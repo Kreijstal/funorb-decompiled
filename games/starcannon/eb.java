@@ -63,10 +63,10 @@ final class eb {
         try {
           if (g.field_a != null &&
             g.field_a.ensureIndexLoaded((byte) 106) &&
-            g.field_a.a("benefits", -9883) &&
+            g.field_a.tryLoadGroupByName("benefits", -9883) &&
             null != AccountRequestState.field_a &&
             AccountRequestState.field_a.ensureIndexLoaded((byte) 110) &&
-            AccountRequestState.field_a.a("benefits", -9883)) {
+            AccountRequestState.field_a.tryLoadGroupByName("benefits", -9883)) {
             DelayedPcmStream.field_k = vk.a("benefits", 32, "headline", g.field_a);
             cf.field_q = vk.a("benefits", 86, "blurbpane", g.field_a);
             pc.field_a = vk.a("benefits", 106, "button", g.field_a);

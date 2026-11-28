@@ -42,7 +42,7 @@ final class vd {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_c.a((byte) 117) == 1) {
+          if (this.field_c.getGroupCapacity((byte) 117) == 1) {
             stackIn_3_0 = this.a(param2, param0, param1 - 219, 0);
             return stackIn_3_0;
           }
@@ -50,7 +50,7 @@ final class vd {
             stackIn_6_0 = (PcmSample) null;
             return stackIn_6_0;
           }
-          if (this.field_c.a((byte) 104, param0) != 1) {
+          if (this.field_c.getFileCapacity((byte) 104, param0) != 1) {
             throw new RuntimeException();
           }
           stackIn_9_0 = this.a(param2, 0, param1 - 220, param0);
@@ -78,14 +78,14 @@ final class vd {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_b.a((byte) 122) == 1) {
+          if (this.field_b.getGroupCapacity((byte) 122) == 1) {
             stackIn_2_0 = this.a(65527, param1, param0, 0);
             return stackIn_2_0;
           }
           if (param2 <= 73) {
             vd.a(56);
           }
-          if (1 != this.field_b.a((byte) 119, param0)) {
+          if (1 != this.field_b.getFileCapacity((byte) 119, param0)) {
             throw new RuntimeException();
           }
           stackIn_8_0 = this.a(65527, param1, 0, param0);

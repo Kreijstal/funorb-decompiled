@@ -333,8 +333,8 @@ final class pfa {
                 nia.field_l[var11.field_b].e(this.field_e[var3_int].field_kb - 1, -1 + this.field_e[var3_int].field_rb, 51233);
               }
             }
-            CreatureType.a(true, this.field_e[var3_int].field_rb, this.field_e[var3_int].field_kb, this.field_e[var3_int].field_zb, 117);
-            if (!this.field_f.field_s.c((byte) -10, this.field_e[var3_int].field_zb)) {
+            CreatureType.drawMoveIcon(true, this.field_e[var3_int].field_rb, this.field_e[var3_int].field_kb, this.field_e[var3_int].field_zb, 117);
+            if (!this.field_f.field_s.isMoveAllowedByStatus((byte) -10, this.field_e[var3_int].field_zb)) {
               SoftwareRasterizer.drawThickLine(4 + this.field_e[var3_int].field_kb, 4 + this.field_e[var3_int].field_rb, (this.field_e[var3_int].field_sb >> 1) + (this.field_e[var3_int].field_kb + 15), this.field_e[var3_int].field_rb + (this.field_e[var3_int].field_p >> 1) + 15, 65793, 4);
               SoftwareRasterizer.drawThickLine(5 + this.field_e[var3_int].field_kb, 5 + this.field_e[var3_int].field_rb, (this.field_e[var3_int].field_sb >> 1) + (this.field_e[var3_int].field_kb + 14), 14 + this.field_e[var3_int].field_rb + (this.field_e[var3_int].field_p >> 1), 16711680, 2);
             }
@@ -356,7 +356,7 @@ final class pfa {
             var6 = 480;
             var7 = 4 + mk.field_p;
             var8 = gd.field_m + 4;
-            sd.a(this.field_f.field_s.a(var15, -5313), var7, var15, (byte) 74, var8, var5, var6);
+            sd.a(this.field_f.field_s.getAttackDamageMultiplier(var15, -5313), var7, var15, (byte) 74, var8, var5, var6);
           }
           var12++;
         }

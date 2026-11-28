@@ -215,7 +215,7 @@ final class SnowAnimation extends EventAnimation {
         var15 = BachelorFridge.field_y;
         al.a(-32, this.field_v.moveId);
         var17 = this.screen.field_h;
-        this.field_v.creature.a(123, this.screen.field_h);
+        this.field_v.creature.resolveCreature(123, this.screen.field_h);
         var20 = this.field_v.d(1);
         var4 = this.field_v.field_r;
         var5 = this.field_v.field_s;
@@ -252,7 +252,7 @@ final class SnowAnimation extends EventAnimation {
         if (param0 != -1) {
           return;
         }
-        BattleCreature var2 = this.field_v.creature.a(81, this.screen.field_h);
+        BattleCreature var2 = this.field_v.creature.resolveCreature(81, this.screen.field_h);
         if (!var2.isDown(param0 - 93)) {
           var3 = (EventEffect) (this.field_v.effects.beginForward((byte) 90));
           al.a(param0 - 69, this.field_v.moveId);

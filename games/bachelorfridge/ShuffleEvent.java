@@ -89,7 +89,7 @@ final class ShuffleEvent extends SpecialEvent {
         var5 = BachelorFridge.field_y;
         try {
           var3_int = 79 % ((param1 - 12) / 35);
-          this.creature.a(73, param0);
+          this.creature.resolveCreature(73, param0);
           var4 = (PlaceCreatureEffect) (this.effects.beginForward((byte) 90));
           while (var4 != null) {
             var4.apply((BattleCreature) null, param0, 12);

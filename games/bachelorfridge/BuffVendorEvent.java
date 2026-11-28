@@ -41,7 +41,7 @@ final class BuffVendorEvent extends SpecialEvent {
 
     final void a(BattleState param0, int param1) {
         try {
-          this.creature.a(107, param0);
+          this.creature.resolveCreature(107, param0);
           this.field_p = !param0.isTileFree(this.field_r, this.field_u, -11066) ? true : false;
           if (null != param0.tiles[this.field_r][this.field_u].occupant) {
             this.field_p = true;

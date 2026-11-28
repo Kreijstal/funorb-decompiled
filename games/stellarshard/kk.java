@@ -98,7 +98,7 @@ final class kk extends lk {
             field_k = (bh) null;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3_int = ResourceArchive.a(var5, (byte) 125);
+          var3_int = ResourceArchive.parseDecimalInt(var5, (byte) 125);
           if (0 < var3_int &&
             130 >= var3_int) {
             return lg.field_c;

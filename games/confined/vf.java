@@ -267,7 +267,7 @@ class vf implements fe, pj {
         int var12Lifetime1;
         var13 = Confined.field_J ? 1 : 0;
         try {
-          lc.a(param6.field_q + param3, param6.field_F + (param3 + param6.field_q), param6.field_m + (param2 + param6.field_z), param2 + param6.field_m, param5 ^ -29579);
+          TunnelMesh.pushAndIntersectRasterClip(param6.field_q + param3, param6.field_F + (param3 + param6.field_q), param6.field_m + (param2 + param6.field_z), param2 + param6.field_m, param5 ^ -29579);
           if (param5 != -18866) {
             return;
           }
@@ -474,7 +474,7 @@ class vf implements fe, pj {
               stackIn_5_3 = var14.field_c[var7 + 1].field_d;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            lc.a(param1.field_q + param0, param1.field_F + param1.field_q + param0, param1.field_z + param1.field_m + param2, param2 + param1.field_m, 14907);
+            TunnelMesh.pushAndIntersectRasterClip(param1.field_q + param0, param1.field_F + param1.field_q + param0, param1.field_z + param1.field_m + param2, param2 + param1.field_m, 14907);
             KeyboardInput.field_d.a(var10, var11, var12, var10, (byte) -62, this.field_m);
             ib.b(false);
           }
@@ -563,7 +563,7 @@ class vf implements fe, pj {
             }
             var10 = var18.b(-96, var8);
             var11 = var18.b(-120, var9);
-            lc.a(param0 + param1.field_q, param1.field_q + param0 + param1.field_F, param4 + param1.field_m + param1.field_z, param4 + param1.field_m, 14907);
+            TunnelMesh.pushAndIntersectRasterClip(param0 + param1.field_q, param1.field_q + param0 + param1.field_F, param4 + param1.field_m + param1.field_z, param4 + param1.field_m, 14907);
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.field_c[var12];
               if (var10 != var12) {

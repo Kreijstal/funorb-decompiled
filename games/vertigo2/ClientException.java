@@ -39,7 +39,7 @@ final class ClientException extends RuntimeException {
         ((UiPanel) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
         qo.field_D.field_b.k(0);
         if (0 != DirectByteStorage.field_j.field_tb) {
-          cn.field_v = true;
+          LevelCamera.field_v = true;
         }
         if (0 != b.field_h.field_tb && (DirectByteStorage.field_g ||
           !(q.field_y <= 0) ||
@@ -281,7 +281,7 @@ final class ClientException extends RuntimeException {
               var13.field_Tb.field_B = var25_int;
               if (vd.field_d == param1) {
                 if (!gd.field_j.field_kc) {
-                  var13.field_Lb.field_S = bh.field_F;
+                  var13.field_Lb.field_S = LevelSimulation.field_F;
                 }
               } else {
                 if (!var13.field_Yb) {
@@ -299,7 +299,7 @@ final class ClientException extends RuntimeException {
               }
               var26_int = 0;
               if (gd.field_j != null &&
-                cn.b(false) &&
+                LevelCamera.isLocalPlayerLobbyHost(false) &&
                 ao.field_N != var13.field_Pb) {
                 if (var13.field_Tb.field_S != null) {
                   var27 = var13.field_Tb.j(-21391) + NetworkArchiveRequest.field_G * 2;
@@ -506,7 +506,7 @@ final class ClientException extends RuntimeException {
                   }
                 }
                 if (vd.field_d == param1 &&
-                  cn.b(false)) {
+                  LevelCamera.isLocalPlayerLobbyHost(false)) {
                   if (var27Lifetime1 == 0) {
                     var25Lifetime2 = var35 + "<br>" + Vertigo2.a(new String[]{(String) (var26)}, mq.field_u, 38);
                   } else {
@@ -520,7 +520,7 @@ final class ClientException extends RuntimeException {
                   }
                 }
                 if (vd.field_d == param1 &&
-                  !cn.b(false)) {
+                  !LevelCamera.isLocalPlayerLobbyHost(false)) {
                   var28 = gd.field_j.field_Nb;
                   var25Lifetime2 = (String) (var25Lifetime2) + "<br>" + Vertigo2.a(new String[]{var28}, ac.field_J, -119);
                 }

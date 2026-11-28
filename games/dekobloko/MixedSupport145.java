@@ -43,7 +43,7 @@ final class MixedSupport145 {
           try {
             try {
               stringLocal2 = (String) (JavaScriptBridge.callWithoutArguments(true, "getcookies", appletArgument1));
-              stringArrayLocal3 = ResourceArchive.computeStringArray0801(';', (byte) 66, stringLocal2);
+              stringArrayLocal3 = ResourceArchive.splitOnCharacter(';', (byte) 66, stringLocal2);
               if (byteArgument2 != -1) {
                 stringState0610 = (String) null;
               }

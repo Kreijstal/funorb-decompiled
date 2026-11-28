@@ -136,7 +136,7 @@ final class PizzaPartyEvent extends SpecialEvent {
         var7 = BachelorFridge.field_y;
         try {
           this.a(param0, (byte) -2);
-          param0.a(this.field_u, this.field_s, 38, (byte) -36);
+          param0.setTerrainAtTilePositions(this.field_u, this.field_s, 38, (byte) -36);
           var4 = 60 / ((12 - param1) / 35);
           for (var3_int = 0; this.field_u > var3_int; var3_int++) {
             var5 = this.field_s[var3_int];

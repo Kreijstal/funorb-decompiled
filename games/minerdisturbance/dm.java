@@ -75,7 +75,7 @@ final class dm {
             return false;
           }
           if (null != var4.field_g &&
-            !var4.field_j.a(false, var4.field_g)) {
+            !var4.field_j.tryLoadGroupByName(false, var4.field_g)) {
             this.a(var2, 100, var4.field_j.getGroupLoadPercentByName(var4.field_g, -128));
             return false;
           }
@@ -83,7 +83,7 @@ final class dm {
             var4.field_g == null &&
             var4.field_l != null &&
             !var4.field_j.tryLoadAllGroups(-1)) {
-            this.a(var2, 100, var4.field_j.c(-14858));
+            this.a(var2, 100, var4.field_j.getArchiveLoadPercent(-14858));
             return false;
           }
           this.field_e = this.field_e + 1;

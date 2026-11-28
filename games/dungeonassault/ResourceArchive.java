@@ -14,7 +14,7 @@ final class ResourceArchive {
     static String field_b;
     static int field_k;
 
-    final boolean a(boolean param0, String param1) {
+    final boolean tryLoadGroupByName(boolean param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -76,7 +76,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final static void c(boolean param0) {
+    final static void showAccountCreationForm(boolean param0) {
         if (!param0) {
           field_a = (String) null;
         }
@@ -84,7 +84,7 @@ final class ResourceArchive {
         ta.field_a.b(1, cd.field_f);
     }
 
-    final static void a(byte param0, ResourceArchive param1, PcmStreamMixer param2, int param3) {
+    final static void initializeLogoAnimation(byte param0, ResourceArchive param1, PcmStreamMixer param2, int param3) {
         hh.field_b = eg.c(1) * param3 / 1000;
         ac.a((byte) -125, param1);
         kd.a(31913, param1);
@@ -101,7 +101,7 @@ final class ResourceArchive {
         }
     }
 
-    final int b(int param0, int param1) {
+    final int getFileCapacity(int param0, int param1) {
         if (!this.validateGroupId(-1, param0)) {
           return 0;
         }
@@ -120,7 +120,7 @@ final class ResourceArchive {
         field_b = null;
     }
 
-    final boolean c(String param0, int param1) {
+    final boolean hasGroupName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -253,7 +253,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean b(String param0, String param1, byte param2) {
+    final boolean hasFileName(String param0, String param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -273,7 +273,7 @@ final class ResourceArchive {
           param1 = param1.toLowerCase();
           if (param2 != -82) {
             var6 = (String) null;
-            this.b((String) null, (String) null, (byte) 88);
+            this.hasFileName((String) null, (String) null, (byte) 88);
           }
           param0 = param0.toLowerCase();
           var7 = (CharSequence) ((Object) param1);
@@ -345,7 +345,7 @@ final class ResourceArchive {
         return false;
     }
 
-    final boolean a(int param0, String param1, String param2) {
+    final boolean tryLoadFileByName(int param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -453,7 +453,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int b(int param0) {
+    final synchronized int getArchiveLoadPercent(int param0) {
         int var2;
         int var3;
         int var4;
@@ -502,7 +502,7 @@ final class ResourceArchive {
             return stackIn_6_0;
           }
           if (param1 != 1000) {
-            ResourceArchive.c(true);
+            ResourceArchive.showAccountCreationForm(true);
           }
           stackIn_10_0 = var3_int;
           return stackIn_10_0;
@@ -781,9 +781,9 @@ final class ResourceArchive {
         return this.getFileWithKeys((int[]) null, param1, (byte) 76, param2);
     }
 
-    final int b(boolean param0) {
+    final int getGroupCapacity(boolean param0) {
         if (!param0) {
-          this.a(((int[]) (this.field_j[3]))[0], 56);
+          this.getFlatFile(((int[]) (this.field_j[3]))[0], 56);
         }
         if (!this.ensureIndexLoaded(-14354)) {
           return -1;
@@ -826,12 +826,12 @@ final class ResourceArchive {
           }
         }
         if (param0 != 59) {
-          this.a(((int[]) (this.field_j[5]))[0], -79);
+          this.getFlatFile(((int[]) (this.field_j[5]))[0], -79);
         }
         return var2 != 0;
     }
 
-    final synchronized byte[] a(int param0, int param1) {
+    final synchronized byte[] getFlatFile(int param0, int param1) {
         if (!this.ensureIndexLoaded(param0 ^ 8699)) {
           return null;
         }

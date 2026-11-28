@@ -104,15 +104,15 @@ final class MoveEvent extends CreatureEvent {
     final void apply(BattleState param0, boolean param1) {
         BattleCreature var3 = null;
         try {
-          var3 = this.creature.a(103, param0);
-          var3.d(this.moveId, (byte) -104);
-          var3.a(param1, this.field_n, this.field_p);
+          var3 = this.creature.resolveCreature(103, param0);
+          var3.applyMoveCooldown(this.moveId, (byte) -104);
+          var3.moveInDirection(param1, this.field_n, this.field_p);
           var3.field_s = this.field_p;
           if (hl.a((byte) 109, this.moveId) &&
-            !var3.g((byte) 85) &&
+            !var3.isCarryingFlag((byte) 85) &&
             33 != var3.statusId &&
             var3.statusId != 31) {
-            var3.b((byte) 123, 2);
+            var3.applyStatusAndRefreshTile((byte) 123, 2);
             var3.statusTurns = var3.statusTurns - 1;
             return;
           }

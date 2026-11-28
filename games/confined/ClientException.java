@@ -142,7 +142,7 @@ final class ClientException extends RuntimeException {
         if (param0 == 126) {
           jd.field_c = true;
           IntrusiveNode.field_f = true;
-          vg.field_Z.g((byte) 109);
+          TunnelCamera.field_Z.g((byte) 109);
           r.a((byte) 97, false, wc.field_jc);
           return;
         }
@@ -150,7 +150,7 @@ final class ClientException extends RuntimeException {
         ClientException.a(19, (String) null, (java.net.URL) null, (String) null, -53);
         jd.field_c = true;
         IntrusiveNode.field_f = true;
-        vg.field_Z.g((byte) 109);
+        TunnelCamera.field_Z.g((byte) 109);
         r.a((byte) 97, false, wc.field_jc);
     }
 

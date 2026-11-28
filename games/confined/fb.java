@@ -46,10 +46,10 @@ final class fb {
         c.field_t = param2;
         if (param1 > -5) {
           field_c = (String) null;
-          ah.field_Q = param0;
+          AcceleratingProjectile.field_Q = param0;
           return;
         }
-        ah.field_Q = param0;
+        AcceleratingProjectile.field_Q = param0;
     }
 
     final static n a(int param0, int param1, String param2) {

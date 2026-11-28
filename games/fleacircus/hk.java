@@ -159,7 +159,7 @@ final class hk extends IntrusiveNode {
         try {
           hk var4_ref = null;
           if (!hk.a(param0)) {
-            param0.a(param2, param1, -60);
+            param0.tryLoadFileByName(param2, param1, -60);
             return null;
           }
           byte[] var3 = param0.getFileByName(0, param2, param1);

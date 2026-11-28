@@ -74,7 +74,7 @@ final class ClientException extends RuntimeException {
             stackIn_5_0 = (String) (param1);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param0 + " - " + param2.b((byte) -66) + "%";
+          stackIn_7_0 = param0 + " - " + param2.getArchiveLoadPercent((byte) -66) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

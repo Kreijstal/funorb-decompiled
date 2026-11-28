@@ -133,13 +133,13 @@ final class ResourceArchive {
           return true;
         }
         if (param1 != 78) {
-          ResourceArchive.d((String) (this.field_j[7]), (byte) -115);
+          ResourceArchive.containsNonAsciiAlphanumeric((String) (this.field_j[7]), (byte) -115);
           return false;
         }
         return false;
     }
 
-    final int b(int param0) {
+    final int getGroupCapacity(int param0) {
         if (!this.ensureIndexLoaded(-54)) {
           return -1;
         }
@@ -285,7 +285,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(String param0, int param1) {
+    final boolean tryLoadGroupByName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -410,7 +410,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized byte[] a(int param0, int param1) {
+    final synchronized byte[] getFlatFile(int param0, int param1) {
         if (!this.ensureIndexLoaded(125)) {
           return null;
         }
@@ -427,7 +427,7 @@ final class ResourceArchive {
         throw new RuntimeException();
     }
 
-    final synchronized int a(boolean param0) {
+    final synchronized int getArchiveLoadPercent(boolean param0) {
         int var2;
         int var3;
         int var4;
@@ -455,7 +455,7 @@ final class ResourceArchive {
         return var4Lifetime1;
     }
 
-    final boolean a(String param0, String param1, int param2) {
+    final boolean tryLoadFileByName(String param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -506,7 +506,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(String param0, byte param1) {
+    final boolean hasGroupName(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -834,7 +834,7 @@ final class ResourceArchive {
         }
     }
 
-    final static boolean d(String param0, byte param1) {
+    final static boolean containsNonAsciiAlphanumeric(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -872,7 +872,7 @@ final class ResourceArchive {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int getFileCapacity(byte param0, int param1) {
         int var3 = 92 % ((70 - param0) / 40);
         if (!this.validateGroupId(param1, 126)) {
           return 0;

@@ -16,7 +16,7 @@ final class ClamsAnimation extends EventAnimation {
     private final void d(int param0) {
         CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
-        BattleCreature var2 = this.field_w.creature.a(56, this.screen.field_h);
+        BattleCreature var2 = this.field_w.creature.resolveCreature(56, this.screen.field_h);
         if (var2.isDown(-109)) {
           return;
         }
@@ -24,7 +24,7 @@ final class ClamsAnimation extends EventAnimation {
         if (param0 == 6) {
           al.a(param0 ^ -103, this.field_w.moveId);
           while (var3 != null) {
-            var4 = var3.target.a(param0 ^ -27455, this.screen);
+            var4 = var3.target.resolveCreatureView(param0 ^ -27455, this.screen);
             var4.b(-1, 6);
             var3.apply(var2, this.screen.field_h, 12);
             var3 = (EventEffect) (this.field_w.effects.nextForward(param0 - 6));
@@ -46,7 +46,7 @@ final class ClamsAnimation extends EventAnimation {
         var8 = (SpecialMoveDefinition) (al.a(-79, this.field_w.moveId));
         var2 = var8;
         var3 = this.screen.field_h;
-        this.field_w.creature.a(90, this.screen.field_h);
+        this.field_w.creature.resolveCreature(90, this.screen.field_h);
         this.field_w.c(false);
         for (var4 = param0; this.field_w.field_r.length > var4; var4++) {
           var5 = this.field_w.field_r[var4][0];

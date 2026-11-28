@@ -165,7 +165,7 @@ abstract class TextLayout {
         if (!MixedSupport116.resourceArchiveState0021.ensureIndexLoaded((byte) 121)) {
           return MixedSupport086.stringState0365;
         }
-        if (!MixedSupport116.resourceArchiveState0021.computeBoolean0811("commonui", (byte) 118)) {
+        if (!MixedSupport116.resourceArchiveState0021.tryLoadGroupByName("commonui", (byte) 118)) {
           return MixedSupport013.stringState0064 + " - " + MixedSupport116.resourceArchiveState0021.getGroupLoadPercentByName(-128, "commonui") + "%";
         }
         if (!PcmPlayerService.resourceArchiveState0020.ensureIndexLoaded((byte) 121)) {
@@ -174,14 +174,14 @@ abstract class TextLayout {
         if (integerArgument1 != -11777) {
           TextLayout.computeString0231(-68);
         }
-        if (!PcmPlayerService.resourceArchiveState0020.computeBoolean0811("commonui", (byte) 124)) {
+        if (!PcmPlayerService.resourceArchiveState0020.tryLoadGroupByName("commonui", (byte) 124)) {
           return MixedSupport133.stringState0574 + " - " + PcmPlayerService.resourceArchiveState0020.getGroupLoadPercentByName(-125, "commonui") + "%";
         }
         if (!UiComponentPart023.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {
           return SceneWidgetPart001.stringState0058;
         }
         if (!UiComponentPart023.resourceArchiveState0016.tryLoadAllGroups(false)) {
-          return MixedSupport010.stringState0048 + " - " + UiComponentPart023.resourceArchiveState0016.computeInteger0816((byte) -61) + "%";
+          return MixedSupport010.stringState0048 + " - " + UiComponentPart023.resourceArchiveState0016.getArchiveLoadPercent((byte) -61) + "%";
         }
         return TextFieldValidator.stringState0633;
     }

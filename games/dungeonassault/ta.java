@@ -23,7 +23,7 @@ final class ta {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 > 103) {
-            stackIn_4_0 = ia.a(param2, param0, CombatState.a((byte) 66, param1, param3), 0);
+            stackIn_4_0 = ia.a(param2, param0, CombatState.formatPlayerNameWithTitle((byte) 66, param1, param3), 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

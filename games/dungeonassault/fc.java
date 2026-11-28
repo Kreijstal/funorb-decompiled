@@ -8,7 +8,7 @@ final class fc extends en {
     static String field_h;
     static volatile int field_m;
     static int field_d;
-    private h field_k;
+    private RaiderDefinition field_k;
     private CombatState field_i;
     static String field_l;
     static String field_j;
@@ -18,7 +18,7 @@ final class fc extends en {
         int var15 = 0;
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        wb[] stackIn_15_0 = null;
+        StatusEffectIndicator[] stackIn_15_0 = null;
         String[] var3;
         Object var4;
         Object var5;
@@ -29,7 +29,7 @@ final class fc extends en {
         int var10;
         int var11;
         int var12;
-        wb[] var13;
+        StatusEffectIndicator[] var13;
         String var14_ref_String;
         String var15_ref_String;
         String var16_ref_String;
@@ -48,8 +48,8 @@ final class fc extends en {
         RgbSprite var26;
         String[] var27;
         String var28;
-        wb[] var29;
-        wb var30;
+        StatusEffectIndicator[] var29;
+        StatusEffectIndicator var30;
         Object[] var31;
         Object var32;
         Object[] var33;
@@ -75,7 +75,7 @@ final class fc extends en {
         var9 = la.field_b.field_E + (var8 + 2) * la.field_b.field_H;
         var10 = la.field_b.field_H;
         if (null != this.field_i) {
-          stackIn_6_0 = (this.field_i.b(0, this.field_f)) ? 1 : 0;
+          stackIn_6_0 = (this.field_i.canUseRaiderAbility(0, this.field_f)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
@@ -300,7 +300,7 @@ final class fc extends en {
         try {
           lb.a(param16, param19, param20, 2);
           mi.a(param12, 25570, param9, param5, param15);
-          wm.a((byte) -66, param3, param13);
+          PackedBitSet.setLayoutCenter((byte) -66, param3, param13);
           PcmOutputWorker.a(param11, (byte) -40, param18, param1, param6, param0);
           if (param14 <= 108) {
             field_l = (String) null;
@@ -356,7 +356,7 @@ final class fc extends en {
         }
     }
 
-    fc(h param0) {
+    fc(RaiderDefinition param0) {
         try {
           this.field_k = param0;
           this.field_i = null;

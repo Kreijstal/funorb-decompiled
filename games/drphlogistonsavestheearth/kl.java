@@ -491,7 +491,7 @@ class kl extends hf {
           if (param2 != 27867) {
             field_R = (RgbSprite[]) null;
           }
-          stackIn_6_0 = param3 + " - " + param1.d((byte) 95) + "%";
+          stackIn_6_0 = param3 + " - " + param1.getArchiveLoadPercent((byte) 95) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

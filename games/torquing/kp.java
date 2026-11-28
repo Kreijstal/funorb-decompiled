@@ -169,7 +169,7 @@ final class kp {
     final static void a(double param0, int param1, double param2, double[] param3, Level param4) {
         try {
           SpriteState.c((byte) 76);
-          param4.a(param2, param3, (byte) 37, param0);
+          param4.collectLevelCollisionContacts(param2, param3, (byte) 37, param0);
           int var7_int = -98 % ((param1 - 5) / 55);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "kp.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');

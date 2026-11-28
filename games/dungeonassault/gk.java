@@ -189,23 +189,23 @@ final class gk extends ii implements mg, vg {
         }
     }
 
-    final static ai a(PacketBuffer param0, byte param1) {
+    final static DungeonTileState a(PacketBuffer param0, byte param1) {
         int dupTemp$4 = 0;
         int dupTemp$5 = 0;
         int dupTemp$6 = 0;
         int dupTemp$7 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        ai var3 = null;
+        DungeonTileState var3 = null;
         int var4 = 0;
-        ai stackIn_1_0 = null;
+        DungeonTileState stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = param0.readUnsignedByte(true);
-          var3 = new ai(var2_int);
+          var3 = new DungeonTileState(var2_int);
           dupTemp$4 = param0.readUnsignedByte(true);
           var3.field_j = dupTemp$4;
           var3.field_p = dupTemp$4;
@@ -358,7 +358,7 @@ final class gk extends ii implements mg, vg {
         pk.a(-96, this.field_R.field_w);
     }
 
-    final static void a(int param0, h param1, int param2, int param3, int param4) {
+    final static void a(int param0, RaiderDefinition param1, int param2, int param3, int param4) {
         try {
           sd.a(param0, gd.field_E, 76, param3, param1.field_m, param4);
           if (param2 < 94) {

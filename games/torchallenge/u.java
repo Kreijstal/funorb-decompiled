@@ -118,11 +118,11 @@ final class u {
             var5 = (int[]) null;
             this.a(108, (int[]) null, -71);
           }
-          if (this.field_e.c((byte) 52) == 1) {
+          if (this.field_e.getGroupCapacity((byte) 52) == 1) {
             stackIn_4_0 = this.a((byte) 113, param2, param1, 0);
             return stackIn_4_0;
           }
-          if (this.field_e.a(param1, -89) != 1) {
+          if (this.field_e.getFileCapacity(param1, -89) != 1) {
             throw new RuntimeException();
           }
           stackIn_7_0 = this.a((byte) 119, param2, 0, param1);
@@ -150,14 +150,14 @@ final class u {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_d.c((byte) 52) == 1) {
+          if (this.field_d.getGroupCapacity((byte) 52) == 1) {
             stackIn_3_0 = this.a(0, param1, param2, 0);
             return stackIn_3_0;
           }
           if (param0 != -1) {
             u.a(-35, -112);
           }
-          if (this.field_d.a(param2, -77) != 1) {
+          if (this.field_d.getFileCapacity(param2, -77) != 1) {
             throw new RuntimeException();
           }
           stackIn_8_0 = this.a(0, param1, 0, param2);

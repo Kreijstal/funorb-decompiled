@@ -37,7 +37,7 @@ final class MassPoisonSpecial extends SpecialOrder {
         BattleCreature var7 = null;
         var8 = BachelorFridge.field_y;
         try {
-          var9 = this.creature.a(39, param0);
+          var9 = this.creature.resolveCreature(39, param0);
           var4 = new MassPoisonEvent(this.moveId, new CreatureRef(var9));
           if (param1 != 3) {
             stackIn_3_0 = (CreatureEvent) null;

@@ -70,7 +70,7 @@ final class SuperSpeedAllSpecial extends SpecialOrder {
         RuntimeException decompiledCaughtException = null;
         var8 = BachelorFridge.field_y;
         try {
-          var9 = this.creature.a(25, param0);
+          var9 = this.creature.resolveCreature(25, param0);
           var4 = new SuperSpeedAllEvent(this.moveId, new CreatureRef(var9));
           var5 = 0;
           if (param1 != 3) {

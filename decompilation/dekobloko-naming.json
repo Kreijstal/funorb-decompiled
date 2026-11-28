@@ -75017,7 +75017,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#0"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#0"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#1",
@@ -75025,7 +75025,7 @@
       "to": "previousIntegerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#1"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#1"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#10",
@@ -75033,7 +75033,7 @@
       "to": "stackStringArrayLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#10"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#10"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#11",
@@ -75041,7 +75041,7 @@
       "to": "stackStringArrayLocal12",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#11"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#11"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#12",
@@ -75049,7 +75049,7 @@
       "to": "stackRuntimeExceptionLocal13",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#12"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#12"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#13",
@@ -75057,7 +75057,7 @@
       "to": "stackStringBuilderLocal14",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#13"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#13"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#14",
@@ -75065,7 +75065,7 @@
       "to": "stackStringLocal15",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#14"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#14"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#15",
@@ -75073,7 +75073,7 @@
       "to": "caughtExceptionLocal16",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#15"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#15"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#16",
@@ -75081,7 +75081,7 @@
       "to": "caughtParameterLocal17",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#16"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#16"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#2",
@@ -75089,7 +75089,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#2"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#2"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#3",
@@ -75097,7 +75097,7 @@
       "to": "runtimeExceptionLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#3"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#3"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#4",
@@ -75105,7 +75105,7 @@
       "to": "stringArrayLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#4"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#4"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#5",
@@ -75113,7 +75113,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#5"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#5"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#6",
@@ -75121,7 +75121,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#6"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#6"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#7",
@@ -75129,7 +75129,7 @@
       "to": "integerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#7"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#7"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#8",
@@ -75137,7 +75137,7 @@
       "to": "integerLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#8"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#8"
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#9",
@@ -75145,7 +75145,7 @@
       "to": "charSequenceLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#9"
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#9"
     },
     {
       "symbol": "L:ji.a(III)[B#0",
@@ -75249,7 +75249,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.performAction0807(IIZ)V#0"
+      "renamedSymbol": "L:ResourceArchive.pollTextEntryDialog(IIZ)V#0"
     },
     {
       "symbol": "L:ji.a(IIZ)V#1",
@@ -75257,7 +75257,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.performAction0807(IIZ)V#1"
+      "renamedSymbol": "L:ResourceArchive.pollTextEntryDialog(IIZ)V#1"
     },
     {
       "symbol": "L:ji.a(ILjava/lang/String;)I#0",
@@ -75545,7 +75545,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#0"
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#0"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#1",
@@ -75553,7 +75553,7 @@
       "to": "runtimeExceptionLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#1"
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#1"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#2",
@@ -75561,7 +75561,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#2"
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#2"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#3",
@@ -75569,7 +75569,7 @@
       "to": "charSequenceLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#3"
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#3"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#4",
@@ -75577,7 +75577,7 @@
       "to": "stackBooleanLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#4"
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#4"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#5",
@@ -75585,7 +75585,7 @@
       "to": "stackRuntimeExceptionLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#5"
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#5"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#6",
@@ -75593,7 +75593,7 @@
       "to": "stackStringBuilderLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#6"
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#6"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#7",
@@ -75601,7 +75601,7 @@
       "to": "stackStringLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#7"
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#7"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#8",
@@ -75609,7 +75609,7 @@
       "to": "caughtExceptionLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#8"
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#8"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#9",
@@ -75617,7 +75617,7 @@
       "to": "caughtParameterLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#9"
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#9"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#0",
@@ -75625,7 +75625,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#0"
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#0"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#1",
@@ -75633,7 +75633,7 @@
       "to": "runtimeExceptionLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#1"
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#1"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#2",
@@ -75641,7 +75641,7 @@
       "to": "charSequenceLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#2"
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#2"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#3",
@@ -75649,7 +75649,7 @@
       "to": "stackRuntimeExceptionLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#3"
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#3"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#4",
@@ -75657,7 +75657,7 @@
       "to": "stackStringBuilderLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#4"
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#4"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#5",
@@ -75665,7 +75665,7 @@
       "to": "stackStringLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#5"
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#5"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#6",
@@ -75673,7 +75673,7 @@
       "to": "caughtExceptionLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#6"
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#6"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#7",
@@ -75681,7 +75681,7 @@
       "to": "caughtParameterLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#7"
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#7"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#0",
@@ -75689,7 +75689,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#0"
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#0"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#1",
@@ -75697,7 +75697,7 @@
       "to": "runtimeExceptionLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#1"
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#1"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#10",
@@ -75705,7 +75705,7 @@
       "to": "stackStringLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#10"
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#10"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#11",
@@ -75713,7 +75713,7 @@
       "to": "caughtExceptionLocal12",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#11"
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#11"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#12",
@@ -75721,7 +75721,7 @@
       "to": "caughtParameterLocal13",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#12"
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#12"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#2",
@@ -75729,7 +75729,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#2"
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#2"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#3",
@@ -75737,7 +75737,7 @@
       "to": "charSequenceLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#3"
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#3"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#4",
@@ -75745,7 +75745,7 @@
       "to": "charSequenceLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#4"
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#4"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#5",
@@ -75753,7 +75753,7 @@
       "to": "stackBooleanLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#5"
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#5"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#6",
@@ -75761,7 +75761,7 @@
       "to": "stackRuntimeExceptionLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#6"
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#6"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#7",
@@ -75769,7 +75769,7 @@
       "to": "stackStringBuilderLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#7"
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#7"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#8",
@@ -75777,7 +75777,7 @@
       "to": "stackStringLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#8"
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#8"
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#9",
@@ -75785,7 +75785,7 @@
       "to": "stackStringBuilderLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#9"
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#9"
     },
     {
       "symbol": "L:ji.a(Z)Z#0",
@@ -76353,7 +76353,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeInteger0816(B)I#0"
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#0"
     },
     {
       "symbol": "L:ji.b(B)I#1",
@@ -76361,7 +76361,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeInteger0816(B)I#1"
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#1"
     },
     {
       "symbol": "L:ji.b(B)I#2",
@@ -76369,7 +76369,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeInteger0816(B)I#2"
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#2"
     },
     {
       "symbol": "L:ji.b(B)I#3",
@@ -76377,7 +76377,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeInteger0816(B)I#3"
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#3"
     },
     {
       "symbol": "L:ji.b(B)I#4",
@@ -76385,7 +76385,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.computeInteger0816(B)I#4"
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#4"
     },
     {
       "symbol": "L:ji.b(ILjava/lang/String;)I#0",
@@ -76473,7 +76473,7 @@
       "to": "cipherPacketBufferLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:ResourceArchive.performAction0820(II)V#0"
+      "renamedSymbol": "L:ResourceArchive.writeTwoByteCommand(II)V#0"
     },
     {
       "symbol": "L:jj.a(I)I#0",
@@ -154942,10 +154942,10 @@
     {
       "symbol": "M:ji.a(CBLjava/lang/String;)[Ljava/lang/String;",
       "originalName": "a",
-      "to": "computeStringArray0801",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;"
+      "to": "splitOnCharacter",
+      "evidence": "Source-purpose review: Splits the string on the supplied character, retaining empty leading, trailing and interior fields via the original substring bounds. A byte other than 66 returns null.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;"
     },
     {
       "symbol": "M:ji.a(I)V",
@@ -154998,10 +154998,10 @@
     {
       "symbol": "M:ji.a(IIZ)V",
       "originalName": "a",
-      "to": "performAction0807",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:ResourceArchive.performAction0807(IIZ)V"
+      "to": "pollTextEntryDialog",
+      "evidence": "Source-purpose review: Polls the active text-entry dialog and sends a selected action with the current text and option flag. The original pending value keeps the dialog open, cancellation skips submission, and the completed branches release it and refresh the UI.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.pollTextEntryDialog(IIZ)V"
     },
     {
       "symbol": "M:ji.a(ILjava/lang/String;)I",
@@ -155030,26 +155030,26 @@
     {
       "symbol": "M:ji.a(Ljava/lang/String;B)Z",
       "originalName": "a",
-      "to": "computeBoolean0811",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z"
+      "to": "tryLoadGroupByName",
+      "evidence": "Source-purpose review: Checks index readiness, resolves the lowercased group name to an ID, and returns the numeric group loader result. Preserves the division between lowercasing and name hashing.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z"
     },
     {
       "symbol": "M:ji.a(Ljava/lang/String;I)Z",
       "originalName": "a",
-      "to": "computeBoolean0812",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z"
+      "to": "hasGroupName",
+      "evidence": "Source-purpose review: Checks the lowercased name against the archive group-name table. Compares the looked-up ID to the original int threshold. A compiled caller supplies zero directly.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z"
     },
     {
       "symbol": "M:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z",
       "originalName": "a",
-      "to": "computeBoolean0813",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z"
+      "to": "tryLoadFileByName",
+      "evidence": "Source-purpose review: Checks index readiness and resolves the lowercased group and file names in their respective tables. Delegates the IDs to the numeric file loader. False returns true before checking the index.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z"
     },
     {
       "symbol": "M:ji.a(Z)Z",
@@ -155070,10 +155070,10 @@
     {
       "symbol": "M:ji.b(B)I",
       "originalName": "b",
-      "to": "computeInteger0816",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:ResourceArchive.computeInteger0816(B)I"
+      "to": "getArchiveLoadPercent",
+      "evidence": "Source-purpose review: Combines per-group loading progress across nonempty groups after the archive index is ready. A byte above -44 invokes the original helper with a nested cache value before iteration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.getArchiveLoadPercent(B)I"
     },
     {
       "symbol": "M:ji.b(IB)Z",
@@ -155086,10 +155086,10 @@
     {
       "symbol": "M:ji.b(II)I",
       "originalName": "b",
-      "to": "computeInteger0818",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:ResourceArchive.computeInteger0818(II)I"
+      "to": "getFileCapacity",
+      "evidence": "Source-purpose review: Returns the addressable file slot count after validating the group ID, including gaps in sparse file IDs. A first int other than -5228 returns -48 before group validation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.getFileCapacity(II)I"
     },
     {
       "symbol": "M:ji.b(ILjava/lang/String;)I",
@@ -155102,10 +155102,10 @@
     {
       "symbol": "M:ji.c(II)V",
       "originalName": "c",
-      "to": "performAction0820",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:ResourceArchive.performAction0820(II)V"
+      "to": "writeTwoByteCommand",
+      "evidence": "Source-purpose review: Appends the original cipher-adjusted opcode and the two payload bytes, the supplied value followed by the constant three. Keeps the opcode writer guard calculation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.writeTwoByteCommand(II)V"
     },
     {
       "symbol": "M:jj.a(I)I",
@@ -190185,7 +190185,7 @@
       "to": "characterArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#0"
+      "renamedSymbol": "P:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#0"
     },
     {
       "symbol": "P:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#1",
@@ -190193,7 +190193,7 @@
       "to": "byteArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#1"
+      "renamedSymbol": "P:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#1"
     },
     {
       "symbol": "P:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#2",
@@ -190201,7 +190201,7 @@
       "to": "stringArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#2"
+      "renamedSymbol": "P:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#2"
     },
     {
       "symbol": "P:ji.a(I)V#0",
@@ -190321,7 +190321,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.performAction0807(IIZ)V#0"
+      "renamedSymbol": "P:ResourceArchive.pollTextEntryDialog(IIZ)V#0"
     },
     {
       "symbol": "P:ji.a(IIZ)V#1",
@@ -190329,7 +190329,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.performAction0807(IIZ)V#1"
+      "renamedSymbol": "P:ResourceArchive.pollTextEntryDialog(IIZ)V#1"
     },
     {
       "symbol": "P:ji.a(IIZ)V#2",
@@ -190337,7 +190337,7 @@
       "to": "booleanArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.performAction0807(IIZ)V#2"
+      "renamedSymbol": "P:ResourceArchive.pollTextEntryDialog(IIZ)V#2"
     },
     {
       "symbol": "P:ji.a(ILjava/lang/String;)I#0",
@@ -190417,7 +190417,7 @@
       "to": "stringArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#0"
+      "renamedSymbol": "P:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#0"
     },
     {
       "symbol": "P:ji.a(Ljava/lang/String;B)Z#1",
@@ -190425,7 +190425,7 @@
       "to": "byteArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#1"
+      "renamedSymbol": "P:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#1"
     },
     {
       "symbol": "P:ji.a(Ljava/lang/String;I)Z#0",
@@ -190433,7 +190433,7 @@
       "to": "stringArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#0"
+      "renamedSymbol": "P:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#0"
     },
     {
       "symbol": "P:ji.a(Ljava/lang/String;I)Z#1",
@@ -190441,7 +190441,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#1"
+      "renamedSymbol": "P:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#1"
     },
     {
       "symbol": "P:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#0",
@@ -190449,7 +190449,7 @@
       "to": "stringArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#0"
+      "renamedSymbol": "P:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#0"
     },
     {
       "symbol": "P:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#1",
@@ -190457,7 +190457,7 @@
       "to": "booleanArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#1"
+      "renamedSymbol": "P:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#1"
     },
     {
       "symbol": "P:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#2",
@@ -190465,7 +190465,7 @@
       "to": "stringArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#2"
+      "renamedSymbol": "P:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#2"
     },
     {
       "symbol": "P:ji.a(Z)Z#0",
@@ -190513,7 +190513,7 @@
       "to": "byteArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.computeInteger0816(B)I#0"
+      "renamedSymbol": "P:ResourceArchive.getArchiveLoadPercent(B)I#0"
     },
     {
       "symbol": "P:ji.b(IB)Z#0",
@@ -190537,7 +190537,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.computeInteger0818(II)I#0"
+      "renamedSymbol": "P:ResourceArchive.getFileCapacity(II)I#0"
     },
     {
       "symbol": "P:ji.b(II)I#1",
@@ -190545,7 +190545,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.computeInteger0818(II)I#1"
+      "renamedSymbol": "P:ResourceArchive.getFileCapacity(II)I#1"
     },
     {
       "symbol": "P:ji.b(ILjava/lang/String;)I#0",
@@ -190569,7 +190569,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.performAction0820(II)V#0"
+      "renamedSymbol": "P:ResourceArchive.writeTwoByteCommand(II)V#0"
     },
     {
       "symbol": "P:ji.c(II)V#1",
@@ -190577,7 +190577,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:ResourceArchive.performAction0820(II)V#1"
+      "renamedSymbol": "P:ResourceArchive.writeTwoByteCommand(II)V#1"
     },
     {
       "symbol": "P:jj.a(I)I#0",
@@ -327854,7 +327854,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#0",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#0",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#0",
       "originalName": "var7",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -327865,7 +327865,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#1",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#1",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#1",
       "originalName": "incrementValue$1",
       "renamedName": "previousIntegerLocal2",
       "declaration": {
@@ -327876,7 +327876,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#10",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#10",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#10",
       "originalName": "stackIn_3_0",
       "renamedName": "stackStringArrayLocal11",
       "declaration": {
@@ -327887,7 +327887,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#11",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#11",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#11",
       "originalName": "stackIn_11_0",
       "renamedName": "stackStringArrayLocal12",
       "declaration": {
@@ -327898,7 +327898,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#12",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#12",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#12",
       "originalName": "stackIn_14_0",
       "renamedName": "stackRuntimeExceptionLocal13",
       "declaration": {
@@ -327909,7 +327909,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#13",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#13",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#13",
       "originalName": "stackIn_14_1",
       "renamedName": "stackStringBuilderLocal14",
       "declaration": {
@@ -327920,7 +327920,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#14",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#14",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#14",
       "originalName": "stackIn_15_2",
       "renamedName": "stackStringLocal15",
       "declaration": {
@@ -327931,7 +327931,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#15",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#15",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#15",
       "originalName": "decompiledCaughtException",
       "renamedName": "caughtExceptionLocal16",
       "declaration": {
@@ -327942,7 +327942,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#16",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#16",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#16",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "caughtParameterLocal17",
       "declaration": {
@@ -327953,7 +327953,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#2",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#2",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#2",
       "originalName": "var3_int",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -327964,7 +327964,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#3",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#3",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#3",
       "originalName": "var3",
       "renamedName": "runtimeExceptionLocal4",
       "declaration": {
@@ -327975,7 +327975,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#4",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#4",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#4",
       "originalName": "var4",
       "renamedName": "stringArrayLocal5",
       "declaration": {
@@ -327986,7 +327986,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#5",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#5",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#5",
       "originalName": "var5",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -327997,7 +327997,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#6",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#6",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#6",
       "originalName": "var6",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -328008,7 +328008,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#7",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#7",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#7",
       "originalName": "var8",
       "renamedName": "integerLocal8",
       "declaration": {
@@ -328019,7 +328019,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#8",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#8",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#8",
       "originalName": "var9",
       "renamedName": "integerLocal9",
       "declaration": {
@@ -328030,7 +328030,7 @@
     },
     {
       "symbol": "L:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#9",
-      "renamedSymbol": "L:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#9",
+      "renamedSymbol": "L:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#9",
       "originalName": "var10",
       "renamedName": "charSequenceLocal10",
       "declaration": {
@@ -328173,7 +328173,7 @@
     },
     {
       "symbol": "L:ji.a(IIZ)V#0",
-      "renamedSymbol": "L:ResourceArchive.performAction0807(IIZ)V#0",
+      "renamedSymbol": "L:ResourceArchive.pollTextEntryDialog(IIZ)V#0",
       "originalName": "var3",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -328184,7 +328184,7 @@
     },
     {
       "symbol": "L:ji.a(IIZ)V#1",
-      "renamedSymbol": "L:ResourceArchive.performAction0807(IIZ)V#1",
+      "renamedSymbol": "L:ResourceArchive.pollTextEntryDialog(IIZ)V#1",
       "originalName": "var4",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -328580,7 +328580,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#0",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#0",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#0",
       "originalName": "var3_int",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -328591,7 +328591,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#1",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#1",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#1",
       "originalName": "var3",
       "renamedName": "runtimeExceptionLocal2",
       "declaration": {
@@ -328602,7 +328602,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#2",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#2",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#2",
       "originalName": "var4",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -328613,7 +328613,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#3",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#3",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#3",
       "originalName": "var5",
       "renamedName": "charSequenceLocal4",
       "declaration": {
@@ -328624,7 +328624,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#4",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#4",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#4",
       "originalName": "stackIn_5_0",
       "renamedName": "stackBooleanLocal5",
       "declaration": {
@@ -328635,7 +328635,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#5",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#5",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#5",
       "originalName": "stackIn_8_0",
       "renamedName": "stackRuntimeExceptionLocal6",
       "declaration": {
@@ -328646,7 +328646,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#6",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#6",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#6",
       "originalName": "stackIn_8_1",
       "renamedName": "stackStringBuilderLocal7",
       "declaration": {
@@ -328657,7 +328657,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#7",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#7",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#7",
       "originalName": "stackIn_9_2",
       "renamedName": "stackStringLocal8",
       "declaration": {
@@ -328668,7 +328668,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#8",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#8",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "caughtExceptionLocal9",
       "declaration": {
@@ -328679,7 +328679,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;B)Z#9",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#9",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "caughtParameterLocal10",
       "declaration": {
@@ -328690,7 +328690,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#0",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#0",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#0",
       "originalName": "var3_int",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -328701,7 +328701,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#1",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#1",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#1",
       "originalName": "var3",
       "renamedName": "runtimeExceptionLocal2",
       "declaration": {
@@ -328712,7 +328712,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#2",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#2",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#2",
       "originalName": "var4",
       "renamedName": "charSequenceLocal3",
       "declaration": {
@@ -328723,7 +328723,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#3",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#3",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#3",
       "originalName": "stackIn_9_0",
       "renamedName": "stackRuntimeExceptionLocal4",
       "declaration": {
@@ -328734,7 +328734,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#4",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#4",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#4",
       "originalName": "stackIn_9_1",
       "renamedName": "stackStringBuilderLocal5",
       "declaration": {
@@ -328745,7 +328745,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#5",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#5",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#5",
       "originalName": "stackIn_10_2",
       "renamedName": "stackStringLocal6",
       "declaration": {
@@ -328756,7 +328756,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#6",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#6",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "caughtExceptionLocal7",
       "declaration": {
@@ -328767,7 +328767,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;I)Z#7",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#7",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "caughtParameterLocal8",
       "declaration": {
@@ -328778,7 +328778,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#0",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#0",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#0",
       "originalName": "var4_int",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -328789,7 +328789,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#1",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#1",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#1",
       "originalName": "var4",
       "renamedName": "runtimeExceptionLocal2",
       "declaration": {
@@ -328800,7 +328800,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#10",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#10",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#10",
       "originalName": "stackIn_19_2",
       "renamedName": "stackStringLocal11",
       "declaration": {
@@ -328811,7 +328811,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#11",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#11",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "caughtExceptionLocal12",
       "declaration": {
@@ -328822,7 +328822,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#12",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#12",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "caughtParameterLocal13",
       "declaration": {
@@ -328833,7 +328833,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#2",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#2",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#2",
       "originalName": "var5",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -328844,7 +328844,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#3",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#3",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#3",
       "originalName": "var6",
       "renamedName": "charSequenceLocal4",
       "declaration": {
@@ -328855,7 +328855,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#4",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#4",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#4",
       "originalName": "var7",
       "renamedName": "charSequenceLocal5",
       "declaration": {
@@ -328866,7 +328866,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#5",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#5",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#5",
       "originalName": "stackIn_12_0",
       "renamedName": "stackBooleanLocal6",
       "declaration": {
@@ -328877,7 +328877,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#6",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#6",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#6",
       "originalName": "stackIn_15_0",
       "renamedName": "stackRuntimeExceptionLocal7",
       "declaration": {
@@ -328888,7 +328888,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#7",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#7",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#7",
       "originalName": "stackIn_15_1",
       "renamedName": "stackStringBuilderLocal8",
       "declaration": {
@@ -328899,7 +328899,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#8",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#8",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#8",
       "originalName": "stackIn_16_2",
       "renamedName": "stackStringLocal9",
       "declaration": {
@@ -328910,7 +328910,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#9",
-      "renamedSymbol": "L:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#9",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#9",
       "originalName": "stackIn_18_1",
       "renamedName": "stackStringBuilderLocal10",
       "declaration": {
@@ -329691,7 +329691,7 @@
     },
     {
       "symbol": "L:ji.b(B)I#0",
-      "renamedSymbol": "L:ResourceArchive.computeInteger0816(B)I#0",
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#0",
       "originalName": "var2",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -329702,7 +329702,7 @@
     },
     {
       "symbol": "L:ji.b(B)I#1",
-      "renamedSymbol": "L:ResourceArchive.computeInteger0816(B)I#1",
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#1",
       "originalName": "var3",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -329713,7 +329713,7 @@
     },
     {
       "symbol": "L:ji.b(B)I#2",
-      "renamedSymbol": "L:ResourceArchive.computeInteger0816(B)I#2",
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#2",
       "originalName": "var4",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -329724,7 +329724,7 @@
     },
     {
       "symbol": "L:ji.b(B)I#3",
-      "renamedSymbol": "L:ResourceArchive.computeInteger0816(B)I#3",
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#3",
       "originalName": "var5",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -329735,7 +329735,7 @@
     },
     {
       "symbol": "L:ji.b(B)I#4",
-      "renamedSymbol": "L:ResourceArchive.computeInteger0816(B)I#4",
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#4",
       "originalName": "var4Lifetime1",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -329856,7 +329856,7 @@
     },
     {
       "symbol": "L:ji.c(II)V#0",
-      "renamedSymbol": "L:ResourceArchive.performAction0820(II)V#0",
+      "renamedSymbol": "L:ResourceArchive.writeTwoByteCommand(II)V#0",
       "originalName": "var2",
       "renamedName": "cipherPacketBufferLocal1",
       "declaration": {
@@ -442144,9 +442144,9 @@
     },
     {
       "symbol": "M:ji.a(CBLjava/lang/String;)[Ljava/lang/String;",
-      "renamedSymbol": "M:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;",
+      "renamedSymbol": "M:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "computeStringArray0801",
+      "renamedName": "splitOnCharacter",
       "declaration": {
         "file": "ji.java",
         "start": 21595,
@@ -442221,9 +442221,9 @@
     },
     {
       "symbol": "M:ji.a(IIZ)V",
-      "renamedSymbol": "M:ResourceArchive.performAction0807(IIZ)V",
+      "renamedSymbol": "M:ResourceArchive.pollTextEntryDialog(IIZ)V",
       "originalName": "a",
-      "renamedName": "performAction0807",
+      "renamedName": "pollTextEntryDialog",
       "declaration": {
         "file": "ji.java",
         "start": 24114,
@@ -442265,9 +442265,9 @@
     },
     {
       "symbol": "M:ji.a(Ljava/lang/String;B)Z",
-      "renamedSymbol": "M:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z",
+      "renamedSymbol": "M:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z",
       "originalName": "a",
-      "renamedName": "computeBoolean0811",
+      "renamedName": "tryLoadGroupByName",
       "declaration": {
         "file": "ji.java",
         "start": 4999,
@@ -442276,9 +442276,9 @@
     },
     {
       "symbol": "M:ji.a(Ljava/lang/String;I)Z",
-      "renamedSymbol": "M:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z",
+      "renamedSymbol": "M:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z",
       "originalName": "a",
-      "renamedName": "computeBoolean0812",
+      "renamedName": "hasGroupName",
       "declaration": {
         "file": "ji.java",
         "start": 6361,
@@ -442287,9 +442287,9 @@
     },
     {
       "symbol": "M:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z",
-      "renamedSymbol": "M:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z",
+      "renamedSymbol": "M:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z",
       "originalName": "a",
-      "renamedName": "computeBoolean0813",
+      "renamedName": "tryLoadFileByName",
       "declaration": {
         "file": "ji.java",
         "start": 2582,
@@ -442320,9 +442320,9 @@
     },
     {
       "symbol": "M:ji.b(B)I",
-      "renamedSymbol": "M:ResourceArchive.computeInteger0816(B)I",
+      "renamedSymbol": "M:ResourceArchive.getArchiveLoadPercent(B)I",
       "originalName": "b",
-      "renamedName": "computeInteger0816",
+      "renamedName": "getArchiveLoadPercent",
       "declaration": {
         "file": "ji.java",
         "start": 17497,
@@ -442342,9 +442342,9 @@
     },
     {
       "symbol": "M:ji.b(II)I",
-      "renamedSymbol": "M:ResourceArchive.computeInteger0818(II)I",
+      "renamedSymbol": "M:ResourceArchive.getFileCapacity(II)I",
       "originalName": "b",
-      "renamedName": "computeInteger0818",
+      "renamedName": "getFileCapacity",
       "declaration": {
         "file": "ji.java",
         "start": 4598,
@@ -442364,9 +442364,9 @@
     },
     {
       "symbol": "M:ji.c(II)V",
-      "renamedSymbol": "M:ResourceArchive.performAction0820(II)V",
+      "renamedSymbol": "M:ResourceArchive.writeTwoByteCommand(II)V",
       "originalName": "c",
-      "renamedName": "performAction0820",
+      "renamedName": "writeTwoByteCommand",
       "declaration": {
         "file": "ji.java",
         "start": 26323,
@@ -492678,7 +492678,7 @@
     },
     {
       "symbol": "P:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#0",
-      "renamedSymbol": "P:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#0",
+      "renamedSymbol": "P:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "characterArgument1",
       "declaration": {
@@ -492689,7 +492689,7 @@
     },
     {
       "symbol": "P:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#1",
-      "renamedSymbol": "P:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#1",
+      "renamedSymbol": "P:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "byteArgument2",
       "declaration": {
@@ -492700,7 +492700,7 @@
     },
     {
       "symbol": "P:ji.a(CBLjava/lang/String;)[Ljava/lang/String;#2",
-      "renamedSymbol": "P:ResourceArchive.computeStringArray0801(CBLjava/lang/String;)[Ljava/lang/String;#2",
+      "renamedSymbol": "P:ResourceArchive.splitOnCharacter(CBLjava/lang/String;)[Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "stringArgument3",
       "declaration": {
@@ -492865,7 +492865,7 @@
     },
     {
       "symbol": "P:ji.a(IIZ)V#0",
-      "renamedSymbol": "P:ResourceArchive.performAction0807(IIZ)V#0",
+      "renamedSymbol": "P:ResourceArchive.pollTextEntryDialog(IIZ)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -492876,7 +492876,7 @@
     },
     {
       "symbol": "P:ji.a(IIZ)V#1",
-      "renamedSymbol": "P:ResourceArchive.performAction0807(IIZ)V#1",
+      "renamedSymbol": "P:ResourceArchive.pollTextEntryDialog(IIZ)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -492887,7 +492887,7 @@
     },
     {
       "symbol": "P:ji.a(IIZ)V#2",
-      "renamedSymbol": "P:ResourceArchive.performAction0807(IIZ)V#2",
+      "renamedSymbol": "P:ResourceArchive.pollTextEntryDialog(IIZ)V#2",
       "originalName": "param2",
       "renamedName": "booleanArgument3",
       "declaration": {
@@ -492997,7 +492997,7 @@
     },
     {
       "symbol": "P:ji.a(Ljava/lang/String;B)Z#0",
-      "renamedSymbol": "P:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#0",
+      "renamedSymbol": "P:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#0",
       "originalName": "param0",
       "renamedName": "stringArgument1",
       "declaration": {
@@ -493008,7 +493008,7 @@
     },
     {
       "symbol": "P:ji.a(Ljava/lang/String;B)Z#1",
-      "renamedSymbol": "P:ResourceArchive.computeBoolean0811(Ljava/lang/String;B)Z#1",
+      "renamedSymbol": "P:ResourceArchive.tryLoadGroupByName(Ljava/lang/String;B)Z#1",
       "originalName": "param1",
       "renamedName": "byteArgument2",
       "declaration": {
@@ -493019,7 +493019,7 @@
     },
     {
       "symbol": "P:ji.a(Ljava/lang/String;I)Z#0",
-      "renamedSymbol": "P:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#0",
+      "renamedSymbol": "P:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#0",
       "originalName": "param0",
       "renamedName": "stringArgument1",
       "declaration": {
@@ -493030,7 +493030,7 @@
     },
     {
       "symbol": "P:ji.a(Ljava/lang/String;I)Z#1",
-      "renamedSymbol": "P:ResourceArchive.computeBoolean0812(Ljava/lang/String;I)Z#1",
+      "renamedSymbol": "P:ResourceArchive.hasGroupName(Ljava/lang/String;I)Z#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -493041,7 +493041,7 @@
     },
     {
       "symbol": "P:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#0",
-      "renamedSymbol": "P:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#0",
+      "renamedSymbol": "P:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#0",
       "originalName": "param0",
       "renamedName": "stringArgument1",
       "declaration": {
@@ -493052,7 +493052,7 @@
     },
     {
       "symbol": "P:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#1",
-      "renamedSymbol": "P:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#1",
+      "renamedSymbol": "P:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#1",
       "originalName": "param1",
       "renamedName": "booleanArgument2",
       "declaration": {
@@ -493063,7 +493063,7 @@
     },
     {
       "symbol": "P:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z#2",
-      "renamedSymbol": "P:ResourceArchive.computeBoolean0813(Ljava/lang/String;ZLjava/lang/String;)Z#2",
+      "renamedSymbol": "P:ResourceArchive.tryLoadFileByName(Ljava/lang/String;ZLjava/lang/String;)Z#2",
       "originalName": "param2",
       "renamedName": "stringArgument3",
       "declaration": {
@@ -493129,7 +493129,7 @@
     },
     {
       "symbol": "P:ji.b(B)I#0",
-      "renamedSymbol": "P:ResourceArchive.computeInteger0816(B)I#0",
+      "renamedSymbol": "P:ResourceArchive.getArchiveLoadPercent(B)I#0",
       "originalName": "param0",
       "renamedName": "byteArgument1",
       "declaration": {
@@ -493162,7 +493162,7 @@
     },
     {
       "symbol": "P:ji.b(II)I#0",
-      "renamedSymbol": "P:ResourceArchive.computeInteger0818(II)I#0",
+      "renamedSymbol": "P:ResourceArchive.getFileCapacity(II)I#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -493173,7 +493173,7 @@
     },
     {
       "symbol": "P:ji.b(II)I#1",
-      "renamedSymbol": "P:ResourceArchive.computeInteger0818(II)I#1",
+      "renamedSymbol": "P:ResourceArchive.getFileCapacity(II)I#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -493206,7 +493206,7 @@
     },
     {
       "symbol": "P:ji.c(II)V#0",
-      "renamedSymbol": "P:ResourceArchive.performAction0820(II)V#0",
+      "renamedSymbol": "P:ResourceArchive.writeTwoByteCommand(II)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -493217,7 +493217,7 @@
     },
     {
       "symbol": "P:ji.c(II)V#1",
-      "renamedSymbol": "P:ResourceArchive.performAction0820(II)V#1",
+      "renamedSymbol": "P:ResourceArchive.writeTwoByteCommand(II)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -537265,7 +537265,7 @@
       "original": "a.java",
       "renamed": "MixedSupport001.java",
       "inputSha256": "8a2878feda6b80acacf6a2ef30d74f85ab85e52af30e16498630be694d5e9c83",
-      "outputSha256": "6ab1512e19c6b1745801b3d0aead2986bcf4fac6199b6b2910a922d6cf660ebd",
+      "outputSha256": "d06fd2db40c5421755abec61af9e9c101faf86fc37549ee007b5f954dbe70616",
       "edits": [
         {
           "start": 44,
@@ -545777,7 +545777,7 @@
           "end": 28593,
           "symbol": "M:ji.a(CBLjava/lang/String;)[Ljava/lang/String;",
           "original": "a",
-          "renamed": "computeStringArray0801"
+          "renamed": "splitOnCharacter"
         },
         {
           "start": 28610,
@@ -553348,7 +553348,7 @@
       "original": "ad.java",
       "renamed": "ResourceSupport001.java",
       "inputSha256": "c821dc5f17fe79593f4e2a2ba4268021905d1aca7f426d08e9c369efbe6acd5d",
-      "outputSha256": "fe26504b45841a83b25362851d09f12ef77735e52d555f6d8c36e592c0051564",
+      "outputSha256": "3772a2811e8d5ea2e5c03ffb77508484e40ce3042025a2ba345a04d35459fa55",
       "edits": [
         {
           "start": 50,
@@ -554041,7 +554041,7 @@
           "end": 2172,
           "symbol": "M:ji.b(B)I",
           "original": "b",
-          "renamed": "computeInteger0816"
+          "renamed": "getArchiveLoadPercent"
         },
         {
           "start": 2209,
@@ -592234,7 +592234,7 @@
       "original": "bd.java",
       "renamed": "FunOrbClient.java",
       "inputSha256": "358bafbd0819303ebe572e323a1f53f866e3668a85faa63c2e4a806f5f391336",
-      "outputSha256": "a57409bfc1f86d434b97925469cff52df80bb67a58b2ea1bb72153c0215a5477",
+      "outputSha256": "280d3801279bc525dbf261e584be22c67fc7ec96646db85c6cc25116dd367f46",
       "edits": [
         {
           "start": 53,
@@ -596525,7 +596525,7 @@
           "end": 13435,
           "symbol": "M:ji.a(Ljava/lang/String;I)Z",
           "original": "a",
-          "renamed": "computeBoolean0812"
+          "renamed": "hasGroupName"
         },
         {
           "start": 13440,
@@ -596553,7 +596553,7 @@
           "end": 13489,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 13527,
@@ -636351,7 +636351,7 @@
       "original": "cb.java",
       "renamed": "MixedSupport014.java",
       "inputSha256": "fccb2d0e71e63b5399c2253978833ff9fe6b847c874f84c87c8d889eb25356a8",
-      "outputSha256": "5133062cbb3f843de680ddd0c4a6f321987cb2e064df44ddcbd619017e2c5c7f",
+      "outputSha256": "e55dde0f1a29563fe7016a78d3f0c97e596c98b326e6f2f3f37b760e017930b7",
       "edits": [
         {
           "start": 50,
@@ -637289,7 +637289,7 @@
           "end": 2552,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 2553,
@@ -637450,7 +637450,7 @@
           "end": 2878,
           "symbol": "M:ji.b(B)I",
           "original": "b",
-          "renamed": "computeInteger0816"
+          "renamed": "getArchiveLoadPercent"
         },
         {
           "start": 2947,
@@ -652427,7 +652427,7 @@
       "original": "cf.java",
       "renamed": "TextLayout.java",
       "inputSha256": "139f2a4cea4bcc406002679f50f461a2b2119344f1c8beb7f89f72c221436d8e",
-      "outputSha256": "e35b2cec369975a780fee442cb8b22d9b386e74727e91f548ae0f7143d717b95",
+      "outputSha256": "f0628b391d7d3bfd883a27924569a6a37edad27d9b46ebb2a481347f630b640f",
       "edits": [
         {
           "start": 53,
@@ -653827,7 +653827,7 @@
           "end": 4824,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 4869,
@@ -653939,7 +653939,7 @@
           "end": 5106,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 5151,
@@ -654065,7 +654065,7 @@
           "end": 5390,
           "symbol": "M:ji.b(B)I",
           "original": "b",
-          "renamed": "computeInteger0816"
+          "renamed": "getArchiveLoadPercent"
         },
         {
           "start": 5435,
@@ -764911,7 +764911,7 @@
       "original": "cn.java",
       "renamed": "UiComponentPart005.java",
       "inputSha256": "880d0777d24dad51980a5da0a33c635683d03321b50514183291c44cf4ba51fa",
-      "outputSha256": "705a245db3d17088ef26d193ac6f90ae47ecacc6023861c4641bf88890629540",
+      "outputSha256": "117bdd0e32f610be23573c74c7e7155dca510e1b0270e18be83a84d65786ccc3",
       "edits": [
         {
           "start": 50,
@@ -766381,7 +766381,7 @@
           "end": 5161,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 5239,
@@ -766423,7 +766423,7 @@
           "end": 5329,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 5406,
@@ -766521,7 +766521,7 @@
           "end": 5710,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 5795,
@@ -766563,7 +766563,7 @@
           "end": 5891,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 5976,
@@ -766689,7 +766689,7 @@
           "end": 6372,
           "symbol": "M:ji.a(Ljava/lang/String;I)Z",
           "original": "a",
-          "renamed": "computeBoolean0812"
+          "renamed": "hasGroupName"
         },
         {
           "start": 6439,
@@ -766710,7 +766710,7 @@
           "end": 6451,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 6526,
@@ -766752,7 +766752,7 @@
           "end": 6622,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 6707,
@@ -766794,7 +766794,7 @@
           "end": 6803,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 6888,
@@ -769946,7 +769946,7 @@
       "original": "da.java",
       "renamed": "MixedSupport022.java",
       "inputSha256": "ac25e9e6d3c3e861cd056a348527863fb4097a9337a0320095e287b3df7046be",
-      "outputSha256": "97cec6b11bebf83fcfbe88dc449e8c37853c112255b3aace26c5b75cf6b0555e",
+      "outputSha256": "304a643abfa409041ac0db070aecdd78c4ba69713ef3a0c7c651c5c33eb070b9",
       "edits": [
         {
           "start": 50,
@@ -770324,7 +770324,7 @@
           "end": 1133,
           "symbol": "M:ji.a(CBLjava/lang/String;)[Ljava/lang/String;",
           "original": "a",
-          "renamed": "computeStringArray0801"
+          "renamed": "splitOnCharacter"
         },
         {
           "start": 1150,
@@ -844510,7 +844510,7 @@
       "original": "em.java",
       "renamed": "MixedSupport032.java",
       "inputSha256": "b80ba9ad5f27351207c926c4dc5c0ec7ba2c074cf867a163c7b6107b04d7d4fb",
-      "outputSha256": "8cc71c663e68adebef7fe52a29451a053539ca1baff8f5ecdf760757042ac832",
+      "outputSha256": "066723cddd3634a20563be8a6d811946255054dd5da0e4e59e624ce6d2b5e769",
       "edits": [
         {
           "start": 50,
@@ -848388,7 +848388,7 @@
           "end": 12551,
           "symbol": "M:ji.b(II)I",
           "original": "b",
-          "renamed": "computeInteger0818"
+          "renamed": "getFileCapacity"
         },
         {
           "start": 12594,
@@ -848409,7 +848409,7 @@
           "end": 12639,
           "symbol": "M:ji.b(II)I",
           "original": "b",
-          "renamed": "computeInteger0818"
+          "renamed": "getFileCapacity"
         },
         {
           "start": 12725,
@@ -1026314,7 +1026314,7 @@
       "original": "ji.java",
       "renamed": "ResourceArchive.java",
       "inputSha256": "ea677fc6160ec37181e2c81583f5ebdd4e9d855cde87422413bd31c7782dc5ec",
-      "outputSha256": "949dd84265ed1dfee58f7367d0a2976834d7159eb024709c015ef580931723cd",
+      "outputSha256": "89a23d1f39990606b02e2d25f8674fcf8fee02cabed160e080b9801eb4c053a2",
       "edits": [
         {
           "start": 50,
@@ -1026965,7 +1026965,7 @@
           "end": 2583,
           "symbol": "M:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z",
           "original": "a",
-          "renamed": "computeBoolean0813"
+          "renamed": "tryLoadFileByName"
         },
         {
           "start": 2591,
@@ -1027462,7 +1027462,7 @@
           "end": 4599,
           "symbol": "M:ji.b(II)I",
           "original": "b",
-          "renamed": "computeInteger0818"
+          "renamed": "getFileCapacity"
         },
         {
           "start": 4604,
@@ -1027567,7 +1027567,7 @@
           "end": 5000,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 5008,
@@ -1027896,7 +1027896,7 @@
           "end": 6362,
           "symbol": "M:ji.a(Ljava/lang/String;I)Z",
           "original": "a",
-          "renamed": "computeBoolean0812"
+          "renamed": "hasGroupName"
         },
         {
           "start": 6370,
@@ -1031200,7 +1031200,7 @@
           "end": 17498,
           "symbol": "M:ji.b(B)I",
           "original": "b",
-          "renamed": "computeInteger0816"
+          "renamed": "getArchiveLoadPercent"
         },
         {
           "start": 17504,
@@ -1032278,7 +1032278,7 @@
           "end": 21596,
           "symbol": "M:ji.a(CBLjava/lang/String;)[Ljava/lang/String;",
           "original": "a",
-          "renamed": "computeStringArray0801"
+          "renamed": "splitOnCharacter"
         },
         {
           "start": 21602,
@@ -1032978,7 +1032978,7 @@
           "end": 24115,
           "symbol": "M:ji.a(IIZ)V",
           "original": "a",
-          "renamed": "performAction0807"
+          "renamed": "pollTextEntryDialog"
         },
         {
           "start": 24120,
@@ -1033636,7 +1033636,7 @@
           "end": 26324,
           "symbol": "M:ji.c(II)V",
           "original": "c",
-          "renamed": "performAction0820"
+          "renamed": "writeTwoByteCommand"
         },
         {
           "start": 26329,
@@ -1138977,7 +1138977,7 @@
       "original": "lk.java",
       "renamed": "BucketBoard.java",
       "inputSha256": "ed0d8f07e4545d4d7e69e57bcd155869c08f7c159d3e86c7da39066bea79d35b",
-      "outputSha256": "11b30d1f56bc6d00c0ddf0dd6de25a302cd18202096880872734d0b952becf10",
+      "outputSha256": "5084dae7742f433f537e3aa06cf43ecb52ee4e63f34194c8a4b2dd24d60509f6",
       "edits": [
         {
           "start": 71,
@@ -1149830,7 +1149830,7 @@
           "end": 33741,
           "symbol": "M:ji.a(IIZ)V",
           "original": "a",
-          "renamed": "performAction0807"
+          "renamed": "pollTextEntryDialog"
         },
         {
           "start": 33742,
@@ -1199632,7 +1199632,7 @@
       "original": "me.java",
       "renamed": "NetworkSupport007.java",
       "inputSha256": "2d458389fc1c159f39a981ef2d4abe1861137c10041cc7c2e991a1af5347c770",
-      "outputSha256": "025a8aa21420382e594cd6fe39fe17f4a5b7bd5b1aee3046cebbc121d180e358",
+      "outputSha256": "2a6280f4334ccbc0ad7caad135cbe2d5cf81d5d414139293d3dfae234b866da8",
       "edits": [
         {
           "start": 50,
@@ -1200647,7 +1200647,7 @@
           "end": 3673,
           "symbol": "M:ji.a(CBLjava/lang/String;)[Ljava/lang/String;",
           "original": "a",
-          "renamed": "computeStringArray0801"
+          "renamed": "splitOnCharacter"
         },
         {
           "start": 3690,
@@ -1365872,7 +1365872,7 @@
       "original": "pb.java",
       "renamed": "GameDomainSupport005.java",
       "inputSha256": "a5e26abff406a5733c7306731273da0cb24a1e3225bf7f5ae731a99401fb9707",
-      "outputSha256": "d33495396960fa86e722169f1257c49b09637c374d818e71cd49e4640ef80a65",
+      "outputSha256": "3701e1efd209e164a8c0541e2a99e2c742136e5ed982662b2d0603332d0708dc",
       "edits": [
         {
           "start": 50,
@@ -1366964,7 +1366964,7 @@
           "end": 3183,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 3224,
@@ -1367020,7 +1367020,7 @@
           "end": 3310,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 3350,
@@ -1542054,7 +1542054,7 @@
       "original": "rg.java",
       "renamed": "MixedSupport109.java",
       "inputSha256": "d633e48b35f2495291f83087632bb185339991e093f9590303d4ca1edfd41fcd",
-      "outputSha256": "726c9d91ffd7783e66bc89f05cfaef10ee7fdf330c1ba31a66627a9a8902cee3",
+      "outputSha256": "08f6fe5dadb2d0fd359bb30dc55bec93a978fac88f4818f0a7b55acb79cb97a4",
       "edits": [
         {
           "start": 50,
@@ -1542327,7 +1542327,7 @@
           "end": 1064,
           "symbol": "M:ji.a(CBLjava/lang/String;)[Ljava/lang/String;",
           "original": "a",
-          "renamed": "computeStringArray0801"
+          "renamed": "splitOnCharacter"
         },
         {
           "start": 1081,
@@ -1602117,7 +1602117,7 @@
       "original": "sm.java",
       "renamed": "NetworkSupport012.java",
       "inputSha256": "a738038e8c05014088bcf87fd0d8f3ccb74d532e3de1e5dde5eb6a07a271bb4c",
-      "outputSha256": "8a3beb9ab1c3b51f17644b0e49c8ecd4827875631af76124c6d173b41febc619",
+      "outputSha256": "1ff74db2bbc88a39da4218a09aeb07d3e10d3d4c7a13842b4f08a907178f1399",
       "edits": [
         {
           "start": 50,
@@ -1603398,7 +1603398,7 @@
           "end": 5131,
           "symbol": "M:ji.b(II)I",
           "original": "b",
-          "renamed": "computeInteger0818"
+          "renamed": "getFileCapacity"
         },
         {
           "start": 5182,
@@ -1603419,7 +1603419,7 @@
           "end": 5249,
           "symbol": "M:ji.b(II)I",
           "original": "b",
-          "renamed": "computeInteger0818"
+          "renamed": "getFileCapacity"
         },
         {
           "start": 5323,
@@ -1614315,7 +1614315,7 @@
       "original": "ta.java",
       "renamed": "MixedSupport119.java",
       "inputSha256": "f94df617b539fc759bd024eba3be72c17c70c213198a2badf23e905b2cabf7a8",
-      "outputSha256": "ce21d60a1dc6d41637959c71acaea572f55625b50246a277ff9edcd049ddc0a3",
+      "outputSha256": "2f347cd4ca6d8fd0f00007c541e95035df0f6df114b4378e14f0ac5c197fc24d",
       "edits": [
         {
           "start": 50,
@@ -1615120,7 +1615120,7 @@
           "end": 2953,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 3034,
@@ -1615148,7 +1615148,7 @@
           "end": 3078,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 3123,
@@ -1615176,7 +1615176,7 @@
           "end": 3169,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 3217,
@@ -1682805,7 +1682805,7 @@
       "original": "va.java",
       "renamed": "VorbisSample.java",
       "inputSha256": "2f16eeab9de4cdc5ce2b234a983fff5658a3a1ad6e4fc6ed1178cb4b1537c271",
-      "outputSha256": "22016ceab7396a723075897e2691d842dd832887a19d36035d4591597a06b033",
+      "outputSha256": "963e634075e8d02db86efe1817be0a637eb33a28c8bcc2dde70f73c22f2abe35",
       "edits": [
         {
           "start": 69,
@@ -1692472,7 +1692472,7 @@
           "end": 28049,
           "symbol": "M:ji.a(Ljava/lang/String;ZLjava/lang/String;)Z",
           "original": "a",
-          "renamed": "computeBoolean0813"
+          "renamed": "tryLoadFileByName"
         },
         {
           "start": 28050,
@@ -1700731,7 +1700731,7 @@
       "original": "vg.java",
       "renamed": "MixedSupport138.java",
       "inputSha256": "16914e1c46a4c89ef94e6d1466a2f508e20f5c072d835629ccd152f77455ead7",
-      "outputSha256": "e3faaf1c2e7af098ce7a46a3aff38d78f5757f01eaec39576ed5352552106fdd",
+      "outputSha256": "1940ee32d72be80383484f7497cfe001e703b914ccfff444c53758bca3949095",
       "edits": [
         {
           "start": 50,
@@ -1704756,7 +1704756,7 @@
           "end": 10450,
           "symbol": "M:ji.c(II)V",
           "original": "c",
-          "renamed": "performAction0820"
+          "renamed": "writeTwoByteCommand"
         },
         {
           "start": 10451,
@@ -1737934,7 +1737934,7 @@
       "original": "wd.java",
       "renamed": "MixedSupport145.java",
       "inputSha256": "5fff480ecc1c77f7fc9413c2b11ce1543bae2ee8c84871920504f8d5b747de3d",
-      "outputSha256": "00c07f5b91cdcffc317ed0dbd05cb49dc4307801170a75592ecb6ce74f34f01b",
+      "outputSha256": "a54b6e674a3ea39c9386243194ac2e9da66b1a08c53f830a0f81543cc9dd918c",
       "edits": [
         {
           "start": 50,
@@ -1738270,7 +1738270,7 @@
           "end": 1318,
           "symbol": "M:ji.a(CBLjava/lang/String;)[Ljava/lang/String;",
           "original": "a",
-          "renamed": "computeStringArray0801"
+          "renamed": "splitOnCharacter"
         },
         {
           "start": 1335,
@@ -1740645,7 +1740645,7 @@
       "original": "wf.java",
       "renamed": "SoftwareFramebuffer.java",
       "inputSha256": "9adf6ebbc0d6806a18ad9b4f36c028bd0f543e263e15dc3b2eee48a3035d9f39",
-      "outputSha256": "49d92d2774914aad20bb9f1232fa69e501c648f9ddb1084c54fcab535b989e9a",
+      "outputSha256": "df005d5a4e5d567ba8d4edf630face9e3ac51515cade8b5e4b2e71ccb34678ab",
       "edits": [
         {
           "start": 71,
@@ -1742864,7 +1742864,7 @@
           "end": 6844,
           "symbol": "M:ji.a(Ljava/lang/String;B)Z",
           "original": "a",
-          "renamed": "computeBoolean0811"
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 6918,
@@ -1763716,10 +1763716,10 @@
       "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
       "subdirectory": "games/dekobloko"
     },
-    "rulesSha256": "c0e771a5fe84c5985732550f4540a74777de766d86852959dd59daa1f6eba051",
+    "rulesSha256": "53acca525188cac6e15df8f96b8bfdb95c1ceb1bd1929df9961fc82a52adc0ce",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
-    "outputTreeSha256": "1bc3e9e019e65bdb8f5f8efa30f413eecd0c4ea1aa17996822cfa31112e9a8ab",
+    "outputTreeSha256": "f2b2682a7fe21e022ccc1c4d34c7ee4450db191f8c62eeb52b3c8084f6fa5ad1",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

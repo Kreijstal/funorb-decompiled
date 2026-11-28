@@ -411,8 +411,8 @@ abstract class ag extends GameApplet {
         if (IntrusiveDeque.field_d == 2) {
           if (kl.field_b != null &&
             kl.field_b.ensureIndexLoaded((byte) 95)) {
-            if (kl.field_b.a(-20955, "")) {
-              if (kl.field_b.a("", param1 ^ 9882)) {
+            if (kl.field_b.hasGroupName(-20955, "")) {
+              if (kl.field_b.tryLoadGroupByName("", param1 ^ 9882)) {
                 eh.a((byte) 63, kl.field_b);
                 kl.field_b = null;
                 tc.j(32);

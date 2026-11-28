@@ -31,11 +31,11 @@ final class ni {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2.ensureIndexLoaded((byte) -36) &&
-            param2.a("commonui", (byte) -109)) {
+            param2.tryLoadGroupByName("commonui", (byte) -109)) {
             if (param0.ensureIndexLoaded((byte) -36) &&
-              param0.a("commonui", (byte) -109)) {
+              param0.tryLoadGroupByName("commonui", (byte) -109)) {
               if (param1.ensureIndexLoaded((byte) -36) &&
-                param1.a("button.gif", (byte) -109)) {
+                param1.tryLoadGroupByName("button.gif", (byte) -109)) {
                 if (param3 == -104) {
                   return true;
                 }

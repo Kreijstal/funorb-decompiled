@@ -70,7 +70,7 @@ final class ResourceArchive {
         try {
           if (!param1) {
             var5 = (String) null;
-            this.a((String) null, (String) null, (byte) -41);
+            this.tryLoadFileByName((String) null, (String) null, (byte) -41);
           }
           if (!this.validateGroupId((byte) -76, param2)) {
             stackIn_5_0 = -1;
@@ -118,7 +118,7 @@ final class ResourceArchive {
           }
         }
         if (param0 != 29741) {
-          this.a(53, (String) (this.field_h[3]));
+          this.hasGroupName(53, (String) (this.field_h[3]));
         }
         return var2 != 0;
     }
@@ -136,7 +136,7 @@ final class ResourceArchive {
         return this.field_a.getGroupRequestProgressPercent(param1, true);
     }
 
-    final static String a(long param0, int param1) {
+    final static String decodeBase37DisplayName(long param0, int param1) {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
@@ -226,7 +226,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(int param0, String param1) {
+    final boolean hasGroupName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -299,7 +299,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int a(byte param0) {
+    final synchronized int getArchiveLoadPercent(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -350,7 +350,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final boolean a(String param0, String param1, byte param2) {
+    final boolean tryLoadFileByName(String param0, String param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -369,7 +369,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           if (param2 != -17) {
-            ResourceArchive.a((ResourceArchive) null, (byte) 1, -121, ((int[]) (this.field_h[2]))[5], (ResourceArchive) (this.field_h[0]));
+            ResourceArchive.loadBitmapFont((ResourceArchive) null, (byte) 1, -121, ((int[]) (this.field_h[2]))[5], (ResourceArchive) (this.field_h[0]));
           }
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
@@ -776,7 +776,7 @@ final class ResourceArchive {
         }
     }
 
-    final static int b(int param0, int param1) {
+    final static int cosineFixed16(int param0, int param1) {
         if (param1 <= 118) {
           return -2;
         }
@@ -787,7 +787,7 @@ final class ResourceArchive {
         return param0 < 2048 ? bd.field_c[-param0 + 2048] : -bd.field_c[-2048 + param0];
     }
 
-    final static i a(ResourceArchive param0, byte param1, int param2, int param3, ResourceArchive param4) {
+    final static i loadBitmapFont(ResourceArchive param0, byte param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         i stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -859,7 +859,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(String param0, int param1) {
+    final boolean tryLoadGroupByName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;

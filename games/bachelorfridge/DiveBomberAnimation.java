@@ -50,7 +50,7 @@ final class DiveBomberAnimation extends EventAnimation {
 
     private final void e(byte param0) {
         al.a(109, this.field_v.moveId);
-        BattleCreature var2 = this.field_v.creature.a(36, this.screen.field_h);
+        BattleCreature var2 = this.field_v.creature.resolveCreature(36, this.screen.field_h);
         if (param0 != -60) {
           return;
         }
@@ -219,7 +219,7 @@ final class DiveBomberAnimation extends EventAnimation {
     private final void f(byte param0) {
         CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
-        BattleCreature var2 = this.field_v.creature.a(53, this.screen.field_h);
+        BattleCreature var2 = this.field_v.creature.resolveCreature(53, this.screen.field_h);
         if (var2.isDown(127)) {
           return;
         }
@@ -229,7 +229,7 @@ final class DiveBomberAnimation extends EventAnimation {
         }
         al.a(89, this.field_v.moveId);
         while (var3 != null) {
-          var4 = var3.target.a(-27449, this.screen);
+          var4 = var3.target.resolveCreatureView(-27449, this.screen);
           var4.b(-1, 6);
           var3.apply(var2, this.screen.field_h, 12);
           this.addChild(27799, new DamagePopupAnimation(this.screen, var4, 40));

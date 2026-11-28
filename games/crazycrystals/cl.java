@@ -40,10 +40,10 @@ final class cl extends hk {
     }
 
     final void a(int param0, int param1, ta param2) {
-        ln var4 = null;
+        ScoreModifier var4 = null;
         int var5 = 0;
         try {
-          var4 = (ln) (vm.field_j[param0].elementAt(r.field_i[param0]));
+          var4 = (ScoreModifier) (vm.field_j[param0].elementAt(LevelLostScene.field_i[param0]));
           if (param1 != 23041505) {
             field_m = (PcmSample) null;
           }
@@ -55,7 +55,7 @@ final class cl extends hk {
             this.field_l = this.field_l + var5;
             this.field_h = this.field_h + 1;
           }
-          r.field_i[param0] = r.field_i[param0] + 1;
+          LevelLostScene.field_i[param0] = LevelLostScene.field_i[param0] + 1;
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "cl.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

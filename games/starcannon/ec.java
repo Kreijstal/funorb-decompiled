@@ -25,13 +25,13 @@ final class ec {
           if (!bf.field_y.ensureIndexLoaded((byte) 99)) {
             return 20;
           }
-          if (!bf.field_y.a("commonui", -9883)) {
+          if (!bf.field_y.tryLoadGroupByName("commonui", -9883)) {
             return 40;
           }
           if (!Bzip2State.field_k.ensureIndexLoaded((byte) 89)) {
             return 50;
           }
-          if (!Bzip2State.field_k.a("commonui", -9883)) {
+          if (!Bzip2State.field_k.tryLoadGroupByName("commonui", -9883)) {
             return 60;
           }
           if (!li.field_b.ensureIndexLoaded((byte) 101)) {
@@ -46,23 +46,23 @@ final class ec {
           if (!kl.field_b.ensureIndexLoaded((byte) 100)) {
             return 14;
           }
-          if (!kl.field_b.a(-20955, "")) {
+          if (!kl.field_b.hasGroupName(-20955, "")) {
             return 29;
           }
-          if (!kl.field_b.a("", -9883)) {
+          if (!kl.field_b.tryLoadGroupByName("", -9883)) {
             return 29;
           }
         }
         if (!bf.field_y.ensureIndexLoaded((byte) 125)) {
           return 43;
         }
-        if (!bf.field_y.a("commonui", -9883)) {
+        if (!bf.field_y.tryLoadGroupByName("commonui", -9883)) {
           return 57;
         }
         if (!Bzip2State.field_k.ensureIndexLoaded((byte) 89)) {
           return 71;
         }
-        if (!Bzip2State.field_k.a("commonui", -9883)) {
+        if (!Bzip2State.field_k.tryLoadGroupByName("commonui", -9883)) {
           return 80;
         }
         if (!li.field_b.ensureIndexLoaded((byte) 115)) {

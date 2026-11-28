@@ -674,8 +674,8 @@ abstract class GameShell extends GameApplet {
         if (gl.field_I == 2) {
           if (null != ff.field_b &&
             ff.field_b.ensureIndexLoaded(-25)) {
-            if (ff.field_b.a("", (byte) -125)) {
-              if (ff.field_b.b("", (byte) -3)) {
+            if (ff.field_b.hasGroupName("", (byte) -125)) {
+              if (ff.field_b.tryLoadGroupByName("", (byte) -3)) {
                 sf.a((byte) -114, ff.field_b);
                 ff.field_b = null;
                 qi.d(83);

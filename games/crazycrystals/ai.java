@@ -269,13 +269,13 @@ final class ai implements Runnable {
           var14 = param0.a((byte) -108);
           var8 = param4.a((byte) -108);
           if (null == oi.field_c &&
-            !te.a((byte) -19, false)) {
+            !ResultScene.pollLoginConnection((byte) -19, false)) {
             stackIn_7_0 = -1;
             return stackIn_7_0;
           }
           if (gj.field_k == cf.field_a) {
             tp.field_f.position = 0;
-            ja.field_f = null;
+            LevelCompleteScene.field_f = null;
             if (param2 != null) {
               var9 = 0;
               if (param1) {
@@ -351,7 +351,7 @@ final class ai implements Runnable {
                 gj.field_k = kf.field_b;
               } else {
                 fq.a(ui.b((byte) -123), (byte) 75);
-                ja.field_f = new Boolean(hm.a(kd.field_n, -2));
+                LevelCompleteScene.field_f = new Boolean(hm.a(kd.field_n, -2));
                 kd.field_n.position = 0;
               }
             }

@@ -138,18 +138,18 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3.ensureIndexLoaded(0) &&
-            param3.a(-3, "commonui")) {
+            param3.tryLoadGroupByName(-3, "commonui")) {
             if (!param0.ensureIndexLoaded(0)) {
               return false;
             }
-            if (!param0.a(-3, "commonui")) {
+            if (!param0.tryLoadGroupByName(-3, "commonui")) {
               return false;
             }
             if (param2) {
               return true;
             }
             if (param1.ensureIndexLoaded(0) &&
-              param1.a(-3, "button.gif")) {
+              param1.tryLoadGroupByName(-3, "button.gif")) {
               return true;
             }
             return false;

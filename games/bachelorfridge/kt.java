@@ -39,8 +39,8 @@ final class kt extends EventEffect {
     final void apply(BattleCreature param0, BattleState param1, int param2) {
         BattleCreature var4 = null;
         try {
-          var4 = this.target.a(param2 ^ 93, param1);
-          var4.j(this.field_l, param2 ^ param2);
+          var4 = this.target.resolveCreature(param2 ^ 93, param1);
+          var4.setCooldownForMoveSlot(this.field_l, param2 ^ param2);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "kt.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

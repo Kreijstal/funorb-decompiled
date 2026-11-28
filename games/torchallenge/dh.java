@@ -25,7 +25,7 @@ final class dh extends df {
           if (!param2) {
             field_V = (am) null;
           }
-          var4 = param1.c(param0, -103);
+          var4 = param1.getFlatFile(param0, -103);
           var3 = var4;
           if (var4 != null) {
             stackIn_6_0 = new fb(var4);

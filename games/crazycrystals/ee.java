@@ -569,7 +569,7 @@ final class ee extends lk {
         int var7 = 0;
         var7 = CrazyCrystals.field_B;
         try {
-          if (ek.field_h != gj.field_k) {
+          if (LevelCompleteEntrancePhase.field_h != gj.field_k) {
             return false;
           }
           if (param1 != 64) {
@@ -630,8 +630,8 @@ final class ee extends lk {
               return true;
             }
             var4 = IntrusiveDeque.field_d;
-            if (0.0 != kk.field_b) {
-              var4 = (int)((double)var4 + og.field_w.nextGaussian() * kk.field_b);
+            if (0.0 != FloatingScoreLabel.field_b) {
+              var4 = (int)((double)var4 + og.field_w.nextGaussian() * FloatingScoreLabel.field_b);
               if (var4 < 0) {
                 var4 = 0;
               }

@@ -1179,7 +1179,7 @@ public final class TorChallenge extends GameClientBase {
           t.a(-67);
           if (null != DelegatingCanvas.field_d) {
             if (aj.field_f.ensureIndexLoaded(-7957) &&
-              aj.field_f.b(5, "basic")) {
+              aj.field_f.tryLoadGroupByName(5, "basic")) {
               if (DelegatingCanvas.field_d.ensureIndexLoaded(-7957) &&
                 DelegatingCanvas.field_d.tryLoadAllGroups((byte) 79)) {
                 if (SpriteLoader.field_f.ensureIndexLoaded(-7957) &&

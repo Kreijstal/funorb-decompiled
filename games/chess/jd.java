@@ -115,20 +115,20 @@ final class jd {
         if (!fl.field_m.ensureIndexLoaded((byte) 121)) {
           return gb.field_o;
         }
-        if (!fl.field_m.b("commonui", 100)) {
+        if (!fl.field_m.tryLoadGroupByName("commonui", 100)) {
           return k.field_V + " - " + fl.field_m.getGroupLoadPercentByName("commonui", 0) + "%";
         }
         if (!Chess.field_B.ensureIndexLoaded((byte) 119)) {
           return HuffmanCodec.field_d;
         }
-        if (!Chess.field_B.b("commonui", 100)) {
+        if (!Chess.field_B.tryLoadGroupByName("commonui", 100)) {
           return nc.field_P + " - " + Chess.field_B.getGroupLoadPercentByName("commonui", 0) + "%";
         }
         if (!bi.field_a.ensureIndexLoaded((byte) 120)) {
           return ld.field_a;
         }
         if (!bi.field_a.tryLoadAllGroups((byte) -40)) {
-          return wn.field_g + " - " + bi.field_a.a((byte) -91) + "%";
+          return wn.field_g + " - " + bi.field_a.getArchiveLoadPercent((byte) -91) + "%";
         }
         if (!param0) {
           return m.field_c;

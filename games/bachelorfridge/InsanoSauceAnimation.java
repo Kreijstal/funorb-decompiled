@@ -58,7 +58,7 @@ final class InsanoSauceAnimation extends EventAnimation {
     private final void e(byte param0) {
         CreatureActor var5 = null;
         int var6 = BachelorFridge.field_y;
-        BattleCreature var7 = this.field_w.creature.a(param0 + 9, this.screen.field_h);
+        BattleCreature var7 = this.field_w.creature.resolveCreature(param0 + 9, this.screen.field_h);
         BattleCreature var2 = var7;
         if (var7.isDown(107)) {
           return;
@@ -70,7 +70,7 @@ final class InsanoSauceAnimation extends EventAnimation {
         al.a(109, this.field_w.moveId);
         int var4 = 0;
         while (var3 != null) {
-          var5 = var3.target.a(-27449, this.screen);
+          var5 = var3.target.resolveCreatureView(-27449, this.screen);
           var5.b(-1, 6);
           if (var3 instanceof DamageEffect) {
             ((DamageEffect) (var3)).a((byte) 74, var7, this.screen.field_h, this.field_w.field_q[var4]);
@@ -117,7 +117,7 @@ final class InsanoSauceAnimation extends EventAnimation {
           return;
         }
         var3 = this.screen.field_h;
-        var4 = this.field_w.creature.a(102, this.screen.field_h);
+        var4 = this.field_w.creature.resolveCreature(102, this.screen.field_h);
         var21 = this.field_w.a(0, -19, this.screen.field_h, var4);
         var6 = this.field_w.field_r;
         var7 = this.field_w.field_s;

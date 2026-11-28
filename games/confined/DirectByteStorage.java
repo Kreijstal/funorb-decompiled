@@ -35,7 +35,7 @@ final class DirectByteStorage extends ByteStorage {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param0.c(param1, (byte) 72);
+          var4 = param0.getFlatFile(param1, (byte) 72);
           var3 = var4;
           if (var4 == null) {
             return false;
@@ -43,7 +43,7 @@ final class DirectByteStorage extends ByteStorage {
           if (param2 < 35) {
             field_h = (AudioOutput) null;
           }
-          lc.a(false, var4);
+          TunnelMesh.decodeIndexedSpriteGroup(false, var4);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

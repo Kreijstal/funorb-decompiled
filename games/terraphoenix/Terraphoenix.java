@@ -1632,9 +1632,9 @@ public final class Terraphoenix extends GameShell {
                       if (fc.field_a.ensureIndexLoaded(0) &&
                         fc.field_a.tryLoadAllGroups((byte) -128)) {
                         if (ByteStorage.field_d.ensureIndexLoaded(0) &&
-                          ByteStorage.field_d.a(-3, "basic")) {
+                          ByteStorage.field_d.tryLoadGroupByName(-3, "basic")) {
                           if (me.field_o <= 0 && (!ByteStorage.field_d.ensureIndexLoaded(param1 + 107) ||
-                            !ByteStorage.field_d.a(-3, "benefits"))) {
+                            !ByteStorage.field_d.tryLoadGroupByName(-3, "benefits"))) {
                             DualLinkNode.a(vf.a("benefits", bl.field_d, ByteStorage.field_d, be.field_w, 4650), (byte) 88, 40.0f);
                             return;
                           }

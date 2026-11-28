@@ -85,8 +85,8 @@ final class RageSpecial extends SpecialOrder {
             var6 = (Sprite[]) null;
             RageSpecial.a(57, (Sprite[]) null, (byte) 36, -19);
           }
-          var3 = this.creature.a(62, param0);
-          var4 = this.field_j.a(116, param0);
+          var3 = this.creature.resolveCreature(62, param0);
+          var4 = this.field_j.resolveCreature(116, param0);
           if (var4 != null &&
             !var4.isDown(-77)) {
             var5 = new RageEvent(this.moveId, new CreatureRef(var3), this.field_j);

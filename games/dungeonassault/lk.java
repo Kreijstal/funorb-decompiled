@@ -27,7 +27,7 @@ final class lk extends gd {
         if (param1 == 8187) {
           var4 = param0 + this.field_t;
           var5 = this.field_i + param2;
-          wd.field_l[this.field_O].a(20 + var5, 30 + var4, true, 30);
+          SpriteAnimationPlayer.field_l[this.field_O].a(20 + var5, 30 + var4, true, 30);
           super.b(param0, param1 ^ 0, param2);
           return;
         }
@@ -370,7 +370,7 @@ final class lk extends gd {
             return stackIn_2_0;
           }
           if (param3 <= -119) {
-            stackIn_7_0 = param0 + " - " + param1.b(100) + "%";
+            stackIn_7_0 = param0 + " - " + param1.getArchiveLoadPercent(100) + "%";
             return stackIn_7_0;
           }
           stackIn_5_0 = (String) null;

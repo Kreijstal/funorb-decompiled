@@ -110,7 +110,7 @@ final class nf extends DualLinkNode {
         }
     }
 
-    final static int[] a(wm param0, int param1, byte param2) {
+    final static int[] a(PackedBitSet param0, int param1, byte param2) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -130,25 +130,25 @@ final class nf extends DualLinkNode {
         try {
           var3_int = 0;
           if (param1 % 7 != 0 &&
-            param0.a(-(param1 / 7) + (-1 + param1), (byte) 103)) {
+            param0.isBitSet(-(param1 / 7) + (-1 + param1), (byte) 103)) {
             incrementValue$0 = var3_int;
             var3_int++;
             ia.field_S[incrementValue$0] = -1 + param1;
           }
           if (param1 > 6 &&
-            param0.a(param1 + 35, (byte) 121)) {
+            param0.isBitSet(param1 + 35, (byte) 121)) {
             incrementValue$1 = var3_int;
             var3_int++;
             ia.field_S[incrementValue$1] = -7 + param1;
           }
           if (param1 % 7 != 6 &&
-            param0.a(param1 - param1 / 7, (byte) 86)) {
+            param0.isBitSet(param1 - param1 / 7, (byte) 86)) {
             incrementValue$2 = var3_int;
             var3_int++;
             ia.field_S[incrementValue$2] = 1 + param1;
           }
           if (42 > param1 &&
-            param0.a(param1 + 42, (byte) 86)) {
+            param0.isBitSet(param1 + 42, (byte) 86)) {
             incrementValue$3 = var3_int;
             var3_int++;
             ia.field_S[incrementValue$3] = param1 + 7;

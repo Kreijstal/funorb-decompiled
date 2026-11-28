@@ -151,7 +151,7 @@ final class gl extends mf {
             stackIn_6_0 = vm.field_bb;
             return stackIn_6_0;
           }
-          if (lc.a(param1, var5)) {
+          if (TunnelMesh.containsNonAsciiAlphanumeric(param1, var5)) {
             stackIn_10_0 = oe.field_T;
             return stackIn_10_0;
           }

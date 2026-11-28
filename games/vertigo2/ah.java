@@ -65,55 +65,55 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -54, "achievement_names,0");
                 if (var2 != null) {
-                  hi.field_i[0] = in.a(0, var2);
+                  BlastDebrisModel.field_i[0] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -52, "achievement_names,1");
                 if (null != var2) {
-                  hi.field_i[1] = in.a(0, var2);
+                  BlastDebrisModel.field_i[1] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -73, "achievement_names,2");
                 if (var2 != null) {
-                  hi.field_i[2] = in.a(0, var2);
+                  BlastDebrisModel.field_i[2] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -10, "achievement_names,3");
                 if (var2 != null) {
-                  hi.field_i[3] = in.a(0, var2);
+                  BlastDebrisModel.field_i[3] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -36, "achievement_names,4");
                 if (var2 != null) {
-                  hi.field_i[4] = in.a(0, var2);
+                  BlastDebrisModel.field_i[4] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -80, "achievement_names,5");
                 if (var2 != null) {
-                  hi.field_i[5] = in.a(0, var2);
+                  BlastDebrisModel.field_i[5] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -59, "achievement_names,6");
                 if (null != var2) {
-                  hi.field_i[6] = in.a(0, var2);
+                  BlastDebrisModel.field_i[6] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -38, "achievement_names,7");
                 if (var2 != null) {
-                  hi.field_i[7] = in.a(0, var2);
+                  BlastDebrisModel.field_i[7] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -77, "achievement_names,8");
                 if (null != var2) {
-                  hi.field_i[8] = in.a(0, var2);
+                  BlastDebrisModel.field_i[8] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -96, "achievement_names,9");
                 if (var2 != null) {
-                  hi.field_i[9] = in.a(0, var2);
+                  BlastDebrisModel.field_i[9] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -84, "achievement_names,10");
                 if (var2 != null) {
-                  hi.field_i[10] = in.a(0, var2);
+                  BlastDebrisModel.field_i[10] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -55, "achievement_names,11");
                 if (null != var2) {
-                  hi.field_i[11] = in.a(0, var2);
+                  BlastDebrisModel.field_i[11] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -63, "achievement_names,12");
                 if (var2 != null) {
-                  hi.field_i[12] = in.a(0, var2);
+                  BlastDebrisModel.field_i[12] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -123, "achievement_criteria,0");
                 if (var2 != null) {
@@ -173,7 +173,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -59, "ANY_KEY_TO_CLOSE");
                 if (var2 != null) {
-                  bg.field_a = in.a(0, var2);
+                  LevelRenderable.field_a = in.a(0, var2);
                 }
                 var2 = en.a((byte) -95, "ANY_KEY_TO_CONTINUE");
                 if (null != var2) {
@@ -309,31 +309,31 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -82, "instructions_item_names,0");
                 if (null != var2) {
-                  bg.field_e[0] = in.a(0, var2);
+                  LevelRenderable.field_e[0] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -104, "instructions_item_names,1");
                 if (var2 != null) {
-                  bg.field_e[1] = in.a(0, var2);
+                  LevelRenderable.field_e[1] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -41, "instructions_item_names,2");
                 if (null != var2) {
-                  bg.field_e[2] = in.a(0, var2);
+                  LevelRenderable.field_e[2] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -109, "instructions_item_names,3");
                 if (var2 != null) {
-                  bg.field_e[3] = in.a(0, var2);
+                  LevelRenderable.field_e[3] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -115, "instructions_item_names,4");
                 if (var2 != null) {
-                  bg.field_e[4] = in.a(0, var2);
+                  LevelRenderable.field_e[4] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -63, "instructions_item_names,5");
                 if (var2 != null) {
-                  bg.field_e[5] = in.a(0, var2);
+                  LevelRenderable.field_e[5] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -77, "instructions_item_names,6");
                 if (null != var2) {
-                  bg.field_e[6] = in.a(0, var2);
+                  LevelRenderable.field_e[6] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -19, "instructions_item_descriptions,0");
                 if (var2 != null) {
@@ -397,15 +397,15 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -73, "GAMEOPTLABELS,0");
                 if (null != var2) {
-                  wo.field_V[0] = in.a(0, var2);
+                  PlayerState.field_V[0] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -21, "GAMEOPTLABELS,1");
                 if (null != var2) {
-                  wo.field_V[1] = in.a(0, var2);
+                  PlayerState.field_V[1] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -119, "GAMEOPTLABELS,2");
                 if (var2 != null) {
-                  wo.field_V[2] = in.a(0, var2);
+                  PlayerState.field_V[2] = in.a(0, var2);
                 }
                 var2 = en.a((byte) -42, "GAMEOPTNAMES,0,0");
                 if (null != var2) {
@@ -1492,7 +1492,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -91, "keycode_left_classic");
                 if (var2 != null) {
-                  am.field_t = 255 & var2[0];
+                  LevelRenderer.field_t = 255 & var2[0];
                 }
                 var2 = en.a((byte) -27, "keycode_jump_classic");
                 if (var2 != null) {

@@ -48,7 +48,7 @@ final class gm {
         RuntimeException var3 = null;
         try {
           var3_int = 114 / ((param0 - 55) / 42);
-          param1 = cn.a((byte) -103, "", '_', param1);
+          param1 = LevelCamera.replaceCharacterInString((byte) -103, "", '_', param1);
           var4 = mq.a(param1, false);
           stackIn_5_0 = (param2.indexOf(param1) != -1) || (param2.indexOf(var4) != -1);
           return stackIn_5_0;

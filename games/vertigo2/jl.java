@@ -53,7 +53,7 @@ final class jl {
           var3 = var10.readUnsignedByte(-11);
           var10.beginBitAccess(0);
           wc.field_o = ng.a((byte) -108, var10);
-          jg.field_j = new int[var3][];
+          LevelTile.field_j = new int[var3][];
           GameKeyHandler.field_b = new jp[var3];
           for (var4 = 0; var3 > var4; var4++) {
             GameKeyHandler.field_b[var4] = di.a(var8, true);
@@ -66,7 +66,7 @@ final class jl {
             var5.a(6, (byte) -121, 6, 6, 1);
             var5.a((byte) 117);
             var6 = new int[]{var5.field_S + var5.field_D >> 1, var5.field_E + var5.field_t >> 1, var5.field_B + var5.field_k >> 1};
-            jg.field_j[var9] = var6;
+            LevelTile.field_j[var9] = var6;
             var5.a(-var6[1], -var6[2], -var6[0], 126);
             var9++;
           }

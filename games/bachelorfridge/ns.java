@@ -26,12 +26,12 @@ final class ns extends BoardChange {
     }
 
     final void a(boolean param0, BattleState param1) {
-        BattleCreature var3 = this.field_n.a(107, param1);
+        BattleCreature var3 = this.field_n.resolveCreature(107, param1);
         if (var3 == null) {
           return;
         }
         try {
-          var3.j(-106);
+          var3.removeDefeatedCreatureFromTile(-106);
           var3.field_A = param0 ? true : false;
           param1.field_R = false;
         } catch (RuntimeException runtimeException) {

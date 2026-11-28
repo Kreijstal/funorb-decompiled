@@ -54,15 +54,15 @@ final class tf {
         int var6 = 0;
         String var7 = null;
         try {
-          pj.field_r[0] = og.field_w.nextInt();
-          pj.field_r[1] = og.field_w.nextInt();
-          pj.field_r[2] = (int)(CipherPacketBuffer.field_m >> 32);
-          pj.field_r[3] = (int)CipherPacketBuffer.field_m;
+          WallTile.field_r[0] = og.field_w.nextInt();
+          WallTile.field_r[1] = og.field_w.nextInt();
+          WallTile.field_r[2] = (int)(CipherPacketBuffer.field_m >> 32);
+          WallTile.field_r[3] = (int)CipherPacketBuffer.field_m;
           SectorCacheStore.field_c.position = 0;
-          SectorCacheStore.field_c.writeInt(pj.field_r[0], -16384);
-          SectorCacheStore.field_c.writeInt(pj.field_r[1], -16384);
-          SectorCacheStore.field_c.writeInt(pj.field_r[2], param1 - 16459);
-          SectorCacheStore.field_c.writeInt(pj.field_r[3], -16384);
+          SectorCacheStore.field_c.writeInt(WallTile.field_r[0], -16384);
+          SectorCacheStore.field_c.writeInt(WallTile.field_r[1], -16384);
+          SectorCacheStore.field_c.writeInt(WallTile.field_r[2], param1 - 16459);
+          SectorCacheStore.field_c.writeInt(WallTile.field_r[3], -16384);
           lo.a(param1 - 51, SectorCacheStore.field_c);
           SectorCacheStore.field_c.writeShort(-161478600, param3);
           param2.a(SectorCacheStore.field_c, (byte) 124);

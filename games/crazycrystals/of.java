@@ -110,7 +110,7 @@ final class of extends pc {
         if (param0 != 0) {
           return true;
         }
-        stackIn_6_0 = (oi.field_c != null) && (gj.field_k == ek.field_h);
+        stackIn_6_0 = (oi.field_c != null) && (gj.field_k == LevelCompleteEntrancePhase.field_h);
         return stackIn_6_0;
     }
 

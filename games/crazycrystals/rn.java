@@ -5,14 +5,14 @@ final class rn extends rd {
     static int field_n;
     private int field_l;
     static int[] field_j;
-    static jg[] field_o;
+    static ModelMesh[] field_o;
     private int field_m;
     static PcmSample field_p;
     static bf field_r;
     static String field_q;
     static vc field_k;
 
-    final f a(boolean param0, int param1, int param2, int param3, ta param4) {
+    final PuzzleTile a(boolean param0, int param1, int param2, int param3, ta param4) {
         RuntimeException var6 = null;
         String var7 = null;
         mi stackIn_3_0 = null;
@@ -28,7 +28,7 @@ final class rn extends rd {
           this.field_l = this.field_l + param3;
           this.field_m = this.field_m + 1;
           stackIn_3_0 = new mi(IsaacRandom.field_g, true);
-          return (f) ((Object) stackIn_3_0);
+          return (PuzzleTile) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -128,7 +128,7 @@ final class rn extends rd {
             return (mg) ((Object) stackIn_5_0);
           }
           if (param0 != 0) {
-            field_o = (jg[]) null;
+            field_o = (ModelMesh[]) null;
           }
           stackIn_11_0 = new fa(param2, param3);
           return (mg) ((Object) stackIn_11_0);
@@ -175,27 +175,27 @@ final class rn extends rd {
         }
         if (null != SecondaryNodeDeque.field_e) {
           if (!SecondaryNodeDeque.field_e.ensureIndexLoaded((byte) 102)) {
-            return jg.field_h;
+            return ModelMesh.field_h;
           }
           return ge.field_a;
         }
         if (!rb.field_k.ensureIndexLoaded((byte) 102)) {
           return re.field_n;
         }
-        if (!rb.field_k.a(-20402, "commonui")) {
-          return dp.field_j + " - " + rb.field_k.getGroupLoadPercentByName("commonui", -38) + "%";
+        if (!rb.field_k.tryLoadGroupByName(-20402, "commonui")) {
+          return ProfileDataRequest.field_j + " - " + rb.field_k.getGroupLoadPercentByName("commonui", -38) + "%";
         }
         if (!ok.field_c.ensureIndexLoaded((byte) 102)) {
           return NetworkArchiveRequest.field_w;
         }
-        if (!ok.field_c.a(param0 ^ 20403, "commonui")) {
+        if (!ok.field_c.tryLoadGroupByName(param0 ^ 20403, "commonui")) {
           return jn.field_k + " - " + ok.field_c.getGroupLoadPercentByName("commonui", -60) + "%";
         }
         if (!FullscreenFocusCanvas.field_a.ensureIndexLoaded((byte) 102)) {
           return gf.field_d;
         }
         if (!FullscreenFocusCanvas.field_a.tryLoadAllGroups(false)) {
-          return l.field_a + " - " + FullscreenFocusCanvas.field_a.b(3492) + "%";
+          return ResultScenePhase.field_a + " - " + FullscreenFocusCanvas.field_a.getArchiveLoadPercent(3492) + "%";
         }
         return wp.field_a;
     }

@@ -117,7 +117,7 @@ final class ph extends IntrusiveNode {
         try {
           ph var4_ref = null;
           if (!ph.a(param0)) {
-            param0.a(param1, param2, 255);
+            param0.tryLoadFileByName(param1, param2, 255);
             return null;
           }
           byte[] var3 = param0.getFileByName(-51, param1, param2);

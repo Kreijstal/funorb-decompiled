@@ -117,7 +117,7 @@ final class BitPacketBuffer extends PacketBuffer {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param1.charAt(var6);
-            if (ResourceArchive.a((char) var7, 0)) {
+            if (ResourceArchive.isAllowedNameCharacter((char) var7, 0)) {
               var8 = jk.a((char) var7, false);
               if (0 != var8) {
                 discarded$0 = var5.append((char) var8);

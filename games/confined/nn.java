@@ -53,7 +53,7 @@ final class nn extends IntrusiveNode {
           if (!param0.ensureIndexLoaded(0)) {
             return false;
           }
-          if (!param0.a("commonui", 0)) {
+          if (!param0.tryLoadGroupByName("commonui", 0)) {
             return false;
           }
           if (param3 <= 21) {
@@ -61,9 +61,9 @@ final class nn extends IntrusiveNode {
             nn.a((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, -51);
           }
           if (param2.ensureIndexLoaded(0) &&
-            param2.a("commonui", 0)) {
+            param2.tryLoadGroupByName("commonui", 0)) {
             if (param1.ensureIndexLoaded(0) &&
-              param1.a("button.gif", 0)) {
+              param1.tryLoadGroupByName("button.gif", 0)) {
               return true;
             }
             return false;

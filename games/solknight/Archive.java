@@ -35,7 +35,7 @@ final class Archive {
         return var2 != 0;
     }
 
-    final int b(int param0, int param1) {
+    final int getFileCapacity(int param0, int param1) {
         boolean discarded$0 = false;
         if (!this.validateGroupId((byte) 48, param1)) {
           return 0;
@@ -46,7 +46,7 @@ final class Archive {
         return this.field_g.field_o[param1];
     }
 
-    final int a(byte param0) {
+    final int getGroupCapacity(byte param0) {
         if (!this.ensureIndexLoaded((byte) -121)) {
           return -1;
         }
@@ -161,7 +161,7 @@ final class Archive {
         return false;
     }
 
-    final boolean a(String param0, String param1, boolean param2) {
+    final boolean tryLoadFileByName(String param0, String param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -180,7 +180,7 @@ final class Archive {
           }
           param0 = param0.toLowerCase();
           if (!param2) {
-            Archive.a(((boolean[]) (((Object[]) (this.field_c[4]))[1]))[4]);
+            Archive.showLoginForm(((boolean[]) (((Object[]) (this.field_c[4]))[1]))[4]);
           }
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
@@ -212,7 +212,7 @@ final class Archive {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void showLoginForm(boolean param0) {
         if (!MusicPatchPcmStream.field_l) {
           throw new IllegalStateException();
         }
@@ -314,9 +314,9 @@ final class Archive {
         throw new IllegalArgumentException(Integer.toString(param1));
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > -121) {
-          Archive.a(true);
+          Archive.showLoginForm(true);
         }
         field_a = null;
         field_d = null;
@@ -414,7 +414,7 @@ final class Archive {
         }
     }
 
-    final synchronized byte[] a(int param0, byte param1) {
+    final synchronized byte[] getFlatFile(int param0, byte param1) {
         int var3 = -45 % ((5 - param1) / 37);
         if (!this.ensureIndexLoaded((byte) -121)) {
           return null;
@@ -497,7 +497,7 @@ final class Archive {
         }
     }
 
-    final synchronized int b(byte param0) {
+    final synchronized int getArchiveLoadPercent(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -525,7 +525,7 @@ final class Archive {
         return var4Lifetime1;
     }
 
-    final static void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blendHalfRgbGradientSpan(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int[] var10 = null;
         int var11 = 0;
         int var12 = 0;
@@ -545,7 +545,7 @@ final class Archive {
             param0--;
             if (param0 < 0) {
               if (param1 <= 14) {
-                Archive.b(-34);
+                Archive.clearStaticReferences(-34);
               }
               return;
             }
@@ -576,12 +576,12 @@ final class Archive {
         }
     }
 
-    final static void a(int param0) {
+    final static void initializePunctuationKeyMappings(int param0) {
         RandomAccessCacheFile.field_b[192] = 28;
         RandomAccessCacheFile.field_b[222] = 58;
         RandomAccessCacheFile.field_b[520] = 59;
         if (param0 != 0) {
-          Archive.a(-106);
+          Archive.initializePunctuationKeyMappings(-106);
         }
         RandomAccessCacheFile.field_b[92] = 74;
         RandomAccessCacheFile.field_b[47] = 73;
@@ -594,7 +594,7 @@ final class Archive {
         RandomAccessCacheFile.field_b[61] = 27;
     }
 
-    final boolean b(int param0, String param1) {
+    final boolean hasGroupName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -889,7 +889,7 @@ final class Archive {
         }
     }
 
-    final static String a(boolean param0, byte[] param1) {
+    final static String decodeCp1252(boolean param0, byte[] param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -918,7 +918,7 @@ final class Archive {
         }
     }
 
-    final boolean a(int param0, String param1) {
+    final boolean tryLoadGroupByName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;

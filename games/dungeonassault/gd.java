@@ -303,10 +303,10 @@ class gd extends rj {
           if (!param1) {
             field_G = (qk) null;
           }
-          var2_int = uj.a(param0, 37, h.field_j);
+          var2_int = uj.a(param0, 37, RaiderDefinition.field_j);
           var3 = ProxyAuthenticationRequiredException.field_e[var2_int];
-          fieldTemp$1 = h.field_j - 1;
-          h.field_j = h.field_j - 1;
+          fieldTemp$1 = RaiderDefinition.field_j - 1;
+          RaiderDefinition.field_j = RaiderDefinition.field_j - 1;
           ProxyAuthenticationRequiredException.field_e[var2_int] = ProxyAuthenticationRequiredException.field_e[fieldTemp$1];
           stackIn_3_0 = var3;
           return stackIn_3_0;

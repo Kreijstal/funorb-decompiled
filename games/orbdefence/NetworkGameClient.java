@@ -570,10 +570,10 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (vh.field_n == 2) {
           if (null != lf.field_a &&
             lf.field_a.ensureIndexLoaded(-1)) {
-            if (!lf.field_a.c((byte) -84, "")) {
+            if (!lf.field_a.hasGroupName((byte) -84, "")) {
               lf.field_a = null;
             } else {
-              if (lf.field_a.b((byte) -61, "")) {
+              if (lf.field_a.tryLoadGroupByName((byte) -61, "")) {
                 lm.a((byte) 116, lf.field_a);
                 lf.field_a = null;
                 vd.a(42);

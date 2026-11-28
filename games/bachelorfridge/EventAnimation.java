@@ -87,7 +87,7 @@ abstract class EventAnimation extends AnimationNode {
               }
             } else {
               var10 = (DamageEffect) (var5);
-              var7 = var10.target.a(-27449, this.screen);
+              var7 = var10.target.resolveCreatureView(-27449, this.screen);
               if (var7.field_s.tileX == param0 &&
                 var7.field_s.tileY == param1) {
                 stackIn_11_0 = (var7.field_s.hp <= 0) ? 0 : 1;
@@ -131,7 +131,7 @@ abstract class EventAnimation extends AnimationNode {
         try {
           this.screen = param0;
           this.event = param1;
-          this.field_n = param1.creature.a(-27449, this.screen);
+          this.field_n = param1.creature.resolveCreatureView(-27449, this.screen);
           this.field_m = new ActorAnimation(this.screen, this.field_n);
           this.addChild(27799, this.field_m);
           this.field_n.a(16776960, 119, pk.a(param1, true));
@@ -139,15 +139,15 @@ abstract class EventAnimation extends AnimationNode {
           if (param1.field_p) {
             this.field_n.a(16761024, 111, dc.field_o);
           }
-          if (this.field_n.field_s.a(param1.moveId, 9)) {
-            this.field_n.field_s.d(param1.moveId, (byte) -118);
+          if (this.field_n.field_s.hasEquippedMove(param1.moveId, 9)) {
+            this.field_n.field_s.applyMoveCooldown(param1.moveId, (byte) -118);
             return;
           }
-          if (!this.field_n.field_s.a(119, 9)) {
-            this.field_n.field_s.d(param1.moveId, (byte) -118);
+          if (!this.field_n.field_s.hasEquippedMove(119, 9)) {
+            this.field_n.field_s.applyMoveCooldown(param1.moveId, (byte) -118);
             return;
           }
-          this.field_n.field_s.d(119, (byte) -86);
+          this.field_n.field_s.applyMoveCooldown(119, (byte) -86);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

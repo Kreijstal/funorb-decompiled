@@ -73,7 +73,7 @@ abstract class sj extends ug {
 
     final void m(int param0) {
         if (this.field_ib != null) {
-          if (cl.field_S != this.field_ib) {
+          if (PowerUpPickup.field_S != this.field_ib) {
             this.a(-41, this.field_nb.field_z + this.field_ob + 12, this.field_nb.field_F + 12);
             this.a(true, this.field_nb);
           }
@@ -127,7 +127,7 @@ abstract class sj extends ug {
             }
             return super.l(param0 ^ 0);
           }
-          if (this.field_ib != cl.field_S) {
+          if (this.field_ib != PowerUpPickup.field_S) {
             if (param0 == -6) {
               return super.l(param0 ^ 0);
             }
@@ -174,7 +174,7 @@ abstract class sj extends ug {
         if (this.field_ib == c.field_s) {
           return;
         }
-        this.field_ib = cl.field_S;
+        this.field_ib = PowerUpPickup.field_S;
         this.field_mb = 0;
         this.a(true, this.field_nb);
         if (param0 <= -6) {

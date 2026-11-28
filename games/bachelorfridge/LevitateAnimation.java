@@ -23,7 +23,7 @@ final class LevitateAnimation extends EventAnimation {
         CreatureActor var7;
         CreatureActor var8;
         var5 = BachelorFridge.field_y;
-        var6 = this.field_w.creature.a(14, this.screen.field_h);
+        var6 = this.field_w.creature.resolveCreature(14, this.screen.field_h);
         if (var6.isDown(80)) {
           return;
         }
@@ -32,7 +32,7 @@ final class LevitateAnimation extends EventAnimation {
         if (param0 == -23403) {
           while (var3 != null) {
             var3.apply(var6, this.screen.field_h, param0 ^ -23399);
-            var7 = var3.target.a(param0 - 4046, this.screen);
+            var7 = var3.target.resolveCreatureView(param0 - 4046, this.screen);
             var7.b(param0 ^ 23402, 7);
             var7.a(24831, 9, kna.field_g[32]);
             var3 = (DamageEffect) (this.field_w.effects.nextForward(0));
@@ -41,7 +41,7 @@ final class LevitateAnimation extends EventAnimation {
           LevitateAnimation.releaseStatics(-10);
           while (var3 != null) {
             var3.apply(var6, this.screen.field_h, param0 ^ -23399);
-            var8 = var3.target.a(param0 - 4046, this.screen);
+            var8 = var3.target.resolveCreatureView(param0 - 4046, this.screen);
             var8.b(param0 ^ 23402, 7);
             var8.a(24831, 9, kna.field_g[32]);
             var3 = (DamageEffect) (this.field_w.effects.nextForward(0));

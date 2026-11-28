@@ -57,9 +57,9 @@ final class cc extends IntrusiveNode {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               bd.a(var15, (byte) -45);
               if (0 == var6_intLifetime1) {
-                cl.a(eh.field_R, AccountNameAvailabilityValidator.field_h, var6_intLifetime1, dj.field_gb, (byte) -127, ll.field_d);
+                PowerUpPickup.a(eh.field_R, AccountNameAvailabilityValidator.field_h, var6_intLifetime1, PlayerShip.field_gb, (byte) -127, ll.field_d);
               } else {
-                cl.a(eh.field_R, AccountNameAvailabilityValidator.field_h, var6_intLifetime1, dj.field_gb, (byte) 74, ll.field_d);
+                PowerUpPickup.a(eh.field_R, AccountNameAvailabilityValidator.field_h, var6_intLifetime1, PlayerShip.field_gb, (byte) 74, ll.field_d);
               }
             }
             wa.a(var5, (byte) 117);

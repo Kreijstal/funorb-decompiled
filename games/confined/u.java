@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class u extends ee {
+final class u extends MovingTunnelEntity {
     static od field_T;
     private int field_V;
     private double field_S;
@@ -10,7 +10,7 @@ final class u extends ee {
     private int field_R;
     private da field_Q;
 
-    final boolean a(boolean param0, pm param1) {
+    final boolean canBeTargetedBy(boolean param0, TunnelEntity param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -36,16 +36,16 @@ final class u extends ee {
         }
     }
 
-    final boolean f(int param0) {
+    final boolean isAlliedWithPlayer(int param0) {
         if (param0 >= -54) {
           return true;
         }
         return false;
     }
 
-    final double a(int param0, boolean param1, double param2) {
+    final double applyDamage(int param0, boolean param1, double param2) {
         if (param0 != 14170) {
-          this.a(96, -108);
+          this.updateForTunnelSegment(96, -108);
           this.field_S = this.field_S - param2;
           if (!(0.0 >= this.field_S)) {
             return 0.0;
@@ -61,7 +61,7 @@ final class u extends ee {
         return -this.field_S;
     }
 
-    final void g(int param0) {
+    final void handleDestruction(int param0) {
         int var8 = 0;
         double var2;
         double var4;
@@ -76,7 +76,7 @@ final class u extends ee {
         ka var19;
         var16 = Confined.field_J ? 1 : 0;
         if (this.field_V >= 2) {
-          if (hn.field_I) {
+          if (GameSession.field_I) {
             var18 = this.a((byte) 120, jn.field_U, 1.0);
             var18.field_M.field_m = 96 >> this.field_V;
           }
@@ -96,7 +96,7 @@ final class u extends ee {
           } else {
             var7 = ha.field_f[2];
           }
-          this.field_A.a((byte) 50, var7 * var6);
+          this.field_A.addScore((byte) 50, var7 * var6);
           for (var8 = 0; -var6 + 4 > var8; var8++) {
             var9 = new u(this.field_A, this.field_E, this.field_t, this.field_D, 0.6299605249474366 * this.field_C, var2, this.field_V + 1);
             var10 = 1.998 * Math.random() - 0.999;
@@ -107,12 +107,12 @@ final class u extends ee {
             var9.field_L = var10 * 0.04;
             ri.a((IntrusiveNode) (this), param0 - 26402, var9);
             if (this.field_S < 0.0) {
-              hn.field_I = false;
-              this.field_S = -var9.a(14170, true, -this.field_S);
-              hn.field_I = true;
+              GameSession.field_I = false;
+              this.field_S = -var9.applyDamage(14170, true, -this.field_S);
+              GameSession.field_I = true;
             }
           }
-          if (hn.field_I) {
+          if (GameSession.field_I) {
             var19 = this.a((byte) 120, jn.field_U, 1.0);
             var19.field_M.field_m = 96 >> this.field_V;
           }
@@ -120,10 +120,10 @@ final class u extends ee {
         if (param0 != 26402) {
           this.a(84, -0.09469503278387087);
         }
-        this.field_A.a((byte) 50, ha.field_f[this.field_V]);
+        this.field_A.addScore((byte) 50, ha.field_f[this.field_V]);
     }
 
-    private u(hn param0, double param1, double param2, double param3, double param4, double param5, int param6) {
+    private u(GameSession param0, double param1, double param2, double param3, double param4, double param5, int param6) {
         super(param0, param1, param2, param3, param4, param5);
         double var13_double = 0.0;
         double var15 = 0.0;
@@ -143,7 +143,7 @@ final class u extends ee {
         }
     }
 
-    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
+    final void drawInTunnel(PrimaryNodeDeque param0, double param1, int param2, TunnelCamera param3, DynamicLight param4) {
         if (this.field_N) {
           return;
         }
@@ -157,7 +157,7 @@ final class u extends ee {
         }
     }
 
-    final boolean a(pm param0, byte param1) {
+    final boolean canBeHitByLightningArcFrom(TunnelEntity param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -182,7 +182,7 @@ final class u extends ee {
         }
     }
 
-    final boolean c(int param0) {
+    final boolean canBeHitByProjectileRay(int param0) {
         if (param0 != 5) {
           return true;
         }
@@ -193,9 +193,9 @@ final class u extends ee {
         int var4 = 92 % ((-16 - param0) / 34);
     }
 
-    final void a(int param0, int param1) {
+    final void updateForTunnelSegment(int param0, int param1) {
         this.field_W.a(param0 ^ -11789, this.field_Q);
-        super.a(param0, param1);
+        super.updateForTunnelSegment(param0, param1);
         if (0.0 > this.field_D) {
           this.field_s = 2;
           this.field_z = true;
@@ -210,7 +210,7 @@ final class u extends ee {
         }
     }
 
-    u(hn param0, double param1, double param2, double param3) {
+    u(GameSession param0, double param1, double param2, double param3) {
         this(param0, param1, param2, param3, 0.4, 1.0, 0);
         double var8_double = 0.0;
         double var10 = 0.0;

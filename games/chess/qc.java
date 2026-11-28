@@ -139,12 +139,12 @@ final class qc {
           this.field_g = param1;
           this.field_b = param2;
           if (null != this.field_g) {
-            this.field_g.a((byte) -57, 1);
+            this.field_g.getFileCapacity((byte) -57, 1);
           }
           if (null == this.field_b) {
             return;
           }
-          this.field_b.a((byte) -98, 1);
+          this.field_b.getFileCapacity((byte) -98, 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

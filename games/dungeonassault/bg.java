@@ -578,7 +578,7 @@ final class bg extends qe {
             }
           }
         } else {
-          var5 = ai.field_e;
+          var5 = DungeonTileState.field_e;
         }
         db.field_v.a(var5, 215, var3Lifetime1, 210, 45, var6, -1, param0, 1, db.field_v.field_H);
     }

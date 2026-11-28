@@ -23,7 +23,7 @@ final class cj extends qf implements Cloneable {
         to.field_c = to.field_c + 1;
     }
 
-    final void f(int param0, int param1, f[][] param2, int param3) {
+    final void f(int param0, int param1, PuzzleTile[][] param2, int param3) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -103,148 +103,148 @@ final class cj extends qf implements Cloneable {
         }
     }
 
-    private final f g(int param0, int param1, f[][] param2, int param3) {
+    private final PuzzleTile g(int param0, int param1, PuzzleTile[][] param2, int param3) {
         vh dupTemp$1 = null;
         ig stackIn_14_0 = null;
-        f[] stackIn_18_0 = null;
+        PuzzleTile[] stackIn_18_0 = null;
         int stackIn_18_1 = 0;
-        f stackIn_18_2 = null;
+        PuzzleTile stackIn_18_2 = null;
         Object stackIn_18_3 = null;
         int stackIn_18_4 = 0;
         int stackIn_18_5 = 0;
-        f[][] stackIn_18_6 = null;
+        PuzzleTile[][] stackIn_18_6 = null;
         int stackIn_18_7 = 0;
         int stackIn_18_8 = 0;
-        f[] stackIn_19_0 = null;
+        PuzzleTile[] stackIn_19_0 = null;
         int stackIn_19_1 = 0;
-        f stackIn_19_2 = null;
+        PuzzleTile stackIn_19_2 = null;
         Object stackIn_19_3 = null;
         int stackIn_19_4 = 0;
         int stackIn_19_5 = 0;
-        f[][] stackIn_19_6 = null;
-        f[] stackIn_20_0 = null;
+        PuzzleTile[][] stackIn_19_6 = null;
+        PuzzleTile[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;
-        f stackIn_20_2 = null;
+        PuzzleTile stackIn_20_2 = null;
         Object stackIn_20_3 = null;
         int stackIn_20_4 = 0;
         int stackIn_20_5 = 0;
-        f[][] stackIn_20_6 = null;
+        PuzzleTile[][] stackIn_20_6 = null;
         int stackIn_20_7 = 0;
         int stackIn_20_8 = 0;
-        f[] stackIn_21_0 = null;
+        PuzzleTile[] stackIn_21_0 = null;
         int stackIn_21_1 = 0;
-        f stackIn_21_2 = null;
+        PuzzleTile stackIn_21_2 = null;
         Object stackIn_21_3 = null;
         int stackIn_21_4 = 0;
         int stackIn_21_5 = 0;
-        f[][] stackIn_21_6 = null;
-        f[] stackIn_22_0 = null;
+        PuzzleTile[][] stackIn_21_6 = null;
+        PuzzleTile[] stackIn_22_0 = null;
         int stackIn_22_1 = 0;
-        f stackIn_22_2 = null;
+        PuzzleTile stackIn_22_2 = null;
         Object stackIn_22_3 = null;
         int stackIn_22_4 = 0;
         int stackIn_22_5 = 0;
-        f[][] stackIn_22_6 = null;
-        f[] stackIn_23_0 = null;
+        PuzzleTile[][] stackIn_22_6 = null;
+        PuzzleTile[] stackIn_23_0 = null;
         int stackIn_23_1 = 0;
-        f stackIn_23_2 = null;
+        PuzzleTile stackIn_23_2 = null;
         Object stackIn_23_3 = null;
         int stackIn_23_4 = 0;
         int stackIn_23_5 = 0;
-        f[][] stackIn_23_6 = null;
+        PuzzleTile[][] stackIn_23_6 = null;
         RgbSprite[] stackIn_23_7 = null;
-        f[] stackIn_28_0 = null;
+        PuzzleTile[] stackIn_28_0 = null;
         int stackIn_28_1 = 0;
-        f stackIn_28_2 = null;
+        PuzzleTile stackIn_28_2 = null;
         Object stackIn_28_3 = null;
         int stackIn_28_4 = 0;
         int stackIn_28_5 = 0;
-        f[][] stackIn_28_6 = null;
+        PuzzleTile[][] stackIn_28_6 = null;
         int stackIn_28_7 = 0;
         int stackIn_28_8 = 0;
-        f[] stackIn_29_0 = null;
+        PuzzleTile[] stackIn_29_0 = null;
         int stackIn_29_1 = 0;
-        f stackIn_29_2 = null;
+        PuzzleTile stackIn_29_2 = null;
         Object stackIn_29_3 = null;
         int stackIn_29_4 = 0;
         int stackIn_29_5 = 0;
-        f[][] stackIn_29_6 = null;
-        f[] stackIn_30_0 = null;
+        PuzzleTile[][] stackIn_29_6 = null;
+        PuzzleTile[] stackIn_30_0 = null;
         int stackIn_30_1 = 0;
-        f stackIn_30_2 = null;
+        PuzzleTile stackIn_30_2 = null;
         Object stackIn_30_3 = null;
         int stackIn_30_4 = 0;
         int stackIn_30_5 = 0;
-        f[][] stackIn_30_6 = null;
+        PuzzleTile[][] stackIn_30_6 = null;
         int stackIn_30_7 = 0;
         int stackIn_30_8 = 0;
-        f[] stackIn_31_0 = null;
+        PuzzleTile[] stackIn_31_0 = null;
         int stackIn_31_1 = 0;
-        f stackIn_31_2 = null;
+        PuzzleTile stackIn_31_2 = null;
         Object stackIn_31_3 = null;
         int stackIn_31_4 = 0;
         int stackIn_31_5 = 0;
-        f[][] stackIn_31_6 = null;
-        f[] stackIn_32_0 = null;
+        PuzzleTile[][] stackIn_31_6 = null;
+        PuzzleTile[] stackIn_32_0 = null;
         int stackIn_32_1 = 0;
-        f stackIn_32_2 = null;
+        PuzzleTile stackIn_32_2 = null;
         Object stackIn_32_3 = null;
         int stackIn_32_4 = 0;
         int stackIn_32_5 = 0;
-        f[][] stackIn_32_6 = null;
-        f[] stackIn_33_0 = null;
+        PuzzleTile[][] stackIn_32_6 = null;
+        PuzzleTile[] stackIn_33_0 = null;
         int stackIn_33_1 = 0;
-        f stackIn_33_2 = null;
+        PuzzleTile stackIn_33_2 = null;
         Object stackIn_33_3 = null;
         int stackIn_33_4 = 0;
         int stackIn_33_5 = 0;
-        f[][] stackIn_33_6 = null;
+        PuzzleTile[][] stackIn_33_6 = null;
         RgbSprite[] stackIn_33_7 = null;
-        f[] stackIn_39_0 = null;
+        PuzzleTile[] stackIn_39_0 = null;
         int stackIn_39_1 = 0;
-        f stackIn_39_2 = null;
+        PuzzleTile stackIn_39_2 = null;
         Object stackIn_39_3 = null;
         int stackIn_39_4 = 0;
         int stackIn_39_5 = 0;
-        f[][] stackIn_39_6 = null;
-        f[] stackIn_40_0 = null;
+        PuzzleTile[][] stackIn_39_6 = null;
+        PuzzleTile[] stackIn_40_0 = null;
         int stackIn_40_1 = 0;
-        f stackIn_40_2 = null;
+        PuzzleTile stackIn_40_2 = null;
         Object stackIn_40_3 = null;
         int stackIn_40_4 = 0;
         int stackIn_40_5 = 0;
-        f[][] stackIn_40_6 = null;
-        f[] stackIn_41_0 = null;
+        PuzzleTile[][] stackIn_40_6 = null;
+        PuzzleTile[] stackIn_41_0 = null;
         int stackIn_41_1 = 0;
-        f stackIn_41_2 = null;
+        PuzzleTile stackIn_41_2 = null;
         Object stackIn_41_3 = null;
         int stackIn_41_4 = 0;
         int stackIn_41_5 = 0;
-        f[][] stackIn_41_6 = null;
+        PuzzleTile[][] stackIn_41_6 = null;
         RgbSprite[] stackIn_41_7 = null;
-        f[] stackIn_47_0 = null;
+        PuzzleTile[] stackIn_47_0 = null;
         int stackIn_47_1 = 0;
-        f stackIn_47_2 = null;
+        PuzzleTile stackIn_47_2 = null;
         Object stackIn_47_3 = null;
         int stackIn_47_4 = 0;
         int stackIn_47_5 = 0;
-        f[][] stackIn_47_6 = null;
-        f[] stackIn_48_0 = null;
+        PuzzleTile[][] stackIn_47_6 = null;
+        PuzzleTile[] stackIn_48_0 = null;
         int stackIn_48_1 = 0;
-        f stackIn_48_2 = null;
+        PuzzleTile stackIn_48_2 = null;
         Object stackIn_48_3 = null;
         int stackIn_48_4 = 0;
         int stackIn_48_5 = 0;
-        f[][] stackIn_48_6 = null;
-        f[] stackIn_49_0 = null;
+        PuzzleTile[][] stackIn_48_6 = null;
+        PuzzleTile[] stackIn_49_0 = null;
         int stackIn_49_1 = 0;
-        f stackIn_49_2 = null;
+        PuzzleTile stackIn_49_2 = null;
         Object stackIn_49_3 = null;
         int stackIn_49_4 = 0;
         int stackIn_49_5 = 0;
-        f[][] stackIn_49_6 = null;
+        PuzzleTile[][] stackIn_49_6 = null;
         RgbSprite[] stackIn_49_7 = null;
-        f stackIn_53_0 = null;
+        PuzzleTile stackIn_53_0 = null;
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
         RuntimeException stackIn_56_0 = null;
@@ -256,7 +256,7 @@ final class cj extends qf implements Cloneable {
         int statePc = 0;
         Throwable caughtException = null;
         int var5_int = 0;
-        f var5 = null;
+        PuzzleTile var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
@@ -277,7 +277,7 @@ final class cj extends qf implements Cloneable {
                             /* Inlined CFG state: 2. */
                             {
                                 to.field_c = to.field_c - 1;
-                                var5_int = this.a(false);
+                                var5_int = this.getAttributedPlayerMask(false);
                                 mb.field_g = mb.field_g + 5;
                                 fn.field_j = fn.field_j + 5;
                                 var6 = 0;
@@ -377,12 +377,12 @@ final class cj extends qf implements Cloneable {
                 }
                 case 11: {
                     try {
-                        this.field_l.a((byte) 82, (f) (this));
+                        this.field_l.copyTileAttribution((byte) 82, (PuzzleTile) (this));
                         if (~this.field_D == param3) {
                             /* Inlined CFG state: 13. */
                             {
                                 FullscreenFocusCanvas.field_c.a(64, param1 * 12, param0 * 12, 0, (byte) -111);
-                                stackIn_14_0 = new ig((f) (this), bd.field_n, this.field_l, false);
+                                stackIn_14_0 = new ig((PuzzleTile) (this), bd.field_n, this.field_l, false);
                                 statePc = 14;
                                 continue scanLoop1;
                             }
@@ -393,7 +393,7 @@ final class cj extends qf implements Cloneable {
                                 {
                                 }
                                 {
-                                    var5 = this.field_l.a((f) (this), param0, param1, param2, ba.field_g, (byte) -87).a((f) (this), param0, param1, param2, jg.field_i, (byte) -87);
+                                    var5 = this.field_l.a((PuzzleTile) (this), param0, param1, param2, ba.field_g, (byte) -87).a((PuzzleTile) (this), param0, param1, param2, ModelMesh.field_i, (byte) -87);
                                     var6 = 1;
                                     statePc = 16;
                                     continue scanLoop1;
@@ -410,7 +410,7 @@ final class cj extends qf implements Cloneable {
                     }
                 }
                 case 14: {
-                    return (f) ((Object) stackIn_14_0);
+                    return (PuzzleTile) ((Object) stackIn_14_0);
                 }
                 case 16: {
                     try {
@@ -433,7 +433,7 @@ final class cj extends qf implements Cloneable {
                                 stackIn_18_4 = stackIn_20_4;
                                 stackIn_20_5 = -var6 + param1;
                                 stackIn_18_5 = stackIn_20_5;
-                                stackIn_20_6 = (f[][]) (param2);
+                                stackIn_20_6 = (PuzzleTile[][]) (param2);
                                 stackIn_18_6 = stackIn_20_6;
                                 stackIn_20_7 = ~var6;
                                 stackIn_18_7 = stackIn_20_7;
@@ -535,7 +535,7 @@ final class cj extends qf implements Cloneable {
                 }
                 case 23: {
                     try {
-                        stackIn_23_0[stackIn_23_1] = ((f) (Object) stackIn_23_2).a((f) (this), stackIn_23_4, stackIn_23_5, stackIn_23_6, stackIn_23_7, (byte) -87);
+                        stackIn_23_0[stackIn_23_1] = ((PuzzleTile) (Object) stackIn_23_2).a((PuzzleTile) (this), stackIn_23_4, stackIn_23_5, stackIn_23_6, stackIn_23_7, (byte) -87);
                         if (var7 == 0) {
                             statePc = 25;
                             continue scanLoop1;
@@ -591,7 +591,7 @@ final class cj extends qf implements Cloneable {
                                 stackIn_28_4 = stackIn_30_4;
                                 stackIn_30_5 = param1 + var6;
                                 stackIn_28_5 = stackIn_30_5;
-                                stackIn_30_6 = (f[][]) (param2);
+                                stackIn_30_6 = (PuzzleTile[][]) (param2);
                                 stackIn_28_6 = stackIn_30_6;
                                 stackIn_30_7 = var6;
                                 stackIn_28_7 = stackIn_30_7;
@@ -693,7 +693,7 @@ final class cj extends qf implements Cloneable {
                 }
                 case 33: {
                     try {
-                        stackIn_33_0[stackIn_33_1] = ((f) (Object) stackIn_33_2).a((f) (this), stackIn_33_4, stackIn_33_5, stackIn_33_6, stackIn_33_7, (byte) -87);
+                        stackIn_33_0[stackIn_33_1] = ((PuzzleTile) (Object) stackIn_33_2).a((PuzzleTile) (this), stackIn_33_4, stackIn_33_5, stackIn_33_6, stackIn_33_7, (byte) -87);
                         if (var7 != 0) {
                             /* Inlined CFG state: 35. */
                             {
@@ -752,7 +752,7 @@ final class cj extends qf implements Cloneable {
                                 stackIn_39_4 = stackIn_40_4;
                                 stackIn_40_5 = param1;
                                 stackIn_39_5 = stackIn_40_5;
-                                stackIn_40_6 = (f[][]) (param2);
+                                stackIn_40_6 = (PuzzleTile[][]) (param2);
                                 stackIn_39_6 = stackIn_40_6;
                                 if (var6 != this.field_D) {
                                     /* Inlined CFG state: 40. */
@@ -764,7 +764,7 @@ final class cj extends qf implements Cloneable {
                                         stackIn_41_4 = stackIn_40_4;
                                         stackIn_41_5 = stackIn_40_5;
                                         stackIn_41_6 = stackIn_40_6;
-                                        stackIn_41_7 = jg.field_i;
+                                        stackIn_41_7 = ModelMesh.field_i;
                                         statePc = 41;
                                         continue scanLoop1;
                                     }
@@ -796,7 +796,7 @@ final class cj extends qf implements Cloneable {
                 }
                 case 41: {
                     try {
-                        stackIn_41_0[stackIn_41_1] = ((f) (Object) stackIn_41_2).a((f) (this), stackIn_41_4, stackIn_41_5, stackIn_41_6, stackIn_41_7, (byte) -87);
+                        stackIn_41_0[stackIn_41_1] = ((PuzzleTile) (Object) stackIn_41_2).a((PuzzleTile) (this), stackIn_41_4, stackIn_41_5, stackIn_41_6, stackIn_41_7, (byte) -87);
                         if (var7 != 0) {
                             /* Inlined CFG state: 43. */
                             {
@@ -855,7 +855,7 @@ final class cj extends qf implements Cloneable {
                                 stackIn_47_4 = stackIn_48_4;
                                 stackIn_48_5 = param1;
                                 stackIn_47_5 = stackIn_48_5;
-                                stackIn_48_6 = (f[][]) (param2);
+                                stackIn_48_6 = (PuzzleTile[][]) (param2);
                                 stackIn_47_6 = stackIn_48_6;
                                 if (var6 == this.field_D) {
                                     statePc = 48;
@@ -883,7 +883,7 @@ final class cj extends qf implements Cloneable {
                         stackIn_49_4 = stackIn_47_4;
                         stackIn_49_5 = stackIn_47_5;
                         stackIn_49_6 = stackIn_47_6;
-                        stackIn_49_7 = jg.field_i;
+                        stackIn_49_7 = ModelMesh.field_i;
                         statePc = 49;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_47) {
@@ -918,7 +918,7 @@ final class cj extends qf implements Cloneable {
                 }
                 case 49: {
                     try {
-                        stackIn_49_0[stackIn_49_1] = ((f) (Object) stackIn_49_2).a((f) (this), stackIn_49_4, stackIn_49_5, stackIn_49_6, stackIn_49_7, (byte) -87);
+                        stackIn_49_0[stackIn_49_1] = ((PuzzleTile) (Object) stackIn_49_2).a((PuzzleTile) (this), stackIn_49_4, stackIn_49_5, stackIn_49_6, stackIn_49_7, (byte) -87);
                         if (var7 != 0) {
                             /* Inlined CFG state: 51. */
                             {
@@ -944,7 +944,7 @@ final class cj extends qf implements Cloneable {
                 }
                 case 52: {
                     try {
-                        stackIn_53_0 = (f) (var5);
+                        stackIn_53_0 = (PuzzleTile) (var5);
                         statePc = 53;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_52) {
@@ -1055,7 +1055,7 @@ final class cj extends qf implements Cloneable {
         }
     }
 
-    cj(f param0, int param1, int param2, int param3) {
+    cj(PuzzleTile param0, int param1, int param2, int param3) {
         super(param0);
         this.field_B = false;
         this.field_z = 0;
@@ -1067,7 +1067,7 @@ final class cj extends qf implements Cloneable {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setTileVariant(int param0, int param1) {
         this.field_D = param0;
         if (param1 < 61) {
           byte[] var4 = (byte[]) null;
@@ -1077,8 +1077,8 @@ final class cj extends qf implements Cloneable {
 
     final boolean b(byte param0) {
         if (param0 <= 43) {
-          f var3 = (f) null;
-          this.a(-108, 119, (f[][]) null, (f) null, (byte) -39);
+          PuzzleTile var3 = (PuzzleTile) null;
+          this.a(-108, 119, (PuzzleTile[][]) null, (PuzzleTile) null, (byte) -39);
         }
         return this.field_B;
     }
@@ -1093,7 +1093,7 @@ final class cj extends qf implements Cloneable {
         field_E = null;
     }
 
-    final nj a(int param0, nj param1) {
+    final nj showTileTooltip(int param0, nj param1) {
         RuntimeException var3 = null;
         nj stackIn_2_0 = null;
         nj stackIn_4_0 = null;
@@ -1122,7 +1122,7 @@ final class cj extends qf implements Cloneable {
         }
     }
 
-    final boolean a(mj param0, boolean param1, f[][] param2) {
+    final boolean a(LaserTraceCursor param0, boolean param1, PuzzleTile[][] param2) {
         RuntimeException var4 = null;
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_7_0 = null;
@@ -1134,7 +1134,7 @@ final class cj extends qf implements Cloneable {
         try {
           stackIn_3_1 = (param1);
           this.field_B = stackIn_3_1;
-          this.a((byte) 95, param0.field_a);
+          this.copyTileAttribution((byte) 95, param0.field_a);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1156,10 +1156,10 @@ final class cj extends qf implements Cloneable {
         }
     }
 
-    final f e(int param0, int param1, f[][] param2, int param3) {
+    final PuzzleTile e(int param0, int param1, PuzzleTile[][] param2, int param3) {
         RuntimeException var5 = null;
-        f stackIn_2_0 = null;
-        f stackIn_5_0 = null;
+        PuzzleTile stackIn_2_0 = null;
+        PuzzleTile stackIn_5_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -1167,13 +1167,13 @@ final class cj extends qf implements Cloneable {
         try {
           if (!this.field_B) {
             if (param3 > 120) {
-              return (f) (this);
+              return (PuzzleTile) (this);
             }
-            stackIn_5_0 = (f) null;
+            stackIn_5_0 = (PuzzleTile) null;
             return stackIn_5_0;
           }
           b.field_a = b.field_a - 3;
-          we.field_h = we.field_h - 6;
+          LevelProgressUpdate.field_h = LevelProgressUpdate.field_h - 6;
           je.field_j = je.field_j - 3;
           fp.field_a = fp.field_a - 6;
           stackIn_2_0 = this.g(param0, param1, param2, -1);
@@ -1192,7 +1192,7 @@ final class cj extends qf implements Cloneable {
         }
     }
 
-    final boolean a(byte param0, f[][] param1, f param2) {
+    final boolean a(byte param0, PuzzleTile[][] param1, PuzzleTile param2) {
         RuntimeException var4 = null;
         fq var5 = null;
         RuntimeException stackIn_8_0 = null;
@@ -1204,15 +1204,15 @@ final class cj extends qf implements Cloneable {
         try {
           if (param0 != 42) {
             var5 = (fq) null;
-            this.a(96, -108, 70, (f[][]) null, -76, (fq) null, -124);
+            this.a(96, -108, 70, (PuzzleTile[][]) null, -76, (fq) null, -124);
           }
           if (0 != this.field_z) {
             return true;
           }
           this.field_z = 2;
-          this.a((byte) 63, param2);
+          this.copyTileAttribution((byte) 63, param2);
           b.field_a = b.field_a - 4;
-          we.field_h = we.field_h - 8;
+          LevelProgressUpdate.field_h = LevelProgressUpdate.field_h - 8;
           fp.field_a = fp.field_a - 8;
           je.field_j = je.field_j - 4;
           fn.field_j = fn.field_j - ob.field_l;
@@ -1238,7 +1238,7 @@ final class cj extends qf implements Cloneable {
         }
     }
 
-    final void a(int param0, f[][] param1, int param2, int param3) {
+    final void a(int param0, PuzzleTile[][] param1, int param2, int param3) {
         try {
           this.field_F = (3 * param2 + 5 * param3) % 64;
           if (param0 != -35) {
@@ -1249,7 +1249,7 @@ final class cj extends qf implements Cloneable {
         }
     }
 
-    final boolean c(f[][] param0, int param1, byte param2, int param3) {
+    final boolean c(PuzzleTile[][] param0, int param1, byte param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -1258,7 +1258,7 @@ final class cj extends qf implements Cloneable {
         try {
           fn.field_j = fn.field_j + ob.field_l;
           wd.field_j = wd.field_j - 1;
-          we.field_h = we.field_h + 20;
+          LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 20;
           fp.field_a = fp.field_a + 20;
           je.field_j = je.field_j + 10;
           b.field_a = b.field_a + 10;
@@ -1298,7 +1298,7 @@ final class cj extends qf implements Cloneable {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    final void c(int param0, int param1, f[][] param2, int param3) {
+    final void c(int param0, int param1, PuzzleTile[][] param2, int param3) {
         if (param1 != 0) {
           return;
         }
@@ -1309,7 +1309,7 @@ final class cj extends qf implements Cloneable {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, f[][] param3, int param4, fq param5, int param6) {
+    final boolean a(int param0, int param1, int param2, PuzzleTile[][] param3, int param4, fq param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -1347,7 +1347,7 @@ final class cj extends qf implements Cloneable {
         }
     }
 
-    final f a(int param0, int param1, f[][] param2, f param3, byte param4) {
+    final PuzzleTile a(int param0, int param1, PuzzleTile[][] param2, PuzzleTile param3, byte param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1361,8 +1361,8 @@ final class cj extends qf implements Cloneable {
           var6_int = -110 / ((73 - param4) / 42);
           fn.field_j = fn.field_j - wd.field_j;
           this.field_B = true;
-          this.a((byte) 123, param3);
-          return (f) (this);
+          this.copyTileAttribution((byte) 123, param3);
+          return (PuzzleTile) (this);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

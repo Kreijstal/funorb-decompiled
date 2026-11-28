@@ -14,22 +14,22 @@ class ga extends fj implements hi {
         RuntimeException var8 = null;
         fj var9 = null;
         int var10 = 0;
-        vb var11 = null;
+        DequeCursor var11 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         var10 = Confined.field_J ? 1 : 0;
         try {
-          var11 = new vb(this.field_N);
-          var9 = (fj) (var11.a((byte) 120));
+          var11 = new DequeCursor(this.field_N);
+          var9 = (fj) (var11.startFromTail((byte) 120));
           while (var9 != null) {
             if (var9.isLinked((byte) 115)) {
               if (var9.e((byte) -125) &&
                 var9.a(param0, param1, (byte) 36, param3, param4, param5, param6)) {
                 return true;
               }
-              var9 = (fj) (var11.b(param2 ^ 95));
+              var9 = (fj) (var11.previousNode(param2 ^ 95));
               continue;
             }
             break;
@@ -53,7 +53,7 @@ class ga extends fj implements hi {
     }
 
     final boolean a(int param0, int param1, byte param2, int param3, fj param4, int param5, int param6) {
-        vb var8 = null;
+        DequeCursor var8 = null;
         RuntimeException var8_ref = null;
         fj var9 = null;
         int var10 = 0;
@@ -63,17 +63,17 @@ class ga extends fj implements hi {
         RuntimeException decompiledCaughtException = null;
         var10 = Confined.field_J ? 1 : 0;
         try {
-          var8 = new vb(this.field_N);
+          var8 = new DequeCursor(this.field_N);
           if (param2 != 91) {
             return false;
           }
-          var9 = (fj) (var8.a((byte) 120));
+          var9 = (fj) (var8.startFromTail((byte) 120));
           while (var9 != null) {
             if (var9.isLinked((byte) 110)) {
               if (var9.a(this.field_q + param0, param1, (byte) 91, param3 + this.field_m, param4, param5, param6)) {
                 return true;
               }
-              var9 = (fj) (var8.b(param2 - 39));
+              var9 = (fj) (var8.previousNode(param2 - 39));
               continue;
             }
             break;
@@ -101,10 +101,10 @@ class ga extends fj implements hi {
     final boolean c(fj param0, int param1) {
         RuntimeException var3 = null;
         fj var4 = null;
-        vb var5 = null;
+        DequeCursor var5 = null;
         fj var6 = null;
         int var7 = 0;
-        vb var8 = null;
+        DequeCursor var8 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -117,21 +117,21 @@ class ga extends fj implements hi {
           if (this.field_N.isEmpty(-1)) {
             return false;
           }
-          var8 = new vb(this.field_N);
-          var4 = (fj) (var8.c(7));
+          var8 = new DequeCursor(this.field_N);
+          var4 = (fj) (var8.startFromHead(7));
           while (var4 != null) {
             if (var4.e((byte) -123)) {
-              var5 = new vb(this.field_N);
-              var5.a(var4, 0);
-              var6 = (fj) (var5.a(0));
+              var5 = new DequeCursor(this.field_N);
+              var5.startForwardAt(var4, 0);
+              var6 = (fj) (var5.nextNode(0));
               while (var6 != null) {
                 if (var6.a(param0, 418)) {
                   return true;
                 }
-                var6 = (fj) (var5.a(0));
+                var6 = (fj) (var5.nextNode(0));
               }
             }
-            var4 = (fj) (var8.a(0));
+            var4 = (fj) (var8.nextNode(0));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -157,21 +157,21 @@ class ga extends fj implements hi {
           null != this.field_n) {
           this.field_n.a((byte) -125, param3, true, (fj) (this), param0);
         }
-        vb var5 = new vb(this.field_N);
-        fj var6 = (fj) (var5.c(7));
+        DequeCursor var5 = new DequeCursor(this.field_N);
+        fj var6 = (fj) (var5.startFromHead(7));
         while (var6 != null) {
           var6.a(this.field_m + param0, param1, (byte) 84, param3 + this.field_q);
-          var6 = (fj) (var5.a(0));
+          var6 = (fj) (var5.nextNode(0));
         }
     }
 
     final void b(int param0) {
         int var4 = Confined.field_J ? 1 : 0;
-        vb var2 = new vb(this.field_N);
-        fj var3 = (fj) (var2.a((byte) 120));
+        DequeCursor var2 = new DequeCursor(this.field_N);
+        fj var3 = (fj) (var2.startFromTail((byte) 120));
         while (var3 != null) {
           var3.b(param0 + 0);
-          var3 = (fj) (var2.b(-67));
+          var3 = (fj) (var2.previousNode(-67));
         }
         if (param0 != 84) {
           this.field_N = (PrimaryNodeDeque) null;
@@ -179,7 +179,7 @@ class ga extends fj implements hi {
     }
 
     final boolean a(fj param0, int param1) {
-        vb var3 = null;
+        DequeCursor var3 = null;
         RuntimeException var3_ref = null;
         fj var4 = null;
         int var5 = 0;
@@ -189,16 +189,16 @@ class ga extends fj implements hi {
         RuntimeException decompiledCaughtException = null;
         var5 = Confined.field_J ? 1 : 0;
         try {
-          var3 = new vb(this.field_N);
+          var3 = new DequeCursor(this.field_N);
           if (param1 != 418) {
             this.field_N = (PrimaryNodeDeque) null;
           }
-          var4 = (fj) (var3.a((byte) 120));
+          var4 = (fj) (var3.startFromTail((byte) 120));
           while (var4 != null) {
             if (var4.a(param0, 418)) {
               return true;
             }
-            var4 = (fj) (var3.b(-126));
+            var4 = (fj) (var3.previousNode(-126));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -269,26 +269,26 @@ class ga extends fj implements hi {
     }
 
     fj f(int param0) {
-        vb var2;
+        DequeCursor var2;
         fj var3;
         int var4;
         var4 = Confined.field_J ? 1 : 0;
         if (param0 != -1) {
           return (fj) null;
         }
-        var2 = new vb(this.field_N);
-        var3 = (fj) (var2.a((byte) 120));
+        var2 = new DequeCursor(this.field_N);
+        var3 = (fj) (var2.startFromTail((byte) 120));
         while (var3 != null) {
           if (var3.e((byte) 87)) {
             return var3;
           }
-          var3 = (fj) (var2.b(-51));
+          var3 = (fj) (var2.previousNode(-51));
         }
         return null;
     }
 
     final void a(int param0, int param1, int param2, fj param3, int param4, int param5) {
-        vb var7 = null;
+        DequeCursor var7 = null;
         fj var8 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -298,12 +298,12 @@ class ga extends fj implements hi {
         RuntimeException var7_ref = null;
         var9 = Confined.field_J ? 1 : 0;
         try {
-          var7 = new vb(this.field_N);
-          var8 = (fj) (var7.a((byte) 120));
+          var7 = new DequeCursor(this.field_N);
+          var8 = (fj) (var7.startFromTail((byte) 120));
           while (var8 != null) {
             if (var8.isLinked((byte) 127)) {
               var8.a(-81, param1 + this.field_m, param2, param3, param4, param5 + this.field_q);
-              var8 = (fj) (var7.b(-108));
+              var8 = (fj) (var7.previousNode(-108));
               continue;
             }
             break;
@@ -339,7 +339,7 @@ class ga extends fj implements hi {
 
     void a(fj param0, int param1, int param2, int param3) {
         RuntimeException runtimeException = null;
-        vb var5 = null;
+        DequeCursor var5 = null;
         fj var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -349,12 +349,12 @@ class ga extends fj implements hi {
         var7 = Confined.field_J ? 1 : 0;
         try {
           super.a(param0, param1, param2, param3);
-          var5 = new vb(this.field_N);
-          var6 = (fj) (var5.a((byte) 120));
+          var5 = new DequeCursor(this.field_N);
+          var6 = (fj) (var5.startFromTail((byte) 120));
           while (var6 != null) {
             if (var6.isLinked((byte) 126)) {
               var6.a(param0, param1 + 0, this.field_q + param2, this.field_m + param3);
-              var6 = (fj) (var5.b(-88));
+              var6 = (fj) (var5.previousNode(-88));
               continue;
             }
             break;
@@ -381,7 +381,7 @@ class ga extends fj implements hi {
         }
         boolean decompiledFrameRemainder0 = true;
         if (we.field_c >= 20 &&
-          dc.f(-14) && (!(oi.field_q > 0) ||
+          dc.f(-14) && (!(DynamicLight.field_q > 0) ||
           ja.c((byte) -77))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
@@ -395,10 +395,10 @@ class ga extends fj implements hi {
     final boolean a(int param0, fj param1) {
         RuntimeException var3 = null;
         fj var4 = null;
-        vb var5 = null;
+        DequeCursor var5 = null;
         fj var6 = null;
         int var7 = 0;
-        vb var8 = null;
+        DequeCursor var8 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -408,24 +408,24 @@ class ga extends fj implements hi {
           if (this.field_N.isEmpty(-1)) {
             return false;
           }
-          var8 = new vb(this.field_N);
+          var8 = new DequeCursor(this.field_N);
           if (param0 != 17731) {
             return false;
           }
-          var4 = (fj) (var8.a((byte) 120));
+          var4 = (fj) (var8.startFromTail((byte) 120));
           while (var4 != null) {
             if (var4.e((byte) -24)) {
-              var5 = new vb(this.field_N);
-              var5.b(var4, param0 ^ 17733);
-              var6 = (fj) (var5.b(-121));
+              var5 = new DequeCursor(this.field_N);
+              var5.startBackwardAt(var4, param0 ^ 17733);
+              var6 = (fj) (var5.previousNode(-121));
               while (var6 != null) {
                 if (var6.a(param1, param0 - 17313)) {
                   return true;
                 }
-                var6 = (fj) (var5.b(-46));
+                var6 = (fj) (var5.previousNode(-46));
               }
             }
-            var4 = (fj) (var8.b(-123));
+            var4 = (fj) (var8.previousNode(-123));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -443,13 +443,13 @@ class ga extends fj implements hi {
     }
 
     final String f(byte param0) {
-        vb var2;
+        DequeCursor var2;
         fj var3;
         String var4;
         int var5;
         var5 = Confined.field_J ? 1 : 0;
-        var2 = new vb(this.field_N);
-        var3 = (fj) (var2.a((byte) 120));
+        var2 = new DequeCursor(this.field_N);
+        var3 = (fj) (var2.startFromTail((byte) 120));
         if (param0 > -82) {
           this.field_N = (PrimaryNodeDeque) null;
         }
@@ -458,7 +458,7 @@ class ga extends fj implements hi {
           if (var4 != null) {
             return var4;
           }
-          var3 = (fj) (var2.b(66));
+          var3 = (fj) (var2.previousNode(66));
         }
         return null;
     }
@@ -474,7 +474,7 @@ class ga extends fj implements hi {
     boolean a(fj param0, byte param1, int param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
-        vb var6 = null;
+        DequeCursor var6 = null;
         int var7 = 0;
         int var8 = 0;
         fj var9 = null;
@@ -486,15 +486,15 @@ class ga extends fj implements hi {
         var8 = Confined.field_J ? 1 : 0;
         try {
           var5_int = 1 % ((47 - param1) / 43);
-          var6 = new vb(this.field_N);
-          var9 = (fj) (var6.a((byte) 120));
+          var6 = new DequeCursor(this.field_N);
+          var9 = (fj) (var6.startFromTail((byte) 120));
           while (var9 != null) {
             if (var9.isLinked((byte) 106)) {
               if (var9.e((byte) -125) &&
                 var9.a(param0, (byte) -49, param2, param3)) {
                 return true;
               }
-              var9 = (fj) (var6.b(-75));
+              var9 = (fj) (var6.previousNode(-75));
               continue;
             }
             break;
@@ -530,14 +530,14 @@ class ga extends fj implements hi {
         if (param0 <= 65) {
           return 67;
         }
-        vb var3 = new vb(this.field_N);
-        fj var4 = (fj) (var3.a((byte) 120));
+        DequeCursor var3 = new DequeCursor(this.field_N);
+        fj var4 = (fj) (var3.startFromTail((byte) 120));
         while (var4 != null) {
           var5 = var4.c(72);
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (fj) (var3.b(-33));
+          var4 = (fj) (var3.previousNode(-33));
         }
         return var2;
     }
@@ -585,11 +585,11 @@ class ga extends fj implements hi {
 
     private final void i(int param0) {
         int var4 = Confined.field_J ? 1 : 0;
-        vb var2 = new vb(this.field_N);
-        fj var3 = (fj) (var2.a((byte) 120));
+        DequeCursor var2 = new DequeCursor(this.field_N);
+        fj var3 = (fj) (var2.startFromTail((byte) 120));
         while (var3 != null) {
           var3.d(60);
-          var3 = (fj) (var2.b(param0 ^ 11913));
+          var3 = (fj) (var2.previousNode(param0 ^ 11913));
         }
         if (param0 != 12007) {
           field_K = (RgbSprite) null;
@@ -600,7 +600,7 @@ class ga extends fj implements hi {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
-        vb var5 = null;
+        DequeCursor var5 = null;
         fj var6 = null;
         int var8 = 0;
         fj stackIn_10_0;
@@ -617,11 +617,11 @@ class ga extends fj implements hi {
         RuntimeException var5_ref = null;
         var8 = Confined.field_J ? 1 : 0;
         try {
-          var5 = new vb(this.field_N);
+          var5 = new DequeCursor(this.field_N);
           if (!param1) {
             field_M = -106L;
           }
-          var6 = (fj) (var5.a((byte) 120));
+          var6 = (fj) (var5.startFromTail((byte) 120));
           while (var6 != null) {
             discarded$3 = param0.append('\n');
             for (var7 = 0; param3 >= var7; var7++) {
@@ -633,7 +633,7 @@ class ga extends fj implements hi {
             stackIn_10_3 = (Hashtable) (param2);
             stackIn_11_4 = !(param1);
             ((fj) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2, stackIn_10_3, stackIn_11_4);
-            var6 = (fj) (var5.b(-38));
+            var6 = (fj) (var5.previousNode(-38));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

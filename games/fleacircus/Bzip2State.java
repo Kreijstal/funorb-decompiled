@@ -83,7 +83,7 @@ final class Bzip2State {
         if (!BoundedRandomAccessFile.field_d.ensureIndexLoaded((byte) -117)) {
           return bf.field_f;
         }
-        if (!BoundedRandomAccessFile.field_d.a("commonui", -114)) {
+        if (!BoundedRandomAccessFile.field_d.tryLoadGroupByName("commonui", -114)) {
           return IterableNodeHashTable.field_e + " - " + BoundedRandomAccessFile.field_d.getGroupLoadPercentByName(param0 + 1851, "commonui") + "%";
         }
         if (param0 != -1917) {
@@ -92,14 +92,14 @@ final class Bzip2State {
         if (!oa.field_l.ensureIndexLoaded((byte) -100)) {
           return de.field_j;
         }
-        if (!oa.field_l.a("commonui", param0 + 1793)) {
+        if (!oa.field_l.tryLoadGroupByName("commonui", param0 + 1793)) {
           return rg.field_q + " - " + oa.field_l.getGroupLoadPercentByName(param0 ^ 1851, "commonui") + "%";
         }
         if (!kc.field_d.ensureIndexLoaded((byte) -108)) {
           return IterableNodeHashTable.field_h;
         }
         if (!kc.field_d.tryLoadAllGroups(-75)) {
-          return ob.field_b + " - " + kc.field_d.a((byte) -43) + "%";
+          return ob.field_b + " - " + kc.field_d.getArchiveLoadPercent((byte) -43) + "%";
         }
         return ja.field_L;
     }

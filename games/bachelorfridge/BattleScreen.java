@@ -500,7 +500,7 @@ final class BattleScreen extends dfa {
           if (this.field_h.field_o != 3) {
             return true;
           }
-          if (!this.field_h.a((byte) -124, param0.field_s.ownerIndex, param0.field_s.tileX, param0.field_s.tileY)) {
+          if (!this.field_h.isFlagBaseTile((byte) -124, param0.field_s.ownerIndex, param0.field_s.tileX, param0.field_s.tileY)) {
             return true;
           }
           if (!param1) {
@@ -557,7 +557,7 @@ final class BattleScreen extends dfa {
           }
           var8 = (BasicMoveDefinition) (al.a(-98, this.field_P.field_s.field_o.field_g.field_b[this.field_P.field_s.field_m[this.field_db]]));
           if (var7Lifetime1 >= var8.field_w) {
-            if (var10.field_s.c(87, this.field_P.field_s.field_o.field_g.field_b[this.field_P.field_s.field_m[this.field_db]]) < var7Lifetime1) {
+            if (var10.field_s.getMoveMaxRange(87, this.field_P.field_s.field_o.field_g.field_b[this.field_P.field_s.field_m[this.field_db]]) < var7Lifetime1) {
               this.m(10);
             } else {
               if ((var8.field_j == 80 ||
@@ -637,7 +637,7 @@ final class BattleScreen extends dfa {
               var6 = 480;
               var7 = 4 + mk.field_p;
               var8 = gd.field_m + 4;
-              sd.a(this.field_G[var3.creature.field_f].field_s.a(var4, -5313), var7, var4, (byte) 74, var8, var5, var6);
+              sd.a(this.field_G[var3.creature.field_f].field_s.getAttackDamageMultiplier(var4, -5313), var7, var4, (byte) 74, var8, var5, var6);
             }
           }
         }
@@ -697,10 +697,10 @@ final class BattleScreen extends dfa {
               }
             }
           }
-          if (this.field_h.a((byte) -60, var4)) {
+          if (this.field_h.hasPlayerOfferedDraw((byte) -60, var4)) {
             b.field_t.a(lga.a(true, new String[]{this.field_h.field_y[var4]}, DisableSpecial.field_p), 72 + var3 + (var5 - 5), 50 + i.field_a.field_rb - ScavengerAnimation.field_w.field_p, 0, -1);
           } else {
-            if (this.field_h.b((byte) 106, var4)) {
+            if (this.field_h.hasPlayerResigned((byte) 106, var4)) {
               b.field_t.a(ZombiesAnimation.field_w, 72 + (-5 + var5 + var3), 26 + (-ScavengerAnimation.field_w.field_p + (i.field_a.field_rb + 24)), 0, -1);
             } else {
               if (this.field_h.rosters[var4].field_c) {
@@ -901,14 +901,14 @@ final class BattleScreen extends dfa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          var4_int = param1.field_s.a(32, (byte) 109) ? 1 : 0;
-          param1.field_s.k(-2049, param2);
+          var4_int = param1.field_s.hasStatus(32, (byte) 109) ? 1 : 0;
+          param1.field_s.tryApplyStatus(-2049, param2);
           param1.a(24831, 45, kna.field_g[param2]);
           if (param0 != -16007) {
             this.field_g = -44;
           }
           if (var4_int != 0) {
-            if (param1.field_s.a(32, (byte) -110)) {
+            if (param1.field_s.hasStatus(32, (byte) -110)) {
               return;
             }
             this.b(param1, (CreatureActor) null, true);
@@ -978,7 +978,7 @@ final class BattleScreen extends dfa {
           if (var4.field_j != 130) {
             return true;
           }
-          stackIn_32_0 = (this.field_h.tiles[this.field_N][this.field_H].occupant == null) && (this.field_h.tiles[this.field_N][this.field_H].e(-123));
+          stackIn_32_0 = (this.field_h.tiles[this.field_N][this.field_H].occupant == null) && (this.field_h.tiles[this.field_N][this.field_H].isTraversableTerrain(-123));
           return stackIn_32_0;
         }
         boolean decompiledFrameRemainder0 = true;
@@ -1029,7 +1029,7 @@ final class BattleScreen extends dfa {
         int var10;
         var10 = BachelorFridge.field_y;
         var2 = 14;
-        var3 = this.field_h.rosters[this.field_n].a((byte) -43);
+        var3 = this.field_h.rosters[this.field_n].countRosterCreatures((byte) -43);
         ShuffleSpecial.field_r.draw(var3 * 39 - ShuffleSpecial.field_r.field_q, 5);
         if (param0 != -1) {
           this.field_n = 83;
@@ -1175,7 +1175,7 @@ final class BattleScreen extends dfa {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = this.field_h.a((byte) -120, param1.field_s);
+          var6 = this.field_h.splitCreatureIntoAdjacentTile((byte) -120, param1.field_s);
           var7 = var6;
           if (param0 != 21915) {
             var5 = (BattleCreature) null;
@@ -1280,10 +1280,10 @@ final class BattleScreen extends dfa {
     final void a(CreatureActor param0, CreatureActor param1, boolean param2) {
         int var4_int = 0;
         int var5 = 0;
-        if (!param0.field_s.a(this.field_h.tiles[param1.field_s.tileX][param1.field_s.tileY].terrain, param2)) {
+        if (!param0.field_s.canTraverseTerrain(this.field_h.tiles[param1.field_s.tileX][param1.field_s.tileY].terrain, param2)) {
           return;
         }
-        if (!param1.field_s.a(this.field_h.tiles[param0.field_s.tileX][param0.field_s.tileY].terrain, false)) {
+        if (!param1.field_s.canTraverseTerrain(this.field_h.tiles[param0.field_s.tileX][param0.field_s.tileY].terrain, false)) {
           return;
         }
         try {
@@ -1339,7 +1339,7 @@ final class BattleScreen extends dfa {
           var15 = var13;
           var4 = var15;
           var4.occupant = param0.field_s;
-          if (param0.field_s.a(32, (byte) 61)) {
+          if (param0.field_s.hasStatus(32, (byte) 61)) {
             return;
           }
           if (!param2) {
@@ -1354,14 +1354,14 @@ final class BattleScreen extends dfa {
             var15.field_m &&
             this.a(param0, param2) &&
             33 != param0.field_s.statusId) {
-            if (var15.a(-36) != 16 &&
-              var15.a(-36) != 18 &&
-              17 != var15.a(-36) &&
-              19 != var15.a(-36)) {
-              if (var15.a(-36) != 4 &&
-                var15.a(-36) != 6 &&
-                5 != var15.a(-36) &&
-                var15.a(-36) != 7) {
+            if (var15.getPowerupStatusId(-36) != 16 &&
+              var15.getPowerupStatusId(-36) != 18 &&
+              17 != var15.getPowerupStatusId(-36) &&
+              19 != var15.getPowerupStatusId(-36)) {
+              if (var15.getPowerupStatusId(-36) != 4 &&
+                var15.getPowerupStatusId(-36) != 6 &&
+                5 != var15.getPowerupStatusId(-36) &&
+                var15.getPowerupStatusId(-36) != 7) {
                 var5_ref_jha = new jha(this, param0.field_s.tileX, param0.field_s.tileY, param0.field_s.ownerIndex);
                 ((TileEffect) ((Object) var5_ref_jha)).a(0);
               } else {
@@ -1372,13 +1372,13 @@ final class BattleScreen extends dfa {
               var5_ref_nj = new nj(this, param0.field_s.tileX, param0.field_s.tileY, BuffVendorAnimation.field_w[var13.terrain].field_f);
               ((TileEffect) ((Object) var5_ref_nj)).a(0);
             }
-            param0.a(24831, 11, kna.field_g[var15.a(-36)]);
+            param0.a(24831, 11, kna.field_g[var15.getPowerupStatusId(-36)]);
           }
           stackIn_30_0 = (var15.terrain != 38) ? 0 : 1;
           var5 = stackIn_30_0;
           stackIn_33_0 = (var15.field_j != 0) ? 0 : 1;
           var6 = stackIn_33_0;
-          param0.field_s.a(var15, -122);
+          param0.field_s.applyTerrainEffects(var15, -122);
           if (var5 != 0) {
             if (var6 != 0) {
               var7 = new bn(this, param0.field_s.tileX, param0.field_s.tileY);
@@ -1406,14 +1406,14 @@ final class BattleScreen extends dfa {
             }
           }
           if (3 == this.field_h.field_o) {
-            if (param0.field_s.g((byte) 85)) {
-              var7_int = this.field_h.b((byte) 99, param0.field_s);
+            if (param0.field_s.isCarryingFlag((byte) 85)) {
+              var7_int = this.field_h.getCarriedFlagTeam((byte) 99, param0.field_s);
               this.field_h.field_c[var7_int] = new int[]{param0.field_s.tileX, param0.field_s.tileY};
             }
             if (this.a((byte) -87, param0)) {
               var7Lifetime1 = new bu(this, param0.field_s.tileX, param0.field_s.tileY, param0.field_s.ownerIndex);
               ((TileEffect) (var7Lifetime1)).a(0);
-              this.field_h.a(this.field_h.b((byte) 121, param0.field_s), (byte) 97);
+              this.field_h.returnFlagToBase(this.field_h.getCarriedFlagTeam((byte) 121, param0.field_s), (byte) 97);
               this.field_h.field_C[param0.field_s.ownerIndex] = this.field_h.field_C[param0.field_s.ownerIndex] + 1;
               param0.field_s.statusId = 0;
               param0.a(this.c(param0.field_s.ownerIndex, 2271), 46, gka.field_r);
@@ -1530,7 +1530,7 @@ final class BattleScreen extends dfa {
         BasicMoveDefinition var5 = null;
         if (null != this.field_P) {
           if (!this.a(this.field_P.field_s, (byte) -107) ||
-            this.field_P.field_s.a(9, (byte) -110)) {
+            this.field_P.field_s.hasStatus(9, (byte) -110)) {
             return;
           }
           this.field_l = false;
@@ -1561,8 +1561,8 @@ final class BattleScreen extends dfa {
             return false;
           }
           var3_int = -37 % ((param0 - 30) / 32);
-          if (this.field_h.b(param1.field_s, (byte) 114) &&
-            param1.field_s.g((byte) 85)) {
+          if (this.field_h.isCreatureAdjacentToOwnFlagBase(param1.field_s, (byte) 114) &&
+            param1.field_s.isCarryingFlag((byte) 85)) {
             return true;
           }
           return false;
@@ -1657,7 +1657,7 @@ final class BattleScreen extends dfa {
                 continue;
               }
             }
-            if (0 >= this.field_h.rosters[this.field_n].b((byte) 97)) {
+            if (0 >= this.field_h.rosters[this.field_n].countLivingCreatures((byte) 97)) {
               break;
             }
             var3 = -(128 * (((CreatureActor) (var2)).field_s.tileX - ((CreatureActor) (var2)).field_s.tileY) >> 1) + 256;
@@ -1929,10 +1929,10 @@ final class BattleScreen extends dfa {
               var7.tileY = var9;
               var7.tileX = var8;
               var7.rosterSlot = var5;
-              this.field_h.a(var7, 1, this.field_n, var5);
+              this.field_h.setRosterCreature(var7, 1, this.field_n, var5);
             }
           }
-          this.field_h.g(127);
+          this.field_h.guardRosterInitialization(127);
           this.j(-15503);
           this.field_e.a(0, param0);
           return;
@@ -2153,8 +2153,8 @@ final class BattleScreen extends dfa {
           this.field_A == null) {
           if (this.field_J) {
             if (this.field_P != null &&
-              !this.field_P.field_s.a(10, (byte) -82) &&
-              !this.field_P.field_s.a(2, (byte) 122)) {
+              !this.field_P.field_s.hasStatus(10, (byte) -82) &&
+              !this.field_P.field_s.hasStatus(2, (byte) 122)) {
               this.field_W.b((byte) 118);
             }
             if (this.field_W.field_l.field_R == 1) {
@@ -2239,7 +2239,7 @@ final class BattleScreen extends dfa {
         }
         if (this.field_n >= 0 &&
           (this.field_h.rosters[this.field_n].field_c ||
-          this.field_h.b((byte) 61, this.field_n)) &&
+          this.field_h.hasPlayerResigned((byte) 61, this.field_n)) &&
           !this.field_cb) {
           this.a((byte) 54);
           this.field_cb = true;
@@ -2277,7 +2277,7 @@ final class BattleScreen extends dfa {
         if (this.field_h.width > this.field_N &&
           this.field_H >= 0 &&
           this.field_h.height > this.field_H) {
-          var4 = var3.field_s.f((byte) 127);
+          var4 = var3.field_s.getBaseMovementRange((byte) 127);
           var5 = (tv) (WhirlpoolDigest.field_e[var9.moveId]);
           if (param0 <= 103) {
             this.b(102, -121);
@@ -2301,7 +2301,7 @@ final class BattleScreen extends dfa {
               if (var7 > 0) {
                 if (var6 > 0) {
                   if (!(this.field_h.height > var3.field_s.tileY + var7) ||
-                    !var3.field_s.a(this.field_h.tiles[var3.field_s.tileX][var7 + var3.field_s.tileY].terrain, false)) {
+                    !var3.field_s.canTraverseTerrain(this.field_h.tiles[var3.field_s.tileX][var7 + var3.field_s.tileY].terrain, false)) {
                     var6 = -1 + var7;
                     if (this.field_h.height <= var3.field_s.tileY + var7) {
                       break scanLoop1;
@@ -2312,7 +2312,7 @@ final class BattleScreen extends dfa {
                     continue;
                   }
                   if (!(var3.field_s.tileY - var7 >= 0) ||
-                    !var3.field_s.a(this.field_h.tiles[var3.field_s.tileX][-var7 + var3.field_s.tileY].terrain, false)) {
+                    !var3.field_s.canTraverseTerrain(this.field_h.tiles[var3.field_s.tileX][-var7 + var3.field_s.tileY].terrain, false)) {
                     var6 = -(-1 + var7);
                     if (var3.field_s.tileY - var7 <= 0) {
                       break scanLoop1;
@@ -2343,7 +2343,7 @@ final class BattleScreen extends dfa {
                 if (var7Lifetime1 > 0) {
                   if (var6Lifetime1 > 0) {
                     if (!(var3.field_s.tileX + var7Lifetime1 < this.field_h.width) ||
-                      !var3.field_s.a(this.field_h.tiles[var7Lifetime1 + var3.field_s.tileX][var3.field_s.tileY].terrain, false)) {
+                      !var3.field_s.canTraverseTerrain(this.field_h.tiles[var7Lifetime1 + var3.field_s.tileX][var3.field_s.tileY].terrain, false)) {
                       var6Lifetime1 = var7Lifetime1 - 1;
                       if (this.field_q + var7Lifetime1 >= -1 + this.field_h.width) {
                         break scanLoop2;
@@ -2354,7 +2354,7 @@ final class BattleScreen extends dfa {
                       continue;
                     }
                     if (!(0 <= -var7Lifetime1 + var3.field_s.tileX) ||
-                      !var3.field_s.a(this.field_h.tiles[-var7Lifetime1 + var3.field_s.tileX][var3.field_s.tileY].terrain, false)) {
+                      !var3.field_s.canTraverseTerrain(this.field_h.tiles[-var7Lifetime1 + var3.field_s.tileX][var3.field_s.tileY].terrain, false)) {
                       var6Lifetime1 = -(var7Lifetime1 - 1);
                       if (-var7Lifetime1 + this.field_q <= 0) {
                         break scanLoop2;
@@ -2520,7 +2520,7 @@ final class BattleScreen extends dfa {
             InvincibleEvent.field_q[82]) {
             sja.field_fb.writeCipheredByte(93, (byte) 113);
             System.out.println("--- STATE DUMP REQUESTED ---");
-            System.out.println(this.field_h.k((byte) -72));
+            System.out.println(this.field_h.describeBattleState((byte) -72));
             System.out.println("--- STATE DUMP ENDS ---");
             return;
           }
@@ -2562,7 +2562,7 @@ final class BattleScreen extends dfa {
         tv var4 = null;
         if (this.field_P != null) {
           if (!this.a(this.field_P.field_s, (byte) 19) ||
-            this.field_P.field_s.a(8, (byte) 55)) {
+            this.field_P.field_s.hasStatus(8, (byte) 55)) {
             return;
           }
           RasterBuffer.a(10, 7758);

@@ -18,7 +18,7 @@ final class StampedeEvent extends SpecialEvent {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.creature.a(param1 ^ -94, param0);
+          var3 = this.creature.resolveCreature(param1 ^ -94, param0);
           if (param1 != -1) {
             stackIn_2_0 = 58;
             return stackIn_2_0;
@@ -180,7 +180,7 @@ final class StampedeEvent extends SpecialEvent {
     final void a(BattleState param0, int param1) {
         try {
           this.a(param0, (byte) -2);
-          this.creature.a(79, param0).a(false, this.b(param0, -1), this.field_r);
+          this.creature.resolveCreature(79, param0).moveInDirection(false, this.b(param0, -1), this.field_r);
           int var3_int = 118 / ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "oo.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

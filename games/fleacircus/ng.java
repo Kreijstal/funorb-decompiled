@@ -20,14 +20,14 @@ final class ng {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_b.d((byte) -111) == 1) {
+          if (this.field_b.getGroupCapacity((byte) -111) == 1) {
             stackIn_3_0 = this.a(0, param0, (byte) 85, param2);
             return stackIn_3_0;
           }
           if (!param1) {
             field_c = 28;
           }
-          if (this.field_b.a(param0, (byte) -105) != 1) {
+          if (this.field_b.getFileCapacity(param0, (byte) -105) != 1) {
             throw new RuntimeException();
           }
           stackIn_9_0 = this.a(param0, 0, (byte) 79, param2);
@@ -142,11 +142,11 @@ final class ng {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_d.d((byte) 60) == 1) {
+          if (this.field_d.getGroupCapacity((byte) 60) == 1) {
             stackIn_3_0 = this.a(param1, 0, param0, 95);
             return stackIn_3_0;
           }
-          if (1 == this.field_d.a(param1, (byte) -116)) {
+          if (1 == this.field_d.getFileCapacity(param1, (byte) -116)) {
             stackIn_6_0 = this.a(0, param1, param0, param2 ^ 29055);
             return stackIn_6_0;
           }

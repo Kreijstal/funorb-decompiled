@@ -5,7 +5,7 @@ final class sf implements cl {
     static int field_h;
     static String field_e;
     static int[] field_b;
-    private wm field_f;
+    private PackedBitSet field_f;
     static IntrusiveDeque field_c;
     private int field_a;
     static String field_i;
@@ -203,7 +203,7 @@ final class sf implements cl {
     }
 
     public final void b(byte param0) {
-        wm stackIn_5_0 = null;
+        PackedBitSet stackIn_5_0 = null;
         int stackIn_40_0 = 0;
         int stackIn_44_0 = 0;
         int stackIn_72_0 = 0;
@@ -221,14 +221,14 @@ final class sf implements cl {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        wm var5 = null;
+        PackedBitSet var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11_int = 0;
-        ai var11 = null;
+        DungeonTileState var11 = null;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -254,7 +254,7 @@ final class sf implements cl {
           if (this.field_j == null) {
             stackIn_5_0 = this.field_f;
           } else {
-            stackIn_5_0 = this.field_j.b((byte) -6);
+            stackIn_5_0 = this.field_j.buildRevealedTilePassageMask((byte) -6);
           }
           var5 = stackIn_5_0;
           var6 = 0;
@@ -278,13 +278,13 @@ final class sf implements cl {
                   bl.field_d[0].h(var2_int + var7, var8);
                 } else {
                   var11_int = 0;
-                  if (this.field_f.a(35 + var6, (byte) 96)) {
+                  if (this.field_f.isBitSet(35 + var6, (byte) 96)) {
                     var12 = -7 + var6;
-                    if (var5.a(35 + var6, (byte) 97)) {
+                    if (var5.isBitSet(35 + var6, (byte) 97)) {
                       boolean decompiledFrameRemainder1 = true;
-                      if (null != this.field_j && (!this.field_j.field_j.a(var6, (byte) 104) &&
+                      if (null != this.field_j && (!this.field_j.field_j.isBitSet(var6, (byte) 104) &&
                         this.field_j.field_B != var6 ||
-                        !this.field_j.field_j.a(var12, (byte) 90) &&
+                        !this.field_j.field_j.isBitSet(var12, (byte) 90) &&
                         ~var12 != ~this.field_j.field_B)) {
                         stackIn_40_0 = 0;
                         decompiledFrameRemainder1 = false;
@@ -303,13 +303,13 @@ final class sf implements cl {
                   bl.field_d[3].h(var7, var2_int + var8);
                 } else {
                   var11_intLifetime1 = 3;
-                  if (this.field_f.a(-1 - var6 / 7 + var6, (byte) 103)) {
+                  if (this.field_f.isBitSet(-1 - var6 / 7 + var6, (byte) 103)) {
                     var12Lifetime1 = -1 + var6;
-                    if (var5.a(-1 + (-(var6 / 7) + var6), (byte) 122)) {
+                    if (var5.isBitSet(-1 + (-(var6 / 7) + var6), (byte) 122)) {
                       boolean decompiledFrameRemainder0 = true;
-                      if (null != this.field_j && (!this.field_j.field_j.a(var6, (byte) 115) &&
+                      if (null != this.field_j && (!this.field_j.field_j.isBitSet(var6, (byte) 115) &&
                         this.field_j.field_B != var6 ||
-                        !this.field_j.field_j.a(var12Lifetime1, (byte) 97) &&
+                        !this.field_j.field_j.isBitSet(var12Lifetime1, (byte) 97) &&
                         this.field_j.field_B != var12Lifetime1)) {
                         stackIn_72_0 = 0;
                         decompiledFrameRemainder0 = false;
@@ -334,7 +334,7 @@ final class sf implements cl {
                 }
                 var12Lifetime2 = var11.field_a;
                 if (this.field_j != null &&
-                  !this.field_j.field_p.a(var6, (byte) 72)) {
+                  !this.field_j.field_p.isBitSet(var6, (byte) 72)) {
                   stackIn_89_0 = 0;
                 } else {
                   stackIn_89_0 = 1;
@@ -347,7 +347,7 @@ final class sf implements cl {
                 if (3 != var12Lifetime2) {
                   if (null != this.field_j &&
                     this.field_j.field_j != null &&
-                    this.field_j.field_j.a(var6, (byte) 68)) {
+                    this.field_j.field_j.isBitSet(var6, (byte) 68)) {
                     stackIn_107_0 = 1;
                   } else {
                     stackIn_107_0 = 0;
@@ -499,7 +499,7 @@ final class sf implements cl {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        wm var5 = null;
+        PackedBitSet var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -526,7 +526,7 @@ final class sf implements cl {
             return;
           }
           var4_int = (int)(0.5 + Math.cos((double)((float)mo.field_a / 5.0f)) * 3.0);
-          var5 = this.field_j.b((byte) -128).a((byte) -53, this.field_j.field_v);
+          var5 = this.field_j.buildRevealedTilePassageMask((byte) -128).intersectOverlappingWords((byte) -53, this.field_j.field_v);
           if (param1 != -1723) {
             return;
           }
@@ -547,19 +547,19 @@ final class sf implements cl {
               boolean decompiledFrameRemainder1 = true;
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_101_0 < stackIn_101_1 &&
-                var5.a(35 + var8, (byte) 106)) {
+                var5.isBitSet(35 + var8, (byte) 106)) {
                 var13 = var8 - 7;
-                decompiledFrameRemainder1 = !(!this.field_j.field_m.a(var8, (byte) 83));
+                decompiledFrameRemainder1 = !(!this.field_j.field_m.isBitSet(var8, (byte) 83));
                 if ((decompiledFrameRemainder1) &&
-                  (decompiledFrameRemainder1 = !(!this.field_j.field_m.a(var13, (byte) 68)))) {
-                  if (!this.field_j.field_j.a(var8, (byte) 77) &&
+                  (decompiledFrameRemainder1 = !(!this.field_j.field_m.isBitSet(var13, (byte) 68)))) {
+                  if (!this.field_j.field_j.isBitSet(var8, (byte) 77) &&
                     var8 != this.field_j.field_q) {
                     stackIn_33_0 = 0;
                   } else {
                     stackIn_33_0 = 1;
                   }
                   var14 = stackIn_33_0;
-                  if (!this.field_j.field_j.a(var13, (byte) 78) &&
+                  if (!this.field_j.field_j.isBitSet(var13, (byte) 78) &&
                     ~var13 != ~this.field_j.field_q) {
                     stackIn_40_0 = 0;
                   } else {
@@ -580,18 +580,18 @@ final class sf implements cl {
                 }
               }
               if ((decompiledFrameRemainder1) && (0 < var12 &&
-                var5.a(-1 + var8 - var8 / 7, (byte) 84))) {
+                var5.isBitSet(-1 + var8 - var8 / 7, (byte) 84))) {
                 var13Lifetime1 = var8 - 1;
-                if (this.field_j.field_m.a(var8, (byte) 110) && (this.field_j.field_m.a(var13Lifetime1, (byte) 79) ||
+                if (this.field_j.field_m.isBitSet(var8, (byte) 110) && (this.field_j.field_m.isBitSet(var13Lifetime1, (byte) 79) ||
                   var16 != 0)) {
-                  if (!this.field_j.field_j.a(var8, (byte) 84) &&
+                  if (!this.field_j.field_j.isBitSet(var8, (byte) 84) &&
                     this.field_j.field_q != var8) {
                     stackIn_77_0 = 0;
                   } else {
                     stackIn_77_0 = 1;
                   }
                   var14Lifetime1 = stackIn_77_0;
-                  if (!this.field_j.field_j.a(var13Lifetime1, (byte) 93) &&
+                  if (!this.field_j.field_j.isBitSet(var13Lifetime1, (byte) 93) &&
                     this.field_j.field_q != var13Lifetime1) {
                     stackIn_84_0 = 0;
                   } else {
@@ -642,19 +642,19 @@ final class sf implements cl {
           }
           var3_int = 0;
           if (param0 % 7 != 0 &&
-            this.field_f.a(-1 + (param0 - param0 / 7), (byte) 99)) {
+            this.field_f.isBitSet(-1 + (param0 - param0 / 7), (byte) 99)) {
             var3_int = var3_int | 1;
           }
           if (6 != param0 % 7 &&
-            this.field_f.a(param0 - param0 / 7, (byte) 89)) {
+            this.field_f.isBitSet(param0 - param0 / 7, (byte) 89)) {
             var3_int = var3_int | 2;
           }
           if (param0 > 6 &&
-            this.field_f.a(param0 + 35, (byte) 70)) {
+            this.field_f.isBitSet(param0 + 35, (byte) 70)) {
             var3_int = var3_int | 4;
           }
           if (param0 < 42 &&
-            this.field_f.a(42 + param0, (byte) 74)) {
+            this.field_f.isBitSet(42 + param0, (byte) 74)) {
             var3_int = var3_int | 8;
           }
           stackIn_28_0 = var3_int;

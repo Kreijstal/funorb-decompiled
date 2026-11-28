@@ -71,11 +71,11 @@ final class bn {
     }
 
     final static void c(int param0) {
-        vg.field_Z.g((byte) 127);
+        TunnelCamera.field_Z.g((byte) 127);
         if (ui.field_c == null) {
-          ui.field_c = new jj(vg.field_Z, cb.field_b);
+          ui.field_c = new jj(TunnelCamera.field_Z, cb.field_b);
         }
-        vg.field_Z.c(ui.field_c, param0);
+        TunnelCamera.field_Z.c(ui.field_c, param0);
     }
 
     final boolean b(int param0) {

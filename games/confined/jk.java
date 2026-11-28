@@ -278,7 +278,7 @@ final class jk {
 
     final static void a(byte param0) {
         KeyboardInput.field_d = tl.a(4314);
-        vg.field_Z = new sh();
+        TunnelCamera.field_Z = new sh();
         if (param0 <= -29) {
           wl.a(-106, true, true);
           return;
@@ -309,7 +309,7 @@ final class jk {
         }
         if (param0 == 255) {
           var4 = new RgbSprite(kb.field_a, em.field_e, DualLinkNode.field_p[0], ij.field_r[0], rg.field_I[0], sd.field_f[0], var3);
-          ql.a(false);
+          StageDirector.clearIndexedSpriteDecodeBuffers(false);
           return var4;
         }
         return (RgbSprite) null;

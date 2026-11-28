@@ -98,22 +98,22 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static f[][] a(int param0, boolean param1, int param2, int param3, f[][] param4) {
+    final static PuzzleTile[][] a(int param0, boolean param1, int param2, int param3, PuzzleTile[][] param4) {
         int var6 = 0;
-        f[][] stackIn_14_0 = null;
+        PuzzleTile[][] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        f[][] var5 = null;
+        PuzzleTile[][] var5 = null;
         RuntimeException var5_ref = null;
         int var7 = 0;
         int var8 = 0;
-        f[][] var9 = null;
+        PuzzleTile[][] var9 = null;
         int var7Lifetime1;
         var8 = CrazyCrystals.field_B;
         try {
-          var9 = new f[param0 * 2 + param4.length][2 * param2 + param4[0].length];
+          var9 = new PuzzleTile[param0 * 2 + param4.length][2 * param2 + param4[0].length];
           var5 = var9;
           for (var6 = 0; var9.length > var6; var6++) {
             for (var7 = 0; var9[0].length > var7; var7++) {
@@ -121,11 +121,11 @@ final class CipherPacketBuffer extends PacketBuffer {
                 var7 < param4[0].length + param2 &&
                 var6 >= param0 &&
                 var6 < param4.length + param0) {
-                var9[var6][var7] = (f) (param4[-param0 + var6][-param2 + var7].clone());
+                var9[var6][var7] = (PuzzleTile) (param4[-param0 + var6][-param2 + var7].clone());
               } else {
-                var9[var6][var7] = (f) (param4[0][0].clone());
+                var9[var6][var7] = (PuzzleTile) (param4[0][0].clone());
               }
-              var9[var6][var7].a(393989, var6, var7, var9);
+              var9[var6][var7].initializeTilePlacement(393989, var6, var7, var9);
               var9[var6][var7].b(true, param1);
             }
           }
@@ -231,14 +231,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param2.d(-113, param0);
+          var4 = param2.getFlatFile(-113, param0);
           var3 = var4;
           if (var4 == null) {
             stackIn_2_0 = null;
             return (dk) (stackIn_2_0);
           }
           if (param1 < 74) {
-            CipherPacketBuffer.a(-108, true, 93, 119, (f[][]) null);
+            CipherPacketBuffer.a(-108, true, 93, 119, (PuzzleTile[][]) null);
           }
           stackIn_6_0 = new dk(var4);
           return stackIn_6_0;

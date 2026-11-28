@@ -108,7 +108,7 @@ final class fd {
         if (param0 < 33) {
           fd.c((byte) 94);
         }
-        ah.field_U = 0;
+        AcceleratingProjectile.field_U = 0;
     }
 
     public static void clearStaticReferences(byte param0) {
@@ -257,7 +257,7 @@ final class fd {
     }
 
     final static void a(int param0, int param1) {
-        fb.field_c = pm.field_B[param1];
+        fb.field_c = TunnelEntity.field_B[param1];
         hc.field_s = ak.field_L[param1];
         b.field_k = th.field_eb[param1];
         if (param0 != 30177) {

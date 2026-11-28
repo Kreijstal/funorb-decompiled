@@ -30,15 +30,15 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != tm.field_b) {
             aq.field_s = 0;
-            kk.field_g = param0.getX();
+            FloatingScoreLabel.field_g = param0.getX();
             sb.field_I = param0.getY();
             lo.correctedCurrentTimeMillis((byte) -57);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               th.field_y = 2;
-              uc.field_b = 2;
+              MenuOverlay.field_b = 2;
             } else {
               th.field_y = 1;
-              uc.field_b = 1;
+              MenuOverlay.field_b = 1;
             }
             var2_int = param0.getModifiers();
             ArchiveRequest.field_m = true;
@@ -131,7 +131,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != tm.field_b) {
             aq.field_s = 0;
-            uc.field_b = 0;
+            MenuOverlay.field_b = 0;
             ArchiveRequest.field_m = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 4) == 0) {
@@ -180,7 +180,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           sl.a(param5, param8, 107, param18);
           mo.a(param20, param3, param4, param0, (byte) -16);
           mh.a(param7, -20, param1);
-          f.a(param16, param15, param17, param13, param14, (byte) 104);
+          PuzzleTile.a(param16, param15, param17, param13, param14, (byte) 104);
           AccountRequestState.a(param6, param12, 250, param9);
           KeyboardInputHandler.a(param11, (byte) 118, param10, param19);
           return;
@@ -243,7 +243,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException var2 = null;
         try {
           if (tm.field_b != null) {
-            uc.field_b = 0;
+            MenuOverlay.field_b = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -399,7 +399,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             sn.field_a[0] = 5;
           } else if (am.field_g != 2) {
             if (3 == am.field_g) {
-              if (te.field_a.privilegedTasksEnabled) {
+              if (ResultScene.field_a.privilegedTasksEnabled) {
                 var3_int = v.a(ec.field_m, ib.field_m, -27815, vk.field_L, NetworkGameClient.field_y);
               } else {
                 var3_int = v.a(ec.field_m, gn.field_U, -27815, vk.field_L, NetworkGameClient.field_y);
@@ -474,7 +474,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             eg.a(NetworkGameClient.field_y, 0, jl.field_a, 0, var4);
             lo.field_c = new String[-1 + var3_int - var4];
             eg.a(NetworkGameClient.field_y, 1 + var4, lo.field_c, 0, -1 + (-var4 + var3_int));
-            var3_int = v.a(ec.field_m, ci.a(new String[]{"<br><%0><br>"}, jg.field_t, 3), -27815, vk.field_L, NetworkGameClient.field_y);
+            var3_int = v.a(ec.field_m, ci.a(new String[]{"<br><%0><br>"}, ModelMesh.field_t, 3), -27815, vk.field_L, NetworkGameClient.field_y);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(NetworkGameClient.field_y[var5])) {

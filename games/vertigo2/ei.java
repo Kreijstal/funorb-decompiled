@@ -34,7 +34,7 @@ final class ei extends DualLinkNode {
           if (!oc.field_r.tryLoadGroup(11321, this.field_v)) {
             return false;
           }
-          var28 = oc.field_r.a(0, this.field_v);
+          var28 = oc.field_r.getFileIds(0, this.field_v);
           this.field_u = new byte[var28.length][];
           for (var3_int = 0; var28.length > var3_int; var3_int++) {
             this.field_u[var3_int] = oc.field_r.getFile(this.field_v, var28[var3_int], (byte) -107);
@@ -48,7 +48,7 @@ final class ei extends DualLinkNode {
           var17 = new PacketBuffer(var29);
           var17.position = 1;
           var6 = var17.readUnsignedShort((byte) -11);
-          var2 = var2 != 0 & hd.field_b.a(var6, (byte) -124) ? 1 : 0;
+          var2 = var2 != 0 & hd.field_b.tryLoadFlatFile(var6, (byte) -124) ? 1 : 0;
           var14++;
         }
         if (param0 < 68) {
@@ -59,9 +59,9 @@ final class ei extends DualLinkNode {
           return false;
         }
         var3 = new IntrusiveDeque();
-        var4 = oc.field_r.b(this.field_v, (byte) -47);
+        var4 = oc.field_r.getFileCapacity(this.field_v, (byte) -47);
         this.field_t = new ul[var4];
-        var30 = oc.field_r.a(0, this.field_v);
+        var30 = oc.field_r.getFileIds(0, this.field_v);
         for (var6Lifetime1 = 0; var30.length > var6Lifetime1; var6Lifetime1++) {
           var31 = this.field_u[var6Lifetime1];
           var8 = new PacketBuffer(var31);
@@ -78,7 +78,7 @@ final class ei extends DualLinkNode {
             break;
           }
           if (var10 == null) {
-            var10 = new mb(var9, hd.field_b.a(true, var9));
+            var10 = new mb(var9, hd.field_b.getFlatFile(true, var9));
             var3.addFirst((IntrusiveNode) (var10), false);
           }
           this.field_t[var30[var6Lifetime1]] = new ul(var31, (mb) (var10));
@@ -319,16 +319,16 @@ final class ei extends DualLinkNode {
           var3 = Model.a(param0, "", "character/debris");
           var4 = Model.a(param0, "", "character/debris_blue");
           var5 = Model.a(param0, "", "character/debris_grey");
-          wo.field_q[0] = Model.a(param0, "", "character/purple_block_cracked_for_anim");
+          PlayerState.field_q[0] = Model.a(param0, "", "character/purple_block_cracked_for_anim");
           JaggrabClient.field_f[0] = Model.a(param0, "", "character/blue_block_cracked_for_anim");
           th.field_a[0] = Model.a(param0, "", "character/grey_block_cracked_for_anim");
-          wo.field_q[1] = Model.a(param0, "", "character/purple_block_cracked_for_anim_lp");
+          PlayerState.field_q[1] = Model.a(param0, "", "character/purple_block_cracked_for_anim_lp");
           JaggrabClient.field_f[1] = Model.a(param0, "", "character/blue_block_cracked_for_anim_lp");
           th.field_a[1] = Model.a(param0, "", "character/grey_block_cracked_for_anim_lp");
           for (var6 = 0; var6 < 2; var6++) {
             var2[0] = var3;
-            var2[1] = wo.field_q[var6];
-            wo.field_q[var6] = new Model(var9, 2);
+            var2[1] = PlayerState.field_q[var6];
+            PlayerState.field_q[var6] = new Model(var9, 2);
             var2[0] = var4;
             var2[1] = JaggrabClient.field_f[var6];
             JaggrabClient.field_f[var6] = new Model(var9, 2);

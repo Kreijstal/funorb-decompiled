@@ -1,0 +1,180 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DungeonTileState {
+    int field_l;
+    boolean field_m;
+    int field_q;
+    boolean field_i;
+    int field_o;
+    int field_j;
+    StatusEffectIndicator[] field_f;
+    SpriteAnimationPlayer field_c;
+    static int field_n;
+    int field_g;
+    int field_r;
+    static String field_b;
+    ac field_h;
+    static String field_e;
+    static String field_k;
+    static String field_d;
+    int field_p;
+    int field_s;
+    int field_a;
+
+    final static void measureRaidTutorialPanelWidth(int param0) {
+        IterableNodeHashTable.field_b = IntrusiveNode.field_c.b(DualLinkNode.field_m[13]);
+        int var1 = IntrusiveNode.field_c.b(DualLinkNode.field_m[14]);
+        if (param0 <= -74) {
+          if (var1 > IterableNodeHashTable.field_b) {
+            IterableNodeHashTable.field_b = var1;
+          }
+          return;
+        }
+    }
+
+    public static void clearStaticReferences(byte param0) {
+        field_e = null;
+        field_d = null;
+        if (param0 == 106) {
+          field_b = null;
+          field_k = null;
+          return;
+        }
+        field_d = (String) null;
+        field_b = null;
+        field_k = null;
+    }
+
+    final static Raider readRaiderFromRaidSave(PacketBuffer param0, int param1, int param2, int param3) {
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        Raider var5 = null;
+        Raider stackIn_2_0 = null;
+        Object stackIn_8_0 = null;
+        Raider stackIn_13_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 != -12) {
+            stackIn_2_0 = (Raider) null;
+            return stackIn_2_0;
+          }
+          var4_int = param0.readUnsignedByte(true);
+          if (0 == var4_int) {
+            param0.readInt(param2 - 94);
+            if (param3 >= 11) {
+              param0.readUnsignedByte(true);
+            }
+            stackIn_8_0 = null;
+            return (Raider) (stackIn_8_0);
+          }
+          var5 = new Raider(param1, var4_int);
+          var5.field_e = param0.readUnsignedByte(true);
+          var5.field_g = param0.readUnsignedByte(true);
+          var5.field_f = param0.readUnsignedByte(true);
+          var5.field_k = param0.readUnsignedByte(true);
+          if (11 <= param3) {
+            var5.field_p = param0.readUnsignedByte(true);
+          } else {
+            var5.field_p = 0;
+          }
+          stackIn_13_0 = var5;
+          return stackIn_13_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_16_0 = var4;
+          stackIn_16_1 = new StringBuilder().append("ai.C(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final void writeTileState(int param0, boolean param1, PacketBuffer param2) {
+        RuntimeException var4 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          param2.writeByte(param0 ^ -14, this.field_a);
+          param2.writeByte(param0 + 18, this.field_p);
+          param2.writeByte(6, this.field_g);
+          param2.writeByte(6, this.field_r);
+          param2.writeByte(6, this.field_q);
+          if (param0 != -12) {
+            field_n = -63;
+          }
+          if (param1) {
+            return;
+          }
+          param2.writeByte(6, this.field_j);
+          param2.writeByte(6, this.field_l);
+          param2.writeByte(param0 + 18, this.field_s);
+          param2.writeByte(6, this.field_o);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_8_0 = var4;
+          stackIn_8_1 = new StringBuilder().append("ai.D(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+        }
+    }
+
+    final static void setPendingLoginPlayerName(String param0, int param1) {
+        try {
+          pd.field_E = param0;
+          if (param1 != 14) {
+            vh var3 = (vh) null;
+            DungeonTileState.preloadMusicTrackSamples(38, (vh) null);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ai.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final static void preloadMusicTrackSamples(int param0, vh param1) {
+        try {
+          FullscreenFocusCanvas.field_b.field_A.a(false, ha.field_k, tl.field_k, param0, param1);
+        } catch (RuntimeException runtimeException) {
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ai.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    DungeonTileState(int param0) {
+        this.field_a = param0;
+        this.field_h = gh.field_i[this.field_a];
+        if (null != this.field_h) {
+          this.field_m = this.field_h.field_C;
+          this.field_o = this.field_h.field_r;
+          this.field_q = this.field_h.field_r;
+          this.field_j = this.field_h.field_A;
+          this.field_p = this.field_h.field_A;
+          this.field_s = this.field_h.field_y;
+          this.field_r = this.field_h.field_y;
+          this.field_l = this.field_h.field_k;
+          this.field_g = this.field_h.field_k;
+          this.field_i = this.field_h.field_b;
+        }
+    }
+
+    static {
+        field_b = "<col=FF0000>Lethal</col>. <%0> gains <%col_attack>+1 Attack</col>, <%col_defence>+1 Defence</col> if it wins in combat.";
+        field_e = "Select a dragon from the table and click 'Raid' to start a raid.";
+        field_k = "From simple pickpockets and highwaymen and up through a variety of brigands, the human cities of the west are full of thieves. This is one of the more competant examples - he is, after all, still alive.";
+        field_d = "Order your raider to disarm the trap. <br><br>The trap may be disarmed, the raider may trigger the trap but avoid its effects, or the raider may become trapped.<br><br>Requires: <col=21634A>Dodge</col>, <col=00A7D2>Sneak</col>";
+    }
+}

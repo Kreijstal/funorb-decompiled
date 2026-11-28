@@ -9,7 +9,7 @@ abstract class qe {
     static RgbSprite[] field_i;
     ph field_e;
     private static int field_d;
-    private static wb[] field_k;
+    private static StatusEffectIndicator[] field_k;
     sa field_q;
     static int field_f;
     private static int[][] field_g;
@@ -91,7 +91,7 @@ abstract class qe {
         }
     }
 
-    final static void a(int param0, int param1, h param2) {
+    final static void a(int param0, int param1, RaiderDefinition param2) {
         if (param2 != null) {
           qe.b(param0, param1, field_i, field_h, new int[]{param2.field_m, param2.field_r, param2.field_b, param2.field_o});
         } else {
@@ -139,21 +139,21 @@ abstract class qe {
         }
     }
 
-    final static wb[] a(Raider param0, int param1) {
+    final static StatusEffectIndicator[] a(Raider param0, int param1) {
         int var2 = qe.a(param0, param1, field_k);
         if (var2 == 0) {
           return null;
         }
-        wb[] var3 = new wb[var2];
+        StatusEffectIndicator[] var3 = new StatusEffectIndicator[var2];
         cj.a(field_k, 0, var3, 0, var2);
         return var3;
     }
 
-    final static void a(int param0, int param1, int param2, wb[] param3, int param4) {
+    final static void a(int param0, int param1, int param2, StatusEffectIndicator[] param3, int param4) {
         int var5;
         int var6;
         int var7;
-        wb var8;
+        StatusEffectIndicator var8;
         var5 = param0 - 18;
         var6 = param1 - 18;
         var7 = 0;
@@ -229,14 +229,14 @@ abstract class qe {
         }
     }
 
-    private final static wb a(int param0, int param1, String param2, RgbSprite param3) {
+    private final static StatusEffectIndicator a(int param0, int param1, String param2, RgbSprite param3) {
         if (param0 < param1) {
-          return new wb(jk.a(new String[]{param2, Integer.toString(param1 - param0)}, vc.field_b, 30496), param3, 16711680);
+          return new StatusEffectIndicator(jk.a(new String[]{param2, Integer.toString(param1 - param0)}, vc.field_b, 30496), param3, 16711680);
         }
         if (param0 <= param1) {
           return null;
         }
-        return new wb(jk.a(new String[]{param2, Integer.toString(param0 - param1)}, so.field_a, 30496), param3, 65280);
+        return new StatusEffectIndicator(jk.a(new String[]{param2, Integer.toString(param0 - param1)}, so.field_a, 30496), param3, 65280);
     }
 
     void c() {
@@ -261,7 +261,7 @@ abstract class qe {
         qe.a(param0, param1, param2, field_k, var5);
     }
 
-    private final static int a(Raider param0, int param1, wb[] param2) {
+    private final static int a(Raider param0, int param1, StatusEffectIndicator[] param2) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -275,10 +275,10 @@ abstract class qe {
         int var5;
         int var6;
         int var7;
-        wb var8;
-        wb var8Lifetime1;
-        wb var8Lifetime2;
-        wb var8Lifetime3;
+        StatusEffectIndicator var8;
+        StatusEffectIndicator var8Lifetime1;
+        StatusEffectIndicator var8Lifetime2;
+        StatusEffectIndicator var8Lifetime3;
         var3 = 0;
         var4 = param0.field_e;
         var5 = param0.field_g;
@@ -321,22 +321,22 @@ abstract class qe {
         if ((param0.field_d & 4) != 0) {
           incrementValue$4 = var3;
           var3++;
-          param2[incrementValue$4] = new wb(kl.field_b, ue.field_i[6], 16744703);
+          param2[incrementValue$4] = new StatusEffectIndicator(kl.field_b, ue.field_i[6], 16744703);
         }
         if ((param0.field_o & 4) != 0) {
           incrementValue$5 = var3;
           var3++;
-          param2[incrementValue$5] = new wb(GameAppletShell.field_m, ue.field_i[5], 16711680);
+          param2[incrementValue$5] = new StatusEffectIndicator(GameAppletShell.field_m, ue.field_i[5], 16711680);
         }
         if ((param0.field_o & 2) != 0) {
           incrementValue$6 = var3;
           var3++;
-          param2[incrementValue$6] = new wb(gl.field_Hb, ue.field_i[4], 16776960);
+          param2[incrementValue$6] = new StatusEffectIndicator(gl.field_Hb, ue.field_i[4], 16776960);
         }
         if ((param0.field_o & 1) != 0) {
           incrementValue$7 = var3;
           var3++;
-          param2[incrementValue$7] = new wb(wi.field_nb, ue.field_i[6], 8438015);
+          param2[incrementValue$7] = new StatusEffectIndicator(wi.field_nb, ue.field_i[6], 8438015);
         }
         return var3;
     }
@@ -532,12 +532,12 @@ abstract class qe {
         }
     }
 
-    final static void a(int param0, int param1, ai param2) {
+    final static void a(int param0, int param1, DungeonTileState param2) {
         SoftwareRasterizer.fillRectangle(param0 - 4, param1 - 4, 120, 120, 0);
         rp.a(4, 112, (byte) 108, param0, 112, kc.field_V, param1);
         if (param2 != null) {
           if (param2.field_c != null) {
-            param2.field_c.a(108, param1 + 2, (byte) 102, param0 + 2, 108);
+            param2.field_c.drawAnimation(108, param1 + 2, (byte) 102, param0 + 2, 108);
           }
           if (param2.field_f != null) {
             qe.a(param0 + 112, param1 + 112, 7, param2.field_f, param2.field_f.length);
@@ -545,9 +545,9 @@ abstract class qe {
         }
     }
 
-    final static wb[] a(ai param0, boolean param1, boolean param2, int param3) {
+    final static StatusEffectIndicator[] a(DungeonTileState param0, boolean param1, boolean param2, int param3) {
         int var4 = qe.a(param0, param1, param2, param3, field_k);
-        wb[] var5 = new wb[var4];
+        StatusEffectIndicator[] var5 = new StatusEffectIndicator[var4];
         cj.a(field_k, 0, var5, 0, var4);
         return var5;
     }
@@ -635,15 +635,15 @@ abstract class qe {
         rp.a(5, param2 - 4, (byte) 108, param0 + 2, param3 - 4, kc.field_S, param1 + 2);
     }
 
-    final static void a(int param0, int param1, wd param2, int[][] param3) {
+    final static void a(int param0, int param1, SpriteAnimationPlayer param2, int[][] param3) {
         SoftwareRasterizer.fillRectangle(param0 - 4, param1 - 4, 120, 120, 0);
         rp.a(4, 112, (byte) 108, param0, 112, param3, param1);
         if (param2 != null) {
-          param2.a(108, param1 + 2, (byte) 102, param0 + 2, 108);
+          param2.drawAnimation(108, param1 + 2, (byte) 102, param0 + 2, 108);
         }
     }
 
-    final static void a(int param0, int param1, ai param2, boolean param3, int param4) {
+    final static void a(int param0, int param1, DungeonTileState param2, boolean param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -684,7 +684,7 @@ abstract class qe {
     void a(boolean param0) {
     }
 
-    private final static int a(ai param0, boolean param1, boolean param2, int param3, wb[] param4) {
+    private final static int a(DungeonTileState param0, boolean param1, boolean param2, int param3, StatusEffectIndicator[] param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -697,11 +697,11 @@ abstract class qe {
         int var7;
         int var8;
         int var9;
-        wb var10;
+        StatusEffectIndicator var10;
         int var11;
-        wb var10Lifetime1;
-        wb var10Lifetime2;
-        wb var10Lifetime3;
+        StatusEffectIndicator var10Lifetime1;
+        StatusEffectIndicator var10Lifetime2;
+        StatusEffectIndicator var10Lifetime3;
         var5 = 0;
         var6 = param0.field_p;
         var7 = param0.field_g;
@@ -742,7 +742,7 @@ abstract class qe {
         if (param2) {
           incrementValue$4 = var5;
           var5++;
-          param4[incrementValue$4] = new wb(dm.field_c, ue.field_i[6], 16744703);
+          param4[incrementValue$4] = new StatusEffectIndicator(dm.field_c, ue.field_i[6], 16744703);
         }
         if (param1) {
           var11 = param0.field_h.field_g;
@@ -751,12 +751,12 @@ abstract class qe {
               var11 == 3) {
               incrementValue$5 = var5;
               var5++;
-              param4[incrementValue$5] = new wb(fi.field_t, ue.field_i[4], 16777215);
+              param4[incrementValue$5] = new StatusEffectIndicator(fi.field_t, ue.field_i[4], 16777215);
             }
           } else {
             incrementValue$6 = var5;
             var5++;
-            param4[incrementValue$6] = new wb(ii.field_C, ue.field_i[4], 16777215);
+            param4[incrementValue$6] = new StatusEffectIndicator(ii.field_C, ue.field_i[4], 16777215);
           }
         }
         return var5;
@@ -768,7 +768,7 @@ abstract class qe {
         if (param2 == null) {
           SoftwareRasterizer.fillRectangle(param0 + 2, param1 + 2, 108, 108, 0);
         } else {
-          param2.field_b.a(108, param1 + 2, (byte) 102, param0 + 2, 108);
+          param2.field_b.drawAnimation(108, param1 + 2, (byte) 102, param0 + 2, 108);
           if (param2.field_i != null) {
             qe.a(param0 + 112, param1 + 112, 7, param2.field_i, param2.field_i.length);
           }
@@ -984,7 +984,7 @@ abstract class qe {
     }
 
     static {
-        field_k = new wb[32];
+        field_k = new StatusEffectIndicator[32];
         field_g = new int[][]{new int[]{16716800, 16756480}, new int[]{685312, 5826816}, new int[]{10449103, 12690143}, new int[]{8086330, 12428684}};
         field_h = new int[][]{new int[]{16716800, 16756480}, new int[]{685312, 5826816}, new int[]{2188106, 7054732}, new int[]{42962, 62200}};
     }

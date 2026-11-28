@@ -41,9 +41,9 @@ final class ad extends um {
         pd.field_g[param1] = pd.field_g[param1] + param2 * 100;
     }
 
-    final f a(boolean param0, int param1, int param2, int param3, ta param4) {
+    final PuzzleTile a(boolean param0, int param1, int param2, int param3, ta param4) {
         RuntimeException var6 = null;
-        f stackIn_3_0 = null;
+        PuzzleTile stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

@@ -48,7 +48,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, f[][] param3) {
+    final static void a(int param0, int param1, int param2, PuzzleTile[][] param3) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -78,7 +78,7 @@ class DualLinkNode extends IntrusiveNode {
               param3[var4_intLifetime2][var5Lifetime2] = param3[var4_intLifetime2][var5Lifetime2].a(var4_intLifetime2, param3, false, var5Lifetime2).c(-1);
             }
           }
-          ja.a(param2, param3, param0, true, 1);
+          LevelCompleteScene.updateSpecialTileNeighbors(param2, param3, param0, true, 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

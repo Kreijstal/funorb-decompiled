@@ -3,7 +3,7 @@
  */
 final class th {
     private qp[] field_c;
-    static ho[] field_e;
+    static BlastDebrisBatch[] field_e;
     private int field_b;
     static MouseWheelInput field_g;
     private int field_i;
@@ -187,7 +187,7 @@ final class th {
             return false;
           }
           if (null != var4.field_e &&
-            !var4.field_i.c(var4.field_e, param0 ^ -21493)) {
+            !var4.field_i.tryLoadGroupByName(var4.field_e, param0 ^ -21493)) {
             this.a(var2, 1, var4.field_i.getGroupLoadPercentByName(var4.field_e, param0 + 21493));
             return false;
           }
@@ -195,7 +195,7 @@ final class th {
             null == var4.field_e &&
             var4.field_a != null &&
             !var4.field_i.tryLoadAllGroups((byte) -112)) {
-            this.a(var2, 1, var4.field_i.d(-1));
+            this.a(var2, 1, var4.field_i.getArchiveLoadPercent(-1));
             return false;
           }
           this.field_d = this.field_d + 1;

@@ -46,7 +46,7 @@ final class FishRainSpecial extends SpecialOrder {
         int[][] var23 = null;
         var18 = BachelorFridge.field_y;
         try {
-          var19 = this.creature.a(21, param0);
+          var19 = this.creature.resolveCreature(21, param0);
           var4 = new FishRainEvent(this.moveId, new CreatureRef(var19));
           var4.field_q = this.field_k;
           var4.field_s = this.field_n;

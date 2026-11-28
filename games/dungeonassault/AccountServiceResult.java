@@ -57,17 +57,17 @@ final class AccountServiceResult {
             stackIn_2_0 = (AccountServiceResult) null;
             return stackIn_2_0;
           }
-          if (wd.field_d == DelegatingCanvas.field_f) {
+          if (SpriteAnimationPlayer.field_d == DelegatingCanvas.field_f) {
             stackIn_5_0 = null;
             return (AccountServiceResult) (stackIn_5_0);
           }
-          if (wd.field_d == SecondaryNodeDeque.field_b &&
+          if (SpriteAnimationPlayer.field_d == SecondaryNodeDeque.field_b &&
             param1.equals(bf.field_o)) {
-            wd.field_d = sp.field_e;
+            SpriteAnimationPlayer.field_d = sp.field_e;
             stackIn_9_0 = DualLinkNode.field_p;
             return stackIn_9_0;
           }
-          wd.field_d = DelegatingCanvas.field_f;
+          SpriteAnimationPlayer.field_d = DelegatingCanvas.field_f;
           bf.field_o = param1;
           DualLinkNode.field_p = null;
           stackIn_11_0 = null;

@@ -9,8 +9,8 @@ final class jk extends fb {
 
     final fb a(int param0) {
         int var2 = 81 / ((param0 - 36) / 62);
-        f[][] var3 = (f[][]) null;
-        if (null != this.field_i.b((f[][]) null, 0, (byte) 28, 0)) {
+        PuzzleTile[][] var3 = (PuzzleTile[][]) null;
+        if (null != this.field_i.b((PuzzleTile[][]) null, 0, (byte) 28, 0)) {
           return (fb) (this);
         }
         return null;
@@ -29,7 +29,7 @@ final class jk extends fb {
     jk(fq param0) {
         super(param0);
         try {
-          this.field_i = new ji((f) null, 0, 0);
+          this.field_i = new ji((PuzzleTile) null, 0, 0);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -37,11 +37,11 @@ final class jk extends fb {
 
     final void a(boolean param0, int param1, int param2, byte param3, boolean param4, int param5, int param6) {
         if (param3 <= -59) {
-          this.field_i.b(118, param1, param2, false, param5, param6);
+          this.field_i.drawTileForeground(118, param1, param2, false, param5, param6);
           return;
         }
         this.a(true, -19, 116, (byte) 114, true, -79, 54);
-        this.field_i.b(118, param1, param2, false, param5, param6);
+        this.field_i.drawTileForeground(118, param1, param2, false, param5, param6);
     }
 
     static {

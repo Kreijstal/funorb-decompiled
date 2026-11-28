@@ -123,9 +123,9 @@ final class pp extends IntrusiveNode {
         if (param0 != 12) {
           java.applet.Applet var2 = (java.applet.Applet) null;
           pp.a((java.applet.Applet) null, 100);
-          return hi.b(117);
+          return BlastDebrisModel.getIgnoreListContent(117);
         }
-        return hi.b(117);
+        return BlastDebrisModel.getIgnoreListContent(117);
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {

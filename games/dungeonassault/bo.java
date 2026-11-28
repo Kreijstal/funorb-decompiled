@@ -7,7 +7,7 @@ final class bo extends ok {
     static String field_Mb;
     String field_Hb;
     static RgbSprite field_Kb;
-    static wm field_Jb;
+    static PackedBitSet field_Jb;
     int field_Ib;
     static String[] field_Gb;
 
@@ -137,7 +137,7 @@ final class bo extends ok {
         field_Mb = null;
         field_Kb = null;
         if (param0 != -36) {
-          field_Jb = (wm) null;
+          field_Jb = (PackedBitSet) null;
           field_Gb = null;
           field_Jb = null;
           return;

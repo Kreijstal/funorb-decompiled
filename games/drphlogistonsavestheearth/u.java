@@ -90,7 +90,7 @@ abstract class u {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param0.b(param2, -2);
+          var4 = param0.getFlatFile(param2, -2);
           var3 = var4;
           if (var4 == null) {
             return null;

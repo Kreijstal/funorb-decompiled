@@ -31,7 +31,7 @@ final class qh extends vf {
             stackIn_3_0 = (fj) (param3);
           }
           var10 = (rg) (stackIn_3_0);
-          lc.a(param1 + param3.field_q, param3.field_F + (param1 + param3.field_q), param4 - (-param3.field_m - param3.field_z), param4 + param3.field_m, 14907);
+          TunnelMesh.pushAndIntersectRasterClip(param1 + param3.field_q, param3.field_F + (param1 + param3.field_q), param4 - (-param3.field_m - param3.field_z), param4 + param3.field_m, 14907);
           if (var10 != null) {
             param2 = param2 & var10.field_L;
           }
@@ -153,7 +153,7 @@ final class qh extends vf {
         if (tj.a(true)) {
           var10.a(param0, 26206, 0);
         } else {
-          var10.a(param0, 26206, 2 + h.field_W);
+          var10.a(param0, 26206, 2 + WingPod.field_W);
         }
         return var10;
     }

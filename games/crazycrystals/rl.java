@@ -58,24 +58,24 @@ abstract class rl extends oh {
     }
 
     final static nd c(int param0) {
-        if (null == p.field_i) {
-          p.field_i = new nd();
-          p.field_i.a(ai.field_h, false);
-          p.field_i.field_l = 6;
-          p.field_i.field_g = 5;
-          p.field_i.field_c = 7697781;
-          p.field_i.field_j = 4;
-          p.field_i.field_f = 14;
-          p.field_i.field_d = 0;
-          p.field_i.field_h = 2763306;
-          p.field_i.field_m = ba.field_i;
+        if (null == PauseMenu.field_i) {
+          PauseMenu.field_i = new nd();
+          PauseMenu.field_i.a(ai.field_h, false);
+          PauseMenu.field_i.field_l = 6;
+          PauseMenu.field_i.field_g = 5;
+          PauseMenu.field_i.field_c = 7697781;
+          PauseMenu.field_i.field_j = 4;
+          PauseMenu.field_i.field_f = 14;
+          PauseMenu.field_i.field_d = 0;
+          PauseMenu.field_i.field_h = 2763306;
+          PauseMenu.field_i.field_m = ba.field_i;
           if (param0 == -9918) {
-            return p.field_i;
+            return PauseMenu.field_i;
           }
           return (nd) null;
         }
         if (param0 == -9918) {
-          return p.field_i;
+          return PauseMenu.field_i;
         }
         return (nd) null;
     }
@@ -101,7 +101,7 @@ abstract class rl extends oh {
         pc.field_y = 0;
         lo.field_b = null;
         rc.field_a = ol.field_z[param1];
-        jo.field_o = param1;
+        CrystalTile.field_o = param1;
         if (param1 == 0) {
           vh.field_a = true;
         }
@@ -113,7 +113,7 @@ abstract class rl extends oh {
         fn.field_j = 8;
         if (param0 == 26) {
           je.field_j = qk.field_F;
-          we.field_h = sm.field_f;
+          LevelProgressUpdate.field_h = sm.field_f;
           b.field_a = MusicPatchPcmStream.field_n;
           fp.field_a = ei.field_F;
           var3 = param2;

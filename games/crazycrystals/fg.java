@@ -8,7 +8,7 @@ final class fg extends pd {
     private int field_h;
     private int field_k;
 
-    final f a(boolean param0, int param1, int param2, int param3, ta param4) {
+    final PuzzleTile a(boolean param0, int param1, int param2, int param3, ta param4) {
         RuntimeException var6 = null;
         gi stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -22,7 +22,7 @@ final class fg extends pd {
             this.a((byte) 104);
           }
           stackIn_3_0 = new gi(3 & q.field_a[ma.field_n[param1]].field_c[param2], IsaacRandom.field_g);
-          return (f) ((Object) stackIn_3_0);
+          return (PuzzleTile) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

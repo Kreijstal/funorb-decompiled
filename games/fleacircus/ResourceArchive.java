@@ -322,7 +322,7 @@ final class ResourceArchive {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int[] param3, byte param4) {
+    final static void blendHalfRgbSpan(int param0, int param1, int param2, int[] param3, byte param4) {
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -381,7 +381,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final boolean a(String param0, int param1) {
+    final boolean tryLoadGroupByName(String param0, int param1) {
         boolean discarded$1 = false;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -417,7 +417,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(String param0, String param1, int param2) {
+    final boolean tryLoadFileByName(String param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -488,7 +488,7 @@ final class ResourceArchive {
         return false;
     }
 
-    final boolean b(String param0, int param1) {
+    final boolean hasGroupName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -578,7 +578,7 @@ final class ResourceArchive {
         }
     }
 
-    final int d(byte param0) {
+    final int getGroupCapacity(byte param0) {
         if (!this.ensureIndexLoaded((byte) -99)) {
           return -1;
         }
@@ -586,7 +586,7 @@ final class ResourceArchive {
         return this.field_m.field_v.length;
     }
 
-    final static String a(byte param0, long param1) {
+    final static String decodeBase37DisplayName(byte param0, long param1) {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
@@ -698,7 +698,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, String param5, int param6, int param7, PlatformTaskDispatcher param8) {
+    final static void initializeArchiveNetworkServices(int param0, int param1, int param2, int param3, int param4, String param5, int param6, int param7, PlatformTaskDispatcher param8) {
         try {
           fh.field_g = param5;
           FrameTimer.field_d = param1;
@@ -809,7 +809,7 @@ final class ResourceArchive {
         throw new IllegalArgumentException(param1 + " " + param2);
     }
 
-    final synchronized byte[] a(int param0, int param1) {
+    final synchronized byte[] getFlatFile(int param0, int param1) {
         if (!this.ensureIndexLoaded((byte) -115)) {
           return null;
         }
@@ -828,7 +828,7 @@ final class ResourceArchive {
         throw new RuntimeException();
     }
 
-    final int a(int param0, byte param1) {
+    final int getFileCapacity(int param0, byte param1) {
         if (!this.validateGroupId(true, param0)) {
           return 0;
         }
@@ -893,7 +893,7 @@ final class ResourceArchive {
 
     private final synchronized void loadPackedGroup(byte param0, int param1) {
         if (param0 != 101) {
-          this.b((String) null, ((int[]) (((Object[]) (this.field_g[3]))[7]))[1]);
+          this.hasGroupName((String) null, ((int[]) (((Object[]) (this.field_g[3]))[7]))[1]);
         }
         if (!this.field_d) {
           this.field_g[param1] = kh.storeBytes(false, this.field_i.b(param1, false), -137);
@@ -902,7 +902,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int a(byte param0) {
+    final synchronized int getArchiveLoadPercent(byte param0) {
         int var2;
         int var3;
         int var4;

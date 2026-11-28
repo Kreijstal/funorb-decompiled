@@ -92,13 +92,13 @@ final class MixedSupport119 {
           if (!resourceArchiveArgument1.ensureIndexLoaded((byte) 121)) {
             return false;
           }
-          if (!resourceArchiveArgument1.computeBoolean0811("commonui", (byte) -101)) {
+          if (!resourceArchiveArgument1.tryLoadGroupByName("commonui", (byte) -101)) {
             return false;
           }
           if (resourceArchiveArgument2.ensureIndexLoaded((byte) 121) &&
-            resourceArchiveArgument2.computeBoolean0811("commonui", (byte) -117)) {
+            resourceArchiveArgument2.tryLoadGroupByName("commonui", (byte) -117)) {
             if (resourceArchiveArgument4.ensureIndexLoaded((byte) 121) &&
-              resourceArchiveArgument4.computeBoolean0811("button.gif", (byte) -34)) {
+              resourceArchiveArgument4.tryLoadGroupByName("button.gif", (byte) -34)) {
               if (integerArgument3 != -21) {
                 stringState0523 = (String) null;
               }

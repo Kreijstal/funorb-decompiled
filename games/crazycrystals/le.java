@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class le extends ln {
+final class le extends ScoreModifier {
     static RgbSprite[][] field_g;
 
     final static void a(int param0) {
@@ -18,9 +18,9 @@ final class le extends ln {
         int[] var10 = null;
         ca var11 = null;
         CipherPacketBuffer var12 = null;
-        dp var13 = null;
+        ProfileDataRequest var13 = null;
         int[] var14 = null;
-        dp var15 = null;
+        ProfileDataRequest var15 = null;
         int[] var16 = null;
         var8 = CrazyCrystals.field_B;
         try {
@@ -41,7 +41,7 @@ final class le extends ln {
             for (var7 = 0; var7 < var6; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -75);
             }
-            var15 = (dp) (pm.field_c.beginForward(32073));
+            var15 = (ProfileDataRequest) (pm.field_c.beginForward(32073));
             if (var15 == null) {
               jj.a(4);
               return;
@@ -61,7 +61,7 @@ final class le extends ln {
             var11.unlink(false);
           } else {
             if (var2 == 2) {
-              var13 = (dp) (pm.field_c.beginForward(param0 ^ 18166));
+              var13 = (ProfileDataRequest) (pm.field_c.beginForward(param0 ^ 18166));
               if (var13 == null) {
                 jj.a(param0 - 15291);
                 return;
@@ -104,7 +104,7 @@ final class le extends ln {
         super(param0, param1, param2, param3);
     }
 
-    final int a(int param0, byte param1) {
+    final int countPlayerApplications(int param0, byte param1) {
         int var3 = 27 % ((param1 - 55) / 50);
         return ue.field_c ? 1 : 0;
     }

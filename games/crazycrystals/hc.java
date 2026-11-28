@@ -8,14 +8,14 @@ final class hc {
 
     final static void a(boolean param0, boolean param1) {
         if (null != ab.field_D) {
-          ab.field_D.a(-1);
+          ab.field_D.disposeResultScene(-1);
           ab.field_D = null;
         }
         fn.field_j = bh.field_c;
         wd.field_j = df.field_c;
         ob.field_l = AccountNameAvailabilityValidator.field_k;
         mb.field_g = vk.field_I;
-        we.field_h = sm.field_e;
+        LevelProgressUpdate.field_h = sm.field_e;
         b.field_a = sb.field_F;
         fp.field_a = fl.field_g;
         je.field_j = nh.field_F;

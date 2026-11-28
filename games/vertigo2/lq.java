@@ -7,7 +7,7 @@ final class lq {
     int field_d;
     static ql field_a;
     int[] field_c;
-    static bh field_b;
+    static LevelSimulation field_b;
 
     final int a(int param0) {
         Sprite var3;

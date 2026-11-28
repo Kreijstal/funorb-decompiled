@@ -207,13 +207,13 @@ final class oo extends se {
           if (!rb.field_k.ensureIndexLoaded((byte) 102)) {
             return 20;
           }
-          if (!rb.field_k.a(-20402, "commonui")) {
+          if (!rb.field_k.tryLoadGroupByName(-20402, "commonui")) {
             return 40;
           }
           if (!ok.field_c.ensureIndexLoaded((byte) 102)) {
             return 50;
           }
-          if (!ok.field_c.a(-20402, "commonui")) {
+          if (!ok.field_c.tryLoadGroupByName(-20402, "commonui")) {
             return 60;
           }
           if (!FullscreenFocusCanvas.field_a.ensureIndexLoaded((byte) 102)) {
@@ -227,23 +227,23 @@ final class oo extends se {
             if (!SecondaryNodeDeque.field_e.ensureIndexLoaded((byte) 102)) {
               return 14;
             }
-            if (!SecondaryNodeDeque.field_e.c("", -46)) {
+            if (!SecondaryNodeDeque.field_e.hasGroupName("", -46)) {
               return 29;
             }
-            if (!SecondaryNodeDeque.field_e.a(-20402, "")) {
+            if (!SecondaryNodeDeque.field_e.tryLoadGroupByName(-20402, "")) {
               return 29;
             }
           }
           if (!rb.field_k.ensureIndexLoaded((byte) 102)) {
             return 43;
           }
-          if (!rb.field_k.a(-20402, "commonui")) {
+          if (!rb.field_k.tryLoadGroupByName(-20402, "commonui")) {
             return 57;
           }
           if (!ok.field_c.ensureIndexLoaded((byte) 102)) {
             return 71;
           }
-          if (!ok.field_c.a(-20402, "commonui")) {
+          if (!ok.field_c.tryLoadGroupByName(-20402, "commonui")) {
             return 80;
           }
           if (!FullscreenFocusCanvas.field_a.ensureIndexLoaded((byte) 102)) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uh extends fa {
-    static uc field_p;
+    static MenuOverlay field_p;
     static RgbSprite field_q;
     static String field_o;
     static boolean field_n;

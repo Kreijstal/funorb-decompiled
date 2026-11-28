@@ -205,7 +205,7 @@ final class InsanoSauceSpecial extends SpecialOrder {
         int var10Lifetime1;
         var17 = BachelorFridge.field_y;
         try {
-          var18 = this.creature.a(59, param0);
+          var18 = this.creature.resolveCreature(59, param0);
           var4 = new InsanoSauceEvent(this.moveId, new CreatureRef(var18));
           var4.field_s = this.field_n;
           var4.field_r = this.field_k;

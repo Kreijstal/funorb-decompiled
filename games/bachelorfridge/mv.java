@@ -46,7 +46,7 @@ class mv extends AnimationNode {
           var2_int = -128 / ((-44 - param0) / 40);
           if (!this.field_k.field_r &&
             !this.field_k.field_n) {
-            var3 = this.field_k.creature.a(67, this.field_l.field_h);
+            var3 = this.field_k.creature.resolveCreature(67, this.field_l.field_h);
             if (var3.isDown(87)) {
               return;
             }
@@ -81,7 +81,7 @@ class mv extends AnimationNode {
                         for (var8_int = 0; this.field_l.field_h.height > var8_int; var8_int++) {
                           var19 = this.field_l.field_h.tiles[var7][var8_int].occupant;
                           if (var19 != null) {
-                            var20 = new CreatureRef(var19).a(-27449, this.field_l);
+                            var20 = new CreatureRef(var19).resolveCreatureView(-27449, this.field_l);
                             this.addChild(27799, new DamagePopupAnimation(this.field_l, var20, var4_ref.field_f));
                           }
                         }
@@ -96,20 +96,20 @@ class mv extends AnimationNode {
                   }
                 }
               } else {
-                var16 = var4_ref.target.a(54, this.field_l.field_h);
-                if (var16.a(13, (byte) 104)) {
-                  var3.a(5, var16, (byte) 2);
-                  this.addChild(27799, new DamagePopupAnimation(this.field_l, this.field_k.creature.a(-27449, this.field_l), 5));
+                var16 = var4_ref.target.resolveCreature(54, this.field_l.field_h);
+                if (var16.hasStatus(13, (byte) 104)) {
+                  var3.applyDamageAndRecordSource(5, var16, (byte) 2);
+                  this.addChild(27799, new DamagePopupAnimation(this.field_l, this.field_k.creature.resolveCreatureView(-27449, this.field_l), 5));
                 }
                 var8_int = this.field_k.field_q;
                 if (this instanceof ba) {
                   var8_int = MouseInputHandler.a(var16, var3, (byte) 104);
                 }
-                var17 = ((DamageEffect) (var4_ref)).a(this.field_k.creature.a(-27449, this.field_l), this.field_l, false, var8_int);
+                var17 = ((DamageEffect) (var4_ref)).a(this.field_k.creature.resolveCreatureView(-27449, this.field_l), this.field_l, false, var8_int);
                 if (var17 != null) {
                   this.addChild(27799, var17);
                 }
-                var18 = var4_ref.target.a(-27449, this.field_l);
+                var18 = var4_ref.target.resolveCreatureView(-27449, this.field_l);
                 if (this.field_k.moveId != 61) {
                   if (this.field_k.moveId != 62) {
                     if (this.field_k.moveId != 63) {
@@ -148,7 +148,7 @@ class mv extends AnimationNode {
                   23 != var5_ref.field_u &&
                   var5_ref.field_u != 20 && (var18.field_s.statusId != 32 ||
                   var5_ref.c(27863))) {
-                  if (!var18.field_s.g((byte) 85)) {
+                  if (!var18.field_s.isCarryingFlag((byte) 85)) {
                     var18.a(24831, 14, kna.field_g[var5_ref.field_u]);
                     if (pna.field_zb[var5_ref.field_u].field_i != -1 &&
                       var5_ref.field_u != 9) {
@@ -169,9 +169,9 @@ class mv extends AnimationNode {
                   this.field_k.moveId != 69 &&
                   70 != this.field_k.moveId) &&
                   (decompiledFrameRemainder0 = (var11_int != 0))) {
-                  var3.a(var11_int, var3, (byte) 2);
-                  if (this.field_k.creature.a(-27449, this.field_l) != null) {
-                    this.field_k.creature.a(-27449, this.field_l).a(65280, 121, Integer.toString(-var11_int));
+                  var3.applyDamageAndRecordSource(var11_int, var3, (byte) 2);
+                  if (this.field_k.creature.resolveCreatureView(-27449, this.field_l) != null) {
+                    this.field_k.creature.resolveCreatureView(-27449, this.field_l).a(65280, 121, Integer.toString(-var11_int));
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -180,11 +180,11 @@ class mv extends AnimationNode {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  var3.a(-var6Lifetime1, var3, (byte) 2);
-                  if (null != this.field_k.creature.a(-27449, this.field_l) &&
+                  var3.applyDamageAndRecordSource(-var6Lifetime1, var3, (byte) 2);
+                  if (null != this.field_k.creature.resolveCreatureView(-27449, this.field_l) &&
                     var6Lifetime1 != 0) {
-                    var12 = this.field_k.creature.a(-27449, this.field_l);
-                    this.field_k.creature.a(-27449, this.field_l).a(65280, 9, Integer.toString(var6Lifetime1));
+                    var12 = this.field_k.creature.resolveCreatureView(-27449, this.field_l);
+                    this.field_k.creature.resolveCreatureView(-27449, this.field_l).a(65280, 9, Integer.toString(var6Lifetime1));
                     var13 = new bn(this.field_l, var12.field_s.tileX, var12.field_s.tileY);
                     ((TileEffect) ((Object) var13)).a(0);
                   }
@@ -206,12 +206,12 @@ class mv extends AnimationNode {
         if (param0 <= 16) {
           return;
         }
-        BattleCreature var2 = this.field_k.creature.a(44, this.field_l.field_h);
+        BattleCreature var2 = this.field_k.creature.resolveCreature(44, this.field_l.field_h);
         if (var2.isDown(-85)) {
           return;
         }
         try {
-          this.field_k.creature.a(-27449, this.field_l).b(false);
+          this.field_k.creature.resolveCreatureView(-27449, this.field_l).b(false);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "mv.B(" + param0 + ')');
         }
@@ -233,8 +233,8 @@ class mv extends AnimationNode {
         try {
           var3 = 14 % ((71 - param0) / 47);
           var8_ref = (BasicMoveDefinition) (al.a(88, this.field_k.moveId));
-          var4 = this.field_k.creature.a(72, this.field_l.field_h);
-          var5 = this.field_k.creature.a(-27449, this.field_l);
+          var4 = this.field_k.creature.resolveCreature(72, this.field_l.field_h);
+          var5 = this.field_k.creature.resolveCreatureView(-27449, this.field_l);
           this.field_l.field_s.a((byte) -57, var4.tileY, var4.tileX);
           var6 = ok.c(var8_ref.field_n, -26684) + 12;
           if (var6 >= 100) {
@@ -318,7 +318,7 @@ class mv extends AnimationNode {
           var2 = (EventEffect) (this.field_k.field_o.beginForward((byte) 90));
           while (var2 != null) {
             if (var2 instanceof DamageEffect) {
-              var3 = var2.target.a(-27449, this.field_l);
+              var3 = var2.target.resolveCreatureView(-27449, this.field_l);
               if (var3.field_f.field_u.field_e) {
                 var3.b(false);
               }
@@ -356,8 +356,8 @@ class mv extends AnimationNode {
         try {
           al.a(91, this.field_k.moveId);
           var19 = this.field_l.field_h;
-          var3 = this.field_k.creature.a(84, this.field_l.field_h);
-          var22 = haa.b(1, var3.d(124, this.field_k.moveId), this.field_k.field_q);
+          var3 = this.field_k.creature.resolveCreature(84, this.field_l.field_h);
+          var22 = haa.b(1, var3.getAttackShape(124, this.field_k.moveId), this.field_k.field_q);
           var5 = var3.tileX;
           var6 = var3.tileY;
           if (this.field_k.field_q == 2) {
@@ -392,7 +392,7 @@ class mv extends AnimationNode {
                   var14 < var19.width &&
                   var15 >= 0 &&
                   var19.height > var15 &&
-                  this.field_l.field_h.tiles[var14][var15].e(-88)) {
+                  this.field_l.field_h.tiles[var14][var15].isTraversableTerrain(-88)) {
                   var16 = null;
                   if (this.field_k.moveId != 61 &&
                     62 != this.field_k.moveId &&
@@ -451,7 +451,7 @@ class mv extends AnimationNode {
           this.field_k = param1;
           this.field_l = param0;
           var6 = (BasicMoveDefinition) (al.a(-91, this.field_k.moveId));
-          var4 = this.field_k.creature.a(-27449, this.field_l);
+          var4 = this.field_k.creature.resolveCreatureView(-27449, this.field_l);
           if (var6.field_p != 2 &&
             var6.field_p != 3) {
             this.addChild(27799, new ActorAnimation(this.field_l, var4));
@@ -465,7 +465,7 @@ class mv extends AnimationNode {
                 if (!this.field_k.field_n) {
                   var4.a(12648384, 43, var6.a((byte) 37));
                   this.field_j = 100;
-                  var4.field_s.d(this.field_k.moveId, (byte) -120);
+                  var4.field_s.applyMoveCooldown(this.field_k.moveId, (byte) -120);
                 } else {
                   var4.a(16761024, 84, dc.field_o);
                 }

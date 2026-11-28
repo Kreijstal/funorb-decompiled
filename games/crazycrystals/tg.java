@@ -25,7 +25,7 @@ final class tg {
         }
     }
 
-    final static void rasterizeLitModelFaces(int param0, int param1, int param2, int param3, int param4, int param5, jg param6, int param7) {
+    final static void rasterizeLitModelFaces(int param0, int param1, int param2, int param3, int param4, int param5, ModelMesh param6, int param7) {
         int stackIn_15_0 = 0;
         int[] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
@@ -71,7 +71,7 @@ final class tg {
         int var40 = 0;
         int[] var41 = null;
         int var44 = 0;
-        jg var45 = null;
+        ModelMesh var45 = null;
         int[] var50 = null;
         int[] var55 = null;
         byte[] var61 = null;
@@ -90,7 +90,7 @@ final class tg {
           if (var45.field_o != null &&
             var45.field_s > 1) {
             var61 = var45.field_o;
-            ln.a(-17512, 0, var61, to.field_b, 0);
+            ScoreModifier.bucketModelFaceIndices(-17512, 0, var61, to.field_b, 0);
           } else {
             qf.h(-30693);
           }
@@ -232,8 +232,8 @@ final class tg {
         field_a = null;
         field_c = null;
         if (param0 != -100) {
-          jg var2 = (jg) null;
-          tg.rasterizeLitModelFaces(-124, 27, 6, 79, -72, -110, (jg) null, 54);
+          ModelMesh var2 = (ModelMesh) null;
+          tg.rasterizeLitModelFaces(-124, 27, 6, 79, -72, -110, (ModelMesh) null, 54);
         }
         field_e = (byte[][]) null;
         field_d = null;

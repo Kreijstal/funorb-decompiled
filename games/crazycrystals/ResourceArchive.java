@@ -72,7 +72,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final boolean c(String param0, int param1) {
+    final boolean hasGroupName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -174,7 +174,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized byte[] d(int param0, int param1) {
+    final synchronized byte[] getFlatFile(int param0, int param1) {
         if (!this.ensureIndexLoaded((byte) 102)) {
           return null;
         }
@@ -213,7 +213,7 @@ final class ResourceArchive {
         return this.getFileWithKeys(param2, true, (int[]) null, param0);
     }
 
-    final boolean a(int param0, String param1) {
+    final boolean tryLoadGroupByName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -257,7 +257,7 @@ final class ResourceArchive {
         field_f = null;
     }
 
-    final static String a(byte param0, byte[] param1) {
+    final static String decodeLegacyUtf8(byte param0, byte[] param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -388,7 +388,7 @@ final class ResourceArchive {
             param1[1] != 0 ||
             param1[2] != 0 ||
             param1[3] != 0)) {
-            var35 = l.extractBytes((byte) 110, true, this.field_h[param0]);
+            var35 = ResultScenePhase.extractBytes((byte) 110, true, this.field_h[param0]);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -396,7 +396,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = l.extractBytes((byte) 110, false, this.field_h[param0]);
+            var9 = ResultScenePhase.extractBytes((byte) 110, false, this.field_h[param0]);
           }
           try {
             var36 = b.a(var9, -1);
@@ -721,7 +721,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final synchronized int b(int param0) {
+    final synchronized int getArchiveLoadPercent(int param0) {
         int var2;
         int var3;
         int var4;
@@ -749,7 +749,7 @@ final class ResourceArchive {
         return var4Lifetime1;
     }
 
-    final int a(int param0, int param1) {
+    final int getFileCapacity(int param0, int param1) {
         if (!this.validateGroupId((byte) 4, param0)) {
           return 0;
         }
@@ -776,7 +776,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final int a(int param0) {
+    final int getGroupCapacity(int param0) {
         if (param0 < 17) {
           String var3 = (String) null;
           this.getGroupIdByName((String) null, 104);
@@ -860,7 +860,7 @@ final class ResourceArchive {
             return stackIn_14_0;
           }
           if (this.field_e[param0][param3] != null) {
-            var7 = l.extractBytes((byte) 110, false, this.field_e[param0][param3]);
+            var7 = ResultScenePhase.extractBytes((byte) 110, false, this.field_e[param0][param3]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -909,7 +909,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(byte param0, String param1, String param2) {
+    final boolean tryLoadFileByName(byte param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

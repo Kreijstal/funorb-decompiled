@@ -79,7 +79,7 @@ final class mo {
             }
             break;
           }
-          me.field_g[var7] = new ai(param1);
+          me.field_g[var7] = new DungeonTileState(param1);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

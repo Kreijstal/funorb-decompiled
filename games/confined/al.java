@@ -55,13 +55,13 @@ final class al {
 
     final static String a(byte param0) {
         int var1 = -81 % ((21 - param0) / 63);
-        if (sa.field_R) {
+        if (DampedProjectile.field_R) {
           return null;
         }
-        if (kc.field_t > hm.field_qb) {
+        if (kc.field_t > LightningArc.field_qb) {
           return null;
         }
-        if (!(hm.field_qb >= kc.field_t + hm.field_nb)) {
+        if (!(LightningArc.field_qb >= kc.field_t + LightningArc.field_nb)) {
           return vf.field_o;
         }
         return null;

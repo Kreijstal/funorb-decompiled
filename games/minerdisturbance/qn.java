@@ -227,7 +227,7 @@ final class qn extends hc {
             field_K = 78;
           }
           if (param3.ensureIndexLoaded((byte) 126)) {
-            stackIn_6_0 = param1 + " - " + param3.c(-14858) + "%";
+            stackIn_6_0 = param1 + " - " + param3.getArchiveLoadPercent(-14858) + "%";
             return stackIn_6_0;
           }
           stackIn_4_0 = (String) (param0);

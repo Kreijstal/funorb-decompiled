@@ -20,7 +20,7 @@ final class rb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = ResourceArchive.a(param0, -115);
+          var3 = ResourceArchive.reverseStringCodeUnits(param0, -115);
           if (param1.indexOf(param0) == param2 &&
             -1 == param1.indexOf(var3)) {
             stackIn_12_0 = (param1.startsWith(param0)) || (param1.startsWith(var3)) || (param1.endsWith(param0)) || (param1.endsWith(var3));

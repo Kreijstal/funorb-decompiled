@@ -35,7 +35,7 @@ final class BufferedSocket implements Runnable {
         DirectByteStorage.field_g = AccountServiceResult.a("commonui", (byte) 122, param2, "frame_bottom");
         ul.field_B = qd.a(param2, "jagex_logo_grey", "commonui", (byte) 55);
         ImageProducerRasterBuffer.field_i = AccountServiceResult.a("commonui", (byte) 85, param2, "button");
-        DualLinkNode.field_p = ResourceArchive.a("commonui", (byte) -98, "validation", param2);
+        DualLinkNode.field_p = ResourceArchive.loadSpriteArrayByName("commonui", (byte) -98, "validation", param2);
         de.field_c = (BitmapFont) ((Object) eh.a("arezzo12", "commonui", param1, param2, (byte) 63));
         si.field_V = (BitmapFont) ((Object) eh.a("arezzo14", "commonui", param1, param2, (byte) 63));
         DualLinkDequeIterator.field_c = (BitmapFont) ((Object) eh.a("arezzo14bold", "commonui", param1, param2, (byte) 63));

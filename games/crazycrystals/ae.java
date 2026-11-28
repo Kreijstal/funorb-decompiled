@@ -12,8 +12,8 @@ final class ae extends og implements vd {
 
     public ae() {
         super(0, 0, 476, 225, (wo) null);
-        this.field_E = new pc(mj.field_d, (bi) null);
-        this.field_B = new pc(dp.field_i, (bi) null);
+        this.field_E = new pc(LaserTraceCursor.field_d, (bi) null);
+        this.field_B = new pc(ProfileDataRequest.field_i, (bi) null);
         this.field_z = new pc(ip.field_b, (bi) null);
         ve var1 = new ve();
         this.field_E.field_i = (wo) ((Object) var1);

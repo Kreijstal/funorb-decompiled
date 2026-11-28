@@ -124,7 +124,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             stackIn_2_0 = (fc) null;
             return stackIn_2_0;
           }
-          var4 = param2.a(param1, (byte) -104);
+          var4 = param2.getFlatFile(param1, (byte) -104);
           var3 = var4;
           if (var4 != null) {
             stackIn_7_0 = new fc(var4);

@@ -86,7 +86,7 @@ final class ql {
         try {
           var4_int = 82 % ((-20 - param3) / 32);
           if (param0.ensureIndexLoaded(-1)) {
-            stackIn_4_0 = param1 + " - " + param0.a(20147) + "%";
+            stackIn_4_0 = param1 + " - " + param0.getArchiveLoadPercent(20147) + "%";
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) (param2);

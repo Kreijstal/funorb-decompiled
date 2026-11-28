@@ -46,7 +46,7 @@ final class mp extends DualLinkNode {
             qh.field_f = param5;
             ji.field_x = param1;
             dg.field_a = param3;
-            lc.field_c = l.field_b;
+            lc.field_c = ResultScenePhase.field_b;
             fh.field_i = param4;
           } else {
             var8.o(106);

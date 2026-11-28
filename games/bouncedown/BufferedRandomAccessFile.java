@@ -647,7 +647,7 @@ final class BufferedRandomAccessFile {
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_jk = q.field_G[var3];
             var4_ref_jk.a(true);
-            ResourceArchive.b(var3, -1);
+            ResourceArchive.updateLogoPartRotation(var3, -1);
             var5 = var4_ref_jk.field_e + var4_ref_jk.field_n >> 1;
             var6 = var4_ref_jk.field_N + var4_ref_jk.field_H >> 1;
             var7 = var4_ref_jk.field_D + var4_ref_jk.field_R >> 1;
@@ -692,7 +692,7 @@ final class BufferedRandomAccessFile {
             }
             var2[var16] = -2147483648;
             var17 = q.field_G[var16];
-            ResourceArchive.b(var16, -1);
+            ResourceArchive.updateLogoPartRotation(var16, -1);
             for (var18 = 0; var18 < 3; var18++) {
               il.field_e[var18] = il.field_e[var18] + li.field_e[var15][var18];
             }

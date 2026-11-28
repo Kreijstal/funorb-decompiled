@@ -63,7 +63,7 @@ final class gka extends AnimationNode {
             return (CreatureProfile) (stackIn_2_0);
           }
           var3 = new CreatureProfile(gfa.field_a[var2_int]);
-          var3.a(param0, false);
+          var3.readCreatureProfile(param0, false);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -98,7 +98,7 @@ final class gka extends AnimationNode {
         if (!(0 > this.field_p.field_s.field_d)) {
           return false;
         }
-        CreatureActor var3 = this.field_o.field_n.a(-27449, this.field_p);
+        CreatureActor var3 = this.field_o.field_n.resolveCreatureView(-27449, this.field_p);
         this.field_k = new ActorAnimation(this.field_p, var3);
         this.addChild(27799, this.field_k);
         this.field_j = true;

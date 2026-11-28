@@ -50,7 +50,7 @@ final class jj {
           var9 = CrazyCrystals.field_B;
           try {
             if (oi.field_c == null &&
-              !te.a((byte) -19, param4)) {
+              !ResultScene.pollLoginConnection((byte) -19, param4)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
@@ -150,7 +150,7 @@ final class jj {
               var11 = (CharSequence) ((Object) je.field_g);
               lk.field_b = fe.a(60136, var11);
               kl.field_V = kd.field_n.readUnsignedByte(255);
-              gj.field_k = ek.field_h;
+              gj.field_k = LevelCompleteEntrancePhase.field_h;
               if (mk.field_c.a(0) == of.field_C) {
                 gg.field_d.a(1, le.b((byte) -20));
               } else {
@@ -181,11 +181,11 @@ final class jj {
               if (mo.field_l > 0) {
                 fj.field_d = true;
               }
-              tp.field_f.a(pj.field_r, true);
+              tp.field_f.a(WallTile.field_r, true);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
-                pj.field_r[var8Lifetime1] = pj.field_r[var8Lifetime1] + 50;
+                WallTile.field_r[var8Lifetime1] = WallTile.field_r[var8Lifetime1] + 50;
               }
-              kd.field_n.a(pj.field_r, true);
+              kd.field_n.a(WallTile.field_r, true);
               stackIn_74_0 = bf.field_b;
               return stackIn_74_0;
             }

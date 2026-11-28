@@ -23,7 +23,7 @@ final class BattleCreature extends CreatureProfile {
     int shield;
     int[] field_K;
 
-    final boolean c(byte param0, int param1) {
+    final boolean isMoveAllowedByStatus(byte param0, int param1) {
         MoveDefinition var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException decompiledCaughtException = null;
@@ -64,14 +64,14 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final boolean f(int param0, int param1) {
+    final boolean isMoveCoolingDown(int param0, int param1) {
         MoveDefinition var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = WhirlpoolDigest.field_e[param1];
-          var4 = this.b(param1, (byte) -127);
+          var4 = this.findMoveSlot(param1, (byte) -127);
           if (var3.field_g != param0 &&
             ~this.field_K[var4] != ~(1 + var3.field_g)) {
             return true;
@@ -84,7 +84,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final static void d(boolean param0) {
+    final static void initializeTutorialPanels(boolean param0) {
         int[] var1 = InvincibleSpecial.c(106);
         if (param0) {
           return;
@@ -100,7 +100,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final void a(boolean param0, byte param1, int param2) {
+    final void advanceStatusAndCooldowns(boolean param0, byte param1, int param2) {
         int var4_int = 0;
         MoveDefinition var5 = null;
         int var6 = 0;
@@ -113,7 +113,7 @@ final class BattleCreature extends CreatureProfile {
             this.statusTurns = this.statusTurns - 1;
           }
           if (param1 >= -7) {
-            this.a(19, (byte) -77);
+            this.hasStatus(19, (byte) -77);
           }
           var4_int = 0;
           while (var4_int < this.field_K.length) {
@@ -136,7 +136,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    private final void e(int param0) {
+    private final void updateFlagPickupAndCapture(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -149,71 +149,71 @@ final class BattleCreature extends CreatureProfile {
           }
           boolean decompiledFrameRemainder1 = true;
           if (this.battle.tiles[this.tileX][this.tileY].terrain != 23 ||
-            !this.battle.a(this.tileY, (byte) 124, this.tileX) ||
+            !this.battle.hasFlagAtTile(this.tileY, (byte) 124, this.tileX) ||
             this.ownerIndex == 0 ||
-            this.g((byte) 85)) {
+            this.isCarryingFlag((byte) 85)) {
             if (24 == this.battle.tiles[this.tileX][this.tileY].terrain &&
-              this.battle.a(this.tileY, (byte) 120, this.tileX) &&
+              this.battle.hasFlagAtTile(this.tileY, (byte) 120, this.tileX) &&
               this.ownerIndex != 1 &&
-              !this.g((byte) 85)) {
-              this.b((byte) 125, 25);
+              !this.isCarryingFlag((byte) 85)) {
+              this.applyStatusAndRefreshTile((byte) 125, 25);
               this.battle.field_T.field_G[1] = true;
               decompiledFrameRemainder1 = (var3 != 0);
             }
             if (decompiledFrameRemainder1) {
               if (25 == this.battle.tiles[this.tileX][this.tileY].terrain &&
-                this.battle.a(this.tileY, (byte) 115, this.tileX) &&
+                this.battle.hasFlagAtTile(this.tileY, (byte) 115, this.tileX) &&
                 this.ownerIndex != 2 &&
-                !this.g((byte) 85)) {
-                this.b((byte) 115, 26);
+                !this.isCarryingFlag((byte) 85)) {
+                this.applyStatusAndRefreshTile((byte) 115, 26);
                 this.battle.field_T.field_G[2] = true;
                 decompiledFrameRemainder1 = (var3 != 0);
               }
               if ((decompiledFrameRemainder1) &&
                 (this.battle.tiles[this.tileX][this.tileY].terrain == 26) &&
-                (this.battle.a(this.tileY, (byte) 121, this.tileX)) &&
+                (this.battle.hasFlagAtTile(this.tileY, (byte) 121, this.tileX)) &&
                 (this.ownerIndex != 3) &&
-                (!this.g((byte) 85))) {
-                this.b((byte) 114, 27);
+                (!this.isCarryingFlag((byte) 85))) {
+                this.applyStatusAndRefreshTile((byte) 114, 27);
                 this.battle.field_T.field_G[3] = true;
                 if (var3 != 0) {
-                  this.b((byte) 115, 24);
+                  this.applyStatusAndRefreshTile((byte) 115, 24);
                   this.battle.field_T.field_G[0] = true;
                 }
               }
             }
           } else {
-            this.b((byte) 115, 24);
+            this.applyStatusAndRefreshTile((byte) 115, 24);
             this.battle.field_T.field_G[0] = true;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (this.i(23, 118) &&
-            this.g((byte) 85) &&
+          if (this.hasAdjacentTerrain(23, 118) &&
+            this.isCarryingFlag((byte) 85) &&
             this.ownerIndex == 0) {
             this.battle.field_C[this.ownerIndex] = this.battle.field_C[this.ownerIndex] + 1;
             this.battle.field_T.field_s[this.ownerIndex] = this.battle.field_T.field_s[this.ownerIndex] + 1;
-            var2_int = this.battle.b((byte) 65, this);
+            var2_int = this.battle.getCarriedFlagTeam((byte) 65, this);
             if (var2_int != -1) {
-              this.battle.a(var2_int, (byte) 82);
+              this.battle.returnFlagToBase(var2_int, (byte) 82);
               this.statusId = 0;
             }
             decompiledFrameRemainder0 = (var3 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (!this.i(24, -105) ||
-              !this.g((byte) 85) ||
+            if (!this.hasAdjacentTerrain(24, -105) ||
+              !this.isCarryingFlag((byte) 85) ||
               1 != this.ownerIndex) {
-              if ((!this.i(25, 127) ||
-                !this.g((byte) 85) ||
+              if ((!this.hasAdjacentTerrain(25, 127) ||
+                !this.isCarryingFlag((byte) 85) ||
                 this.ownerIndex != 2) &&
-                (decompiledFrameRemainder0 = !(!this.i(26, 125))) &&
-                (decompiledFrameRemainder0 = !(!this.g((byte) 85))) &&
+                (decompiledFrameRemainder0 = !(!this.hasAdjacentTerrain(26, 125))) &&
+                (decompiledFrameRemainder0 = !(!this.isCarryingFlag((byte) 85))) &&
                 (decompiledFrameRemainder0 = (this.ownerIndex == 3))) {
                 this.battle.field_C[this.ownerIndex] = this.battle.field_C[this.ownerIndex] + 1;
                 this.battle.field_T.field_s[this.ownerIndex] = this.battle.field_T.field_s[this.ownerIndex] + 1;
-                var2_intLifetime1 = this.battle.b((byte) 63, this);
+                var2_intLifetime1 = this.battle.getCarriedFlagTeam((byte) 63, this);
                 if (-1 != var2_intLifetime1) {
-                  this.battle.a(var2_intLifetime1, (byte) 78);
+                  this.battle.returnFlagToBase(var2_intLifetime1, (byte) 78);
                   this.statusId = 0;
                 }
                 decompiledFrameRemainder0 = (var3 != 0);
@@ -221,17 +221,17 @@ final class BattleCreature extends CreatureProfile {
               if (decompiledFrameRemainder0) {
                 this.battle.field_C[this.ownerIndex] = this.battle.field_C[this.ownerIndex] + 1;
                 this.battle.field_T.field_s[this.ownerIndex] = this.battle.field_T.field_s[this.ownerIndex] + 1;
-                var2_intLifetime1 = this.battle.b((byte) 116, this);
+                var2_intLifetime1 = this.battle.getCarriedFlagTeam((byte) 116, this);
                 if (var2_intLifetime1 != -1) {
-                  this.battle.a(var2_intLifetime1, (byte) 121);
+                  this.battle.returnFlagToBase(var2_intLifetime1, (byte) 121);
                   this.statusId = 0;
                 }
                 if (var3 != 0) {
                   this.battle.field_C[this.ownerIndex] = this.battle.field_C[this.ownerIndex] + 1;
                   this.battle.field_T.field_s[this.ownerIndex] = this.battle.field_T.field_s[this.ownerIndex] + 1;
-                  var2_intLifetime1 = this.battle.b((byte) 51, this);
+                  var2_intLifetime1 = this.battle.getCarriedFlagTeam((byte) 51, this);
                   if (var2_intLifetime1 != -1) {
-                    this.battle.a(var2_intLifetime1, (byte) 120);
+                    this.battle.returnFlagToBase(var2_intLifetime1, (byte) 120);
                     this.statusId = 0;
                   }
                 }
@@ -239,16 +239,16 @@ final class BattleCreature extends CreatureProfile {
             } else {
               this.battle.field_C[this.ownerIndex] = this.battle.field_C[this.ownerIndex] + 1;
               this.battle.field_T.field_s[this.ownerIndex] = this.battle.field_T.field_s[this.ownerIndex] + 1;
-              var2_intLifetime1 = this.battle.b((byte) 51, this);
+              var2_intLifetime1 = this.battle.getCarriedFlagTeam((byte) 51, this);
               if (var2_intLifetime1 != -1) {
-                this.battle.a(var2_intLifetime1, (byte) 120);
+                this.battle.returnFlagToBase(var2_intLifetime1, (byte) 120);
                 this.statusId = 0;
               }
             }
           }
-          if (this.battle.a(this.ownerIndex, this.tileX, this.tileY, (byte) -41) &&
-            !this.g((byte) 85)) {
-            this.battle.a(this.ownerIndex, (byte) 65);
+          if (this.battle.isTeamFlagAtTile(this.ownerIndex, this.tileX, this.tileY, (byte) -41) &&
+            !this.isCarryingFlag((byte) 85)) {
+            this.battle.returnFlagToBase(this.ownerIndex, (byte) 65);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -258,7 +258,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final void j(int param0) {
+    final void removeDefeatedCreatureFromTile(int param0) {
         int var2_int = 0;
         BattleCreature var3 = null;
         int var4 = 0;
@@ -274,8 +274,8 @@ final class BattleCreature extends CreatureProfile {
             return;
           }
           if (this.battle.field_o == 3 &&
-            this.g((byte) 85)) {
-            this.c(true);
+            this.isCarryingFlag((byte) 85)) {
+            this.dropCarriedFlag(true);
           }
           boolean decompiledFrameCompleted0 = true;
           if (31 == this.statusId) {
@@ -294,7 +294,7 @@ final class BattleCreature extends CreatureProfile {
                 (!var3.isDown(-106) ||
                 var4 != 0) &&
                 var2_int != this.rosterSlot) {
-                var3.h(121, this.field_t);
+                var3.healAndRecord(121, this.field_t);
               }
               var2_int++;
             }
@@ -314,7 +314,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final void c(int param0, byte param1) {
+    final void rechargeReadyMoveAtIndex(int param0, byte param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
@@ -351,7 +351,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    private final void h(int param0) {
+    private final void refreshMaximumHealth(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -360,7 +360,7 @@ final class BattleCreature extends CreatureProfile {
             this.hp = this.field_t;
           }
           if (param0 != -2) {
-            this.c((byte) 99, -101);
+            this.isMoveAllowedByStatus((byte) 99, -101);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -370,7 +370,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final void j(int param0, int param1) {
+    final void setCooldownForMoveSlot(int param0, int param1) {
         MoveDefinition var3 = WhirlpoolDigest.field_e[this.field_o.field_g.field_b[this.field_m[param0]]];
         if (param1 != 0) {
           return;
@@ -382,7 +382,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final void d(int param0, byte param1) {
+    final void applyMoveCooldown(int param0, byte param1) {
         RuntimeException runtimeException = null;
         MoveDefinition var3 = null;
         int var4 = 0;
@@ -393,9 +393,9 @@ final class BattleCreature extends CreatureProfile {
           }
           var3 = WhirlpoolDigest.field_e[param0];
           if (param1 > -78) {
-            this.j(-35, -54);
+            this.setCooldownForMoveSlot(-35, -54);
           }
-          var4 = this.b(param0, (byte) -113);
+          var4 = this.findMoveSlot(param0, (byte) -113);
           if (var3.a(-125)) {
             this.field_K[var4] = 2 + var3.field_g;
             if (BachelorFridge.field_y == 0) {
@@ -411,7 +411,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final void a(rha param0, byte param1) {
+    final void appendCreatureDebugInfo(rha param0, byte param1) {
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_38_2 = null;
@@ -460,7 +460,7 @@ final class BattleCreature extends CreatureProfile {
             }
             var4++;
           }
-          param0.a("Creature checksum: " + Integer.toString(this.g(96), 16), 4819);
+          param0.a("Creature checksum: " + Integer.toString(this.computeCreatureChecksum(96), 16), 4819);
           param0.a(115, -2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -477,7 +477,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final boolean i(int param0, int param1) {
+    final boolean hasAdjacentTerrain(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -507,7 +507,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final String b(int param0) {
+    final String describeCreatureIdentity(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -532,7 +532,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    private final void h(int param0, int param1) {
+    private final void healAndRecord(int param0, int param1) {
         int var3_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -552,7 +552,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final boolean g(int param0, int param1) {
+    final boolean applyDamageOrHealing(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -567,28 +567,28 @@ final class BattleCreature extends CreatureProfile {
           if (this.shield > 0) {
             this.shield = this.shield - param1;
             if (this.shield <= 0) {
-              this.b((byte) 125, 0);
+              this.applyStatusAndRefreshTile((byte) 125, 0);
             }
             return false;
           }
           if (37 == this.statusId &&
             param1 != 0) {
-            this.b((byte) 116, 0);
+            this.applyStatusAndRefreshTile((byte) 116, 0);
           }
           if (param1 < 0) {
-            this.h(-24, -param1);
+            this.healAndRecord(-24, -param1);
             return false;
           }
           if (29 == this.statusId ||
             this.statusId == 44) {
-            this.b((byte) 115, 0);
+            this.applyStatusAndRefreshTile((byte) 115, 0);
           }
           this.hp = this.hp - param1;
           this.battle.field_T.field_b[this.ownerIndex] = this.battle.field_T.field_b[this.ownerIndex] + param1;
           if (this.hp > 0) {
             return false;
           }
-          this.j(-122);
+          this.removeDefeatedCreatureFromTile(-122);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -597,7 +597,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final void a(BoardTile param0, int param1) {
+    final void applyTerrainEffects(BoardTile param0, int param1) {
         RuntimeException stackIn_125_0 = null;
         StringBuilder stackIn_125_1 = null;
         String stackIn_126_2 = null;
@@ -608,29 +608,29 @@ final class BattleCreature extends CreatureProfile {
         int var5 = 0;
         var5 = BachelorFridge.field_y;
         try {
-          if (this.a(32, (byte) -66)) {
+          if (this.hasStatus(32, (byte) -66)) {
             return;
           }
           var3_int = param0.terrain;
           if (BuffVendorAnimation.field_w[this.battle.tiles[this.tileX][this.tileY].terrain].field_b &&
             this.battle.tiles[this.tileX][this.tileY].field_m &&
-            !this.g((byte) 85) &&
+            !this.isCarryingFlag((byte) 85) &&
             33 != this.statusId) {
             regionExit1: {
               if (var3_int != 11) {
                 if (var3_int == 10) {
-                  this.b((byte) 126, 18);
+                  this.applyStatusAndRefreshTile((byte) 126, 18);
                   this.battle.field_T.field_e[this.ownerIndex] = this.battle.field_T.field_e[this.ownerIndex] + 1;
                 }
                 if (var3_int != 10 ||
                   var5 != 0) {
                   if (var3_int == 7) {
-                    this.b((byte) 111, 4);
+                    this.applyStatusAndRefreshTile((byte) 111, 4);
                   }
                   if (var3_int != 7 ||
                     var5 != 0) {
                     if (var3_int == 6) {
-                      this.b((byte) 120, 16);
+                      this.applyStatusAndRefreshTile((byte) 120, 16);
                       this.battle.field_T.field_e[this.ownerIndex] = this.battle.field_T.field_e[this.ownerIndex] + 1;
                     }
                     if (var3_int != 6 ||
@@ -639,7 +639,7 @@ final class BattleCreature extends CreatureProfile {
                         28 == this.statusId) {
                         switch (var3_int) {
                           case 8:
-                            this.b((byte) 126, 17);
+                            this.applyStatusAndRefreshTile((byte) 126, 17);
                             this.battle.field_T.field_e[this.ownerIndex] = this.battle.field_T.field_e[this.ownerIndex] + 1;
                             if (var5 == 0) {
                               break regionExit1;
@@ -647,37 +647,37 @@ final class BattleCreature extends CreatureProfile {
                           default:
                             break regionExit1;
                           case 29:
-                            this.b((byte) 126, 12);
+                            this.applyStatusAndRefreshTile((byte) 126, 12);
                             if (var5 == 0) {
                               break regionExit1;
                             }
                           case 12:
-                            this.b((byte) 113, 19);
+                            this.applyStatusAndRefreshTile((byte) 113, 19);
                             this.battle.field_T.field_e[this.ownerIndex] = this.battle.field_T.field_e[this.ownerIndex] + 1;
                             if (var5 == 0) {
                               break regionExit1;
                             }
                           case 13:
-                            this.b((byte) 116, 7);
+                            this.applyStatusAndRefreshTile((byte) 116, 7);
                             if (var5 == 0) {
                               break regionExit1;
                             }
                             break;
                         }
                       }
-                      this.b((byte) 127, 5);
+                      this.applyStatusAndRefreshTile((byte) 127, 5);
                       if (var5 != 0) {
-                        this.b((byte) 110, 6);
+                        this.applyStatusAndRefreshTile((byte) 110, 6);
                       }
                     }}}} else {
-                this.b((byte) 110, 6);
+                this.applyStatusAndRefreshTile((byte) 110, 6);
               }
             }
-            if (!this.battle.a(this.tileY, (byte) 120, this.tileX) &&
+            if (!this.battle.hasFlagAtTile(this.tileY, (byte) 120, this.tileX) &&
               29 != var3_int) {
               this.battle.tiles[this.tileX][this.tileY].field_m = false;
             }
-            if (!this.battle.a(this.tileY, (byte) 117, this.tileX)) {
+            if (!this.battle.hasFlagAtTile(this.tileY, (byte) 117, this.tileX)) {
               this.battle.tiles[this.tileX][this.tileY].field_j = 5;
               if (var5 != 0) {
                 this.battle.tiles[this.tileX][this.tileY].field_j = -1;
@@ -685,22 +685,22 @@ final class BattleCreature extends CreatureProfile {
             } else {
               this.battle.tiles[this.tileX][this.tileY].field_j = -1;
             }
-            this.d(-127);
+            this.recalculateCreatureStats(-127);
           }
           if (21 == var3_int) {
-            this.j(-114);
+            this.removeDefeatedCreatureFromTile(-114);
             this.field_A = false;
           }
           if ((21 != var3_int ||
             var5 != 0) &&
             var3_int == 38) {
             if (0 == param0.field_j) {
-              this.h(-23, 30);
+              this.healAndRecord(-23, 30);
               if (var5 != 0) {
-                this.g(-67, 75);
+                this.applyDamageOrHealing(-67, 75);
               }
             } else {
-              this.g(-67, 75);
+              this.applyDamageOrHealing(-67, 75);
             }
             this.battle.setTerrain((byte) 47, 0, this.tileX, this.tileY);
           }
@@ -708,25 +708,25 @@ final class BattleCreature extends CreatureProfile {
             this.field_v = -90;
           }
           if (this.battle.field_o == 3) {
-            var4 = this.battle.a(1845, this.tileY, this.tileX);
+            var4 = this.battle.findFlagTeamAtTile(1845, this.tileY, this.tileX);
             if (-1 != var4) {
               boolean decompiledSharedTail0 = (~this.ownerIndex != ~var4);
               if (!decompiledSharedTail0) {
-                this.battle.a(this.ownerIndex, (byte) 46);
+                this.battle.returnFlagToBase(this.ownerIndex, (byte) 46);
                 this.battle.tiles[this.tileX][this.tileY].field_m = false;
                 decompiledSharedTail0 = (var5 != 0);
               }
               if ((decompiledSharedTail0) &&
-                (!this.g((byte) 85))) {
-                this.b((byte) 111, var4 + 24);
+                (!this.isCarryingFlag((byte) 85))) {
+                this.applyStatusAndRefreshTile((byte) 111, var4 + 24);
                 this.battle.tiles[this.tileX][this.tileY].field_m = false;
                 this.battle.field_T.field_G[var4] = true;
               }
             }
           }
           if (this.battle.field_o == 3 &&
-            this.g((byte) 85)) {
-            var4 = this.battle.b((byte) 65, this);
+            this.isCarryingFlag((byte) 85)) {
+            var4 = this.battle.getCarriedFlagTeam((byte) 65, this);
             this.battle.field_c[var4] = new int[]{this.tileX, this.tileY};
           }
           return;
@@ -744,7 +744,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final int c(int param0) {
+    final int countRechargeEligibleMoves(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -755,7 +755,7 @@ final class BattleCreature extends CreatureProfile {
         var5 = BachelorFridge.field_y;
         try {
           if (param0 <= 110) {
-            this.a((byte) -104, (PacketBuffer) null);
+            this.writeCreatureData((byte) -104, (PacketBuffer) null);
           }
           var2_int = 0;
           var3 = 0;
@@ -785,7 +785,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final void a(BoardTile param0, BoardChangeBatch param1, IntrusiveDeque param2, byte param3) {
+    final void applyRoundEffects(BoardTile param0, BoardChangeBatch param1, IntrusiveDeque param2, byte param3) {
         int stackIn_46_0 = 0;
         int stackIn_46_1 = 0;
         RuntimeException stackIn_126_0 = null;
@@ -813,17 +813,17 @@ final class BattleCreature extends CreatureProfile {
             35 != this.statusId &&
             this.statusId != 31 &&
             0 >= this.statusTurns &&
-            !this.g((byte) 85) &&
+            !this.isCarryingFlag((byte) 85) &&
             this.shield <= 0) {
             var6.a(true, new ks(new CreatureRef(this)));
             this.statusId = 0;
-            this.d(114);
+            this.recalculateCreatureStats(114);
           }
           if (this.statusId == 42 &&
             this.field_G) {
             var6.a(true, new ks(new CreatureRef(this)));
             this.statusId = 0;
-            this.d(param3 ^ -15);
+            this.recalculateCreatureStats(param3 ^ -15);
           }
           if (param3 != 121) {
             return;
@@ -838,7 +838,7 @@ final class BattleCreature extends CreatureProfile {
                 var8 = WhirlpoolDigest.field_e[this.field_o.field_g.field_b[this.field_m[var7_int]]];
                 if (this.field_K[var7_int] == var8.field_g &&
                   var8.field_g != 0) {
-                  this.j(var7_int, 0);
+                  this.setCooldownForMoveSlot(var7_int, 0);
                   var6.a(true, new kt(new CreatureRef(this.ownerIndex, this.rosterSlot), var7_int));
                 }
               }
@@ -895,7 +895,7 @@ final class BattleCreature extends CreatureProfile {
               var6.a(true, new lia(new CreatureRef(this.ownerIndex, this.rosterSlot), 0, DiveBomberAnimation.a(14, this.field_p, param3 + 2147483527) + 1));
             }
           }
-          var7 = this.e(36, 73);
+          var7 = this.findAdjacentTerrainTile(36, 73);
           if (null != var7) {
             var6.a(true, new lia(new CreatureRef(this.ownerIndex, this.rosterSlot), -30, -1));
           }
@@ -940,7 +940,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final boolean a(int param0, BattleCreature param1, byte param2) {
+    final boolean applyDamageAndRecordSource(int param0, BattleCreature param1, byte param2) {
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_42_2 = null;
@@ -967,7 +967,7 @@ final class BattleCreature extends CreatureProfile {
               this.battle.field_T.field_j[this.ownerIndex] = true;
             }
           }
-          if (!this.g(param2 + 72, param0)) {
+          if (!this.applyDamageOrHealing(param2 + 72, param0)) {
             return false;
           }
           if (param1 != null) {
@@ -992,7 +992,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final void f(int param0) {
+    final void applyTileArrival(int param0) {
         int stackIn_21_0 = 0;
         int stackIn_21_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1004,10 +1004,10 @@ final class BattleCreature extends CreatureProfile {
         var5 = BachelorFridge.field_y;
         try {
           this.battle.tiles[this.tileX][this.tileY].occupant = this;
-          if (this.a(param0, (byte) 126)) {
+          if (this.hasStatus(param0, (byte) 126)) {
             return;
           }
-          this.a(this.battle.tiles[this.tileX][this.tileY], -83);
+          this.applyTerrainEffects(this.battle.tiles[this.tileX][this.tileY], -83);
           var2 = this.battle.field_i;
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -1033,7 +1033,7 @@ final class BattleCreature extends CreatureProfile {
             stackIn_21_1 = ~this.battle.field_o;
           }
           if (stackIn_21_0 == stackIn_21_1) {
-            this.e(77);
+            this.updateFlagPickupAndCapture(77);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1043,7 +1043,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final boolean a(int param0, byte param1) {
+    final boolean hasStatus(int param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
@@ -1059,12 +1059,12 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final boolean g(byte param0) {
+    final boolean isCarryingFlag(byte param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 85) {
-            this.c((byte) -17, 73);
+            this.isMoveAllowedByStatus((byte) -17, 73);
           }
           if (this.statusId >= 24 &&
             27 >= this.statusId) {
@@ -1078,7 +1078,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final int f(byte param0) {
+    final int getBaseMovementRange(byte param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -1102,7 +1102,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final static void a(Random param0, boolean param1, IntrusiveDeque param2, int param3) {
+    final static void advanceEffectParticles(Random param0, boolean param1, IntrusiveDeque param2, int param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -1154,7 +1154,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final boolean k(int param0, int param1) {
+    final boolean tryApplyStatus(int param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         double var3_double = 0.0;
@@ -1167,7 +1167,7 @@ final class BattleCreature extends CreatureProfile {
           if (this.statusId == 31) {
             return false;
           }
-          if (this.g((byte) 85)) {
+          if (this.isCarryingFlag((byte) 85)) {
             return false;
           }
           if (param1 == 42) {
@@ -1194,7 +1194,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    private final int[] e(int param0, int param1) {
+    private final int[] findAdjacentTerrainTile(int param0, int param1) {
         int[] stackIn_11_0 = null;
         int[] stackIn_17_0 = null;
         int[] stackIn_25_0 = null;
@@ -1235,7 +1235,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final boolean a(int param0, boolean param1) {
+    final boolean canTraverseTerrain(int param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_15_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -1244,7 +1244,7 @@ final class BattleCreature extends CreatureProfile {
             return false;
           }
           if (this.battle.field_o == 3 &&
-            ~this.ownerIndex == ~this.battle.b(false, param0)) {
+            ~this.ownerIndex == ~this.battle.getFlagTeamFromTerrain(false, param0)) {
             return false;
           }
           if (32 == this.statusId) {
@@ -1312,7 +1312,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final BattleCreature b(boolean param0) {
+    final BattleCreature splitCreature(boolean param0) {
         BattleCreature var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -1336,7 +1336,7 @@ final class BattleCreature extends CreatureProfile {
             var3++;
           } while (var4 == 0);
           if (!param0) {
-            this.b((byte) -95, 67);
+            this.applyStatusAndRefreshTile((byte) -95, 67);
           }
           var2.tileY = this.tileY;
           this.splitId = 5 + this.rosterSlot + 17 * this.ownerIndex;
@@ -1351,18 +1351,18 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void dropCarriedFlag(boolean param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = this.battle.b((byte) 122, this);
-          if (this.g((byte) 85)) {
+          var2_int = this.battle.getCarriedFlagTeam((byte) 122, this);
+          if (this.isCarryingFlag((byte) 85)) {
             this.statusId = 0;
           }
           this.battle.field_c[var2_int] = new int[]{this.tileX, this.tileY};
           if (this.battle.tiles[this.tileX][this.tileY].terrain == 21) {
-            this.battle.a(var2_int, (byte) 115);
+            this.battle.returnFlagToBase(var2_int, (byte) 115);
           }
           if (!param0) {
             this.shield = 56;
@@ -1375,7 +1375,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void placeOnTile(int param0, int param1, boolean param2) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
@@ -1385,7 +1385,7 @@ final class BattleCreature extends CreatureProfile {
           this.battle.field_T.field_i[this.ownerIndex] = this.battle.field_T.field_i[this.ownerIndex] + 1;
           this.tileX = param1;
           this.tileY = param0;
-          this.f(32);
+          this.applyTileArrival(32);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1394,7 +1394,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final int b(int param0, byte param1) {
+    final int findMoveSlot(int param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -1425,7 +1425,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void moveInDirection(boolean param0, int param1, int param2) {
         int stackIn_47_0 = 0;
         int stackIn_47_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1495,7 +1495,7 @@ final class BattleCreature extends CreatureProfile {
           if (stackIn_47_0 == stackIn_47_1) {
             this.statusId = 0;
           }
-          this.a(var4_int, var5, (byte) 17);
+          this.moveToTile(var4_int, var5, (byte) 17);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1504,7 +1504,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final boolean a(boolean param0, int param1) {
+    final boolean hasJustUsedMove(boolean param0, int param1) {
         MoveDefinition var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -1515,7 +1515,7 @@ final class BattleCreature extends CreatureProfile {
             return false;
           }
           var3 = WhirlpoolDigest.field_e[param1];
-          var4 = this.b(param1, (byte) 30);
+          var4 = this.findMoveSlot(param1, (byte) 30);
           stackIn_7_0 = (~(var3.field_g + 2) == ~this.field_K[var4]);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1525,7 +1525,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final void a(byte param0, PacketBuffer param1) {
+    final void writeCreatureData(byte param0, PacketBuffer param1) {
         PacketBuffer stackIn_14_0 = null;
         int stackIn_15_1 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -1537,7 +1537,7 @@ final class BattleCreature extends CreatureProfile {
         int var4 = 0;
         var4 = BachelorFridge.field_y;
         try {
-          super.a((byte) -74, param1);
+          super.writeCreatureData((byte) -74, param1);
           param1.writeShort(this.hp, -126);
           param1.writeShort(this.field_t, -119);
           param1.writeByte(this.ownerIndex, 0);
@@ -1583,7 +1583,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final void d(int param0) {
+    final void recalculateCreatureStats(int param0) {
         int stackIn_69_0 = 0;
         int stackIn_69_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1594,16 +1594,16 @@ final class BattleCreature extends CreatureProfile {
         var3 = BachelorFridge.field_y;
         try {
           ArrayOperations.copy(this.field_o.field_l, 0, this.field_k, 0, this.field_k.length);
-          if (this.a(84, 0, this.field_m)) {
+          if (this.containsMoveFromSlot(84, 0, this.field_m)) {
             this.field_k[0] = this.field_k[0] + 1;
           }
-          if (this.a(85, 0, this.field_m)) {
+          if (this.containsMoveFromSlot(85, 0, this.field_m)) {
             this.field_k[1] = this.field_k[1] + 1;
           }
-          if (this.a(86, 0, this.field_m)) {
+          if (this.containsMoveFromSlot(86, 0, this.field_m)) {
             this.field_k[2] = this.field_k[2] + 1;
           }
-          if (this.a(87, 0, this.field_m)) {
+          if (this.containsMoveFromSlot(87, 0, this.field_m)) {
             this.field_k[3] = this.field_k[3] + 1;
           }
           if (this.statusId == 7) {
@@ -1665,7 +1665,7 @@ final class BattleCreature extends CreatureProfile {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            this.h(-2);
+            this.refreshMaximumHealth(-2);
             stackIn_69_0 = 75;
             stackIn_69_1 = (param0 + 49) / 38;
           }
@@ -1694,7 +1694,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void moveToTile(int param0, int param1, byte param2) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
@@ -1705,7 +1705,7 @@ final class BattleCreature extends CreatureProfile {
           this.battle.field_T.field_i[this.ownerIndex] = this.battle.field_T.field_i[this.ownerIndex] + (Math.abs(-param0 + this.tileX) + Math.abs(this.tileY - param1));
           this.tileX = param0;
           this.tileY = param1;
-          this.f(32);
+          this.applyTileArrival(32);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1714,7 +1714,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final void b(byte param0, int param1) {
+    final void applyStatusAndRefreshTile(byte param0, int param1) {
         int var3_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -1723,12 +1723,12 @@ final class BattleCreature extends CreatureProfile {
             return;
           }
           var3_int = this.statusId;
-          if (!this.k(-2049, param1)) {
+          if (!this.tryApplyStatus(-2049, param1)) {
             return;
           }
           if (var3_int == 32 &&
             32 != this.statusId) {
-            this.f(32);
+            this.applyTileArrival(32);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1738,7 +1738,7 @@ final class BattleCreature extends CreatureProfile {
         }
     }
 
-    final int g(int param0) {
+    final int computeCreatureChecksum(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_31_0 = 0;
         RuntimeException decompiledCaughtException = null;

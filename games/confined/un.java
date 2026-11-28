@@ -7,7 +7,7 @@ final class un {
     static byte[][] field_i;
     static String field_b;
     static String field_d;
-    private hn field_c;
+    private GameSession field_c;
     private kn field_g;
     private double[] field_f;
     private int field_e;
@@ -61,7 +61,7 @@ final class un {
         int var2Lifetime1;
         double var3Lifetime1;
         if (param0 <= -55) {
-          var2 = (int)(this.field_c.a((byte) 81, 256.0) + 0.5);
+          var2 = (int)(this.field_c.attenuateBrightnessThroughShockwave((byte) 81, 256.0) + 0.5);
           if (this.field_e == 0) {
             this.field_g.a((byte) -121, var2, this.field_c.field_m);
           } else {
@@ -71,7 +71,7 @@ final class un {
           return;
         }
         this.field_g = (kn) null;
-        var2Lifetime1 = (int)(this.field_c.a((byte) 81, 256.0) + 0.5);
+        var2Lifetime1 = (int)(this.field_c.attenuateBrightnessThroughShockwave((byte) 81, 256.0) + 0.5);
         if (this.field_e == 0) {
           this.field_g.a((byte) -121, var2Lifetime1, this.field_c.field_m);
         } else {
@@ -80,7 +80,7 @@ final class un {
         }
     }
 
-    un(hn param0) {
+    un(GameSession param0) {
         this.field_g = new kn();
         this.field_f = new double[12];
         this.field_e = 0;

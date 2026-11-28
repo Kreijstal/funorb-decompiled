@@ -17,7 +17,7 @@ final class ResourceArchive {
 
     private final synchronized boolean validateFileId(boolean param0, int param1, int param2) {
         if (!param0) {
-          ResourceArchive.d(126);
+          ResourceArchive.clearStaticReferences(126);
         }
         if (!this.ensureIndexLoaded(-12749)) {
           return false;
@@ -34,7 +34,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isClientStartupReady(boolean param0) {
         boolean stackIn_6_0 = false;
         if (!param0) {
           return true;
@@ -43,19 +43,19 @@ final class ResourceArchive {
         return stackIn_6_0;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_j = null;
         if (param0 < 98) {
           int[] var2 = (int[]) null;
-          ResourceArchive.a(10, 1, (int[]) null, 117, (int[]) null, -51, -19, -100, 65, 28);
+          ResourceArchive.darkenRgbWithSpriteMask(10, 1, (int[]) null, 117, (int[]) null, -51, -19, -100, 65, 28);
         }
         field_h = null;
         field_b = null;
         field_c = null;
     }
 
-    final boolean b(int param0, String param1, String param2) {
+    final boolean tryLoadFileByName(int param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -374,7 +374,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized byte[] b(int param0, byte param1) {
+    final synchronized byte[] getFlatFile(int param0, byte param1) {
         if (!this.ensureIndexLoaded(-12749)) {
           return null;
         }
@@ -398,7 +398,7 @@ final class ResourceArchive {
           return 0;
         }
         if (!param0) {
-          ResourceArchive.d(38);
+          ResourceArchive.clearStaticReferences(38);
         }
         if (null != this.field_f[param1]) {
           return 100;
@@ -507,7 +507,7 @@ final class ResourceArchive {
         return false;
     }
 
-    final boolean b(byte param0, String param1) {
+    final boolean hasGroupName(byte param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -616,7 +616,7 @@ final class ResourceArchive {
         int var3 = -47 % ((32 - param1) / 62);
     }
 
-    final synchronized int a(byte param0) {
+    final synchronized int getArchiveLoadPercent(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -644,7 +644,7 @@ final class ResourceArchive {
         return var4Lifetime1;
     }
 
-    final boolean a(boolean param0, String param1) {
+    final boolean tryLoadGroupByName(boolean param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -826,7 +826,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized boolean a(int param0, boolean param1) {
+    final synchronized boolean tryLoadFlatFile(int param0, boolean param1) {
         if (!this.ensureIndexLoaded(-12749)) {
           return false;
         }
@@ -930,7 +930,7 @@ final class ResourceArchive {
         }
     }
 
-    final static void a(int param0, int param1, int[] param2, int param3, int[] param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void darkenRgbWithSpriteMask(int param0, int param1, int[] param2, int param3, int[] param4, int param5, int param6, int param7, int param8, int param9) {
         int var10_int = 0;
         int var11 = 0;
         int incrementValue$1 = 0;

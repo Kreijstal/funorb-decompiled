@@ -181,7 +181,7 @@ final class md {
             var6_ref_bj.unlink(true);
             return;
           }
-          mb.a("HS1: " + ui.a(param0 ^ -10970), true, (Throwable) null);
+          ShockwaveBlast.a("HS1: " + ui.a(param0 ^ -10970), true, (Throwable) null);
           dc.d(102);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -415,7 +415,7 @@ final class md {
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
-        return new bn(mc.a(16), hf.l(50));
+        return new bn(mc.a(16), HomingProjectile.l(50));
     }
 
     final static void a(byte param0) {
@@ -477,7 +477,7 @@ final class md {
             var12.unlink(true);
           } else {
             if (var2 != 2) {
-              mb.a("A1: " + ui.a(10), true, (Throwable) null);
+              ShockwaveBlast.a("A1: " + ui.a(10), true, (Throwable) null);
               dc.d(122);
             } else {
               var14 = (gd) (ra.field_d.beginForward(121));

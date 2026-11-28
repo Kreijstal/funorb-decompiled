@@ -252,7 +252,7 @@ final class BoundedRandomAccessFile {
               }
               jn.field_C = false;
               if (var12 != null) {
-                ResourceArchive.a((byte) 62, BufferedRandomAccessFile.c(-1), var12);
+                ResourceArchive.writeSettingsCookie((byte) 62, BufferedRandomAccessFile.c(-1), var12);
               }
               if (0 >= wb.field_S &&
                 !AccountCreationResultPanel.field_ub) {

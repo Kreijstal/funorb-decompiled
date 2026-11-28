@@ -9,10 +9,10 @@ final class SplitEvent extends SpecialEvent {
     final void a(BattleState param0, int param1) {
         BattleCreature var3 = null;
         try {
-          var3 = this.creature.a(63, param0);
+          var3 = this.creature.resolveCreature(63, param0);
           int var4 = 99 % ((param1 - 12) / 35);
           this.effects.beginForward((byte) 90);
-          this.field_p = null == param0.a(var3, (byte) -92) ? true : false;
+          this.field_p = null == param0.splitCreatureAndAddToTurnOrder(var3, (byte) -92) ? true : false;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "l.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

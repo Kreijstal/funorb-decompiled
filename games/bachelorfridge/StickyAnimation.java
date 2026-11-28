@@ -30,7 +30,7 @@ final class StickyAnimation extends EventAnimation {
         var16_ref = (SpecialMoveDefinition) (al.a(103, this.field_w.moveId));
         var2 = var16_ref;
         var3 = this.screen.field_h;
-        this.field_w.creature.a(param0 + 46, this.screen.field_h);
+        this.field_w.creature.resolveCreature(param0 + 46, this.screen.field_h);
         var20 = this.field_w.e((byte) -18);
         var5 = this.field_w.field_r;
         var6 = this.field_w.field_q;

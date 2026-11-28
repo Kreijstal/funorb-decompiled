@@ -175,7 +175,7 @@ final class SoftwareFramebuffer extends Framebuffer implements java.awt.image.Im
         if (MixedSupport074.booleanState0097) {
           return true;
         }
-        if (!EmailFormatValidator.resourceArchiveState0008.computeBoolean0811("benefits", (byte) -75)) {
+        if (!EmailFormatValidator.resourceArchiveState0008.tryLoadGroupByName("benefits", (byte) -75)) {
           return false;
         }
         if (booleanArgument1) {

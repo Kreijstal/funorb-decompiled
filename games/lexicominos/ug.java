@@ -355,7 +355,7 @@ final class ug extends hf {
           if (!param2) {
             field_q = (dg) null;
           }
-          var4 = param0.a(param1, -117);
+          var4 = param0.getFlatFile(param1, -117);
           var3 = var4;
           if (var4 == null) {
             return null;

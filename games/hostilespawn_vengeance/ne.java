@@ -165,7 +165,7 @@ final class ne extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param0.a(param2, -2);
+          var5 = param0.getFlatFile(param2, -2);
           var3 = var5;
           if (var5 == null) {
             return null;

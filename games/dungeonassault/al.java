@@ -4,7 +4,7 @@
 final class al extends IntrusiveNode {
     int field_l;
     static RgbSprite field_j;
-    static wm field_o;
+    static PackedBitSet field_o;
     int field_p;
     static String field_n;
     static String[] field_i;
@@ -106,7 +106,7 @@ final class al extends IntrusiveNode {
     }
 
     static {
-        field_o = new wm(49);
+        field_o = new PackedBitSet(49);
         field_n = "Your party has been defeated";
         field_i = new String[]{"Thievery", "Reduced chance of waking dragon"};
         field_m = "Raider dodges.";

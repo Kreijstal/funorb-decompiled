@@ -16,7 +16,7 @@ abstract class dc extends DualLinkNode {
     double field_ab;
     private int field_U;
     double field_L;
-    pm field_T;
+    TunnelEntity field_T;
     double field_s;
     int field_N;
     private int field_Z;
@@ -32,7 +32,7 @@ abstract class dc extends DualLinkNode {
     private int field_O;
     double field_R;
     double field_C;
-    pm field_S;
+    TunnelEntity field_S;
     boolean field_V;
     int field_H;
     int field_t;
@@ -50,7 +50,7 @@ abstract class dc extends DualLinkNode {
 
     final void a(int param0, int param1) {
         if (param1 > -39) {
-          this.field_S = (pm) null;
+          this.field_S = (TunnelEntity) null;
         }
         this.a(true, 0, param0);
     }
@@ -401,7 +401,7 @@ abstract class dc extends DualLinkNode {
         }
     }
 
-    final boolean a(vg param0, int param1) {
+    final boolean a(TunnelCamera param0, int param1) {
         double var3_double = 0.0;
         RuntimeException var3 = null;
         double var5 = 0.0;
@@ -639,7 +639,7 @@ abstract class dc extends DualLinkNode {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        oi var6 = null;
+        DynamicLight var6 = null;
         Object var7 = null;
         double var8 = 0.0;
         double var10 = 0.0;
@@ -650,9 +650,9 @@ abstract class dc extends DualLinkNode {
         double var20 = 0.0;
         double var22 = 0.0;
         Object var23 = null;
-        oi var23_ref = null;
+        DynamicLight var23_ref = null;
         Object var24 = null;
-        oi var24_ref = null;
+        DynamicLight var24_ref = null;
         int var25 = 0;
         int var5Lifetime1;
         var23 = null;
@@ -660,11 +660,11 @@ abstract class dc extends DualLinkNode {
         var25 = Confined.field_J ? 1 : 0;
         try {
           var3_int = (int)this.field_y;
-          var4 = var3_int + ah.field_U + 1;
+          var4 = var3_int + AcceleratingProjectile.field_U + 1;
           if (GzipDecompressor.field_d.size() < var4) {
             GzipDecompressor.field_d.setSize(var4);
-            for (var5 = ah.field_U; var4 > var5; var5++) {
-              GzipDecompressor.field_d.setElementAt(new oi((pm) null), var5);
+            for (var5 = AcceleratingProjectile.field_U; var4 > var5; var5++) {
+              GzipDecompressor.field_d.setElementAt(new DynamicLight((TunnelEntity) null), var5);
             }
           }
           stackIn_9_0 = (!(this.field_X > this.field_eb)) ? 0 : 1;
@@ -674,7 +674,7 @@ abstract class dc extends DualLinkNode {
           } else {
             stackIn_12_0 = param0.beginBackward(false);
           }
-          var6 = (oi) (stackIn_12_0);
+          var6 = (DynamicLight) (stackIn_12_0);
           var7 = param0.sentinel;
           var8 = this.field_cb;
           var10 = this.field_L;
@@ -690,9 +690,9 @@ abstract class dc extends DualLinkNode {
           var10 = var10 + 0.5 * var18;
           var12 = var12 + 0.5 * var20;
           for (var22_int = 0; var3_int > var22_int; var22_int++) {
-            fieldTemp$1 = ah.field_U;
-            ah.field_U = ah.field_U + 1;
-            var23_ref = (oi) (GzipDecompressor.field_d.elementAt(fieldTemp$1));
+            fieldTemp$1 = AcceleratingProjectile.field_U;
+            AcceleratingProjectile.field_U = AcceleratingProjectile.field_U + 1;
+            var23_ref = (DynamicLight) (GzipDecompressor.field_d.elementAt(fieldTemp$1));
             var23_ref.field_p = var12;
             var23_ref.field_o = var10;
             var23_ref.field_t = var8;
@@ -703,7 +703,7 @@ abstract class dc extends DualLinkNode {
               while (var6 != null) {
                 if (var12 > var6.field_p) {
                   var7 = var6;
-                  var6 = (oi) (param0.nextBackward((byte) -90));
+                  var6 = (DynamicLight) (param0.nextBackward((byte) -90));
                   continue;
                 }
                 break;
@@ -713,7 +713,7 @@ abstract class dc extends DualLinkNode {
             } else {
               while (var6 != null) {
                 if (var6.field_p > var12) {
-                  var6 = (oi) (param0.nextForward(2123));
+                  var6 = (DynamicLight) (param0.nextForward(2123));
                   continue;
                 }
                 break;
@@ -731,9 +731,9 @@ abstract class dc extends DualLinkNode {
           var8 = var8 + 0.5 * (var22 - 1.0) * var16;
           var10 = var10 - 0.5 * (-1.0 + var22) * var18;
           var12 = var12 - var20 * ((-1.0 + var22) * 0.5);
-          fieldTemp$0 = ah.field_U;
-          ah.field_U = ah.field_U + 1;
-          var24_ref = (oi) (GzipDecompressor.field_d.elementAt(fieldTemp$0));
+          fieldTemp$0 = AcceleratingProjectile.field_U;
+          AcceleratingProjectile.field_U = AcceleratingProjectile.field_U + 1;
+          var24_ref = (DynamicLight) (GzipDecompressor.field_d.elementAt(fieldTemp$0));
           var24_ref.field_t = var8;
           var24_ref.field_u = var22 * this.field_B;
           var24_ref.field_p = var12;
@@ -742,7 +742,7 @@ abstract class dc extends DualLinkNode {
             while (var6 != null) {
               if (var12 > var6.field_p) {
                 var7 = var6;
-                var6 = (oi) (param0.nextBackward((byte) 125));
+                var6 = (DynamicLight) (param0.nextBackward((byte) 125));
                 continue;
               }
               break;
@@ -753,7 +753,7 @@ abstract class dc extends DualLinkNode {
           }
           while (var6 != null) {
             if (var12 < var6.field_p) {
-              var6 = (oi) (param0.nextForward(param1 ^ 2127));
+              var6 = (DynamicLight) (param0.nextForward(param1 ^ 2127));
               continue;
             }
             break;
@@ -1089,7 +1089,7 @@ abstract class dc extends DualLinkNode {
         }
     }
 
-    dc(pm param0, PcmSample param1, int param2) {
+    dc(TunnelEntity param0, PcmSample param1, int param2) {
         try {
           this.field_T = param0;
           if (param1 != null) {

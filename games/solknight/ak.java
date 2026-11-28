@@ -110,13 +110,13 @@ final class ak {
           if (!MusicPatchPcmStream.field_o.ensureIndexLoaded((byte) -121)) {
             return 20;
           }
-          if (!MusicPatchPcmStream.field_o.a(2, "commonui")) {
+          if (!MusicPatchPcmStream.field_o.tryLoadGroupByName(2, "commonui")) {
             return 40;
           }
           if (!DelegatingCanvas.field_c.ensureIndexLoaded((byte) -121)) {
             return 50;
           }
-          if (!DelegatingCanvas.field_c.a(2, "commonui")) {
+          if (!DelegatingCanvas.field_c.tryLoadGroupByName(2, "commonui")) {
             return 60;
           }
           if (!AccountCreationResultPanel.field_ub.ensureIndexLoaded((byte) -121)) {
@@ -130,23 +130,23 @@ final class ak {
             if (!af.field_c.ensureIndexLoaded((byte) -121)) {
               return 14;
             }
-            if (!af.field_c.b(82, "")) {
+            if (!af.field_c.hasGroupName(82, "")) {
               return 29;
             }
-            if (!af.field_c.a(2, "")) {
+            if (!af.field_c.tryLoadGroupByName(2, "")) {
               return 29;
             }
           }
           if (!MusicPatchPcmStream.field_o.ensureIndexLoaded((byte) -121)) {
             return 43;
           }
-          if (!MusicPatchPcmStream.field_o.a(2, "commonui")) {
+          if (!MusicPatchPcmStream.field_o.tryLoadGroupByName(2, "commonui")) {
             return 57;
           }
           if (!DelegatingCanvas.field_c.ensureIndexLoaded((byte) -121)) {
             return 71;
           }
-          if (!DelegatingCanvas.field_c.a(2, "commonui")) {
+          if (!DelegatingCanvas.field_c.tryLoadGroupByName(2, "commonui")) {
             return 80;
           }
           if (!AccountCreationResultPanel.field_ub.ensureIndexLoaded((byte) -121)) {

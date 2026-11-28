@@ -1332,7 +1332,7 @@ public final class Chess extends gb {
                 if (cb.field_e != null) {
                   ba.a(cb.field_e, -102, 3);
                 }
-                ResourceArchive.a(5);
+                ResourceArchive.dismissMessageDialog(5);
                 qk.field_h = ge.field_bb;
                 if (FullscreenFocusCanvas.field_d) {
                   SpriteGeometry.a(false, 15);
@@ -1563,7 +1563,7 @@ public final class Chess extends gb {
         rl.b(1);
         MouseWheelInput.clearStaticReferences((byte) 30);
         SoftwareRasterizer.clearStaticReferences();
-        ResourceArchive.d((byte) 73);
+        ResourceArchive.clearStaticReferences((byte) 73);
         lh.clearStaticReferences();
         jf.clearStaticReferences((byte) -8);
         PacketBuffer.clearStaticReferences((byte) -128);
@@ -1894,7 +1894,7 @@ public final class Chess extends gb {
               ob.f(0);
               return false;
             }
-            ResourceArchive.b(param0 - 19123);
+            ResourceArchive.initializeChessWidgets(param0 - 19123);
             for (var3Lifetime1 = 0; var3Lifetime1 < 12; var3Lifetime1++) {
               ae.field_e[var3Lifetime1] = new aa(var3Lifetime1);
             }
@@ -1957,19 +1957,19 @@ public final class Chess extends gb {
                     if (bo.field_d.ensureIndexLoaded((byte) 127) &&
                       bo.field_d.tryLoadAllGroups((byte) -40)) {
                       if (hm.field_e.ensureIndexLoaded((byte) 118) &&
-                        hm.field_e.b("basic", 100)) {
+                        hm.field_e.tryLoadGroupByName("basic", 100)) {
                         if (hm.field_e.ensureIndexLoaded((byte) 122) &&
-                          hm.field_e.b("roman12", param0 - 19663)) {
+                          hm.field_e.tryLoadGroupByName("roman12", param0 - 19663)) {
                           if (ByteStorage.field_b.ensureIndexLoaded((byte) 123) &&
-                            ByteStorage.field_b.b("roman12", param0 - 19663)) {
+                            ByteStorage.field_b.tryLoadGroupByName("roman12", param0 - 19663)) {
                             if (hm.field_e.ensureIndexLoaded((byte) 123) &&
-                              hm.field_e.b("kartika13", 100)) {
+                              hm.field_e.tryLoadGroupByName("kartika13", 100)) {
                               if (ByteStorage.field_b.ensureIndexLoaded((byte) 127) &&
-                                ByteStorage.field_b.b("kartika13", 100)) {
+                                ByteStorage.field_b.tryLoadGroupByName("kartika13", 100)) {
                                 if (hm.field_e.ensureIndexLoaded((byte) 118) &&
-                                  hm.field_e.b("lobby", 100)) {
+                                  hm.field_e.tryLoadGroupByName("lobby", 100)) {
                                   if (ByteStorage.field_b.ensureIndexLoaded((byte) 118) &&
-                                    ByteStorage.field_b.b("lobby", 100)) {
+                                    ByteStorage.field_b.tryLoadGroupByName("lobby", 100)) {
                                     if (ca.field_b.ensureIndexLoaded((byte) 123) &&
                                       ca.field_b.tryLoadAllGroups((byte) -40)) {
                                       if (!param1) {

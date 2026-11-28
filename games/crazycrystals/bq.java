@@ -84,7 +84,7 @@ final class bq extends mg {
         int var2 = 0;
         ca var3 = null;
         RuntimeException decompiledCaughtException = null;
-        we var1 = null;
+        LevelProgressUpdate var1 = null;
         RuntimeException var1_ref = null;
         var2 = CrazyCrystals.field_B;
         try {
@@ -100,7 +100,7 @@ final class bq extends mg {
             break;
           }
           while (true) {
-            var1 = (we) (ec.field_l.removeFirst(0));
+            var1 = (LevelProgressUpdate) (ec.field_l.removeFirst(0));
             if (var1 != null) {
               lj.a(5, var1, param0 ^ 120);
               continue;

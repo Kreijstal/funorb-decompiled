@@ -361,7 +361,7 @@ class qm extends IntrusiveNode {
           if (param2) {
             if (of.field_H != 0) {
               if (var5 == 0) {
-                if (pj.field_v == 0) {
+                if (WallTile.field_v == 0) {
                   if (gg.field_c == 0 &&
                     qk.field_D != 0) {
                     this.a(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
@@ -375,12 +375,12 @@ class qm extends IntrusiveNode {
                     }
                     if (var7 != 0 &&
                       var5 != 0 &&
-                      pj.field_v != 0) {
+                      WallTile.field_v != 0) {
                       this.b((byte) -110);
                     }
                   }
                 } else {
-                  if (this.a(param3, dp.field_h, this, false, param0, pj.field_v, to.field_a)) {
+                  if (this.a(param3, ProfileDataRequest.field_h, this, false, param0, WallTile.field_v, to.field_a)) {
                     param2 = false;
                     if (var7 == 0) {
                       if (gg.field_c == 0 &&
@@ -396,7 +396,7 @@ class qm extends IntrusiveNode {
                         }
                         if (var7 != 0 &&
                           var5 != 0 &&
-                          pj.field_v != 0) {
+                          WallTile.field_v != 0) {
                           this.b((byte) -110);
                         }
                       }
@@ -421,8 +421,8 @@ class qm extends IntrusiveNode {
               this.a(1, IsaacRandom.field_h, this, qh.field_i, param0, param3, of.field_H);
             }
             regionExit2: {
-              if (pj.field_v != 0) {
-                if (this.a(param3, dp.field_h, this, false, param0, pj.field_v, to.field_a)) {
+              if (WallTile.field_v != 0) {
+                if (this.a(param3, ProfileDataRequest.field_h, this, false, param0, WallTile.field_v, to.field_a)) {
                   param2 = false;
                   if (var7 == 0) {
                     break regionExit2;
@@ -443,7 +443,7 @@ class qm extends IntrusiveNode {
                       ok.field_e = null;
                     }
                     if (var7 != 0) {
-                      if (pj.field_v == 0) {
+                      if (WallTile.field_v == 0) {
                         break regionExit1;
                       }
                       this.b((byte) -110);
@@ -465,13 +465,13 @@ class qm extends IntrusiveNode {
               }
               if ((var7 != 0) &&
                 (var5 != 0 &&
-                pj.field_v != 0)) {
+                WallTile.field_v != 0)) {
                 this.b((byte) -110);
               }
             }
           } else {
             if (var5 != 0 &&
-              pj.field_v != 0) {
+              WallTile.field_v != 0) {
               this.b((byte) -110);
             }
           }

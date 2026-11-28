@@ -6,9 +6,9 @@ final class tc extends rl {
     static long field_j;
     private int field_k;
 
-    final f a(boolean param0, int param1, int param2, int param3, ta param4) {
+    final PuzzleTile a(boolean param0, int param1, int param2, int param3, ta param4) {
         RuntimeException var6 = null;
-        jo stackIn_3_0 = null;
+        CrystalTile stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -19,8 +19,8 @@ final class tc extends rl {
           }
           this.field_k = this.field_k + param3;
           this.field_l = this.field_l + 1;
-          stackIn_3_0 = new jo(IsaacRandom.field_g, 0);
-          return (f) ((Object) stackIn_3_0);
+          stackIn_3_0 = new CrystalTile(IsaacRandom.field_g, 0);
+          return (PuzzleTile) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

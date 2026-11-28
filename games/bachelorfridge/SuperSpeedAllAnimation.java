@@ -21,7 +21,7 @@ final class SuperSpeedAllAnimation extends EventAnimation {
     private final void d(int param0) {
         CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
-        BattleCreature var6 = this.field_v.creature.a(99, this.screen.field_h);
+        BattleCreature var6 = this.field_v.creature.resolveCreature(99, this.screen.field_h);
         if (var6.isDown(-118)) {
           return;
         }
@@ -29,7 +29,7 @@ final class SuperSpeedAllAnimation extends EventAnimation {
         al.a(-46, this.field_v.moveId);
         while (var3 != null) {
           var3.apply(var6, this.screen.field_h, 12);
-          var4 = var3.target.a(-27449, this.screen);
+          var4 = var3.target.resolveCreatureView(-27449, this.screen);
           this.addChild(27799, new ActorAnimation(this.screen, var4));
           this.addChild(27799, new cb(var4, 7));
           this.addChild(27799, new wn(var4, kna.field_g[17], 24831));

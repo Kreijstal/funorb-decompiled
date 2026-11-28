@@ -8,7 +8,7 @@ final class tm {
     static am field_f;
     static String field_c;
     static int field_e;
-    static f[][] field_d;
+    static PuzzleTile[][] field_d;
     static int[] field_a;
 
     final IntrusiveNode a(byte param0) {
@@ -126,7 +126,7 @@ final class tm {
 
     public static void clearStaticReferences(int param0) {
         field_c = null;
-        field_d = (f[][]) null;
+        field_d = (PuzzleTile[][]) null;
         field_f = null;
         field_a = null;
         if (param0 != -11909) {

@@ -212,7 +212,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           if (lf.field_z == null ||
             !(param14 <= lf.field_z.length)) {
             ga.field_hb = new int[100 + param14];
-            rn.field_z = new int[param14 + 100];
+            MovingLevelTile.field_z = new int[param14 + 100];
             lf.field_z = new int[param14 + 100];
           }
           if (null == b.field_m ||
@@ -334,8 +334,8 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   qq.a(ga.field_hb, 0, var55Lifetime1Lifetime1, 0, no.field_b);
                   ga.field_hb = var55Lifetime1Lifetime1;
                   var55Lifetime1Lifetime2 = new int[104 + (var32 + param14)];
-                  qq.a(rn.field_z, 0, var55Lifetime1Lifetime2, 0, no.field_b);
-                  rn.field_z = var55Lifetime1Lifetime2;
+                  qq.a(MovingLevelTile.field_z, 0, var55Lifetime1Lifetime2, 0, no.field_b);
+                  MovingLevelTile.field_z = var55Lifetime1Lifetime2;
                 }
                 var56 = jd.field_d;
                 var57 = no.field_b;
@@ -392,7 +392,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                     var25[var40] = incrementValue$5;
                     lf.field_z[var35] = var43;
                     ga.field_hb[var35] = var44;
-                    rn.field_z[var35] = var45;
+                    MovingLevelTile.field_z[var35] = var45;
                   }
                   var26[var59 + 4] = var35;
                   var26[var59 + 12] = var36;
@@ -420,7 +420,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   var35 = incrementValue$7;
                   lf.field_z[var35] = var60;
                   ga.field_hb[var35] = var61;
-                  rn.field_z[var35] = var62;
+                  MovingLevelTile.field_z[var35] = var62;
                   var26[4 + var59] = var35;
                   var26[12 + var59] = var63;
                   var59++;
@@ -449,7 +449,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                     var25[var41] = incrementValue$9;
                     lf.field_z[var35] = var46;
                     ga.field_hb[var35] = var47;
-                    rn.field_z[var35] = var48;
+                    MovingLevelTile.field_z[var35] = var48;
                   }
                   var26[4 + var59] = var35;
                   var26[var59 + 12] = var37;
@@ -477,7 +477,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   var58++;
                   lf.field_z[var35] = var60Lifetime1;
                   ga.field_hb[var35] = var61Lifetime1;
-                  rn.field_z[var35] = var62Lifetime1;
+                  MovingLevelTile.field_z[var35] = var62Lifetime1;
                   var26[var59 + 4] = var35;
                   var26[var59 + 12] = var63Lifetime1;
                   var59++;
@@ -506,7 +506,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                     var25[var42] = incrementValue$13;
                     lf.field_z[var35] = var49;
                     ga.field_hb[var35] = var50;
-                    rn.field_z[var35] = var51;
+                    MovingLevelTile.field_z[var35] = var51;
                   }
                   var26[4 + var59] = var35;
                   var26[12 + var59] = var38;
@@ -533,7 +533,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   var35 = incrementValue$15;
                   lf.field_z[var35] = var60Lifetime2;
                   ga.field_hb[var35] = var61Lifetime2;
-                  rn.field_z[var35] = var62Lifetime2;
+                  MovingLevelTile.field_z[var35] = var62Lifetime2;
                   var26[var59 + 4] = var35;
                   var26[12 + var59] = var63Lifetime2;
                   var59++;
@@ -664,7 +664,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   var25[var40] = fieldTemp$21;
                   lf.field_z[var35] = var43;
                   ga.field_hb[var35] = var44;
-                  rn.field_z[var35] = var45;
+                  MovingLevelTile.field_z[var35] = var45;
                 }
                 b.field_m[var34] = var35;
                 var35 = var25[var41];
@@ -675,7 +675,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   var25[var41] = fieldTemp$22;
                   lf.field_z[var35] = var46;
                   ga.field_hb[var35] = var47;
-                  rn.field_z[var35] = var48;
+                  MovingLevelTile.field_z[var35] = var48;
                 }
                 tf.field_p[var34] = var35;
                 var35 = var25[var42];
@@ -686,7 +686,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   var25[var42] = fieldTemp$23;
                   lf.field_z[var35] = var49;
                   ga.field_hb[var35] = var50;
-                  rn.field_z[var35] = var51;
+                  MovingLevelTile.field_z[var35] = var51;
                 }
                 vj.field_f[var34] = var35;
                 if (null != param9) {
@@ -711,7 +711,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           if (stackIn_259_0 > ~param11) {
             if (null != param20) {
               fieldTemp$24 = param20.field_E;
-              hb.field_A.field_E = param20.field_E;
+              PlayerAvatarRenderer.field_A.field_E = param20.field_E;
               qn.field_p.field_E = fieldTemp$24;
               if (qn.field_p.field_M == null ||
                 !(param11 <= qn.field_p.field_M.length)) {
@@ -719,11 +719,11 @@ final class DiskArchiveRequest extends ArchiveRequest {
                 qn.field_p.field_P = new short[param11];
                 qn.field_p.field_M = new short[param11];
               }
-              if (null == hb.field_A.field_M ||
-                !(param11 <= hb.field_A.field_M.length)) {
-                hb.field_A.field_M = new short[param11];
-                hb.field_A.field_P = new short[param11];
-                hb.field_A.field_F = new short[param11];
+              if (null == PlayerAvatarRenderer.field_A.field_M ||
+                !(param11 <= PlayerAvatarRenderer.field_A.field_M.length)) {
+                PlayerAvatarRenderer.field_A.field_M = new short[param11];
+                PlayerAvatarRenderer.field_A.field_P = new short[param11];
+                PlayerAvatarRenderer.field_A.field_F = new short[param11];
               }
               var39Lifetime1 = 0;
               while (true) {
@@ -751,9 +751,9 @@ final class DiskArchiveRequest extends ArchiveRequest {
                         var25[var34] = fieldTemp$26;
                         lf.field_z[var35Lifetime1] = param17[var34];
                         ga.field_hb[var35Lifetime1] = param1[var34];
-                        rn.field_z[var35Lifetime1] = param6[var34];
+                        MovingLevelTile.field_z[var35Lifetime1] = param6[var34];
                       }
-                      hb.field_A.field_M[var39Lifetime1] = (short)var35Lifetime1;
+                      PlayerAvatarRenderer.field_A.field_M[var39Lifetime1] = (short)var35Lifetime1;
                       var34 = param20.field_P[var39Lifetime1];
                       var35Lifetime1 = var24[var34];
                       if (var35Lifetime1 < 0) {
@@ -774,9 +774,9 @@ final class DiskArchiveRequest extends ArchiveRequest {
                         var25[var34] = fieldTemp$28;
                         lf.field_z[var35Lifetime1] = param17[var34];
                         ga.field_hb[var35Lifetime1] = param1[var34];
-                        rn.field_z[var35Lifetime1] = param6[var34];
+                        MovingLevelTile.field_z[var35Lifetime1] = param6[var34];
                       }
-                      hb.field_A.field_P[var39Lifetime1] = (short)var35Lifetime1;
+                      PlayerAvatarRenderer.field_A.field_P[var39Lifetime1] = (short)var35Lifetime1;
                       var34 = param20.field_F[var39Lifetime1];
                       var35Lifetime1 = var24[var34];
                       if (0 > var35Lifetime1) {
@@ -797,18 +797,18 @@ final class DiskArchiveRequest extends ArchiveRequest {
                         var25[var34] = fieldTemp$30;
                         lf.field_z[var35Lifetime1] = param17[var34];
                         ga.field_hb[var35Lifetime1] = param1[var34];
-                        rn.field_z[var35Lifetime1] = param6[var34];
+                        MovingLevelTile.field_z[var35Lifetime1] = param6[var34];
                       }
-                      hb.field_A.field_F[var39Lifetime1] = (short)var35Lifetime1;
+                      PlayerAvatarRenderer.field_A.field_F[var39Lifetime1] = (short)var35Lifetime1;
                     } else {
                       dupTemp$31 = param20.field_M[var39Lifetime1];
-                      hb.field_A.field_M[var39Lifetime1] = dupTemp$31;
+                      PlayerAvatarRenderer.field_A.field_M[var39Lifetime1] = dupTemp$31;
                       qn.field_p.field_M[var39Lifetime1] = dupTemp$31;
                       dupTemp$32 = param20.field_P[var39Lifetime1];
-                      hb.field_A.field_P[var39Lifetime1] = dupTemp$32;
+                      PlayerAvatarRenderer.field_A.field_P[var39Lifetime1] = dupTemp$32;
                       qn.field_p.field_P[var39Lifetime1] = dupTemp$32;
                       dupTemp$33 = param20.field_F[var39Lifetime1];
-                      hb.field_A.field_F[var39Lifetime1] = dupTemp$33;
+                      PlayerAvatarRenderer.field_A.field_F[var39Lifetime1] = dupTemp$33;
                       qn.field_p.field_F[var39Lifetime1] = dupTemp$33;
                     }
                     var39Lifetime1++;
@@ -816,32 +816,32 @@ final class DiskArchiveRequest extends ArchiveRequest {
                   }
                 } else {
                   fieldTemp$34 = param20.field_a;
-                  hb.field_A.field_a = param20.field_a;
+                  PlayerAvatarRenderer.field_A.field_a = param20.field_a;
                   qn.field_p.field_a = fieldTemp$34;
                   fieldTemp$35 = param20.field_m;
-                  hb.field_A.field_m = param20.field_m;
+                  PlayerAvatarRenderer.field_A.field_m = param20.field_m;
                   qn.field_p.field_m = fieldTemp$35;
                   fieldTemp$36 = param20.field_I;
-                  hb.field_A.field_I = param20.field_I;
+                  PlayerAvatarRenderer.field_A.field_I = param20.field_I;
                   qn.field_p.field_I = fieldTemp$36;
                   fieldTemp$37 = param20.field_h;
-                  hb.field_A.field_h = param20.field_h;
+                  PlayerAvatarRenderer.field_A.field_h = param20.field_h;
                   qn.field_p.field_h = fieldTemp$37;
                   fieldTemp$38 = param20.field_t;
-                  hb.field_A.field_t = param20.field_t;
+                  PlayerAvatarRenderer.field_A.field_t = param20.field_t;
                   qn.field_p.field_t = fieldTemp$38;
                   fieldTemp$39 = param20.field_b;
-                  hb.field_A.field_b = param20.field_b;
+                  PlayerAvatarRenderer.field_A.field_b = param20.field_b;
                   qn.field_p.field_b = fieldTemp$39;
                   fieldTemp$40 = param20.field_J;
-                  hb.field_A.field_J = param20.field_J;
+                  PlayerAvatarRenderer.field_A.field_J = param20.field_J;
                   qn.field_p.field_J = fieldTemp$40;
                   stackIn_312_0 = qn.field_p;
                 }
                 break;
               }
               fieldTemp$41 = param20.field_y;
-              hb.field_A.field_y = param20.field_y;
+              PlayerAvatarRenderer.field_A.field_y = param20.field_y;
               stackIn_312_0.field_y = fieldTemp$41;
               if (var66 == 0) {
                 return;
@@ -884,7 +884,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                 var25[var34] = fieldTemp$43;
                 lf.field_z[var35Lifetime1Lifetime1] = param17[var34];
                 ga.field_hb[var35Lifetime1Lifetime1] = param1[var34];
-                rn.field_z[var35Lifetime1Lifetime1] = param6[var34];
+                MovingLevelTile.field_z[var35Lifetime1Lifetime1] = param6[var34];
               }
               ga.field_jb[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
               var34 = param8[var39Lifetime1Lifetime1];
@@ -907,7 +907,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                 var25[var34] = fieldTemp$45;
                 lf.field_z[var35Lifetime1Lifetime1] = param17[var34];
                 ga.field_hb[var35Lifetime1Lifetime1] = param1[var34];
-                rn.field_z[var35Lifetime1Lifetime1] = param6[var34];
+                MovingLevelTile.field_z[var35Lifetime1Lifetime1] = param6[var34];
               }
               ln.field_g[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
               var34 = param12[var39Lifetime1Lifetime1];
@@ -930,7 +930,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                 var25[var34] = fieldTemp$47;
                 lf.field_z[var35Lifetime1Lifetime1] = param17[var34];
                 ga.field_hb[var35Lifetime1Lifetime1] = param1[var34];
-                rn.field_z[var35Lifetime1Lifetime1] = param6[var34];
+                MovingLevelTile.field_z[var35Lifetime1Lifetime1] = param6[var34];
               }
               GameKeyHandler.field_e[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
               var39Lifetime1Lifetime1++;

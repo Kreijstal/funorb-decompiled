@@ -1331,11 +1331,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_raiders4,0", false);
                 if (null != var2) {
-                  h.field_y[0] = dj.a(var2, param1);
+                  RaiderDefinition.field_y[0] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_raiders4,1", false);
                 if (var2 != null) {
-                  h.field_y[1] = dj.a(var2, param1);
+                  RaiderDefinition.field_y[1] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_rooms1,0", param1);
                 if (null != var2) {
@@ -1925,7 +1925,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("desc_cave_troll", param1);
                 if (null != var2) {
-                  h.field_n = dj.a(var2, false);
+                  RaiderDefinition.field_n = dj.a(var2, false);
                 }
                 var2 = gm.a("desc_northman_ranger", false);
                 if (var2 != null) {
@@ -1937,7 +1937,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("desc_thief", false);
                 if (var2 != null) {
-                  ai.field_k = dj.a(var2, param1);
+                  DungeonTileState.field_k = dj.a(var2, param1);
                 }
                 var2 = gm.a("desc_zealot", false);
                 if (var2 != null) {
@@ -2205,7 +2205,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tip_vampire_lord", false);
                 if (var2 != null) {
-                  ai.field_b = dj.a(var2, false);
+                  DungeonTileState.field_b = dj.a(var2, false);
                 }
                 var2 = gm.a("tip_demon_lord", param1);
                 if (var2 != null) {
@@ -2879,83 +2879,83 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("titles_external_male,0", param1);
                 if (var2 != null) {
-                  wm.field_i[0] = dj.a(var2, false);
+                  PackedBitSet.field_i[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_male,1", false);
                 if (var2 != null) {
-                  wm.field_i[1] = dj.a(var2, false);
+                  PackedBitSet.field_i[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_male,2", param1);
                 if (var2 != null) {
-                  wm.field_i[2] = dj.a(var2, false);
+                  PackedBitSet.field_i[2] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_male,3", false);
                 if (var2 != null) {
-                  wm.field_i[3] = dj.a(var2, false);
+                  PackedBitSet.field_i[3] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_male,4", false);
                 if (null != var2) {
-                  wm.field_i[4] = dj.a(var2, false);
+                  PackedBitSet.field_i[4] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_male,5", param1);
                 if (var2 != null) {
-                  wm.field_i[5] = dj.a(var2, false);
+                  PackedBitSet.field_i[5] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_male,6", false);
                 if (null != var2) {
-                  wm.field_i[6] = dj.a(var2, param1);
+                  PackedBitSet.field_i[6] = dj.a(var2, param1);
                 }
                 var2 = gm.a("titles_external_male,7", false);
                 if (var2 != null) {
-                  wm.field_i[7] = dj.a(var2, param1);
+                  PackedBitSet.field_i[7] = dj.a(var2, param1);
                 }
                 var2 = gm.a("titles_external_male,8", false);
                 if (null != var2) {
-                  wm.field_i[8] = dj.a(var2, false);
+                  PackedBitSet.field_i[8] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_male,9", false);
                 if (var2 != null) {
-                  wm.field_i[9] = dj.a(var2, false);
+                  PackedBitSet.field_i[9] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_female,0", param1);
                 if (var2 != null) {
-                  wm.field_d[0] = dj.a(var2, false);
+                  PackedBitSet.field_d[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_female,1", false);
                 if (null != var2) {
-                  wm.field_d[1] = dj.a(var2, false);
+                  PackedBitSet.field_d[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_female,2", false);
                 if (var2 != null) {
-                  wm.field_d[2] = dj.a(var2, param1);
+                  PackedBitSet.field_d[2] = dj.a(var2, param1);
                 }
                 var2 = gm.a("titles_external_female,3", false);
                 if (null != var2) {
-                  wm.field_d[3] = dj.a(var2, false);
+                  PackedBitSet.field_d[3] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_female,4", false);
                 if (var2 != null) {
-                  wm.field_d[4] = dj.a(var2, false);
+                  PackedBitSet.field_d[4] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_female,5", false);
                 if (null != var2) {
-                  wm.field_d[5] = dj.a(var2, false);
+                  PackedBitSet.field_d[5] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_female,6", false);
                 if (var2 != null) {
-                  wm.field_d[6] = dj.a(var2, param1);
+                  PackedBitSet.field_d[6] = dj.a(var2, param1);
                 }
                 var2 = gm.a("titles_external_female,7", false);
                 if (null != var2) {
-                  wm.field_d[7] = dj.a(var2, false);
+                  PackedBitSet.field_d[7] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_female,8", false);
                 if (null != var2) {
-                  wm.field_d[8] = dj.a(var2, false);
+                  PackedBitSet.field_d[8] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_female,9", false);
                 if (null != var2) {
-                  wm.field_d[9] = dj.a(var2, false);
+                  PackedBitSet.field_d[9] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_external_game,0", false);
                 if (var2 != null) {
@@ -3247,7 +3247,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_renowntable_hint", false);
                 if (var2 != null) {
-                  ai.field_e = dj.a(var2, false);
+                  DungeonTileState.field_e = dj.a(var2, false);
                 }
                 var2 = gm.a("text_stake", param1);
                 if (null != var2) {
@@ -3267,7 +3267,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_bounty_claimed", param1);
                 if (var2 != null) {
-                  wm.field_e = dj.a(var2, false);
+                  PackedBitSet.field_e = dj.a(var2, false);
                 }
                 var2 = gm.a("text_please_wait", false);
                 if (null != var2) {
@@ -3433,7 +3433,7 @@ class PacketBuffer extends IntrusiveNode {
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  ai.field_d = dj.a(var2, false);
+                  DungeonTileState.field_d = dj.a(var2, false);
                 }
                 var2 = gm.a("text_disarm_guardian_tooltip", false);
                 if (var2 != null) {
@@ -3513,7 +3513,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_monster_wins", param1);
                 if (var2 != null) {
-                  h.field_i = dj.a(var2, false);
+                  RaiderDefinition.field_i = dj.a(var2, false);
                 }
                 var2 = gm.a("text_monster_attacks", false);
                 if (var2 != null) {
@@ -3721,7 +3721,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_guardians", false);
                 if (var2 != null) {
-                  wm.field_j = dj.a(var2, false);
+                  PackedBitSet.field_j = dj.a(var2, false);
                 }
                 var2 = gm.a("text_no_defences", false);
                 if (var2 != null) {

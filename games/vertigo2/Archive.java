@@ -25,14 +25,14 @@ final class Archive {
         }
     }
 
-    final int c(int param0) {
+    final int getGroupCapacity(int param0) {
         if (!this.ensureIndexLoaded(param0 ^ param0)) {
           return -1;
         }
         return this.field_g.field_r.length;
     }
 
-    final boolean a(String param0, String param1, boolean param2) {
+    final boolean tryLoadFileByName(String param0, String param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -100,7 +100,7 @@ final class Archive {
             return stackIn_3_0;
           }
           if (param0 < 110) {
-            this.b(49, (byte) 11);
+            this.getFileCapacity(49, (byte) 11);
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
@@ -144,7 +144,7 @@ final class Archive {
         throw new IllegalArgumentException(param0 + " " + param1);
     }
 
-    final synchronized byte[] a(boolean param0, int param1) {
+    final synchronized byte[] getFlatFile(boolean param0, int param1) {
         if (!this.ensureIndexLoaded(0)) {
           return null;
         }
@@ -163,7 +163,7 @@ final class Archive {
         throw new RuntimeException();
     }
 
-    final synchronized boolean a(int param0, byte param1) {
+    final synchronized boolean tryLoadFlatFile(int param0, byte param1) {
         if (!this.ensureIndexLoaded(0)) {
           return false;
         }
@@ -260,7 +260,7 @@ final class Archive {
         return var2 != 0;
     }
 
-    final synchronized int[] a(int param0, int param1) {
+    final synchronized int[] getFileIds(int param0, int param1) {
         int[] var6 = null;
         int var4 = 0;
         int var5 = Vertigo2.field_L ? 1 : 0;
@@ -329,7 +329,7 @@ final class Archive {
         }
     }
 
-    final int b(int param0, byte param1) {
+    final int getFileCapacity(int param0, byte param1) {
         if (!this.validateGroupId(param0, (byte) -52)) {
           return 0;
         }
@@ -579,7 +579,7 @@ final class Archive {
 
     final synchronized boolean tryLoadFile(int param0, int param1, int param2) {
         if (param0 != 0) {
-          this.c(-100);
+          this.getGroupCapacity(-100);
         }
         if (!this.validateFileId(param1, param2, param0 - 20729)) {
           return false;
@@ -708,7 +708,7 @@ final class Archive {
         }
     }
 
-    final boolean c(String param0, int param1) {
+    final boolean tryLoadGroupByName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -772,7 +772,7 @@ final class Archive {
         return false;
     }
 
-    final synchronized int d(int param0) {
+    final synchronized int getArchiveLoadPercent(int param0) {
         int var2;
         int var3;
         int var4;
@@ -797,7 +797,7 @@ final class Archive {
         return var4Lifetime1;
     }
 
-    final boolean b(String param0, int param1) {
+    final boolean hasGroupName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -843,7 +843,7 @@ final class Archive {
           return false;
         }
         if (param1 >= -38) {
-          this.b(91, (byte) 121);
+          this.getFileCapacity(91, (byte) 121);
           return true;
         }
         return true;

@@ -63,7 +63,7 @@ final class ll {
         try {
           RuntimeException decompiledCaughtException = null;
           RuntimeException var3 = null;
-          f[][] var4 = null;
+          PuzzleTile[][] var4 = null;
           int var5 = 0;
           int var6 = 0;
           int var7 = 0;
@@ -116,7 +116,7 @@ final class ll {
             AccountNameAvailabilityValidator.a(var8, -8383, var7, tm.field_d);
             if (null == rn.field_q ||
               !rn.field_q.equals(hf.field_b[var10.field_d])) {
-              um.a(kk.field_j[var10.field_d], hf.field_b[var10.field_d], (byte) 80);
+              um.a(FloatingScoreLabel.field_j[var10.field_d], hf.field_b[var10.field_d], (byte) 80);
             }
             en.field_O = 0;
             kd.field_l = nj.a(45, var8, var7);

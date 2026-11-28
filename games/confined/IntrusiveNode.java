@@ -24,7 +24,7 @@ class IntrusiveNode {
         if (param0 != -61) {
           return;
         }
-        lc.field_J = null;
+        TunnelMesh.field_J = null;
         ra.field_c = new PrimaryNodeDeque();
         i.field_o = 0;
         oj.field_B = 0;
@@ -59,8 +59,8 @@ class IntrusiveNode {
           int var4_int = -4 % ((68 - param1) / 50);
           fd.field_k = (ok) ((Object) ej.a("arezzo14bold", param3, param2, "commonui", 0));
           var5 = new RgbSprite(param0.getFileByName(110, "button.gif", ""), (java.awt.Component) ((Object) fb.field_b));
-          pm.a(param3, "commonui", "dropdown", (byte) 112);
-          var6 = ql.a("commonui", (byte) 90, "screen_options", param3);
+          TunnelEntity.a(param3, "commonui", "dropdown", (byte) 112);
+          var6 = StageDirector.loadIndexedSpriteGroup("commonui", (byte) 90, "screen_options", param3);
           qm.field_B = new bm[4];
           FrameTimer.field_d = new bm[4];
           qd.field_b = new bm[4];

@@ -61,10 +61,10 @@ final class fm {
         try {
           if (null != me.field_g &&
             me.field_g.ensureIndexLoaded(-1) &&
-            me.field_g.b((byte) 70, "benefits") &&
+            me.field_g.tryLoadGroupByName((byte) 70, "benefits") &&
             null != sf.field_q &&
             sf.field_q.ensureIndexLoaded(param0 - 242) &&
-            sf.field_q.b((byte) -100, "benefits")) {
+            sf.field_q.tryLoadGroupByName((byte) -100, "benefits")) {
             vg.field_i = fk.a(me.field_g, "headline", -114, "benefits");
             nl.field_e = fk.a(me.field_g, "blurbpane", -63, "benefits");
             rl.field_a = fk.a(me.field_g, "button", -53, "benefits");

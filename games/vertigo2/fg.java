@@ -61,7 +61,7 @@ final class fg extends sp {
             return stackIn_3_0;
           }
           if (param3 == 274) {
-            stackIn_8_0 = param1 + " - " + param0.d(-1) + "%";
+            stackIn_8_0 = param1 + " - " + param0.getArchiveLoadPercent(-1) + "%";
             return stackIn_8_0;
           }
           stackIn_6_0 = (String) null;

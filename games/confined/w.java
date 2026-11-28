@@ -299,7 +299,7 @@ final class w extends ga implements uj, el {
           var8 = hd.field_a;
           var9 = SecondaryNodeDequeIterator.a(ii.b(false), -118);
           if (pi.field_T == var9) {
-            var8 = hn.field_p;
+            var8 = GameSession.field_p;
           } else {
             if (tj.field_n == var9) {
               var8 = nm.field_D;

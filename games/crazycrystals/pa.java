@@ -65,7 +65,7 @@ final class pa extends pc {
         }
     }
 
-    final static void a(f[][] param0, int param1, int param2, byte param3) {
+    final static void a(PuzzleTile[][] param0, int param1, int param2, byte param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -81,7 +81,7 @@ final class pa extends pc {
           }
           for (var4_int = -param2 + (param0.length - 2); var4_int >= param2 + 1; var4_int--) {
             for (var5 = 1 + param1; var5 < -1 + (-param1 + param0[0].length); var5++) {
-              param0[var4_int][var5].b(105, var4_int, param0, var5);
+              param0[var4_int][var5].refreshTileBoardState(105, var4_int, param0, var5);
             }
           }
           return;

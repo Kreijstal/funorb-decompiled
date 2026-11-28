@@ -65,13 +65,13 @@ class hl extends lc {
           if (!BoundedRandomAccessFile.field_d.ensureIndexLoaded((byte) -115)) {
             return 20;
           }
-          if (!BoundedRandomAccessFile.field_d.a("commonui", -114)) {
+          if (!BoundedRandomAccessFile.field_d.tryLoadGroupByName("commonui", -114)) {
             return 40;
           }
           if (!oa.field_l.ensureIndexLoaded((byte) -111)) {
             return 50;
           }
-          if (!oa.field_l.a("commonui", -106)) {
+          if (!oa.field_l.tryLoadGroupByName("commonui", -106)) {
             return 60;
           }
           if (!kc.field_d.ensureIndexLoaded((byte) -122)) {
@@ -85,23 +85,23 @@ class hl extends lc {
             if (!il.field_a.ensureIndexLoaded((byte) -103)) {
               return 14;
             }
-            if (!il.field_a.b("", 37)) {
+            if (!il.field_a.hasGroupName("", 37)) {
               return 29;
             }
-            if (!il.field_a.a("", -128)) {
+            if (!il.field_a.tryLoadGroupByName("", -128)) {
               return 29;
             }
           }
           if (!BoundedRandomAccessFile.field_d.ensureIndexLoaded((byte) -120)) {
             return 43;
           }
-          if (!BoundedRandomAccessFile.field_d.a("commonui", -99)) {
+          if (!BoundedRandomAccessFile.field_d.tryLoadGroupByName("commonui", -99)) {
             return 57;
           }
           if (!oa.field_l.ensureIndexLoaded((byte) -105)) {
             return 71;
           }
-          if (!oa.field_l.a("commonui", -95)) {
+          if (!oa.field_l.tryLoadGroupByName("commonui", -95)) {
             return 80;
           }
           if (!kc.field_d.ensureIndexLoaded((byte) -116)) {

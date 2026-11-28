@@ -18,13 +18,13 @@ final class lia extends EventEffect {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          var6 = this.target.a(29, param1);
+          var6 = this.target.resolveCreature(29, param1);
           var7 = var6;
-          if (var7.g(param2 + 83, this.field_f)) {
+          if (var7.applyDamageOrHealing(param2 + 83, this.field_f)) {
             return;
           }
           if (-1 != this.field_k) {
-            var7.b((byte) 117, this.field_k);
+            var7.applyStatusAndRefreshTile((byte) 117, this.field_k);
           }
           if (BuffVendorAnimation.field_w[param1.tiles[var6.tileX][var6.tileY].terrain].field_b) {
             param1.tiles[var6.tileX][var6.tileY].field_m = false;

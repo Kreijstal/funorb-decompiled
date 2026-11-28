@@ -9,7 +9,7 @@ final class tf {
     private double field_q;
     double field_j;
     static String[] field_d;
-    private ee field_l;
+    private MovingTunnelEntity field_l;
     static int[][] field_c;
     static int[][] field_n;
     double field_f;
@@ -134,7 +134,7 @@ final class tf {
         this.field_i = this.field_l.field_E;
     }
 
-    tf(ee param0) {
+    tf(MovingTunnelEntity param0) {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {

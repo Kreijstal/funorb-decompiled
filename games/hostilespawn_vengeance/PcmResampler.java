@@ -376,7 +376,7 @@ final class PcmResampler {
           tk.field_d = param0 * eh.a((byte) -126) / 1000;
           tk.a(true, param1);
           hd.a(param1, false);
-          ResourceArchive.a(param1, -11310);
+          ResourceArchive.loadFinalFrameSprites(param1, -11310);
           ha.b(255);
           pl.a(-16183);
           tk.field_e = -tk.field_d + 0;

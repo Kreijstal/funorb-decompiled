@@ -31,15 +31,15 @@ final class hba extends AttackEvent {
     }
 
     final void apply(BattleState param0, boolean param1) {
-        BattleCreature var3 = this.creature.a(11, param0);
+        BattleCreature var3 = this.creature.resolveCreature(11, param0);
         if (this.field_r ||
           this.field_n ||
           this.field_t) {
-          var3.d(this.moveId, (byte) -115);
+          var3.applyMoveCooldown(this.moveId, (byte) -115);
           return;
         }
         try {
-          var3.a(param1, this.field_w, this.field_q);
+          var3.moveInDirection(param1, this.field_w, this.field_q);
           super.apply(param0, false);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "hba.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

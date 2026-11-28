@@ -348,13 +348,13 @@ final class be extends ih {
           if (!RasterBuffer.field_c.ensureIndexLoaded((byte) -126)) {
             return 20;
           }
-          if (!RasterBuffer.field_c.a((byte) 120, "commonui")) {
+          if (!RasterBuffer.field_c.tryLoadGroupByName((byte) 120, "commonui")) {
             return 40;
           }
           if (!wi.field_e.ensureIndexLoaded((byte) -127)) {
             return 50;
           }
-          if (!wi.field_e.a((byte) 112, "commonui")) {
+          if (!wi.field_e.tryLoadGroupByName((byte) 112, "commonui")) {
             return 60;
           }
           if (!DelayedPcmStream.field_n.ensureIndexLoaded((byte) -118)) {
@@ -368,23 +368,23 @@ final class be extends ih {
             if (!hg.field_a.ensureIndexLoaded((byte) -114)) {
               return 14;
             }
-            if (!hg.field_a.b((byte) -120, "")) {
+            if (!hg.field_a.hasGroupName((byte) -120, "")) {
               return 29;
             }
-            if (!hg.field_a.a((byte) -98, "")) {
+            if (!hg.field_a.tryLoadGroupByName((byte) -98, "")) {
               return 29;
             }
           }
           if (!RasterBuffer.field_c.ensureIndexLoaded((byte) -125)) {
             return 43;
           }
-          if (!RasterBuffer.field_c.a((byte) 120, "commonui")) {
+          if (!RasterBuffer.field_c.tryLoadGroupByName((byte) 120, "commonui")) {
             return 57;
           }
           if (!wi.field_e.ensureIndexLoaded((byte) -118)) {
             return 71;
           }
-          if (!wi.field_e.a((byte) -42, "commonui")) {
+          if (!wi.field_e.tryLoadGroupByName((byte) -42, "commonui")) {
             return 80;
           }
           if (!DelayedPcmStream.field_n.ensureIndexLoaded((byte) -118)) {

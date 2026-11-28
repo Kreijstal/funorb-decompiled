@@ -161,13 +161,13 @@ final class kg {
           if (!lp.field_a.ensureIndexLoaded(-12749)) {
             return 20;
           }
-          if (!lp.field_a.a(true, "commonui")) {
+          if (!lp.field_a.tryLoadGroupByName(true, "commonui")) {
             return 40;
           }
           if (!eg.field_v.ensureIndexLoaded(-12749)) {
             return 50;
           }
-          if (!eg.field_v.a(true, "commonui")) {
+          if (!eg.field_v.tryLoadGroupByName(true, "commonui")) {
             return 60;
           }
           if (!kb.field_a.ensureIndexLoaded(-12749)) {
@@ -181,23 +181,23 @@ final class kg {
             if (!je.field_f.ensureIndexLoaded(-12749)) {
               return 14;
             }
-            if (!je.field_f.b((byte) -37, "")) {
+            if (!je.field_f.hasGroupName((byte) -37, "")) {
               return 29;
             }
-            if (!je.field_f.a(true, "")) {
+            if (!je.field_f.tryLoadGroupByName(true, "")) {
               return 29;
             }
           }
           if (!lp.field_a.ensureIndexLoaded(-12749)) {
             return 43;
           }
-          if (!lp.field_a.a(true, "commonui")) {
+          if (!lp.field_a.tryLoadGroupByName(true, "commonui")) {
             return 57;
           }
           if (!eg.field_v.ensureIndexLoaded(-12749)) {
             return 71;
           }
-          if (!eg.field_v.a(true, "commonui")) {
+          if (!eg.field_v.tryLoadGroupByName(true, "commonui")) {
             return 80;
           }
           if (!kb.field_a.ensureIndexLoaded(-12749)) {

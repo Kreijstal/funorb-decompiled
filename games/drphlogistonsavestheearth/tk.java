@@ -557,7 +557,7 @@ final class tk extends IntrusiveNode {
         try {
           tk var4_ref = null;
           if (!tk.a(param0)) {
-            param0.a(-23, param1, param2);
+            param0.tryLoadFileByName(-23, param1, param2);
             return null;
           }
           byte[] var3 = param0.getFileByName(param1, param2, 24874);

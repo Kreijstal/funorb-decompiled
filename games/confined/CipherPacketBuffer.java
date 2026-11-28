@@ -81,11 +81,11 @@ final class CipherPacketBuffer extends PacketBuffer {
           if (param0 != 122) {
             return;
           }
-          hm.field_qb = hm.field_qb + 1;
+          LightningArc.field_qb = LightningArc.field_qb + 1;
           if (-1 == c.field_t &&
-            -1 == ah.field_Q) {
+            -1 == AcceleratingProjectile.field_Q) {
             c.field_t = ld.field_l;
-            ah.field_Q = jh.field_R;
+            AcceleratingProjectile.field_Q = jh.field_R;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null) {
@@ -94,9 +94,9 @@ final class CipherPacketBuffer extends PacketBuffer {
             decompiledFrameRemainder0 = (vf.field_o == null);
           }
           if (decompiledFrameRemainder0) {
-            if (!sa.field_R) {
-              if (kc.field_t <= hm.field_qb) {
-                stackIn_18_0 = (kc.field_t + hm.field_nb > hm.field_qb) ? 1 : 0;
+            if (!DampedProjectile.field_R) {
+              if (kc.field_t <= LightningArc.field_qb) {
+                stackIn_18_0 = (kc.field_t + LightningArc.field_nb > LightningArc.field_qb) ? 1 : 0;
               } else {
                 stackIn_18_0 = 0;
               }
@@ -105,43 +105,43 @@ final class CipherPacketBuffer extends PacketBuffer {
             }
             var2_int = stackIn_18_0;
             if (param1 == null) {
-              hm.field_qb = 0;
+              LightningArc.field_qb = 0;
             } else {
-              if (sa.field_R) {
-                hm.field_qb = kc.field_t;
+              if (DampedProjectile.field_R) {
+                LightningArc.field_qb = kc.field_t;
               } else {
                 if (var2_int == 0) {
-                  hm.field_qb = 0;
+                  LightningArc.field_qb = 0;
                 } else {
-                  hm.field_qb = kc.field_t;
+                  LightningArc.field_qb = kc.field_t;
                 }
               }
             }
             if (param1 != null) {
-              sa.field_R = false;
+              DampedProjectile.field_R = false;
             } else {
               if (var2_int != 0) {
-                sa.field_R = true;
+                DampedProjectile.field_R = true;
               }
             }
             nm.field_I = c.field_t;
-            he.field_f = ah.field_Q;
+            he.field_f = AcceleratingProjectile.field_Q;
           }
           vf.field_o = param1;
-          if (!sa.field_R &&
-            hm.field_qb < kc.field_t &&
-            hn.field_D) {
-            hm.field_qb = 0;
-            he.field_f = ah.field_Q;
+          if (!DampedProjectile.field_R &&
+            LightningArc.field_qb < kc.field_t &&
+            GameSession.field_D) {
+            LightningArc.field_qb = 0;
+            he.field_f = AcceleratingProjectile.field_Q;
             nm.field_I = c.field_t;
           }
-          if (sa.field_R &&
-            hm.field_qb == qa.field_f) {
-            hm.field_qb = 0;
-            sa.field_R = false;
+          if (DampedProjectile.field_R &&
+            LightningArc.field_qb == qa.field_f) {
+            LightningArc.field_qb = 0;
+            DampedProjectile.field_R = false;
           }
           c.field_t = -1;
-          ah.field_Q = -1;
+          AcceleratingProjectile.field_Q = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,14 +167,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         while (var4 < param0) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((hn.field_C[var4] & this.payload[incrementValue$0]) << param0 - var4);
+          var5 = var5 + ((GameSession.field_C[var4] & this.payload[incrementValue$0]) << param0 - var4);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (param0 != var4) {
-          var5 = var5 + (this.payload[var3] >> var4 - param0 & hn.field_C[param0]);
+          var5 = var5 + (this.payload[var3] >> var4 - param0 & GameSession.field_C[param0]);
         } else {
-          var5 = var5 + (hn.field_C[var4] & this.payload[var3]);
+          var5 = var5 + (GameSession.field_C[var4] & this.payload[var3]);
         }
         return var5;
     }

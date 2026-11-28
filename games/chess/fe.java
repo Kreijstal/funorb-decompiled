@@ -22,11 +22,11 @@ final class fe {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -64 / ((-8 - param2) / 36);
-          if (this.field_f.a(false) == 1) {
+          if (this.field_f.getGroupCapacity(false) == 1) {
             stackIn_2_0 = this.a(param1, (byte) 12, param0, 0);
             return stackIn_2_0;
           }
-          if (this.field_f.a((byte) -107, param0) != 1) {
+          if (this.field_f.getFileCapacity((byte) -107, param0) != 1) {
             throw new RuntimeException();
           }
           stackIn_5_0 = this.a(param1, (byte) 12, 0, param0);
@@ -483,14 +483,14 @@ final class fe {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_a.a(false) == 1) {
+          if (this.field_a.getGroupCapacity(false) == 1) {
             stackIn_2_0 = this.a(true, param1, 0, param0);
             return stackIn_2_0;
           }
           if (param2 != 968449200) {
             field_d = (byte[]) null;
           }
-          if (1 != this.field_a.a((byte) -84, param1)) {
+          if (1 != this.field_a.getFileCapacity((byte) -84, param1)) {
             throw new RuntimeException();
           }
           stackIn_7_0 = this.a(true, 0, param1, param0);

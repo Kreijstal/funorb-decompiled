@@ -46,7 +46,7 @@ abstract class pb {
         try {
           fk.field_v = param5;
           em.field_g = param6;
-          pj.field_x = param8;
+          WallTile.field_x = param8;
           kn.field_q = param2;
           ah.field_e = param7;
           cb.field_m = param0;

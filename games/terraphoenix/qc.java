@@ -202,7 +202,7 @@ final class qc {
             return stackIn_3_0;
           }
           if (param3 > 76) {
-            stackIn_8_0 = param0 + " - " + param1.a((byte) 127) + "%";
+            stackIn_8_0 = param0 + " - " + param1.getArchiveLoadPercent((byte) 127) + "%";
             return stackIn_8_0;
           }
           stackIn_6_0 = (String) null;

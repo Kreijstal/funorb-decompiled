@@ -36,13 +36,13 @@ final class db extends qe {
         regionExit1: {
           var11 = (int[]) null;
           if (o.a(FrameTimer.field_c, (int[]) null, var3, gm.field_d, true)) {
-            var12 = jk.a(new String[]{CombatState.a((byte) 66, gm.field_d.field_w, CrossfadingMidiPcmStream.field_u)}, DungeonAssault.field_G, 30496);
+            var12 = jk.a(new String[]{CombatState.formatPlayerNameWithTitle((byte) 66, gm.field_d.field_w, CrossfadingMidiPcmStream.field_u)}, DungeonAssault.field_G, 30496);
             la.field_b.a(var12, 70, 338, 270, 180, 16760960, -1, 1, 0, la.field_b.field_H + la.field_b.field_E);
             if (var10 == 0) {
               break regionExit1;
             }
           }
-          var4 = ib.a((byte) -15, 16760960, CombatState.a((byte) 66, var3, CrossfadingMidiPcmStream.field_u));
+          var4 = ib.a((byte) -15, 16760960, CombatState.formatPlayerNameWithTitle((byte) 66, var3, CrossfadingMidiPcmStream.field_u));
           var5 = jk.a(new String[]{var4}, dk.field_e, 30496);
           var6 = 127 & var3;
           if (wh.field_a > var6) {
@@ -78,8 +78,8 @@ final class db extends qe {
                       break regionExit2;
                     }
                   }
-                  if (!(wm.field_a > var6)) {
-                    var7 = -wm.field_a + var6;
+                  if (!(PackedBitSet.field_a > var6)) {
+                    var7 = -PackedBitSet.field_a + var6;
                     if (var7 < Bzip2State.field_p.length) {
                       var8_intLifetime1 = Bzip2State.field_p[var7];
                       var9 = ib.a((byte) -125, 16760960, Integer.toString(var8_intLifetime1));
@@ -258,7 +258,7 @@ final class db extends qe {
         int var3Lifetime1;
         var6 = DungeonAssault.field_K;
         super.c(param0);
-        var8 = wd.field_l;
+        var8 = SpriteAnimationPlayer.field_l;
         var2 = var8;
         var3 = 0;
         scanLoop1: while (true) {
@@ -482,7 +482,7 @@ final class db extends qe {
         }
         scanLoop1: while (true) {
           if (Bzip2State.field_p.length > var5_int) {
-            var6_intLifetime1 = var5_int + wm.field_a;
+            var6_intLifetime1 = var5_int + PackedBitSet.field_a;
             var12 = (int[]) null;
             stackIn_16_0 = (!o.a(FrameTimer.field_c, (int[]) null, var6_intLifetime1, gm.field_d, true)) ? 0 : 1;
             var7Lifetime1 = stackIn_16_0;
@@ -831,10 +831,10 @@ final class db extends qe {
         jh.b();
         this.field_s = new tf[this.field_w.field_i];
         this.a((byte) -127);
-        wd.field_l = new bf[6];
+        SpriteAnimationPlayer.field_l = new bf[6];
         var3 = 0;
         while (var3 < 6) {
-          wd.field_l[var3] = new bf(sf.field_b[var3]);
+          SpriteAnimationPlayer.field_l[var3] = new bf(sf.field_b[var3]);
           var3++;
           if (var4 != 0) {
             return;
@@ -1026,7 +1026,7 @@ final class db extends qe {
         if (null != mk.field_j.field_l) {
           SoftwareRasterizer.fillRectangleAlpha(370, 110, 182, 124, 0, 208);
           var4_int = ((lk) (mk.field_j.field_l)).field_O;
-          wd.field_l[var4_int].a(var3, var2, true, 100);
+          SpriteAnimationPlayer.field_l[var4_int].a(var3, var2, true, 100);
           field_v.c(li.field_b[var4_int], var2, var3 + 90, 0, -1);
           var5 = gm.field_d.field_J[var4_int] + gm.field_d.field_F[var4_int];
           if (ve.a(false)) {

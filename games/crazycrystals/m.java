@@ -99,17 +99,17 @@ final class m extends ue {
             return;
           }
           if (!rc.a(-93)) {
-            if (pj.field_q == 96) {
+            if (WallTile.field_q == 96) {
               al.field_c = (al.field_c + 3 - 1) % 3;
               this.field_b.field_c = al.field_c;
               this.field_b.field_i = false;
             }
-            if (97 == pj.field_q) {
+            if (97 == WallTile.field_q) {
               al.field_c = (al.field_c + 1) % 3;
               this.field_b.field_i = false;
               this.field_b.field_c = al.field_c;
             }
-            if (pj.field_q == 98) {
+            if (WallTile.field_q == 98) {
               if (4 != this.field_b.field_c) {
                 this.field_b.field_c = 4;
               } else {
@@ -117,7 +117,7 @@ final class m extends ue {
               }
               this.field_b.field_i = false;
             }
-            if (pj.field_q == 99) {
+            if (WallTile.field_q == 99) {
               if (al.field_c == this.field_b.field_c) {
                 this.field_b.field_c = 4;
               } else {
@@ -126,7 +126,7 @@ final class m extends ue {
               this.field_b.field_i = false;
             }
           } else {
-            if (pj.field_q == 98) {
+            if (WallTile.field_q == 98) {
               if (4 == this.field_b.field_c) {
                 this.field_b.field_c = 3;
               } else {
@@ -134,7 +134,7 @@ final class m extends ue {
               }
               this.field_b.field_i = false;
             }
-            if (99 == pj.field_q) {
+            if (99 == WallTile.field_q) {
               if (3 == this.field_b.field_c) {
                 this.field_b.field_c = 4;
               } else {
@@ -147,7 +147,7 @@ final class m extends ue {
           if (this.a(106)) {
             return;
           }
-        } while (pj.field_q != 13 &&
+        } while (WallTile.field_q != 13 &&
           !this.field_b.a(true));
         if (this.field_q &&
           mo.field_l == 0 &&
@@ -296,7 +296,7 @@ final class m extends ue {
         go.field_l.a(ae.field_G, 100, 136, 16760896, -1);
         go.field_l.b(vn.field_m, 340, 136, 16760896, -1);
         go.field_l.b(tg.field_a, 440, 136, 16760896, -1);
-        go.field_l.b(ff.field_d, 560, 136, 16760896, -1);
+        go.field_l.b(AnimatedResultScene.field_d, 560, 136, 16760896, -1);
         for (var6 = 0; var6 < 10; var6++) {
           var7 = 8438015;
           if (~var6 == ~var5) {

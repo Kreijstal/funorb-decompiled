@@ -94,7 +94,7 @@ final class jna extends IntrusiveNode {
     }
 
     final static void a(boolean param0, boolean param1) {
-        BoardTile.a(param1, (byte) 31);
+        BoardTile.renderInterfaceLayers(param1, (byte) 31);
         MassPoisonEvent.a((byte) -74, param1);
         if (param0) {
           return;

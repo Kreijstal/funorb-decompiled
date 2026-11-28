@@ -118,7 +118,7 @@ final class pi {
         if (param0 != -555) {
           pi.clearStaticReferences(49);
         }
-        return DelegatingCanvas.field_f == wd.field_d ? true : false;
+        return DelegatingCanvas.field_f == SpriteAnimationPlayer.field_d ? true : false;
     }
 
     final pi a(int param0, int param1) {
@@ -338,7 +338,7 @@ final class pi {
         int var11_intLifetime2;
         var13 = DungeonAssault.field_K;
         try {
-          if (!param6.a(false, param3)) {
+          if (!param6.tryLoadGroupByName(false, param3)) {
             stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
           }
@@ -375,7 +375,7 @@ final class pi {
           var9Lifetime1 = 2;
           for (var10_intLifetime1 = 0; 4 > var10_intLifetime1; var10_intLifetime1++) {
             var17 = "qt" + var10_intLifetime1;
-            if (param6.b(var17, param3, (byte) -82)) {
+            if (param6.hasFileName(var17, param3, (byte) -82)) {
               var8_array[var10_intLifetime1] = param6.getFileByName(param3, var17, (byte) -107);
               var9Lifetime1 = var9Lifetime1 + var23[var10_intLifetime1].length;
             }
@@ -410,7 +410,7 @@ final class pi {
           var9Lifetime2 = 2;
           for (var11_int = 0; var11_int < 32; var11_int++) {
             var12_ref_String = "ht" + var11_int;
-            if (param6.b(var12_ref_String, param3, (byte) -82)) {
+            if (param6.hasFileName(var12_ref_String, param3, (byte) -82)) {
               var10[var11_int] = param6.getFileByName(param3, var12_ref_String, (byte) -125);
               var9Lifetime2 = var9Lifetime2 + var24[var11_int].length;
             }

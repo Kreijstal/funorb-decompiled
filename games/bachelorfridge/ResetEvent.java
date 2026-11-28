@@ -140,12 +140,12 @@ final class ResetEvent extends SpecialEvent {
         RuntimeException var3 = null;
         var7 = BachelorFridge.field_y;
         try {
-          this.creature.a(35, param0);
+          this.creature.resolveCreature(35, param0);
           var3_int = -76 / ((param1 - 12) / 35);
           for (var4 = 0; param0.width > var4; var4++) {
             for (var5 = 0; param0.height > var5; var5++) {
               var6 = param0.tiles[var4][var5];
-              if (var6.c(-87)) {
+              if (var6.isStandardPowerupTile(-87)) {
                 var6.field_m = true;
               }
             }

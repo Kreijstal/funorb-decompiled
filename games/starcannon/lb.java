@@ -67,7 +67,7 @@ final class lb {
             stackIn_5_0 = (String) (param2);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param1 + " - " + param0.a((byte) 120) + "%";
+          stackIn_7_0 = param1 + " - " + param0.getArchiveLoadPercent((byte) 120) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

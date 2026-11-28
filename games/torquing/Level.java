@@ -30,14 +30,14 @@ final class Level {
     ti[] field_k;
     private int field_v;
 
-    final int a(int param0) {
+    final int getTimeLimitMillis(int param0) {
         if (param0 != -31648) {
           return 84;
         }
         return this.field_j;
     }
 
-    final void a(double param0, double[] param1, byte param2, double param3) {
+    final void collectLevelCollisionContacts(double param0, double[] param1, byte param2, double param3) {
         int var21_int = 0;
         double dupTemp$2 = 0.0;
         double dupTemp$3 = 0.0;
@@ -138,11 +138,11 @@ final class Level {
                 var23 = 1 + var21_int;
                 var24 = var22 + 1;
                 if (0 == (var21_int + var22 & 1)) {
-                  var25_ref_double__ = this.a(var21_int, var24, var21_int, var22, param1, 5, var23, var24);
-                  var26 = this.a(var23, var22, var23, var24, param1, 5, var21_int, var22);
+                  var25_ref_double__ = this.findTerrainTriangleContact(var21_int, var24, var21_int, var22, param1, 5, var23, var24);
+                  var26 = this.findTerrainTriangleContact(var23, var22, var23, var24, param1, 5, var21_int, var22);
                 } else {
-                  var25_ref_double__ = this.a(var23, var22, var21_int, var22, param1, param2 - 32, var21_int, var24);
-                  var26 = this.a(var21_int, var24, var23, var24, param1, 5, var23, var22);
+                  var25_ref_double__ = this.findTerrainTriangleContact(var23, var22, var21_int, var22, param1, param2 - 32, var21_int, var24);
+                  var26 = this.findTerrainTriangleContact(var21_int, var24, var23, var24, param1, 5, var23, var22);
                 }
                 dupTemp$2 = param3 + mo.field_D[this.field_o[var21_int][var22]];
                 var26[5] = dupTemp$2;
@@ -334,19 +334,19 @@ final class Level {
         }
     }
 
-    final int a(boolean param0) {
+    final int getViewPresetIndex(boolean param0) {
         if (param0) {
           this.field_i = (String) null;
         }
         return this.field_f;
     }
 
-    final double[] f(int param0) {
+    final double[] getStartPose(int param0) {
         int var2 = -45 % ((param0 + 39) / 46);
         return this.field_p;
     }
 
-    final boolean g(int param0) {
+    final boolean processLevelSceneMeshes(int param0) {
         long var2;
         lm var4;
         int var4_int;
@@ -362,7 +362,7 @@ final class Level {
         }
         if (null == this.field_g) {
           this.field_g = new sg(1);
-          this.field_g.a(0, this.a(-100, true));
+          this.field_g.a(0, this.getTerrainModel(-100, true));
           return false;
         }
         if (0 < this.field_a.size(false)) {
@@ -415,7 +415,7 @@ final class Level {
         return true;
     }
 
-    final boolean e(int param0) {
+    final boolean processLevelDecoding(int param0) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$40 = 0;
@@ -508,7 +508,7 @@ final class Level {
           if (param0 != 0) {
             return true;
           }
-          this.a(param0 - 100, true);
+          this.getTerrainModel(param0 - 100, true);
           this.field_i = null;
           return false;
         }
@@ -692,7 +692,7 @@ final class Level {
         return false;
     }
 
-    private final double[] a(int param0, int param1, int param2, int param3, double[] param4, int param5, int param6, int param7) {
+    private final double[] findTerrainTriangleContact(int param0, int param1, int param2, int param3, double[] param4, int param5, int param6, int param7) {
         double[] var9 = null;
         double[] var10 = null;
         double var11 = 0.0;
@@ -784,7 +784,7 @@ final class Level {
         }
     }
 
-    final Model c(int param0) {
+    final Model getTerrainSkirtModel(int param0) {
         int var10_int = 0;
         int dupTemp$0 = 0;
         int[] arrayValue$1 = null;
@@ -852,7 +852,7 @@ final class Level {
           var29.field_r = null;
           var4.field_G = null;
           var29.b();
-          var5 = this.a(param0 ^ 20531, true);
+          var5 = this.getTerrainModel(param0 ^ 20531, true);
           var6 = var5.field_k;
           var7 = var6.field_k;
           var8 = var6.field_x;
@@ -1032,21 +1032,21 @@ final class Level {
         return this.field_t;
     }
 
-    final boolean b(int param0) {
+    final boolean prepareTerrainSkirtModel(int param0) {
         int var2 = this.field_t != null ? 1 : 0;
         int var3 = 96 % ((param0 - 0) / 61);
-        this.c(-20561);
+        this.getTerrainSkirtModel(-20561);
         return var2 != 0;
     }
 
-    final void d(int param0) {
+    final void applyTerrainRenderMode(int param0) {
         sg.field_s = this.field_b;
         if (param0 != -18916) {
           this.field_m = (Level) null;
         }
     }
 
-    final static ResourceArchive a(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5) {
+    final static ResourceArchive openIndexedResourceArchive(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
@@ -1092,16 +1092,16 @@ final class Level {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearLevelGlobals(byte param0) {
         if (param0 > -29) {
-          Level.a(true, true, -54, 24, true, 101);
+          Level.openIndexedResourceArchive(true, true, -54, 24, true, 101);
         }
         field_u = null;
         field_c = null;
         field_d = null;
     }
 
-    final Model a(int param0, boolean param1) {
+    final Model getTerrainModel(int param0, boolean param1) {
         int var9 = 0;
         Model var4;
         mp var5;

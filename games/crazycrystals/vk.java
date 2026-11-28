@@ -151,15 +151,15 @@ final class vk extends og implements ho, vd {
         oe.field_a = null;
         q.field_a = null;
         if (ab.field_D != null) {
-          ab.field_D.a(-1);
+          ab.field_D.disposeResultScene(-1);
           ab.field_D = null;
         }
         cn.field_d = null;
         kd.field_l = null;
         vh.field_a = false;
-        tm.field_d = (f[][]) null;
+        tm.field_d = (PuzzleTile[][]) null;
         bq.field_i = null;
-        r.field_m = false;
+        LevelLostScene.field_m = false;
         gm.field_c = null;
         td.field_c = null;
         qh.field_o = null;
@@ -179,16 +179,16 @@ final class vk extends og implements ho, vd {
         if (param0 <= 4) {
           vk.j(-59);
         }
-        if (FrameTimer.field_b[jo.field_o] >= uo.field_o) {
+        if (FrameTimer.field_b[CrystalTile.field_o] >= uo.field_o) {
           if (var1 > 0 &&
-            jo.field_o == 1) {
+            CrystalTile.field_o == 1) {
             wd.a(-111, 65535, uo.field_o - 1, dk.field_h, var1, 70, 0);
             dupTemp$0 = new m(var2, 8, cp.field_h, 0, 70, true);
             var3 = dupTemp$0;
             MouseInputHandler.field_b = (ue) ((Object) dupTemp$0);
           }
           if (0 < var1 &&
-            4 == jo.field_o) {
+            4 == CrystalTile.field_o) {
             wd.a(-77, 65534, -1 + uo.field_o, dk.field_h, var1, 25, 1);
             dupTemp$1 = new m(var2, 9, fq.field_G, 1, 25, true);
             var3 = dupTemp$1;
@@ -197,7 +197,7 @@ final class vk extends og implements ho, vd {
         }
         if (rc.a(-116) &&
           uo.field_o > 0 &&
-          uo.field_o <= FrameTimer.field_b[jo.field_o]) {
+          uo.field_o <= FrameTimer.field_b[CrystalTile.field_o]) {
           MouseInputHandler.field_b = (ue) ((Object) new nc((m) (var3), var2));
         } else {
           if (0 != pc.field_y) {
@@ -270,7 +270,7 @@ final class vk extends og implements ho, vd {
             }
             this.field_G = new pc(stackIn_18_3, (bi) null);
             if (this.field_C) {
-              this.field_H = new pc(mj.field_d, (bi) (this));
+              this.field_H = new pc(LaserTraceCursor.field_d, (bi) (this));
             }
           }
           this.field_J.field_i = (wo) ((Object) new wc(10000536));

@@ -105,7 +105,7 @@ final class ph {
         RgbSprite var4 = null;
         RgbSprite var3 = oh.a(param0, param1, 11091, param2);
         param2 = param2 + field_z;
-        if (param0.b(param2, param1, (byte) -82)) {
+        if (param0.hasFileName(param2, param1, (byte) -82)) {
           var4 = oh.a(param0, param1, 11091, param2);
           return new ph(var3, var4);
         }

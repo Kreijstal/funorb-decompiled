@@ -665,8 +665,8 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (pb.field_Kb == 2) {
           if (GameCanvas.field_d != null &&
             GameCanvas.field_d.ensureIndexLoaded(-15879)) {
-            if (GameCanvas.field_d.a("", (byte) 124)) {
-              if (GameCanvas.field_d.a(param1 ^ -14784, "")) {
+            if (GameCanvas.field_d.hasGroupName("", (byte) 124)) {
+              if (GameCanvas.field_d.tryLoadGroupByName(param1 ^ -14784, "")) {
                 MusicPatchPcmStream.a(param1 - 9839, GameCanvas.field_d);
                 GameCanvas.field_d = null;
                 ql.f(param1 ^ 14668);

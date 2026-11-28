@@ -27,7 +27,7 @@ final class mc {
             var5 = (ResourceArchive) null;
             mc.a(68, 108, (ResourceArchive) null, (byte) -5);
           }
-          lc.a(false, var6);
+          TunnelMesh.decodeIndexedSpriteGroup(false, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -48,10 +48,10 @@ final class mc {
           return jb.field_o;
         }
         if (wh.field_fb == na.field_S) {
-          return ee.field_F;
+          return MovingTunnelEntity.field_F;
         }
         if (!fb.field_a.c(param0 ^ 17221)) {
-          return ee.field_F;
+          return MovingTunnelEntity.field_F;
         }
         if (param0 == 16) {
           return kj.field_c;

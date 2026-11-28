@@ -122,10 +122,10 @@ final class IntrusiveDeque {
           }
           if (IterableNodeHashTable.field_c != null &&
             IterableNodeHashTable.field_c.ensureIndexLoaded(-7957) &&
-            IterableNodeHashTable.field_c.b(5, "benefits") &&
+            IterableNodeHashTable.field_c.tryLoadGroupByName(5, "benefits") &&
             null != sf.field_a &&
             sf.field_a.ensureIndexLoaded(-7957) &&
-            sf.field_a.b(5, "benefits")) {
+            sf.field_a.tryLoadGroupByName(5, "benefits")) {
             IntrusiveNode.field_b = qk.a("benefits", "headline", IterableNodeHashTable.field_c, 0);
             me.field_e = qk.a("benefits", "blurbpane", IterableNodeHashTable.field_c, 0);
             NodeHashTableIterator.field_b = qk.a("benefits", "button", IterableNodeHashTable.field_c, 0);

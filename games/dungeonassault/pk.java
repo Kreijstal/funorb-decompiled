@@ -29,7 +29,7 @@ final class pk extends kl {
 
     final static void a(int param0, String param1) {
         try {
-          ai.a(param1, 14);
+          DungeonTileState.setPendingLoginPlayerName(param1, 14);
           gh.a(23321, sl.field_a, false);
           if (param0 >= -1) {
             pk.d(79);

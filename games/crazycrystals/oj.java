@@ -88,7 +88,7 @@ final class oj extends om {
         }
     }
 
-    final static void a(boolean param0, f[][] param1, int param2, int param3, double param4, int param5, double param6, int param7, byte param8, double param9) {
+    final static void a(boolean param0, PuzzleTile[][] param1, int param2, int param3, double param4, int param5, double param6, int param7, byte param8, double param9) {
         int var23 = 0;
         int var26 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -134,9 +134,9 @@ final class oj extends om {
                   param1.length > var23 &&
                   var26 >= 0 &&
                   param1[var23].length > var26) {
-                  param1[var23][var26].a(var14, -117, var27 - var25 >> 1, false, var24, var25);
+                  param1[var23][var26].drawTile(var14, -117, var27 - var25 >> 1, false, var24, var25);
                 } else {
-                  param1[0][0].a(var14, -35, -var25 + var27 >> 1, false, var24, var25);
+                  param1[0][0].drawTile(var14, -35, -var25 + var27 >> 1, false, var24, var25);
                 }
                 var25 = var27;
               }

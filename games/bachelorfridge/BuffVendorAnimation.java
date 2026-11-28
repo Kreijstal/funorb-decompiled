@@ -135,7 +135,7 @@ final class BuffVendorAnimation extends EventAnimation {
           return true;
         }
         if (!this.field_v) {
-          this.field_y.creature.a(-27449, this.screen).b(-1, 2);
+          this.field_y.creature.resolveCreatureView(-27449, this.screen).b(-1, 2);
           var2 = new tka(this.screen, this.field_y.field_r, this.field_y.field_u);
           ((TileEffect) ((Object) var2)).a(0);
           this.field_v = true;

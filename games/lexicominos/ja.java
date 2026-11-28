@@ -99,11 +99,11 @@ final class ja {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1 == this.field_a.b(param0 + 21)) {
+          if (1 == this.field_a.getGroupCapacity(param0 + 21)) {
             stackIn_2_0 = this.a(param1, param2, 4164, 0);
             return stackIn_2_0;
           }
-          if (this.field_a.a((byte) 119, param2) == 1) {
+          if (this.field_a.getFileCapacity((byte) 119, param2) == 1) {
             stackIn_6_0 = this.a(param1, 0, 4164, param2);
             return stackIn_6_0;
           }
@@ -137,7 +137,7 @@ final class ja {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_e.a("", (byte) -127)) {
+          if (this.field_e.hasGroupName("", (byte) -127)) {
             stackIn_3_0 = this.a("", param2, param0 + 7135, param1);
             return stackIn_3_0;
           }
@@ -189,11 +189,11 @@ final class ja {
             var5 = (int[]) null;
             discarded$1 = this.a((byte) -35, (String) null, (int[]) null);
           }
-          if (1 == this.field_e.b(27)) {
+          if (1 == this.field_e.getGroupCapacity(27)) {
             stackIn_4_0 = this.a(param0, 0, (byte) -6, param1);
             return stackIn_4_0;
           }
-          if (this.field_e.a((byte) -95, param0) != 1) {
+          if (this.field_e.getFileCapacity((byte) -95, param0) != 1) {
             throw new RuntimeException();
           }
           stackIn_8_0 = this.a(0, param0, (byte) -6, param1);

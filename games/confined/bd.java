@@ -42,8 +42,8 @@ final class bd {
           ll.field_d = ll.field_d + (param0.readUnsignedByte(32) << 7);
           var2_intLifetime2 = param0.readUnsignedByte(32);
           ll.field_d = ll.field_d + (var2_intLifetime2 >> 1);
-          dj.field_gb = var2_intLifetime2 << 16 & 65536;
-          dj.field_gb = dj.field_gb + param0.readUnsignedShort((byte) 25);
+          PlayerShip.field_gb = var2_intLifetime2 << 16 & 65536;
+          PlayerShip.field_gb = PlayerShip.field_gb + param0.readUnsignedShort((byte) 25);
           if (param1 == -45) {
             return;
           }

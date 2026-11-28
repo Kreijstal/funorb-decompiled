@@ -30,7 +30,7 @@ final class AttackUpAllSpecial extends SpecialOrder {
         BattleCreature var7 = null;
         var8 = BachelorFridge.field_y;
         try {
-          var9 = this.creature.a(32, param0);
+          var9 = this.creature.resolveCreature(32, param0);
           var4 = new AttackUpAllEvent(this.moveId, new CreatureRef(var9));
           var5 = 0;
           if (param1 != 3) {

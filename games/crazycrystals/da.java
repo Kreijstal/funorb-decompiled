@@ -17,7 +17,7 @@ final class da extends ue {
     private boolean field_k;
     private int field_i;
     private int field_r;
-    private f[][] field_p;
+    private PuzzleTile[][] field_p;
     private int field_j;
 
     private final void c(int param0) {
@@ -241,7 +241,7 @@ final class da extends ue {
         re stackIn_6_0 = null;
         int stackIn_7_1 = 0;
         int var2;
-        f[][] var3;
+        PuzzleTile[][] var3;
         String var3_ref;
         double var4;
         String var4_ref_String;
@@ -251,7 +251,7 @@ final class da extends ue {
         int var8;
         int var9;
         int var10;
-        f[][] var11;
+        PuzzleTile[][] var11;
         var10 = CrazyCrystals.field_B;
         if (this.field_f &&
           co.field_x < 20) {
@@ -348,7 +348,7 @@ final class da extends ue {
     private final void c(boolean param0) {
         int var10;
         kb var3;
-        f[][] var4;
+        PuzzleTile[][] var4;
         int var5;
         double var6;
         int var8;
@@ -378,7 +378,7 @@ final class da extends ue {
             }
             this.field_p = CipherPacketBuffer.a(var9, true, var8, 82, var4);
           } else {
-            this.field_p = (f[][]) null;
+            this.field_p = (PuzzleTile[][]) null;
           }
           this.field_o = this.field_e;
         }
@@ -578,7 +578,7 @@ final class da extends ue {
           wn.field_b = wn.field_b + 65536;
           while (65536 <= pn.b(wn.field_b, 160, h.field_a)) {
             wn.field_b = wn.field_b - h.field_a;
-            hl.field_g = hl.field_g + 1;
+            LevelLostEntrancePhase.field_g = LevelLostEntrancePhase.field_g + 1;
           }
           var2_int = -1;
           if (!param1) {
@@ -629,9 +629,9 @@ final class da extends ue {
           if (qk.field_H != null) {
             var3 = 357 - qk.field_H.field_o / 2;
             var4 = 0;
-            if (pj.field_v != 0 &&
-              var3 < dp.field_h &&
-              var3 + qk.field_H.field_u > dp.field_h) {
+            if (WallTile.field_v != 0 &&
+              var3 < ProfileDataRequest.field_h &&
+              var3 + qk.field_H.field_u > ProfileDataRequest.field_h) {
               if (to.field_a > 269 - qk.field_H.field_l &&
                 269 > to.field_a) {
                 var4 = 1;
@@ -660,7 +660,7 @@ final class da extends ue {
             }
           }
           if (param0) {
-            AwtRasterBuffer.field_f.a(0, og.a(0, dp.field_h, to.field_a), og.a(0, IsaacRandom.field_h, qh.field_i));
+            AwtRasterBuffer.field_f.a(0, og.a(0, ProfileDataRequest.field_h, to.field_a), og.a(0, IsaacRandom.field_h, qh.field_i));
             if (AwtRasterBuffer.field_f.a(true)) {
               if (0 == AwtRasterBuffer.field_f.field_c) {
                 stackIn_59_0 = 3;
@@ -683,7 +683,7 @@ final class da extends ue {
                   return stackIn_73_0;
                 }
               }
-              if (pj.field_q != 13) {
+              if (WallTile.field_q != 13) {
                 continue;
               }
               stackIn_77_0 = 1;
@@ -764,7 +764,7 @@ final class da extends ue {
           this.field_j = this.field_j + 3 * of.field_H;
           this.e(17832);
           while (ge.b(-35)) {
-            if (pj.field_q == 80) {
+            if (WallTile.field_q == 80) {
               if (this.field_m > this.field_b.field_c &&
                 this.field_e >= 0) {
                 if (0 <= this.field_e &&
@@ -789,7 +789,7 @@ final class da extends ue {
               }
               this.field_b.field_i = false;
             }
-            if (pj.field_q == 96) {
+            if (WallTile.field_q == 96) {
               while (true) {
                 if (this.field_b.field_c != this.field_m + 2) {
                   if (this.field_b.field_c == this.field_m + 1) {
@@ -825,7 +825,7 @@ final class da extends ue {
               }
               this.field_b.field_i = false;
             }
-            if (pj.field_q == 97) {
+            if (WallTile.field_q == 97) {
               while (true) {
                 if (this.field_b.field_c != this.field_m) {
                   if (this.field_m + 1 != this.field_b.field_c) {
@@ -854,7 +854,7 @@ final class da extends ue {
               }
               this.field_b.field_i = false;
             }
-            if (pj.field_q == 98) {
+            if (WallTile.field_q == 98) {
               while (true) {
                 if (2 + this.field_m != this.field_b.field_c) {
                   if (this.field_b.field_c != this.field_m + 1) {
@@ -899,7 +899,7 @@ final class da extends ue {
               }
               this.field_b.field_i = false;
             }
-            if (99 == pj.field_q) {
+            if (99 == WallTile.field_q) {
               while (true) {
                 if (this.field_b.field_c == this.field_m) {
                   this.field_b.field_c = this.field_m + 1;
@@ -939,7 +939,7 @@ final class da extends ue {
               }
               this.field_b.field_i = false;
             }
-            if (pj.field_q == 104) {
+            if (WallTile.field_q == 104) {
               if (this.field_e < 0) {
                 this.field_e = this.field_j;
               }
@@ -952,7 +952,7 @@ final class da extends ue {
               this.field_b.field_i = false;
               this.field_b.field_c = this.field_e;
             }
-            if (pj.field_q == 105) {
+            if (WallTile.field_q == 105) {
               if (0 > this.field_e) {
                 this.field_e = this.field_j;
               }
@@ -965,21 +965,21 @@ final class da extends ue {
               this.field_b.field_c = this.field_e;
               this.field_b.field_i = false;
             }
-            if (pj.field_q == 102) {
+            if (WallTile.field_q == 102) {
               this.field_e = 0;
               this.d(24902);
               this.field_b.field_i = false;
               this.field_b.field_c = this.field_e;
             }
-            if (103 == pj.field_q) {
+            if (103 == WallTile.field_q) {
               this.field_e = this.field_m - 1;
               this.f(116);
               this.d(24902);
               this.field_b.field_c = this.field_e;
               this.field_b.field_i = false;
             }
-            if (pj.field_q == 84 ||
-              83 == pj.field_q) {
+            if (WallTile.field_q == 84 ||
+              83 == WallTile.field_q) {
               this.field_b.field_i = false;
               if (this.field_m + 1 == this.field_b.field_c &&
                 rc.a(-52)) {
@@ -996,7 +996,7 @@ final class da extends ue {
                 return;
               }
             }
-            if (pj.field_q != 13) {
+            if (WallTile.field_q != 13) {
               continue;
             }
             this.field_b.field_i = false;
@@ -1168,7 +1168,7 @@ final class da extends ue {
         Object var7Lifetime5;
         Object var7Lifetime6;
         var8 = CrazyCrystals.field_B;
-        this.field_p = (f[][]) null;
+        this.field_p = (PuzzleTile[][]) null;
         this.field_g = 0;
         this.field_o = -1;
         if (ol.field_z[this.field_r] != null) {

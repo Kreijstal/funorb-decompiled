@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ta extends l {
+abstract class ta extends ResultScenePhase {
     static oi field_h;
     int field_f;
     pb field_e;
@@ -57,14 +57,14 @@ abstract class ta extends l {
         return var2;
     }
 
-    final l b(byte param0) {
+    final ResultScenePhase fastForwardPhase(byte param0) {
         int var2_int = 0;
         int var3;
         int var4;
         Object var2;
         var4 = CrazyCrystals.field_B;
         if (param0 != -90) {
-          return (l) null;
+          return (ResultScenePhase) null;
         }
         for (var2_int = 0; ma.field_n.length > var2_int; var2_int++) {
           var3 = this.field_e.a(param0 ^ -1843275132, var2_int) - this.field_f;
@@ -76,10 +76,10 @@ abstract class ta extends l {
         if (var2 == null) {
           var2 = this.b(false);
         }
-        return (l) (var2);
+        return (ResultScenePhase) (var2);
     }
 
-    abstract l b(boolean param0);
+    abstract ResultScenePhase b(boolean param0);
 
     abstract int c(int param0);
 
@@ -101,10 +101,10 @@ abstract class ta extends l {
         return this.b(-126) > 0 ? this : this.e((byte) -56).d((byte) -123);
     }
 
-    final l a(int param0) {
+    final ResultScenePhase updatePhase(int param0) {
         int var2 = this.b(-115);
         if (var2 > 0) {
-          return new o(var2, (l) (this)).a(param0 ^ 0);
+          return new o(var2, (ResultScenePhase) (this)).updatePhase(param0 ^ 0);
         }
         if (param0 != -2) {
           this.field_e = (pb) null;
@@ -113,7 +113,7 @@ abstract class ta extends l {
         if (var3 == null) {
           var3 = this.b(false);
         }
-        return ((l) (var3)).a(-2);
+        return ((ResultScenePhase) (var3)).updatePhase(-2);
     }
 
     final static void a(java.applet.Applet param0, int param1) {

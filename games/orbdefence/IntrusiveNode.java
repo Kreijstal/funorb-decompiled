@@ -88,13 +88,13 @@ class IntrusiveNode {
           if (!og.field_g.ensureIndexLoaded(-1)) {
             return 20;
           }
-          if (!og.field_g.b((byte) 112, "commonui")) {
+          if (!og.field_g.tryLoadGroupByName((byte) 112, "commonui")) {
             return 40;
           }
           if (!am.field_b.ensureIndexLoaded(-1)) {
             return 50;
           }
-          if (!am.field_b.b((byte) 111, "commonui")) {
+          if (!am.field_b.tryLoadGroupByName((byte) 111, "commonui")) {
             return 60;
           }
           if (!wb.field_b.ensureIndexLoaded(-1)) {
@@ -108,23 +108,23 @@ class IntrusiveNode {
             if (!lf.field_a.ensureIndexLoaded(-1)) {
               return 14;
             }
-            if (!lf.field_a.c((byte) -62, "")) {
+            if (!lf.field_a.hasGroupName((byte) -62, "")) {
               return 29;
             }
-            if (!lf.field_a.b((byte) -113, "")) {
+            if (!lf.field_a.tryLoadGroupByName((byte) -113, "")) {
               return 29;
             }
           }
           if (!og.field_g.ensureIndexLoaded(-1)) {
             return 43;
           }
-          if (!og.field_g.b((byte) 58, "commonui")) {
+          if (!og.field_g.tryLoadGroupByName((byte) 58, "commonui")) {
             return 57;
           }
           if (!am.field_b.ensureIndexLoaded(-1)) {
             return 71;
           }
-          if (!am.field_b.b((byte) 94, "commonui")) {
+          if (!am.field_b.tryLoadGroupByName((byte) 94, "commonui")) {
             return 80;
           }
           if (!wb.field_b.ensureIndexLoaded(-1)) {

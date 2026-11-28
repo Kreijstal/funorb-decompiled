@@ -528,18 +528,18 @@ final class pl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0.ensureIndexLoaded((byte) -121) &&
-            param0.a("commonui", -95)) {
+            param0.tryLoadGroupByName("commonui", -95)) {
             if (!param1.ensureIndexLoaded((byte) -126)) {
               return false;
             }
-            if (!param1.a("commonui", -109)) {
+            if (!param1.tryLoadGroupByName("commonui", -109)) {
               return false;
             }
             if (!param3) {
               pl.f(-93);
             }
             if (param2.ensureIndexLoaded((byte) -125) &&
-              param2.a("button.gif", -101)) {
+              param2.tryLoadGroupByName("button.gif", -101)) {
               return true;
             }
             return false;

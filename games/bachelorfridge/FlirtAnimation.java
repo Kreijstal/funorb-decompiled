@@ -127,7 +127,7 @@ final class FlirtAnimation extends EventAnimation {
         BattleCreature var7;
         CreatureActor var8;
         var6 = BachelorFridge.field_y;
-        var7 = this.field_w.creature.a(param0 ^ -113, this.screen.field_h);
+        var7 = this.field_w.creature.resolveCreature(param0 ^ -113, this.screen.field_h);
         if (var7.isDown(param0 - 104)) {
           return;
         }
@@ -138,9 +138,9 @@ final class FlirtAnimation extends EventAnimation {
         }
         while (var3 != null) {
           if (var3 instanceof SetFriendlyEffect) {
-            var8 = var3.target.a(param0 ^ 27448, this.screen);
+            var8 = var3.target.resolveCreatureView(param0 ^ 27448, this.screen);
             var8.b(-1, 6);
-            var5 = new sia(this.screen, var8.field_s.tileX, var8.field_s.tileY, this.field_w.creature.a(-27449, this.screen));
+            var5 = new sia(this.screen, var8.field_s.tileX, var8.field_s.tileY, this.field_w.creature.resolveCreatureView(-27449, this.screen));
             ((TileEffect) ((Object) var5)).a(0);
           }
           var3.apply(var7, this.screen.field_h, 12);
@@ -153,7 +153,7 @@ final class FlirtAnimation extends EventAnimation {
         try {
           this.field_w = param1;
           al.a(105, this.field_w.moveId);
-          this.field_v = new ActorAnimation(this.screen, this.field_w.field_s.a(-27449, this.screen));
+          this.field_v = new ActorAnimation(this.screen, this.field_w.field_s.resolveCreatureView(-27449, this.screen));
           this.addChild(27799, this.field_v);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "er.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

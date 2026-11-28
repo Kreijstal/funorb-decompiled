@@ -463,7 +463,7 @@ final class jp extends IntrusiveNode {
         try {
           jp var4_ref = null;
           if (!jp.a(param0)) {
-            param0.a(-13703, param2, param1);
+            param0.tryLoadFileByName(-13703, param2, param1);
             return null;
           }
           byte[] var3 = param0.getFileByName(param1, param2, (byte) -110);

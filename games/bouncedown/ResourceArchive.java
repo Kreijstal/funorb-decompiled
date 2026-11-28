@@ -18,7 +18,7 @@ final class ResourceArchive {
     private Object[][] field_c;
     static String field_m;
 
-    final boolean a(String param0, String param1, int param2) {
+    final boolean tryLoadFileByName(String param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -78,18 +78,18 @@ final class ResourceArchive {
           this.field_o[param1] = nh.storeBytes(false, -11560, this.field_n.a(param1, true));
         }
         if (param0 != -19250) {
-          ResourceArchive.a(((int[]) (this.field_o[1]))[10], (String) (this.field_o[2]));
+          ResourceArchive.updateTooltipState(((int[]) (this.field_o[1]))[10], (String) (this.field_o[2]));
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean ensureArchiveMasterIndexLoaded(int param0) {
         if (param0 < 110) {
           field_g = (byte[][]) null;
         }
         return ih.field_Q.a(-125);
     }
 
-    final int a(byte param0, int param1) {
+    final int getFileCapacity(byte param0, int param1) {
         if (param0 != 47) {
           return ((int[]) (this.field_o[6]))[22];
         }
@@ -99,7 +99,7 @@ final class ResourceArchive {
         return this.field_l.field_c[param1];
     }
 
-    final static void a(int param0, String param1) {
+    final static void updateTooltipState(int param0, String param1) {
         int stackIn_16_0 = 0;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
@@ -162,7 +162,7 @@ final class ResourceArchive {
           }
           ck.field_c = -1;
           if (param0 <= 20) {
-            ResourceArchive.b(false);
+            ResourceArchive.clearStaticReferences(false);
           }
           if (nh.field_P &&
             jk.field_K == ge.field_c) {
@@ -203,7 +203,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final boolean b(String param0, boolean param1) {
+    final boolean tryLoadGroupByName(String param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -280,7 +280,7 @@ final class ResourceArchive {
         return true;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_e = null;
         field_g = (byte[][]) null;
         field_i = null;
@@ -288,11 +288,11 @@ final class ResourceArchive {
         field_h = null;
         field_m = null;
         if (param0) {
-          ResourceArchive.b(-83, -52);
+          ResourceArchive.updateLogoPartRotation(-83, -52);
         }
     }
 
-    final boolean a(String param0, byte param1) {
+    final boolean hasGroupName(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -367,7 +367,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int a(int param0) {
+    final synchronized int getArchiveLoadPercent(int param0) {
         int var2;
         int var3;
         int var4;
@@ -392,7 +392,7 @@ final class ResourceArchive {
         return var4Lifetime1;
     }
 
-    final int a(boolean param0) {
+    final int getGroupCapacity(boolean param0) {
         if (!this.ensureIndexLoaded(45)) {
           return -1;
         }
@@ -402,7 +402,7 @@ final class ResourceArchive {
         return this.field_l.field_c.length;
     }
 
-    final static void a(int param0, int param1, RgbSprite[] param2, int param3, int param4) {
+    final static void drawTiledSpriteStrip(int param0, int param1, RgbSprite[] param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -567,7 +567,7 @@ final class ResourceArchive {
         return var2 != 0;
     }
 
-    final static void b(int param0, int param1) {
+    final static void updateLogoPartRotation(int param0, int param1) {
         int var2;
         int var3;
         int var4;
@@ -742,7 +742,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized byte[] c(int param0, int param1) {
+    final synchronized byte[] getFlatFile(int param0, int param1) {
         if (!this.ensureIndexLoaded(68)) {
           return null;
         }

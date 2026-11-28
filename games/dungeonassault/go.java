@@ -48,7 +48,7 @@ final class go extends qe {
           ac.field_B.writeShort(param0, -94);
           return;
         }
-        mo var3 = this.field_Y.b(this.field_Y.field_o, gm.field_d.field_N, param1 ^ 18900, param0, this.field_Y.field_y);
+        mo var3 = this.field_Y.resolveHoardGoldTheft(this.field_Y.field_o, gm.field_d.field_N, param1 ^ 18900, param0, this.field_Y.field_y);
         var3.field_c.position = 0;
         if (param1 != 69) {
           this.field_E = (String) null;
@@ -181,7 +181,7 @@ final class go extends qe {
         }
     }
 
-    private final void a(byte param0, ai param1) {
+    private final void a(byte param0, DungeonTileState param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -192,7 +192,7 @@ final class go extends qe {
             this.field_y = (Raider) null;
           }
           if (null != param1.field_h.field_u) {
-            param1.field_c.a(29, param1.field_h.field_u);
+            param1.field_c.playOnceThenIdle(29, param1.field_h.field_u);
           }
           if (null != param1.field_h.field_x) {
             gd.a(64, param1.field_h.field_x);
@@ -271,9 +271,9 @@ final class go extends qe {
           var4 = stackIn_27_0;
         }
         if (var4 == 0) {
-          stackIn_31_0 = this.field_Y.b((byte) 121, param1);
+          stackIn_31_0 = this.field_Y.resolveTargetRoomAction((byte) 121, param1);
         } else {
-          stackIn_31_0 = this.field_Y.c(-94, param1);
+          stackIn_31_0 = this.field_Y.resolveSingleRaiderRoomAction(-94, param1);
         }
         var5 = stackIn_31_0;
         var5.field_c.position = 0;
@@ -282,11 +282,11 @@ final class go extends qe {
     }
 
     private final void i(int param0) {
-        if (!this.field_Y.field_p.a(24, (byte) 115)) {
+        if (!this.field_Y.field_p.isBitSet(24, (byte) 115)) {
           this.b(false, 24);
         }
-        this.field_Y.a(this.field_Y.field_u, true, 24);
-        this.field_Y.a(false, 64);
+        this.field_Y.enterDungeonRoom(this.field_Y.field_u, true, 24);
+        this.field_Y.setCombatMode(false, 64);
         int var2 = 72 / ((param0 - 17) / 53);
         this.a(um.field_c, -8963);
         this.field_b = (kl) ((Object) new ro(this));
@@ -302,10 +302,10 @@ final class go extends qe {
         field_S = null;
     }
 
-    private final void b(ai param0, int param1) {
+    private final void b(DungeonTileState param0, int param1) {
         try {
           if (param0.field_h.field_m != null) {
-            param0.field_c.a(li.field_h, param0.field_h.field_m, -10872);
+            param0.field_c.startAnimation(li.field_h, param0.field_h.field_m, -10872);
           }
           if (null != param0.field_h.field_p) {
             gd.a(64, param0.field_h.field_p);
@@ -359,7 +359,7 @@ final class go extends qe {
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
           if (var4 != null) {
-            var4.field_b = new wd(var4.field_n.field_e);
+            var4.field_b = new SpriteAnimationPlayer(var4.field_n.field_e);
             if ((var4.field_o & 6) != 0) {
               var4.field_b.field_e = 0;
               var4.field_b.field_k = ga.field_n;
@@ -438,7 +438,7 @@ final class go extends qe {
           var3_ref_hb__ = this.field_Y.field_A;
           for (var4_int = 0; var4_int < var3_ref_hb__.length; var4_int++) {
             var5_ref_hb = var3_ref_hb__[var4_int];
-            if (this.field_Y.b(0, var5_ref_hb)) {
+            if (this.field_Y.canUseRaiderAbility(0, var5_ref_hb)) {
               var2 = var2 | 1 << var5_ref_hb.field_j;
             }
           }
@@ -474,7 +474,7 @@ final class go extends qe {
     }
 
     private final void a(int param0, boolean param1, Raider param2) {
-        wd stackIn_2_0 = null;
+        SpriteAnimationPlayer stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -488,7 +488,7 @@ final class go extends qe {
           } else {
             stackIn_3_1 = li.field_h;
           }
-          ((wd) (Object) stackIn_2_0).a(stackIn_3_1, param2.field_n.field_v, -10872);
+          ((SpriteAnimationPlayer) (Object) stackIn_2_0).startAnimation(stackIn_3_1, param2.field_n.field_v, -10872);
           if (null != param2.field_n.field_g) {
             gd.a(64, param2.field_n.field_g);
           }
@@ -516,7 +516,7 @@ final class go extends qe {
         Raider var4;
         int var5;
         Raider[] var6;
-        ai var3;
+        DungeonTileState var3;
         var5 = DungeonAssault.field_K;
         this.field_R.c(-30876);
         if (0 < this.field_X) {
@@ -526,10 +526,10 @@ final class go extends qe {
         for (var3_int = 0; var3_int < var6.length; var3_int++) {
           var4 = var6[var3_int];
           if (var4 != null) {
-            var4.field_b.a((byte) 109, 20);
+            var4.field_b.advanceAnimation((byte) 109, 20);
             if ((4 & var4.field_o) != 0 &&
               ga.field_n == var4.field_b.field_k) {
-              var4.field_b.a(rl.field_b, k.field_c, -10872);
+              var4.field_b.startAnimation(rl.field_b, k.field_c, -10872);
               var4.field_b.field_e = 0;
             }
             var4.field_b.field_e = var4.field_b.field_e + 1;
@@ -542,7 +542,7 @@ final class go extends qe {
           var3 = this.field_Y.field_h[var2];
           if (var3 != null &&
             null != var3.field_c) {
-            var3.field_c.a((byte) 109, 20);
+            var3.field_c.advanceAnimation((byte) 109, 20);
           }
         }
         return;
@@ -558,13 +558,13 @@ final class go extends qe {
         RuntimeException var4 = null;
         int var5 = 0;
         Raider var6 = null;
-        ai var7 = null;
+        DungeonTileState var7 = null;
         int var8_int = 0;
         String var8 = null;
         int var9 = 0;
         int var10 = 0;
-        ai var11 = null;
-        ai var12 = null;
+        DungeonTileState var11 = null;
+        DungeonTileState var12 = null;
         String var13 = null;
         String var8Lifetime1;
         String var8Lifetime2;
@@ -584,11 +584,11 @@ final class go extends qe {
             var12 = var11;
             var7 = var12;
             this.field_Y.field_h[var4_int] = var11;
-            var12.field_c = new wd(var12.field_h.field_d);
+            var12.field_c = new SpriteAnimationPlayer(var12.field_h.field_d);
             var8_int = param1.readUnsignedByte(true);
             this.a(var8_int, -31959, var4_int);
           }
-          if (!this.field_Y.field_p.a(var4_int, (byte) 77)) {
+          if (!this.field_Y.field_p.isBitSet(var4_int, (byte) 77)) {
             this.b(false, var4_int);
           }
           var13 = var7.field_h.field_z.toUpperCase();
@@ -641,8 +641,8 @@ final class go extends qe {
               this.field_R.a(-9398, 65280, var4_int);
             }
           }
-          this.field_Y.a(var6, true, var4_int);
-          if (!this.field_Y.field_j.a(var4_int, (byte) 89)) {
+          this.field_Y.enterDungeonRoom(var6, true, var4_int);
+          if (!this.field_Y.field_j.isBitSet(var4_int, (byte) 89)) {
             this.a(var7, 89);
           }
           if (this.field_Y.field_k != 8) {
@@ -767,7 +767,7 @@ final class go extends qe {
           }
         }
         stackIn_39_0 = this.field_O;
-        stackIn_40_1 = (this.field_Y.field_u != null) && (this.field_Y.b(0, this.field_Y.field_u));
+        stackIn_40_1 = (this.field_Y.field_u != null) && (this.field_Y.canUseRaiderAbility(0, this.field_Y.field_u));
         stackIn_39_0.field_w = stackIn_40_1;
         stackIn_43_0 = this.field_N;
         stackIn_45_1 = (this.field_Y.field_k == 16) || (32 == this.field_Y.field_k);
@@ -793,7 +793,7 @@ final class go extends qe {
         this.field_Q = stackIn_67_1;
     }
 
-    private final void a(ai param0, int param1) {
+    private final void a(DungeonTileState param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -826,18 +826,18 @@ final class go extends qe {
     private final void k(int param0) {
         int stackIn_65_0 = 0;
         int stackIn_108_0 = 0;
-        ai stackIn_115_0 = null;
+        DungeonTileState stackIn_115_0 = null;
         boolean stackIn_130_0 = false;
         Object var2;
         int var3;
         int var4;
-        ai var4_ref_ai;
-        wb[] var4_ref_wb__;
+        DungeonTileState var4_ref_ai;
+        StatusEffectIndicator[] var4_ref_wb__;
         en var5;
-        ai var5_ref;
+        DungeonTileState var5_ref;
         int var5_int;
         int var6_int;
-        wb[] var6;
+        StatusEffectIndicator[] var6;
         int var7_int;
         Object var7;
         int var8;
@@ -845,26 +845,26 @@ final class go extends qe {
         ac var9;
         int var10;
         int var11;
-        wb var12_ref_wb;
+        StatusEffectIndicator var12_ref_wb;
         int var12;
         int var13;
-        wb var14;
+        StatusEffectIndicator var14;
         int var15;
         IntrusiveDeque var16;
-        wb[] var17;
+        StatusEffectIndicator[] var17;
         Raider var18;
-        ai var19;
+        DungeonTileState var19;
         ac var20;
         Object var21;
-        ai var21_ref;
+        DungeonTileState var21_ref;
         int var4Lifetime1;
         int var4Lifetime2;
         int var8Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
-        wb var14Lifetime1;
-        wb var14Lifetime2;
+        StatusEffectIndicator var14Lifetime1;
+        StatusEffectIndicator var14Lifetime2;
         var21 = null;
         var15 = DungeonAssault.field_K;
         this.field_s = -1;
@@ -923,7 +923,7 @@ final class go extends qe {
           }
           if (this.field_O == hh.field_s &&
             null != this.field_Y.field_u &&
-            this.field_Y.b(param0 - 2, this.field_Y.field_u)) {
+            this.field_Y.canUseRaiderAbility(param0 - 2, this.field_Y.field_u)) {
             this.a((byte) -94, this.field_Y.field_u);
           }
           if (hh.field_s instanceof hj) {
@@ -955,7 +955,7 @@ final class go extends qe {
             var4 = stackIn_65_0;
           }
           if (var4 != 0 &&
-            this.field_Y.b(var3, 27747)) {
+            this.field_Y.isTileSelectable(var3, 27747)) {
             this.a(this.field_Y.field_u, var3, (byte) 123);
           } else {
             this.field_X = 125;
@@ -968,7 +968,7 @@ final class go extends qe {
           var19 = this.field_Y.field_h[this.field_s];
           var4_ref_ai = var19;
           if (var4_ref_ai != AccountCreationResultPanel.field_Pb) {
-            if (!this.field_Y.field_p.a(this.field_s, (byte) 105) &&
+            if (!this.field_Y.field_p.isBitSet(this.field_s, (byte) 105) &&
               this.field_s != 24) {
               var20 = gh.field_i[1];
               AccountNameAvailabilityValidator.field_u = (en) ((Object) new qf(var20.field_z.toUpperCase(), var20.field_t, var20.field_z));
@@ -996,7 +996,7 @@ final class go extends qe {
               var14 = var12_ref_wb;
               var14Lifetime2 = var12_ref_wb;
               if (jg.a(false, var9_int, 12, 12, var10)) {
-                var5 = var12_ref_wb.a();
+                var5 = var12_ref_wb.getTooltip();
               }
               var9_int -= 16;
               var11++;
@@ -1019,7 +1019,7 @@ final class go extends qe {
           }
         }
         if (0 <= this.field_u &&
-          this.field_Y.field_p.a(this.field_u, (byte) 73)) {
+          this.field_Y.field_p.isBitSet(this.field_u, (byte) 73)) {
           stackIn_108_0 = this.field_u;
         } else {
           stackIn_108_0 = -1;
@@ -1030,7 +1030,7 @@ final class go extends qe {
           var4Lifetime2 = this.field_Y.field_B;
         }
         if (var4Lifetime2 < 0) {
-          stackIn_115_0 = (ai) null;
+          stackIn_115_0 = (DungeonTileState) null;
         } else {
           stackIn_115_0 = this.field_Y.field_h[var4Lifetime2];
         }
@@ -1050,7 +1050,7 @@ final class go extends qe {
             while (var13 < var6.length) {
               var14Lifetime1 = var6[var13];
               if (jg.a(false, var11Lifetime1, 12, 12, var12)) {
-                var7 = var14Lifetime1.a();
+                var7 = var14Lifetime1.getTooltip();
               }
               var11Lifetime1 -= 16;
               var13++;
@@ -1063,7 +1063,7 @@ final class go extends qe {
           }
           if (var7 == null) {
             if (AccountCreationResultPanel.field_Pb != var21_ref) {
-              stackIn_130_0 = this.field_Y.field_p.a(var4Lifetime2, (byte) 105);
+              stackIn_130_0 = this.field_Y.field_p.isBitSet(var4Lifetime2, (byte) 105);
               if (!stackIn_130_0 &&
                 24 != var4Lifetime2) {
                 var9 = gh.field_i[1];
@@ -1097,11 +1097,11 @@ final class go extends qe {
         int var6 = 0;
         int var7 = 0;
         int var8_int = 0;
-        ai var8 = null;
-        ai var9_ref_ai = null;
+        DungeonTileState var8 = null;
+        DungeonTileState var9_ref_ai = null;
         int var9 = 0;
         int var10 = 0;
-        ai var11 = null;
+        DungeonTileState var11 = null;
         int var12 = 0;
         int var13 = 0;
         PacketBuffer var14 = null;
@@ -1126,20 +1126,20 @@ final class go extends qe {
               var8_int = param1.readUnsignedByte(true);
               if (!param2) {
                 var9_ref_ai = bl.a(true, param1, false);
-                var9_ref_ai.field_c = new wd(var9_ref_ai.field_h.field_d);
+                var9_ref_ai.field_c = new SpriteAnimationPlayer(var9_ref_ai.field_h.field_d);
                 var10 = param1.readUnsignedByte(true);
                 var11 = bl.a(true, param1, false);
-                var11.field_c = new wd(var11.field_h.field_d);
+                var11.field_c = new SpriteAnimationPlayer(var11.field_h.field_d);
                 var12 = param1.readUnsignedByte(true);
                 this.field_Y.field_h[var7] = var9_ref_ai;
                 this.field_Y.field_h[var8_int] = var11;
                 this.a(var10, -31959, var7);
                 this.a(var12, -31959, var8_int);
               }
-              if (!this.field_Y.field_p.a(var7, (byte) 71)) {
+              if (!this.field_Y.field_p.isBitSet(var7, (byte) 71)) {
                 this.b(false, var7);
               }
-              if (!this.field_Y.field_p.a(var8_int, (byte) 83)) {
+              if (!this.field_Y.field_p.isBitSet(var8_int, (byte) 83)) {
                 this.b(false, var8_int);
               }
               je.a(param0 ^ -67, Bzip2State.field_q);
@@ -1150,7 +1150,7 @@ final class go extends qe {
               if (var5 == ob.field_Mb) {
                 var6 = param1.position;
                 var16 = this.field_Y.field_A[param1.readUnsignedByte(true)];
-                var16.field_b.a(rf.field_M, var16.field_n.field_t, -10872);
+                var16.field_b.startAnimation(rf.field_M, var16.field_n.field_t, -10872);
                 param1.position = var6;
               } else if (var5 == ob.field_lc ||
                 var5 == ob.field_Gb) {
@@ -1160,24 +1160,24 @@ final class go extends qe {
             } else {
               var6 = param1.position;
               var17 = this.field_Y.field_A[param1.readUnsignedByte(true)];
-              var17.field_b.a(li.field_h, var17.field_n.field_l, -10872);
+              var17.field_b.startAnimation(li.field_h, var17.field_n.field_l, -10872);
               param1.position = var6;
               if (null != var17.field_n.field_g) {
                 gd.a(64, var17.field_n.field_g);
               }
-              var4.field_b = new wd(var15.field_n.field_e, var15.field_n.field_t, rf.field_M);
+              var4.field_b = new SpriteAnimationPlayer(var15.field_n.field_e, var15.field_n.field_t, rf.field_M);
             }
           } else {
             var6 = param1.position;
             var7 = param1.readUnsignedByte(true);
             if (!param2) {
               var8 = bl.a(true, param1, false);
-              var8.field_c = new wd(var8.field_h.field_d);
+              var8.field_c = new SpriteAnimationPlayer(var8.field_h.field_d);
               var9 = param1.readUnsignedByte(true);
               this.field_Y.field_h[var7] = var8;
               this.a(var9, -31959, var7);
             }
-            if (!this.field_Y.field_p.a(var7, (byte) 93)) {
+            if (!this.field_Y.field_p.isBitSet(var7, (byte) 93)) {
               this.b(false, var7);
             }
             if (ob.field_dc == var5) {
@@ -1185,7 +1185,7 @@ final class go extends qe {
             }
             param1.position = var6;
           }
-          this.field_Y.a(var15, param1, 118);
+          this.field_Y.applyRaiderAbility(var15, param1, 118);
           this.d(false);
           if (var5 != ob.field_lc &&
             ob.field_Gb != var5) {
@@ -1231,7 +1231,7 @@ final class go extends qe {
 
     private final void b(Raider param0, int param1) {
         try {
-          param0.field_b.a(li.field_h, param0.field_n.field_l, -10872);
+          param0.field_b.startAnimation(li.field_h, param0.field_n.field_l, -10872);
           if (param0.field_n.field_g != null) {
             gd.a(64, param0.field_n.field_g);
           }
@@ -1247,11 +1247,11 @@ final class go extends qe {
     }
 
     final void f() {
-        ai dupTemp$0 = null;
+        DungeonTileState dupTemp$0 = null;
         int var1;
         int var2;
         int var3_int;
-        ai var3;
+        DungeonTileState var3;
         int var4;
         int var1Lifetime1;
         int var2Lifetime1;
@@ -1281,7 +1281,7 @@ final class go extends qe {
               }
               if (var2 != var3_int) {
                 this.field_Y.field_A[var1] = new Raider(var1, var3_int);
-                this.field_Y.field_A[var1].field_b = new wd(this.field_Y.field_A[var1].field_n.field_e);
+                this.field_Y.field_A[var1].field_b = new SpriteAnimationPlayer(this.field_Y.field_A[var1].field_n.field_e);
                 this.b((byte) 47, this.field_Y.field_A[var1]);
               }
             }
@@ -1290,7 +1290,7 @@ final class go extends qe {
               !this.field_w) {
               var1Lifetime1 = this.field_Y.field_h[this.field_u].field_a;
               var2Lifetime1 = var1Lifetime1;
-              this.field_Y.field_p.a(this.field_u, -96);
+              this.field_Y.field_p.setBit(this.field_u, -96);
               this.b(false, this.field_u);
               if (mm.field_t == 27) {
                 var2Lifetime1 = (var1Lifetime1 + 1) % 38;
@@ -1300,12 +1300,12 @@ final class go extends qe {
                 }
               }
               if (var1Lifetime1 != var2Lifetime1) {
-                dupTemp$0 = new ai(var2Lifetime1);
+                dupTemp$0 = new DungeonTileState(var2Lifetime1);
                 this.field_Y.field_h[this.field_u] = dupTemp$0;
                 var3 = dupTemp$0;
-                this.field_Y.field_j.b(this.field_u, 31);
+                this.field_Y.field_j.clearBit(this.field_u, 31);
                 this.a(var3, 76);
-                var3.field_c = new wd(var3.field_h.field_d);
+                var3.field_c = new SpriteAnimationPlayer(var3.field_h.field_d);
               }
             }
             if (mm.field_t == 9) {
@@ -1327,7 +1327,7 @@ final class go extends qe {
             return;
           }
           if (param1.field_b.field_n == param1.field_b.field_i) {
-            param1.field_b.a(126, param1.field_n.field_u);
+            param1.field_b.playOnceThenIdle(126, param1.field_n.field_u);
             if (null == param1.field_n.field_p) {
               return;
             }
@@ -1373,7 +1373,7 @@ final class go extends qe {
         var3 = 0;
         for (var4 = 0; var4 < 4; var4++) {
           if ((param1 & 1 << var4) != 0) {
-            this.field_Y.a(120, this.field_Y.field_A[var4]);
+            this.field_Y.applyDragonFireToRaider(120, this.field_Y.field_A[var4]);
             if (0 == (4 & this.field_Y.field_A[var4].field_o)) {
               if ((this.field_Y.field_A[var4].field_o & 2) != 0) {
                 this.a(0, true, this.field_Y.field_A[var4]);
@@ -1416,7 +1416,7 @@ final class go extends qe {
           var6.writeByte(6, param0.field_j);
           if ((ob.field_dc == var5_int ||
             var5_int == ob.field_Nb) && (this.field_G == -1 &&
-            this.field_Y.b(param2, 27747) &&
+            this.field_Y.isTileSelectable(param2, 27747) &&
             param2 != 24)) {
             this.field_G = param2;
             var7 = 1;
@@ -1473,7 +1473,7 @@ final class go extends qe {
             }
             var8Lifetime1 = stackIn_51_0;
             if (var8Lifetime1 != 0 &&
-              !this.field_Y.field_p.a(param2, (byte) 78) &&
+              !this.field_Y.field_p.isBitSet(param2, (byte) 78) &&
               param2 != 24) {
               if (this.field_G != -1) {
                 this.field_I = param2;
@@ -1572,7 +1572,7 @@ final class go extends qe {
             this.field_Y.field_k == 4) {
             param0 = this.field_Y.field_A[0];
           }
-          if (!this.field_Y.field_p.a(param1, (byte) 89)) {
+          if (!this.field_Y.field_p.isBitSet(param1, (byte) 89)) {
             je.a(0, Bzip2State.field_q);
           }
           if (this.field_w) {
@@ -1653,16 +1653,16 @@ final class go extends qe {
           this.c();
         }
         if ((param0 & 1) != 0) {
-          this.field_Y.field_v.a(-1 + (param2 - param2 / 7), param1 + 31854);
+          this.field_Y.field_v.setBit(-1 + (param2 - param2 / 7), param1 + 31854);
         }
         if ((2 & param0) != 0) {
-          this.field_Y.field_v.a(param2 - param2 / 7, param1 ^ 31920);
+          this.field_Y.field_v.setBit(param2 - param2 / 7, param1 ^ 31920);
         }
         if ((4 & param0) != 0) {
-          this.field_Y.field_v.a(param2 + 35, param1 + 31884);
+          this.field_Y.field_v.setBit(param2 + 35, param1 + 31884);
         }
         if ((8 & param0) != 0) {
-          this.field_Y.field_v.a(42 + param2, param1 + 31894);
+          this.field_Y.field_v.setBit(42 + param2, param1 + 31894);
         }
     }
 
@@ -1677,8 +1677,8 @@ final class go extends qe {
     }
 
     private final void b(boolean param0, int param1) {
-        ai var3 = this.field_Y.field_h[param1];
-        var3.field_c = new wd(var3.field_h.field_d);
+        DungeonTileState var3 = this.field_Y.field_h[param1];
+        var3.field_c = new SpriteAnimationPlayer(var3.field_h.field_d);
         this.field_R.a(15122, param1);
         if (param0) {
           this.field_r = (pp) null;
@@ -1687,12 +1687,12 @@ final class go extends qe {
 
     final void a(int param0, int param1, boolean param2, int param3) {
         boolean discarded$0 = false;
-        ai stackIn_2_0 = null;
+        DungeonTileState stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         int stackIn_8_0 = 0;
         int stackIn_40_0 = 0;
         int stackIn_43_0 = 0;
-        ai stackIn_101_0 = null;
+        DungeonTileState stackIn_101_0 = null;
         boolean stackIn_102_1 = false;
         int var6;
         Raider var7;
@@ -1703,7 +1703,7 @@ final class go extends qe {
         Raider var11_ref_hb;
         int var11;
         int var12;
-        ai var13;
+        DungeonTileState var13;
         var12 = DungeonAssault.field_K;
         var13 = this.field_Y.field_h[param1];
         var6 = 0;
@@ -1718,12 +1718,12 @@ final class go extends qe {
         if (1 == var13.field_h.field_g) {
           if (param0 != 36864) {
             if (!param2) {
-              this.field_Y.a(param1, true, -12331);
+              this.field_Y.applyRoomEntryDetectionEffects(param1, true, -12331);
             }
             if (param0 != 20480) {
               this.a((byte) 76, var13);
               if (!param2) {
-                this.field_Y.a(true, 118, param1);
+                this.field_Y.applyRoomTriggerDetectionEffects(true, 118, param1);
               }
               if (0 != (param0 & 2048)) {
                 this.b(var7, param3 - 127);
@@ -1743,7 +1743,7 @@ final class go extends qe {
             var6 = stackIn_8_0;
             if (var13.field_h.a((byte) -108, 7) &&
               var6 != 0) {
-              this.field_Y.a(32768, 3);
+              this.field_Y.setRaidOutcome(32768, 3);
               this.a((byte) 27, var13);
               var9_ref_hb__ = this.field_Y.field_A;
               for (var10 = 0; var9_ref_hb__.length > var10; var10++) {
@@ -1758,7 +1758,7 @@ final class go extends qe {
             }
             if ((16384 & param0) != 0 &&
               !param2) {
-              this.field_Y.a(param1, true, -12331);
+              this.field_Y.applyRoomEntryDetectionEffects(param1, true, -12331);
             }
             if (0 == (16384 & param0) &&
               var6 != 0) {
@@ -1770,7 +1770,7 @@ final class go extends qe {
               } else {
                 this.a((byte) 78, var13);
                 if (!param2) {
-                  this.field_Y.a(true, param3 ^ -126, param1);
+                  this.field_Y.applyRoomTriggerDetectionEffects(true, param3 ^ -126, param1);
                 }
                 if ((param0 & 2048) == 0) {
                   this.a(param3 + 1, true, var7);
@@ -1781,9 +1781,9 @@ final class go extends qe {
             } else {
               if (var13.field_h.a((byte) -65, 15) &&
                 (16384 & param0) == 0) {
-                this.field_Y.b(-100);
-                this.field_Y.a(false, 32);
-                this.field_Y.a(false, 8);
+                this.field_Y.moveCurrentTileToTarget(-100);
+                this.field_Y.setCombatMode(false, 32);
+                this.field_Y.setCombatMode(false, 8);
                 this.m(param3 ^ -121);
                 return;
               }
@@ -1838,7 +1838,7 @@ final class go extends qe {
                 this.b(var13, param3 + 5);
               } else {
                 if (!param2) {
-                  this.field_Y.a(true, 113, param1);
+                  this.field_Y.applyRoomTriggerDetectionEffects(true, 113, param1);
                 }
                 this.a(~param3, false, var7);
                 this.a((byte) 85, var13);
@@ -1846,7 +1846,7 @@ final class go extends qe {
             } else {
               if (param0 != 36864) {
                 if (!param2) {
-                  this.field_Y.a(param1, true, -12331);
+                  this.field_Y.applyRoomEntryDetectionEffects(param1, true, -12331);
                 }
                 this.a(0, false, var7);
                 this.a((byte) 117, var13);
@@ -1859,15 +1859,15 @@ final class go extends qe {
         }
         if (!param2) {
           if (var13.field_h.a((byte) -72, 13)) {
-            this.field_Y.a(false);
+            this.field_Y.clearTargetRoomAndAdvance(false);
           }
           if ((param0 & 4096) == 0) {
-            this.field_Y.d(param3 ^ -109);
+            this.field_Y.resolveFailedRoomAction(param3 ^ -109);
           } else {
             if (var6 != 0) {
-              this.field_Y.a(param3 ^ 7);
+              this.field_Y.resetTargetToCurrentTile(param3 ^ 7);
             } else {
-              this.field_Y.a(false);
+              this.field_Y.clearTargetRoomAndAdvance(false);
             }
           }
         }
@@ -1881,7 +1881,7 @@ final class go extends qe {
     }
 
     final void a(boolean param0) {
-        ai stackIn_16_0 = null;
+        DungeonTileState stackIn_16_0 = null;
         int stackIn_24_0 = 0;
         int stackIn_25_1 = 0;
         int stackIn_30_0 = 0;
@@ -1892,7 +1892,7 @@ final class go extends qe {
         int stackIn_85_0 = 0;
         int var2;
         String[] var3;
-        ai var3_ref;
+        DungeonTileState var3_ref;
         int var4;
         String var5_ref_String;
         int var5;
@@ -1905,10 +1905,10 @@ final class go extends qe {
         int var10;
         int var11;
         Raider var12;
-        wd var13;
+        SpriteAnimationPlayer var13;
         String[] var14;
         rj var15;
-        ai var16;
+        DungeonTileState var16;
         int var2Lifetime1;
         int var4Lifetime1;
         int var4Lifetime2;
@@ -1944,7 +1944,7 @@ final class go extends qe {
         var2Lifetime1 = this.field_Y.field_B;
         if ((var2Lifetime1 == -1 ||
           this.field_Y.field_q == var2Lifetime1) && (this.field_s != -1 &&
-          this.field_Y.field_p.a(this.field_s, (byte) 69))) {
+          this.field_Y.field_p.isBitSet(this.field_s, (byte) 69))) {
           var2Lifetime1 = this.field_s;
         }
         if (var2Lifetime1 >= 0) {
@@ -1985,8 +1985,8 @@ final class go extends qe {
             var5 = var5 + la.field_b.field_H;
           }
         } else {
-          var13 = (wd) null;
-          go.a(518, 57, (wd) null, kc.field_V);
+          var13 = (SpriteAnimationPlayer) null;
+          go.a(518, 57, (SpriteAnimationPlayer) null, kc.field_V);
         }
         go.a(590, 320, var16, var4Lifetime2 != 0, this.field_Y.field_i);
         var15 = (rj) (this.field_p.beginBackward(-24172));
@@ -2090,7 +2090,7 @@ final class go extends qe {
     final void a(int param0, boolean param1) {
         int var3;
         int var4;
-        ai var5;
+        DungeonTileState var5;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
         var4 = DungeonAssault.field_K;
@@ -2101,8 +2101,8 @@ final class go extends qe {
           }
         }
         if (param0 != 17158) {
-          var5 = (ai) null;
-          this.a((ai) null, 46);
+          var5 = (DungeonTileState) null;
+          this.a((DungeonTileState) null, 46);
         }
         if (kn.field_g &&
           kd.field_c == 17) {
@@ -2125,7 +2125,7 @@ final class go extends qe {
     }
 
     final void f(byte param0) {
-        ai var3 = null;
+        DungeonTileState var3 = null;
         int var2 = 0;
         if (this.field_Y.field_B != -1) {
           var3 = this.field_Y.field_h[this.field_Y.field_B];
@@ -2271,14 +2271,14 @@ final class go extends qe {
           if ((ob.field_dc == var3 ||
             var3 == ob.field_Nb) &&
             -1 == this.field_G) {
-            if (this.field_Y.b(this.field_s, 27747)) {
+            if (this.field_Y.isTileSelectable(this.field_s, 27747)) {
               stackIn_23_0 = (this.field_s != 24) ? 1 : 0;
             } else {
               stackIn_23_0 = 0;
             }
             var4 = stackIn_23_0;
             if (var4 != 0 &&
-              this.field_Y.field_p.a(this.field_s, (byte) 66)) {
+              this.field_Y.field_p.isBitSet(this.field_s, (byte) 66)) {
               var4 = 0;
             }
             if (var4 != 0) {
@@ -2301,7 +2301,7 @@ final class go extends qe {
             }
             var4Lifetime2 = stackIn_41_0;
             if (var4Lifetime2 != 0 &&
-              this.field_Y.field_p.a(this.field_s, (byte) 72)) {
+              this.field_Y.field_p.isBitSet(this.field_s, (byte) 72)) {
               var4Lifetime2 = 0;
             }
             if (var4Lifetime2 == 0) {
@@ -2385,7 +2385,7 @@ final class go extends qe {
         }
         if (hc.field_c == 70) {
           this.e(false);
-          this.field_Y.a(false, 8);
+          this.field_Y.setCombatMode(false, 8);
           return true;
         }
         if (hc.field_c == 67) {
@@ -2419,7 +2419,7 @@ final class go extends qe {
 
     private final void a(int param0, Raider param1) {
         try {
-          param1.field_b.a(95, param1.field_n.field_t);
+          param1.field_b.playOnceThenIdle(95, param1.field_n.field_t);
           if (param0 != 4) {
             this.field_N = (pp) null;
           }
@@ -2443,14 +2443,14 @@ final class go extends qe {
     }
 
     private final void d(int param0) {
-        ai stackIn_8_0 = null;
+        DungeonTileState stackIn_8_0 = null;
         String[] var2;
-        ai var2_ref;
+        DungeonTileState var2_ref;
         String var3_ref_String;
         int var3;
         int var4;
         String[] var5;
-        ai var6;
+        DungeonTileState var6;
         var4 = DungeonAssault.field_K;
         if (null != this.field_Y.field_u &&
           this.field_Y.field_u.field_n.field_s != -1) {
@@ -2480,7 +2480,7 @@ final class go extends qe {
               this.field_N.field_n = (en) ((Object) new qf(u.field_S, GameAppletShell.field_k, rb.field_I));
             }
           } else {
-            this.field_N.field_n = (en) ((Object) new qf(vd.field_b, ai.field_d, vo.field_o));
+            this.field_N.field_n = (en) ((Object) new qf(vd.field_b, DungeonTileState.field_d, vo.field_o));
           }
         }
         this.field_r.field_n = (en) ((Object) new qf(lh.field_b, mo.field_f, fp.field_e));
@@ -2560,12 +2560,12 @@ final class go extends qe {
           }
           if (var5 != 0) {
             if (!param0) {
-              this.field_Y.a(32768, 2);
+              this.field_Y.setRaidOutcome(32768, 2);
             }
             var6.a(15 & var5, this.field_C, (byte) 1);
           } else {
             if (!param0) {
-              this.field_Y.a(32768, 1);
+              this.field_Y.setRaidOutcome(32768, 1);
             }
             var6.a((byte) 101, this.field_C);
           }
@@ -2594,7 +2594,7 @@ final class go extends qe {
         int stackIn_23_1 = 0;
         int stackIn_25_0 = 0;
         int stackIn_26_1 = 0;
-        ai var3;
+        DungeonTileState var3;
         int var4;
         int var4Lifetime1;
         int var4Lifetime2;
@@ -2634,7 +2634,7 @@ final class go extends qe {
               stackIn_26_1 = 1;
             }
             var4Lifetime2 = stackIn_25_0 & stackIn_26_1;
-            var3.field_f = go.a(var3, this.field_Y.field_j.a(var2, (byte) 79), var4Lifetime2 != 0, this.field_Y.field_i);
+            var3.field_f = go.a(var3, this.field_Y.field_j.isBitSet(var2, (byte) 79), var4Lifetime2 != 0, this.field_Y.field_i);
           }
         }
     }
@@ -2647,7 +2647,7 @@ final class go extends qe {
           ac.field_B.d((byte) -78, 68);
           return;
         }
-        this.field_Y.a(false, 8);
+        this.field_Y.setCombatMode(false, 8);
         if (param0 != 68) {
           Raider var3 = (Raider) null;
           this.a((Raider) null, (Raider) null, -76, (byte) -21);
@@ -2721,7 +2721,7 @@ final class go extends qe {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        ai var6 = null;
+        DungeonTileState var6 = null;
         Raider var7 = null;
         int var8 = 0;
         Object var9 = null;
@@ -2778,7 +2778,7 @@ final class go extends qe {
               else {
                 if ((16384 & var5_int) != 0 &&
                   !param0) {
-                  this.field_Y.a(param2, true, param3 - 17074);
+                  this.field_Y.applyRoomEntryDetectionEffects(param2, true, param3 - 17074);
                 }
                 if ((16384 & var5_int) == 0 &&
                   var8Lifetime1 == 0) {
@@ -2787,7 +2787,7 @@ final class go extends qe {
                   var10 = uo.field_d;
                 }
                 if ((1024 & var5_int) != 0 &&
-                  var7.field_n.a(ob.field_jc, -120)) {
+                  var7.field_n.hasAbility(ob.field_jc, -120)) {
                   var10 = var10 + " <col=FF8000>" + jk.a(new String[]{var7.field_n.field_F}, ia.field_N, 30496) + "</col> ";
                   var18 = var10;
                   var10 = var18;
@@ -2821,7 +2821,7 @@ final class go extends qe {
                     var13 = 7 & var5_int;
                     var14 = -1;
                     if (0 != (var5_int & 1024) &&
-                      var7.field_n.a(ob.field_mc, 89)) {
+                      var7.field_n.hasAbility(ob.field_mc, 89)) {
                       var14 = ji.a(-1 + var13, false, 1);
                     }
                     var15 = -1;
@@ -2872,7 +2872,7 @@ final class go extends qe {
                       }
                       if (var13 <= 0 &&
                         var12 == 0) {
-                        var9 = new oc(var7, var6, false, var10 + " " + h.field_i);
+                        var9 = new oc(var7, var6, false, var10 + " " + RaiderDefinition.field_i);
                         decompiledFrameCompleted0 = false;
                         break;
                       }
@@ -2982,7 +2982,7 @@ final class go extends qe {
         Raider var11 = null;
         int[] var12 = null;
         Raider[] var13 = null;
-        ai var14 = null;
+        DungeonTileState var14 = null;
         int[] var15 = null;
         int[] var16 = null;
         IntrusiveDeque discarded$0 = new IntrusiveDeque();
@@ -3067,9 +3067,9 @@ final class go extends qe {
             this.b((byte) 70, this.field_Y.field_u);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < 49; var4Lifetime2++) {
-            if (this.field_Y.field_p.a(var4Lifetime2, (byte) 96)) {
+            if (this.field_Y.field_p.isBitSet(var4Lifetime2, (byte) 96)) {
               var14 = this.field_Y.field_h[var4Lifetime2];
-              var14.field_c = new wd(var14.field_h.field_d);
+              var14.field_c = new SpriteAnimationPlayer(var14.field_h.field_d);
             }
           }
           return;

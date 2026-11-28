@@ -5,7 +5,7 @@ final class mg {
     static String field_c;
     static volatile int field_e;
     static int field_g;
-    static pm[] field_b;
+    static TunnelEntity[] field_b;
     static String field_f;
     static String field_h;
     static PlatformTask field_a;
@@ -63,7 +63,7 @@ final class mg {
 
     static {
         field_c = "Lasers";
-        field_b = new pm[5];
+        field_b = new TunnelEntity[5];
         field_e = 0;
         field_h = "Carefully tuned to send blasts#into every corner of the tunnel,#this weapon will hit everything.";
         field_f = "This password contains your email address, and would be easy to guess";

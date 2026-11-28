@@ -713,10 +713,10 @@ final class wj extends fb {
         try {
           if (nh.field_g != null &&
             nh.field_g.ensureIndexLoaded((byte) -36) &&
-            nh.field_g.a("benefits", (byte) -109) &&
+            nh.field_g.tryLoadGroupByName("benefits", (byte) -109) &&
             vf.field_E != null &&
             vf.field_E.ensureIndexLoaded((byte) -36) &&
-            vf.field_E.a("benefits", (byte) -109)) {
+            vf.field_E.tryLoadGroupByName("benefits", (byte) -109)) {
             tk.field_c = qd.a(nh.field_g, "headline", "benefits", (byte) 81);
             pl.field_T = qd.a(nh.field_g, "blurbpane", "benefits", (byte) 78);
             MouseWheelInput.field_a = qd.a(nh.field_g, "button", "benefits", (byte) 78);

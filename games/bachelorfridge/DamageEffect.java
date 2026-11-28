@@ -57,16 +57,16 @@ final class DamageEffect extends EventEffect {
           var10 = param1.field_h;
           var11 = var10;
           var6 = param0.field_s;
-          var7 = this.target.a(120, var11);
+          var7 = this.target.resolveCreature(120, var11);
           if (param2) {
             var9 = (BattleScreen) null;
             discarded$0 = this.a(-99, (byte) -20, (CreatureActor) null, -42, (BattleScreen) null);
           }
           var8 = null;
-          if (var7.a(13, (byte) -91)) {
-            var6.a(5, var7, (byte) 2);
+          if (var7.hasStatus(13, (byte) -91)) {
+            var6.applyDamageAndRecordSource(5, var7, (byte) 2);
           }
-          if (var7.a(this.field_f, var6, (byte) 2)) {
+          if (var7.applyDamageAndRecordSource(this.field_f, var6, (byte) 2)) {
             return null;
           }
           if (this.field_k != 23 &&
@@ -79,11 +79,11 @@ final class DamageEffect extends EventEffect {
             this.field_k != 49 &&
             50 != this.field_k &&
             this.field_k != 0) {
-            var7.b((byte) 116, this.field_k);
-            var7.d(15);
+            var7.applyStatusAndRefreshTile((byte) 116, this.field_k);
+            var7.recalculateCreatureStats(15);
             var11.field_T.field_t[var6.ownerIndex] = sr.a(var10.field_T.field_t[var6.ownerIndex], 1L << aj.a((byte) -20, this.field_k));
           }
-          if (!var7.a(32, (byte) -117)) {
+          if (!var7.hasStatus(32, (byte) -117)) {
             if (this.field_k == 15) {
               var8 = this.a(1, (byte) -13, param0, param3, param1);
             }
@@ -98,13 +98,13 @@ final class DamageEffect extends EventEffect {
             }
           }
           if (this.field_k == 48) {
-            param1.a(param0, this.target.a(-27449, param1), false);
+            param1.a(param0, this.target.resolveCreatureView(-27449, param1), false);
           }
           if (this.field_k == 49) {
-            var11.a(1, var6, 15, param3, -113);
+            var11.setTerrainInDirection(1, var6, 15, param3, -113);
           }
           if (this.field_k == 50) {
-            var11.a(1, var6, 14, param3, -74);
+            var11.setTerrainInDirection(1, var6, 14, param3, -74);
           }
           if (this.field_k == 21) {
             var7.statusTurns = var7.statusTurns << 1;
@@ -364,11 +364,11 @@ final class DamageEffect extends EventEffect {
         BattleCreature var8 = null;
         var7 = BachelorFridge.field_y;
         try {
-          var8 = this.target.a(91, param2);
-          if (var8.a(13, (byte) -69)) {
-            param1.a(5, var8, (byte) 2);
+          var8 = this.target.resolveCreature(91, param2);
+          if (var8.hasStatus(13, (byte) -69)) {
+            param1.applyDamageAndRecordSource(5, var8, (byte) 2);
           }
-          if (var8.a(this.field_f, param1, (byte) 2)) {
+          if (var8.applyDamageAndRecordSource(this.field_f, param1, (byte) 2)) {
             return;
           }
           if (this.field_k != 23 &&
@@ -420,44 +420,44 @@ final class DamageEffect extends EventEffect {
               53 == this.field_k) {
               param2.field_T.field_D[param1.ownerIndex] = param2.field_T.field_D[param1.ownerIndex] + 1;
             }
-            var8.b((byte) 115, this.field_k);
-            var8.d(67);
+            var8.applyStatusAndRefreshTile((byte) 115, this.field_k);
+            var8.recalculateCreatureStats(67);
             param2.field_T.field_t[param1.ownerIndex] = sr.a(param2.field_T.field_t[param1.ownerIndex], 1L << aj.a((byte) -20, this.field_k));
           }
           if (var8.statusId != 32) {
             if (15 == this.field_k) {
-              if (!param2.a(param3, var8, 1, param1, -1)) {
-                var8.b((byte) 116, 8);
+              if (!param2.applyKnockback(param3, var8, 1, param1, -1)) {
+                var8.applyStatusAndRefreshTile((byte) 116, 8);
               } else {
                 param2.field_T.field_c[param1.ownerIndex] = param2.field_T.field_c[param1.ownerIndex] + 1;
               }
             }
             if (this.field_k == 45) {
-              if (param2.a(param3, var8, 2, param1, -1)) {
+              if (param2.applyKnockback(param3, var8, 2, param1, -1)) {
                 param2.field_T.field_c[param1.ownerIndex] = param2.field_T.field_c[param1.ownerIndex] + 1;
               } else {
-                var8.b((byte) 112, 8);
+                var8.applyStatusAndRefreshTile((byte) 112, 8);
               }
             }
             if (this.field_k == 46) {
-              if (!param2.a(param3, var8, 3, param1, -1)) {
-                var8.b((byte) 122, 8);
+              if (!param2.applyKnockback(param3, var8, 3, param1, -1)) {
+                var8.applyStatusAndRefreshTile((byte) 122, 8);
               } else {
                 param2.field_T.field_c[param1.ownerIndex] = param2.field_T.field_c[param1.ownerIndex] + 1;
               }
             }
             if (this.field_k == 23) {
-              param2.a(param3, var8, -1, param1, -1);
+              param2.applyKnockback(param3, var8, -1, param1, -1);
             }
           }
           if (this.field_k == 48) {
-            param2.a(var8, param1, 4);
+            param2.checkOrSwapCreatureTiles(var8, param1, 4);
           }
           if (this.field_k == 49) {
-            param2.a(1, param1, 15, param3, -92);
+            param2.setTerrainInDirection(1, param1, 15, param3, -92);
           }
           if (this.field_k == 50) {
-            param2.a(1, param1, 14, param3, -82);
+            param2.setTerrainInDirection(1, param1, 14, param3, -82);
           }
           if (this.field_k == 21) {
             var8.statusTurns = var8.statusTurns << 1;
@@ -527,14 +527,14 @@ final class DamageEffect extends EventEffect {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = this.target.a(param1 ^ -90, param4.field_h);
+          var9 = this.target.resolveCreature(param1 ^ -90, param4.field_h);
           if (param1 != -13) {
             var8 = (BattleState) null;
             this.apply((BattleCreature) null, (BattleState) null, 127);
           }
-          var7 = param4.field_h.b(var9, 126, param3, param0);
+          var7 = param4.field_h.getSignedKnockbackDistance(var9, 126, param3, param0);
           if (var7 < param0) {
-            param4.a(-16007, this.target.a(-27449, param4), 8);
+            param4.a(-16007, this.target.resolveCreatureView(-27449, param4), 8);
           }
           if (var7 > 0) {
             stackIn_8_0 = new rka(param4, this.target, new CreatureRef(param2.field_s), param3, var7);

@@ -62,7 +62,7 @@ final class ia extends ii implements vg {
             return;
           }
           if (this.field_V == param0) {
-            ResourceArchive.c(true);
+            ResourceArchive.showAccountCreationForm(true);
             return;
           }
           if (param0 != this.field_T) {

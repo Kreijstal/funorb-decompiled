@@ -733,7 +733,7 @@ final class ml extends IntrusiveNode {
         try {
           ml var4_ref = null;
           if (!ml.a(param0)) {
-            param0.a((byte) 35, param2, param1);
+            param0.tryLoadFileByName((byte) 35, param2, param1);
             return null;
           }
           byte[] var3 = param0.getFileByName(param2, (byte) 72, param1);

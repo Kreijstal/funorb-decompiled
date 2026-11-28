@@ -220,7 +220,7 @@ final class CreatureActor extends IntrusiveNode {
     }
 
     final void c(byte param0) {
-        this.field_f = this.field_s.e((byte) -78);
+        this.field_f = this.field_s.createCreatureModel((byte) -78);
         this.field_f.field_b = this.field_s.field_o.field_k.field_b;
         this.field_t = new IntrusiveDeque();
         this.field_n = new IntrusiveDeque();

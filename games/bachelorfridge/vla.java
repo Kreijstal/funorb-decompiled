@@ -36,7 +36,7 @@ final class vla extends mv {
           var2 = (EventEffect) (this.field_k.field_o.beginForward((byte) 90));
           while (var2 != null) {
             if (var2.target != null) {
-              var3 = var2.target.a(-27449, this.field_l);
+              var3 = var2.target.resolveCreatureView(-27449, this.field_l);
               if (var3.field_f.field_u.field_e) {
                 var3.b(false);
               }
@@ -59,8 +59,8 @@ final class vla extends mv {
     final boolean isFinished(byte param0) {
         Object var6 = null;
         BasicMoveDefinition var6_ref = (BasicMoveDefinition) (al.a(-69, this.field_k.moveId));
-        BattleCreature var3 = this.field_k.creature.a(125, this.field_l.field_h);
-        CreatureActor var4 = this.field_k.creature.a(-27449, this.field_l);
+        BattleCreature var3 = this.field_k.creature.resolveCreature(125, this.field_l.field_h);
+        CreatureActor var4 = this.field_k.creature.resolveCreatureView(-27449, this.field_l);
         this.field_l.field_s.a((byte) -57, var3.tileY, var3.tileX);
         if (var3.isDown(91)) {
           return true;

@@ -11,7 +11,7 @@ final class lm {
     static RgbSprite[] field_g;
     static PcmSample field_a;
     static sj field_e;
-    static f[] field_d;
+    static PuzzleTile[] field_d;
 
     final static void a(byte param0) {
         int var2 = 0;
@@ -19,15 +19,15 @@ final class lm {
         Object var1 = null;
         var1 = tm.field_b;
         synchronized (var1) {
-          gg.field_c = uc.field_b;
+          gg.field_c = MenuOverlay.field_b;
           aq.field_s = aq.field_s + 1;
           qh.field_i = fq.field_C;
           IsaacRandom.field_h = tn.field_s;
           DualLinkNode.field_h = ArchiveRequest.field_m;
           ArchiveRequest.field_m = false;
-          pj.field_v = th.field_y;
-          to.field_a = kk.field_g;
-          dp.field_h = sb.field_I;
+          WallTile.field_v = th.field_y;
+          to.field_a = FloatingScoreLabel.field_g;
+          ProfileDataRequest.field_h = sb.field_I;
           th.field_y = 0;
           var2 = 33 % ((-53 - param0) / 49);
         }

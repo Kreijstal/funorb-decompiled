@@ -10,8 +10,8 @@ final class r {
           DiskCacheWorker.field_f = param1;
           s.field_K = true;
           int var3_int = 4 % ((param0 - 32) / 48);
-          ki.field_c = new dh(vg.field_Z, fd.field_k, param2, IntrusiveNode.field_f, DiskCacheWorker.field_f);
-          vg.field_Z.c(ki.field_c, 0);
+          ki.field_c = new dh(TunnelCamera.field_Z, fd.field_k, param2, IntrusiveNode.field_f, DiskCacheWorker.field_f);
+          TunnelCamera.field_Z.c(ki.field_c, 0);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "r.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

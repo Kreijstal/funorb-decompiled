@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class o extends l {
+final class o extends ResultScenePhase {
     private int field_e;
     static String field_h;
     static int field_f;
-    private l field_g;
+    private ResultScenePhase field_g;
 
     final static void b(int param0) {
         rg.field_a[93] = 43;
@@ -25,16 +25,16 @@ final class o extends l {
         }
     }
 
-    final l a(int param0) {
+    final ResultScenePhase updatePhase(int param0) {
         this.field_e = this.field_e - 1;
         if (param0 == -2) {
-          return 0 == this.field_e ? this.field_g : (l) (this);
+          return 0 == this.field_e ? this.field_g : (ResultScenePhase) (this);
         }
         this.field_e = 15;
-        return 0 == this.field_e ? this.field_g : (l) (this);
+        return 0 == this.field_e ? this.field_g : (ResultScenePhase) (this);
     }
 
-    final l b(byte param0) {
+    final ResultScenePhase fastForwardPhase(byte param0) {
         if (param0 != -90) {
           o.clearStaticReferences(-31);
           return this.field_g;
@@ -49,7 +49,7 @@ final class o extends l {
         field_h = null;
     }
 
-    o(int param0, l param1) {
+    o(int param0, ResultScenePhase param1) {
         try {
           this.field_g = param1;
           this.field_e = param0;

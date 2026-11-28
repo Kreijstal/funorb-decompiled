@@ -12,7 +12,7 @@ final class pa {
         return param0 ^ param1;
     }
 
-    final static void a(double param0, double param1, byte param2, int param3, double param4, double param5, RgbSprite param6, double param7, vg param8) {
+    final static void a(double param0, double param1, byte param2, int param3, double param4, double param5, RgbSprite param6, double param7, TunnelCamera param8) {
         double var14_double = 0.0;
         RuntimeException var14 = null;
         double var16 = 0.0;
@@ -54,7 +54,7 @@ final class pa {
           var27 = 188 + (int)(640.0 * (var22 / var24));
           var28 = (int)(param1 / var24 * 640.0);
           var29 = (double)(2 * param3) * (1.0 - var18 / param7);
-          var31 = (int)qn.field_v.a(var29, 0, param4);
+          var31 = (int)qn.field_v.attenuateBrightnessToDepth(var29, 0, param4);
           if (var31 <= 0) {
             return;
           }

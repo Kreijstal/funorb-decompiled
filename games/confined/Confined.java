@@ -55,32 +55,32 @@ public final class Confined extends i {
           AudioOutput.clearStaticReferences();
           vk.clearStaticReferences((byte) -111);
           dd.clearStaticReferences();
-          hn.e(0);
+          GameSession.clearGameSessionGlobals(0);
           PrimaryNodeDeque.clearStaticReferences(103);
           eg.clearStaticReferences((byte) 80);
           sg.resetStaticState((byte) 109);
-          pm.clearDeclaredStaticReferences((byte) 45);
+          TunnelEntity.clearDeclaredStaticReferences((byte) 45);
           rd.clearDeclaredStaticReferences(-122);
-          ee.clearStaticReferences(2);
+          MovingTunnelEntity.clearStaticReferences(2);
           DualLinkNode.b(9898);
           IntrusiveNode.a(14);
-          oi.clearStaticReferences(false);
+          DynamicLight.clearStaticReferences(false);
           ka.resetStaticState(0);
           od.clearStaticReferences();
-          vg.l(78);
+          TunnelCamera.clearTunnelCameraGlobals(78);
           sk.clearStaticReferences();
           da.b(-12961);
-          kh.clearStaticReferences((byte) 100);
-          hm.clearStaticReferences(true);
-          hf.clearDeclaredStaticReferences(-126);
-          il.n(109);
-          ah.resetStaticState((byte) -128);
-          sa.h((byte) -28);
-          cl.clearStaticReferences(false);
-          mb.m(1072);
+          ProjectileRay.clearStaticReferences((byte) 100);
+          LightningArc.clearStaticReferences(true);
+          HomingProjectile.clearDeclaredStaticReferences(-126);
+          ExpandingPulseProjectile.n(109);
+          AcceleratingProjectile.resetStaticState((byte) -128);
+          DampedProjectile.h((byte) -28);
+          PowerUpPickup.clearStaticReferences(false);
+          ShockwaveBlast.m(1072);
           mm.clearDeclaredStaticReferences(-27552);
-          dj.n(-1);
-          h.clearDeclaredStaticReferences(0);
+          PlayerShip.clearPlayerShipGlobals(-1);
+          WingPod.clearDeclaredStaticReferences(0);
           ek.clearStaticReferences((byte) -93);
           tf.clearStaticReferences(58);
           gk.clearStaticReferences(14714);
@@ -89,11 +89,11 @@ public final class Confined extends i {
           ti.clearStaticReferences();
           PolygonScanlineRasterizer.clearStaticReferences();
           wc.n(0);
-          lc.a((byte) 83);
-          vb.resetStaticState(8);
+          TunnelMesh.clearTunnelMeshGlobals((byte) 83);
+          DequeCursor.resetStaticState(8);
           kl.clearStaticReferences(-16420);
           un.d(param0 - 191);
-          ql.clearStaticReferences(14293);
+          StageDirector.clearStaticReferences(14293);
           wd.b(param0 - 17957);
           ok.clearStaticReferences();
           ld.clearStaticReferences(0);
@@ -422,7 +422,7 @@ public final class Confined extends i {
           }
           if (!wg.field_b &&
             qn.field_v != null) {
-            qn.field_v.j(119);
+            qn.field_v.refreshSceneSoundState(119);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -447,7 +447,7 @@ public final class Confined extends i {
         int stackIn_79_0 = 0;
         int stackIn_83_0 = 0;
         int stackIn_98_0 = 0;
-        dj stackIn_211_0 = null;
+        PlayerShip stackIn_211_0 = null;
         RuntimeException decompiledCaughtException = null;
         Object var2 = null;
         RuntimeException var2_ref = null;
@@ -508,7 +508,7 @@ public final class Confined extends i {
           if (null != qn.field_v.field_K) {
             qn.field_v.field_K.b(-108);
           }
-          qn.field_v.c((byte) -94);
+          qn.field_v.drawGameScene((byte) -94);
           if (md.a(-96)) {
             SoftwareRasterizer.drawHorizontalLineAlpha(288, 187, 16, 16777215, 64);
             SoftwareRasterizer.drawHorizontalLineAlpha(336, 187, 16, 16777215, 64);
@@ -528,13 +528,13 @@ public final class Confined extends i {
                 (null == qn.field_v.field_Q) &&
                 (!of.field_a) &&
                 ((id.field_rb & 32) == 0)) {
-                vg.field_I.b(ng.field_a, 320, 40, 7381104, -1);
+                TunnelCamera.field_I.b(ng.field_a, 320, 40, 7381104, -1);
                 if (var23 != 0) {
                   var4 = (int)(-qn.field_v.field_B.field_D + qn.field_v.field_x.field_r[qn.field_v.field_x.field_t]) + 1;
-                  stackIn_55_0 = vg.field_I;
+                  stackIn_55_0 = TunnelCamera.field_I;
                   stackIn_55_1 = new String[]{Integer.toString(var4), Integer.toString(qn.field_v.field_J.field_o)};
                   if (1 == var4) {
-                    stackIn_56_2 = ee.field_P;
+                    stackIn_56_2 = MovingTunnelEntity.field_P;
                   } else {
                     stackIn_56_2 = AccountRequestState.field_d;
                   }
@@ -543,10 +543,10 @@ public final class Confined extends i {
               }
             } else {
               var4 = (int)(-qn.field_v.field_B.field_D + qn.field_v.field_x.field_r[qn.field_v.field_x.field_t]) + 1;
-              stackIn_55_0 = vg.field_I;
+              stackIn_55_0 = TunnelCamera.field_I;
               stackIn_55_1 = new String[]{Integer.toString(var4), Integer.toString(qn.field_v.field_J.field_o)};
               if (1 == var4) {
-                stackIn_56_2 = ee.field_P;
+                stackIn_56_2 = MovingTunnelEntity.field_P;
               } else {
                 stackIn_56_2 = AccountRequestState.field_d;
               }
@@ -631,7 +631,7 @@ public final class Confined extends i {
               ef.field_tb < 2850) {
               var18Lifetime1 = var18Lifetime1 + (-2800 + ef.field_tb) * (2850 - ef.field_tb) * 127 / 625;
             }
-            pm.b(var18Lifetime1, 3);
+            TunnelEntity.b(var18Lifetime1, 3);
             fd.field_e.field_z = var17;
           }
           if (hc.field_u != null &&
@@ -640,12 +640,12 @@ public final class Confined extends i {
           }
           if (of.field_a &&
             0 == (32 & we.field_a)) {
-            vg.field_I.b(qk.field_b, 320, 196, 16777215, -1);
+            TunnelCamera.field_I.b(qk.field_b, 320, 196, 16777215, -1);
           }
           if (pa.field_b >= 0 &&
             0 == (32 & pa.field_b)) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 376, 16711680, 32);
-            vg.field_I.b(fg.field_nb, 320, 76, 16744576, -1);
+            TunnelCamera.field_I.b(fg.field_nb, 320, 76, 16744576, -1);
           }
           boolean decompiledFrameRemainder1 = true;
           SoftwareRasterizer.field_l = 480;
@@ -780,7 +780,7 @@ public final class Confined extends i {
           boolean decompiledSharedTail0 = !(ka.k(-58));
           if (!decompiledSharedTail0) {
             SoftwareRasterizer.darkenRectangleHalf(0, 0, 640, 480);
-            SoftwareRasterizer.fillRectangleAlpha(-30 - hn.d(param0 ^ 43292) / 2 + 320, 240 - IntrusiveNodeHashTable.a(true) / 2 - 20, 60 + hn.d(24860), IntrusiveNodeHashTable.a(true) + 40, 0, 150);
+            SoftwareRasterizer.fillRectangleAlpha(-30 - GameSession.getDialogContentWidth(param0 ^ 43292) / 2 + 320, 240 - IntrusiveNodeHashTable.a(true) / 2 - 20, 60 + GameSession.getDialogContentWidth(24860), IntrusiveNodeHashTable.a(true) + 40, 0, 150);
             pi.j(-1101556575);
             decompiledSharedTail0 = (var23 != 0);
           }
@@ -841,7 +841,7 @@ public final class Confined extends i {
         var7 = field_J ? 1 : 0;
         try {
           if (IsaacRandom.field_d == null) {
-            ca.a(il.field_cb, -1856653215);
+            ca.a(ExpandingPulseProjectile.field_cb, -1856653215);
             Bzip2State.a((byte) -102);
             jc.a(ij.field_o, param0 ^ -10312, 50.0f);
             this.h(param0 ^ -51295);
@@ -874,10 +874,10 @@ public final class Confined extends i {
             this.h(51200);
             e.field_a = od.a(ka.field_N, "", "missiles/concussion");
             e.field_a.b(204);
-            h.field_Y = od.a(ka.field_N, "", "missiles/homing");
-            h.field_Y.b(204);
-            hn.field_f = od.a(ka.field_N, "", "missiles/cluster");
-            hn.field_f.b(204);
+            WingPod.field_Y = od.a(ka.field_N, "", "missiles/homing");
+            WingPod.field_Y.b(204);
+            GameSession.field_f = od.a(ka.field_N, "", "missiles/cluster");
+            GameSession.field_f.b(204);
             tk.field_a = od.a(ka.field_N, "", "missiles/cluster-shell");
             tk.field_a.b(102);
             u.field_T = od.a(ka.field_N, "", "missiles/nuclear");
@@ -991,10 +991,10 @@ public final class Confined extends i {
                   var5++;
                 }
                 var5Lifetime1 = 0;
-                while (ee.field_I[var2_int] > var5Lifetime1) {
+                while (MovingTunnelEntity.field_I[var2_int] > var5Lifetime1) {
                   var6Lifetime1Lifetime1 = GameCanvas.field_a.getFileIdByName(0, si.field_e[var2_int] + "ready" + (var5Lifetime1 + 1), -114);
-                  ee.field_H[var2_int][var5Lifetime1] = var6Lifetime1Lifetime1;
-                  ee.field_O[var2_int][var5Lifetime1] = va.a((int) i.field_u.getFile((byte) -2, 0, var6Lifetime1Lifetime1)[0], 255);
+                  MovingTunnelEntity.field_H[var2_int][var5Lifetime1] = var6Lifetime1Lifetime1;
+                  MovingTunnelEntity.field_O[var2_int][var5Lifetime1] = va.a((int) i.field_u.getFile((byte) -2, 0, var6Lifetime1Lifetime1)[0], 255);
                   li.field_m.a(var4Lifetime2, 61, var6Lifetime1Lifetime1, 192);
                   var5Lifetime1++;
                 }
@@ -1023,7 +1023,7 @@ public final class Confined extends i {
             pi.field_S.setAsRasterTarget((byte) 111);
             var2_ref2 = null;
             pn.field_a = bj.a("", ih.field_d, ul.field_U, "fonts_bottomheavy16", (byte) 38);
-            vg.field_I = bj.a("", ih.field_d, ul.field_U, "fonts_bottomheavy32", (byte) 38);
+            TunnelCamera.field_I = bj.a("", ih.field_d, ul.field_U, "fonts_bottomheavy32", (byte) 38);
             ei.field_mb = nm.a(ih.field_d, "shields_friend_small", param0 + 96, "");
             IntrusiveNodeHashTable.field_h = f.a(8364, ei.field_mb, 96);
             uc.field_U = nm.a(ih.field_d, "shields_enemy_small", 1, "");
@@ -1039,7 +1039,7 @@ public final class Confined extends i {
             qd.field_c = nm.a(ih.field_d, "shields_invincible_flash_large", 1, "");
             jc.a(wl.field_a, 10265, 70.0f);
             this.h(51200);
-            pm.field_w = nm.a(ih.field_d, "powerup_sphere", 1, "");
+            TunnelEntity.field_w = nm.a(ih.field_d, "powerup_sphere", 1, "");
             m.field_i = nm.a(ih.field_d, "powerup_icons", 1, "");
             jc.a(wl.field_a, 10265, 73.0f);
             this.h(51200);
@@ -1059,7 +1059,7 @@ public final class Confined extends i {
                 dn.field_c = nm.a(ih.field_d, "interface_bars", 1, "");
                 gd.field_t = nm.a(ih.field_d, "interface_confined_decoration", 1, "");
                 cj.field_a = va.a(126, nm.a(ih.field_d, "menu_frame", 1, ""));
-                ah.field_T = va.a(123, nm.a(ih.field_d, "menu_button_frame", 1, ""));
+                AcceleratingProjectile.field_T = va.a(123, nm.a(ih.field_d, "menu_button_frame", 1, ""));
                 lh.field_c = va.a(param0 ^ -44, nm.a(ih.field_d, "menu_button_frame_raised", 1, ""));
                 ui.field_a = dh.a(false, "normal_key", "", ih.field_d);
                 qe.field_J = dh.a(false, "wide_key", "", ih.field_d);
@@ -1081,10 +1081,10 @@ public final class Confined extends i {
               }
             }
             ih.field_d.field_k = 0;
-            cl.field_W = new hl(oj.field_C, ih.field_d, 6, 128);
+            PowerUpPickup.field_W = new hl(oj.field_C, ih.field_d, 6, 128);
             ih.field_d = null;
             oj.field_C = null;
-            ti.a(cl.field_W);
+            ti.a(PowerUpPickup.field_W);
             am.g(-4258);
             return;
           }
@@ -1129,7 +1129,7 @@ public final class Confined extends i {
             nn.field_o = fk.a(jd.field_b, "", "friend-shield-lost").a();
             an.field_q = fk.a(jd.field_b, "", "enemy-shield-lost").a();
             ih.field_e = fk.a(jd.field_b, "", "enemy-shot-fire").a();
-            kh.field_fb = fk.a(jd.field_b, "", "enemy-shot-ambient").a();
+            ProjectileRay.field_fb = fk.a(jd.field_b, "", "enemy-shot-ambient").a();
             FrameTimer.field_e = fk.a(jd.field_b, "", "enemy-shot-hit").a();
             we.field_b = fk.a(jd.field_b, "", "enemy-laser-ambient").a();
             am.g(-4258);
@@ -1145,8 +1145,8 @@ public final class Confined extends i {
             d.field_g = fk.a(jd.field_b, "", "friend-shot-fire").a();
             og.field_f = fk.a(jd.field_b, "", "friend-shot-hit").a();
             qj.field_b = fk.a(jd.field_b, "", "friend-power-shot-fire").a();
-            vb.field_f = fk.a(jd.field_b, "", "friend-power-shot-hit").a();
-            hf.field_T = fk.a(jd.field_b, "", "friend-laser-ambient").a();
+            DequeCursor.field_f = fk.a(jd.field_b, "", "friend-power-shot-hit").a();
+            HomingProjectile.field_T = fk.a(jd.field_b, "", "friend-laser-ambient").a();
             ki.field_a = fk.a(jd.field_b, "", "friend-electrocute-ambient").a();
             ca.field_r = fk.a(jd.field_b, "", "enemy-electrocute-ambient").a();
             se.field_a = fk.a(jd.field_b, "", "friend-electrocute-trying").a();
@@ -1157,7 +1157,7 @@ public final class Confined extends i {
             jd.field_a = fk.a(jd.field_b, "", "charge-cannon-hit").a();
             th.field_bb = fk.a(jd.field_b, "", "disruption-charge").a();
             fg.field_mb = fk.a(jd.field_b, "", "disruption-fire").a();
-            hm.field_pb = fk.a(jd.field_b, "", "disruption-ambient").a();
+            LightningArc.field_pb = fk.a(jd.field_b, "", "disruption-ambient").a();
             n.field_a = fk.a(jd.field_b, "", "concussion-missile-fire").a();
             ul.field_P = fk.a(jd.field_b, "", "homing-missile-fire").a();
             pe.field_o = fk.a(jd.field_b, "", "cluster-missile-fire").a();
@@ -1165,7 +1165,7 @@ public final class Confined extends i {
             ke.field_cb = fk.a(jd.field_b, "", "concussion-missile-ambient").a();
             fj.field_G = fk.a(jd.field_b, "", "homing-missile-ambient").a();
             un.field_h = fk.a(jd.field_b, "", "cluster-missile-ambient").a();
-            pm.field_x = fk.a(jd.field_b, "", "nuclear-missile-ambient").a();
+            TunnelEntity.field_x = fk.a(jd.field_b, "", "nuclear-missile-ambient").a();
             SpriteGeometry.field_y = fk.a(jd.field_b, "", "cluster-shell-ambient").a();
             bn.field_b = fk.a(jd.field_b, "", "concussion-homing-missile-explode").a();
             ib.field_J = fk.a(jd.field_b, "", "cluster-missile-explode").a();
@@ -1211,9 +1211,9 @@ public final class Confined extends i {
             jd.field_b = null;
             GameAppletShell.field_c = gi.a(var2, (byte) -65, PrimaryNodeDeque.field_b, "music/music", "");
             PrimaryNodeDeque.field_b = null;
-            h.field_R = new dd(GameAppletShell.field_c);
-            h.field_R.b(64 * hd.field_f >> 7);
-            h.field_R.b(DirectByteStorage.field_j[0], 32);
+            WingPod.field_R = new dd(GameAppletShell.field_c);
+            WingPod.field_R.b(64 * hd.field_f >> 7);
+            WingPod.field_R.b(DirectByteStorage.field_j[0], 32);
             am.g(-4258);
             return;
           }
@@ -1221,7 +1221,7 @@ public final class Confined extends i {
           if (param0 != -95) {
             field_K = (rm[]) null;
           }
-          sa.a((byte) -35, 50);
+          DampedProjectile.a((byte) -35, 50);
           ti.a(0, 0, 640, 376);
           ti.b(ua.a(true));
           ni.field_a = RawPcmStream.b(rj.field_b, 100, 0);
@@ -1233,10 +1233,10 @@ public final class Confined extends i {
           da.field_j = RawPcmStream.b(rj.field_b, 29, 0);
           da.field_j.c(-1);
           cb.field_a.a(da.field_j);
-          qn.field_v = new hn();
+          qn.field_v = new GameSession();
           md.d(param0 ^ 39);
-          mm.a(480, 320, lh.field_c, cj.field_a, ah.field_T, 4243584, (byte) -126, 240, 9805732, 30, 5, 16777215, pn.field_a, 20, pn.field_a, 16, 50, 20, 0, 20, 16);
-          he.field_d.a(h.field_R);
+          mm.a(480, 320, lh.field_c, cj.field_a, AcceleratingProjectile.field_T, 4243584, (byte) -126, 240, 9805732, 30, 5, 16777215, pn.field_a, 20, pn.field_a, 16, 50, 20, 0, 20, 16);
+          he.field_d.a(WingPod.field_R);
           da.field_e = og.a(false, (byte) 55);
           qa.field_a = true;
           return;
@@ -1263,7 +1263,7 @@ public final class Confined extends i {
           var2 = 0;
           do {
             if (!(var2 < wc.field_hc)) {
-              ql.a(false);
+              StageDirector.clearIndexedSpriteDecodeBuffers(false);
               break;
             }
             var1[var2] = new bm(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], rg.field_I[var2], sd.field_f[var2], rj.field_f[var2], an.field_p);
@@ -1372,10 +1372,10 @@ public final class Confined extends i {
               if (!li.field_l) {
                 ol.a((byte) 8);
                 if (var3 != 0) {
-                  vb.b((byte) 119);
+                  DequeCursor.openStartupLogin((byte) 119);
                 }
               } else {
-                vb.b((byte) 119);
+                DequeCursor.openStartupLogin((byte) 119);
               }
               cj.field_d = false;
             }
@@ -1384,8 +1384,8 @@ public final class Confined extends i {
           boolean decompiledFrameRemainder2 = true;
           if (ci.field_e == 20 &&
             !tj.a(true)) {
-            if (null != lc.field_J) {
-              r.a(lc.field_J, -1, 3);
+            if (null != TunnelMesh.field_J) {
+              r.a(TunnelMesh.field_J, -1, 3);
             }
             if (fi.field_a == 1) {
               tj.a(true, 480);
@@ -1404,7 +1404,7 @@ public final class Confined extends i {
                   }
                   if (decompiledFrameRemainder2) {
                     if (fi.field_a == 5) {
-                      h.a((byte) -6, false);
+                      WingPod.a((byte) -6, false);
                       decompiledFrameRemainder2 = (var3 != 0);
                     }
                     if (decompiledFrameRemainder2) {
@@ -1448,18 +1448,18 @@ public final class Confined extends i {
           }
           if (vl.field_b) {
             eg.field_i = eg.field_i - 1;
-            h.field_R.b(eg.field_i * hd.field_f >> 9);
+            WingPod.field_R.b(eg.field_i * hd.field_f >> 9);
             if (0 == eg.field_i) {
-              he.field_d.b(h.field_R);
+              he.field_d.b(WingPod.field_R);
               sg.f((byte) 105);
               md.d(-102);
-              h.field_R.d();
-              h.field_R.b(hd.field_f * 64 >> 7);
-              h.field_R.b(DirectByteStorage.field_j[0], 32);
+              WingPod.field_R.d();
+              WingPod.field_R.b(hd.field_f * 64 >> 7);
+              WingPod.field_R.b(DirectByteStorage.field_j[0], 32);
               da.field_e = og.a(false, (byte) 55);
               sf.a(false, 36);
-              qn.field_v.c(-87);
-              qn.field_v = new hn();
+              qn.field_v.stopSceneSoundSources(-87);
+              qn.field_v = new GameSession();
               id.field_rb = -1;
               pa.field_b = -1;
               DelegatingCanvas.field_a = false;
@@ -1612,7 +1612,7 @@ public final class Confined extends i {
           }
           boolean decompiledFrameRemainder0 = true;
           ii.c((byte) 74);
-          qn.field_v.f(0);
+          qn.field_v.tickGameSession(0);
           wg.field_b = true;
           id.field_rb = 63 & id.field_rb + 1;
           if ((pa.field_b < 0) &&

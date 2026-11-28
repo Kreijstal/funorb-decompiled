@@ -250,7 +250,7 @@ final class SplitSpecial extends SpecialOrder {
           if (param1 != 3) {
             field_p = (UiComponent) null;
           }
-          var3 = this.creature.a(15, param0);
+          var3 = this.creature.resolveCreature(15, param0);
           var4 = new SplitEvent(this.moveId, new CreatureRef(var3));
           stackIn_4_0 = var4;
           return (CreatureEvent) ((Object) stackIn_4_0);

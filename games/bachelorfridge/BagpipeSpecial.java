@@ -79,7 +79,7 @@ final class BagpipeSpecial extends SpecialOrder {
         int[][] var22 = null;
         var17 = BachelorFridge.field_y;
         try {
-          var18 = this.creature.a(49, param0);
+          var18 = this.creature.resolveCreature(49, param0);
           var4 = new BagpipeEvent(this.moveId, new CreatureRef(var18));
           this.field_k = var18.tileX;
           this.field_n = var18.tileY;

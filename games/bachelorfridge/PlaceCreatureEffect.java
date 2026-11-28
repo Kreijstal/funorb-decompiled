@@ -9,7 +9,7 @@ final class PlaceCreatureEffect extends EventEffect {
     int field_l;
 
     final void apply(BattleCreature param0, BattleState param1, int param2) {
-        BattleCreature var4 = this.target.a(52, param1);
+        BattleCreature var4 = this.target.resolveCreature(52, param1);
         if (param2 != 12) {
           return;
         }
@@ -17,7 +17,7 @@ final class PlaceCreatureEffect extends EventEffect {
           var4.tileY = this.field_m;
           var4.tileX = this.field_l;
           param1.tiles[this.field_l][this.field_m].occupant = var4;
-          var4.f(32);
+          var4.applyTileArrival(32);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "cn.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

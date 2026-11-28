@@ -24,19 +24,19 @@ public final class AceOfSkies extends NetworkGameClient {
           qq.a((byte) -100);
           if (jk.synthesizedSoundArchive != null) {
             if (hg.sharedSpriteArchive.ensureIndexLoaded((byte) 95) &&
-              hg.sharedSpriteArchive.c("basic", -14012)) {
-              if (!hg.sharedSpriteArchive.c("arialbold14", -14012)) {
+              hg.sharedSpriteArchive.tryLoadGroupByName("basic", -14012)) {
+              if (!hg.sharedSpriteArchive.tryLoadGroupByName("arialbold14", -14012)) {
                 fh.setLoadingProgress(-124, 4.0f, qo.a(bk.field_g, "arialbold14", hg.sharedSpriteArchive, 13525, ks.field_c));
                 return false;
               }
               if (CachedArchiveProvider.sharedFontMetricsArchive.ensureIndexLoaded((byte) -119) &&
-                CachedArchiveProvider.sharedFontMetricsArchive.c("arialbold14", -14012)) {
-                if (!hg.sharedSpriteArchive.c("arial13", -14012)) {
+                CachedArchiveProvider.sharedFontMetricsArchive.tryLoadGroupByName("arialbold14", -14012)) {
+                if (!hg.sharedSpriteArchive.tryLoadGroupByName("arial13", -14012)) {
                   fh.setLoadingProgress(-65, 4.0f, qo.a(bk.field_g, "arial13", hg.sharedSpriteArchive, 13525, ks.field_c));
                   return false;
                 }
                 if (CachedArchiveProvider.sharedFontMetricsArchive.ensureIndexLoaded((byte) -127) &&
-                  CachedArchiveProvider.sharedFontMetricsArchive.c("arial13", -14012)) {
+                  CachedArchiveProvider.sharedFontMetricsArchive.tryLoadGroupByName("arial13", -14012)) {
                   if (jk.synthesizedSoundArchive.ensureIndexLoaded((byte) 100) &&
                     jk.synthesizedSoundArchive.tryLoadAllGroups(0)) {
                     if (ub.vorbisSoundArchive.ensureIndexLoaded((byte) -73) &&

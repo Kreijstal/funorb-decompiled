@@ -26,7 +26,7 @@ final class ak extends IntrusiveNode {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (null != oi.field_c && (param0 < 0 ||
-            ek.field_h == gj.field_k)) {
+            LevelCompleteEntrancePhase.field_h == gj.field_k)) {
             if (tp.field_f.position == 0 &&
               (10000L + mp.field_p) < lo.correctedCurrentTimeMillis((byte) -118)) {
               tp.field_f.d(8, param0);

@@ -272,7 +272,7 @@ final class tc {
     }
 
     final static tc a(ResourceArchive param0, int param1) {
-        byte[] var2 = param0.b(param1, (byte) 95);
+        byte[] var2 = param0.getFlatFile(param1, (byte) 95);
         if (var2 == null) {
           return null;
         }

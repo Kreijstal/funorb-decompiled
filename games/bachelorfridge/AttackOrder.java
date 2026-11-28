@@ -201,7 +201,7 @@ final class AttackOrder extends CreatureOrder {
         int var6Lifetime1;
         var8 = BachelorFridge.field_y;
         try {
-          var10 = this.creature.a(44, param0);
+          var10 = this.creature.resolveCreature(44, param0);
           if (9 == var10.statusId) {
             stackIn_4_0 = this.a(true, false, true, param1 ^ -278);
             return (CreatureEvent) ((Object) stackIn_4_0);
@@ -242,7 +242,7 @@ final class AttackOrder extends CreatureOrder {
           }
           if (2 == var4.field_p) {
             var6Lifetime1 = this.field_k;
-            if (!param0.a(-9, var6Lifetime1, this.field_j, var10)) {
+            if (!param0.canCreatureLandInDirection(-9, var6Lifetime1, this.field_j, var10)) {
               stackIn_31_0 = new hba(this.moveId, this.creature, this.field_j, var6Lifetime1, false, false, false, true);
               return (CreatureEvent) ((Object) stackIn_31_0);
             }
@@ -320,8 +320,8 @@ final class AttackOrder extends CreatureOrder {
         try {
           var28_ref = (BasicMoveDefinition) (al.a(-103, this.moveId));
           var29 = var28_ref;
-          var5 = this.creature.a(67, param2);
-          var33 = haa.b(1, var5.d(125, this.moveId), this.field_j);
+          var5 = this.creature.resolveCreature(67, param2);
+          var33 = haa.b(1, var5.getAttackShape(125, this.moveId), this.field_j);
           var7 = var5.tileX;
           if (param0 <= 26) {
             this.field_j = -84;
@@ -331,7 +331,7 @@ final class AttackOrder extends CreatureOrder {
           stackIn_6_0 = (var9 > 0) ? 0 : 1;
           var10 = stackIn_6_0;
           if (var10 == 0) {
-            var9 = (int)(var5.a(var29, -5313) * (double)var9);
+            var9 = (int)(var5.getAttackDamageMultiplier(var29, -5313) * (double)var9);
           }
           var11 = 0;
           if (this.field_k != 31) {
@@ -381,7 +381,7 @@ final class AttackOrder extends CreatureOrder {
                     param2.height > var19) {
                     var20 = param2.tiles[var18][var19];
                     var21 = var20.occupant;
-                    if (var20.b((byte) -113)) {
+                    if (var20.hasDurability((byte) -113)) {
                       var22_ref_sl = new DamageTileEffect(var9, var18, var19);
                       param1.addLast(var22_ref_sl, true);
                       if (var20.terrain == 34) {

@@ -138,7 +138,7 @@ final class ResourceArchive {
             param1[1] != 0 ||
             0 != param1[2] ||
             param1[3] != 0)) {
-            var36 = vb.extractBytes(true, 6, this.field_d[param0]);
+            var36 = DequeCursor.extractBytes(true, 6, this.field_d[param0]);
             var26 = var36;
             var10 = var26;
             var27 = new PacketBuffer(var36);
@@ -146,7 +146,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var10 = vb.extractBytes(false, 6, this.field_d[param0]);
+            var10 = DequeCursor.extractBytes(false, 6, this.field_d[param0]);
           }
           try {
             var37 = SecondaryNodeDequeIterator.a(119, var10);
@@ -333,7 +333,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int[] a(byte param0, int param1) {
+    final synchronized int[] getFileIds(byte param0, int param1) {
         int[] var6 = null;
         int var4 = 0;
         int var5 = Confined.field_J ? 1 : 0;
@@ -381,7 +381,7 @@ final class ResourceArchive {
         return var2 != 0;
     }
 
-    final boolean b(String param0, int param1) {
+    final boolean hasGroupName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -474,7 +474,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final boolean a(String param0, String param1, int param2) {
+    final boolean tryLoadFileByName(String param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -522,7 +522,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized byte[] c(int param0, byte param1) {
+    final synchronized byte[] getFlatFile(int param0, byte param1) {
         if (!this.ensureIndexLoaded(0)) {
           return null;
         }
@@ -566,7 +566,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.field_h[param2][param1] != null) {
-            var7 = vb.extractBytes(false, 6, this.field_h[param2][param1]);
+            var7 = DequeCursor.extractBytes(false, 6, this.field_h[param2][param1]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -672,7 +672,7 @@ final class ResourceArchive {
         }
     }
 
-    final int d(int param0, byte param1) {
+    final int getFileCapacity(int param0, byte param1) {
         if (param1 > -70) {
           this.getGroupIdByName(-88, (String) (this.field_d[0]));
         }
@@ -763,7 +763,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int c(int param0) {
+    final synchronized int getArchiveLoadPercent(int param0) {
         int var2;
         int var3;
         int var4;
@@ -791,7 +791,7 @@ final class ResourceArchive {
         return var4Lifetime1;
     }
 
-    final boolean a(String param0, int param1) {
+    final boolean tryLoadGroupByName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -823,7 +823,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized boolean a(int param0, byte param1) {
+    final synchronized boolean tryLoadFlatFile(int param0, byte param1) {
         if (!this.ensureIndexLoaded(param1 + 37)) {
           return false;
         }

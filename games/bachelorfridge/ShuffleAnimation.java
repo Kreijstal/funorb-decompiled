@@ -110,7 +110,7 @@ final class ShuffleAnimation extends EventAnimation {
           var7 = 0;
           var5Lifetime1 = var7;
           while (var4 != null) {
-            this.field_z[var7] = var4.target.a(-27449, this.screen);
+            this.field_z[var7] = var4.target.resolveCreatureView(-27449, this.screen);
             this.field_z[var7].field_p = -256;
             var4 = (PlaceCreatureEffect) (this.field_x.effects.nextForward(0));
             var7++;
@@ -219,7 +219,7 @@ final class ShuffleAnimation extends EventAnimation {
     private final void e(int param0) {
         CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
-        BattleCreature var2 = this.field_x.creature.a(107, this.screen.field_h);
+        BattleCreature var2 = this.field_x.creature.resolveCreature(107, this.screen.field_h);
         if (var2.isDown(param0 - 2147483560)) {
           return;
         }
@@ -228,7 +228,7 @@ final class ShuffleAnimation extends EventAnimation {
         }
         PlaceCreatureEffect var3 = (PlaceCreatureEffect) (this.field_x.effects.beginForward((byte) 90));
         while (var3 != null) {
-          var4 = var3.target.a(param0 ^ -2147456200, this.screen);
+          var4 = var3.target.resolveCreatureView(param0 ^ -2147456200, this.screen);
           var4.field_s.tileY = var3.field_m;
           var4.field_s.tileX = var3.field_l;
           this.screen.b(var4, (CreatureActor) null, true);
@@ -294,7 +294,7 @@ final class ShuffleAnimation extends EventAnimation {
                 }
               }
               if (var10 != null &&
-                param5.a(((BoardTile) (var10)).terrain, false)) {
+                param5.canTraverseTerrain(((BoardTile) (var10)).terrain, false)) {
                 if (((BoardTile) (var10)).occupant == null) {
                   var8_int = var9;
                 } else {

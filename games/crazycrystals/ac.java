@@ -7,9 +7,9 @@ final class ac extends nf {
     private int field_i;
     static String field_k;
 
-    final f a(boolean param0, int param1, int param2, int param3, ta param4) {
+    final PuzzleTile a(boolean param0, int param1, int param2, int param3, ta param4) {
         RuntimeException var6 = null;
-        f stackIn_2_0 = null;
+        PuzzleTile stackIn_2_0 = null;
         Object stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -18,7 +18,7 @@ final class ac extends nf {
         try {
           this.field_i = this.field_i + param3;
           if (param0) {
-            stackIn_2_0 = (f) null;
+            stackIn_2_0 = (PuzzleTile) null;
             return stackIn_2_0;
           }
           this.field_h = this.field_h + 1;
@@ -27,7 +27,7 @@ final class ac extends nf {
           } else {
             stackIn_6_0 = new gh(IsaacRandom.field_g, 0, 0);
           }
-          return (f) (stackIn_6_0);
+          return (PuzzleTile) (stackIn_6_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -108,14 +108,14 @@ final class ac extends nf {
     }
 
     final static String c(int param0) {
-        if (lc.field_c == l.field_b) {
+        if (lc.field_c == ResultScenePhase.field_b) {
           return dg.field_a;
         }
         int var1 = 17 % ((param0 + 79) / 38);
         if (!gk.field_e.b(-67)) {
           return gk.field_e.a(120);
         }
-        if (sg.field_b == l.field_b) {
+        if (sg.field_b == ResultScenePhase.field_b) {
           return gk.field_e.a(124);
         }
         return jd.field_G;

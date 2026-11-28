@@ -2137,7 +2137,7 @@ final class GameScreen {
             var1 = MidiPcmStream.field_O.g((byte) -39);
           }
           if (0 == var1.length()) {
-            var1 = ResourceArchive.a((byte) -116);
+            var1 = ResourceArchive.getCachedPlayerName((byte) -116);
           }
           if (var1.length() == 0) {
             var1 = wc.field_i;

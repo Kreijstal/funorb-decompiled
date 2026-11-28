@@ -98,7 +98,7 @@ final class lfa extends k {
               return true;
             }
             if (ri.field_a == 74) {
-              ((BattleScreen) (var1)).field_h.a(dw.field_f, true, ig.field_m);
+              ((BattleScreen) (var1)).field_h.readTurnUpdates(dw.field_f, true, ig.field_m);
               if (!((BattleScreen) (var1)).field_h.field_U.isEmpty(12917)) {
                 ((BattleScreen) (var1)).field_g = ((BattleUpdate) (((BattleScreen) (var1)).field_h.field_U.beginBackward(6))).field_j;
               }
@@ -122,7 +122,7 @@ final class lfa extends k {
                   stackIn_51_0 = 0;
                 }
                 var7 = stackIn_51_0;
-                ((BattleScreen) (var1)).field_h.a(var2, -16292, var3_int != 0);
+                ((BattleScreen) (var1)).field_h.setTurnPhase(var2, -16292, var3_int != 0);
                 ((BattleScreen) (var1)).field_h.field_Q = var5;
                 ((BattleScreen) (var1)).field_h.field_M = var4_int;
                 if (((BattleScreen) (var1)).field_h.field_o == 2) {

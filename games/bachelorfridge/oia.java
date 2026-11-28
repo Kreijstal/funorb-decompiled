@@ -78,7 +78,7 @@ final class oia extends TileEffect {
             this.field_g.addLast(var9, true);
           }
         }
-        BattleCreature.a(this.field_e.field_h.field_w, true, this.field_g, this.field_h);
+        BattleCreature.advanceEffectParticles(this.field_e.field_h.field_w, true, this.field_g, this.field_h);
         return false;
     }
 

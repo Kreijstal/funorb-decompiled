@@ -34,7 +34,7 @@ abstract class RasterBuffer {
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
           var9 = (CharSequence) ((Object) param2);
-          if (!hi.a((byte) -3, var9)) {
+          if (!BlastDebrisModel.isValidPlayerName((byte) -3, var9)) {
             stackIn_3_0 = or.field_a;
             return stackIn_3_0;
           }

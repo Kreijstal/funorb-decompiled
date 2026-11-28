@@ -3,10 +3,10 @@
  */
 final class aj extends ig {
     static int field_t;
-    static f field_s;
+    static PuzzleTile field_s;
 
-    aj(f param0) {
-        super((f) null, bd.field_n, param0, false);
+    aj(PuzzleTile param0) {
+        super((PuzzleTile) null, bd.field_n, param0, false);
         try {
           this.field_j = false;
         } catch (RuntimeException runtimeException) {
@@ -62,7 +62,7 @@ final class aj extends ig {
         }
     }
 
-    final void c(int param0, int param1, f[][] param2, int param3) {
+    final void c(int param0, int param1, PuzzleTile[][] param2, int param3) {
         try {
           param2[param0][param3] = this.b(param2, param0, (byte) -118, param3);
           if (param1 != 0) {
@@ -94,7 +94,7 @@ final class aj extends ig {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -91 % ((param0 + 46) / 45);
-          if (sg.field_b == l.field_b) {
+          if (sg.field_b == ResultScenePhase.field_b) {
             return null;
           }
           if (sg.field_b == io.field_P &&
@@ -105,7 +105,7 @@ final class aj extends ig {
           }
           ne.field_h = param1;
           nn.field_a = null;
-          sg.field_b = l.field_b;
+          sg.field_b = ResultScenePhase.field_b;
           stackIn_8_0 = null;
           return (AccountServiceResult) (stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -141,6 +141,6 @@ final class aj extends ig {
 
     static {
         IntrusiveDeque discarded$0 = new IntrusiveDeque();
-        field_s = (f) ((Object) new pj(-1, 0));
+        field_s = (PuzzleTile) ((Object) new WallTile(-1, 0));
     }
 }

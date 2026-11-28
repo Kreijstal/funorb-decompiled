@@ -223,7 +223,7 @@ final class PcmOutputWorker implements Runnable {
           oh.field_t = param3;
           om.field_d = param5;
           gd.field_G = param0;
-          h.field_q = param2;
+          RaiderDefinition.field_q = param2;
           if (param1 != -40) {
             field_c = (String) null;
           }

@@ -7,7 +7,7 @@ final class PlayerRoster {
     int field_a;
     boolean field_c;
 
-    final int a(byte param0) {
+    final int countRosterCreatures(byte param0) {
         int var4 = 0;
         int var2;
         BattleCreature[] var3;
@@ -27,7 +27,7 @@ final class PlayerRoster {
         return var2;
     }
 
-    final static int a(boolean param0) {
+    final static int pollMenuAction(boolean param0) {
         int stackIn_27_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -97,7 +97,7 @@ final class PlayerRoster {
         }
     }
 
-    final int b(byte param0) {
+    final int countLivingCreatures(byte param0) {
         int var4 = 0;
         int var2;
         BattleCreature[] var3;
@@ -119,7 +119,7 @@ final class PlayerRoster {
         return var2;
     }
 
-    final boolean a(byte param0, int param1) {
+    final boolean hasLivingCreatureWithStatus(byte param0, int param1) {
         int var4 = 0;
         BattleCreature[] var3;
         BattleCreature var5;
@@ -127,7 +127,7 @@ final class PlayerRoster {
         var6 = BachelorFridge.field_y;
         var3 = this.field_b;
         if (param0 > -19) {
-          PlayerRoster.a(false);
+          PlayerRoster.pollMenuAction(false);
         }
         for (var4 = 0; var3.length > var4; var4++) {
           var5 = var3[var4];
@@ -140,7 +140,7 @@ final class PlayerRoster {
         return false;
     }
 
-    final void a(int param0, BattleCreature param1) {
+    final void addCreature(int param0, BattleCreature param1) {
         if (param0 != -20836) {
           return;
         }

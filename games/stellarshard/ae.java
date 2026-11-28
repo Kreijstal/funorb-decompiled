@@ -322,7 +322,7 @@ class ae extends ig {
           sj.field_B = new n[var3];
           bi.field_s = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
-            sj.field_B[var4] = ResourceArchive.a(16, var8);
+            sj.field_B[var4] = ResourceArchive.decodeLogoMesh(16, var8);
           }
           var10.g((byte) 95);
           var9 = 0;

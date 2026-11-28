@@ -47,14 +47,14 @@ final class wp {
             var8 = ca.a("%40", 0, var7, "@");
             var9 = ca.a("%26", 0, var8, "&");
             var10 = ca.a("%23", 0, var9, "#");
-            if (pj.field_w == null) {
+            if (WallTile.field_w == null) {
               return;
             }
             stackIn_11_0 = rd.field_g;
             stackIn_11_1 = param2 ^ 21859;
             stackIn_11_2 = null;
             stackIn_11_3 = null;
-            stackIn_11_4 = pj.field_w.getCodeBase();
+            stackIn_11_4 = WallTile.field_w.getCodeBase();
             stackIn_11_5 = new StringBuilder().append("clienterror.ws?c=").append(me.field_e).append("&u=");
             if (bn.field_f != null) {
               stackIn_12_2 = null;

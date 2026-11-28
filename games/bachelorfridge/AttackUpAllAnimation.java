@@ -70,13 +70,13 @@ final class AttackUpAllAnimation extends EventAnimation {
         DamageEffect var3_refLifetime1;
         if (param0 != -2602) {
           field_x = -4;
-          var7 = this.field_v.creature.a(63, this.screen.field_h);
+          var7 = this.field_v.creature.resolveCreature(63, this.screen.field_h);
           if (!var7.isDown(-100)) {
             var3_ref = (DamageEffect) (this.field_v.effects.beginForward((byte) 90));
             al.a(106, this.field_v.moveId);
             while (var3_ref != null) {
               var3_ref.apply(var7, this.screen.field_h, 12);
-              var8 = var3_ref.target.a(param0 ^ 24849, this.screen);
+              var8 = var3_ref.target.resolveCreatureView(param0 ^ 24849, this.screen);
               if (var8 != null) {
                 this.addChild(27799, new ActorAnimation(this.screen, var8));
                 this.addChild(27799, new iu(3));
@@ -89,13 +89,13 @@ final class AttackUpAllAnimation extends EventAnimation {
           }
           return;
         }
-        BattleCreature var9 = this.field_v.creature.a(63, this.screen.field_h);
+        BattleCreature var9 = this.field_v.creature.resolveCreature(63, this.screen.field_h);
         if (!var9.isDown(-100)) {
           var3_refLifetime1 = (DamageEffect) (this.field_v.effects.beginForward((byte) 90));
           al.a(106, this.field_v.moveId);
           while (var3_refLifetime1 != null) {
             var3_refLifetime1.apply(var9, this.screen.field_h, 12);
-            var10 = var3_refLifetime1.target.a(param0 ^ 24849, this.screen);
+            var10 = var3_refLifetime1.target.resolveCreatureView(param0 ^ 24849, this.screen);
             if (var10 != null) {
               this.addChild(27799, new ActorAnimation(this.screen, var10));
               this.addChild(27799, new iu(3));

@@ -25,7 +25,7 @@ final class ResourceArchive {
         field_f = null;
     }
 
-    final boolean a(String param0, boolean param1, String param2) {
+    final boolean tryLoadFileByName(String param0, boolean param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -158,7 +158,7 @@ final class ResourceArchive {
         return false;
     }
 
-    final boolean a(int param0, String param1) {
+    final boolean tryLoadGroupByName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -193,7 +193,7 @@ final class ResourceArchive {
         }
     }
 
-    final static void a(String param0, int param1, float param2) {
+    final static void setLoadingStatus(String param0, int param1, float param2) {
         try {
           IntrusiveDeque.field_h = param2;
           be.field_d = param0;
@@ -281,7 +281,7 @@ final class ResourceArchive {
         return false;
     }
 
-    final boolean b(String param0, byte param1) {
+    final boolean hasGroupName(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -568,7 +568,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int b(boolean param0) {
+    final synchronized int getArchiveLoadPercent(boolean param0) {
         int var2;
         int var3;
         int var4;
@@ -596,7 +596,7 @@ final class ResourceArchive {
         return var4Lifetime1;
     }
 
-    final static boolean c(boolean param0) {
+    final static boolean hasStatsButtonSetting(boolean param0) {
         if (param0) {
           field_g = (int[]) null;
         }
@@ -661,7 +661,7 @@ final class ResourceArchive {
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isMessageDialogActive(boolean param0) {
         if (param0) {
           field_j = (String) null;
         }
@@ -684,7 +684,7 @@ final class ResourceArchive {
         throw new IllegalArgumentException(param0 + " " + param1);
     }
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void clearSessionAndReloadPage(java.applet.Applet param0, boolean param1) {
         if (!param1) {
           return;
         }
@@ -799,7 +799,7 @@ final class ResourceArchive {
         }
     }
 
-    final static int a(int param0, int param1, boolean param2, boolean param3, String param4, String param5) {
+    final static int pollLoginHandshake(int param0, int param1, boolean param2, boolean param3, String param4, String param5) {
         try {
           int stackIn_5_0 = 0;
           int stackIn_32_0 = 0;
@@ -985,7 +985,7 @@ final class ResourceArchive {
             }
             if (param1 != 650) {
               var10 = (String) null;
-              ResourceArchive.a(-115, 60, false, false, (String) null, (String) null);
+              ResourceArchive.pollLoginHandshake(-115, 60, false, false, (String) null, (String) null);
             }
             if (IsaacRandom.field_g == null) {
               if (DequeCursor.field_e) {

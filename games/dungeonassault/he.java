@@ -23,8 +23,8 @@ final class he extends ip {
         String var5 = null;
         int var6 = 0;
         int var8 = 0;
-        h[] var9 = null;
-        h var10 = null;
+        RaiderDefinition[] var9 = null;
+        RaiderDefinition var10 = null;
         String var3_ref_StringLifetime1;
         String var3_ref_StringLifetime2;
         String var3_ref_StringLifetime3;
@@ -404,7 +404,7 @@ final class he extends ip {
             hp.field_b[16].field_F = var3_ref_StringLifetime15;
           }
           var3_ref_StringLifetime16 = ua.field_d;
-          var4Lifetime16 = h.field_n;
+          var4Lifetime16 = RaiderDefinition.field_n;
           if (null != hp.field_b[17]) {
             hp.field_b[17].field_F = var3_ref_StringLifetime16;
             hp.field_b[17].field_G = var4Lifetime16;
@@ -422,7 +422,7 @@ final class he extends ip {
             hp.field_b[19].field_G = var4Lifetime18;
           }
           var3_ref_StringLifetime19 = o.field_l;
-          var4Lifetime19 = ai.field_k;
+          var4Lifetime19 = DungeonTileState.field_k;
           if (null != hp.field_b[20]) {
             hp.field_b[20].field_F = var3_ref_StringLifetime19;
             hp.field_b[20].field_G = var4Lifetime19;
@@ -772,7 +772,7 @@ final class he extends ip {
           }
           var3_ref_StringLifetime66 = ea.field_a;
           var4Lifetime66 = an.field_x;
-          var5Lifetime32 = ai.field_b;
+          var5Lifetime32 = DungeonTileState.field_b;
           if (null != gh.field_i[32]) {
             gh.field_i[32].field_t = var4Lifetime66;
             gh.field_i[32].field_o = var5Lifetime32;
@@ -828,8 +828,8 @@ final class he extends ip {
           ByteStorage.field_a[2] = an.field_C;
           DiskCacheWorker.field_e = new String[254];
           for (var3 = 0; var3 < Bzip2State.field_p.length; var3++) {
-            DiskCacheWorker.field_e[var3 + wm.field_a] = od.field_b[var3];
-            DiskCacheWorker.field_e[var3 + (rj.field_l + wm.field_a)] = FullscreenFocusCanvas.field_h[var3];
+            DiskCacheWorker.field_e[var3 + PackedBitSet.field_a] = od.field_b[var3];
+            DiskCacheWorker.field_e[var3 + (rj.field_l + PackedBitSet.field_a)] = FullscreenFocusCanvas.field_h[var3];
           }
           for (var3Lifetime1 = 0; Raider.field_m.length > var3Lifetime1; var3Lifetime1++) {
             DiskCacheWorker.field_e[var3Lifetime1 + uf.field_a] = j.field_O[var3Lifetime1];
@@ -844,8 +844,8 @@ final class he extends ip {
             DiskCacheWorker.field_e[ok.field_z + (rj.field_l + var3Lifetime3)] = lh.field_n[var3Lifetime3];
           }
           for (var3Lifetime4 = 0; var3Lifetime4 < SecondaryNodeDequeIterator.field_j.length; var3Lifetime4++) {
-            DiskCacheWorker.field_e[cp.field_R + var3Lifetime4] = wm.field_i[var3Lifetime4];
-            DiskCacheWorker.field_e[var3Lifetime4 + (rj.field_l + cp.field_R)] = wm.field_d[var3Lifetime4];
+            DiskCacheWorker.field_e[cp.field_R + var3Lifetime4] = PackedBitSet.field_i[var3Lifetime4];
+            DiskCacheWorker.field_e[var3Lifetime4 + (rj.field_l + cp.field_R)] = PackedBitSet.field_d[var3Lifetime4];
           }
           ck.field_H = new fm();
           ck.field_H.a("<col=FF0000>" + qk.field_d + "</col>", -111, "attack");
@@ -867,7 +867,7 @@ final class he extends ip {
           ck.field_H.a(ClientException.a(ak.field_m, -1), param0 + 23560, "raiders");
           ck.field_H.a(ClientException.a(wo.field_f, -1), 102, "monsters");
           ck.field_H.a(ClientException.a(SecondaryNodeDeque.field_e, -1), param0 ^ -23517, "traps");
-          ck.field_H.a(ClientException.a(wm.field_j, -1), -115, "guardians");
+          ck.field_H.a(ClientException.a(PackedBitSet.field_j, -1), -115, "guardians");
           ck.field_H.a("<col=8B1717>", -103, "col_charge");
           ck.field_H.a("<col=2E5D17>", -106, "col_advance");
           ck.field_H.a("<col=8B8B2E>", -101, "col_flee");
@@ -1032,10 +1032,10 @@ final class he extends ip {
         try {
           if (null != AccountCreationResultPanel.field_Qb &&
             AccountCreationResultPanel.field_Qb.ensureIndexLoaded(-14354) &&
-            AccountCreationResultPanel.field_Qb.a(false, "benefits") &&
+            AccountCreationResultPanel.field_Qb.tryLoadGroupByName(false, "benefits") &&
             null != hf.field_pb &&
             hf.field_pb.ensureIndexLoaded(-14354) &&
-            hf.field_pb.a(false, "benefits")) {
+            hf.field_pb.tryLoadGroupByName(false, "benefits")) {
             ia.field_Q = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "headline");
             gn.field_c = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "blurbpane");
             tl.field_i = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "button");
@@ -1094,9 +1094,9 @@ final class he extends ip {
             var3Lifetime1 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(rp.field_e);
             var14 = jk.a(new String[]{kl.field_c[wo.field_g]}, rn.field_e, 30496);
-            var5 = Bzip2State.field_e.b(var14, wm.field_b);
-            var6Lifetime1 = Bzip2State.field_e.a(var14, wm.field_b, Bzip2State.field_e.field_E + Bzip2State.field_e.field_H);
-            var7Lifetime1 = (-var5 + wm.field_b) / 2 + lj.field_m;
+            var5 = Bzip2State.field_e.b(var14, PackedBitSet.field_b);
+            var6Lifetime1 = Bzip2State.field_e.a(var14, PackedBitSet.field_b, Bzip2State.field_e.field_E + Bzip2State.field_e.field_H);
+            var7Lifetime1 = (-var5 + PackedBitSet.field_b) / 2 + lj.field_m;
             var8 = (-var6Lifetime1 + e.field_d) / 2 + cb.field_b;
             var5 += 6;
             var7Lifetime1 -= 3;
@@ -1141,7 +1141,7 @@ final class he extends ip {
             qc.field_z.a();
             var9 = new RgbSprite(qc.field_z.field_E, qc.field_z.field_G);
             var9.e();
-            Bzip2State.field_e.a(var14, lj.field_m, cb.field_b, wm.field_b, e.field_d, 16777215, -1, 1, 1, Bzip2State.field_e.field_H + Bzip2State.field_e.field_E);
+            Bzip2State.field_e.a(var14, lj.field_m, cb.field_b, PackedBitSet.field_b, e.field_d, 16777215, -1, 1, 1, Bzip2State.field_e.field_H + Bzip2State.field_e.field_E);
             uc.a(1, 3, var9.field_E, var9, 0, var9.field_G, 0, false);
             qc.field_z.e();
             var9.h(0, 0);

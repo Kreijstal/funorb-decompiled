@@ -283,8 +283,8 @@ final class kc {
           var11 = 1;
           if (var9 > var8 ||
             param1.indexOf("<br>") != -1) {
-            if (lc.field_l == null) {
-              lc.field_l = new String[16];
+            if (TunnelMesh.field_l == null) {
+              TunnelMesh.field_l = new String[16];
             }
             if (var9 <= var8) {
               var12 = var8;
@@ -292,11 +292,11 @@ final class kc {
               var13 = var9 / var8;
               var12 = (-1 + var9 % var8 + var13) / var13 * 2 + var8;
             }
-            var11Lifetime1 = this.field_i.a(param1, new int[]{var12}, lc.field_l);
+            var11Lifetime1 = this.field_i.a(param1, new int[]{var12}, TunnelMesh.field_l);
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_i.c(lc.field_l[var13Lifetime2]);
+              var14 = this.field_i.c(TunnelMesh.field_l[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
@@ -407,7 +407,7 @@ final class kc {
         int var5 = -var4 + 48 >> 1;
         if ((1 << param2 & 50087) != 0) {
           m.field_i[param2].d(param3 + var5, param1 + var5, var4, var4, 256);
-          pm.field_w[qn.field_r >> 1 & 15].d(param3, param1, 48, 48, 256);
+          TunnelEntity.field_w[qn.field_r >> 1 & 15].d(param3, param1, 48, 48, 256);
           if (param0) {
             field_k = (java.applet.Applet) null;
             return;
@@ -415,14 +415,14 @@ final class kc {
           return;
         }
         m.field_i[param2].b(param3 + var5, param1 + var5, var4, var4);
-        pm.field_w[qn.field_r >> 1 & 15].d(param3, param1, 48, 48, 256);
+        TunnelEntity.field_w[qn.field_r >> 1 & 15].d(param3, param1, 48, 48, 256);
         if (param0) {
           field_k = (java.applet.Applet) null;
           return;
         }
     }
 
-    final static void a(String param0, pm param1, int param2, boolean param3) {
+    final static void a(String param0, TunnelEntity param1, int param2, boolean param3) {
         ce stackIn_7_0 = null;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -437,7 +437,7 @@ final class kc {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        vg var8 = null;
+        TunnelCamera var8 = null;
         double var9 = 0.0;
         double var11 = 0.0;
         double var13 = 0.0;
@@ -447,7 +447,7 @@ final class kc {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        pm var24 = null;
+        TunnelEntity var24 = null;
         ce var25 = null;
         var23 = Confined.field_J ? 1 : 0;
         try {
@@ -458,7 +458,7 @@ final class kc {
             ih.field_a = ih.field_a & ~(1 << um.field_a);
           }
           if (param3) {
-            stackIn_7_0 = vg.field_I;
+            stackIn_7_0 = TunnelCamera.field_I;
           } else {
             stackIn_7_0 = pn.field_a;
           }
@@ -470,13 +470,13 @@ final class kc {
           var6 = stackIn_13_0;
           var7 = var25.c(param0) >> 1;
           var8 = qn.field_v.field_m;
-          var8.m(10959);
+          var8.updateEffectiveViewOrigin(10959);
           var9 = -var8.field_T + param1.field_E;
           var11 = -var8.field_L + param1.field_t;
           var13 = param1.field_D - var8.field_O;
           if (param2 < 115) {
-            var24 = (pm) null;
-            kc.a((String) null, (pm) null, 53, false);
+            var24 = (TunnelEntity) null;
+            kc.a((String) null, (TunnelEntity) null, 53, false);
           }
           var15 = var8.field_R * var9 + var8.field_ab * var11 + var8.field_M * var13;
           var17 = var9 * var8.field_V + var11 * var8.field_U + var13 * var8.field_F;

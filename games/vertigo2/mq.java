@@ -147,11 +147,11 @@ final class mq extends va {
               }
             }
           } else {
-            sl.field_q[12] = ho.field_a;
+            sl.field_q[12] = BlastDebrisBatch.field_a;
           }
         } else {
           if ((1 << ln.field_d.field_B & ln.field_d.field_D.field_t) != 0) {
-            sl.field_q[12] = hi.field_p;
+            sl.field_q[12] = BlastDebrisModel.field_p;
           } else {
             if (ln.field_d.field_D.field_t == 0) {
               if ((1 << ln.field_d.field_B | ln.field_d.field_h) == -1 + (1 << ln.field_d.field_D.field_z)) {
@@ -160,7 +160,7 @@ final class mq extends va {
                 sl.field_q[12] = oq.field_H;
               }
             } else {
-              sl.field_q[12] = bh.field_H;
+              sl.field_q[12] = LevelSimulation.field_H;
             }
           }
         }

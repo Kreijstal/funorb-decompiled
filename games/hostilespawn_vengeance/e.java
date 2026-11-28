@@ -533,13 +533,13 @@ final class e {
         this.c(9);
         if (null != jk.field_c &&
           jk.field_c.ensureIndexLoaded(-15879) &&
-          jk.field_c.a(-8088, "members_expansion_screen") &&
-          jk.field_c.a(-8088, "arialish12") &&
-          jk.field_c.a(-8088, "pump32") &&
+          jk.field_c.tryLoadGroupByName(-8088, "members_expansion_screen") &&
+          jk.field_c.tryLoadGroupByName(-8088, "arialish12") &&
+          jk.field_c.tryLoadGroupByName(-8088, "pump32") &&
           cl.field_i != null &&
           cl.field_i.ensureIndexLoaded(-15879) &&
-          cl.field_i.a(-8088, "arialish12") &&
-          cl.field_i.a(param0 ^ 8149, "pump32")) {
+          cl.field_i.tryLoadGroupByName(-8088, "arialish12") &&
+          cl.field_i.tryLoadGroupByName(param0 ^ 8149, "pump32")) {
           im.field_g = qm.a("members_expansion_screen", param0 + 67, "frame", jk.field_c);
           jm.field_b = MouseInput.a("members_expansion_screen", param0 + 181, "arrow", jk.field_c);
           mn.field_e = ArchiveIndex.a("arialish12", cl.field_i, 84, jk.field_c, "");

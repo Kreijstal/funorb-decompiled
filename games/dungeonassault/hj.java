@@ -26,7 +26,7 @@ final class hj extends gd {
         }
         var4 = param0 + this.field_t;
         var5 = this.field_i + param2;
-        if (this.field_R.b(0, this.field_V)) {
+        if (this.field_R.canUseRaiderAbility(0, this.field_V)) {
           this.a(var4, var5, this.field_z, (byte) 105);
         }
         if (this.field_R.field_u == this.field_V &&
@@ -45,9 +45,9 @@ final class hj extends gd {
         SoftwareRasterizer.saveClip(var11);
         SoftwareRasterizer.setClip(var4 + 5, 5 + var5, 40 + var4 - 5, 40 + var5 - 5);
         if (k.field_c != this.field_V.field_b.field_n) {
-          this.field_V.field_b.a(60, var5, (byte) 102, -10 + var4, 60);
+          this.field_V.field_b.drawAnimation(60, var5, (byte) 102, -10 + var4, 60);
         } else {
-          this.field_V.field_b.a(40, var5, (byte) 102, var4, 40);
+          this.field_V.field_b.drawAnimation(40, var5, (byte) 102, var4, 40);
         }
         SoftwareRasterizer.restoreClip(var11);
         if (this.field_V.field_i != null) {

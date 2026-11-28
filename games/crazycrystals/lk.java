@@ -19,7 +19,7 @@ abstract class lk {
     final static void a(ResourceArchive param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
-        jg var5 = null;
+        ModelMesh var5 = null;
         int[] var6 = null;
         int var7 = 0;
         CipherPacketBuffer var8 = null;
@@ -42,7 +42,7 @@ abstract class lk {
           var10.f((byte) 50);
           ud.field_S = rd.a(var10, -95);
           je.field_d = new int[var3][];
-          rn.field_o = new jg[var3];
+          rn.field_o = new ModelMesh[var3];
           for (var4 = 0; var3 > var4; var4++) {
             rn.field_o[var4] = nh.a(-31741, var8);
           }
@@ -51,11 +51,11 @@ abstract class lk {
           var4Lifetime1 = var9;
           while (var3 > var9) {
             var5 = rn.field_o[var9];
-            var5.a(-30866, 6, 6, 1, 6);
-            var5.b(32767);
+            var5.scaleVertices(-30866, 6, 6, 1, 6);
+            var5.computeMeshBounds(32767);
             var6 = new int[]{var5.field_j + var5.field_x >> 1, var5.field_C + var5.field_E >> 1, var5.field_p + var5.field_e >> 1};
             je.field_d[var9] = var6;
-            var5.a(-var6[0], -var6[2], -var6[1], 0);
+            var5.translateVertices(-var6[0], -var6[2], -var6[1], 0);
             var9++;
           }
           return;
@@ -79,7 +79,7 @@ abstract class lk {
         if (param0 != 6) {
           return true;
         }
-        return sg.field_b == l.field_b ? true : false;
+        return sg.field_b == ResultScenePhase.field_b ? true : false;
     }
 
     static {

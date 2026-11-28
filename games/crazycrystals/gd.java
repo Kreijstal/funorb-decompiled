@@ -5,7 +5,7 @@ final class gd extends qc {
     private int field_j;
     private int field_k;
 
-    final f a(boolean param0, int param1, int param2, int param3, ta param4) {
+    final PuzzleTile a(boolean param0, int param1, int param2, int param3, ta param4) {
         RuntimeException var6 = null;
         aj stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -20,7 +20,7 @@ final class gd extends qc {
           this.field_j = this.field_j + 1;
           ph.a(1, (byte) 107, param1, param4);
           stackIn_3_0 = new aj(IsaacRandom.field_g);
-          return (f) ((Object) stackIn_3_0);
+          return (PuzzleTile) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

@@ -31,7 +31,7 @@ class tb implements ka {
         if (var3 != null) {
           return (he) (var3);
         }
-        byte[] var4 = this.field_i.a(true, param1);
+        byte[] var4 = this.field_i.getFlatFile(true, param1);
         if (param0 != 21922) {
           this.e(-77, -84);
         }

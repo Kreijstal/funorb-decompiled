@@ -53,7 +53,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param2);
-          if (!hi.a((byte) 118, var6)) {
+          if (!BlastDebrisModel.isValidPlayerName((byte) 118, var6)) {
             stackIn_2_0 = or.field_a;
             return stackIn_2_0;
           }
@@ -192,7 +192,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           hn.field_s = param9.field_X;
           vf.field_y = param9.field_i;
           PcmOutputWorker.field_f = param9.field_bb;
-          rn.field_z = param9.field_A;
+          MovingLevelTile.field_z = param9.field_A;
           ln.field_g = param9.field_D;
           al.field_s = param0.field_a;
           IntrusiveDequeCursor.field_d = param0.field_bb;
@@ -227,7 +227,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           param9.field_X = hn.field_s;
           param9.field_C = ga.field_hb;
           param9.field_bb = PcmOutputWorker.field_f;
-          param9.field_A = rn.field_z;
+          param9.field_A = MovingLevelTile.field_z;
           param9.field_o = b.field_m;
           param9.field_u = vj.field_f;
           param9.field_D = ln.field_g;

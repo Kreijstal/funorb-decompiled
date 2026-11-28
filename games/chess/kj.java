@@ -100,12 +100,12 @@ final class kj {
           this.field_e = param1;
           this.field_b = param2;
           if (this.field_e != null) {
-            this.field_e.a((byte) -67, 0);
+            this.field_e.getFileCapacity((byte) -67, 0);
           }
           if (this.field_b == null) {
             return;
           }
-          this.field_b.a((byte) -106, 0);
+          this.field_b.getFileCapacity((byte) -106, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

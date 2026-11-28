@@ -20,7 +20,7 @@ final class kj {
         bp.field_b = null;
         m.field_l = null;
         pd.field_g = null;
-        r.field_i = null;
+        LevelLostScene.field_i = null;
         ib.field_l = null;
         fo.field_m = null;
         if (param0 <= 16) {

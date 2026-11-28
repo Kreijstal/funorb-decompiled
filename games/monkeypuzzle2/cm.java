@@ -13,7 +13,7 @@ final class cm extends WidgetContainer implements ql {
     static String field_G;
 
     final static void k(int param0) {
-        if (!ResourceArchive.a(false)) {
+        if (!ResourceArchive.isMessageDialogActive(false)) {
           return;
         }
         jk.a(-95, false, param0);

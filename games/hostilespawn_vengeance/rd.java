@@ -147,11 +147,11 @@ final class rd {
             stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
           }
-          if (1 == this.field_c.f(-120)) {
+          if (1 == this.field_c.getGroupCapacity(-120)) {
             stackIn_6_0 = this.a(param1, 0, param2, (byte) 97);
             return stackIn_6_0;
           }
-          if (1 != this.field_c.c(0, param2)) {
+          if (1 != this.field_c.getFileCapacity(0, param2)) {
             throw new RuntimeException();
           }
           stackIn_9_0 = this.a(param1, param2, 0, (byte) 97);
@@ -181,7 +181,7 @@ final class rd {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_f.f(-114) == 1) {
+          if (this.field_f.getGroupCapacity(-114) == 1) {
             stackIn_3_0 = this.a(-117, 0, param0, param2);
             return stackIn_3_0;
           }
@@ -189,7 +189,7 @@ final class rd {
             var5 = (int[]) null;
             discarded$1 = this.a(44, 65, (int[]) null, 71);
           }
-          if (this.field_f.c(0, param2) != 1) {
+          if (this.field_f.getFileCapacity(0, param2) != 1) {
             throw new RuntimeException();
           }
           stackIn_8_0 = this.a(param1 - 76, param2, param0, 0);

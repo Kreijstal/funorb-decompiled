@@ -8,11 +8,11 @@ abstract class bo extends pn {
 
     protected Object clone() {
         pn var1 = (pn) (super.clone());
-        var1.field_l = (f) (this.field_l.clone());
+        var1.field_l = (PuzzleTile) (this.field_l.clone());
         return var1;
     }
 
-    final void a(int param0, int param1, int param2, f[][] param3, int param4, int param5, int param6, int param7) {
+    final void a(int param0, int param1, int param2, PuzzleTile[][] param3, int param4, int param5, int param6, int param7) {
         try {
           if (param0 < 92) {
             this.clone();
@@ -22,16 +22,16 @@ abstract class bo extends pn {
         }
     }
 
-    final f a(int param0, byte param1, int param2) {
+    final PuzzleTile a(int param0, byte param1, int param2) {
         if (param1 != -110) {
           java.awt.Frame var5 = (java.awt.Frame) null;
           bo.exitFullscreenFrame((PlatformTaskDispatcher) null, (java.awt.Frame) null, -60);
-          return (f) (this);
+          return (PuzzleTile) (this);
         }
-        return (f) (this);
+        return (PuzzleTile) (this);
     }
 
-    bo(f param0) {
+    bo(PuzzleTile param0) {
         super(param0);
     }
 

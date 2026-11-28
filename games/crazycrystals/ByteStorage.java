@@ -85,7 +85,7 @@ abstract class ByteStorage {
             uh.field_p == null &&
             !gn.d(false)) {
             if (li.field_a == null) {
-              if (ab.field_D instanceof ja) {
+              if (ab.field_D instanceof LevelCompleteScene) {
                 var1_int -= 20;
                 if (var11 != 0) {
                   var1_int -= 40;
@@ -118,7 +118,7 @@ abstract class ByteStorage {
               if (!uh.field_n &&
                 null == uh.field_p &&
                 !gn.d(false)) {
-                if (!(ab.field_D instanceof ja)) {
+                if (!(ab.field_D instanceof LevelCompleteScene)) {
                   var2 -= 40;
                   if (var11 != 0) {
                     var2 -= 20;
@@ -156,7 +156,7 @@ abstract class ByteStorage {
                     en.field_O == 0 &&
                     cn.field_d == null) {
                     var4_intLifetime1 = 16760896;
-                    var5_int = go.field_l.a(f.field_e, 152);
+                    var5_int = go.field_l.a(PuzzleTile.field_e, 152);
                     var6 = -(10 * var5_int) + 100;
                     if (var5_int >= 3) {
                       var6 += 10;
@@ -168,7 +168,7 @@ abstract class ByteStorage {
                       var7 + 4 + var3_int > IsaacRandom.field_h) {
                       var4_intLifetime1 = 16777215;
                     }
-                    go.field_l.a(f.field_e, 484, -go.field_l.field_o + (15 + (4 + var3_int + var6)), 152, 1000, var4_intLifetime1, -1, 1, 0, 20);
+                    go.field_l.a(PuzzleTile.field_e, 484, -go.field_l.field_o + (15 + (4 + var3_int + var6)), 152, 1000, var4_intLifetime1, -1, 1, 0, 20);
                   }
                 }
                 decompiledFrameRemainder1 = (var11 != 0);
@@ -180,7 +180,7 @@ abstract class ByteStorage {
               if ((qh.field_o.isEmpty()) &&
                 (en.field_O == 0) &&
                 (cn.field_d == null) &&
-                (!(ab.field_D instanceof ja)) &&
+                (!(ab.field_D instanceof LevelCompleteScene)) &&
                 (!go.field_i)) {
                 SoftwareRasterizer.setClip(484, 58, 636, var1_int - 4);
                 co.d((byte) -51);
@@ -258,7 +258,7 @@ abstract class ByteStorage {
                 decompiledFrameRemainder0 = (var11 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if (ab.field_D instanceof ja) {
+                if (ab.field_D instanceof LevelCompleteScene) {
                   if (qh.field_i >= 480 &&
                     qh.field_i < 640 &&
                     IsaacRandom.field_h >= var2 - 16 &&
@@ -367,11 +367,11 @@ abstract class ByteStorage {
             SoftwareRasterizer.resetClip();
             var2 = rc.field_a.size();
             stackIn_247_0 = 1;
-            stackIn_247_1 = jo.field_o;
+            stackIn_247_1 = CrystalTile.field_o;
           }
           if (stackIn_247_0 == stackIn_247_1) {
             var2 = 70;
-            if (60 > FrameTimer.field_b[jo.field_o]) {
+            if (60 > FrameTimer.field_b[CrystalTile.field_o]) {
               var2 = 60;
             }
           }
@@ -388,7 +388,7 @@ abstract class ByteStorage {
           go.field_l.c(var4Lifetime1, 560, 43, 0, -1);
           go.field_l.c(var4Lifetime1, 560, 42, 12640511, -1);
           if (!vh.field_a) {
-            if (!(ab.field_D instanceof ja) &&
+            if (!(ab.field_D instanceof LevelCompleteScene) &&
               !go.field_i) {
               var5_intLifetime1 = 0;
               var6Lifetime1 = 0;
@@ -432,19 +432,19 @@ abstract class ByteStorage {
                         var9++;
                         continue;
                       }
-                      jd.field_A.c(var6Lifetime1, 60, ek.field_f[var7Lifetime1]);
+                      jd.field_A.c(var6Lifetime1, 60, LevelCompleteEntrancePhase.field_f[var7Lifetime1]);
                       break;
                     }
                     decompiledFrameRemainder2 = false;
                   }
                   else {
-                    vj.field_a[3][(SecondaryIntrusiveDeque.field_d >> 2) % bp.field_c[3]].c(var6Lifetime1, 48, ek.field_f[var7Lifetime1]);
+                    vj.field_a[3][(SecondaryIntrusiveDeque.field_d >> 2) % bp.field_c[3]].c(var6Lifetime1, 48, LevelCompleteEntrancePhase.field_f[var7Lifetime1]);
                     jf.field_b[var7Lifetime1].a(-(jf.field_b[var7Lifetime1].field_n / 2) + (24 + var6Lifetime1), 110);
                   }
                   stackIn_293_0Lifetime1 = ~q.field_a[var7Lifetime1].field_i;
                   stackIn_293_1Lifetime1 = -1;
                   if (stackIn_293_0Lifetime1 < stackIn_293_1Lifetime1) {
-                    an.field_q.c(Integer.toString(q.field_a[var7Lifetime1].field_i), 23 + var6Lifetime1, 160, ek.field_f[var7Lifetime1], -1);
+                    an.field_q.c(Integer.toString(q.field_a[var7Lifetime1].field_i), 23 + var6Lifetime1, 160, LevelCompleteEntrancePhase.field_f[var7Lifetime1], -1);
                   }
                   var6Lifetime1 += 52;
                 }
@@ -454,7 +454,7 @@ abstract class ByteStorage {
                 return;
               }
             }
-            if (jo.field_o == 1) {
+            if (CrystalTile.field_o == 1) {
               var5Lifetime1 = null;
               if (uo.field_o == 19) {
                 var5Lifetime1 = ci.a(new String[]{"80C0FF", CipherPacketBuffer.field_t[0], CipherPacketBuffer.field_t[1]}, fb.field_e, 3);
@@ -1553,7 +1553,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("goback", 5236);
                 if (null != var2) {
-                  dp.field_i = fa.a((byte) -85, var2);
+                  ProfileDataRequest.field_i = fa.a((byte) -85, var2);
                 }
                 var2 = ah.a("otheroptions", 5236);
                 if (null != var2) {
@@ -1873,7 +1873,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("create_createanaccount", 5236);
                 if (var2 != null) {
-                  mj.field_d = fa.a((byte) -81, var2);
+                  LaserTraceCursor.field_d = fa.a((byte) -81, var2);
                 }
                 var2 = ah.a("create_username", 5236);
                 if (null != var2) {
@@ -2009,7 +2009,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("create_password_tooltip", 5236);
                 if (null != var2) {
-                  we.field_l = fa.a((byte) -109, var2);
+                  LevelProgressUpdate.field_l = fa.a((byte) -109, var2);
                 }
                 var2 = ah.a("create_password_hint", 5236);
                 if (var2 != null) {
@@ -2285,7 +2285,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("loading_graphics", 5236);
                 if (var2 != null) {
-                  dp.field_j = fa.a((byte) -80, var2);
+                  ProfileDataRequest.field_j = fa.a((byte) -80, var2);
                 }
                 var2 = ah.a("loading_models", 5236);
                 if (null != var2) {
@@ -2297,7 +2297,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("loading_soundeffects", 5236);
                 if (null != var2) {
-                  uc.field_a = fa.a((byte) -120, var2);
+                  MenuOverlay.field_a = fa.a((byte) -120, var2);
                 }
                 var2 = ah.a("loading_music", 5236);
                 if (var2 != null) {
@@ -2313,7 +2313,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("loading_extradata", 5236);
                 if (var2 != null) {
-                  l.field_a = fa.a((byte) -126, var2);
+                  ResultScenePhase.field_a = fa.a((byte) -126, var2);
                 }
                 var2 = ah.a("loading_languages", 5236);
                 if (null != var2) {
@@ -2795,7 +2795,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("hs_score", 5236);
                 if (null != var2) {
-                  ff.field_d = fa.a((byte) -116, var2);
+                  AnimatedResultScene.field_d = fa.a((byte) -116, var2);
                 }
                 var2 = ah.a("hs_end", 5236);
                 if (var2 != null) {
@@ -3151,7 +3151,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("fs_accept_countdown_pl", 5236);
                 if (null != var2) {
-                  jg.field_t = fa.a((byte) -72, var2);
+                  ModelMesh.field_t = fa.a((byte) -72, var2);
                 }
                 var2 = ah.a("fs_nonmember", 5236);
                 if (var2 != null) {
@@ -3392,31 +3392,31 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("mustlogin4,1", 5236);
                 if (null != var2) {
-                  f.field_h[1] = fa.a((byte) -70, var2);
+                  PuzzleTile.field_h[1] = fa.a((byte) -70, var2);
                 }
                 var2 = ah.a("mustlogin4,2", 5236);
                 if (var2 != null) {
-                  f.field_h[2] = fa.a((byte) -126, var2);
+                  PuzzleTile.field_h[2] = fa.a((byte) -126, var2);
                 }
                 var2 = ah.a("mustlogin4,3", 5236);
                 if (null != var2) {
-                  f.field_h[3] = fa.a((byte) -124, var2);
+                  PuzzleTile.field_h[3] = fa.a((byte) -124, var2);
                 }
                 var2 = ah.a("mustlogin4,4", 5236);
                 if (var2 != null) {
-                  f.field_h[4] = fa.a((byte) -97, var2);
+                  PuzzleTile.field_h[4] = fa.a((byte) -97, var2);
                 }
                 var2 = ah.a("mustlogin4,5", 5236);
                 if (null != var2) {
-                  f.field_h[5] = fa.a((byte) -90, var2);
+                  PuzzleTile.field_h[5] = fa.a((byte) -90, var2);
                 }
                 var2 = ah.a("mustlogin4,6", 5236);
                 if (null != var2) {
-                  f.field_h[6] = fa.a((byte) -77, var2);
+                  PuzzleTile.field_h[6] = fa.a((byte) -77, var2);
                 }
                 var2 = ah.a("mustlogin4,7", 5236);
                 if (null != var2) {
-                  f.field_h[7] = fa.a((byte) -66, var2);
+                  PuzzleTile.field_h[7] = fa.a((byte) -66, var2);
                 }
                 var2 = ah.a("mustlogin_notloggedin", 5236);
                 if (var2 != null) {

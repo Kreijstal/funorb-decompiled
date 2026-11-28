@@ -32,11 +32,11 @@ final class bc extends to {
             return stackIn_10_0;
           }
           String var3 = SectorCacheStore.field_g + var11;
-          if (!rj.field_b.a(var3, -126, "")) {
+          if (!rj.field_b.hasFileName(var3, -126, "")) {
             int stackIn_13_0 = -1;
             return stackIn_13_0;
           }
-          if (!rj.field_b.c(var3, -14012)) {
+          if (!rj.field_b.tryLoadGroupByName(var3, -14012)) {
             int stackIn_16_0 = rj.field_b.getGroupLoadPercentByName(var3, (byte) -79);
             return stackIn_16_0;
           }

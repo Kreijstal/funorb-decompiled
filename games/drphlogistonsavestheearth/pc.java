@@ -42,7 +42,7 @@ final class pc {
             field_b = (he[]) null;
           }
           param1 = ph.a(param1, (byte) 123, '_', "");
-          var3 = ResourceArchive.a(param1, -113);
+          var3 = ResourceArchive.reverseStringCodeUnits(param1, -113);
           stackIn_7_0 = (param2.indexOf(param1) != -1) || (param2.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -340,7 +340,7 @@ final class ja {
           lc.field_o = lc.field_o + 1;
         }
         if (this.field_a == 7) {
-          stackIn_13_0 = !(ResourceArchive.d(-116));
+          stackIn_13_0 = !(ResourceArchive.refreshReconnectDeadline(-116));
           var2 = wd.updateMembershipSlides(stackIn_13_0, false);
           if (var2 == 3) {
             if (PacketBuffer.field_k != null) {

@@ -439,14 +439,14 @@ class eg implements ad, cf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2.ensureIndexLoaded((byte) 127) &&
-            param2.a(false, "commonui")) {
+            param2.tryLoadGroupByName(false, "commonui")) {
             if (param0.ensureIndexLoaded((byte) 95) &&
-              param0.a(false, "commonui")) {
+              param0.tryLoadGroupByName(false, "commonui")) {
               if (param1 != 4) {
                 return false;
               }
               if (param3.ensureIndexLoaded((byte) 83) &&
-                param3.a(false, "button.gif")) {
+                param3.tryLoadGroupByName(false, "button.gif")) {
                 return true;
               }
               return false;

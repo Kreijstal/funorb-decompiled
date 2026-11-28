@@ -114,7 +114,7 @@ final class MenuSelectionCursor {
               }
               if (0 == this.field_l) {
                 if (!this.field_f &&
-                  !wo.field_s) {
+                  !PlayerState.field_s) {
                   return;
                 }
                 if (param1 < 0) {
@@ -139,7 +139,7 @@ final class MenuSelectionCursor {
             if (q.field_v != 0) {
               if (0 == this.field_l) {
                 if (!this.field_f &&
-                  !wo.field_s) {
+                  !PlayerState.field_s) {
                   return;
                 }
                 if (param1 < 0) {
@@ -164,7 +164,7 @@ final class MenuSelectionCursor {
             return;
           }
           if (!this.field_f &&
-            !wo.field_s) {
+            !PlayerState.field_s) {
             return;
           }
           if (param1 < 0) {
@@ -194,7 +194,7 @@ final class MenuSelectionCursor {
               }
               if (0 == this.field_l) {
                 if (!this.field_f &&
-                  !wo.field_s) {
+                  !PlayerState.field_s) {
                   return;
                 }
                 if (param1 < 0) {
@@ -219,7 +219,7 @@ final class MenuSelectionCursor {
             if (q.field_v != 0) {
               if (0 == this.field_l) {
                 if (!this.field_f &&
-                  !wo.field_s) {
+                  !PlayerState.field_s) {
                   return;
                 }
                 if (param1 < 0) {
@@ -244,7 +244,7 @@ final class MenuSelectionCursor {
             return;
           }
           if (!this.field_f &&
-            !wo.field_s) {
+            !PlayerState.field_s) {
             return;
           }
           if (param1 < 0) {
@@ -274,7 +274,7 @@ final class MenuSelectionCursor {
             return;
           }
           if (!this.field_f &&
-            !wo.field_s) {
+            !PlayerState.field_s) {
             return;
           }
           if (param1 < 0) {
@@ -299,7 +299,7 @@ final class MenuSelectionCursor {
                 return;
               }
               if (!this.field_f &&
-                !wo.field_s) {
+                !PlayerState.field_s) {
                 return;
               }
               if (param1 < 0) {
@@ -325,7 +325,7 @@ final class MenuSelectionCursor {
               return;
             }
             if (!this.field_f &&
-              !wo.field_s) {
+              !PlayerState.field_s) {
               return;
             }
             if (param1 < 0) {
@@ -352,7 +352,7 @@ final class MenuSelectionCursor {
               return;
             }
             if (!this.field_f &&
-              !wo.field_s) {
+              !PlayerState.field_s) {
               return;
             }
             if (param1 < 0) {
@@ -372,7 +372,7 @@ final class MenuSelectionCursor {
         }
         if (0 == this.field_l) {
           if (!this.field_f &&
-            !wo.field_s) {
+            !PlayerState.field_s) {
             return;
           }
           if (param1 >= 0) {

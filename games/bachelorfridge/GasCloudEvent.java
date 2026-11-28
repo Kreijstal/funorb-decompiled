@@ -168,8 +168,8 @@ final class GasCloudEvent extends SpecialEvent {
 
     final void a(BattleState param0, int param1) {
         try {
-          this.creature.a(74, param0);
-          param0.a(878, this.field_s, this.field_r, this.e((byte) -108), 30);
+          this.creature.resolveCreature(74, param0);
+          param0.hideTilesInMask(878, this.field_s, this.field_r, this.e((byte) -108), 30);
           int var3_int = -19 / ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "lp.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

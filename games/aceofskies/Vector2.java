@@ -16,7 +16,7 @@ final class Vector2 {
             return stackIn_2_0;
           }
           if (param2.ensureIndexLoaded((byte) -127)) {
-            String stackIn_7_0 = param0 + " - " + param2.a(-85) + "%";
+            String stackIn_7_0 = param0 + " - " + param2.getArchiveLoadPercent(-85) + "%";
             return stackIn_7_0;
           }
           String stackIn_5_0 = (String) (param1);

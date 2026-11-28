@@ -31,7 +31,7 @@ final class aq extends wc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -1) {
-            stackIn_4_0 = r.a(true, '*', param0.field_o.length());
+            stackIn_4_0 = LevelLostScene.repeatCharacter(true, '*', param0.field_o.length());
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

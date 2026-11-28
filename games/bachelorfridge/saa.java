@@ -38,12 +38,12 @@ final class saa {
             for (var2_int = 0; var2_int < 50; var2_int++) {
               if (mg.field_m.field_i[var2_int] != null) {
                 this.field_d.field_c.field_r[var2_int] = new FridgeCreature(mg.field_m.field_i[var2_int], 0, 0, this.field_d.field_c.field_i);
-                this.field_d.field_c.field_r[var2_int].field_g.a((byte) -121, ProxySocketConnector.field_f);
+                this.field_d.field_c.field_r[var2_int].field_g.clearAdvancedMoveSlots((byte) -121, ProxySocketConnector.field_f);
               }
             }
             var2 = (FridgeCreature) (this.field_d.field_c.field_m.beginForward((byte) 90));
             while (var2 != null) {
-              var2.field_g.a((byte) 13, ProxySocketConnector.field_f);
+              var2.field_g.clearAdvancedMoveSlots((byte) 13, ProxySocketConnector.field_f);
               var2 = (FridgeCreature) (this.field_d.field_c.field_m.nextForward(0));
             }
             this.field_d.field_c.field_n = mg.field_m.field_c;

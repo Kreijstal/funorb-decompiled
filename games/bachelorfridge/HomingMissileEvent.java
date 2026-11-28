@@ -56,8 +56,8 @@ final class HomingMissileEvent extends SpecialEvent {
         BattleCreature var3 = null;
         try {
           this.a(param0, (byte) -2);
-          var3 = this.creature.a(40, param0);
-          var3.j(-113);
+          var3 = this.creature.resolveCreature(40, param0);
+          var3.removeDefeatedCreatureFromTile(-113);
           int var4 = -119 / ((param1 - 12) / 35);
           var3.field_A = false;
         } catch (RuntimeException runtimeException) {

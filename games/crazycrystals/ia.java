@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ia extends ln {
+final class ia extends ScoreModifier {
     static int field_i;
     static String field_h;
     static int field_g;
 
-    final int a(int param0, byte param1) {
+    final int countPlayerApplications(int param0, byte param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = CrazyCrystals.field_B;

@@ -18,7 +18,7 @@ final class kj {
         field_d = null;
     }
 
-    final static void a(PcmSample param0, int param1, pm param2) {
+    final static void a(PcmSample param0, int param1, TunnelEntity param2) {
         try {
           da.a(param1, param1 - 96, param0, false, param2);
         } catch (RuntimeException runtimeException) {

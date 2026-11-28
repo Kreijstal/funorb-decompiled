@@ -20,12 +20,12 @@ final class ql extends ta {
         return (wj) null;
     }
 
-    final l b(boolean param0) {
+    final ResultScenePhase b(boolean param0) {
         if (!param0) {
-          return (l) ((Object) new o(60, new il()));
+          return (ResultScenePhase) ((Object) new o(60, new il()));
         }
         this.b(true);
-        return (l) ((Object) new o(60, new il()));
+        return (ResultScenePhase) ((Object) new o(60, new il()));
     }
 
     ql() {

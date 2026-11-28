@@ -72,16 +72,16 @@ final class RageAnimation extends EventAnimation {
         rq discarded$0 = null;
         Object var3 = null;
         int var5 = BachelorFridge.field_y;
-        BattleCreature var6 = this.field_x.creature.a(49, this.screen.field_h);
+        BattleCreature var6 = this.field_x.creature.resolveCreature(49, this.screen.field_h);
         if (param0 < 12) {
           this.d(-101);
         }
-        this.addChild(27799, new ActorAnimation(this.screen, this.field_x.field_r.a(-27449, this.screen)));
+        this.addChild(27799, new ActorAnimation(this.screen, this.field_x.field_r.resolveCreatureView(-27449, this.screen)));
         if (!var6.isDown(78)) {
           var3_ref = (EventEffect) (this.field_x.effects.beginForward((byte) 90));
           al.a(-52, this.field_x.moveId);
           while (var3_ref != null) {
-            var7 = var3_ref.target.a(-27449, this.screen);
+            var7 = var3_ref.target.resolveCreatureView(-27449, this.screen);
             discarded$0 = new rq(this.screen, var7.field_s.tileX, var7.field_s.tileY);
             var3_ref.apply(var6, this.screen.field_h, 12);
             var3_ref = (EventEffect) (this.field_x.effects.nextForward(0));

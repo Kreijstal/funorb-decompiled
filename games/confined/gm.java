@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gm extends ah {
+final class gm extends AcceleratingProjectile {
     static ok field_cb;
     static int[] field_bb;
-    private oi field_db;
-    private pm field_eb;
+    private DynamicLight field_db;
+    private TunnelEntity field_eb;
 
-    gm(hn param0, ee param1, double[] param2, double param3, double param4, double param5) {
+    gm(GameSession param0, MovingTunnelEntity param1, double[] param2, double param3, double param4, double param5) {
         super(param0, param1, 0.4, 0.02, 8.0, param2, param3, param4, param5, fj.field_G);
-        this.field_db = new oi((pm) (this));
+        this.field_db = new DynamicLight((TunnelEntity) (this));
         try {
-          this.field_eb = (pm) ((Object) param0.field_B);
+          this.field_eb = (TunnelEntity) ((Object) param0.field_B);
           this.field_eb.h(17086);
           kj.a(ul.field_P, 96, param1);
         } catch (RuntimeException runtimeException) {
@@ -19,7 +19,7 @@ final class gm extends ah {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void updateForTunnelSegment(int param0, int param1) {
         double var3;
         double var5;
         double var7;
@@ -45,7 +45,7 @@ final class gm extends ah {
             }
           }
         }
-        super.a(param0, param1);
+        super.updateForTunnelSegment(param0, param1);
         if (!this.field_z) {
           return;
         }
@@ -56,7 +56,7 @@ final class gm extends ah {
         this.field_eb = null;
     }
 
-    final void a(PrimaryNodeDeque param0, byte param1) {
+    final void collectEntityLights(PrimaryNodeDeque param0, byte param1) {
         double[] var13 = null;
         double[] var12 = null;
         double[] var11 = null;
@@ -87,10 +87,10 @@ final class gm extends ah {
         }
     }
 
-    final void g(int param0) {
+    final void handleDestruction(int param0) {
         if (param0 != 26402) {
-          oi var3 = (oi) null;
-          this.a((PrimaryNodeDeque) null, 0.183731807417079, -74, (vg) null, (oi) null);
+          DynamicLight var3 = (DynamicLight) null;
+          this.drawInTunnel((PrimaryNodeDeque) null, 0.183731807417079, -74, (TunnelCamera) null, (DynamicLight) null);
           if (null != this.field_eb) {
             this.field_eb.f((byte) -125);
             fl.a(this.a(-2384, bn.field_b, 1.5, 0.002, 0.5), 4);
@@ -107,10 +107,10 @@ final class gm extends ah {
         fl.a(this.a(-2384, bn.field_b, 1.5, 0.002, 0.5), 4);
     }
 
-    gm(hn param0, dj param1) {
+    gm(GameSession param0, PlayerShip param1) {
         super(param0, param1, 0.4, 0.02, 64.0, fj.field_G);
         double[] var4 = null;
-        this.field_db = new oi((pm) (this));
+        this.field_db = new DynamicLight((TunnelEntity) (this));
         try {
           var4 = new double[12];
           double[] var3 = var4;
@@ -146,7 +146,7 @@ final class gm extends ah {
         NanoFrameTimer.a(4, false, (byte) -101);
     }
 
-    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
+    final void drawInTunnel(PrimaryNodeDeque param0, double param1, int param2, TunnelCamera param3, DynamicLight param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -183,13 +183,13 @@ final class gm extends ah {
           stackIn_7_0 = (!(var12 * param3.field_N + (param3.field_H * var10 + param3.field_P * var8) > 0.0)) ? 0 : 1;
           var14 = stackIn_7_0;
           if (var14 != 0) {
-            this.a(h.field_Y, this.field_ab, param4, (byte) 64, param1, param0, param3, 512);
+            this.a(WingPod.field_Y, this.field_ab, param4, (byte) 64, param1, param0, param3, 512);
           }
           pa.a(-(this.field_C * var8 * 0.8) + this.field_E, 0.2 * this.field_C, (byte) -11, 256, this.field_D - var12 * this.field_C * 0.8, this.field_t - 0.8 * (var10 * this.field_C), wb.field_a, param1, param3);
           if (var14 != 0) {
             return;
           }
-          this.a(h.field_Y, this.field_ab, param4, (byte) 64, param1, param0, param3, 512);
+          this.a(WingPod.field_Y, this.field_ab, param4, (byte) 64, param1, param0, param3, 512);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

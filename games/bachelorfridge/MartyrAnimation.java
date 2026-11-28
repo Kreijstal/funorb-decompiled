@@ -28,7 +28,7 @@ final class MartyrAnimation extends EventAnimation {
         int var5;
         CreatureActor var6;
         var5 = BachelorFridge.field_y;
-        var2 = this.field_w.creature.a(40, this.screen.field_h);
+        var2 = this.field_w.creature.resolveCreature(40, this.screen.field_h);
         if (var2.isDown(-99)) {
           return;
         }
@@ -39,7 +39,7 @@ final class MartyrAnimation extends EventAnimation {
         }
         while (var3 != null) {
           var3.apply(var2, this.screen.field_h, 12);
-          var6 = var3.target.a(-27449, this.screen);
+          var6 = var3.target.resolveCreatureView(-27449, this.screen);
           var6.b(-1, 7);
           var6.a(24831, 41, kna.field_g[31]);
           var3 = (DamageEffect) (this.field_w.effects.nextForward(0));

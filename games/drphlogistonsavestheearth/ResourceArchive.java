@@ -25,7 +25,7 @@ final class ResourceArchive {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getFileCapacity(int param0, byte param1) {
         if (param1 <= 125) {
           return 71;
         }
@@ -350,7 +350,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(int param0, String param1) {
+    final boolean tryLoadGroupByName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -448,7 +448,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(byte param0, String param1) {
+    final boolean hasGroupName(byte param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -514,7 +514,7 @@ final class ResourceArchive {
         return this.field_e.getGroupRequestProgressPercent(param1, -1);
     }
 
-    final boolean a(int param0, String param1, String param2) {
+    final boolean tryLoadFileByName(int param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -576,7 +576,7 @@ final class ResourceArchive {
         field_f = null;
     }
 
-    final synchronized int d(byte param0) {
+    final synchronized int getArchiveLoadPercent(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -606,7 +606,7 @@ final class ResourceArchive {
 
     final byte[] getFile(int param0, int param1, byte param2) {
         if (param2 != 35) {
-          ResourceArchive.e((byte) -62);
+          ResourceArchive.pollArchiveConnection((byte) -62);
         }
         return this.getFileWithKeys(param1, param2 - 14115, (int[]) null, param0);
     }
@@ -627,7 +627,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final int b(int param0) {
+    final int getGroupCapacity(int param0) {
         if (!this.ensureIndexLoaded(0)) {
           return -1;
         }
@@ -694,7 +694,7 @@ final class ResourceArchive {
         }
     }
 
-    final static void b(byte param0) {
+    final static void showFullscreenFocusWarningIfDialogActive(byte param0) {
         if (!BoundedRandomAccessFile.a((byte) 97)) {
           return;
         }
@@ -702,7 +702,7 @@ final class ResourceArchive {
         jk.a((byte) 49, false, 4);
     }
 
-    final synchronized byte[] b(int param0, int param1) {
+    final synchronized byte[] getFlatFile(int param0, int param1) {
         if (!this.ensureIndexLoaded(0)) {
           return null;
         }
@@ -718,7 +718,7 @@ final class ResourceArchive {
         throw new RuntimeException();
     }
 
-    final static mk a(byte param0) {
+    final static mk createTerrainProfileBuffer(byte param0) {
         mk var1 = new mk();
         int var2 = -124 % ((param0 + 13) / 44);
         var1.field_h = new int[1440000];
@@ -769,7 +769,7 @@ final class ResourceArchive {
         }
     }
 
-    final static String a(String param0, int param1) {
+    final static String reverseStringCodeUnits(String param0, int param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -843,7 +843,7 @@ final class ResourceArchive {
         }
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String getAccountNameValidationError(boolean param0, CharSequence param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -930,7 +930,7 @@ final class ResourceArchive {
         }
     }
 
-    final static int e(byte param0) {
+    final static int pollArchiveConnection(byte param0) {
         try {
           int stackIn_12_0 = 0;
           int stackIn_24_0 = 0;
@@ -991,7 +991,7 @@ final class ResourceArchive {
             }
             if (param0 >= -28) {
               var2 = (CharSequence) null;
-              ResourceArchive.a(true, (CharSequence) null);
+              ResourceArchive.getAccountNameValidationError(true, (CharSequence) null);
             }
             if (hf.field_C != 4) {
               return -1;

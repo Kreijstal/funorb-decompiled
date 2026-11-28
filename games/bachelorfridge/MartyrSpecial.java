@@ -17,7 +17,7 @@ final class MartyrSpecial extends SpecialOrder {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.creature.a(63, param0);
+          var3 = this.creature.resolveCreature(63, param0);
           var4 = new MartyrEvent(this.moveId, new CreatureRef(var3));
           if (param1 != 3) {
             stackIn_2_0 = (CreatureEvent) null;

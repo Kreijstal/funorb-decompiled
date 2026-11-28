@@ -179,7 +179,7 @@ final class IncomingAnimation extends EventAnimation {
           this.field_D = (Sprite) null;
         }
         var5 = var15.height;
-        var6 = this.field_E.creature.a(-27449, this.screen);
+        var6 = this.field_E.creature.resolveCreatureView(-27449, this.screen);
         var7 = vn.field_M[param0];
         for (var8 = -3; var8 <= 3; var8++) {
           for (var9 = -3; var9 <= 3; var9++) {

@@ -20,13 +20,13 @@ final class nb extends vd implements qk {
             if (!im.field_c.ensureIndexLoaded(-15879)) {
               return 20;
             }
-            if (!im.field_c.a(-8088, "commonui")) {
+            if (!im.field_c.tryLoadGroupByName(-8088, "commonui")) {
               return 40;
             }
             if (!mb.field_m.ensureIndexLoaded(-15879)) {
               return 50;
             }
-            if (!mb.field_m.a(-8088, "commonui")) {
+            if (!mb.field_m.tryLoadGroupByName(-8088, "commonui")) {
               return 60;
             }
             if (!ll.field_b.ensureIndexLoaded(-15879)) {
@@ -41,10 +41,10 @@ final class nb extends vd implements qk {
             if (!GameCanvas.field_d.ensureIndexLoaded(-15879)) {
               return 14;
             }
-            if (!GameCanvas.field_d.a("", (byte) 115)) {
+            if (!GameCanvas.field_d.hasGroupName("", (byte) 115)) {
               return 29;
             }
-            if (!GameCanvas.field_d.a(-8088, "")) {
+            if (!GameCanvas.field_d.tryLoadGroupByName(-8088, "")) {
               return 29;
             }
           }
@@ -57,13 +57,13 @@ final class nb extends vd implements qk {
             if (!im.field_c.ensureIndexLoaded(-15879)) {
               return 20;
             }
-            if (!im.field_c.a(-8088, "commonui")) {
+            if (!im.field_c.tryLoadGroupByName(-8088, "commonui")) {
               return 40;
             }
             if (!mb.field_m.ensureIndexLoaded(-15879)) {
               return 50;
             }
-            if (!mb.field_m.a(-8088, "commonui")) {
+            if (!mb.field_m.tryLoadGroupByName(-8088, "commonui")) {
               return 60;
             }
             if (!ll.field_b.ensureIndexLoaded(-15879)) {
@@ -78,13 +78,13 @@ final class nb extends vd implements qk {
             if (!im.field_c.ensureIndexLoaded(-15879)) {
               return 43;
             }
-            if (!im.field_c.a(-8088, "commonui")) {
+            if (!im.field_c.tryLoadGroupByName(-8088, "commonui")) {
               return 57;
             }
             if (!mb.field_m.ensureIndexLoaded(-15879)) {
               return 71;
             }
-            if (!mb.field_m.a(-8088, "commonui")) {
+            if (!mb.field_m.tryLoadGroupByName(-8088, "commonui")) {
               return 80;
             }
             if (!ll.field_b.ensureIndexLoaded(-15879)) {
@@ -98,23 +98,23 @@ final class nb extends vd implements qk {
           if (!GameCanvas.field_d.ensureIndexLoaded(-15879)) {
             return 14;
           }
-          if (!GameCanvas.field_d.a("", (byte) 115)) {
+          if (!GameCanvas.field_d.hasGroupName("", (byte) 115)) {
             return 29;
           }
-          if (!GameCanvas.field_d.a(-8088, "")) {
+          if (!GameCanvas.field_d.tryLoadGroupByName(-8088, "")) {
             return 29;
           }
         }
         if (!im.field_c.ensureIndexLoaded(-15879)) {
           return 43;
         }
-        if (!im.field_c.a(-8088, "commonui")) {
+        if (!im.field_c.tryLoadGroupByName(-8088, "commonui")) {
           return 57;
         }
         if (!mb.field_m.ensureIndexLoaded(-15879)) {
           return 71;
         }
-        if (!mb.field_m.a(-8088, "commonui")) {
+        if (!mb.field_m.tryLoadGroupByName(-8088, "commonui")) {
           return 80;
         }
         if (!ll.field_b.ensureIndexLoaded(-15879)) {
@@ -215,7 +215,7 @@ final class nb extends vd implements qk {
                 MouseInput.a(-1);
               }
             } else {
-              ResourceArchive.d(62);
+              ResourceArchive.showAccountCreationForm(62);
             }
           } else {
             fa.a(5109);

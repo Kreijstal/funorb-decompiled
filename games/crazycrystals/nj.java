@@ -7,7 +7,7 @@ final class nj {
     String[] field_o;
     int field_f;
     static int field_k;
-    f field_a;
+    PuzzleTile field_a;
     private int field_d;
     nj field_n;
     RgbSprite field_l;
@@ -61,7 +61,7 @@ final class nj {
           return;
         }
         if (this.field_a != null) {
-          this.field_a.a(24, 35, 24, false, 24 + (param1 + 4), 486);
+          this.field_a.drawTile(24, 35, 24, false, 24 + (param1 + 4), 486);
         }
         if (this.field_l != null) {
           param1 -= 2;
@@ -196,7 +196,7 @@ final class nj {
         var3 = CrazyCrystals.field_B;
         this.field_m = 1 + this.field_m & 15;
         if (param0 != 71) {
-          this.field_a = (f) null;
+          this.field_a = (PuzzleTile) null;
         }
         if (this.field_g <= 0) {
           if (this.field_n == null) {
@@ -264,8 +264,8 @@ final class nj {
 
     final nj c(int param0) {
         if (null != this.field_a) {
-          f[][] var3 = (f[][]) null;
-          this.field_a.b(57, 0, (f[][]) null, 0);
+          PuzzleTile[][] var3 = (PuzzleTile[][]) null;
+          this.field_a.refreshTileBoardState(57, 0, (PuzzleTile[][]) null, 0);
         }
         if (param0 != -28530) {
           return (nj) null;
@@ -280,7 +280,7 @@ final class nj {
         return this;
     }
 
-    nj(f param0, String param1, String[] param2) {
+    nj(PuzzleTile param0, String param1, String[] param2) {
         this.field_f = 300;
         this.field_d = 0;
         this.field_j = 0;

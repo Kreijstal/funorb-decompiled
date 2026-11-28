@@ -790,7 +790,7 @@ final class mh {
         var9 = 0;
         do {
           if (!(var8.field_y > var9)) {
-            h.field_j = var7.a(false);
+            h.field_j = var7.getViewPresetIndex(false);
             ap.a(ne.field_a, AccountNameAvailabilityValidator.field_m[h.field_j]);
             im.field_L.a(true, ne.field_a);
             var9 = vf.field_j[h.field_j][0];
@@ -810,7 +810,7 @@ final class mh {
         im.field_L.b(1);
         SoftwareRasterizer.setClip(0, 0, 160, 120);
         var12 = wi.field_a[param1];
-        if (var7.a(false) != 1 ||
+        if (var7.getViewPresetIndex(false) != 1 ||
           hi.field_h[var12] == null) {
           UiWidget.field_r[var12].a(0, 0, 160, 120);
           if (var16 != 0) {

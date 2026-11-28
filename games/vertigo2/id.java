@@ -79,11 +79,11 @@ final class id {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_b.c(-1) == 1) {
+          if (this.field_b.getGroupCapacity(-1) == 1) {
             stackIn_3_0 = this.a(param1, 120, param2, 0);
             return stackIn_3_0;
           }
-          if (1 == this.field_b.b(param2, (byte) -73)) {
+          if (1 == this.field_b.getFileCapacity(param2, (byte) -73)) {
             stackIn_7_0 = this.a(param1, 124, 0, param2);
             return stackIn_7_0;
           }
@@ -165,11 +165,11 @@ final class id {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_h.c(-1) == 1) {
+          if (this.field_h.getGroupCapacity(-1) == 1) {
             stackIn_3_0 = this.b(param0, 0, -127, param2);
             return stackIn_3_0;
           }
-          if (this.field_h.b(param2, (byte) -94) == 1) {
+          if (this.field_h.getFileCapacity(param2, (byte) -94) == 1) {
             stackIn_6_0 = this.b(param0, param2, -128, 0);
             return stackIn_6_0;
           }

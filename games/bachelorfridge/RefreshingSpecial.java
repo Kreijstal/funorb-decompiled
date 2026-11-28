@@ -20,7 +20,7 @@ final class RefreshingSpecial extends SpecialOrder {
         RuntimeException decompiledCaughtException = null;
         var7 = BachelorFridge.field_y;
         try {
-          var8 = this.creature.a(77, param0);
+          var8 = this.creature.resolveCreature(77, param0);
           var4 = new RefreshingEvent(this.moveId, new CreatureRef(var8));
           if (param1 != 3) {
             stackIn_3_0 = (CreatureEvent) null;

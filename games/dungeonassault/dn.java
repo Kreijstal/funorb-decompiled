@@ -67,7 +67,7 @@ final class dn extends ii implements jo, vg {
                 }
               }
             } else {
-              ResourceArchive.c(true);
+              ResourceArchive.showAccountCreationForm(true);
             }
           } else {
             this.j(-24327);

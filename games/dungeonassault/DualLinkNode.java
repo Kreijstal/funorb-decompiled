@@ -88,7 +88,7 @@ class DualLinkNode extends IntrusiveNode {
         le.field_b[0] = lc.a(-27711, new String[][]{bh.field_J, nf.field_C});
         le.field_b[1] = lc.a(-27711, new String[][]{rl.field_e, DiskArchiveRequest.field_J});
         int var1 = -50 % ((30 - param0) / 40);
-        le.field_b[2] = lc.a(-27711, new String[][]{p.field_J, je.field_f, KeyboardInput.field_a, h.field_y});
+        le.field_b[2] = lc.a(-27711, new String[][]{p.field_J, je.field_f, KeyboardInput.field_a, RaiderDefinition.field_y});
         le.field_b[3] = lc.a(-27711, new String[][]{pp.field_E, np.field_C});
         le.field_b[4] = lc.a(-27711, new String[][]{eg.field_b, lp.field_q, lb.field_d, le.field_c});
         le.field_b[5] = lc.a(-27711, new String[][]{bn.field_m, lp.field_q, ka.field_d});

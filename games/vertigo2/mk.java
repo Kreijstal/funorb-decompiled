@@ -89,7 +89,7 @@ final class mk extends WidgetContainer implements cm, ij, nc {
           var2 = Integer.parseInt(this.field_T.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return bg.a(this.field_H.text, var2, this.field_F.text, this.field_R.field_G, this.field_U.text, (byte) 66, this);
+        return LevelRenderable.startAccountCreation(this.field_H.text, var2, this.field_F.text, this.field_R.field_G, this.field_U.text, (byte) 66, this);
     }
 
     final void a(byte param0, int param1, int param2, UiWidget param3) {
@@ -318,7 +318,7 @@ final class mk extends WidgetContainer implements cm, ij, nc {
         this.field_R = new ck("", (uf) null, var1 != 0);
         this.field_I = new d(DiskArchiveRequest.field_K, (uf) null);
         this.field_O = new d(tc.field_a, (uf) null);
-        this.field_H.field_q = ho.field_d;
+        this.field_H.field_q = BlastDebrisBatch.field_d;
         this.field_F.field_q = ak.field_f;
         this.field_L.field_q = df.field_i;
         this.field_U.field_q = dl.field_c;
@@ -349,7 +349,7 @@ final class mk extends WidgetContainer implements cm, ij, nc {
         var3 = var3 + (5 + this.a(27557, var3, 20, this.field_L, "", 170, re.field_f));
         var3 = var3 + this.b(uc.field_c, 125, this.field_U, 170, var3);
         var3 = var3 + (5 + this.a(ag.field_c, this.field_Q, var3, ln.field_a, 0, 170));
-        var3 = var3 + (this.a(jg.field_m, this.field_H, var3, GameShell.field_q, 0, 170) + 5);
+        var3 = var3 + (this.a(LevelTile.field_m, this.field_H, var3, GameShell.field_q, 0, 170) + 5);
         var3 = var3 + this.a(po.field_b, 170, this.field_T, var3, 268);
         mg var4 = new mg(46, var3, this.width - 90, 25, this.field_R, true, -120 + this.width, 5, bl.field_N, 11579568, ll.field_d);
         this.c((byte) 88, var4);

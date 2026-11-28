@@ -67,11 +67,11 @@ final class TeleportSpecial extends SpecialOrder {
           if (param1 != 3) {
             TeleportSpecial.releaseStatics(45);
           }
-          var3 = this.creature.a(94, param0);
+          var3 = this.creature.resolveCreature(94, param0);
           var4 = new TeleportEvent(this.moveId, new CreatureRef(var3));
           var4.field_t = this.field_n;
           var4.field_q = this.field_k;
-          if (param0.a(var3, this.field_n, this.field_k, (byte) 54)) {
+          if (param0.canCreatureOccupyTile(var3, this.field_n, this.field_k, (byte) 54)) {
             var4.effects.addLast(new MoveCreatureEffect(new CreatureRef(var3), this.field_k, this.field_n), true);
           }
           stackIn_6_0 = var4;

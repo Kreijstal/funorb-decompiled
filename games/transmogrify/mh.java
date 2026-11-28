@@ -167,7 +167,7 @@ final class mh {
         if (!RasterBuffer.field_c.ensureIndexLoaded((byte) -124)) {
           return vg.field_a;
         }
-        if (!RasterBuffer.field_c.a((byte) 120, "commonui")) {
+        if (!RasterBuffer.field_c.tryLoadGroupByName((byte) 120, "commonui")) {
           return aa.field_f + " - " + RasterBuffer.field_c.getGroupLoadPercentByName(0, "commonui") + "%";
         }
         if (param0 <= 75) {
@@ -176,14 +176,14 @@ final class mh {
         if (!wi.field_e.ensureIndexLoaded((byte) -121)) {
           return ByteStorage.field_a;
         }
-        if (!wi.field_e.a((byte) 120, "commonui")) {
+        if (!wi.field_e.tryLoadGroupByName((byte) 120, "commonui")) {
           return i.field_c + " - " + wi.field_e.getGroupLoadPercentByName(0, "commonui") + "%";
         }
         if (!DelayedPcmStream.field_n.ensureIndexLoaded((byte) -123)) {
           return gk.field_a;
         }
         if (!DelayedPcmStream.field_n.tryLoadAllGroups(32031)) {
-          return fj.field_b + " - " + DelayedPcmStream.field_n.b(-22884) + "%";
+          return fj.field_b + " - " + DelayedPcmStream.field_n.getArchiveLoadPercent(-22884) + "%";
         }
         return field_d;
     }

@@ -50,7 +50,7 @@ final class dm {
         RuntimeException decompiledCaughtException = null;
         var9 = DungeonAssault.field_K;
         try {
-          if (!bo.field_Jb.a(param5, (byte) 97)) {
+          if (!bo.field_Jb.isBitSet(param5, (byte) 97)) {
             return;
           }
           if (param2 > param1[param4]) {

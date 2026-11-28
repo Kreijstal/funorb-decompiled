@@ -32,7 +32,7 @@ final class nm extends gk {
           }
           var4_int = param0.getGroupIdByName(-26, param3);
           var5 = param0.getFileIdByName(var4_int, param1, -94);
-          stackIn_3_0 = hf.a(param0, var4_int, (byte) -127, var5);
+          stackIn_3_0 = HomingProjectile.a(param0, var4_int, (byte) -127, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -60,7 +60,7 @@ final class nm extends gk {
         }
     }
 
-    nm(pm param0, PcmSample param1, dc param2, int param3) {
+    nm(TunnelEntity param0, PcmSample param1, dc param2, int param3) {
         super(param0, param1);
         try {
           this.field_n.e(param1.field_o.length * param3 >> 8);
@@ -151,7 +151,7 @@ final class nm extends gk {
         double var40;
         double var42;
         double var44;
-        dj var46;
+        PlayerShip var46;
         double[] var50;
         double var11Lifetime1;
         double var13Lifetime1;

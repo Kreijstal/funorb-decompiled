@@ -1118,23 +1118,23 @@ final class MenuScreen {
             if (!ij.field_h.ensureIndexLoaded((byte) -105)) {
               return 14;
             }
-            if (!ij.field_h.a("", param0 - 168)) {
+            if (!ij.field_h.hasGroupName("", param0 - 168)) {
               return 29;
             }
-            if (!ij.field_h.c("", -14012)) {
+            if (!ij.field_h.tryLoadGroupByName("", -14012)) {
               return 29;
             }
           }
           if (!oi.field_a.ensureIndexLoaded((byte) 83)) {
             return 43;
           }
-          if (!oi.field_a.c("commonui", param0 - 14080)) {
+          if (!oi.field_a.tryLoadGroupByName("commonui", param0 - 14080)) {
             return 57;
           }
           if (!uj.field_b.ensureIndexLoaded((byte) 89)) {
             return 71;
           }
-          if (!uj.field_b.c("commonui", -14012)) {
+          if (!uj.field_b.tryLoadGroupByName("commonui", -14012)) {
             return 80;
           }
           if (!cf.field_f.ensureIndexLoaded((byte) -13)) {
@@ -1147,13 +1147,13 @@ final class MenuScreen {
           if (!oi.field_a.ensureIndexLoaded((byte) 82)) {
             return 20;
           }
-          if (!oi.field_a.c("commonui", -14012)) {
+          if (!oi.field_a.tryLoadGroupByName("commonui", -14012)) {
             return 40;
           }
           if (!uj.field_b.ensureIndexLoaded((byte) 93)) {
             return 50;
           }
-          if (!uj.field_b.c("commonui", param0 - 14080)) {
+          if (!uj.field_b.tryLoadGroupByName("commonui", param0 - 14080)) {
             return 60;
           }
           if (!cf.field_f.ensureIndexLoaded((byte) -63)) {

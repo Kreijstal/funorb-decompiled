@@ -98,7 +98,7 @@ final class OneSpecial extends SpecialOrder {
           }
           if (param1 >= 0 &&
             param1 < param0.height) {
-            if (!param3.a(param0.tiles[param2][param1].terrain, false)) {
+            if (!param3.canTraverseTerrain(param0.tiles[param2][param1].terrain, false)) {
               return false;
             }
             if (null != param0.tiles[param2][param1].occupant) {
@@ -194,13 +194,13 @@ final class OneSpecial extends SpecialOrder {
         RuntimeException decompiledCaughtException = null;
         var8 = BachelorFridge.field_y;
         try {
-          var10 = this.creature.a(77, param0);
+          var10 = this.creature.resolveCreature(77, param0);
           var4 = new OneEvent(this.moveId, new CreatureRef(var10));
           if (param1 != 3) {
             var9 = (BattleCreature) null;
             discarded$1 = this.a((BattleState) null, -99, -115, (BattleCreature) null, -106);
           }
-          var5 = this.field_j.a(79, param0);
+          var5 = this.field_j.resolveCreature(79, param0);
           if (var5 != null &&
             !var5.isDown(param1 - 109)) {
             var6 = 1;

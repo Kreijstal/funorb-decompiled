@@ -28,7 +28,7 @@ final class ok implements wo {
         }
     }
 
-    final static void a(jg param0, int param1, byte param2, boolean param3, int param4) {
+    final static void a(ModelMesh param0, int param1, byte param2, boolean param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_11_0 = false;
         int stackIn_25_0 = 0;

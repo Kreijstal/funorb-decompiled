@@ -62,7 +62,7 @@ final class ha {
         int var7 = FrameTimer.field_c.get(11);
         int var8 = FrameTimer.field_c.get(12);
         int var9 = FrameTimer.field_c.get(param1);
-        return nn.field_p[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + oi.field_s[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        return nn.field_p[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + DynamicLight.field_s[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     static {

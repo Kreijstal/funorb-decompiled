@@ -69,11 +69,11 @@ final class dc extends og implements im, vd, fd {
         int var1 = 1;
         this.field_F = new of("", (bi) null, var1 != 0);
         this.field_G = new pc(ok.field_i, (bi) null);
-        this.field_E = new pc(dp.field_i, (bi) null);
+        this.field_E = new pc(ProfileDataRequest.field_i, (bi) null);
         this.field_N.field_t = ac.field_k;
         this.field_A.field_t = go.field_g;
         this.field_K.field_t = dq.field_C;
-        this.field_M.field_t = we.field_l;
+        this.field_M.field_t = LevelProgressUpdate.field_l;
         this.field_I.field_t = ad.field_j;
         this.field_z.field_t = tf.field_a;
         this.field_F.field_t = na.field_fb;

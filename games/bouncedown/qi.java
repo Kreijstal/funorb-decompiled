@@ -248,13 +248,13 @@ final class qi extends jd {
           if (!param3.ensureIndexLoaded(-108)) {
             return false;
           }
-          if (!param3.b("commonui", false)) {
+          if (!param3.tryLoadGroupByName("commonui", false)) {
             return false;
           }
           if (param1.ensureIndexLoaded(-90) &&
-            param1.b("commonui", false)) {
+            param1.tryLoadGroupByName("commonui", false)) {
             if (param0.ensureIndexLoaded(44) &&
-              param0.b("button.gif", false)) {
+              param0.tryLoadGroupByName("button.gif", false)) {
               return true;
             }
             return false;

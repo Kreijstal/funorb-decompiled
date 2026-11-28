@@ -5,7 +5,7 @@ abstract class SpriteGeometry extends DualLinkNode {
     int field_w;
     int field_A;
     static int field_C;
-    static ai field_x;
+    static DungeonTileState field_x;
     int field_y;
     static int field_D;
     static en[] field_F;

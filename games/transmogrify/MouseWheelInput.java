@@ -30,7 +30,7 @@ abstract class MouseWheelInput {
             stackIn_3_0 = bd.field_r;
             return stackIn_3_0;
           }
-          var9 = param0.a(false);
+          var9 = param0.getGroupIds(false);
           var2 = var9;
           var3 = param0.getGroupIdByName(79, "index");
           var4 = 0;

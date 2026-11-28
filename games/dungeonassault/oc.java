@@ -4,7 +4,7 @@
 final class oc extends kl {
     static int field_E;
     go field_w;
-    private ai field_F;
+    private DungeonTileState field_F;
     static od field_A;
     private boolean field_s;
     private int field_H;
@@ -15,7 +15,7 @@ final class oc extends kl {
     private Raider field_n;
     private String field_D;
     private pp field_z;
-    private wd field_p;
+    private SpriteAnimationPlayer field_p;
     int field_B;
     private RgbSprite field_y;
     private RgbSprite field_o;
@@ -63,7 +63,7 @@ final class oc extends kl {
         if (this.field_C == 115) {
           this.d(true);
         }
-        this.field_p.a((byte) 109, 20);
+        this.field_p.advanceAnimation((byte) 109, 20);
     }
 
     final void a(boolean param0) {
@@ -100,7 +100,7 @@ final class oc extends kl {
     }
 
     private final void d(int param0) {
-        this.field_p.a(ga.field_n, this.field_x ? this.field_n.field_n.field_t : this.field_n.field_n.field_v, -10872);
+        this.field_p.startAnimation(ga.field_n, this.field_x ? this.field_n.field_n.field_t : this.field_n.field_n.field_v, -10872);
         if (param0 <= 124) {
           return;
         }
@@ -157,7 +157,7 @@ final class oc extends kl {
         jh.b();
     }
 
-    oc(Raider param0, ai param1, boolean param2, String param3) {
+    oc(Raider param0, DungeonTileState param1, boolean param2, String param3) {
         super(350, 400);
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
@@ -200,7 +200,7 @@ final class oc extends kl {
           this.field_s = stackIn_7_1;
           stackIn_10_1 = (oi.b(0, 2) == 0);
           this.field_u = stackIn_10_1;
-          this.field_p = new wd(this.field_n.field_n.field_e);
+          this.field_p = new SpriteAnimationPlayer(this.field_n.field_n.field_e);
           this.field_z = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, this.field_i + this.field_j - jm.field_i.field_v, IntrusiveNode.field_c, jm.field_i, -75, hj.field_X);
           this.field_f.addFirst(this.field_z, false);
           var5_int = this.field_a - 64;
@@ -338,7 +338,7 @@ final class oc extends kl {
         SoftwareRasterizer.fillRectangle(-8 + var10, var11 - 8, 232, 232, 0);
         rp.a(4, 224, (byte) 108, var10 - 4, 224, kc.field_S, var11 - 4);
         if (this.field_C >= 100) {
-          this.field_p.a(216, var11, (byte) 102, var10, 216);
+          this.field_p.drawAnimation(216, var11, (byte) 102, var10, 216);
           if (this.field_C >= 250) {
             var15 = var10 + (-this.field_y.field_y + 216 >> 1);
             var16 = var11 + 208 - this.field_y.field_v;
@@ -364,7 +364,7 @@ final class oc extends kl {
             }
           }
         } else {
-          this.field_p.a(216, var11, (byte) 102, var10, 216);
+          this.field_p.drawAnimation(216, var11, (byte) 102, var10, 216);
           ((RgbSprite) (var9)).d(-4 + var10, -4 + var11, 192);
         }
     }

@@ -21,7 +21,7 @@ final class sh extends qc {
         this.field_k = 0;
     }
 
-    final f a(boolean param0, int param1, int param2, int param3, ta param4) {
+    final PuzzleTile a(boolean param0, int param1, int param2, int param3, ta param4) {
         RuntimeException var6 = null;
         cj stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -35,7 +35,7 @@ final class sh extends qc {
           }
           this.field_k = this.field_k + 1;
           stackIn_3_0 = new cj(IsaacRandom.field_g, 0, 0, 0);
-          return (f) ((Object) stackIn_3_0);
+          return (PuzzleTile) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

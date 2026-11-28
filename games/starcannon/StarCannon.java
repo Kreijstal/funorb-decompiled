@@ -1696,7 +1696,7 @@ public final class StarCannon extends ag {
                   if (BoundedRandomAccessFile.field_c.ensureIndexLoaded((byte) 127) &&
                     BoundedRandomAccessFile.field_c.tryLoadAllGroups(29741)) {
                     if (FrameTimer.field_f.ensureIndexLoaded((byte) 103) &&
-                      FrameTimer.field_f.a("basic", -9883)) {
+                      FrameTimer.field_f.tryLoadGroupByName("basic", -9883)) {
                       ma.a(fa.field_z, -13923, 70.0f);
                       this.d((byte) 22);
                       if (!param0) {

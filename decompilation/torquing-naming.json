@@ -2868,6 +2868,110 @@
       "renamedSymbol": "M:hb.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:hc.a(B)V",
+      "originalName": "a",
+      "to": "clearLevelGlobals",
+      "evidence": "Source-purpose review: Clears the shared archive connection text, packet buffer and level text fields at shutdown.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Level.clearLevelGlobals(B)V"
+    },
+    {
+      "symbol": "M:hc.a(D[DBD)V",
+      "originalName": "a",
+      "to": "collectLevelCollisionContacts",
+      "evidence": "Source-purpose review: Checks the nearby terrain triangles and level objects around the moving sphere and adds the contact points to the collision solver.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Level.collectLevelCollisionContacts(D[DBD)V"
+    },
+    {
+      "symbol": "M:hc.a(I)I",
+      "originalName": "a",
+      "to": "getTimeLimitMillis",
+      "evidence": "Source-purpose review: Provides the initial time limit in milliseconds for the level countdown.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Level.getTimeLimitMillis(I)I"
+    },
+    {
+      "symbol": "M:hc.a(IIII[DIII)[D",
+      "originalName": "a",
+      "to": "findTerrainTriangleContact",
+      "evidence": "Source-purpose review: Projects a point onto the triangle and returns the contact coordinates, distance and normal, falling back to the nearest edge when needed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Level.findTerrainTriangleContact(IIII[DIII)[D"
+    },
+    {
+      "symbol": "M:hc.a(IZ)Lkh;",
+      "originalName": "a",
+      "to": "getTerrainModel",
+      "evidence": "Source-purpose review: Builds and caches the terrain mesh from the elevation grid and materials, including the faces used by collision and rendering.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Level.getTerrainModel(IZ)LModel;"
+    },
+    {
+      "symbol": "M:hc.a(Z)I",
+      "originalName": "a",
+      "to": "getViewPresetIndex",
+      "evidence": "Source-purpose review: Provides the preset used for the level view transform, camera offset and HUD treatment.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Level.getViewPresetIndex(Z)I"
+    },
+    {
+      "symbol": "M:hc.a(ZZIIZI)Lla;",
+      "originalName": "a",
+      "to": "openIndexedResourceArchive",
+      "evidence": "Source-purpose review: Opens the archive for the selected index with its optional disk stores and requests the initial preload when enabled.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;"
+    },
+    {
+      "symbol": "M:hc.b(I)Z",
+      "originalName": "b",
+      "to": "prepareTerrainSkirtModel",
+      "evidence": "Source-purpose review: Ensures the terrain skirt is generated and reports whether it was already available for the staged loader.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Level.prepareTerrainSkirtModel(I)Z"
+    },
+    {
+      "symbol": "M:hc.c(I)Lkh;",
+      "originalName": "c",
+      "to": "getTerrainSkirtModel",
+      "evidence": "Source-purpose review: Builds and caches the side mesh by finding terrain edges and subdividing vertical faces down to their edge heights.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Level.getTerrainSkirtModel(I)LModel;"
+    },
+    {
+      "symbol": "M:hc.d(I)V",
+      "originalName": "d",
+      "to": "applyTerrainRenderMode",
+      "evidence": "Source-purpose review: Copies the level render mode into the scene rasterizer, which uses it during terrain face visibility tests.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Level.applyTerrainRenderMode(I)V"
+    },
+    {
+      "symbol": "M:hc.e(I)Z",
+      "originalName": "e",
+      "to": "processLevelDecoding",
+      "evidence": "Source-purpose review: Decodes the level name, grid, heights, objects, time limit and start pose, and advances the loader until the encoded record can be released.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Level.processLevelDecoding(I)Z"
+    },
+    {
+      "symbol": "M:hc.f(I)[D",
+      "originalName": "f",
+      "to": "getStartPose",
+      "evidence": "Source-purpose review: Returns the starting transform with the coordinates parsed from the level record.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Level.getStartPose(I)[D"
+    },
+    {
+      "symbol": "M:hc.g(I)Z",
+      "originalName": "g",
+      "to": "processLevelSceneMeshes",
+      "evidence": "Source-purpose review: Consumes scene geometry in time-limited batches and prepares the cached mesh groups before releasing the preparation queue.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Level.processLevelSceneMeshes(I)Z"
+    },
+    {
       "symbol": "M:he.a(ILjava/lang/String;)Ldn;",
       "originalName": "a",
       "to": "pollAccountNameCheck",
@@ -3468,6 +3572,14 @@
       "renamedSymbol": "M:l.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:la.a(B)I",
+      "originalName": "a",
+      "to": "getArchiveLoadPercent",
+      "evidence": "Source-purpose review: Combines per-group loading progress across nonempty groups after the archive index is ready. After handling zero accumulated capacity, a byte other than -32 returns 35.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.getArchiveLoadPercent(B)I"
+    },
+    {
       "symbol": "M:la.a(BI)Z",
       "originalName": "a",
       "to": "tryLoadGroup",
@@ -3524,6 +3636,14 @@
       "renamedSymbol": "M:ResourceArchive.unpackGroupFiles(III[I)Z"
     },
     {
+      "symbol": "M:la.a(II[II[IIIIII)V",
+      "originalName": "a",
+      "to": "darkenRgbWithSpriteMask",
+      "evidence": "Source-purpose review: Darkens the destination RGB pixels according to the low-byte opacity in nonzero sprite pixels. Keeps the row strides, zero-pixel skip and original channel masks, including 16711855.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V"
+    },
+    {
       "symbol": "M:la.a(ILjava/lang/String;)I",
       "originalName": "a",
       "to": "getGroupIdByName",
@@ -3540,12 +3660,28 @@
       "renamedSymbol": "M:ResourceArchive.getFileByName(ILjava/lang/String;Ljava/lang/String;)[B"
     },
     {
+      "symbol": "M:la.a(IZ)Z",
+      "originalName": "a",
+      "to": "tryLoadFlatFile",
+      "evidence": "Source-purpose review: In a one-slot archive uses the supplied ID as a file ID in group zero. Otherwise uses it as a group ID when the group has one addressable file slot. Delegates availability to the numeric file loader. True invokes the keyed named-file reader with null keys after group validation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.tryLoadFlatFile(IZ)Z"
+    },
+    {
       "symbol": "M:la.a(Ljava/lang/String;II)I",
       "originalName": "a",
       "to": "getFileIdByName",
       "evidence": "Source-purpose review: Validates the group, lowercases and hashes a file name, then returns the validated file ID from that group’s name table or the original missing-ID value. After file ID validation, returns the looked-up ID when the middle int is at most -98 and returns 11 otherwise.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ResourceArchive.getFileIdByName(Ljava/lang/String;II)I"
+    },
+    {
+      "symbol": "M:la.a(Z)Z",
+      "originalName": "a",
+      "to": "isClientStartupReady",
+      "evidence": "Source-purpose review: Reports whether both the startup screen state and asset loading state have reached the original thresholds. False bypasses the checks and returns true.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.isClientStartupReady(Z)Z"
     },
     {
       "symbol": "M:la.a(ZI)I",
@@ -3562,6 +3698,14 @@
       "evidence": "Source-purpose review: Validates the archive group and file-slot index with the original load, bounds and strict-mode exception branches. False invokes the original static helper before index loading.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ResourceArchive.validateFileId(ZII)Z"
+    },
+    {
+      "symbol": "M:la.a(ZLjava/lang/String;)Z",
+      "originalName": "a",
+      "to": "tryLoadGroupByName",
+      "evidence": "Source-purpose review: Checks index readiness, resolves the lowercased group name to an ID, and returns the numeric group loader result. False repeats the index-readiness call with a nested cached int before group hashing.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.tryLoadGroupByName(ZLjava/lang/String;)Z"
     },
     {
       "symbol": "M:la.a([IBLjava/lang/String;Ljava/lang/String;)[B",
@@ -3588,6 +3732,14 @@
       "renamedSymbol": "M:ResourceArchive.validateGroupId(BI)Z"
     },
     {
+      "symbol": "M:la.b(BLjava/lang/String;)Z",
+      "originalName": "b",
+      "to": "hasGroupName",
+      "evidence": "Source-purpose review: Checks the lowercased name against the archive group-name table. A first byte at least -7 returns a nested cache boolean after looking up the name.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.hasGroupName(BLjava/lang/String;)Z"
+    },
+    {
       "symbol": "M:la.b(I)Lvc;",
       "originalName": "b",
       "to": "createMouseWheelInput",
@@ -3596,12 +3748,36 @@
       "renamedSymbol": "M:ResourceArchive.createMouseWheelInput(I)LMouseWheelInput;"
     },
     {
+      "symbol": "M:la.b(IB)[B",
+      "originalName": "b",
+      "to": "getFlatFile",
+      "evidence": "Source-purpose review: Uses the supplied ID as a file ID in group zero for a one-slot archive, or as a group ID for a single-file-slot group. Delegates both branches to the numeric reader and preserves the original rejection paths. A final byte below 68 clears a static int array after validating the group.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.getFlatFile(IB)[B"
+    },
+    {
+      "symbol": "M:la.b(ILjava/lang/String;Ljava/lang/String;)Z",
+      "originalName": "b",
+      "to": "tryLoadFileByName",
+      "evidence": "Source-purpose review: Checks index readiness and resolves the lowercased group and file names in their respective tables. Delegates the IDs to the numeric file loader. A first int other than zero invokes the keyed name reader with two null strings before lowercasing the file name.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z"
+    },
+    {
       "symbol": "M:la.c(I)Z",
       "originalName": "c",
       "to": "tryLoadAllGroups",
       "evidence": "Source-purpose review: Ensures the index is ready and iterates the indexed group IDs, requesting each missing packed group. The accumulated flag reports whether the checked groups became available. A guard other than -19375 clears a static int array before iteration.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ResourceArchive.tryLoadAllGroups(I)Z"
+    },
+    {
+      "symbol": "M:la.d(I)V",
+      "originalName": "d",
+      "to": "clearStaticReferences",
+      "evidence": "Source-purpose review: Releases five static resources during Torquing shutdown. A guard below 98 preserves the original helper call between the reference assignments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.clearStaticReferences(I)V"
     },
     {
       "symbol": "M:lb.b(I)I",
@@ -84246,7 +84422,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#0",
-      "renamedSymbol": "L:Level.a(D[DBD)V#0",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#0",
       "originalName": "var21_int",
       "renamedName": "var21_int",
       "declaration": {
@@ -84257,7 +84433,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#1",
-      "renamedSymbol": "L:Level.a(D[DBD)V#1",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#1",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -84268,7 +84444,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#10",
-      "renamedSymbol": "L:Level.a(D[DBD)V#10",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#10",
       "originalName": "var7_double",
       "renamedName": "var7_double",
       "declaration": {
@@ -84279,7 +84455,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#11",
-      "renamedSymbol": "L:Level.a(D[DBD)V#11",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -84290,7 +84466,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#12",
-      "renamedSymbol": "L:Level.a(D[DBD)V#12",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#12",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -84301,7 +84477,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#13",
-      "renamedSymbol": "L:Level.a(D[DBD)V#13",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#13",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -84312,7 +84488,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#14",
-      "renamedSymbol": "L:Level.a(D[DBD)V#14",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -84323,7 +84499,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#15",
-      "renamedSymbol": "L:Level.a(D[DBD)V#15",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#15",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -84334,7 +84510,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#16",
-      "renamedSymbol": "L:Level.a(D[DBD)V#16",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#16",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -84345,7 +84521,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#17",
-      "renamedSymbol": "L:Level.a(D[DBD)V#17",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#17",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -84356,7 +84532,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#18",
-      "renamedSymbol": "L:Level.a(D[DBD)V#18",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#18",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -84367,7 +84543,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#19",
-      "renamedSymbol": "L:Level.a(D[DBD)V#19",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#19",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -84378,7 +84554,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#2",
-      "renamedSymbol": "L:Level.a(D[DBD)V#2",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#2",
       "originalName": "dupTemp$3",
       "renamedName": "dupTemp$3",
       "declaration": {
@@ -84389,7 +84565,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#20",
-      "renamedSymbol": "L:Level.a(D[DBD)V#20",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#20",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -84400,7 +84576,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#21",
-      "renamedSymbol": "L:Level.a(D[DBD)V#21",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#21",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -84411,7 +84587,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#22",
-      "renamedSymbol": "L:Level.a(D[DBD)V#22",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#22",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -84422,7 +84598,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#23",
-      "renamedSymbol": "L:Level.a(D[DBD)V#23",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#23",
       "originalName": "var23_ref_double__",
       "renamedName": "var23_ref_double__",
       "declaration": {
@@ -84433,7 +84609,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#24",
-      "renamedSymbol": "L:Level.a(D[DBD)V#24",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#24",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -84444,7 +84620,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#25",
-      "renamedSymbol": "L:Level.a(D[DBD)V#25",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#25",
       "originalName": "var24_ref_double__",
       "renamedName": "var24_ref_double__",
       "declaration": {
@@ -84455,7 +84631,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#26",
-      "renamedSymbol": "L:Level.a(D[DBD)V#26",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#26",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -84466,7 +84642,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#27",
-      "renamedSymbol": "L:Level.a(D[DBD)V#27",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#27",
       "originalName": "var25_ref_double__",
       "renamedName": "var25_ref_double__",
       "declaration": {
@@ -84477,7 +84653,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#28",
-      "renamedSymbol": "L:Level.a(D[DBD)V#28",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#28",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -84488,7 +84664,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#29",
-      "renamedSymbol": "L:Level.a(D[DBD)V#29",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#29",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -84499,7 +84675,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#3",
-      "renamedSymbol": "L:Level.a(D[DBD)V#3",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#3",
       "originalName": "var41_int",
       "renamedName": "var41_int",
       "declaration": {
@@ -84510,7 +84686,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#30",
-      "renamedSymbol": "L:Level.a(D[DBD)V#30",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#30",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -84521,7 +84697,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#31",
-      "renamedSymbol": "L:Level.a(D[DBD)V#31",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#31",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -84532,7 +84708,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#32",
-      "renamedSymbol": "L:Level.a(D[DBD)V#32",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#32",
       "originalName": "var38",
       "renamedName": "var38",
       "declaration": {
@@ -84543,7 +84719,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#33",
-      "renamedSymbol": "L:Level.a(D[DBD)V#33",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#33",
       "originalName": "var39",
       "renamedName": "var39",
       "declaration": {
@@ -84554,7 +84730,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#34",
-      "renamedSymbol": "L:Level.a(D[DBD)V#34",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#34",
       "originalName": "var40",
       "renamedName": "var40",
       "declaration": {
@@ -84565,7 +84741,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#35",
-      "renamedSymbol": "L:Level.a(D[DBD)V#35",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#35",
       "originalName": "var41",
       "renamedName": "var41",
       "declaration": {
@@ -84576,7 +84752,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#36",
-      "renamedSymbol": "L:Level.a(D[DBD)V#36",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#36",
       "originalName": "var42",
       "renamedName": "var42",
       "declaration": {
@@ -84587,7 +84763,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#37",
-      "renamedSymbol": "L:Level.a(D[DBD)V#37",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#37",
       "originalName": "var42_int",
       "renamedName": "var42_int",
       "declaration": {
@@ -84598,7 +84774,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#38",
-      "renamedSymbol": "L:Level.a(D[DBD)V#38",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#38",
       "originalName": "var43",
       "renamedName": "var43",
       "declaration": {
@@ -84609,7 +84785,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#39",
-      "renamedSymbol": "L:Level.a(D[DBD)V#39",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#39",
       "originalName": "var44",
       "renamedName": "var44",
       "declaration": {
@@ -84620,7 +84796,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#4",
-      "renamedSymbol": "L:Level.a(D[DBD)V#4",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#4",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -84631,7 +84807,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#40",
-      "renamedSymbol": "L:Level.a(D[DBD)V#40",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#40",
       "originalName": "var44_int",
       "renamedName": "var44_int",
       "declaration": {
@@ -84642,7 +84818,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#41",
-      "renamedSymbol": "L:Level.a(D[DBD)V#41",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#41",
       "originalName": "var45",
       "renamedName": "var45",
       "declaration": {
@@ -84653,7 +84829,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#42",
-      "renamedSymbol": "L:Level.a(D[DBD)V#42",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#42",
       "originalName": "var46",
       "renamedName": "var46",
       "declaration": {
@@ -84664,7 +84840,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#43",
-      "renamedSymbol": "L:Level.a(D[DBD)V#43",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#43",
       "originalName": "var48",
       "renamedName": "var48",
       "declaration": {
@@ -84675,7 +84851,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#44",
-      "renamedSymbol": "L:Level.a(D[DBD)V#44",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#44",
       "originalName": "var49",
       "renamedName": "var49",
       "declaration": {
@@ -84686,7 +84862,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#45",
-      "renamedSymbol": "L:Level.a(D[DBD)V#45",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#45",
       "originalName": "var50",
       "renamedName": "var50",
       "declaration": {
@@ -84697,7 +84873,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#46",
-      "renamedSymbol": "L:Level.a(D[DBD)V#46",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#46",
       "originalName": "var51",
       "renamedName": "var51",
       "declaration": {
@@ -84708,7 +84884,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#47",
-      "renamedSymbol": "L:Level.a(D[DBD)V#47",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#47",
       "originalName": "var52",
       "renamedName": "var52",
       "declaration": {
@@ -84719,7 +84895,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#48",
-      "renamedSymbol": "L:Level.a(D[DBD)V#48",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#48",
       "originalName": "var53",
       "renamedName": "var53",
       "declaration": {
@@ -84730,7 +84906,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#49",
-      "renamedSymbol": "L:Level.a(D[DBD)V#49",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#49",
       "originalName": "var54",
       "renamedName": "var54",
       "declaration": {
@@ -84741,7 +84917,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#5",
-      "renamedSymbol": "L:Level.a(D[DBD)V#5",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#5",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -84752,7 +84928,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#50",
-      "renamedSymbol": "L:Level.a(D[DBD)V#50",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#50",
       "originalName": "var55",
       "renamedName": "var55",
       "declaration": {
@@ -84763,7 +84939,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#51",
-      "renamedSymbol": "L:Level.a(D[DBD)V#51",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#51",
       "originalName": "var56",
       "renamedName": "var56",
       "declaration": {
@@ -84774,7 +84950,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#52",
-      "renamedSymbol": "L:Level.a(D[DBD)V#52",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#52",
       "originalName": "var57",
       "renamedName": "var57",
       "declaration": {
@@ -84785,7 +84961,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#53",
-      "renamedSymbol": "L:Level.a(D[DBD)V#53",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#53",
       "originalName": "var58",
       "renamedName": "var58",
       "declaration": {
@@ -84796,7 +84972,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#54",
-      "renamedSymbol": "L:Level.a(D[DBD)V#54",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#54",
       "originalName": "var65",
       "renamedName": "var65",
       "declaration": {
@@ -84807,7 +84983,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#55",
-      "renamedSymbol": "L:Level.a(D[DBD)V#55",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#55",
       "originalName": "var66",
       "renamedName": "var66",
       "declaration": {
@@ -84818,7 +84994,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#56",
-      "renamedSymbol": "L:Level.a(D[DBD)V#56",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#56",
       "originalName": "var67",
       "renamedName": "var67",
       "declaration": {
@@ -84829,7 +85005,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#57",
-      "renamedSymbol": "L:Level.a(D[DBD)V#57",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#57",
       "originalName": "var68",
       "renamedName": "var68",
       "declaration": {
@@ -84840,7 +85016,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#58",
-      "renamedSymbol": "L:Level.a(D[DBD)V#58",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#58",
       "originalName": "var69",
       "renamedName": "var69",
       "declaration": {
@@ -84851,7 +85027,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#59",
-      "renamedSymbol": "L:Level.a(D[DBD)V#59",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#59",
       "originalName": "var70",
       "renamedName": "var70",
       "declaration": {
@@ -84862,7 +85038,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#6",
-      "renamedSymbol": "L:Level.a(D[DBD)V#6",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#6",
       "originalName": "stackIn_78_0",
       "renamedName": "stackIn_78_0",
       "declaration": {
@@ -84873,7 +85049,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#60",
-      "renamedSymbol": "L:Level.a(D[DBD)V#60",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#60",
       "originalName": "var71",
       "renamedName": "var71",
       "declaration": {
@@ -84884,7 +85060,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#61",
-      "renamedSymbol": "L:Level.a(D[DBD)V#61",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#61",
       "originalName": "var72",
       "renamedName": "var72",
       "declaration": {
@@ -84895,7 +85071,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#62",
-      "renamedSymbol": "L:Level.a(D[DBD)V#62",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#62",
       "originalName": "var73",
       "renamedName": "var73",
       "declaration": {
@@ -84906,7 +85082,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#63",
-      "renamedSymbol": "L:Level.a(D[DBD)V#63",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#63",
       "originalName": "var74",
       "renamedName": "var74",
       "declaration": {
@@ -84917,7 +85093,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#64",
-      "renamedSymbol": "L:Level.a(D[DBD)V#64",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#64",
       "originalName": "var81",
       "renamedName": "var81",
       "declaration": {
@@ -84928,7 +85104,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#65",
-      "renamedSymbol": "L:Level.a(D[DBD)V#65",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#65",
       "originalName": "var82",
       "renamedName": "var82",
       "declaration": {
@@ -84939,7 +85115,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#66",
-      "renamedSymbol": "L:Level.a(D[DBD)V#66",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#66",
       "originalName": "var89",
       "renamedName": "var89",
       "declaration": {
@@ -84950,7 +85126,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#67",
-      "renamedSymbol": "L:Level.a(D[DBD)V#67",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#67",
       "originalName": "var90",
       "renamedName": "var90",
       "declaration": {
@@ -84961,7 +85137,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#68",
-      "renamedSymbol": "L:Level.a(D[DBD)V#68",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#68",
       "originalName": "var91",
       "renamedName": "var91",
       "declaration": {
@@ -84972,7 +85148,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#69",
-      "renamedSymbol": "L:Level.a(D[DBD)V#69",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#69",
       "originalName": "var92",
       "renamedName": "var92",
       "declaration": {
@@ -84983,7 +85159,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#7",
-      "renamedSymbol": "L:Level.a(D[DBD)V#7",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#7",
       "originalName": "stackIn_78_1",
       "renamedName": "stackIn_78_1",
       "declaration": {
@@ -84994,7 +85170,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#70",
-      "renamedSymbol": "L:Level.a(D[DBD)V#70",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#70",
       "originalName": "var93",
       "renamedName": "var93",
       "declaration": {
@@ -85005,7 +85181,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#71",
-      "renamedSymbol": "L:Level.a(D[DBD)V#71",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#71",
       "originalName": "var94",
       "renamedName": "var94",
       "declaration": {
@@ -85016,7 +85192,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#72",
-      "renamedSymbol": "L:Level.a(D[DBD)V#72",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#72",
       "originalName": "var23_ref_double__Lifetime1",
       "renamedName": "var23_ref_double__Lifetime1",
       "declaration": {
@@ -85027,7 +85203,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#73",
-      "renamedSymbol": "L:Level.a(D[DBD)V#73",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#73",
       "originalName": "var23_ref_double__Lifetime2",
       "renamedName": "var23_ref_double__Lifetime2",
       "declaration": {
@@ -85038,7 +85214,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#74",
-      "renamedSymbol": "L:Level.a(D[DBD)V#74",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#74",
       "originalName": "var23_ref_double__Lifetime3",
       "renamedName": "var23_ref_double__Lifetime3",
       "declaration": {
@@ -85049,7 +85225,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#75",
-      "renamedSymbol": "L:Level.a(D[DBD)V#75",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#75",
       "originalName": "var24_ref_double__Lifetime1",
       "renamedName": "var24_ref_double__Lifetime1",
       "declaration": {
@@ -85060,7 +85236,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#76",
-      "renamedSymbol": "L:Level.a(D[DBD)V#76",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#76",
       "originalName": "var24_ref_double__Lifetime2",
       "renamedName": "var24_ref_double__Lifetime2",
       "declaration": {
@@ -85071,7 +85247,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#77",
-      "renamedSymbol": "L:Level.a(D[DBD)V#77",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#77",
       "originalName": "var24_ref_double__Lifetime3",
       "renamedName": "var24_ref_double__Lifetime3",
       "declaration": {
@@ -85082,7 +85258,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#78",
-      "renamedSymbol": "L:Level.a(D[DBD)V#78",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#78",
       "originalName": "var45Lifetime1",
       "renamedName": "var45Lifetime1",
       "declaration": {
@@ -85093,7 +85269,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#79",
-      "renamedSymbol": "L:Level.a(D[DBD)V#79",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#79",
       "originalName": "var22Lifetime1",
       "renamedName": "var22Lifetime1",
       "declaration": {
@@ -85104,7 +85280,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#8",
-      "renamedSymbol": "L:Level.a(D[DBD)V#8",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#8",
       "originalName": "stackIn_79_2",
       "renamedName": "stackIn_79_2",
       "declaration": {
@@ -85115,7 +85291,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#80",
-      "renamedSymbol": "L:Level.a(D[DBD)V#80",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#80",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -85126,7 +85302,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#81",
-      "renamedSymbol": "L:Level.a(D[DBD)V#81",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#81",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -85137,7 +85313,7 @@
     },
     {
       "symbol": "L:hc.a(D[DBD)V#9",
-      "renamedSymbol": "L:Level.a(D[DBD)V#9",
+      "renamedSymbol": "L:Level.collectLevelCollisionContacts(D[DBD)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -85148,7 +85324,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#0",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#0",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -85159,7 +85335,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#1",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#1",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#1",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -85170,7 +85346,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#10",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#10",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#10",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -85181,7 +85357,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#11",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#11",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#11",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -85192,7 +85368,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#12",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#12",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#12",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -85203,7 +85379,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#13",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#13",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#13",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -85214,7 +85390,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#14",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#14",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#14",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -85225,7 +85401,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#15",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#15",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#15",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -85236,7 +85412,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#16",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#16",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#16",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -85247,7 +85423,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#17",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#17",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#17",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -85258,7 +85434,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#18",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#18",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#18",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -85269,7 +85445,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#19",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#19",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#19",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -85280,7 +85456,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#2",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#2",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#2",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -85291,7 +85467,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#20",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#20",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#20",
       "originalName": "var9_ref",
       "renamedName": "var9_ref",
       "declaration": {
@@ -85302,7 +85478,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#21",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#21",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#21",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -85313,7 +85489,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#3",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#3",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#3",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -85324,7 +85500,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#4",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#4",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#4",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -85335,7 +85511,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#5",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#5",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#5",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -85346,7 +85522,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#6",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#6",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#6",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -85357,7 +85533,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#7",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#7",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#7",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -85368,7 +85544,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#8",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#8",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#8",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -85379,7 +85555,7 @@
     },
     {
       "symbol": "L:hc.a(IIII[DIII)[D#9",
-      "renamedSymbol": "L:Level.a(IIII[DIII)[D#9",
+      "renamedSymbol": "L:Level.findTerrainTriangleContact(IIII[DIII)[D#9",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -85390,7 +85566,7 @@
     },
     {
       "symbol": "L:hc.a(IZ)Lkh;#0",
-      "renamedSymbol": "L:Level.a(IZ)LModel;#0",
+      "renamedSymbol": "L:Level.getTerrainModel(IZ)LModel;#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -85401,7 +85577,7 @@
     },
     {
       "symbol": "L:hc.a(IZ)Lkh;#1",
-      "renamedSymbol": "L:Level.a(IZ)LModel;#1",
+      "renamedSymbol": "L:Level.getTerrainModel(IZ)LModel;#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -85412,7 +85588,7 @@
     },
     {
       "symbol": "L:hc.a(IZ)Lkh;#10",
-      "renamedSymbol": "L:Level.a(IZ)LModel;#10",
+      "renamedSymbol": "L:Level.getTerrainModel(IZ)LModel;#10",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -85423,7 +85599,7 @@
     },
     {
       "symbol": "L:hc.a(IZ)Lkh;#11",
-      "renamedSymbol": "L:Level.a(IZ)LModel;#11",
+      "renamedSymbol": "L:Level.getTerrainModel(IZ)LModel;#11",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -85434,7 +85610,7 @@
     },
     {
       "symbol": "L:hc.a(IZ)Lkh;#12",
-      "renamedSymbol": "L:Level.a(IZ)LModel;#12",
+      "renamedSymbol": "L:Level.getTerrainModel(IZ)LModel;#12",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -85445,7 +85621,7 @@
     },
     {
       "symbol": "L:hc.a(IZ)Lkh;#13",
-      "renamedSymbol": "L:Level.a(IZ)LModel;#13",
+      "renamedSymbol": "L:Level.getTerrainModel(IZ)LModel;#13",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -85456,7 +85632,7 @@
     },
     {
       "symbol": "L:hc.a(IZ)Lkh;#2",
-      "renamedSymbol": "L:Level.a(IZ)LModel;#2",
+      "renamedSymbol": "L:Level.getTerrainModel(IZ)LModel;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -85467,7 +85643,7 @@
     },
     {
       "symbol": "L:hc.a(IZ)Lkh;#3",
-      "renamedSymbol": "L:Level.a(IZ)LModel;#3",
+      "renamedSymbol": "L:Level.getTerrainModel(IZ)LModel;#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -85478,7 +85654,7 @@
     },
     {
       "symbol": "L:hc.a(IZ)Lkh;#4",
-      "renamedSymbol": "L:Level.a(IZ)LModel;#4",
+      "renamedSymbol": "L:Level.getTerrainModel(IZ)LModel;#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -85489,7 +85665,7 @@
     },
     {
       "symbol": "L:hc.a(IZ)Lkh;#5",
-      "renamedSymbol": "L:Level.a(IZ)LModel;#5",
+      "renamedSymbol": "L:Level.getTerrainModel(IZ)LModel;#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -85500,7 +85676,7 @@
     },
     {
       "symbol": "L:hc.a(IZ)Lkh;#6",
-      "renamedSymbol": "L:Level.a(IZ)LModel;#6",
+      "renamedSymbol": "L:Level.getTerrainModel(IZ)LModel;#6",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -85511,7 +85687,7 @@
     },
     {
       "symbol": "L:hc.a(IZ)Lkh;#7",
-      "renamedSymbol": "L:Level.a(IZ)LModel;#7",
+      "renamedSymbol": "L:Level.getTerrainModel(IZ)LModel;#7",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -85522,7 +85698,7 @@
     },
     {
       "symbol": "L:hc.a(IZ)Lkh;#8",
-      "renamedSymbol": "L:Level.a(IZ)LModel;#8",
+      "renamedSymbol": "L:Level.getTerrainModel(IZ)LModel;#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -85533,7 +85709,7 @@
     },
     {
       "symbol": "L:hc.a(IZ)Lkh;#9",
-      "renamedSymbol": "L:Level.a(IZ)LModel;#9",
+      "renamedSymbol": "L:Level.getTerrainModel(IZ)LModel;#9",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -85544,7 +85720,7 @@
     },
     {
       "symbol": "L:hc.a(ZZIIZI)Lla;#0",
-      "renamedSymbol": "L:Level.a(ZZIIZI)LResourceArchive;#0",
+      "renamedSymbol": "L:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -85555,7 +85731,7 @@
     },
     {
       "symbol": "L:hc.a(ZZIIZI)Lla;#1",
-      "renamedSymbol": "L:Level.a(ZZIIZI)LResourceArchive;#1",
+      "renamedSymbol": "L:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -85566,7 +85742,7 @@
     },
     {
       "symbol": "L:hc.a(ZZIIZI)Lla;#2",
-      "renamedSymbol": "L:Level.a(ZZIIZI)LResourceArchive;#2",
+      "renamedSymbol": "L:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;#2",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -85577,7 +85753,7 @@
     },
     {
       "symbol": "L:hc.a(ZZIIZI)Lla;#3",
-      "renamedSymbol": "L:Level.a(ZZIIZI)LResourceArchive;#3",
+      "renamedSymbol": "L:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;#3",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -85588,7 +85764,7 @@
     },
     {
       "symbol": "L:hc.a(ZZIIZI)Lla;#4",
-      "renamedSymbol": "L:Level.a(ZZIIZI)LResourceArchive;#4",
+      "renamedSymbol": "L:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -85599,7 +85775,7 @@
     },
     {
       "symbol": "L:hc.a(ZZIIZI)Lla;#5",
-      "renamedSymbol": "L:Level.a(ZZIIZI)LResourceArchive;#5",
+      "renamedSymbol": "L:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -85610,7 +85786,7 @@
     },
     {
       "symbol": "L:hc.a(ZZIIZI)Lla;#6",
-      "renamedSymbol": "L:Level.a(ZZIIZI)LResourceArchive;#6",
+      "renamedSymbol": "L:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;#6",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -85621,7 +85797,7 @@
     },
     {
       "symbol": "L:hc.a(ZZIIZI)Lla;#7",
-      "renamedSymbol": "L:Level.a(ZZIIZI)LResourceArchive;#7",
+      "renamedSymbol": "L:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;#7",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -85632,7 +85808,7 @@
     },
     {
       "symbol": "L:hc.b(I)Z#0",
-      "renamedSymbol": "L:Level.b(I)Z#0",
+      "renamedSymbol": "L:Level.prepareTerrainSkirtModel(I)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -85643,7 +85819,7 @@
     },
     {
       "symbol": "L:hc.b(I)Z#1",
-      "renamedSymbol": "L:Level.b(I)Z#1",
+      "renamedSymbol": "L:Level.prepareTerrainSkirtModel(I)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -85654,7 +85830,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#0",
-      "renamedSymbol": "L:Level.c(I)LModel;#0",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#0",
       "originalName": "var10_int",
       "renamedName": "var10_int",
       "declaration": {
@@ -85665,7 +85841,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#1",
-      "renamedSymbol": "L:Level.c(I)LModel;#1",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#1",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -85676,7 +85852,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#10",
-      "renamedSymbol": "L:Level.c(I)LModel;#10",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#10",
       "originalName": "arrayValue$9",
       "renamedName": "arrayValue$9",
       "declaration": {
@@ -85687,7 +85863,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#11",
-      "renamedSymbol": "L:Level.c(I)LModel;#11",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#11",
       "originalName": "dupTemp$10",
       "renamedName": "dupTemp$10",
       "declaration": {
@@ -85698,7 +85874,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#12",
-      "renamedSymbol": "L:Level.c(I)LModel;#12",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#12",
       "originalName": "arrayValue$11",
       "renamedName": "arrayValue$11",
       "declaration": {
@@ -85709,7 +85885,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#13",
-      "renamedSymbol": "L:Level.c(I)LModel;#13",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#13",
       "originalName": "stackIn_79_0",
       "renamedName": "stackIn_79_0",
       "declaration": {
@@ -85720,7 +85896,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#14",
-      "renamedSymbol": "L:Level.c(I)LModel;#14",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#14",
       "originalName": "stackIn_79_1",
       "renamedName": "stackIn_79_1",
       "declaration": {
@@ -85731,7 +85907,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#15",
-      "renamedSymbol": "L:Level.c(I)LModel;#15",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#15",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -85742,7 +85918,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#16",
-      "renamedSymbol": "L:Level.c(I)LModel;#16",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#16",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -85753,7 +85929,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#17",
-      "renamedSymbol": "L:Level.c(I)LModel;#17",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#17",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -85764,7 +85940,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#18",
-      "renamedSymbol": "L:Level.c(I)LModel;#18",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#18",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -85775,7 +85951,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#19",
-      "renamedSymbol": "L:Level.c(I)LModel;#19",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#19",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -85786,7 +85962,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#2",
-      "renamedSymbol": "L:Level.c(I)LModel;#2",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#2",
       "originalName": "arrayValue$1",
       "renamedName": "arrayValue$1",
       "declaration": {
@@ -85797,7 +85973,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#20",
-      "renamedSymbol": "L:Level.c(I)LModel;#20",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#20",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -85808,7 +85984,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#21",
-      "renamedSymbol": "L:Level.c(I)LModel;#21",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#21",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -85819,7 +85995,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#22",
-      "renamedSymbol": "L:Level.c(I)LModel;#22",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#22",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -85830,7 +86006,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#23",
-      "renamedSymbol": "L:Level.c(I)LModel;#23",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#23",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -85841,7 +86017,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#24",
-      "renamedSymbol": "L:Level.c(I)LModel;#24",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#24",
       "originalName": "var12_int",
       "renamedName": "var12_int",
       "declaration": {
@@ -85852,7 +86028,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#25",
-      "renamedSymbol": "L:Level.c(I)LModel;#25",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#25",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -85863,7 +86039,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#26",
-      "renamedSymbol": "L:Level.c(I)LModel;#26",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#26",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -85874,7 +86050,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#27",
-      "renamedSymbol": "L:Level.c(I)LModel;#27",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#27",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -85885,7 +86061,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#28",
-      "renamedSymbol": "L:Level.c(I)LModel;#28",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#28",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -85896,7 +86072,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#29",
-      "renamedSymbol": "L:Level.c(I)LModel;#29",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#29",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -85907,7 +86083,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#3",
-      "renamedSymbol": "L:Level.c(I)LModel;#3",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#3",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -85918,7 +86094,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#30",
-      "renamedSymbol": "L:Level.c(I)LModel;#30",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#30",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -85929,7 +86105,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#31",
-      "renamedSymbol": "L:Level.c(I)LModel;#31",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#31",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -85940,7 +86116,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#32",
-      "renamedSymbol": "L:Level.c(I)LModel;#32",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#32",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -85951,7 +86127,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#33",
-      "renamedSymbol": "L:Level.c(I)LModel;#33",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#33",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -85962,7 +86138,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#34",
-      "renamedSymbol": "L:Level.c(I)LModel;#34",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#34",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -85973,7 +86149,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#35",
-      "renamedSymbol": "L:Level.c(I)LModel;#35",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#35",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -85984,7 +86160,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#36",
-      "renamedSymbol": "L:Level.c(I)LModel;#36",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#36",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -85995,7 +86171,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#37",
-      "renamedSymbol": "L:Level.c(I)LModel;#37",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#37",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -86006,7 +86182,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#38",
-      "renamedSymbol": "L:Level.c(I)LModel;#38",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#38",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -86017,7 +86193,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#39",
-      "renamedSymbol": "L:Level.c(I)LModel;#39",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#39",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -86028,7 +86204,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#4",
-      "renamedSymbol": "L:Level.c(I)LModel;#4",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#4",
       "originalName": "arrayValue$3",
       "renamedName": "arrayValue$3",
       "declaration": {
@@ -86039,7 +86215,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#40",
-      "renamedSymbol": "L:Level.c(I)LModel;#40",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#40",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -86050,7 +86226,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#41",
-      "renamedSymbol": "L:Level.c(I)LModel;#41",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#41",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -86061,7 +86237,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#42",
-      "renamedSymbol": "L:Level.c(I)LModel;#42",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#42",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -86072,7 +86248,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#43",
-      "renamedSymbol": "L:Level.c(I)LModel;#43",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#43",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -86083,7 +86259,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#44",
-      "renamedSymbol": "L:Level.c(I)LModel;#44",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#44",
       "originalName": "var34",
       "renamedName": "var34",
       "declaration": {
@@ -86094,7 +86270,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#45",
-      "renamedSymbol": "L:Level.c(I)LModel;#45",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#45",
       "originalName": "var35",
       "renamedName": "var35",
       "declaration": {
@@ -86105,7 +86281,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#46",
-      "renamedSymbol": "L:Level.c(I)LModel;#46",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#46",
       "originalName": "var37",
       "renamedName": "var37",
       "declaration": {
@@ -86116,7 +86292,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#47",
-      "renamedSymbol": "L:Level.c(I)LModel;#47",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#47",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -86127,7 +86303,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#48",
-      "renamedSymbol": "L:Level.c(I)LModel;#48",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#48",
       "originalName": "var13Lifetime1",
       "renamedName": "var13Lifetime1",
       "declaration": {
@@ -86138,7 +86314,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#49",
-      "renamedSymbol": "L:Level.c(I)LModel;#49",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#49",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -86149,7 +86325,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#5",
-      "renamedSymbol": "L:Level.c(I)LModel;#5",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#5",
       "originalName": "dupTemp$4",
       "renamedName": "dupTemp$4",
       "declaration": {
@@ -86160,7 +86336,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#50",
-      "renamedSymbol": "L:Level.c(I)LModel;#50",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#50",
       "originalName": "var21Lifetime1",
       "renamedName": "var21Lifetime1",
       "declaration": {
@@ -86171,7 +86347,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#51",
-      "renamedSymbol": "L:Level.c(I)LModel;#51",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#51",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -86182,7 +86358,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#52",
-      "renamedSymbol": "L:Level.c(I)LModel;#52",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#52",
       "originalName": "var21Lifetime2",
       "renamedName": "var21Lifetime2",
       "declaration": {
@@ -86193,7 +86369,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#53",
-      "renamedSymbol": "L:Level.c(I)LModel;#53",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#53",
       "originalName": "var21Lifetime3",
       "renamedName": "var21Lifetime3",
       "declaration": {
@@ -86204,7 +86380,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#54",
-      "renamedSymbol": "L:Level.c(I)LModel;#54",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#54",
       "originalName": "var13Lifetime1Lifetime1",
       "renamedName": "var13Lifetime1Lifetime1",
       "declaration": {
@@ -86215,7 +86391,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#55",
-      "renamedSymbol": "L:Level.c(I)LModel;#55",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#55",
       "originalName": "var14Lifetime1Lifetime1",
       "renamedName": "var14Lifetime1Lifetime1",
       "declaration": {
@@ -86226,7 +86402,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#56",
-      "renamedSymbol": "L:Level.c(I)LModel;#56",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#56",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -86237,7 +86413,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#6",
-      "renamedSymbol": "L:Level.c(I)LModel;#6",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#6",
       "originalName": "arrayValue$5",
       "renamedName": "arrayValue$5",
       "declaration": {
@@ -86248,7 +86424,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#7",
-      "renamedSymbol": "L:Level.c(I)LModel;#7",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#7",
       "originalName": "dupTemp$6",
       "renamedName": "dupTemp$6",
       "declaration": {
@@ -86259,7 +86435,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#8",
-      "renamedSymbol": "L:Level.c(I)LModel;#8",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#8",
       "originalName": "arrayValue$7",
       "renamedName": "arrayValue$7",
       "declaration": {
@@ -86270,7 +86446,7 @@
     },
     {
       "symbol": "L:hc.c(I)Lkh;#9",
-      "renamedSymbol": "L:Level.c(I)LModel;#9",
+      "renamedSymbol": "L:Level.getTerrainSkirtModel(I)LModel;#9",
       "originalName": "dupTemp$8",
       "renamedName": "dupTemp$8",
       "declaration": {
@@ -86281,7 +86457,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#0",
-      "renamedSymbol": "L:Level.e(I)Z#0",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#0",
       "originalName": "incrementValue$6",
       "renamedName": "incrementValue$6",
       "declaration": {
@@ -86292,7 +86468,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#1",
-      "renamedSymbol": "L:Level.e(I)Z#1",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#1",
       "originalName": "incrementValue$7",
       "renamedName": "incrementValue$7",
       "declaration": {
@@ -86303,7 +86479,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#10",
-      "renamedSymbol": "L:Level.e(I)Z#10",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#10",
       "originalName": "incrementValue$32",
       "renamedName": "incrementValue$32",
       "declaration": {
@@ -86314,7 +86490,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#11",
-      "renamedSymbol": "L:Level.e(I)Z#11",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#11",
       "originalName": "incrementValue$33",
       "renamedName": "incrementValue$33",
       "declaration": {
@@ -86325,7 +86501,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#12",
-      "renamedSymbol": "L:Level.e(I)Z#12",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#12",
       "originalName": "incrementValue$34",
       "renamedName": "incrementValue$34",
       "declaration": {
@@ -86336,7 +86512,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#13",
-      "renamedSymbol": "L:Level.e(I)Z#13",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#13",
       "originalName": "incrementValue$35",
       "renamedName": "incrementValue$35",
       "declaration": {
@@ -86347,7 +86523,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#14",
-      "renamedSymbol": "L:Level.e(I)Z#14",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#14",
       "originalName": "incrementValue$36",
       "renamedName": "incrementValue$36",
       "declaration": {
@@ -86358,7 +86534,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#15",
-      "renamedSymbol": "L:Level.e(I)Z#15",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#15",
       "originalName": "incrementValue$37",
       "renamedName": "incrementValue$37",
       "declaration": {
@@ -86369,7 +86545,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#16",
-      "renamedSymbol": "L:Level.e(I)Z#16",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#16",
       "originalName": "incrementValue$9",
       "renamedName": "incrementValue$9",
       "declaration": {
@@ -86380,7 +86556,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#17",
-      "renamedSymbol": "L:Level.e(I)Z#17",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#17",
       "originalName": "incrementValue$10",
       "renamedName": "incrementValue$10",
       "declaration": {
@@ -86391,7 +86567,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#18",
-      "renamedSymbol": "L:Level.e(I)Z#18",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#18",
       "originalName": "incrementValue$11",
       "renamedName": "incrementValue$11",
       "declaration": {
@@ -86402,7 +86578,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#19",
-      "renamedSymbol": "L:Level.e(I)Z#19",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#19",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -86413,7 +86589,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#2",
-      "renamedSymbol": "L:Level.e(I)Z#2",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#2",
       "originalName": "incrementValue$40",
       "renamedName": "incrementValue$40",
       "declaration": {
@@ -86424,7 +86600,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#20",
-      "renamedSymbol": "L:Level.e(I)Z#20",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#20",
       "originalName": "incrementValue$13",
       "renamedName": "incrementValue$13",
       "declaration": {
@@ -86435,7 +86611,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#21",
-      "renamedSymbol": "L:Level.e(I)Z#21",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#21",
       "originalName": "incrementValue$14",
       "renamedName": "incrementValue$14",
       "declaration": {
@@ -86446,7 +86622,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#22",
-      "renamedSymbol": "L:Level.e(I)Z#22",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#22",
       "originalName": "incrementValue$15",
       "renamedName": "incrementValue$15",
       "declaration": {
@@ -86457,7 +86633,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#23",
-      "renamedSymbol": "L:Level.e(I)Z#23",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#23",
       "originalName": "incrementValue$16",
       "renamedName": "incrementValue$16",
       "declaration": {
@@ -86468,7 +86644,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#24",
-      "renamedSymbol": "L:Level.e(I)Z#24",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#24",
       "originalName": "incrementValue$17",
       "renamedName": "incrementValue$17",
       "declaration": {
@@ -86479,7 +86655,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#25",
-      "renamedSymbol": "L:Level.e(I)Z#25",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#25",
       "originalName": "incrementValue$18",
       "renamedName": "incrementValue$18",
       "declaration": {
@@ -86490,7 +86666,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#26",
-      "renamedSymbol": "L:Level.e(I)Z#26",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#26",
       "originalName": "incrementValue$19",
       "renamedName": "incrementValue$19",
       "declaration": {
@@ -86501,7 +86677,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#27",
-      "renamedSymbol": "L:Level.e(I)Z#27",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#27",
       "originalName": "incrementValue$20",
       "renamedName": "incrementValue$20",
       "declaration": {
@@ -86512,7 +86688,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#28",
-      "renamedSymbol": "L:Level.e(I)Z#28",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#28",
       "originalName": "incrementValue$21",
       "renamedName": "incrementValue$21",
       "declaration": {
@@ -86523,7 +86699,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#29",
-      "renamedSymbol": "L:Level.e(I)Z#29",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#29",
       "originalName": "incrementValue$22",
       "renamedName": "incrementValue$22",
       "declaration": {
@@ -86534,7 +86710,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#3",
-      "renamedSymbol": "L:Level.e(I)Z#3",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#3",
       "originalName": "dupTemp$41",
       "renamedName": "dupTemp$41",
       "declaration": {
@@ -86545,7 +86721,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#30",
-      "renamedSymbol": "L:Level.e(I)Z#30",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#30",
       "originalName": "incrementValue$23",
       "renamedName": "incrementValue$23",
       "declaration": {
@@ -86556,7 +86732,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#31",
-      "renamedSymbol": "L:Level.e(I)Z#31",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#31",
       "originalName": "incrementValue$24",
       "renamedName": "incrementValue$24",
       "declaration": {
@@ -86567,7 +86743,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#32",
-      "renamedSymbol": "L:Level.e(I)Z#32",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#32",
       "originalName": "incrementValue$25",
       "renamedName": "incrementValue$25",
       "declaration": {
@@ -86578,7 +86754,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#33",
-      "renamedSymbol": "L:Level.e(I)Z#33",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#33",
       "originalName": "incrementValue$26",
       "renamedName": "incrementValue$26",
       "declaration": {
@@ -86589,7 +86765,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#34",
-      "renamedSymbol": "L:Level.e(I)Z#34",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#34",
       "originalName": "incrementValue$27",
       "renamedName": "incrementValue$27",
       "declaration": {
@@ -86600,7 +86776,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#35",
-      "renamedSymbol": "L:Level.e(I)Z#35",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#35",
       "originalName": "incrementValue$28",
       "renamedName": "incrementValue$28",
       "declaration": {
@@ -86611,7 +86787,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#36",
-      "renamedSymbol": "L:Level.e(I)Z#36",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#36",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -86622,7 +86798,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#37",
-      "renamedSymbol": "L:Level.e(I)Z#37",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#37",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -86633,7 +86809,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#38",
-      "renamedSymbol": "L:Level.e(I)Z#38",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#38",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -86644,7 +86820,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#39",
-      "renamedSymbol": "L:Level.e(I)Z#39",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#39",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -86655,7 +86831,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#4",
-      "renamedSymbol": "L:Level.e(I)Z#4",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#4",
       "originalName": "incrementValue$38",
       "renamedName": "incrementValue$38",
       "declaration": {
@@ -86666,7 +86842,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#40",
-      "renamedSymbol": "L:Level.e(I)Z#40",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#40",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -86677,7 +86853,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#41",
-      "renamedSymbol": "L:Level.e(I)Z#41",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#41",
       "originalName": "var6_ref_int__",
       "renamedName": "var6_ref_int__",
       "declaration": {
@@ -86688,7 +86864,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#42",
-      "renamedSymbol": "L:Level.e(I)Z#42",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#42",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -86699,7 +86875,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#43",
-      "renamedSymbol": "L:Level.e(I)Z#43",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#43",
       "originalName": "var7_ref_int__",
       "renamedName": "var7_ref_int__",
       "declaration": {
@@ -86710,7 +86886,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#44",
-      "renamedSymbol": "L:Level.e(I)Z#44",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#44",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -86721,7 +86897,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#45",
-      "renamedSymbol": "L:Level.e(I)Z#45",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#45",
       "originalName": "var8_ref_int__",
       "renamedName": "var8_ref_int__",
       "declaration": {
@@ -86732,7 +86908,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#46",
-      "renamedSymbol": "L:Level.e(I)Z#46",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#46",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -86743,7 +86919,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#47",
-      "renamedSymbol": "L:Level.e(I)Z#47",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#47",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -86754,7 +86930,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#48",
-      "renamedSymbol": "L:Level.e(I)Z#48",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#48",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -86765,7 +86941,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#49",
-      "renamedSymbol": "L:Level.e(I)Z#49",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#49",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -86776,7 +86952,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#5",
-      "renamedSymbol": "L:Level.e(I)Z#5",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#5",
       "originalName": "incrementValue$39",
       "renamedName": "incrementValue$39",
       "declaration": {
@@ -86787,7 +86963,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#50",
-      "renamedSymbol": "L:Level.e(I)Z#50",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#50",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -86798,7 +86974,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#51",
-      "renamedSymbol": "L:Level.e(I)Z#51",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#51",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -86809,7 +86985,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#52",
-      "renamedSymbol": "L:Level.e(I)Z#52",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#52",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -86820,7 +86996,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#53",
-      "renamedSymbol": "L:Level.e(I)Z#53",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#53",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -86831,7 +87007,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#54",
-      "renamedSymbol": "L:Level.e(I)Z#54",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#54",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -86842,7 +87018,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#55",
-      "renamedSymbol": "L:Level.e(I)Z#55",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#55",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -86853,7 +87029,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#56",
-      "renamedSymbol": "L:Level.e(I)Z#56",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#56",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -86864,7 +87040,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#57",
-      "renamedSymbol": "L:Level.e(I)Z#57",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#57",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -86875,7 +87051,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#58",
-      "renamedSymbol": "L:Level.e(I)Z#58",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#58",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -86886,7 +87062,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#59",
-      "renamedSymbol": "L:Level.e(I)Z#59",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#59",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -86897,7 +87073,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#6",
-      "renamedSymbol": "L:Level.e(I)Z#6",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#6",
       "originalName": "incrementValue$8",
       "renamedName": "incrementValue$8",
       "declaration": {
@@ -86908,7 +87084,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#60",
-      "renamedSymbol": "L:Level.e(I)Z#60",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#60",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -86919,7 +87095,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#61",
-      "renamedSymbol": "L:Level.e(I)Z#61",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#61",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -86930,7 +87106,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#62",
-      "renamedSymbol": "L:Level.e(I)Z#62",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#62",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -86941,7 +87117,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#63",
-      "renamedSymbol": "L:Level.e(I)Z#63",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#63",
       "originalName": "var3Lifetime2",
       "renamedName": "var3Lifetime2",
       "declaration": {
@@ -86952,7 +87128,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#64",
-      "renamedSymbol": "L:Level.e(I)Z#64",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#64",
       "originalName": "var3Lifetime3",
       "renamedName": "var3Lifetime3",
       "declaration": {
@@ -86963,7 +87139,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#65",
-      "renamedSymbol": "L:Level.e(I)Z#65",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#65",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -86974,7 +87150,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#66",
-      "renamedSymbol": "L:Level.e(I)Z#66",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#66",
       "originalName": "var4Lifetime2",
       "renamedName": "var4Lifetime2",
       "declaration": {
@@ -86985,7 +87161,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#67",
-      "renamedSymbol": "L:Level.e(I)Z#67",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#67",
       "originalName": "var4Lifetime3",
       "renamedName": "var4Lifetime3",
       "declaration": {
@@ -86996,7 +87172,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#68",
-      "renamedSymbol": "L:Level.e(I)Z#68",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#68",
       "originalName": "var4Lifetime4",
       "renamedName": "var4Lifetime4",
       "declaration": {
@@ -87007,7 +87183,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#69",
-      "renamedSymbol": "L:Level.e(I)Z#69",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#69",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -87018,7 +87194,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#7",
-      "renamedSymbol": "L:Level.e(I)Z#7",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#7",
       "originalName": "incrementValue$29",
       "renamedName": "incrementValue$29",
       "declaration": {
@@ -87029,7 +87205,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#70",
-      "renamedSymbol": "L:Level.e(I)Z#70",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#70",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -87040,7 +87216,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#71",
-      "renamedSymbol": "L:Level.e(I)Z#71",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#71",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -87051,7 +87227,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#72",
-      "renamedSymbol": "L:Level.e(I)Z#72",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#72",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -87062,7 +87238,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#73",
-      "renamedSymbol": "L:Level.e(I)Z#73",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#73",
       "originalName": "var9Lifetime2",
       "renamedName": "var9Lifetime2",
       "declaration": {
@@ -87073,7 +87249,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#74",
-      "renamedSymbol": "L:Level.e(I)Z#74",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#74",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -87084,7 +87260,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#75",
-      "renamedSymbol": "L:Level.e(I)Z#75",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#75",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -87095,7 +87271,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#76",
-      "renamedSymbol": "L:Level.e(I)Z#76",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#76",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -87106,7 +87282,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#77",
-      "renamedSymbol": "L:Level.e(I)Z#77",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#77",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -87117,7 +87293,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#78",
-      "renamedSymbol": "L:Level.e(I)Z#78",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#78",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -87128,7 +87304,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#79",
-      "renamedSymbol": "L:Level.e(I)Z#79",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#79",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -87139,7 +87315,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#8",
-      "renamedSymbol": "L:Level.e(I)Z#8",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#8",
       "originalName": "incrementValue$30",
       "renamedName": "incrementValue$30",
       "declaration": {
@@ -87150,7 +87326,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#80",
-      "renamedSymbol": "L:Level.e(I)Z#80",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#80",
       "originalName": "var5Lifetime2",
       "renamedName": "var5Lifetime2",
       "declaration": {
@@ -87161,7 +87337,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#81",
-      "renamedSymbol": "L:Level.e(I)Z#81",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#81",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -87172,7 +87348,7 @@
     },
     {
       "symbol": "L:hc.e(I)Z#9",
-      "renamedSymbol": "L:Level.e(I)Z#9",
+      "renamedSymbol": "L:Level.processLevelDecoding(I)Z#9",
       "originalName": "incrementValue$31",
       "renamedName": "incrementValue$31",
       "declaration": {
@@ -87183,7 +87359,7 @@
     },
     {
       "symbol": "L:hc.f(I)[D#0",
-      "renamedSymbol": "L:Level.f(I)[D#0",
+      "renamedSymbol": "L:Level.getStartPose(I)[D#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -87194,7 +87370,7 @@
     },
     {
       "symbol": "L:hc.g(I)Z#0",
-      "renamedSymbol": "L:Level.g(I)Z#0",
+      "renamedSymbol": "L:Level.processLevelSceneMeshes(I)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -87205,7 +87381,7 @@
     },
     {
       "symbol": "L:hc.g(I)Z#1",
-      "renamedSymbol": "L:Level.g(I)Z#1",
+      "renamedSymbol": "L:Level.processLevelSceneMeshes(I)Z#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -87216,7 +87392,7 @@
     },
     {
       "symbol": "L:hc.g(I)Z#2",
-      "renamedSymbol": "L:Level.g(I)Z#2",
+      "renamedSymbol": "L:Level.processLevelSceneMeshes(I)Z#2",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -87227,7 +87403,7 @@
     },
     {
       "symbol": "L:hc.g(I)Z#3",
-      "renamedSymbol": "L:Level.g(I)Z#3",
+      "renamedSymbol": "L:Level.processLevelSceneMeshes(I)Z#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -87238,7 +87414,7 @@
     },
     {
       "symbol": "L:hc.g(I)Z#4",
-      "renamedSymbol": "L:Level.g(I)Z#4",
+      "renamedSymbol": "L:Level.processLevelSceneMeshes(I)Z#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -87249,7 +87425,7 @@
     },
     {
       "symbol": "L:hc.g(I)Z#5",
-      "renamedSymbol": "L:Level.g(I)Z#5",
+      "renamedSymbol": "L:Level.processLevelSceneMeshes(I)Z#5",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -115541,7 +115717,7 @@
     },
     {
       "symbol": "L:la.a(B)I#0",
-      "renamedSymbol": "L:ResourceArchive.a(B)I#0",
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -115552,7 +115728,7 @@
     },
     {
       "symbol": "L:la.a(B)I#1",
-      "renamedSymbol": "L:ResourceArchive.a(B)I#1",
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -115563,7 +115739,7 @@
     },
     {
       "symbol": "L:la.a(B)I#2",
-      "renamedSymbol": "L:ResourceArchive.a(B)I#2",
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -115574,7 +115750,7 @@
     },
     {
       "symbol": "L:la.a(B)I#3",
-      "renamedSymbol": "L:ResourceArchive.a(B)I#3",
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -115585,7 +115761,7 @@
     },
     {
       "symbol": "L:la.a(B)I#4",
-      "renamedSymbol": "L:ResourceArchive.a(B)I#4",
+      "renamedSymbol": "L:ResourceArchive.getArchiveLoadPercent(B)I#4",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -116278,7 +116454,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#0",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#0",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#0",
       "originalName": "var10_int",
       "renamedName": "var10_int",
       "declaration": {
@@ -116289,7 +116465,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#1",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#1",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -116300,7 +116476,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#10",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#10",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#10",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -116311,7 +116487,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#11",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#11",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#11",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -116322,7 +116498,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#12",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#12",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#12",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -116333,7 +116509,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#13",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#13",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#13",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -116344,7 +116520,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#14",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#14",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#14",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -116355,7 +116531,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#15",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#15",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#15",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -116366,7 +116542,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#16",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#16",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#16",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -116377,7 +116553,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#2",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#2",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#2",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -116388,7 +116564,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#3",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#3",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#3",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -116399,7 +116575,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#4",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#4",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#4",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -116410,7 +116586,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#5",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#5",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#5",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -116421,7 +116597,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#6",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#6",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#6",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -116432,7 +116608,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#7",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#7",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#7",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -116443,7 +116619,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#8",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#8",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -116454,7 +116630,7 @@
     },
     {
       "symbol": "L:la.a(II[II[IIIIII)V#9",
-      "renamedSymbol": "L:ResourceArchive.a(II[II[IIIIII)V#9",
+      "renamedSymbol": "L:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -116872,7 +117048,7 @@
     },
     {
       "symbol": "L:la.a(Z)Z#0",
-      "renamedSymbol": "L:ResourceArchive.a(Z)Z#0",
+      "renamedSymbol": "L:ResourceArchive.isClientStartupReady(Z)Z#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -116883,7 +117059,7 @@
     },
     {
       "symbol": "L:la.a(ZLjava/lang/String;)Z#0",
-      "renamedSymbol": "L:ResourceArchive.a(ZLjava/lang/String;)Z#0",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(ZLjava/lang/String;)Z#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -116894,7 +117070,7 @@
     },
     {
       "symbol": "L:la.a(ZLjava/lang/String;)Z#1",
-      "renamedSymbol": "L:ResourceArchive.a(ZLjava/lang/String;)Z#1",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(ZLjava/lang/String;)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -116905,7 +117081,7 @@
     },
     {
       "symbol": "L:la.a(ZLjava/lang/String;)Z#2",
-      "renamedSymbol": "L:ResourceArchive.a(ZLjava/lang/String;)Z#2",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(ZLjava/lang/String;)Z#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -116916,7 +117092,7 @@
     },
     {
       "symbol": "L:la.a(ZLjava/lang/String;)Z#3",
-      "renamedSymbol": "L:ResourceArchive.a(ZLjava/lang/String;)Z#3",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(ZLjava/lang/String;)Z#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -116927,7 +117103,7 @@
     },
     {
       "symbol": "L:la.a(ZLjava/lang/String;)Z#4",
-      "renamedSymbol": "L:ResourceArchive.a(ZLjava/lang/String;)Z#4",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(ZLjava/lang/String;)Z#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -116938,7 +117114,7 @@
     },
     {
       "symbol": "L:la.a(ZLjava/lang/String;)Z#5",
-      "renamedSymbol": "L:ResourceArchive.a(ZLjava/lang/String;)Z#5",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(ZLjava/lang/String;)Z#5",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -116949,7 +117125,7 @@
     },
     {
       "symbol": "L:la.a(ZLjava/lang/String;)Z#6",
-      "renamedSymbol": "L:ResourceArchive.a(ZLjava/lang/String;)Z#6",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(ZLjava/lang/String;)Z#6",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -116960,7 +117136,7 @@
     },
     {
       "symbol": "L:la.a(ZLjava/lang/String;)Z#7",
-      "renamedSymbol": "L:ResourceArchive.a(ZLjava/lang/String;)Z#7",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(ZLjava/lang/String;)Z#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -116971,7 +117147,7 @@
     },
     {
       "symbol": "L:la.a(ZLjava/lang/String;)Z#8",
-      "renamedSymbol": "L:ResourceArchive.a(ZLjava/lang/String;)Z#8",
+      "renamedSymbol": "L:ResourceArchive.tryLoadGroupByName(ZLjava/lang/String;)Z#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -117279,7 +117455,7 @@
     },
     {
       "symbol": "L:la.b(BLjava/lang/String;)Z#0",
-      "renamedSymbol": "L:ResourceArchive.b(BLjava/lang/String;)Z#0",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(BLjava/lang/String;)Z#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -117290,7 +117466,7 @@
     },
     {
       "symbol": "L:la.b(BLjava/lang/String;)Z#1",
-      "renamedSymbol": "L:ResourceArchive.b(BLjava/lang/String;)Z#1",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(BLjava/lang/String;)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -117301,7 +117477,7 @@
     },
     {
       "symbol": "L:la.b(BLjava/lang/String;)Z#2",
-      "renamedSymbol": "L:ResourceArchive.b(BLjava/lang/String;)Z#2",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(BLjava/lang/String;)Z#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -117312,7 +117488,7 @@
     },
     {
       "symbol": "L:la.b(BLjava/lang/String;)Z#3",
-      "renamedSymbol": "L:ResourceArchive.b(BLjava/lang/String;)Z#3",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(BLjava/lang/String;)Z#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -117323,7 +117499,7 @@
     },
     {
       "symbol": "L:la.b(BLjava/lang/String;)Z#4",
-      "renamedSymbol": "L:ResourceArchive.b(BLjava/lang/String;)Z#4",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(BLjava/lang/String;)Z#4",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -117334,7 +117510,7 @@
     },
     {
       "symbol": "L:la.b(BLjava/lang/String;)Z#5",
-      "renamedSymbol": "L:ResourceArchive.b(BLjava/lang/String;)Z#5",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(BLjava/lang/String;)Z#5",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -117345,7 +117521,7 @@
     },
     {
       "symbol": "L:la.b(BLjava/lang/String;)Z#6",
-      "renamedSymbol": "L:ResourceArchive.b(BLjava/lang/String;)Z#6",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(BLjava/lang/String;)Z#6",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -117356,7 +117532,7 @@
     },
     {
       "symbol": "L:la.b(BLjava/lang/String;)Z#7",
-      "renamedSymbol": "L:ResourceArchive.b(BLjava/lang/String;)Z#7",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(BLjava/lang/String;)Z#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -117367,7 +117543,7 @@
     },
     {
       "symbol": "L:la.b(BLjava/lang/String;)Z#8",
-      "renamedSymbol": "L:ResourceArchive.b(BLjava/lang/String;)Z#8",
+      "renamedSymbol": "L:ResourceArchive.hasGroupName(BLjava/lang/String;)Z#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -117444,7 +117620,7 @@
     },
     {
       "symbol": "L:la.b(ILjava/lang/String;Ljava/lang/String;)Z#0",
-      "renamedSymbol": "L:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#0",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -117455,7 +117631,7 @@
     },
     {
       "symbol": "L:la.b(ILjava/lang/String;Ljava/lang/String;)Z#1",
-      "renamedSymbol": "L:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#1",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -117466,7 +117642,7 @@
     },
     {
       "symbol": "L:la.b(ILjava/lang/String;Ljava/lang/String;)Z#10",
-      "renamedSymbol": "L:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#10",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#10",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -117477,7 +117653,7 @@
     },
     {
       "symbol": "L:la.b(ILjava/lang/String;Ljava/lang/String;)Z#11",
-      "renamedSymbol": "L:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#11",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#11",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -117488,7 +117664,7 @@
     },
     {
       "symbol": "L:la.b(ILjava/lang/String;Ljava/lang/String;)Z#12",
-      "renamedSymbol": "L:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#12",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#12",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -117499,7 +117675,7 @@
     },
     {
       "symbol": "L:la.b(ILjava/lang/String;Ljava/lang/String;)Z#13",
-      "renamedSymbol": "L:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#13",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -117510,7 +117686,7 @@
     },
     {
       "symbol": "L:la.b(ILjava/lang/String;Ljava/lang/String;)Z#2",
-      "renamedSymbol": "L:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#2",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -117521,7 +117697,7 @@
     },
     {
       "symbol": "L:la.b(ILjava/lang/String;Ljava/lang/String;)Z#3",
-      "renamedSymbol": "L:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#3",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -117532,7 +117708,7 @@
     },
     {
       "symbol": "L:la.b(ILjava/lang/String;Ljava/lang/String;)Z#4",
-      "renamedSymbol": "L:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#4",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -117543,7 +117719,7 @@
     },
     {
       "symbol": "L:la.b(ILjava/lang/String;Ljava/lang/String;)Z#5",
-      "renamedSymbol": "L:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#5",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -117554,7 +117730,7 @@
     },
     {
       "symbol": "L:la.b(ILjava/lang/String;Ljava/lang/String;)Z#6",
-      "renamedSymbol": "L:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#6",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#6",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -117565,7 +117741,7 @@
     },
     {
       "symbol": "L:la.b(ILjava/lang/String;Ljava/lang/String;)Z#7",
-      "renamedSymbol": "L:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#7",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#7",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -117576,7 +117752,7 @@
     },
     {
       "symbol": "L:la.b(ILjava/lang/String;Ljava/lang/String;)Z#8",
-      "renamedSymbol": "L:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#8",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#8",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -117587,7 +117763,7 @@
     },
     {
       "symbol": "L:la.b(ILjava/lang/String;Ljava/lang/String;)Z#9",
-      "renamedSymbol": "L:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#9",
+      "renamedSymbol": "L:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#9",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -117642,7 +117818,7 @@
     },
     {
       "symbol": "L:la.d(I)V#0",
-      "renamedSymbol": "L:ResourceArchive.d(I)V#0",
+      "renamedSymbol": "L:ResourceArchive.clearStaticReferences(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -221251,9 +221427,9 @@
     },
     {
       "symbol": "M:hc.a(B)V",
-      "renamedSymbol": "M:Level.a(B)V",
+      "renamedSymbol": "M:Level.clearLevelGlobals(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearLevelGlobals",
       "declaration": {
         "file": "hc.java",
         "start": 44104,
@@ -221262,9 +221438,9 @@
     },
     {
       "symbol": "M:hc.a(D[DBD)V",
-      "renamedSymbol": "M:Level.a(D[DBD)V",
+      "renamedSymbol": "M:Level.collectLevelCollisionContacts(D[DBD)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "collectLevelCollisionContacts",
       "declaration": {
         "file": "hc.java",
         "start": 824,
@@ -221273,9 +221449,9 @@
     },
     {
       "symbol": "M:hc.a(I)I",
-      "renamedSymbol": "M:Level.a(I)I",
+      "renamedSymbol": "M:Level.getTimeLimitMillis(I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getTimeLimitMillis",
       "declaration": {
         "file": "hc.java",
         "start": 694,
@@ -221284,9 +221460,9 @@
     },
     {
       "symbol": "M:hc.a(IIII[DIII)[D",
-      "renamedSymbol": "M:Level.a(IIII[DIII)[D",
+      "renamedSymbol": "M:Level.findTerrainTriangleContact(IIII[DIII)[D",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findTerrainTriangleContact",
       "declaration": {
         "file": "hc.java",
         "start": 27783,
@@ -221295,9 +221471,9 @@
     },
     {
       "symbol": "M:hc.a(IZ)Lkh;",
-      "renamedSymbol": "M:Level.a(IZ)LModel;",
+      "renamedSymbol": "M:Level.getTerrainModel(IZ)LModel;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getTerrainModel",
       "declaration": {
         "file": "hc.java",
         "start": 44299,
@@ -221306,9 +221482,9 @@
     },
     {
       "symbol": "M:hc.a(Z)I",
-      "renamedSymbol": "M:Level.a(Z)I",
+      "renamedSymbol": "M:Level.getViewPresetIndex(Z)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getViewPresetIndex",
       "declaration": {
         "file": "hc.java",
         "start": 14864,
@@ -221317,9 +221493,9 @@
     },
     {
       "symbol": "M:hc.a(ZZIIZI)Lla;",
-      "renamedSymbol": "M:Level.a(ZZIIZI)LResourceArchive;",
+      "renamedSymbol": "M:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openIndexedResourceArchive",
       "declaration": {
         "file": "hc.java",
         "start": 42156,
@@ -221328,9 +221504,9 @@
     },
     {
       "symbol": "M:hc.b(I)Z",
-      "renamedSymbol": "M:Level.b(I)Z",
+      "renamedSymbol": "M:Level.prepareTerrainSkirtModel(I)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "prepareTerrainSkirtModel",
       "declaration": {
         "file": "hc.java",
         "start": 41818,
@@ -221339,9 +221515,9 @@
     },
     {
       "symbol": "M:hc.c(I)Lkh;",
-      "renamedSymbol": "M:Level.c(I)LModel;",
+      "renamedSymbol": "M:Level.getTerrainSkirtModel(I)LModel;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "getTerrainSkirtModel",
       "declaration": {
         "file": "hc.java",
         "start": 31997,
@@ -221350,9 +221526,9 @@
     },
     {
       "symbol": "M:hc.d(I)V",
-      "renamedSymbol": "M:Level.d(I)V",
+      "renamedSymbol": "M:Level.applyTerrainRenderMode(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "applyTerrainRenderMode",
       "declaration": {
         "file": "hc.java",
         "start": 42000,
@@ -221361,9 +221537,9 @@
     },
     {
       "symbol": "M:hc.e(I)Z",
-      "renamedSymbol": "M:Level.e(I)Z",
+      "renamedSymbol": "M:Level.processLevelDecoding(I)Z",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "processLevelDecoding",
       "declaration": {
         "file": "hc.java",
         "start": 17023,
@@ -221372,9 +221548,9 @@
     },
     {
       "symbol": "M:hc.f(I)[D",
-      "renamedSymbol": "M:Level.f(I)[D",
+      "renamedSymbol": "M:Level.getStartPose(I)[D",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "getStartPose",
       "declaration": {
         "file": "hc.java",
         "start": 15011,
@@ -221383,9 +221559,9 @@
     },
     {
       "symbol": "M:hc.g(I)Z",
-      "renamedSymbol": "M:Level.g(I)Z",
+      "renamedSymbol": "M:Level.processLevelSceneMeshes(I)Z",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "processLevelSceneMeshes",
       "declaration": {
         "file": "hc.java",
         "start": 15128,
@@ -226278,9 +226454,9 @@
     },
     {
       "symbol": "M:la.a(B)I",
-      "renamedSymbol": "M:ResourceArchive.a(B)I",
+      "renamedSymbol": "M:ResourceArchive.getArchiveLoadPercent(B)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getArchiveLoadPercent",
       "declaration": {
         "file": "la.java",
         "start": 21476,
@@ -226366,9 +226542,9 @@
     },
     {
       "symbol": "M:la.a(II[II[IIIIII)V",
-      "renamedSymbol": "M:ResourceArchive.a(II[II[IIIIII)V",
+      "renamedSymbol": "M:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "darkenRgbWithSpriteMask",
       "declaration": {
         "file": "la.java",
         "start": 32931,
@@ -226399,9 +226575,9 @@
     },
     {
       "symbol": "M:la.a(IZ)Z",
-      "renamedSymbol": "M:ResourceArchive.a(IZ)Z",
+      "renamedSymbol": "M:ResourceArchive.tryLoadFlatFile(IZ)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "tryLoadFlatFile",
       "declaration": {
         "file": "la.java",
         "start": 29202,
@@ -226421,9 +226597,9 @@
     },
     {
       "symbol": "M:la.a(Z)Z",
-      "renamedSymbol": "M:ResourceArchive.a(Z)Z",
+      "renamedSymbol": "M:ResourceArchive.isClientStartupReady(Z)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isClientStartupReady",
       "declaration": {
         "file": "la.java",
         "start": 921,
@@ -226454,9 +226630,9 @@
     },
     {
       "symbol": "M:la.a(ZLjava/lang/String;)Z",
-      "renamedSymbol": "M:ResourceArchive.a(ZLjava/lang/String;)Z",
+      "renamedSymbol": "M:ResourceArchive.tryLoadGroupByName(ZLjava/lang/String;)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "tryLoadGroupByName",
       "declaration": {
         "file": "la.java",
         "start": 22139,
@@ -226498,9 +226674,9 @@
     },
     {
       "symbol": "M:la.b(BLjava/lang/String;)Z",
-      "renamedSymbol": "M:ResourceArchive.b(BLjava/lang/String;)Z",
+      "renamedSymbol": "M:ResourceArchive.hasGroupName(BLjava/lang/String;)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "hasGroupName",
       "declaration": {
         "file": "la.java",
         "start": 17521,
@@ -226520,9 +226696,9 @@
     },
     {
       "symbol": "M:la.b(IB)[B",
-      "renamedSymbol": "M:ResourceArchive.b(IB)[B",
+      "renamedSymbol": "M:ResourceArchive.getFlatFile(IB)[B",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "getFlatFile",
       "declaration": {
         "file": "la.java",
         "start": 13168,
@@ -226531,9 +226707,9 @@
     },
     {
       "symbol": "M:la.b(ILjava/lang/String;Ljava/lang/String;)Z",
-      "renamedSymbol": "M:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z",
+      "renamedSymbol": "M:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "tryLoadFileByName",
       "declaration": {
         "file": "la.java",
         "start": 1470,
@@ -226553,9 +226729,9 @@
     },
     {
       "symbol": "M:la.d(I)V",
-      "renamedSymbol": "M:ResourceArchive.d(I)V",
+      "renamedSymbol": "M:ResourceArchive.clearStaticReferences(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "clearStaticReferences",
       "declaration": {
         "file": "la.java",
         "start": 1155,
@@ -263414,7 +263590,7 @@
     },
     {
       "symbol": "P:hc.a(B)V#0",
-      "renamedSymbol": "P:Level.a(B)V#0",
+      "renamedSymbol": "P:Level.clearLevelGlobals(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263425,7 +263601,7 @@
     },
     {
       "symbol": "P:hc.a(D[DBD)V#0",
-      "renamedSymbol": "P:Level.a(D[DBD)V#0",
+      "renamedSymbol": "P:Level.collectLevelCollisionContacts(D[DBD)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263436,7 +263612,7 @@
     },
     {
       "symbol": "P:hc.a(D[DBD)V#1",
-      "renamedSymbol": "P:Level.a(D[DBD)V#1",
+      "renamedSymbol": "P:Level.collectLevelCollisionContacts(D[DBD)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -263447,7 +263623,7 @@
     },
     {
       "symbol": "P:hc.a(D[DBD)V#2",
-      "renamedSymbol": "P:Level.a(D[DBD)V#2",
+      "renamedSymbol": "P:Level.collectLevelCollisionContacts(D[DBD)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -263458,7 +263634,7 @@
     },
     {
       "symbol": "P:hc.a(D[DBD)V#3",
-      "renamedSymbol": "P:Level.a(D[DBD)V#3",
+      "renamedSymbol": "P:Level.collectLevelCollisionContacts(D[DBD)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -263469,7 +263645,7 @@
     },
     {
       "symbol": "P:hc.a(I)I#0",
-      "renamedSymbol": "P:Level.a(I)I#0",
+      "renamedSymbol": "P:Level.getTimeLimitMillis(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263480,7 +263656,7 @@
     },
     {
       "symbol": "P:hc.a(IIII[DIII)[D#0",
-      "renamedSymbol": "P:Level.a(IIII[DIII)[D#0",
+      "renamedSymbol": "P:Level.findTerrainTriangleContact(IIII[DIII)[D#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263491,7 +263667,7 @@
     },
     {
       "symbol": "P:hc.a(IIII[DIII)[D#1",
-      "renamedSymbol": "P:Level.a(IIII[DIII)[D#1",
+      "renamedSymbol": "P:Level.findTerrainTriangleContact(IIII[DIII)[D#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -263502,7 +263678,7 @@
     },
     {
       "symbol": "P:hc.a(IIII[DIII)[D#2",
-      "renamedSymbol": "P:Level.a(IIII[DIII)[D#2",
+      "renamedSymbol": "P:Level.findTerrainTriangleContact(IIII[DIII)[D#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -263513,7 +263689,7 @@
     },
     {
       "symbol": "P:hc.a(IIII[DIII)[D#3",
-      "renamedSymbol": "P:Level.a(IIII[DIII)[D#3",
+      "renamedSymbol": "P:Level.findTerrainTriangleContact(IIII[DIII)[D#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -263524,7 +263700,7 @@
     },
     {
       "symbol": "P:hc.a(IIII[DIII)[D#4",
-      "renamedSymbol": "P:Level.a(IIII[DIII)[D#4",
+      "renamedSymbol": "P:Level.findTerrainTriangleContact(IIII[DIII)[D#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -263535,7 +263711,7 @@
     },
     {
       "symbol": "P:hc.a(IIII[DIII)[D#5",
-      "renamedSymbol": "P:Level.a(IIII[DIII)[D#5",
+      "renamedSymbol": "P:Level.findTerrainTriangleContact(IIII[DIII)[D#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -263546,7 +263722,7 @@
     },
     {
       "symbol": "P:hc.a(IIII[DIII)[D#6",
-      "renamedSymbol": "P:Level.a(IIII[DIII)[D#6",
+      "renamedSymbol": "P:Level.findTerrainTriangleContact(IIII[DIII)[D#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -263557,7 +263733,7 @@
     },
     {
       "symbol": "P:hc.a(IIII[DIII)[D#7",
-      "renamedSymbol": "P:Level.a(IIII[DIII)[D#7",
+      "renamedSymbol": "P:Level.findTerrainTriangleContact(IIII[DIII)[D#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -263568,7 +263744,7 @@
     },
     {
       "symbol": "P:hc.a(IZ)Lkh;#0",
-      "renamedSymbol": "P:Level.a(IZ)LModel;#0",
+      "renamedSymbol": "P:Level.getTerrainModel(IZ)LModel;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263579,7 +263755,7 @@
     },
     {
       "symbol": "P:hc.a(IZ)Lkh;#1",
-      "renamedSymbol": "P:Level.a(IZ)LModel;#1",
+      "renamedSymbol": "P:Level.getTerrainModel(IZ)LModel;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -263590,7 +263766,7 @@
     },
     {
       "symbol": "P:hc.a(Z)I#0",
-      "renamedSymbol": "P:Level.a(Z)I#0",
+      "renamedSymbol": "P:Level.getViewPresetIndex(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263601,7 +263777,7 @@
     },
     {
       "symbol": "P:hc.a(ZZIIZI)Lla;#0",
-      "renamedSymbol": "P:Level.a(ZZIIZI)LResourceArchive;#0",
+      "renamedSymbol": "P:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263612,7 +263788,7 @@
     },
     {
       "symbol": "P:hc.a(ZZIIZI)Lla;#1",
-      "renamedSymbol": "P:Level.a(ZZIIZI)LResourceArchive;#1",
+      "renamedSymbol": "P:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -263623,7 +263799,7 @@
     },
     {
       "symbol": "P:hc.a(ZZIIZI)Lla;#2",
-      "renamedSymbol": "P:Level.a(ZZIIZI)LResourceArchive;#2",
+      "renamedSymbol": "P:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -263634,7 +263810,7 @@
     },
     {
       "symbol": "P:hc.a(ZZIIZI)Lla;#3",
-      "renamedSymbol": "P:Level.a(ZZIIZI)LResourceArchive;#3",
+      "renamedSymbol": "P:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -263645,7 +263821,7 @@
     },
     {
       "symbol": "P:hc.a(ZZIIZI)Lla;#4",
-      "renamedSymbol": "P:Level.a(ZZIIZI)LResourceArchive;#4",
+      "renamedSymbol": "P:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -263656,7 +263832,7 @@
     },
     {
       "symbol": "P:hc.a(ZZIIZI)Lla;#5",
-      "renamedSymbol": "P:Level.a(ZZIIZI)LResourceArchive;#5",
+      "renamedSymbol": "P:Level.openIndexedResourceArchive(ZZIIZI)LResourceArchive;#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -263667,7 +263843,7 @@
     },
     {
       "symbol": "P:hc.b(I)Z#0",
-      "renamedSymbol": "P:Level.b(I)Z#0",
+      "renamedSymbol": "P:Level.prepareTerrainSkirtModel(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263678,7 +263854,7 @@
     },
     {
       "symbol": "P:hc.c(I)Lkh;#0",
-      "renamedSymbol": "P:Level.c(I)LModel;#0",
+      "renamedSymbol": "P:Level.getTerrainSkirtModel(I)LModel;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263689,7 +263865,7 @@
     },
     {
       "symbol": "P:hc.d(I)V#0",
-      "renamedSymbol": "P:Level.d(I)V#0",
+      "renamedSymbol": "P:Level.applyTerrainRenderMode(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263700,7 +263876,7 @@
     },
     {
       "symbol": "P:hc.e(I)Z#0",
-      "renamedSymbol": "P:Level.e(I)Z#0",
+      "renamedSymbol": "P:Level.processLevelDecoding(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263711,7 +263887,7 @@
     },
     {
       "symbol": "P:hc.f(I)[D#0",
-      "renamedSymbol": "P:Level.f(I)[D#0",
+      "renamedSymbol": "P:Level.getStartPose(I)[D#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263722,7 +263898,7 @@
     },
     {
       "symbol": "P:hc.g(I)Z#0",
-      "renamedSymbol": "P:Level.g(I)Z#0",
+      "renamedSymbol": "P:Level.processLevelSceneMeshes(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274942,7 +275118,7 @@
     },
     {
       "symbol": "P:la.a(B)I#0",
-      "renamedSymbol": "P:ResourceArchive.a(B)I#0",
+      "renamedSymbol": "P:ResourceArchive.getArchiveLoadPercent(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -275140,7 +275316,7 @@
     },
     {
       "symbol": "P:la.a(II[II[IIIIII)V#0",
-      "renamedSymbol": "P:ResourceArchive.a(II[II[IIIIII)V#0",
+      "renamedSymbol": "P:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -275151,7 +275327,7 @@
     },
     {
       "symbol": "P:la.a(II[II[IIIIII)V#1",
-      "renamedSymbol": "P:ResourceArchive.a(II[II[IIIIII)V#1",
+      "renamedSymbol": "P:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -275162,7 +275338,7 @@
     },
     {
       "symbol": "P:la.a(II[II[IIIIII)V#2",
-      "renamedSymbol": "P:ResourceArchive.a(II[II[IIIIII)V#2",
+      "renamedSymbol": "P:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -275173,7 +275349,7 @@
     },
     {
       "symbol": "P:la.a(II[II[IIIIII)V#3",
-      "renamedSymbol": "P:ResourceArchive.a(II[II[IIIIII)V#3",
+      "renamedSymbol": "P:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -275184,7 +275360,7 @@
     },
     {
       "symbol": "P:la.a(II[II[IIIIII)V#4",
-      "renamedSymbol": "P:ResourceArchive.a(II[II[IIIIII)V#4",
+      "renamedSymbol": "P:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -275195,7 +275371,7 @@
     },
     {
       "symbol": "P:la.a(II[II[IIIIII)V#5",
-      "renamedSymbol": "P:ResourceArchive.a(II[II[IIIIII)V#5",
+      "renamedSymbol": "P:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -275206,7 +275382,7 @@
     },
     {
       "symbol": "P:la.a(II[II[IIIIII)V#6",
-      "renamedSymbol": "P:ResourceArchive.a(II[II[IIIIII)V#6",
+      "renamedSymbol": "P:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -275217,7 +275393,7 @@
     },
     {
       "symbol": "P:la.a(II[II[IIIIII)V#7",
-      "renamedSymbol": "P:ResourceArchive.a(II[II[IIIIII)V#7",
+      "renamedSymbol": "P:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -275228,7 +275404,7 @@
     },
     {
       "symbol": "P:la.a(II[II[IIIIII)V#8",
-      "renamedSymbol": "P:ResourceArchive.a(II[II[IIIIII)V#8",
+      "renamedSymbol": "P:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -275239,7 +275415,7 @@
     },
     {
       "symbol": "P:la.a(II[II[IIIIII)V#9",
-      "renamedSymbol": "P:ResourceArchive.a(II[II[IIIIII)V#9",
+      "renamedSymbol": "P:ResourceArchive.darkenRgbWithSpriteMask(II[II[IIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -275305,7 +275481,7 @@
     },
     {
       "symbol": "P:la.a(IZ)Z#0",
-      "renamedSymbol": "P:ResourceArchive.a(IZ)Z#0",
+      "renamedSymbol": "P:ResourceArchive.tryLoadFlatFile(IZ)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -275316,7 +275492,7 @@
     },
     {
       "symbol": "P:la.a(IZ)Z#1",
-      "renamedSymbol": "P:ResourceArchive.a(IZ)Z#1",
+      "renamedSymbol": "P:ResourceArchive.tryLoadFlatFile(IZ)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -275360,7 +275536,7 @@
     },
     {
       "symbol": "P:la.a(Z)Z#0",
-      "renamedSymbol": "P:ResourceArchive.a(Z)Z#0",
+      "renamedSymbol": "P:ResourceArchive.isClientStartupReady(Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -275426,7 +275602,7 @@
     },
     {
       "symbol": "P:la.a(ZLjava/lang/String;)Z#0",
-      "renamedSymbol": "P:ResourceArchive.a(ZLjava/lang/String;)Z#0",
+      "renamedSymbol": "P:ResourceArchive.tryLoadGroupByName(ZLjava/lang/String;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -275437,7 +275613,7 @@
     },
     {
       "symbol": "P:la.a(ZLjava/lang/String;)Z#1",
-      "renamedSymbol": "P:ResourceArchive.a(ZLjava/lang/String;)Z#1",
+      "renamedSymbol": "P:ResourceArchive.tryLoadGroupByName(ZLjava/lang/String;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -275558,7 +275734,7 @@
     },
     {
       "symbol": "P:la.b(BLjava/lang/String;)Z#0",
-      "renamedSymbol": "P:ResourceArchive.b(BLjava/lang/String;)Z#0",
+      "renamedSymbol": "P:ResourceArchive.hasGroupName(BLjava/lang/String;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -275569,7 +275745,7 @@
     },
     {
       "symbol": "P:la.b(BLjava/lang/String;)Z#1",
-      "renamedSymbol": "P:ResourceArchive.b(BLjava/lang/String;)Z#1",
+      "renamedSymbol": "P:ResourceArchive.hasGroupName(BLjava/lang/String;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -275591,7 +275767,7 @@
     },
     {
       "symbol": "P:la.b(IB)[B#0",
-      "renamedSymbol": "P:ResourceArchive.b(IB)[B#0",
+      "renamedSymbol": "P:ResourceArchive.getFlatFile(IB)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -275602,7 +275778,7 @@
     },
     {
       "symbol": "P:la.b(IB)[B#1",
-      "renamedSymbol": "P:ResourceArchive.b(IB)[B#1",
+      "renamedSymbol": "P:ResourceArchive.getFlatFile(IB)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -275613,7 +275789,7 @@
     },
     {
       "symbol": "P:la.b(ILjava/lang/String;Ljava/lang/String;)Z#0",
-      "renamedSymbol": "P:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#0",
+      "renamedSymbol": "P:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -275624,7 +275800,7 @@
     },
     {
       "symbol": "P:la.b(ILjava/lang/String;Ljava/lang/String;)Z#1",
-      "renamedSymbol": "P:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#1",
+      "renamedSymbol": "P:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -275635,7 +275811,7 @@
     },
     {
       "symbol": "P:la.b(ILjava/lang/String;Ljava/lang/String;)Z#2",
-      "renamedSymbol": "P:ResourceArchive.b(ILjava/lang/String;Ljava/lang/String;)Z#2",
+      "renamedSymbol": "P:ResourceArchive.tryLoadFileByName(ILjava/lang/String;Ljava/lang/String;)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -275657,7 +275833,7 @@
     },
     {
       "symbol": "P:la.d(I)V#0",
-      "renamedSymbol": "P:ResourceArchive.d(I)V#0",
+      "renamedSymbol": "P:ResourceArchive.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -316944,7 +317120,7 @@
       "original": "Torquing.java",
       "renamed": "Torquing.java",
       "inputSha256": "742b6d0e1c2e9f63f2a936a53bef0afab5a0766ce8f580bc98ea4a0992d727f5",
-      "outputSha256": "0136bbe2d4a09f3ba7bd605d78ba9401a0ed06a3c865121e643e7511bd57e2b5",
+      "outputSha256": "7cf1509334079c1c620d03e165af554cc0c483f1e2644c3e20870ef4b530d8e2",
       "edits": [
         {
           "start": 91,
@@ -317206,6 +317382,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 3907,
+          "end": 3908,
+          "symbol": "M:la.d(I)V",
+          "original": "d",
+          "renamed": "clearStaticReferences"
+        },
+        {
           "start": 3936,
           "end": 3937,
           "symbol": "M:uc.a()V",
@@ -317372,6 +317555,13 @@
           "symbol": "C:hc",
           "original": "hc",
           "renamed": "Level"
+        },
+        {
+          "start": 4483,
+          "end": 4484,
+          "symbol": "M:hc.a(B)V",
+          "original": "a",
+          "renamed": "clearLevelGlobals"
         },
         {
           "start": 4512,
@@ -319509,11 +319699,32 @@
           "renamed": "ensureIndexLoaded"
         },
         {
+          "start": 18272,
+          "end": 18273,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
+        },
+        {
+          "start": 18324,
+          "end": 18325,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
+        },
+        {
           "start": 18365,
           "end": 18367,
           "symbol": "C:df",
           "original": "df",
           "renamed": "IsaacPacketBuffer"
+        },
+        {
+          "start": 18529,
+          "end": 18530,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 18571,
@@ -319528,6 +319739,13 @@
           "symbol": "M:la.a(I)Z",
           "original": "a",
           "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 18766,
+          "end": 18767,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 18823,
@@ -321049,6 +321267,27 @@
           "renamed": "DirectByteStorage"
         },
         {
+          "start": 49332,
+          "end": 49333,
+          "symbol": "M:hc.e(I)Z",
+          "original": "e",
+          "renamed": "processLevelDecoding"
+        },
+        {
+          "start": 49365,
+          "end": 49366,
+          "symbol": "M:hc.b(I)Z",
+          "original": "b",
+          "renamed": "prepareTerrainSkirtModel"
+        },
+        {
+          "start": 49409,
+          "end": 49410,
+          "symbol": "M:hc.g(I)Z",
+          "original": "g",
+          "renamed": "processLevelSceneMeshes"
+        },
+        {
           "start": 49555,
           "end": 49557,
           "symbol": "C:df",
@@ -321075,6 +321314,13 @@
           "symbol": "C:hc",
           "original": "hc",
           "renamed": "Level"
+        },
+        {
+          "start": 61366,
+          "end": 61367,
+          "symbol": "M:hc.e(I)Z",
+          "original": "e",
+          "renamed": "processLevelDecoding"
         },
         {
           "start": 61535,
@@ -321831,6 +322077,13 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 86815,
+          "end": 86816,
+          "symbol": "M:la.a(Z)Z",
+          "original": "a",
+          "renamed": "isClientStartupReady"
         },
         {
           "start": 87111,
@@ -326219,7 +326472,7 @@
       "original": "bi.java",
       "renamed": "bi.java",
       "inputSha256": "5ad67ef1615e20f6ae1c830233a955e73d626deb34ee74635f18d5f8abf683ea",
-      "outputSha256": "a9f848da3d11b4019c29001231c10877d24f8c58a1cc7741d3c2989e9b0a934b",
+      "outputSha256": "b2ce9c9a807890dcb314d6b591f5f2409e930d8bc70c97c8f30aeb4d9be44a30",
       "edits": [
         {
           "start": 138,
@@ -326278,6 +326531,20 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 3379,
+          "end": 3380,
+          "symbol": "M:hc.a(I)I",
+          "original": "a",
+          "renamed": "getTimeLimitMillis"
+        },
+        {
+          "start": 3487,
+          "end": 3488,
+          "symbol": "M:hc.a(Z)I",
+          "original": "a",
+          "renamed": "getViewPresetIndex"
+        },
+        {
           "start": 3512,
           "end": 3514,
           "symbol": "C:gj",
@@ -326290,6 +326557,13 @@
           "symbol": "C:il",
           "original": "il",
           "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 3781,
+          "end": 3782,
+          "symbol": "M:hc.a(IZ)Lkh;",
+          "original": "a",
+          "renamed": "getTerrainModel"
         },
         {
           "start": 4267,
@@ -326675,6 +326949,13 @@
           "symbol": "C:ph",
           "original": "ph",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 33469,
+          "end": 33470,
+          "symbol": "M:hc.a(Z)I",
+          "original": "a",
+          "renamed": "getViewPresetIndex"
         },
         {
           "start": 33606,
@@ -327132,6 +327413,13 @@
           "renamed": "ProxySocketConnector"
         },
         {
+          "start": 49088,
+          "end": 49089,
+          "symbol": "M:hc.a(IZ)Lkh;",
+          "original": "a",
+          "renamed": "getTerrainModel"
+        },
+        {
           "start": 49821,
           "end": 49823,
           "symbol": "C:mm",
@@ -327144,6 +327432,13 @@
           "symbol": "C:mm",
           "original": "mm",
           "renamed": "UrlRequest"
+        },
+        {
+          "start": 53066,
+          "end": 53067,
+          "symbol": "M:hc.f(I)[D",
+          "original": "f",
+          "renamed": "getStartPose"
         },
         {
           "start": 53678,
@@ -350044,7 +350339,7 @@
       "original": "hc.java",
       "renamed": "Level.java",
       "inputSha256": "c296abd9f4fbe50eeef718c33b7ba286e27cc327d902a7387c0b8cc843b43701",
-      "outputSha256": "3ee8f4aa707b7c75402eca0785b3a6906a8aedcce30c32c8d680ead430029f7e",
+      "outputSha256": "e6ea4eab1c9cc1a99f433c4d5ea4fe00f2484077b87c3b036a1573173eac9214",
       "edits": [
         {
           "start": 69,
@@ -350110,6 +350405,48 @@
           "renamed": "Model"
         },
         {
+          "start": 694,
+          "end": 695,
+          "symbol": "M:hc.a(I)I",
+          "original": "a",
+          "renamed": "getTimeLimitMillis"
+        },
+        {
+          "start": 824,
+          "end": 825,
+          "symbol": "M:hc.a(D[DBD)V",
+          "original": "a",
+          "renamed": "collectLevelCollisionContacts"
+        },
+        {
+          "start": 4308,
+          "end": 4309,
+          "symbol": "M:hc.a(IIII[DIII)[D",
+          "original": "a",
+          "renamed": "findTerrainTriangleContact"
+        },
+        {
+          "start": 4403,
+          "end": 4404,
+          "symbol": "M:hc.a(IIII[DIII)[D",
+          "original": "a",
+          "renamed": "findTerrainTriangleContact"
+        },
+        {
+          "start": 4532,
+          "end": 4533,
+          "symbol": "M:hc.a(IIII[DIII)[D",
+          "original": "a",
+          "renamed": "findTerrainTriangleContact"
+        },
+        {
+          "start": 4637,
+          "end": 4638,
+          "symbol": "M:hc.a(IIII[DIII)[D",
+          "original": "a",
+          "renamed": "findTerrainTriangleContact"
+        },
+        {
           "start": 14654,
           "end": 14655,
           "symbol": "M:rb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
@@ -350117,11 +350454,39 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 14864,
+          "end": 14865,
+          "symbol": "M:hc.a(Z)I",
+          "original": "a",
+          "renamed": "getViewPresetIndex"
+        },
+        {
+          "start": 15011,
+          "end": 15012,
+          "symbol": "M:hc.f(I)[D",
+          "original": "f",
+          "renamed": "getStartPose"
+        },
+        {
+          "start": 15128,
+          "end": 15129,
+          "symbol": "M:hc.g(I)Z",
+          "original": "g",
+          "renamed": "processLevelSceneMeshes"
+        },
+        {
           "start": 15340,
           "end": 15347,
           "symbol": "F:hc.field_s:I",
           "original": "field_s",
           "renamed": "id"
+        },
+        {
+          "start": 15538,
+          "end": 15539,
+          "symbol": "M:hc.a(IZ)Lkh;",
+          "original": "a",
+          "renamed": "getTerrainModel"
         },
         {
           "start": 15617,
@@ -350187,11 +350552,25 @@
           "renamed": "correctedCurrentTimeMillis"
         },
         {
+          "start": 17023,
+          "end": 17024,
+          "symbol": "M:hc.e(I)Z",
+          "original": "e",
+          "renamed": "processLevelDecoding"
+        },
+        {
           "start": 19551,
           "end": 19553,
           "symbol": "C:ei",
           "original": "ei",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 19650,
+          "end": 19651,
+          "symbol": "M:hc.a(IZ)Lkh;",
+          "original": "a",
+          "renamed": "getTerrainModel"
         },
         {
           "start": 19956,
@@ -350236,6 +350615,13 @@
           "renamed": "addFirst"
         },
         {
+          "start": 27783,
+          "end": 27784,
+          "symbol": "M:hc.a(IIII[DIII)[D",
+          "original": "a",
+          "renamed": "findTerrainTriangleContact"
+        },
+        {
           "start": 31761,
           "end": 31762,
           "symbol": "M:rb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
@@ -350248,6 +350634,13 @@
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "Model"
+        },
+        {
+          "start": 31997,
+          "end": 31998,
+          "symbol": "M:hc.c(I)Lkh;",
+          "original": "c",
+          "renamed": "getTerrainSkirtModel"
         },
         {
           "start": 32482,
@@ -350297,6 +350690,13 @@
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "Model"
+        },
+        {
+          "start": 33704,
+          "end": 33705,
+          "symbol": "M:hc.a(IZ)Lkh;",
+          "original": "a",
+          "renamed": "getTerrainModel"
         },
         {
           "start": 35786,
@@ -350369,6 +350769,27 @@
           "renamed": "Model"
         },
         {
+          "start": 41818,
+          "end": 41819,
+          "symbol": "M:hc.b(I)Z",
+          "original": "b",
+          "renamed": "prepareTerrainSkirtModel"
+        },
+        {
+          "start": 41941,
+          "end": 41942,
+          "symbol": "M:hc.c(I)Lkh;",
+          "original": "c",
+          "renamed": "getTerrainSkirtModel"
+        },
+        {
+          "start": 42000,
+          "end": 42001,
+          "symbol": "M:hc.d(I)V",
+          "original": "d",
+          "renamed": "applyTerrainRenderMode"
+        },
+        {
           "start": 42109,
           "end": 42111,
           "symbol": "C:hc",
@@ -350381,6 +350802,13 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 42156,
+          "end": 42157,
+          "symbol": "M:hc.a(ZZIIZI)Lla;",
+          "original": "a",
+          "renamed": "openIndexedResourceArchive"
         },
         {
           "start": 42328,
@@ -350474,6 +350902,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 44104,
+          "end": 44105,
+          "symbol": "M:hc.a(B)V",
+          "original": "a",
+          "renamed": "clearLevelGlobals"
+        },
+        {
           "start": 44159,
           "end": 44161,
           "symbol": "C:hc",
@@ -350481,11 +350916,25 @@
           "renamed": "Level"
         },
         {
+          "start": 44162,
+          "end": 44163,
+          "symbol": "M:hc.a(ZZIIZI)Lla;",
+          "original": "a",
+          "renamed": "openIndexedResourceArchive"
+        },
+        {
           "start": 44296,
           "end": 44298,
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "Model"
+        },
+        {
+          "start": 44299,
+          "end": 44300,
+          "symbol": "M:hc.a(IZ)Lkh;",
+          "original": "a",
+          "renamed": "getTerrainModel"
         },
         {
           "start": 44361,
@@ -352895,7 +353344,7 @@
       "original": "hm.java",
       "renamed": "hm.java",
       "inputSha256": "dbb1e69eaa823a01dd6e627aff5943fc71eadf777320de6bbf0660c34d077d9a",
-      "outputSha256": "8d04387b0ca62501c1fb034df8c46dbd092238abdfeda6970ddb4dcd76517b23",
+      "outputSha256": "4fee2d16dbe4624d79110609855224204c689e820e7a2abb3425e06656e7d6e2",
       "edits": [
         {
           "start": 10083,
@@ -353106,6 +353555,13 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 14899,
+          "end": 14900,
+          "symbol": "M:la.a(II[II[IIIIII)V",
+          "original": "a",
+          "renamed": "darkenRgbWithSpriteMask"
         },
         {
           "start": 14938,
@@ -354171,7 +354627,7 @@
       "original": "ho.java",
       "renamed": "ho.java",
       "inputSha256": "8f9c7ae89c58ada317ee53c4e4230ca81f7d91b431ae28157d496cc0d087e0ad",
-      "outputSha256": "50ac60459d3101066748836bd355f5d84f2d390f5ac22c2865a98cb297e49f9c",
+      "outputSha256": "fca383df96b7a8ebecab905ebc99ea9419168ee91f3015e7879181ddf97de8e5",
       "edits": [
         {
           "start": 80,
@@ -354221,6 +354677,13 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 1990,
+          "end": 1991,
+          "symbol": "M:la.b(ILjava/lang/String;Ljava/lang/String;)Z",
+          "original": "b",
+          "renamed": "tryLoadFileByName"
         },
         {
           "start": 2080,
@@ -356018,7 +356481,7 @@
       "original": "il.java",
       "renamed": "AccountNameAvailabilityValidator.java",
       "inputSha256": "9c4838296c709e17d77b46078ad25a55576c1029cec2ae9247a1676bf59323dd",
-      "outputSha256": "05adc8bda32ab1f3830874c8671c205acfc1ad4a4c3ad80e8be42abd698b052f",
+      "outputSha256": "0c6e24a27cffb696834cfcce78344fb5c861f18f0e9c23f979eea3c078362ab6",
       "edits": [
         {
           "start": 50,
@@ -356201,6 +356664,13 @@
           "symbol": "M:la.a(I)Z",
           "original": "a",
           "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 3785,
+          "end": 3786,
+          "symbol": "M:la.a(B)I",
+          "original": "a",
+          "renamed": "getArchiveLoadPercent"
         },
         {
           "start": 4726,
@@ -361114,7 +361584,7 @@
       "original": "kg.java",
       "renamed": "kg.java",
       "inputSha256": "3277aeb9ca1c2d05ce811b6ba0625edd7322370df0adbf9d530c747de5f602ee",
-      "outputSha256": "8cdc966291ec5a27404ad94ed928715ec86ee2250e972dacb1f505a74cca9add",
+      "outputSha256": "7a28699edcdfade37652ea7875e122660c08ed3c7b3c2e1090efce47ba8b8fc8",
       "edits": [
         {
           "start": 780,
@@ -361292,11 +361762,25 @@
           "renamed": "ensureIndexLoaded"
         },
         {
+          "start": 5591,
+          "end": 5592,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
+        },
+        {
           "start": 5675,
           "end": 5676,
           "symbol": "M:la.a(I)Z",
           "original": "a",
           "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 5749,
+          "end": 5750,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 5833,
@@ -361320,6 +361804,20 @@
           "renamed": "ensureIndexLoaded"
         },
         {
+          "start": 6116,
+          "end": 6117,
+          "symbol": "M:la.b(BLjava/lang/String;)Z",
+          "original": "b",
+          "renamed": "hasGroupName"
+        },
+        {
+          "start": 6204,
+          "end": 6205,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
+        },
+        {
           "start": 6296,
           "end": 6297,
           "symbol": "M:la.a(I)Z",
@@ -361327,11 +361825,25 @@
           "renamed": "ensureIndexLoaded"
         },
         {
+          "start": 6370,
+          "end": 6371,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
+        },
+        {
           "start": 6454,
           "end": 6455,
           "symbol": "M:la.a(I)Z",
           "original": "a",
           "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 6528,
+          "end": 6529,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 6612,
@@ -363216,7 +363728,7 @@
       "original": "kp.java",
       "renamed": "kp.java",
       "inputSha256": "9941e98083d72db7f855dfd1f0a1d8f74cd782bd0f354c4d934bd656a72ac3ee",
-      "outputSha256": "3ddc78549dd58e594b4fe66336b0c259088186f64055cf151b6d1dbaf24d1291",
+      "outputSha256": "9a3a0f64fb6437ee7900eb0b65d0b01218f005cd5c526c4986b72d7ef8d0cb51",
       "edits": [
         {
           "start": 157,
@@ -363392,6 +363904,13 @@
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 5606,
+          "end": 5607,
+          "symbol": "M:hc.a(D[DBD)V",
+          "original": "a",
+          "renamed": "collectLevelCollisionContacts"
         },
         {
           "start": 5769,
@@ -363722,7 +364241,7 @@
       "original": "la.java",
       "renamed": "ResourceArchive.java",
       "inputSha256": "ee06659186759775b25d4042adbbd168b3136a1c3042b63e9d38142e2713404c",
-      "outputSha256": "736c0c4cfa103744d3f0be1487fe4b9ca7f3d5f9fbd1cf1465f63815095cfd5c",
+      "outputSha256": "544e4adb090cf0220aa3fca3bb50fafeaf14d2e6bca4bd98b083a31356b884c2",
       "edits": [
         {
           "start": 50,
@@ -363774,6 +364293,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 487,
+          "end": 488,
+          "symbol": "M:la.d(I)V",
+          "original": "d",
+          "renamed": "clearStaticReferences"
+        },
+        {
           "start": 523,
           "end": 524,
           "symbol": "M:la.a(I)Z",
@@ -363781,11 +364307,39 @@
           "renamed": "ensureIndexLoaded"
         },
         {
+          "start": 921,
+          "end": 922,
+          "symbol": "M:la.a(Z)Z",
+          "original": "a",
+          "renamed": "isClientStartupReady"
+        },
+        {
+          "start": 1155,
+          "end": 1156,
+          "symbol": "M:la.d(I)V",
+          "original": "d",
+          "renamed": "clearStaticReferences"
+        },
+        {
           "start": 1293,
           "end": 1295,
           "symbol": "C:la",
           "original": "la",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 1296,
+          "end": 1297,
+          "symbol": "M:la.a(II[II[IIIIII)V",
+          "original": "a",
+          "renamed": "darkenRgbWithSpriteMask"
+        },
+        {
+          "start": 1470,
+          "end": 1471,
+          "symbol": "M:la.b(ILjava/lang/String;Ljava/lang/String;)Z",
+          "original": "b",
+          "renamed": "tryLoadFileByName"
         },
         {
           "start": 2033,
@@ -364054,6 +364608,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 13168,
+          "end": 13169,
+          "symbol": "M:la.b(IB)[B",
+          "original": "b",
+          "renamed": "getFlatFile"
+        },
+        {
           "start": 13215,
           "end": 13216,
           "symbol": "M:la.a(I)Z",
@@ -364101,6 +364662,13 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 13821,
+          "end": 13822,
+          "symbol": "M:la.d(I)V",
+          "original": "d",
+          "renamed": "clearStaticReferences"
         },
         {
           "start": 13942,
@@ -364201,6 +364769,13 @@
           "renamed": "loadPackedGroup"
         },
         {
+          "start": 17521,
+          "end": 17522,
+          "symbol": "M:la.b(BLjava/lang/String;)Z",
+          "original": "b",
+          "renamed": "hasGroupName"
+        },
+        {
           "start": 17906,
           "end": 17907,
           "symbol": "M:la.a(I)Z",
@@ -364278,6 +364853,13 @@
           "renamed": "storeBytes"
         },
         {
+          "start": 21476,
+          "end": 21477,
+          "symbol": "M:la.a(B)I",
+          "original": "a",
+          "renamed": "getArchiveLoadPercent"
+        },
+        {
           "start": 21643,
           "end": 21644,
           "symbol": "M:la.a(I)Z",
@@ -364290,6 +364872,13 @@
           "symbol": "M:la.a(ZI)I",
           "original": "a",
           "renamed": "getGroupLoadPercent"
+        },
+        {
+          "start": 22139,
+          "end": 22140,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 22525,
@@ -364432,6 +365021,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 29202,
+          "end": 29203,
+          "symbol": "M:la.a(IZ)Z",
+          "original": "a",
+          "renamed": "tryLoadFlatFile"
+        },
+        {
           "start": 29252,
           "end": 29253,
           "symbol": "M:la.a(I)Z",
@@ -364549,6 +365145,13 @@
           "symbol": "M:rb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 32931,
+          "end": 32932,
+          "symbol": "M:la.a(II[II[IIIIII)V",
+          "original": "a",
+          "renamed": "darkenRgbWithSpriteMask"
         },
         {
           "start": 33676,
@@ -368534,7 +369137,7 @@
       "original": "mh.java",
       "renamed": "mh.java",
       "inputSha256": "edef7f8c7b294558f5d2fb331a5972c511ad2d0d15d1f99b7600b24626ef4305",
-      "outputSha256": "f8a793008be258f0dc0c9e394cfb9a82d19dce8eb5c3a9adf76239087c26b722",
+      "outputSha256": "d67985c255f838947df8e8d2660ef5af4c44790f93a0104ec729ff46b13fd4d7",
       "edits": [
         {
           "start": 458,
@@ -369153,6 +369756,13 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 28244,
+          "end": 28245,
+          "symbol": "M:hc.a(Z)I",
+          "original": "a",
+          "renamed": "getViewPresetIndex"
+        },
+        {
           "start": 28283,
           "end": 28285,
           "symbol": "C:il",
@@ -369172,6 +369782,13 @@
           "symbol": "M:ph.g(IIII)V",
           "original": "g",
           "renamed": "setClip"
+        },
+        {
+          "start": 29214,
+          "end": 29215,
+          "symbol": "M:hc.a(Z)I",
+          "original": "a",
+          "renamed": "getViewPresetIndex"
         },
         {
           "start": 29280,
@@ -389742,7 +390359,7 @@
       "original": "ro.java",
       "renamed": "ro.java",
       "inputSha256": "6de5d229445116a0bdc3d8dc38e9acc5846f474525e7266f76f14aa17c4911bb",
-      "outputSha256": "f7b74a81768d2cbb65bce47afba32edac505552d548d2efb7e06ac99f6f4d2ae",
+      "outputSha256": "617c6fd0a25f4264161ceffdb736292c267dd522db80e98096d6bd202fb99a37",
       "edits": [
         {
           "start": 2225,
@@ -389766,6 +390383,13 @@
           "renamed": "ensureIndexLoaded"
         },
         {
+          "start": 2426,
+          "end": 2427,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
+        },
+        {
           "start": 2498,
           "end": 2499,
           "symbol": "M:la.a(BLjava/lang/String;)I",
@@ -389778,6 +390402,13 @@
           "symbol": "M:la.a(I)Z",
           "original": "a",
           "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 2714,
+          "end": 2715,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 2785,
@@ -389806,6 +390437,13 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 2989,
+          "end": 2990,
+          "symbol": "M:la.a(B)I",
+          "original": "a",
+          "renamed": "getArchiveLoadPercent"
         },
         {
           "start": 3077,
@@ -389864,6 +390502,13 @@
           "renamed": "ensureIndexLoaded"
         },
         {
+          "start": 5582,
+          "end": 5583,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
+        },
+        {
           "start": 5664,
           "end": 5665,
           "symbol": "M:la.a(I)Z",
@@ -389871,11 +390516,25 @@
           "renamed": "ensureIndexLoaded"
         },
         {
+          "start": 5696,
+          "end": 5697,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
+        },
+        {
           "start": 5793,
           "end": 5794,
           "symbol": "M:la.a(I)Z",
           "original": "a",
           "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 5827,
+          "end": 5828,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 6878,
@@ -390385,7 +391044,7 @@
       "original": "sd.java",
       "renamed": "sd.java",
       "inputSha256": "13e04512b06d7ea0b778f14659480cb8d08266a98ca491a4a4aaf5e01119ddd4",
-      "outputSha256": "a224e81de3a1e7569d18181cedce56486020918fe9f9c1dfcf2b821c2ab78b0b",
+      "outputSha256": "32355e0f22a1c500b1d4c12df29f7801227ece601577ab0c06c493c10b6249db",
       "edits": [
         {
           "start": 864,
@@ -390465,6 +391124,13 @@
           "symbol": "C:hc",
           "original": "hc",
           "renamed": "Level"
+        },
+        {
+          "start": 4862,
+          "end": 4863,
+          "symbol": "M:hc.a(ZZIIZI)Lla;",
+          "original": "a",
+          "renamed": "openIndexedResourceArchive"
         },
         {
           "start": 5140,
@@ -390697,7 +391363,7 @@
       "original": "sf.java",
       "renamed": "sf.java",
       "inputSha256": "4ea1d09928aa477c924ef21234448a350db75f1cde4a1d8992b69996a4db43d7",
-      "outputSha256": "2d70e79d01ec2bba9cc1ab0fa48c6ece67d7afd28de440d1d27b1cc94e005374",
+      "outputSha256": "456d67face2f0d5c54ae903b50f2e13183a89a167049720ce2126008cc60e232",
       "edits": [
         {
           "start": 361,
@@ -390707,11 +391373,25 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 364,
+          "end": 365,
+          "symbol": "M:la.a(Z)Z",
+          "original": "a",
+          "renamed": "isClientStartupReady"
+        },
+        {
           "start": 663,
           "end": 665,
           "symbol": "C:la",
           "original": "la",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 666,
+          "end": 667,
+          "symbol": "M:la.a(Z)Z",
+          "original": "a",
+          "renamed": "isClientStartupReady"
         }
       ]
     },
@@ -393981,7 +394661,7 @@
       "original": "tc.java",
       "renamed": "tc.java",
       "inputSha256": "146e37193b2a8717c1c4f5b7e006844c94ddcd7edbf785e162a7895f87f25816",
-      "outputSha256": "1d8ce256dd3d2152414cbbad024b9f242b7967ec336d9c2a7aa4f79f94416b45",
+      "outputSha256": "04867364f72aa233955f27b5a1d4204cecc45102eff1afa4efe30005e2500c94",
       "edits": [
         {
           "start": 2510,
@@ -394157,6 +394837,13 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 8958,
+          "end": 8959,
+          "symbol": "M:la.b(IB)[B",
+          "original": "b",
+          "renamed": "getFlatFile"
         }
       ]
     },
@@ -394517,7 +395204,7 @@
       "original": "tg.java",
       "renamed": "tg.java",
       "inputSha256": "3129f33fbd1e5071240de0c5e9a03ae69775ef67d34a1628df47e001e17a4bef",
-      "outputSha256": "a8832fca5aab09a307e85f01feb086bb2f2dba7f7e2ca60958f45553325385ae",
+      "outputSha256": "355407cfcc9d340278bbd34d824f4bbf43772e37d18b7c717accec24ca01de71",
       "edits": [
         {
           "start": 64,
@@ -394721,6 +395408,20 @@
           "symbol": "M:la.a(I)Z",
           "original": "a",
           "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 6941,
+          "end": 6942,
+          "symbol": "M:la.b(BLjava/lang/String;)Z",
+          "original": "b",
+          "renamed": "hasGroupName"
+        },
+        {
+          "start": 7045,
+          "end": 7046,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 7076,
@@ -395015,6 +395716,13 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 16456,
+          "end": 16457,
+          "symbol": "M:la.a(Z)Z",
+          "original": "a",
+          "renamed": "isClientStartupReady"
         },
         {
           "start": 16706,
@@ -401742,7 +402450,7 @@
       "original": "vf.java",
       "renamed": "vf.java",
       "inputSha256": "da18191bf80b68b460246292f4717e8cd37fe7da87b604459bbf742ba96c07bf",
-      "outputSha256": "75bdf468c482143b0ef50e0520d9aac42bb45f65669d1e518f88b9e213ff055a",
+      "outputSha256": "8cfee2bc0451859071ab8f45ea216762b4e31e198379be135e9993b56a7078e3",
       "edits": [
         {
           "start": 262,
@@ -401794,6 +402502,13 @@
           "renamed": "getGroupLoadPercent"
         },
         {
+          "start": 3112,
+          "end": 3113,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
+        },
+        {
           "start": 3179,
           "end": 3180,
           "symbol": "M:la.a(BLjava/lang/String;)I",
@@ -401806,6 +402521,13 @@
           "symbol": "M:la.c(I)Z",
           "original": "c",
           "renamed": "tryLoadAllGroups"
+        },
+        {
+          "start": 3470,
+          "end": 3471,
+          "symbol": "M:la.a(B)I",
+          "original": "a",
+          "renamed": "getArchiveLoadPercent"
         },
         {
           "start": 4046,
@@ -401904,7 +402626,7 @@
       "original": "vg.java",
       "renamed": "vg.java",
       "inputSha256": "42bc2293f0815b794fba7a55974656de55f93b66ee5d83e32fa232764055a95b",
-      "outputSha256": "5cbc83ff169c2743c7c601cd2ea714d91935e8d6291e08b08d3e63d0ef609020",
+      "outputSha256": "e8dd4a59d1d82d8e1d1f3d785316c59b2cb59663939c84c9f97d95e53863541c",
       "edits": [
         {
           "start": 77,
@@ -401947,6 +402669,34 @@
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "Model"
+        },
+        {
+          "start": 10377,
+          "end": 10378,
+          "symbol": "M:hc.d(I)V",
+          "original": "d",
+          "renamed": "applyTerrainRenderMode"
+        },
+        {
+          "start": 10545,
+          "end": 10546,
+          "symbol": "M:hc.a(IZ)Lkh;",
+          "original": "a",
+          "renamed": "getTerrainModel"
+        },
+        {
+          "start": 10830,
+          "end": 10831,
+          "symbol": "M:hc.c(I)Lkh;",
+          "original": "c",
+          "renamed": "getTerrainSkirtModel"
+        },
+        {
+          "start": 11553,
+          "end": 11554,
+          "symbol": "M:hc.f(I)[D",
+          "original": "f",
+          "renamed": "getStartPose"
         },
         {
           "start": 12212,
@@ -402087,6 +402837,13 @@
           "symbol": "C:hc",
           "original": "hc",
           "renamed": "Level"
+        },
+        {
+          "start": 17179,
+          "end": 17180,
+          "symbol": "M:hc.a(ZZIIZI)Lla;",
+          "original": "a",
+          "renamed": "openIndexedResourceArchive"
         },
         {
           "start": 17856,
@@ -405350,7 +406107,7 @@
       "original": "wb.java",
       "renamed": "wb.java",
       "inputSha256": "0cd5a29f6be9212227a9873d62c5d05ba532bc4e798af1ef5ac28bffe29cef20",
-      "outputSha256": "3276b241ec8f7fea2e34a4151b9129d3d547947b302811cb81f5a401640a0013",
+      "outputSha256": "eaea961213f2db45849e889aaa2896edbb9931d92081f8d55a256c85510f3d25",
       "edits": [
         {
           "start": 102,
@@ -405465,11 +406222,25 @@
           "renamed": "ensureIndexLoaded"
         },
         {
+          "start": 5117,
+          "end": 5118,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
+        },
+        {
           "start": 5199,
           "end": 5200,
           "symbol": "M:la.a(I)Z",
           "original": "a",
           "renamed": "ensureIndexLoaded"
+        },
+        {
+          "start": 5236,
+          "end": 5237,
+          "symbol": "M:la.a(ZLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "tryLoadGroupByName"
         },
         {
           "start": 5271,
@@ -406549,7 +407320,7 @@
       "original": "wd.java",
       "renamed": "wd.java",
       "inputSha256": "4ffccbe239cd11caced4832c6748d15813cfde7745297955c748e3b4eb79f2c5",
-      "outputSha256": "d341bc8dbee160db9710822fccba80aa590934a2ad97beca94f5f70f7958fd5f",
+      "outputSha256": "4fa24270bd6753ffec6b8c5e97a5ad48db1e07f7914932caa9fdd5e17f86e094",
       "edits": [
         {
           "start": 61,
@@ -406620,6 +407391,13 @@
           "symbol": "M:la.a(IIB)Z",
           "original": "a",
           "renamed": "tryLoadFile"
+        },
+        {
+          "start": 7096,
+          "end": 7097,
+          "symbol": "M:la.a(IZ)Z",
+          "original": "a",
+          "renamed": "tryLoadFlatFile"
         },
         {
           "start": 8183,
@@ -407262,7 +408040,7 @@
       "original": "wk.java",
       "renamed": "wk.java",
       "inputSha256": "251512135b1ad7056e876c2b32cf7fdbbdaaef81be100c793c0f2cd01fc20079",
-      "outputSha256": "50210232224c4049772c699620f23023b0cf72fc8b9ee76c55ba2538700d97f5",
+      "outputSha256": "dd93e979a76987101c2275d5257732ace484d1c67aa9881b4f04819c8a295dd6",
       "edits": [
         {
           "start": 122,
@@ -407445,6 +408223,13 @@
           "symbol": "C:ta",
           "original": "ta",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 9149,
+          "end": 9150,
+          "symbol": "M:la.b(IB)[B",
+          "original": "b",
+          "renamed": "getFlatFile"
         },
         {
           "start": 9331,
@@ -408231,10 +409016,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/torquing"
     },
-    "rulesSha256": "05f9ac7a6a36cef190fcef7b8a959fcf9e6b2844a930bf52fa961f69c43cd395",
+    "rulesSha256": "3a65f5544333691f14289e3cc95d1aa6fd89a22cf43d0daaf4303517230ec995",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "d5b607927334e94f96a23b7311ef60890204fe2a23d66a0571322079a17eec67",
-    "outputTreeSha256": "49ca262a4d982a4d893e1f3021283537dfadc8ac75b3dc1425df0872b67810f7",
+    "outputTreeSha256": "c4ae10a1de7288bc882f217935d3e78ed31d0cba5f03dda7c32f85c4b87ea5a1",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

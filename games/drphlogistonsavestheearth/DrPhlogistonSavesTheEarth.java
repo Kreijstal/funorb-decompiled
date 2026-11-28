@@ -227,7 +227,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (df.field_l != null &&
             df.field_l.focusLost) {
             ProxyAuthenticationRequiredException.a(true);
-            ResourceArchive.b((byte) 72);
+            ResourceArchive.showFullscreenFocusWarningIfDialogActive((byte) 72);
           }
           if (param0 != 35) {
             this.a((he[]) null, 93, (he[]) null);
@@ -2056,7 +2056,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                         if (ff.field_P.ensureIndexLoaded(0) &&
                           ff.field_P.tryLoadAllGroups((byte) 109)) {
                           if (ph.field_b.ensureIndexLoaded(0) &&
-                            ph.field_b.a(255, "basic")) {
+                            ph.field_b.tryLoadGroupByName(255, "basic")) {
                             if (!param0) {
                               return false;
                             }

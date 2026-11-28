@@ -324,7 +324,7 @@ final class we extends UiWidget {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          bh.field_a = gk.a(param1, "commonui", "frame_top", true);
+          LevelSimulation.field_a = gk.a(param1, "commonui", "frame_top", true);
           ki.field_b = gk.a(param1, "commonui", "frame_bottom", true);
           qo.field_y = tn.a("jagex_logo_grey", param1, param3 - 38, "commonui");
           q.field_z = gk.a(param1, "commonui", "button", true);

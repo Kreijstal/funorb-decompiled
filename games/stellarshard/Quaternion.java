@@ -175,7 +175,7 @@ final class Quaternion {
             var5 = (String) null;
             Quaternion.a((String) null, (ResourceArchive) null, (String) null, 1);
           }
-          stackIn_6_0 = param0 + " - " + param1.b((byte) 1) + "%";
+          stackIn_6_0 = param0 + " - " + param1.getArchiveLoadPercent((byte) 1) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

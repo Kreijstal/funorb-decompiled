@@ -73,7 +73,7 @@ final class ClamsSpecial extends SpecialOrder {
         int var12Lifetime1;
         var15 = BachelorFridge.field_y;
         try {
-          var17 = this.creature.a(93, param0);
+          var17 = this.creature.resolveCreature(93, param0);
           var4 = new ClamsEvent(this.moveId, new CreatureRef(var17));
           var4.field_t = this.field_n;
           if (param1 != 3) {

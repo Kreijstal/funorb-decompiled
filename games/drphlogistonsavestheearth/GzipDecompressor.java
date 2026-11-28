@@ -18,13 +18,13 @@ final class GzipDecompressor {
           if (!AccountCreationResultPanel.field_Jb.ensureIndexLoaded(0)) {
             return 20;
           }
-          if (!AccountCreationResultPanel.field_Jb.a(255, "commonui")) {
+          if (!AccountCreationResultPanel.field_Jb.tryLoadGroupByName(255, "commonui")) {
             return 40;
           }
           if (!sb.field_i.ensureIndexLoaded(0)) {
             return 50;
           }
-          if (!sb.field_i.a(255, "commonui")) {
+          if (!sb.field_i.tryLoadGroupByName(255, "commonui")) {
             return 60;
           }
           if (!ig.field_t.ensureIndexLoaded(0)) {
@@ -38,23 +38,23 @@ final class GzipDecompressor {
             if (!DiskArchiveRequest.field_I.ensureIndexLoaded(0)) {
               return 14;
             }
-            if (!DiskArchiveRequest.field_I.a((byte) 12, "")) {
+            if (!DiskArchiveRequest.field_I.hasGroupName((byte) 12, "")) {
               return 29;
             }
-            if (!DiskArchiveRequest.field_I.a(255, "")) {
+            if (!DiskArchiveRequest.field_I.tryLoadGroupByName(255, "")) {
               return 29;
             }
           }
           if (!AccountCreationResultPanel.field_Jb.ensureIndexLoaded(0)) {
             return 43;
           }
-          if (!AccountCreationResultPanel.field_Jb.a(255, "commonui")) {
+          if (!AccountCreationResultPanel.field_Jb.tryLoadGroupByName(255, "commonui")) {
             return 57;
           }
           if (!sb.field_i.ensureIndexLoaded(0)) {
             return 71;
           }
-          if (!sb.field_i.a(255, "commonui")) {
+          if (!sb.field_i.tryLoadGroupByName(255, "commonui")) {
             return 80;
           }
           if (!ig.field_t.ensureIndexLoaded(0)) {

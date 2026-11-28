@@ -138,13 +138,13 @@ final class UiComponentPart005 extends ComponentContainer implements CallbackCon
           if (!MixedSupport116.resourceArchiveState0021.ensureIndexLoaded((byte) 121)) {
             return 20;
           }
-          if (!MixedSupport116.resourceArchiveState0021.computeBoolean0811("commonui", (byte) -33)) {
+          if (!MixedSupport116.resourceArchiveState0021.tryLoadGroupByName("commonui", (byte) -33)) {
             return 40;
           }
           if (!PcmPlayerService.resourceArchiveState0020.ensureIndexLoaded((byte) 121)) {
             return 50;
           }
-          if (!PcmPlayerService.resourceArchiveState0020.computeBoolean0811("commonui", (byte) 57)) {
+          if (!PcmPlayerService.resourceArchiveState0020.tryLoadGroupByName("commonui", (byte) 57)) {
             return 60;
           }
           if (!UiComponentPart023.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {
@@ -158,13 +158,13 @@ final class UiComponentPart005 extends ComponentContainer implements CallbackCon
             if (!MixedSupport116.resourceArchiveState0021.ensureIndexLoaded((byte) 121)) {
               return 43;
             }
-            if (!MixedSupport116.resourceArchiveState0021.computeBoolean0811("commonui", (byte) -114)) {
+            if (!MixedSupport116.resourceArchiveState0021.tryLoadGroupByName("commonui", (byte) -114)) {
               return 57;
             }
             if (!PcmPlayerService.resourceArchiveState0020.ensureIndexLoaded((byte) 121)) {
               return 71;
             }
-            if (!PcmPlayerService.resourceArchiveState0020.computeBoolean0811("commonui", (byte) -125)) {
+            if (!PcmPlayerService.resourceArchiveState0020.tryLoadGroupByName("commonui", (byte) -125)) {
               return 80;
             }
             if (!UiComponentPart023.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {
@@ -179,22 +179,22 @@ final class UiComponentPart005 extends ComponentContainer implements CallbackCon
             if (!NodeDeque.resourceArchiveState0025.ensureIndexLoaded((byte) 121)) {
               return 14;
             }
-            if (!NodeDeque.resourceArchiveState0025.computeBoolean0812("", 0)) {
+            if (!NodeDeque.resourceArchiveState0025.hasGroupName("", 0)) {
               return 29;
             }
-            if (!NodeDeque.resourceArchiveState0025.computeBoolean0811("", (byte) 63)) {
+            if (!NodeDeque.resourceArchiveState0025.tryLoadGroupByName("", (byte) 63)) {
               return 29;
             }
             if (!MixedSupport116.resourceArchiveState0021.ensureIndexLoaded((byte) 121)) {
               return 43;
             }
-            if (!MixedSupport116.resourceArchiveState0021.computeBoolean0811("commonui", (byte) -114)) {
+            if (!MixedSupport116.resourceArchiveState0021.tryLoadGroupByName("commonui", (byte) -114)) {
               return 57;
             }
             if (!PcmPlayerService.resourceArchiveState0020.ensureIndexLoaded((byte) 121)) {
               return 71;
             }
-            if (!PcmPlayerService.resourceArchiveState0020.computeBoolean0811("commonui", (byte) -125)) {
+            if (!PcmPlayerService.resourceArchiveState0020.tryLoadGroupByName("commonui", (byte) -125)) {
               return 80;
             }
             if (!UiComponentPart023.resourceArchiveState0016.ensureIndexLoaded((byte) 121)) {

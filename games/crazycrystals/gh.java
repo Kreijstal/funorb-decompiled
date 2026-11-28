@@ -19,7 +19,7 @@ final class gh extends ea implements Cloneable {
     static int field_B;
     static int[] field_z;
 
-    final sl a(f[][] param0, int param1, boolean param2, int param3, int param4, int param5) {
+    final sl a(PuzzleTile[][] param0, int param1, boolean param2, int param3, int param4, int param5) {
         sl stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -27,7 +27,7 @@ final class gh extends ea implements Cloneable {
         RuntimeException decompiledCaughtException = null;
         sl var7 = null;
         RuntimeException var7_ref = null;
-        f var8 = null;
+        PuzzleTile var8 = null;
         int var9 = 0;
         sl var10 = null;
         var9 = CrazyCrystals.field_B;
@@ -68,7 +68,7 @@ final class gh extends ea implements Cloneable {
             ((ro) (var8)).field_o = this;
             b.field_a = b.field_a + 20;
             je.field_j = je.field_j + 20;
-            we.field_h = we.field_h + 40;
+            LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 40;
             fp.field_a = fp.field_a + 40;
           }
           stackIn_14_0 = var7;
@@ -106,10 +106,10 @@ final class gh extends ea implements Cloneable {
         int var7 = 100 / ((param4 + 50) / 33);
     }
 
-    final f a(f[][] param0, int param1, f param2, int param3, int param4) {
+    final PuzzleTile a(PuzzleTile[][] param0, int param1, PuzzleTile param2, int param3, int param4) {
         int var7 = 0;
-        f stackIn_15_0 = null;
-        f stackIn_23_0 = null;
+        PuzzleTile stackIn_15_0 = null;
+        PuzzleTile stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -117,7 +117,7 @@ final class gh extends ea implements Cloneable {
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
-        f var6 = null;
+        PuzzleTile var6 = null;
         RuntimeException var6_ref = null;
         int var8 = 0;
         var8 = CrazyCrystals.field_B;
@@ -125,17 +125,17 @@ final class gh extends ea implements Cloneable {
           if (null == ab.field_D) {
             BoundedRandomAccessFile.field_e = BoundedRandomAccessFile.field_e - 1;
             if (param2 != null) {
-              var6_int = param2.a(false);
+              var6_int = param2.getAttributedPlayerMask(false);
               for (var7 = 0; var7 < 3; var7++) {
                 if ((1 << var7 & var6_int) != 0) {
                   q.field_a[var7].a(false, (byte) -128);
                   b.field_a = b.field_a - 1;
                   je.field_j = je.field_j - 1;
                   fp.field_a = fp.field_a - 2;
-                  we.field_h = we.field_h - 1;
+                  LevelProgressUpdate.field_h = LevelProgressUpdate.field_h - 1;
                   mb.field_g = mb.field_g - 5;
                   fn.field_j = fn.field_j - 5;
-                  we.field_h = we.field_h + 6;
+                  LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 6;
                   fp.field_a = fp.field_a + 6;
                   b.field_a = b.field_a + 3;
                   je.field_j = je.field_j + 3;
@@ -151,7 +151,7 @@ final class gh extends ea implements Cloneable {
             }
           }
           if (param3 != 11460) {
-            stackIn_15_0 = (f) null;
+            stackIn_15_0 = (PuzzleTile) null;
             return stackIn_15_0;
           }
           this.b(param4, param1, -663, param0);
@@ -166,7 +166,7 @@ final class gh extends ea implements Cloneable {
           }
           if (decompiledNaturalLoopExit0) {
             ((ro) (var6)).field_p = null;
-            we.field_h = we.field_h + 40;
+            LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 40;
             fp.field_a = fp.field_a + 40;
             b.field_a = b.field_a + 20;
             je.field_j = je.field_j + 20;
@@ -193,23 +193,23 @@ final class gh extends ea implements Cloneable {
         }
     }
 
-    final void a(int param0, f[][] param1, int param2, int param3) {
+    final void a(int param0, PuzzleTile[][] param1, int param2, int param3) {
         try {
           if (param0 != -35) {
             nj var6 = (nj) null;
-            this.a(49, (nj) null);
+            this.showTileTooltip(49, (nj) null);
           }
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "gh.KC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void f(int param0, int param1, f[][] param2, int param3) {
+    final void f(int param0, int param1, PuzzleTile[][] param2, int param3) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
-        f var5 = null;
+        PuzzleTile var5 = null;
         RuntimeException var5_ref = null;
         ro var6_ref_ro = null;
         int var6 = 0;
@@ -243,7 +243,7 @@ final class gh extends ea implements Cloneable {
                 this.field_G = var8;
                 this.field_x = var9;
                 if (!param2[this.field_x + param1][this.field_G + param3].a(16736352, param2, true, this.field_x, param1, param3, (ea) (this), this.field_G)) {
-                  this.a((byte) 73, param2[param1 + this.field_x][param3 + this.field_G]);
+                  this.copyTileAttribution((byte) 73, param2[param1 + this.field_x][param3 + this.field_G]);
                   this.field_x = -this.field_x;
                   this.field_G = -this.field_G;
                   var7++;
@@ -251,7 +251,7 @@ final class gh extends ea implements Cloneable {
                 }
                 break;
               }
-              var6_ref_ro.a((byte) 127, (f) (this));
+              var6_ref_ro.copyTileAttribution((byte) 127, (PuzzleTile) (this));
               this.field_v = true;
               this.a(param2, param1, false, this.field_x, param3, this.field_G);
               mb.field_g = mb.field_g + ob.field_l;
@@ -267,7 +267,7 @@ final class gh extends ea implements Cloneable {
           var6 = 0;
           if (param0 != 1) {
             var11 = (nj) null;
-            this.a(-1, (nj) null);
+            this.showTileTooltip(-1, (nj) null);
           }
           var7Lifetime1 = 0;
           while (true) {
@@ -275,7 +275,7 @@ final class gh extends ea implements Cloneable {
               return;
             }
             if (!param2[param1 + this.field_x][param3 + this.field_G].a(16736352, param2, true, this.field_x, param1, param3, (ea) (this), this.field_G)) {
-              this.a((byte) 62, param2[this.field_x + param1][this.field_G + param3]);
+              this.copyTileAttribution((byte) 62, param2[this.field_x + param1][this.field_G + param3]);
               this.field_x = -this.field_x;
               var6 = 1;
               this.field_G = -this.field_G;
@@ -371,7 +371,7 @@ final class gh extends ea implements Cloneable {
         }
     }
 
-    gh(f param0, int param1, int param2) {
+    gh(PuzzleTile param0, int param1, int param2) {
         super(param0);
         this.field_D = true;
         try {
@@ -405,7 +405,7 @@ final class gh extends ea implements Cloneable {
         return tl.field_b;
     }
 
-    final nj a(int param0, nj param1) {
+    final nj showTileTooltip(int param0, nj param1) {
         RuntimeException var3 = null;
         nj stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -432,10 +432,10 @@ final class gh extends ea implements Cloneable {
         }
     }
 
-    final f a(sl param0, f[][] param1, int param2, int param3, int param4, int param5, int param6) {
+    final PuzzleTile a(sl param0, PuzzleTile[][] param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
-        f stackIn_2_0 = null;
-        f stackIn_4_0 = null;
+        PuzzleTile stackIn_2_0 = null;
+        PuzzleTile stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -449,7 +449,7 @@ final class gh extends ea implements Cloneable {
             stackIn_4_0 = super.a(param0, param1, param2, param3, 17512, param5, param6);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (f) null;
+          stackIn_2_0 = (PuzzleTile) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -667,17 +667,17 @@ final class gh extends ea implements Cloneable {
         }
     }
 
-    final void b(int param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final void drawTileForeground(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var7 = 18 % ((74 - param0) / 41);
         if (this.field_D) {
-          super.b(120, param1, param2, param3, param4, param5);
+          super.drawTileForeground(120, param1, param2, param3, param4, param5);
         }
     }
 
     final boolean g(int param0) {
         if (param0 != 0) {
-          f var3 = (f) null;
-          this.a((f[][]) null, -81, (f) null, 72, -60);
+          PuzzleTile var3 = (PuzzleTile) null;
+          this.a((PuzzleTile[][]) null, -81, (PuzzleTile) null, 72, -60);
           return false;
         }
         return false;
@@ -693,8 +693,8 @@ final class gh extends ea implements Cloneable {
         BoundedRandomAccessFile.field_e = BoundedRandomAccessFile.field_e + 1;
     }
 
-    final void b(int param0, int param1, int param2, f[][] param3) {
-        f var5 = null;
+    final void b(int param0, int param1, int param2, PuzzleTile[][] param3) {
+        PuzzleTile var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -717,7 +717,7 @@ final class gh extends ea implements Cloneable {
             break;
           }
           if (param2 != -663) {
-            this.f(99, -94, (f[][]) null, -15);
+            this.f(99, -94, (PuzzleTile[][]) null, -15);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -734,11 +734,11 @@ final class gh extends ea implements Cloneable {
         }
     }
 
-    final f e(int param0, int param1, f[][] param2, int param3) {
-        f var5 = null;
+    final PuzzleTile e(int param0, int param1, PuzzleTile[][] param2, int param3) {
+        PuzzleTile var5 = null;
         de var6 = null;
         int var7 = 0;
-        f stackIn_5_0 = null;
+        PuzzleTile stackIn_5_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -761,14 +761,14 @@ final class gh extends ea implements Cloneable {
               ua.field_a.a(256, param1 * 12, param0 * 12, 0, (byte) -111);
               var6.field_j = (ea) (this);
               this.field_v = false;
-              stackIn_5_0 = this.a(param2, param0, (f) (this), 11460, param1);
+              stackIn_5_0 = this.a(param2, param0, (PuzzleTile) (this), 11460, param1);
               return stackIn_5_0;
             }
           }
           if (param3 < 120) {
             this.field_v = true;
           }
-          return (f) (this);
+          return (PuzzleTile) (this);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
@@ -870,12 +870,12 @@ final class gh extends ea implements Cloneable {
           MouseInputHandler.field_d = null;
           rb.field_g.a((byte) -75);
           rb.field_g = null;
-          ln.field_f.a((byte) -29);
-          ln.field_f = null;
+          ScoreModifier.field_f.a((byte) -29);
+          ScoreModifier.field_f = null;
           oj.field_E.a((byte) -42);
           oj.field_E = null;
-          c.field_q.a((byte) -68);
-          c.field_q = null;
+          LaserHubTile.field_q.a((byte) -68);
+          LaserHubTile.field_q = null;
           ck.field_db.a((byte) -86);
           vk.field_N.a((byte) -16);
           fp.field_c.a((byte) -84);

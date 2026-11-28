@@ -70,7 +70,7 @@ final class dk implements ca {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = vh.a(bl.field_t, "", param2);
-          ai.a(param1 ^ param1, var3);
+          DungeonTileState.preloadMusicTrackSamples(param1 ^ param1, var3);
           stackIn_1_0 = new wh(var3, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

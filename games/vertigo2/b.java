@@ -269,7 +269,7 @@ final class b {
         if (param1 != 17) {
           return false;
         }
-        up.field_z = new cb(this.field_l.field_ob, this.field_l.field_C, this.field_l.field_Fb, this.field_l.field_db, param2, hb.field_D, TextureOperator.field_s, eh.field_a, AccountRequestState.field_b, fr.field_a, ja.field_e, this.field_k, this.field_o);
+        up.field_z = new cb(this.field_l.field_ob, this.field_l.field_C, this.field_l.field_Fb, this.field_l.field_db, param2, PlayerAvatarRenderer.field_D, TextureOperator.field_s, eh.field_a, AccountRequestState.field_b, fr.field_a, ja.field_e, this.field_k, this.field_o);
         return true;
     }
 
@@ -504,14 +504,14 @@ final class b {
           this.field_j = -69;
           return;
         }
-        if (!cn.b(false)) {
+        if (!LevelCamera.isLocalPlayerLobbyHost(false)) {
           if (param0 == 0) {
             return;
           }
           this.field_j = -69;
           return;
         }
-        var7 = jg.a(this.field_o, -119);
+        var7 = LevelTile.findLobbyPlayerById(this.field_o, -119);
         var4 = eq.a(this.field_o, (byte) 84);
         var5 = this.a(true);
         if (var4 != null) {

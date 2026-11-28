@@ -77,7 +77,7 @@ final class fm {
           wc.field_q[1] = 6356832;
           wc.field_q[0] = 16764000;
           gg.field_n[4] = 16711935;
-          lj.field_p = 8421504;
+          MatchSession.field_p = 8421504;
           wc.field_q[2] = 16736352;
           var12 = new Sprite(4, 4);
           var13 = var12.field_F;

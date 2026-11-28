@@ -17,16 +17,16 @@ class BoardTile {
     int field_a;
     int field_h;
 
-    final boolean b(byte param0) {
+    final boolean hasDurability(byte param0) {
         if (param0 == -113) {
           return this.field_h > 0 ? true : false;
         }
         BattleState var3 = (BattleState) null;
-        this.a(true, (BattleState) null);
+        this.isCurryBaseTile(true, (BattleState) null);
         return this.field_h > 0 ? true : false;
     }
 
-    final int a(int param0) {
+    final int getPowerupStatusId(int param0) {
         if (param0 != -36) {
           return -8;
         }
@@ -72,7 +72,7 @@ class BoardTile {
         return 12;
     }
 
-    final boolean a(int param0, BattleState param1, int param2) {
+    final boolean shouldIncludeInDebugDump(int param0, BattleState param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -82,7 +82,7 @@ class BoardTile {
           if (param2 != this.terrain) {
             return true;
           }
-          if (this.a(param1, (byte) 77)) {
+          if (this.hasTileCounter(param1, (byte) 77)) {
             return true;
           }
           if (this.field_m) {
@@ -109,7 +109,7 @@ class BoardTile {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void renderInterfaceLayers(boolean param0, byte param1) {
         if (InvincibleAnimation.g((byte) -52)) {
           param0 = false;
         }
@@ -122,7 +122,7 @@ class BoardTile {
           hl.a(0, param0);
           return;
         }
-        BoardTile.a(true, (byte) 28);
+        BoardTile.renderInterfaceLayers(true, (byte) 28);
         if (CreatureActor.field_i) {
           SoftwareRasterizer.darkenRectangle(BitPacketBuffer.field_n.field_a.field_kb, BitPacketBuffer.field_n.field_a.field_rb, BitPacketBuffer.field_n.field_a.field_sb, BitPacketBuffer.field_n.field_a.field_p);
           BitPacketBuffer.field_n.field_a.a(param0, 7802);
@@ -130,7 +130,7 @@ class BoardTile {
         hl.a(0, param0);
     }
 
-    final int d(int param0) {
+    final int computeTileChecksum(int param0) {
         int var2 = this.terrain * 77421;
         if (this.field_i) {
           var2 = var2 ^ 98381;
@@ -162,7 +162,7 @@ class BoardTile {
         return var2;
     }
 
-    private final boolean a(BattleState param0, byte param1) {
+    private final boolean hasTileCounter(BattleState param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_29_0 = null;
@@ -170,7 +170,7 @@ class BoardTile {
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(false, param0)) {
+          if (this.isCurryBaseTile(false, param0)) {
             return true;
           }
           if (this.terrain == 27) {
@@ -208,7 +208,7 @@ class BoardTile {
         }
     }
 
-    final void a(int param0, int param1, rha param2, BattleState param3, int param4) {
+    final void appendTileDebugInfo(int param0, int param1, rha param2, BattleState param3, int param4) {
         boolean discarded$0 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -223,7 +223,7 @@ class BoardTile {
           param2.a(104, 2);
           param2.a("x: " + param1 + " y: " + param4, 4819);
           if (null != this.occupant) {
-            param2.a("occupied: " + this.occupant.b(52), 4819);
+            param2.a("occupied: " + this.occupant.describeCreatureIdentity(52), 4819);
           }
           if (this.field_a != -1) {
             param2.a("object id: " + this.field_a, 4819);
@@ -231,7 +231,7 @@ class BoardTile {
           if (this.field_m) {
             param2.a("powerup present", 4819);
           }
-          if (this.a(param3, (byte) -125)) {
+          if (this.hasTileCounter(param3, (byte) -125)) {
             param2.a("counter: " + this.field_j, 4819);
           }
           param2.a(-116, -2);
@@ -239,7 +239,7 @@ class BoardTile {
             return;
           }
           var7 = (BattleState) null;
-          discarded$0 = this.a((BattleState) null, (byte) -107);
+          discarded$0 = this.hasTileCounter((BattleState) null, (byte) -107);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -272,14 +272,14 @@ class BoardTile {
         field_f = null;
     }
 
-    final boolean e(int param0) {
+    final boolean isTraversableTerrain(int param0) {
         if (param0 > -24) {
           return false;
         }
         return DiveBomberEvent.c(23745, this.terrain);
     }
 
-    final boolean c(int param0) {
+    final boolean isStandardPowerupTile(int param0) {
         BattleState var3;
         if (param0 <= -81) {
           if (this.terrain == 6) {
@@ -309,7 +309,7 @@ class BoardTile {
           return false;
         }
         var3 = (BattleState) null;
-        this.a(false, (BattleState) null);
+        this.isCurryBaseTile(false, (BattleState) null);
         if (this.terrain == 6) {
           return true;
         }
@@ -337,11 +337,11 @@ class BoardTile {
         return false;
     }
 
-    final boolean a(byte param0) {
+    final boolean isUnmarkedBaseTile(byte param0) {
         boolean discarded$2 = false;
         if (param0 != -63) {
           BattleState var3 = (BattleState) null;
-          discarded$2 = this.a((BattleState) null, (byte) -3);
+          discarded$2 = this.hasTileCounter((BattleState) null, (byte) -3);
           if (this.terrain != 0) {
             return false;
           }
@@ -359,7 +359,7 @@ class BoardTile {
         return false;
     }
 
-    final boolean a(boolean param0, BattleState param1) {
+    final boolean isCurryBaseTile(boolean param0, BattleState param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -370,7 +370,7 @@ class BoardTile {
           if (param0) {
             this.field_a = -64;
           }
-          stackIn_6_0 = (param1.field_E == 2) && (this.a((byte) -63));
+          stackIn_6_0 = (param1.field_E == 2) && (this.isUnmarkedBaseTile((byte) -63));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

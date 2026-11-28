@@ -21,16 +21,16 @@ final class di {
           if (!param0.ensureIndexLoaded(92)) {
             return false;
           }
-          if (!param0.a(0, "commonui")) {
+          if (!param0.tryLoadGroupByName(0, "commonui")) {
             return false;
           }
           if (param1.ensureIndexLoaded(-33) &&
-            param1.a(0, "commonui")) {
+            param1.tryLoadGroupByName(0, "commonui")) {
             if (param3 < 100) {
               return true;
             }
             if (param2.ensureIndexLoaded(-82) &&
-              param2.a(0, "button.gif")) {
+              param2.tryLoadGroupByName(0, "button.gif")) {
               return true;
             }
             return false;

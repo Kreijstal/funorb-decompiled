@@ -12,7 +12,7 @@ final class OhNoSpecial extends SpecialOrder {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.creature.a(79, param0);
+          var3 = this.creature.resolveCreature(79, param0);
           if (param1 != 3) {
             OhNoSpecial.a(68, -10, (byte) -83, -44, 25, 72);
           }

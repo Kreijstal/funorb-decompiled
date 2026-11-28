@@ -72,7 +72,7 @@ final class io extends rf {
     }
 
     io(n param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, c.b(false));
+        super(param1, LaserHubTile.b(false));
         try {
           this.field_N = param1;
           this.field_L = param0;

@@ -210,7 +210,7 @@ final class mf {
               im.field_d = false;
               var3_int = 1;
             }
-            BufferedRandomAccessFile.a(tl.b(-3), jc.field_d, var3_int != 0, (byte) 105, h.a(-3));
+            BufferedRandomAccessFile.a(tl.b(-3), jc.field_d, var3_int != 0, (byte) 105, RaiderDefinition.measureStartupAssetLoadPercent(-3));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

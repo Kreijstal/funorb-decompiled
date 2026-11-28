@@ -92,13 +92,13 @@ final class wea extends AnimationNode {
               var2_ref_bf = (bf) (this.field_l.field_m.nextForward(0));
               continue;
             }
-            var6 = ((dla) (var2_ref_bf)).field_n.a(-27449, this.field_j);
+            var6 = ((dla) (var2_ref_bf)).field_n.resolveCreatureView(-27449, this.field_j);
             if (!var6.field_s.isDown(81) &&
               var6.field_f.field_s != 6) {
               var6.b(-1, 5);
             }
           } else {
-            var5 = ((qja) (var2_ref_bf)).field_i.a(-27449, this.field_j);
+            var5 = ((qja) (var2_ref_bf)).field_i.resolveCreatureView(-27449, this.field_j);
             if (!var5.field_s.isDown(98) &&
               var5.field_f.field_s != 3) {
               var5.b(-1, 7);

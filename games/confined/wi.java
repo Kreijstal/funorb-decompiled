@@ -37,7 +37,7 @@ final class wi {
         if (oe.field_Q == wh.field_fb) {
           return kc.field_n;
         }
-        return hm.field_gb;
+        return LightningArc.field_gb;
     }
 
     final static void a(int param0, int param1) {

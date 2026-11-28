@@ -86,7 +86,7 @@ final class SnowSpecial extends SpecialOrder {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.creature.a(param1 + 63, param0);
+          var3 = this.creature.resolveCreature(param1 + 63, param0);
           var4 = new SnowEvent(this.moveId, new CreatureRef(var3));
           var4.field_r = this.field_k;
           var4.field_s = this.field_n;

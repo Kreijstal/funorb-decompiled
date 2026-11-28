@@ -98,7 +98,7 @@ final class mj {
             stackIn_18_0 = (String) null;
             return stackIn_18_0;
           }
-          if (!pa.field_i.b("commonui", false)) {
+          if (!pa.field_i.tryLoadGroupByName("commonui", false)) {
             stackIn_23_0 = fi.field_a + " - " + pa.field_i.getGroupLoadPercentByName("commonui", (byte) -100) + "%";
             return stackIn_23_0;
           }
@@ -106,7 +106,7 @@ final class mj {
             stackIn_26_0 = AccountNameAvailabilityValidator.field_k;
             return stackIn_26_0;
           }
-          if (!kg.field_b.b("commonui", false)) {
+          if (!kg.field_b.tryLoadGroupByName("commonui", false)) {
             stackIn_29_0 = vc.field_B + " - " + kg.field_b.getGroupLoadPercentByName("commonui", (byte) -100) + "%";
             return stackIn_29_0;
           }
@@ -115,7 +115,7 @@ final class mj {
             return stackIn_34_0;
           }
           if (!ea.field_e.tryLoadAllGroups((byte) -100)) {
-            stackIn_39_0 = da.field_b + " - " + ea.field_e.a(100) + "%";
+            stackIn_39_0 = da.field_b + " - " + ea.field_e.getArchiveLoadPercent(100) + "%";
             return stackIn_39_0;
           }
           stackIn_41_0 = gf.field_h;

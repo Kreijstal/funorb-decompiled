@@ -28,10 +28,10 @@ final class e {
           field_a = (String) null;
         }
         tl.field_a = new am(RawPcmStream.a(mo.field_i, 100, 0));
-        jo.field_p = new am(RawPcmStream.a(pl.field_h, 100, 0));
+        CrystalTile.field_p = new am(RawPcmStream.a(pl.field_h, 100, 0));
         AccountCreationResultPanel.field_mb = new am(RawPcmStream.a(sj.field_d, 100, 0));
         io.field_M = new am(RawPcmStream.a(jn.field_m, 100, 0));
-        ec.field_k = new am(RawPcmStream.a(bb.field_x, 100, 0));
+        ec.field_k = new am(RawPcmStream.a(RockTile.field_x, 100, 0));
     }
 
     public static void a(boolean param0) {
@@ -54,7 +54,7 @@ final class e {
           pl.field_h = bl.a(param2, "initialset", "blown-up").a();
           sj.field_d = bl.a(param2, "initialset", "electrocuted-buzz").a();
           jn.field_m = ha.a(param1, "initialset", "electrocuted-end").b();
-          bb.field_x = bl.a(param2, "initialset", "explode-into-sparks").a();
+          RockTile.field_x = bl.a(param2, "initialset", "explode-into-sparks").a();
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "e.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -88,9 +88,9 @@ final class e {
         try {
           gk.field_d = bf.a(param0 - 5, "frame_top", "commonui", param2);
           lm.field_g = bf.a(-1, "frame_bottom", "commonui", param2);
-          p.field_f = ArchiveRequest.a("jagex_logo_grey", param2, 10, "commonui");
+          PauseMenu.field_f = ArchiveRequest.a("jagex_logo_grey", param2, 10, "commonui");
           sb.field_B = bf.a(-1, "button", "commonui", param2);
-          ao.field_b = we.a("validation", "commonui", param2, false);
+          ao.field_b = LevelProgressUpdate.loadNamedSpriteSet("validation", "commonui", param2, false);
           ba.field_i = (vc) ((Object) lj.a(param2, "commonui", param3, "arezzo12", 17153));
           ai.field_h = (vc) ((Object) lj.a(param2, "commonui", param3, "arezzo14", 17153));
           mo.field_m = (vc) ((Object) lj.a(param2, "commonui", param3, "arezzo14bold", 17153));

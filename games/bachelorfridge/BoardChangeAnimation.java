@@ -270,7 +270,7 @@ final class BoardChangeAnimation extends AnimationNode {
         if (fieldTemp$0 > 0) {
           return false;
         }
-        this.field_o.field_h.a(23189);
+        this.field_o.field_h.advanceTileCountersAndCreatureTimers(23189);
         BoardChange var5 = (BoardChange) (this.field_n.field_k.beginForward((byte) 90));
         while (var5 != null) {
           var5.a(this, -107);

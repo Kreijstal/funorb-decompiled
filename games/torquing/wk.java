@@ -248,7 +248,7 @@ class wk implements si {
         if (var3 != null) {
           return (wd) (var3);
         }
-        byte[] var4 = this.field_f.b(param1, (byte) 89);
+        byte[] var4 = this.field_f.getFlatFile(param1, (byte) 89);
         if (param0 < 19) {
           this.a(60, (byte) 74);
         }

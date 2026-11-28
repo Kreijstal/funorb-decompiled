@@ -204,7 +204,7 @@ final class bq extends TextureOperator {
             var17 = GameKeyHandler.field_b[var16];
             c.a(var16, -3797);
             for (var18 = 0; var18 < 3; var18++) {
-              ba.field_g[var18] = ba.field_g[var18] + jg.field_j[var15][var18];
+              ba.field_g[var18] = ba.field_g[var18] + LevelTile.field_j[var15][var18];
             }
             ti.a(ba.field_g, (byte) -53, false, false, true, tf.field_o, var17);
             pb.a(var12Lifetime1, var8Lifetime1, var13Lifetime1, var17, var7Lifetime1, var14, var9Lifetime1, 73);

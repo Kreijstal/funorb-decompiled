@@ -66,7 +66,7 @@ final class ResetAnimation extends EventAnimation {
         for (var2 = 0; this.screen.field_h.width > var2; var2++) {
           for (var3 = 0; var3 < this.screen.field_h.height; var3++) {
             var4 = this.screen.field_h.tiles[var2][var3];
-            if (var4.c(-123)) {
+            if (var4.isStandardPowerupTile(-123)) {
               this.screen.b(param0 + 30948, var2, var3);
             }
           }

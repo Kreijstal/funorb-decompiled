@@ -24,7 +24,7 @@ final class SplitAnimation extends EventAnimation {
 
     private final void d(int param0) {
         int var5 = BachelorFridge.field_y;
-        BattleCreature var2 = this.field_y.creature.a(116, this.screen.field_h);
+        BattleCreature var2 = this.field_y.creature.resolveCreature(116, this.screen.field_h);
         if (var2.isDown(105)) {
           return;
         }

@@ -79,7 +79,7 @@ final class ResourceSupport001 {
             byteArrayLocal2 = (byte[]) null;
             ResourceSupport001.performAction0047((byte[]) null, -41, true, 8, -58, true);
           }
-          stackStringLocal4 = stringArgument4 + " - " + resourceArchiveArgument1.computeInteger0816((byte) -89) + "%";
+          stackStringLocal4 = stringArgument4 + " - " + resourceArchiveArgument1.getArchiveLoadPercent((byte) -89) + "%";
           return stackStringLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
           caughtExceptionLocal12 = caughtParameterLocal13;

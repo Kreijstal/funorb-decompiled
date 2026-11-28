@@ -366,7 +366,7 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.a(param0)) {
-            param0.a(param2, false, param1);
+            param0.tryLoadFileByName(param2, false, param1);
             return null;
           }
           byte[] var3 = param0.getFileByName(param1, (byte) -71, param2);

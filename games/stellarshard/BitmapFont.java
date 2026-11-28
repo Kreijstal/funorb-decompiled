@@ -87,7 +87,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_C = ResourceArchive.a(var4, (byte) 125);
+                field_C = ResourceArchive.parseDecimalInt(var4, (byte) 125);
               }
             } else {
               field_E = field_J;
@@ -331,7 +331,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = ResourceArchive.a(var13, (byte) 125);
+                                  var10 = ResourceArchive.parseDecimalInt(var13, (byte) 125);
                                   var11_ref_o = this.field_s[var10];
                                   if (this.field_G == null) {
                                     stackIn_27_0 = var11_ref_o.field_d;
@@ -483,7 +483,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = ResourceArchive.a(var18, (byte) 125);
+                                    var16_int = ResourceArchive.parseDecimalInt(var18, (byte) 125);
                                     var4 = var4 + this.field_s[var16_int].field_k;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -676,7 +676,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = ResourceArchive.a(var10, (byte) 125);
+                                  var9_int = ResourceArchive.parseDecimalInt(var10, (byte) 125);
                                   var4 = var4 + this.field_s[var9_int].field_k;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {

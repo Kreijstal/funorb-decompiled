@@ -5,7 +5,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     String field_u;
     private boolean field_t;
     private boolean field_r;
-    static dp field_p;
+    static ProfileDataRequest field_p;
     private int field_x;
     private boolean field_q;
     private long field_n;
@@ -67,7 +67,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                         this.j(-8);
                       } else {
                         if (var2 == 8) {
-                          ah.a(kd.field_n, rk.field_b, -126, te.field_a);
+                          ah.a(kd.field_n, rk.field_b, -126, ResultScene.field_a);
                         } else {
                           if (var2 == 16) {
                             NetworkArchiveRequest.g(-1266);
@@ -92,8 +92,8 @@ abstract class NetworkGameClient extends GameAppletShell {
                             }
                             stackIn_26_0 = 16;
                             stackIn_27_1 = (var2 == 12);
-                            var3 = hl.a(stackIn_26_0, stackIn_27_1);
-                            c.a(-1, var3);
+                            var3 = LevelLostEntrancePhase.decodePuzzleLaunch(stackIn_26_0, stackIn_27_1);
+                            LaserHubTile.queuePuzzleLaunch(-1, var3);
                           }
                         }
                       }
@@ -134,7 +134,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = CrazyCrystals.field_B;
-          var4 = uc.a(param2, (byte) 63, of.field_H, ul.field_g);
+          var4 = MenuOverlay.pollLobbySelection(param2, (byte) 63, of.field_H, ul.field_g);
           if (param1 != -94) {
             this.field_x = 76;
           }
@@ -144,19 +144,19 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 1) {
             var5_int = qm.a(gh.h(26500), param1 + 194, rh.b(param1 + 459));
             if (-1 != var5_int) {
-              f.a((byte) 125, gj.field_o, re.field_j, var5_int);
+              PuzzleTile.setAccountResponseMessage((byte) 125, gj.field_o, re.field_j, var5_int);
               gj.field_o = null;
               re.field_j = null;
             }
             var11 = gg.a(-23387);
             if (var11 != null) {
-              mj.a((byte) -34, var11.booleanValue());
+              LaserTraceCursor.publishAccountValidationResult((byte) -34, var11.booleanValue());
             }
           }
           if (var4 == 2) {
             var5_intLifetime1 = gg.a(bh.a((byte) 78), (byte) 126, this.field_x, ac.c(70), bp.a(6), vg.b((byte) -29), hp.d(5));
             if (var5_intLifetime1 != -1) {
-              r.a(-13405, gj.field_o, var5_intLifetime1, re.field_j);
+              LevelLostScene.setLoginResponseMessage(-13405, gj.field_o, var5_intLifetime1, re.field_j);
               re.field_j = null;
               gj.field_o = null;
             }
@@ -220,7 +220,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 13) {
             try {
               if (jl.field_e == null) {
-                jl.field_e = new ai(te.field_a, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                jl.field_e = new ai(ResultScene.field_a, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (jl.field_e.b(0)) {
                 var12 = jl.field_e.a((byte) -111);
@@ -276,8 +276,8 @@ abstract class NetworkGameClient extends GameAppletShell {
         this.setBackground(java.awt.Color.black);
         ul.field_g = this.field_o;
         th.a(ul.field_g, -127);
-        qe.a((byte) -106, param3, this.field_A, te.field_a, 5000, param7, 5000, this.field_n, this.field_v, ul.field_g, this.field_u, this.field_r, this.field_z, this.field_s);
-        pb.a(this.field_A, te.field_a, param7, this.field_s, 1843275042, this.field_v, this.field_u, this.field_z, ul.field_g);
+        qe.a((byte) -106, param3, this.field_A, ResultScene.field_a, 5000, param7, 5000, this.field_n, this.field_v, ul.field_g, this.field_u, this.field_r, this.field_z, this.field_s);
+        pb.a(this.field_A, ResultScene.field_a, param7, this.field_s, 1843275042, this.field_v, this.field_u, this.field_z, ul.field_g);
         o.b(-25281);
         ok.field_g = qm.createMouseWheelInput(1);
         mm.a(jd.field_D, true);
@@ -592,10 +592,10 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (eq.field_j == 2) {
           if (SecondaryNodeDeque.field_e != null &&
             SecondaryNodeDeque.field_e.ensureIndexLoaded((byte) 102)) {
-            if (!SecondaryNodeDeque.field_e.c("", -93)) {
+            if (!SecondaryNodeDeque.field_e.hasGroupName("", -93)) {
               SecondaryNodeDeque.field_e = null;
             } else {
-              if (SecondaryNodeDeque.field_e.a(-20402, "")) {
+              if (SecondaryNodeDeque.field_e.tryLoadGroupByName(-20402, "")) {
                 ByteStorage.a(SecondaryNodeDeque.field_e, param1 ^ -15041);
                 SecondaryNodeDeque.field_e = null;
                 vp.a(106);
@@ -608,7 +608,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (eq.field_j == 3 &&
           ro.a(rb.field_k, ok.field_c, false, FullscreenFocusCanvas.field_a) &&
-          jg.a(FullscreenFocusCanvas.field_a, -38)) {
+          ModelMesh.isArchiveReady(FullscreenFocusCanvas.field_a, -38)) {
           sg.a(param1 ^ 15099);
           m.c(29537);
           jd.field_z = false;
@@ -649,7 +649,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (eq.field_j == 11) {
           if (null != ak.field_f && (!ak.field_f.ensureIndexLoaded((byte) 102) ||
             !ak.field_f.tryLoadAllGroups(false))) {
-            td.a(0.0f, fl.a(127, jg.field_h, ak.field_f, ge.field_a), false);
+            td.a(0.0f, fl.a(127, ModelMesh.field_h, ak.field_f, ge.field_a), false);
             decompiledFrameRemainder0 = false;
           }
           else {

@@ -49,7 +49,7 @@ final class VorbisDecoder extends IntrusiveNode {
         try {
           VorbisDecoder var4_ref = null;
           if (!VorbisDecoder.a(param0)) {
-            param0.a(param2, (byte) 104, param1);
+            param0.tryLoadFileByName(param2, (byte) 104, param1);
             return null;
           }
           byte[] var3 = param0.getFileByName(param1, param2, -21653);

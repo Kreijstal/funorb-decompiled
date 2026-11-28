@@ -154,7 +154,7 @@ final class vl {
             }
             id.field_d = -2147483648;
             FrameTimer.field_b = -2147483648;
-            cq.field_i = 0;
+            BlastEffectRenderer.field_i = 0;
             q.field_x = 2147483647;
             f.field_y = 2147483647;
             return;
@@ -253,7 +253,7 @@ final class vl {
               }
               id.field_d = -2147483648;
               FrameTimer.field_b = -2147483648;
-              cq.field_i = 0;
+              BlastEffectRenderer.field_i = 0;
               q.field_x = 2147483647;
               f.field_y = 2147483647;
               return;
@@ -363,7 +363,7 @@ final class vl {
               }
               id.field_d = -2147483648;
               FrameTimer.field_b = -2147483648;
-              cq.field_i = 0;
+              BlastEffectRenderer.field_i = 0;
               q.field_x = 2147483647;
               f.field_y = 2147483647;
               return;
@@ -385,7 +385,7 @@ final class vl {
               param1 <= sl.field_m.length) {
               id.field_d = -2147483648;
               FrameTimer.field_b = -2147483648;
-              cq.field_i = 0;
+              BlastEffectRenderer.field_i = 0;
               q.field_x = 2147483647;
               f.field_y = 2147483647;
               return;
@@ -395,7 +395,7 @@ final class vl {
         }
         id.field_d = -2147483648;
         FrameTimer.field_b = -2147483648;
-        cq.field_i = 0;
+        BlastEffectRenderer.field_i = 0;
         q.field_x = 2147483647;
         f.field_y = 2147483647;
     }

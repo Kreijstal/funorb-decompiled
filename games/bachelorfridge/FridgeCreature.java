@@ -213,12 +213,12 @@ final class FridgeCreature extends IntrusiveNode {
           this.field_o.field_e.isEmpty(12917) &&
           null != this.field_m[this.field_u][this.field_l].field_f &&
           this.field_m[this.field_u][this.field_l].field_f.field_a &&
-          this.field_g.a((byte) 77, this.field_m[this.field_u][this.field_l].field_f.field_d, ProxySocketConnector.field_f)) {
+          this.field_g.tryUnlockAbilityWithFood((byte) 77, this.field_m[this.field_u][this.field_l].field_f.field_d, ProxySocketConnector.field_f)) {
           this.field_i.addLast(new vma(this, this.field_m[this.field_u][this.field_l].field_f), true);
           this.field_i.addLast(new vu(this, true), true);
           this.field_y = -1;
           HailAnimation.a(this.field_m[this.field_u][this.field_l].field_f, this, 89);
-          this.field_v = this.field_g.e((byte) -108);
+          this.field_v = this.field_g.createCreatureModel((byte) -108);
           this.field_m[this.field_u][this.field_l].field_f.field_a = false;
         }
         this.field_z = -1;
@@ -316,8 +316,8 @@ final class FridgeCreature extends IntrusiveNode {
               this.field_m[0].length - 1 >= this.field_l + var6 &&
               this.field_m[var4 + this.field_u][this.field_l + var6].field_f != null &&
               this.field_m[var4 + this.field_u][this.field_l + var6].field_f.field_a &&
-              Math.abs(var4) + Math.abs(var6) < var2 && (this.field_g.field_o.a(this.field_m[this.field_u + var4][this.field_l + var6].field_f.field_d, 0, this.field_g.field_g) != -1 ||
-              -1 != this.field_g.field_o.a(119, this.field_m[this.field_u + var4][var6 + this.field_l].field_f.field_d, this.field_g.field_g))) {
+              Math.abs(var4) + Math.abs(var6) < var2 && (this.field_g.field_o.findAbilitySlotForFood(this.field_m[this.field_u + var4][this.field_l + var6].field_f.field_d, 0, this.field_g.field_g) != -1 ||
+              -1 != this.field_g.field_o.findUnlockBranchForFood(119, this.field_m[this.field_u + var4][var6 + this.field_l].field_f.field_d, this.field_g.field_g))) {
               var2 = Math.abs(var4) + Math.abs(var6);
               var3 = 1;
               this.field_x = var4 + this.field_u;
@@ -436,7 +436,7 @@ final class FridgeCreature extends IntrusiveNode {
           this.field_n = this.c((byte) -120);
           this.field_k = this.b(true);
           this.field_m = param3;
-          this.field_v = this.field_g.e((byte) -127);
+          this.field_v = this.field_g.createCreatureModel((byte) -127);
           this.field_i = new IntrusiveDeque();
           this.field_r = new Random();
           this.field_j = new Sprite(39, 39);

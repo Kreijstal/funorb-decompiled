@@ -13,16 +13,16 @@ final class gg {
         Boolean var1Lifetime1;
         if (param0 != -23387) {
           gg.a(73);
-          var1 = ja.field_f;
-          ja.field_f = null;
+          var1 = LevelCompleteScene.field_f;
+          LevelCompleteScene.field_f = null;
           return var1;
         }
-        var1Lifetime1 = ja.field_f;
-        ja.field_f = null;
+        var1Lifetime1 = LevelCompleteScene.field_f;
+        LevelCompleteScene.field_f = null;
         return var1Lifetime1;
     }
 
-    final static fb a(fq param0, byte param1, f param2, f[][] param3) {
+    final static fb a(fq param0, byte param1, PuzzleTile param2, PuzzleTile[][] param3) {
         fb stackIn_2_0 = null;
         nl stackIn_6_0 = null;
         qo stackIn_9_0 = null;
@@ -59,7 +59,7 @@ final class gg {
             return (fb) ((Object) stackIn_9_0);
           }
           if (param2 instanceof ig) {
-            jo.field_p.a(128, 12 * param0.field_A + param0.field_m * param0.field_o, param0.field_t * 12 + param0.field_m * param0.field_s, 0, (byte) -111);
+            CrystalTile.field_p.a(128, 12 * param0.field_A + param0.field_m * param0.field_o, param0.field_t * 12 + param0.field_m * param0.field_s, 0, (byte) -111);
             stackIn_12_0 = new uo(param0);
             return (fb) ((Object) stackIn_12_0);
           }
@@ -153,7 +153,7 @@ final class gg {
         field_e = null;
         field_d = null;
         if (param0 > -104) {
-          gg.a((fq) null, (byte) -7, (f) null, (f[][]) null);
+          gg.a((fq) null, (byte) -7, (PuzzleTile) null, (PuzzleTile[][]) null);
         }
     }
 

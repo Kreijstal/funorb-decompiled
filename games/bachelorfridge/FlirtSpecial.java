@@ -15,8 +15,8 @@ final class FlirtSpecial extends SpecialOrder {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = this.creature.a(29, param0);
-          var4 = this.field_j.a(18, param0);
+          var6 = this.creature.resolveCreature(29, param0);
+          var4 = this.field_j.resolveCreature(18, param0);
           if (var4 != null &&
             !var4.isDown(75)) {
             var5 = new FlirtEvent(this.moveId, new CreatureRef(var6), this.field_j);

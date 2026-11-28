@@ -5,7 +5,7 @@ final class jf extends en {
     static String[] field_e;
     static RgbSprite field_f;
     static long[] field_g;
-    private wb field_d;
+    private StatusEffectIndicator field_d;
 
     public static void a(boolean param0) {
         field_f = null;
@@ -24,7 +24,7 @@ final class jf extends en {
         int var2Lifetime1;
         int var3Lifetime1;
         if (param0 < 18) {
-          this.field_d = (wb) null;
+          this.field_d = (StatusEffectIndicator) null;
         } else {
           jh.c();
           var2 = 4 + this.field_d.field_c.field_y + la.field_b.b(this.field_d.field_b);
@@ -102,7 +102,7 @@ final class jf extends en {
         return this.c((byte) 25);
     }
 
-    jf(wb param0) {
+    jf(StatusEffectIndicator param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {

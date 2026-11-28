@@ -17,13 +17,13 @@ final class FishRainAnimation extends EventAnimation {
         var3 = null;
         var5 = BachelorFridge.field_y;
         if (param0 > 9) {
-          var8 = this.field_x.creature.a(8, this.screen.field_h);
+          var8 = this.field_x.creature.resolveCreature(8, this.screen.field_h);
           if (var8.isDown(-79)) {
             return;
           }
           var3_ref = (EventEffect) (this.field_x.effects.beginForward((byte) 90));
           while (var3_ref != null) {
-            var9 = var3_ref.target.a(-27449, this.screen);
+            var9 = var3_ref.target.resolveCreatureView(-27449, this.screen);
             var9.b(-1, 6);
             var3_ref.apply(var8, this.screen.field_h, 12);
             if (var3_ref instanceof DamageEffect) {
@@ -34,13 +34,13 @@ final class FishRainAnimation extends EventAnimation {
           return;
         }
         this.f(104);
-        var6 = this.field_x.creature.a(8, this.screen.field_h);
+        var6 = this.field_x.creature.resolveCreature(8, this.screen.field_h);
         if (var6.isDown(-79)) {
           return;
         }
         var3_ref = (EventEffect) (this.field_x.effects.beginForward((byte) 90));
         while (var3_ref != null) {
-          var7 = var3_ref.target.a(-27449, this.screen);
+          var7 = var3_ref.target.resolveCreatureView(-27449, this.screen);
           var7.b(-1, 6);
           var3_ref.apply(var6, this.screen.field_h, 12);
           if (var3_ref instanceof DamageEffect) {

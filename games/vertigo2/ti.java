@@ -210,8 +210,8 @@ final class ti {
           var21 = param0[0] - param5[0];
           var22 = param0[1] - param5[1];
           var23 = -param5[2] + param0[2];
-          var9 = var23 * param5[5] + param5[3] * var21 + var22 * param5[4] >> -hi.field_j + 16;
-          var10 = param5[8] * var23 + (param5[6] * var21 + var22 * param5[7]) >> -hi.field_j + 16;
+          var9 = var23 * param5[5] + param5[3] * var21 + var22 * param5[4] >> -BlastDebrisModel.field_j + 16;
+          var10 = param5[8] * var23 + (param5[6] * var21 + var22 * param5[7]) >> -BlastDebrisModel.field_j + 16;
           var11 = param5[11] * var23 + param5[9] * var21 + var22 * param5[10] >> 16;
           var21 = oo.field_l;
           if (param1 != -53) {
@@ -224,8 +224,8 @@ final class ti {
               var24 = param6.field_I[var23];
               var25 = param6.field_r[var23];
               var26 = param6.field_m[var23];
-              var27 = (var26 * var18 + var15 * var25 + var12 * var24 >> 16 - hi.field_j) + var9;
-              var28 = var10 + (var13 * var24 + var25 * var16 + var19 * var26 >> 16 - hi.field_j);
+              var27 = (var26 * var18 + var15 * var25 + var12 * var24 >> 16 - BlastDebrisModel.field_j) + var9;
+              var28 = var10 + (var13 * var24 + var25 * var16 + var19 * var26 >> 16 - BlastDebrisModel.field_j);
               var29 = var11 + (var20 * var26 + var25 * var17 + var14 * var24 >> 16);
               stackIn_62_0 = 50;
               stackIn_62_1 = var29;
@@ -259,8 +259,8 @@ final class ti {
                 pk.field_v[var23] = -2147483648;
               }
               if (param3) {
-                te.field_F[var23] = var27 >> hi.field_j;
-                fa.field_u[var23] = var28 >> hi.field_j;
+                te.field_F[var23] = var27 >> BlastDebrisModel.field_j;
+                fa.field_u[var23] = var28 >> BlastDebrisModel.field_j;
                 ea.field_h[var23] = var29;
               }
               var23++;

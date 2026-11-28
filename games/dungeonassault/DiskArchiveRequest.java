@@ -23,7 +23,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         if (!im.field_b.b(36)) {
           return im.field_b.c(-2085);
         }
-        if (wd.field_d != DelegatingCanvas.field_f) {
+        if (SpriteAnimationPlayer.field_d != DelegatingCanvas.field_f) {
           return field_C;
         }
         return im.field_b.c(-2085);

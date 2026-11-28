@@ -38,9 +38,9 @@ final class fk extends kl {
             }
             if (var4 != null) {
               if (var4.field_p != 255) {
-                var4.field_b = new wd(var4.field_n.field_e);
+                var4.field_b = new SpriteAnimationPlayer(var4.field_n.field_e);
               } else {
-                var4.field_b = new wd(k.field_c);
+                var4.field_b = new SpriteAnimationPlayer(k.field_c);
               }
             }
           }
@@ -189,7 +189,7 @@ final class fk extends kl {
                       sd.field_J = sd.field_J + 1;
                       qd.field_c[var2] = true;
                       if (var3.field_b.field_n == var3.field_b.field_i) {
-                        var3.field_b.a(62, var3.field_n.field_u);
+                        var3.field_b.playOnceThenIdle(62, var3.field_n.field_u);
                         if (var3.field_n.field_p != null) {
                           gd.a(64, var3.field_n.field_p);
                         }
@@ -198,7 +198,7 @@ final class fk extends kl {
                   } else {
                     sd.field_J = sd.field_J - 1;
                     qd.field_c[var2] = false;
-                    var3.field_b.a(107, var3.field_n.field_v);
+                    var3.field_b.playOnceThenIdle(107, var3.field_n.field_v);
                   }
                 }
               }
@@ -215,7 +215,7 @@ final class fk extends kl {
                 var4 = var6[var3_int];
                 if (var4 != null &&
                   qd.field_c[var4.field_j]) {
-                  var4.field_b.a(62, var4.field_n.field_t);
+                  var4.field_b.playOnceThenIdle(62, var4.field_n.field_t);
                   if (var4.field_n.field_p != null) {
                     gd.a(64, var4.field_n.field_p);
                   }
@@ -370,7 +370,7 @@ final class fk extends kl {
             var5 = 83 * var4 + this.field_k + 199;
             var6 = 86 * var3 + (this.field_j + 57);
             if (gm.field_d.field_a[var2] != null) {
-              gm.field_d.field_a[var2].field_b.a(60, var6 + 6, (byte) 102, var5 + 6, 60);
+              gm.field_d.field_a[var2].field_b.drawAnimation(60, var6 + 6, (byte) 102, var5 + 6, 60);
               qe.a(72 + (var5 - 4), -4 + (var6 + 72), 3, gm.field_d.field_a[var2], 0);
               var7 = (int)(64.0 * (te.c(mo.field_a, 10273 * var2, 0.015625) + 2.0));
               if (var7 < 0) {
@@ -394,7 +394,7 @@ final class fk extends kl {
           if (qd.field_c[var5Lifetime1] &&
             null != gm.field_d.field_a[var5Lifetime1]) {
             stackIn_30_0 = gm.field_d.field_a[var5Lifetime1];
-            ((wd) (Object) stackIn_30_0.field_b).a(84, 6 + var4Lifetime1, (byte) 102, 6 + var3Lifetime1, 84);
+            ((SpriteAnimationPlayer) (Object) stackIn_30_0.field_b).drawAnimation(84, 6 + var4Lifetime1, (byte) 102, 6 + var3Lifetime1, 84);
             qe.a(var3Lifetime1 + 96 - 4, var4Lifetime1 + 96 - 4, 3, gm.field_d.field_a[var5Lifetime1], 0);
             var3Lifetime1 += 130;
           }
@@ -414,7 +414,7 @@ final class fk extends kl {
         for (var4 = 0; var4 < var3.length; var4++) {
           var5 = var3[var4];
           if (var5 != null) {
-            var5.field_b.a((byte) 109, 20);
+            var5.field_b.advanceAnimation((byte) 109, 20);
           }
         }
     }

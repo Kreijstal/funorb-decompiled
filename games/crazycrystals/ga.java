@@ -517,7 +517,7 @@ class ga extends pc {
           qe.field_g.a(ea.field_r, false, true, cn.field_a);
           qe.field_g.b(false);
           while (ge.b(-31)) {
-            qe.field_g.a(pj.field_q, false, c.field_p);
+            qe.field_g.a(WallTile.field_q, false, LaserHubTile.field_p);
           }
           if (pl.field_g != -1) {
             var1_int = pl.field_g;
@@ -529,7 +529,7 @@ class ga extends pc {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }
-          if (l.field_b == sg.field_b) {
+          if (ResultScenePhase.field_b == sg.field_b) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
@@ -537,7 +537,7 @@ class ga extends pc {
             stackIn_17_0 = 1;
             return stackIn_17_0;
           }
-          if (l.field_b == lc.field_c) {
+          if (ResultScenePhase.field_b == lc.field_c) {
             stackIn_21_0 = 2;
             return stackIn_21_0;
           }

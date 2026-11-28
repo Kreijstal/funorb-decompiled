@@ -14,7 +14,7 @@ final class nh {
           Confined.field_I = pe.field_n;
           ld.field_l = r.field_a;
           jh.field_R = rd.field_Nb;
-          hn.field_D = th.field_cb;
+          GameSession.field_D = th.field_cb;
           th.field_cb = param0;
           rh.field_X = sh.field_K;
           wm.field_hb = va.field_a;

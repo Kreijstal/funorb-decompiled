@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fh extends ln {
+final class fh extends ScoreModifier {
     static String field_j;
     static String field_g;
     static String field_h;
@@ -79,7 +79,7 @@ final class fh extends ln {
         field_j = null;
     }
 
-    final int a(int param0, byte param1) {
+    final int countPlayerApplications(int param0, byte param1) {
         int var3 = 77 % ((55 - param1) / 50);
         return (1 << param0 & ol.field_B) != 0 ? 1 : 0;
     }

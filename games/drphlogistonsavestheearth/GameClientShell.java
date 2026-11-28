@@ -159,8 +159,8 @@ abstract class GameClientShell extends GameAppletShell {
         if (hj.field_f == 2) {
           if (null != DiskArchiveRequest.field_I &&
             DiskArchiveRequest.field_I.ensureIndexLoaded(0)) {
-            if (DiskArchiveRequest.field_I.a((byte) 12, "")) {
-              if (DiskArchiveRequest.field_I.a(255, "")) {
+            if (DiskArchiveRequest.field_I.hasGroupName((byte) 12, "")) {
+              if (DiskArchiveRequest.field_I.tryLoadGroupByName(255, "")) {
                 LoginMenuScreen.a(7, DiskArchiveRequest.field_I);
                 DiskArchiveRequest.field_I = null;
                 IterableNodeHashTable.a((byte) 86);

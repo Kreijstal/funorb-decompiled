@@ -203,7 +203,7 @@ final class ec {
           if (param3 != 0) {
             field_b = (Calendar) null;
           }
-          stackIn_6_0 = param2 + " - " + param0.b(true) + "%";
+          stackIn_6_0 = param2 + " - " + param0.getArchiveLoadPercent(true) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

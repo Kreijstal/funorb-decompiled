@@ -40,20 +40,20 @@ class ik implements rd, ub {
         if (param0 < 63) {
           ik.b((byte) -17);
         }
-        if (!we.field_h.a("commonui", 10762)) {
+        if (!we.field_h.tryLoadGroupByName("commonui", 10762)) {
           return IsaacRandom.field_e + " - " + we.field_h.getGroupLoadPercentByName("commonui", (byte) 118) + "%";
         }
         if (!GzipDecompressor.field_a.ensureIndexLoaded(-75)) {
           return li.field_P;
         }
-        if (!GzipDecompressor.field_a.a("commonui", 10762)) {
+        if (!GzipDecompressor.field_a.tryLoadGroupByName("commonui", 10762)) {
           return v.field_t + " - " + GzipDecompressor.field_a.getGroupLoadPercentByName("commonui", (byte) 118) + "%";
         }
         if (!ej.field_d.ensureIndexLoaded(-116)) {
           return ef.field_c;
         }
         if (!ej.field_d.tryLoadAllGroups((byte) -114)) {
-          return ProxyAuthenticationRequiredException.field_c + " - " + ej.field_d.a(false) + "%";
+          return ProxyAuthenticationRequiredException.field_c + " - " + ej.field_d.getArchiveLoadPercent(false) + "%";
         }
         return ta.field_b;
     }

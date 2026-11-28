@@ -68,7 +68,7 @@ final class va extends tj {
             stackIn_8_0 = IsaacRandom.field_a;
             return stackIn_8_0;
           }
-          if (ResourceArchive.d(var5, (byte) 50)) {
+          if (ResourceArchive.containsNonAsciiAlphanumeric(var5, (byte) 50)) {
             stackIn_12_0 = rg.field_d;
             return stackIn_12_0;
           }

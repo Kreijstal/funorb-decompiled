@@ -18,7 +18,7 @@ final class ih extends qe {
     static tf field_x;
     private rh field_D;
     static String field_v;
-    private wd field_F;
+    private SpriteAnimationPlayer field_F;
     private rh field_y;
 
     private final int a(int param0, int param1, int param2) {
@@ -110,7 +110,7 @@ final class ih extends qe {
         Object var2;
         Object var3;
         rj var4;
-        h var5;
+        RaiderDefinition var5;
         int var6;
         int var7;
         RgbSprite var8;
@@ -144,7 +144,7 @@ final class ih extends qe {
           ih.a(216, 275, this.field_F, kc.field_S);
         }
         if (var2 == null) {
-          ih.a(339, 289, (h) (var3));
+          ih.a(339, 289, (RaiderDefinition) (var3));
         } else {
           ih.a(339, 289, (Raider) (var2), 0);
         }
@@ -260,7 +260,7 @@ final class ih extends qe {
         int stackIn_49_0 = 0;
         int var2;
         Raider var2_ref_hb;
-        wb[] var3;
+        StatusEffectIndicator[] var3;
         Raider var3_ref;
         en var4;
         int var5;
@@ -271,15 +271,15 @@ final class ih extends qe {
         int var10;
         int var11;
         int var12;
-        wb var13;
+        StatusEffectIndicator var13;
         int var14;
         Raider var15;
-        wb[] var16;
+        StatusEffectIndicator[] var16;
         Raider var17;
-        h var18;
-        h var19;
+        RaiderDefinition var18;
+        RaiderDefinition var19;
         Raider var20;
-        h var21;
+        RaiderDefinition var21;
         var14 = DungeonAssault.field_K;
         this.field_t = -1;
         if (kn.field_g &&
@@ -317,7 +317,7 @@ final class ih extends qe {
             while (var12 < var16.length) {
               var13 = var16[var12];
               if (jg.a(false, var10, 12, 12, var11)) {
-                var4 = var13.a();
+                var4 = var13.getTooltip();
               }
               var10 -= 16;
               var12++;
@@ -343,7 +343,7 @@ final class ih extends qe {
                   this.a((byte) -112, -1);
                   if (null == this.field_F ||
                     var18.field_t != this.field_F.field_n) {
-                    this.field_F = new wd(var18.field_e, var18.field_t, rf.field_M);
+                    this.field_F = new SpriteAnimationPlayer(var18.field_e, var18.field_t, rf.field_M);
                     if (null == var18.field_p) {
                       break regionExit1;
                     }
@@ -372,7 +372,7 @@ final class ih extends qe {
                                 um.field_i[var2] = gm.field_d.field_a[var2];
                                 if (null != um.field_i[var2] &&
                                   um.field_i[var2].field_b == null) {
-                                  um.field_i[var2].field_b = new wd(um.field_i[var2].field_n.field_e);
+                                  um.field_i[var2].field_b = new SpriteAnimationPlayer(um.field_i[var2].field_n.field_e);
                                 }
                                 NodeHashTableIterator.b((byte) -36);
                               }
@@ -394,7 +394,7 @@ final class ih extends qe {
                                   if (var3_ref != null &&
                                     var20.field_p != 255 &&
                                     var21.field_u != var20.field_b.field_n) {
-                                    var20.field_b.a(124, var21.field_u);
+                                    var20.field_b.playOnceThenIdle(124, var21.field_u);
                                     if (var20.field_n.field_p != null) {
                                       gd.a(param0 ^ -24836, var21.field_p);
                                     }
@@ -403,7 +403,7 @@ final class ih extends qe {
                               } else {
                                 var19 = ((u) (op.field_d.field_l)).field_Q;
                                 um.field_i[var2] = new Raider(var2, var19.field_w);
-                                um.field_i[var2].field_b = new wd(var19.field_e);
+                                um.field_i[var2].field_b = new SpriteAnimationPlayer(var19.field_e);
                                 NodeHashTableIterator.b((byte) -36);
                                 op.field_d.a((byte) 80);
                               }
@@ -426,7 +426,7 @@ final class ih extends qe {
                 var2_ref_hb = var17;
                 if (var2_ref_hb != null) {
                   um.field_i[this.field_C] = new Raider(this.field_C, var17.field_c);
-                  um.field_i[this.field_C].field_b = new wd(var17.field_n.field_e);
+                  um.field_i[this.field_C].field_b = new SpriteAnimationPlayer(var17.field_n.field_e);
                   NodeHashTableIterator.b((byte) -36);
                   this.a((byte) -112, -1);
                 }
@@ -458,7 +458,7 @@ final class ih extends qe {
         ih.a(188, 8, 264, 32, 256, 64, 4, 128);
         ih.a(460, 8, 172, 32, 256, 64, 4, 128);
         this.field_B.b(12, 32, 640 - this.field_B.field_i >> 1);
-        h.a(false, 425, 618, true, PcmOutputWorker.field_e.field_b + 40);
+        RaiderDefinition.drawTiledPanelBorder(false, 425, 618, true, PcmOutputWorker.field_e.field_b + 40);
         ke.a(55, 180, 480, 0);
         ke.a(51, 605, 480, PcmOutputWorker.field_e.field_b + 40);
         ke.a(106, 640 - be.field_o.field_d, 480, 0);
@@ -468,7 +468,7 @@ final class ih extends qe {
         jc.a(32, 460 - be.field_o.field_d, 8, 1, 2, 1);
         AwtRasterBuffer.a(0, 640, 480 - PcmOutputWorker.field_e.field_b, (byte) 110);
         ih.b(be.field_o.field_d, 40 + PcmOutputWorker.field_e.field_b, 170, 425, 16777215, 32, 128);
-        h.a(false, 425, 20, true, PcmOutputWorker.field_e.field_b + 40);
+        RaiderDefinition.drawTiledPanelBorder(false, 425, 20, true, PcmOutputWorker.field_e.field_b + 40);
         ih.a(8, 47, 172, 425, 256, 32, 8, 128);
         ih.a(14, 55, 161, 36);
         jh.b();
@@ -510,16 +510,16 @@ final class ih extends qe {
     private final void c(int param0) {
         this.b();
         op.field_d = new nn(true);
-        wd.field_f = new nn(false);
+        SpriteAnimationPlayer.field_f = new nn(false);
         ud.field_t = new ed(8, 90, 180, 382);
         sn.field_b = tn.a(16, 12, IntrusiveNode.field_c, jm.field_i, -107, lk.field_P);
         MouseWheelInput.field_a = tn.a(472, 12, IntrusiveNode.field_c, jm.field_i, -76, be.field_r.toUpperCase());
         NetworkGameClient.field_y = tn.a((164 - jm.field_i.field_y >> 1) + 340, 376, IntrusiveNode.field_c, jm.field_i, -100, sa.field_e);
-        hl.field_b = sj.a(22, param0 ^ 38, 65, uj.field_c, wd.field_f);
-        hi.field_a = sj.a(55, 109, 65, gd.field_E, wd.field_f);
-        kl.field_h = sj.a(86, 104, 65, jj.field_b, wd.field_f);
-        cd.field_d = sj.a(117, 87, 65, ProxyAuthenticationRequiredException.field_d, wd.field_f);
-        am.field_f = sj.a(148, param0 + 54, param0, pk.field_o, wd.field_f);
+        hl.field_b = sj.a(22, param0 ^ 38, 65, uj.field_c, SpriteAnimationPlayer.field_f);
+        hi.field_a = sj.a(55, 109, 65, gd.field_E, SpriteAnimationPlayer.field_f);
+        kl.field_h = sj.a(86, 104, 65, jj.field_b, SpriteAnimationPlayer.field_f);
+        cd.field_d = sj.a(117, 87, 65, ProxyAuthenticationRequiredException.field_d, SpriteAnimationPlayer.field_f);
+        am.field_f = sj.a(148, param0 + 54, param0, pk.field_o, SpriteAnimationPlayer.field_f);
         this.field_p.addFirst(ud.field_t, false);
         this.field_p.addFirst(sn.field_b, false);
         this.field_p.addFirst(MouseWheelInput.field_a, false);
@@ -532,7 +532,7 @@ final class ih extends qe {
         this.a(-122);
         this.field_G = 0;
         this.field_E = false;
-        wd.field_f.a(hl.field_b, -256);
+        SpriteAnimationPlayer.field_f.a(hl.field_b, -256);
         this.a(0, 0);
         this.field_q = new sa(262, 412, 280, 56);
         this.field_q.a(true, lg.field_h, (byte) 91, a.field_m, 16777215);
@@ -562,7 +562,7 @@ final class ih extends qe {
             var5 = 195 + 102 * var4;
             var6 = 104 * var3 + 60;
             if (null != um.field_i[var2]) {
-              um.field_i[var2].field_b.a(86, var6 + 5, (byte) 102, 5 + var5, 86);
+              um.field_i[var2].field_b.drawAnimation(86, var6 + 5, (byte) 102, 5 + var5, 86);
               ih.a(var5 + 96, 96 + var6, 3, um.field_i[var2], 0);
             }
             var7 = (int)((te.c(mo.field_a, var2 * 10273, 0.015625) + 2.0) * 64.0);
@@ -755,7 +755,7 @@ final class ih extends qe {
               stackIn_10_0 = um.field_i[var2].field_n.field_e;
             }
             var3 = stackIn_10_0;
-            um.field_i[var2].field_b = new wd(var3);
+            um.field_i[var2].field_b = new SpriteAnimationPlayer(var3);
           }
         }
         NodeHashTableIterator.b((byte) -36);
@@ -795,7 +795,7 @@ final class ih extends qe {
 
     private final void a(byte param0, int param1) {
         Object var3;
-        h var4;
+        RaiderDefinition var4;
         int var5;
         var5 = DungeonAssault.field_K;
         this.field_C = param1;
@@ -835,7 +835,7 @@ final class ih extends qe {
     private final void a(int param0) {
         int var3 = 0;
         int var2;
-        h var4;
+        RaiderDefinition var4;
         int var6;
         u var5;
         var6 = DungeonAssault.field_K;
@@ -902,11 +902,11 @@ final class ih extends qe {
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
           if (var4 != null) {
-            var4.field_b.a((byte) 109, 20);
+            var4.field_b.advanceAnimation((byte) 109, 20);
           }
         }
         if (this.field_F != null) {
-          this.field_F.a((byte) 109, 20);
+          this.field_F.advanceAnimation((byte) 109, 20);
         }
         return;
     }

@@ -121,8 +121,8 @@ final class RaiseSpecial extends SpecialOrder {
           if (param1 != 3) {
             RaiseSpecial.releaseStatics(87);
           }
-          var6 = this.creature.a(71, param0);
-          var4 = this.field_j.a(67, param0);
+          var6 = this.creature.resolveCreature(71, param0);
+          var4 = this.field_j.resolveCreature(67, param0);
           if (var4 != null &&
             null == param0.tiles[var4.tileX][var4.tileY].occupant &&
             var4.field_A) {

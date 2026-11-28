@@ -254,7 +254,7 @@ final class AchievementIconEntry extends IntrusiveNode {
               }
             }
             if (wf.field_x >= am.field_c) {
-              ai.field_n = me.field_f;
+              DungeonTileState.field_n = me.field_f;
               wf.field_x = wf.field_x - am.field_c;
               if (oo.field_a) {
                 me.field_f = me.field_f + 1;

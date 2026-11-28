@@ -261,7 +261,7 @@ final class ui {
             field_b = (UiPanel) null;
           }
           if (null != var2) {
-            ir.a((String) null, lj.field_p, (String) (var2), 0, 0);
+            ir.a((String) null, MatchSession.field_p, (String) (var2), 0, 0);
           } else {
             var3 = qe.field_V;
             var3 = jk.a(15709, var3);

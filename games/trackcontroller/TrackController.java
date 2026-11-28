@@ -781,34 +781,34 @@ public final class TrackController extends GameShell {
           var18 = field_F ? 1 : 0;
           if (null != el.field_L) {
             if (el.field_L.ensureIndexLoaded(111) &&
-              el.field_L.b("basic", (byte) -3)) {
-              if (!el.field_L.b("comic12", (byte) -3)) {
+              el.field_L.tryLoadGroupByName("basic", (byte) -3)) {
+              if (!el.field_L.tryLoadGroupByName("comic12", (byte) -3)) {
                 ud.a(128, 3.0f, wf.a("comic12", IndexedSpriteState.field_f, v.field_c, el.field_L, 43));
                 return false;
               }
-              if (!el.field_L.b("kartika13", (byte) -3)) {
+              if (!el.field_L.tryLoadGroupByName("kartika13", (byte) -3)) {
                 ud.a(param0 - 339, 3.0f, wf.a("kartika13", IndexedSpriteState.field_f, v.field_c, el.field_L, param0 - 431));
                 return false;
               }
-              if (!fb.field_b.b("comic12", (byte) -3)) {
+              if (!fb.field_b.tryLoadGroupByName("comic12", (byte) -3)) {
                 ud.a(param0 ^ 339, 3.0f, wf.a("comic12", IndexedSpriteState.field_f, v.field_c, fb.field_b, param0 ^ 399));
                 return false;
               }
-              if (!fb.field_b.b("kartika13", (byte) -3)) {
+              if (!fb.field_b.tryLoadGroupByName("kartika13", (byte) -3)) {
                 ud.a(128, 3.0f, wf.a("kartika13", IndexedSpriteState.field_f, v.field_c, fb.field_b, 62));
                 return false;
               }
               if (rl.field_D.ensureIndexLoaded(param0 - 374) &&
                 rl.field_D.tryLoadAllGroups((byte) 48)) {
                 if (ui.a(0, true) && (!sg.field_a.ensureIndexLoaded(-115) ||
-                  !sg.field_a.b("halloween", (byte) -3))) {
+                  !sg.field_a.tryLoadGroupByName("halloween", (byte) -3))) {
                   ud.a(param0 ^ 339, 11.0f, wf.a("halloween", sa.field_K, gj.field_e, sg.field_a, param0 ^ 479));
                   return false;
                 }
                 if (sg.field_a.ensureIndexLoaded(91) &&
-                  sg.field_a.b("", (byte) -3)) {
+                  sg.field_a.tryLoadGroupByName("", (byte) -3)) {
                   if (sg.field_a.ensureIndexLoaded(106) &&
-                    sg.field_a.b("", (byte) -3)) {
+                    sg.field_a.tryLoadGroupByName("", (byte) -3)) {
                     if (si.field_c.ensureIndexLoaded(-109) &&
                       si.field_c.tryLoadAllGroups((byte) 48)) {
                       if (j.field_h.ensureIndexLoaded(96) &&

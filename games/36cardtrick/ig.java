@@ -708,7 +708,7 @@ final class ig extends IntrusiveNode {
         try {
           ig var4_ref = null;
           if (!ig.a(param0)) {
-            param0.a(param1, param2, (byte) -44);
+            param0.tryLoadFileByName(param1, param2, (byte) -44);
             return null;
           }
           byte[] var3 = param0.getFileByName((byte) 7, param2, param1);

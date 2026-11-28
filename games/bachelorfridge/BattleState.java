@@ -52,14 +52,14 @@ final class BattleState {
     int playerCount;
     int field_M;
 
-    final void g(int param0) {
+    final void guardRosterInitialization(int param0) {
         if (param0 < 126) {
           CreatureProfile[] var3 = (CreatureProfile[]) null;
-          this.a(42, (CreatureProfile[]) null, -43);
+          this.initializePlayerRoster(42, (CreatureProfile[]) null, -43);
         }
     }
 
-    final void a(int param0, BattleCreature param1, int param2) {
+    final void setTerrainAroundCreature(int param0, BattleCreature param1, int param2) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -78,7 +78,7 @@ final class BattleState {
             this.setTerrain((byte) 91, param2, param1.tileX + 1, param1.tileY);
           }
           if (param0 != -25) {
-            this.a((byte) 64, -97);
+            this.hasPlayerOfferedDraw((byte) 64, -97);
           }
           if (-1 + param1.tileY >= 0 &&
             this.tiles[param1.tileX][param1.tileY - 1].terrain != 20) {
@@ -104,7 +104,7 @@ final class BattleState {
         }
     }
 
-    final int a(int param0, BattleCreature param1, int param2, int param3) {
+    final int getDirectionalMoveDistance(int param0, BattleCreature param1, int param2, int param3) {
         int stackIn_20_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_27_0 = 0;
@@ -160,7 +160,7 @@ final class BattleState {
                 stackIn_24_0 = var6;
                 return stackIn_24_0;
               }
-              if (!param1.a(var10, false)) {
+              if (!param1.canTraverseTerrain(var10, false)) {
                 stackIn_27_0 = var6 - 1;
                 return stackIn_27_0;
               }
@@ -188,7 +188,7 @@ final class BattleState {
         }
     }
 
-    private final void d(int param0) {
+    private final void updateObjectiveWinner(int param0) {
         int var6 = 0;
         int var2;
         int[] var2_ref_int__;
@@ -279,13 +279,13 @@ final class BattleState {
           param0.writeByte(this.field_Q, 0);
           this.writeBoard(param0, (byte) 92);
           this.writeTurnOrder(param0, (byte) -115);
-          this.a(param0, (byte) 113);
+          this.writeAllRosters(param0, (byte) 113);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "op.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final int b(BattleCreature param0, int param1, int param2, int param3) {
+    final int getSignedKnockbackDistance(BattleCreature param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -299,7 +299,7 @@ final class BattleState {
             param3 = -param3;
           }
           if (param1 >= 68) {
-            stackIn_6_0 = this.a(param2, param3, param0, (byte) -44);
+            stackIn_6_0 = this.getUnblockedDisplacement(param2, param3, param0, (byte) -44);
             return stackIn_6_0;
           }
           stackIn_4_0 = 9;
@@ -329,8 +329,8 @@ final class BattleState {
           this.field_N = ~param1.readUnsignedByte(16711935) != param0 ? false : true;
           this.field_M = param1.readByte(true);
           this.field_Q = param1.readUnsignedByte(16711935);
-          this.b(-1, param1);
-          this.b(param1, 68);
+          this.readBoardState(-1, param1);
+          this.readTurnOrder(param1, 68);
           this.rosters = new PlayerRoster[this.playerCount];
           for (var3_int = 0; this.playerCount > var3_int; var3_int++) {
             this.rosters[var3_int] = new PlayerRoster(var3_int);
@@ -344,7 +344,7 @@ final class BattleState {
             }
           }
           this.assignTurnOrderIndices(-1);
-          this.g(127);
+          this.guardRosterInitialization(127);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "op.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -359,7 +359,7 @@ final class BattleState {
         }
     }
 
-    final void i(byte param0) {
+    final void bucketCreaturesForTurnOrder(byte param0) {
         int var3 = 0;
         int var2;
         BattleCreature var4;
@@ -388,7 +388,7 @@ final class BattleState {
         var2Lifetime2 = 89 / ((-14 - param0) / 32);
     }
 
-    final void a(int[][] param0, byte param1, int param2, int param3, int param4, int param5) {
+    final void setTerrainAtTileCoordinates(int[][] param0, byte param1, int param2, int param3, int param4, int param5) {
         int var7_int = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -438,7 +438,7 @@ final class BattleState {
         }
     }
 
-    private final int a(int param0, int param1, BattleCreature param2, byte param3) {
+    private final int getUnblockedDisplacement(int param0, int param1, BattleCreature param2, byte param3) {
         int stackIn_17_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_24_0 = 0;
@@ -458,7 +458,7 @@ final class BattleState {
           while (true) {
             if (var5_int > param1) {
               if (param3 != -44) {
-                this.a(-49, -74, false);
+                this.setTurnPhase(-49, -74, false);
               }
               stackIn_29_0 = param1;
               return stackIn_29_0;
@@ -488,7 +488,7 @@ final class BattleState {
                 stackIn_20_0 = var5_int;
                 return stackIn_20_0;
               }
-              if (!this.a(param2, var7, var6, (byte) 54)) {
+              if (!this.canCreatureOccupyTile(param2, var7, var6, (byte) 54)) {
                 stackIn_24_0 = var5_int - 1;
                 return stackIn_24_0;
               }
@@ -513,7 +513,7 @@ final class BattleState {
         }
     }
 
-    final void a(int param0, aj[] param1, int param2, byte param3) {
+    final void setTerrainAtTilePositions(int param0, aj[] param1, int param2, byte param3) {
         int discarded$0 = 0;
         int var5_int = 0;
         RuntimeException stackIn_21_0 = null;
@@ -530,7 +530,7 @@ final class BattleState {
         try {
           if (param3 != -36) {
             var10 = (BattleCreature) null;
-            discarded$0 = this.a(-106, -64, (BattleCreature) null, (byte) 29);
+            discarded$0 = this.getUnblockedDisplacement(-106, -64, (BattleCreature) null, (byte) 29);
           }
           for (var5_int = 0; var5_int < param0; var5_int++) {
             var6 = param1[var5_int].field_c;
@@ -566,7 +566,7 @@ final class BattleState {
         }
     }
 
-    final boolean a(BattleCreature param0, int param1, int param2, byte param3) {
+    final boolean canCreatureOccupyTile(BattleCreature param0, int param1, int param2, byte param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -577,7 +577,7 @@ final class BattleState {
             param1 >= 0 &&
             this.width > param2 &&
             param1 < this.height) {
-            if (!param0.a(this.tiles[param2][param1].terrain, false)) {
+            if (!param0.canTraverseTerrain(this.tiles[param2][param1].terrain, false)) {
               return false;
             }
             if (param3 != 54) {
@@ -624,7 +624,7 @@ final class BattleState {
           if (param0 == null) {
             return null;
           }
-          var6 = param0.creature.a(29, this);
+          var6 = param0.creature.resolveCreature(29, this);
           var7 = var6;
           if (var7 == null) {
             stackIn_5_0 = null;
@@ -661,7 +661,7 @@ final class BattleState {
         }
     }
 
-    final int a(CreatureOrder[] param0, boolean param1) {
+    final int countSpecialOrders(CreatureOrder[] param0, boolean param1) {
         int var4 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -675,7 +675,7 @@ final class BattleState {
         var6 = BachelorFridge.field_y;
         try {
           if (param1) {
-            this.b(-125);
+            this.advanceTurn(-125);
           }
           var3_int = 0;
           for (var4 = 0; var4 < param0.length; var4++) {
@@ -702,7 +702,7 @@ final class BattleState {
         }
     }
 
-    final void i(int param0) {
+    final void buildCreatureTurnOrder(int param0) {
         int var3 = 0;
         int var2;
         IntrusiveDeque var4;
@@ -744,7 +744,7 @@ final class BattleState {
         }
     }
 
-    final void a(int param0) {
+    final void advanceTileCountersAndCreatureTimers(int param0) {
         BoardTile dupTemp$1 = null;
         BoardTile dupTemp$2 = null;
         BoardTile dupTemp$0 = null;
@@ -761,9 +761,9 @@ final class BattleState {
         for (var2 = 0; var2 < this.tiles.length; var2++) {
           for (var3 = 0; this.tiles[0].length > var3; var3++) {
             if (this.tiles[var2][var3].occupant != null) {
-              this.tiles[var2][var3].occupant.a(this.tiles[var2][var3].field_m, (byte) -82, this.tiles[var2][var3].terrain);
+              this.tiles[var2][var3].occupant.advanceStatusAndCooldowns(this.tiles[var2][var3].field_m, (byte) -82, this.tiles[var2][var3].terrain);
             }
-            if (this.tiles[var2][var3].a(false, this)) {
+            if (this.tiles[var2][var3].isCurryBaseTile(false, this)) {
               dupTemp$1 = this.tiles[var2][var3];
               dupTemp$1.field_j = dupTemp$1.field_j - 1;
             }
@@ -795,7 +795,7 @@ final class BattleState {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4) {
+    private final void applyAreaDamage(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         int stackIn_19_0 = 0;
@@ -845,7 +845,7 @@ final class BattleState {
         }
     }
 
-    final boolean a(int param0, BattleCreature param1, int param2, BattleCreature param3, int param4) {
+    final boolean applyKnockback(int param0, BattleCreature param1, int param2, BattleCreature param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         RuntimeException stackIn_12_0 = null;
@@ -859,9 +859,9 @@ final class BattleState {
             param2 = -param2;
             param0 = ov.b(param0, 60);
           }
-          var6_int = this.a(param0, param2, param1, (byte) -44);
-          param1.a(false, var6_int, param0);
-          if (!param1.a(32, (byte) 103) &&
+          var6_int = this.getUnblockedDisplacement(param0, param2, param1, (byte) -44);
+          param1.moveInDirection(false, var6_int, param0);
+          if (!param1.hasStatus(32, (byte) 103) &&
             this.tiles[param1.tileX][param1.tileY].terrain == 21) {
             this.field_T.field_l[param3.ownerIndex] = this.field_T.field_l[param3.ownerIndex] + 1;
           }
@@ -891,14 +891,14 @@ final class BattleState {
         int var2 = -34 % ((-46 - param0) / 53);
     }
 
-    private final String a(byte param0) {
+    private final String getTerrainThemeName(byte param0) {
         if (param0 > -46) {
           this.computeChecksum((byte) 75);
         }
         return ArenaTheme.a((byte) 48, this.field_E, new String[]{"Pizza", "Dessert", "Curry"});
     }
 
-    final void a(int param0, int param1, int param2, int[][] param3, int param4) {
+    final void hideTilesInMask(int param0, int param1, int param2, int[][] param3, int param4) {
         int var10 = 0;
         int var11 = 0;
         int var6_int = 0;
@@ -928,13 +928,13 @@ final class BattleState {
                   var12 < this.width &&
                   0 <= var13 &&
                   this.height > var13) {
-                  this.d(-1, var13, var12);
+                  this.markTileHidden(-1, var13, var12);
                 }
               }
             }
           }
           if (param0 != 878) {
-            this.k((byte) -48);
+            this.describeBattleState((byte) -48);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -951,7 +951,7 @@ final class BattleState {
         }
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void setTurnPhase(int param0, int param1, boolean param2) {
         this.field_A = param0;
         this.field_N = param2 ? true : false;
         if (param1 != -16292) {
@@ -959,7 +959,7 @@ final class BattleState {
         }
     }
 
-    private final void b(PacketBuffer param0, int param1) {
+    private final void readTurnOrder(PacketBuffer param0, int param1) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -1034,27 +1034,27 @@ final class BattleState {
         var2 = var2 ^ 87 * this.width + (this.field_D * 599 + this.height * 713);
         for (var4Lifetime2 = 0; this.width > var4Lifetime2; var4Lifetime2++) {
           for (var5Lifetime2 = 0; this.height > var5Lifetime2; var5Lifetime2++) {
-            var2 = var2 ^ this.tiles[var4Lifetime2][var5Lifetime2].d(1446291025) * (var5Lifetime2 * (var4Lifetime2 + 13) + 37 + var4Lifetime2);
+            var2 = var2 ^ this.tiles[var4Lifetime2][var5Lifetime2].computeTileChecksum(1446291025) * (var5Lifetime2 * (var4Lifetime2 + 13) + 37 + var4Lifetime2);
           }
         }
         for (var4Lifetime3 = 0; var4Lifetime3 < this.playerCount; var4Lifetime3++) {
           for (var5Lifetime3 = 0; var5Lifetime3 < 7; var5Lifetime3++) {
             var6 = this.rosters[var4Lifetime3].field_b[var5Lifetime3];
             if (var6 != null) {
-              var2 = var2 ^ var6.g(94) * (31 + (var4Lifetime3 * 59 + 53 * var5Lifetime3));
+              var2 = var2 ^ var6.computeCreatureChecksum(94) * (31 + (var4Lifetime3 * 59 + 53 * var5Lifetime3));
             }
           }
         }
         return var2;
     }
 
-    private final void f(int param0) {
+    private final void executeTurnOrders(int param0) {
         BattleUpdate discarded$0 = null;
         int var3 = BachelorFridge.field_y;
-        this.h(param0 ^ -26126);
+        this.buildTurnOrderQueues(param0 ^ -26126);
         if (param0 != 26125) {
           BattleCreature var4 = (BattleCreature) null;
-          this.a(-25, (BattleCreature) null, 68);
+          this.setTerrainAroundCreature(-25, (BattleCreature) null, 68);
         }
         CreatureOrder var5 = (CreatureOrder) (this.field_P.beginForward((byte) 90));
         while (var5 != null) {
@@ -1063,7 +1063,7 @@ final class BattleState {
         }
     }
 
-    final boolean a(byte param0, int param1) {
+    final boolean hasPlayerOfferedDraw(byte param0, int param1) {
         boolean stackIn_6_0 = false;
         if (param0 > -11) {
           this.field_H = (PlayerMatchStats[]) null;
@@ -1104,7 +1104,7 @@ final class BattleState {
         }
         for (var4 = 0; var4 < var3.length; var4++) {
           var5 = var3[var4];
-          var2 = var2 + var5.b((byte) 84);
+          var2 = var2 + var5.countLivingCreatures((byte) 84);
         }
         return var2;
     }
@@ -1142,7 +1142,7 @@ final class BattleState {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, BattleCreature param3) {
+    final boolean canCreatureLandInDirection(int param0, int param1, int param2, BattleCreature param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1164,7 +1164,7 @@ final class BattleState {
             if (param2 != 4) {
               if (param2 != 1) {
                 if (param2 != 3) {
-                  return this.a(param3, var7, var5_int, (byte) 54);
+                  return this.canCreatureOccupyTile(param3, var7, var5_int, (byte) 54);
                 }
                 var7 = var7 + param1;
               } else {
@@ -1174,7 +1174,7 @@ final class BattleState {
               var5_int = var5_int + param1;
             }
           }
-          stackIn_11_0 = this.a(param3, var7, var5_int, (byte) 54);
+          stackIn_11_0 = this.canCreatureOccupyTile(param3, var7, var5_int, (byte) 54);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1190,7 +1190,7 @@ final class BattleState {
         }
     }
 
-    private final CreatureOrder b(int param0, int param1) {
+    private final CreatureOrder getOrderAtTurnOrderIndex(int param0, int param1) {
         int var3 = -48 / ((param0 + 60) / 52);
         if (param1 < 0) {
           return null;
@@ -1243,7 +1243,7 @@ final class BattleState {
         }
     }
 
-    final boolean b(byte param0, int param1) {
+    final boolean hasPlayerResigned(byte param0, int param1) {
         boolean stackIn_6_0 = false;
         if (param0 < 5) {
           this.playerCount = 78;
@@ -1252,7 +1252,7 @@ final class BattleState {
         return stackIn_6_0;
     }
 
-    private final void h(int param0) {
+    private final void buildTurnOrderQueues(int param0) {
         int var3;
         CreatureOrder var4;
         int var6;
@@ -1262,13 +1262,13 @@ final class BattleState {
         CreatureOrder var4Lifetime1;
         var6 = BachelorFridge.field_y;
         if (~(this.field_A & 1) == param0) {
-          this.d((byte) -74);
+          this.clearCreatureOrderExecutionFlags((byte) -74);
         }
         this.field_P = new IntrusiveDeque();
         this.field_U = new IntrusiveDeque();
         var7 = new IntrusiveDeque();
         for (var3 = 0; this.field_n.length > var3; var3++) {
-          var4 = this.b(param0 - 112, var3);
+          var4 = this.getOrderAtTurnOrderIndex(param0 - 112, var3);
           if (var4 != null) {
             var7.addLast(var4, true);
           }
@@ -1288,12 +1288,12 @@ final class BattleState {
         var7.moveAllTo(this.field_P, 12632256);
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int findFlagTeamAtTile(int param0, int param1, int param2) {
         int var4 = 0;
         int var5;
         var5 = BachelorFridge.field_y;
         if (param0 != 1845) {
-          this.c(80);
+          this.applyOvertimeDamage(80);
         }
         for (var4 = 0; this.playerCount > var4; var4++) {
           if (param2 == this.field_c[var4][0] &&
@@ -1410,7 +1410,7 @@ final class BattleState {
         }
     }
 
-    final void d(int param0, int param1, int param2) {
+    final void markTileHidden(int param0, int param1, int param2) {
         if (~param2 > param0) {
           return;
         }
@@ -1422,7 +1422,7 @@ final class BattleState {
         }
     }
 
-    final boolean a(int param0, int param1, byte param2) {
+    final boolean isTileTerrainTraversable(int param0, int param1, byte param2) {
         int var4;
         var4 = -126 % ((3 - param2) / 37);
         if (param0 >= 0 &&
@@ -1434,7 +1434,7 @@ final class BattleState {
         return false;
     }
 
-    private final boolean b(byte param0) {
+    private final boolean hasConsistentCreatureOccupancy(byte param0) {
         int var3 = 0;
         int var2;
         BattleCreature var4;
@@ -1463,7 +1463,7 @@ final class BattleState {
         return true;
     }
 
-    private final void a(BattleCreature param0, boolean param1) {
+    private final void addCreatureToTurnOrder(BattleCreature param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -1504,7 +1504,7 @@ final class BattleState {
         }
     }
 
-    final void b(int param0) {
+    final void advanceTurn(int param0) {
         BoardChangeBatch discarded$0 = null;
         if (this.field_r) {
           throw new IllegalStateException();
@@ -1512,26 +1512,26 @@ final class BattleState {
         if (this.field_A > 0) {
           this.field_N = !this.field_N ? true : false;
           this.field_A = this.field_A + 1;
-          this.f((byte) 103);
-          this.f(param0 + 26125);
+          this.clearTurnBucketsOnAlternateGuard((byte) 103);
+          this.executeTurnOrders(param0 + 26125);
         }
         if (param0 != 0) {
           return;
         }
         if (!this.field_N) {
-          discarded$0 = this.e(0);
+          discarded$0 = this.applyRoundTransition(0);
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3) {
+    final boolean isAdjacentToFlagBase(int param0, int param1, int param2, int param3) {
         int var5;
         var5 = -8 / ((50 - param1) / 63);
-        if (!this.a((byte) -113, param2, param0 + 1, param3) &&
-          !this.a((byte) -115, param2, param0 - 1, param3)) {
-          if (this.a((byte) -105, param2, param0, param3 + 1)) {
+        if (!this.isFlagBaseTile((byte) -113, param2, param0 + 1, param3) &&
+          !this.isFlagBaseTile((byte) -115, param2, param0 - 1, param3)) {
+          if (this.isFlagBaseTile((byte) -105, param2, param0, param3 + 1)) {
             return true;
           }
-          if (!this.a((byte) -126, param2, param0, -1 + param3)) {
+          if (!this.isFlagBaseTile((byte) -126, param2, param0, -1 + param3)) {
             return false;
           }
           return true;
@@ -1539,7 +1539,7 @@ final class BattleState {
         return true;
     }
 
-    final void a(CreatureOrder[] param0, int param1, byte param2) {
+    final void submitPlayerOrders(CreatureOrder[] param0, int param1, byte param2) {
         int var4_int = 0;
         Object stackIn_27_0 = null;
         BattleCreature stackIn_27_1 = null;
@@ -1574,7 +1574,7 @@ final class BattleState {
             }
           }
           if (this.field_N &&
-            this.rosters[param1].a((byte) -52, 42)) {
+            this.rosters[param1].hasLivingCreatureWithStatus((byte) -52, 42)) {
             var13 = this.rosters[param1].field_b;
             var4 = var13;
             for (var5 = 0; var13.length > var5; var5++) {
@@ -1586,7 +1586,7 @@ final class BattleState {
                 !var14.isDown(115) &&
                 var14.statusId == 42) {
                 var7 = new AttackOrder(24, var14);
-                var17 = this.a(var14, 0);
+                var17 = this.chooseRageAttackTarget(var14, 0);
                 var7.field_k = var17[1];
                 var7.field_j = var17[0];
                 this.field_j[param1][var14.rosterSlot] = (CreatureOrder) ((Object) var7);
@@ -1595,10 +1595,10 @@ final class BattleState {
           }
           if (param2 != -31) {
             var10 = (BattleCreature) null;
-            this.b((BattleCreature) null, (byte) -16);
+            this.isCreatureAdjacentToOwnFlagBase((BattleCreature) null, (byte) -16);
           }
           if (!this.field_N &&
-            this.rosters[param1].a((byte) -49, 40)) {
+            this.rosters[param1].hasLivingCreatureWithStatus((byte) -49, 40)) {
             var4Lifetime1 = this.rosters[param1].field_b;
             for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime1.length; var5Lifetime1++) {
               var6Lifetime1 = var4Lifetime1[var5Lifetime1];
@@ -1608,7 +1608,7 @@ final class BattleState {
                 !var6Lifetime1.isDown(124) &&
                 var6Lifetime1.statusId == 40) {
                 var7_ref = new MoveOrder(0, var6Lifetime1);
-                var18 = this.a(true, var6Lifetime1);
+                var18 = this.chooseFearMovement(true, var6Lifetime1);
                 var7_ref.field_i = var18[0];
                 var7_ref.field_l = var18[1];
                 this.field_j[param1][var6Lifetime1.rosterSlot] = (CreatureOrder) ((Object) var7_ref);
@@ -1631,7 +1631,7 @@ final class BattleState {
         }
     }
 
-    final void a(int param0, int param1, int param2, boolean param3, int[][] param4, int param5) {
+    final void applyTerrainToTileMask(int param0, int param1, int param2, boolean param3, int[][] param4, int param5) {
         int var11 = 0;
         int var12 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -1691,7 +1691,7 @@ final class BattleState {
         }
     }
 
-    private final void d(byte param0) {
+    private final void clearCreatureOrderExecutionFlags(byte param0) {
         int var3 = 0;
         int var2;
         int var4;
@@ -1700,7 +1700,7 @@ final class BattleState {
         var2 = 0;
         if (param0 != -74) {
           var5 = (BattleCreature) null;
-          this.a((BattleCreature) null, -119, 102, (byte) 43);
+          this.canCreatureOccupyTile((BattleCreature) null, -119, 102, (byte) 43);
         }
         while (this.playerCount > var2) {
           for (var3 = 0; 7 > var3; var3++) {
@@ -1712,7 +1712,7 @@ final class BattleState {
         }
     }
 
-    private final boolean b(int param0, int param1, int param2) {
+    private final boolean isFlagBaseInMapTemplate(int param0, int param1, int param2) {
         if (param1 != 26) {
           return true;
         }
@@ -1731,7 +1731,7 @@ final class BattleState {
         return true;
     }
 
-    private final int[] a(int param0, int param1) {
+    private final int[] findFlagBaseTile(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         int var5;
@@ -1806,7 +1806,7 @@ final class BattleState {
         }
     }
 
-    final void a(BattleCreature param0, int param1, int param2, int param3) {
+    final void setRosterCreature(BattleCreature param0, int param1, int param2, int param3) {
         if (param1 != 1) {
           return;
         }
@@ -1817,7 +1817,7 @@ final class BattleState {
         }
     }
 
-    final BattleCreature a(byte param0, BattleCreature param1) {
+    final BattleCreature splitCreatureIntoAdjacentTile(byte param0, BattleCreature param1) {
         Object stackIn_26_0 = null;
         Object stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
@@ -1842,30 +1842,30 @@ final class BattleState {
           var4 = null;
           if (param1.tileX > 0 &&
             null == this.tiles[-1 + param1.tileX][param1.tileY].occupant &&
-            this.tiles[param1.tileX - 1][param1.tileY].e(-35)) {
-            var5 = param1.b(true);
+            this.tiles[param1.tileX - 1][param1.tileY].isTraversableTerrain(-35)) {
+            var5 = param1.splitCreature(true);
             var4 = var5;
             var5.field_s = 2;
             var5.tileX = var5.tileX - 1;
           } else if (-1 + this.width > param1.tileX &&
             this.tiles[param1.tileX + 1][param1.tileY].occupant == null &&
-            this.tiles[param1.tileX + 1][param1.tileY].e(-126)) {
-            var8 = param1.b(true);
+            this.tiles[param1.tileX + 1][param1.tileY].isTraversableTerrain(-126)) {
+            var8 = param1.splitCreature(true);
             var4 = var8;
             var8.tileX = var8.tileX + 1;
             var8.field_s = 4;
           } else if (param1.tileY > 0 &&
             null == this.tiles[param1.tileX][-1 + param1.tileY].occupant &&
-            this.tiles[param1.tileX][-1 + param1.tileY].e(-120)) {
-            var7 = param1.b(true);
+            this.tiles[param1.tileX][-1 + param1.tileY].isTraversableTerrain(-120)) {
+            var7 = param1.splitCreature(true);
             var4 = var7;
             var7.field_s = 1;
             var7.tileY = var7.tileY - 1;
           } else {
             if (param1.tileY < -1 + this.height &&
               null == this.tiles[param1.tileX][1 + param1.tileY].occupant &&
-              this.tiles[param1.tileX][1 + param1.tileY].e(-36)) {
-              var6 = param1.b(true);
+              this.tiles[param1.tileX][1 + param1.tileY].isTraversableTerrain(-36)) {
+              var6 = param1.splitCreature(true);
               var4 = var6;
               var6.tileY = var6.tileY + 1;
               var6.field_s = 3;
@@ -1875,10 +1875,10 @@ final class BattleState {
             stackIn_26_0 = null;
             return (BattleCreature) (stackIn_26_0);
           }
-          this.rosters[param1.ownerIndex].a(-20836, (BattleCreature) (var4));
+          this.rosters[param1.ownerIndex].addCreature(-20836, (BattleCreature) (var4));
           this.tiles[((BattleCreature) (var4)).tileX][((BattleCreature) (var4)).tileY].occupant = (BattleCreature) (var4);
-          param1.d(-107);
-          ((BattleCreature) (var4)).d(3);
+          param1.recalculateCreatureStats(-107);
+          ((BattleCreature) (var4)).recalculateCreatureStats(3);
           stackIn_28_0 = var4;
           return (BattleCreature) (stackIn_28_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1907,11 +1907,11 @@ final class BattleState {
           }
         }
         if (param0 != -1) {
-          this.a((int[][]) null, (byte) -21, -84, -59, 6, 41);
+          this.setTerrainAtTileCoordinates((int[][]) null, (byte) -21, -84, -59, 6, 41);
         }
     }
 
-    final boolean a(BattleCreature param0, BattleCreature param1, int param2) {
+    final boolean checkOrSwapCreatureTiles(BattleCreature param0, BattleCreature param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -1928,10 +1928,10 @@ final class BattleState {
           if (param0 == null) {
             return false;
           }
-          if (!param1.a(this.tiles[param0.tileX][param0.tileY].terrain, false)) {
+          if (!param1.canTraverseTerrain(this.tiles[param0.tileX][param0.tileY].terrain, false)) {
             return false;
           }
-          if (!param0.a(this.tiles[param1.tileX][param1.tileY].terrain, false)) {
+          if (!param0.canTraverseTerrain(this.tiles[param1.tileX][param1.tileY].terrain, false)) {
             return false;
           }
           if (param2 != 4) {
@@ -1939,8 +1939,8 @@ final class BattleState {
           }
           var4_int = param1.tileX;
           var5 = param1.tileY;
-          param1.a(param0.tileY, param0.tileX, true);
-          param0.a(var5, var4_int, true);
+          param1.placeOnTile(param0.tileY, param0.tileX, true);
+          param0.placeOnTile(var5, var4_int, true);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1962,7 +1962,7 @@ final class BattleState {
         }
     }
 
-    private final void a(int param0, PacketBuffer param1, int param2) {
+    private final void writePlayerRoster(int param0, PacketBuffer param1, int param2) {
         int discarded$1 = 0;
         int var4_int = 0;
         BattleCreature var5 = null;
@@ -1977,7 +1977,7 @@ final class BattleState {
         try {
           if (param2 >= -111) {
             var7 = (BattleCreature) null;
-            discarded$1 = this.a(-84, 118, (BattleCreature) null, (byte) 51);
+            discarded$1 = this.getUnblockedDisplacement(-84, 118, (BattleCreature) null, (byte) 51);
           }
           for (var4_int = 0; var4_int < 7; var4_int++) {
             var5 = this.rosters[param0].field_b[var4_int];
@@ -1998,7 +1998,7 @@ final class BattleState {
         }
     }
 
-    final boolean a(int param0, byte param1, int param2) {
+    final boolean hasFlagAtTile(int param0, byte param1, int param2) {
         int var4 = 0;
         int var5;
         var5 = BachelorFridge.field_y;
@@ -2017,7 +2017,7 @@ final class BattleState {
         return false;
     }
 
-    private final int[] a(BattleCreature param0, int param1) {
+    private final int[] chooseRageAttackTarget(BattleCreature param0, int param1) {
         int[] stackIn_3_0 = null;
         int[] stackIn_70_0 = null;
         RuntimeException stackIn_73_0 = null;
@@ -2070,7 +2070,7 @@ final class BattleState {
                   decompiledFrameCompleted9 = false;
                   break;
                 }
-                if (!this.tiles[-var11 + var3_int][var4].e(-84)) {
+                if (!this.tiles[-var11 + var3_int][var4].isTraversableTerrain(-84)) {
                   decompiledFrameCompleted8 = false;
                   break;
                 }
@@ -2098,7 +2098,7 @@ final class BattleState {
                     decompiledFrameCompleted6 = false;
                     break;
                   }
-                  if (!this.tiles[var11Lifetime1 + var3_int][var4].e(-121)) {
+                  if (!this.tiles[var11Lifetime1 + var3_int][var4].isTraversableTerrain(-121)) {
                     var7++;
                     if (var7 == 5) {
                       decompiledFrameCompleted5 = false;
@@ -2133,7 +2133,7 @@ final class BattleState {
                       decompiledFrameCompleted2 = false;
                       break;
                     }
-                    if (!this.tiles[var3_int][var4 - var11Lifetime1Lifetime1].e(-106)) {
+                    if (!this.tiles[var3_int][var4 - var11Lifetime1Lifetime1].isTraversableTerrain(-106)) {
                       decompiledFrameCompleted1 = false;
                       break;
                     }
@@ -2160,7 +2160,7 @@ final class BattleState {
                     if ((-1 + this.height) < (var11Lifetime1Lifetime1 + var4)) {
                       break;
                     }
-                    if (!this.tiles[var3_int][var4 + var11Lifetime1Lifetime1].e(-31)) {
+                    if (!this.tiles[var3_int][var4 + var11Lifetime1Lifetime1].isTraversableTerrain(-31)) {
                       break;
                     }
                     if (this.height > var4 + var11Lifetime1Lifetime1 &&
@@ -2207,7 +2207,7 @@ final class BattleState {
         }
     }
 
-    private final void c(int param0) {
+    private final void applyOvertimeDamage(int param0) {
         int var3 = 0;
         int var7 = 0;
         int var2;
@@ -2260,24 +2260,24 @@ final class BattleState {
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void returnFlagToBase(int param0, byte param1) {
         BoardTile var3;
         BattleCreature var4;
-        this.field_c[param0] = this.a(0, param0);
+        this.field_c[param0] = this.findFlagBaseTile(0, param0);
         var3 = this.tiles[this.field_c[param0][0]][this.field_c[param0][1]];
         var3.field_m = true;
         if (param1 <= 43) {
-          this.a(38, -108, -127, (int[][]) null, 91);
+          this.hideTilesInMask(38, -108, -127, (int[][]) null, 91);
         }
         var4 = var3.occupant;
         if (var4 != null &&
           param0 != var4.ownerIndex &&
-          !var4.g((byte) 85)) {
-          var4.b((byte) 124, 24 + param0);
+          !var4.isCarryingFlag((byte) 85)) {
+          var4.applyStatusAndRefreshTile((byte) 124, 24 + param0);
         }
     }
 
-    final void a(int param0, BattleCreature param1, int param2, int param3, int param4) {
+    final void setTerrainInDirection(int param0, BattleCreature param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -2319,29 +2319,29 @@ final class BattleState {
         }
     }
 
-    final boolean a(byte param0, int param1, int param2, int param3) {
+    final boolean isFlagBaseTile(byte param0, int param1, int param2, int param3) {
         int discarded$1 = 0;
         int[] var5;
         BattleCreature var6;
         int[] var7;
         boolean stackIn_6_0 = false;
-        var7 = this.a(0, param1);
+        var7 = this.findFlagBaseTile(0, param1);
         var5 = var7;
         if (param0 >= -95) {
           var6 = (BattleCreature) null;
-          discarded$1 = this.a(-117, 19, (BattleCreature) null, (byte) -1);
+          discarded$1 = this.getUnblockedDisplacement(-117, 19, (BattleCreature) null, (byte) -1);
         }
         stackIn_6_0 = (var7[0] == param2) && (var7[1] == param3);
         return stackIn_6_0;
     }
 
-    private final void f(byte param0) {
+    private final void clearTurnBucketsOnAlternateGuard(byte param0) {
         if (param0 != 103) {
           this.field_t = (IntrusiveDeque[]) null;
         }
     }
 
-    private final void b(int param0, PacketBuffer param1) {
+    private final void readBoardState(int param0, PacketBuffer param1) {
         int var6 = 0;
         BoardTile stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
@@ -2443,7 +2443,7 @@ final class BattleState {
         }
     }
 
-    final boolean b(BattleCreature param0, byte param1) {
+    final boolean isCreatureAdjacentToOwnFlagBase(BattleCreature param0, byte param1) {
         RuntimeException var3 = null;
         aj[] var4 = null;
         boolean stackIn_6_0 = false;
@@ -2457,24 +2457,24 @@ final class BattleState {
         try {
           if (param1 < 113) {
             var4 = (aj[]) null;
-            this.a(2, (aj[]) null, 108, (byte) -104);
+            this.setTerrainAtTilePositions(2, (aj[]) null, 108, (byte) -104);
           }
           if (param0.ownerIndex == 0) {
-            stackIn_14_0 = param0.i(23, 116);
+            stackIn_14_0 = param0.hasAdjacentTerrain(23, 116);
             return stackIn_14_0;
           }
           if (1 == param0.ownerIndex) {
-            stackIn_12_0 = param0.i(24, 126);
+            stackIn_12_0 = param0.hasAdjacentTerrain(24, 126);
             return stackIn_12_0;
           }
           if (param0.ownerIndex == 2) {
-            stackIn_6_0 = param0.i(25, 124);
+            stackIn_6_0 = param0.hasAdjacentTerrain(25, 124);
             return stackIn_6_0;
           }
           if (3 != param0.ownerIndex) {
             return false;
           }
-          stackIn_10_0 = param0.i(26, 122);
+          stackIn_10_0 = param0.hasAdjacentTerrain(26, 122);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2490,7 +2490,7 @@ final class BattleState {
         }
     }
 
-    final void a(int param0, boolean param1, PacketBuffer param2) {
+    final void readTurnUpdates(int param0, boolean param1, PacketBuffer param2) {
         int var4_int = 0;
         BattleUpdate var5 = null;
         int var6 = 0;
@@ -2502,7 +2502,7 @@ final class BattleState {
         var6 = BachelorFridge.field_y;
         try {
           var4_int = param2.position + param0;
-          this.b(param2, -69);
+          this.readTurnOrder(param2, -69);
           this.field_O = param2.readUnsignedByte(16711935);
           this.field_U = new IntrusiveDeque();
           while (var4_int > param2.position) {
@@ -2528,7 +2528,7 @@ final class BattleState {
         }
     }
 
-    final int b(boolean param0, int param1) {
+    final int getFlagTeamFromTerrain(boolean param0, int param1) {
         if (23 == param1) {
           return 0;
         }
@@ -2547,7 +2547,7 @@ final class BattleState {
         return -1;
     }
 
-    private final int[] a(boolean param0, BattleCreature param1) {
+    private final int[] chooseFearMovement(boolean param0, BattleCreature param1) {
         int[] stackIn_3_0 = null;
         int[] stackIn_84_0 = null;
         RuntimeException stackIn_87_0 = null;
@@ -2571,7 +2571,7 @@ final class BattleState {
         try {
           var3_int = param1.tileX;
           var4 = param1.tileY;
-          var5 = param1.f((byte) 123);
+          var5 = param1.getBaseMovementRange((byte) 123);
           var6 = DiveBomberAnimation.a(4, this.field_w, -2147483648) + 1;
           if (!param0) {
             stackIn_3_0 = (int[]) null;
@@ -2595,7 +2595,7 @@ final class BattleState {
                   decompiledFrameCompleted5 = false;
                   break;
                 }
-                if (!this.tiles[-var11 + var3_int][var4].e(-110)) {
+                if (!this.tiles[-var11 + var3_int][var4].isTraversableTerrain(-110)) {
                   decompiledFrameCompleted4 = false;
                   break;
                 }
@@ -2619,7 +2619,7 @@ final class BattleState {
                     decompiledFrameCompleted3 = false;
                     break;
                   }
-                  if (!this.tiles[var11Lifetime1 + var3_int][var4].e(-80)) {
+                  if (!this.tiles[var11Lifetime1 + var3_int][var4].isTraversableTerrain(-80)) {
                     decompiledFrameCompleted2 = false;
                     break;
                   }
@@ -2643,7 +2643,7 @@ final class BattleState {
                       decompiledFrameCompleted1 = false;
                       break;
                     }
-                    if (!this.tiles[var3_int][var4 - var11Lifetime1Lifetime1].e(-88)) {
+                    if (!this.tiles[var3_int][var4 - var11Lifetime1Lifetime1].isTraversableTerrain(-88)) {
                       decompiledFrameCompleted0 = false;
                       break;
                     }
@@ -2666,7 +2666,7 @@ final class BattleState {
                     if ((this.height - 1) < (var11Lifetime1Lifetime1 + var4)) {
                       break;
                     }
-                    if (!this.tiles[var3_int][var11Lifetime1Lifetime1 + var4].e(-35)) {
+                    if (!this.tiles[var3_int][var11Lifetime1Lifetime1 + var4].isTraversableTerrain(-35)) {
                       break;
                     }
                     if (this.height > var11Lifetime1Lifetime1 + var4 &&
@@ -2707,7 +2707,7 @@ final class BattleState {
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void writeTurnUpdates(PacketBuffer param0, int param1) {
         BattleUpdate var3 = null;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -2718,7 +2718,7 @@ final class BattleState {
         var4 = BachelorFridge.field_y;
         try {
           if (param1 != -1) {
-            this.d(52, -96, -42);
+            this.markTileHidden(52, -96, -42);
           }
           this.writeTurnOrder(param0, (byte) -116);
           param0.writeByte(this.field_O, 0);
@@ -2743,7 +2743,7 @@ final class BattleState {
         }
     }
 
-    final int b(byte param0, BattleCreature param1) {
+    final int getCarriedFlagTeam(byte param0, BattleCreature param1) {
         RuntimeException var3 = null;
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
@@ -2758,7 +2758,7 @@ final class BattleState {
           if (param0 < 44) {
             this.field_n = (CreatureRef[]) null;
           }
-          if (param1.g((byte) 85)) {
+          if (param1.isCarryingFlag((byte) 85)) {
             if (param1.statusId == 24) {
               stackIn_15_0 = 0;
               return stackIn_15_0;
@@ -2792,7 +2792,7 @@ final class BattleState {
         }
     }
 
-    private final BoardChangeBatch e(int param0) {
+    private final BoardChangeBatch applyRoundTransition(int param0) {
         int var5 = 0;
         int incrementValue$1 = 0;
         int stackIn_38_0 = 0;
@@ -2816,16 +2816,16 @@ final class BattleState {
         int var4Lifetime4;
         int var4Lifetime5;
         var7 = BachelorFridge.field_y;
-        boolean discarded$0 = this.b((byte) 10);
-        this.i((byte) 56);
-        this.i(0);
+        boolean discarded$0 = this.hasConsistentCreatureOccupancy((byte) 10);
+        this.bucketCreaturesForTurnOrder((byte) 56);
+        this.buildCreatureTurnOrder(0);
         this.assignTurnOrderIndices(-1);
         var8 = new BoardChangeBatch();
-        this.a(23189);
+        this.advanceTileCountersAndCreatureTimers(23189);
         for (var3 = param0; var3 < this.width; var3++) {
           for (var4 = 0; this.height > var4; var4++) {
             if (null != this.tiles[var3][var4].occupant) {
-              this.tiles[var3][var4].occupant.a(this.tiles[var3][var4], var8, this.field_U, (byte) 121);
+              this.tiles[var3][var4].occupant.applyRoundEffects(this.tiles[var3][var4], var8, this.field_U, (byte) 121);
             }
             if (this.tiles[var3][var4].terrain == 27 &&
               this.tiles[var3][var4].field_j <= 3) {
@@ -2856,7 +2856,7 @@ final class BattleState {
                 stackIn_38_0 = 75;
               }
               var6 = stackIn_38_0;
-              this.a(var4Lifetime1, 3 - var5_ref_wia.field_j, -1, var6, var3Lifetime1);
+              this.applyAreaDamage(var4Lifetime1, 3 - var5_ref_wia.field_j, -1, var6, var3Lifetime1);
             }
           }
         }
@@ -2880,7 +2880,7 @@ final class BattleState {
           var3Lifetime3 = 0;
           for (var4Lifetime3 = 0; var4Lifetime3 < this.width; var4Lifetime3++) {
             for (var5 = 0; this.height > var5; var5++) {
-              if (this.tiles[var4Lifetime3][var5].a((byte) -63) &&
+              if (this.tiles[var4Lifetime3][var5].isUnmarkedBaseTile((byte) -63) &&
                 this.tiles[var4Lifetime3][var5].field_j == -1) {
                 incrementValue$1 = var3Lifetime3;
                 var3Lifetime3++;
@@ -2909,10 +2909,10 @@ final class BattleState {
         }
         var8.apply(this, false);
         this.field_U.addLast(var8, true);
-        this.a(var8, (byte) 73);
+        this.updatePlayerEliminations(var8, (byte) 73);
         for (var3Lifetime5 = 0; var3Lifetime5 < this.playerCount; var3Lifetime5++) {
           if (!this.rosters[var3Lifetime5].field_c &&
-            this.b((byte) 53, var3Lifetime5)) {
+            this.hasPlayerResigned((byte) 53, var3Lifetime5)) {
             var4_ref_ej = new ej(var3Lifetime5);
             var8.a(var4_ref_ej, (byte) 112);
             var4_ref_ej.a(false, this);
@@ -2927,8 +2927,8 @@ final class BattleState {
           }
           if (var3Lifetime6 >= 2 ||
             1 == this.playerCount) {
-            this.c(param0 ^ 101);
-            this.a(var8, (byte) 73);
+            this.applyOvertimeDamage(param0 ^ 101);
+            this.updatePlayerEliminations(var8, (byte) 73);
           }
         }
         for (var3Lifetime7 = 0; this.playerCount > var3Lifetime7; var3Lifetime7++) {
@@ -2941,11 +2941,11 @@ final class BattleState {
           }
           this.field_T.field_y[var3Lifetime7] = 0;
         }
-        this.d(98);
+        this.updateObjectiveWinner(98);
         return var8;
     }
 
-    private final void a(BoardChangeBatch param0, byte param1) {
+    private final void updatePlayerEliminations(BoardChangeBatch param0, byte param1) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -2996,14 +2996,14 @@ final class BattleState {
         }
     }
 
-    private final String j(byte param0) {
+    private final String getBattleModeName(byte param0) {
         if (param0 != 42) {
           return (String) null;
         }
         return ArenaTheme.a((byte) -122, this.field_o, new String[]{null, "Annihilation", "Take & Hold", "CTF"});
     }
 
-    final void a(int param0, CreatureProfile[] param1, int param2) {
+    final void initializePlayerRoster(int param0, CreatureProfile[] param1, int param2) {
         int var5 = 0;
         int var7 = 0;
         PlayerRoster dupTemp$0 = null;
@@ -3072,7 +3072,7 @@ final class BattleState {
         }
     }
 
-    final String k(byte param0) {
+    final String describeBattleState(byte param0) {
         int var3;
         int var4;
         BattleCreature var5;
@@ -3086,7 +3086,7 @@ final class BattleState {
         int var4Lifetime1;
         var6 = BachelorFridge.field_y;
         var8 = new rha();
-        var8.a("gametype: " + this.j((byte) 42), 4819);
+        var8.a("gametype: " + this.getBattleModeName((byte) 42), 4819);
         var8.a("players: " + this.playerCount, 4819);
         var8.a(99, 2);
         for (var3 = 0; var3 < this.playerCount; var3++) {
@@ -3097,7 +3097,7 @@ final class BattleState {
           }
         }
         var8.a(102, -2);
-        var8.a("boardtype: " + this.a((byte) -83), 4819);
+        var8.a("boardtype: " + this.getTerrainThemeName((byte) -83), 4819);
         var8.a("turnid: " + this.field_A, 4819);
         if (this.field_o == 3) {
           var8.a("flags:", 4819);
@@ -3114,8 +3114,8 @@ final class BattleState {
         for (var3Lifetime2 = 0; this.width > var3Lifetime2; var3Lifetime2++) {
           for (var4 = 0; this.height > var4; var4++) {
             var5_int = this.field_E * 2 + this.field_L.field_o[var3Lifetime2][var4].terrain;
-            if (this.tiles[var3Lifetime2][var4].a(-27864, this, var5_int)) {
-              this.tiles[var3Lifetime2][var4].a(-128, var3Lifetime2, var8, this, var4);
+            if (this.tiles[var3Lifetime2][var4].shouldIncludeInDebugDump(-27864, this, var5_int)) {
+              this.tiles[var3Lifetime2][var4].appendTileDebugInfo(-128, var3Lifetime2, var8, this, var4);
             }
           }
         }
@@ -3131,7 +3131,7 @@ final class BattleState {
           while (var7 < 7) {
             var5 = this.rosters[var3Lifetime3].field_b[var7];
             if (var5 != null) {
-              var5.a(var8, (byte) 73);
+              var5.appendCreatureDebugInfo(var8, (byte) 73);
             } else {
               var8.a(var7 + ": (empty)", 4819);
             }
@@ -3144,7 +3144,7 @@ final class BattleState {
         return var8.a((byte) -128);
     }
 
-    final boolean a(int param0, int param1, int param2, byte param3) {
+    final boolean isTeamFlagAtTile(int param0, int param1, int param2, byte param3) {
         int var5;
         boolean stackIn_6_0 = false;
         if (3 != this.field_o) {
@@ -3155,7 +3155,7 @@ final class BattleState {
         return stackIn_6_0;
     }
 
-    private final void a(PacketBuffer param0, byte param1) {
+    private final void writeAllRosters(PacketBuffer param0, byte param1) {
         int var4 = 0;
         int var3_int = 0;
         int var5 = 0;
@@ -3168,7 +3168,7 @@ final class BattleState {
         try {
           var3_int = 40 % ((61 - param1) / 45);
           for (var4 = 0; var4 < this.playerCount; var4++) {
-            this.a(var4, param0, -123);
+            this.writePlayerRoster(var4, param0, -123);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3185,7 +3185,7 @@ final class BattleState {
         }
     }
 
-    final BattleCreature a(BattleCreature param0, byte param1) {
+    final BattleCreature splitCreatureAndAddToTurnOrder(BattleCreature param0, byte param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         BattleCreature stackIn_6_0 = null;
@@ -3194,13 +3194,13 @@ final class BattleState {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.a((byte) 112, param0);
+          var3 = this.splitCreatureIntoAdjacentTile((byte) 112, param0);
           if (param1 >= -39) {
-            this.k((byte) -50);
+            this.describeBattleState((byte) -50);
           }
           if (var3 != null) {
-            var3.f(32);
-            this.a(var3, true);
+            var3.applyTileArrival(32);
+            this.addCreatureToTurnOrder(var3, true);
           }
           stackIn_6_0 = var3;
           return stackIn_6_0;
@@ -3272,12 +3272,12 @@ final class BattleState {
               stackIn_14_0 = this.tiles[var9][var8];
               stackIn_15_1 = (this.field_L.field_o[var9][var8].terrain == 1);
               stackIn_14_0.field_i = stackIn_15_1;
-              if (this.tiles[var9][var8].a(false, this)) {
+              if (this.tiles[var9][var8].isCurryBaseTile(false, this)) {
                 this.tiles[var9][var8].field_j = DiveBomberAnimation.a(3, this.field_w, -2147483648);
               }
               if (-1 != this.field_L.field_o[var9][var8].field_a &&
                 this.field_L.field_o[var9][var8].field_a < 13) {
-                if (!this.b(var8, 26, var9)) {
+                if (!this.isFlagBaseInMapTemplate(var8, 26, var9)) {
                   this.tiles[var9][var8].terrain = this.field_L.field_o[var9][var8].field_a;
                   this.tiles[var9][var8].field_a = this.field_L.field_o[var9][var8].field_a;
                   this.tiles[var9][var8].field_m = true;
@@ -3319,7 +3319,7 @@ final class BattleState {
           if (3 == this.field_o) {
             this.field_c = new int[this.playerCount][2];
             for (var8 = 0; var8 < this.playerCount; var8++) {
-              this.field_c[var8] = this.a(0, var8);
+              this.field_c[var8] = this.findFlagBaseTile(0, var8);
               if (this.field_c[var8][0] != -1 &&
                 this.field_c[var8][1] != -1) {
                 this.tiles[this.field_c[var8][0]][this.field_c[var8][1]].terrain = var8 + 23;

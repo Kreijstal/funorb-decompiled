@@ -12,7 +12,7 @@ final class ro extends pn implements Cloneable {
     static String field_s;
     static RgbSprite field_q;
 
-    final f a(mj param0, byte param1, boolean param2, f[][] param3) {
+    final PuzzleTile a(LaserTraceCursor param0, byte param1, boolean param2, PuzzleTile[][] param3) {
         RgbSprite var5 = null;
         RuntimeException var5_ref = null;
         ma stackIn_3_0 = null;
@@ -26,9 +26,9 @@ final class ro extends pn implements Cloneable {
           if (param1 > -74) {
             ro.g(-49);
           }
-          var5 = param0.a(13214, this.field_m);
-          stackIn_3_0 = new ma(var5, (f) (this), param0);
-          return (f) ((Object) stackIn_3_0);
+          var5 = param0.turnAndGetCornerSprite(13214, this.field_m);
+          stackIn_3_0 = new ma(var5, (PuzzleTile) (this), param0);
+          return (PuzzleTile) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
@@ -66,7 +66,7 @@ final class ro extends pn implements Cloneable {
         var10.a((byte) -84);
     }
 
-    final boolean a(boolean param0, f[][] param1, mj param2) {
+    final boolean a(boolean param0, PuzzleTile[][] param1, LaserTraceCursor param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -105,7 +105,7 @@ final class ro extends pn implements Cloneable {
         ud.field_U = true;
     }
 
-    final void b(int param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final void drawTileForeground(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int stackIn_9_0 = 0;
         int stackIn_13_0 = 0;
         RgbSprite stackIn_22_0 = null;
@@ -205,7 +205,7 @@ final class ro extends pn implements Cloneable {
               var14 = this.field_o.field_m;
               if (1 == this.field_m) {
                 if (0 <= var12 - var13) {
-                  stackIn_306_0 = ja.field_h[var14];
+                  stackIn_306_0 = LevelCompleteScene.field_h[var14];
                 } else {
                   stackIn_306_0 = ImageProducerRasterBuffer.field_h[var14];
                 }
@@ -261,7 +261,7 @@ final class ro extends pn implements Cloneable {
           }
           if (this.field_m == 1) {
             if (-var13Lifetime1 + var12Lifetime1 <= 0) {
-              stackIn_70_0 = ja.field_h[var14Lifetime1];
+              stackIn_70_0 = LevelCompleteScene.field_h[var14Lifetime1];
             } else {
               stackIn_70_0 = ImageProducerRasterBuffer.field_h[var14Lifetime1];
             }
@@ -291,7 +291,7 @@ final class ro extends pn implements Cloneable {
                   var11 = stackIn_96_0;
                 } else {
                   if (0 <= var12Lifetime1 - var13Lifetime1) {
-                    stackIn_92_0 = ja.field_h[var14Lifetime1];
+                    stackIn_92_0 = LevelCompleteScene.field_h[var14Lifetime1];
                   } else {
                     stackIn_92_0 = ImageProducerRasterBuffer.field_h[var14Lifetime1];
                   }
@@ -344,7 +344,7 @@ final class ro extends pn implements Cloneable {
                   var11 = stackIn_48_0;
                 } else {
                   if (0 <= var12Lifetime1 - var13Lifetime1) {
-                    stackIn_44_0 = ja.field_h[var14Lifetime1];
+                    stackIn_44_0 = LevelCompleteScene.field_h[var14Lifetime1];
                   } else {
                     stackIn_44_0 = ImageProducerRasterBuffer.field_h[var14Lifetime1];
                   }
@@ -393,7 +393,7 @@ final class ro extends pn implements Cloneable {
                   var11 = stackIn_143_0;
                 } else {
                   if (0 <= var12Lifetime1 - var13Lifetime1) {
-                    stackIn_139_0 = ja.field_h[var14Lifetime1];
+                    stackIn_139_0 = LevelCompleteScene.field_h[var14Lifetime1];
                   } else {
                     stackIn_139_0 = ImageProducerRasterBuffer.field_h[var14Lifetime1];
                   }
@@ -422,7 +422,7 @@ final class ro extends pn implements Cloneable {
             }
             if (this.field_m == 1) {
               if (-var13Lifetime1 + var12Lifetime1 <= 0) {
-                stackIn_217_0 = ja.field_h[var14Lifetime1];
+                stackIn_217_0 = LevelCompleteScene.field_h[var14Lifetime1];
               } else {
                 stackIn_217_0 = ImageProducerRasterBuffer.field_h[var14Lifetime1];
               }
@@ -452,7 +452,7 @@ final class ro extends pn implements Cloneable {
                     var11 = stackIn_243_0;
                   } else {
                     if (0 <= var12Lifetime1 - var13Lifetime1) {
-                      stackIn_239_0 = ja.field_h[var14Lifetime1];
+                      stackIn_239_0 = LevelCompleteScene.field_h[var14Lifetime1];
                     } else {
                       stackIn_239_0 = ImageProducerRasterBuffer.field_h[var14Lifetime1];
                     }
@@ -505,7 +505,7 @@ final class ro extends pn implements Cloneable {
                     var11 = stackIn_195_0;
                   } else {
                     if (0 <= var12Lifetime1 - var13Lifetime1) {
-                      stackIn_191_0 = ja.field_h[var14Lifetime1];
+                      stackIn_191_0 = LevelCompleteScene.field_h[var14Lifetime1];
                     } else {
                       stackIn_191_0 = ImageProducerRasterBuffer.field_h[var14Lifetime1];
                     }
@@ -538,7 +538,7 @@ final class ro extends pn implements Cloneable {
         return;
     }
 
-    final nj a(int param0, nj param1) {
+    final nj showTileTooltip(int param0, nj param1) {
         RuntimeException var3 = null;
         nj stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -547,7 +547,7 @@ final class ro extends pn implements Cloneable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 23525) {
-            this.a(-44, -106, 68, (f[][]) null, 106, 20, 110, -87);
+            this.a(-44, -106, 68, (PuzzleTile[][]) null, 106, 20, 110, -87);
           }
           stackIn_3_0 = PacketBuffer.a(sn.field_b, param1, new ro(this.field_m, new kp(-1)), (byte) -83, qk.field_z);
           return stackIn_3_0;
@@ -565,15 +565,15 @@ final class ro extends pn implements Cloneable {
         }
     }
 
-    final f a(int param0, byte param1, int param2) {
+    final PuzzleTile a(int param0, byte param1, int param2) {
         if (param1 != -110) {
           field_u = (RgbSprite[]) null;
-          return (f) (this);
+          return (PuzzleTile) (this);
         }
-        return (f) (this);
+        return (PuzzleTile) (this);
     }
 
-    final void a(int param0, int param1, int param2, f[][] param3, int param4, int param5, int param6, int param7) {
+    final void a(int param0, int param1, int param2, PuzzleTile[][] param3, int param4, int param5, int param6, int param7) {
         try {
           if (param0 <= 92) {
             this.a(-61, (byte) -122, 116);
@@ -615,7 +615,7 @@ final class ro extends pn implements Cloneable {
         field_u = null;
     }
 
-    final boolean a(int param0, f[][] param1, boolean param2, int param3, int param4, int param5, ea param6, int param7) {
+    final boolean a(int param0, PuzzleTile[][] param1, boolean param2, int param3, int param4, int param5, ea param6, int param7) {
         RuntimeException var9 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -650,7 +650,7 @@ final class ro extends pn implements Cloneable {
         }
     }
 
-    ro(int param0, f param1) {
+    ro(int param0, PuzzleTile param1) {
         super(param1);
         this.field_p = null;
         this.field_o = null;
@@ -678,13 +678,13 @@ final class ro extends pn implements Cloneable {
           if (!param0.ensureIndexLoaded((byte) 102)) {
             return false;
           }
-          if (!param0.a(-20402, "commonui")) {
+          if (!param0.tryLoadGroupByName(-20402, "commonui")) {
             return false;
           }
           if (param1.ensureIndexLoaded((byte) 102) &&
-            param1.a(-20402, "commonui")) {
+            param1.tryLoadGroupByName(-20402, "commonui")) {
             if (param3.ensureIndexLoaded((byte) 102) &&
-              param3.a(-20402, "button.gif")) {
+              param3.tryLoadGroupByName(-20402, "button.gif")) {
               return true;
             }
             return false;

@@ -250,7 +250,7 @@ final class lb {
             if (255 == ImageProducerRasterBuffer.field_k) {
               var9_ref_String = sc.field_g.a((byte) 28);
               if (var9_ref_String != null) {
-                ResourceArchive.a((byte) 98, BufferedRandomAccessFile.c(-1), var9_ref_String);
+                ResourceArchive.writeSettingsCookie((byte) 98, BufferedRandomAccessFile.c(-1), var9_ref_String);
               }
             } else {
               km.field_x = sc.field_g.o(32);

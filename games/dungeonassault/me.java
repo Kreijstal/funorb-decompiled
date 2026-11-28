@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class me {
-    static ai[] field_g;
+    static DungeonTileState[] field_g;
     private boolean field_b;
     private String field_d;
     private boolean field_h;
@@ -35,14 +35,14 @@ final class me {
     }
 
     final static void a(int param0, int param1, byte param2, int param3) {
-        if (!a.field_o.a(param3, (byte) 99)) {
+        if (!a.field_o.isBitSet(param3, (byte) 99)) {
           return;
         }
-        if (al.field_o.a(param1, (byte) 118)) {
+        if (al.field_o.isBitSet(param1, (byte) 118)) {
           return;
         }
         AccountCreationResultPanel.field_Sb[param1] = param0;
-        al.field_o.a(param1, -128);
+        al.field_o.setBit(param1, -128);
         if (param2 > 65) {
           hf.field_ob.addFirst(new a(param1), false);
           return;

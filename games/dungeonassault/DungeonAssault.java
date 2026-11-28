@@ -135,7 +135,7 @@ public final class DungeonAssault extends NetworkGameClient {
               stackIn_112_1 = oi.b(0, 5);
               if (stackIn_112_0 == stackIn_112_1 &&
                 var9.field_h[var4].field_a == 0) {
-                var9.field_h[var4] = new ai(ji.a(37, false, 4));
+                var9.field_h[var4] = new DungeonTileState(ji.a(37, false, 4));
               }
             }
             if (null == gm.field_d) {
@@ -150,7 +150,7 @@ public final class DungeonAssault extends NetworkGameClient {
             var9.field_A[1] = new Raider(1, 27);
             var9.field_A[2] = new Raider(2, 18);
             var9.field_A[3] = new Raider(3, 19);
-            var9.a(false, 4);
+            var9.setCombatMode(false, 4);
             ik.field_e = new go(false, var9);
             var5 = cm.field_Q ? 1 : 0;
             stackIn_110_0 = (!ve.a(false)) ? 0 : 12;
@@ -162,7 +162,7 @@ public final class DungeonAssault extends NetworkGameClient {
             var10 = new CombatState();
             if (!ed.c(true) &&
               gm.field_d.field_q == -1) {
-              var10.field_v = new wm(gm.field_d.field_k);
+              var10.field_v = new PackedBitSet(gm.field_d.field_k);
               var10.field_h = gm.field_d.field_L;
             } else {
               var4_ref_Random = new Random();
@@ -179,7 +179,7 @@ public final class DungeonAssault extends NetworkGameClient {
             var10.field_A[1] = new Raider(1, 3);
             var10.field_A[2] = new Raider(2, 4);
             var10.field_A[3] = new Raider(3, 2);
-            var10.a(false, 4);
+            var10.setCombatMode(false, 4);
             ha.d(1);
             ik.field_e = new go(false, var10);
             stackIn_127_0 = (!cm.field_Q) ? 0 : 1;
@@ -672,7 +672,7 @@ public final class DungeonAssault extends NetworkGameClient {
           ke.clearStaticReferences(-123);
           n.clearStaticReferences(3554);
           Raider.clearStaticReferences((byte) 3);
-          ai.clearStaticReferences((byte) 106);
+          DungeonTileState.clearStaticReferences((byte) 106);
           jc.clearStaticReferences(0);
           ua.a((byte) 103);
           IntrusiveNode.clearStaticReferences(-18880);
@@ -703,7 +703,7 @@ public final class DungeonAssault extends NetworkGameClient {
           qk.clearStaticReferences((byte) 127);
           uf.clearStaticReferences(0);
           gm.clearStaticReferences(-94);
-          CombatState.e(126);
+          CombatState.clearCombatStateGlobals(126);
           mo.clearStaticReferences(2);
           ul.clearStaticReferences(true);
           jg.a((byte) -126);
@@ -876,7 +876,7 @@ public final class DungeonAssault extends NetworkGameClient {
           NodeHashTableIterator.clearStaticReferences(0);
           SecondaryNodeDequeIterator.clearStaticReferences((byte) -90);
           fa.a(-28822);
-          wm.clearStaticReferences((byte) 112);
+          PackedBitSet.clearStaticReferences((byte) 112);
           gg.clearStaticReferences(0);
           AchievementIconEntry.d(269);
           tf.a(-1);
@@ -898,11 +898,11 @@ public final class DungeonAssault extends NetworkGameClient {
           pm.clearDeclaredStaticReferences(112);
           bl.clearStaticReferences((byte) -128);
           jd.clearDeclaredStaticReferences(1);
-          h.a((byte) 16);
+          RaiderDefinition.clearRaiderDefinitionGlobals((byte) 16);
           ac.clearStaticReferences(19757);
           AccountRequestState.clearStaticReferences(0);
           AccountServiceResult.clearStaticReferences((byte) 75);
-          wd.a(115);
+          SpriteAnimationPlayer.clearAnimationPlayerGlobals(115);
           fl.resetStaticState((byte) 63);
           gn.clearStaticReferences(194);
           ie.d(-102);
@@ -976,7 +976,7 @@ public final class DungeonAssault extends NetworkGameClient {
           if (!tf.a((java.applet.Applet) (this), 1041792321)) {
             return false;
           }
-          ai.a(param0 - 78);
+          DungeonTileState.measureRaidTutorialPanelWidth(param0 - 78);
           var2_int = param0;
           while (var2_int < 14) {
             stackIn_46_0 = ~var2_int;

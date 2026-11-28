@@ -72,7 +72,7 @@ final class la {
         this.field_e = tk.field_v;
         this.field_n = GzipDecompressor.field_a;
         this.field_o = di.field_d;
-        this.field_h = wd.field_j;
+        this.field_h = SpriteAnimationPlayer.field_j;
         if (param0) {
           this.field_i = kp.field_a;
         } else {

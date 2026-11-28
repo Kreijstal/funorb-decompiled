@@ -293,7 +293,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final boolean b(int param0, String param1) {
+    final boolean tryLoadGroupByName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -342,7 +342,7 @@ final class ResourceArchive {
         return this.field_d.getGroupRequestProgressPercent(param1, param0 ^ 123);
     }
 
-    final boolean c(int param0, String param1) {
+    final boolean hasGroupName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -392,7 +392,7 @@ final class ResourceArchive {
         return false;
     }
 
-    final synchronized int a(int param0) {
+    final synchronized int getArchiveLoadPercent(int param0) {
         int var2;
         int var3;
         int var4;
@@ -420,7 +420,7 @@ final class ResourceArchive {
         return var4Lifetime1;
     }
 
-    final boolean a(String param0, String param1, byte param2) {
+    final boolean tryLoadFileByName(String param0, String param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

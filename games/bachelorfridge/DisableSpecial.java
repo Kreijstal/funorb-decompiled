@@ -119,14 +119,14 @@ final class DisableSpecial extends SpecialOrder {
             stackIn_2_0 = (CreatureEvent) null;
             return stackIn_2_0;
           }
-          var3 = this.creature.a(61, param0);
-          var4 = this.field_j.a(param1 ^ 96, param0);
+          var3 = this.creature.resolveCreature(61, param0);
+          var4 = this.field_j.resolveCreature(param1 ^ 96, param0);
           if (var4 == null) {
             stackIn_5_0 = new ew(new CreatureRef(var3));
             return (CreatureEvent) ((Object) stackIn_5_0);
           }
           var5 = new DisableEvent(this.moveId, new CreatureRef(var3), this.field_j);
-          var6 = var4.c(param1 ^ 119);
+          var6 = var4.countRechargeEligibleMoves(param1 ^ 119);
           var7 = DiveBomberAnimation.a(var6, param0.field_w, param1 + 2147483645);
           var5.effects.addLast(new ela(new CreatureRef(var4), var7), true);
           stackIn_7_0 = var5;

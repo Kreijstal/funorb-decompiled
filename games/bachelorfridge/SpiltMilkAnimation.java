@@ -29,7 +29,7 @@ final class SpiltMilkAnimation extends EventAnimation {
         DamageEffect var3_ref = null;
         Object var3 = null;
         int var5 = BachelorFridge.field_y;
-        BattleCreature var2 = this.field_x.creature.a(124, this.screen.field_h);
+        BattleCreature var2 = this.field_x.creature.resolveCreature(124, this.screen.field_h);
         DamageEffect var3_refLifetime1;
         if (var2.isDown(-74)) {
           return;
@@ -41,7 +41,7 @@ final class SpiltMilkAnimation extends EventAnimation {
           al.a(-36, this.field_x.moveId);
           while (var3_ref != null) {
             var3_ref.apply(var2, this.screen.field_h, 12);
-            var6 = var3_ref.target.a(-27449, this.screen);
+            var6 = var3_ref.target.resolveCreatureView(-27449, this.screen);
             var6.b(-1, 7);
             var6.a(24831, 53, kna.field_g[43]);
             var3_ref = (DamageEffect) (this.field_x.effects.nextForward(0));
@@ -52,7 +52,7 @@ final class SpiltMilkAnimation extends EventAnimation {
         al.a(-36, this.field_x.moveId);
         while (var3_refLifetime1 != null) {
           var3_refLifetime1.apply(var2, this.screen.field_h, 12);
-          var7 = var3_refLifetime1.target.a(-27449, this.screen);
+          var7 = var3_refLifetime1.target.resolveCreatureView(-27449, this.screen);
           var7.b(-1, 7);
           var7.a(24831, 53, kna.field_g[43]);
           var3_refLifetime1 = (DamageEffect) (this.field_x.effects.nextForward(0));

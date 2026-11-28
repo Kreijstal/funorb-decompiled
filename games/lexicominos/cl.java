@@ -31,11 +31,11 @@ final class cl extends rl implements nd {
             cl.a((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, (byte) -3);
           }
           if (param1.ensureIndexLoaded(89) &&
-            param1.a("commonui", 10762)) {
+            param1.tryLoadGroupByName("commonui", 10762)) {
             if (param2.ensureIndexLoaded(-53) &&
-              param2.a("commonui", 10762)) {
+              param2.tryLoadGroupByName("commonui", 10762)) {
               if (param0.ensureIndexLoaded(74) &&
-                param0.a("button.gif", 10762)) {
+                param0.tryLoadGroupByName("button.gif", 10762)) {
                 return true;
               }
               return false;

@@ -270,7 +270,7 @@ final class ap extends ob {
           if (0 == var2) {
             if (null == vl.field_d) {
               vl.field_d = new vp(128);
-              hl.field_h = 0;
+              LevelLostEntrancePhase.field_h = 0;
             }
             stackIn_14_0 = (var1.readUnsignedByte(255) != 1) ? 0 : 1;
             var3_int = stackIn_14_0;
@@ -294,8 +294,8 @@ final class ap extends ob {
             if (var5 == null) {
               var5 = new ce();
               vl.field_d.a(var5, (long)var7.hashCode(), (byte) 104);
-              fieldTemp$0 = hl.field_h;
-              hl.field_h = hl.field_h + 1;
+              fieldTemp$0 = LevelLostEntrancePhase.field_h;
+              LevelLostEntrancePhase.field_h = LevelLostEntrancePhase.field_h + 1;
               var5.field_db = fieldTemp$0;
               g.field_b.addLast(0, var5);
             }

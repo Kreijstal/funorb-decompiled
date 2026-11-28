@@ -243,7 +243,7 @@ final class te extends IntrusiveNode {
         try {
           te var4_ref = null;
           if (!te.a(param0)) {
-            param0.a(param1, param2, 16484);
+            param0.tryLoadFileByName(param1, param2, 16484);
             return null;
           }
           byte[] var3 = param0.getFileByName(param1, param2, 118);

@@ -3,7 +3,7 @@
  */
 final class AccountCreationResultPanel extends nk implements vg {
     static int[] field_Tb;
-    static ai field_Pb;
+    static DungeonTileState field_Pb;
     private rg field_Ob;
     static ResourceArchive field_Qb;
     static String field_Nb;
@@ -157,7 +157,7 @@ final class AccountCreationResultPanel extends nk implements vg {
         }
         try {
           if (param1 != 98) {
-            field_Pb = (ai) null;
+            field_Pb = (DungeonTileState) null;
           }
           up.b(-121);
           this.j((byte) 77);
@@ -360,7 +360,7 @@ final class AccountCreationResultPanel extends nk implements vg {
           AccountCreationResultPanel.q(-42);
         }
         if (param1 == 32) {
-          return h.field_E;
+          return RaiderDefinition.field_E;
         }
         if (param1 == 33) {
           return bn.field_h;

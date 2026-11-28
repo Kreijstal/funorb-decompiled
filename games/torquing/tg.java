@@ -216,10 +216,10 @@ abstract class tg extends GameApplet {
         if (b.field_x == 2) {
           if (null != je.field_f &&
             je.field_f.ensureIndexLoaded(-12749)) {
-            if (!je.field_f.b((byte) -58, "")) {
+            if (!je.field_f.hasGroupName((byte) -58, "")) {
               je.field_f = null;
             } else {
-              if (je.field_f.a(true, "")) {
+              if (je.field_f.tryLoadGroupByName(true, "")) {
                 SocketJs5Transport.a(7, je.field_f);
                 je.field_f = null;
                 cf.a(param0 ^ 6648);
@@ -550,7 +550,7 @@ abstract class tg extends GameApplet {
         int var3;
         boolean stackIn_11_1 = false;
         var3 = Torquing.field_u;
-        if (ResourceArchive.a(true)) {
+        if (ResourceArchive.isClientStartupReady(true)) {
           stackIn_11_1 = (dg.field_i != null);
           discarded$4 = this.a(stackIn_11_1, false, true);
         } else {

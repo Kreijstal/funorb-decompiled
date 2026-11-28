@@ -153,7 +153,7 @@ final class vo extends ip {
             stackIn_3_0 = pd.field_J;
             return stackIn_3_0;
           }
-          if (!wm.a(var4, var5, (byte) -83)) {
+          if (!PackedBitSet.passesAccountPasswordPolicy(var4, var5, (byte) -83)) {
             stackIn_7_0 = pd.field_J;
             return stackIn_7_0;
           }

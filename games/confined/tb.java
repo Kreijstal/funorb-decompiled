@@ -20,7 +20,7 @@ final class tb {
         var4 = Confined.field_J ? 1 : 0;
         try {
           var3_int = -param2.field_lb + param0.field_lb;
-          if (ql.field_t != param0.field_kb) {
+          if (StageDirector.field_t != param0.field_kb) {
             if (param0.field_kb == null) {
               var3_int += 200;
             }
@@ -31,7 +31,7 @@ final class tb {
             var5 = (fg) null;
             tb.a((fg) null, -40, (fg) null);
           }
-          if (ql.field_t == param2.field_kb) {
+          if (StageDirector.field_t == param2.field_kb) {
             var3_int += 200;
           } else {
             if (null == param2.field_kb) {
@@ -143,7 +143,7 @@ final class tb {
             }
             var4 = new byte[var3_int];
             param1.position = param1.position + hc.field_t.a(param1.position, var4, 0, param1.payload, var3_int, false);
-            var5 = kh.decodeCp1252String(var4, var3_int, 0, 0);
+            var5 = ProjectileRay.decodeCp1252String(var4, var3_int, 0, 0);
             stackIn_6_0 = var5;
             return stackIn_6_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

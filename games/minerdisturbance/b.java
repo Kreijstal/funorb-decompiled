@@ -319,7 +319,7 @@ final class b extends IntrusiveNode {
         try {
           b var4_ref = null;
           if (!b.a(param0)) {
-            param0.a(param1, param2, -16675);
+            param0.tryLoadFileByName(param1, param2, -16675);
             return null;
           }
           byte[] var3 = param0.getFileByName(param2, 0, param1);

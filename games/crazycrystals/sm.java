@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class sm extends l {
+final class sm extends ResultScenePhase {
     static int field_f;
     static int field_j;
     private int field_g;
@@ -146,36 +146,36 @@ final class sm extends l {
         }
     }
 
-    final l a(int param0) {
+    final ResultScenePhase updatePhase(int param0) {
         if (li.field_a != null &&
           li.field_a.field_l != null &&
           180 <= li.field_a.field_f) {
-          return (l) (this);
+          return (ResultScenePhase) (this);
         }
-        nj.field_k = kk.field_a[0].length;
-        DualLinkNode.a(0, param0, 0, kk.field_a);
+        nj.field_k = FloatingScoreLabel.field_a[0].length;
+        DualLinkNode.a(0, param0, 0, FloatingScoreLabel.field_a);
         nj.field_k = 0;
         if (this.field_g >= 60) {
           jj.field_b = jj.field_b - (~jj.field_b >> 3);
-          if (jj.field_b >= kk.field_l) {
-            kk.field_a = (f[][]) null;
+          if (jj.field_b >= FloatingScoreLabel.field_l) {
+            FloatingScoreLabel.field_a = (PuzzleTile[][]) null;
             bd.a((byte) 35, true);
             kj.a((byte) 91);
             return null;
           }
         }
         this.field_g = this.field_g + 1;
-        return (l) (this);
+        return (ResultScenePhase) (this);
     }
 
-    final l b(byte param0) {
-        kk.field_a = (f[][]) null;
+    final ResultScenePhase fastForwardPhase(byte param0) {
+        FloatingScoreLabel.field_a = (PuzzleTile[][]) null;
         bd.a((byte) 35, false);
         kj.a((byte) 36);
         if (param0 == -90) {
           return null;
         }
-        return (l) null;
+        return (ResultScenePhase) null;
     }
 
     sm() {

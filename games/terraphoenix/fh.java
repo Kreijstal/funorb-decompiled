@@ -200,8 +200,8 @@ final class fh {
           var6.field_h = 0;
           var7 = new hf(var4, true);
           var7.field_h = 0;
-          var7.a(Archive.f(8947848, 4), (byte) -24);
-          var7.a(1, 3).a(Archive.f(11184810, 4), (byte) 45).b(2236962, true);
+          var7.a(Archive.createSolidColorSpriteArray(8947848, 4), (byte) -24);
+          var7.a(1, 3).a(Archive.createSolidColorSpriteArray(11184810, 4), (byte) 45).b(2236962, true);
           this.field_q = (WidgetActionListener) ((Object) new ea(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new f(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new sk(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);

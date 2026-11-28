@@ -73,9 +73,9 @@ final class rb extends ue {
         if (null != ga.field_L) {
           boolean decompiledFrameRemainder0 = true;
           if (!tf.field_c) {
-            if (!ga.field_L.a(param0 ^ -20410, "benefits")) {
+            if (!ga.field_L.tryLoadGroupByName(param0 ^ -20410, "benefits")) {
               if (!ob.field_o &&
-                ga.field_L.a(param0 ^ -20410, "screenshots")) {
+                ga.field_L.tryLoadGroupByName(param0 ^ -20410, "screenshots")) {
                 IsaacRandom.a(6437, bf.a(-1, "screenshots", "screenshots", ga.field_L));
                 ob.field_o = true;
                 vp.a(127);
@@ -96,7 +96,7 @@ final class rb extends ue {
             }
           }
           if ((decompiledFrameRemainder0) && (!ob.field_o &&
-            ga.field_L.a(param0 ^ -20410, "screenshots"))) {
+            ga.field_L.tryLoadGroupByName(param0 ^ -20410, "screenshots"))) {
             IsaacRandom.a(6437, bf.a(-1, "screenshots", "screenshots", ga.field_L));
             ob.field_o = true;
             vp.a(127);

@@ -6,7 +6,7 @@ final class jm extends TextureOperator {
     static java.math.BigInteger field_H;
     private int[] field_z;
     static long field_y;
-    static wo[] field_E;
+    static PlayerState[] field_E;
     static String field_D;
     static String field_C;
     static ei field_B;
@@ -276,7 +276,7 @@ final class jm extends TextureOperator {
         if (this.field_A == null) {
           this.a(1, (byte) 59);
           if (param0 > -98) {
-            field_E = (wo[]) null;
+            field_E = (PlayerState[]) null;
             this.g(2);
             return;
           }
@@ -287,7 +287,7 @@ final class jm extends TextureOperator {
           this.g(2);
           return;
         }
-        field_E = (wo[]) null;
+        field_E = (PlayerState[]) null;
         this.g(2);
     }
 
@@ -335,7 +335,7 @@ final class jm extends TextureOperator {
           if (param0 == 110) {
             return;
           }
-          field_E = (wo[]) null;
+          field_E = (PlayerState[]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

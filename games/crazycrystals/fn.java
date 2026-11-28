@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fn extends ln {
+final class fn extends ScoreModifier {
     static String field_g;
     static am field_h;
     static int field_j;
@@ -50,7 +50,7 @@ final class fn extends ln {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int countPlayerApplications(int param0, byte param1) {
         int var3 = -121 % ((param1 - 55) / 50);
         return (ProxyAuthenticationRequiredException.field_d & 1 << param0) != 0 ? 1 : 0;
     }

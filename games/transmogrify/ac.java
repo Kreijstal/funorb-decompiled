@@ -46,7 +46,7 @@ final class ac extends kk {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param2.b((byte) -121, param0);
+          var4 = param2.getFlatFile((byte) -121, param0);
           var3 = var4;
           if (var4 == null) {
             return null;

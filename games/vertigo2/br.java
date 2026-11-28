@@ -110,7 +110,7 @@ final class br extends kp implements ik {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param0);
-          if (!hi.a((byte) 122, var6)) {
+          if (!BlastDebrisModel.isValidPlayerName((byte) 122, var6)) {
             stackIn_3_0 = or.field_a;
             return stackIn_3_0;
           }

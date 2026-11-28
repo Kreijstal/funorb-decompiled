@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class go extends ln {
+final class go extends ScoreModifier {
     static String field_k;
     static boolean field_i;
     static String field_g;
@@ -16,14 +16,14 @@ final class go extends ln {
         RuntimeException var2 = null;
         var3 = CrazyCrystals.field_B;
         try {
-          pj.a(ae.field_F, param0, SecondaryNodeDeque.field_c, true, uo.field_m, (byte) 119, 0);
+          WallTile.a(ae.field_F, param0, SecondaryNodeDeque.field_c, true, uo.field_m, (byte) 119, 0);
           for (var2_int = 0; SecondaryNodeDeque.field_c > var2_int; var2_int++) {
             wp.field_d[var2_int + param0] = var2_int;
           }
           if (param1 != 240) {
             return;
           }
-          pj.a(ResourceArchive.field_i, param0 + param0, SecondaryNodeDeque.field_c + param0, false, em.field_i, (byte) 119, param0);
+          WallTile.a(ResourceArchive.field_i, param0 + param0, SecondaryNodeDeque.field_c + param0, false, em.field_i, (byte) 119, param0);
           if (param0 < SecondaryNodeDeque.field_c) {
             SecondaryNodeDeque.field_c = param0;
           }
@@ -45,7 +45,7 @@ final class go extends ln {
         field_k = null;
     }
 
-    final int a(int param0, byte param1) {
+    final int countPlayerApplications(int param0, byte param1) {
         int var3 = 45 % ((55 - param1) / 50);
         return q.field_a[param0].field_l;
     }

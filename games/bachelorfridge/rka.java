@@ -5,7 +5,7 @@ final class rka extends MovementAnimation {
     private CreatureRef field_t;
 
     final boolean isFinished(byte param0) {
-        CreatureActor var2 = this.field_p.a(-27449, this.field_s);
+        CreatureActor var2 = this.field_p.resolveCreatureView(-27449, this.field_s);
         int fieldTemp$0 = this.field_n + 1;
         this.field_n = this.field_n + 1;
         if (fieldTemp$0 < 0) {
@@ -16,15 +16,15 @@ final class rka extends MovementAnimation {
           this.e((byte) -115);
           return true;
         }
-        var2 = this.field_p.a(-27449, this.field_s);
+        var2 = this.field_p.resolveCreatureView(-27449, this.field_s);
         var2.field_r = (-this.field_n + this.field_q * 2) * (this.field_j << 16) * this.field_n / (this.field_q * this.field_q);
         var2.field_o = this.field_n * ((this.field_l << 16) * (this.field_q * 2 - this.field_n)) / (this.field_q * this.field_q);
         return false;
     }
 
     private final void e(byte param0) {
-        CreatureActor var2 = this.field_p.a(-27449, this.field_s);
-        this.field_s.a(132, this.field_t.a(-27449, this.field_s), this.field_r, this.field_k, var2);
+        CreatureActor var2 = this.field_p.resolveCreatureView(-27449, this.field_s);
+        this.field_s.a(132, this.field_t.resolveCreatureView(-27449, this.field_s), this.field_r, this.field_k, var2);
         var2.b(false);
         var2.field_r = 0;
         int var3 = 54 % ((param0 - 23) / 63);

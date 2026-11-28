@@ -327,7 +327,7 @@ final class MixedSupport138 {
             }
             if (MixedSupport087.sceneWidgetState0091.integerState0891 != 0) {
               if (MixedSupport040.booleanState0047) {
-                ResourceArchive.performAction0820(integerArgument1, 1);
+                ResourceArchive.writeTwoByteCommand(integerArgument1, 1);
               } else {
                 MixedSupport122.performAction1603(integerArgument1, true);
               }

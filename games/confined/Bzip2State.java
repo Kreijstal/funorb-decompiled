@@ -40,8 +40,8 @@ final class Bzip2State {
     int[][] field_q;
 
     final static void a(byte param0) {
-        if (vg.field_Z != null) {
-          vg.field_Z.h((byte) -3);
+        if (TunnelCamera.field_Z != null) {
+          TunnelCamera.field_Z.h((byte) -3);
         }
         if (ui.field_c != null) {
           ui.field_c.i((byte) 127);

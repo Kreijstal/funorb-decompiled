@@ -24,7 +24,7 @@ final class fo {
         }
     }
 
-    private final void a(int param0, lj param1, int param2) {
+    private final void a(int param0, MatchSession param1, int param2) {
         int var5 = 0;
         Object var4 = null;
         int var6 = 0;
@@ -138,10 +138,10 @@ final class fo {
                 an.field_c = true;
                 lc.field_d = false;
               }
-              gj.a((byte) 116, false, am.field_n, 0);
+              gj.a((byte) 116, false, LevelRenderer.field_n, 0);
               continue;
             }
-            gj.a((byte) 116, false, am.field_n, -1);
+            gj.a((byte) 116, false, LevelRenderer.field_n, -1);
           }
           this.field_a.a((byte) -29, this.a(31, PacketBuffer.field_n, gb.field_d), this.a(121, sd.field_N, no.field_e));
           if (this.field_a.selectedIndex != -1) {
@@ -164,18 +164,18 @@ final class fo {
               if (0 <= FullscreenFocusCanvas.field_d.field_t) {
                 if (DiskCacheWorker.field_l >= FullscreenFocusCanvas.field_d.field_t &&
                   wi.field_f != FullscreenFocusCanvas.field_d.field_t) {
-                  lb.field_d.a((byte) 99, FullscreenFocusCanvas.field_d.field_t, kn.field_h[0][FullscreenFocusCanvas.field_d.field_t]);
+                  lb.field_d.loadLevel((byte) 99, FullscreenFocusCanvas.field_d.field_t, kn.field_h[0][FullscreenFocusCanvas.field_d.field_t]);
                   wi.field_f = FullscreenFocusCanvas.field_d.field_t;
                   gm.a(29, (byte) -55);
                 }
                 if (tf.field_l != null &&
                   lb.field_d != null) {
-                  tf.field_l.a(lb.field_d, 0, -88);
+                  tf.field_l.advancePreviewRenderState(lb.field_d, 0, -88);
                 }
               } else {
                 if (tf.field_l != null &&
                   lb.field_d != null) {
-                  tf.field_l.a(lb.field_d, 0, -88);
+                  tf.field_l.advancePreviewRenderState(lb.field_d, 0, -88);
                 }
               }
               FullscreenFocusCanvas.field_d.b(false);
@@ -200,18 +200,18 @@ final class fo {
                 if (ap.field_d.field_t >= 0) {
                   if (ap.field_d.field_t <= var2Lifetime1 &&
                     ap.field_d.field_t != wi.field_f) {
-                    lq.field_b.a((byte) 74, ap.field_d.field_t, kn.field_h[0][ap.field_d.field_t]);
+                    lq.field_b.loadLevel((byte) 74, ap.field_d.field_t, kn.field_h[0][ap.field_d.field_t]);
                     wi.field_f = ap.field_d.field_t;
                     gm.a(29, (byte) -55);
                   }
                   if (tf.field_l != null &&
                     lq.field_b != null) {
-                    tf.field_l.a(lq.field_b, 0, -109);
+                    tf.field_l.advancePreviewRenderState(lq.field_b, 0, -109);
                   }
                 } else {
                   if (tf.field_l != null &&
                     lq.field_b != null) {
-                    tf.field_l.a(lq.field_b, 0, -109);
+                    tf.field_l.advancePreviewRenderState(lq.field_b, 0, -109);
                   }
                 }
                 ap.field_d.b(false);
@@ -234,23 +234,23 @@ final class fo {
 
     private final void f(int param0) {
         int var4 = Vertigo2.field_L ? 1 : 0;
-        if (!am.field_b &&
+        if (!LevelRenderer.field_b &&
           !PacketBuffer.field_q) {
           return;
         }
         if (param0 != 380) {
           field_d = false;
         }
-        lj var5 = am.field_b ? ln.field_d.field_D : AccountCreationResultPanel.field_pb.field_D;
-        lj var2 = var5;
-        int var3 = am.field_b ? ln.field_d.field_B : -1;
-        if (var5.b((byte) 115) < 0) {
+        MatchSession var5 = LevelRenderer.field_b ? ln.field_d.field_D : AccountCreationResultPanel.field_pb.field_D;
+        MatchSession var2 = var5;
+        int var3 = LevelRenderer.field_b ? ln.field_d.field_B : -1;
+        if (var5.getWinningPlayerIndex((byte) 115) < 0) {
           va.field_s.a(go.field_d, 16777215, -1, 320, 350, 2);
         } else {
-          if (var5.b(-6133) >= kn.field_h[1].length - 1) {
+          if (var5.getLevelIndex(-6133) >= kn.field_h[1].length - 1) {
             va.field_s.a(NetworkArchiveRequest.field_I, 16777215, -1, 320, 380, param0 ^ 382);
           } else {
-            va.field_s.a(Vertigo2.a(new String[]{Integer.toString(1 + var5.b(-6133))}, uh.field_lc, 105), 16777215, -1, 320, 380, 2);
+            va.field_s.a(Vertigo2.a(new String[]{Integer.toString(1 + var5.getLevelIndex(-6133))}, uh.field_lc, 105), 16777215, -1, 320, 380, 2);
           }
         }
         this.a(var3, var5, 27670);
@@ -429,7 +429,7 @@ final class fo {
         var6 = 0;
         MusicPatchPcmStream.a(100, 600, 100, 20, 63, 150);
         MusicPatchPcmStream.a(200, 600, 210, 20, 69, 150);
-        for (var7 = 0; var7 < hi.field_i.length; var7++) {
+        for (var7 = 0; var7 < BlastDebrisModel.field_i.length; var7++) {
           regionExit1: {
             if (0 == (var5 & 1 << var7)) {
               if (param1) {
@@ -475,7 +475,7 @@ final class fo {
         if (var7Lifetime1 != -1) {
           if (!ag.b(49)) {
             var8Lifetime1 = va.field_s.field_c + va.field_s.field_g;
-            va.field_s.a(16777215, (byte) 115, -1, 250, hi.field_i[var7Lifetime1], 240);
+            va.field_s.a(16777215, (byte) 115, -1, 250, BlastDebrisModel.field_i[var7Lifetime1], 240);
             stackIn_40_0 = ((1 << var7Lifetime1 & var5) == 0) ? 0 : 1;
             var9 = stackIn_40_0;
             if (var9 != 0) {
@@ -555,7 +555,7 @@ final class fo {
         }
     }
 
-    private final void a(byte param0, lj param1) {
+    private final void a(byte param0, MatchSession param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -577,14 +577,14 @@ final class fo {
           va.field_s.a(var5 + var4, -40, 16777215, var6, -1, Integer.toString(kn.field_h[param1.field_j].length > param1.field_e + param1.field_c ? param1.field_c + param1.field_e : kn.field_h[param1.field_j].length));
           var6 += 20;
           va.field_s.a(16777215, (byte) 103, -1, var4, we.field_H, var6);
-          va.field_s.a(var5 + var4, param0 ^ -27, 16777215, var6, -1, Integer.toString(1 + param1.b(-6133)));
+          va.field_s.a(var5 + var4, param0 ^ -27, 16777215, var6, -1, Integer.toString(1 + param1.getLevelIndex(-6133)));
           var6 += 20;
           if (!PacketBuffer.field_q) {
             va.field_s.a(16777215, (byte) 103, -1, var4, w.field_B, var6);
             va.field_s.a(var5 + var4, param0 - 25, 16777215, var6, -1, Integer.toString(param1.field_h));
             var6 += 20;
             va.field_s.a(16777215, (byte) 74, -1, var4, sg.field_c, var6);
-            va.field_s.a(var4 + var5, -32, 16777215, var6, -1, Integer.toString(param1.a(-89)));
+            va.field_s.a(var4 + var5, -32, 16777215, var6, -1, Integer.toString(param1.getLocalTilesPainted(-89)));
             var6 += 20;
             va.field_s.a(16777215, (byte) 90, -1, var4, km.field_u, var6);
             va.field_s.a(var5 + var4, param0 ^ -53, 16777215, var6, -1, Vertigo2.a(new String[]{gl.a(-39, false, false, param1.field_q)}, tn.field_g, param0 + 22));
@@ -659,7 +659,7 @@ final class fo {
           return true;
         }
         if (param0 == 1 &&
-          (null == ln.field_d || ln.field_d.field_D.field_r.field_f[0].h((byte) 117))) {
+          (null == ln.field_d || ln.field_d.field_D.field_r.field_f[0].isOutOfLives((byte) 117))) {
           return false;
         }
         return true;
@@ -744,20 +744,20 @@ final class fo {
         var5 = var21;
         if (var4 == 8) {
           if (ue.field_O != 0 &&
-            am.field_n != 0) {
+            LevelRenderer.field_n != 0) {
             if (ue.field_O == 21) {
               var5 = sl.field_q[34];
             } else {
               if (ue.field_O != 1 &&
-                am.field_n != 1) {
+                LevelRenderer.field_n != 1) {
                 if (2 != ue.field_O &&
-                  am.field_n != 2 &&
+                  LevelRenderer.field_n != 2 &&
                   ue.field_O != 3 &&
-                  am.field_n != 3 &&
+                  LevelRenderer.field_n != 3 &&
                   4 != ue.field_O &&
-                  am.field_n != 4 &&
+                  LevelRenderer.field_n != 4 &&
                   22 != ue.field_O &&
-                  22 != am.field_n) {
+                  22 != LevelRenderer.field_n) {
                   var5 = j.field_o;
                 } else {
                   var5 = po.field_d;
@@ -964,37 +964,37 @@ final class fo {
     }
 
     private final void g(byte param0) {
-        lj stackIn_6_0 = null;
+        MatchSession stackIn_6_0 = null;
         int stackIn_9_0 = 0;
-        lj var2;
+        MatchSession var2;
         int var3;
         String var4;
         String var5;
         int var6;
-        lj var7;
+        MatchSession var7;
         var6 = Vertigo2.field_L ? 1 : 0;
-        if (!am.field_b &&
+        if (!LevelRenderer.field_b &&
           !PacketBuffer.field_q) {
           return;
         }
-        if (am.field_b) {
+        if (LevelRenderer.field_b) {
           stackIn_6_0 = ln.field_d.field_D;
         } else {
           stackIn_6_0 = AccountCreationResultPanel.field_pb.field_D;
         }
         var7 = stackIn_6_0;
         var2 = var7;
-        if (!am.field_b) {
+        if (!LevelRenderer.field_b) {
           stackIn_9_0 = -1;
         } else {
           stackIn_9_0 = ln.field_d.field_B;
         }
         var3 = stackIn_9_0;
         if (0 == var3) {
-          if (0 == var7.b((byte) 116)) {
+          if (0 == var7.getWinningPlayerIndex((byte) 116)) {
             ea.field_d[2].e(-(ea.field_d[2].field_x / 2) + 320, 0);
           } else {
-            if (var7.b((byte) 116) != 1) {
+            if (var7.getWinningPlayerIndex((byte) 116) != 1) {
               ea.field_d[4].e(320 - ea.field_d[4].field_x / 2, 0);
             } else {
               ea.field_d[3].e(-(ea.field_d[3].field_x / 2) + 320, 0);
@@ -1005,20 +1005,20 @@ final class fo {
             ea.field_d[6].e(-(ea.field_d[6].field_x / 2) + 320, 0);
             var4 = var7.field_w[0];
             var5 = var7.field_w[1];
-            if (var7.b((byte) 106) == 0) {
+            if (var7.getWinningPlayerIndex((byte) 106) == 0) {
               va.field_s.a(Vertigo2.a(new String[]{var4}, Vertigo2.field_D, param0 ^ -124), 16777215, -1, 320, 340, 2);
             } else {
-              if (var7.b((byte) 115) == 1) {
+              if (var7.getWinningPlayerIndex((byte) 115) == 1) {
                 va.field_s.a(Vertigo2.a(new String[]{var5}, Vertigo2.field_D, 1), 16777215, -1, 320, 340, 2);
               } else {
                 va.field_s.a(1, -1, Vertigo2.a(new String[]{var4, var5}, jp.field_u, param0 ^ -17), 80, 340, 40, 1, 560, 0, 16777215);
               }
             }
           } else {
-            if (var7.b((byte) 114) == 1) {
+            if (var7.getWinningPlayerIndex((byte) 114) == 1) {
               ea.field_d[2].e(-(ea.field_d[2].field_x / 2) + 320, 0);
             } else {
-              if (var7.b((byte) 123) == 0) {
+              if (var7.getWinningPlayerIndex((byte) 123) == 0) {
                 ea.field_d[3].e(320 - ea.field_d[3].field_x / 2, 0);
               } else {
                 ea.field_d[4].e(-(ea.field_d[4].field_x / 2) + 320, 0);
@@ -1060,7 +1060,7 @@ final class fo {
           var5 -= 20;
         }
         var8 = 0;
-        for (var9 = 0; var9 < hi.field_i.length; var9++) {
+        for (var9 = 0; var9 < BlastDebrisModel.field_i.length; var9++) {
           if (0 != (var7 & 1 << var9) ||
             !param0 &&
             (var9 != 12 ||
@@ -1278,13 +1278,13 @@ final class fo {
               if (var8 == 28) {
                 if (this.field_a.a(84)) {
                   var8 = param2 ? 1 : 0;
-                  gj.a((byte) 79, var8 != 0, am.field_n, -3);
+                  gj.a((byte) 79, var8 != 0, LevelRenderer.field_n, -3);
                 }
               } else {
                 if (35 == var8) {
                   if (!(!this.field_a.a(84))) {
                     var8 = param2 ? 1 : 0;
-                    gj.a((byte) -60, var8 != 0, am.field_n, -7);
+                    gj.a((byte) -60, var8 != 0, LevelRenderer.field_n, -7);
                   }
                   break regionExit1;
                 }
@@ -1293,25 +1293,25 @@ final class fo {
                     if (ag.b(49)) {
                       id.a(23);
                     } else {
-                      jm.field_E = new wo[1];
-                      jm.field_E[0] = new wo(0, false, 0, false, false, false);
-                      lq.field_b = new bh(3, jm.field_E, false, false);
+                      jm.field_E = new PlayerState[1];
+                      jm.field_E[0] = new PlayerState(0, false, 0, false, false, false);
+                      lq.field_b = new LevelSimulation(3, jm.field_E, false, false);
                       if (ap.field_d.field_t < 0) {
                         stackIn_81_0 = 0;
                       } else {
                         stackIn_81_0 = ap.field_d.field_t;
                       }
                       var8 = stackIn_81_0;
-                      lq.field_b.a((byte) 63, var8, kn.field_h[0][var8]);
+                      lq.field_b.loadLevel((byte) 63, var8, kn.field_h[0][var8]);
                       if (!qe.field_V.equals("")) {
                         var9_ref_String = qe.field_V;
                       } else {
                         var9_ref_String = PacketBuffer.field_o;
                       }
-                      tf.field_l = new am(0, 1, new String[]{var9_ref_String});
+                      tf.field_l = new LevelRenderer(0, 1, new String[]{var9_ref_String});
                       mh.field_a = false;
                       var10 = param2 ? 1 : 0;
-                      gj.a((byte) 55, var10 != 0, am.field_n, 19);
+                      gj.a((byte) 55, var10 != 0, LevelRenderer.field_n, 19);
                     }
                   }
                   break regionExit1;
@@ -1319,7 +1319,7 @@ final class fo {
                 if (33 == var8) {
                   if (!(!this.field_a.a(84))) {
                     var8 = param2 ? 1 : 0;
-                    gj.a((byte) -51, var8 != 0, am.field_n, -6);
+                    gj.a((byte) -51, var8 != 0, LevelRenderer.field_n, -6);
                   }
                   break regionExit1;
                 }
@@ -1327,20 +1327,20 @@ final class fo {
                   if (!(!this.field_a.a(84))) {
                     if (!ag.b(49)) {
                       var8 = param2 ? 1 : 0;
-                      gj.a((byte) 124, var8 != 0, am.field_n, 21);
+                      gj.a((byte) 124, var8 != 0, LevelRenderer.field_n, 21);
                     } else {
-                      jm.field_E = new wo[1];
-                      jm.field_E[0] = new wo(0, false, 0, false, false, false);
-                      lb.field_d = new bh(0, jm.field_E, false, false);
-                      lb.field_d.a((byte) -51, var6, kn.field_h[0][var6]);
+                      jm.field_E = new PlayerState[1];
+                      jm.field_E[0] = new PlayerState(0, false, 0, false, false, false);
+                      lb.field_d = new LevelSimulation(0, jm.field_E, false, false);
+                      lb.field_d.loadLevel((byte) -51, var6, kn.field_h[0][var6]);
                       if (null == qe.field_V) {
                         var8_ref_String = PacketBuffer.field_o;
                       } else {
                         var8_ref_String = qe.field_V;
                       }
-                      tf.field_l = new am(0, 1, new String[]{var8_ref_String});
+                      tf.field_l = new LevelRenderer(0, 1, new String[]{var8_ref_String});
                       var9 = param2 ? 1 : 0;
-                      gj.a((byte) -87, var9 != 0, am.field_n, 13);
+                      gj.a((byte) -87, var9 != 0, LevelRenderer.field_n, 13);
                     }
                   }
                   break regionExit1;
@@ -1352,7 +1352,7 @@ final class fo {
                       MusicPatchPcmStream.a(true, (byte) 127, var8, param2, HuffmanCodec.field_g);
                     } else {
                       var8 = param2 ? 1 : 0;
-                      gj.a((byte) 70, var8 != 0, am.field_n, -4);
+                      gj.a((byte) 70, var8 != 0, LevelRenderer.field_n, -4);
                     }
                   }
                   break regionExit1;
@@ -1360,7 +1360,7 @@ final class fo {
                 if (var8 == 2) {
                   if (!(!this.field_a.a(84))) {
                     var8 = param2 ? 1 : 0;
-                    gj.a((byte) -90, var8 != 0, am.field_n, -1);
+                    gj.a((byte) -90, var8 != 0, LevelRenderer.field_n, -1);
                   }
                   break regionExit1;
                 }
@@ -1372,14 +1372,14 @@ final class fo {
                       lc.field_d = false;
                     }
                     var8 = param2 ? 1 : 0;
-                    gj.a((byte) -74, var8 != 0, am.field_n, 0);
+                    gj.a((byte) -74, var8 != 0, LevelRenderer.field_n, 0);
                   }
                   break regionExit1;
                 }
                 if (var8 == 24) {
                   if (this.field_a.a(84)) {
                     var8 = param2 ? 1 : 0;
-                    gj.a((byte) 114, var8 != 0, am.field_n, 0);
+                    gj.a((byte) 114, var8 != 0, LevelRenderer.field_n, 0);
                     SectorCacheStore.field_f = true;
                   }
                 } else {
@@ -1388,7 +1388,7 @@ final class fo {
                       if (!(!this.field_a.a(84))) {
                         jq.field_b = 0;
                         var8 = param2 ? 1 : 0;
-                        gj.a((byte) 33, var8 != 0, am.field_n, 7);
+                        gj.a((byte) 33, var8 != 0, LevelRenderer.field_n, 7);
                       }
                       break regionExit1;
                     }
@@ -1396,13 +1396,13 @@ final class fo {
                       if (this.field_a.a(84)) {
                         var8 = ue.field_O;
                         var9Lifetime1 = param2 ? 1 : 0;
-                        gj.a((byte) 46, var9Lifetime1 != 0, am.field_n, var8);
+                        gj.a((byte) 46, var9Lifetime1 != 0, LevelRenderer.field_n, var8);
                       }
                     } else {
                       if (var8 == 4) {
                         if (!(!this.field_a.a(84))) {
                           var8 = param2 ? 1 : 0;
-                          gj.a((byte) -90, var8 != 0, am.field_n, 6);
+                          gj.a((byte) -90, var8 != 0, LevelRenderer.field_n, 6);
                         }
                         break regionExit1;
                       }
@@ -1410,10 +1410,10 @@ final class fo {
                         if (!(!this.field_a.a(84))) {
                           if (9 != this.field_b) {
                             var8 = param2 ? 1 : 0;
-                            gj.a((byte) -127, var8 != 0, am.field_n, 5);
+                            gj.a((byte) -127, var8 != 0, LevelRenderer.field_n, 5);
                           } else {
                             var8 = param2 ? 1 : 0;
-                            gj.a((byte) 92, var8 != 0, am.field_n, 5);
+                            gj.a((byte) 92, var8 != 0, LevelRenderer.field_n, 5);
                           }
                         }
                         break regionExit1;
@@ -1526,7 +1526,7 @@ final class fo {
                           if (!(!this.field_a.a(84))) {
                             ln.field_d.a(-101);
                             var8 = param2 ? 1 : 0;
-                            gj.a((byte) 94, var8 != 0, am.field_n, -1);
+                            gj.a((byte) 94, var8 != 0, LevelRenderer.field_n, -1);
                           }
                           break regionExit1;
                         }
@@ -1554,7 +1554,7 @@ final class fo {
                                   lc.field_d = false;
                                   an.field_c = true;
                                   var9Lifetime1 = param2 ? 1 : 0;
-                                  gj.a((byte) -124, var9Lifetime1 != 0, am.field_n, 19);
+                                  gj.a((byte) -124, var9Lifetime1 != 0, LevelRenderer.field_n, 19);
                                 }
                               }
                             } else {
@@ -1647,7 +1647,7 @@ final class fo {
                                 if (var8 == 29) {
                                   if (!(!this.field_a.a(84))) {
                                     var8 = param2 ? 1 : 0;
-                                    gj.a((byte) 54, var8 != 0, am.field_n, 17);
+                                    gj.a((byte) 54, var8 != 0, LevelRenderer.field_n, 17);
                                   }
                                   break regionExit1;
                                 }
@@ -1658,15 +1658,15 @@ final class fo {
                                   break regionExit1;
                                 }
                                 var8 = param2 ? 1 : 0;
-                                gj.a((byte) -98, var8 != 0, am.field_n, 18);
+                                gj.a((byte) -98, var8 != 0, LevelRenderer.field_n, 18);
                                 break regionExit2;
                               }
                             }
                             if ((this.field_a.a(84) ||
                               param0)) {
-                              if (am.field_b) {
+                              if (LevelRenderer.field_b) {
                                 var8 = param2 ? 1 : 0;
-                                gj.a((byte) 92, var8 != 0, am.field_n, -5);
+                                gj.a((byte) 92, var8 != 0, LevelRenderer.field_n, -5);
                               }
                               if (!(!PacketBuffer.field_q)) {
                                 bs.a(11, (byte) -47, 0);
@@ -1677,13 +1677,13 @@ final class fo {
                           if (this.field_a.a(84)) {
                             ln.field_d.b(-27588);
                             var8 = param2 ? 1 : 0;
-                            gj.a((byte) -57, var8 != 0, am.field_n, -1);
+                            gj.a((byte) -57, var8 != 0, LevelRenderer.field_n, -1);
                           }
                         } else {
                           if (this.field_a.a(84)) {
                             ln.field_d.b(true);
                             var8 = param2 ? 1 : 0;
-                            gj.a((byte) -84, var8 != 0, am.field_n, -1);
+                            gj.a((byte) -84, var8 != 0, LevelRenderer.field_n, -1);
                           }
                         }
                       } else {
@@ -1697,7 +1697,7 @@ final class fo {
                   } else {
                     if (this.field_a.a(84)) {
                       var8 = param2 ? 1 : 0;
-                      gj.a((byte) -84, var8 != 0, am.field_n, 8);
+                      gj.a((byte) -84, var8 != 0, LevelRenderer.field_n, 8);
                     }
                   }
                 }
@@ -1705,13 +1705,13 @@ final class fo {
             }
           } else {
             if (this.field_a.a(84)) {
-              jm.field_E = new wo[1];
-              jm.field_E[0] = new wo(0, false, 0, false, false, false);
-              lb.field_d = new bh(0, jm.field_E, false, false);
-              lb.field_d.a((byte) 91, var6, kn.field_h[0][var6]);
-              tf.field_l = new am(0, 1, new String[]{qe.field_V});
+              jm.field_E = new PlayerState[1];
+              jm.field_E[0] = new PlayerState(0, false, 0, false, false, false);
+              lb.field_d = new LevelSimulation(0, jm.field_E, false, false);
+              lb.field_d.loadLevel((byte) 91, var6, kn.field_h[0][var6]);
+              tf.field_l = new LevelRenderer(0, 1, new String[]{qe.field_V});
               var8 = param2 ? 1 : 0;
-              gj.a((byte) 74, var8 != 0, am.field_n, 13);
+              gj.a((byte) 74, var8 != 0, LevelRenderer.field_n, 13);
             }
           }
         }
@@ -1769,7 +1769,7 @@ final class fo {
                   if (tf.field_l != null &&
                     lb.field_d != null) {
                     oo.a(450, 240);
-                    tf.field_l.a(0, param0 + 223, lb.field_d);
+                    tf.field_l.drawLevelSelectionPreview(0, param0 + 223, lb.field_d);
                   }
                   oo.b();
                   MusicPatchPcmStream.a(320, 280, 100, 30, 86, 150);
@@ -1779,7 +1779,7 @@ final class fo {
                     if (null != tf.field_l &&
                       null != lq.field_b) {
                       oo.a(545, 160);
-                      tf.field_l.a(false, 0, lq.field_b, (byte) 119);
+                      tf.field_l.drawAlternateLevelPreview(false, 0, lq.field_b, (byte) 119);
                     }
                     oo.b();
                     MusicPatchPcmStream.a(320, 280, 100, 30, 75, 150);

@@ -19,12 +19,12 @@ final class ab {
           if (SecondaryNodeDequeIterator.field_l != null &&
             fc.field_d == uo.field_f.length - 1) {
             if (SecondaryNodeDequeIterator.field_l != bl.field_l) {
-              h.field_f = mf.a(16744448, SecondaryNodeDequeIterator.field_l.field_x, 8, SecondaryNodeDequeIterator.field_l.field_q, (byte) -124);
+              RaiderDefinition.field_f = mf.a(16744448, SecondaryNodeDequeIterator.field_l.field_x, 8, SecondaryNodeDequeIterator.field_l.field_q, (byte) -124);
               bl.field_l = SecondaryNodeDequeIterator.field_l;
             }
             var1_int = 32 - mo.field_a % 50 << 3;
             if (0 < var1_int) {
-              h.field_f.b(SecondaryNodeDequeIterator.field_l.field_t, SecondaryNodeDequeIterator.field_l.field_i, var1_int);
+              RaiderDefinition.field_f.b(SecondaryNodeDequeIterator.field_l.field_t, SecondaryNodeDequeIterator.field_l.field_i, var1_int);
             }
           }
           if (param0 != 0) {
@@ -90,11 +90,11 @@ final class ab {
               var6 = KeyboardInput.a(true, go.field_A[var3_int], param0 ^ 776707894);
               var4 = var4 + ci.field_j;
               var7 = vo.field_r - (var6 >> 1);
-              if (PacketBuffer.a(var4, mj.field_g + (h.field_q << 1), param1, (oh.field_t << 1) + var6, -oh.field_t + var7, param2, 100)) {
+              if (PacketBuffer.a(var4, mj.field_g + (RaiderDefinition.field_q << 1), param1, (oh.field_t << 1) + var6, -oh.field_t + var7, param2, 100)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (mj.field_g + ci.field_j + (h.field_q << 1));
+              var4 = var4 + (mj.field_g + ci.field_j + (RaiderDefinition.field_q << 1));
             } else {
               var4 = var4 + ag.field_a;
             }

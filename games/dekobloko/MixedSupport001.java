@@ -710,7 +710,7 @@ class MixedSupport001 implements CallbackContract004, CallbackContract012 {
               stringLocal8 = appletArgument1.getParameter("cookieprefix");
               stringLocal2 = stringLocal8 + "settings";
               stringLocal3 = (String) (JavaScriptBridge.callWithoutArguments(true, "getcookies", appletArgument1));
-              stringArrayLocal4 = ResourceArchive.computeStringArray0801(';', (byte) 66, stringLocal3);
+              stringArrayLocal4 = ResourceArchive.splitOnCharacter(';', (byte) 66, stringLocal3);
               for (integerLocal1 = 0; stringArrayLocal4.length > integerLocal1; integerLocal1++) {
                 integerLocal5 = stringArrayLocal4[integerLocal1].indexOf('=');
                 if (integerLocal5 >= 0 &&

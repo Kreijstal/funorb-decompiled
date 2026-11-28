@@ -17,7 +17,7 @@ final class CranberryAnimation extends EventAnimation {
           return false;
         }
         if (this.field_l == 100) {
-          var3 = this.field_w.field_q.a(-27449, this.screen);
+          var3 = this.field_w.field_q.resolveCreatureView(-27449, this.screen);
           var4 = new ffa(this.screen, this.field_w, var3.field_s.tileX, var3.field_s.tileY);
           ((TileEffect) ((Object) var4)).a(0);
         }
@@ -40,7 +40,7 @@ final class CranberryAnimation extends EventAnimation {
         super(param0, param1);
         try {
           this.field_w = param1;
-          this.field_x = new ActorAnimation(this.screen, this.field_w.field_q.a(-27449, this.screen));
+          this.field_x = new ActorAnimation(this.screen, this.field_w.field_q.resolveCreatureView(-27449, this.screen));
           this.addChild(27799, this.field_x);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "mea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

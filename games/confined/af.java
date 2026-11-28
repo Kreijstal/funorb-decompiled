@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class af extends sa {
+final class af extends DampedProjectile {
     static PrimaryNodeDeque field_cb;
     static String field_ab;
     static int field_Z;
     static String field_bb;
     static String field_U;
 
-    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
+    final void drawInTunnel(PrimaryNodeDeque param0, double param1, int param2, TunnelCamera param3, DynamicLight param4) {
         if (param2 >= -5) {
           return;
         }
@@ -22,7 +22,7 @@ final class af extends sa {
         }
     }
 
-    af(hn param0, ee param1, da param2) {
+    af(GameSession param0, MovingTunnelEntity param1, da param2) {
         super(param0, param1, param2, 0.2, 0.03, 16.0);
         try {
           kj.a(rd.field_Hb, 96, param1);
@@ -122,10 +122,10 @@ final class af extends sa {
         }
     }
 
-    final void g(int param0) {
+    final void handleDestruction(int param0) {
         this.a((byte) -123, da.field_g, 1.5);
         if (param0 != 26402) {
-          this.g(55);
+          this.handleDestruction(55);
         }
     }
 

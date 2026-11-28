@@ -41,10 +41,10 @@ final class hj {
           var4 += 2;
         }
         if (!param2) {
-          return f.field_h[var4];
+          return PuzzleTile.field_h[var4];
         }
         var4++;
-        return f.field_h[var4];
+        return PuzzleTile.field_h[var4];
     }
 
     static {

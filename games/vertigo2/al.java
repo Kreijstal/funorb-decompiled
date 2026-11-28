@@ -514,7 +514,7 @@ final class al extends IntrusiveNode {
               var31 = var15[var29Lifetime3Lifetime1 + 1];
               var32 = var28 * (-var27Lifetime6Lifetime1 + var30) + (var30 - var27Lifetime6Lifetime1) / 2;
               for (var33 = var27Lifetime6Lifetime1; var33 < var30; var33++) {
-                var34 = lj.a(var32, false, -var27Lifetime6Lifetime1 + var30);
+                var34 = MatchSession.floorDivideByPositive(var32, false, -var27Lifetime6Lifetime1 + var30);
                 this.field_p[var33] = (byte)(32 + this.field_p[var33] * var34 >> 6);
                 var32 = var32 + (-var28 + var31);
               }
@@ -557,7 +557,7 @@ final class al extends IntrusiveNode {
               var37 = var27Lifetime7;
               var33Lifetime1 = var37;
               while (var30Lifetime1Lifetime1 > var37) {
-                var34Lifetime1 = lj.a(var32Lifetime1, false, var30Lifetime1Lifetime1 - var27Lifetime7);
+                var34Lifetime1 = MatchSession.floorDivideByPositive(var32Lifetime1, false, var30Lifetime1Lifetime1 - var27Lifetime7);
                 var35 = (255 & this.field_B[var37]) + var34Lifetime1;
                 if (0 > var35) {
                   var35 = 0;

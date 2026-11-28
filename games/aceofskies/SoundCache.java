@@ -14,11 +14,11 @@ final class SoundCache {
     final PcmSample getVorbisSample(int sampleId, int[] remainingByteBudget, byte obfuscationGuard) {
         String stackIn_14_2 = null;
         try {
-          if (1 == this.vorbisSoundArchive.a((byte) 127)) {
+          if (1 == this.vorbisSoundArchive.getGroupCapacity((byte) 127)) {
             PcmSample stackIn_3_0 = this.getVorbisSampleByGroup(0, sampleId, remainingByteBudget, 1452176260);
             return stackIn_3_0;
           }
-          if (this.vorbisSoundArchive.b(sampleId, obfuscationGuard + 28004) == 1) {
+          if (this.vorbisSoundArchive.getFileCapacity(sampleId, obfuscationGuard + 28004) == 1) {
             PcmSample stackIn_6_0 = this.getVorbisSampleByGroup(sampleId, 0, remainingByteBudget, 1452176260);
             return stackIn_6_0;
           }
@@ -182,14 +182,14 @@ final class SoundCache {
     final PcmSample getSynthesizedSample(int[] remainingByteBudget, int sampleId, byte obfuscationGuard) {
         String stackIn_13_2 = null;
         try {
-          if (this.synthesizedSoundArchive.a((byte) 113) == 1) {
+          if (this.synthesizedSoundArchive.getGroupCapacity((byte) 113) == 1) {
             PcmSample stackIn_2_0 = this.getSynthesizedSampleByGroup(sampleId, remainingByteBudget, 0, -58);
             return stackIn_2_0;
           }
           if (obfuscationGuard <= 96) {
             field_f = (String) null;
           }
-          if (this.synthesizedSoundArchive.b(sampleId, 27912) != 1) {
+          if (this.synthesizedSoundArchive.getFileCapacity(sampleId, 27912) != 1) {
             throw new RuntimeException();
           }
           PcmSample stackIn_8_0 = this.getSynthesizedSampleByGroup(0, remainingByteBudget, sampleId, -58);

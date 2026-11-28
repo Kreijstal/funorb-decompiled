@@ -119,7 +119,7 @@ final class po extends tb {
               } else {
                 stackIn_42_1 = 0;
               }
-              te.a(stackIn_41_0, stackIn_42_1, var13, (byte) -95, param2);
+              ResultScene.layoutJustifiedTextOffsets(stackIn_41_0, stackIn_42_1, var13, (byte) -95, param2);
             }
             this.field_h[var12Lifetime1] = var14;
             var11 = var11 + param7;
@@ -167,7 +167,7 @@ final class po extends tb {
           }
           var8.field_e[0] = param2 - (var7 >> 1);
           var8.field_e[param0.length()] = param2 + (var7 >> 1);
-          te.a(var8, 0, param0, (byte) -95, param1);
+          ResultScene.layoutJustifiedTextOffsets(var8, 0, param0, (byte) -95, param1);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "po.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -197,7 +197,7 @@ final class po extends tb {
           var10 = var9;
           var10.field_e[0] = -param4.a(param1) + param2;
           var10.field_e[param1.length()] = param2;
-          te.a(var10, 0, param1, (byte) -95, param4);
+          ResultScene.layoutJustifiedTextOffsets(var10, 0, param1, (byte) -95, param4);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "po.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -268,7 +268,7 @@ final class po extends tb {
           var8 = var7;
           var7.field_e[0] = param3;
           var8.field_e[param1.length()] = param4.a(param1) + param3;
-          te.a(var8, 0, param1, (byte) -95, param4);
+          ResultScene.layoutJustifiedTextOffsets(var8, 0, param1, (byte) -95, param4);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "po.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

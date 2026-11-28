@@ -188,7 +188,7 @@ final class rha {
           return;
         }
         try {
-          param0.a((byte) -59, param1);
+          param0.writeCreatureData((byte) -59, param1);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "rha.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

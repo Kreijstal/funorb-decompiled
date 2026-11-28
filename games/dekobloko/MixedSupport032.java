@@ -335,10 +335,10 @@ final class MixedSupport032 {
           this.resourceArchiveState0006 = resourceArchiveArgument3;
           this.resourceArchiveState0007 = resourceArchiveArgument2;
           if (null != this.resourceArchiveState0007) {
-            this.resourceArchiveState0007.computeInteger0818(-5228, 0);
+            this.resourceArchiveState0007.getFileCapacity(-5228, 0);
           }
           if (this.resourceArchiveState0006 != null) {
-            this.resourceArchiveState0006.computeInteger0818(-5228, 0);
+            this.resourceArchiveState0006.getFileCapacity(-5228, 0);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {

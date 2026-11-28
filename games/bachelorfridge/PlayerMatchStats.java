@@ -21,7 +21,7 @@ final class PlayerMatchStats {
     private int field_i;
     private int field_p;
 
-    final int a(int param0, byte param1) {
+    final int getStat(int param0, byte param1) {
         if (0 == param0) {
           return this.field_o;
         }

@@ -103,7 +103,7 @@ final class tn extends bh {
         cd.field_b = false;
         qc.field_t = false;
         sn.a(49, param0);
-        wd.field_d = sp.field_e;
+        SpriteAnimationPlayer.field_d = sp.field_e;
         ol.field_i = sp.field_e;
     }
 

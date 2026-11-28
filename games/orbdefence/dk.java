@@ -293,16 +293,16 @@ final class dk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1.ensureIndexLoaded(-1) &&
-            param1.b((byte) 104, "commonui")) {
+            param1.tryLoadGroupByName((byte) 104, "commonui")) {
             if (param0 != 1) {
               field_a = -12;
             }
             if (param3.ensureIndexLoaded(-1) &&
-              param3.b((byte) 92, "commonui")) {
+              param3.tryLoadGroupByName((byte) 92, "commonui")) {
               if (!param2.ensureIndexLoaded(param0 - 2)) {
                 return false;
               }
-              if (!param2.b((byte) -110, "button.gif")) {
+              if (!param2.tryLoadGroupByName((byte) -110, "button.gif")) {
                 return false;
               }
               return true;

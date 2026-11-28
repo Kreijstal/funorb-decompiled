@@ -344,7 +344,7 @@ abstract class am extends fj implements hi {
         int var2 = Confined.field_J ? 1 : 0;
         int var1_intLifetime1;
         try {
-          kh.field_gb.resetTiming((byte) 31);
+          ProjectileRay.field_gb.resetTiming((byte) 31);
           if (param0 != -4258) {
             CharSequence var3 = (CharSequence) null;
             am.a(-36, (CharSequence) null);

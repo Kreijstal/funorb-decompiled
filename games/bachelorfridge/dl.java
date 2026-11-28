@@ -257,11 +257,11 @@ final class dl extends jla {
           return -83;
         }
         for (var6 = 0; var6 < var5; var6++) {
-          if (var3 < pu.field_j.field_h.field_H[var6].a(param1, (byte) 68)) {
+          if (var3 < pu.field_j.field_h.field_H[var6].getStat(param1, (byte) 68)) {
             var4 = var6;
-            var3 = pu.field_j.field_h.field_H[var6].a(param1, (byte) 68);
+            var3 = pu.field_j.field_h.field_H[var6].getStat(param1, (byte) 68);
           } else {
-            if (var3 == pu.field_j.field_h.field_H[var6].a(param1, (byte) 68)) {
+            if (var3 == pu.field_j.field_h.field_H[var6].getStat(param1, (byte) 68)) {
               var4 = -2;
             }
           }

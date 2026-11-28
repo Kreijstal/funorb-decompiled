@@ -643,7 +643,7 @@ final class qf extends IntrusiveNode {
         try {
           qf var4_ref = null;
           if (!qf.a(param0)) {
-            param0.a(-121, param1, param2);
+            param0.tryLoadFileByName(-121, param1, param2);
             return null;
           }
           byte[] var3 = param0.getFileByName(param2, param1, 0);

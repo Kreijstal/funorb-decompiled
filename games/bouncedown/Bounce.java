@@ -108,7 +108,7 @@ public final class Bounce extends GameClient {
           ha.clearStaticReferences(false);
           MouseWheelInput.a((byte) 53);
           SoftwareRasterizer.clearStaticReferences();
-          ResourceArchive.b(false);
+          ResourceArchive.clearStaticReferences(false);
           ob.clearStaticReferences(640);
           PacketBuffer.clearStaticReferences((byte) -127);
           of.clearStaticReferences(true);
@@ -1220,7 +1220,7 @@ public final class Bounce extends GameClient {
               return;
             }
             if (j.field_j != null && (!j.field_j.ensureIndexLoaded(param1 - 3219) ||
-              !j.field_j.b("basic", false))) {
+              !j.field_j.tryLoadGroupByName("basic", false))) {
               hg.a(fb.a((byte) -67, dk.field_b, fi.field_a, j.field_j, "basic"), -39, 60.0f);
               return;
             }

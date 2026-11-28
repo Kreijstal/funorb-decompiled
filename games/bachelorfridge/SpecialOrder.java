@@ -147,63 +147,63 @@ class SpecialOrder extends CreatureOrder {
           var4_int = this.moveId;
           if (88 != var4_int) {
             if (89 == var4_int) {
-              var3 = new SuperSpeedSpecial(this.moveId, this.creature.a(param1 ^ 63, param0));
+              var3 = new SuperSpeedSpecial(this.moveId, this.creature.resolveCreature(param1 ^ 63, param0));
             } else {
               if (90 == var4_int) {
-                var3 = new SleepSpecial(this.moveId, this.creature.a(8, param0), this.field_i);
+                var3 = new SleepSpecial(this.moveId, this.creature.resolveCreature(8, param0), this.field_i);
               } else {
                 if (91 == var4_int) {
-                  var3 = new ShieldSpecial(this.moveId, this.creature.a(38, param0));
+                  var3 = new ShieldSpecial(this.moveId, this.creature.resolveCreature(38, param0));
                 } else {
                   if (92 != var4_int) {
                     if (var4_int == 93) {
-                      var3 = new RaiseSpecial(this.moveId, this.creature.a(param1 + 36, param0), this.field_j);
+                      var3 = new RaiseSpecial(this.moveId, this.creature.resolveCreature(param1 + 36, param0), this.field_j);
                     } else {
                       if (var4_int == 94) {
-                        var3 = new DiveBomberSpecial(this.moveId, this.creature.a(62, param0));
+                        var3 = new DiveBomberSpecial(this.moveId, this.creature.resolveCreature(62, param0));
                       } else {
                         if (var4_int == 95) {
-                          var3 = new MartyrSpecial(this.moveId, this.creature.a(param1 ^ 50, param0));
+                          var3 = new MartyrSpecial(this.moveId, this.creature.resolveCreature(param1 ^ 50, param0));
                         } else {
                           if (var4_int != 96) {
                             if (var4_int == 97) {
-                              var3 = new SpiltMilkSpecial(this.moveId, this.creature.a(103, param0));
+                              var3 = new SpiltMilkSpecial(this.moveId, this.creature.resolveCreature(103, param0));
                             } else {
                               if (var4_int == 98) {
-                                var3 = new DreamsSpecial(this.moveId, this.creature.a(20, param0));
+                                var3 = new DreamsSpecial(this.moveId, this.creature.resolveCreature(20, param0));
                               } else {
                                 if (var4_int == 99) {
-                                  var3 = new SlowAllSpecial(this.moveId, this.creature.a(40, param0));
+                                  var3 = new SlowAllSpecial(this.moveId, this.creature.resolveCreature(40, param0));
                                 } else {
                                   if (var4_int == 100) {
-                                    var3 = new InsanoSauceSpecial(this.moveId, this.creature.a(85, param0), this.field_k, this.field_n);
+                                    var3 = new InsanoSauceSpecial(this.moveId, this.creature.resolveCreature(85, param0), this.field_k, this.field_n);
                                   } else {
                                     if (var4_int == 101) {
-                                      var3 = new SuperSpeedAllSpecial(this.moveId, this.creature.a(27, param0));
+                                      var3 = new SuperSpeedAllSpecial(this.moveId, this.creature.resolveCreature(27, param0));
                                     } else {
                                       if (var4_int != 102) {
                                         if (var4_int != 103) {
                                           if (var4_int != 104) {
                                             if (var4_int == 105) {
-                                              var3 = new FullHealSpecial(this.moveId, this.creature.a(param1 + 65, param0));
+                                              var3 = new FullHealSpecial(this.moveId, this.creature.resolveCreature(param1 + 65, param0));
                                             } else {
                                               if (var4_int != 106) {
                                                 if (107 == var4_int) {
-                                                  var3 = new ClamsSpecial(this.moveId, this.creature.a(21, param0), this.field_k, this.field_n);
+                                                  var3 = new ClamsSpecial(this.moveId, this.creature.resolveCreature(21, param0), this.field_k, this.field_n);
                                                 } else {
                                                   if (var4_int != 108) {
                                                     if (109 == var4_int) {
-                                                      var3 = new FishRainSpecial(this.moveId, this.creature.a(112, param0), this.field_k, this.field_n);
+                                                      var3 = new FishRainSpecial(this.moveId, this.creature.resolveCreature(112, param0), this.field_k, this.field_n);
                                                     } else {
                                                       if (var4_int == 110) {
-                                                        var3 = new MassPoisonSpecial(this.moveId, this.creature.a(53, param0));
+                                                        var3 = new MassPoisonSpecial(this.moveId, this.creature.resolveCreature(53, param0));
                                                       } else {
                                                         if (var4_int != 111) {
                                                           if (var4_int != 112) {
                                                             if (var4_int != 113) {
                                                               if (var4_int != 114) {
                                                                 if (var4_int == 115) {
-                                                                  var3 = new FlirtSpecial(this.moveId, this.creature.a(112, param0), this.field_j);
+                                                                  var3 = new FlirtSpecial(this.moveId, this.creature.resolveCreature(112, param0), this.field_j);
                                                                 } else {
                                                                   if (116 != var4_int) {
                                                                     if (var4_int != 117) {
@@ -211,117 +211,117 @@ class SpecialOrder extends CreatureOrder {
                                                                         if (var4_int != 119) {
                                                                           if (var4_int != 120) {
                                                                             if (var4_int == 121) {
-                                                                              var3 = new AttackUpAllSpecial(this.moveId, this.creature.a(51, param0));
+                                                                              var3 = new AttackUpAllSpecial(this.moveId, this.creature.resolveCreature(51, param0));
                                                                             } else {
                                                                               if (122 != var4_int) {
                                                                                 if (var4_int == 123) {
-                                                                                  var3 = new SplitSpecial(this.moveId, this.creature.a(param1 + 25, param0));
+                                                                                  var3 = new SplitSpecial(this.moveId, this.creature.resolveCreature(param1 + 25, param0));
                                                                                 } else {
                                                                                   if (124 != var4_int) {
                                                                                     if (var4_int != 125) {
                                                                                       if (var4_int != 126) {
                                                                                         if (var4_int == 127) {
-                                                                                          var3 = new BagpipeSpecial(this.moveId, this.creature.a(param1 ^ 127, param0));
+                                                                                          var3 = new BagpipeSpecial(this.moveId, this.creature.resolveCreature(param1 ^ 127, param0));
                                                                                         } else {
                                                                                           if (var4_int == 128) {
-                                                                                            var3 = new ResetSpecial(this.moveId, this.creature.a(param1 + 60, param0));
+                                                                                            var3 = new ResetSpecial(this.moveId, this.creature.resolveCreature(param1 + 60, param0));
                                                                                           } else {
                                                                                             if (var4_int != 129) {
                                                                                               if (var4_int == 130) {
-                                                                                                var3 = new TeleportSpecial(this.moveId, this.creature.a(107, param0), this.field_k, this.field_n);
+                                                                                                var3 = new TeleportSpecial(this.moveId, this.creature.resolveCreature(107, param0), this.field_k, this.field_n);
                                                                                               } else {
                                                                                                 if (var4_int == 131) {
-                                                                                                  var3 = new AirstrikeSpecial(this.moveId, this.creature.a(param1 ^ 123, param0), this.field_k, this.field_n);
+                                                                                                  var3 = new AirstrikeSpecial(this.moveId, this.creature.resolveCreature(param1 ^ 123, param0), this.field_k, this.field_n);
                                                                                                 } else {
                                                                                                   if (var4_int != 132) {
                                                                                                     if (133 != var4_int) {
                                                                                                       if (var4_int == 134) {
-                                                                                                        var3 = new RefreshingSpecial(this.moveId, this.creature.a(58, param0));
+                                                                                                        var3 = new RefreshingSpecial(this.moveId, this.creature.resolveCreature(58, param0));
                                                                                                       } else {
                                                                                                         if (135 != var4_int) {
                                                                                                           if (var4_int == 136) {
-                                                                                                            var3 = new GasCloudSpecial(this.moveId, this.creature.a(109, param0), this.field_k, this.field_n);
+                                                                                                            var3 = new GasCloudSpecial(this.moveId, this.creature.resolveCreature(109, param0), this.field_k, this.field_n);
                                                                                                           } else {
                                                                                                             if (var4_int != 137) {
                                                                                                               throw new IllegalArgumentException("Special not found");
                                                                                                             }
-                                                                                                            var3 = new OneSpecial(this.moveId, this.creature.a(52, param0), this.field_j);
+                                                                                                            var3 = new OneSpecial(this.moveId, this.creature.resolveCreature(52, param0), this.field_j);
                                                                                                           }
                                                                                                         } else {
-                                                                                                          var3 = new RageSpecial(this.moveId, this.creature.a(96, param0), this.field_j);
+                                                                                                          var3 = new RageSpecial(this.moveId, this.creature.resolveCreature(96, param0), this.field_j);
                                                                                                         }
                                                                                                       }
                                                                                                     } else {
-                                                                                                      var3 = new OhNoSpecial(this.moveId, this.creature.a(17, param0), this.field_k, this.field_n);
+                                                                                                      var3 = new OhNoSpecial(this.moveId, this.creature.resolveCreature(17, param0), this.field_k, this.field_n);
                                                                                                     }
                                                                                                   } else {
-                                                                                                    var3 = new PizzaPartySpecial(this.moveId, this.creature.a(param1 ^ 78, param0), this.field_k, this.field_n);
+                                                                                                    var3 = new PizzaPartySpecial(this.moveId, this.creature.resolveCreature(param1 ^ 78, param0), this.field_k, this.field_n);
                                                                                                   }
                                                                                                 }
                                                                                               }
                                                                                             } else {
-                                                                                              var3 = new PetAttackSpecial(this.moveId, this.creature.a(94, param0));
+                                                                                              var3 = new PetAttackSpecial(this.moveId, this.creature.resolveCreature(94, param0));
                                                                                             }
                                                                                           }
                                                                                         }
                                                                                       } else {
-                                                                                        var3 = new HazmatSpecial(this.moveId, this.creature.a(24, param0), this.field_k, this.field_n);
+                                                                                        var3 = new HazmatSpecial(this.moveId, this.creature.resolveCreature(24, param0), this.field_k, this.field_n);
                                                                                       }
                                                                                     } else {
-                                                                                      var3 = new BuffVendorSpecial(this.moveId, this.creature.a(param1 + 83, param0), this.field_k, this.field_n);
+                                                                                      var3 = new BuffVendorSpecial(this.moveId, this.creature.resolveCreature(param1 + 83, param0), this.field_k, this.field_n);
                                                                                     }
                                                                                   } else {
-                                                                                    var3 = new CranberrySpecial(this.moveId, this.creature.a(116, param0), this.field_j);
+                                                                                    var3 = new CranberrySpecial(this.moveId, this.creature.resolveCreature(116, param0), this.field_j);
                                                                                   }
                                                                                 }
                                                                               } else {
-                                                                                var3 = new SauceOfFlameSpecial(this.moveId, this.creature.a(37, param0), this.field_k, this.field_n);
+                                                                                var3 = new SauceOfFlameSpecial(this.moveId, this.creature.resolveCreature(37, param0), this.field_k, this.field_n);
                                                                               }
                                                                             }
                                                                           } else {
-                                                                            var3 = new ScavengerSpecial(this.moveId, this.creature.a(113, param0));
+                                                                            var3 = new ScavengerSpecial(this.moveId, this.creature.resolveCreature(113, param0));
                                                                           }
                                                                         }
                                                                       } else {
-                                                                        var3 = new StampedeSpecial(this.moveId, this.creature.a(32, param0), this.field_i);
+                                                                        var3 = new StampedeSpecial(this.moveId, this.creature.resolveCreature(32, param0), this.field_i);
                                                                       }
                                                                     } else {
-                                                                      var3 = new BananarangSpecial(this.moveId, this.creature.a(107, param0), this.field_i);
+                                                                      var3 = new BananarangSpecial(this.moveId, this.creature.resolveCreature(107, param0), this.field_i);
                                                                     }
                                                                   } else {
-                                                                    var3 = new HomingMissileSpecial(this.moveId, this.creature.a(param1 + 44, param0), this.field_k, this.field_n);
+                                                                    var3 = new HomingMissileSpecial(this.moveId, this.creature.resolveCreature(param1 + 44, param0), this.field_k, this.field_n);
                                                                   }
                                                                 }
                                                               } else {
-                                                                var3 = new StickySpecial(this.moveId, this.creature.a(81, param0), this.field_k, this.field_n);
+                                                                var3 = new StickySpecial(this.moveId, this.creature.resolveCreature(81, param0), this.field_k, this.field_n);
                                                               }
                                                             } else {
-                                                              var3 = new TBomberSpecial(this.moveId, this.creature.a(19, param0), this.field_k, this.field_n);
+                                                              var3 = new TBomberSpecial(this.moveId, this.creature.resolveCreature(19, param0), this.field_k, this.field_n);
                                                             }
                                                           } else {
-                                                            var3 = new FlySpecial(this.moveId, this.creature.a(13, param0), this.field_k, this.field_n);
+                                                            var3 = new FlySpecial(this.moveId, this.creature.resolveCreature(13, param0), this.field_k, this.field_n);
                                                           }
                                                         } else {
-                                                          var3 = new ZombiesSpecial(this.moveId, this.creature.a(25, param0));
+                                                          var3 = new ZombiesSpecial(this.moveId, this.creature.resolveCreature(25, param0));
                                                         }
                                                       }
                                                     }
                                                   } else {
-                                                    var3 = new DisableSpecial(this.moveId, this.creature.a(87, param0), this.field_j);
+                                                    var3 = new DisableSpecial(this.moveId, this.creature.resolveCreature(87, param0), this.field_j);
                                                   }
                                                 }
                                               } else {
-                                                var3 = new InvincibleSpecial(this.moveId, this.creature.a(113, param0));
+                                                var3 = new InvincibleSpecial(this.moveId, this.creature.resolveCreature(113, param0));
                                               }
                                             }
                                           } else {
-                                            var3 = new LevitateSpecial(this.moveId, this.creature.a(param1 ^ 105, param0), this.field_j);
+                                            var3 = new LevitateSpecial(this.moveId, this.creature.resolveCreature(param1 ^ 105, param0), this.field_j);
                                           }
                                         } else {
-                                          var3 = new FloodSpecial(this.moveId, this.creature.a(param1 + 53, param0));
+                                          var3 = new FloodSpecial(this.moveId, this.creature.resolveCreature(param1 + 53, param0));
                                         }
                                       } else {
-                                        var3 = new ShuffleSpecial(this.moveId, this.creature.a(126, param0));
+                                        var3 = new ShuffleSpecial(this.moveId, this.creature.resolveCreature(126, param0));
                                       }
                                     }
                                   }
@@ -329,19 +329,19 @@ class SpecialOrder extends CreatureOrder {
                               }
                             }
                           } else {
-                            var3 = new IncomingSpecial(this.moveId, this.creature.a(109, param0), this.field_k, this.field_n);
+                            var3 = new IncomingSpecial(this.moveId, this.creature.resolveCreature(109, param0), this.field_k, this.field_n);
                           }
                         }
                       }
                     }
                   } else {
-                    var3 = new HailSpecial(this.moveId, this.creature.a(30, param0), this.field_k, this.field_n);
+                    var3 = new HailSpecial(this.moveId, this.creature.resolveCreature(30, param0), this.field_k, this.field_n);
                   }
                 }
               }
             }
           } else {
-            var3 = new SnowSpecial(this.moveId, this.creature.a(104, param0), this.field_k, this.field_n);
+            var3 = new SnowSpecial(this.moveId, this.creature.resolveCreature(104, param0), this.field_k, this.field_n);
           }
           param0.field_T.field_v[this.creature.field_g] = param0.field_T.field_v[this.creature.field_g] + 1;
           param0.field_T.field_r[this.creature.field_g] = sr.a(param0.field_T.field_r[this.creature.field_g], 1L << this.moveId - 88);

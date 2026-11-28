@@ -25,9 +25,9 @@ final class fs {
               var4[var5] = new BattleCreature(var8[var5], this.field_d, 0, var5);
             }
           }
-          this.field_d.a(param0 ^ 1, var4, 0);
-          this.field_d.i((byte) -99);
-          this.field_d.i(param0 ^ 0);
+          this.field_d.initializePlayerRoster(param0 ^ 1, var4, 0);
+          this.field_d.bucketCreaturesForTurnOrder((byte) -99);
+          this.field_d.buildCreatureTurnOrder(param0 ^ 0);
           RaiseEvent.field_t.position = 0;
           this.field_d.write(RaiseEvent.field_t, (byte) 123);
           RaiseEvent.field_t.position = 0;
@@ -67,7 +67,7 @@ final class fs {
         if (0 == this.field_d.field_A) {
           this.field_d.field_A = 1;
         } else {
-          this.field_d.b(0);
+          this.field_d.advanceTurn(0);
         }
         var2 = this.field_d.field_A;
         var3 = this.field_d.field_N ? 1 : 0;
@@ -80,7 +80,7 @@ final class fs {
           stackIn_9_0 = 0;
         }
         var7 = stackIn_9_0;
-        this.field_b.field_h.a(var2, -16292, var3 != 0);
+        this.field_b.field_h.setTurnPhase(var2, -16292, var3 != 0);
         this.field_b.field_h.field_Q = var5;
         this.field_b.field_h.field_M = var4;
         if (2 == this.field_b.field_h.field_o) {
@@ -188,14 +188,14 @@ final class fs {
             var5Lifetime1 = -var4_int + sja.field_fb.position;
             sja.field_fb.writeLengthByte((byte) 83, var5Lifetime1);
           } else {
-            this.field_d.a(param1, 0, (byte) -31);
+            this.field_d.submitPlayerOrders(param1, 0, (byte) -31);
             this.c(15467);
             RaiseEvent.field_t.position = 0;
-            this.field_d.a(RaiseEvent.field_t, -1);
+            this.field_d.writeTurnUpdates(RaiseEvent.field_t, -1);
             this.field_d.clearOrders((byte) -111);
             var4_int = RaiseEvent.field_t.position;
             RaiseEvent.field_t.position = 0;
-            this.field_b.field_h.a(var4_int, true, RaiseEvent.field_t);
+            this.field_b.field_h.readTurnUpdates(var4_int, true, RaiseEvent.field_t);
             this.field_b.b((byte) 31);
             this.field_b.field_cb = false;
           }

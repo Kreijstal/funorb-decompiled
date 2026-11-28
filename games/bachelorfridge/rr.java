@@ -187,7 +187,7 @@ final class rr extends AnimationNode {
 
     private final void d(byte param0) {
         oia var2 = null;
-        this.field_o.a(this.field_v, this.field_n, this.field_o.field_B.creature.a(-27449, this.field_j), 0);
+        this.field_o.a(this.field_v, this.field_n, this.field_o.field_B.creature.resolveCreatureView(-27449, this.field_j), 0);
         if (param0 > 87) {
           var2 = new oia(this.field_j, this.field_v, this.field_n);
           ((TileEffect) ((Object) var2)).a(0);

@@ -138,7 +138,7 @@ final class gu {
     final static InstrumentPatch a(int param0, ResourceArchive param1, int param2) {
         String stackIn_10_2 = null;
         try {
-          byte[] var4 = param1.d(param0, -2);
+          byte[] var4 = param1.getFlatFile(param0, -2);
           byte[] var3 = var4;
           if (var4 == null) {
             Object stackIn_2_0 = null;

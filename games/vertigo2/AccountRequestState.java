@@ -236,7 +236,7 @@ final class AccountRequestState {
           param1 = false;
         }
         kf.a(-7393, param1);
-        if (bg.field_c) {
+        if (LevelRenderable.field_c) {
           SoftwareRasterizer.darkenRectangleHalf(IterableNodeHashTable.field_e.field_b.field_wb, IterableNodeHashTable.field_e.field_b.field_N, IterableNodeHashTable.field_e.field_b.field_Fb, IterableNodeHashTable.field_e.field_b.field_db);
           IterableNodeHashTable.field_e.field_b.b(param1, param0 ^ 8);
         }

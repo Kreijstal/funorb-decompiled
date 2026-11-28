@@ -370,7 +370,7 @@ class fj extends rl implements ij {
               var6.a(so.field_z, 8, -58);
             }
           } else {
-            var6.a(hb.field_o, 7, -82);
+            var6.a(PlayerAvatarRenderer.field_o, 7, -82);
           }
           this.a(false, var6);
           return;

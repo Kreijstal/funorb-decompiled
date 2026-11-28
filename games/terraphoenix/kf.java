@@ -141,7 +141,7 @@ final class kf {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 39 % ((74 - param1) / 39);
-          var4 = param2.b(param0, 0);
+          var4 = param2.getFlatFile(param0, 0);
           if (var4 == null) {
             return null;
           }

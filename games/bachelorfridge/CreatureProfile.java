@@ -18,7 +18,7 @@ class CreatureProfile extends IntrusiveNode {
     boolean[] field_g;
     int field_i;
 
-    final boolean a(int param0, int param1) {
+    final boolean hasEquippedMove(int param0, int param1) {
         int var4 = 0;
         int[] var3;
         int var5;
@@ -40,7 +40,7 @@ class CreatureProfile extends IntrusiveNode {
         return false;
     }
 
-    final boolean a(int param0, int param1, int[] param2) {
+    final boolean containsMoveFromSlot(int param0, int param1, int[] param2) {
         int var5 = 0;
         int[] var4 = null;
         RuntimeException var4_ref = null;
@@ -77,7 +77,7 @@ class CreatureProfile extends IntrusiveNode {
         }
     }
 
-    final boolean b(int param0, int param1) {
+    final boolean hasUnlockedAbilityBranch(int param0, int param1) {
         int var4 = BachelorFridge.field_y;
         ho var3 = (ho) (this.field_h.beginForward((byte) 90));
         while (var3 != null) {
@@ -92,7 +92,7 @@ class CreatureProfile extends IntrusiveNode {
         return false;
     }
 
-    final void a(byte param0, int param1) {
+    final void clearAdvancedMoveSlots(byte param0, int param1) {
         int var4 = 0;
         int var3;
         int var5;
@@ -108,7 +108,7 @@ class CreatureProfile extends IntrusiveNode {
         }
     }
 
-    final int c(int param0, int param1) {
+    final int getMoveMaxRange(int param0, int param1) {
         BasicMoveDefinition var3;
         if (param0 != 87) {
           this.field_g = (boolean[]) null;
@@ -117,19 +117,19 @@ class CreatureProfile extends IntrusiveNode {
         if (var3.field_p != 4) {
           return var3.field_t;
         }
-        if (this.a(36, param0 - 78)) {
+        if (this.hasEquippedMove(36, param0 - 78)) {
           return ((a) (al.a(87, 36))).field_r;
         }
-        if (this.a(35, 9)) {
+        if (this.hasEquippedMove(35, 9)) {
           return ((a) (al.a(param0 ^ 12, 35))).field_r;
         }
-        if (!this.a(34, 9)) {
+        if (!this.hasEquippedMove(34, 9)) {
           return var3.field_t;
         }
         return ((a) (al.a(-42, 34))).field_r;
     }
 
-    void a(byte param0, PacketBuffer param1) {
+    void writeCreatureData(byte param0, PacketBuffer param1) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -150,7 +150,7 @@ class CreatureProfile extends IntrusiveNode {
           var3 = (ho) (this.field_h.beginForward((byte) 90));
           if (param0 >= -21) {
             var7 = (MoveDefinition) null;
-            this.a((MoveDefinition) null, -19);
+            this.getAttackDamageMultiplier((MoveDefinition) null, -19);
           }
           param1.writeByte(this.field_h.countWithOffset(0), 0);
           while (var3 != null) {
@@ -186,7 +186,7 @@ class CreatureProfile extends IntrusiveNode {
         }
     }
 
-    final double a(MoveDefinition param0, int param1) {
+    final double getAttackDamageMultiplier(MoveDefinition param0, int param1) {
         BasicMoveDefinition var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -224,7 +224,7 @@ class CreatureProfile extends IntrusiveNode {
         }
     }
 
-    final static EventEffect a(int param0, PacketBuffer param1) {
+    final static EventEffect readSetFriendlyEffect(int param0, PacketBuffer param1) {
         CreatureRef var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -289,19 +289,19 @@ class CreatureProfile extends IntrusiveNode {
             this.field_m[var5] = param0.field_m[var5];
             var5++;
           }
-          if (this.a(84, 0, this.field_m)) {
+          if (this.containsMoveFromSlot(84, 0, this.field_m)) {
             this.field_k[0] = this.field_k[0] + 1;
           }
-          if (this.a(85, 0, this.field_m)) {
+          if (this.containsMoveFromSlot(85, 0, this.field_m)) {
             this.field_k[1] = this.field_k[1] + 1;
           }
-          if (this.a(86, 0, this.field_m)) {
+          if (this.containsMoveFromSlot(86, 0, this.field_m)) {
             this.field_k[2] = this.field_k[2] + 1;
           }
-          if (this.a(87, 0, this.field_m)) {
+          if (this.containsMoveFromSlot(87, 0, this.field_m)) {
             this.field_k[3] = this.field_k[3] + 1;
           }
-          discarded$0 = this.a(0);
+          discarded$0 = this.storeUnusedProfileValue(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -324,15 +324,15 @@ class CreatureProfile extends IntrusiveNode {
         return var1;
     }
 
-    private final void d(byte param0) {
+    private final void resetCreatureName(byte param0) {
         if (param0 >= -87) {
           MoveDefinition var3 = (MoveDefinition) null;
-          this.a((MoveDefinition) null, -23);
+          this.getAttackDamageMultiplier((MoveDefinition) null, -23);
         }
         this.field_n = this.field_o.field_h;
     }
 
-    final void a(PacketBuffer param0, boolean param1) {
+    final void readCreatureProfile(PacketBuffer param0, boolean param1) {
         boolean[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         boolean stackIn_9_2 = false;
@@ -391,7 +391,7 @@ class CreatureProfile extends IntrusiveNode {
         }
     }
 
-    final lna e(byte param0) {
+    final lna createCreatureModel(byte param0) {
         int var6 = BachelorFridge.field_y;
         int[] var9 = new int[5];
         int[] var8 = var9;
@@ -412,7 +412,7 @@ class CreatureProfile extends IntrusiveNode {
         return new lna(var7[var3[0]], var7[var3[1]], var7[var3[2]], var7[var3[3]], var7[var3[4]], var7[var3[5]], var7[var3[6]], var7[var3[7]], var7[var3[8]], var7[var3[9]], var7[var3[10]]);
     }
 
-    final boolean a(byte param0, pd param1, int param2) {
+    final boolean tryUnlockAbilityWithFood(byte param0, pd param1, int param2) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -429,7 +429,7 @@ class CreatureProfile extends IntrusiveNode {
         int var5Lifetime1;
         var9 = BachelorFridge.field_y;
         try {
-          var4_int = 1 + this.field_o.a(73, param1, this.field_g);
+          var4_int = 1 + this.field_o.findUnlockBranchForFood(73, param1, this.field_g);
           var5 = 0;
           if (var4_int != 0) {
             if (var4_int > 1 &&
@@ -449,7 +449,7 @@ class CreatureProfile extends IntrusiveNode {
             var5Lifetime1 = 3 * var4_int;
             this.field_i = var5Lifetime1;
           } else {
-            var5Lifetime1 = this.field_o.a(param1, 0, this.field_g);
+            var5Lifetime1 = this.field_o.findAbilitySlotForFood(param1, 0, this.field_g);
             if (var5Lifetime1 == -1) {
               return false;
             }
@@ -491,7 +491,7 @@ class CreatureProfile extends IntrusiveNode {
         }
     }
 
-    final int d(int param0, int param1) {
+    final int getAttackShape(int param0, int param1) {
         BasicMoveDefinition var3;
         if (param0 <= 122) {
           this.field_j = (int[]) null;
@@ -500,13 +500,13 @@ class CreatureProfile extends IntrusiveNode {
         if (var3.field_p != 4) {
           return var3.field_r;
         }
-        if (this.a(53, 9)) {
+        if (this.hasEquippedMove(53, 9)) {
           return ((a) (al.a(-82, 53))).field_q;
         }
         return var3.field_r;
     }
 
-    private final int a(int param0) {
+    private final int storeUnusedProfileValue(int param0) {
         this.field_l = param0;
         return this.field_l;
     }
@@ -568,7 +568,7 @@ class CreatureProfile extends IntrusiveNode {
           if (null == this.field_o) {
             throw new RuntimeException("You're not supposed to be able to breed random creatures any more!");
           }
-          this.d((byte) -107);
+          this.resetCreatureName((byte) -107);
           this.field_k = new int[4];
           ArrayOperations.copy(this.field_o.field_l, 0, this.field_k, 0, 4);
           this.field_p = new Random();
@@ -578,7 +578,7 @@ class CreatureProfile extends IntrusiveNode {
           ArrayOperations.a(this.field_m, 0, this.field_m.length, -1);
           this.field_m[0] = 0;
           this.field_m[1] = 1;
-          discarded$0 = this.a(0);
+          discarded$0 = this.storeUnusedProfileValue(0);
           this.key = (long)DiveBomberAnimation.a(2147483647, this.field_p, -2147483648);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "rk.<init>(" + (param0 != null ? "{...}" : "null") + ')');

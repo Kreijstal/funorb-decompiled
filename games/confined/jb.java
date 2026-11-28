@@ -169,7 +169,7 @@ final class jb {
         for (var4 = var2; var4 < var3; var4++) {
           var5 = 9805732;
           if (this.field_p.field_i != var4) {
-            dn.a(this.field_h[var4].field_f, 0 + this.field_h[var4].field_j, this.field_h[var4].field_b, ah.field_T, 208, -7992, this.field_h[var4].field_i);
+            dn.a(this.field_h[var4].field_f, 0 + this.field_h[var4].field_j, this.field_h[var4].field_b, AcceleratingProjectile.field_T, 208, -7992, this.field_h[var4].field_i);
           } else {
             dn.a(this.field_h[var4].field_f, 0 + this.field_h[var4].field_j, this.field_h[var4].field_b, lh.field_c, 208, param0 ^ -7992, this.field_h[var4].field_i);
             var5 = 16777215;
@@ -279,7 +279,7 @@ final class jb {
           }
           var2 = this.field_d;
         }
-        var3 = DiskCacheWorker.a(h.field_W, var2, 113, lc.field_J);
+        var3 = DiskCacheWorker.a(WingPod.field_W, var2, 113, TunnelMesh.field_J);
         pn.field_a.c(IntrusiveNodeHashTable.field_b, 125, 29 + this.field_c, 4243584, -1);
         pn.field_a.a(tk.field_d, 400, 29 + this.field_c, 4243584, -1);
         pn.field_a.a(e.field_d, 545, this.field_c + 29, 4243584, -1);
@@ -294,11 +294,11 @@ final class jb {
         var5Lifetime1 = 1;
         if (var2 != null) {
           if (!var2.field_t) {
-            var4 = hm.field_W;
+            var4 = LightningArc.field_W;
           } else {
             if (var2.field_u != null) {
-              var6_ref_String__ = var2.field_u[h.field_W];
-              var17 = var2.field_q[h.field_W];
+              var6_ref_String__ = var2.field_u[WingPod.field_W];
+              var17 = var2.field_q[WingPod.field_W];
               for (var8 = 0; var8 < 10; var8++) {
                 if (var6_ref_String__[var8] != null) {
                   var4 = null;
@@ -324,10 +324,10 @@ final class jb {
               var4 = kl.field_H;
             }
             if (var3 < 0 &&
-              null != lc.field_J &&
-              var2.field_w == lc.field_J.field_r) {
+              null != TunnelMesh.field_J &&
+              var2.field_w == TunnelMesh.field_J.field_r) {
               pn.field_a.c(ok.a(qc.field_m), 125, 259 + this.field_c, 16777215, -1);
-              var6 = lc.field_J.field_s[0];
+              var6 = TunnelMesh.field_J.field_s[0];
               var7 = var6 / 25;
               var8Lifetime1 = var6 % 25 + 1;
               stackIn_41_0 = pn.field_a;
@@ -425,14 +425,14 @@ final class jb {
             if (this.field_p.field_i != 0 &&
               1 != this.field_p.field_i) {
               if (96 == gk.field_r) {
-                h.field_W = (3 + (h.field_W - 1)) % 3;
-                this.field_p.a(h.field_W + 2, -1);
+                WingPod.field_W = (3 + (WingPod.field_W - 1)) % 3;
+                this.field_p.a(WingPod.field_W + 2, -1);
                 this.e((byte) -123);
                 this.field_p.field_b = false;
               }
               if (gk.field_r == 97) {
-                h.field_W = (1 + h.field_W) % 3;
-                this.field_p.a(2 + h.field_W, param0 - 3679);
+                WingPod.field_W = (1 + WingPod.field_W) % 3;
+                this.field_p.a(2 + WingPod.field_W, param0 - 3679);
                 this.e((byte) -125);
                 this.field_p.field_b = false;
               }
@@ -449,7 +449,7 @@ final class jb {
                   this.field_p.a(al.field_d, -1);
                 } else {
                   if (this.field_p.field_i == 5) {
-                    this.field_p.a(h.field_W + 2, -1);
+                    this.field_p.a(WingPod.field_W + 2, -1);
                   } else {
                     this.field_p.a(-1 + this.field_p.field_i, -1);
                   }
@@ -462,7 +462,7 @@ final class jb {
               if (this.field_p.field_i >= 0 &&
                 this.field_p.field_k - 1 != this.field_p.field_i) {
                 if (this.field_p.field_i < 2) {
-                  this.field_p.a(2 + h.field_W, param0 - 3679);
+                  this.field_p.a(2 + WingPod.field_W, param0 - 3679);
                 } else {
                   if (this.field_p.field_i >= 5) {
                     this.field_p.a(1 + this.field_p.field_i, -1);
@@ -582,8 +582,8 @@ final class jb {
             this.field_p.field_i != 1) &&
             (decompiledFrameRemainder0 = !(2 > this.field_p.field_i)) &&
             (decompiledFrameRemainder0 = !(5 <= this.field_p.field_i))) {
-            h.field_W = this.field_p.field_i - 2;
-            this.field_p.a(h.field_W + 2, -1);
+            WingPod.field_W = this.field_p.field_i - 2;
+            this.field_p.a(WingPod.field_W + 2, -1);
             this.e((byte) -122);
             return true;
           }
@@ -871,7 +871,7 @@ final class jb {
             var7 = 16777215;
             dn.a(var3.field_f, 0 + var3.field_j, var5, lh.field_c, 208, param0 - 8028, var6);
           } else {
-            dn.a(var3.field_f, var3.field_j + 0, var5, ah.field_T, 208, -7992, var6);
+            dn.a(var3.field_f, var3.field_j + 0, var5, AcceleratingProjectile.field_T, 208, -7992, var6);
           }
           if (7 != var3.field_d &&
             var3.field_d != 8 &&
@@ -884,7 +884,7 @@ final class jb {
                 var7 = 16777215;
               }
               if (var3.field_d == 19 &&
-                h.field_W == -2 + var2) {
+                WingPod.field_W == -2 + var2) {
                 var7 = 16777215;
               }
               pn.field_a.a(var4, 0 + var3.field_j, var5, var3.field_f, var6, var7, -1, 1, 1, 20);
@@ -953,7 +953,7 @@ final class jb {
             if (var8 < var9) {
               var8 = var9;
             }
-            var9 = pn.field_a.c(pm.field_u);
+            var9 = pn.field_a.c(TunnelEntity.field_u);
             if (var8 < var9) {
               var8 = var9;
             }
@@ -1066,7 +1066,7 @@ final class jb {
         pn.field_a.b(p.field_b, 320, 120, 4243584, -1);
         pn.field_a.b(fb.a(this.field_t, this.field_n, 0, this.field_i), 320, 140, 4243584, -1);
         pn.field_a.b(qc.a(this.field_n, this.field_i, 2, this.field_t), 320, 240, 4243584, -1);
-        pn.field_a.b(ah.a(this.field_i, this.field_n, -125, this.field_t), 320, 300, param0, -1);
+        pn.field_a.b(AcceleratingProjectile.a(this.field_i, this.field_n, -125, this.field_t), 320, 300, param0, -1);
     }
 
     final void c(int param0) {
@@ -1148,7 +1148,7 @@ final class jb {
         if (var3 == 1 &&
           this.field_p.d((byte) 55)) {
           this.e((byte) -125);
-          h.a((byte) -6, param1);
+          WingPod.a((byte) -6, param1);
           return true;
         }
         if (2 == var3 &&
@@ -1190,7 +1190,7 @@ final class jb {
             if (var4 < var5) {
               var4 = var5;
             }
-            var5Lifetime3 = pn.field_a.c(pm.field_u);
+            var5Lifetime3 = pn.field_a.c(TunnelEntity.field_u);
             if (var5Lifetime3 > var4) {
               var4 = var5Lifetime3;
             }
@@ -1258,7 +1258,7 @@ final class jb {
             if (var5Lifetime1 > var4Lifetime1) {
               var4Lifetime1 = var5Lifetime1;
             }
-            var5Lifetime1Lifetime1 = pn.field_a.c(pm.field_u);
+            var5Lifetime1Lifetime1 = pn.field_a.c(TunnelEntity.field_u);
             if (var4Lifetime1 < var5Lifetime1Lifetime1) {
               var4Lifetime1 = var5Lifetime1Lifetime1;
             }
@@ -1274,16 +1274,16 @@ final class jb {
             } else {
               hd.field_f = 0;
             }
-            h.field_R.b(hd.field_f * 64 >> 7);
+            WingPod.field_R.b(hd.field_f * 64 >> 7);
           }
           if (this.field_p.a(0)) {
             hd.field_f = 0;
-            h.field_R.b(hd.field_f * 64 >> 7);
+            WingPod.field_R.b(hd.field_f * 64 >> 7);
             this.e((byte) -126);
           }
           if (this.field_p.c((byte) -128)) {
             hd.field_f = 128;
-            h.field_R.b(64 * hd.field_f >> 7);
+            WingPod.field_R.b(64 * hd.field_f >> 7);
             this.e((byte) -128);
           }
           if (this.field_p.e((byte) 105)) {
@@ -1291,7 +1291,7 @@ final class jb {
             if (0 > hd.field_f) {
               hd.field_f = 0;
             }
-            h.field_R.b(64 * hd.field_f >> 7);
+            WingPod.field_R.b(64 * hd.field_f >> 7);
             this.e((byte) -124);
           }
           if (this.field_p.b(114)) {
@@ -1299,7 +1299,7 @@ final class jb {
             if (128 < hd.field_f) {
               hd.field_f = 128;
             }
-            h.field_R.b(64 * hd.field_f >> 7);
+            WingPod.field_R.b(64 * hd.field_f >> 7);
             this.e((byte) -128);
           }
         }
@@ -1313,7 +1313,7 @@ final class jb {
             if (var5Lifetime2 > var4Lifetime2) {
               var4Lifetime2 = var5Lifetime2;
             }
-            var5Lifetime2Lifetime1 = pn.field_a.c(pm.field_u);
+            var5Lifetime2Lifetime1 = pn.field_a.c(TunnelEntity.field_u);
             if (var5Lifetime2Lifetime1 > var4Lifetime2) {
               var4Lifetime2 = var5Lifetime2Lifetime1;
             }

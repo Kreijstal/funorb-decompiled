@@ -81,7 +81,7 @@ final class bj extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_6_0 = (pm.a(param1, true) != null);
+            stackIn_6_0 = (TunnelEntity.a(param1, true) != null);
             return stackIn_6_0;
           }
           return true;
@@ -102,7 +102,7 @@ final class bj extends IntrusiveNode {
     final static void a(boolean param0, String param1, int param2, String param3) {
         try {
           kj.field_c = param3;
-          hm.field_gb = param1;
+          LightningArc.field_gb = param1;
           r.a((byte) 101, param0, sj.field_kb);
           if (param2 != 14451) {
             field_w = (String[]) null;

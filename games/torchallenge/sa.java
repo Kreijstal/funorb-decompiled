@@ -25,7 +25,7 @@ final class sa {
         if (!IntrusiveDeque.field_a.ensureIndexLoaded(-7957)) {
           return uk.field_K;
         }
-        if (!IntrusiveDeque.field_a.b(5, "commonui")) {
+        if (!IntrusiveDeque.field_a.tryLoadGroupByName(5, "commonui")) {
           return ra.field_m + " - " + IntrusiveDeque.field_a.getGroupLoadPercentByName(112, "commonui") + "%";
         }
         if (!gf.field_p.ensureIndexLoaded(-7957)) {
@@ -34,14 +34,14 @@ final class sa {
         if (!param0) {
           field_b = (String) null;
         }
-        if (!gf.field_p.b(5, "commonui")) {
+        if (!gf.field_p.tryLoadGroupByName(5, "commonui")) {
           return ij.field_x + " - " + gf.field_p.getGroupLoadPercentByName(125, "commonui") + "%";
         }
         if (!FrameTimer.field_b.ensureIndexLoaded(-7957)) {
           return wa.field_qb;
         }
         if (!FrameTimer.field_b.tryLoadAllGroups((byte) 79)) {
-          return bk.field_l + " - " + FrameTimer.field_b.c(126) + "%";
+          return bk.field_l + " - " + FrameTimer.field_b.getArchiveLoadPercent(126) + "%";
         }
         return lh.field_y;
     }

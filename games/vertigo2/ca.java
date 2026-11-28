@@ -20,7 +20,7 @@ final class ca {
           return;
         }
         try {
-          hb.field_j.field_S = param6;
+          PlayerAvatarRenderer.field_j.field_S = param6;
           if (2 != ui.field_g) {
             oa.field_s.field_S = ml.field_x;
           } else {
@@ -35,7 +35,7 @@ final class ca {
           kk.field_a.a(94, kk.field_a.j(-21391), param1, var10, 5);
           var11 = oa.field_s.j(-21391);
           oa.field_s.a(120, var11, param1, var10, -5 + var9_int - var11);
-          hb.field_j.a(121, var9_int, param4, 0, 0);
+          PlayerAvatarRenderer.field_j.a(121, var9_int, param4, 0, 0);
           var12 = 5 + var10 + param1;
           lm.field_F.a(120, var9_int, var12, param4, 0);
           lm.field_F.field_Bb = vl.a(lm.field_F.field_db, 3, 0, 2105376, 11579568, 8421504);
@@ -95,7 +95,7 @@ final class ca {
             if (!lc.field_d) {
               return;
             }
-            if (am.field_b) {
+            if (LevelRenderer.field_b) {
               stackIn_77_0 = (MouseWheelInput.field_a) ? 1 : 0;
             } else {
               stackIn_77_0 = 0;
@@ -120,7 +120,7 @@ final class ca {
         if (!lc.field_d) {
           return;
         }
-        if (!am.field_b) {
+        if (!LevelRenderer.field_b) {
           var2Lifetime1 = 0;
           if (!param0) {
             ff.a(false, 11182);

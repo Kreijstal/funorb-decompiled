@@ -97,7 +97,7 @@ final class Archive {
 
     final synchronized boolean tryLoadGroup(byte param0, int param1) {
         if (param0 != -40) {
-          this.b(-100, ((int[]) (this.field_d[2]))[0]);
+          this.getFlatFile(-100, ((int[]) (this.field_d[2]))[0]);
         }
         if (!this.validateGroupId(71, param1)) {
           return false;
@@ -112,7 +112,7 @@ final class Archive {
         return false;
     }
 
-    final synchronized byte[] b(int param0, int param1) {
+    final synchronized byte[] getFlatFile(int param0, int param1) {
         if (!this.ensureIndexLoaded(-101)) {
           return null;
         }
@@ -138,7 +138,7 @@ final class Archive {
         return this.getFileWithKeys((int[]) null, true, param1, param0);
     }
 
-    final int b(int param0) {
+    final int getGroupCapacity(int param0) {
         if (param0 != 0) {
           field_g = (int[]) null;
         }
@@ -188,7 +188,7 @@ final class Archive {
         }
     }
 
-    final synchronized int a(boolean param0) {
+    final synchronized int getArchiveLoadPercent(boolean param0) {
         int var2;
         int var3;
         int var4;
@@ -216,7 +216,7 @@ final class Archive {
         return var4Lifetime1;
     }
 
-    final boolean a(String param0, String param1, byte param2) {
+    final boolean tryLoadFileByName(String param0, String param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -267,7 +267,7 @@ final class Archive {
         }
     }
 
-    final boolean b(String param0, byte param1) {
+    final boolean tryLoadGroupByName(String param0, byte param1) {
         byte[] discarded$1 = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -303,14 +303,14 @@ final class Archive {
         }
     }
 
-    final static boolean b(byte param0) {
+    final static boolean isPasswordOnlyLogin(byte param0) {
         if (param0 >= -50) {
           Archive.clearStaticReferences(-33);
         }
         return vg.field_o;
     }
 
-    final int a(int param0, byte param1) {
+    final int getFileCapacity(int param0, byte param1) {
         if (!this.validateGroupId(67, param0)) {
           return 0;
         }
@@ -502,7 +502,7 @@ final class Archive {
         }
     }
 
-    final boolean a(String param0, byte param1) {
+    final boolean hasGroupName(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;

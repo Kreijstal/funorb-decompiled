@@ -14,11 +14,11 @@ final class gj extends ta {
         this.field_p = (ta) ((Object) new ql());
     }
 
-    final l b(boolean param0) {
+    final ResultScenePhase b(boolean param0) {
         if (param0) {
-          return (l) null;
+          return (ResultScenePhase) null;
         }
-        return (l) ((Object) new o(60, this.field_p));
+        return (ResultScenePhase) ((Object) new o(60, this.field_p));
     }
 
     public static void clearStaticReferences(int param0) {

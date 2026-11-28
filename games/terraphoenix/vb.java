@@ -64,13 +64,13 @@ final class vb {
         if (!bi.field_d.ensureIndexLoaded(0)) {
           return be.field_w;
         }
-        if (!bi.field_d.a(-3, "commonui")) {
+        if (!bi.field_d.tryLoadGroupByName(-3, "commonui")) {
           return bl.field_d + " - " + bi.field_d.getGroupLoadPercentByName(-120, "commonui") + "%";
         }
         if (!ph.field_q.ensureIndexLoaded(0)) {
           return field_a;
         }
-        if (!ph.field_q.a(-3, "commonui")) {
+        if (!ph.field_q.tryLoadGroupByName(-3, "commonui")) {
           return ki.field_S + " - " + ph.field_q.getGroupLoadPercentByName(param0 ^ 120, "commonui") + "%";
         }
         if (!ch.field_g.ensureIndexLoaded(param0 ^ -27)) {
@@ -79,7 +79,7 @@ final class vb {
         if (ch.field_g.tryLoadAllGroups((byte) -128)) {
           return MusicPatchPcmStream.field_o;
         }
-        return li.field_b + " - " + ch.field_g.a((byte) 127) + "%";
+        return li.field_b + " - " + ch.field_g.getArchiveLoadPercent((byte) 127) + "%";
     }
 
     final static boolean a(int param0) {

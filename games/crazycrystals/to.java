@@ -14,7 +14,7 @@ final class to {
           if (11 == hp.field_s) {
             fg.c((byte) 95);
           }
-          tg.a(pj.field_p, ta.field_i, (byte) -41, nf.field_f);
+          tg.a(WallTile.field_p, ta.field_i, (byte) -41, nf.field_f);
           bq.a(param1, param0, 0, 4);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "to.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

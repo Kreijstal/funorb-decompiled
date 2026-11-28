@@ -95,25 +95,25 @@ final class g {
         int var2;
         int var3;
         var3 = Vertigo2.field_L ? 1 : 0;
-        if (lc.field_b == am.field_n) {
+        if (lc.field_b == LevelRenderer.field_n) {
           return;
         }
         if (al.a(lc.field_b, (byte) -94)) {
           fh.field_y[lc.field_b].c(20);
           SectorCacheStore.field_g = lc.field_d;
           vl.field_c = 0;
-          lc.field_b = am.field_n;
+          lc.field_b = LevelRenderer.field_n;
           if (lc.field_b == -1) {
             var1 = 0;
             var2 = 0;
             if (null != ln.field_d) {
-              var1 = ln.field_d.field_D.b(-6133);
-              stackIn_14_0 = (1 != ln.field_d.field_D.field_r.h(9979)) ? 0 : 1;
+              var1 = ln.field_d.field_D.getLevelIndex(-6133);
+              stackIn_14_0 = (1 != ln.field_d.field_D.field_r.getSimulationPhase(9979)) ? 0 : 1;
               var2 = stackIn_14_0;
             } else {
               if (null != AccountCreationResultPanel.field_pb) {
-                var1 = AccountCreationResultPanel.field_pb.field_D.b(-6133);
-                stackIn_10_0 = (1 != AccountCreationResultPanel.field_pb.field_D.field_r.h(9979)) ? 0 : 1;
+                var1 = AccountCreationResultPanel.field_pb.field_D.getLevelIndex(-6133);
+                stackIn_10_0 = (1 != AccountCreationResultPanel.field_pb.field_D.field_r.getSimulationPhase(9979)) ? 0 : 1;
                 var2 = stackIn_10_0;
               }
             }
@@ -125,13 +125,13 @@ final class g {
               var1 = 0;
               var2 = 0;
               if (null != ln.field_d) {
-                var1 = ln.field_d.field_D.b(-6133);
-                stackIn_37_0 = (1 != ln.field_d.field_D.field_r.h(9979)) ? 0 : 1;
+                var1 = ln.field_d.field_D.getLevelIndex(-6133);
+                stackIn_37_0 = (1 != ln.field_d.field_D.field_r.getSimulationPhase(9979)) ? 0 : 1;
                 var2 = stackIn_37_0;
               } else {
                 if (null != AccountCreationResultPanel.field_pb) {
-                  var1 = AccountCreationResultPanel.field_pb.field_D.b(-6133);
-                  stackIn_33_0 = (1 != AccountCreationResultPanel.field_pb.field_D.field_r.h(9979)) ? 0 : 1;
+                  var1 = AccountCreationResultPanel.field_pb.field_D.getLevelIndex(-6133);
+                  stackIn_33_0 = (1 != AccountCreationResultPanel.field_pb.field_D.field_r.getSimulationPhase(9979)) ? 0 : 1;
                   var2 = stackIn_33_0;
                 }
               }
@@ -149,13 +149,13 @@ final class g {
                 var1 = 0;
                 var2 = 0;
                 if (null != ln.field_d) {
-                  var1 = ln.field_d.field_D.b(-6133);
-                  stackIn_65_0 = (1 != ln.field_d.field_D.field_r.h(9979)) ? 0 : 1;
+                  var1 = ln.field_d.field_D.getLevelIndex(-6133);
+                  stackIn_65_0 = (1 != ln.field_d.field_D.field_r.getSimulationPhase(9979)) ? 0 : 1;
                   var2 = stackIn_65_0;
                 } else {
                   if (null != AccountCreationResultPanel.field_pb) {
-                    var1 = AccountCreationResultPanel.field_pb.field_D.b(-6133);
-                    stackIn_61_0 = (1 != AccountCreationResultPanel.field_pb.field_D.field_r.h(9979)) ? 0 : 1;
+                    var1 = AccountCreationResultPanel.field_pb.field_D.getLevelIndex(-6133);
+                    stackIn_61_0 = (1 != AccountCreationResultPanel.field_pb.field_D.field_r.getSimulationPhase(9979)) ? 0 : 1;
                     var2 = stackIn_61_0;
                   }
                 }
@@ -187,7 +187,7 @@ final class g {
         } else {
           SectorCacheStore.field_g = lc.field_d;
           vl.field_c = 0;
-          lc.field_b = am.field_n;
+          lc.field_b = LevelRenderer.field_n;
           if (lc.field_b != -1 &&
             1 != lc.field_b &&
             2 != lc.field_b &&
@@ -198,13 +198,13 @@ final class g {
               var1 = 0;
               var2 = 0;
               if (null != ln.field_d) {
-                var1 = ln.field_d.field_D.b(-6133);
-                stackIn_102_0 = (1 != ln.field_d.field_D.field_r.h(9979)) ? 0 : 1;
+                var1 = ln.field_d.field_D.getLevelIndex(-6133);
+                stackIn_102_0 = (1 != ln.field_d.field_D.field_r.getSimulationPhase(9979)) ? 0 : 1;
                 var2 = stackIn_102_0;
               } else {
                 if (null != AccountCreationResultPanel.field_pb) {
-                  var1 = AccountCreationResultPanel.field_pb.field_D.b(-6133);
-                  stackIn_98_0 = (1 != AccountCreationResultPanel.field_pb.field_D.field_r.h(9979)) ? 0 : 1;
+                  var1 = AccountCreationResultPanel.field_pb.field_D.getLevelIndex(-6133);
+                  stackIn_98_0 = (1 != AccountCreationResultPanel.field_pb.field_D.field_r.getSimulationPhase(9979)) ? 0 : 1;
                   var2 = stackIn_98_0;
                 }
               }
@@ -289,13 +289,13 @@ final class g {
           var1 = 0;
           var2 = 0;
           if (null != ln.field_d) {
-            var1 = ln.field_d.field_D.b(-6133);
-            stackIn_135_0 = (1 != ln.field_d.field_D.field_r.h(9979)) ? 0 : 1;
+            var1 = ln.field_d.field_D.getLevelIndex(-6133);
+            stackIn_135_0 = (1 != ln.field_d.field_D.field_r.getSimulationPhase(9979)) ? 0 : 1;
             var2 = stackIn_135_0;
           } else {
             if (null != AccountCreationResultPanel.field_pb) {
-              var1 = AccountCreationResultPanel.field_pb.field_D.b(-6133);
-              stackIn_120_0 = (1 != AccountCreationResultPanel.field_pb.field_D.field_r.h(9979)) ? 0 : 1;
+              var1 = AccountCreationResultPanel.field_pb.field_D.getLevelIndex(-6133);
+              stackIn_120_0 = (1 != AccountCreationResultPanel.field_pb.field_D.field_r.getSimulationPhase(9979)) ? 0 : 1;
               var2 = stackIn_120_0;
               if (var2 != 0) {
                 MidiPcmStream.a(false, 12, (byte) 117, up.field_B[var1 % up.field_B.length], false, 12);

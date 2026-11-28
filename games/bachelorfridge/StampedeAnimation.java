@@ -217,7 +217,7 @@ final class StampedeAnimation extends EventAnimation {
         this.field_D = 8;
         try {
           this.field_z = param1;
-          this.field_B = this.field_z.creature.a(-27449, this.screen);
+          this.field_B = this.field_z.creature.resolveCreatureView(-27449, this.screen);
           this.field_B.b(-1, 3);
           this.field_y = 0;
           this.field_E = 0;

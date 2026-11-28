@@ -465,20 +465,20 @@ final class tl implements Runnable {
         if (!fi.field_u.ensureIndexLoaded(-14354)) {
           return qk.field_c;
         }
-        if (!fi.field_u.a(false, "commonui")) {
+        if (!fi.field_u.tryLoadGroupByName(false, "commonui")) {
           return sa.field_w + " - " + fi.field_u.getGroupLoadPercentByName("commonui", -1) + "%";
         }
         if (!GameAppletShell.field_b.ensureIndexLoaded(param0 ^ 14355)) {
           return rf.field_L;
         }
-        if (!GameAppletShell.field_b.a(false, "commonui")) {
+        if (!GameAppletShell.field_b.tryLoadGroupByName(false, "commonui")) {
           return mp.field_c + " - " + GameAppletShell.field_b.getGroupLoadPercentByName("commonui", param0 ^ 2) + "%";
         }
         if (!ib.field_b.ensureIndexLoaded(param0 - 14351)) {
           return NanoFrameTimer.field_m;
         }
         if (!ib.field_b.tryLoadAllGroups((byte) 59)) {
-          return kj.field_m + " - " + ib.field_b.b(100) + "%";
+          return kj.field_m + " - " + ib.field_b.getArchiveLoadPercent(100) + "%";
         }
         return p.field_K;
     }

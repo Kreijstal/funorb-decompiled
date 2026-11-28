@@ -340,11 +340,11 @@ final class ba extends mv {
         try {
           this.field_o = param1;
           this.field_p = param0;
-          var5 = this.field_o.creature.a(-27449, this.field_p);
+          var5 = this.field_o.creature.resolveCreatureView(-27449, this.field_p);
           if (var5.field_s.isDown(-102)) {
             return;
           }
-          var5.field_s.d(this.field_o.moveId, (byte) -87);
+          var5.field_s.applyMoveCooldown(this.field_o.moveId, (byte) -87);
           this.field_j = 25;
           if (this.field_o.field_r) {
             var5.a(16777152, 54, m.field_c);
@@ -398,7 +398,7 @@ final class ba extends mv {
         CreatureActor var7;
         var6 = BachelorFridge.field_y;
         var3 = -16 / ((71 - param0) / 47);
-        var7 = this.field_o.creature.a(-27449, this.field_p);
+        var7 = this.field_o.creature.resolveCreatureView(-27449, this.field_p);
         var4 = (BasicMoveDefinition) (al.a(-108, this.field_o.moveId));
         if (this.field_j == 25 &&
           !this.field_o.field_r &&
@@ -406,7 +406,7 @@ final class ba extends mv {
           !this.field_o.field_t) {
           var7.b(-1, var4.field_o);
         }
-        var5 = this.field_o.creature.a(124, this.field_p.field_h);
+        var5 = this.field_o.creature.resolveCreature(124, this.field_p.field_h);
         this.field_p.field_s.a((byte) -57, var5.tileY, var5.tileX);
         int fieldTemp$0 = this.field_j - 1;
         this.field_j = this.field_j - 1;

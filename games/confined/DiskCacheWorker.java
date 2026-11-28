@@ -61,7 +61,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              mb.a((String) null, true, (Throwable) ((Object) var2_ref));
+              ShockwaveBlast.a((String) null, true, (Throwable) ((Object) var2_ref));
               var7.field_v = false;
             }
           }

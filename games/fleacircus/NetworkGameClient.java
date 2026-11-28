@@ -205,10 +205,10 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (ib.field_k == 2) {
           if (il.field_a != null &&
             il.field_a.ensureIndexLoaded((byte) -109)) {
-            if (!il.field_a.b("", 37)) {
+            if (!il.field_a.hasGroupName("", 37)) {
               il.field_a = null;
             } else {
-              if (il.field_a.a("", -123)) {
+              if (il.field_a.tryLoadGroupByName("", -123)) {
                 je.a(il.field_a, -30);
                 il.field_a = null;
                 fleas.h((byte) 76);
@@ -579,7 +579,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         cg.field_y = this.field_m;
         ek.a(10, cg.field_y);
         wc.a(22986, param2, cg.field_y, param3, fg.field_q, this.field_p, this.field_n, this.field_o, this.field_u, 5000, this.field_r, this.field_x, 5000, this.field_l);
-        ResourceArchive.a(cg.field_y, this.field_r, 8737, param2, this.field_u, this.field_n, this.field_p, this.field_l, fg.field_q);
+        ResourceArchive.initializeArchiveNetworkServices(cg.field_y, this.field_r, 8737, param2, this.field_u, this.field_n, this.field_p, this.field_l, fg.field_q);
         vg.b((byte) 32);
         ui.field_pb = of.createMouseWheelInput(-21814);
         aj.a(0, ol.field_e);

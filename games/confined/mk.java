@@ -15,15 +15,15 @@ final class mk extends ai {
     final static void a(String param0, boolean param1, float param2, int param3) {
         try {
           if (ui.field_c == null) {
-            ui.field_c = new jj(vg.field_Z, cb.field_b);
-            vg.field_Z.c(ui.field_c, 0);
+            ui.field_c = new jj(TunnelCamera.field_Z, cb.field_b);
+            TunnelCamera.field_Z.c(ui.field_c, 0);
           }
           ui.field_c.a(-67, param1, param2, param0);
           SoftwareRasterizer.clearRaster();
           if (param3 > -34) {
             mk.b(41);
           }
-          kh.a((byte) 35, true);
+          ProjectileRay.a((byte) 35, true);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "mk.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

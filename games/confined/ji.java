@@ -84,7 +84,7 @@ final class ji {
               }
             }
             if (decompiledFrameRemainder0) {
-              mb.a("LR1: " + ui.a(10), true, (Throwable) null);
+              ShockwaveBlast.a("LR1: " + ui.a(10), true, (Throwable) null);
               dc.d(121);
             }
           }

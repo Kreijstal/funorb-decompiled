@@ -482,10 +482,10 @@ abstract class bi extends GameApplet {
         if (mc.field_a == 2) {
           if (ec.field_a != null &&
             ec.field_a.ensureIndexLoaded(73)) {
-            if (!ec.field_a.b("", (byte) -111)) {
+            if (!ec.field_a.hasGroupName("", (byte) -111)) {
               ec.field_a = null;
             } else {
-              if (ec.field_a.a(0, "")) {
+              if (ec.field_a.tryLoadGroupByName(0, "")) {
                 ll.a(2, ec.field_a);
                 ec.field_a = null;
                 oe.a((byte) 119);
@@ -536,7 +536,7 @@ abstract class bi extends GameApplet {
         if (mc.field_a == 11) {
           if (BufferedRandomAccessFile.field_j != null && (!BufferedRandomAccessFile.field_j.ensureIndexLoaded(-124) ||
             !BufferedRandomAccessFile.field_j.tryLoadAllGroups(0))) {
-            ResourceArchive.a(ec.a(BufferedRandomAccessFile.field_j, IntrusiveNode.field_b, tk.field_a, 0), param0 ^ -24150, 0.0f);
+            ResourceArchive.setLoadingStatus(ec.a(BufferedRandomAccessFile.field_j, IntrusiveNode.field_b, tk.field_a, 0), param0 ^ -24150, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -553,7 +553,7 @@ abstract class bi extends GameApplet {
           if (lb.field_C != null) {
             stackIn_143_0 = (!lb.field_C.a(28296)) ? 0 : 1;
             var3Lifetime2 = stackIn_143_0;
-            ResourceArchive.a(lb.field_C.field_g, -24119, lb.field_C.field_b);
+            ResourceArchive.setLoadingStatus(lb.field_C.field_g, -24119, lb.field_C.field_b);
           }
           if (var3Lifetime2 != 0) {
             mc.field_a = 20;
@@ -735,7 +735,7 @@ abstract class bi extends GameApplet {
         if (param0 != 8213) {
           this.field_p = -31;
         }
-        int var2 = ResourceArchive.a(this.field_n, 650, this.field_y, true, mk.e(0), lb.d((byte) -56));
+        int var2 = ResourceArchive.pollLoginHandshake(this.field_n, 650, this.field_y, true, mk.e(0), lb.d((byte) -56));
         if (var2 == -1) {
           return -1;
         }
@@ -820,7 +820,7 @@ abstract class bi extends GameApplet {
               PcmOutputWorker.a(95);
             }
             if (!param0) {
-              var5_intLifetime2 = ResourceArchive.a(this.field_n, 650, this.field_y, false, mk.e(0), lb.d((byte) -56));
+              var5_intLifetime2 = ResourceArchive.pollLoginHandshake(this.field_n, 650, this.field_y, false, mk.e(0), lb.d((byte) -56));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   pc.a((byte) -46, var5_intLifetime2, ImageProducerRasterBuffer.field_n);
@@ -838,7 +838,7 @@ abstract class bi extends GameApplet {
           }
           if (4 == var4) {
             if (mb.field_c) {
-              ResourceArchive.a(ii.a(!param1), true);
+              ResourceArchive.clearSessionAndReloadPage(ii.a(!param1), true);
             } else {
               ha.field_db = true;
               k.field_g = 10;
@@ -857,7 +857,7 @@ abstract class bi extends GameApplet {
             aa.a(-126, ii.a(false));
           }
           if (var4 == 8) {
-            ResourceArchive.a(ii.a(false), true);
+            ResourceArchive.clearSessionAndReloadPage(ii.a(false), true);
           }
           if (var4 == 9) {
             m.a((byte) -79, ii.a(false));

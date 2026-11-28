@@ -1018,7 +1018,7 @@ final class BucketBoard {
             UiComponentPart031.performAction1598((byte) -78);
           }
           MixedSupport079.performAction1002(booleanArgument5, 0, integerArgument6);
-          ResourceArchive.performAction0807(integerArgument3, 0, booleanArgument5);
+          ResourceArchive.pollTextEntryDialog(integerArgument3, 0, booleanArgument5);
           booleanArgument5 = false;
         }
         return booleanArgument5;

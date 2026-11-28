@@ -10,9 +10,9 @@ final class ul extends um {
     static int field_g;
     static vm field_k;
 
-    final f a(boolean param0, int param1, int param2, int param3, ta param4) {
+    final PuzzleTile a(boolean param0, int param1, int param2, int param3, ta param4) {
         RuntimeException var6 = null;
-        jo stackIn_3_0 = null;
+        CrystalTile stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -23,8 +23,8 @@ final class ul extends um {
           }
           this.field_i = this.field_i + 1;
           this.field_h = this.field_h + param3;
-          stackIn_3_0 = new jo(IsaacRandom.field_g, 1);
-          return (f) ((Object) stackIn_3_0);
+          stackIn_3_0 = new CrystalTile(IsaacRandom.field_g, 1);
+          return (PuzzleTile) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -39,7 +39,7 @@ final class ul extends um {
         }
     }
 
-    final static void a(mj param0, boolean param1, f[][] param2, byte param3) {
+    final static void a(LaserTraceCursor param0, boolean param1, PuzzleTile[][] param2, byte param3) {
         int var5 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -51,7 +51,7 @@ final class ul extends um {
         var5 = CrazyCrystals.field_B;
         try {
           while (true) {
-            param0.a(120);
+            param0.advanceOneTile(120);
             if (param2[param0.field_c][param0.field_b].a(false, param2, param0)) {
               param2[param0.field_c][param0.field_b] = param2[param0.field_c][param0.field_b].a(param0, (byte) -119, param1, param2);
               continue;
@@ -61,7 +61,7 @@ final class ul extends um {
           if (param3 >= 18) {
             return;
           }
-          ul.a((mj) null, true, (f[][]) null, (byte) 24);
+          ul.a((LaserTraceCursor) null, true, (PuzzleTile[][]) null, (byte) 24);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

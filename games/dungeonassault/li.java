@@ -90,11 +90,11 @@ final class li {
           if (param0 > -57) {
             field_e = (String) null;
           }
-          if (null == wm.field_c) {
+          if (null == PackedBitSet.field_c) {
             bn.field_f = new RgbSprite(256, 256);
-            wm.field_c = new RgbSprite(316, 316);
-            wm.field_c.field_w = -16;
-            wm.field_c.field_A = -16;
+            PackedBitSet.field_c = new RgbSprite(316, 316);
+            PackedBitSet.field_c.field_w = -16;
+            PackedBitSet.field_c.field_A = -16;
           }
           bn.field_f.e();
           SoftwareRasterizer.clearRaster();
@@ -107,12 +107,12 @@ final class li {
               var1_int++;
             }
           }
-          wm.field_c.e();
+          PackedBitSet.field_c.e();
           SoftwareRasterizer.clearRaster();
           bn.field_f.e(16, 16, 8454143);
-          SoftwareRasterizer.blurRectangle(8, 8, 0, 0, wm.field_c.field_y, wm.field_c.field_v);
+          SoftwareRasterizer.blurRectangle(8, 8, 0, 0, PackedBitSet.field_c.field_y, PackedBitSet.field_c.field_v);
           bn.field_f.e(16, 16, 0);
-          SoftwareRasterizer.blurRectangle(4, 4, 0, 0, wm.field_c.field_y, wm.field_c.field_v);
+          SoftwareRasterizer.blurRectangle(4, 4, 0, 0, PackedBitSet.field_c.field_y, PackedBitSet.field_c.field_v);
           jh.b();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

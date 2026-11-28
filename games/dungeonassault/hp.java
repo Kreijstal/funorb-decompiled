@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hp {
-    static h[] field_b;
+    static RaiderDefinition[] field_b;
     static String field_a;
     static String field_d;
     static cf[] field_c;
@@ -35,7 +35,7 @@ final class hp {
 
     static {
         field_d = "Spy";
-        field_b = new h[35];
+        field_b = new RaiderDefinition[35];
         field_a = "Confirm Email:";
     }
 }

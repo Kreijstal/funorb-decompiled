@@ -12,12 +12,12 @@ final class df {
 
     final static void b(int param0) {
         int var1_int = 0;
-        ai var2 = null;
+        DungeonTileState var2 = null;
         int var3 = 0;
         HuffmanDecoder var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        ai var2Lifetime1;
+        DungeonTileState var2Lifetime1;
         var3 = DungeonAssault.field_K;
         try {
           if (param0 != 16) {

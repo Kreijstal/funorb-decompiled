@@ -23,7 +23,7 @@ final class ac {
     static String field_f;
     int field_g;
     String field_z;
-    static ai field_n;
+    static DungeonTileState field_n;
     eh field_m;
     static CipherPacketBuffer field_B;
     String field_t;
@@ -75,7 +75,7 @@ final class ac {
             throw new RuntimeException((String) null);
           }
           if (param1 != 0) {
-            field_n = (ai) null;
+            field_n = (DungeonTileState) null;
           }
           if (!gm.field_d.field_H) {
             field_B.d((byte) -99, 58);

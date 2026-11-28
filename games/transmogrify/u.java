@@ -96,7 +96,7 @@ final class u {
             field_a = (AudioOutput) null;
           }
           if (param2.ensureIndexLoaded((byte) -125)) {
-            stackIn_6_0 = param1 + " - " + param2.b(-22884) + "%";
+            stackIn_6_0 = param1 + " - " + param2.getArchiveLoadPercent(-22884) + "%";
             return stackIn_6_0;
           }
           stackIn_4_0 = (String) (param0);

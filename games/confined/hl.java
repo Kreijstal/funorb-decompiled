@@ -159,12 +159,12 @@ final class hl implements de {
           this.field_d = param2;
           this.field_c = this.field_d;
           this.field_g = param3;
-          var12 = param0.a((byte) -65, 0);
+          var12 = param0.getFileIds((byte) -65, 0);
           var11 = var12;
           var10 = var11;
           var5 = var10;
           var6 = var12.length;
-          this.field_e = new ma[param0.d(0, (byte) -73)];
+          this.field_e = new ma[param0.getFileCapacity(0, (byte) -73)];
           for (var7 = 0; var7 < var6; var7++) {
             var8 = new PacketBuffer(param0.getFile((byte) -2, 0, var12[var7]));
             this.field_e[var12[var7]] = new ma(var8);

@@ -304,11 +304,11 @@ final class vg extends eh {
         try {
           var8 = param1.field_q;
           var9 = var8;
-          param1.d(-18916);
+          param1.applyTerrainRenderMode(-18916);
           for (var4_int = 0; var4_int < var8.length; var4_int++) {
             var8[var4_int].d(-2).field_q.field_r = 0;
           }
-          var4 = param1.a(-100, true);
+          var4 = param1.getTerrainModel(-100, true);
           this.field_h = new sg(3 + var9.length);
           this.field_h.a(0, var4);
           this.field_h.a(1, tp.field_a);
@@ -316,7 +316,7 @@ final class vg extends eh {
             this.e(19);
           }
           this.field_c = 1;
-          this.field_h.a(var9.length + 2, param1.c(-20561));
+          this.field_h.a(var9.length + 2, param1.getTerrainSkirtModel(-20561));
           for (var5 = 0; var5 < var9.length; var5++) {
             this.field_h.a(2 + var5, var9[var5].d(-2));
             var9[var5].field_c = var5 + 2;
@@ -336,7 +336,7 @@ final class vg extends eh {
             var9[var6].field_h = this.field_h;
             var9[var6].e((byte) -91);
           }
-          this.a(param1.f(50), 18910);
+          this.a(param1.getStartPose(50), 18910);
           this.b(1);
           if (var5Lifetime1 != 0) {
             param1.field_k = this.field_h.a(0);
@@ -488,7 +488,7 @@ final class vg extends eh {
         if (param0 != -27646) {
           return (ResourceArchive) null;
         }
-        return Level.a(false, true, param1, 8505, false, 1);
+        return Level.openIndexedResourceArchive(false, true, param1, 8505, false, 1);
     }
 
     private final void a(double[] param0, int param1) {

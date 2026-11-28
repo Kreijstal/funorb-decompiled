@@ -1104,7 +1104,7 @@ public final class HostileSpawn extends NetworkGameClient {
           MouseInput.b(-31);
           MouseWheelInput.clearStaticReferences((byte) -63);
           SoftwareRasterizer.clearStaticReferences();
-          ResourceArchive.b(-16199);
+          ResourceArchive.clearStaticReferences(-16199);
           gf.clearStaticReferences((byte) -105);
           il.clearStaticReferences(-91);
           PacketBuffer.g(255);
@@ -1877,7 +1877,7 @@ public final class HostileSpawn extends NetworkGameClient {
                       if (IsaacGenerator.field_h.ensureIndexLoaded(-15879) &&
                         IsaacGenerator.field_h.tryLoadAllGroups(0)) {
                         if (null != wd.field_a && (!wd.field_a.ensureIndexLoaded(param0 ^ -15875) ||
-                          !wd.field_a.a(-8088, "basic"))) {
+                          !wd.field_a.tryLoadGroupByName(-8088, "basic"))) {
                           gj.a(param0 ^ 16, s.a(wd.field_a, "basic", 47, cl.field_h, lj.field_r), 40.0f);
                           return false;
                         }
@@ -1889,13 +1889,13 @@ public final class HostileSpawn extends NetworkGameClient {
                             return false;
                           }
                           if (wd.field_a.ensureIndexLoaded(param0 - 15883) &&
-                            wd.field_a.a(-8088, "basicfont12")) {
+                            wd.field_a.tryLoadGroupByName(-8088, "basicfont12")) {
                             if (ResourceArchive.field_a.ensureIndexLoaded(-15879) &&
-                              ResourceArchive.field_a.a(param0 ^ -8084, "basicfont12")) {
+                              ResourceArchive.field_a.tryLoadGroupByName(param0 ^ -8084, "basicfont12")) {
                               if (wd.field_a.ensureIndexLoaded(-15879) &&
-                                wd.field_a.a(param0 - 8092, "kartika13")) {
+                                wd.field_a.tryLoadGroupByName(param0 - 8092, "kartika13")) {
                                 if (ResourceArchive.field_a.ensureIndexLoaded(-15879) &&
-                                  ResourceArchive.field_a.a(-8088, "kartika13")) {
+                                  ResourceArchive.field_a.tryLoadGroupByName(-8088, "kartika13")) {
                                   MouseWheelInput.b((byte) -43);
                                   u.field_e = u.field_e - MidiPcmStream.field_r;
                                   MidiPcmStream.field_r = 0;
@@ -2034,7 +2034,7 @@ public final class HostileSpawn extends NetworkGameClient {
             stackIn_12_0 = false;
             stackIn_12_1 = var2;
             stackIn_15_2 = (ImageProducerRasterBuffer.field_q != null) || (PcmResampler.field_a);
-            ResourceArchive.a(stackIn_12_0, (java.awt.Canvas) (stackIn_12_1), stackIn_15_2);
+            ResourceArchive.drawLoadingFrame(stackIn_12_0, (java.awt.Canvas) (stackIn_12_1), stackIn_15_2);
             return;
           }
           if (!ul.field_N) {

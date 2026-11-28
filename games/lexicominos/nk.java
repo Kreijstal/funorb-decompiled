@@ -267,10 +267,10 @@ abstract class nk extends GameAppletShell {
         if (PacketBuffer.field_i == 2) {
           if (eh.field_d != null &&
             eh.field_d.ensureIndexLoaded(92)) {
-            if (!eh.field_d.a("", (byte) -114)) {
+            if (!eh.field_d.hasGroupName("", (byte) -114)) {
               eh.field_d = null;
             } else {
-              if (eh.field_d.a("", 10762)) {
+              if (eh.field_d.tryLoadGroupByName("", 10762)) {
                 kb.a(-119, eh.field_d);
                 eh.field_d = null;
                 SectorCacheStore.b(5);

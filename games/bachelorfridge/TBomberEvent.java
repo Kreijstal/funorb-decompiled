@@ -48,7 +48,7 @@ final class TBomberEvent extends SpecialEvent {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.creature.a(78, param0);
+          this.creature.resolveCreature(78, param0);
           stackIn_3_1 = !(param0.isTileFree(this.field_q, this.field_t, -11066));
           this.field_p = stackIn_3_1;
           var3_int = -82 % ((param1 - 12) / 35);

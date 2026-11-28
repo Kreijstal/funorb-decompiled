@@ -96,7 +96,7 @@ final class ej extends BoardChange {
           }
           for (var4 = 0; var3.field_b.length > var4; var4++) {
             if (null != var7.field_b[var4]) {
-              var7.field_b[var4].j(-121);
+              var7.field_b[var4].removeDefeatedCreatureFromTile(-121);
               var7.field_b[var4].field_A = false;
             }
           }

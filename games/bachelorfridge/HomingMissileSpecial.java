@@ -161,7 +161,7 @@ final class HomingMissileSpecial extends SpecialOrder {
             stackIn_3_0 = (CreatureEvent) null;
             return stackIn_3_0;
           }
-          var16 = this.creature.a(107, param0);
+          var16 = this.creature.resolveCreature(107, param0);
           var4 = new HomingMissileEvent(this.moveId, new CreatureRef(var16), this.field_k, this.field_n);
           var5 = MassPoisonSpecial.field_q.length - 1;
           for (var6 = -var5; var5 >= var6; var6++) {

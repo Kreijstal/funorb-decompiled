@@ -48,7 +48,7 @@ final class ShuffleSpecial extends SpecialOrder {
         int var10Lifetime1;
         var12 = BachelorFridge.field_y;
         try {
-          var15 = this.creature.a(40, param0);
+          var15 = this.creature.resolveCreature(40, param0);
           var4 = new ShuffleEvent(this.moveId, new CreatureRef(var15));
           var18 = new int[param0.countCreatures((byte) 79)][2];
           var16 = var18;
@@ -126,13 +126,13 @@ final class ShuffleSpecial extends SpecialOrder {
           if (param0.isDown(param1 + 116)) {
             return false;
           }
-          if (param0.a(32, (byte) 60)) {
+          if (param0.hasStatus(32, (byte) 60)) {
             return false;
           }
           if (param1 != -8) {
             return false;
           }
-          if (param2.b(false, param2.tiles[param0.tileX][param0.tileY].terrain) == -1) {
+          if (param2.getFlagTeamFromTerrain(false, param2.tiles[param0.tileX][param0.tileY].terrain) == -1) {
             return true;
           }
           return false;

@@ -200,7 +200,7 @@ final class NanoFrameTimer extends FrameTimer {
               if (ea.field_a != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = ri.a(cf.field_cb, -120, ql.field_A, rn.field_e, wg.field_a);
+              var3_int = ri.a(cf.field_cb, -120, StageDirector.field_A, rn.field_e, wg.field_a);
               var4 = 3 + var3_int;
               la.field_T = new int[var4];
               dl.field_c = new String[var4];
@@ -276,7 +276,7 @@ final class NanoFrameTimer extends FrameTimer {
             dl.field_c[0] = qa.field_d;
             la.field_T[3] = 1;
             uc.field_ab[1] = 2;
-            dl.field_c[2] = hm.field_mb;
+            dl.field_c[2] = LightningArc.field_mb;
             dl.field_c[5] = "";
             dl.field_c[4] = em.field_c;
             dl.field_c[3] = PcmOutputWorker.field_i;
@@ -311,7 +311,7 @@ final class NanoFrameTimer extends FrameTimer {
             stackIn_88_0 = -3;
             stackIn_88_1 = dl.field_c[var4Lifetime1];
             stackIn_89_2 = !(0 > la.field_T[var4Lifetime1]);
-            var5Lifetime1 = cl.a(stackIn_88_0, stackIn_88_1, stackIn_89_2);
+            var5Lifetime1 = PowerUpPickup.a(stackIn_88_0, stackIn_88_1, stackIn_89_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -321,7 +321,7 @@ final class NanoFrameTimer extends FrameTimer {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = cl.a(-3, var11, false);
+              var7Lifetime1 = PowerUpPickup.a(-3, var11, false);
               if (var3_intLifetime1 < var7Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -329,7 +329,7 @@ final class NanoFrameTimer extends FrameTimer {
             var4_ref_String__Lifetime1 = tf.field_d;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = cl.a(-3, var12, false);
+              var7Lifetime1Lifetime1 = PowerUpPickup.a(-3, var12, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -359,7 +359,7 @@ final class NanoFrameTimer extends FrameTimer {
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + wm.field_bb;
             } else {
-              var7Lifetime2 = cl.a(-3, dl.field_c[var4Lifetime3], true);
+              var7Lifetime2 = PowerUpPickup.a(-3, dl.field_c[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + kb.field_b;
               var8Lifetime1 = ef.field_vb - (var7Lifetime2 >> 1);
               tj.field_l[var4Lifetime3] = new int[4];

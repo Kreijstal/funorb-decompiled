@@ -11,7 +11,7 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     abstract byte[] getData(int param0);
 
-    final static void a(int[] param0, jg param1, int param2, boolean param3, boolean param4, int[] param5, boolean param6) {
+    final static void a(int[] param0, ModelMesh param1, int param2, boolean param3, boolean param4, int[] param5, boolean param6) {
         int stackIn_62_0 = 0;
         int stackIn_62_1 = 0;
         RuntimeException stackIn_72_0 = null;
@@ -120,7 +120,7 @@ abstract class ArchiveRequest extends DualLinkNode {
               if (param3) {
                 BoundedRandomAccessFile.field_d[var23] = var27 >> li.field_c;
                 qm.field_q[var23] = var28 >> li.field_c;
-                ff.field_b[var23] = var29;
+                AnimatedResultScene.field_b[var23] = var29;
               }
               var23++;
               continue;

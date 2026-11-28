@@ -199,7 +199,7 @@ abstract class MovementAnimation extends AnimationNode {
         BattleCreature var4;
         int var5;
         var5 = BachelorFridge.field_y;
-        var4 = this.field_p.a(64, this.field_s.field_h);
+        var4 = this.field_p.resolveCreature(64, this.field_s.field_h);
         this.field_s.b(var4, -23990);
         if (param2 != 27230) {
           this.field_n = -76;

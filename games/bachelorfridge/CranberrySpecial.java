@@ -17,8 +17,8 @@ final class CranberrySpecial extends SpecialOrder {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.creature.a(91, param0);
-          var4 = this.field_j.a(param1 ^ 35, param0);
+          var3 = this.creature.resolveCreature(91, param0);
+          var4 = this.field_j.resolveCreature(param1 ^ 35, param0);
           if (var4 != null &&
             !var4.isDown(-127)) {
             var5 = new CranberryEvent(this.moveId, new CreatureRef(var3), this.field_j);

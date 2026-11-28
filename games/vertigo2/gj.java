@@ -146,28 +146,28 @@ final class gj extends TextureOperator {
     final static void a(byte param0, boolean param1, int param2, int param3) {
         int var4;
         int var4Lifetime1;
-        am.field_n = param3;
+        LevelRenderer.field_n = param3;
         vl.field_c = 0;
         ue.field_O = param2;
-        if (al.a(am.field_n, (byte) -94)) {
+        if (al.a(LevelRenderer.field_n, (byte) -94)) {
           var4 = 0;
-          if (am.field_n == 13 ||
-            am.field_n == 19) {
+          if (LevelRenderer.field_n == 13 ||
+            LevelRenderer.field_n == 19) {
             var4 = 1;
           }
-          if (am.field_n != 0 &&
-            am.field_n != 21 &&
-            am.field_n != 1 &&
-            2 != am.field_n &&
-            am.field_n != 22 &&
-            3 != am.field_n &&
-            am.field_n != 4) {
-            var4 = IntrusiveDequeCursor.a((byte) 76, am.field_n) - 1;
+          if (LevelRenderer.field_n != 0 &&
+            LevelRenderer.field_n != 21 &&
+            LevelRenderer.field_n != 1 &&
+            2 != LevelRenderer.field_n &&
+            LevelRenderer.field_n != 22 &&
+            3 != LevelRenderer.field_n &&
+            LevelRenderer.field_n != 4) {
+            var4 = IntrusiveDequeCursor.a((byte) 76, LevelRenderer.field_n) - 1;
           }
-          if (am.field_n == 7) {
+          if (LevelRenderer.field_n == 7) {
             var4 = 1;
           }
-          fh.field_y[am.field_n].a(-121, param1, var4);
+          fh.field_y[LevelRenderer.field_n].a(-121, param1, var4);
         }
         var4Lifetime1 = 72 % ((-10 - param0) / 41);
     }
@@ -254,7 +254,7 @@ final class gj extends TextureOperator {
             kk.field_f.field_db = 0;
             var7 = kk.field_f;
             var7.field_Fb = 0;
-            if (!cn.b(false)) {
+            if (!LevelCamera.isLocalPlayerLobbyHost(false)) {
               var9_ref_String = gd.field_j.field_Nb;
               ud.field_x.field_S = Vertigo2.a(new String[]{var9_ref_String}, ie.field_Rb, 20).toUpperCase();
               kk.field_f.a(88, lb.field_c.field_Fb, 40, -40 + lb.field_c.field_db, 0);
@@ -590,7 +590,7 @@ final class gj extends TextureOperator {
                     var14 = Vertigo2.a(new String[]{(String) (var11)}, eg.field_q, -123);
                   }
                 } else {
-                  var13_ref = rn.field_y;
+                  var13_ref = MovingLevelTile.field_y;
                   if (var12 == 0) {
                     var14 = Vertigo2.a(new String[]{(String) (var11)}, fa.field_t, 14);
                     if (var19 != 0) {

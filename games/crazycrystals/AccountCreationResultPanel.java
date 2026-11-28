@@ -55,7 +55,7 @@ final class AccountCreationResultPanel extends na implements vd {
         int var3 = CrazyCrystals.field_B;
         try {
           uh.field_n = false;
-          r.field_m = true;
+          LevelLostScene.field_m = true;
           go.field_i = false;
           q.field_a = new vh[3];
           for (var1_int = 0; var1_int < 3; var1_int++) {
@@ -77,7 +77,7 @@ final class AccountCreationResultPanel extends na implements vd {
           sb.field_F = b.field_a;
           fl.field_g = fp.field_a;
           int var2 = 110 % ((param0 - 27) / 50);
-          sm.field_e = we.field_h;
+          sm.field_e = LevelProgressUpdate.field_h;
           ll.a(-84, true, true);
           NetworkArchiveRequest.field_y = 0;
           ue.field_c = true;

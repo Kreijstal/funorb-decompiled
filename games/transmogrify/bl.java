@@ -87,7 +87,7 @@ final class bl {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1 == this.field_f.a(117)) {
+          if (1 == this.field_f.getGroupCapacity(117)) {
             stackIn_2_0 = this.b(param1, 0, param2, 79289964);
             return stackIn_2_0;
           }
@@ -95,7 +95,7 @@ final class bl {
             stackIn_5_0 = (PcmSample) null;
             return stackIn_5_0;
           }
-          if (this.field_f.a(param1, (byte) 121) != 1) {
+          if (this.field_f.getFileCapacity(param1, (byte) 121) != 1) {
             throw new RuntimeException();
           }
           stackIn_8_0 = this.b(0, param1, param2, 79289964);
@@ -128,11 +128,11 @@ final class bl {
             stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
           }
-          if (this.field_c.a(param2 ^ 112) == 1) {
+          if (this.field_c.getGroupCapacity(param2 ^ 112) == 1) {
             stackIn_5_0 = this.a(-94, param1, param0, 0);
             return stackIn_5_0;
           }
-          if (this.field_c.a(param1, (byte) 101) != 1) {
+          if (this.field_c.getFileCapacity(param1, (byte) 101) != 1) {
             throw new RuntimeException();
           }
           stackIn_9_0 = this.a(-48, 0, param0, param1);

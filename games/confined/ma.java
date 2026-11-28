@@ -48,7 +48,7 @@ final class ma extends IntrusiveNode {
         int var13Lifetime1;
         int var4Lifetime1;
         for (var4 = 0; var4 < this.field_p.length; var4++) {
-          if (!param2.a(this.field_p[var4], (byte) -37)) {
+          if (!param2.tryLoadFlatFile(this.field_p[var4], (byte) -37)) {
             return false;
           }
         }

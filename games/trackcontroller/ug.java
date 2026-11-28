@@ -76,7 +76,7 @@ class ug extends ii {
             stackIn_5_0 = (String) (param0);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param3 + " - " + param1.a(true) + "%";
+          stackIn_7_0 = param3 + " - " + param1.getArchiveLoadPercent(true) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

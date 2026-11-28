@@ -540,8 +540,8 @@ abstract class SessionGameApplet extends GameApplet {
         if (2 == bi.field_L) {
           if (null != hg.field_a &&
             hg.field_a.ensureIndexLoaded((byte) -117)) {
-            if (hg.field_a.b((byte) -120, "")) {
-              if (hg.field_a.a((byte) 117, "")) {
+            if (hg.field_a.hasGroupName((byte) -120, "")) {
+              if (hg.field_a.tryLoadGroupByName((byte) 117, "")) {
                 ContextualRuntimeException.a(7, hg.field_a);
                 hg.field_a = null;
                 el.b(-6491);

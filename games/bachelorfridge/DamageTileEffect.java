@@ -114,7 +114,7 @@ final class DamageTileEffect extends EventEffect {
           if (var4 == null) {
             return;
           }
-          if (!var6.b((byte) -113)) {
+          if (!var6.hasDurability((byte) -113)) {
             return;
           }
           if (param0 != null) {

@@ -36,7 +36,7 @@ final class se {
         }
     }
 
-    final static void a(vg param0, boolean param1, double[] param2, boolean param3, double param4, double param5, dj param6) {
+    final static void a(TunnelCamera param0, boolean param1, double[] param2, boolean param3, double param4, double param5, PlayerShip param6) {
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
@@ -84,7 +84,7 @@ final class se {
           if (var28 >= 0.15) {
             var30 = 5120 + (int)(var24 / var28 * 10240.0);
             var31 = 3008 + (int)(10240.0 * (var26 / var28));
-            var17 = (int)qn.field_v.a((double)var17 * (-(var22 / param5) + 1.0), 0, var13);
+            var17 = (int)qn.field_v.attenuateBrightnessToDepth((double)var17 * (-(var22 / param5) + 1.0), 0, var13);
             var32 = (int)(0.2 / var28 * 10240.0);
             var33 = var17 >> 10;
             if (127 < var33) {

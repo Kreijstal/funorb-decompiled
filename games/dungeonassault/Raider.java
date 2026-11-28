@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Raider {
-    h field_n;
+    RaiderDefinition field_n;
     int field_c;
     int field_p;
     static String field_l;
     static int[] field_m;
-    wb[] field_i;
+    StatusEffectIndicator[] field_i;
     int field_o;
-    wd field_b;
+    SpriteAnimationPlayer field_b;
     int field_j;
     int field_e;
     int field_k;
@@ -29,7 +29,7 @@ final class Raider {
         field_m = null;
     }
 
-    final static int[] a(byte param0, int param1) {
+    final static int[] buildGridPathFromParents(byte param0, int param1) {
         int dupTemp$0 = 0;
         int var5 = DungeonAssault.field_K;
         if (param0 != -111) {
@@ -55,7 +55,7 @@ final class Raider {
         return var4;
     }
 
-    final void a(boolean param0) {
+    final void markDead(boolean param0) {
         this.field_o = this.field_o & -3;
         this.field_p = 255;
         this.field_o = this.field_o | 4;
@@ -64,7 +64,7 @@ final class Raider {
         }
     }
 
-    final static void a(int param0, PacketBuffer param1, PlatformTaskDispatcher param2, int param3) {
+    final static void queueReflectionCheck(int param0, PacketBuffer param1, PlatformTaskDispatcher param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -108,7 +108,7 @@ final class Raider {
             var18.field_k = new byte[var18.field_q][][];
             var18.field_s = new PlatformTask[var18.field_q];
             if (param0 != -5) {
-              Raider.a((byte) -84, 16);
+              Raider.buildGridPathFromParents((byte) -84, 16);
             }
             var18.field_r = new int[var18.field_q];
             var18.field_n = new int[var18.field_q];
@@ -285,7 +285,7 @@ final class Raider {
         return (byte) var2;
     }
 
-    final void a(int param0) {
+    final void markIncapacitated(int param0) {
         this.field_o = this.field_o | 2;
         this.field_p = param0;
     }

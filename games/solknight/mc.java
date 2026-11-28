@@ -20,20 +20,20 @@ final class mc {
         if (!MusicPatchPcmStream.field_o.ensureIndexLoaded((byte) -121)) {
           return IsaacRandom.field_e;
         }
-        if (!MusicPatchPcmStream.field_o.a(2, "commonui")) {
+        if (!MusicPatchPcmStream.field_o.tryLoadGroupByName(2, "commonui")) {
           return vb.field_i + " - " + MusicPatchPcmStream.field_o.getGroupLoadPercentByName(-1, "commonui") + "%";
         }
         if (!DelegatingCanvas.field_c.ensureIndexLoaded((byte) -121)) {
           return ri.field_d;
         }
-        if (!DelegatingCanvas.field_c.a(2, "commonui")) {
+        if (!DelegatingCanvas.field_c.tryLoadGroupByName(2, "commonui")) {
           return qb.field_bb + " - " + DelegatingCanvas.field_c.getGroupLoadPercentByName(-1, "commonui") + "%";
         }
         if (!AccountCreationResultPanel.field_ub.ensureIndexLoaded((byte) -121)) {
           return bg.field_t;
         }
         if (!AccountCreationResultPanel.field_ub.tryLoadAllGroups(true)) {
-          return li.field_j + " - " + AccountCreationResultPanel.field_ub.b((byte) -66) + "%";
+          return li.field_j + " - " + AccountCreationResultPanel.field_ub.getArchiveLoadPercent((byte) -66) + "%";
         }
         return qf.field_g;
     }

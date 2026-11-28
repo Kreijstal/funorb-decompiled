@@ -77,13 +77,13 @@ final class ra {
           if (!IntrusiveDeque.field_a.ensureIndexLoaded(param0 - 7958)) {
             return 20;
           }
-          if (!IntrusiveDeque.field_a.b(param0 + 4, "commonui")) {
+          if (!IntrusiveDeque.field_a.tryLoadGroupByName(param0 + 4, "commonui")) {
             return 40;
           }
           if (!gf.field_p.ensureIndexLoaded(-7957)) {
             return 50;
           }
-          if (!gf.field_p.b(param0 ^ 4, "commonui")) {
+          if (!gf.field_p.tryLoadGroupByName(param0 ^ 4, "commonui")) {
             return 60;
           }
           if (!FrameTimer.field_b.ensureIndexLoaded(-7957)) {
@@ -97,23 +97,23 @@ final class ra {
             if (!rj.field_f.ensureIndexLoaded(-7957)) {
               return 14;
             }
-            if (!rj.field_f.a((byte) -39, "")) {
+            if (!rj.field_f.hasGroupName((byte) -39, "")) {
               return 29;
             }
-            if (!rj.field_f.b(param0 + 4, "")) {
+            if (!rj.field_f.tryLoadGroupByName(param0 + 4, "")) {
               return 29;
             }
           }
           if (!IntrusiveDeque.field_a.ensureIndexLoaded(-7957)) {
             return 43;
           }
-          if (!IntrusiveDeque.field_a.b(param0 ^ 4, "commonui")) {
+          if (!IntrusiveDeque.field_a.tryLoadGroupByName(param0 ^ 4, "commonui")) {
             return 57;
           }
           if (!gf.field_p.ensureIndexLoaded(param0 - 7958)) {
             return 71;
           }
-          if (!gf.field_p.b(5, "commonui")) {
+          if (!gf.field_p.tryLoadGroupByName(5, "commonui")) {
             return 80;
           }
           if (!FrameTimer.field_b.ensureIndexLoaded(-7957)) {

@@ -19,7 +19,7 @@ final class dl {
           if (param0 <= 71) {
             dl.a(-15, -114);
           }
-          var4 = param2.a(-6635, param1);
+          var4 = param2.getFlatFile(-6635, param1);
           var3 = var4;
           if (var4 == null) {
             return null;

@@ -98,7 +98,7 @@ final class SnowEvent extends SpecialEvent {
         try {
           int var3_int = 22 / ((param1 - 12) / 35);
           this.a(param0, (byte) -2);
-          param0.a(0, this.field_r, this.field_s, true, this.d(1), 27);
+          param0.applyTerrainToTileMask(0, this.field_r, this.field_s, true, this.d(1), 27);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ak.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

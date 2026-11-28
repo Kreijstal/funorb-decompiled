@@ -219,7 +219,7 @@ final class mg extends WidgetWrapper {
             stackIn_12_0 = (qn.field_q) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
-            if (cn.b(false)) {
+            if (LevelCamera.isLocalPlayerLobbyHost(false)) {
               stackIn_8_0 = (!param3.field_kc) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
@@ -247,7 +247,7 @@ final class mg extends WidgetWrapper {
               stackIn_30_0.field_V = stackIn_31_1;
             }
             if (field_S[0][2].field_G) {
-              if (cn.b(false)) {
+              if (LevelCamera.isLocalPlayerLobbyHost(false)) {
                 ko.field_S = qn.field_z;
               } else {
                 ko.field_S = Vertigo2.a(new String[]{gd.field_j.field_Nb}, e.field_e, 77);

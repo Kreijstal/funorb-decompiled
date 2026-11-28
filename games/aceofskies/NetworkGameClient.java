@@ -515,9 +515,9 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (SectorCacheStore.field_c == 2) {
           if (ij.field_h != null &&
             ij.field_h.ensureIndexLoaded((byte) 104)) {
-            if (!ij.field_h.a("", 116)) {
+            if (!ij.field_h.hasGroupName("", 116)) {
               ij.field_h = null;
-            } else if (ij.field_h.c("", -14012)) {
+            } else if (ij.field_h.tryLoadGroupByName("", -14012)) {
               ub.a((byte) -125, ij.field_h);
               ij.field_h = null;
               te.resetFrameTiming(62);

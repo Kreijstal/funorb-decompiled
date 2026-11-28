@@ -49,7 +49,7 @@ final class FloodSpecial extends SpecialOrder {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.creature.a(46, param0);
+          var3 = this.creature.resolveCreature(46, param0);
           var4 = new FloodEvent(this.moveId, new CreatureRef(var3));
           if (param1 != 3) {
             field_p = false;

@@ -10,7 +10,7 @@ final class qn extends IntrusiveNode {
     int field_s;
     static int field_n;
     static int field_r;
-    static hn field_v;
+    static GameSession field_v;
     String[][] field_u;
     static String field_x;
     static String field_m;

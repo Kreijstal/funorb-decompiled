@@ -27,7 +27,7 @@ final class ra extends AnimationNode {
     ra(BattleScreen param0, ew param1) {
         try {
           this.field_o = param0;
-          this.field_n = param1.creature.a(-27449, this.field_o);
+          this.field_n = param1.creature.resolveCreatureView(-27449, this.field_o);
           this.field_q = new ActorAnimation(this.field_o, this.field_n);
           this.addChild(27799, this.field_q);
           this.field_n.a(16761024, 65, ShuffleSpecial.field_q);

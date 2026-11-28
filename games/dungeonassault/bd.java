@@ -4,12 +4,12 @@
 final class bd extends en {
     static RgbSprite field_g;
     static int field_f;
-    private ai field_d;
+    private DungeonTileState field_d;
     private ac field_h;
     static String[] field_e;
 
     private final RgbSprite a(boolean param0, int param1) {
-        wb[] stackIn_3_0 = null;
+        StatusEffectIndicator[] stackIn_3_0 = null;
         boolean stackIn_9_0 = false;
         int stackIn_13_0 = 0;
         int stackIn_15_1 = 0;
@@ -18,7 +18,7 @@ final class bd extends en {
         int var5;
         int var6;
         int var7;
-        wb[] var8;
+        StatusEffectIndicator[] var8;
         int var9;
         RgbSprite var10;
         int var12;
@@ -28,8 +28,8 @@ final class bd extends en {
         int var17;
         String[] var18;
         String var19;
-        wb[] var20;
-        wb var21;
+        StatusEffectIndicator[] var20;
+        StatusEffectIndicator var21;
         int var9Lifetime1;
         int var12Lifetime1;
         var15 = DungeonAssault.field_K;
@@ -181,7 +181,7 @@ final class bd extends en {
         RgbSprite var3 = null;
         try {
           if (param0 != 0) {
-            this.field_d = (ai) null;
+            this.field_d = (DungeonTileState) null;
           }
           var3 = this.a(true, -40 + param1.field_b);
           param1.a(var3, 8 + var3.field_v, false, 111, -la.field_b.field_H + param1.field_y >> 1);
@@ -198,7 +198,7 @@ final class bd extends en {
         }
     }
 
-    bd(CombatState param0, ai param1) {
+    bd(CombatState param0, DungeonTileState param1) {
         try {
           this.field_d = param1;
           this.field_h = this.field_d.field_h;

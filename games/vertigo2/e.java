@@ -110,14 +110,14 @@ final class e {
             }
           }
           var8 = (String) null;
-          ir.a((String) null, lj.field_p, var5, 0, 0);
+          ir.a((String) null, MatchSession.field_p, var5, 0, 0);
           ha.field_a = dj.field_d;
           gj.field_z = ui.field_b;
-          dj.field_d.field_B = ((np.field_Ib.field_B & 16711422) >> 1) + lj.field_p - (8355711 & lj.field_p >> 1);
-          dj.field_d.field_H = -((16711423 & lj.field_p) >> 1) + lj.field_p + ((16711422 & np.field_Ib.field_H) >> 1);
-          dj.field_d.field_K = lj.field_p - (((16711422 & lj.field_p) >> 1) - (np.field_Ib.field_K >> 1 & 8355711));
+          dj.field_d.field_B = ((np.field_Ib.field_B & 16711422) >> 1) + MatchSession.field_p - (8355711 & MatchSession.field_p >> 1);
+          dj.field_d.field_H = -((16711423 & MatchSession.field_p) >> 1) + MatchSession.field_p + ((16711422 & np.field_Ib.field_H) >> 1);
+          dj.field_d.field_K = MatchSession.field_p - (((16711422 & MatchSession.field_p) >> 1) - (np.field_Ib.field_K >> 1 & 8355711));
           gk.field_c = new UiPanel(0L, param1);
-          hb.field_j = new UiPanel(0L, param2);
+          PlayerAvatarRenderer.field_j = new UiPanel(0L, param2);
           lm.field_F = new UiPanel(0L, (UiPanel) null);
           if (param0 != 12899) {
             var7 = (UiPanel) null;
@@ -131,7 +131,7 @@ final class e {
           gg.field_o.b(ui.field_b, 125);
           kk.field_a = new UiPanel(0L, np.field_Ib, AccountCreationResultPanel.field_rb);
           oa.field_s = new UiPanel(0L, np.field_Ib);
-          gk.field_c.b(hb.field_j, 127);
+          gk.field_c.b(PlayerAvatarRenderer.field_j, 127);
           gk.field_c.b(lm.field_F, 123);
           lm.field_F.b(gg.field_o, param0 ^ 12824);
           lm.field_F.b(kk.field_a, param0 - 12774);

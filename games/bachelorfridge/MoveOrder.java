@@ -37,10 +37,10 @@ final class MoveOrder extends CreatureOrder {
         BattleCreature var10 = null;
         BattleCreature var11 = null;
         try {
-          var10 = this.creature.a(42, param1);
+          var10 = this.creature.resolveCreature(42, param1);
           var11 = var10;
           var4 = param1.tiles[var10.tileX][var10.tileY];
-          var5 = var11.a(51, (byte) -87) ? 1 : 0;
+          var5 = var11.hasStatus(51, (byte) -87) ? 1 : 0;
           var7 = 62 / ((param0 + 27) / 32);
           stackIn_3_0 = (var4.terrain != 27) ? 0 : 1;
           var6 = stackIn_3_0;
@@ -78,7 +78,7 @@ final class MoveOrder extends CreatureOrder {
               var9 = 1;
             }
           }
-          stackIn_34_0 = param1.a(var9, var11, this.field_i, -1);
+          stackIn_34_0 = param1.getDirectionalMoveDistance(var9, var11, this.field_i, -1);
           return stackIn_34_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -208,7 +208,7 @@ final class MoveOrder extends CreatureOrder {
         BattleCreature var13 = null;
         var10 = BachelorFridge.field_y;
         try {
-          var12 = this.creature.a(32, param0);
+          var12 = this.creature.resolveCreature(32, param0);
           var13 = var12;
           if (8 == var13.statusId) {
             stackIn_3_0 = this.b(25683, 0, true);

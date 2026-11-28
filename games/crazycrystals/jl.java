@@ -67,30 +67,30 @@ final class jl {
           for (var9 = 0; 4 > var9; var9++) {
             var8[var9] = sl.field_s.nextInt();
           }
-          if (null == ek.field_e ||
-            !(ek.field_e.payload.length >= var7_int)) {
-            ek.field_e = new PacketBuffer(var7_int);
+          if (null == LevelCompleteEntrancePhase.field_e ||
+            !(LevelCompleteEntrancePhase.field_e.payload.length >= var7_int)) {
+            LevelCompleteEntrancePhase.field_e = new PacketBuffer(var7_int);
           }
-          ek.field_e.position = 0;
-          ek.field_e.writeBytes(param0, param4, 97, param2);
-          ek.field_e.padZerosTo((byte) 105, var7_int);
-          ek.field_e.encryptXtea(-268435456, var13);
-          if (ek.field_g == null ||
-            !(ek.field_g.payload.length >= 100)) {
-            ek.field_g = new PacketBuffer(100);
+          LevelCompleteEntrancePhase.field_e.position = 0;
+          LevelCompleteEntrancePhase.field_e.writeBytes(param0, param4, 97, param2);
+          LevelCompleteEntrancePhase.field_e.padZerosTo((byte) 105, var7_int);
+          LevelCompleteEntrancePhase.field_e.encryptXtea(-268435456, var13);
+          if (LevelCompleteEntrancePhase.field_g == null ||
+            !(LevelCompleteEntrancePhase.field_g.payload.length >= 100)) {
+            LevelCompleteEntrancePhase.field_g = new PacketBuffer(100);
           }
-          ek.field_g.position = 0;
-          ek.field_g.writeByte(true, 10);
+          LevelCompleteEntrancePhase.field_g.position = 0;
+          LevelCompleteEntrancePhase.field_g.writeByte(true, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            ek.field_g.writeInt(var13[var11], -16384);
+            LevelCompleteEntrancePhase.field_g.writeInt(var13[var11], -16384);
             var11++;
           }
-          ek.field_g.writeShort(-161478600, param4);
-          ek.field_g.applyRsa(param5, param6 - 4, param3);
-          param1.writeBytes(0, ek.field_g.position, 90, ek.field_g.payload);
-          param1.writeBytes(0, ek.field_e.position, 112, ek.field_e.payload);
+          LevelCompleteEntrancePhase.field_g.writeShort(-161478600, param4);
+          LevelCompleteEntrancePhase.field_g.applyRsa(param5, param6 - 4, param3);
+          param1.writeBytes(0, LevelCompleteEntrancePhase.field_g.position, 90, LevelCompleteEntrancePhase.field_g.payload);
+          param1.writeBytes(0, LevelCompleteEntrancePhase.field_e.position, 112, LevelCompleteEntrancePhase.field_e.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

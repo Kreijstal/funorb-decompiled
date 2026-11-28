@@ -36,7 +36,7 @@ final class SauceOfFlameSpecial extends SpecialOrder {
         int[][] var22 = null;
         var17 = BachelorFridge.field_y;
         try {
-          var18 = this.creature.a(25, param0);
+          var18 = this.creature.resolveCreature(25, param0);
           var4 = new SauceOfFlameEvent(this.moveId, new CreatureRef(var18));
           var4.field_q = this.field_n;
           var4.field_s = this.field_k;

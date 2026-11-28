@@ -28,7 +28,7 @@ final class hl extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1 = cn.a((byte) -126, "", '_', param1);
+          param1 = LevelCamera.replaceCharacterInString((byte) -126, "", '_', param1);
           var4 = 127 / ((-8 - param0) / 36);
           var3 = mq.a(param2, false);
           stackIn_5_0 = (-1 != param1.indexOf(param2)) || (param1.indexOf(var3) != -1);

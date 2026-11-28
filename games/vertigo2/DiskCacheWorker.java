@@ -180,7 +180,7 @@ final class DiskCacheWorker implements Runnable {
           if (lc.field_b == 9 &&
             jq.field_e == 0) {
             lc.field_b = 5;
-            gj.a((byte) -123, false, am.field_n, 5);
+            gj.a((byte) -123, false, LevelRenderer.field_n, 5);
           }
         }
     }
@@ -188,7 +188,7 @@ final class DiskCacheWorker implements Runnable {
     final static void a(PcmStreamMixer param0, int param1, int param2, Archive param3) {
         try {
           sq.field_e = param2 * IterableNodeHashTable.b(true) / 1000;
-          hi.a(param3, 56);
+          BlastDebrisModel.preloadLogoVorbisAudio(param3, 56);
           jl.a(param3, (byte) -85);
           ao.a(param1 - 1513236, param3);
           uc.a((byte) 73);

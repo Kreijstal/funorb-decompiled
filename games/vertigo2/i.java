@@ -13,7 +13,7 @@ final class i {
     int field_h;
 
     final static i a(Archive param0, int param1) {
-        byte[] var2 = param0.a(true, param1);
+        byte[] var2 = param0.getFlatFile(true, param1);
         if (var2 == null) {
           return null;
         }

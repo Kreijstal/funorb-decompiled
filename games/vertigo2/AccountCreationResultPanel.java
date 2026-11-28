@@ -162,7 +162,7 @@ final class AccountCreationResultPanel extends fj implements ij {
               var5.a(vi.field_x, (uf) (this), -116);
             }
             if (param0.statusCode == 3) {
-              var5.a(hb.field_o, 7, -33);
+              var5.a(PlayerAvatarRenderer.field_o, 7, -33);
             } else {
               if (param0.statusCode != 6) {
                 this.a(false, var5);

@@ -10,7 +10,7 @@ final class pea extends EventEffect {
     final void apply(BattleCreature param0, BattleState param1, int param2) {
         Object var4 = null;
         if (null != this.target) {
-          var4 = this.target.a(116, param1);
+          var4 = this.target.resolveCreature(116, param1);
         }
         if (var4 == null) {
           var4 = param1.getCreatureAt(this.field_j, this.field_i, 112);

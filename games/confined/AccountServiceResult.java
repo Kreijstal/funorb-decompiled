@@ -72,7 +72,7 @@ final class AccountServiceResult {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 < -80) {
-            stackIn_4_0 = ah.computeCrc32(param1, 0, param0, (byte) -124);
+            stackIn_4_0 = AcceleratingProjectile.computeCrc32(param1, 0, param0, (byte) -124);
             return stackIn_4_0;
           }
           stackIn_2_0 = 80;

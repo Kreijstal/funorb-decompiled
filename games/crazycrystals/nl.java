@@ -25,9 +25,9 @@ final class nl extends fb {
           if (this.field_i < 48) {
             if (24 == param1 &&
               24 == param2) {
-              vj.field_a[4 + (1 ^ this.field_j)][this.field_i % 12].b(param5, -param2 + param6, 2 * param1, 3 * param2, ek.field_f[this.field_a.field_u]);
+              vj.field_a[4 + (1 ^ this.field_j)][this.field_i % 12].b(param5, -param2 + param6, 2 * param1, 3 * param2, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
             } else {
-              vj.field_a[4 + (this.field_j ^ 1)][this.field_i % 12].c(param5, param6 - param2, ek.field_f[this.field_a.field_u]);
+              vj.field_a[4 + (this.field_j ^ 1)][this.field_i % 12].c(param5, param6 - param2, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
             }
           } else {
             var8 = (72 - this.field_i) * param1 / 24;
@@ -54,7 +54,7 @@ final class nl extends fb {
             if (var14 == null) {
               return;
             }
-            vj.field_a[(1 ^ this.field_j) + 4][this.field_i % 12].b(var9, var11, var8 * 2, 3 * var10, ek.field_f[this.field_a.field_u]);
+            vj.field_a[(1 ^ this.field_j) + 4][this.field_i % 12].b(var9, var11, var8 * 2, 3 * var10, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
             var14.a((byte) -99);
             if (param4) {
               for (var15 = param2 + param6; var15 < param6 + 2 * param2; var15++) {
@@ -65,9 +65,9 @@ final class nl extends fb {
         } else {
           if (param1 == 24 &&
             param2 == 24) {
-            vj.field_a[4 + this.field_j][0].c(param5, param6 - param2, ek.field_f[this.field_a.field_u]);
+            vj.field_a[4 + this.field_j][0].c(param5, param6 - param2, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
           } else {
-            vj.field_a[4 + this.field_j][0].b(param5, -param2 + param6, 2 * param1, param2 * 3, ek.field_f[this.field_a.field_u]);
+            vj.field_a[4 + this.field_j][0].b(param5, -param2 + param6, 2 * param1, param2 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
           }
         }
         if (param3 > -59) {
@@ -99,9 +99,9 @@ final class nl extends fb {
         return null;
     }
 
-    nl(fq param0, f[][] param1) {
+    nl(fq param0, PuzzleTile[][] param1) {
         super(param0);
-        f var3 = null;
+        PuzzleTile var3 = null;
         this.field_i = 0;
         try {
           var3 = param0.field_l;

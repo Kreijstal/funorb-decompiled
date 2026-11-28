@@ -22,11 +22,11 @@ final class uk extends nf {
         return (pb) ((Object) new mn());
     }
 
-    final f a(boolean param0, int param1, int param2, int param3, ta param4) {
+    final PuzzleTile a(boolean param0, int param1, int param2, int param3, ta param4) {
         RuntimeException var6 = null;
-        f stackIn_2_0 = null;
+        PuzzleTile stackIn_2_0 = null;
         int stackIn_6_0 = 0;
-        f stackIn_7_0 = null;
+        PuzzleTile stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -34,7 +34,7 @@ final class uk extends nf {
         try {
           this.field_k = this.field_k + param3;
           if (param0) {
-            stackIn_2_0 = (f) null;
+            stackIn_2_0 = (PuzzleTile) null;
             return stackIn_2_0;
           }
           this.field_h = this.field_h + 1;
@@ -95,7 +95,7 @@ final class uk extends nf {
                   ol.field_z[1] = b.a(oe.a(param0, -9762), (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle1p.ccl", ""))), ro.field_r);
                   ol.field_z[2] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle2p.ccl", ""))), GameCanvas.field_e);
                   ol.field_z[3] = b.a(param0 + 9762, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "puzzle3p.ccl", ""))), qg.field_c);
-                  ol.field_z[4] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "arcade1p.ccl", ""))), kk.field_k);
+                  ol.field_z[4] = b.a(0, (InputStream) ((Object) new ByteArrayInputStream(mg.field_g.getFileByNameWithKeys(false, var7, "arcade1p.ccl", ""))), FloatingScoreLabel.field_k);
                   pd.field_f = null;
                   mg.field_g = null;
                   vp.a(105);

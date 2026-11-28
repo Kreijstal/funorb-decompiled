@@ -46,8 +46,8 @@ final class HomingMissileAnimation extends EventAnimation {
             return false;
           }
           if (75 == this.field_l) {
-            var3 = this.field_C.creature.a(-27449, this.screen);
-            var3.field_s.j(-105);
+            var3 = this.field_C.creature.resolveCreatureView(-27449, this.screen);
+            var3.field_s.removeDefeatedCreatureFromTile(-105);
             var3.field_s.field_A = false;
             var3.field_j = 0;
           }
@@ -100,7 +100,7 @@ final class HomingMissileAnimation extends EventAnimation {
         var16 = this.screen.field_h;
         var4 = var16.width;
         var5 = var16.height;
-        var6 = this.field_C.creature.a(-27449, this.screen);
+        var6 = this.field_C.creature.resolveCreatureView(-27449, this.screen);
         var7 = sj.field_l[param1];
         var8 = MassPoisonSpecial.field_q.length + param0;
         for (var9 = -var8; var8 >= var9; var9++) {
@@ -155,7 +155,7 @@ final class HomingMissileAnimation extends EventAnimation {
         int var9 = BachelorFridge.field_y;
         if (fn.field_m == this.field_z) {
           var2 = this.field_l;
-          var3_ref_ad = this.field_C.creature.a(-27449, this.screen);
+          var3_ref_ad = this.field_C.creature.resolveCreatureView(-27449, this.screen);
           var4 = this.screen.field_s.a(var3_ref_ad.field_s.tileY, (byte) 33, var3_ref_ad.field_s.tileX);
           var5 = (-var2 + 150) * ((150 - var2) * 400) / 22500;
           SoftwareRasterizer.saveClip(fr.field_p);
@@ -196,7 +196,7 @@ final class HomingMissileAnimation extends EventAnimation {
           this.field_z = li.field_l;
           this.field_B = de.field_F.toRgbSprite();
           this.field_l = 150;
-          var3 = this.field_C.creature.a(34, this.screen.field_h);
+          var3 = this.field_C.creature.resolveCreature(34, this.screen.field_h);
           this.field_A = new dda(this.screen, var3.tileX, var3.tileY);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "aka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -205,11 +205,11 @@ final class cf {
             var5 = (int[]) null;
             this.a((int[]) null, -91, -63);
           }
-          if (this.field_h.b(param0 - 16288) == 1) {
+          if (this.field_h.getGroupCapacity(param0 - 16288) == 1) {
             stackIn_5_0 = this.a(param1, 0, param2, -106);
             return stackIn_5_0;
           }
-          if (this.field_h.a(param1, (byte) 127) != 1) {
+          if (this.field_h.getFileCapacity(param1, (byte) 127) != 1) {
             throw new RuntimeException();
           }
           stackIn_8_0 = this.a(0, param1, param2, -93);
@@ -248,11 +248,11 @@ final class cf {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_d.b(-16032) == 1) {
+          if (this.field_d.getGroupCapacity(-16032) == 1) {
             stackIn_3_0 = this.b(0, -609592560, param0, param1);
             return stackIn_3_0;
           }
-          if (this.field_d.a(param1, (byte) 127) != param2) {
+          if (this.field_d.getFileCapacity(param1, (byte) 127) != param2) {
             throw new RuntimeException();
           }
           stackIn_7_0 = this.b(param1, -609592560, param0, 0);

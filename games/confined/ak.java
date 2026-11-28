@@ -154,7 +154,7 @@ final class ak extends ga implements el {
         }
     }
 
-    final static void a(double param0, double[] param1, dj param2, int param3, oi param4, PrimaryNodeDeque param5) {
+    final static void a(double param0, double[] param1, PlayerShip param2, int param3, DynamicLight param4, PrimaryNodeDeque param5) {
         double var7_double = 0.0;
         double var9 = 0.0;
         double var11 = 0.0;
@@ -162,7 +162,7 @@ final class ak extends ga implements el {
         try {
           if (param3 != 4825) {
             PrimaryNodeDeque var15 = (PrimaryNodeDeque) null;
-            ak.a(1.1248923326487368, (double[]) null, (dj) null, -35, (oi) null, (PrimaryNodeDeque) null);
+            ak.a(1.1248923326487368, (double[]) null, (PlayerShip) null, -35, (DynamicLight) null, (PrimaryNodeDeque) null);
           }
           var7_double = param2.field_E + param2.field_C * param1[9];
           var9 = param2.field_C * param1[10] + param2.field_t;

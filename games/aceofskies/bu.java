@@ -8,14 +8,14 @@ final class bu {
         String stackIn_27_2 = null;
         try {
           if (param2.ensureIndexLoaded((byte) 102) &&
-            param2.c("commonui", -14012)) {
+            param2.tryLoadGroupByName("commonui", -14012)) {
             if (param3) {
               return true;
             }
             if (param0.ensureIndexLoaded((byte) -81) &&
-              param0.c("commonui", -14012)) {
+              param0.tryLoadGroupByName("commonui", -14012)) {
               if (param1.ensureIndexLoaded((byte) -91) &&
-                param1.c("button.gif", -14012)) {
+                param1.tryLoadGroupByName("button.gif", -14012)) {
                 return true;
               }
               return false;

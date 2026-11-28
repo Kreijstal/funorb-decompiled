@@ -44,7 +44,7 @@ final class qo extends el {
     final fb a(int param0) {
         fb discarded$0 = super.a(-103);
         int var2 = 14 % ((param0 - 36) / 62);
-        if (this.field_a.field_B < fg.field_j[this.field_a.field_w] << uc.field_c[this.field_a.field_w]) {
+        if (this.field_a.field_B < fg.field_j[this.field_a.field_w] << MenuOverlay.field_c[this.field_a.field_w]) {
           this.field_j.field_E = this.field_j.field_E + 1;
           return (fb) (this);
         }

@@ -69,8 +69,8 @@ final class b {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        f[][] var12 = null;
-        f var13 = null;
+        PuzzleTile[][] var12 = null;
+        PuzzleTile var13 = null;
         int var14 = 0;
         int var16 = 0;
         DataInputStream var17 = null;
@@ -90,15 +90,15 @@ final class b {
             var9 = var17.readUnsignedByte();
             var10 = var17.readInt();
             var11 = var17.readInt();
-            var12 = new f[var11 + 2][2 + var10];
-            var13 = ff.a(0, 0, 1, var4, var17);
+            var12 = new PuzzleTile[var11 + 2][2 + var10];
+            var13 = AnimatedResultScene.decodePuzzleTile(0, 0, 1, var4, var17);
             for (var14 = 0; var14 < 2 + var10; var14++) {
               var12[0][var14] = var13;
             }
             for (var14Lifetime1 = 1; 1 + var11 > var14Lifetime1; var14Lifetime1++) {
               var12[var14Lifetime1][0] = var13;
               for (var15 = 1; var10 + 1 > var15; var15++) {
-                var12[var14Lifetime1][var15] = ff.a(var4, var15, oe.a(param0, 1), var14Lifetime1, var17);
+                var12[var14Lifetime1][var15] = AnimatedResultScene.decodePuzzleTile(var4, var15, oe.a(param0, 1), var14Lifetime1, var17);
               }
               var12[var14Lifetime1][var10 + 1] = var13;
             }

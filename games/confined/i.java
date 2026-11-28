@@ -53,7 +53,7 @@ abstract class i extends GameAppletShell {
         if (param0 != -215) {
           this.l(63);
         }
-        var2 = oi.a(true, this.field_v, wi.c(38), this.field_t, mc.a(param0 ^ -199), (byte) -91);
+        var2 = DynamicLight.a(true, this.field_v, wi.c(38), this.field_t, mc.a(param0 ^ -199), (byte) -91);
         if (var2 == -1) {
           return -1;
         }
@@ -70,7 +70,7 @@ abstract class i extends GameAppletShell {
         }
         if (IntrusiveNode.field_e == 11 &&
           ch.field_c == 0) {
-          h.m(-31574);
+          WingPod.m(-31574);
         }
         return var2;
     }
@@ -95,7 +95,7 @@ abstract class i extends GameAppletShell {
               if (IntrusiveNode.field_e == 0) {
                 discarded$5 = this.a(false, false, (byte) -106);
               } else {
-                ca.a(il.field_cb, -1856653215);
+                ca.a(ExpandingPulseProjectile.field_cb, -1856653215);
               }
             } else {
               fa.g(0);
@@ -144,7 +144,7 @@ abstract class i extends GameAppletShell {
           ei.n(15102);
         }
         if (null != jc.field_c) {
-          il.field_cb = jc.field_c.pollRotation(8);
+          ExpandingPulseProjectile.field_cb = jc.field_c.pollRotation(8);
         }
         if (ProxyAuthenticationRequiredException.a(117)) {
           var3 = 1200 * KeyboardInput.a(12398);
@@ -164,12 +164,12 @@ abstract class i extends GameAppletShell {
           ch.field_c == 0) {
           stackIn_25_0 = (-1 != ch.field_c) ? 0 : 1;
           var3Lifetime1 = stackIn_25_0;
-          ch.field_c = hn.g(18042);
+          ch.field_c = GameSession.pollLobbyConnection(18042);
           if (var3Lifetime1 != 0 &&
             ch.field_c == 0 &&
             IntrusiveNode.field_e == 11 &&
             !rj.b(28404)) {
-            h.m(-31574);
+            WingPod.m(-31574);
           }
           if (ch.field_c != -1 &&
             ch.field_c != 0) {
@@ -245,15 +245,15 @@ abstract class i extends GameAppletShell {
           }
           wc.field_Wb = gi.a(gd.field_n, false, true, 1, true);
           field_r = gi.a(wg.field_e, false, true, 1, true);
-          tf.field_k = gi.a(lc.field_z, false, true, 1, true);
+          tf.field_k = gi.a(TunnelMesh.field_z, false, true, 1, true);
           we.field_c = 2;
           pb.field_e = wc.field_Wb;
         }
         if (we.field_c == 2) {
           if (null != IntrusiveNodeHashTableIterator.field_f &&
             IntrusiveNodeHashTableIterator.field_f.ensureIndexLoaded(0)) {
-            if (IntrusiveNodeHashTableIterator.field_f.b("", -4308)) {
-              if (IntrusiveNodeHashTableIterator.field_f.a("", 0)) {
+            if (IntrusiveNodeHashTableIterator.field_f.hasGroupName("", -4308)) {
+              if (IntrusiveNodeHashTableIterator.field_f.tryLoadGroupByName("", 0)) {
                 wb.a(param0 ^ 104, IntrusiveNodeHashTableIterator.field_f);
                 IntrusiveNodeHashTableIterator.field_f = null;
                 am.g(-4258);
@@ -285,11 +285,11 @@ abstract class i extends GameAppletShell {
           if (AccountRequestState.field_g) {
             bd.a(param0 ^ 1849965388);
           }
-          if (vg.field_G == null) {
-            vg.field_G = n.a(21146);
+          if (TunnelCamera.field_G == null) {
+            TunnelCamera.field_G = n.a(21146);
             la.field_O = hd.a(58);
           }
-          og.a((byte) 122, tf.field_k, vg.field_G, la.field_O);
+          og.a((byte) 122, tf.field_k, TunnelCamera.field_G, la.field_O);
           tf.field_k = null;
           field_r = null;
           wc.field_Wb = null;
@@ -396,7 +396,7 @@ abstract class i extends GameAppletShell {
                       sf.c(-52);
                       break regionExit1;
                     default:
-                      mb.a("MGS1: " + ui.a(10), true, (Throwable) null);
+                      ShockwaveBlast.a("MGS1: " + ui.a(10), true, (Throwable) null);
                       dc.d(124);
                       break regionExit1;
                   }
@@ -404,7 +404,7 @@ abstract class i extends GameAppletShell {
                 stackIn_28_0 = 1;
                 stackIn_29_1 = (var2 == 12);
                 var3 = vm.a(stackIn_28_0, stackIn_29_1);
-                vg.a(false, var3);
+                TunnelCamera.addChatMessageIfNew(false, var3);
                 break;
               case 8:
                 b.a(ki.field_d, -85, e.field_c, ai.field_i);
@@ -422,7 +422,7 @@ abstract class i extends GameAppletShell {
           }
           return;
         }
-        mb.a("MGS2: " + ui.a(10), true, (Throwable) null);
+        ShockwaveBlast.a("MGS2: " + ui.a(10), true, (Throwable) null);
         dc.d(118);
     }
 
@@ -500,7 +500,7 @@ abstract class i extends GameAppletShell {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            mb.a((String) null, true, (Throwable) ((Object) var6_ref));
+            ShockwaveBlast.a((String) null, true, (Throwable) ((Object) var6_ref));
             this.a("crash", false);
           }
           return;
@@ -558,10 +558,10 @@ abstract class i extends GameAppletShell {
         fd.a(30177, hc.field_m);
         tl.a(this.field_C, this.field_y, 5000, hc.field_m, param0 + 9718, this.field_x, ki.field_d, this.field_n, param4, this.field_s, this.field_A, this.field_B, param1, 5000);
         ng.a(this.field_A, this.field_n, 24774, this.field_B, hc.field_m, this.field_C, ki.field_d, this.field_y, param1);
-        kh.h(-66);
+        ProjectileRay.h(-66);
         jc.field_c = ba.createMouseWheelInput((byte) 110);
         ac.a(fb.field_b, (byte) -118);
-        lc.field_z = param7;
+        TunnelMesh.field_z = param7;
         gd.field_n = param6;
         si.field_h = param5;
         wg.field_e = param3;
@@ -746,7 +746,7 @@ abstract class i extends GameAppletShell {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Confined.field_J ? 1 : 0;
-          var4 = cc.a(param1, (byte) -111, hc.field_m, il.field_cb);
+          var4 = cc.a(param1, (byte) -111, hc.field_m, ExpandingPulseProjectile.field_cb);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -757,7 +757,7 @@ abstract class i extends GameAppletShell {
               gl.field_k = null;
               sc.field_g = null;
             }
-            var11 = dj.i((byte) 118);
+            var11 = PlayerShip.consumeLoginResponseFlag((byte) 118);
             if (var11 != null) {
               qj.a(-72, var11.booleanValue());
             }
@@ -777,14 +777,14 @@ abstract class i extends GameAppletShell {
               a.a((byte) -26);
             }
             if (!param0) {
-              var5_intLifetime2 = oi.a(false, this.field_v, wi.c(-123), this.field_t, mc.a(16), (byte) -89);
+              var5_intLifetime2 = DynamicLight.a(false, this.field_v, wi.c(-123), this.field_t, mc.a(16), (byte) -89);
               if (-1 != var5_intLifetime2) {
                 if (var5_intLifetime2 != 0) {
                   fh.a(var5_intLifetime2, (byte) -1, gl.field_k);
                   gl.field_k = null;
                 } else {
-                  field_p = vb.field_d;
-                  h.m(-31574);
+                  field_p = DequeCursor.field_d;
+                  WingPod.m(-31574);
                   fd.field_j = false;
                   IntrusiveNode.field_e = 10;
                 }
@@ -840,7 +840,7 @@ abstract class i extends GameAppletShell {
                   var9 = (String) null;
                   tk.a(13, (String) null);
                 } else {
-                  var7 = kh.decodeCp1252String(var12.payload, var12.position, 0, 0);
+                  var7 = ProjectileRay.decodeCp1252String(var12.payload, var12.position, 0, 0);
                   tk.a(13, var7);
                 }
                 cg.field_e = null;
@@ -848,7 +848,7 @@ abstract class i extends GameAppletShell {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              mb.a("S1", true, (Throwable) ((Object) var5));
+              ShockwaveBlast.a("S1", true, (Throwable) ((Object) var5));
               var10 = (String) null;
               tk.a(13, (String) null);
               cg.field_e = null;

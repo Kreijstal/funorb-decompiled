@@ -78,9 +78,9 @@ final class AccountNameAvailabilityValidator extends se {
         }
     }
 
-    final static void a(int param0, int param1, int param2, f[][] param3) {
+    final static void a(int param0, int param1, int param2, PuzzleTile[][] param3) {
         try {
-          ja.a(param0, param3, param2, false, 1);
+          LevelCompleteScene.updateSpecialTileNeighbors(param0, param3, param2, false, 1);
           if (param1 != -8383) {
             AccountNameAvailabilityValidator.e((byte) -125);
           }
@@ -150,7 +150,7 @@ final class AccountNameAvailabilityValidator extends se {
           return;
         }
         fq.a(-32, ph.field_E);
-        ph.field_E.exitFullscreen(te.field_a, (byte) -92);
+        ph.field_E.exitFullscreen(ResultScene.field_a, (byte) -92);
         ph.field_E = null;
         if (ne.field_f != null) {
           ne.field_f.a((byte) 96);

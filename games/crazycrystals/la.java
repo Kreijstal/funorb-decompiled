@@ -67,10 +67,10 @@ final class la {
         try {
           if (null != oj.field_H &&
             oj.field_H.ensureIndexLoaded((byte) 102) &&
-            oj.field_H.a(-20402, "benefits") &&
+            oj.field_H.tryLoadGroupByName(-20402, "benefits") &&
             MusicPatchPcmStream.field_m != null &&
             MusicPatchPcmStream.field_m.ensureIndexLoaded((byte) 102) &&
-            MusicPatchPcmStream.field_m.a(-20402, "benefits")) {
+            MusicPatchPcmStream.field_m.tryLoadGroupByName(-20402, "benefits")) {
             so.field_d = ArchiveRequest.a("headline", oj.field_H, 10, "benefits");
             uh.field_q = ArchiveRequest.a("blurbpane", oj.field_H, 10, "benefits");
             ad.field_h = ArchiveRequest.a("button", oj.field_H, 10, "benefits");
@@ -251,7 +251,7 @@ final class la {
             stackIn_51_0 = 40;
             stackIn_51_1 = 40;
             stackIn_51_2 = 2047;
-            stackIn_51_3 = hl.field_g;
+            stackIn_51_3 = LevelLostEntrancePhase.field_g;
             if (AwtRasterBuffer.field_f.field_c != 0) {
               stackIn_52_4 = 3;
             } else {
@@ -291,7 +291,7 @@ final class la {
             bf.field_a.a(586, var1_int);
             if (var1_int < IsaacRandom.field_h &&
               qk.field_H.field_u + var1_int > IsaacRandom.field_h) {
-              var2Lifetime5 = 40 + (40 * ProxyAuthenticationRequiredException.a(2047, hl.field_g << 4) >> 16);
+              var2Lifetime5 = 40 + (40 * ProxyAuthenticationRequiredException.a(2047, LevelLostEntrancePhase.field_g << 4) >> 16);
               if (var2Lifetime5 <= 0) {
                 rh.a(false);
                 NetworkArchiveRequest.field_v[ue.field_a].a(269, 340);

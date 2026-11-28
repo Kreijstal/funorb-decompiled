@@ -86,7 +86,7 @@ abstract class FrameTimer {
         }
     }
 
-    final static int a(int param0, h param1) {
+    final static int a(int param0, RaiderDefinition param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -119,7 +119,7 @@ abstract class FrameTimer {
 
     final static void a(int[] param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         try {
-          hp.field_b[param4] = new h(param4, param1, param7, param5, param2, param6, param9, param8, param10, param0);
+          hp.field_b[param4] = new RaiderDefinition(param4, param1, param7, param5, param2, param6, param9, param8, param10, param0);
           if (param3 != 33) {
             String var12 = (String) null;
             FrameTimer.a(86, 102, (String[]) null, (String) null);

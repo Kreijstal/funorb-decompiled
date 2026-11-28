@@ -463,7 +463,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mu_lobby_location", false);
                 if (var2 != null) {
-                  ho.field_i = in.a(0, var2);
+                  BlastDebrisBatch.field_i = in.a(0, var2);
                 }
                 var2 = tk.a("mu_gamelist_all_games", false);
                 if (null != var2) {
@@ -507,7 +507,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mu_options_whocanjoin", false);
                 if (null != var2) {
-                  wo.field_b = in.a(0, var2);
+                  PlayerState.field_b = in.a(0, var2);
                 }
                 var2 = tk.a("mu_options_players", false);
                 if (null != var2) {
@@ -703,7 +703,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("find_opponent_singular", false);
                 if (var2 != null) {
-                  lj.field_o = in.a(0, var2);
+                  MatchSession.field_o = in.a(0, var2);
                 }
                 var2 = tk.a("find_opponents_plural", false);
                 if (null != var2) {
@@ -719,7 +719,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("waiting_to_start_hint", false);
                 if (null != var2) {
-                  lj.field_A = in.a(param0 + 0, var2);
+                  MatchSession.field_A = in.a(param0 + 0, var2);
                 }
                 var2 = tk.a("your_game", false);
                 if (null != var2) {
@@ -775,7 +775,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("kick", false);
                 if (null != var2) {
-                  bh.field_F = in.a(0, var2);
+                  LevelSimulation.field_F = in.a(0, var2);
                 }
                 var2 = tk.a("inviting_x", false);
                 if (null != var2) {
@@ -1083,7 +1083,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("gameopt_unselectedoptions", false);
                 if (var2 != null) {
-                  rn.field_y = in.a(0, var2);
+                  MovingLevelTile.field_y = in.a(0, var2);
                 }
                 var2 = tk.a("gameopt_pleaseselectoption1", false);
                 if (var2 != null) {
@@ -1233,7 +1233,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("pleasetryagain", false);
                 if (var2 != null) {
-                  am.field_m = in.a(param0 ^ 0, var2);
+                  LevelRenderer.field_m = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("pleasereenterpass", false);
                 if (var2 != null) {
@@ -1249,7 +1249,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("toserverlist", false);
                 if (var2 != null) {
-                  hb.field_o = in.a(0, var2);
+                  PlayerAvatarRenderer.field_o = in.a(0, var2);
                 }
                 var2 = tk.a("tocustomersupport", false);
                 if (null != var2) {
@@ -1673,7 +1673,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("create_u13terms", false);
                 if (null != var2) {
-                  hi.field_n = in.a(0, var2);
+                  BlastDebrisModel.field_n = in.a(0, var2);
                 }
                 var2 = tk.a("login_username_email", false);
                 if (null != var2) {
@@ -1725,11 +1725,11 @@ final class wc extends da {
                 }
                 var2 = tk.a("create_displayname_tooltip", false);
                 if (null != var2) {
-                  ho.field_d = in.a(0, var2);
+                  BlastDebrisBatch.field_d = in.a(0, var2);
                 }
                 var2 = tk.a("create_displayname_hint", false);
                 if (null != var2) {
-                  jg.field_m = in.a(0, var2);
+                  LevelTile.field_m = in.a(0, var2);
                 }
                 var2 = tk.a("create_password_tooltip", false);
                 if (null != var2) {
@@ -2551,15 +2551,15 @@ final class wc extends da {
                 }
                 var2 = tk.a("mp_acceptrematch_unrated", false);
                 if (null != var2) {
-                  bh.field_H = in.a(0, var2);
+                  LevelSimulation.field_H = in.a(0, var2);
                 }
                 var2 = tk.a("mp_cancelrematch", false);
                 if (var2 != null) {
-                  ho.field_a = in.a(0, var2);
+                  BlastDebrisBatch.field_a = in.a(0, var2);
                 }
                 var2 = tk.a("mp_cancelrematch_unrated", false);
                 if (null != var2) {
-                  hi.field_p = in.a(0, var2);
+                  BlastDebrisModel.field_p = in.a(0, var2);
                 }
                 var2 = tk.a("mp_rematchnewgame", false);
                 if (null != var2) {
@@ -2854,7 +2854,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("fs_accept_beforeaccept", false);
                 if (var2 != null) {
-                  am.field_e = in.a(param0 ^ 0, var2);
+                  LevelRenderer.field_e = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("fs_button_accept", false);
                 if (var2 != null) {

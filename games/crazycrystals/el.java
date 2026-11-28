@@ -11,14 +11,14 @@ class el extends fb {
           el.clearStaticReferences(126);
         }
         if (param1 != 24) {
-          this.field_a.h(-80).b(param5, -param2 + param6, param1 * 2, param2 * 3, ek.field_f[this.field_a.field_u]);
+          this.field_a.h(-80).b(param5, -param2 + param6, param1 * 2, param2 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
           return;
         }
         if (param2 == 24) {
-          this.field_a.h(-121).c(param5, -param2 + param6, ek.field_f[this.field_a.field_u]);
+          this.field_a.h(-121).c(param5, -param2 + param6, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
           return;
         }
-        this.field_a.h(-80).b(param5, -param2 + param6, param1 * 2, param2 * 3, ek.field_f[this.field_a.field_u]);
+        this.field_a.h(-80).b(param5, -param2 + param6, param1 * 2, param2 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
     }
 
     el(fq param0, int param1) {

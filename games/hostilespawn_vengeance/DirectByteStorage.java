@@ -34,7 +34,7 @@ final class DirectByteStorage extends ByteStorage {
             return stackIn_3_0;
           }
           var4_int = 12 / ((3 - param3) / 60);
-          stackIn_5_0 = param0 + " - " + param1.c(0) + "%";
+          stackIn_5_0 = param0 + " - " + param1.getArchiveLoadPercent(0) + "%";
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

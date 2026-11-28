@@ -139,13 +139,13 @@ final class fda extends EventEffect {
     }
 
     final void apply(BattleCreature param0, BattleState param1, int param2) {
-        BattleCreature var4 = this.target.a(103, param1);
+        BattleCreature var4 = this.target.resolveCreature(103, param1);
         if (var4 == null) {
           return;
         }
         try {
           var4.field_A = false;
-          var4.j(param2 ^ -98);
+          var4.removeDefeatedCreatureFromTile(param2 ^ -98);
           if (param2 != 12) {
             field_l = (ResourceArchive) null;
           }

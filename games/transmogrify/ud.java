@@ -19,16 +19,16 @@ final class ud {
           if (!param2.ensureIndexLoaded((byte) -119)) {
             return false;
           }
-          if (!param2.a((byte) 120, "commonui")) {
+          if (!param2.tryLoadGroupByName((byte) 120, "commonui")) {
             return false;
           }
           if (param3.ensureIndexLoaded((byte) -117) &&
-            param3.a((byte) -79, "commonui")) {
+            param3.tryLoadGroupByName((byte) -79, "commonui")) {
             if (!param1) {
               field_a = false;
             }
             if (param0.ensureIndexLoaded((byte) -118) &&
-              param0.a((byte) 127, "button.gif")) {
+              param0.tryLoadGroupByName((byte) 127, "button.gif")) {
               return true;
             }
             return false;

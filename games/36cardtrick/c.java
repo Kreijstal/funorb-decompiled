@@ -3538,8 +3538,8 @@ abstract class c extends GameApplet {
           if (g.field_A == 2) {
             if (null != lb.field_a &&
               lb.field_a.ensureIndexLoaded(4)) {
-              if (lb.field_a.c(0, "")) {
-                if (lb.field_a.b(4, "")) {
+              if (lb.field_a.hasGroupName(0, "")) {
+                if (lb.field_a.tryLoadGroupByName(4, "")) {
                   c.a(-106, lb.field_a);
                   lb.field_a = null;
                   AccountNameAvailabilityValidator.b((byte) -40);

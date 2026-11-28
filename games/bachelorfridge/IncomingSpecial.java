@@ -35,7 +35,7 @@ final class IncomingSpecial extends SpecialOrder {
         int var5Lifetime1;
         var16 = BachelorFridge.field_y;
         try {
-          var17 = this.creature.a(18, param0);
+          var17 = this.creature.resolveCreature(18, param0);
           var4 = this.field_k;
           var5 = this.field_n;
           var4Lifetime1 = -2 + this.field_k + DiveBomberAnimation.a(5, param0.field_w, -2147483648);

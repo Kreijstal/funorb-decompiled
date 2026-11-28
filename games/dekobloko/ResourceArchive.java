@@ -79,7 +79,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean computeBoolean0813(String stringArgument1, boolean booleanArgument2, String stringArgument3) {
+    final boolean tryLoadFileByName(String stringArgument1, boolean booleanArgument2, String stringArgument3) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -130,7 +130,7 @@ final class ResourceArchive {
         }
     }
 
-    final int computeInteger0818(int integerArgument1, int integerArgument2) {
+    final int getFileCapacity(int integerArgument1, int integerArgument2) {
         if (integerArgument1 != -5228) {
           return -48;
         }
@@ -148,7 +148,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean computeBoolean0811(String stringArgument1, byte byteArgument2) {
+    final boolean tryLoadGroupByName(String stringArgument1, byte byteArgument2) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -182,7 +182,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean computeBoolean0812(String stringArgument1, int integerArgument2) {
+    final boolean hasGroupName(String stringArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         CharSequence charSequenceLocal3 = null;
@@ -472,7 +472,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int computeInteger0816(byte byteArgument1) {
+    final synchronized int getArchiveLoadPercent(byte byteArgument1) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -594,7 +594,7 @@ final class ResourceArchive {
         return this.getFileWithKeys(integerArgument1, (int[]) null, integerArgument3, (byte) -33);
     }
 
-    final static String[] computeStringArray0801(char characterArgument1, byte byteArgument2, String stringArgument3) {
+    final static String[] splitOnCharacter(char characterArgument1, byte byteArgument2, String stringArgument3) {
         int integerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int integerLocal3 = 0;
@@ -665,7 +665,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final static void performAction0807(int integerArgument1, int integerArgument2, boolean booleanArgument3) {
+    final static void pollTextEntryDialog(int integerArgument1, int integerArgument2, boolean booleanArgument3) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         if (null != MixedSupport097.sceneWidgetPart007State0001) {
@@ -726,7 +726,7 @@ final class ResourceArchive {
         }
     }
 
-    final static void performAction0820(int integerArgument1, int integerArgument2) {
+    final static void writeTwoByteCommand(int integerArgument1, int integerArgument2) {
         CipherPacketBuffer cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
         cipherPacketBufferLocal1.performAction1641(integerArgument1, integerArgument2 ^ -3);
         cipherPacketBufferLocal1.writeByte(true, integerArgument2);

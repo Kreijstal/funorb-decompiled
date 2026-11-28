@@ -36,14 +36,14 @@ final class ir {
           if (!param2.ensureIndexLoaded(0)) {
             return false;
           }
-          if (!param2.c("commonui", 0)) {
+          if (!param2.tryLoadGroupByName("commonui", 0)) {
             return false;
           }
           if (param1.ensureIndexLoaded(0) &&
-            param1.c("commonui", 0)) {
+            param1.tryLoadGroupByName("commonui", 0)) {
             var4_int = -20 % ((param0 - 12) / 63);
             if (param3.ensureIndexLoaded(0) &&
-              param3.c("button.gif", 0)) {
+              param3.tryLoadGroupByName("button.gif", 0)) {
               return true;
             }
             return false;

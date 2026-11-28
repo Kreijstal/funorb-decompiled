@@ -83,13 +83,13 @@ final class qh {
             } else {
               la.field_f = false;
               param2 = 4;
-              o.field_n.a(6, -64);
+              o.field_n.setBit(6, -64);
             }
             lk.field_S = lk.field_S + 1;
           } else {
             if (param2 != 8) {
               if (param2 == 11 &&
-                o.field_n.a(11, (byte) 127)) {
+                o.field_n.isBitSet(11, (byte) 127)) {
                 ba.a(param1, (byte) 52, 12);
                 return;
               }
@@ -97,15 +97,15 @@ final class qh {
               if (la.field_f) {
                 la.field_f = false;
                 param2 = 5;
-                o.field_n.a(8, -69);
+                o.field_n.setBit(8, -69);
               }
             }
           }
           if (param0 != -13716) {
             qh.clearStaticReferences((byte) -92);
           }
-          if (!o.field_n.a(param2, (byte) 71)) {
-            o.field_n.a(param2, param0 ^ 13772);
+          if (!o.field_n.isBitSet(param2, (byte) 71)) {
+            o.field_n.setBit(param2, param0 ^ 13772);
             ba.a(param1, (byte) 90, param2);
           }
           return;
@@ -168,7 +168,7 @@ final class qh {
             var6.h(245, 199);
           }
           if (wf.field_x < am.field_g) {
-            var7Lifetime2 = of.field_q[ai.field_n];
+            var7Lifetime2 = of.field_q[DungeonTileState.field_n];
             if (var7Lifetime2 != null) {
               var2_int = wf.field_x * (var7Lifetime2.field_E + 60) / am.field_g;
               var3 = -30 + var2_int;

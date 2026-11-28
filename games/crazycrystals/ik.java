@@ -77,7 +77,7 @@ abstract class ik {
         if (param0 >= -59) {
           this.a(false, -29, -81);
         }
-        stackIn_8_0 = (this.field_a <= to.field_a) && (to.field_a < this.field_b + this.field_a) && (dp.field_h >= this.field_d) && (this.field_d + this.field_c > dp.field_h);
+        stackIn_8_0 = (this.field_a <= to.field_a) && (to.field_a < this.field_b + this.field_a) && (ProfileDataRequest.field_h >= this.field_d) && (this.field_d + this.field_c > ProfileDataRequest.field_h);
         return stackIn_8_0;
     }
 

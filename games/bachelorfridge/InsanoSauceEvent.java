@@ -226,7 +226,7 @@ final class InsanoSauceEvent extends SpecialEvent {
         RuntimeException var3_ref = null;
         var7 = BachelorFridge.field_y;
         try {
-          var3 = this.creature.a(8, param0);
+          var3 = this.creature.resolveCreature(8, param0);
           var5 = 0 / ((12 - param1) / 35);
           var4 = 0;
           var6 = (EventEffect) (this.effects.beginForward((byte) 90));

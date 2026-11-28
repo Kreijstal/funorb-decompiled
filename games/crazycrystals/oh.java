@@ -5,7 +5,7 @@ abstract class oh extends pb {
     static qk field_d;
     static int field_e;
 
-    abstract f a(boolean param0, int param1, int param2, int param3, ta param4);
+    abstract PuzzleTile a(boolean param0, int param1, int param2, int param3, ta param4);
 
     oh() {
     }
@@ -55,7 +55,7 @@ abstract class oh extends pb {
         if (Character.isISOControl(param0)) {
           return false;
         }
-        if (ja.a(param0, (byte) 15)) {
+        if (LevelCompleteScene.isAsciiAlphanumeric(param0, (byte) 15)) {
           return true;
         }
         if (param0 == 45) {
@@ -130,7 +130,7 @@ abstract class oh extends pb {
           if (param1 != 23041505) {
             field_d = (qk) null;
           }
-          kk.field_a[param2.field_g][var4_int] = this.a(false, param0, param2.field_f, (18 + var4_int * 16384) / 37, param2);
+          FloatingScoreLabel.field_a[param2.field_g][var4_int] = this.a(false, param0, param2.field_f, (18 + var4_int * 16384) / 37, param2);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "oh.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

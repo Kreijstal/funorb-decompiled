@@ -234,7 +234,7 @@ final class ne extends WidgetContainer implements nc, ij {
         UiWidget var2 = new UiWidget(km.field_v, var1, (uf) null);
         this.field_L = new d(bm.field_y, (uf) null);
         this.field_M = new d(mp.field_c, (uf) null);
-        this.field_H.field_q = ho.field_d;
+        this.field_H.field_q = BlastDebrisBatch.field_d;
         this.field_H.a(true, new AccountNameAvailabilityValidator(this.field_H));
         this.field_L.field_F = false;
         this.field_L.listener = (WidgetListener) ((Object) new vo());
@@ -246,7 +246,7 @@ final class ne extends WidgetContainer implements nc, ij {
         var2.setBounds(false, 20, var3, 50, 270);
         var3 += 50;
         this.c((byte) -117, var2);
-        var3 = var3 + (this.a(GameShell.field_q, jg.field_m, this.field_H, 170, var3, false) + 5);
+        var3 = var3 + (this.a(GameShell.field_q, LevelTile.field_m, this.field_H, 170, var3, false) + 5);
         this.field_L.setBounds(false, -var5 + 496 >> 1, var3, 40, var5);
         this.field_M.setBounds(false, 3 + var4, var3 + 15, 40, 60);
         this.field_M.field_v = (uf) (this);

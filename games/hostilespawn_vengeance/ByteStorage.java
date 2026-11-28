@@ -216,7 +216,7 @@ abstract class ByteStorage {
                         break regionExit1;
                     }
                   }
-                  ResourceArchive.a(var3, (byte) 81, var8_ref_p, var2);
+                  ResourceArchive.drawRotatedEntityEffect(var3, (byte) 81, var8_ref_p, var2);
                 } else {
                   wi.a(var8_ref_p, var2, (byte) -87, var3);
                 }

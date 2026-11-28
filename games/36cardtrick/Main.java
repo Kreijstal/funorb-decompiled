@@ -1568,7 +1568,7 @@ public final class Main extends c {
           SectorCacheStore.a(true);
           if (null == BufferedSocket.field_c[0]) {
             if (hf.field_H.ensureIndexLoaded(4) &&
-              hf.field_H.b(4, "basic")) {
+              hf.field_H.tryLoadGroupByName(4, "basic")) {
               if (sh.field_g.ensureIndexLoaded(4) &&
                 sh.field_g.tryLoadAllGroups((byte) 46)) {
                 if (id.field_a.ensureIndexLoaded(4) &&

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cf extends hf {
-    private oi field_eb;
+final class cf extends HomingProjectile {
+    private DynamicLight field_eb;
     static String field_db;
     private int field_hb;
     static int field_ib;
@@ -22,7 +22,7 @@ final class cf extends hf {
         field_cb = null;
     }
 
-    final void a(PrimaryNodeDeque param0, byte param1) {
+    final void collectEntityLights(PrimaryNodeDeque param0, byte param1) {
         try {
           this.field_eb.field_o = this.field_t;
           this.field_eb.field_p = this.field_D;
@@ -35,15 +35,15 @@ final class cf extends hf {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void updateForTunnelSegment(int param0, int param1) {
         this.field_bb = this.field_E;
         this.field_hb = this.field_hb + 1;
         this.field_fb = this.field_D;
         if (param0 != 11878) {
           PrimaryNodeDeque var4 = (PrimaryNodeDeque) null;
-          this.a((PrimaryNodeDeque) null, (byte) -102);
+          this.collectEntityLights((PrimaryNodeDeque) null, (byte) -102);
           this.field_ab = this.field_t;
-          super.a(param0 + 0, param1);
+          super.updateForTunnelSegment(param0 + 0, param1);
           if (this.field_D >= this.field_A.field_x.field_r[this.field_A.field_x.field_a - 1]) {
             this.field_z = true;
             this.field_s = 2;
@@ -52,7 +52,7 @@ final class cf extends hf {
           return;
         }
         this.field_ab = this.field_t;
-        super.a(param0 + 0, param1);
+        super.updateForTunnelSegment(param0 + 0, param1);
         if (!(this.field_D >= this.field_A.field_x.field_r[this.field_A.field_x.field_a - 1])) {
           return;
         }
@@ -60,7 +60,7 @@ final class cf extends hf {
         this.field_s = 2;
     }
 
-    cf(hn param0, ee param1, double[] param2, double[] param3, double param4, double param5, boolean param6, boolean param7, boolean param8) {
+    cf(GameSession param0, MovingTunnelEntity param1, double[] param2, double[] param3, double param4, double param5, boolean param6, boolean param7, boolean param8) {
         super(param0, param1.field_E, param1.field_t, param1.field_D, 0.9, 0.003, param1, 0.75, 0.01);
         double dupTemp$0 = 0.0;
         double dupTemp$1 = 0.0;
@@ -69,7 +69,7 @@ final class cf extends hf {
         if (!param7) {
         }
         this.field_hb = 0;
-        this.field_eb = new oi((pm) (this));
+        this.field_eb = new DynamicLight((TunnelEntity) (this));
         try {
           this.field_gb = param8 ? true : false;
           dupTemp$0 = this.field_E + (param3[1] * param2[6] + param2[3] * param3[0] + param3[2] * param2[9]);
@@ -102,15 +102,15 @@ final class cf extends hf {
         }
     }
 
-    final void g(int param0) {
+    final void handleDestruction(int param0) {
         this.field_C = !this.field_gb ? 0.1 : 0.2;
         if (param0 == 26402) {
-          this.a((byte) -95, !this.field_gb ? og.field_f : vb.field_f, 3.0);
+          this.a((byte) -95, !this.field_gb ? og.field_f : DequeCursor.field_f, 3.0);
           return;
         }
     }
 
-    final void b(ee param0, int param1) {
+    final void b(MovingTunnelEntity param0, int param1) {
         double var3_double = 0.0;
         RuntimeException var3 = null;
         double var5 = 0.0;
@@ -167,7 +167,7 @@ final class cf extends hf {
         }
     }
 
-    final void a(int param0, double param1, double param2, double param3, double param4, double param5, double param6) {
+    final void resolveTunnelWallContact(int param0, double param1, double param2, double param3, double param4, double param5, double param6) {
         double var14 = 0.0;
         double var16 = 0.0;
         double var18 = 0.0;
@@ -194,7 +194,7 @@ final class cf extends hf {
         this.d(10797);
     }
 
-    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
+    final void drawInTunnel(PrimaryNodeDeque param0, double param1, int param2, TunnelCamera param3, DynamicLight param4) {
         int var7_int = 0;
         double var8 = 0.0;
         double stackIn_10_1 = 0.0;

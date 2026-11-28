@@ -45,7 +45,7 @@ final class d {
         GzipDecompressor.field_a = 127 & var3;
         stackIn_5_0 = ((128 & var3) != 0);
         ac.field_l = stackIn_5_0;
-        wd.field_j = var8.readUnsignedByte(true);
+        SpriteAnimationPlayer.field_j = var8.readUnsignedByte(true);
         gg.field_d = var8.readLong((byte) 69);
         if (GzipDecompressor.field_a != 2) {
           di.field_d = 0;

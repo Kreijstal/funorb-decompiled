@@ -72,12 +72,12 @@ final class eq extends rl {
         var2.writeByte(true, param0);
     }
 
-    final f a(boolean param0, int param1, int param2, int param3, ta param4) {
+    final PuzzleTile a(boolean param0, int param1, int param2, int param3, ta param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        f stackIn_2_0 = null;
-        f stackIn_4_0 = null;
+        PuzzleTile stackIn_2_0 = null;
+        PuzzleTile stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -85,7 +85,7 @@ final class eq extends rl {
         try {
           var6_int = -6 + (int)(Math.random() * 12.99);
           if (param0) {
-            stackIn_2_0 = (f) null;
+            stackIn_2_0 = (PuzzleTile) null;
             return stackIn_2_0;
           }
           var7 = (int)(100.0 * Math.pow(2.0, (double)var6_int / 12.0));

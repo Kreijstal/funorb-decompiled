@@ -46,7 +46,7 @@ final class GasCloudSpecial extends SpecialOrder {
             stackIn_2_0 = (CreatureEvent) null;
             return stackIn_2_0;
           }
-          var3 = this.creature.a(22, param0);
+          var3 = this.creature.resolveCreature(22, param0);
           var4 = new GasCloudEvent(this.moveId, new CreatureRef(var3));
           var4.field_r = var3.tileX;
           var4.field_s = var3.tileY;

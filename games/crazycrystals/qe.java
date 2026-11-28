@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class qe extends ln {
+final class qe extends ScoreModifier {
     static String field_h;
     static ol field_g;
 
@@ -97,7 +97,7 @@ final class qe extends ln {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int countPlayerApplications(int param0, byte param1) {
         int var3 = 59 % ((55 - param1) / 50);
         if (1 >= this.field_c) {
           return 0;

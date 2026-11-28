@@ -1709,7 +1709,7 @@ public final class BachelorFridge extends NetworkGameClient {
             if (decompiledFrameRemainder0) {
               if (vs.a(23864)) {
                 if (ha.field_k == ha.field_l) {
-                  var3 = PlayerRoster.a(true);
+                  var3 = PlayerRoster.pollMenuAction(true);
                   switch (var3) {
                     case 2:
                       lga.c((byte) 109);

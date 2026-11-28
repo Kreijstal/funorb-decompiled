@@ -324,7 +324,7 @@ class na extends rg {
             stackIn_38_0 = -3;
             stackIn_38_1 = var6;
             stackIn_39_2 = !(var4 < 0);
-            var7Lifetime1 = cl.a(stackIn_38_0, stackIn_38_1, stackIn_39_2);
+            var7Lifetime1 = PowerUpPickup.a(stackIn_38_0, stackIn_38_1, stackIn_39_2);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + ef.field_vb;
             if (var4 >= 0) {
               var1_int = var1_int + kb.field_b;

@@ -17,7 +17,7 @@ final class on {
           nb.b();
           SoftwareRasterizer.clearRaster();
           sn.field_c = 0;
-          ja.d((byte) -67);
+          LevelCompleteScene.drawModelsInDepthOrder((byte) -67);
           var2 = var1.d();
           var3 = 0;
           if (param0 > -66) {

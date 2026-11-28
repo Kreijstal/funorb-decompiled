@@ -53,7 +53,7 @@ abstract class AwtRasterBuffer {
           em.a((byte) 38, rk.field_a);
           nb.b();
           SoftwareRasterizer.clearRaster();
-          ja.d((byte) -67);
+          LevelCompleteScene.drawModelsInDepthOrder((byte) -67);
           if (var5 < 256) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_d, 0, 256 - var5);
           }
@@ -113,7 +113,7 @@ abstract class AwtRasterBuffer {
         em.a((byte) 38, rk.field_a);
         nb.b();
         SoftwareRasterizer.clearRaster();
-        ja.d((byte) -67);
+        LevelCompleteScene.drawModelsInDepthOrder((byte) -67);
         if (var5Lifetime1 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_d, 0, 256 - var5Lifetime1);
         }

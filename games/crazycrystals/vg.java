@@ -30,10 +30,10 @@ final class vg {
     final static String b(byte param0) {
         if (param0 != -29) {
           vg.b((byte) 15);
-          if (lc.field_c == l.field_b) {
+          if (lc.field_c == ResultScenePhase.field_b) {
             return ji.field_x;
           }
-          if (l.field_b == sg.field_b) {
+          if (ResultScenePhase.field_b == sg.field_b) {
             return ne.field_h;
           }
           if (!gk.field_e.b(-82)) {
@@ -41,10 +41,10 @@ final class vg {
           }
           return jd.field_G;
         }
-        if (lc.field_c == l.field_b) {
+        if (lc.field_c == ResultScenePhase.field_b) {
           return ji.field_x;
         }
-        if (l.field_b == sg.field_b) {
+        if (ResultScenePhase.field_b == sg.field_b) {
           return ne.field_h;
         }
         if (!gk.field_e.b(-82)) {

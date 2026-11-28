@@ -680,7 +680,7 @@ public final class Transmogrify extends SessionGameApplet {
         try {
           if (null != pc.field_a) {
             if (AccountNameAvailabilityValidator.field_k.ensureIndexLoaded((byte) -116) &&
-              AccountNameAvailabilityValidator.field_k.a((byte) -98, "basic")) {
+              AccountNameAvailabilityValidator.field_k.tryLoadGroupByName((byte) -98, "basic")) {
               if (pc.field_a.ensureIndexLoaded((byte) -120) &&
                 pc.field_a.tryLoadAllGroups(param0 ^ -32065)) {
                 if (BoundedRandomAccessFile.field_h.ensureIndexLoaded((byte) -116) &&
@@ -690,27 +690,27 @@ public final class Transmogrify extends SessionGameApplet {
                     if (ta.field_d.ensureIndexLoaded((byte) -115) &&
                       ta.field_d.tryLoadAllGroups(32031)) {
                       if (oi.field_g.ensureIndexLoaded((byte) -128) &&
-                        oi.field_g.a((byte) 123, "")) {
+                        oi.field_g.tryLoadGroupByName((byte) 123, "")) {
                         if (wl.a(false, 0) && (!oi.field_g.ensureIndexLoaded((byte) -113) ||
-                          !oi.field_g.a((byte) 121, "halloween"))) {
+                          !oi.field_g.tryLoadGroupByName((byte) 121, "halloween"))) {
                           vf.a((byte) 36, 50.0f, ee.a(q.field_e, (byte) 114, ih.field_c, oi.field_g, "halloween"));
                           return false;
                         }
                         if (kk.field_a.ensureIndexLoaded((byte) -118) &&
                           kk.field_a.tryLoadAllGroups(32031)) {
-                          if (!AccountNameAvailabilityValidator.field_k.a((byte) 126, "arialish12")) {
+                          if (!AccountNameAvailabilityValidator.field_k.tryLoadGroupByName((byte) 126, "arialish12")) {
                             vf.a((byte) -128, 52.0f, ee.a(ByteStorage.field_a, (byte) 102, i.field_c, AccountNameAvailabilityValidator.field_k, "arialish12"));
                             return false;
                           }
-                          if (!SessionGameApplet.field_y.a((byte) 118, "arialish12")) {
+                          if (!SessionGameApplet.field_y.tryLoadGroupByName((byte) 118, "arialish12")) {
                             vf.a((byte) -125, 52.0f, ee.a(ByteStorage.field_a, (byte) 106, i.field_c, AccountNameAvailabilityValidator.field_k, "arialish12"));
                             return false;
                           }
-                          if (!AccountNameAvailabilityValidator.field_k.a((byte) -13, "arialish20")) {
+                          if (!AccountNameAvailabilityValidator.field_k.tryLoadGroupByName((byte) -13, "arialish20")) {
                             vf.a((byte) 83, 53.0f, ee.a(ByteStorage.field_a, (byte) 106, i.field_c, AccountNameAvailabilityValidator.field_k, "arialish20"));
                             return false;
                           }
-                          if (!SessionGameApplet.field_y.a((byte) 117, "arialish20")) {
+                          if (!SessionGameApplet.field_y.tryLoadGroupByName((byte) 117, "arialish20")) {
                             vf.a((byte) -123, 53.0f, ee.a(ByteStorage.field_a, (byte) 123, i.field_c, AccountNameAvailabilityValidator.field_k, "arialish20"));
                             return false;
                           }

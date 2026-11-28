@@ -44,7 +44,7 @@ final class sb extends pc {
           var4 = new byte[var2_int];
           param1.readFully(var4);
           if (param0 <= var3) {
-            stackIn_6_0 = ResourceArchive.a((byte) 109, var4);
+            stackIn_6_0 = ResourceArchive.decodeLegacyUtf8((byte) 109, var4);
             return stackIn_6_0;
           }
           stackIn_4_0 = fa.a((byte) -80, var4);

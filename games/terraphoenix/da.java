@@ -92,7 +92,7 @@ final class da {
             stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
           }
-          if (!this.field_c.d(-1, "")) {
+          if (!this.field_c.hasGroupName(-1, "")) {
             stackIn_7_0 = this.a("", param1, (byte) -62, param2);
             return stackIn_7_0;
           }
@@ -275,7 +275,7 @@ final class da {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 7 % ((70 - param2) / 46);
-          if (this.field_a.d(-1, "")) {
+          if (this.field_a.hasGroupName(-1, "")) {
             stackIn_3_0 = this.a(param1, (byte) -29, param0, "");
             return stackIn_3_0;
           }
@@ -322,7 +322,7 @@ final class da {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_c.c(param0 + 20) == 1) {
+          if (this.field_c.getGroupCapacity(param0 + 20) == 1) {
             stackIn_3_0 = this.a(param2, 0, param1, 0);
             return stackIn_3_0;
           }
@@ -330,7 +330,7 @@ final class da {
             var5 = (String) null;
             this.a((String) null, -114);
           }
-          if (1 != this.field_c.c(param0 - 519, param2)) {
+          if (1 != this.field_c.getFileCapacity(param0 - 519, param2)) {
             throw new RuntimeException();
           }
           stackIn_9_0 = this.a(0, param0 ^ -21, param1, param2);
@@ -454,11 +454,11 @@ final class da {
             var5 = (int[]) null;
             discarded$1 = this.a(21, 68, (int[]) null, -32);
           }
-          if (this.field_a.c(-1) == 1) {
+          if (this.field_a.getGroupCapacity(-1) == 1) {
             stackIn_4_0 = this.a(0, (byte) 18, param2, param1);
             return stackIn_4_0;
           }
-          if (1 != this.field_a.c(-540, param1)) {
+          if (1 != this.field_a.getFileCapacity(-540, param1)) {
             throw new RuntimeException();
           }
           stackIn_8_0 = this.a(param1, (byte) 18, param2, 0);

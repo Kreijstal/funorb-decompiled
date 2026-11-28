@@ -22,7 +22,7 @@ final class SleepSpecial extends SpecialOrder {
         BattleCreature var11 = null;
         var10 = BachelorFridge.field_y;
         try {
-          var11 = this.creature.a(68, param0);
+          var11 = this.creature.resolveCreature(68, param0);
           var4 = new SleepEvent(this.moveId, new CreatureRef(var11));
           var4.field_q = this.field_i;
           var4.a(this.field_i, (byte) 106, var11, param0);

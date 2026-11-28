@@ -88,12 +88,12 @@ final class jn {
           this.field_f = param1;
           this.field_a = param2;
           if (this.field_f != null) {
-            this.field_f.b(1, (byte) -99);
+            this.field_f.getFileCapacity(1, (byte) -99);
           }
           if (this.field_a == null) {
             return;
           }
-          this.field_a.b(1, (byte) -29);
+          this.field_a.getFileCapacity(1, (byte) -29);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

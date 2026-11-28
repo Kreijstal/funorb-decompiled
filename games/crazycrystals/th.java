@@ -42,7 +42,7 @@ final class th extends om {
 
     final static void a(int param0, int param1) {
         hd.field_b = kb.field_f[param0];
-        jg.field_h = ck.field_fb[param0];
+        ModelMesh.field_h = ck.field_fb[param0];
         if (param1 > -24) {
           return;
         }

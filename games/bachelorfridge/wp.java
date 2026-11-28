@@ -33,7 +33,7 @@ final class wp extends tga {
           return;
         }
         try {
-          var7.field_s.g(48, 45);
+          var7.field_s.applyDamageOrHealing(48, 45);
           param0.addChild(27799, new DamagePopupAnimation(var8, var7, 45));
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "wp.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -54,7 +54,7 @@ final class wp extends tga {
               param3.height > param1) {
               var5 = param3.tiles[param2][param1].occupant;
               if (var5 != null) {
-                var5.g(-94, 45);
+                var5.applyDamageOrHealing(-94, 45);
               }
               if (param0 != -116) {
                 field_r = -38;

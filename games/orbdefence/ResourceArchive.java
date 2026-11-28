@@ -87,7 +87,7 @@ final class ResourceArchive {
         int var3 = -85 % ((param1 - 69) / 38);
     }
 
-    final boolean a(String param0, String param1, int param2) {
+    final boolean tryLoadFileByName(String param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -138,7 +138,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean b(byte param0, String param1) {
+    final boolean tryLoadGroupByName(byte param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -200,7 +200,7 @@ final class ResourceArchive {
         return this.field_e.getGroupRequestProgressPercent(param1, -7362);
     }
 
-    final int a(byte param0) {
+    final int getGroupCapacity(byte param0) {
         if (!this.ensureIndexLoaded(-1)) {
           return -1;
         }
@@ -210,7 +210,7 @@ final class ResourceArchive {
         return this.field_i.field_l.length;
     }
 
-    final int a(byte param0, int param1) {
+    final int getFileCapacity(byte param0, int param1) {
         if (!this.validateGroupId(param1, -7720)) {
           return 0;
         }
@@ -256,7 +256,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean c(byte param0, String param1) {
+    final boolean hasGroupName(byte param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -298,7 +298,7 @@ final class ResourceArchive {
         return this.getFileWithKeys(-2, (int[]) null, param0, param2);
     }
 
-    final synchronized int a(int param0) {
+    final synchronized int getArchiveLoadPercent(int param0) {
         int var2;
         int var3;
         int var4;
@@ -419,14 +419,14 @@ final class ResourceArchive {
         return false;
     }
 
-    final static boolean d(int param0) {
+    final static boolean refreshReconnectDeadline(int param0) {
         if (param0 >= -92) {
           field_d = (String) null;
         }
         return ec.k(783);
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String getAccountNameValidationError(int param0, CharSequence param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -717,7 +717,7 @@ final class ResourceArchive {
         field_f = null;
     }
 
-    final synchronized byte[] a(int param0, boolean param1) {
+    final synchronized byte[] getFlatFile(int param0, boolean param1) {
         if (!this.ensureIndexLoaded(-1)) {
           return null;
         }
@@ -749,7 +749,7 @@ final class ResourceArchive {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 5187) {
-            this.a((byte) 121);
+            this.getGroupCapacity((byte) 121);
           }
           if (!this.validateGroupId(param2, -7720)) {
             stackIn_5_0 = -1;
@@ -884,7 +884,7 @@ final class ResourceArchive {
         }
         if (!param1) {
           CharSequence var5 = (CharSequence) null;
-          ResourceArchive.a(101, (CharSequence) null);
+          ResourceArchive.getAccountNameValidationError(101, (CharSequence) null);
         }
         if (param0 >= 0 &&
           0 <= param2 &&

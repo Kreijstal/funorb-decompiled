@@ -69,7 +69,7 @@ abstract class ok extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_I = sa.a(16, (byte) 56, var7);
+                                field_I = DampedProjectile.a(16, (byte) 56, var7);
                               }
                             } else {
                               field_E = -1;
@@ -79,7 +79,7 @@ abstract class ok extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_E = sa.a(16, (byte) 73, var6);
+                          field_E = DampedProjectile.a(16, (byte) 73, var6);
                         }
                       } else {
                         field_u = -1;
@@ -89,7 +89,7 @@ abstract class ok extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_u = sa.a(16, (byte) 108, var5);
+                    field_u = DampedProjectile.a(16, (byte) 108, var5);
                   }
                 } else {
                   field_F = field_G;
@@ -103,7 +103,7 @@ abstract class ok extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_O = sa.a(16, (byte) 74, var3);
+            field_O = DampedProjectile.a(16, (byte) 74, var3);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

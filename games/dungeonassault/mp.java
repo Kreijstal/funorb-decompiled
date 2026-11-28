@@ -41,10 +41,10 @@ final class mp {
           }
           for (var5_int = 0; 8 > var5_int; var5_int++) {
             oh.a(param4, 7);
-            if (!al.field_o.a(param3, (byte) 104)) {
+            if (!al.field_o.isBitSet(param3, (byte) 104)) {
               return;
             }
-            if (DualLinkNode.a((byte) -110, param0, Raider.a((byte) -111, param3), param1)) {
+            if (DualLinkNode.a((byte) -110, param0, Raider.buildGridPathFromParents((byte) -111, param3), param1)) {
               continue;
             }
             break;

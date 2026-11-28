@@ -44,7 +44,7 @@ final class kd extends se {
           kf.field_h.a(NetworkGameClient.field_l, false, true, vl.field_a);
           kf.field_h.b(false);
           while (ge.b(-65)) {
-            kf.field_h.a(pj.field_q, false, c.field_p);
+            kf.field_h.a(WallTile.field_q, false, LaserHubTile.field_p);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

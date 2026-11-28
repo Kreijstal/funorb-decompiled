@@ -76,11 +76,11 @@ final class TeleportAnimation extends EventAnimation {
         EventEffect var3 = (EventEffect) (this.field_A.effects.beginForward((byte) 90));
         al.a(-99, this.field_A.moveId);
         while (var3 != null) {
-          var4 = var3.target.a(-27449, this.screen);
+          var4 = var3.target.resolveCreatureView(-27449, this.screen);
           var4.b(-1, 7);
           if (var3 instanceof MoveCreatureEffect) {
             var5 = (MoveCreatureEffect) (var3);
-            var6 = var5.target.a(-27449, this.screen);
+            var6 = var5.target.resolveCreatureView(-27449, this.screen);
             this.screen.a(var5.field_i, var6, (byte) -106, var5.field_l);
           } else {
             var3.apply(var8, this.screen.field_h, 12);

@@ -46,13 +46,13 @@ final class te implements uj {
           if (!hj.field_i.ensureIndexLoaded((byte) 125)) {
             return 20;
           }
-          if (!hj.field_i.a(false, "commonui")) {
+          if (!hj.field_i.tryLoadGroupByName(false, "commonui")) {
             return 40;
           }
           if (!pb.field_r.ensureIndexLoaded((byte) 89)) {
             return 50;
           }
-          if (!pb.field_r.a(false, "commonui")) {
+          if (!pb.field_r.tryLoadGroupByName(false, "commonui")) {
             return 60;
           }
           if (!oh.field_C.ensureIndexLoaded((byte) 94)) {
@@ -67,23 +67,23 @@ final class te implements uj {
           if (!PacketBuffer.field_r.ensureIndexLoaded((byte) 125)) {
             return 14;
           }
-          if (!PacketBuffer.field_r.b(false, "")) {
+          if (!PacketBuffer.field_r.hasGroupName(false, "")) {
             return 29;
           }
-          if (!PacketBuffer.field_r.a(false, "")) {
+          if (!PacketBuffer.field_r.tryLoadGroupByName(false, "")) {
             return 29;
           }
         }
         if (!hj.field_i.ensureIndexLoaded((byte) 94)) {
           return 43;
         }
-        if (!hj.field_i.a(false, "commonui")) {
+        if (!hj.field_i.tryLoadGroupByName(false, "commonui")) {
           return 57;
         }
         if (!pb.field_r.ensureIndexLoaded((byte) 104)) {
           return 71;
         }
-        if (!pb.field_r.a(false, "commonui")) {
+        if (!pb.field_r.tryLoadGroupByName(false, "commonui")) {
           return 80;
         }
         if (!oh.field_C.ensureIndexLoaded((byte) 115)) {

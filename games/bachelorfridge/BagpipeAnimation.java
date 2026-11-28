@@ -163,7 +163,7 @@ final class BagpipeAnimation extends EventAnimation {
         CreatureActor var9 = null;
         CreatureActor var11 = null;
         int var6 = BachelorFridge.field_y;
-        BattleCreature var7 = this.field_v.creature.a(77, this.screen.field_h);
+        BattleCreature var7 = this.field_v.creature.resolveCreature(77, this.screen.field_h);
         if (var7.isDown(111)) {
           return;
         }
@@ -172,22 +172,22 @@ final class BagpipeAnimation extends EventAnimation {
         if (param0 != 0) {
           BagpipeAnimation.a((byte[]) null, (int[]) null, (byte[]) null, (IndexedSprite[]) null, -84, (int[]) null, true, (ResourceArchive) null, (Sprite[][]) null, (String[][]) null, 83, (String[]) null, 45, (ResourceArchive) null, (String[]) null, (Sprite[][]) null, (ResourceArchive) null, (String[][]) null, -71);
         } else {
-          var8 = this.field_v.creature.a(-27449, this.screen);
+          var8 = this.field_v.creature.resolveCreatureView(-27449, this.screen);
           this.screen.field_fb.addLast(new vt(this.screen, var8), true);
           while (var3 != null) {
             var3.apply(var7, this.screen.field_h, 12);
-            var9 = var3.target.a(-27449, this.screen);
+            var9 = var3.target.resolveCreatureView(-27449, this.screen);
             var9.b(~param0, 6);
             var9.a(24831, 17, kna.field_g[40]);
             var3 = (DamageEffect) (this.field_v.effects.nextForward(param0 ^ 0));
           }
           return;
         }
-        CreatureActor var10 = this.field_v.creature.a(-27449, this.screen);
+        CreatureActor var10 = this.field_v.creature.resolveCreatureView(-27449, this.screen);
         this.screen.field_fb.addLast(new vt(this.screen, var10), true);
         while (var3 != null) {
           var3.apply(var7, this.screen.field_h, 12);
-          var11 = var3.target.a(-27449, this.screen);
+          var11 = var3.target.resolveCreatureView(-27449, this.screen);
           var11.b(~param0, 6);
           var11.a(24831, 17, kna.field_g[40]);
           var3 = (DamageEffect) (this.field_v.effects.nextForward(param0 ^ 0));

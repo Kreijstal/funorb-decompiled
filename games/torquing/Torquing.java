@@ -113,7 +113,7 @@ public final class Torquing extends tg {
           MouseInputHandler.a(18133);
           MouseWheelInput.clearStaticReferences(0);
           SoftwareRasterizer.clearStaticReferences();
-          ResourceArchive.d(param0 + 99);
+          ResourceArchive.clearStaticReferences(param0 + 99);
           uc.clearStaticReferences();
           l.clearStaticReferences((byte) 88);
           qi.clearStaticReferences(104);
@@ -137,7 +137,7 @@ public final class Torquing extends tg {
           AudioOutput.clearStaticReferences();
           wl.clearStaticReferences();
           fi.a(108);
-          Level.a((byte) -113);
+          Level.clearLevelGlobals((byte) -113);
           mh.clearStaticReferences(32);
           ia.clearStaticReferences(88);
           TooltipPanel.clearStaticReferences(3);
@@ -628,17 +628,17 @@ public final class Torquing extends tg {
           if (rl.field_a != null) {
             if (tp.field_a == null) {
               if (rp.field_d.ensureIndexLoaded(-12749) &&
-                rp.field_d.a(true, "basic")) {
-                if (!rp.field_d.a(true, "benefits")) {
+                rp.field_d.tryLoadGroupByName(true, "basic")) {
+                if (!rp.field_d.tryLoadGroupByName(true, "benefits")) {
                   IsaacPacketBuffer.a(1.0f, -93, c.a(param1 ^ -117, bo.field_i, "basic", db.field_d, rp.field_d));
                   return false;
                 }
-                if (!rp.field_d.a(true, "kartika13")) {
+                if (!rp.field_d.tryLoadGroupByName(true, "kartika13")) {
                   IsaacPacketBuffer.a(2.0f, 117, c.a(17, ol.field_e, "kartika13", l.field_c, rp.field_d));
                   return false;
                 }
                 if (e.field_b.ensureIndexLoaded(-12749) &&
-                  e.field_b.a(true, "kartika13")) {
+                  e.field_b.tryLoadGroupByName(true, "kartika13")) {
                   if (rl.field_a.ensureIndexLoaded(param1 - 12647) &&
                     rl.field_a.tryLoadAllGroups(-19375)) {
                     if (rg.field_v.ensureIndexLoaded(-12749) &&
@@ -1211,9 +1211,9 @@ public final class Torquing extends tg {
             var3_intLifetime2 = 0;
             var4_ref = DirectByteStorage.field_d;
             while (var4_ref != null) {
-              if (var4_ref.e(0) &&
-                var4_ref.b(param1 ^ -15) &&
-                var4_ref.g(1)) {
+              if (var4_ref.processLevelDecoding(0) &&
+                var4_ref.prepareTerrainSkirtModel(param1 ^ -15) &&
+                var4_ref.processLevelSceneMeshes(1)) {
                 var3_intLifetime2++;
                 var4_ref = var4_ref.field_m;
                 continue;
@@ -1243,7 +1243,7 @@ public final class Torquing extends tg {
             cf.a(6639);
             return false;
           }
-          if (!ig.field_q.e(param1 ^ -102)) {
+          if (!ig.field_q.processLevelDecoding(param1 ^ -102)) {
             cf.a(6639);
             return false;
           }
@@ -1909,7 +1909,7 @@ public final class Torquing extends tg {
           } else {
             this.n(param0 + 126);
             if (sf.a(-1)) {
-              if (ResourceArchive.a(true) &&
+              if (ResourceArchive.isClientStartupReady(true) &&
                 !ee.field_s) {
                 discarded$0 = this.b(false, (byte) -102);
               }

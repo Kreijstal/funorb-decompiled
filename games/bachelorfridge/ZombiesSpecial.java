@@ -22,7 +22,7 @@ final class ZombiesSpecial extends SpecialOrder {
         BattleCreature var10 = null;
         var8 = BachelorFridge.field_y;
         try {
-          var10 = this.creature.a(91, param0);
+          var10 = this.creature.resolveCreature(91, param0);
           var4 = new ZombiesEvent(this.moveId, new CreatureRef(var10));
           var5 = 0;
           if (param1 != 3) {

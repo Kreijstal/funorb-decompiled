@@ -94,12 +94,12 @@ final class ResourceArchive {
         }
     }
 
-    final static int a(int param0, int param1, boolean param2, int param3) {
+    final static int pollAccountScreen(int param0, int param1, boolean param2, int param3) {
         int var4 = -107 / ((6 - param3) / 48);
         return s.a(-27911);
     }
 
-    final synchronized byte[] e(int param0, int param1) {
+    final synchronized byte[] getFlatFile(int param0, int param1) {
         if (!this.ensureIndexLoaded((byte) 106)) {
           return null;
         }
@@ -136,7 +136,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final boolean b(boolean param0, String param1) {
+    final boolean hasGroupName(boolean param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -552,12 +552,12 @@ final class ResourceArchive {
 
     final byte[] getFile(boolean param0, int param1, int param2) {
         if (param0) {
-          this.e(-122, 54);
+          this.getFlatFile(-122, 54);
         }
         return this.getFileWithKeys((int[]) null, param1, param2, -21331);
     }
 
-    final boolean a(String param0, String param1, int param2) {
+    final boolean tryLoadFileByName(String param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -605,12 +605,12 @@ final class ResourceArchive {
         }
     }
 
-    final int b(byte param0) {
+    final int getGroupCapacity(byte param0) {
         if (!this.ensureIndexLoaded((byte) 124)) {
           return -1;
         }
         if (param0 != -71) {
-          ResourceArchive.a(111);
+          ResourceArchive.showPlayerNamePrompt(111);
         }
         return this.field_f.field_f.length;
     }
@@ -658,7 +658,7 @@ final class ResourceArchive {
         return var2 != 0;
     }
 
-    final boolean a(boolean param0, String param1) {
+    final boolean tryLoadGroupByName(boolean param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         wh var4 = null;
@@ -675,7 +675,7 @@ final class ResourceArchive {
           param1 = param1.toLowerCase();
           if (param0) {
             var4 = (wh) null;
-            ResourceArchive.a(22, (wh) null);
+            ResourceArchive.playMusicTrack(22, (wh) null);
           }
           var5 = (CharSequence) ((Object) param1);
           var3_int = this.field_f.field_s.a((byte) -71, jh.a(var5, 0));
@@ -817,7 +817,7 @@ final class ResourceArchive {
         field_h = null;
     }
 
-    final static void a(int param0) {
+    final static void showPlayerNamePrompt(int param0) {
         if (sj.field_h != null) {
           sj.field_h.s(2121792);
         }
@@ -828,14 +828,14 @@ final class ResourceArchive {
         de.field_a.a((byte) -103, (fe) (bh.field_Z));
     }
 
-    final int b(int param0, int param1) {
+    final int getFileCapacity(int param0, int param1) {
         if (!this.validateGroupId(param0, param1 ^ param1)) {
           return 0;
         }
         return this.field_f.field_f[param0];
     }
 
-    final static void a(int param0, wh param1) {
+    final static void playMusicTrack(int param0, wh param1) {
         try {
           mk.a(true, param1, 0);
           if (param0 != -6358) {
@@ -846,7 +846,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int c(int param0) {
+    final synchronized int getArchiveLoadPercent(int param0) {
         int var2;
         int var3;
         int var4;

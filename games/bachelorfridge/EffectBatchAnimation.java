@@ -29,7 +29,7 @@ final class EffectBatchAnimation extends AnimationNode {
             var2 = (EventEffect) (this.field_j.field_m.nextForward(0));
             continue;
           }
-          var3_ref_ad = var2.target.a(-27449, this.field_l);
+          var3_ref_ad = var2.target.resolveCreatureView(-27449, this.field_l);
           if (var3_ref_ad != null) {
             var2.apply((BattleCreature) null, this.field_l.field_h, 12);
             if (var2 instanceof mh) {

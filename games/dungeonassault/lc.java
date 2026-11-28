@@ -155,11 +155,11 @@ final class lc {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1 == this.field_i.b(true)) {
+          if (1 == this.field_i.getGroupCapacity(true)) {
             stackIn_3_0 = this.a(param0, -15, 0, param1);
             return stackIn_3_0;
           }
-          if (1 != this.field_i.b(param1, param2 ^ param2)) {
+          if (1 != this.field_i.getFileCapacity(param1, param2 ^ param2)) {
             throw new RuntimeException();
           }
           stackIn_6_0 = this.a(param0, param2 ^ 31216, param1, 0);
@@ -187,14 +187,14 @@ final class lc {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_b.b(true) == 1) {
+          if (this.field_b.getGroupCapacity(true) == 1) {
             stackIn_2_0 = this.a(-126, param2, 0, param0);
             return stackIn_2_0;
           }
           if (param1 >= -61) {
             this.field_f = (wa) null;
           }
-          if (this.field_b.b(param2, 0) != 1) {
+          if (this.field_b.getFileCapacity(param2, 0) != 1) {
             throw new RuntimeException();
           }
           stackIn_7_0 = this.a(-123, 0, param2, param0);

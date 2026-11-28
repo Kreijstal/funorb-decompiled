@@ -214,7 +214,7 @@ final class he extends DualLinkNode {
             }
           } else {
             for (var4_int = 0; var4_int < this.field_y.length; var4_int++) {
-              if (!param0.a(this.field_y[var4_int], (byte) 53)) {
+              if (!param0.tryLoadFlatFile(this.field_y[var4_int], (byte) 53)) {
                 return false;
               }
             }

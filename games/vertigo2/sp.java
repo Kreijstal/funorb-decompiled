@@ -195,7 +195,7 @@ abstract class sp extends nm {
           var8Lifetime1++;
         }
         qo.field_y.e(-90 + (param1 + this.width), 10 + param2);
-        kj.a(1, this.width - 10, param1 + 5, bh.field_a, param2 + 35);
+        kj.a(1, this.width - 10, param1 + 5, LevelSimulation.field_a, param2 + 35);
         kj.a(1, this.width, param1, ki.field_b, -22 + (this.height + param2));
         var4Lifetime2 = -79 + this.height;
         var5Lifetime2 = 169;

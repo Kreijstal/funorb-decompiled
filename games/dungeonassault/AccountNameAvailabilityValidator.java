@@ -29,7 +29,7 @@ final class AccountNameAvailabilityValidator extends ip {
 
     final static void e(int param0) {
         Object stackIn_25_0 = null;
-        ai stackIn_25_1 = null;
+        DungeonTileState stackIn_25_1 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -48,11 +48,11 @@ final class AccountNameAvailabilityValidator extends ip {
         var7 = DungeonAssault.field_K;
         try {
           jh.c();
-          if (null == wm.field_c) {
+          if (null == PackedBitSet.field_c) {
             bn.field_f = new RgbSprite(378, 300);
-            wm.field_c = new RgbSprite(410, 332);
-            wm.field_c.field_A = -16;
-            wm.field_c.field_w = -16;
+            PackedBitSet.field_c = new RgbSprite(410, 332);
+            PackedBitSet.field_c.field_A = -16;
+            PackedBitSet.field_c.field_w = -16;
           }
           bn.field_f.e();
           SoftwareRasterizer.clearRaster();
@@ -102,13 +102,13 @@ final class AccountNameAvailabilityValidator extends ip {
               var2Lifetime1 += 54;
             }
           }
-          wm.field_c.e();
+          PackedBitSet.field_c.e();
           SoftwareRasterizer.clearRaster();
           if (param0 < 35) {
             field_t = -99;
           }
           bn.field_f.e(16, 16, 8454143);
-          SoftwareRasterizer.blurRectangle(8, 8, 0, 0, wm.field_c.field_y, wm.field_c.field_v);
+          SoftwareRasterizer.blurRectangle(8, 8, 0, 0, PackedBitSet.field_c.field_y, PackedBitSet.field_c.field_v);
           bn.field_f.e(16, 16, 0);
           jh.b();
           return;

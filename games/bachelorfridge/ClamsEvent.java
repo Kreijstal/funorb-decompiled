@@ -245,7 +245,7 @@ final class ClamsEvent extends SpecialEvent {
     final void a(BattleState param0, int param1) {
         try {
           this.a(param0, (byte) -2);
-          param0.a(this.field_r, (byte) 25, this.field_r.length, 37, this.field_q, this.field_t);
+          param0.setTerrainAtTileCoordinates(this.field_r, (byte) 25, this.field_r.length, 37, this.field_q, this.field_t);
           int var3_int = -52 / ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "bea.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -18,7 +18,7 @@ final class ob extends WidgetContainer implements ih, ij {
     static double field_F;
 
     private final void a(int param0) {
-        if (hi.c((byte) 6) ||
+        if (BlastDebrisModel.isReconnectLoginActive((byte) 6) ||
           !(this.field_H.text.length() <= 0) &&
           !(this.field_O.text.length() <= 0)) {
           la.a(this.field_H.text, this.field_O.text, 26806);

@@ -374,7 +374,7 @@ abstract class MouseWheelInput {
           if (stackIn_14_0 < stackIn_14_1) {
             MouseWheelInput.a(35, (ResourceArchive) null);
           }
-          stackIn_18_0 = ql.field_k;
+          stackIn_18_0 = StageDirector.field_k;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

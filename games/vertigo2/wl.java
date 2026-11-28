@@ -22,7 +22,7 @@ final class wl {
           UiWidget.field_x.writeInt(he.field_u[1], 0);
           UiWidget.field_x.writeInt(he.field_u[2], 0);
           UiWidget.field_x.writeInt(he.field_u[3], 0);
-          cn.a(UiWidget.field_x, 117);
+          LevelCamera.writeRandomDatBytes(UiWidget.field_x, 117);
           UiWidget.field_x.writeShort(param3, -1783);
           param4.a(UiWidget.field_x, 47);
           uh.field_Wb.position = 0;

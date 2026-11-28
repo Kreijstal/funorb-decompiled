@@ -180,8 +180,8 @@ final class rc implements fe {
                       } else {
                         stackIn_35_0 = var15 << -var7;
                       }
-                      var16 = -stackIn_35_0 + vb.field_e.length - 1;
-                      var17 = vb.field_e[var16];
+                      var16 = -stackIn_35_0 + DequeCursor.field_e.length - 1;
+                      var17 = DequeCursor.field_e[var16];
                       while (true) {
                         if (0 != var17 >> 4) {
                           var16--;
@@ -191,14 +191,14 @@ final class rc implements fe {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = vb.field_e[var16];
+                          var17 = DequeCursor.field_e[var16];
                           continue;
                         }
                         stackIn_46_0Lifetime1 = var17;
                         stackIn_46_1Lifetime1 = var16 << 4;
                         var18 = stackIn_46_0Lifetime1 + stackIn_46_1Lifetime1;
                         tl.field_i[var18] = var8;
-                        vb.field_e[var16] = var17 + 1;
+                        DequeCursor.field_e[var16] = var17 + 1;
                         if (param4.field_A > 0 &&
                           param4.field_P != null) {
                           dupTemp$0 = param4.field_P[var8];
@@ -364,8 +364,8 @@ final class rc implements fe {
                       } else {
                         stackIn_35_0 = var15 << -var7;
                       }
-                      var16 = -stackIn_35_0 + vb.field_e.length - 1;
-                      var17 = vb.field_e[var16];
+                      var16 = -stackIn_35_0 + DequeCursor.field_e.length - 1;
+                      var17 = DequeCursor.field_e[var16];
                       while (true) {
                         if (0 != var17 >> 4) {
                           var16--;
@@ -375,14 +375,14 @@ final class rc implements fe {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = vb.field_e[var16];
+                          var17 = DequeCursor.field_e[var16];
                           continue;
                         }
                         stackIn_46_0Lifetime1 = var17;
                         stackIn_46_1Lifetime1 = var16 << 4;
                         var18 = stackIn_46_0Lifetime1 + stackIn_46_1Lifetime1;
                         tl.field_i[var18] = var8;
-                        vb.field_e[var16] = var17 + 1;
+                        DequeCursor.field_e[var16] = var17 + 1;
                         if (param4.field_A > 0 &&
                           param4.field_P != null) {
                           dupTemp$0 = param4.field_P[var8];

@@ -3,14 +3,14 @@
  */
 import java.io.*;
 
-final class ep extends f implements Cloneable {
+final class ep extends PuzzleTile implements Cloneable {
     private int field_k;
-    private f field_j;
+    private PuzzleTile field_j;
     private int field_i;
 
-    final void b(int param0, int param1, f[][] param2, int param3) {
+    final void refreshTileBoardState(int param0, int param1, PuzzleTile[][] param2, int param3) {
         try {
-          this.field_j.b(101, param1, param2, param3);
+          this.field_j.refreshTileBoardState(101, param1, param2, param3);
           if (param0 <= 24) {
             this.a((byte) 0);
           }
@@ -108,18 +108,18 @@ final class ep extends f implements Cloneable {
 
     protected final Object clone() {
         ep var1 = (ep) (super.clone());
-        var1.field_j = (f) (this.field_j.clone());
+        var1.field_j = (PuzzleTile) (this.field_j.clone());
         return var1;
     }
 
-    final void a(int param0, int param1, int param2, DataInputStream param3, byte param4) throws IOException {
+    final void readTileData(int param0, int param1, int param2, DataInputStream param3, byte param4) throws IOException {
         RuntimeException var6 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_j = ff.a(param0, param1, 1, param2, param3);
+          this.field_j = AnimatedResultScene.decodePuzzleTile(param0, param1, 1, param2, param3);
           if (param4 == -35) {
             return;
           }
@@ -178,15 +178,15 @@ final class ep extends f implements Cloneable {
             mb.field_g = mb.field_g - 128;
             fn.field_j = fn.field_j - 128;
             fp.field_a = fp.field_a + 2;
-            we.field_h = we.field_h + 2;
+            LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 2;
             je.field_j = je.field_j + 1;
             b.field_a = b.field_a + 1;
             fn.field_j = fn.field_j + ob.field_l;
             wd.field_j = wd.field_j - 1;
             pm.field_b.a(128, param1 * 12, 12 * param2, 0, (byte) -111);
             this.field_i = 1;
-            this.a((byte) 74, param3);
-            this.field_j.a((byte) 87, param3);
+            this.copyTileAttribution((byte) 74, param3);
+            this.field_j.copyTileAttribution((byte) 87, param3);
             stackIn_3_0 = 1;
             return stackIn_3_0;
           }
@@ -210,24 +210,24 @@ final class ep extends f implements Cloneable {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setTileVariant(int param0, int param1) {
         if (param1 >= 61) {
           this.field_k = param0;
           return;
         }
-        this.a(-85, 60, 47, false, -57, 25);
+        this.drawTile(-85, 60, 47, false, -57, 25);
         this.field_k = param0;
     }
 
-    final void a(int param0, int param1, int param2, f[][] param3) {
+    final void initializeTilePlacement(int param0, int param1, int param2, PuzzleTile[][] param3) {
         try {
-          this.field_j.a(param0, param1, param2, param3);
+          this.field_j.initializeTilePlacement(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ep.UB(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final void drawTile(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var8 = 0;
         int var9 = 0;
         int var8Lifetime1;
@@ -244,76 +244,76 @@ final class ep extends f implements Cloneable {
         int var7 = param3 ? 18 : this.field_i;
         if (24 != param2) {
           if (var7 <= 1) {
-            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, f.field_g[this.field_k]);
+            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
             var8 = 32 % ((param1 + 70) / 33);
             return;
           }
-          bb.field_y[var7 / 2].b(param5, param4 - param0, 2 * param2, param0 * 3, f.field_g[this.field_k]);
+          RockTile.field_y[var7 / 2].b(param5, param4 - param0, 2 * param2, param0 * 3, PuzzleTile.field_g[this.field_k]);
           var8Lifetime5 = ((24 - var7) * param2 + 23) / 24;
           var9 = (param0 * (24 - var7) + 23) / 24;
           if (param2 <= var8Lifetime5) {
-            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, f.field_g[this.field_k]);
+            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
             var8Lifetime5 = 32 % ((param1 + 70) / 33);
             return;
           }
           if (param0 > var9) {
             this.field_j.a(-128, param3, param2 - var8Lifetime5, param5 + var8Lifetime5, param4 + var9, param0 - var9);
-            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, f.field_g[this.field_k]);
+            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
             var8Lifetime5 = 32 % ((param1 + 70) / 33);
             return;
           }
-          v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, f.field_g[this.field_k]);
+          v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
           var8Lifetime6 = 32 % ((param1 + 70) / 33);
           return;
         }
         if (param0 != 24) {
           if (var7 <= 1) {
-            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, f.field_g[this.field_k]);
+            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
             var8Lifetime1 = 32 % ((param1 + 70) / 33);
             return;
           }
-          bb.field_y[var7 / 2].b(param5, param4 - param0, 2 * param2, param0 * 3, f.field_g[this.field_k]);
+          RockTile.field_y[var7 / 2].b(param5, param4 - param0, 2 * param2, param0 * 3, PuzzleTile.field_g[this.field_k]);
           var8Lifetime1Lifetime1 = ((24 - var7) * param2 + 23) / 24;
           var9Lifetime1 = (param0 * (24 - var7) + 23) / 24;
           if (param2 <= var8Lifetime1Lifetime1) {
-            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, f.field_g[this.field_k]);
+            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
             var8Lifetime1Lifetime1 = 32 % ((param1 + 70) / 33);
             return;
           }
           if (param0 > var9Lifetime1) {
             this.field_j.a(-128, param3, param2 - var8Lifetime1Lifetime1, param5 + var8Lifetime1Lifetime1, param4 + var9Lifetime1, param0 - var9Lifetime1);
-            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, f.field_g[this.field_k]);
+            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
             var8Lifetime1Lifetime1 = 32 % ((param1 + 70) / 33);
             return;
           }
-          v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, f.field_g[this.field_k]);
+          v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
           var8Lifetime1Lifetime2 = 32 % ((param1 + 70) / 33);
           return;
         }
         if (var7 <= 1) {
-          v.field_b[var7 / 2].c(param5, param4 - param0, f.field_g[this.field_k]);
+          v.field_b[var7 / 2].c(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
           var8Lifetime2 = 32 % ((param1 + 70) / 33);
           return;
         }
-        bb.field_y[var7 / 2].c(param5, param4 - param0, f.field_g[this.field_k]);
+        RockTile.field_y[var7 / 2].c(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
         var8Lifetime3 = ((24 - var7) * param2 + 23) / 24;
         var9Lifetime2 = (param0 * (-var7 + 24) + 23) / 24;
         if (var8Lifetime3 >= param2) {
-          v.field_b[var7 / 2].c(param5, param4 - param0, f.field_g[this.field_k]);
+          v.field_b[var7 / 2].c(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
           var8Lifetime3 = 32 % ((param1 + 70) / 33);
           return;
         }
         if (param0 > var9Lifetime2) {
           this.field_j.a(-125, param3, param2 - var8Lifetime3, var8Lifetime3 + param5, param4 + var9Lifetime2, param0 - var9Lifetime2);
-          v.field_b[var7 / 2].c(param5, param4 - param0, f.field_g[this.field_k]);
+          v.field_b[var7 / 2].c(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
           var8Lifetime3 = 32 % ((param1 + 70) / 33);
           return;
         }
-        v.field_b[var7 / 2].c(param5, param4 - param0, f.field_g[this.field_k]);
+        v.field_b[var7 / 2].c(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
         var8Lifetime4 = 32 % ((param1 + 70) / 33);
     }
 
-    final nj a(int param0, nj param1) {
+    final nj showTileTooltip(int param0, nj param1) {
         RuntimeException var3 = null;
         nj stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -322,7 +322,7 @@ final class ep extends f implements Cloneable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 23525) {
-            this.a(-24, -83, 51, true, 50, -127);
+            this.drawTile(-24, -83, 51, true, 50, -127);
           }
           stackIn_3_0 = PacketBuffer.a(qh.field_g, param1, new ep(new kp(-1), this.field_k), (byte) -83, rb.field_j);
           return stackIn_3_0;
@@ -340,17 +340,17 @@ final class ep extends f implements Cloneable {
         }
     }
 
-    final f a(int param0, int param1, f[][] param2, int param3) {
+    final PuzzleTile a(int param0, int param1, PuzzleTile[][] param2, int param3) {
         RuntimeException var5 = null;
-        f stackIn_2_0 = null;
-        f stackIn_7_0 = null;
+        PuzzleTile stackIn_2_0 = null;
+        PuzzleTile stackIn_7_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 106) {
-            stackIn_2_0 = (f) null;
+            stackIn_2_0 = (PuzzleTile) null;
             return stackIn_2_0;
           }
           if (this.field_i > 0) {
@@ -360,7 +360,7 @@ final class ep extends f implements Cloneable {
               return stackIn_7_0;
             }
           }
-          return (f) (this);
+          return (PuzzleTile) (this);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -375,7 +375,7 @@ final class ep extends f implements Cloneable {
         }
     }
 
-    ep(f param0, int param1) {
+    ep(PuzzleTile param0, int param1) {
         this.field_i = 0;
         try {
           this.field_j = param0;

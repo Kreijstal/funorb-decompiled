@@ -246,7 +246,7 @@ abstract class MouseWheelInput {
             var5 = (java.applet.Applet) null;
             MouseWheelInput.a((String) null, 36, (java.applet.Applet) null);
           }
-          stackIn_7_0 = param2 + " - " + param3.a(false) + "%";
+          stackIn_7_0 = param2 + " - " + param3.getArchiveLoadPercent(false) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

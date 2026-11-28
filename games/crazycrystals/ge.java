@@ -33,8 +33,8 @@ final class ge {
           if (param0 > -1) {
             field_a = (String) null;
           }
-          pj.field_q = re.field_o[td.field_d];
-          c.field_p = tp.field_i[td.field_d];
+          WallTile.field_q = re.field_o[td.field_d];
+          LaserHubTile.field_p = tp.field_i[td.field_d];
           td.field_d = td.field_d + 1 & 127;
           stackIn_7_0 = true;
         }

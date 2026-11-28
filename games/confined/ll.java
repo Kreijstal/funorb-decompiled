@@ -160,7 +160,7 @@ final class ll {
           }
           if (param0.charAt(0) == 34) {
             if (param0.charAt(-1 + var2_int) != 34) {
-              stackIn_15_0 = ql.field_k;
+              stackIn_15_0 = StageDirector.field_k;
               return stackIn_15_0;
             }
             var3 = 0;
@@ -172,7 +172,7 @@ final class ll {
               } else {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_29_0 = ql.field_k;
+                  stackIn_29_0 = StageDirector.field_k;
                   return stackIn_29_0;
                 }
                 var3 = 0;
@@ -192,13 +192,13 @@ final class ll {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_43_0 = ql.field_k;
+                stackIn_43_0 = StageDirector.field_k;
                 return stackIn_43_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (ji.field_b.indexOf(var5Lifetime1) == -1) {
-                stackIn_47_0 = ql.field_k;
+                stackIn_47_0 = StageDirector.field_k;
                 return stackIn_47_0;
               }
               var3Lifetime1 = 0;

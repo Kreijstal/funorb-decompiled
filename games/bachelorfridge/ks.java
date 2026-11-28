@@ -19,9 +19,9 @@ final class ks extends EventEffect {
           return;
         }
         try {
-          var4 = this.target.a(123, param1);
-          var4.b((byte) 117, 0);
-          var4.d(param2 - 123);
+          var4 = this.target.resolveCreature(123, param1);
+          var4.applyStatusAndRefreshTile((byte) 117, 0);
+          var4.recalculateCreatureStats(param2 - 123);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ks.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

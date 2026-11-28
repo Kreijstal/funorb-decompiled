@@ -381,7 +381,7 @@ final class sl extends IntrusiveNode {
         try {
           sl var4_ref = null;
           if (!sl.a(param0)) {
-            param0.a(param1, param2, true);
+            param0.tryLoadFileByName(param1, param2, true);
             return null;
           }
           byte[] var3 = param0.getFileByName(4, param1, param2);

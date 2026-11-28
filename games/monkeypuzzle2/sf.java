@@ -103,7 +103,7 @@ final class sf extends IntrusiveNode {
         try {
           sf var4_ref = null;
           if (!sf.a(param0)) {
-            param0.a(param2, true, param1);
+            param0.tryLoadFileByName(param2, true, param1);
             return null;
           }
           byte[] var3 = param0.getFileByName(param2, param1, -124);

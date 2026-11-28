@@ -1267,9 +1267,9 @@ public final class fleas extends NetworkGameClient {
           MidiPcmStream.b(true);
           if (null != pb.field_a) {
             if (a.field_a.ensureIndexLoaded((byte) -100) &&
-              a.field_a.a("basic", -116) &&
-              a.field_a.a("roman12", -112) &&
-              a.field_a.a("roman20", -113)) {
+              a.field_a.tryLoadGroupByName("basic", -116) &&
+              a.field_a.tryLoadGroupByName("roman12", -112) &&
+              a.field_a.tryLoadGroupByName("roman20", -113)) {
               if (pb.field_a.ensureIndexLoaded((byte) -110) &&
                 pb.field_a.tryLoadAllGroups(-116)) {
                 if (ib.field_f.ensureIndexLoaded((byte) -125) &&
@@ -1285,8 +1285,8 @@ public final class fleas extends NetworkGameClient {
                           if (de.field_h.ensureIndexLoaded((byte) -122) &&
                             de.field_h.tryLoadAllGroups(-54)) {
                             if (pf.field_b.ensureIndexLoaded((byte) -106) &&
-                              pf.field_b.a("roman12", -106) &&
-                              pf.field_b.a("roman20", -118)) {
+                              pf.field_b.tryLoadGroupByName("roman12", -106) &&
+                              pf.field_b.tryLoadGroupByName("roman20", -118)) {
                               jj.a(55.0f, ri.field_s, true);
                               if (!param0) {
                                 return false;

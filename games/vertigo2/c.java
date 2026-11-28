@@ -312,9 +312,9 @@ class c extends v {
                 var3.field_y = kp.field_P;
                 var3.field_u = af.field_E;
                 var3.field_p = bp.field_z;
-                wo.a(kp.field_P, af.field_E, true, var6_intLifetime1, br.field_U, bp.field_z);
+                PlayerState.appendPlayerMatchStats(kp.field_P, af.field_E, true, var6_intLifetime1, br.field_U, bp.field_z);
               } else {
-                wo.a(kp.field_P, af.field_E, true, var6_intLifetime1, br.field_U, bp.field_z);
+                PlayerState.appendPlayerMatchStats(kp.field_P, af.field_E, true, var6_intLifetime1, br.field_U, bp.field_z);
               }
             }
             JaggrabClient.a(var5, 2);
@@ -324,7 +324,7 @@ class c extends v {
             dupTemp$1 = new int[2][4 * var5];
             var3.field_q = dupTemp$1;
             var7 = dupTemp$1;
-            var8 = cq.field_i;
+            var8 = BlastEffectRenderer.field_i;
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {

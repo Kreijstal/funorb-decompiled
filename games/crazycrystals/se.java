@@ -7,7 +7,7 @@ abstract class se extends li implements ho {
     private ga field_h;
 
     final static void a(byte param0, boolean param1, int param2) {
-        fa.a(gj.field_m, go.field_l, true, param1, r.field_m ? 280 : 480, 5, 20, 15, 26, 240, h.field_d, DirectByteStorage.field_c, 0, param2, r.field_m ? 240 : 320, 20, 17);
+        fa.a(gj.field_m, go.field_l, true, param1, LevelLostScene.field_m ? 280 : 480, 5, 20, 15, 26, 240, h.field_d, DirectByteStorage.field_c, 0, param2, LevelLostScene.field_m ? 240 : 320, 20, 17);
         int var3 = -117 / ((param0 + 6) / 42);
     }
 

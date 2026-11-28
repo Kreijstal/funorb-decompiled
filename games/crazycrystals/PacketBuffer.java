@@ -12,7 +12,7 @@ class PacketBuffer extends IntrusiveNode {
         field_i = null;
         if (param0 > -54) {
           String var2 = (String) null;
-          PacketBuffer.a((String) null, (nj) null, (f) null, (byte) -17, (String) null);
+          PacketBuffer.a((String) null, (nj) null, (PuzzleTile) null, (byte) -17, (String) null);
         }
         field_g = (byte[][]) null;
     }
@@ -539,7 +539,7 @@ class PacketBuffer extends IntrusiveNode {
         return false;
     }
 
-    final static nj a(String param0, nj param1, f param2, byte param3, String param4) {
+    final static nj a(String param0, nj param1, PuzzleTile param2, byte param3, String param4) {
         int var6 = 0;
         int var7 = 0;
         String[] var8 = null;

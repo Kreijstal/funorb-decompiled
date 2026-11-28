@@ -514,7 +514,7 @@ final class vh extends IntrusiveNode {
         try {
           vh var4_ref = null;
           if (!vh.a(param0)) {
-            param0.a(param2, param1, false);
+            param0.tryLoadFileByName(param2, param1, false);
             return null;
           }
           byte[] var3 = param0.getFileByName(param1, param2, 0);

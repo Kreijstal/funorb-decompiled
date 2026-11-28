@@ -30,7 +30,7 @@ final class DiveBomberSpecial extends SpecialOrder {
         int[][] var23 = null;
         var18 = BachelorFridge.field_y;
         try {
-          var19 = this.creature.a(34, param0);
+          var19 = this.creature.resolveCreature(34, param0);
           if (param1 != 3) {
             stackIn_3_0 = (CreatureEvent) null;
             return stackIn_3_0;

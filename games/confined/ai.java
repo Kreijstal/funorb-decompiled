@@ -81,7 +81,7 @@ class ai extends em {
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
           if (null == kl.field_G &&
-            !mb.a(false, (byte) 17)) {
+            !ShockwaveBlast.a(false, (byte) 17)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
@@ -209,7 +209,7 @@ class ai extends em {
               if (la.h(112) <= 30000L) {
                 gl.field_k = ka.field_G;
               } else {
-                gl.field_k = hf.field_S;
+                gl.field_k = HomingProjectile.field_S;
               }
               sg.field_y = false;
               stackIn_63_0 = 249;

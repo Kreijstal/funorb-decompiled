@@ -32,7 +32,7 @@ final class ne {
               if ((ih.field_a & 1 << var1_int) == 0) {
                 stackIn_10_0 = pn.field_a;
               } else {
-                stackIn_10_0 = vg.field_I;
+                stackIn_10_0 = TunnelCamera.field_I;
               }
               var2 = stackIn_10_0;
               var2.c(fb.field_d[var1_int], sc.field_d[var1_int], uh.field_g[var1_int] >> 4, 16777215, -1);

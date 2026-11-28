@@ -11,7 +11,7 @@ final class wc extends id {
     static RgbSprite[] field_nc;
     static int field_Ob;
     private int field_Tb;
-    private kh[] field_ic;
+    private ProjectileRay[] field_ic;
     private boolean field_Jb;
     private int field_lc;
     static int field_hc;
@@ -119,7 +119,7 @@ final class wc extends id {
         }
     }
 
-    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
+    final void drawInTunnel(PrimaryNodeDeque param0, double param1, int param2, TunnelCamera param3, DynamicLight param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -137,13 +137,13 @@ final class wc extends id {
           var9 = new od(gg.field_n[this.field_Zb], false, true, true, true);
           var10 = var9;
           if ((1 << this.field_Zb & 7) != 0) {
-            var10.a(li.field_m, ee.field_H[this.field_Zb][this.field_Qb]);
+            var10.a(li.field_m, MovingTunnelEntity.field_H[this.field_Zb][this.field_Qb]);
             var10.a(li.field_m, tf.field_n[this.field_Zb][this.field_Xb]);
           } else {
             if (this.field_Xb != 0) {
               var10.a(li.field_m, tf.field_n[this.field_Zb][this.field_Xb]);
             } else {
-              var9.a(li.field_m, ee.field_H[this.field_Zb][this.field_Qb]);
+              var9.a(li.field_m, MovingTunnelEntity.field_H[this.field_Zb][this.field_Qb]);
             }
           }
           if (param2 > -5) {
@@ -178,7 +178,7 @@ final class wc extends id {
         }
     }
 
-    wc(hn param0, int param1, double param2, int param3, int param4) {
+    wc(GameSession param0, int param1, double param2, int param3, int param4) {
         super(param0, param2, 1.5, 5.0, param4, 14.0, 0.001);
         int fieldTemp$0 = 0;
         int stackIn_9_1 = 0;
@@ -201,16 +201,16 @@ final class wc extends id {
         this.field_Tb = 0;
         this.field_fc = 0;
         try {
-          this.a(Math.random(), param0.field_J.field_b, Math.random(), Math.random(), Math.random(), (byte) 27, Math.random(), param0.field_x.a((byte) 78, this.field_C), Math.random());
+          this.a(Math.random(), param0.field_J.field_b, Math.random(), Math.random(), Math.random(), (byte) 27, Math.random(), param0.field_x.getMinimumRadiusAfterClearance((byte) 78, this.field_C), Math.random());
           this.d(param1, -96);
           this.field_nb.b(118);
           this.field_Zb = param3;
           this.a(va.field_c[3 * param3], va.field_c[2 + 3 * param3], false, va.field_c[1 + 3 * param3]);
           var7_int = vl.field_c[param3].length / 3;
           this.field_bc = new double[3 * var7_int];
-          this.field_ic = new kh[var7_int];
+          this.field_ic = new ProjectileRay[var7_int];
           for (var8_int = 0; var8_int < var7_int; var8_int++) {
-            this.field_ic[var8_int] = new kh((pm) (this), we.field_b, 117 * var8_int);
+            this.field_ic[var8_int] = new ProjectileRay((TunnelEntity) (this), we.field_b, 117 * var8_int);
             this.field_bc[2 + 3 * var8_int] = -1.0;
           }
           this.g(-122, 0);
@@ -298,15 +298,15 @@ final class wc extends id {
           }
           this.field_zb = param0.field_J.field_p;
           this.f(-1, 0);
-          if (h.field_R != null) {
-            h.field_R.b(lf.field_m[param3], 32);
+          if (WingPod.field_R != null) {
+            WingPod.field_R.b(lf.field_m[param3], 32);
           }
-          this.field_cc = new gk((pm) (this), ResourceArchive.field_b[param3]);
+          this.field_cc = new gk((TunnelEntity) (this), ResourceArchive.field_b[param3]);
           this.field_cc.field_w = this.field_C;
           this.field_cc.field_m = 192;
           var8 = sc.field_h[param3];
           if (var8 != null) {
-            this.field_Fb = new gk((pm) (this), var8);
+            this.field_Fb = new gk((TunnelEntity) (this), var8);
             this.field_Fb.field_w = this.field_C;
             this.field_Fb.field_m = 0;
           }
@@ -325,7 +325,7 @@ final class wc extends id {
         }
     }
 
-    final pm i(byte param0) {
+    final TunnelEntity i(byte param0) {
         double[] var2;
         Object var3;
         int var4;
@@ -342,19 +342,19 @@ final class wc extends id {
         var2 = var5;
         this.field_Eb.a((byte) 91, var7);
         if (this.field_zb == 0) {
-          var3 = new th(this.field_A, (ee) (this), var7, vl.field_c[this.field_Zb][this.field_Tb], vl.field_c[this.field_Zb][this.field_Tb + 1], vl.field_c[this.field_Zb][2 + this.field_Tb]);
+          var3 = new th(this.field_A, (MovingTunnelEntity) (this), var7, vl.field_c[this.field_Zb][this.field_Tb], vl.field_c[this.field_Zb][this.field_Tb + 1], vl.field_c[this.field_Zb][2 + this.field_Tb]);
         } else {
           if (this.field_zb == 1) {
-            var3 = new gm(this.field_A, (ee) (this), var7, vl.field_c[this.field_Zb][this.field_Tb], vl.field_c[this.field_Zb][1 + this.field_Tb], vl.field_c[this.field_Zb][this.field_Tb + 2]);
+            var3 = new gm(this.field_A, (MovingTunnelEntity) (this), var7, vl.field_c[this.field_Zb][this.field_Tb], vl.field_c[this.field_Zb][1 + this.field_Tb], vl.field_c[this.field_Zb][this.field_Tb + 2]);
           } else {
-            var3 = new ik(this.field_A, (ee) (this), var7, vl.field_c[this.field_Zb][this.field_Tb], vl.field_c[this.field_Zb][this.field_Tb + 1], vl.field_c[this.field_Zb][this.field_Tb + 2]);
+            var3 = new ik(this.field_A, (MovingTunnelEntity) (this), var7, vl.field_c[this.field_Zb][this.field_Tb], vl.field_c[this.field_Zb][this.field_Tb + 1], vl.field_c[this.field_Zb][this.field_Tb + 2]);
           }
         }
         this.field_Tb = (this.field_Tb + 3) % vl.field_c[this.field_Zb].length;
-        return (pm) (var3);
+        return (TunnelEntity) (var3);
     }
 
-    final void a(int param0, int param1) {
+    final void updateForTunnelSegment(int param0, int param1) {
         int var12 = 0;
         double var3;
         PcmSample var3_ref_bi;
@@ -368,9 +368,9 @@ final class wc extends id {
         int var9_int;
         double var11;
         double var13_double;
-        kh var13;
+        ProjectileRay var13;
         int var15;
-        mb var16;
+        ShockwaveBlast var16;
         PcmSample var17;
         double[] var21;
         double var3Lifetime1;
@@ -397,12 +397,12 @@ final class wc extends id {
           }
           this.field_Kb.field_t = null;
           this.field_Gb.field_t = null;
-          var16 = new mb((pm) (this), 2.0, 0.2, 0.0003, lk.field_e[this.field_Zb]);
+          var16 = new ShockwaveBlast((TunnelEntity) (this), 2.0, 0.2, 0.0003, lk.field_e[this.field_Zb]);
           var16.field_M.field_w = this.field_C * 2.0;
           var16.field_M.field_m = 192;
           ri.a((IntrusiveNode) (this), param0 - 11878, var16);
           this.field_z = true;
-          this.field_A.a((byte) 50, 5000);
+          this.field_A.addScore((byte) 50, 5000);
           this.field_A.field_J.field_j = true;
           if (this.field_A.field_J.field_o == 3) {
             di.a(param0 ^ -22261, 255, 0);
@@ -427,7 +427,7 @@ final class wc extends id {
         if (0 != this.field_Mb) {
           this.field_Mb = this.field_Mb - 1;
         } else {
-          this.g(-124, (1 + this.field_Qb) % ee.field_I[this.field_Zb]);
+          this.g(-124, (1 + this.field_Qb) % MovingTunnelEntity.field_I[this.field_Zb]);
         }
         if (param0 != 11878) {
           return;
@@ -478,7 +478,7 @@ final class wc extends id {
                 var17 = bk.field_j[this.field_Zb];
                 var3_ref_bi = var17;
                 if (var3_ref_bi != null) {
-                  new gk((pm) (this), var17, 0).field_w = 4.0 * this.field_C;
+                  new gk((TunnelEntity) (this), var17, 0).field_w = 4.0 * this.field_C;
                 }
               }
               this.e(114, 1 + this.field_Xb);
@@ -532,7 +532,7 @@ final class wc extends id {
                 }
                 var5Lifetime1 = this.field_D - this.field_C;
                 var7_int = (int)(Math.random() * (double)bf.field_L[var4].length);
-                var8 = this.field_A.field_J.a(var5Lifetime1, 0, this.field_E, this.field_t, true, bf.field_L[var4][var7_int], (u) null, this.field_A.field_J.field_o, 583, var4, (rd) null, true, new boolean[]{true});
+                var8 = this.field_A.field_J.createStageEnemy(var5Lifetime1, 0, this.field_E, this.field_t, true, bf.field_L[var4][var7_int], (u) null, this.field_A.field_J.field_o, 583, var4, (rd) null, true, new boolean[]{true});
                 for (var9_int = param1; var9_int > 0; var9_int--) {
                   if (this.field_A.field_x.field_r[var9_int] > var5Lifetime1) {
                     continue;
@@ -565,7 +565,7 @@ final class wc extends id {
             }
           }
         }
-        super.a(param0 ^ 0, param1);
+        super.updateForTunnelSegment(param0 ^ 0, param1);
         if (this.field_Rb &&
           pi.field_U[this.field_Zb] == this.field_Xb) {
           var3Lifetime1 = this.field_E - this.field_A.field_B.field_E;
@@ -591,7 +591,7 @@ final class wc extends id {
         }
     }
 
-    final void g(int param0) {
+    final void handleDestruction(int param0) {
         double var2;
         double var4;
         if (0 == this.field_fc &&
@@ -599,14 +599,14 @@ final class wc extends id {
           this.field_fc = 200;
           this.field_cc.f(128);
           this.field_cc = null;
-          this.field_Gb = new gk((pm) (this), ne.field_b, 0);
+          this.field_Gb = new gk((TunnelEntity) (this), ne.field_b, 0);
           this.field_Gb.field_m = 192;
           this.field_Gb.field_w = this.field_C * 2.0;
-          this.field_Kb = new gk((pm) (this), ja.field_b[this.field_Zb], 0);
+          this.field_Kb = new gk((TunnelEntity) (this), ja.field_b[this.field_Zb], 0);
           this.field_Kb.field_w = 2.0 * this.field_C;
           this.field_Kb.field_m = 192;
-          if (null != h.field_R) {
-            h.field_R.b(DirectByteStorage.field_j[1 + this.field_A.field_J.field_o], 32);
+          if (null != WingPod.field_R) {
+            WingPod.field_R.b(DirectByteStorage.field_j[1 + this.field_A.field_J.field_o], 32);
           }
           if (this.field_A.field_J.field_o == 24) {
             this.field_A.field_i = true;
@@ -637,13 +637,13 @@ final class wc extends id {
         if (param0 > -28) {
           this.field_Yb = 70;
         }
-        this.field_Mb = -1 + ee.field_O[this.field_Zb][param1];
+        this.field_Mb = -1 + MovingTunnelEntity.field_O[this.field_Zb][param1];
         if (this.field_Zb == 2) {
           if (1 == this.field_Qb) {
-            new gk((pm) (this), ol.field_c, 0).field_w = 4.0 * this.field_C;
+            new gk((TunnelEntity) (this), ol.field_c, 0).field_w = 4.0 * this.field_C;
           }
           if (1 == this.field_Qb) {
-            new gk((pm) (this), gk.field_q, 0).field_w = this.field_C * 4.0;
+            new gk((TunnelEntity) (this), gk.field_q, 0).field_w = this.field_C * 4.0;
           }
         }
     }
@@ -685,27 +685,27 @@ final class wc extends id {
         }
     }
 
-    final void a(boolean param0, ee param1) {
+    final void onMovingEntityContact(boolean param0, MovingTunnelEntity param1) {
         try {
-          if (param1 instanceof dj) {
+          if (param1 instanceof PlayerShip) {
             this.field_A.field_B.field_X = true;
           }
-          super.a(param0, param1);
+          super.onMovingEntityContact(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "wc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final pm h(byte param0) {
+    final TunnelEntity h(byte param0) {
         if (param0 <= 15) {
-          return (pm) null;
+          return (TunnelEntity) null;
         }
         double[] var4 = new double[12];
         double[] var2 = var4;
         this.field_Eb.a((byte) 26, var4);
-        vm var3 = new vm(this.field_A, (ee) (this), var4, vl.field_c[this.field_Zb][this.field_Tb], vl.field_c[this.field_Zb][1 + this.field_Tb], vl.field_c[this.field_Zb][this.field_Tb + 2], this.field_Y, this.field_db);
+        vm var3 = new vm(this.field_A, (MovingTunnelEntity) (this), var4, vl.field_c[this.field_Zb][this.field_Tb], vl.field_c[this.field_Zb][1 + this.field_Tb], vl.field_c[this.field_Zb][this.field_Tb + 2], this.field_Y, this.field_db);
         this.field_Tb = (3 + this.field_Tb) % vl.field_c[this.field_Zb].length;
-        return (pm) ((Object) var3);
+        return (TunnelEntity) ((Object) var3);
     }
 
     static {

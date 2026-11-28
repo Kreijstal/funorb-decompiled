@@ -23,16 +23,16 @@ final class ad extends ei {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3.ensureIndexLoaded(0) &&
-            param3.a(255, "commonui")) {
+            param3.tryLoadGroupByName(255, "commonui")) {
             if (param1 > -53) {
               field_v = (he[]) null;
             }
             if (param2.ensureIndexLoaded(0) &&
-              param2.a(255, "commonui")) {
+              param2.tryLoadGroupByName(255, "commonui")) {
               if (!param0.ensureIndexLoaded(0)) {
                 return false;
               }
-              if (!param0.a(255, "button.gif")) {
+              if (!param0.tryLoadGroupByName(255, "button.gif")) {
                 return false;
               }
               return true;

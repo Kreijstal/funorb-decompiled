@@ -1380,7 +1380,7 @@ final class ld {
             if (nj.field_j >= 2 &&
               ck.field_f[82]) {
               if (null == nb.field_a) {
-                nb.field_a = ResourceArchive.a((byte) 74);
+                nb.field_a = ResourceArchive.createTerrainProfileBuffer((byte) 74);
               }
               sd.field_a = new LevelSession(7);
               sd.field_a.field_G = nb.field_a;

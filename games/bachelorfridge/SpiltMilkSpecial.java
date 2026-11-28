@@ -34,7 +34,7 @@ final class SpiltMilkSpecial extends SpecialOrder {
             stackIn_2_0 = (CreatureEvent) null;
             return stackIn_2_0;
           }
-          var3 = this.creature.a(118, param0);
+          var3 = this.creature.resolveCreature(118, param0);
           var4 = new SpiltMilkEvent(this.moveId, new CreatureRef(var3));
           var4.effects.addLast(new DamageEffect(new CreatureRef(var3), false, 1, 0, 43), true);
           stackIn_4_0 = var4;

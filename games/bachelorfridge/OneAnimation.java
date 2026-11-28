@@ -38,7 +38,7 @@ final class OneAnimation extends EventAnimation {
         try {
           this.field_D = param1;
           var4 = (MoveCreatureEffect) (this.field_D.effects.beginForward((byte) 90));
-          this.field_F = var4.target.a(-27449, this.screen);
+          this.field_F = var4.target.resolveCreatureView(-27449, this.screen);
           this.field_y = -this.field_F.field_s.tileX + var4.field_i;
           this.field_w = var4.field_l - this.field_F.field_s.tileY;
           this.field_H = (int)Math.sqrt((double)((this.field_w * this.field_w + this.field_y * this.field_y) * 100));
@@ -165,7 +165,7 @@ final class OneAnimation extends EventAnimation {
         int var7;
         BattleCreature var8;
         var7 = BachelorFridge.field_y;
-        var8 = this.field_D.creature.a(36, this.screen.field_h);
+        var8 = this.field_D.creature.resolveCreature(36, this.screen.field_h);
         if (var8.isDown(-114)) {
           return;
         }
@@ -174,11 +174,11 @@ final class OneAnimation extends EventAnimation {
         }
         var3 = (EventEffect) (this.field_D.effects.beginForward((byte) 90));
         while (var3 != null) {
-          var4 = var3.target.a(param0 ^ -27455, this.screen);
+          var4 = var3.target.resolveCreatureView(param0 ^ -27455, this.screen);
           var4.b(-1, 6);
           if (var3 instanceof MoveCreatureEffect) {
             var5 = (MoveCreatureEffect) (var3);
-            var6 = var5.target.a(-27449, this.screen);
+            var6 = var5.target.resolveCreatureView(-27449, this.screen);
             this.screen.a(var5.field_i, var6, (byte) 48, var5.field_l);
           } else {
             if (!(var3 instanceof DamageEffect)) {
@@ -193,14 +193,14 @@ final class OneAnimation extends EventAnimation {
         EventEffect var3 = null;
         CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
-        BattleCreature var2 = this.field_D.creature.a(70, this.screen.field_h);
+        BattleCreature var2 = this.field_D.creature.resolveCreature(70, this.screen.field_h);
         if (var2.isDown(-112)) {
           return;
         }
         if (param0 >= 37) {
           var3 = (EventEffect) (this.field_D.effects.beginForward((byte) 90));
           while (var3 != null) {
-            var4 = var3.target.a(-27449, this.screen);
+            var4 = var3.target.resolveCreatureView(-27449, this.screen);
             var4.b(-1, 6);
             if (var3 instanceof DamageEffect) {
               var3.apply(var2, this.screen.field_h, 12);

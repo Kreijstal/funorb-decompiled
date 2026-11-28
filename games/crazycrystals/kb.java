@@ -4,7 +4,7 @@
 final class kb {
     static String[] field_f;
     int field_d;
-    f[][] field_b;
+    PuzzleTile[][] field_b;
     static int field_h;
     String field_e;
     static String[] field_c;
@@ -19,7 +19,7 @@ final class kb {
         }
     }
 
-    kb(f[][] param0, String param1, int param2) {
+    kb(PuzzleTile[][] param0, String param1, int param2) {
         try {
           this.field_b = param0;
           this.field_e = param1;

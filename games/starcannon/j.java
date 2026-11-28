@@ -31,13 +31,13 @@ final class j {
         if (!bf.field_y.ensureIndexLoaded((byte) 110)) {
           return n.field_f;
         }
-        if (!bf.field_y.a("commonui", -9883)) {
+        if (!bf.field_y.tryLoadGroupByName("commonui", -9883)) {
           return ae.field_a + " - " + bf.field_y.getGroupLoadPercentByName("commonui", (byte) 98) + "%";
         }
         if (!Bzip2State.field_k.ensureIndexLoaded((byte) 106)) {
           return s.field_g;
         }
-        if (!Bzip2State.field_k.a("commonui", -9883)) {
+        if (!Bzip2State.field_k.tryLoadGroupByName("commonui", -9883)) {
           return sj.field_D + " - " + Bzip2State.field_k.getGroupLoadPercentByName("commonui", (byte) 116) + "%";
         }
         if (!li.field_b.ensureIndexLoaded((byte) 105)) {
@@ -47,7 +47,7 @@ final class j {
           j.b(69);
         }
         if (!li.field_b.tryLoadAllGroups(29741)) {
-          return MouseWheelSource.field_b + " - " + li.field_b.a((byte) 116) + "%";
+          return MouseWheelSource.field_b + " - " + li.field_b.getArchiveLoadPercent((byte) 116) + "%";
         }
         return ba.field_a;
     }

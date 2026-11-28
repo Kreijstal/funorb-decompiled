@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fe extends l {
+final class fe extends ResultScenePhase {
     private int field_i;
-    private r field_f;
+    private LevelLostScene field_f;
     static int field_j;
     static String field_e;
     static int[] field_h;
@@ -26,7 +26,7 @@ final class fe extends l {
         }
     }
 
-    fe(r param0) {
+    fe(LevelLostScene param0) {
         this.field_i = 0;
         try {
           this.field_f = param0;
@@ -35,20 +35,20 @@ final class fe extends l {
         }
     }
 
-    final l a(int param0) {
-        nj.field_k = kk.field_a[0].length;
-        DualLinkNode.a(0, param0, 0, kk.field_a);
+    final ResultScenePhase updatePhase(int param0) {
+        nj.field_k = FloatingScoreLabel.field_a[0].length;
+        DualLinkNode.a(0, param0, 0, FloatingScoreLabel.field_a);
         nj.field_k = 0;
         if (!(this.field_f.field_o > this.field_i)) {
           jj.field_b = jj.field_b - (~jj.field_b >> 3);
           if (!(this.field_f.field_n > jj.field_b)) {
-            kk.field_a = (f[][]) null;
+            FloatingScoreLabel.field_a = (PuzzleTile[][]) null;
             hc.a(true, false);
             return null;
           }
         }
         this.field_i = this.field_i + 1;
-        return (l) (this);
+        return (ResultScenePhase) (this);
     }
 
     final static String a(int param0, CharSequence param1) {
@@ -131,8 +131,8 @@ final class fe extends l {
         }
     }
 
-    final l b(byte param0) {
-        kk.field_a = (f[][]) null;
+    final ResultScenePhase fastForwardPhase(byte param0) {
+        FloatingScoreLabel.field_a = (PuzzleTile[][]) null;
         hc.a(true, false);
         if (param0 == -90) {
           return null;
@@ -172,9 +172,9 @@ final class fe extends l {
           m.field_n = new am(RawPcmStream.a(cl.field_m, 100, 0));
           MouseInputHandler.field_d = new am(RawPcmStream.a(ab.field_z, 100, 0));
           rb.field_g = new am(RawPcmStream.a(AccountCreationResultPanel.field_nb, 100, 0));
-          ln.field_f = new am(RawPcmStream.a(tg.field_c, 100, 0));
+          ScoreModifier.field_f = new am(RawPcmStream.a(tg.field_c, 100, 0));
           oj.field_E = new am(RawPcmStream.a(ProxyAuthenticationRequiredException.field_b, 100, 0));
-          c.field_q = new am(RawPcmStream.a(ga.field_H, 100, 0));
+          LaserHubTile.field_q = new am(RawPcmStream.a(ga.field_H, 100, 0));
           e.b((byte) -122);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "fe.G(" + param0 + ')');

@@ -296,7 +296,7 @@ final class bl extends IntrusiveNode {
         try {
           bl var4_ref = null;
           if (!bl.a(param0)) {
-            param0.a((byte) 43, param1, param2);
+            param0.tryLoadFileByName((byte) 43, param1, param2);
             return null;
           }
           byte[] var3 = param0.getFileByName(7693, param2, param1);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc extends sa {
+final class uc extends DampedProjectile {
     static String field_Z;
     static RgbSprite[] field_U;
     static RgbSprite[] field_db;
@@ -39,7 +39,7 @@ final class uc extends sa {
         }
     }
 
-    final void g(int param0) {
+    final void handleDestruction(int param0) {
         int var2 = 0;
         int var3 = Confined.field_J ? 1 : 0;
         int var2Lifetime1;
@@ -49,32 +49,32 @@ final class uc extends sa {
           this.a((byte) 112, ji.field_a, 1.5);
           this.a(AccountNameAvailabilityValidator.field_k, false);
           for (var2 = 0; var2 < 5; var2++) {
-            ri.a((IntrusiveNode) (this), 0, new mm(this.field_A, (ee) (this), this.field_S, AccountNameAvailabilityValidator.field_k[var2]));
+            ri.a((IntrusiveNode) (this), 0, new mm(this.field_A, (MovingTunnelEntity) (this), this.field_S, AccountNameAvailabilityValidator.field_k[var2]));
           }
           return;
         }
         this.a((byte) 112, ji.field_a, 1.5);
         this.a(AccountNameAvailabilityValidator.field_k, false);
         for (var2Lifetime1 = 0; var2Lifetime1 < 5; var2Lifetime1++) {
-          ri.a((IntrusiveNode) (this), 0, new mm(this.field_A, (ee) (this), this.field_S, AccountNameAvailabilityValidator.field_k[var2Lifetime1]));
+          ri.a((IntrusiveNode) (this), 0, new mm(this.field_A, (MovingTunnelEntity) (this), this.field_S, AccountNameAvailabilityValidator.field_k[var2Lifetime1]));
         }
     }
 
-    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
+    final void drawInTunnel(PrimaryNodeDeque param0, double param1, int param2, TunnelCamera param3, DynamicLight param4) {
         if (this.field_N) {
           return;
         }
         try {
           this.a(DiskArchiveRequest.field_A, this.field_S, param4, (byte) 64, param1, param0, param3, 128);
           if (param2 >= -5) {
-            this.g(118);
+            this.handleDestruction(118);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "uc.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    uc(hn param0, ee param1, da param2) {
+    uc(GameSession param0, MovingTunnelEntity param1, da param2) {
         super(param0, param1, param2, 0.2, 0.03, 16.0);
         try {
           kj.a(gi.field_eb, 96, param1);

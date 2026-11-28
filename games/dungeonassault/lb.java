@@ -14,10 +14,10 @@ final class lb {
     private long[] field_c;
     private int[] field_n;
     int[] field_J;
-    ai[] field_L;
+    DungeonTileState[] field_L;
     int field_l;
     private int[] field_M;
-    wm field_k;
+    PackedBitSet field_k;
     static String field_E;
     boolean field_H;
     int field_b;
@@ -70,7 +70,7 @@ final class lb {
     }
 
     private final void a(PacketBuffer param0, int param1, int param2) {
-        ai dupTemp$0 = null;
+        DungeonTileState dupTemp$0 = null;
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_92_0 = null;
         StringBuilder stackIn_92_1 = null;
@@ -148,9 +148,9 @@ final class lb {
           for (var5 = 0; var5 < this.field_k.field_f.length; var5++) {
             this.field_k.field_f[var5] = param0.readInt(IntrusiveDeque.b(param1, 13096));
           }
-          this.field_L = new ai[49];
-          this.field_L[24] = new ai(2);
-          dupTemp$0 = new ai(3);
+          this.field_L = new DungeonTileState[49];
+          this.field_L[24] = new DungeonTileState(2);
+          dupTemp$0 = new DungeonTileState(3);
           this.field_L[48] = dupTemp$0;
           this.field_L[42] = dupTemp$0;
           this.field_L[6] = dupTemp$0;
@@ -166,7 +166,7 @@ final class lb {
           }
           this.field_a = new Raider[8];
           for (var5Lifetime2 = 0; 8 > var5Lifetime2; var5Lifetime2++) {
-            this.field_a[var5Lifetime2] = ai.a(param0, var5Lifetime2, -12, param2);
+            this.field_a[var5Lifetime2] = DungeonTileState.readRaiderFromRaidSave(param0, var5Lifetime2, -12, param2);
           }
           this.field_F = new int[6];
           this.field_e = 0;
@@ -278,7 +278,7 @@ final class lb {
           wa.field_l = param2;
           i.field_x = param0;
           n.field_c = param1;
-          wm.a((byte) -52, SoftwareRasterizer.field_i / 2, SoftwareRasterizer.field_c / param3);
+          PackedBitSet.setLayoutCenter((byte) -52, SoftwareRasterizer.field_i / 2, SoftwareRasterizer.field_c / param3);
           mi.a(param0.field_N, 25570, param0.field_E + param0.field_N, param1.field_N, param1.field_N + param1.field_E);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "lb.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -325,21 +325,21 @@ final class lb {
         this.field_l = 2500;
         this.field_s = 2500;
         this.field_N = 2500;
-        this.field_k = new wm(84);
+        this.field_k = new PackedBitSet(84);
         this.field_a = new Raider[8];
-        this.field_L = new ai[49];
+        this.field_L = new DungeonTileState[49];
         for (var1 = 0; var1 < 49; var1++) {
           if (var1 != 24) {
             if (var1 != 0 &&
               6 != var1 &&
               var1 != 42 &&
               var1 != 48) {
-              this.field_L[var1] = new ai(0);
+              this.field_L[var1] = new DungeonTileState(0);
             } else {
-              this.field_L[var1] = new ai(3);
+              this.field_L[var1] = new DungeonTileState(3);
             }
           } else {
-            this.field_L[var1] = new ai(2);
+            this.field_L[var1] = new DungeonTileState(2);
           }
         }
         this.field_J = new int[6];

@@ -30,8 +30,8 @@ final class oh implements ca {
         int var3 = 0;
         var3 = DungeonAssault.field_K;
         try {
-          al.field_o.a(1);
-          al.field_o.a(24, -92);
+          al.field_o.clearAllBits(1);
+          al.field_o.setBit(24, -92);
           AccountCreationResultPanel.field_Sb[24] = -1;
           if (param1 != 7) {
             field_b = (String) null;
@@ -41,7 +41,7 @@ final class oh implements ca {
           while (!hf.field_ob.isEmpty((byte) -88)) {
             var2_int = ((a) (hf.field_ob.removeLast((byte) -124))).field_j;
             if (me.field_g[var2_int].field_h.field_g == param0) {
-              al.field_o.b(var2_int, param1 + 24);
+              al.field_o.clearBit(var2_int, param1 + 24);
               continue;
             }
             if (var2_int % 7 > 0) {

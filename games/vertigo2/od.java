@@ -40,13 +40,13 @@ final class od extends UiPanel {
           if (!HuffmanCodec.field_b.ensureIndexLoaded(0)) {
             return 20;
           }
-          if (!HuffmanCodec.field_b.c("commonui", 0)) {
+          if (!HuffmanCodec.field_b.tryLoadGroupByName("commonui", 0)) {
             return 40;
           }
           if (!la.field_e.ensureIndexLoaded(0)) {
             return 50;
           }
-          if (!la.field_e.c("commonui", 0)) {
+          if (!la.field_e.tryLoadGroupByName("commonui", 0)) {
             return 60;
           }
           if (!kb.field_b.ensureIndexLoaded(0)) {
@@ -60,23 +60,23 @@ final class od extends UiPanel {
             if (!qc.field_B.ensureIndexLoaded(0)) {
               return 14;
             }
-            if (!qc.field_B.b("", -1)) {
+            if (!qc.field_B.hasGroupName("", -1)) {
               return 29;
             }
-            if (!qc.field_B.c("", 0)) {
+            if (!qc.field_B.tryLoadGroupByName("", 0)) {
               return 29;
             }
           }
           if (!HuffmanCodec.field_b.ensureIndexLoaded(0)) {
             return 43;
           }
-          if (!HuffmanCodec.field_b.c("commonui", 0)) {
+          if (!HuffmanCodec.field_b.tryLoadGroupByName("commonui", 0)) {
             return 57;
           }
           if (!la.field_e.ensureIndexLoaded(0)) {
             return 71;
           }
-          if (!la.field_e.c("commonui", 0)) {
+          if (!la.field_e.tryLoadGroupByName("commonui", 0)) {
             return 80;
           }
           if (!kb.field_b.ensureIndexLoaded(0)) {

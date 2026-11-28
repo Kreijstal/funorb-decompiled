@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class th extends ah {
+final class th extends AcceleratingProjectile {
     static String[] field_eb;
     static String field_fb;
-    private oi field_db;
+    private DynamicLight field_db;
     static PcmSample field_bb;
     static volatile boolean field_cb;
 
-    th(hn param0, dj param1) {
+    th(GameSession param0, PlayerShip param1) {
         super(param0, param1, 0.4, 0.02, 64.0, ke.field_cb);
-        this.field_db = new oi((pm) (this));
+        this.field_db = new DynamicLight((TunnelEntity) (this));
         try {
           kj.a(n.field_a, 96, param1);
         } catch (RuntimeException runtimeException) {
@@ -18,9 +18,9 @@ final class th extends ah {
         }
     }
 
-    th(hn param0, ee param1, double[] param2, double param3, double param4, double param5) {
+    th(GameSession param0, MovingTunnelEntity param1, double[] param2, double param3, double param4, double param5) {
         super(param0, param1, 0.4, 0.02, 8.0, param2, param3, param4, param5, ke.field_cb);
-        this.field_db = new oi((pm) (this));
+        this.field_db = new DynamicLight((TunnelEntity) (this));
         try {
           kj.a(n.field_a, 96, param1);
         } catch (RuntimeException runtimeException) {
@@ -41,7 +41,7 @@ final class th extends ah {
         field_fb = null;
     }
 
-    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
+    final void drawInTunnel(PrimaryNodeDeque param0, double param1, int param2, TunnelCamera param3, DynamicLight param4) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -112,7 +112,7 @@ final class th extends ah {
         }
     }
 
-    final void a(PrimaryNodeDeque param0, byte param1) {
+    final void collectEntityLights(PrimaryNodeDeque param0, byte param1) {
         double[] var13 = null;
         double[] var12 = null;
         double[] var11 = null;
@@ -143,7 +143,7 @@ final class th extends ah {
         }
     }
 
-    final void g(int param0) {
+    final void handleDestruction(int param0) {
         if (param0 == 26402) {
           fl.a(this.a(param0 - 28786, bn.field_b, 1.5, 0.002, 0.5), 4);
           return;

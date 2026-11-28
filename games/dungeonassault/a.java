@@ -3,7 +3,7 @@
  */
 final class a extends IntrusiveNode {
     static String field_m;
-    static wm field_o;
+    static PackedBitSet field_o;
     static String field_p;
     static String field_k;
     static String field_l;

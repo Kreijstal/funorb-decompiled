@@ -55,12 +55,12 @@ final class rc {
           var9 = IntrusiveNode.field_i[0].field_t;
           var10 = 0;
           var11 = 3;
-          bh.a(var10, var8, var2, MenuSelectionCursor.field_j, var11, var13, 225, var6, aa.field_Sb, var7, 128, IntrusiveNode.field_i, var9);
+          LevelSimulation.drawTutorialEntries(var10, var8, var2, MenuSelectionCursor.field_j, var11, var13, 225, var6, aa.field_Sb, var7, 128, IntrusiveNode.field_i, var9);
           SoftwareRasterizer.drawVerticalLineAlpha(320, var3 + 130 + 4, 320 - (80 - (var3 + 4)), 16777215, 100);
           var6 += 300;
           var11 += 3;
           var10 += 3;
-          bh.a(var10, var8, var2, MenuSelectionCursor.field_j, var11, var13, 225, var6, aa.field_Sb, var7, 128, IntrusiveNode.field_i, var9);
+          LevelSimulation.drawTutorialEntries(var10, var8, var2, MenuSelectionCursor.field_j, var11, var13, 225, var6, aa.field_Sb, var7, 128, IntrusiveNode.field_i, var9);
           if (var12 == 0) {
             va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
             return;
@@ -75,12 +75,12 @@ final class rc {
             var9Lifetime1 = vj.field_g[0].field_t;
             var10Lifetime1 = 0;
             var11Lifetime1 = 4;
-            bh.a(var10Lifetime1, var8Lifetime1, var2, ag.field_a, var11Lifetime1, var13, 225, var6Lifetime1, bg.field_e, var7Lifetime1, 128, vj.field_g, var9Lifetime1);
+            LevelSimulation.drawTutorialEntries(var10Lifetime1, var8Lifetime1, var2, ag.field_a, var11Lifetime1, var13, 225, var6Lifetime1, LevelRenderable.field_e, var7Lifetime1, 128, vj.field_g, var9Lifetime1);
             var10Lifetime1 += 4;
             var6Lifetime1 += 300;
             var11Lifetime1 += 3;
             SoftwareRasterizer.drawVerticalLineAlpha(320, 134 + var3, 320 - (80 + (-4 - var3)), 16777215, 100);
-            bh.a(var10Lifetime1, var8Lifetime1, var2, ag.field_a, var11Lifetime1, var13, 225, var6Lifetime1, bg.field_e, var7Lifetime1, param0 + 32291, vj.field_g, var9Lifetime1);
+            LevelSimulation.drawTutorialEntries(var10Lifetime1, var8Lifetime1, var2, ag.field_a, var11Lifetime1, var13, 225, var6Lifetime1, LevelRenderable.field_e, var7Lifetime1, param0 + 32291, vj.field_g, var9Lifetime1);
             if (var12 == 0) {
               va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
               return;
@@ -108,12 +108,12 @@ final class rc {
         var9Lifetime2 = IntrusiveNode.field_i[0].field_t;
         var10Lifetime2 = 6;
         var11Lifetime2 = 9;
-        bh.a(var10Lifetime2, var8Lifetime2, var2, MenuSelectionCursor.field_j, var11Lifetime2, var13, 225, var6Lifetime2, aa.field_Sb, var7Lifetime2, 128, IntrusiveNode.field_i, var9Lifetime2);
+        LevelSimulation.drawTutorialEntries(var10Lifetime2, var8Lifetime2, var2, MenuSelectionCursor.field_j, var11Lifetime2, var13, 225, var6Lifetime2, aa.field_Sb, var7Lifetime2, 128, IntrusiveNode.field_i, var9Lifetime2);
         var11Lifetime2 += 3;
         var10Lifetime2 += 3;
         SoftwareRasterizer.drawVerticalLineAlpha(320, 134 + var3, -80 - (-4 - var3) + 320, 16777215, 100);
         var6Lifetime2 += 300;
-        bh.a(var10Lifetime2, var8Lifetime2, var2, MenuSelectionCursor.field_j, var11Lifetime2, var13, 225, var6Lifetime2, aa.field_Sb, var7Lifetime2, param0 + 32291, IntrusiveNode.field_i, var9Lifetime2);
+        LevelSimulation.drawTutorialEntries(var10Lifetime2, var8Lifetime2, var2, MenuSelectionCursor.field_j, var11Lifetime2, var13, 225, var6Lifetime2, aa.field_Sb, var7Lifetime2, param0 + 32291, IntrusiveNode.field_i, var9Lifetime2);
         if (var12 == 0) {
           va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
           return;

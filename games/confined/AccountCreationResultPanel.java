@@ -116,7 +116,7 @@ final class AccountCreationResultPanel extends dh implements el {
           if (this.field_Fb) {
             return super.l(-6);
           }
-          var2 = lc.pollAccountCreationResult((byte) -100);
+          var2 = TunnelMesh.pollAccountCreationResult((byte) -100);
           if (var2 == null) {
             return super.l(-6);
           }
@@ -131,7 +131,7 @@ final class AccountCreationResultPanel extends dh implements el {
         if (this.field_Fb) {
           return super.l(-6);
         }
-        var2Lifetime1 = lc.pollAccountCreationResult((byte) -100);
+        var2Lifetime1 = TunnelMesh.pollAccountCreationResult((byte) -100);
         if (var2Lifetime1 != null) {
           this.showAccountCreationResult((byte) -96, false, var2Lifetime1);
         }

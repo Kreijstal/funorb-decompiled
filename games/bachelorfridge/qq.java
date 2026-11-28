@@ -408,13 +408,13 @@ final class qq extends EventEffect {
         RuntimeException decompiledCaughtException = null;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var4 = this.target.a(71, param1);
+          var4 = this.target.resolveCreature(71, param1);
           if (-1 != this.field_j) {
             var4.field_k[this.field_j] = var4.field_k[this.field_j] - this.field_f;
             decompiledFrameRemainder0 = (BachelorFridge.field_y != 0);
           }
           if ((decompiledFrameRemainder0) &&
-            (var4.a(this.field_f, param0, (byte) 2))) {
+            (var4.applyDamageAndRecordSource(this.field_f, param0, (byte) 2))) {
             return;
           }
           if (param2 != 12) {

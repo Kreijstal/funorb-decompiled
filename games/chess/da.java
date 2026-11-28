@@ -728,7 +728,7 @@ final class da extends ArchiveProvider {
             stackIn_4_0 = (String) (param0);
             return stackIn_4_0;
           }
-          stackIn_6_0 = param1 + " - " + param2.a((byte) -108) + "%";
+          stackIn_6_0 = param1 + " - " + param2.getArchiveLoadPercent((byte) -108) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

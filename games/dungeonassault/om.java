@@ -94,7 +94,7 @@ final class om {
           if (bl.field_j != null) {
             return true;
           }
-          if (!hj.field_Z.a(false, "benefits")) {
+          if (!hj.field_Z.tryLoadGroupByName(false, "benefits")) {
             return false;
           }
           bl.field_j = oh.a(hj.field_Z, "benefits", 11091, "members_benefits_borders");

@@ -3,15 +3,15 @@
  */
 import java.io.*;
 
-final class vm extends hf {
+final class vm extends HomingProjectile {
     static PcmSample field_cb;
     static String field_ab;
     private int field_db;
     private static long[] field_fb;
-    private oi field_eb;
+    private DynamicLight field_eb;
     static String field_bb;
 
-    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
+    final void drawInTunnel(PrimaryNodeDeque param0, double param1, int param2, TunnelCamera param3, DynamicLight param4) {
         try {
           if (param2 >= -5) {
             field_ab = (String) null;
@@ -34,24 +34,24 @@ final class vm extends hf {
         }
     }
 
-    final void g(int param0) {
+    final void handleDestruction(int param0) {
         if (param0 != 26402) {
-          oi var3 = (oi) null;
-          this.a((PrimaryNodeDeque) null, -0.40409225463452153, 117, (vg) null, (oi) null);
+          DynamicLight var3 = (DynamicLight) null;
+          this.drawInTunnel((PrimaryNodeDeque) null, -0.40409225463452153, 117, (TunnelCamera) null, (DynamicLight) null);
         }
         this.a((byte) -120, FrameTimer.field_e, 3.0);
     }
 
-    final void a(int param0, int param1) {
+    final void updateForTunnelSegment(int param0, int param1) {
         this.field_db = this.field_db + 1;
-        super.a(param0, param1);
+        super.updateForTunnelSegment(param0, param1);
         if (this.field_A.field_x.field_r[this.field_A.field_x.field_a - 1] <= this.field_D) {
           this.field_z = true;
           this.field_s = 2;
         }
     }
 
-    final void a(PrimaryNodeDeque param0, byte param1) {
+    final void collectEntityLights(PrimaryNodeDeque param0, byte param1) {
         try {
           int var3_int = 68 % ((-2 - param1) / 62);
           this.field_eb.field_p = this.field_D;
@@ -116,7 +116,7 @@ final class vm extends hf {
         }
     }
 
-    vm(hn param0, ee param1, double[] param2, double param3, double param4, double param5, double param6, boolean param7) {
+    vm(GameSession param0, MovingTunnelEntity param1, double[] param2, double param3, double param4, double param5, double param6, boolean param7) {
         super(param0, param1.field_E, param1.field_t, param1.field_D, 0.1, 0.01, param1, 4.0, 0.004);
         double[] var42 = null;
         double[] var40 = null;
@@ -135,12 +135,12 @@ final class vm extends hf {
         double var35 = 0.0;
         double var37 = 0.0;
         this.field_db = 0;
-        this.field_eb = new oi((pm) (this));
+        this.field_eb = new DynamicLight((TunnelEntity) (this));
         try {
           this.field_t = this.field_t + (param5 * param2[10] + (param4 * param2[7] + param3 * param2[4]));
           this.field_D = this.field_D + (param2[11] * param5 + (param3 * param2[5] + param2[8] * param4));
           this.field_E = this.field_E + (param5 * param2[9] + (param4 * param2[6] + param3 * param2[3]));
-          var42 = param0.field_B.e(3008);
+          var42 = param0.field_B.getPositionAndVelocity(3008);
           var40 = var42;
           var39 = var40;
           double[] var13 = var39;
@@ -178,12 +178,12 @@ final class vm extends hf {
           this.field_Y = 0.004;
           this.field_G = var22 + var16 / var37;
           if (param7) {
-            this.field_W = (pm) ((Object) param0.field_B);
+            this.field_W = (TunnelEntity) ((Object) param0.field_B);
           }
           this.field_L = var24 + var18 / var37;
           this.field_K = var14 / var37 + var20;
           kj.a(ih.field_e, 96, param1);
-          new gk((pm) (this), kh.field_fb).field_w = 0.1;
+          new gk((TunnelEntity) (this), ProjectileRay.field_fb).field_w = 0.1;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "vm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
@@ -243,7 +243,7 @@ final class vm extends hf {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            mb.a("CC1", true, (Throwable) ((Object) var6));
+            ShockwaveBlast.a("CC1", true, (Throwable) ((Object) var6));
             NanoFrameTimer.field_j = null;
             lk.field_b = null;
           }

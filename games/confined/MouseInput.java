@@ -208,7 +208,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           var1 = BufferedSocket.d(85);
           om.field_p = new w(var1, (String) null, true, false, false);
           if (param0 == 2) {
-            vg.field_Z.c(dn.field_b, 0);
+            TunnelCamera.field_Z.c(dn.field_b, 0);
             dn.field_b.a((fj) (om.field_p), (byte) -72);
             dn.field_b.m(118);
             return;
@@ -218,7 +218,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         var1Lifetime1 = BufferedSocket.d(85);
         om.field_p = new w(var1Lifetime1, (String) null, true, false, false);
         if (param0 == 2) {
-          vg.field_Z.c(dn.field_b, 0);
+          TunnelCamera.field_Z.c(dn.field_b, 0);
           dn.field_b.a((fj) (om.field_p), (byte) -72);
           dn.field_b.m(118);
           return;

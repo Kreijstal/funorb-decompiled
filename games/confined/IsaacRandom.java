@@ -55,13 +55,13 @@ final class IsaacRandom {
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        oi var2 = null;
+        DynamicLight var2 = null;
         RuntimeException var2_ref = null;
-        oi var3 = null;
+        DynamicLight var3 = null;
         int var4 = 0;
         int var5 = 0;
-        oi var2Lifetime1;
-        oi var3Lifetime1;
+        DynamicLight var2Lifetime1;
+        DynamicLight var3Lifetime1;
         int var4Lifetime1;
         var5 = Confined.field_J ? 1 : 0;
         try {
@@ -69,11 +69,11 @@ final class IsaacRandom {
             return;
           }
           while (true) {
-            var2 = (oi) (param1.beginBackward(false));
+            var2 = (DynamicLight) (param1.beginBackward(false));
             if (var2 == null) {
               return;
             }
-            var3 = (oi) (param1.nextBackward((byte) -124));
+            var3 = (DynamicLight) (param1.nextBackward((byte) -124));
             var4 = 1;
             while (var3 != null) {
               if (var3.field_p + var3.field_n < var2.field_n + var2.field_p) {
@@ -82,13 +82,13 @@ final class IsaacRandom {
               } else {
                 var2 = var3;
               }
-              var3 = (oi) (param1.nextBackward((byte) -127));
+              var3 = (DynamicLight) (param1.nextBackward((byte) -127));
             }
             if (var4 != 0) {
               return;
             }
-            var3Lifetime1 = (oi) (param1.beginForward(-113));
-            var2Lifetime1 = (oi) (param1.nextForward(2123));
+            var3Lifetime1 = (DynamicLight) (param1.beginForward(-113));
+            var2Lifetime1 = (DynamicLight) (param1.nextForward(2123));
             var4Lifetime1 = 1;
             while (var2Lifetime1 != null) {
               if (var2Lifetime1.field_n + var2Lifetime1.field_p > var3Lifetime1.field_n + var3Lifetime1.field_p) {
@@ -97,7 +97,7 @@ final class IsaacRandom {
               } else {
                 var3Lifetime1 = var2Lifetime1;
               }
-              var2Lifetime1 = (oi) (param1.nextForward(2123));
+              var2Lifetime1 = (DynamicLight) (param1.nextForward(2123));
             }
             if (var4Lifetime1 != 0) {
               return;
@@ -139,10 +139,10 @@ final class IsaacRandom {
           }
           var5_int = 0;
           while (true) {
-            if (var5_int >= vb.field_e.length) {
+            if (var5_int >= DequeCursor.field_e.length) {
               return;
             }
-            param3 = vb.field_e[var5_int];
+            param3 = DequeCursor.field_e[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param3;
@@ -388,24 +388,24 @@ final class IsaacRandom {
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
-        oi var2 = null;
+        DynamicLight var2 = null;
         RuntimeException var2_ref = null;
-        oi var3 = null;
+        DynamicLight var3 = null;
         int var4 = 0;
         int var5 = 0;
-        oi var2Lifetime1;
-        oi var3Lifetime1;
+        DynamicLight var2Lifetime1;
+        DynamicLight var3Lifetime1;
         var5 = Confined.field_J ? 1 : 0;
         try {
           if (param1 < 13) {
             return;
           }
           do {
-            var2 = (oi) (param0.beginBackward(false));
+            var2 = (DynamicLight) (param0.beginBackward(false));
             if (var2 == null) {
               return;
             }
-            var3 = (oi) (param0.nextBackward((byte) -30));
+            var3 = (DynamicLight) (param0.nextBackward((byte) -30));
             var4 = 1;
             while (var3 != null) {
               if (!(var3.field_p - var3.field_n < -var2.field_n + var2.field_p)) {
@@ -414,13 +414,13 @@ final class IsaacRandom {
                 ri.a(var3, 0, var2);
                 var4 = 0;
               }
-              var3 = (oi) (param0.nextBackward((byte) -96));
+              var3 = (DynamicLight) (param0.nextBackward((byte) -96));
             }
             if (var4 != 0) {
               return;
             }
-            var3Lifetime1 = (oi) (param0.beginForward(59));
-            var2Lifetime1 = (oi) (param0.nextForward(2123));
+            var3Lifetime1 = (DynamicLight) (param0.beginForward(59));
+            var2Lifetime1 = (DynamicLight) (param0.nextForward(2123));
             var4 = 1;
             while (var2Lifetime1 != null) {
               if (!(var3Lifetime1.field_p - var3Lifetime1.field_n < -var2Lifetime1.field_n + var2Lifetime1.field_p)) {
@@ -429,7 +429,7 @@ final class IsaacRandom {
                 var4 = 0;
                 ri.a(var3Lifetime1, 0, var2Lifetime1);
               }
-              var2Lifetime1 = (oi) (param0.nextForward(2123));
+              var2Lifetime1 = (DynamicLight) (param0.nextForward(2123));
             }
           } while (var4 == 0);
           return;

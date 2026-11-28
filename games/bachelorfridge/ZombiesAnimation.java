@@ -12,7 +12,7 @@ final class ZombiesAnimation extends EventAnimation {
         CreatureActor var7 = null;
         Object var3 = null;
         int var5 = BachelorFridge.field_y;
-        BattleCreature var6 = this.field_v.creature.a(9, this.screen.field_h);
+        BattleCreature var6 = this.field_v.creature.resolveCreature(9, this.screen.field_h);
         if (param0 >= -47) {
           ZombiesAnimation.releaseStatics(-41);
         }
@@ -22,7 +22,7 @@ final class ZombiesAnimation extends EventAnimation {
           while (var3_ref != null) {
             var3_ref.apply(var6, this.screen.field_h, 12);
             if (var3_ref instanceof DamageEffect) {
-              var7 = var3_ref.target.a(-27449, this.screen);
+              var7 = var3_ref.target.resolveCreatureView(-27449, this.screen);
               this.addChild(27799, new ActorAnimation(this.screen, var7));
               this.addChild(27799, new iu(67, 256));
               this.addChild(27799, new cb(var7, 19));

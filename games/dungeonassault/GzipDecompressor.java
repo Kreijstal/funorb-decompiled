@@ -10,12 +10,12 @@ final class GzipDecompressor {
     static RgbSprite field_e;
     static int field_a;
 
-    final static wm a(int param0, Random param1) {
+    final static PackedBitSet a(int param0, Random param1) {
         int fieldTemp$0 = 0;
         int var10 = 0;
         int var7 = 0;
         int stackIn_54_0 = 0;
-        wm stackIn_103_0 = null;
+        PackedBitSet stackIn_103_0 = null;
         RuntimeException stackIn_106_0 = null;
         StringBuilder stackIn_106_1 = null;
         String stackIn_107_2 = null;
@@ -38,9 +38,9 @@ final class GzipDecompressor {
         int var8Lifetime1;
         var12 = DungeonAssault.field_K;
         try {
-          bo.field_Jb = new wm(ib.field_l);
+          bo.field_Jb = new PackedBitSet(ib.field_l);
           ProxyAuthenticationRequiredException.field_e = new int[ib.field_l];
-          h.field_j = 0;
+          RaiderDefinition.field_j = 0;
           for (var2_int = 0; var2_int < ib.field_l; var2_int++) {
             if (var2_int != 14 &&
               var2_int != 15 &&
@@ -54,8 +54,8 @@ final class GzipDecompressor {
               var2_int != 21 &&
               var2_int != 59 &&
               var2_int != 66) {
-              fieldTemp$0 = h.field_j;
-              h.field_j = h.field_j + 1;
+              fieldTemp$0 = RaiderDefinition.field_j;
+              RaiderDefinition.field_j = RaiderDefinition.field_j + 1;
               ProxyAuthenticationRequiredException.field_e[fieldTemp$0] = var2_int;
             }
           }
@@ -63,7 +63,7 @@ final class GzipDecompressor {
           for (var2_intLifetime1 = param0; ib.field_k > var2_intLifetime1; var2_intLifetime1++) {
             ue.field_j[var2_intLifetime1] = var2_intLifetime1;
           }
-          while (h.field_j > 0) {
+          while (RaiderDefinition.field_j > 0) {
             fo.a(-126, gd.a(param1, true));
           }
           var2_intLifetime2 = uj.a(param1, param0 ^ 37, 4);
@@ -73,25 +73,25 @@ final class GzipDecompressor {
           }
           if (0 != var2_intLifetime2) {
             if (0 == var3) {
-              bo.field_Jb.a(20, -111);
+              bo.field_Jb.setBit(20, -111);
             }
           } else {
-            bo.field_Jb.a(20, -111);
+            bo.field_Jb.setBit(20, -111);
           }
           if (1 != var2_intLifetime2) {
             if (1 == var3) {
-              bo.field_Jb.a(21, -90);
+              bo.field_Jb.setBit(21, -90);
             }
           } else {
-            bo.field_Jb.a(21, -90);
+            bo.field_Jb.setBit(21, -90);
           }
           if (var2_intLifetime2 == 2 ||
             var3 == 2) {
-            bo.field_Jb.a(59, -86);
+            bo.field_Jb.setBit(59, -86);
           }
           if (3 == var2_intLifetime2 ||
             var3 == 3) {
-            bo.field_Jb.a(66, -70);
+            bo.field_Jb.setBit(66, -70);
           }
           var4 = PacketBuffer.h(24, 5);
           for (var5 = 0; var5 < 4; var5++) {
@@ -127,7 +127,7 @@ final class GzipDecompressor {
               }
             }
             if (var9 != -1) {
-              bo.field_Jb.a(var9, -126);
+              bo.field_Jb.setBit(var9, -126);
             }
           }
           while (true) {
@@ -150,7 +150,7 @@ final class GzipDecompressor {
               stackIn_103_0 = bo.field_Jb;
               return stackIn_103_0;
             }
-            bo.field_Jb.a(var6Lifetime1, -88);
+            bo.field_Jb.setBit(var6Lifetime1, -88);
             var4 = PacketBuffer.h(24, 5);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

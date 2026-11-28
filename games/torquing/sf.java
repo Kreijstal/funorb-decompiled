@@ -15,7 +15,7 @@ final class sf {
           if (20 > b.field_x) {
             return true;
           }
-          if (!ResourceArchive.a(true)) {
+          if (!ResourceArchive.isClientStartupReady(true)) {
             return true;
           }
           if (pa.field_c <= 0) {
@@ -29,7 +29,7 @@ final class sf {
         if (20 > b.field_x) {
           return true;
         }
-        if (!ResourceArchive.a(true)) {
+        if (!ResourceArchive.isClientStartupReady(true)) {
           return true;
         }
         if (pa.field_c <= 0) {

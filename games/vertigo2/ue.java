@@ -76,7 +76,7 @@ final class ue extends WidgetContainer implements cm, ij {
           this.field_E = param0;
           this.field_P = new d(vi.field_x, (uf) null);
           this.field_P.listener = (WidgetListener) ((Object) new vo());
-          var7 = Vertigo2.a(new String[]{this.a(0), this.a((byte) -88)}, hi.field_n, -127);
+          var7 = Vertigo2.a(new String[]{this.a(0), this.a((byte) -88)}, BlastDebrisModel.field_n, -127);
           var3 = 20;
           var4 = new va(qc.field_x, 0, 0, 0, 0, 16777215, -1, 3, 0, qc.field_x.field_z, -1, 2147483647, true);
           this.field_L = new pn(var7, var4);

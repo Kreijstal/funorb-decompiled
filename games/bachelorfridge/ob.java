@@ -9,7 +9,7 @@ final class ob extends TileEffect {
         int fieldTemp$0 = this.field_f - 1;
         this.field_f = this.field_f - 1;
         if (0 > fieldTemp$0) {
-          this.field_e.field_h.d(-1, this.field_c, this.field_d);
+          this.field_e.field_h.markTileHidden(-1, this.field_c, this.field_d);
           return true;
         }
         if (param0 > 21) {

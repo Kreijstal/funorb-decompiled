@@ -37,7 +37,7 @@ final class MixedSupport022 {
             stackEmailValidationErrorLocal10 = MixedSupport045.emailValidationErrorState0003;
             return stackEmailValidationErrorLocal10;
           }
-          stringArrayLocal4 = ResourceArchive.computeStringArray0801('.', (byte) 66, stringArgument1);
+          stringArrayLocal4 = ResourceArchive.splitOnCharacter('.', (byte) 66, stringArgument1);
           if (2 > stringArrayLocal4.length) {
             stackEmailValidationErrorLocal11 = MouseWheelInput.emailValidationErrorState0004;
             return stackEmailValidationErrorLocal11;

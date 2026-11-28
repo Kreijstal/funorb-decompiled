@@ -69,7 +69,7 @@ final class uc {
         try {
           oo.c();
           bl.field_r = new int[260];
-          hi.field_j = 11;
+          BlastDebrisModel.field_j = 11;
           if (param0 != 73) {
             uc.$cfr$intArgs$a$7ffe4b125357(69, true);
           }

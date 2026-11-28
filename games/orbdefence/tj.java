@@ -22,13 +22,13 @@ final class tj {
         if (!og.field_g.ensureIndexLoaded(-1)) {
           return jj.field_B;
         }
-        if (!og.field_g.b((byte) 91, "commonui")) {
+        if (!og.field_g.tryLoadGroupByName((byte) 91, "commonui")) {
           return kj.field_z + " - " + og.field_g.getGroupLoadPercentByName((byte) -41, "commonui") + "%";
         }
         if (!am.field_b.ensureIndexLoaded(-1)) {
           return ProxyAuthenticationRequiredException.field_a;
         }
-        if (!am.field_b.b((byte) -103, "commonui")) {
+        if (!am.field_b.tryLoadGroupByName((byte) -103, "commonui")) {
           return hi.field_e + " - " + am.field_b.getGroupLoadPercentByName((byte) -97, "commonui") + "%";
         }
         int var1 = 87 % ((param0 + 3) / 57);
@@ -36,7 +36,7 @@ final class tj {
           return ge.field_i;
         }
         if (!wb.field_b.tryLoadAllGroups(7715)) {
-          return fa.field_c + " - " + wb.field_b.a(20147) + "%";
+          return fa.field_c + " - " + wb.field_b.getArchiveLoadPercent(20147) + "%";
         }
         return ql.field_f;
     }

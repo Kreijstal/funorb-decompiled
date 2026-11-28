@@ -86,7 +86,7 @@ class ro extends am {
         if (!lp.field_a.ensureIndexLoaded(-12749)) {
           return bo.field_i;
         }
-        if (!lp.field_a.a(true, "commonui")) {
+        if (!lp.field_a.tryLoadGroupByName(true, "commonui")) {
           return db.field_d + " - " + lp.field_a.getGroupLoadPercentByName((byte) 102, "commonui") + "%";
         }
         if (param0 > -93) {
@@ -95,14 +95,14 @@ class ro extends am {
         if (!eg.field_v.ensureIndexLoaded(-12749)) {
           return ol.field_e;
         }
-        if (!eg.field_v.a(true, "commonui")) {
+        if (!eg.field_v.tryLoadGroupByName(true, "commonui")) {
           return l.field_c + " - " + eg.field_v.getGroupLoadPercentByName((byte) 50, "commonui") + "%";
         }
         if (!kb.field_a.ensureIndexLoaded(-12749)) {
           return ci.field_d;
         }
         if (!kb.field_a.tryLoadAllGroups(-19375)) {
-          return ResourceArchive.field_b + " - " + kb.field_a.a((byte) -32) + "%";
+          return ResourceArchive.field_b + " - " + kb.field_a.getArchiveLoadPercent((byte) -32) + "%";
         }
         return pm.field_p;
     }
@@ -186,14 +186,14 @@ class ro extends am {
           if (!param1.ensureIndexLoaded(-12749)) {
             return false;
           }
-          if (!param1.a(true, "commonui")) {
+          if (!param1.tryLoadGroupByName(true, "commonui")) {
             return false;
           }
           if (param3.ensureIndexLoaded(-12749) &&
-            param3.a(true, "commonui")) {
+            param3.tryLoadGroupByName(true, "commonui")) {
             var4_int = -28 / ((param0 + 42) / 52);
             if (param2.ensureIndexLoaded(-12749) &&
-              param2.a(true, "button.gif")) {
+              param2.tryLoadGroupByName(true, "button.gif")) {
               return true;
             }
             return false;

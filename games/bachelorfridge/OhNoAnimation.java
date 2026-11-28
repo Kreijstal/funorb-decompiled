@@ -8,7 +8,7 @@ final class OhNoAnimation extends EventAnimation {
     private final void f(int param0) {
         SpecialMoveDefinition var4 = (SpecialMoveDefinition) (al.a(103, this.field_v.moveId));
         var4 = var4;
-        this.field_v.creature.a(19, this.screen.field_h);
+        this.field_v.creature.resolveCreature(19, this.screen.field_h);
         this.field_v.d((byte) 2);
         uea discarded$2 = new uea(this.screen, this.field_v.field_q, this.field_v.field_r, gma.field_e[var4.field_q].field_a);
         this.field_v.apply(this.screen.field_h, false);

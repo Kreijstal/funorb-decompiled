@@ -16,11 +16,11 @@ final class ResourceArchive {
     static int field_a;
     static PcmSample[] field_l;
 
-    public static void d(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_g = null;
         if (param0 != 73) {
-          ResourceArchive.b(102);
+          ResourceArchive.initializeChessWidgets(102);
         }
         field_l = null;
         field_j = null;
@@ -28,7 +28,7 @@ final class ResourceArchive {
         field_c = null;
     }
 
-    final static void a(int param0) {
+    final static void dismissMessageDialog(int param0) {
         if (param0 != 5) {
           field_c = (RgbSprite) null;
         }
@@ -53,7 +53,7 @@ final class ResourceArchive {
         throw new IllegalArgumentException(Integer.toString(param1));
     }
 
-    final int a(boolean param0) {
+    final int getGroupCapacity(boolean param0) {
         if (param0) {
           field_b = (wf) null;
         }
@@ -118,7 +118,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int a(byte param0) {
+    final synchronized int getArchiveLoadPercent(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -209,7 +209,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean b(String param0, int param1) {
+    final boolean tryLoadGroupByName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -276,7 +276,7 @@ final class ResourceArchive {
         return this.field_i.getGroupRequestProgressPercent(110, param0);
     }
 
-    final boolean a(int param0, String param1) {
+    final boolean hasGroupName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -577,7 +577,7 @@ final class ResourceArchive {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int getFileCapacity(byte param0, int param1) {
         if (!this.validateGroupId(0, param1)) {
           return 0;
         }
@@ -643,7 +643,7 @@ final class ResourceArchive {
         }
     }
 
-    final static void b(int param0) {
+    final static void initializeChessWidgets(int param0) {
         cd[] stackIn_9_0;
         int stackIn_9_1;
         cd stackIn_9_2;
@@ -733,7 +733,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized byte[] b(byte param0, int param1) {
+    final synchronized byte[] getFlatFile(byte param0, int param1) {
         if (!this.ensureIndexLoaded((byte) 125)) {
           return null;
         }
@@ -767,7 +767,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final boolean a(String param0, String param1, byte param2) {
+    final boolean tryLoadFileByName(String param0, String param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

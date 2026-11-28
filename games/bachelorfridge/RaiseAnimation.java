@@ -12,7 +12,7 @@ final class RaiseAnimation extends EventAnimation {
         EventEffect var3_ref = null;
         Object var3 = null;
         int var5 = BachelorFridge.field_y;
-        BattleCreature var2 = this.field_w.creature.a(23, this.screen.field_h);
+        BattleCreature var2 = this.field_w.creature.resolveCreature(23, this.screen.field_h);
         EventEffect var3_refLifetime1;
         if (!param0) {
           field_x = (int[]) null;
@@ -22,7 +22,7 @@ final class RaiseAnimation extends EventAnimation {
           var3_ref = (EventEffect) (this.field_w.effects.beginForward((byte) 90));
           al.a(87, this.field_w.moveId);
           while (var3_ref != null) {
-            var6 = var3_ref.target.a(-27449, this.screen);
+            var6 = var3_ref.target.resolveCreatureView(-27449, this.screen);
             var6.b(-1, 19);
             var6.a(24831, 105, gb.field_i);
             var3_ref.apply(var2, this.screen.field_h, 12);
@@ -36,7 +36,7 @@ final class RaiseAnimation extends EventAnimation {
         var3_refLifetime1 = (EventEffect) (this.field_w.effects.beginForward((byte) 90));
         al.a(87, this.field_w.moveId);
         while (var3_refLifetime1 != null) {
-          var7 = var3_refLifetime1.target.a(-27449, this.screen);
+          var7 = var3_refLifetime1.target.resolveCreatureView(-27449, this.screen);
           var7.b(-1, 19);
           var7.a(24831, 105, gb.field_i);
           var3_refLifetime1.apply(var2, this.screen.field_h, 12);
@@ -93,7 +93,7 @@ final class RaiseAnimation extends EventAnimation {
         CreatureActor var3 = null;
         try {
           this.field_w = param1;
-          var3 = this.field_w.field_q.a(-27449, this.screen);
+          var3 = this.field_w.field_q.resolveCreatureView(-27449, this.screen);
           this.field_v = new ActorAnimation(this.screen, var3);
           this.addChild(27799, this.field_v);
         } catch (RuntimeException runtimeException) {

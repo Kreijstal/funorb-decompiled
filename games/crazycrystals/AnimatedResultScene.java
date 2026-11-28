@@ -1,0 +1,122 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+abstract class AnimatedResultScene extends ResultScene {
+    static String field_d;
+    ResultScenePhase field_c;
+    static int[] field_b;
+    static char[] field_e;
+
+    final void drawResultBoard(double param0, boolean param1) {
+        if (!param1) {
+          this.updateResultScene((byte) 13);
+        }
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, 480, 480, 0, kb.field_g);
+        oj.a(false, FloatingScoreLabel.field_a, 480, 480, (double)(-jj.field_b) + (double)FloatingScoreLabel.field_a.length * param0, 0, param0, 0, (byte) -32, param0 * (double)FloatingScoreLabel.field_a[0].length);
+    }
+
+    public static void clearDeclaredStaticReferences(int param0) {
+        if (param0 != -18692) {
+          AnimatedResultScene.clearDeclaredStaticReferences(33);
+        }
+        field_e = null;
+        field_d = null;
+        field_b = null;
+    }
+
+    void disposeResultScene(int param0) {
+        this.field_c.disposePhase((byte) 125);
+        if (param0 != -1) {
+          AnimatedResultScene.clearDeclaredStaticReferences(113);
+        }
+        FloatingScoreLabel.field_a = (PuzzleTile[][]) null;
+    }
+
+    final static PuzzleTile decodePuzzleTile(int param0, int param1, int param2, int param3, DataInputStream param4) throws IOException {
+        int var8_int = 0;
+        int var5_int = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var9 = 0;
+        PuzzleTile stackIn_11_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        PuzzleTile var8 = null;
+        PuzzleTile[][] var10 = null;
+        var9 = CrazyCrystals.field_B;
+        try {
+          var5_int = param4.readUnsignedByte();
+          var6 = 0;
+          var7 = kf.field_d[0];
+          for (var8_int = param2; var8_int < kf.field_d.length; var8_int++) {
+            if (kf.field_d[var8_int] <= var5_int &&
+              kf.field_d[var8_int] > var7) {
+              var6 = var8_int;
+              var7 = kf.field_d[var8_int];
+            }
+          }
+          var8 = (PuzzleTile) (lm.field_d[var6].clone());
+          var8.setTileVariant(var5_int - var7, 89);
+          var8.readTileData(param0, param1, param3, param4, (byte) -35);
+          var10 = (PuzzleTile[][]) null;
+          var8.initializeTilePlacement(param2 ^ 393988, param3, param1, (PuzzleTile[][]) null);
+          stackIn_11_0 = var8;
+          return stackIn_11_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_14_0 = var5;
+          stackIn_14_1 = new StringBuilder().append("ff.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+        }
+    }
+
+    AnimatedResultScene() {
+        jj.field_b = 0;
+        kb.field_g = 0;
+    }
+
+    ResultScene updateResultScene(byte param0) {
+        if (param0 != -39) {
+          return (ResultScene) null;
+        }
+        if (kb.field_g < 192) {
+          kb.field_g = kb.field_g + 12;
+        }
+        nj.field_k = FloatingScoreLabel.field_a[0].length;
+        pa.a(FloatingScoreLabel.field_a, 0, 0, (byte) -45);
+        nj.field_k = 0;
+        this.field_c = this.field_c.updatePhase(param0 + 37);
+        if (null == this.field_c) {
+          return null;
+        }
+        return (ResultScene) (this);
+    }
+
+    final void fastForwardResultPhases(byte param0) {
+        int var3 = CrazyCrystals.field_B;
+        if (param0 != -41) {
+          field_b = (int[]) null;
+        }
+        ResultScenePhase var2 = this.field_c;
+        while (var2 != null) {
+          var2 = var2.fastForwardPhase((byte) -90);
+        }
+    }
+
+    static {
+        field_d = "Score";
+        field_b = new int[8192];
+        field_e = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
+    }
+}

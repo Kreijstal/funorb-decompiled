@@ -47,7 +47,7 @@ final class SauceOfFlameAnimation extends EventAnimation {
         var16 = BachelorFridge.field_y;
         var18_ref = (SpecialMoveDefinition) (al.a(-111, this.field_z.moveId));
         var3 = this.screen.field_h;
-        var4 = this.field_z.creature.a(92, this.screen.field_h);
+        var4 = this.field_z.creature.resolveCreature(92, this.screen.field_h);
         if (param0 > -56) {
           field_v = (IndexedSprite[][]) null;
         }
@@ -99,7 +99,7 @@ final class SauceOfFlameAnimation extends EventAnimation {
     private final void g(byte param0) {
         CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
-        BattleCreature var6 = this.field_z.creature.a(106, this.screen.field_h);
+        BattleCreature var6 = this.field_z.creature.resolveCreature(106, this.screen.field_h);
         if (var6.isDown(-69)) {
           return;
         }
@@ -109,7 +109,7 @@ final class SauceOfFlameAnimation extends EventAnimation {
         EventEffect var3 = (EventEffect) (this.field_z.effects.beginForward((byte) 90));
         al.a(param0 ^ 19, this.field_z.moveId);
         while (var3 != null) {
-          var4 = var3.target.a(-27449, this.screen);
+          var4 = var3.target.resolveCreatureView(-27449, this.screen);
           this.addChild(27799, new ActorAnimation(this.screen, var4));
           this.addChild(27799, new cb(var4, 6));
           this.addChild(27799, new TileEffectAnimation(new ip(this.screen, var4.field_s.tileX, var4.field_s.tileY)));

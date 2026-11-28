@@ -68,7 +68,7 @@ final class lc {
           for (var1_int = 18; var1_int < 32; var1_int++) {
             for (var2 = 0; var2 < ma.field_n.length; var2++) {
               for (var3 = 0; var3 < 9; var3++) {
-                kk.field_a[var1_int][m.field_l[var2] + var3] = kk.field_a[var1_int + 1][var3 + m.field_l[var2]];
+                FloatingScoreLabel.field_a[var1_int][m.field_l[var2] + var3] = FloatingScoreLabel.field_a[var1_int + 1][var3 + m.field_l[var2]];
               }
             }
           }
@@ -79,7 +79,7 @@ final class lc {
             var5 = 0;
             var2Lifetime1 = var5;
             while (var5 < 9) {
-              kk.field_a[32][var5 + m.field_l[var1_intLifetime1]] = IsaacRandom.field_g;
+              FloatingScoreLabel.field_a[32][var5 + m.field_l[var1_intLifetime1]] = IsaacRandom.field_g;
               var5++;
             }
           }

@@ -28,13 +28,13 @@ final class qn {
         if (!oi.field_a.ensureIndexLoaded((byte) 86)) {
           return co.field_j;
         }
-        if (!oi.field_a.c("commonui", -14012)) {
+        if (!oi.field_a.tryLoadGroupByName("commonui", -14012)) {
           return lm.field_b + " - " + oi.field_a.getGroupLoadPercentByName("commonui", (byte) -79) + "%";
         }
         if (!uj.field_b.ensureIndexLoaded((byte) -21)) {
           return bk.field_g;
         }
-        if (!uj.field_b.c("commonui", -14012)) {
+        if (!uj.field_b.tryLoadGroupByName("commonui", -14012)) {
           return ks.field_c + " - " + uj.field_b.getGroupLoadPercentByName("commonui", (byte) -79) + "%";
         }
         if (!cf.field_f.ensureIndexLoaded((byte) 106)) {
@@ -44,7 +44,7 @@ final class qn {
           qn.clearStaticReferences(82);
         }
         if (!cf.field_f.tryLoadAllGroups(0)) {
-          return RenderStateStack.field_g + " - " + cf.field_f.a(-82) + "%";
+          return RenderStateStack.field_g + " - " + cf.field_f.getArchiveLoadPercent(-82) + "%";
         }
         return jr.field_r;
     }

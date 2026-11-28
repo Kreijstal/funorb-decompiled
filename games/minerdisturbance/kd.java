@@ -273,13 +273,13 @@ final class kd {
         this.b((byte) 72);
         if (wk.field_c != null &&
           wk.field_c.ensureIndexLoaded((byte) 105) &&
-          wk.field_c.a(false, "members_expansion_screen") &&
-          wk.field_c.a(false, "arialish12") &&
-          wk.field_c.a(false, "pump32") &&
+          wk.field_c.tryLoadGroupByName(false, "members_expansion_screen") &&
+          wk.field_c.tryLoadGroupByName(false, "arialish12") &&
+          wk.field_c.tryLoadGroupByName(false, "pump32") &&
           null != AccountCreationResultPanel.field_xb &&
           AccountCreationResultPanel.field_xb.ensureIndexLoaded((byte) 95) &&
-          AccountCreationResultPanel.field_xb.a(false, "arialish12") &&
-          AccountCreationResultPanel.field_xb.a(false, "pump32")) {
+          AccountCreationResultPanel.field_xb.tryLoadGroupByName(false, "arialish12") &&
+          AccountCreationResultPanel.field_xb.tryLoadGroupByName(false, "pump32")) {
           ba.field_K = pb.a("members_expansion_screen", wk.field_c, "frame", (byte) -77);
           ah.field_d = jn.a("arrow", -29553, "members_expansion_screen", wk.field_c);
           ql.field_m = rd.a("arialish12", -102, AccountCreationResultPanel.field_xb, wk.field_c, "");

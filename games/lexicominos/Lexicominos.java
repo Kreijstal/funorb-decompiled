@@ -78,18 +78,18 @@ public final class Lexicominos extends nk {
         try {
           if (kc.field_m[0] == null) {
             if (BitPacketBuffer.field_p.ensureIndexLoaded(-61) &&
-              BitPacketBuffer.field_p.a("basic", 10762)) {
-              if (!BitPacketBuffer.field_p.a("roman20", param0 + 10848)) {
+              BitPacketBuffer.field_p.tryLoadGroupByName("basic", 10762)) {
+              if (!BitPacketBuffer.field_p.tryLoadGroupByName("roman20", param0 + 10848)) {
                 al.a(16, rh.a(BitPacketBuffer.field_p, (byte) 68, "roman20", v.field_t, li.field_P), 0.0f);
                 return false;
               }
-              if (!BitPacketBuffer.field_p.a("roman12", 10762)) {
+              if (!BitPacketBuffer.field_p.tryLoadGroupByName("roman12", 10762)) {
                 al.a(16, rh.a(BitPacketBuffer.field_p, (byte) 94, "roman12", v.field_t, li.field_P), 0.0f);
                 return false;
               }
               if (gg.field_d.ensureIndexLoaded(106) &&
-                gg.field_d.a("roman20", 10762)) {
-                if (!gg.field_d.a("roman12", param0 ^ -10848)) {
+                gg.field_d.tryLoadGroupByName("roman20", 10762)) {
+                if (!gg.field_d.tryLoadGroupByName("roman12", param0 ^ -10848)) {
                   al.a(16, rh.a(gg.field_d, (byte) 124, "roman12", v.field_t, li.field_P), 0.0f);
                   return false;
                 }

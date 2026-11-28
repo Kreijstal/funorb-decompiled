@@ -16,7 +16,7 @@ final class gb {
         }
     }
 
-    final static void a(pm param0, pm param1, byte param2) {
+    final static void a(TunnelEntity param0, TunnelEntity param1, byte param2) {
         double var3_double = 0.0;
         RuntimeException var3 = null;
         double var5 = 0.0;
@@ -38,7 +38,7 @@ final class gb {
           if (!((param1.field_C + param0.field_C) * (param1.field_C + param0.field_C) > var10)) {
             return;
           }
-          param0.a(param1, -88);
+          param0.dispatchEntityCollision(param1, -88);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

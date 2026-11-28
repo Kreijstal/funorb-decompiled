@@ -14,10 +14,10 @@ final class wb {
         RuntimeException decompiledCaughtException = null;
         var4 = Confined.field_J ? 1 : 0;
         try {
-          var1_int = vb.field_e[0];
+          var1_int = DequeCursor.field_e[0];
           var2 = 1;
-          while (vb.field_e.length > var2) {
-            var3 = vb.field_e[var2];
+          while (DequeCursor.field_e.length > var2) {
+            var3 = DequeCursor.field_e[var2];
             lj.a(tl.field_i, var2 << 4, tl.field_i, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;
@@ -150,7 +150,7 @@ final class wb {
                 MouseInput.field_a = param1;
                 var2 = ha.a("loginm3", (byte) 31);
                 if (var2 != null) {
-                  hf.field_S = va.a(0, var2);
+                  HomingProjectile.field_S = va.a(0, var2);
                 }
                 var2 = ha.a("loginm2", (byte) 127);
                 if (var2 != null) {
@@ -1588,7 +1588,7 @@ final class wb {
                 }
                 var2 = ha.a("login_email", (byte) 21);
                 if (null != var2) {
-                  hn.field_p = va.a(0, var2);
+                  GameSession.field_p = va.a(0, var2);
                 }
                 var2 = ha.a("login_username_tooltip", (byte) 109);
                 if (null != var2) {
@@ -1660,7 +1660,7 @@ final class wb {
                 }
                 var2 = ha.a("create_optin_news_tooltip", (byte) 52);
                 if (var2 != null) {
-                  hf.field_U = va.a(param0 ^ 6, var2);
+                  HomingProjectile.field_U = va.a(param0 ^ 6, var2);
                 }
                 var2 = ha.a("create_u13_email_tooltip", (byte) 65);
                 if (var2 != null) {
@@ -2126,7 +2126,7 @@ final class wb {
                 }
                 var2 = ha.a("endgame", (byte) 16);
                 if (null != var2) {
-                  hn.field_e = va.a(param0 ^ 6, var2);
+                  GameSession.field_e = va.a(param0 ^ 6, var2);
                 }
                 var2 = ha.a("endtutorial", (byte) 74);
                 if (null != var2) {
@@ -2693,19 +2693,19 @@ final class wb {
                 }
                 var2 = ha.a("reconnect_lost_seq,0", (byte) 63);
                 if (null != var2) {
-                  il.field_db[0] = va.a(km.a(param0, 6), var2);
+                  ExpandingPulseProjectile.field_db[0] = va.a(km.a(param0, 6), var2);
                 }
                 var2 = ha.a("reconnect_lost_seq,1", (byte) 120);
                 if (var2 != null) {
-                  il.field_db[1] = va.a(param0 - 6, var2);
+                  ExpandingPulseProjectile.field_db[1] = va.a(param0 - 6, var2);
                 }
                 var2 = ha.a("reconnect_lost_seq,2", (byte) 76);
                 if (var2 != null) {
-                  il.field_db[2] = va.a(0, var2);
+                  ExpandingPulseProjectile.field_db[2] = va.a(0, var2);
                 }
                 var2 = ha.a("reconnect_lost_seq,3", (byte) 49);
                 if (var2 != null) {
-                  il.field_db[3] = va.a(0, var2);
+                  ExpandingPulseProjectile.field_db[3] = va.a(0, var2);
                 }
                 var2 = ha.a("reconnect_lost", (byte) 89);
                 if (var2 != null) {
@@ -2765,7 +2765,7 @@ final class wb {
                 }
                 var2 = ha.a("fs_accept_afteraccept", (byte) 123);
                 if (null != var2) {
-                  hm.field_mb = va.a(0, var2);
+                  LightningArc.field_mb = va.a(0, var2);
                 }
                 var2 = ha.a("fs_button_cancel", (byte) 76);
                 if (var2 != null) {
@@ -2813,7 +2813,7 @@ final class wb {
                 }
                 var2 = ha.a("fs_timeout", (byte) 17);
                 if (var2 != null) {
-                  ql.field_A = va.a(0, var2);
+                  StageDirector.field_A = va.a(0, var2);
                 }
                 var2 = ha.a("fs_button_tryagain", (byte) 24);
                 if (null != var2) {
@@ -2929,7 +2929,7 @@ final class wb {
                 }
                 var2 = ha.a("pleasewait_dotdotdot", (byte) 52);
                 if (var2 != null) {
-                  hm.field_W = va.a(0, var2);
+                  LightningArc.field_W = va.a(0, var2);
                 }
                 var2 = ha.a("serviceunavailable", (byte) 93);
                 if (null != var2) {

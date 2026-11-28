@@ -51,10 +51,10 @@ final class sf extends IntrusiveNode {
             stackIn_13_0 = false;
             stackIn_13_1 = param0;
             stackIn_14_2 = (oj.field_B == 0) ? false : true;
-            stackIn_17_3 = (null == lc.field_J) ? false : true;
+            stackIn_17_3 = (null == TunnelMesh.field_J) ? false : true;
             hh.field_d = ih.a(stackIn_13_0, stackIn_13_1, stackIn_14_2, stackIn_17_3, (byte) 120);
           } else {
-            if (lc.field_J == null) {
+            if (TunnelMesh.field_J == null) {
               if (oj.field_B != 0) {
                 kc.field_o = true;
               }
@@ -69,7 +69,7 @@ final class sf extends IntrusiveNode {
               stackIn_21_0 = false;
               stackIn_21_1 = param0;
               stackIn_22_2 = (oj.field_B == 0) ? false : true;
-              stackIn_25_3 = (null == lc.field_J) ? false : true;
+              stackIn_25_3 = (null == TunnelMesh.field_J) ? false : true;
               hh.field_d = ih.a(stackIn_21_0, stackIn_21_1, stackIn_22_2, stackIn_25_3, (byte) 120);
             }
           }

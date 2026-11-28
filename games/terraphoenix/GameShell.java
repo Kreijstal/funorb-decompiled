@@ -446,10 +446,10 @@ abstract class GameShell extends GameApplet {
         if (uh.field_H == 2) {
           if (null != bl.field_a &&
             bl.field_a.ensureIndexLoaded(0)) {
-            if (!bl.field_a.d(-1, "")) {
+            if (!bl.field_a.hasGroupName(-1, "")) {
               bl.field_a = null;
             } else {
-              if (bl.field_a.a(-3, "")) {
+              if (bl.field_a.tryLoadGroupByName(-3, "")) {
                 MessageKeys.a(3, bl.field_a);
                 bl.field_a = null;
                 ea.a((byte) 47);

@@ -4,7 +4,7 @@
 abstract class ab extends og {
     private int field_B;
     static PcmSample field_z;
-    static te field_D;
+    static ResultScene field_D;
     private ol field_E;
     boolean field_C;
     static bf field_A;
@@ -139,7 +139,7 @@ abstract class ab extends og {
             stackIn_13_0 = var5;
             return stackIn_13_0;
           }
-          stackIn_4_0 = f.field_d;
+          stackIn_4_0 = PuzzleTile.field_d;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -294,7 +294,7 @@ abstract class ab extends og {
 
     final static void f(byte param0) {
         if (param0 != -49) {
-          field_D = (te) null;
+          field_D = (ResultScene) null;
           if (null == qe.field_g) {
             if (td.field_b == null) {
               ck.m(0);

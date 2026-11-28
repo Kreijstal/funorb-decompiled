@@ -48,7 +48,7 @@ final class kh {
           }
           var8 = new AccountCreationResultPanel(wg.field_j, param5);
           wg.field_j.b((byte) -33, var8);
-          if (!ResourceArchive.c(false)) {
+          if (!ResourceArchive.hasStatsButtonSetting(false)) {
             cg.field_a = null;
             ac.field_c = param0;
             v.field_b = param6;

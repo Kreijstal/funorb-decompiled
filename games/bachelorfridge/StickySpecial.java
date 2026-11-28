@@ -88,7 +88,7 @@ final class StickySpecial extends SpecialOrder {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.creature.a(107, param0);
+          var3 = this.creature.resolveCreature(107, param0);
           var4 = new StickyEvent(this.moveId, new CreatureRef(var3));
           var4.field_q = this.field_n;
           var4.field_r = this.field_k;

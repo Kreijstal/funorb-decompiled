@@ -337,13 +337,13 @@ final class c extends sc {
             return (AccountServiceResult) (stackIn_7_0);
           }
           if (na.field_S == b.field_a &&
-            param0.equals(ee.field_F)) {
+            param0.equals(MovingTunnelEntity.field_F)) {
             na.field_S = ml.field_a;
             stackIn_13_0 = IntrusiveDeque.field_e;
             return stackIn_13_0;
           }
           IntrusiveDeque.field_e = null;
-          ee.field_F = param0;
+          MovingTunnelEntity.field_F = param0;
           na.field_S = wh.field_fb;
           stackIn_15_0 = null;
           return (AccountServiceResult) (stackIn_15_0);
@@ -622,7 +622,7 @@ final class c extends sc {
           PrimaryNodeDeque.field_e = param1;
           var2 = wm.a("keycode_energyweapon1", (byte) 101);
           if (null != var2) {
-            ql.field_u = 255 & var2[0];
+            StageDirector.field_u = 255 & var2[0];
           }
           var2Lifetime1 = wm.a("keycode_energyweapon2", (byte) 87);
           if (var2Lifetime1 != null) {
@@ -853,7 +853,7 @@ final class c extends sc {
           }
           var2Lifetime57 = wm.a("oneMetreToLevelN", (byte) 88);
           if (var2Lifetime57 != null) {
-            ee.field_P = va.a(0, var2Lifetime57);
+            MovingTunnelEntity.field_P = va.a(0, var2Lifetime57);
           }
           var2Lifetime58 = wm.a("nMetresToLevelN", (byte) 39);
           if (null != var2Lifetime58) {
@@ -917,7 +917,7 @@ final class c extends sc {
           }
           var2Lifetime73 = wm.a("intro5_OthersHaveTriedAndFailed", (byte) 69);
           if (null != var2Lifetime73) {
-            sa.field_W = va.a(0, var2Lifetime73);
+            DampedProjectile.field_W = va.a(0, var2Lifetime73);
           }
           var2Lifetime74 = wm.a("intro6_FlyYourShipInConfined", (byte) 32);
           if (var2Lifetime74 != null) {
@@ -1053,7 +1053,7 @@ final class c extends sc {
           }
           var2Lifetime107 = wm.a("instructions_ShieldMeter", (byte) 45);
           if (var2Lifetime107 != null) {
-            hm.field_ib = va.a(0, var2Lifetime107);
+            LightningArc.field_ib = va.a(0, var2Lifetime107);
           }
           var2Lifetime108 = wm.a("instructions_BossMeter", (byte) 28);
           if (var2Lifetime108 != null) {
@@ -1081,7 +1081,7 @@ final class c extends sc {
           }
           var2Lifetime114 = wm.a("instructions_ShieldPowerUp", (byte) 116);
           if (var2Lifetime114 != null) {
-            mb.field_H = va.a(0, var2Lifetime114);
+            ShockwaveBlast.field_H = va.a(0, var2Lifetime114);
           }
           var2Lifetime115 = wm.a("instructions_ConcussionMissiles", (byte) 66);
           if (var2Lifetime115 != null) {
@@ -1093,7 +1093,7 @@ final class c extends sc {
           }
           var2Lifetime117 = wm.a("instructions_HomingMissiles", (byte) 76);
           if (var2Lifetime117 != null) {
-            ee.field_J = va.a(0, var2Lifetime117);
+            MovingTunnelEntity.field_J = va.a(0, var2Lifetime117);
           }
           var2Lifetime118 = wm.a("instructions_WingPods", (byte) 123);
           if (var2Lifetime118 != null) {
@@ -1181,7 +1181,7 @@ final class c extends sc {
           }
           var2Lifetime139 = wm.a("dataSheet_WingPods", (byte) 82);
           if (null != var2Lifetime139) {
-            hm.field_rb = va.a(0, var2Lifetime139);
+            LightningArc.field_rb = va.a(0, var2Lifetime139);
           }
           var2Lifetime140 = wm.a("youDropPowerUpsIfYouDie", (byte) 118);
           if (var2Lifetime140 != null) {
@@ -1209,7 +1209,7 @@ final class c extends sc {
           }
           var2Lifetime146 = wm.a("brightnessColon", (byte) 115);
           if (null != var2Lifetime146) {
-            pm.field_u = va.a(0, var2Lifetime146);
+            TunnelEntity.field_u = va.a(0, var2Lifetime146);
           }
           var2Lifetime147 = wm.a("difficultyColon", (byte) 65);
           if (null != var2Lifetime147) {
@@ -1265,7 +1265,7 @@ final class c extends sc {
           }
           var2Lifetime160 = wm.a("chargeCannon", (byte) 104);
           if (var2Lifetime160 != null) {
-            ah.field_Z = va.a(0, var2Lifetime160);
+            AcceleratingProjectile.field_Z = va.a(0, var2Lifetime160);
           }
           var2Lifetime161 = wm.a("howToFireChargeCannon", (byte) 30);
           if (var2Lifetime161 != null) {
@@ -1285,7 +1285,7 @@ final class c extends sc {
           }
           var2Lifetime165 = wm.a("youAlreadyHaveDisruptionCannon", (byte) 99);
           if (var2Lifetime165 != null) {
-            vg.field_Q = va.a(0, var2Lifetime165);
+            TunnelCamera.field_Q = va.a(0, var2Lifetime165);
           }
           var2Lifetime166 = wm.a("lightningCannon", (byte) 126);
           if (var2Lifetime166 != null) {
@@ -1293,7 +1293,7 @@ final class c extends sc {
           }
           var2Lifetime167 = wm.a("howToFireLightningCannon", (byte) 49);
           if (null != var2Lifetime167) {
-            vg.field_K = va.a(0, var2Lifetime167);
+            TunnelCamera.field_K = va.a(0, var2Lifetime167);
           }
           var2Lifetime168 = wm.a("youAlreadyHaveLightningCannon", (byte) 103);
           if (null != var2Lifetime168) {
@@ -1317,7 +1317,7 @@ final class c extends sc {
           }
           var2Lifetime173 = wm.a("nConcussionMissiles", (byte) 102);
           if (null != var2Lifetime173) {
-            ah.field_R = va.a(0, var2Lifetime173);
+            AcceleratingProjectile.field_R = va.a(0, var2Lifetime173);
           }
           var2Lifetime174 = wm.a("howToFireConcussionMissiles", (byte) 114);
           if (null != var2Lifetime174) {
@@ -1333,7 +1333,7 @@ final class c extends sc {
           }
           var2Lifetime177 = wm.a("nHomingMissiles", (byte) 39);
           if (null != var2Lifetime177) {
-            hf.field_X = va.a(0, var2Lifetime177);
+            HomingProjectile.field_X = va.a(0, var2Lifetime177);
           }
           var2Lifetime178 = wm.a("howToFireHomingMissiles", (byte) 28);
           if (var2Lifetime178 != null) {
@@ -1365,7 +1365,7 @@ final class c extends sc {
           }
           var2Lifetime185 = wm.a("oneNuclearMissile", (byte) 76);
           if (null != var2Lifetime185) {
-            ah.field_W = va.a(0, var2Lifetime185);
+            AcceleratingProjectile.field_W = va.a(0, var2Lifetime185);
           }
           var2Lifetime186 = wm.a("howToFireNuclearMissiles", (byte) 37);
           if (null != var2Lifetime186) {
@@ -1377,7 +1377,7 @@ final class c extends sc {
           }
           var2Lifetime188 = wm.a("shield", (byte) 115);
           if (null != var2Lifetime188) {
-            dj.field_Ib = va.a(0, var2Lifetime188);
+            PlayerShip.field_Ib = va.a(0, var2Lifetime188);
           }
           var2Lifetime189 = wm.a("shieldUpgrade", (byte) 103);
           if (var2Lifetime189 != null) {
@@ -1397,7 +1397,7 @@ final class c extends sc {
           }
           var2Lifetime193 = wm.a("powerUpAttractor", (byte) 104);
           if (null != var2Lifetime193) {
-            dj.field_W = va.a(0, var2Lifetime193);
+            PlayerShip.field_W = va.a(0, var2Lifetime193);
           }
           var2Lifetime194 = wm.a("nextPowerUpAttractor_LevelN", (byte) 98);
           if (null != var2Lifetime194) {

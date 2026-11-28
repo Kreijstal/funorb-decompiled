@@ -156,7 +156,7 @@ final class ce extends AttackEvent {
         try {
           if (!this.field_r &&
             !this.field_n) {
-            var3 = this.creature.a(69, param0);
+            var3 = this.creature.resolveCreature(69, param0);
             var4 = (BasicMoveDefinition) (al.a(120, this.moveId));
             var5 = 0;
             if (var4.field_u == 15 ||
@@ -166,7 +166,7 @@ final class ce extends AttackEvent {
             }
             var6 = ShuffleAnimation.a(this.field_q, (byte) 25, var3.tileY, var5 != 0, this.field_v, var3, var3.tileX, param0);
             this.field_v = var6;
-            var3.a(param1, this.field_v, this.field_q);
+            var3.moveInDirection(param1, this.field_v, this.field_q);
             super.apply(param0, false);
             return;
           }

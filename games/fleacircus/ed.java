@@ -64,10 +64,10 @@ final class ed {
         try {
           if (null != ub.field_b &&
             ub.field_b.ensureIndexLoaded((byte) -121) &&
-            ub.field_b.a("benefits", -127) &&
+            ub.field_b.tryLoadGroupByName("benefits", -127) &&
             null != SecondaryNodeDeque.field_b &&
             SecondaryNodeDeque.field_b.ensureIndexLoaded((byte) -122) &&
-            SecondaryNodeDeque.field_b.a("benefits", -114)) {
+            SecondaryNodeDeque.field_b.tryLoadGroupByName("benefits", -114)) {
             mf.field_b = kl.a(252, ub.field_b, "benefits", "headline");
             wh.field_b = kl.a(252, ub.field_b, "benefits", "blurbpane");
             vj.field_c = kl.a(252, ub.field_b, "benefits", "button");

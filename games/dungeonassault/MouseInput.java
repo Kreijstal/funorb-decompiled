@@ -27,10 +27,10 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             NetworkArchiveRequest.field_C = param0.getY();
             kd.correctedCurrentTimeMillis(-2456);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              wm.field_g = 1;
+              PackedBitSet.field_g = 1;
               ua.field_a = 1;
             } else {
-              wm.field_g = 2;
+              PackedBitSet.field_g = 2;
               ua.field_a = 2;
             }
             var2_int = param0.getModifiers();
@@ -176,8 +176,8 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         if (!(param1 < uf.field_a)) {
           return -uf.field_a + param1 < Raider.field_m.length ? true : false;
         }
-        if (wm.field_a <= param1) {
-          return Bzip2State.field_p.length > -wm.field_a + param1 ? true : false;
+        if (PackedBitSet.field_a <= param1) {
+          return Bzip2State.field_p.length > -PackedBitSet.field_a + param1 ? true : false;
         }
         return false;
     }

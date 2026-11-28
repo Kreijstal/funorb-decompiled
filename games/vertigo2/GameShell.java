@@ -62,7 +62,7 @@ abstract class GameShell extends GameApplet {
           var3 = 1200 * IterableNodeHashTable.b(true);
           if (this.field_t ||
             !(jq.a((byte) 29) <= var3) &&
-            !(hb.b((byte) -122) <= var3)) {
+            !(PlayerAvatarRenderer.getMouseIdleTicks((byte) -122) <= var3)) {
             this.field_t = false;
             rm.b((byte) 85);
             wp.a(param1 + 16);
@@ -168,10 +168,10 @@ abstract class GameShell extends GameApplet {
         if (qc.field_A == 2) {
           if (null != qc.field_B &&
             qc.field_B.ensureIndexLoaded(0)) {
-            if (!qc.field_B.b("", param1 + 5)) {
+            if (!qc.field_B.hasGroupName("", param1 + 5)) {
               qc.field_B = null;
             } else {
-              if (qc.field_B.c("", 0)) {
+              if (qc.field_B.tryLoadGroupByName("", 0)) {
                 wc.a(0, qc.field_B);
                 qc.field_B = null;
                 di.b((byte) -67);
@@ -185,7 +185,7 @@ abstract class GameShell extends GameApplet {
         if (qc.field_A == 3 &&
           ir.a(-95, la.field_e, HuffmanCodec.field_b, kb.field_b) &&
           lm.a(kb.field_b, (byte) 119)) {
-          hb.e(-1);
+          PlayerAvatarRenderer.releaseStartupFontAndImage(-1);
           vl.b(2147483647);
           mg.field_O = false;
           IntrusiveNode.field_h = mq.field_t;

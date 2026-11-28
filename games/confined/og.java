@@ -403,7 +403,7 @@ final class og extends n {
           }
           var17 = new bd(7, AwtRasterBuffer.field_h, pn.field_a);
           var18 = new bd(8, mg.field_d, pn.field_a);
-          var19 = new bd(9, pm.field_u, pn.field_a);
+          var19 = new bd(9, TunnelEntity.field_u, pn.field_a);
           var6 = var17.field_f;
           if (var6 < var18.field_f) {
             var6 = var18.field_f;
@@ -433,7 +433,7 @@ final class og extends n {
             var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
             var12.a((byte) -78, new bd(13, w.field_Q, pn.field_a));
           } else {
-            var12.a((byte) -59, new bd(15, hn.field_e, pn.field_a));
+            var12.a((byte) -59, new bd(15, GameSession.field_e, pn.field_a));
           }
         } else {
           var12.a((byte) -63, new bd(1, qj.field_d, pn.field_a));
@@ -443,7 +443,7 @@ final class og extends n {
             var12.a((byte) -80, new bd(4, ef.field_ub, pn.field_a));
             var31 = new bd(7, AwtRasterBuffer.field_h, pn.field_a);
             var32 = new bd(8, mg.field_d, pn.field_a);
-            var33 = new bd(9, pm.field_u, pn.field_a);
+            var33 = new bd(9, TunnelEntity.field_u, pn.field_a);
             var6 = var31.field_f;
             if (var6 < var32.field_f) {
               var6 = var32.field_f;
@@ -472,11 +472,11 @@ final class og extends n {
                 var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
                 var12.a((byte) -78, new bd(13, w.field_Q, pn.field_a));
               } else {
-                var12.a((byte) -59, new bd(15, hn.field_e, pn.field_a));
+                var12.a((byte) -59, new bd(15, GameSession.field_e, pn.field_a));
               }
             } else {
               if (param0) {
-                var12.a((byte) -59, new bd(15, hn.field_e, pn.field_a));
+                var12.a((byte) -59, new bd(15, GameSession.field_e, pn.field_a));
               } else {
                 var12.a((byte) -119, new bd(11, li.field_n, pn.field_a));
                 var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
@@ -487,7 +487,7 @@ final class og extends n {
             if (of.field_a) {
               var20 = new bd(7, AwtRasterBuffer.field_h, pn.field_a);
               var21 = new bd(8, mg.field_d, pn.field_a);
-              var22 = new bd(9, pm.field_u, pn.field_a);
+              var22 = new bd(9, TunnelEntity.field_u, pn.field_a);
               var6 = var20.field_f;
               if (var6 < var21.field_f) {
                 var6 = var21.field_f;
@@ -516,11 +516,11 @@ final class og extends n {
                   var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
                   var12.a((byte) -78, new bd(13, w.field_Q, pn.field_a));
                 } else {
-                  var12.a((byte) -59, new bd(15, hn.field_e, pn.field_a));
+                  var12.a((byte) -59, new bd(15, GameSession.field_e, pn.field_a));
                 }
               } else {
                 if (param0) {
-                  var12.a((byte) -59, new bd(15, hn.field_e, pn.field_a));
+                  var12.a((byte) -59, new bd(15, GameSession.field_e, pn.field_a));
                 } else {
                   var12.a((byte) -119, new bd(11, li.field_n, pn.field_a));
                   var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
@@ -542,7 +542,7 @@ final class og extends n {
                 var12.a((byte) -87, var27);
                 var28 = new bd(7, AwtRasterBuffer.field_h, pn.field_a);
                 var29 = new bd(8, mg.field_d, pn.field_a);
-                var30 = new bd(9, pm.field_u, pn.field_a);
+                var30 = new bd(9, TunnelEntity.field_u, pn.field_a);
                 var6 = var28.field_f;
                 if (var6 < var29.field_f) {
                   var6 = var29.field_f;
@@ -568,7 +568,7 @@ final class og extends n {
                   og.a(38, '%');
                 }
                 if (param0) {
-                  var12.a((byte) -59, new bd(15, hn.field_e, pn.field_a));
+                  var12.a((byte) -59, new bd(15, GameSession.field_e, pn.field_a));
                 } else {
                   var12.a((byte) -119, new bd(11, li.field_n, pn.field_a));
                   var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
@@ -577,7 +577,7 @@ final class og extends n {
               } else {
                 var23 = new bd(7, AwtRasterBuffer.field_h, pn.field_a);
                 var24 = new bd(8, mg.field_d, pn.field_a);
-                var25 = new bd(9, pm.field_u, pn.field_a);
+                var25 = new bd(9, TunnelEntity.field_u, pn.field_a);
                 var6 = var23.field_f;
                 if (var6 < var24.field_f) {
                   var6 = var24.field_f;
@@ -606,11 +606,11 @@ final class og extends n {
                     var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
                     var12.a((byte) -78, new bd(13, w.field_Q, pn.field_a));
                   } else {
-                    var12.a((byte) -59, new bd(15, hn.field_e, pn.field_a));
+                    var12.a((byte) -59, new bd(15, GameSession.field_e, pn.field_a));
                   }
                 } else {
                   if (param0) {
-                    var12.a((byte) -59, new bd(15, hn.field_e, pn.field_a));
+                    var12.a((byte) -59, new bd(15, GameSession.field_e, pn.field_a));
                   } else {
                     var12.a((byte) -119, new bd(11, li.field_n, pn.field_a));
                     var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
@@ -665,7 +665,7 @@ final class og extends n {
         }
         try {
           MouseWheelInput.a(26613, param1);
-          ee.a(param1, (byte) 70);
+          MovingTunnelEntity.a(param1, (byte) 70);
           pb.b(126);
           im.b((byte) -85);
           tg.field_H = 0 - mg.field_g;

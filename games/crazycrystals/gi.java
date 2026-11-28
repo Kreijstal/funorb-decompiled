@@ -36,15 +36,15 @@ final class gi extends pn implements Cloneable {
         }
     }
 
-    final f a(int param0, byte param1, int param2) {
+    final PuzzleTile a(int param0, byte param1, int param2) {
         if (param1 != -110) {
           nj var5 = (nj) null;
-          this.a(-70, (nj) null);
+          this.showTileTooltip(-70, (nj) null);
         }
-        return (f) (this);
+        return (PuzzleTile) (this);
     }
 
-    final nj a(int param0, nj param1) {
+    final nj showTileTooltip(int param0, nj param1) {
         RuntimeException var3 = null;
         nj stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -53,7 +53,7 @@ final class gi extends pn implements Cloneable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 23525) {
-            this.b(-112, 33, -8, true, -15, -44);
+            this.drawTileForeground(-112, 33, -8, true, -15, -44);
           }
           stackIn_3_0 = PacketBuffer.a(e.field_a, param1, new gi(this.field_p, new kp(-1)), (byte) -83, qd.field_p);
           return stackIn_3_0;
@@ -78,7 +78,7 @@ final class gi extends pn implements Cloneable {
         return 12;
     }
 
-    final boolean a(byte param0, f[][] param1, int param2, int param3, int param4, fq param5, int param6) {
+    final boolean a(byte param0, PuzzleTile[][] param1, int param2, int param3, int param4, fq param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -112,18 +112,18 @@ final class gi extends pn implements Cloneable {
         }
     }
 
-    final void b(int param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final void drawTileForeground(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var7;
         if (param1 == 24 &&
           param2 == 24) {
-          fl.field_i[this.field_o >> 1].c(param4, -param2 + param5, f.field_g[this.field_p]);
+          fl.field_i[this.field_o >> 1].c(param4, -param2 + param5, PuzzleTile.field_g[this.field_p]);
         } else {
-          fl.field_i[this.field_o >> 1].b(param4, -param2 + param5, param1 * 2, param2 * 3, f.field_g[this.field_p]);
+          fl.field_i[this.field_o >> 1].b(param4, -param2 + param5, param1 * 2, param2 * 3, PuzzleTile.field_g[this.field_p]);
         }
         var7 = 101 % ((74 - param0) / 41);
     }
 
-    gi(int param0, f param1) {
+    gi(int param0, PuzzleTile param1) {
         super(param1);
         this.field_o = 0;
         try {
@@ -133,14 +133,14 @@ final class gi extends pn implements Cloneable {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setTileVariant(int param0, int param1) {
         if (param1 < 61) {
           return;
         }
         this.field_p = param0;
     }
 
-    final void a(int param0, int param1, int param2, f[][] param3, int param4, int param5, int param6, int param7) {
+    final void a(int param0, int param1, int param2, PuzzleTile[][] param3, int param4, int param5, int param6, int param7) {
         try {
           if (param0 < 92) {
             this.field_p = 78;
@@ -150,7 +150,7 @@ final class gi extends pn implements Cloneable {
         }
     }
 
-    final void c(int param0, int param1, f[][] param2, int param3) {
+    final void c(int param0, int param1, PuzzleTile[][] param2, int param3) {
         byte[] var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -188,11 +188,11 @@ final class gi extends pn implements Cloneable {
         field_n = null;
     }
 
-    final f a(int param0, ea param1, int param2, int param3, byte param4, int param5, f[][] param6) {
+    final PuzzleTile a(int param0, ea param1, int param2, int param3, byte param4, int param5, PuzzleTile[][] param6) {
         int var11_int = 0;
         vh dupTemp$0 = null;
         int fieldTemp$1 = 0;
-        f stackIn_20_0 = null;
+        PuzzleTile stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -246,7 +246,7 @@ final class gi extends pn implements Cloneable {
             if (var9 <= 0) {
               mb.field_g = mb.field_g + 300;
               fn.field_j = fn.field_j + 350;
-              we.field_h = we.field_h + 20;
+              LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 20;
               b.field_a = b.field_a + 10;
               je.field_j = je.field_j + 10;
               fp.field_a = fp.field_a + 20;
@@ -261,13 +261,13 @@ final class gi extends pn implements Cloneable {
               ob.field_l = ob.field_l + 1;
               ob.field_l = ob.field_l - 1;
               fn.field_j = fn.field_j + wd.field_j;
-              we.field_h = we.field_h + 40;
+              LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 40;
               fp.field_a = fp.field_a + 40;
               b.field_a = b.field_a + 20;
               je.field_j = je.field_j + 20;
             }
           }
-          this.field_l.a(1 << var15.field_u, true, tm.field_e);
+          this.field_l.recordTileAttribution(1 << var15.field_u, true, tm.field_e);
           stackIn_20_0 = this.field_l.a(param0, param1, param2, param3, (byte) -93, param5, param6);
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

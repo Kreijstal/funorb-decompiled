@@ -44,7 +44,7 @@ final class NanoFrameTimer extends FrameTimer {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = ResourceArchive.a(ArchiveRequest.a(param0, (byte) -113), 16778);
+          var2 = ResourceArchive.decodeBase37DisplayName(ArchiveRequest.a(param0, (byte) -113), 16778);
           if (var2 == null) {
             var2 = "";
           }

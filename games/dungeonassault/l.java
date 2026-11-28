@@ -303,20 +303,20 @@ abstract class l {
           }
           var1_int = 0;
           while (ha.b((byte) 47)) {
-            h.field_h.d(param0 - 4570);
-            if (!h.field_h.c(param0 - 4670)) {
+            RaiderDefinition.field_h.d(param0 - 4570);
+            if (!RaiderDefinition.field_h.c(param0 - 4670)) {
               continue;
             }
             var1_int = 1;
           }
-          h.field_h.a(-7734, wi.c(AchievementIconEntry.field_k, param0 ^ 2118074, lc.field_c), wi.c(eh.field_h, 2113632, hj.field_S));
-          if (h.field_h.c(param0 - 4689)) {
+          RaiderDefinition.field_h.a(-7734, wi.c(AchievementIconEntry.field_k, param0 ^ 2118074, lc.field_c), wi.c(eh.field_h, 2113632, hj.field_S));
+          if (RaiderDefinition.field_h.c(param0 - 4689)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
-            0 <= h.field_h.field_b) {
-            var2 = op.field_c[h.field_h.field_b];
+            0 <= RaiderDefinition.field_h.field_b) {
+            var2 = op.field_c[RaiderDefinition.field_h.field_b];
             if (var2 == 2) {
               AccountServiceResult.a((byte) -31);
             }

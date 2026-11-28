@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gi extends ah {
-    private oi field_cb;
+final class gi extends AcceleratingProjectile {
+    private DynamicLight field_cb;
     static fi field_bb;
     static String field_fb;
     static String field_hb;
@@ -67,9 +67,9 @@ final class gi extends ah {
         }
     }
 
-    gi(hn param0, dj param1) {
-        super(param0, param1, 0.5, 0.02, 64.0, pm.field_x);
-        this.field_cb = new oi((pm) (this));
+    gi(GameSession param0, PlayerShip param1) {
+        super(param0, param1, 0.5, 0.02, 64.0, TunnelEntity.field_x);
+        this.field_cb = new DynamicLight((TunnelEntity) (this));
         try {
           kj.a(lf.field_i, 96, param1);
           this.field_gb = 64.0;
@@ -78,7 +78,7 @@ final class gi extends ah {
         }
     }
 
-    final void a(PrimaryNodeDeque param0, byte param1) {
+    final void collectEntityLights(PrimaryNodeDeque param0, byte param1) {
         double[] var13 = null;
         double[] var12 = null;
         double[] var11 = null;
@@ -109,7 +109,7 @@ final class gi extends ah {
         }
     }
 
-    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
+    final void drawInTunnel(PrimaryNodeDeque param0, double param1, int param2, TunnelCamera param3, DynamicLight param4) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -192,7 +192,7 @@ final class gi extends ah {
         }
     }
 
-    final void g(int param0) {
+    final void handleDestruction(int param0) {
         int var3;
         gk var5;
         gk var6;
@@ -206,7 +206,7 @@ final class gi extends ah {
           this.field_A.field_H = 0.6;
           this.field_A.field_E = this.field_D;
           this.field_A.field_A = 0.5;
-          var6 = new gk(this.field_A, (pm) null, vf.field_n, 0, false);
+          var6 = new gk(this.field_A, (TunnelEntity) null, vf.field_n, 0, false);
           var6.field_w = 4.0;
           var6.field_m = 255;
           this.field_A.field_n = var6;
@@ -248,7 +248,7 @@ final class gi extends ah {
         this.field_A.field_H = 0.6;
         this.field_A.field_E = this.field_D;
         this.field_A.field_A = 0.5;
-        var5 = new gk(this.field_A, (pm) null, vf.field_n, 0, false);
+        var5 = new gk(this.field_A, (TunnelEntity) null, vf.field_n, 0, false);
         var5.field_w = 4.0;
         var5.field_m = 255;
         this.field_A.field_n = var5;
@@ -293,7 +293,7 @@ final class gi extends ah {
         di.a(-30867, 240, 15);
     }
 
-    final void b(boolean param0, ee param1) {
+    final void b(boolean param0, MovingTunnelEntity param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -305,7 +305,7 @@ final class gi extends ah {
             this.field_S = this.field_S + 1;
             return;
           }
-          this.field_gb = param1.a(14170, true, this.field_gb);
+          this.field_gb = param1.applyDamage(14170, true, this.field_gb);
           if (param0) {
             field_hb = (String) null;
           }
@@ -313,7 +313,7 @@ final class gi extends ah {
             return;
           }
           this.a(param1, 0.0, -123);
-          param1.a(14170, false, this.field_X);
+          param1.applyDamage(14170, false, this.field_X);
           this.d(10797);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

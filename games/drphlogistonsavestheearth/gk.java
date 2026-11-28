@@ -83,7 +83,7 @@ final class gk {
         RuntimeException var3_ref = null;
         try {
           param1 = ph.a(param1, (byte) -21, '_', "");
-          var3 = ResourceArchive.a(param2, -121);
+          var3 = ResourceArchive.reverseStringCodeUnits(param2, -121);
           if (param0 != -1) {
             field_a = (String) null;
           }

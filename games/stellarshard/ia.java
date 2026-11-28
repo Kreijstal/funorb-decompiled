@@ -70,13 +70,13 @@ final class ia extends tb implements oi {
           if (!lk.field_i.ensureIndexLoaded((byte) -36)) {
             return 20;
           }
-          if (!lk.field_i.a("commonui", (byte) -109)) {
+          if (!lk.field_i.tryLoadGroupByName("commonui", (byte) -109)) {
             return 40;
           }
           if (!wf.field_e.ensureIndexLoaded((byte) -36)) {
             return 50;
           }
-          if (!wf.field_e.a("commonui", (byte) -109)) {
+          if (!wf.field_e.tryLoadGroupByName("commonui", (byte) -109)) {
             return 60;
           }
           if (!am.field_g.ensureIndexLoaded((byte) -36)) {
@@ -90,23 +90,23 @@ final class ia extends tb implements oi {
             if (!pg.field_db.ensureIndexLoaded((byte) -36)) {
               return 14;
             }
-            if (!pg.field_db.c("", (byte) -116)) {
+            if (!pg.field_db.hasGroupName("", (byte) -116)) {
               return 29;
             }
-            if (!pg.field_db.a("", (byte) -109)) {
+            if (!pg.field_db.tryLoadGroupByName("", (byte) -109)) {
               return 29;
             }
           }
           if (!lk.field_i.ensureIndexLoaded((byte) -36)) {
             return 43;
           }
-          if (!lk.field_i.a("commonui", (byte) -109)) {
+          if (!lk.field_i.tryLoadGroupByName("commonui", (byte) -109)) {
             return 57;
           }
           if (!wf.field_e.ensureIndexLoaded((byte) -36)) {
             return 71;
           }
-          if (!wf.field_e.a("commonui", (byte) -109)) {
+          if (!wf.field_e.tryLoadGroupByName("commonui", (byte) -109)) {
             return 80;
           }
           if (!am.field_g.ensureIndexLoaded((byte) -36)) {

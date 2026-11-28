@@ -25,11 +25,11 @@ final class ci extends IntrusiveNode {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (DualLinkNode.field_r.b(param0, "", (byte) -82)) {
+          if (DualLinkNode.field_r.hasFileName(param0, "", (byte) -82)) {
             stackIn_3_0 = ha.field_k.a(param0, (byte) 126, "");
             return stackIn_3_0;
           }
-          if (ia.field_W.b(param0, "", (byte) -82)) {
+          if (ia.field_W.hasFileName(param0, "", (byte) -82)) {
             stackIn_7_0 = ha.field_k.a(param0, "", param1 + 47712);
             return stackIn_7_0;
           }
@@ -148,16 +148,16 @@ final class ci extends IntrusiveNode {
               var9 = stackIn_46_0;
               var1_int = var1_int + field_j;
               if (var9 != null) {
-                var9.a(var1_int, (h.field_q << 1) + mj.field_g, (oh.field_t << 1) + var7Lifetime1, 112, var8Lifetime1 - oh.field_t);
+                var9.a(var1_int, (RaiderDefinition.field_q << 1) + mj.field_g, (oh.field_t << 1) + var7Lifetime1, 112, var8Lifetime1 - oh.field_t);
               }
-              var1_int = var1_int + h.field_q;
+              var1_int = var1_int + RaiderDefinition.field_q;
             }
             if (var4 < 0) {
               n.field_c.b(var6, var8Lifetime1, li.field_g + var1_int, var5, -1);
               var1_int = var1_int + ag.field_a;
             } else {
               i.field_x.b(var6, var8Lifetime1, i.field_n + var1_int, var5, -1);
-              var1_int = var1_int + (field_j + h.field_q + mj.field_g);
+              var1_int = var1_int + (field_j + RaiderDefinition.field_q + mj.field_g);
             }
           }
           return;

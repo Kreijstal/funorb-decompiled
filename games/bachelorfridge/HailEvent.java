@@ -95,7 +95,7 @@ final class HailEvent extends SpecialEvent {
 
     final void a(BattleState param0, int param1) {
         try {
-          param0.a(0, this.field_q, this.field_t, false, this.d(1), 28);
+          param0.applyTerrainToTileMask(0, this.field_q, this.field_t, false, this.d(1), 28);
           int var3_int = -67 / ((param1 - 12) / 35);
           this.a(param0, (byte) -2);
         } catch (RuntimeException runtimeException) {

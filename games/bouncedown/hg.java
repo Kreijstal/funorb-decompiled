@@ -162,7 +162,7 @@ final class hg extends al {
             field_j = (eh) null;
           }
           if (param1.ensureIndexLoaded(77)) {
-            stackIn_6_0 = param3 + " - " + param1.a(100) + "%";
+            stackIn_6_0 = param3 + " - " + param1.getArchiveLoadPercent(100) + "%";
             return stackIn_6_0;
           }
           stackIn_4_0 = (String) (param0);

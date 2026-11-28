@@ -110,7 +110,7 @@ final class fl implements wo {
             var5 = (String) null;
             fl.a(-14, (String) null, (ResourceArchive) null, (String) null);
           }
-          stackIn_7_0 = param3 + " - " + param2.b(3492) + "%";
+          stackIn_7_0 = param3 + " - " + param2.getArchiveLoadPercent(3492) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

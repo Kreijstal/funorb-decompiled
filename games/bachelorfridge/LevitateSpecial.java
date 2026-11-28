@@ -35,9 +35,9 @@ final class LevitateSpecial extends SpecialOrder {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = this.creature.a(param1 ^ 48, param0);
+          var6 = this.creature.resolveCreature(param1 ^ 48, param0);
           var7 = var6;
-          var4 = this.field_j.a(79, param0);
+          var4 = this.field_j.resolveCreature(79, param0);
           if (var4 != null &&
             !var4.isDown(-127)) {
             var5 = new LevitateEvent(this.moveId, new CreatureRef(var7));

@@ -54,7 +54,7 @@ final class ap {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = -118 % ((param2 + 61) / 52);
-          var5 = param1.a(true, param0);
+          var5 = param1.getFlatFile(true, param0);
           var3 = var5;
           if (var5 != null) {
             stackIn_4_0 = new al(var5);

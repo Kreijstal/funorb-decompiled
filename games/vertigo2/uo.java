@@ -631,10 +631,10 @@ final class uo {
           this.field_a = param1;
           this.field_b = param2;
           if (null != this.field_a) {
-            this.field_a.b(0, (byte) -59);
+            this.field_a.getFileCapacity(0, (byte) -59);
           }
           if (null != this.field_b) {
-            this.field_b.b(0, (byte) -61);
+            this.field_b.getFileCapacity(0, (byte) -61);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

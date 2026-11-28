@@ -292,7 +292,7 @@ final class BoardView {
                 }
               }
             }
-            var29 = haa.b(param0 ^ -63, var7.d(125, var6.moveId), var6.field_j);
+            var29 = haa.b(param0 ^ -63, var7.getAttackShape(125, var6.moveId), var6.field_j);
             var10Lifetime1 = 17;
             var11Lifetime1 = 17;
             var12Lifetime1 = -1 + var10Lifetime1 >> 1;
@@ -716,7 +716,7 @@ final class BoardView {
                   CreatureActor.field_h.a("" + var6.field_v, var8 + 2 - 16, var9 + 30 - 26, var6.ownerIndex + 2, -1);
                 }
                 if (this.field_i.field_h.field_o == 3 &&
-                  var6.g((byte) 85)) {
+                  var6.isCarryingFlag((byte) 85)) {
                   var14Lifetime1 = (int)(15.0 * Math.cos(0.5 * ((double)(this.field_i.field_L + (var6.tileX * var6.tileY << 2)) / 40.0)));
                   IncomingAnimation.field_v[(this.field_i.field_L >> 2) % 2].a(72 + var19.field_c, var14Lifetime1 + (var19.field_a - 32));
                 }
@@ -1718,8 +1718,8 @@ final class BoardView {
         RuntimeException decompiledCaughtException = null;
         try {
           param1 = this.a(this.field_r, (byte) -95, this.field_q);
-          if (this.field_i.field_h.tiles[this.field_q][this.field_r].e(-97) &&
-            !this.field_i.field_h.a((byte) -101, this.field_i.field_n, this.field_q, this.field_r)) {
+          if (this.field_i.field_h.tiles[this.field_q][this.field_r].isTraversableTerrain(-97) &&
+            !this.field_i.field_h.isFlagBaseTile((byte) -101, this.field_i.field_n, this.field_q, this.field_r)) {
             this.field_m.a(param1.field_c + 1, param1.field_a + 1, 64);
           } else {
             this.field_g.a(param1.field_c + 1, 1 + param1.field_a, 64);
@@ -1875,8 +1875,8 @@ final class BoardView {
         this.field_k.a(this, (byte) 117);
         for (var7Lifetime2 = 0; this.field_a > var7Lifetime2; var7Lifetime2++) {
           for (var8 = 0; this.field_z > var8; var8++) {
-            if (this.field_i.field_h.a(var7Lifetime2, 120, this.field_i.field_n, var8) &&
-              this.field_i.field_h.tiles[var7Lifetime2][var8].e(-111)) {
+            if (this.field_i.field_h.isAdjacentToFlagBase(var7Lifetime2, 120, this.field_i.field_n, var8) &&
+              this.field_i.field_h.tiles[var7Lifetime2][var8].isTraversableTerrain(-111)) {
               var29 = this.a(var8, (byte) -98, var7Lifetime2);
               var6 = var29;
               this.field_w[this.field_i.field_n].a(var29.field_c, var29.field_a, 64 - var3 * 10);
@@ -1953,7 +1953,7 @@ final class BoardView {
           var10 = 0;
           var12 = 0;
           var11_int = 0;
-          var13 = var36.field_s.f((byte) 122);
+          var13 = var36.field_s.getBaseMovementRange((byte) 122);
           var14_ref_tv = (tv) (WhirlpoolDigest.field_e[this.field_i.field_Z.moveId]);
           if (hl.a((byte) 109, this.field_i.field_Z.moveId)) {
             var13 = var13 << 1;
@@ -1972,8 +1972,8 @@ final class BoardView {
             boolean decompiledFrameRemainder3 = true;
             if (var11_int == 0 &&
               var16 - var8Lifetime5 >= 0) {
-              if (var15 == 0 && (!this.field_I[var16 - var8Lifetime5][var17].e(-53) ||
-                this.field_i.field_h.a((byte) -98, this.field_i.field_n, -var8Lifetime5 + var16, var17))) {
+              if (var15 == 0 && (!this.field_I[var16 - var8Lifetime5][var17].isTraversableTerrain(-53) ||
+                this.field_i.field_h.isFlagBaseTile((byte) -98, this.field_i.field_n, -var8Lifetime5 + var16, var17))) {
                 var11_int = 1;
               } else {
                 var37 = this.a(var17, (byte) -100, var16 - var8Lifetime5);
@@ -1993,8 +1993,8 @@ final class BoardView {
             boolean decompiledFrameRemainder2 = true;
             if (var9Lifetime1 == 0 &&
               -var8Lifetime5 + var17 >= 0) {
-              if (var15 == 0 && (!this.field_I[var16][-var8Lifetime5 + var17].e(-30) ||
-                this.field_i.field_h.a((byte) -127, this.field_i.field_n, var16, -var8Lifetime5 + var17))) {
+              if (var15 == 0 && (!this.field_I[var16][-var8Lifetime5 + var17].isTraversableTerrain(-30) ||
+                this.field_i.field_h.isFlagBaseTile((byte) -127, this.field_i.field_n, var16, -var8Lifetime5 + var17))) {
                 var9Lifetime1 = 1;
               } else {
                 var38 = this.a(var17 - var8Lifetime5, (byte) -100, var16);
@@ -2014,8 +2014,8 @@ final class BoardView {
             boolean decompiledFrameRemainder1 = true;
             if (var12 == 0 &&
               -1 + this.field_a >= var8Lifetime5 + var16) {
-              if (var15 == 0 && (!this.field_I[var16 + var8Lifetime5][var17].e(param0 + 32003) ||
-                this.field_i.field_h.a((byte) -100, this.field_i.field_n, var8Lifetime5 + var16, var17))) {
+              if (var15 == 0 && (!this.field_I[var16 + var8Lifetime5][var17].isTraversableTerrain(param0 + 32003) ||
+                this.field_i.field_h.isFlagBaseTile((byte) -100, this.field_i.field_n, var8Lifetime5 + var16, var17))) {
                 var12 = 1;
               } else {
                 var39 = this.a(var17, (byte) -118, var16 + var8Lifetime5);
@@ -2035,8 +2035,8 @@ final class BoardView {
             boolean decompiledFrameRemainder0 = true;
             if (var10 == 0 &&
               this.field_z - 1 >= var8Lifetime5 + var17 && (var15 != 0 ||
-              this.field_I[var16][var17 + var8Lifetime5].e(-78) &&
-              !this.field_i.field_h.a((byte) -121, this.field_i.field_n, var16, var17 + var8Lifetime5))) {
+              this.field_I[var16][var17 + var8Lifetime5].isTraversableTerrain(-78) &&
+              !this.field_i.field_h.isFlagBaseTile((byte) -121, this.field_i.field_n, var16, var17 + var8Lifetime5))) {
               var40 = this.a(var17 + var8Lifetime5, (byte) 83, var16);
               var6 = var40;
               this.field_u.a(var40.field_c, var40.field_a, -(10 * var3) + 128);
@@ -2060,7 +2060,7 @@ final class BoardView {
           var9Lifetime2 = var41.field_m[this.field_i.field_db];
           var10Lifetime1 = var41.field_o.field_g.field_b[var9Lifetime2];
           var11 = (BasicMoveDefinition) (al.a(-83, var10Lifetime1));
-          var12Lifetime1 = var41.c(87, var10Lifetime1);
+          var12Lifetime1 = var41.getMoveMaxRange(87, var10Lifetime1);
           var13Lifetime1 = var11.field_w;
           var14 = 0;
           var15Lifetime1 = -1;
@@ -2196,7 +2196,7 @@ final class BoardView {
               this.field_r != -1 &&
               130 == var46_ref.field_j &&
               this.field_i.field_h.tiles[this.field_q][this.field_r].occupant == null &&
-              this.field_i.field_h.tiles[this.field_q][this.field_r].e(-52)) {
+              this.field_i.field_h.tiles[this.field_q][this.field_r].isTraversableTerrain(-52)) {
               var2 = 1;
               this.a(true, var6, 18503);
             } else {

@@ -152,7 +152,7 @@ final class oq extends qc {
                 param1 = Vertigo2.a(new String[]{param1}, ri.field_o, -128);
               }
               if (bf.field_a) {
-                param1 = am.field_m;
+                param1 = LevelRenderer.field_m;
               }
               df.field_l.a(param2, true, param1);
             }

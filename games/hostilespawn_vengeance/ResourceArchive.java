@@ -104,7 +104,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final int c(int param0, int param1) {
+    final int getFileCapacity(int param0, int param1) {
         if (!this.validateGroupId((byte) -40, param1)) {
           return 0;
         }
@@ -114,7 +114,7 @@ final class ResourceArchive {
         return this.field_g.field_p[param1];
     }
 
-    final synchronized byte[] a(int param0, int param1) {
+    final synchronized byte[] getFlatFile(int param0, int param1) {
         if (!this.ensureIndexLoaded(-15879)) {
           return null;
         }
@@ -142,7 +142,7 @@ final class ResourceArchive {
           return true;
         }
         if (param2 <= 65) {
-          ResourceArchive.a(true, (java.awt.Canvas) null, ((boolean[]) (((Object[]) (((Object[]) (this.field_d[36]))[3]))[4]))[0]);
+          ResourceArchive.drawLoadingFrame(true, (java.awt.Canvas) null, ((boolean[]) (((Object[]) (((Object[]) (this.field_d[36]))[3]))[4]))[0]);
         }
         this.loadPackedGroup(20529, param1);
         if (null == this.field_d[param1]) {
@@ -158,10 +158,10 @@ final class ResourceArchive {
         return this.getFileWithKeys(param2, (int[]) null, param1, -2);
     }
 
-    final int f(int param0) {
+    final int getGroupCapacity(int param0) {
         if (param0 >= -111) {
           String var3 = (String) null;
-          this.a((String) null, (byte) 90);
+          this.hasGroupName((String) null, (byte) 90);
         }
         if (!this.ensureIndexLoaded(-15879)) {
           return -1;
@@ -169,7 +169,7 @@ final class ResourceArchive {
         return this.field_g.field_p.length;
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadFinalFrameSprites(ResourceArchive param0, int param1) {
         RgbSprite var2 = new RgbSprite(param0.getFileByName("", "final_frame.jpg", 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
         int var3 = var2.field_z;
         int var4 = var2.field_A;
@@ -191,7 +191,7 @@ final class ResourceArchive {
         }
     }
 
-    final static void a(byte param0, java.applet.Applet param1, String param2) {
+    final static void writeSettingsCookie(byte param0, java.applet.Applet param1, String param2) {
         try {
           String var6 = null;
           String var5 = null;
@@ -237,7 +237,7 @@ final class ResourceArchive {
         }
     }
 
-    final static void d(int param0) {
+    final static void showAccountCreationForm(int param0) {
         if (param0 <= 14) {
           return;
         }
@@ -245,7 +245,7 @@ final class ResourceArchive {
         ke.field_s.b(ik.field_d, (byte) 110);
     }
 
-    final static void a(int param0, byte param1, p param2, int param3) {
+    final static void drawRotatedEntityEffect(int param0, byte param1, p param2, int param3) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -278,7 +278,7 @@ final class ResourceArchive {
           }
           if (param1 != 81) {
             var6 = (ResourceArchive) null;
-            ResourceArchive.a((ResourceArchive) null, 120);
+            ResourceArchive.loadFinalFrameSprites((ResourceArchive) null, 120);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -295,7 +295,7 @@ final class ResourceArchive {
         }
     }
 
-    final static void a(boolean param0, java.awt.Canvas param1, boolean param2) {
+    final static void drawLoadingFrame(boolean param0, java.awt.Canvas param1, boolean param2) {
         int var4 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -329,7 +329,7 @@ final class ResourceArchive {
           }
           if (param0) {
             var5 = (String) null;
-            ResourceArchive.a((byte) 10, (java.applet.Applet) null, (String) null);
+            ResourceArchive.writeSettingsCookie((byte) 10, (java.applet.Applet) null, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -346,7 +346,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(int param0, String param1, String param2) {
+    final boolean tryLoadFileByName(int param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -397,7 +397,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(String param0, byte param1) {
+    final boolean hasGroupName(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -509,13 +509,13 @@ final class ResourceArchive {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_k = null;
         field_l = null;
         if (param0 != -16199) {
           ResourceArchive var2 = (ResourceArchive) null;
-          ResourceArchive.a((ResourceArchive) null, 78);
+          ResourceArchive.loadFinalFrameSprites((ResourceArchive) null, 78);
         }
         field_f = null;
     }
@@ -866,7 +866,7 @@ final class ResourceArchive {
         return this.field_c.getGroupRequestProgressPercent(-23, param1);
     }
 
-    final boolean a(int param0, String param1) {
+    final boolean tryLoadGroupByName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -996,7 +996,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int c(int param0) {
+    final synchronized int getArchiveLoadPercent(int param0) {
         int var2;
         int var3;
         int var4;

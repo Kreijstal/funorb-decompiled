@@ -74,7 +74,7 @@ final class ip implements wo {
     }
 
     final static void a(int param0, boolean param1) {
-        hl.field_g = 0;
+        LevelLostEntrancePhase.field_g = 0;
         mb.field_f = h.field_b;
         ue.field_a = 0;
         wn.field_b = 0;

@@ -6,7 +6,7 @@ class gk extends IntrusiveNode {
     PcmSample field_s;
     int field_m;
     boolean field_x;
-    pm field_t;
+    TunnelEntity field_t;
     boolean field_o;
     private boolean field_p;
     double field_w;
@@ -47,13 +47,13 @@ class gk extends IntrusiveNode {
         int var21 = 0;
         double var22 = 0.0;
         Object var24_ref = null;
-        ee var24_ref_ee = null;
+        MovingTunnelEntity var24_ref_ee = null;
         double var24 = 0.0;
         double var26 = 0.0;
         double var28 = 0.0;
         double var30 = 0.0;
         Object var32 = null;
-        dj var34 = null;
+        PlayerShip var34 = null;
         double[] var38 = null;
         var24_ref = null;
         var34 = this.field_t.field_A.field_B;
@@ -100,8 +100,8 @@ class gk extends IntrusiveNode {
           var7 = var7 * var9;
         }
         var22 = 2.0;
-        if (this.field_t instanceof ee) {
-          var24_ref_ee = (ee) (this.field_t);
+        if (this.field_t instanceof MovingTunnelEntity) {
+          var24_ref_ee = (MovingTunnelEntity) (this.field_t);
           var22 = -(var24_ref_ee.field_L * var7) - (var5 * var24_ref_ee.field_G + var24_ref_ee.field_K * var3) + 2.0;
           if (var22 < 0.01) {
             this.field_n.d(0);
@@ -137,7 +137,7 @@ class gk extends IntrusiveNode {
         return;
     }
 
-    gk(pm param0, PcmSample param1) {
+    gk(TunnelEntity param0, PcmSample param1) {
         this(param0, param1, -1, false);
     }
 
@@ -167,7 +167,7 @@ class gk extends IntrusiveNode {
     }
 
     final void g(int param0) {
-        dj var3 = null;
+        PlayerShip var3 = null;
         double var4 = 0.0;
         double var6 = 0.0;
         double var8 = 0.0;
@@ -179,7 +179,7 @@ class gk extends IntrusiveNode {
         double var20 = 0.0;
         int var22 = 0;
         double var23 = 0.0;
-        hn var27 = null;
+        GameSession var27 = null;
         double[] var31 = null;
         int stackIn_3_0 = 0;
         double stackIn_8_0 = 0.0;
@@ -235,14 +235,14 @@ class gk extends IntrusiveNode {
 
     final static void a(boolean param0, String param1, byte param2, boolean param3) {
         im.a((byte) -110);
-        vg.field_Z.g((byte) 105);
+        TunnelCamera.field_Z.g((byte) 105);
         om.field_p = new w(kj.field_c, (String) null, IntrusiveNode.field_f, param0, param3);
-        dn.field_b = new ef(vg.field_Z, om.field_p);
+        dn.field_b = new ef(TunnelCamera.field_Z, om.field_p);
         if (param2 >= -110) {
           return;
         }
         try {
-          vg.field_Z.c(dn.field_b, 0);
+          TunnelCamera.field_Z.c(dn.field_b, 0);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "gk.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -331,11 +331,11 @@ class gk extends IntrusiveNode {
         this.f(128);
     }
 
-    gk(pm param0, PcmSample param1, int param2, boolean param3) {
+    gk(TunnelEntity param0, PcmSample param1, int param2, boolean param3) {
         this(param0.field_A, param0, param1, param2, param3);
     }
 
-    gk(pm param0, PcmSample param1, int param2) {
+    gk(TunnelEntity param0, PcmSample param1, int param2) {
         this(param0, param1, param2, false);
     }
 
@@ -357,7 +357,7 @@ class gk extends IntrusiveNode {
         var2_int = -9 % ((-15 - param0) / 48);
     }
 
-    gk(hn param0, pm param1, PcmSample param2, int param3, boolean param4) {
+    gk(GameSession param0, TunnelEntity param1, PcmSample param2, int param3, boolean param4) {
         this.field_m = 96;
         this.field_w = 1.0;
         this.field_x = true;
@@ -380,14 +380,14 @@ class gk extends IntrusiveNode {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$c13c9cd76cbe(boolean param0, String param1, int param2, boolean param3) {
         im.a((byte) -110);
-        vg.field_Z.g((byte) 105);
+        TunnelCamera.field_Z.g((byte) 105);
         om.field_p = new w(kj.field_c, (String) null, IntrusiveNode.field_f, param0, param3);
-        dn.field_b = new ef(vg.field_Z, om.field_p);
+        dn.field_b = new ef(TunnelCamera.field_Z, om.field_p);
         if (param2 >= -110) {
           return;
         }
         try {
-          vg.field_Z.c(dn.field_b, 0);
+          TunnelCamera.field_Z.c(dn.field_b, 0);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "gk.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

@@ -117,7 +117,7 @@ final class BananarangAnimation extends EventAnimation {
         this.field_D = -1;
         try {
           this.field_B = param1;
-          this.field_R = this.field_B.creature.a(-27449, this.screen);
+          this.field_R = this.field_B.creature.resolveCreatureView(-27449, this.screen);
           this.field_O = this.field_R.field_s.tileX;
           this.field_G = this.field_R.field_s.tileY;
           this.field_F = this.field_B.field_r;

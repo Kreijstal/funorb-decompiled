@@ -84,7 +84,7 @@ final class pf extends IntrusiveNode {
             pf.a(3);
           }
           if (param0.ensureIndexLoaded(4)) {
-            stackIn_6_0 = param2 + " - " + param0.a(2) + "%";
+            stackIn_6_0 = param2 + " - " + param0.getArchiveLoadPercent(2) + "%";
             return stackIn_6_0;
           }
           stackIn_4_0 = (String) (param1);

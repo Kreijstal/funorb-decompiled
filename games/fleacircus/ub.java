@@ -17,7 +17,7 @@ final class ub {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param2.a(param0, 0);
+          var4 = param2.getFlatFile(param0, 0);
           var3 = var4;
           if (param1 > -84) {
             ub.clearStaticReferences(82);

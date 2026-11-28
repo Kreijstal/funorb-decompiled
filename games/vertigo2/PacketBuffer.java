@@ -551,7 +551,7 @@ class PacketBuffer extends IntrusiveNode {
         AccountNameAvailabilityValidator.field_o = new UiPanel(0L, (UiPanel) null);
         AccountNameAvailabilityValidator.field_o.b(IterableNodeHashTable.field_e.field_b, 118);
         AccountNameAvailabilityValidator.field_o.b(ne.field_G, 118);
-        wc.field_m = new UiPanel(0L, hb.field_D);
+        wc.field_m = new UiPanel(0L, PlayerAvatarRenderer.field_D);
         lr.field_P = new UiPanel(0L, (UiPanel) null);
         wc.field_m.b(he.field_x, 118);
         wc.field_m.b(lr.field_P, 126);
@@ -560,7 +560,7 @@ class PacketBuffer extends IntrusiveNode {
         }
         lr.field_P.b(BufferedRandomAccessFile.field_j, 120);
         lr.field_P.b(Vertigo2.field_M, 120);
-        ho.a(0, param0);
+        BlastDebrisBatch.layoutLobbyPanels(0, param0);
     }
 
     final boolean o(int param0) {

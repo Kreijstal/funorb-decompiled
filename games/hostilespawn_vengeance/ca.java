@@ -31,16 +31,16 @@ abstract class ca {
           if (!param2.ensureIndexLoaded(-15879)) {
             return false;
           }
-          if (!param2.a(param3 ^ -8088, "commonui")) {
+          if (!param2.tryLoadGroupByName(param3 ^ -8088, "commonui")) {
             return false;
           }
           if (param3 != 0) {
             ca.a(-34);
           }
           if (param1.ensureIndexLoaded(-15879) &&
-            param1.a(-8088, "commonui")) {
+            param1.tryLoadGroupByName(-8088, "commonui")) {
             if (param0.ensureIndexLoaded(param3 - 15879) &&
-              param0.a(-8088, "button.gif")) {
+              param0.tryLoadGroupByName(-8088, "button.gif")) {
               return true;
             }
             return false;

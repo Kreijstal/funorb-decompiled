@@ -57,7 +57,7 @@ final class mb extends IntrusiveNode {
         if (param0 != -110) {
           mb.b((byte) 10);
         }
-        lj.a((byte) -116);
+        MatchSession.openChatPanel((byte) -116);
     }
 
     final static String a(int param0) {

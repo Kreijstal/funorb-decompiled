@@ -522,7 +522,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.g(125);
                 pi.field_S = on.a((java.awt.Component) ((Object) fb.field_b), im.field_b, wm.field_ab, 1359);
                 this.f(-3998);
-                kh.field_gb = og.e(1);
+                ProjectileRay.field_gb = og.e(1);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (hk.field_d != 0L) {
@@ -534,14 +534,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    Confined.field_D = kh.field_gb.waitAndCountTicks(0, ij.field_u);
+                    Confined.field_D = ProjectileRay.field_gb.waitAndCountTicks(0, ij.field_u);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;
                   do {
                     if (!(Confined.field_D > var3)) {
                       this.a((byte) 11);
-                      mb.a(fb.field_b, 1001, ki.field_d);
+                      ShockwaveBlast.a(fb.field_b, 1001, ki.field_d);
                       break;
                     }
                     this.a(31);
@@ -552,7 +552,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              mb.a((String) null, true, (Throwable) (var1));
+              ShockwaveBlast.a((String) null, true, (Throwable) (var1));
               this.a("crash", false);
             }
             this.a(29121, true);
@@ -748,7 +748,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              mb.a((String) null, true, var8_ref);
+              ShockwaveBlast.a((String) null, true, var8_ref);
               this.a("crash", false);
             }
             return;
@@ -848,7 +848,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (param1 != 10) {
             field_c = (vk) null;
           }
-          stackIn_7_0 = h.a(false, param0.getFile((byte) -2, param4, param2));
+          stackIn_7_0 = WingPod.a(false, param0.getFile((byte) -2, param4, param2));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

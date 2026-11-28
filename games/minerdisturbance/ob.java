@@ -250,8 +250,8 @@ abstract class ob extends GameAppletShell {
         if (af.field_u == 2) {
           if (null != PacketBuffer.field_r &&
             PacketBuffer.field_r.ensureIndexLoaded((byte) 83)) {
-            if (PacketBuffer.field_r.b(false, "")) {
-              if (PacketBuffer.field_r.a(false, "")) {
+            if (PacketBuffer.field_r.hasGroupName(false, "")) {
+              if (PacketBuffer.field_r.tryLoadGroupByName(false, "")) {
                 li.a(9259, PacketBuffer.field_r);
                 PacketBuffer.field_r = null;
                 wf.p(4462);
@@ -577,7 +577,7 @@ abstract class ob extends GameAppletShell {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = MinerDisturbance.field_ab;
-          var4 = ResourceArchive.a(ki.field_n, kb.field_c, param2, 65);
+          var4 = ResourceArchive.pollAccountScreen(ki.field_n, kb.field_c, param2, 65);
           if (var4 == 0) {
             throw new IllegalStateException();
           }

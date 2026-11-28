@@ -10,13 +10,13 @@ final class lj implements cl {
     private CombatState field_h;
     static String field_p;
     private int[][] field_w;
-    private wm field_k;
+    private PackedBitSet field_k;
     private RgbSprite field_f;
     private int field_q;
     static volatile boolean field_g;
     static String field_j;
     static int field_m;
-    private wm field_i;
+    private PackedBitSet field_i;
     private int field_l;
     private RgbSprite field_c;
     private rh[][] field_v;
@@ -144,7 +144,7 @@ final class lj implements cl {
             stackIn_5_0 = var2_int;
             stackIn_5_1 = 49;
             if (stackIn_5_0 < stackIn_5_1) {
-              stackOut_6_0 = this.field_h.field_p.a(var2_int, (byte) 122);
+              stackOut_6_0 = this.field_h.field_p.isBitSet(var2_int, (byte) 122);
               stackIn_28_0 = stackOut_6_0 ? 1 : 0;
               stackIn_7_0 = stackOut_6_0;
               if (var11 == 0) {
@@ -306,22 +306,22 @@ final class lj implements cl {
         try {
           var3_int = 0;
           if (param1 % 7 != 0 &&
-            this.field_i.a(-(param1 / 7) + (param1 - 1), (byte) 87)) {
+            this.field_i.isBitSet(-(param1 / 7) + (param1 - 1), (byte) 87)) {
             var3_int = var3_int | 1;
           }
           if (param1 % 7 != 6 &&
-            this.field_i.a(-(param1 / 7) + param1, (byte) 123)) {
+            this.field_i.isBitSet(-(param1 / 7) + param1, (byte) 123)) {
             var3_int = var3_int | 2;
           }
           if (param0) {
             this.b(-31);
           }
           if (param1 > 6 &&
-            this.field_i.a(param1 + 35, (byte) 122)) {
+            this.field_i.isBitSet(param1 + 35, (byte) 122)) {
             var3_int = var3_int | 4;
           }
           if (param1 < 42 &&
-            this.field_i.a(param1 + 42, (byte) 118)) {
+            this.field_i.isBitSet(param1 + 42, (byte) 118)) {
             var3_int = var3_int | 8;
           }
           stackIn_28_0 = var3_int;
@@ -397,7 +397,7 @@ final class lj implements cl {
         try {
           var7 = -95 % ((43 - param2) / 50);
           var6_int = this.field_h.field_h[param1].field_a;
-          if (!this.field_h.field_p.a(param1, (byte) 106) &&
+          if (!this.field_h.field_p.isBitSet(param1, (byte) 106) &&
             param1 != 24) {
             var6_int = 0;
           }
@@ -456,11 +456,11 @@ final class lj implements cl {
                 var6 = stackIn_33_0;
                 while (var6 < (1 + var2_int)) {
                   var7 = 16777215;
-                  stackOut_10_0 = this.field_h.field_m.a(var5, (byte) 92);
+                  stackOut_10_0 = this.field_h.field_m.isBitSet(var5, (byte) 92);
                   stackIn_6_0 = stackOut_10_0 ? 1 : 0;
                   stackIn_11_0 = stackOut_10_0;
                   if (!stackIn_11_0 ||
-                    this.field_h.field_j.a(var5, (byte) 86)) {
+                    this.field_h.field_j.isBitSet(var5, (byte) 86)) {
                     var7 = 0;
                   }
                   if (0 != var5 &&
@@ -494,11 +494,11 @@ final class lj implements cl {
                   var6Lifetime1 = stackIn_69_0;
                   while (var6Lifetime1 < 13 - var2_int) {
                     var7Lifetime1 = 16777215;
-                    stackOut_39_0 = this.field_h.field_m.a(var5Lifetime1, (byte) 106);
+                    stackOut_39_0 = this.field_h.field_m.isBitSet(var5Lifetime1, (byte) 106);
                     stackIn_35_0 = stackOut_39_0 ? 1 : 0;
                     stackIn_40_0 = stackOut_39_0;
                     if (!stackIn_40_0 ||
-                      this.field_h.field_j.a(var5Lifetime1, (byte) 74)) {
+                      this.field_h.field_j.isBitSet(var5Lifetime1, (byte) 74)) {
                       var7Lifetime1 = 0;
                     }
                     ri.field_d[5].e(var3Lifetime1, var4Lifetime1, var7Lifetime1);
@@ -664,7 +664,7 @@ final class lj implements cl {
             decompiledFrameRemainder0 = (var19 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (!this.field_h.field_p.a(param2, (byte) 89)) {
+            if (!this.field_h.field_p.isBitSet(param2, (byte) 89)) {
               if (param2 == 24) {
                 var6_int = 96;
                 var8 = 0;
@@ -675,14 +675,14 @@ final class lj implements cl {
                 var6_int = 0;
                 var7 = 0;
                 var8 = 0;
-                var10_ref_int__ = this.field_h.a((byte) 120, param2);
+                var10_ref_int__ = this.field_h.getConnectedNeighborTiles((byte) 120, param2);
                 var11Lifetime2 = 0;
                 var12_ref_int__ = var10_ref_int__;
                 var13 = 0;
                 while (true) {
                   if (var12_ref_int__.length > var13) {
                     var14 = var12_ref_int__[var13];
-                    stackOut_17_0 = this.field_h.field_p.a(var14, (byte) 80);
+                    stackOut_17_0 = this.field_h.field_p.isBitSet(var14, (byte) 80);
                     stackIn_25_0 = stackOut_17_0 ? 1 : 0;
                     stackIn_18_0 = stackOut_17_0;
                     if (var19 == 0) {
@@ -898,7 +898,7 @@ final class lj implements cl {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ai var7 = null;
+        DungeonTileState var7 = null;
         int var7_int = 0;
         RgbSprite var7_ref = null;
         int[] var7_array = null;
@@ -933,29 +933,29 @@ final class lj implements cl {
           }
           if (decompiledSharedTail0) {
             var5_int = this.field_h.field_h[param2].field_a;
-            var6 = this.field_h.field_p.a(param2, (byte) 106) ? 1 : 0;
+            var6 = this.field_h.field_p.isBitSet(param2, (byte) 106) ? 1 : 0;
           }
           if (var6 == 0 &&
             param2 != 24) {
             this.a(i.field_r[0], -32, param2, param0, param1 + 1);
             if (param2 > 6) {
               var7_int = param2 - 7;
-              if (this.field_h.field_p.a(var7_int, (byte) 110) &&
-                this.field_i.a(var7_int + 42, (byte) 78)) {
+              if (this.field_h.field_p.isBitSet(var7_int, (byte) 110) &&
+                this.field_i.isBitSet(var7_int + 42, (byte) 78)) {
                 PacketBuffer.a(18 + param1, param0, (byte) -80, mf.field_b[0], (je.field_d[this.field_a[var7_int]] >> 1 & 8355711) + 8421504, this.a((byte) -11, var7_int) >> 2);
               }
             }
             if (param2 % 7 != 6) {
               var7_intLifetime2 = 1 + param2;
-              if (this.field_h.field_p.a(var7_intLifetime2, (byte) 93) &&
-                this.field_i.a(param2 - param2 / 7, (byte) 121)) {
+              if (this.field_h.field_p.isBitSet(var7_intLifetime2, (byte) 93) &&
+                this.field_i.isBitSet(param2 - param2 / 7, (byte) 121)) {
                 PacketBuffer.a(param1 + 18, param0, (byte) -90, mf.field_b[1], 8421504 + (8355711 & je.field_d[this.field_a[var7_intLifetime2]] >> 1), this.a((byte) -8, var7_intLifetime2) >> 2);
               }
             }
             if (param2 < 42) {
               var7_intLifetime3 = 7 + param2;
-              if (this.field_h.field_p.a(var7_intLifetime3, (byte) 104) &&
-                this.field_i.a(param2 + 42, (byte) 97)) {
+              if (this.field_h.field_p.isBitSet(var7_intLifetime3, (byte) 104) &&
+                this.field_i.isBitSet(param2 + 42, (byte) 97)) {
                 PacketBuffer.a(param1 + 18, param0, (byte) -128, mf.field_b[2], (8355711 & je.field_d[this.field_a[var7_intLifetime3]] >> 1) + 8421504, this.a((byte) -67, var7_intLifetime3) >> 2);
               }
             }
@@ -963,8 +963,8 @@ final class lj implements cl {
               return;
             }
             var7_intLifetime4 = -1 + param2;
-            if (this.field_h.field_p.a(var7_intLifetime4, (byte) 114) &&
-              this.field_i.a(var7_intLifetime4 - var7_intLifetime4 / 7, (byte) 101)) {
+            if (this.field_h.field_p.isBitSet(var7_intLifetime4, (byte) 114) &&
+              this.field_i.isBitSet(var7_intLifetime4 - var7_intLifetime4 / 7, (byte) 101)) {
               PacketBuffer.a(18 + param1, param0, (byte) -105, mf.field_b[3], ((je.field_d[this.field_a[var7_intLifetime4]] & 16711422) >> 1) + 8421504, this.a((byte) -36, var7_intLifetime4) >> 2);
             }
             if (var10 == 0) {
@@ -978,7 +978,7 @@ final class lj implements cl {
               decompiledFrameRemainder0 = (var10 != 0);
             }
             if (decompiledFrameRemainder0) {
-              var7_intLifetime1 = this.field_h.d(param2, 30813);
+              var7_intLifetime1 = this.field_h.getTilePassageFlags(param2, 30813);
               mc.field_w[var7_intLifetime1].h(param0, 1 + param1);
             }
           }
@@ -993,7 +993,7 @@ final class lj implements cl {
               var10 != 0) {
               this.a(i.field_r[var5_int], -32, param2, param0, param1 + 1);
               if (gh.field_i[var5_int].field_g == 2 && (this.field_h == null ||
-                !this.field_h.field_j.a(param2, (byte) 101))) {
+                !this.field_h.field_j.isBitSet(param2, (byte) 101))) {
                 var7_ref = AccountCreationResultPanel.a((byte) -70, var5_int);
                 if (var7_ref != null) {
                   if (null == this.field_h) {
@@ -1046,29 +1046,29 @@ final class lj implements cl {
                   break regionExit1;
                 }
                 var7_intLifetime1Lifetime1 = -7 + param2;
-                if (this.field_h.field_p.a(var7_intLifetime1Lifetime1, (byte) 106) &&
-                  this.field_i.a(var7_intLifetime1Lifetime1 + 42, (byte) 86)) {
+                if (this.field_h.field_p.isBitSet(var7_intLifetime1Lifetime1, (byte) 106) &&
+                  this.field_i.isBitSet(var7_intLifetime1Lifetime1 + 42, (byte) 86)) {
                   PacketBuffer.a(18 + param1, param0, (byte) -111, mf.field_b[0], 8421504 + ((16711422 & je.field_d[this.field_a[var7_intLifetime1Lifetime1]]) >> 1), this.a((byte) -39, var7_intLifetime1Lifetime1) >> 2);
                 }
               }
               if (param2 % 7 != 6) {
                 var7_intLifetime1Lifetime1 = param2 + 1;
-                if (this.field_h.field_p.a(var7_intLifetime1Lifetime1, (byte) 110) &&
-                  this.field_i.a(-(param2 / 7) + param2, (byte) 92)) {
+                if (this.field_h.field_p.isBitSet(var7_intLifetime1Lifetime1, (byte) 110) &&
+                  this.field_i.isBitSet(-(param2 / 7) + param2, (byte) 92)) {
                   PacketBuffer.a(param1 + 18, param0, (byte) -82, mf.field_b[1], ((je.field_d[this.field_a[var7_intLifetime1Lifetime1]] & 16711422) >> 1) + 8421504, this.a((byte) -57, var7_intLifetime1Lifetime1) >> 2);
                 }
               }
               if (param2 < 42) {
                 var7_intLifetime1Lifetime1 = 7 + param2;
-                if (this.field_h.field_p.a(var7_intLifetime1Lifetime1, (byte) 93) &&
-                  this.field_i.a(param2 + 42, (byte) 92)) {
+                if (this.field_h.field_p.isBitSet(var7_intLifetime1Lifetime1, (byte) 93) &&
+                  this.field_i.isBitSet(param2 + 42, (byte) 92)) {
                   PacketBuffer.a(param1 + 18, param0, (byte) -111, mf.field_b[2], 8421504 + ((je.field_d[this.field_a[var7_intLifetime1Lifetime1]] & 16711422) >> 1), this.a((byte) -56, var7_intLifetime1Lifetime1) >> 2);
                 }
               }
               if (param2 % 7 != 0) {
                 var7_intLifetime1Lifetime1 = param2 - 1;
-                if (this.field_h.field_p.a(var7_intLifetime1Lifetime1, (byte) 69) &&
-                  this.field_i.a(var7_intLifetime1Lifetime1 - var7_intLifetime1Lifetime1 / 7, (byte) 67)) {
+                if (this.field_h.field_p.isBitSet(var7_intLifetime1Lifetime1, (byte) 69) &&
+                  this.field_i.isBitSet(var7_intLifetime1Lifetime1 - var7_intLifetime1Lifetime1 / 7, (byte) 67)) {
                   PacketBuffer.a(18 + param1, param0, (byte) -104, mf.field_b[3], 8421504 + (8355711 & je.field_d[this.field_a[var7_intLifetime1Lifetime1]] >> 1), this.a((byte) -52, var7_intLifetime1Lifetime1) >> 2);
                 }
               }
@@ -1112,7 +1112,7 @@ final class lj implements cl {
           this.field_n = new int[49];
           this.field_w = new int[49][];
           this.field_v = new rh[49][];
-          this.field_k = new wm(84);
+          this.field_k = new PackedBitSet(84);
           this.field_s = -1;
           this.a(15122, 0);
           this.a(15122, 6);
@@ -1239,7 +1239,7 @@ final class lj implements cl {
               var6 = stackIn_119_0;
               while (1 + var2_int > var6) {
                 if (null != this.field_h &&
-                  !this.field_h.field_p.a(var5, (byte) 104)) {
+                  !this.field_h.field_p.isBitSet(var5, (byte) 104)) {
                   stackIn_25_0 = 0;
                 } else {
                   stackIn_25_0 = 1;
@@ -1253,7 +1253,7 @@ final class lj implements cl {
                 } else {
                   var8 = -7 + var5;
                   if (var7 == 0 &&
-                    !this.field_h.field_p.a(var8, (byte) 67)) {
+                    !this.field_h.field_p.isBitSet(var8, (byte) 67)) {
                     stackIn_42_0 = 0;
                   } else {
                     stackIn_42_0 = 1;
@@ -1261,12 +1261,12 @@ final class lj implements cl {
                   var9 = stackIn_42_0;
                   var10 = 5;
                   if (var9 != 0) {
-                    var11 = this.field_i.a(42 + var8, (byte) 123) ? 1 : 0;
+                    var11 = this.field_i.isBitSet(42 + var8, (byte) 123) ? 1 : 0;
                     if (var11 != 0) {
                       boolean decompiledFrameRemainder1 = true;
-                      if (this.field_h != null && (!this.field_h.field_j.a(var5, (byte) 110) &&
+                      if (this.field_h != null && (!this.field_h.field_j.isBitSet(var5, (byte) 110) &&
                         ~this.field_h.field_B != ~var5 ||
-                        !this.field_h.field_j.a(var8, (byte) 103) &&
+                        !this.field_h.field_j.isBitSet(var8, (byte) 103) &&
                         ~var8 != ~this.field_h.field_B)) {
                         stackIn_64_0 = 0;
                         decompiledFrameRemainder1 = false;
@@ -1289,7 +1289,7 @@ final class lj implements cl {
                 } else {
                   var8Lifetime2 = var5 + 1;
                   if (var7 == 0 &&
-                    !this.field_h.field_p.a(var8Lifetime2, (byte) 89)) {
+                    !this.field_h.field_p.isBitSet(var8Lifetime2, (byte) 89)) {
                     stackIn_87_0 = 0;
                   } else {
                     stackIn_87_0 = 1;
@@ -1297,12 +1297,12 @@ final class lj implements cl {
                   var9Lifetime2 = stackIn_87_0;
                   var10Lifetime2 = 4;
                   if (var9Lifetime2 != 0) {
-                    var11Lifetime2 = this.field_i.a(-(var5 / 7) + var5, (byte) 90) ? 1 : 0;
+                    var11Lifetime2 = this.field_i.isBitSet(-(var5 / 7) + var5, (byte) 90) ? 1 : 0;
                     if (var11Lifetime2 != 0) {
                       boolean decompiledFrameRemainder0 = true;
-                      if (this.field_h != null && (!this.field_h.field_j.a(var5, (byte) 66) &&
+                      if (this.field_h != null && (!this.field_h.field_j.isBitSet(var5, (byte) 66) &&
                         var5 != this.field_h.field_B ||
-                        !this.field_h.field_j.a(var8Lifetime2, (byte) 80) &&
+                        !this.field_h.field_j.isBitSet(var8Lifetime2, (byte) 80) &&
                         ~var8Lifetime2 != ~this.field_h.field_B)) {
                         stackIn_109_0 = 0;
                         decompiledFrameRemainder0 = false;
@@ -1339,7 +1339,7 @@ final class lj implements cl {
             var6Lifetime1 = 0;
             while (13 - var2_int > var6Lifetime1) {
               if (this.field_h != null &&
-                !this.field_h.field_p.a(var5Lifetime1, (byte) 75)) {
+                !this.field_h.field_p.isBitSet(var5Lifetime1, (byte) 75)) {
                 stackIn_134_0 = 0;
               } else {
                 stackIn_134_0 = 1;
@@ -1347,7 +1347,7 @@ final class lj implements cl {
               var7Lifetime1 = stackIn_134_0;
               var8Lifetime1 = -7 + var5Lifetime1;
               if (var7Lifetime1 == 0 &&
-                !this.field_h.field_p.a(var8Lifetime1, (byte) 122)) {
+                !this.field_h.field_p.isBitSet(var8Lifetime1, (byte) 122)) {
                 stackIn_141_0 = 0;
               } else {
                 stackIn_141_0 = 1;
@@ -1355,12 +1355,12 @@ final class lj implements cl {
               var9Lifetime1 = stackIn_141_0;
               var10Lifetime1 = 5;
               if (var9Lifetime1 != 0) {
-                var11Lifetime1 = this.field_i.a(42 + var8Lifetime1, (byte) 121) ? 1 : 0;
+                var11Lifetime1 = this.field_i.isBitSet(42 + var8Lifetime1, (byte) 121) ? 1 : 0;
                 if (var11Lifetime1 != 0) {
                   boolean decompiledFrameRemainder3 = true;
-                  if (this.field_h != null && (!this.field_h.field_j.a(var5Lifetime1, (byte) 68) &&
+                  if (this.field_h != null && (!this.field_h.field_j.isBitSet(var5Lifetime1, (byte) 68) &&
                     ~var5Lifetime1 != ~this.field_h.field_B ||
-                    !this.field_h.field_j.a(var8Lifetime1, (byte) 103) &&
+                    !this.field_h.field_j.isBitSet(var8Lifetime1, (byte) 103) &&
                     ~this.field_h.field_B != ~var8Lifetime1)) {
                     stackIn_163_0 = 0;
                     decompiledFrameRemainder3 = false;
@@ -1377,19 +1377,19 @@ final class lj implements cl {
               this.a(var4Lifetime1, 5, var3Lifetime1, var5Lifetime1, ua.field_b[var10Lifetime1]);
               var10Lifetime1Lifetime1 = 4;
               if (var7Lifetime1 == 0 &&
-                !this.field_h.field_p.a(var8Lifetime1Lifetime1, (byte) 95)) {
+                !this.field_h.field_p.isBitSet(var8Lifetime1Lifetime1, (byte) 95)) {
                 stackIn_175_0 = 0;
               } else {
                 stackIn_175_0 = 1;
               }
               var9Lifetime1Lifetime1 = stackIn_175_0;
               if (var9Lifetime1Lifetime1 != 0) {
-                var11Lifetime1Lifetime1 = this.field_i.a(-(var5Lifetime1 / 7) + var5Lifetime1, (byte) 116) ? 1 : 0;
+                var11Lifetime1Lifetime1 = this.field_i.isBitSet(-(var5Lifetime1 / 7) + var5Lifetime1, (byte) 116) ? 1 : 0;
                 if (var11Lifetime1Lifetime1 != 0) {
                   boolean decompiledFrameRemainder2 = true;
-                  if (null != this.field_h && (!this.field_h.field_j.a(var5Lifetime1, (byte) 88) &&
+                  if (null != this.field_h && (!this.field_h.field_j.isBitSet(var5Lifetime1, (byte) 88) &&
                     var5Lifetime1 != this.field_h.field_B ||
-                    !this.field_h.field_j.a(var8Lifetime1Lifetime1, (byte) 70) &&
+                    !this.field_h.field_j.isBitSet(var8Lifetime1Lifetime1, (byte) 70) &&
                     var8Lifetime1Lifetime1 != this.field_h.field_B)) {
                     stackIn_195_0 = 0;
                     decompiledFrameRemainder2 = false;
@@ -1456,7 +1456,7 @@ final class lj implements cl {
           if (null != this.field_w[param1]) {
             return;
           }
-          var3 = this.field_h.b(param1, (byte) -36);
+          var3 = this.field_h.getTilePassageIndices(param1, (byte) -36);
           var4 = 0;
           if (param0 != 15122) {
             this.field_w = (int[][]) null;
@@ -1466,7 +1466,7 @@ final class lj implements cl {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var6 >= var5_ref_int__.length))) {
             var7_int = var5_ref_int__[var6];
-            stackOut_8_0 = this.field_k.a(var7_int, (byte) 88);
+            stackOut_8_0 = this.field_k.isBitSet(var7_int, (byte) 88);
             stackIn_15_0 = stackOut_8_0 ? 1 : 0;
             stackIn_9_0 = stackOut_8_0;
             if (var10 == 0) {
@@ -1501,8 +1501,8 @@ final class lj implements cl {
             if (var10 != 0) {
               return;
             }
-            if (!this.field_k.a(var9, (byte) 93)) {
-              this.field_k.a(var9, param0 - 15183);
+            if (!this.field_k.isBitSet(var9, (byte) 93)) {
+              this.field_k.setBit(var9, param0 - 15183);
               if (~var9 == ~(-(param1 / 7) + (param1 - 1))) {
                 incrementValue$2 = var6Lifetime1;
                 var6Lifetime1++;
@@ -1553,7 +1553,7 @@ final class lj implements cl {
                 var2_int != 6 &&
                 42 != var2_int &&
                 var2_int != 48 &&
-                this.field_h.field_p.a(var2_int, (byte) 73)) {
+                this.field_h.field_p.isBitSet(var2_int, (byte) 73)) {
                 this.a(15122, var2_int);
               }
               var2_int++;

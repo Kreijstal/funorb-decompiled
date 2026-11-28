@@ -26,7 +26,7 @@ final class bp extends TextureOperator {
               uh.field_sc = false;
               var3_int = 1;
             }
-            tq.a(bh.field_M, var3_int != 0, MidiPcmStream.h(2), (byte) -128, od.a((byte) -18));
+            tq.a(LevelSimulation.field_M, var3_int != 0, MidiPcmStream.h(2), (byte) -128, od.a((byte) -18));
           } else {
             if (!NanoFrameTimer.a((byte) 107)) {
               SoftwareRasterizer.clearRaster();

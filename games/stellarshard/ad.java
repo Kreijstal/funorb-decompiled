@@ -552,7 +552,7 @@ final class ad extends IntrusiveNode {
         try {
           ad var4_ref = null;
           if (!ad.a(param0)) {
-            param0.b(param1, param2, (byte) 42);
+            param0.tryLoadFileByName(param1, param2, (byte) 42);
             return null;
           }
           byte[] var3 = param0.getFileByName(param1, param2, (byte) -12);

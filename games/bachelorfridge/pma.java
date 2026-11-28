@@ -169,7 +169,7 @@ final class pma extends k {
           bf.field_h[CreatureType.field_n].a(108);
           ua.field_b = true;
           AccountRequestState.field_a = true;
-          BattleCreature.d(false);
+          BattleCreature.initializeTutorialPanels(false);
         }
     }
 

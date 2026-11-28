@@ -216,7 +216,7 @@ final class tk extends ng {
             stackIn_5_0 = (String) (param0);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param2 + " - " + param1.c(param3 - 197) + "%";
+          stackIn_7_0 = param2 + " - " + param1.getArchiveLoadPercent(param3 - 197) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

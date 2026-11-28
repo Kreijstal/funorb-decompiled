@@ -82,7 +82,7 @@ final class ih {
         if (var7Lifetime3 > var6) {
           var6 = var7Lifetime3;
         }
-        var7Lifetime4 = pn.field_a.c(ah.a(param0, param3, -108, param2));
+        var7Lifetime4 = pn.field_a.c(AcceleratingProjectile.a(param0, param3, -108, param2));
         if (var6 < var7Lifetime4) {
           var6 = var7Lifetime4;
         }

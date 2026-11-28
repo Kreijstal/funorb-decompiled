@@ -182,7 +182,7 @@ final class kk {
         } else {
           var2 = kb.field_a[5];
         }
-        if (!ResourceArchive.a(false) &&
+        if (!ResourceArchive.isMessageDialogActive(false) &&
           !ek.a((byte) -125) &&
           !this.field_d &&
           20 >= this.field_i ||
@@ -279,7 +279,7 @@ final class kk {
         var3Lifetime2 = 0;
         while (true) {
           if (!(this.field_c.field_i > var3Lifetime2)) {
-            if (!ResourceArchive.a(false)) {
+            if (!ResourceArchive.isMessageDialogActive(false)) {
               return;
             }
             var3Lifetime2 = hl.field_a;
@@ -830,7 +830,7 @@ final class kk {
         ac.field_a.setAsRasterTarget((byte) 114);
         var11Lifetime1 = 40 * this.field_i / 20;
         if (var11Lifetime1 > 40 ||
-          ResourceArchive.a(false)) {
+          ResourceArchive.isMessageDialogActive(false)) {
           var11Lifetime1 = 40;
         }
         this.field_f[param1].b(var5, var4 + (40 - var11Lifetime1 >> 1), var8, var11Lifetime1);

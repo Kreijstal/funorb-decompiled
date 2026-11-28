@@ -38,7 +38,7 @@ final class ScavengerSpecial extends SpecialOrder {
           if (param1 != 3) {
             field_s = 126;
           }
-          var9 = this.creature.a(param1 ^ 115, param0);
+          var9 = this.creature.resolveCreature(param1 ^ 115, param0);
           var4 = new ScavengerEvent(this.moveId, new CreatureRef(var9));
           for (var5 = 0; var5 < param0.playerCount; var5++) {
             for (var6 = 0; var6 < 7; var6++) {

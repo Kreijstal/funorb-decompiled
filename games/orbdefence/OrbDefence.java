@@ -765,19 +765,19 @@ public final class OrbDefence extends NetworkGameClient {
         bl.a(param1 ^ 20);
         if (null != kd.field_q) {
           if (j.field_b.ensureIndexLoaded(-1) &&
-            j.field_b.b((byte) 102, "basic")) {
-            if (!j.field_b.b((byte) 99, "arialbold14")) {
+            j.field_b.tryLoadGroupByName((byte) 102, "basic")) {
+            if (!j.field_b.tryLoadGroupByName((byte) 99, "arialbold14")) {
               j.a(4.0f, ed.a(hi.field_e, j.field_b, -14416, ProxyAuthenticationRequiredException.field_a, "arialbold14"), (byte) 118);
               return false;
             }
             if (GameAppletShell.field_d.ensureIndexLoaded(-1) &&
-              GameAppletShell.field_d.b((byte) 121, "arialbold14")) {
-              if (!j.field_b.b((byte) 81, "arial13")) {
+              GameAppletShell.field_d.tryLoadGroupByName((byte) 121, "arialbold14")) {
+              if (!j.field_b.tryLoadGroupByName((byte) 81, "arial13")) {
                 j.a(4.0f, ed.a(hi.field_e, j.field_b, param1 - 14513, ProxyAuthenticationRequiredException.field_a, "arial13"), (byte) 112);
                 return false;
               }
               if (GameAppletShell.field_d.ensureIndexLoaded(param1 - 98) &&
-                GameAppletShell.field_d.b((byte) -84, "arial13")) {
+                GameAppletShell.field_d.tryLoadGroupByName((byte) -84, "arial13")) {
                 if (kd.field_q.ensureIndexLoaded(-1) &&
                   kd.field_q.tryLoadAllGroups(7715)) {
                   if (AccountCreationResultPanel.field_hb.ensureIndexLoaded(-1) &&

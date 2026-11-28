@@ -1,0 +1,84 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class ResultScenePhase {
+    static AccountRequestState field_b;
+    static String field_c;
+    static String field_a;
+    static ResourceArchive field_d;
+
+    public static void clearStaticReferences(byte param0) {
+        field_c = null;
+        field_a = null;
+        field_d = null;
+        field_b = null;
+        if (param0 != -101) {
+          field_c = (String) null;
+        }
+    }
+
+    final static byte[] extractBytes(byte param0, boolean param1, Object param2) {
+        byte[] var3 = null;
+        RuntimeException var3_ref = null;
+        ByteStorage var4 = null;
+        Object stackIn_4_0 = null;
+        byte[] stackIn_9_0 = null;
+        byte[] stackIn_11_0 = null;
+        byte[] stackIn_14_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 110) {
+            field_c = (String) null;
+          }
+          if (param2 == null) {
+            stackIn_4_0 = null;
+            return (byte[]) (stackIn_4_0);
+          }
+          if (!(param2 instanceof byte[])) {
+            if (!(param2 instanceof ByteStorage)) {
+              throw new IllegalArgumentException();
+            }
+            var4 = (ByteStorage) (param2);
+            stackIn_14_0 = var4.getBytes(78);
+            return stackIn_14_0;
+          }
+          var3 = (byte[]) (param2);
+          if (param1) {
+            stackIn_11_0 = sm.copyBytes(30, var3);
+            return stackIn_11_0;
+          }
+          stackIn_9_0 = var3;
+          return stackIn_9_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_18_0 = var3_ref;
+          stackIn_18_1 = new StringBuilder().append("l.K(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+        }
+    }
+
+    abstract ResultScenePhase fastForwardPhase(byte param0);
+
+    void disposePhase(byte param0) {
+        if (param0 < 123) {
+          this.disposePhase((byte) 2);
+        }
+    }
+
+    abstract ResultScenePhase updatePhase(int param0);
+
+    static {
+        field_c = "Three-Player Puzzles";
+        field_b = new AccountRequestState();
+        field_a = "Loading extra data";
+    }
+}

@@ -99,11 +99,11 @@ final class uh extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0.ensureIndexLoaded(param3 ^ 6) &&
-            param0.b(4, "commonui")) {
+            param0.tryLoadGroupByName(4, "commonui")) {
             if (param2.ensureIndexLoaded(4) &&
-              param2.b(param3 ^ 6, "commonui")) {
+              param2.tryLoadGroupByName(param3 ^ 6, "commonui")) {
               if (param1.ensureIndexLoaded(param3 + param3) &&
-                param1.b(4, "button.gif")) {
+                param1.tryLoadGroupByName(4, "button.gif")) {
                 return true;
               }
               return false;

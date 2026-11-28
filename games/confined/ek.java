@@ -9,7 +9,7 @@ final class ek {
     gk field_g;
     static String field_k;
     private boolean field_f;
-    private ee field_n;
+    private MovingTunnelEntity field_n;
     private boolean field_h;
     private int field_o;
     private int field_c;
@@ -17,7 +17,7 @@ final class ek {
     int field_d;
     static PlatformTaskDispatcher field_p;
     int field_b;
-    private oi field_j;
+    private DynamicLight field_j;
 
     final void a(tf param0, int param1) {
         int stackIn_6_0 = 0;
@@ -482,7 +482,7 @@ final class ek {
         field_k = null;
     }
 
-    final void a(vg param0, double param1, byte param2) {
+    final void a(TunnelCamera param0, double param1, byte param2) {
         int stackIn_10_0 = 0;
         RgbSprite[] stackIn_19_0 = null;
         RgbSprite stackIn_21_0;
@@ -518,7 +518,7 @@ final class ek {
         int var24 = 0;
         try {
           var5_double = 1.0 - (this.field_n.field_D - param0.field_O) / param1;
-          var5_double = qn.field_v.a(var5_double, 0, this.field_n.field_D);
+          var5_double = qn.field_v.attenuateBrightnessToDepth(var5_double, 0, this.field_n.field_D);
           if (0.0 >= var5_double) {
             return;
           }
@@ -609,7 +609,7 @@ final class ek {
     final void a(int param0, PrimaryNodeDeque param1) {
         int var3_int = 0;
         int stackIn_8_0 = 0;
-        oi stackIn_13_0 = null;
+        DynamicLight stackIn_13_0 = null;
         double stackIn_13_1 = 0.0;
         int stackIn_14_2 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -755,7 +755,7 @@ final class ek {
         return param2;
     }
 
-    ek(ee param0, boolean param1, boolean param2, int param3) {
+    ek(MovingTunnelEntity param0, boolean param1, boolean param2, int param3) {
         this.field_l = false;
         this.field_d = 65536;
         this.field_o = 0;
@@ -766,7 +766,7 @@ final class ek {
           this.field_n = param0;
           this.field_h = param2 ? true : false;
           this.field_b = param3;
-          this.field_j = new oi(param0);
+          this.field_j = new DynamicLight(param0);
           this.field_i = new gk(param0, !param1 ? fh.field_b : tl.field_b);
           this.field_i.field_w = param0.field_C;
           this.field_i.field_m = 0;

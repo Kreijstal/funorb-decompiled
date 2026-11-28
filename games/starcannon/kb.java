@@ -20,13 +20,13 @@ final class kb {
           if (!param3.ensureIndexLoaded((byte) 126)) {
             return false;
           }
-          if (!param3.a("commonui", -9883)) {
+          if (!param3.tryLoadGroupByName("commonui", -9883)) {
             return false;
           }
           if (param1.ensureIndexLoaded((byte) 121) &&
-            param1.a("commonui", -9883)) {
+            param1.tryLoadGroupByName("commonui", -9883)) {
             if (param0.ensureIndexLoaded((byte) 100) &&
-              param0.a("button.gif", -9883)) {
+              param0.tryLoadGroupByName("button.gif", -9883)) {
               return true;
             }
             return false;

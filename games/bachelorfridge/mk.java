@@ -381,7 +381,7 @@ final class mk {
                 nia.field_l[var8_ref_oha.field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_q >> 1) + (-1 + var6_int), var7 - 1 - (nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var5].field_vb].field_b].field_p >> 1), 51233);
               }
             }
-            CreatureType.a(true, -15 + BuffVendorAnimation.field_A[var5][1], -15 + BuffVendorAnimation.field_A[var5][0], IsaacRandom.field_f.field_b[BananarangEvent.field_s.field_g.field_m[var5]], 78);
+            CreatureType.drawMoveIcon(true, -15 + BuffVendorAnimation.field_A[var5][1], -15 + BuffVendorAnimation.field_A[var5][0], IsaacRandom.field_f.field_b[BananarangEvent.field_s.field_g.field_m[var5]], 78);
           }
         }
         if (-1 != this.field_x ||
@@ -403,7 +403,7 @@ final class mk {
           var9 = field_p + 4;
           var10 = 4 + gd.field_m;
           if (param0) {
-            sd.a(BananarangEvent.field_s.field_g.a(var6, -5313), var9, var6, (byte) 74, var10, var7Lifetime1, var8);
+            sd.a(BananarangEvent.field_s.field_g.getAttackDamageMultiplier(var6, -5313), var9, var6, (byte) 74, var10, var7Lifetime1, var8);
           }
         }
         if (this.field_m != null) {
@@ -436,7 +436,7 @@ final class mk {
           var4 = SauceOfFlameEvent.field_r[var3][0];
           var5 = SauceOfFlameEvent.field_r[var3][1];
           if (var2 > var3 && (var3 < 3 ||
-            BananarangEvent.field_s.field_g.b(8, var3 / 3))) {
+            BananarangEvent.field_s.field_g.hasUnlockedAbilityBranch(8, var3 / 3))) {
             if (var3 == BananarangEvent.field_s.field_g.field_i &&
               BananarangEvent.field_s.field_g.field_i != 0) {
               this.field_r.drawAdditive(-13 + var4, var5 - 13, 255);
@@ -450,7 +450,7 @@ final class mk {
             if (var6 != 0) {
               var10 = WhirlpoolDigest.field_e[bf.field_g[var3].field_vb];
               var7 = var10;
-              if (BananarangEvent.field_s.field_g.a(bf.field_g[var3].field_vb, 9)) {
+              if (BananarangEvent.field_s.field_g.hasEquippedMove(bf.field_g[var3].field_vb, 9)) {
                 a.field_o.rotateNearest(a.field_o.field_n << 3, a.field_o.field_o << 3, (1 + var4) * 16, 16 * var5 + 16, 0, 4096);
               }
               boolean decompiledFrameRemainder2 = true;
@@ -495,13 +495,13 @@ final class mk {
               } else {
                 nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + var4 - 1, -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + var5 - 1, 51233);
               }
-              CreatureType.a(true, bf.field_g[var3].field_rb, bf.field_g[var3].field_kb + 1, bf.field_g[var3].field_vb, 106);
+              CreatureType.drawMoveIcon(true, bf.field_g[var3].field_rb, bf.field_g[var3].field_kb + 1, bf.field_g[var3].field_vb, 106);
             } else {
               if (var3 >= var2 && (2 > var3 ||
                 BananarangEvent.field_s.field_g.field_g[var3 - 2])) {
                 var9 = WhirlpoolDigest.field_e[bf.field_g[var3].field_vb];
                 var7 = var9;
-                if (BananarangEvent.field_s.field_g.a(bf.field_g[var3].field_vb, 9)) {
+                if (BananarangEvent.field_s.field_g.hasEquippedMove(bf.field_g[var3].field_vb, 9)) {
                   a.field_o.rotateNearest(a.field_o.field_n << 3, a.field_o.field_o << 3, var4 * 16 + 16, (1 + var5) * 16, 0, 4096);
                 }
                 boolean decompiledFrameRemainder1 = true;
@@ -546,7 +546,7 @@ final class mk {
                     nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].e(-(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_q >> 1) + var4 - 1, -(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_p >> 1) + (var5 - 1), 14971949);
                   }
                 }
-                CreatureType.a(true, bf.field_g[var3].field_rb, 1 + bf.field_g[var3].field_kb, bf.field_g[var3].field_vb, 106);
+                CreatureType.drawMoveIcon(true, bf.field_g[var3].field_rb, 1 + bf.field_g[var3].field_kb, bf.field_g[var3].field_vb, 106);
                 RefreshingAnimation.field_v.rotateNearest(RefreshingAnimation.field_v.field_n << 3, RefreshingAnimation.field_v.field_o << 3, 16 * var4, var5 * 16, 0, 4096);
               } else {
                 hp.field_b[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].rotateNearest(nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_n << 3, nia.field_l[WhirlpoolDigest.field_e[bf.field_g[var3].field_vb].field_b].field_o << 3, 16 * var4, 16 * var5, 0, 4096);
@@ -595,19 +595,19 @@ final class mk {
         var9 = BachelorFridge.field_y;
         try {
           if (param5 == 0 &&
-            BananarangEvent.field_s.field_g.a(84, 0, BananarangEvent.field_s.field_g.field_m)) {
+            BananarangEvent.field_s.field_g.containsMoveFromSlot(84, 0, BananarangEvent.field_s.field_g.field_m)) {
             param1++;
           }
           if (1 == param5 &&
-            BananarangEvent.field_s.field_g.a(85, 0, BananarangEvent.field_s.field_g.field_m)) {
+            BananarangEvent.field_s.field_g.containsMoveFromSlot(85, 0, BananarangEvent.field_s.field_g.field_m)) {
             param1++;
           }
           if (param5 == 2 &&
-            BananarangEvent.field_s.field_g.a(86, 0, BananarangEvent.field_s.field_g.field_m)) {
+            BananarangEvent.field_s.field_g.containsMoveFromSlot(86, 0, BananarangEvent.field_s.field_g.field_m)) {
             param1++;
           }
           if (param5 == 3 &&
-            BananarangEvent.field_s.field_g.a(87, 0, BananarangEvent.field_s.field_g.field_m)) {
+            BananarangEvent.field_s.field_g.containsMoveFromSlot(87, 0, BananarangEvent.field_s.field_g.field_m)) {
             param1++;
           }
           var7_int = 0;
@@ -718,7 +718,7 @@ final class mk {
           this.field_k = new int[BananarangEvent.field_s.field_g.field_m.length];
           ArrayOperations.copy(BananarangEvent.field_s.field_g.field_m, 0, this.field_k, 0, this.field_k.length);
           this.field_d = BananarangEvent.field_s.field_g.field_k;
-          this.field_s = BananarangEvent.field_s.field_g.e((byte) -121);
+          this.field_s = BananarangEvent.field_s.field_g.createCreatureModel((byte) -121);
           BananarangEvent.field_v = mka.a(13558251, 13558251, 13558251, (byte) -123, jha.field_g, 13558251, 16777215, 13558251);
           BananarangEvent.field_v.field_eb = wd.field_w;
           BananarangEvent.field_v.field_A = RageSpecial.field_p;

@@ -600,7 +600,7 @@ final class re extends ue {
           var2 += 26;
           incrementValue$13 = var1_int;
           var1_int++;
-          this.field_d[incrementValue$13] = (ik) ((Object) new mh(690, var2, 180, l.field_c, 2));
+          this.field_d[incrementValue$13] = (ik) ((Object) new mh(690, var2, 180, ResultScenePhase.field_c, 2));
           var2 += 26;
           incrementValue$14 = var1_int;
           var1_int++;

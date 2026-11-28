@@ -80,7 +80,7 @@ final class s extends am {
             return;
           }
           if (1 != var2) {
-            mb.a("A1: " + ui.a(10), true, (Throwable) null);
+            ShockwaveBlast.a("A1: " + ui.a(10), true, (Throwable) null);
             dc.d(116);
             return;
           }

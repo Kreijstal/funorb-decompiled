@@ -43,7 +43,7 @@ final class DreamsAnimation extends EventAnimation {
         if (param0 != 44) {
           return;
         }
-        BattleCreature var2 = this.field_w.creature.a(76, this.screen.field_h);
+        BattleCreature var2 = this.field_w.creature.resolveCreature(76, this.screen.field_h);
         if (var2.isDown(69)) {
           return;
         }
@@ -51,7 +51,7 @@ final class DreamsAnimation extends EventAnimation {
         al.a(107, this.field_w.moveId);
         while (var3 != null) {
           var3.apply(var2, this.screen.field_h, 12);
-          var4 = var3.target.a(-27449, this.screen);
+          var4 = var3.target.resolveCreatureView(-27449, this.screen);
           var4.b(-1, 18);
           var4.a(24831, 110, kna.field_g[44]);
           var3 = (DamageEffect) (this.field_w.effects.nextForward(param0 ^ 44));

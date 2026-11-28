@@ -11,7 +11,7 @@ final class IsaacRandom {
     static String field_j;
     static int[][] field_e;
     private int field_c;
-    static f field_g;
+    static PuzzleTile field_g;
 
     final static String b(byte param0) {
         if (param0 <= 88) {
@@ -344,6 +344,6 @@ final class IsaacRandom {
     static {
         field_h = 0;
         field_j = "Achieved";
-        field_g = (f) ((Object) new kp(-1));
+        field_g = (PuzzleTile) ((Object) new kp(-1));
     }
 }

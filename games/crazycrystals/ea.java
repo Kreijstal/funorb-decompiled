@@ -10,7 +10,7 @@ abstract class ea extends pn {
     transient int field_o;
     transient int field_m;
 
-    f a(sl param0, f[][] param1, int param2, int param3, int param4, int param5, int param6) {
+    PuzzleTile a(sl param0, PuzzleTile[][] param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -21,9 +21,9 @@ abstract class ea extends pn {
         try {
           this.field_j = true;
           if (param4 != 17512) {
-            this.a(-19, -65, -62, (f[][]) null, 68, 12, 92, -106);
+            this.a(-19, -65, -62, (PuzzleTile[][]) null, 68, 12, 92, -106);
           }
-          return (f) (this);
+          return (PuzzleTile) (this);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -44,15 +44,15 @@ abstract class ea extends pn {
         }
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
-        f var7 = null;
+    final PuzzleTile a(PuzzleTile param0, int param1, int param2, PuzzleTile[][] param3, RgbSprite[] param4, byte param5) {
+        PuzzleTile var7 = null;
         int var9 = 0;
         Object stackIn_9_0;
-        f stackIn_9_1;
-        f stackIn_9_2;
+        PuzzleTile stackIn_9_1;
+        PuzzleTile stackIn_9_2;
         int stackIn_9_3;
         int stackIn_9_4;
-        f[][] stackIn_9_5;
+        PuzzleTile[][] stackIn_9_5;
         RgbSprite[] stackIn_10_6 = null;
         ig stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
@@ -70,7 +70,7 @@ abstract class ea extends pn {
           var7 = this.field_l;
           while (true) {
             if (var7 instanceof ro) {
-              return (f) (this);
+              return (PuzzleTile) (this);
             }
             if (var7 instanceof pn) {
               var7 = ((pn) (var7)).field_l;
@@ -80,24 +80,24 @@ abstract class ea extends pn {
           }
           stackIn_9_0 = this;
           stackIn_9_1 = this.field_l;
-          stackIn_9_2 = (f) (param0);
+          stackIn_9_2 = (PuzzleTile) (param0);
           stackIn_9_3 = param1;
           stackIn_9_4 = param2;
-          stackIn_9_5 = (f[][]) (param3);
+          stackIn_9_5 = (PuzzleTile[][]) (param3);
           if (!this.b((byte) 97)) {
             stackIn_10_6 = null;
           } else {
             stackIn_10_6 = (RgbSprite[]) (param4);
           }
-          this.field_l = ((f) (Object) stackIn_9_1).a(stackIn_9_2, stackIn_9_3, stackIn_9_4, stackIn_9_5, stackIn_10_6, param5);
+          this.field_l = ((PuzzleTile) (Object) stackIn_9_1).a(stackIn_9_2, stackIn_9_3, stackIn_9_4, stackIn_9_5, stackIn_10_6, param5);
           if (this.a((byte) 42, param3, param0)) {
-            return (f) (this);
+            return (PuzzleTile) (this);
           }
           cn.field_e.a(64, param2 * 12, param1 * 12, 0, (byte) -111);
-          var8 = new ig(param0, bd.field_n, (f) null, true);
+          var8 = new ig(param0, bd.field_n, (PuzzleTile) null, true);
           var8.field_l = this.a(param1, param2, var8, -122, param3);
           stackIn_14_0 = var8;
-          return (f) ((Object) stackIn_14_0);
+          return (PuzzleTile) ((Object) stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
@@ -124,7 +124,7 @@ abstract class ea extends pn {
         }
     }
 
-    private final boolean a(int param0, int param1, boolean param2, f[][] param3, int param4, fq param5, int param6) {
+    private final boolean a(int param0, int param1, boolean param2, PuzzleTile[][] param3, int param4, fq param5, int param6) {
         boolean discarded$1 = false;
         RuntimeException var8 = null;
         ea var9 = null;
@@ -139,7 +139,7 @@ abstract class ea extends pn {
             return false;
           }
           var9 = (ea) null;
-          discarded$1 = this.a(59, -123, (f[][]) null, -125, (ea) null, -112, 91);
+          discarded$1 = this.a(59, -123, (PuzzleTile[][]) null, -125, (ea) null, -112, 91);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -161,7 +161,7 @@ abstract class ea extends pn {
         }
     }
 
-    boolean a(int param0, int param1, int param2, f[][] param3, int param4, fq param5, int param6) {
+    boolean a(int param0, int param1, int param2, PuzzleTile[][] param3, int param4, fq param5, int param6) {
         RuntimeException var8 = null;
         ea var9 = null;
         RuntimeException stackIn_6_0 = null;
@@ -175,7 +175,7 @@ abstract class ea extends pn {
             return false;
           }
           var9 = (ea) null;
-          this.a(-31, 46, (f[][]) null, -62, 17, -38, (ea) null);
+          this.a(-31, 46, (PuzzleTile[][]) null, -62, 17, -38, (ea) null);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,11 +205,11 @@ abstract class ea extends pn {
         }
     }
 
-    final f a(int param0, int param1, f param2, int param3, f[][] param4) {
+    final PuzzleTile a(int param0, int param1, PuzzleTile param2, int param3, PuzzleTile[][] param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
-        f var7 = null;
-        f stackIn_5_0 = null;
+        PuzzleTile var7 = null;
+        PuzzleTile stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -245,10 +245,10 @@ abstract class ea extends pn {
         }
     }
 
-    final f a(int param0, ea param1, int param2, int param3, byte param4, int param5, f[][] param6) {
+    final PuzzleTile a(int param0, ea param1, int param2, int param3, byte param4, int param5, PuzzleTile[][] param6) {
         RuntimeException var8 = null;
-        f stackIn_2_0 = null;
-        f stackIn_8_0 = null;
+        PuzzleTile stackIn_2_0 = null;
+        PuzzleTile stackIn_8_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -258,13 +258,13 @@ abstract class ea extends pn {
         try {
           this.field_l = this.field_l.a(param0, param1, param2, param3, (byte) -91, param5, param6);
           if (param4 > -87) {
-            stackIn_2_0 = (f) null;
+            stackIn_2_0 = (PuzzleTile) null;
             return stackIn_2_0;
           }
           if (this.field_o == param2 &&
             param0 == this.field_s &&
             param1.field_m * this.field_p < param1.field_p * this.field_m) {
-            return (f) (this);
+            return (PuzzleTile) (this);
           }
           stackIn_8_0 = this.a(param0, param5 + param2, param6, -31135, param0 + param3, param2, param1);
           return stackIn_8_0;
@@ -296,9 +296,9 @@ abstract class ea extends pn {
         return true;
     }
 
-    f a(mj param0, byte param1, boolean param2, f[][] param3) {
+    PuzzleTile a(LaserTraceCursor param0, byte param1, boolean param2, PuzzleTile[][] param3) {
         RuntimeException var5 = null;
-        f stackIn_6_0 = null;
+        PuzzleTile stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -308,7 +308,7 @@ abstract class ea extends pn {
         try {
           if (this.field_s > 0) {
             this.field_l = this.field_l.a(param0, (byte) -101, param2, param3);
-            return (f) (this);
+            return (PuzzleTile) (this);
           }
           if (param1 > -74) {
             this.field_p = -83;
@@ -335,7 +335,7 @@ abstract class ea extends pn {
         }
     }
 
-    boolean a(int param0, f[][] param1, boolean param2, int param3, int param4, int param5, ea param6, int param7) {
+    boolean a(int param0, PuzzleTile[][] param1, boolean param2, int param3, int param4, int param5, ea param6, int param7) {
         RuntimeException var9 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_11_0 = false;
@@ -389,7 +389,7 @@ abstract class ea extends pn {
         field_q = null;
     }
 
-    private final boolean a(int param0, int param1, f[][] param2, int param3, ea param4, int param5, int param6) {
+    private final boolean a(int param0, int param1, PuzzleTile[][] param2, int param3, ea param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -422,7 +422,7 @@ abstract class ea extends pn {
         }
     }
 
-    final sl a(int param0, f[][] param1, int param2, byte param3) {
+    final sl a(int param0, PuzzleTile[][] param1, int param2, byte param3) {
         sl stackIn_6_0 = null;
         sl stackIn_11_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -430,20 +430,20 @@ abstract class ea extends pn {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         sl var5 = null;
-        f var5_ref = null;
+        PuzzleTile var5_ref = null;
         RuntimeException var5_ref2 = null;
         pn var6 = null;
         sl var7 = null;
         int var8 = 0;
-        f var9 = null;
+        PuzzleTile var9 = null;
         sl var10 = null;
         var8 = CrazyCrystals.field_B;
         try {
           param2 = param2 + this.field_s;
           param0 = param0 + this.field_o;
           if (param3 > -87) {
-            var9 = (f) null;
-            this.a((f[][]) null, -82, (f) null, -14, 66);
+            var9 = (PuzzleTile) null;
+            this.a((PuzzleTile[][]) null, -82, (PuzzleTile) null, -14, 66);
           }
           if (param1[param2][param0] instanceof sl &&
             this == ((sl) (param1[param2][param0])).field_o) {
@@ -479,9 +479,9 @@ abstract class ea extends pn {
         }
     }
 
-    f a(f[][] param0, int param1, f param2, int param3, int param4) {
+    PuzzleTile a(PuzzleTile[][] param0, int param1, PuzzleTile param2, int param3, int param4) {
         RuntimeException var6 = null;
-        f stackIn_3_0 = null;
+        PuzzleTile stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -490,7 +490,7 @@ abstract class ea extends pn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 11460) {
-            this.a((f[][]) null, 39, 69, false);
+            this.a((PuzzleTile[][]) null, 39, 69, false);
           }
           stackIn_3_0 = this.field_l;
           return stackIn_3_0;
@@ -514,11 +514,11 @@ abstract class ea extends pn {
         }
     }
 
-    f b(f[][] param0, int param1, byte param2, int param3) {
+    PuzzleTile b(PuzzleTile[][] param0, int param1, byte param2, int param3) {
         Object stackIn_4_0 = null;
-        f stackIn_9_0 = null;
+        PuzzleTile stackIn_9_0 = null;
         fm stackIn_32_0 = null;
-        f stackIn_37_0 = null;
+        PuzzleTile stackIn_37_0 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -529,8 +529,8 @@ abstract class ea extends pn {
         sl var7 = null;
         int var8 = 0;
         int var9 = 0;
-        f var10 = null;
-        f var11 = null;
+        PuzzleTile var10 = null;
+        PuzzleTile var11 = null;
         int var12 = 0;
         cb var13 = null;
         var12 = CrazyCrystals.field_B;
@@ -542,7 +542,7 @@ abstract class ea extends pn {
               var6 = param0[this.field_s + param1][this.field_o + param3];
               while (true) {
                 if (var6 instanceof ma) {
-                  stackIn_9_0 = this.a(param0, (f) (this), this.field_s + param1, param3 + this.field_o, true);
+                  stackIn_9_0 = this.a(param0, (PuzzleTile) (this), this.field_s + param1, param3 + this.field_o, true);
                   return stackIn_9_0;
                 }
                 if (var6 instanceof pn) {
@@ -551,7 +551,7 @@ abstract class ea extends pn {
                 }
                 break;
               }
-              return (f) (this);
+              return (PuzzleTile) (this);
             }
             this.b(param3, param1, -663, param0);
             var6 = this.field_l;
@@ -567,10 +567,10 @@ abstract class ea extends pn {
             wd.field_j = wd.field_j + 1;
             je.field_j = je.field_j + 15;
             fp.field_a = fp.field_a + 30;
-            we.field_h = we.field_h + 30;
+            LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 30;
             b.field_a = b.field_a + 15;
             stackIn_4_0 = var6;
-            return (f) (stackIn_4_0);
+            return (PuzzleTile) (stackIn_4_0);
           }
           var6 = this;
           boolean decompiledNaturalLoopExit0 = false;
@@ -594,7 +594,7 @@ abstract class ea extends pn {
                   mb.field_g = mb.field_g + 10;
                   fn.field_j = fn.field_j + 10;
                   fp.field_a = fp.field_a + 20;
-                  we.field_h = we.field_h + 20;
+                  LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 20;
                   b.field_a = b.field_a + 10;
                   je.field_j = je.field_j + 10;
                   MouseInputHandler.field_d.a(96, 12 * param3, param1 * 12, 60, (byte) -111);
@@ -604,11 +604,11 @@ abstract class ea extends pn {
                     if (var13.field_o == 0) {
                       ((pn) (var6)).field_l = var13.field_l;
                     }
-                    ((pn) (var6)).field_l.a((byte) 94, (f) (this));
+                    ((pn) (var6)).field_l.copyTileAttribution((byte) 94, (PuzzleTile) (this));
                   }
                   var10 = this.field_l;
                   this.field_l = param0[var9][var8];
-                  this.a((byte) 63, this.field_l);
+                  this.copyTileAttribution((byte) 63, this.field_l);
                   this.c(var8, -5, var9);
                   var11 = this.e(var9, var8, param0, 123);
                   if (var11 == this) {
@@ -617,13 +617,13 @@ abstract class ea extends pn {
                   param0[var9][var8] = var11;
                   var13.field_t = true;
                   stackIn_32_0 = new fm(var10);
-                  return (f) ((Object) stackIn_32_0);
+                  return (PuzzleTile) ((Object) stackIn_32_0);
                 }
                 b.field_a = b.field_a + 1;
-                we.field_h = we.field_h + 2;
+                LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 2;
                 fp.field_a = fp.field_a + 2;
                 je.field_j = je.field_j + 1;
-                this.a((byte) 86, param0[var9][var8]);
+                this.copyTileAttribution((byte) 86, param0[var9][var8]);
               }
             }
           }
@@ -643,7 +643,7 @@ abstract class ea extends pn {
         }
     }
 
-    f a(int param0, int param1, f[][] param2, int param3, int param4, int param5, ea param6) {
+    PuzzleTile a(int param0, int param1, PuzzleTile[][] param2, int param3, int param4, int param5, ea param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -655,7 +655,7 @@ abstract class ea extends pn {
           if (param3 != -31135) {
             this.field_p = 33;
           }
-          return (f) (this);
+          return (PuzzleTile) (this);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -676,7 +676,7 @@ abstract class ea extends pn {
         }
     }
 
-    boolean a(mj param0, boolean param1, f[][] param2) {
+    boolean a(LaserTraceCursor param0, boolean param1, PuzzleTile[][] param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -688,7 +688,7 @@ abstract class ea extends pn {
           if (param1) {
             return false;
           }
-          this.e(-66, -35, (f[][]) null, -13);
+          this.e(-66, -35, (PuzzleTile[][]) null, -13);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -722,10 +722,10 @@ abstract class ea extends pn {
         return var4;
     }
 
-    final f a(int param0, f[][] param1, boolean param2, int param3) {
+    final PuzzleTile a(int param0, PuzzleTile[][] param1, boolean param2, int param3) {
         RuntimeException var5 = null;
-        f stackIn_7_0 = null;
-        f stackIn_9_0 = null;
+        PuzzleTile stackIn_7_0 = null;
+        PuzzleTile stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -741,7 +741,7 @@ abstract class ea extends pn {
             stackIn_9_0 = super.a(param0, param1, false, param3);
             return stackIn_9_0;
           }
-          stackIn_7_0 = (f) null;
+          stackIn_7_0 = (PuzzleTile) null;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -757,9 +757,9 @@ abstract class ea extends pn {
         }
     }
 
-    f a(f[][] param0, f param1, int param2, int param3, boolean param4) {
+    PuzzleTile a(PuzzleTile[][] param0, PuzzleTile param1, int param2, int param3, boolean param4) {
         RuntimeException var6 = null;
-        f stackIn_2_0 = null;
+        PuzzleTile stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -768,9 +768,9 @@ abstract class ea extends pn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4) {
-            return (f) (this);
+            return (PuzzleTile) (this);
           }
-          stackIn_2_0 = (f) null;
+          stackIn_2_0 = (PuzzleTile) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -792,12 +792,12 @@ abstract class ea extends pn {
         }
     }
 
-    void a(f[][] param0, int param1, int param2, boolean param3) {
+    void a(PuzzleTile[][] param0, int param1, int param2, boolean param3) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        f var5 = null;
+        PuzzleTile var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         var6 = CrazyCrystals.field_B;
@@ -817,13 +817,13 @@ abstract class ea extends pn {
               }
               if (!this.a((byte) 42, param0, var5)) {
                 cn.field_e.a(64, param1 * 12, 12 * param2, 0, (byte) -111);
-                param0[param2][param1] = (f) ((Object) new ig(var5, bd.field_n, this.a(param2, param1, var5, 103, param0), true));
+                param0[param2][param1] = (PuzzleTile) ((Object) new ig(var5, bd.field_n, this.a(param2, param1, var5, 103, param0), true));
                 ob.field_l = ob.field_l - 1;
                 mb.field_g = mb.field_g - wd.field_j;
                 fp.field_a = fp.field_a - 4;
                 je.field_j = je.field_j - 2;
                 b.field_a = b.field_a - 2;
-                we.field_h = we.field_h - 4;
+                LevelProgressUpdate.field_h = LevelProgressUpdate.field_h - 4;
                 wd.field_j = wd.field_j + 1;
                 mb.field_g = mb.field_g + ob.field_l;
                 return;
@@ -844,7 +844,7 @@ abstract class ea extends pn {
               }
               cn.field_e.a(64, param1 * 12, 12 * param2, 0, (byte) -111);
               param0[param2][param1] = this.a(param2, param1, var5, -119, param0);
-              param0[this.field_s + param2][this.field_o + param1] = (f) ((Object) new ig(var5, bd.field_n, param0[this.field_s + param2][this.field_o + param1], true));
+              param0[this.field_s + param2][this.field_o + param1] = (PuzzleTile) ((Object) new ig(var5, bd.field_n, param0[this.field_s + param2][this.field_o + param1], true));
               mb.field_g = mb.field_g - wd.field_j;
               ob.field_l = ob.field_l - 1;
               mb.field_g = mb.field_g + ob.field_l;
@@ -852,7 +852,7 @@ abstract class ea extends pn {
               je.field_j = je.field_j - 2;
               fp.field_a = fp.field_a - 4;
               b.field_a = b.field_a - 2;
-              we.field_h = we.field_h - 4;
+              LevelProgressUpdate.field_h = LevelProgressUpdate.field_h - 4;
               return;
             }
             return;
@@ -872,7 +872,7 @@ abstract class ea extends pn {
         }
     }
 
-    private final boolean a(int param0, ea param1, int param2, f[][] param3, int param4, boolean param5, int param6) {
+    private final boolean a(int param0, ea param1, int param2, PuzzleTile[][] param3, int param4, boolean param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -906,18 +906,18 @@ abstract class ea extends pn {
         }
     }
 
-    f e(int param0, int param1, f[][] param2, int param3) {
+    PuzzleTile e(int param0, int param1, PuzzleTile[][] param2, int param3) {
         RuntimeException var5 = null;
-        f stackIn_2_0 = null;
+        PuzzleTile stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 > 120) {
-            return (f) (this);
+            return (PuzzleTile) (this);
           }
-          stackIn_2_0 = (f) null;
+          stackIn_2_0 = (PuzzleTile) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -933,7 +933,7 @@ abstract class ea extends pn {
         }
     }
 
-    final void a(int param0, int param1, int param2, f[][] param3, int param4, int param5, int param6, int param7) {
+    final void a(int param0, int param1, int param2, PuzzleTile[][] param3, int param4, int param5, int param6, int param7) {
         ea var10 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -946,7 +946,7 @@ abstract class ea extends pn {
           }
           if (param0 <= 92) {
             var10 = (ea) null;
-            this.a(114, -55, (f[][]) null, -103, -43, -87, (ea) null);
+            this.a(114, -55, (PuzzleTile[][]) null, -103, -43, -87, (ea) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -963,7 +963,7 @@ abstract class ea extends pn {
         }
     }
 
-    final void a(f[][] param0, int param1, byte param2, int param3) {
+    final void a(PuzzleTile[][] param0, int param1, byte param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -971,7 +971,7 @@ abstract class ea extends pn {
         RuntimeException var5 = null;
         try {
           if (param2 != 40) {
-            this.b(0, 110, -35, (f[][]) null);
+            this.b(0, 110, -35, (PuzzleTile[][]) null);
           }
           if (this.g(0)) {
             this.field_l.a(param0, param1, (byte) 40, param3);
@@ -991,7 +991,7 @@ abstract class ea extends pn {
         }
     }
 
-    void b(int param0, int param1, int param2, boolean param3, int param4, int param5) {
+    void drawTileForeground(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var9 = 0;
         int var10 = 0;
         int var7 = 54 / ((74 - param0) / 41);
@@ -1008,9 +1008,9 @@ abstract class ea extends pn {
         }
     }
 
-    final boolean a(boolean param0, f[][] param1, mj param2) {
+    final boolean a(boolean param0, PuzzleTile[][] param1, LaserTraceCursor param2) {
         RuntimeException var4 = null;
-        mj stackIn_5_1 = null;
+        LaserTraceCursor stackIn_5_1 = null;
         boolean stackIn_6_2 = false;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
@@ -1023,7 +1023,7 @@ abstract class ea extends pn {
           if (param0) {
             return false;
           }
-          stackIn_5_1 = (mj) (param2);
+          stackIn_5_1 = (LaserTraceCursor) (param2);
           stackIn_6_2 = !(param0);
           stackIn_10_0 = (this.a(stackIn_5_1, stackIn_6_2, param1)) && (this.field_l.a(false, param1, param2));
           return stackIn_10_0;
@@ -1054,12 +1054,12 @@ abstract class ea extends pn {
         }
     }
 
-    ea(f param0) {
+    ea(PuzzleTile param0) {
         super(param0);
         this.field_p = 12;
     }
 
-    final boolean a(byte param0, f[][] param1, int param2, int param3, int param4, fq param5, int param6) {
+    final boolean a(byte param0, PuzzleTile[][] param1, int param2, int param3, int param4, fq param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_10_0 = false;
         boolean stackIn_12_0 = false;
@@ -1104,7 +1104,7 @@ abstract class ea extends pn {
         }
     }
 
-    void f(int param0, int param1, f[][] param2, int param3) {
+    void f(int param0, int param1, PuzzleTile[][] param2, int param3) {
         try {
           if (param0 != 1) {
             this.g(113);
@@ -1114,18 +1114,18 @@ abstract class ea extends pn {
         }
     }
 
-    final f a(int param0, byte param1, int param2) {
+    final PuzzleTile a(int param0, byte param1, int param2) {
         if (this.g(param1 ^ -110)) {
           this.field_l = this.field_l.a(param0, (byte) -110, param2);
         }
         if (param1 == -110) {
-          return (f) (this);
+          return (PuzzleTile) (this);
         }
-        return (f) null;
+        return (PuzzleTile) null;
     }
 
-    final sl d(int param0, int param1, f[][] param2, int param3) {
-        f var5 = null;
+    final sl d(int param0, int param1, PuzzleTile[][] param2, int param3) {
+        PuzzleTile var5 = null;
         int var6 = 0;
         sl stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
@@ -1136,7 +1136,7 @@ abstract class ea extends pn {
         var6 = CrazyCrystals.field_B;
         try {
           if (param3 <= 58) {
-            this.b((f[][]) null, 70, (byte) 75, -111);
+            this.b((PuzzleTile[][]) null, 70, (byte) 75, -111);
           }
           var5 = param2[param0 + this.field_s][this.field_o + param1];
           while (true) {
@@ -1161,7 +1161,7 @@ abstract class ea extends pn {
         }
     }
 
-    sl a(f[][] param0, int param1, boolean param2, int param3, int param4, int param5) {
+    sl a(PuzzleTile[][] param0, int param1, boolean param2, int param3, int param4, int param5) {
         sl var7 = null;
         RuntimeException var7_ref = null;
         sl var8 = null;
@@ -1208,7 +1208,7 @@ abstract class ea extends pn {
         }
         int var4 = this.field_l.a(param0, param1);
         if (!param0) {
-          this.b(-122, 54, -56, (f[][]) null);
+          this.b(-122, 54, -56, (PuzzleTile[][]) null);
         }
         if ((var4 & 2) != 0) {
           var4 = var4 | 12;
@@ -1216,7 +1216,7 @@ abstract class ea extends pn {
         return var3 & var4;
     }
 
-    void b(int param0, int param1, int param2, f[][] param3) {
+    void b(int param0, int param1, int param2, PuzzleTile[][] param3) {
         try {
           if (param2 != -663) {
             this.field_s = -24;
@@ -1226,7 +1226,7 @@ abstract class ea extends pn {
         }
     }
 
-    boolean a(byte param0, f[][] param1, f param2) {
+    boolean a(byte param0, PuzzleTile[][] param1, PuzzleTile param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

@@ -413,22 +413,22 @@ class ul extends rg {
         if (!wc.field_Wb.ensureIndexLoaded(0)) {
           return fi.field_b;
         }
-        if (!wc.field_Wb.a("commonui", 0)) {
+        if (!wc.field_Wb.tryLoadGroupByName("commonui", 0)) {
           return dl.field_a + " - " + wc.field_Wb.getGroupLoadPercentByName(-8087, "commonui") + "%";
         }
         if (!i.field_r.ensureIndexLoaded(0)) {
           return pb.field_a;
         }
-        if (!i.field_r.a("commonui", 0)) {
+        if (!i.field_r.tryLoadGroupByName("commonui", 0)) {
           return ByteStorage.field_d + " - " + i.field_r.getGroupLoadPercentByName(param0 - 8087, "commonui") + "%";
         }
         if (!tf.field_k.ensureIndexLoaded(param0)) {
           return nl.field_d;
         }
         if (!tf.field_k.tryLoadAllGroups(25057)) {
-          return bd.field_c + " - " + tf.field_k.c(-123) + "%";
+          return bd.field_c + " - " + tf.field_k.getArchiveLoadPercent(-123) + "%";
         }
-        return hm.field_W;
+        return LightningArc.field_W;
     }
 
     void k(byte param0) {

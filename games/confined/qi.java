@@ -101,7 +101,7 @@ final class qi {
             }
             if (0 == this.field_a) {
               if (!this.field_e &&
-                !hn.field_D) {
+                !GameSession.field_D) {
                 return;
               }
               if (param2 < 0) {
@@ -130,7 +130,7 @@ final class qi {
               return;
             }
             if (!this.field_e &&
-              !hn.field_D) {
+              !GameSession.field_D) {
               return;
             }
             if (param2 < 0) {
@@ -152,7 +152,7 @@ final class qi {
               return;
             }
             if (!this.field_e &&
-              !hn.field_D) {
+              !GameSession.field_D) {
               return;
             }
             if (param2 < 0) {
@@ -172,7 +172,7 @@ final class qi {
           this.field_a = 0;
           if (0 == this.field_a) {
             if (!this.field_e &&
-              !hn.field_D) {
+              !GameSession.field_D) {
               return;
             }
             if (param2 < 0) {
@@ -199,7 +199,7 @@ final class qi {
               return;
             }
             if (!this.field_e &&
-              !hn.field_D) {
+              !GameSession.field_D) {
               return;
             }
             if (param2 < 0) {
@@ -228,7 +228,7 @@ final class qi {
         }
         if (0 == this.field_a) {
           if (!this.field_e &&
-            !hn.field_D) {
+            !GameSession.field_D) {
             return;
           }
           if (param2 >= 0) {

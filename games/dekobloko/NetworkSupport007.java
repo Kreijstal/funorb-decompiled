@@ -119,7 +119,7 @@ final class NetworkSupport007 extends DualNode {
             return;
           }
           if (integerArgument1 == 1) {
-            this.stringArrayState0022 = ResourceArchive.computeStringArray0801('<', (byte) 66, packetBufferArgument3.readNullTerminatedString((byte) -38));
+            this.stringArrayState0022 = ResourceArchive.splitOnCharacter('<', (byte) 66, packetBufferArgument3.readNullTerminatedString((byte) -38));
           } else {
             if (integerArgument1 == 2) {
               integerLocal7 = packetBufferArgument3.readUnsignedByte((byte) -86);

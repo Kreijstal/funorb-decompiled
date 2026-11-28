@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class il extends l {
+final class il extends ResultScenePhase {
     private int field_f;
     private RawPcmStream field_g;
     static RgbSprite field_e;
     static am[] field_h;
 
-    final l a(int param0) {
+    final ResultScenePhase updatePhase(int param0) {
         vh dupTemp$0 = null;
         vh dupTemp$1 = null;
         vh dupTemp$2 = null;
@@ -15,7 +15,7 @@ final class il extends l {
         int var3;
         int var4;
         int var5_int;
-        pj var5;
+        WallTile var5;
         int var6;
         int var7;
         int var8;
@@ -31,7 +31,7 @@ final class il extends l {
         var10 = CrazyCrystals.field_B;
         if (this.field_f != 0) {
           this.field_f = this.field_f - 1;
-          return (l) (this);
+          return (ResultScenePhase) (this);
         }
         var2 = 0;
         var3 = 0;
@@ -103,11 +103,11 @@ final class il extends l {
           }
           this.field_g.c(var5_intLifetime1, var6Lifetime1);
           this.field_f = 2;
-          return (l) (this);
+          return (ResultScenePhase) (this);
         }
         tb.field_d.a(this.field_g);
         tb.field_d.a(dn.field_e, 100, 128 * gi.field_m, 8192);
-        var5 = new pj(-1, 1);
+        var5 = new WallTile(-1, 1);
         for (var6Lifetime2 = 0; var6Lifetime2 < pd.field_g.length; var6Lifetime2++) {
           var7Lifetime1 = q.field_a[ma.field_n[var6Lifetime2]].field_i;
           var8Lifetime1 = 0;
@@ -117,22 +117,22 @@ final class il extends l {
           }
           var9Lifetime1 = 9 + (m.field_l[var6Lifetime2] - 1);
           while (var8Lifetime1 >= 8) {
-            kk.field_a[14][var9Lifetime1] = aj.field_s;
+            FloatingScoreLabel.field_a[14][var9Lifetime1] = aj.field_s;
             var8Lifetime1 -= 15;
             var9Lifetime1--;
           }
           if (var8Lifetime1 >= 4) {
-            kk.field_a[14][var9Lifetime1] = (f) ((Object) var5);
+            FloatingScoreLabel.field_a[14][var9Lifetime1] = (PuzzleTile) ((Object) var5);
           }
         }
-        return (l) ((Object) new o(60, new sm()));
+        return (ResultScenePhase) ((Object) new o(60, new sm()));
     }
 
     private final void a(byte param0, int param1) {
         int var3 = 0;
         int var3Lifetime1;
-        if (uo.field_o <= FrameTimer.field_b[jo.field_o] &&
-          !(jo.field_o < 1)) {
+        if (uo.field_o <= FrameTimer.field_b[CrystalTile.field_o] &&
+          !(CrystalTile.field_o < 1)) {
           var3 = q.field_a[ma.field_n[param1]].field_i;
           if (1000 <= var3) {
             rc.a(1, fn.field_j, mb.field_g, 247, wd.field_j, 8, ob.field_l);
@@ -155,10 +155,10 @@ final class il extends l {
         if (param0 >= -108) {
           return false;
         }
-        return hl.a(le.b((byte) -20), -94);
+        return LevelLostEntrancePhase.hasStatsButtonMarker(le.b((byte) -20), -94);
     }
 
-    final void c(byte param0) {
+    final void disposePhase(byte param0) {
         if (param0 < 123) {
           field_h = (am[]) null;
         }
@@ -167,7 +167,7 @@ final class il extends l {
         }
     }
 
-    final l b(byte param0) {
+    final ResultScenePhase fastForwardPhase(byte param0) {
         vh dupTemp$0 = null;
         int var3 = CrazyCrystals.field_B;
         if (null != this.field_g) {
@@ -183,7 +183,7 @@ final class il extends l {
           this.a((byte) -94, var2);
           var2++;
         }
-        return (l) ((Object) new sm());
+        return (ResultScenePhase) ((Object) new sm());
     }
 
     public static void clearStaticReferences(boolean param0) {

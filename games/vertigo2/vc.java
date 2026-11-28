@@ -181,8 +181,8 @@ final class vc {
           ie.field_Kb > 0) {
           fieldTemp$1 = ie.field_Kb - 1;
           ie.field_Kb = ie.field_Kb - 1;
-          var2_ref_byte__Lifetime1 = bh.field_g[fieldTemp$1];
-          bh.field_g[ie.field_Kb] = null;
+          var2_ref_byte__Lifetime1 = LevelSimulation.field_g[fieldTemp$1];
+          LevelSimulation.field_g[ie.field_Kb] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param0 == 30000 &&

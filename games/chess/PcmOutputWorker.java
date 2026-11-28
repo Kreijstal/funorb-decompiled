@@ -32,15 +32,15 @@ final class PcmOutputWorker implements Runnable {
             field_d = -26;
           }
           if (param0.ensureIndexLoaded((byte) 127) &&
-            param0.b("commonui", 100)) {
+            param0.tryLoadGroupByName("commonui", 100)) {
             if (!param2.ensureIndexLoaded((byte) 121)) {
               return false;
             }
-            if (!param2.b("commonui", 100)) {
+            if (!param2.tryLoadGroupByName("commonui", 100)) {
               return false;
             }
             if (param3.ensureIndexLoaded((byte) 126) &&
-              param3.b("button.gif", 100)) {
+              param3.tryLoadGroupByName("button.gif", 100)) {
               return true;
             }
             return false;

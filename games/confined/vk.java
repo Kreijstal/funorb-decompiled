@@ -220,7 +220,7 @@ final class vk {
           this.field_p = new int[256];
           lj.a(this.field_p, 0, 256, 64);
           for (var5Lifetime1 = 0; var5Lifetime1 < 256; var5Lifetime1++) {
-            this.field_l[var5Lifetime1] = sa.field_V;
+            this.field_l[var5Lifetime1] = DampedProjectile.field_V;
           }
           for (var5Lifetime2 = 0; this.field_y > var5Lifetime2; var5Lifetime2++) {
             this.field_p[var5Lifetime2] = 1 + param0.readUnsignedByte(32);

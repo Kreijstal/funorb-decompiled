@@ -204,8 +204,8 @@ final class h {
           return var2_ref_byte__Lifetime2;
         }
         if (null != lp.field_a) {
-          for (var2 = 0; kk.field_e.length > var2; var2++) {
-            if (kk.field_e[var2] == param1 &&
+          for (var2 = 0; FloatingScoreLabel.field_e.length > var2; var2++) {
+            if (FloatingScoreLabel.field_e[var2] == param1 &&
               jd.field_K[var2] > 0) {
               dupTemp$4 = jd.field_K[var2] - 1;
               arrayValue$5 = lp.field_a[var2];

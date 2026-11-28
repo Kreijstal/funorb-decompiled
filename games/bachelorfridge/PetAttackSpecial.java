@@ -45,7 +45,7 @@ final class PetAttackSpecial extends SpecialOrder {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.creature.a(31, param0);
+          var3 = this.creature.resolveCreature(31, param0);
           var4 = new PetAttackEvent(this.moveId, new CreatureRef(var3));
           var4.field_t = this.field_n;
           var4.field_u = this.field_k;

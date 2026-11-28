@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ka extends pm {
+class ka extends TunnelEntity {
     private double field_O;
-    private oi field_I;
+    private DynamicLight field_I;
     static int field_P;
     static ResourceArchive field_N;
     private int field_J;
@@ -13,7 +13,7 @@ class ka extends pm {
     static String field_G;
     gk field_M;
 
-    void a(boolean param0, ee param1) {
+    void onMovingEntityContact(boolean param0, MovingTunnelEntity param1) {
         try {
           if (!param0) {
             field_P = -79;
@@ -23,19 +23,19 @@ class ka extends pm {
         }
     }
 
-    final boolean f(int param0) {
+    final boolean isAlliedWithPlayer(int param0) {
         if (param0 > -54) {
-          this.g((byte) 11);
+          this.participatesInEntityCollisions((byte) 11);
           return false;
         }
         return false;
     }
 
-    ka(pm param0, double param1, PcmSample param2) {
+    ka(TunnelEntity param0, double param1, PcmSample param2) {
         this(param0.field_A, param0.field_E, param0.field_t, param0.field_D, param0.field_C * param1, param2);
     }
 
-    final void a(int param0, vg param1) {
+    final void onCameraContact(int param0, TunnelCamera param1) {
         try {
           if (param0 != -1) {
             field_F = (byte[]) null;
@@ -45,11 +45,11 @@ class ka extends pm {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void updateForTunnelSegment(int param0, int param1) {
         this.field_K = this.field_K + this.field_O;
         this.field_J = (int)this.field_K;
         if (param0 != 11878) {
-          this.a(96, -128);
+          this.updateForTunnelSegment(96, -128);
           if (this.field_J < uc.field_db.length) {
             return;
           }
@@ -70,7 +70,7 @@ class ka extends pm {
         this.field_M.field_t = null;
     }
 
-    final boolean c(int param0) {
+    final boolean canBeHitByProjectileRay(int param0) {
         if (param0 != 5) {
           field_G = (String) null;
           return false;
@@ -78,18 +78,18 @@ class ka extends pm {
         return false;
     }
 
-    void a(int param0, hf param1) {
+    void onHomingProjectileContact(int param0, HomingProjectile param1) {
         try {
           if (param0 >= -29) {
-            mb var4 = (mb) null;
-            this.a(-79, (mb) null);
+            ShockwaveBlast var4 = (ShockwaveBlast) null;
+            this.onShockwaveContact(-79, (ShockwaveBlast) null);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ka.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    void a(int param0, mb param1) {
+    void onShockwaveContact(int param0, ShockwaveBlast param1) {
         try {
           if (param0 != -23154) {
             this.field_K = -0.9744507612027556;
@@ -99,7 +99,7 @@ class ka extends pm {
         }
     }
 
-    final void a(PrimaryNodeDeque param0, byte param1) {
+    final void collectEntityLights(PrimaryNodeDeque param0, byte param1) {
         try {
           this.field_I.field_t = this.field_E;
           this.field_I.field_o = this.field_t;
@@ -112,7 +112,7 @@ class ka extends pm {
         }
     }
 
-    boolean g(byte param0) {
+    boolean participatesInEntityCollisions(byte param0) {
         if (param0 < 64) {
           field_P = -1;
           return false;
@@ -120,7 +120,7 @@ class ka extends pm {
         return false;
     }
 
-    void a(int param0, ah param1) {
+    void onAcceleratingProjectileContact(int param0, AcceleratingProjectile param1) {
         try {
           int var3_int = 98 % ((param0 - 14) / 53);
         } catch (RuntimeException runtimeException) {
@@ -128,7 +128,7 @@ class ka extends pm {
         }
     }
 
-    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
+    final void drawInTunnel(PrimaryNodeDeque param0, double param1, int param2, TunnelCamera param3, DynamicLight param4) {
         try {
           if (param2 >= -5) {
             field_G = (String) null;
@@ -159,7 +159,7 @@ class ka extends pm {
           if (param2 != -12) {
             field_G = (String) null;
           }
-          stackIn_6_0 = param3 + " - " + param0.c(-123) + "%";
+          stackIn_6_0 = param3 + " - " + param0.getArchiveLoadPercent(-123) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -187,7 +187,7 @@ class ka extends pm {
         }
     }
 
-    void a(pm param0, int param1) {
+    void dispatchEntityCollision(TunnelEntity param0, int param1) {
         try {
           if (param1 >= -81) {
             this.field_O = 2.3214224287080496;
@@ -262,18 +262,18 @@ class ka extends pm {
         }
     }
 
-    void a(boolean param0, il param1) {
+    void onExpandingPulseContact(boolean param0, ExpandingPulseProjectile param1) {
         try {
           if (param0) {
-            mb var4 = (mb) null;
-            this.a(98, (mb) null);
+            ShockwaveBlast var4 = (ShockwaveBlast) null;
+            this.onShockwaveContact(98, (ShockwaveBlast) null);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ka.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(pm param0, byte param1) {
+    final boolean canBeHitByLightningArcFrom(TunnelEntity param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -299,28 +299,28 @@ class ka extends pm {
         }
     }
 
-    void a(byte param0, sa param1) {
+    void onDampedProjectileContact(byte param0, DampedProjectile param1) {
         try {
           if (param0 != 9) {
-            pm var4 = (pm) null;
-            this.a((pm) null, 62);
+            TunnelEntity var4 = (TunnelEntity) null;
+            this.dispatchEntityCollision((TunnelEntity) null, 62);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ka.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(boolean param0, pm param1) {
+    final boolean canBeTargetedBy(boolean param0, TunnelEntity param1) {
         RuntimeException var3 = null;
-        cl var4 = null;
+        PowerUpPickup var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            var4 = (cl) null;
-            this.a((cl) null, (byte) -89);
+            var4 = (PowerUpPickup) null;
+            this.onPowerUpContact((PowerUpPickup) null, (byte) -89);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -337,7 +337,7 @@ class ka extends pm {
         }
     }
 
-    final boolean i(int param0) {
+    final boolean participatesInTunnelCollisions(int param0) {
         if (param0 != 8) {
           field_N = (ResourceArchive) null;
           return false;
@@ -345,7 +345,7 @@ class ka extends pm {
         return false;
     }
 
-    void a(cl param0, byte param1) {
+    void onPowerUpContact(PowerUpPickup param0, byte param1) {
         try {
           int var3_int = -120 / ((-35 - param1) / 60);
         } catch (RuntimeException runtimeException) {
@@ -353,7 +353,7 @@ class ka extends pm {
         }
     }
 
-    ka(hn param0, double param1, double param2, double param3, double param4, PcmSample param5) {
+    ka(GameSession param0, double param1, double param2, double param3, double param4, PcmSample param5) {
         super(param0, param1, param2, param3, param4);
         RuntimeException var11 = null;
         RuntimeException stackIn_7_0 = null;
@@ -364,13 +364,13 @@ class ka extends pm {
         RuntimeException decompiledCaughtException = null;
         this.field_J = 0;
         this.field_K = 0.0;
-        this.field_I = new oi((pm) (this));
+        this.field_I = new DynamicLight((TunnelEntity) (this));
         try {
           this.field_O = (double)uc.field_db.length / (Math.pow(param4, 0.3333333333333333) * 64.0);
           if (param5 == null) {
             return;
           }
-          this.field_M = new gk((pm) (this), param5, 0);
+          this.field_M = new gk((TunnelEntity) (this), param5, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -405,7 +405,7 @@ class ka extends pm {
         field_F = null;
     }
 
-    final void a(hm param0, boolean param1) {
+    final void onLightningArcContact(LightningArc param0, boolean param1) {
         try {
           if (!param1) {
             field_F = (byte[]) null;
@@ -415,7 +415,7 @@ class ka extends pm {
         }
     }
 
-    final void a(kh param0, int param1) {
+    final void onProjectileHit(ProjectileRay param0, int param1) {
         try {
           if (param1 <= 122) {
             field_N = (ResourceArchive) null;

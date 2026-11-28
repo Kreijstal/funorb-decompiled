@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tf extends wm {
-    static am field_l;
+    static LevelRenderer field_l;
     static int[] field_o;
     static int field_n;
     static int[] field_p;
@@ -10,7 +10,7 @@ final class tf extends wm {
 
     final static UiPanel b(byte param0) {
         if (param0 <= 90) {
-          field_l = (am) null;
+          field_l = (LevelRenderer) null;
           return uk.field_v.field_Nb;
         }
         return uk.field_v.field_Nb;

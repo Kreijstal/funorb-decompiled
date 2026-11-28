@@ -25,21 +25,21 @@ final class rd extends id {
         int var18Lifetime2;
         int var18Lifetime3;
         if (param3 == 0) {
-          this.a(this.field_A.field_x.a((byte) 78, this.field_C), param9, (byte) 99, 6.283185307179586 * param5);
+          this.a(this.field_A.field_x.getMinimumRadiusAfterClearance((byte) 78, this.field_C), param9, (byte) 99, 6.283185307179586 * param5);
           var18 = -15 % ((-3 - param6) / 32);
           return;
         }
         if (param3 == 1) {
-          this.a(this.field_A.field_x.a((byte) 78, this.field_C), param9, param5 * 6.283185307179586, (byte) 107);
+          this.a(this.field_A.field_x.getMinimumRadiusAfterClearance((byte) 78, this.field_C), param9, param5 * 6.283185307179586, (byte) 107);
           var18Lifetime1 = -15 % ((-3 - param6) / 32);
           return;
         }
         if (2 == param3) {
-          this.a(param5 * 6.283185307179586, 0.5 * param9, 2.0, this.field_A.field_x.a((byte) 78, this.field_C), (byte) -68);
+          this.a(param5 * 6.283185307179586, 0.5 * param9, 2.0, this.field_A.field_x.getMinimumRadiusAfterClearance((byte) 78, this.field_C), (byte) -68);
           var18Lifetime2 = -15 % ((-3 - param6) / 32);
           return;
         }
-        this.a(param8, param9, param7, param0, param5, (byte) 89, param1, this.field_A.field_x.a((byte) 78, this.field_C), param4);
+        this.a(param8, param9, param7, param0, param5, (byte) 89, param1, this.field_A.field_x.getMinimumRadiusAfterClearance((byte) 78, this.field_C), param4);
         var18Lifetime3 = -15 % ((-3 - param6) / 32);
     }
 
@@ -76,7 +76,7 @@ final class rd extends id {
         this.field_X = 1.5707963267948966;
     }
 
-    final void a(vg param0, boolean param1) {
+    final void a(TunnelCamera param0, boolean param1) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -157,7 +157,7 @@ final class rd extends id {
         }
     }
 
-    final pm i(byte param0) {
+    final TunnelEntity i(byte param0) {
         double[] var12 = new double[12];
         double[] var11 = var12;
         double[] var10 = var11;
@@ -172,12 +172,12 @@ final class rd extends id {
         double var8 = var3[2 + this.field_Fb];
         this.field_Fb = (3 + this.field_Fb) % var3.length;
         if (this.field_zb == 0) {
-          return (pm) ((Object) new th(this.field_A, (ee) (this), var12, var4, var6, var8));
+          return (TunnelEntity) ((Object) new th(this.field_A, (MovingTunnelEntity) (this), var12, var4, var6, var8));
         }
         if (this.field_zb != 1) {
-          return (pm) ((Object) new ik(this.field_A, (ee) (this), var12, var4, var6, var8));
+          return (TunnelEntity) ((Object) new ik(this.field_A, (MovingTunnelEntity) (this), var12, var4, var6, var8));
         }
-        return (pm) ((Object) new gm(this.field_A, (ee) (this), var12, var4, var6, var8));
+        return (TunnelEntity) ((Object) new gm(this.field_A, (MovingTunnelEntity) (this), var12, var4, var6, var8));
     }
 
     private final void a(double param0, double param1, double param2, double param3, byte param4) {
@@ -280,7 +280,7 @@ final class rd extends id {
         return;
     }
 
-    final void a(PrimaryNodeDeque param0, byte param1) {
+    final void collectEntityLights(PrimaryNodeDeque param0, byte param1) {
         int var3_int = 0;
         double[] var8 = null;
         RuntimeException stackIn_9_0 = null;
@@ -289,7 +289,7 @@ final class rd extends id {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.a(param0, (byte) -84);
+          super.collectEntityLights(param0, (byte) -84);
           var3_int = -89 % ((-2 - param1) / 62);
           if (this.field_ob < 256 &&
             (this.field_Sb == 0 ||
@@ -330,7 +330,7 @@ final class rd extends id {
         this.field_Mb = -128;
     }
 
-    private rd(hn param0, double param1, double param2, double param3, double param4, double param5, int param6, int param7, boolean param8, int param9, boolean param10, double param11, int param12, boolean param13, double param14, boolean param15, boolean param16, int param17, boolean param18, rd param19, int param20, u param21, boolean param22, boolean[] param23) {
+    private rd(GameSession param0, double param1, double param2, double param3, double param4, double param5, int param6, int param7, boolean param8, int param9, boolean param10, double param11, int param12, boolean param13, double param14, boolean param15, boolean param16, int param17, boolean param18, rd param19, int param20, u param21, boolean param22, boolean[] param23) {
         super(param0, param1, param2, param3, Math.random() * 0.4 - 0.2, -0.2 + Math.random() * 0.4, -0.2 + 0.4 * Math.random(), param4, param5, false, param9, param11, 0.005);
         gk discarded$0 = null;
         boolean stackIn_4_1 = false;
@@ -415,7 +415,7 @@ final class rd extends id {
           this.field_Kb = param23;
           stackIn_32_1 = (param22);
           this.field_Rb = stackIn_32_1;
-          discarded$0 = new gk((pm) (this), tk.field_c[param7]);
+          discarded$0 = new gk((TunnelEntity) (this), tk.field_c[param7]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -467,7 +467,7 @@ final class rd extends id {
         this.field_Fb = 56;
     }
 
-    final pm h(byte param0) {
+    final TunnelEntity h(byte param0) {
         double[] var3 = null;
         double var4 = 0.0;
         double var6 = 0.0;
@@ -485,7 +485,7 @@ final class rd extends id {
           var6 = var3[this.field_Fb + 1];
           var8 = var3[this.field_Fb + 2];
           this.field_Fb = (this.field_Fb + 3) % var3.length;
-          return (pm) ((Object) new vm(this.field_A, (ee) (this), var10, var4, var6, var8, this.field_Y, this.field_db));
+          return (TunnelEntity) ((Object) new vm(this.field_A, (MovingTunnelEntity) (this), var10, var4, var6, var8, this.field_Y, this.field_db));
         }
         this.a(-0.20656177354580776, 0.5060040522939452, 0.05774250501221265, 0.8961713050329917, (byte) 20);
         var3Lifetime1 = tl.field_a[this.field_Sb];
@@ -493,7 +493,7 @@ final class rd extends id {
         var6Lifetime1 = var3Lifetime1[this.field_Fb + 1];
         var8Lifetime1 = var3Lifetime1[this.field_Fb + 2];
         this.field_Fb = (this.field_Fb + 3) % var3Lifetime1.length;
-        return (pm) ((Object) new vm(this.field_A, (ee) (this), var10, var4Lifetime1, var6Lifetime1, var8Lifetime1, this.field_Y, this.field_db));
+        return (TunnelEntity) ((Object) new vm(this.field_A, (MovingTunnelEntity) (this), var10, var4Lifetime1, var6Lifetime1, var8Lifetime1, this.field_Y, this.field_db));
     }
 
     final boolean o(int param0) {
@@ -513,10 +513,10 @@ final class rd extends id {
         return true;
     }
 
-    rd(hn param0, double param1, double param2, double param3, boolean param4, int param5, int param6, rd param7, int param8, boolean param9, int param10, int param11, boolean param12, boolean param13, double param14, boolean param15, boolean param16, u param17, boolean param18, boolean[] param19, int param20) {
+    rd(GameSession param0, double param1, double param2, double param3, boolean param4, int param5, int param6, rd param7, int param8, boolean param9, int param10, int param11, boolean param12, boolean param13, double param14, boolean param15, boolean param16, u param17, boolean param18, boolean[] param19, int param20) {
         this(null, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 0, false, 0, false, 0.0, 0, false, 0.0, false, false, 0, false, param7, param8, param17, param18, param19);
         Object stackIn_2_0;
-        hn stackIn_2_1;
+        GameSession stackIn_2_1;
         double stackIn_2_2;
         double stackIn_2_3;
         double stackIn_2_4;
@@ -565,7 +565,7 @@ final class rd extends id {
         boolean decompiledFrameRemainder0 = true;
         var38 = Confined.field_J ? 1 : 0;
         stackIn_2_0 = this;
-        stackIn_2_1 = (hn) (param0);
+        stackIn_2_1 = (GameSession) (param0);
         stackIn_2_2 = param1;
         stackIn_2_3 = param2;
         stackIn_2_4 = param3;
@@ -682,7 +682,7 @@ final class rd extends id {
         }
     }
 
-    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
+    final void drawInTunnel(PrimaryNodeDeque param0, double param1, int param2, TunnelCamera param3, DynamicLight param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -704,15 +704,15 @@ final class rd extends id {
         int var25 = 0;
         int var26 = 0;
         int var27 = 0;
-        oi var28 = null;
+        DynamicLight var28 = null;
         try {
           if (this.field_N) {
             return;
           }
           this.a(this.field_ob, jk.field_c[this.field_Sb], 27902, this.field_Eb, 512, param4, param1, param3, param0);
           if (param2 >= -5) {
-            var28 = (oi) null;
-            this.a((PrimaryNodeDeque) null, 0.8438752622488864, -63, (vg) null, (oi) null);
+            var28 = (DynamicLight) null;
+            this.drawInTunnel((PrimaryNodeDeque) null, 0.8438752622488864, -63, (TunnelCamera) null, (DynamicLight) null);
           }
           this.field_fb.a(param3, param1, (byte) 125);
           if (this.field_V >= 10) {
@@ -776,7 +776,7 @@ final class rd extends id {
         return (double)(this.field_Lb << 16);
     }
 
-    final void g(int param0) {
+    final void handleDestruction(int param0) {
         int var4;
         ka var6;
         int stackIn_17_0 = 0;
@@ -818,10 +818,10 @@ final class rd extends id {
               var3 = stackIn_17_0;
             }
             if (var3 != 0) {
-              ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this));
+              ri.a((IntrusiveNode) (this), 0, new PowerUpPickup(this.field_A, this));
             }
             if (!this.field_Rb) {
-              this.field_A.a((byte) 50, si.a(107, this));
+              this.field_A.addScore((byte) 50, si.a(107, this));
             }
           }
           if (this.field_Mb <= 2) {
@@ -900,10 +900,10 @@ final class rd extends id {
               var3Lifetime1 = stackIn_76_0;
             }
             if (var3Lifetime1 != 0) {
-              ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this));
+              ri.a((IntrusiveNode) (this), 0, new PowerUpPickup(this.field_A, this));
             }
             if (!this.field_Rb) {
-              this.field_A.a((byte) 50, si.a(107, this));
+              this.field_A.addScore((byte) 50, si.a(107, this));
             }
             if (this.field_Mb <= 2) {
               this.field_A.field_c = this.field_A.field_c - 1;
@@ -947,10 +947,10 @@ final class rd extends id {
           var3Lifetime2 = stackIn_107_0;
         }
         if (var3Lifetime2 != 0) {
-          ri.a((IntrusiveNode) (this), 0, new cl(this.field_A, this));
+          ri.a((IntrusiveNode) (this), 0, new PowerUpPickup(this.field_A, this));
         }
         if (!this.field_Rb) {
-          this.field_A.a((byte) 50, si.a(107, this));
+          this.field_A.addScore((byte) 50, si.a(107, this));
         }
         if (this.field_Mb <= 2) {
           this.field_A.field_c = this.field_A.field_c - 1;
@@ -1224,17 +1224,17 @@ final class rd extends id {
         this.j(-120);
     }
 
-    final void a(int param0, int param1) {
+    final void updateForTunnelSegment(int param0, int param1) {
         if (!this.field_Ob) {
-          super.a(param0, param1);
+          super.updateForTunnelSegment(param0, param1);
           return;
         }
         if (this.field_fb.field_d == 0) {
           this.field_S = true;
-          super.a(param0, param1);
+          super.updateForTunnelSegment(param0, param1);
           return;
         }
-        super.a(param0, param1);
+        super.updateForTunnelSegment(param0, param1);
     }
 
     static {

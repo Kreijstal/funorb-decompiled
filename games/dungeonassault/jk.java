@@ -15,21 +15,21 @@ final class jk extends hf {
     }
 
     final static void j(byte param0) {
-        ai[] var5 = null;
+        DungeonTileState[] var5 = null;
         int var2 = 0;
-        ai var3 = null;
+        DungeonTileState var3 = null;
         int var4 = DungeonAssault.field_K;
         try {
           if (param0 != 59) {
             field_Db = (int[]) null;
           }
           var5 = gm.field_d.field_L;
-          ai[] var1 = var5;
+          DungeonTileState[] var1 = var5;
           for (var2 = 0; var2 < var5.length; var2++) {
             var3 = var5[var2];
-            var3.field_c = new wd(var3.field_h.field_d);
+            var3.field_c = new SpriteAnimationPlayer(var3.field_h.field_d);
           }
-          wm.field_c = null;
+          PackedBitSet.field_c = null;
           im.field_e = null;
           if (!gl.field_Lb) {
             AccountNameAvailabilityValidator.e(108);

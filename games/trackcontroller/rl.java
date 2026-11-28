@@ -315,7 +315,7 @@ final class rl extends td implements se, ButtonListener {
     }
 
     private final void c(boolean param0) {
-        if (Archive.b((byte) -128) ||
+        if (Archive.isPasswordOnlyLogin((byte) -128) ||
           !(0 >= this.field_H.field_s.length()) &&
           !(this.field_F.field_s.length() <= 0)) {
           vh.a(this.field_H.field_s, 224, this.field_F.field_s);

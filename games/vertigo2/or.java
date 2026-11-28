@@ -34,7 +34,7 @@ final class or {
     }
 
     final static void b(byte param0) {
-        IntrusiveDeque.field_b = new np(hb.field_D, TextureOperator.field_s, eh.field_a, AccountRequestState.field_b, fr.field_a, ja.field_e);
+        IntrusiveDeque.field_b = new np(PlayerAvatarRenderer.field_D, TextureOperator.field_s, eh.field_a, AccountRequestState.field_b, fr.field_a, ja.field_e);
         if (param0 <= 76) {
           or.b(-8);
         }

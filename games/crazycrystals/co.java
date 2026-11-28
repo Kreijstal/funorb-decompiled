@@ -101,7 +101,7 @@ final class co extends qm {
             if (2 == jh.field_e) {
               so.field_c = new BufferedSocket((java.net.Socket) (ci.field_k.result), cc.field_a);
               var2 = new PacketBuffer(13);
-              hn.a(kn.field_q, pj.field_x, 12, var2, fk.field_v);
+              hn.a(kn.field_q, WallTile.field_x, 12, var2, fk.field_v);
               var2.writeByte(true, 15);
               var2.writeInt(ah.field_e, -16384);
               so.field_c.queueWrite(0, 114, var2.payload, 13);

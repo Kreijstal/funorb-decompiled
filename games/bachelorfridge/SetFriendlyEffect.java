@@ -80,7 +80,7 @@ final class SetFriendlyEffect extends EventEffect {
     }
 
     final void apply(BattleCreature param0, BattleState param1, int param2) {
-        BattleCreature var6 = this.target.a(74, param1);
+        BattleCreature var6 = this.target.resolveCreature(74, param1);
         BattleCreature var4 = var6;
         if (var6 == null) {
           return;

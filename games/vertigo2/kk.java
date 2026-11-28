@@ -177,7 +177,7 @@ final class kk {
           ha.field_a = null;
         }
         gg.field_o = null;
-        hb.field_j = null;
+        PlayerAvatarRenderer.field_j = null;
         oa.field_s = null;
     }
 

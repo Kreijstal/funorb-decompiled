@@ -145,12 +145,12 @@ final class NetworkSupport012 {
           this.resourceArchiveState0022 = resourceArchiveArgument2;
           this.resourceArchiveState0023 = resourceArchiveArgument3;
           if (null != this.resourceArchiveState0022) {
-            this.resourceArchiveState0022.computeInteger0818(-5228, 1);
+            this.resourceArchiveState0022.getFileCapacity(-5228, 1);
           }
           if (null == this.resourceArchiveState0023) {
             return;
           }
-          this.resourceArchiveState0023.computeInteger0818(-5228, 1);
+          this.resourceArchiveState0023.getFileCapacity(-5228, 1);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal10) {
           caughtExceptionLocal9 = caughtParameterLocal10;

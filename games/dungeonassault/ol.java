@@ -277,7 +277,7 @@ final class ol {
         try {
           var4 = (ue) (qm.field_q.beginBackward(-24172));
           while (var4 != null) {
-            wd.a((byte) -69, param1, var4);
+            SpriteAnimationPlayer.writeQueuedClientPayload((byte) -69, param1, var4);
             var4 = (ue) (qm.field_q.nextBackward(param0 ^ 12));
           }
           if (param0 != 8) {

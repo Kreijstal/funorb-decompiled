@@ -74,7 +74,7 @@ final class lk extends vd implements cd, qk {
                 }
               }
             } else {
-              ResourceArchive.d(126);
+              ResourceArchive.showAccountCreationForm(126);
             }
           }
           return;

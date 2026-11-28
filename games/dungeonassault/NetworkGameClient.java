@@ -391,7 +391,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                             ih.a((byte) 59);
                           }
                         } else {
-                          Raider.a(-5, ra.field_c, i.field_A, nj.field_b);
+                          Raider.queueReflectionCheck(-5, ra.field_c, i.field_A, nj.field_b);
                         }
                       } else {
                         this.f(8);
@@ -742,8 +742,8 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (dk.field_c == 2) {
           if (null != ia.field_U &&
             ia.field_U.ensureIndexLoaded(param1 - 14280)) {
-            if (ia.field_U.c("", param1 ^ -74)) {
-              if (ia.field_U.a(false, "")) {
+            if (ia.field_U.hasGroupName("", param1 ^ -74)) {
+              if (ia.field_U.tryLoadGroupByName(false, "")) {
                 ng.a(param1 ^ 27014, ia.field_U);
                 ia.field_U = null;
                 nf.d(0);
@@ -763,7 +763,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           am.b(112);
           lj.field_e = bg.field_t;
           oj.field_b = false;
-          h.a(param1 ^ -8099, fi.field_u, ib.field_b, ld.field_g, GameAppletShell.field_b);
+          RaiderDefinition.initializeGameUiAssets(param1 ^ -8099, fi.field_u, ib.field_b, ld.field_g, GameAppletShell.field_b);
           if (np.field_D ||
             null != mi.field_d) {
             stackIn_102_0 = 8192;
@@ -779,7 +779,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             je.field_c = fb.b((byte) 127);
             tb.field_g = ab.a((byte) -97);
           }
-          ResourceArchive.a((byte) -96, ib.field_b, je.field_c, tb.field_g);
+          ResourceArchive.initializeLogoAnimation((byte) -96, ib.field_b, je.field_c, tb.field_g);
           ib.field_b = null;
           fi.field_u = null;
           GameAppletShell.field_b = null;

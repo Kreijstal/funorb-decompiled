@@ -141,8 +141,8 @@ abstract class wk extends ri {
           var8Lifetime1++;
         }
         fd.field_m.a(this.field_k + (param2 - 90), 10 + param0);
-        ResourceArchive.a(param2 + 5, 1, ij.field_c, param0 + 35, -10 + this.field_k);
-        ResourceArchive.a(param2, 1, DirectByteStorage.field_d, -22 + (param0 + this.field_m), this.field_k);
+        ResourceArchive.drawTiledSpriteStrip(param2 + 5, 1, ij.field_c, param0 + 35, -10 + this.field_k);
+        ResourceArchive.drawTiledSpriteStrip(param2, 1, DirectByteStorage.field_d, -22 + (param0 + this.field_m), this.field_k);
         var4Lifetime2 = this.field_m - 79;
         var5Lifetime2 = 169;
         var6Lifetime2 = 127;

@@ -155,16 +155,16 @@ final class pl {
           if (!param3.ensureIndexLoaded(param2 ^ 8055)) {
             return false;
           }
-          if (!param3.b(5, "commonui")) {
+          if (!param3.tryLoadGroupByName(5, "commonui")) {
             return false;
           }
           if (param0.ensureIndexLoaded(param2 - 7857) &&
-            param0.b(param2 ^ -103, "commonui")) {
+            param0.tryLoadGroupByName(param2 ^ -103, "commonui")) {
             if (param2 != -100) {
               return true;
             }
             if (param1.ensureIndexLoaded(param2 - 7857) &&
-              param1.b(5, "button.gif")) {
+              param1.tryLoadGroupByName(5, "button.gif")) {
               return true;
             }
             return false;

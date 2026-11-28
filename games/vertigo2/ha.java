@@ -146,7 +146,7 @@ final class ha {
           rh.field_I.field_ab = 0;
           rh.field_I.field_O = 1;
           gb.field_c = new UiPanel(0L, ub.field_t, bm.field_y.toUpperCase());
-          oc.field_v = new UiPanel(0L, hb.field_D);
+          oc.field_v = new UiPanel(0L, PlayerAvatarRenderer.field_D);
           oc.field_v.b(rh.field_I, 118);
           oc.field_v.b(gb.field_c, 119);
           oi.field_a = new UiPanel(0L, ua.field_c);
@@ -172,7 +172,7 @@ final class ha {
           pc.field_b = new UiPanel(0L, gn.field_f, me.field_c.toUpperCase());
           IterableNodeHashTable.field_h = new UiPanel[4 + param7];
           mg.field_S = new nk[param7 + 4][];
-          IterableNodeHashTable.field_h[0] = new UiPanel(0L, fm.field_e, wo.field_b);
+          IterableNodeHashTable.field_h[0] = new UiPanel(0L, fm.field_e, PlayerState.field_b);
           mg.field_S[0] = new nk[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
             mg.field_S[0][1 + var17_int] = new nk(0L, GameplayScreen.field_l, (UiPanel) null, ja.field_e, eg.field_r[var17_int], gm.field_c[var17_int]);

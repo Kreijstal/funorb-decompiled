@@ -25,7 +25,7 @@ final class kn {
         double var24 = 0.0;
         double var26 = 0.0;
         int var28 = 0;
-        vg var29 = null;
+        TunnelCamera var29 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -39,8 +39,8 @@ final class kn {
           var5_double = param2 * param1[9];
           var7 = param2 * param1[10];
           if (param0 != 26214) {
-            var29 = (vg) null;
-            this.a(-107, -2.534413273598302, 0.45288593443831515, 0.5839953212132996, (vg) null, 63);
+            var29 = (TunnelCamera) null;
+            this.a(-107, -2.534413273598302, 0.45288593443831515, 0.5839953212132996, (TunnelCamera) null, 63);
           }
           var9 = param1[11] * param2;
           for (var11 = 0; var11 < 8192; var11++) {
@@ -79,7 +79,7 @@ final class kn {
         }
     }
 
-    final void a(int param0, double param1, double param2, double param3, vg param4, int param5) {
+    final void a(int param0, double param1, double param2, double param3, TunnelCamera param4, int param5) {
         int var37 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -115,8 +115,8 @@ final class kn {
         int var60 = 0;
         int var61 = 0;
         int var62 = 0;
-        vg var63 = null;
-        kh var64 = null;
+        TunnelCamera var63 = null;
+        ProjectileRay var64 = null;
         double var52Lifetime1;
         double var54Lifetime1;
         int var60Lifetime1;
@@ -127,11 +127,11 @@ final class kn {
         int var61Lifetime3;
         var62 = Confined.field_J ? 1 : 0;
         try {
-          var64 = new kh((pm) null, (PcmSample) null, 0);
+          var64 = new ProjectileRay((TunnelEntity) null, (PcmSample) null, 0);
           var11 = 32.0 * param4.field_R;
           if (param5 != -1212126616) {
-            var63 = (vg) null;
-            this.a((byte) 43, -52, (vg) null);
+            var63 = (TunnelCamera) null;
+            this.a((byte) 43, -52, (TunnelCamera) null);
           }
           var13 = param4.field_ab * 32.0;
           var15 = 32.0 * param4.field_M;
@@ -252,7 +252,7 @@ final class kn {
         field_b = null;
     }
 
-    final void a(byte param0, int param1, vg param2) {
+    final void a(byte param0, int param1, TunnelCamera param2) {
         int var4_int = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;

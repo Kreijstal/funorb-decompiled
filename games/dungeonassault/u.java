@@ -6,7 +6,7 @@ final class u extends gd {
     static cf[] field_T;
     static int field_P;
     static String field_S;
-    h field_Q;
+    RaiderDefinition field_Q;
     static boolean field_O;
     static String field_R;
 
@@ -41,7 +41,7 @@ final class u extends gd {
         return -d.a(-120, param0, -param1);
     }
 
-    u(int param0, int param1, h param2) {
+    u(int param0, int param1, RaiderDefinition param2) {
         super(param0, param1, 0, 0, 0);
         int stackIn_7_0 = 0;
         int stackIn_13_0 = 0;
@@ -192,7 +192,7 @@ final class u extends gd {
                   stackIn_15_0 = k.field_c;
                 }
                 var3 = stackIn_15_0;
-                um.field_i[var2_int].field_b = new wd(var3);
+                um.field_i[var2_int].field_b = new SpriteAnimationPlayer(var3);
               }
             }
           }

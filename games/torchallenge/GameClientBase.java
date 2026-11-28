@@ -196,8 +196,8 @@ abstract class GameClientBase extends GameApplet {
         if (li.field_K == 2) {
           if (rj.field_f != null &&
             rj.field_f.ensureIndexLoaded(-7957)) {
-            if (rj.field_f.a((byte) -39, "")) {
-              if (rj.field_f.b(5, "")) {
+            if (rj.field_f.hasGroupName((byte) -39, "")) {
+              if (rj.field_f.tryLoadGroupByName(5, "")) {
                 oj.a(-3798, rj.field_f);
                 rj.field_f = null;
                 id.a(104);

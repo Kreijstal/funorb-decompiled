@@ -15,7 +15,7 @@ abstract class qf extends ea {
           if (!param2) {
             return;
           }
-          var4 = hl.field_g % fl.field_a.field_l * 2;
+          var4 = LevelLostEntrancePhase.field_g % fl.field_a.field_l * 2;
           if (fl.field_a.field_l <= var4) {
             var4 = fl.field_a.field_l - var4 + fl.field_a.field_l;
           }
@@ -33,7 +33,7 @@ abstract class qf extends ea {
         if (!param2) {
           return;
         }
-        var4Lifetime1 = hl.field_g % fl.field_a.field_l * 2;
+        var4Lifetime1 = LevelLostEntrancePhase.field_g % fl.field_a.field_l * 2;
         if (fl.field_a.field_l <= var4Lifetime1) {
           var4Lifetime1 = fl.field_a.field_l - var4Lifetime1 + fl.field_a.field_l;
         }
@@ -47,7 +47,7 @@ abstract class qf extends ea {
         wm.a(var4Lifetime1, param0, fl.field_a, param3, 480, 0, 30, 80, 0);
     }
 
-    boolean c(f[][] param0, int param1, byte param2, int param3) {
+    boolean c(PuzzleTile[][] param0, int param1, byte param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -80,7 +80,7 @@ abstract class qf extends ea {
         return false;
     }
 
-    void f(int param0, int param1, f[][] param2, int param3) {
+    void f(int param0, int param1, PuzzleTile[][] param2, int param3) {
         int stackIn_8_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
@@ -108,17 +108,17 @@ abstract class qf extends ea {
             return;
           }
           if (!this.field_v) {
-            this.a((byte) 52, param2[1 + param1][param3]);
-            this.field_l.a((byte) 89, param2[1 + param1][param3]);
+            this.copyTileAttribution((byte) 52, param2[1 + param1][param3]);
+            this.field_l.copyTileAttribution((byte) 89, param2[1 + param1][param3]);
           } else {
             this.field_v = false;
             stackIn_8_0 = (!this.c(param2, param1, (byte) -31, param3)) ? 0 : 1;
             var6 = stackIn_8_0;
-            param2[1 + param1][param3] = param2[param1 + 1][param3].a(1 + param1, param3, param2, (f) (this), (byte) 12);
-            this.a((byte) 122, param2[1 + param1][param3]);
-            this.field_l.a((byte) 121, param2[1 + param1][param3]);
+            param2[1 + param1][param3] = param2[param1 + 1][param3].a(1 + param1, param3, param2, (PuzzleTile) (this), (byte) 12);
+            this.copyTileAttribution((byte) 122, param2[1 + param1][param3]);
+            this.field_l.copyTileAttribution((byte) 121, param2[1 + param1][param3]);
             je.field_j = je.field_j - 1;
-            we.field_h = we.field_h - 2;
+            LevelProgressUpdate.field_h = LevelProgressUpdate.field_h - 2;
             fp.field_a = fp.field_a - 2;
             b.field_a = b.field_a - 1;
             mb.field_g = mb.field_g - ob.field_l;
@@ -190,7 +190,7 @@ abstract class qf extends ea {
         return 0;
     }
 
-    private final boolean c(int param0, int param1, int param2, f[][] param3) {
+    private final boolean c(int param0, int param1, int param2, PuzzleTile[][] param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -218,7 +218,7 @@ abstract class qf extends ea {
         }
     }
 
-    qf(f param0) {
+    qf(PuzzleTile param0) {
         super(param0);
         this.field_v = false;
         try {
@@ -228,7 +228,7 @@ abstract class qf extends ea {
         }
     }
 
-    boolean a(int param0, int param1, int param2, f[][] param3, int param4, fq param5, int param6) {
+    boolean a(int param0, int param1, int param2, PuzzleTile[][] param3, int param4, fq param5, int param6) {
         RuntimeException var8 = null;
         String var9 = null;
         boolean stackIn_9_0 = false;
@@ -294,7 +294,7 @@ abstract class qf extends ea {
         }
     }
 
-    private final boolean a(byte param0, int param1, int param2, f[][] param3) {
+    private final boolean a(byte param0, int param1, int param2, PuzzleTile[][] param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -360,7 +360,7 @@ abstract class qf extends ea {
         field_w = null;
     }
 
-    sl a(f[][] param0, int param1, boolean param2, int param3, int param4, int param5) {
+    sl a(PuzzleTile[][] param0, int param1, boolean param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         boolean stackIn_3_1 = false;
         sl stackIn_4_0 = null;
@@ -374,7 +374,7 @@ abstract class qf extends ea {
           b.field_a = b.field_a - 2;
           je.field_j = je.field_j - 2;
           fp.field_a = fp.field_a - 4;
-          we.field_h = we.field_h - 4;
+          LevelProgressUpdate.field_h = LevelProgressUpdate.field_h - 4;
           stackIn_3_1 = (param2);
           this.field_v = stackIn_3_1;
           this.field_u = false;
@@ -394,9 +394,9 @@ abstract class qf extends ea {
         }
     }
 
-    final f a(sl param0, f[][] param1, int param2, int param3, int param4, int param5, int param6) {
+    final PuzzleTile a(sl param0, PuzzleTile[][] param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
-        f stackIn_5_0 = null;
+        PuzzleTile stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -432,13 +432,13 @@ abstract class qf extends ea {
         }
     }
 
-    private final boolean a(int param0, byte param1, f[][] param2, int param3) {
+    private final boolean a(int param0, byte param1, PuzzleTile[][] param2, int param3) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_23_1 = 0;
         boolean stackIn_23_2 = false;
         int stackIn_24_3 = 0;
-        f stackIn_26_0 = null;
+        PuzzleTile stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         boolean stackIn_26_2 = false;
         int stackIn_27_3;
@@ -462,10 +462,10 @@ abstract class qf extends ea {
           var6 = stackIn_9_0;
           if (var5_int != 0 &&
             var6 != 0) {
-            var7 = param2[param3][param0].a(false) & param2[1 + param3][param0].a(false);
+            var7 = param2[param3][param0].getAttributedPlayerMask(false) & param2[1 + param3][param0].getAttributedPlayerMask(false);
             if (var7 != 0) {
-              var8 = param2[param3][param0].b(-3445);
-              var9 = param2[1 + param3][param0].b(-3445);
+              var8 = param2[param3][param0].getAttributionTick(-3445);
+              var9 = param2[1 + param3][param0].getAttributionTick(-3445);
               stackIn_23_1 = var7;
               stackIn_23_2 = true;
               if (var8 > var9) {
@@ -473,7 +473,7 @@ abstract class qf extends ea {
               } else {
                 stackIn_24_3 = var9;
               }
-              this.a(stackIn_23_1, stackIn_23_2, stackIn_24_3);
+              this.recordTileAttribution(stackIn_23_1, stackIn_23_2, stackIn_24_3);
               stackIn_26_0 = this.field_l;
               stackIn_26_1 = var7;
               stackIn_26_2 = true;
@@ -482,20 +482,20 @@ abstract class qf extends ea {
               } else {
                 stackIn_27_3 = var8;
               }
-              ((f) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_26_2, stackIn_27_3);
+              ((PuzzleTile) (Object) stackIn_26_0).recordTileAttribution(stackIn_26_1, stackIn_26_2, stackIn_27_3);
             }
             return false;
           }
           if (var5_int != 0) {
-            this.a((byte) 97, param2[param3][param0]);
-            this.field_l.a((byte) 90, param2[param3][param0]);
+            this.copyTileAttribution((byte) 97, param2[param3][param0]);
+            this.field_l.copyTileAttribution((byte) 90, param2[param3][param0]);
             return false;
           }
           if (var6 == 0) {
             return true;
           }
-          this.a((byte) 112, param2[param3 + 1][param0]);
-          this.field_l.a((byte) 71, param2[1 + param3][param0]);
+          this.copyTileAttribution((byte) 112, param2[param3 + 1][param0]);
+          this.field_l.copyTileAttribution((byte) 71, param2[1 + param3][param0]);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -511,7 +511,7 @@ abstract class qf extends ea {
         }
     }
 
-    final f a(int param0, int param1, f[][] param2, int param3, int param4, int param5, ea param6) {
+    final PuzzleTile a(int param0, int param1, PuzzleTile[][] param2, int param3, int param4, int param5, ea param6) {
         RuntimeException var8 = null;
         am stackIn_6_0 = null;
         RuntimeException stackIn_11_0 = null;
@@ -526,7 +526,7 @@ abstract class qf extends ea {
           }
           if (0 == (this.field_o | this.field_s)) {
             fp.field_a = fp.field_a + 10;
-            we.field_h = we.field_h + 10;
+            LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 10;
             b.field_a = b.field_a + 5;
             je.field_j = je.field_j + 5;
             mb.field_g = mb.field_g + 12;
@@ -537,11 +537,11 @@ abstract class qf extends ea {
               stackIn_6_0 = dn.field_d;
             }
             ((am) (Object) stackIn_6_0).a(128, 12 * param1, param4 * 12, 60, (byte) -111);
-            this.a((byte) 111, param6);
-            this.field_l.a((byte) 83, param6);
+            this.copyTileAttribution((byte) 111, param6);
+            this.field_l.copyTileAttribution((byte) 83, param6);
             this.a(param2, param4, false, param0, param1, param5);
           }
-          return (f) (this);
+          return (PuzzleTile) (this);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;

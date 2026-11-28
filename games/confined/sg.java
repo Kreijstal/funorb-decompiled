@@ -46,7 +46,7 @@ final class sg extends DualLinkNode {
           if (!rn.field_f.tryLoadGroup(this.field_w, 0)) {
             return false;
           }
-          var26 = rn.field_f.a((byte) -112, this.field_w);
+          var26 = rn.field_f.getFileIds((byte) -112, this.field_w);
           this.field_v = new byte[var26.length][];
           for (var3_int = 0; var26.length > var3_int; var3_int++) {
             this.field_v[var3_int] = rn.field_f.getFile((byte) -2, this.field_w, var26[var3_int]);
@@ -61,16 +61,16 @@ final class sg extends DualLinkNode {
           var6_ref_kg = new PacketBuffer(var27);
           var6_ref_kg.position = 1;
           var7 = var6_ref_kg.readUnsignedShort((byte) 25);
-          var2 = var2 != 0 & un.field_a.a(var7, (byte) -37) ? 1 : 0;
+          var2 = var2 != 0 & un.field_a.tryLoadFlatFile(var7, (byte) -37) ? 1 : 0;
           var13++;
         }
         if (var2 == 0) {
           return false;
         }
         var3 = new PrimaryNodeDeque();
-        var4Lifetime1 = rn.field_f.d(this.field_w, (byte) -121);
+        var4Lifetime1 = rn.field_f.getFileCapacity(this.field_w, (byte) -121);
         this.field_t = new cm[var4Lifetime1];
-        var28 = rn.field_f.a((byte) -115, this.field_w);
+        var28 = rn.field_f.getFileIds((byte) -115, this.field_w);
         for (var6 = 0; var6 < var28.length; var6++) {
           var29 = this.field_v[var6];
           var8 = new PacketBuffer(var29);
@@ -87,7 +87,7 @@ final class sg extends DualLinkNode {
             break;
           }
           if (var10 == null) {
-            var10 = new ij(var9, un.field_a.c(var9, (byte) 125));
+            var10 = new ij(var9, un.field_a.getFlatFile(var9, (byte) 125));
             var3.addLast((IntrusiveNode) (var10), (byte) -112);
           }
           this.field_t[var28[var6]] = new cm(var29, (ij) (var10));
@@ -158,16 +158,16 @@ final class sg extends DualLinkNode {
         if (param0 < 85) {
           field_y = true;
         }
-        if (lc.field_J == null) {
+        if (TunnelMesh.field_J == null) {
           if (qn.field_v.field_h <= 0) {
           } else {
             if (!pa.field_c) {
-              lc.field_J = new bj(0, 65535, qn.field_v.field_B.field_yb + bd.field_h, qn.field_v.field_J.field_o + we.field_g, -qn.field_v.field_h + d.field_a, rc.field_i, new int[]{-1 + (qn.field_v.field_J.field_o + qn.field_v.field_h * 25)});
+              TunnelMesh.field_J = new bj(0, 65535, qn.field_v.field_B.field_yb + bd.field_h, qn.field_v.field_J.field_o + we.field_g, -qn.field_v.field_h + d.field_a, rc.field_i, new int[]{-1 + (qn.field_v.field_J.field_o + qn.field_v.field_h * 25)});
             } else {
-              lc.field_J = new bj(1, 65534, bd.field_h + qn.field_v.field_B.field_yb, we.field_g + qn.field_v.field_J.field_o, -qn.field_v.field_h + d.field_a, rc.field_i, new int[]{qn.field_v.field_J.field_o + (qn.field_v.field_h * 25 - 1)});
+              TunnelMesh.field_J = new bj(1, 65534, bd.field_h + qn.field_v.field_B.field_yb, we.field_g + qn.field_v.field_J.field_o, -qn.field_v.field_h + d.field_a, rc.field_i, new int[]{qn.field_v.field_J.field_o + (qn.field_v.field_h * 25 - 1)});
             }
             if (!tj.a(true)) {
-              r.a(lc.field_J, -1, 3);
+              r.a(TunnelMesh.field_J, -1, 3);
             }
             rg.field_K = true;
           }

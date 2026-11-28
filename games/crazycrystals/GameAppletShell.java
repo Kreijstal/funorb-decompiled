@@ -169,7 +169,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(var3 < hf.field_a)) {
                       this.b((byte) 122);
-                      so.a(jd.field_D, te.field_a, true);
+                      so.a(jd.field_D, ResultScene.field_a, true);
                       break;
                     }
                     this.d(2648);
@@ -207,7 +207,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (uc.field_d != null) {
+          if (MenuOverlay.field_d != null) {
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
@@ -283,7 +283,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (var4 != 0L &&
             var4 < var2_long) {
             var6_int = (int)(-var4 + var2_long);
-            p.field_j = (32000 + (var6_int >> 1)) / var6_int;
+            PauseMenu.field_j = (32000 + (var6_int >> 1)) / var6_int;
           }
           ne.field_c = ne.field_c + 1 & 31;
           fieldTemp$1 = wf.field_h;
@@ -293,9 +293,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             wf.field_h = wf.field_h - 50;
             jd.field_D.setSize(ap.field_r, rh.field_f);
             jd.field_D.setVisible(true);
-            if (uc.field_d != null &&
+            if (MenuOverlay.field_d != null &&
               null == vk.field_F) {
-              var6 = uc.field_d.getInsets();
+              var6 = MenuOverlay.field_d.getInsets();
               jd.field_D.setLocation(ui.field_a + var6.left, wm.field_e + var6.top);
               if (CrazyCrystals.field_B != 0) {
                 jd.field_D.setLocation(ui.field_a, wm.field_e);
@@ -413,16 +413,16 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (te.field_a != null) {
+          if (ResultScene.field_a != null) {
             try {
-              te.field_a.shutdown(113);
+              ResultScene.field_a.shutdown(113);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
           this.c((byte) 89);
-          if (uc.field_d != null) {
+          if (MenuOverlay.field_d != null) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -464,21 +464,21 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (null == uc.field_d) {
+            if (null == MenuOverlay.field_d) {
               if (null == ImageProducerRasterBuffer.field_i) {
                 var2 = BoundedRandomAccessFile.field_h;
                 if (var4 != 0) {
                   var2 = ImageProducerRasterBuffer.field_i;
-                  var2 = uc.field_d;
+                  var2 = MenuOverlay.field_d;
                 }
               } else {
                 var2 = ImageProducerRasterBuffer.field_i;
                 if (var4 != 0) {
-                  var2 = uc.field_d;
+                  var2 = MenuOverlay.field_d;
                 }
               }
             } else {
-              var2 = uc.field_d;
+              var2 = MenuOverlay.field_d;
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
@@ -489,8 +489,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             return;
           }
           jd.field_D.setVisible(true);
-          if (var2 == uc.field_d) {
-            var3 = uc.field_d.getInsets();
+          if (var2 == MenuOverlay.field_d) {
+            var3 = MenuOverlay.field_d.getInsets();
             jd.field_D.setLocation(var3.left + ui.field_a, wm.field_e + var3.top);
             if (var4 != 0) {
               jd.field_D.setLocation(ui.field_a, wm.field_e);
@@ -671,11 +671,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               SecondaryNodeDequeIterator.field_b = param5;
               ap.field_r = param6;
               MouseWheelInput.field_c = param6;
-              pj.field_w = le.b((byte) -20);
+              WallTile.field_w = le.b((byte) -20);
               dupTemp$0 = new PlatformTaskDispatcher(param1, param3, param2, true);
-              te.field_a = dupTemp$0;
+              ResultScene.field_a = dupTemp$0;
               rd.field_g = dupTemp$0;
-              var8 = te.field_a.requestThreadStart((Runnable) (this), 2, 1);
+              var8 = ResultScene.field_a.requestThreadStart((Runnable) (this), 2, 1);
               while (true) {
                 if (0 == var8.status) {
                   fh.sleepMillis(true, 10L);
@@ -740,7 +740,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (uc.field_d != null) {
+        if (MenuOverlay.field_d != null) {
           return null;
         }
         if (null != ImageProducerRasterBuffer.field_i &&
@@ -827,7 +827,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.applet.AppletContext stackIn_14_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != uc.field_d) {
+          if (null != MenuOverlay.field_d) {
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
@@ -852,7 +852,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.net.URL stackIn_14_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (uc.field_d != null) {
+          if (MenuOverlay.field_d != null) {
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }

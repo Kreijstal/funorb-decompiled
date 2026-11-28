@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends ln {
+final class ba extends ScoreModifier {
     static RgbSprite field_j;
     static String field_l;
     static vc field_i;
@@ -9,7 +9,7 @@ final class ba extends ln {
     static ResourceArchive field_k;
     static java.awt.Image field_h;
 
-    final int a(int param0, byte param1) {
+    final int countPlayerApplications(int param0, byte param1) {
         int var3 = 75 / ((param1 - 55) / 50);
         return (1 << param0 & qg.field_q) != 0 ? 1 : 0;
     }

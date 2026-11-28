@@ -131,7 +131,7 @@ class PacketBuffer extends IntrusiveNode {
               fieldTemp$1 = Confined.field_E;
               Confined.field_E = Confined.field_E + 1;
               var5_ref.field_lb = fieldTemp$1;
-              vg.field_J.addLast((IntrusiveNode) (var5_ref), (byte) -97);
+              TunnelCamera.field_J.addLast((IntrusiveNode) (var5_ref), (byte) -97);
             }
             var5_ref.field_ob = var4_ref_String;
             return;
@@ -152,12 +152,12 @@ class PacketBuffer extends IntrusiveNode {
             if (var2 == 4) {
               IntrusiveNode.field_d = 1;
               var3 = var1.readString(true);
-              ql.field_t = ((String) (var3)).intern();
+              StageDirector.field_t = ((String) (var3)).intern();
               var4 = var1.readUnsignedByte(param0 ^ -20);
               SecondaryNodeDequeIterator.a(-127, var4);
               return;
             }
-            mb.a("F1: " + ui.a(10), true, (Throwable) null);
+            ShockwaveBlast.a("F1: " + ui.a(10), true, (Throwable) null);
             if (param0 != -52) {
               return;
             }
@@ -174,9 +174,9 @@ class PacketBuffer extends IntrusiveNode {
           }
           var4_ref_StringLifetime1 = var1.readString(true);
           var5 = var1.readString(true);
-          var6 = pm.a(var4_ref_StringLifetime1, true);
+          var6 = TunnelEntity.a(var4_ref_StringLifetime1, true);
           if (var6 == null) {
-            var6 = pm.a(var5, true);
+            var6 = TunnelEntity.a(var5, true);
             if (var6 != null) {
               AccountCreationResultPanel.field_Db.a((long)hh.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6, 123);
             }
@@ -187,7 +187,7 @@ class PacketBuffer extends IntrusiveNode {
             fieldTemp$0 = c.field_k;
             c.field_k = c.field_k + 1;
             var6.field_lb = fieldTemp$0;
-            il.field_fb.addLast((IntrusiveNode) (var6), (byte) -103);
+            ExpandingPulseProjectile.field_fb.addLast((IntrusiveNode) (var6), (byte) -103);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -195,7 +195,7 @@ class PacketBuffer extends IntrusiveNode {
           var6.field_kb = (String) (var3Lifetime1);
           var6.field_ob = var4_ref_StringLifetime1;
           var6.unlink(true);
-          var7 = (fg) (il.field_fb.beginForward(56));
+          var7 = (fg) (ExpandingPulseProjectile.field_fb.beginForward(56));
           scanLoop1: while (true) {
             if (var7 != null) {
               stackIn_57_0 = var6;
@@ -205,12 +205,12 @@ class PacketBuffer extends IntrusiveNode {
                 break scanLoop1;
               }
               if (tb.a(stackIn_57_0, stackIn_57_1, stackIn_57_2)) {
-                var7 = (fg) (il.field_fb.nextForward(param0 ^ -2169));
+                var7 = (fg) (ExpandingPulseProjectile.field_fb.nextForward(param0 ^ -2169));
                 continue;
               }
             }
             if (var7 == null) {
-              il.field_fb.addLast((IntrusiveNode) (var6), (byte) 89);
+              ExpandingPulseProjectile.field_fb.addLast((IntrusiveNode) (var6), (byte) 89);
               if (var8 == 0) {
                 return;
               }
@@ -925,7 +925,7 @@ class PacketBuffer extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           this.position = this.position - param0;
-          var2_int = ah.computeCrc32(this.payload, 0, this.position, (byte) 68);
+          var2_int = AcceleratingProjectile.computeCrc32(this.payload, 0, this.position, (byte) 68);
           var3 = this.readInt((byte) 36);
           if (~var2_int != ~var3) {
             return false;
@@ -959,7 +959,7 @@ class PacketBuffer extends IntrusiveNode {
             return stackIn_6_0;
           }
           if (0 != var3) {
-            stackIn_11_0 = kh.decodeCp1252String(this.payload, var3, 0, var2_int);
+            stackIn_11_0 = ProjectileRay.decodeCp1252String(this.payload, var3, 0, var2_int);
             return stackIn_11_0;
           }
           stackIn_9_0 = "";
@@ -1145,7 +1145,7 @@ class PacketBuffer extends IntrusiveNode {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = ah.computeCrc32(this.payload, param1, this.position, (byte) 121);
+          var3_int = AcceleratingProjectile.computeCrc32(this.payload, param1, this.position, (byte) 121);
           if (param0 != 26199) {
             stackIn_2_0 = -53;
             return stackIn_2_0;
@@ -1190,7 +1190,7 @@ class PacketBuffer extends IntrusiveNode {
             stackIn_15_0 = "";
             return stackIn_15_0;
           }
-          stackIn_17_0 = kh.decodeCp1252String(this.payload, var4, 0, var3);
+          stackIn_17_0 = ProjectileRay.decodeCp1252String(this.payload, var4, 0, var3);
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

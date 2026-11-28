@@ -29,7 +29,7 @@ final class ud extends IntrusiveNode {
         try {
           var4 = (om) (jd.field_f.beginForward(88));
           while (var4 != null) {
-            vg.a(7932, param0, var4);
+            TunnelCamera.writeQueuedRecordRequest(7932, param0, var4);
             var4 = (om) (jd.field_f.nextForward(param1 + 2005));
           }
           var5 = (ca) (dl.field_b.beginForward(param1 ^ 96));

@@ -323,7 +323,7 @@ abstract class da extends lm implements aa {
         try {
           if (param6 != -84) {
             var9 = (Random) null;
-            da.a((wm) null, (byte) 48, (Random) null);
+            da.a((PackedBitSet) null, (byte) 48, (Random) null);
           }
           stackIn_7_0 = (null != this.field_D) && (this.field_D.a((byte) 82)) && (this.field_D.a(param0, param1, param2, param3, param4, param5, (byte) -84));
           return stackIn_7_0;
@@ -424,10 +424,10 @@ abstract class da extends lm implements aa {
         }
     }
 
-    final static ai[] a(wm param0, byte param1, Random param2) {
+    final static DungeonTileState[] a(PackedBitSet param0, byte param1, Random param2) {
         int var4 = 0;
         int var7 = 0;
-        ai[] stackIn_32_0 = null;
+        DungeonTileState[] stackIn_32_0 = null;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -445,16 +445,16 @@ abstract class da extends lm implements aa {
         int[] var12 = null;
         var9 = DungeonAssault.field_K;
         try {
-          me.field_g = new ai[49];
+          me.field_g = new DungeonTileState[49];
           a.field_o = param0;
           for (var3_int = 0; var3_int < 49; var3_int++) {
-            me.field_g[var3_int] = new ai(0);
+            me.field_g[var3_int] = new DungeonTileState(0);
           }
-          me.field_g[24] = new ai(2);
-          me.field_g[0] = new ai(3);
-          me.field_g[6] = new ai(3);
-          me.field_g[42] = new ai(3);
-          me.field_g[48] = new ai(3);
+          me.field_g[24] = new DungeonTileState(2);
+          me.field_g[0] = new DungeonTileState(3);
+          me.field_g[6] = new DungeonTileState(3);
+          me.field_g[42] = new DungeonTileState(3);
+          me.field_g[48] = new DungeonTileState(3);
           mp.a(param2, il.field_d, -127, 0, 2);
           mp.a(param2, il.field_d, -127, 6, 2);
           mp.a(param2, il.field_d, -127, 42, 2);
@@ -493,7 +493,7 @@ abstract class da extends lm implements aa {
                 } else {
                   var6 = il.field_d;
                 }
-                me.field_g[var4] = new ai(var6[uj.a(param2, 37, var6.length)]);
+                me.field_g[var4] = new DungeonTileState(var6[uj.a(param2, 37, var6.length)]);
               }
             }
           }

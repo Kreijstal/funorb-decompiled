@@ -156,7 +156,7 @@ final class sd extends am {
         if (param2 > -62) {
           return (ResourceArchive) null;
         }
-        return Level.a(false, param0, param3, 8505, param4, param1);
+        return Level.openIndexedResourceArchive(false, param0, param3, 8505, param4, param1);
     }
 
     final static boolean b(int param0) {

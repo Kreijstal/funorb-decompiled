@@ -120,7 +120,7 @@ final class en {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = (CharSequence) ((Object) param0);
-          if (!hi.a((byte) 126, var9)) {
+          if (!BlastDebrisModel.isValidPlayerName((byte) 126, var9)) {
             stackIn_3_0 = or.field_a;
             return stackIn_3_0;
           }

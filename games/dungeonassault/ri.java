@@ -44,7 +44,7 @@ final class ri {
           if (param3 > -14) {
             ri.a((byte) 7);
           }
-          wd.field_d = SecondaryNodeDeque.field_b;
+          SpriteAnimationPlayer.field_d = SecondaryNodeDeque.field_b;
           if (param2 != 255) {
             if (param2 < 100) {
               DualLinkNode.field_p = p.createAccountErrorResult(param2, param0, -28323);

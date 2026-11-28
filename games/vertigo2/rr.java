@@ -81,49 +81,49 @@ final class rr extends TextureOperator {
         if ((double)var6 >= -3.141592653589793 &&
           (double)var6 <= -2.356194490192345) {
           tn.field_j = param1;
-          bh.field_c = param2;
+          LevelSimulation.field_c = param2;
         } else if ((double)var6 <= -1.5707963267948966 &&
           -2.356194490192345 <= (double)var6) {
-          bh.field_c = param1;
+          LevelSimulation.field_c = param1;
           tn.field_j = param2;
         } else if (-0.7853981633974483 >= (double)var6 &&
           -1.5707963267948966 <= (double)var6) {
           tn.field_j = we.field_M - param2;
-          bh.field_c = param1;
+          LevelSimulation.field_c = param1;
         } else if (0.0f >= var6 &&
           (double)var6 >= -0.7853981633974483) {
           tn.field_j = param1;
-          bh.field_c = aa.field_Vb - param2;
+          LevelSimulation.field_c = aa.field_Vb - param2;
         } else if (var6 >= 0.0f &&
           0.7853981633974483 >= (double)var6) {
-          bh.field_c = aa.field_Vb - param2;
+          LevelSimulation.field_c = aa.field_Vb - param2;
           tn.field_j = -param1 + we.field_M;
         } else if ((double)var6 >= 0.7853981633974483 &&
           (double)var6 <= 1.5707963267948966) {
           tn.field_j = we.field_M - param2;
-          bh.field_c = -param1 + aa.field_Vb;
+          LevelSimulation.field_c = -param1 + aa.field_Vb;
         } else {
           if ((double)var6 >= 1.5707963267948966) {
             if ((double)var6 <= 2.356194490192345) {
               tn.field_j = param2;
-              bh.field_c = aa.field_Vb - param1;
+              LevelSimulation.field_c = aa.field_Vb - param1;
             } else {
               if (2.356194490192345 <= (double)var6 &&
                 (double)var6 <= 3.141592653589793) {
                 tn.field_j = we.field_M - param1;
-                bh.field_c = param2;
+                LevelSimulation.field_c = param2;
               }
             }
           } else {
             if (2.356194490192345 <= (double)var6 &&
               (double)var6 <= 3.141592653589793) {
               tn.field_j = we.field_M - param1;
-              bh.field_c = param2;
+              LevelSimulation.field_c = param2;
             }
           }
         }
         tn.field_j = tn.field_j & rm.field_z;
-        bh.field_c = bh.field_c & CrossfadingMidiPcmStream.field_x;
+        LevelSimulation.field_c = LevelSimulation.field_c & CrossfadingMidiPcmStream.field_x;
     }
 
     public static void clearStaticReferences(byte param0) {
@@ -179,7 +179,7 @@ final class rr extends TextureOperator {
         if (this.field_x.field_i) {
           for (var4 = 0; var4 < we.field_M; var4++) {
             this.d(2048, var4, param0);
-            var5 = this.a(0, -1, bh.field_c);
+            var5 = this.a(0, -1, LevelSimulation.field_c);
             var7[var4] = var5[tn.field_j];
           }
         }
@@ -206,7 +206,7 @@ final class rr extends TextureOperator {
           var6 = var13[2];
           for (var7 = 0; var7 < we.field_M; var7++) {
             this.d(param0 ^ -1732, var7, param1);
-            var14 = this.c(0, param0 ^ -3777, bh.field_c);
+            var14 = this.c(0, param0 ^ -3777, LevelSimulation.field_c);
             var4[var7] = var14[0][tn.field_j];
             var5[var7] = var14[1][tn.field_j];
             var6[var7] = var14[2][tn.field_j];

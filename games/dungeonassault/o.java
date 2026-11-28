@@ -4,7 +4,7 @@
 final class o extends IntrusiveNode {
     static String field_l;
     static long field_j;
-    static wm field_n;
+    static PackedBitSet field_n;
     int field_p;
     fa field_k;
     static ae field_i;
@@ -147,10 +147,10 @@ final class o extends IntrusiveNode {
             return stackIn_28_0;
           }
           if (uf.field_a > param2) {
-            if (wm.field_a > param2) {
+            if (PackedBitSet.field_a > param2) {
               return false;
             }
-            stackIn_42_0 = !(Bzip2State.field_p[-wm.field_a + param2] > param3.field_f);
+            stackIn_42_0 = !(Bzip2State.field_p[-PackedBitSet.field_a + param2] > param3.field_f);
             return stackIn_42_0;
           }
           var5_int = 0;
@@ -256,7 +256,7 @@ final class o extends IntrusiveNode {
 
     static {
         field_l = "Thief";
-        field_n = new wm(25);
+        field_n = new PackedBitSet(25);
         field_q = "Single-player game";
     }
 }

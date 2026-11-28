@@ -246,7 +246,7 @@ final class an {
             if (!qn.field_q) {
               stackIn_36_0 = hd.field_g;
               if (var8 == 0) {
-                stackIn_37_1 = lj.field_o;
+                stackIn_37_1 = MatchSession.field_o;
               } else {
                 stackIn_37_1 = w.field_y;
               }
@@ -260,7 +260,7 @@ final class an {
               }
               stackIn_39_0.field_S = Vertigo2.a(stackIn_39_1, stackIn_40_2, -122);
               ne.field_G.field_lb = true;
-              kk.field_f.field_S = lj.field_A;
+              kk.field_f.field_S = MatchSession.field_A;
               gd.field_r = true;
               if (null != gr.field_W) {
                 gd.field_r = false;
@@ -521,7 +521,7 @@ final class an {
         } else {
           ue.field_N.c(0, 0);
         }
-        if (cn.field_r) {
+        if (LevelCamera.field_r) {
           RasterBuffer.a(this.field_d, (byte) -48);
           var13 = sf.field_b;
           var2 = var13;

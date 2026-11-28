@@ -11,7 +11,7 @@ final class td {
     final static void a(float param0, String param1, boolean param2) {
         try {
           ta.field_i = param1;
-          pj.field_p = param0;
+          WallTile.field_p = param0;
           if (param2) {
             field_d = 90;
           }

@@ -33,7 +33,7 @@ final class ja {
           }
           var1[var2] = new RgbSprite(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], rg.field_I[var2], sd.field_f[var2], var5);
         }
-        ql.a(false);
+        StageDirector.clearIndexedSpriteDecodeBuffers(false);
         return var1;
     }
 

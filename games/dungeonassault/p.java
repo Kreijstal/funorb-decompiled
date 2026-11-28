@@ -27,7 +27,7 @@ final class p extends qe {
     private rh field_N;
     private rh field_I;
     static String field_r;
-    private wd field_H;
+    private SpriteAnimationPlayer field_H;
 
     private final static RgbSprite[] a(RgbSprite[] param0, int param1) {
         RgbSprite[] var2 = null;
@@ -304,19 +304,19 @@ final class p extends qe {
             if (DungeonAssault.field_K != 0) {
               var7 = 0;
               if (param3 % 7 != 0 &&
-                gm.field_d.field_k.a(-1 + param3 - param3 / 7, (byte) 72)) {
+                gm.field_d.field_k.isBitSet(-1 + param3 - param3 / 7, (byte) 72)) {
                 var7 = var7 | 1;
               }
               if (param3 % 7 != 6 &&
-                gm.field_d.field_k.a(param3 - param3 / 7, (byte) 73)) {
+                gm.field_d.field_k.isBitSet(param3 - param3 / 7, (byte) 73)) {
                 var7 = var7 | 2;
               }
               if (param3 > 6 &&
-                gm.field_d.field_k.a(param3 + 35, (byte) 119)) {
+                gm.field_d.field_k.isBitSet(param3 + 35, (byte) 119)) {
                 var7 = var7 | 4;
               }
               if (param3 < 42 &&
-                gm.field_d.field_k.a(param3 + 42, (byte) 80)) {
+                gm.field_d.field_k.isBitSet(param3 + 42, (byte) 80)) {
                 var7 = var7 | 8;
               }
               SecondaryNodeDequeIterator.field_m[var7].h(param1, param0 + 12);
@@ -325,19 +325,19 @@ final class p extends qe {
         } else {
           var7 = 0;
           if (param3 % 7 != 0 &&
-            gm.field_d.field_k.a(-1 + param3 - param3 / 7, (byte) 72)) {
+            gm.field_d.field_k.isBitSet(-1 + param3 - param3 / 7, (byte) 72)) {
             var7 = var7 | 1;
           }
           if (param3 % 7 != 6 &&
-            gm.field_d.field_k.a(param3 - param3 / 7, (byte) 73)) {
+            gm.field_d.field_k.isBitSet(param3 - param3 / 7, (byte) 73)) {
             var7 = var7 | 2;
           }
           if (param3 > 6 &&
-            gm.field_d.field_k.a(param3 + 35, (byte) 119)) {
+            gm.field_d.field_k.isBitSet(param3 + 35, (byte) 119)) {
             var7 = var7 | 4;
           }
           if (param3 < 42 &&
-            gm.field_d.field_k.a(param3 + 42, (byte) 80)) {
+            gm.field_d.field_k.isBitSet(param3 + 42, (byte) 80)) {
             var7 = var7 | 8;
           }
           SecondaryNodeDequeIterator.field_m[var7].h(param1, param0 + 12);
@@ -384,11 +384,11 @@ final class p extends qe {
             var3 = ((cp) (this.field_R.field_l)).field_S;
           }
         } else {
-          var3 = ((ai) (var2)).field_h;
+          var3 = ((DungeonTileState) (var2)).field_h;
         }
         p.a(200, 65, (ac) (var3));
         if (var2 != null) {
-          p.a(488, 54, (ai) (var2));
+          p.a(488, 54, (DungeonTileState) (var2));
           if (var15 != 0) {
             p.a(488, 54, this.field_H, kc.field_V);
           }
@@ -425,8 +425,8 @@ final class p extends qe {
         boolean decompiledSharedTail0 = !(!gl.field_Lb);
         if (!decompiledSharedTail0) {
           var5 = (int)((1.0 + Math.cos((double)((float)mo.field_a / 20.0f))) * 128.0);
-          wm.field_c.b(205, 83, 256);
-          wm.field_c.b(205, 83, var5);
+          PackedBitSet.field_c.b(205, 83, 256);
+          PackedBitSet.field_c.b(205, 83, var5);
           if (this.field_w.field_B) {
             PacketBuffer.a(95, 205, (byte) -95, im.field_e, 16744448, 192);
           }
@@ -434,8 +434,8 @@ final class p extends qe {
         }
         if (decompiledSharedTail0) {
           var5 = (int)(128.0 * (1.0 + Math.cos((double)((float)mo.field_a / 20.0f))));
-          wm.field_c.b(-(im.field_e.field_y >> 1) + 356, -(im.field_e.field_v >> 1) + 267, 256);
-          wm.field_c.b(356 - (im.field_e.field_y >> 1), 267 - (im.field_e.field_v >> 1), var5);
+          PackedBitSet.field_c.b(-(im.field_e.field_y >> 1) + 356, -(im.field_e.field_v >> 1) + 267, 256);
+          PackedBitSet.field_c.b(356 - (im.field_e.field_y >> 1), 267 - (im.field_e.field_v >> 1), var5);
           if (this.field_w.field_B) {
             PacketBuffer.a(-(im.field_e.field_v >> 1) + 265, -(im.field_e.field_y >> 1) + 354, (byte) -86, im.field_e, 16744448, 96);
           }
@@ -714,7 +714,7 @@ final class p extends qe {
 
     private final void d(int param0) {
         int discarded$0 = 0;
-        ai var2_ref_ai;
+        DungeonTileState var2_ref_ai;
         int var2;
         ac var3;
         int var4;
@@ -807,16 +807,16 @@ final class p extends qe {
                                     jj.field_c = jj.field_c - (gm.field_d.field_L[var2].field_h.field_c >> 1);
                                   }
                                 }
-                                qj.field_c[var2] = new ai(var3.field_v);
+                                qj.field_c[var2] = new DungeonTileState(var3.field_v);
                                 if (null == qj.field_c[var2].field_c ||
                                   qj.field_c[var2].field_c.field_i != var3.field_d) {
-                                  qj.field_c[var2].field_c = new wd(var3.field_d);
+                                  qj.field_c[var2].field_c = new SpriteAnimationPlayer(var3.field_d);
                                 }
                                 jj.field_c = jj.field_c + var3.field_c;
                                 qh.a(param0 ^ 1380875597, this.field_Q, 19);
                                 if (var3.field_u != qj.field_c[var2].field_c.field_n) {
                                   if (null != var3.field_u) {
-                                    qj.field_c[var2].field_c.a(rf.field_M, var3.field_u, -10872);
+                                    qj.field_c[var2].field_c.startAnimation(rf.field_M, var3.field_u, -10872);
                                   }
                                   if (var3.field_a != null) {
                                     gd.a(64, var3.field_a);
@@ -831,9 +831,9 @@ final class p extends qe {
                         }
                         if (decompiledFrameRemainder1) {
                           var5 = ((cp) (hh.field_s)).field_S;
-                          this.field_H = new wd(var5.field_d);
+                          this.field_H = new SpriteAnimationPlayer(var5.field_d);
                           if (null != var5.field_u) {
-                            this.field_H.a(rf.field_M, var5.field_u, -10872);
+                            this.field_H.startAnimation(rf.field_M, var5.field_u, -10872);
                           }
                           decompiledFrameRemainder1 = (var4 != 0);
                         }
@@ -1074,14 +1074,14 @@ final class p extends qe {
 
     final void c(boolean param0) {
         int stackIn_18_0 = 0;
-        ai[] var2;
+        DungeonTileState[] var2;
         int var3;
-        ai var4;
+        DungeonTileState var4;
         int var5;
-        ai[] var6;
+        DungeonTileState[] var6;
         lf var7;
-        ai var8;
-        ai var9;
+        DungeonTileState var8;
+        DungeonTileState var9;
         int var3Lifetime1;
         var5 = DungeonAssault.field_K;
         super.c(param0);
@@ -1127,7 +1127,7 @@ final class p extends qe {
           bl.a(0);
         }
         if (this.field_H != null) {
-          this.field_H.a((byte) 109, 20);
+          this.field_H.advanceAnimation((byte) 109, 20);
         }
         var6 = gm.field_d.field_L;
         var2 = var6;
@@ -1140,7 +1140,7 @@ final class p extends qe {
           var8 = var6[var3];
           if (var5 == 0) {
             if (var8 != null) {
-              var8.field_c.a((byte) 109, 20);
+              var8.field_c.advanceAnimation((byte) 109, 20);
             }
             var3++;
             continue;
@@ -1153,7 +1153,7 @@ final class p extends qe {
           var4 = var9;
           if (var5 == 0) {
             if (var4 != null) {
-              var9.field_c.a((byte) 109, 20);
+              var9.field_c.advanceAnimation((byte) 109, 20);
             }
             var3Lifetime1++;
             continue;
@@ -1366,7 +1366,7 @@ final class p extends qe {
         jn.field_a = null;
         dm.field_f = null;
         ol.field_a = null;
-        wm.field_c = null;
+        PackedBitSet.field_c = null;
         bd.field_g = null;
         SecondaryNodeDequeIterator.field_m = null;
         hh.field_r = null;
@@ -1436,7 +1436,7 @@ final class p extends qe {
                 24 != var2Lifetime1 &&
                 var2Lifetime1 != 42 && (var2Lifetime1 != 48 ||
                 var3 != 0) && null != qj.field_c[var2Lifetime1]) {
-                gm.field_d.field_L[var2Lifetime1] = new ai(qj.field_c[var2Lifetime1].field_a);
+                gm.field_d.field_L[var2Lifetime1] = new DungeonTileState(qj.field_c[var2Lifetime1].field_a);
                 gm.field_d.field_L[var2Lifetime1].field_c = qj.field_c[var2Lifetime1].field_c;
                 qj.field_c[var2Lifetime1] = null;
               }
@@ -1604,7 +1604,7 @@ final class p extends qe {
                     this.a(var6, 92, var8, var7 + 4, rl.field_d[5]);
                   }
                 } else {
-                  var10 = var14.field_k.a(35 + var8, (byte) 109) ? 1 : 0;
+                  var10 = var14.field_k.isBitSet(35 + var8, (byte) 109) ? 1 : 0;
                   var11 = 5;
                   if (var10 != 0) {
                     var12 = 0;
@@ -1619,7 +1619,7 @@ final class p extends qe {
                     this.a(27 + var6, 119, var8, var7 + 4, rl.field_d[4]);
                   }
                 } else {
-                  var10Lifetime2 = var14.field_k.a(var8 - var8 / 7, (byte) 125) ? 1 : 0;
+                  var10Lifetime2 = var14.field_k.isBitSet(var8 - var8 / 7, (byte) 125) ? 1 : 0;
                   var11Lifetime2 = 4;
                   if (var10Lifetime2 != 0) {
                     var12Lifetime2 = 0;
@@ -1649,7 +1649,7 @@ final class p extends qe {
               if (var13 == 0) {
                 var9Lifetime1 = 0;
                 while (13 - var5 > var9Lifetime1) {
-                  var10Lifetime1 = var14.field_k.a(var8Lifetime1 + 35, (byte) 86) ? 1 : 0;
+                  var10Lifetime1 = var14.field_k.isBitSet(var8Lifetime1 + 35, (byte) 86) ? 1 : 0;
                   var11Lifetime1 = 5;
                   stackIn_42_0 = var10Lifetime1;
                   if (stackIn_42_0 != 0) {
@@ -1658,7 +1658,7 @@ final class p extends qe {
                     var11Lifetime1 = stackIn_51_0;
                   }
                   this.a(var6Lifetime1, 57, var8Lifetime1, 4 + var7Lifetime1, rl.field_d[var11Lifetime1]);
-                  var10Lifetime1Lifetime1 = var14.field_k.a(var8Lifetime1 - var8Lifetime1 / 7, (byte) 110) ? 1 : 0;
+                  var10Lifetime1Lifetime1 = var14.field_k.isBitSet(var8Lifetime1 - var8Lifetime1 / 7, (byte) 110) ? 1 : 0;
                   var11Lifetime1Lifetime1 = 4;
                   if (var10Lifetime1Lifetime1 != 0) {
                     var12Lifetime1Lifetime1 = 0;
@@ -1716,8 +1716,8 @@ final class p extends qe {
         p.a(this.field_e, 188, 48, 605, 400, 394, 220);
         jh.a(this.field_e);
         p.b(8, 46, 180, 427, 16777215, 32, 128);
-        h.a(false, 388, 15, true, 80);
-        h.a(false, 426, 617, true, 46);
+        RaiderDefinition.drawTiledPanelBorder(false, 388, 15, true, 80);
+        RaiderDefinition.drawTiledPanelBorder(false, 426, 617, true, 46);
         p.a(8, 47, 172, 425, 256, 32, 8, 128);
         p.a(8, 8, 172, 32, 256, 64, 4, 128);
         p.a(460, 8, 172, 32, 256, 64, 4, 128);
@@ -1747,7 +1747,7 @@ final class p extends qe {
         jh.b();
         this.b(2798);
         jj.field_c = 0;
-        qj.field_c = new ai[49];
+        qj.field_c = new DungeonTileState[49];
         t.field_a = -1;
         bl.a((byte) 124);
         this.e(18239);

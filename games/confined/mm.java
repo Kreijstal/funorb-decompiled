@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mm extends ah {
+final class mm extends AcceleratingProjectile {
     static int[][] field_bb;
-    private pm field_ib;
-    private oi field_db;
+    private TunnelEntity field_ib;
+    private DynamicLight field_db;
     static int[][] field_eb;
     static String field_hb;
     static String field_fb;
@@ -23,7 +23,7 @@ final class mm extends ah {
         field_hb = null;
     }
 
-    final void a(PrimaryNodeDeque param0, byte param1) {
+    final void collectEntityLights(PrimaryNodeDeque param0, byte param1) {
         double[] var13 = null;
         double[] var12 = null;
         double[] var11 = null;
@@ -54,7 +54,7 @@ final class mm extends ah {
         }
     }
 
-    mm(hn param0, ee param1, da param2, pm param3) {
+    mm(GameSession param0, MovingTunnelEntity param1, da param2, TunnelEntity param3) {
         super(param0, 0.2, 0.003, 16.0, param1, SpriteGeometry.field_y);
         double[] var39 = null;
         double[] var38 = null;
@@ -79,7 +79,7 @@ final class mm extends ah {
         double var18Lifetime1;
         double var20Lifetime1;
         double var20Lifetime2;
-        this.field_db = new oi((pm) (this));
+        this.field_db = new DynamicLight((TunnelEntity) (this));
         try {
           this.field_ab = new da(param2);
           var39 = new double[12];
@@ -141,16 +141,16 @@ final class mm extends ah {
           return;
         }
         try {
-          this.a(105, param0);
+          this.onAcceleratingProjectileContact(105, param0);
           if (param1) {
-            this.field_ib = (pm) null;
+            this.field_ib = (TunnelEntity) null;
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "mm.DC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void g(int param0) {
+    final void handleDestruction(int param0) {
         ka var2 = this.a((byte) -126, kj.field_b, 1.5);
         if (param0 != 26402) {
           mm.clearDeclaredStaticReferences(42);
@@ -158,7 +158,7 @@ final class mm extends ah {
         var2.field_M.field_w = 0.5;
     }
 
-    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
+    final void drawInTunnel(PrimaryNodeDeque param0, double param1, int param2, TunnelCamera param3, DynamicLight param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -199,7 +199,7 @@ final class mm extends ah {
             this.a(tk.field_a, this.field_ab, param4, (byte) 64, param1, param0, param3, 512);
           }
           if (param2 > -5) {
-            this.field_ib = (pm) null;
+            this.field_ib = (TunnelEntity) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -285,8 +285,8 @@ final class mm extends ah {
         }
     }
 
-    final void a(int param0, int param1) {
-        pm dupTemp$1 = null;
+    final void updateForTunnelSegment(int param0, int param1) {
+        TunnelEntity dupTemp$1 = null;
         double var3;
         double var5;
         double var7;
@@ -314,14 +314,14 @@ final class mm extends ah {
         if (param0 != 11878) {
           mm.clearDeclaredStaticReferences(-44);
         }
-        super.a(param0 ^ 0, param1);
+        super.updateForTunnelSegment(param0 ^ 0, param1);
     }
 
-    final void a(pm param0, int param1) {
+    final void dispatchEntityCollision(TunnelEntity param0, int param1) {
         try {
           if (param1 > -81) {
             PrimaryNodeDeque var4 = (PrimaryNodeDeque) null;
-            this.a((PrimaryNodeDeque) null, (byte) 122);
+            this.collectEntityLights((PrimaryNodeDeque) null, (byte) 122);
           }
           param0.a(this, false);
         } catch (RuntimeException runtimeException) {

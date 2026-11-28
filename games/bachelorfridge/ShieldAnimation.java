@@ -19,7 +19,7 @@ final class ShieldAnimation extends EventAnimation {
         CreatureActor var7 = null;
         CreatureActor var8 = null;
         int var5 = BachelorFridge.field_y;
-        BattleCreature var6 = this.field_x.creature.a(54, this.screen.field_h);
+        BattleCreature var6 = this.field_x.creature.resolveCreature(54, this.screen.field_h);
         if (var6.isDown(119)) {
           return;
         }
@@ -29,7 +29,7 @@ final class ShieldAnimation extends EventAnimation {
         } else {
           al.a(110, this.field_x.moveId);
           while (var3 != null) {
-            var7 = var3.target.a(-27449, this.screen);
+            var7 = var3.target.resolveCreatureView(-27449, this.screen);
             if (var7 != null) {
               this.addChild(27799, new ActorAnimation(this.screen, var7));
               this.addChild(27799, new TileEffectAnimation(new nd(this.screen, var7.field_s.tileX, var7.field_s.tileY)));
@@ -42,7 +42,7 @@ final class ShieldAnimation extends EventAnimation {
         }
         al.a(110, this.field_x.moveId);
         while (var3 != null) {
-          var8 = var3.target.a(-27449, this.screen);
+          var8 = var3.target.resolveCreatureView(-27449, this.screen);
           if (var8 != null) {
             this.addChild(27799, new ActorAnimation(this.screen, var8));
             this.addChild(27799, new TileEffectAnimation(new nd(this.screen, var8.field_s.tileX, var8.field_s.tileY)));

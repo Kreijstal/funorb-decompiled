@@ -97,7 +97,7 @@ final class SlowAllAnimation extends EventAnimation {
         var3 = null;
         var5 = BachelorFridge.field_y;
         if (!param0) {
-          var9 = this.field_x.creature.a(25, this.screen.field_h);
+          var9 = this.field_x.creature.resolveCreature(25, this.screen.field_h);
           if (var9.isDown(-97)) {
             return;
           }
@@ -105,7 +105,7 @@ final class SlowAllAnimation extends EventAnimation {
           al.a(118, this.field_x.moveId);
           while (var3_ref != null) {
             var3_ref.apply(var9, this.screen.field_h, 12);
-            var10 = var3_ref.target.a(-27449, this.screen);
+            var10 = var3_ref.target.resolveCreatureView(-27449, this.screen);
             this.addChild(27799, new ActorAnimation(this.screen, var10));
             this.addChild(27799, new cb(var10, 6));
             this.addChild(27799, new wn(var10, kna.field_g[5], 24831));
@@ -114,7 +114,7 @@ final class SlowAllAnimation extends EventAnimation {
           return;
         }
         this.field_x = (SlowAllEvent) null;
-        var7 = this.field_x.creature.a(25, this.screen.field_h);
+        var7 = this.field_x.creature.resolveCreature(25, this.screen.field_h);
         if (var7.isDown(-97)) {
           return;
         }
@@ -122,7 +122,7 @@ final class SlowAllAnimation extends EventAnimation {
         al.a(118, this.field_x.moveId);
         while (var3_refLifetime1 != null) {
           var3_refLifetime1.apply(var7, this.screen.field_h, 12);
-          var8 = var3_refLifetime1.target.a(-27449, this.screen);
+          var8 = var3_refLifetime1.target.resolveCreatureView(-27449, this.screen);
           this.addChild(27799, new ActorAnimation(this.screen, var8));
           this.addChild(27799, new cb(var8, 6));
           this.addChild(27799, new wn(var8, kna.field_g[5], 24831));

@@ -107,10 +107,10 @@ final class GameDomainSupport005 {
         try {
           if (MixedSupport076.resourceArchiveState0011 != null &&
             MixedSupport076.resourceArchiveState0011.ensureIndexLoaded((byte) 121) &&
-            MixedSupport076.resourceArchiveState0011.computeBoolean0811("benefits", (byte) -119) &&
+            MixedSupport076.resourceArchiveState0011.tryLoadGroupByName("benefits", (byte) -119) &&
             MixedSupport028.resourceArchiveState0004 != null &&
             MixedSupport028.resourceArchiveState0004.ensureIndexLoaded((byte) 121) &&
-            MixedSupport028.resourceArchiveState0004.computeBoolean0811("benefits", (byte) 102)) {
+            MixedSupport028.resourceArchiveState0004.tryLoadGroupByName("benefits", (byte) 102)) {
             UiComponentPart008.rgbSpriteState0012 = UiComponentPart015.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "headline", "benefits", integerArgument1 + 7802);
             MixedSupport054.rgbSpriteState0019 = UiComponentPart015.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "blurbpane", "benefits", 8192);
             RichTextLayout.rgbSpriteState0015 = UiComponentPart015.computeRgbSprite0704(MixedSupport076.resourceArchiveState0011, "button", "benefits", 8192);

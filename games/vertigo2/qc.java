@@ -120,7 +120,7 @@ abstract class qc extends DualLinkNode {
           as.field_a = param0;
           if (!gl.field_o &&
             qf.field_b < ProxySocketConnector.field_h &&
-            wo.field_s) {
+            PlayerState.field_s) {
             hn.field_n = ek.field_E;
             qf.field_b = 0;
             rl.field_db = or.field_c;

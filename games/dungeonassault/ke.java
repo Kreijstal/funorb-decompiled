@@ -30,10 +30,10 @@ final class ke {
           eh.field_h = dj.field_d;
           cp.field_U = lj.field_g;
           lj.field_g = false;
-          no.field_d = wm.field_g;
+          no.field_d = PackedBitSet.field_g;
           lc.field_c = ak.field_k;
           AchievementIconEntry.field_k = NetworkArchiveRequest.field_C;
-          wm.field_g = param0;
+          PackedBitSet.field_g = param0;
         }
     }
 

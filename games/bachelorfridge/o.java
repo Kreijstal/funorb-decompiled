@@ -53,7 +53,7 @@ final class o extends EventEffect {
             for (var5 = 0; var5 < param1.height; var5++) {
               var6 = param1.tiles[var4_int][var5].occupant;
               if (var6 != null) {
-                var6.g(-116, this.field_f);
+                var6.applyDamageOrHealing(-116, this.field_f);
               }
             }
           }

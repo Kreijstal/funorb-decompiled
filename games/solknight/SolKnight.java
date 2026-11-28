@@ -209,7 +209,7 @@ public final class SolKnight extends ab {
           na.a(-13357);
           MouseWheelInput.b(18609);
           SoftwareRasterizer.clearStaticReferences();
-          Archive.b(-127);
+          Archive.clearStaticReferences(-127);
           BitmapFont.clearStaticReferences();
           bk.clearStaticReferences((byte) 84);
           vc.clearStaticReferences(true);
@@ -484,7 +484,7 @@ public final class SolKnight extends ab {
           kb.b((byte) -128);
           if (null != AccountServiceResult.field_g) {
             if (pl.field_d.ensureIndexLoaded((byte) -121) &&
-              pl.field_d.a(2, "basic")) {
+              pl.field_d.tryLoadGroupByName(2, "basic")) {
               if (AccountServiceResult.field_g.ensureIndexLoaded((byte) -121) &&
                 AccountServiceResult.field_g.tryLoadAllGroups(true)) {
                 if (ProxySocketConnector.field_h.ensureIndexLoaded((byte) -121) &&
@@ -843,7 +843,7 @@ public final class SolKnight extends ab {
               if (!RandomAccessCacheFile.b((byte) -104)) {
                 nh.a((byte) 3);
               } else {
-                Archive.a(true);
+                Archive.showLoginForm(true);
               }
               je.field_d = 2;
               return;

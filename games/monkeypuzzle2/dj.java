@@ -26,13 +26,13 @@ final class dj {
         if (!fj.field_B.ensureIndexLoaded(116)) {
           return vb.field_i;
         }
-        if (!fj.field_B.a(0, "commonui")) {
+        if (!fj.field_B.tryLoadGroupByName(0, "commonui")) {
           return ed.field_a + " - " + fj.field_B.getGroupLoadPercentByName("commonui", (byte) -81) + "%";
         }
         if (!hf.field_a.ensureIndexLoaded(102)) {
           return DiskCacheWorker.field_b;
         }
-        if (!hf.field_a.a(0, "commonui")) {
+        if (!hf.field_a.tryLoadGroupByName(0, "commonui")) {
           return ek.field_e + " - " + hf.field_a.getGroupLoadPercentByName("commonui", (byte) -81) + "%";
         }
         var1 = 112 % ((param0 - 21) / 62);
@@ -40,7 +40,7 @@ final class dj {
           return h.field_f;
         }
         if (!ii.field_m.tryLoadAllGroups(0)) {
-          return db.field_b + " - " + ii.field_m.b(true) + "%";
+          return db.field_b + " - " + ii.field_m.getArchiveLoadPercent(true) + "%";
         }
         return eg.field_h;
     }

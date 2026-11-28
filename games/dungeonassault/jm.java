@@ -14,22 +14,22 @@ final class jm {
 
     final static void a(int param0, int param1, int param2, int param3) {
         if (param1 % 7 != 0 &&
-          gm.field_d.field_k.a(-(param1 / 7) + (-1 + param1), (byte) 105)) {
+          gm.field_d.field_k.isBitSet(-(param1 / 7) + (-1 + param1), (byte) 105)) {
           ol.field_a[0].b(param3, param0, 256);
         }
         if (param1 % 7 != 6 &&
-          gm.field_d.field_k.a(param1 - param1 / 7, (byte) 109)) {
+          gm.field_d.field_k.isBitSet(param1 - param1 / 7, (byte) 109)) {
           ol.field_a[2].b(param3, param0, 256);
         }
         if (param2 != 3) {
           jm.a(125, 94, 37, 21);
         }
         if (6 < param1 &&
-          gm.field_d.field_k.a(param1 + 35, (byte) 117)) {
+          gm.field_d.field_k.isBitSet(param1 + 35, (byte) 117)) {
           ol.field_a[1].b(param3, param0, 256);
         }
         if (42 > param1 &&
-          gm.field_d.field_k.a(param1 + 42, (byte) 114)) {
+          gm.field_d.field_k.isBitSet(param1 + 42, (byte) 114)) {
           ol.field_a[3].b(param3, param0, 256);
         }
     }

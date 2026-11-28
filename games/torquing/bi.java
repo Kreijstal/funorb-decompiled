@@ -111,17 +111,17 @@ final class bi {
           this.field_w = false;
           this.field_T = ki.a("ff9040", "ffffff", 93, this.field_T);
           this.field_z = 0;
-          this.field_k = this.field_d.a(-31648);
+          this.field_k = this.field_d.getTimeLimitMillis(-31648);
           this.field_r = 3000;
           this.field_c = 0;
-          this.field_v = this.field_d.a(false);
+          this.field_v = this.field_d.getViewPresetIndex(false);
           ap.a(ProxySocketConnector.field_i, AccountNameAvailabilityValidator.field_m[this.field_v]);
           stackIn_30_1 = (this.field_L == 18);
           this.field_y = stackIn_30_1;
           this.field_J = false;
           this.field_h = Double.NEGATIVE_INFINITY;
           this.field_K = -1.0;
-          var5 = this.field_d.a(-100, false).field_k;
+          var5 = this.field_d.getTerrainModel(-100, false).field_k;
           for (var6 = var5.field_k - 1; var6 >= 0; var6--) {
             if (this.field_h < re.field_d[1] * (double)var5.field_y[var6]) {
               this.field_h = re.field_d[1] * (double)var5.field_y[var6];
@@ -934,7 +934,7 @@ final class bi {
           var2_int = this.field_q - 1;
           if (var2_int >= 0 &&
             var2_int < 8) {
-            if (1 == this.field_d.a(false) &&
+            if (1 == this.field_d.getViewPresetIndex(false) &&
               null != hi.field_h[var2_int]) {
               hi.field_h[var2_int].b(0, 0);
             } else {
@@ -1354,7 +1354,7 @@ final class bi {
             re.field_d[0] = 80.0 * (double)be.field_l[this.field_x] / 65535.0;
             re.field_d[1] = (double)be.field_o[this.field_x] * 80.0 / 65535.0;
             this.field_h = Double.NEGATIVE_INFINITY;
-            var8_ref_pj = this.field_d.a(-100, false).field_k;
+            var8_ref_pj = this.field_d.getTerrainModel(-100, false).field_k;
             for (var9_int = -1 + var8_ref_pj.field_k; var9_int >= 0; var9_int--) {
               this.field_h = Math.max(this.field_h, re.field_d[1] * (double)var8_ref_pj.field_y[var9_int] + (1000.0 + (double)var8_ref_pj.field_j[var9_int] * re.field_d[0]) + (double)var8_ref_pj.field_v[var9_int] * re.field_d[2]);
             }
@@ -1438,7 +1438,7 @@ final class bi {
             }
           }
           if (ig.field_q == this.field_d) {
-            var36 = this.field_d.f(14);
+            var36 = this.field_d.getStartPose(14);
             this.field_P.field_g[0] = var36[0];
             this.field_P.field_g[2] = var36[2];
           }

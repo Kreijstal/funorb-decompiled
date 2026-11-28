@@ -95,7 +95,7 @@ final class oh extends bl {
             var4 = (ResourceArchive) null;
             oh.a(-87, 94, (ResourceArchive) null);
           }
-          var5 = param2.e(param1, 1);
+          var5 = param2.getFlatFile(param1, 1);
           var3 = var5;
           if (var5 == null) {
             return null;

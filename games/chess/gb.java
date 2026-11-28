@@ -528,10 +528,10 @@ abstract class gb extends GameAppletShell {
         if (il.field_a == 2) {
           if (null != qa.field_c &&
             qa.field_c.ensureIndexLoaded((byte) 124)) {
-            if (!qa.field_c.a(4, "")) {
+            if (!qa.field_c.hasGroupName(4, "")) {
               qa.field_c = null;
             } else {
-              if (qa.field_c.b("", 100)) {
+              if (qa.field_c.tryLoadGroupByName("", 100)) {
                 FrameTimer.a(qa.field_c, -44);
                 qa.field_c = null;
                 ob.f(0);

@@ -75,7 +75,7 @@ abstract class tk {
                 param1 > 0) {
                 discarded$18 = new IntrusiveDeque();
                 bq.field_E = param1;
-                wo.field_S = param4;
+                PlayerState.field_S = param4;
                 return;
               }
               if (param1 == 0) {
@@ -92,7 +92,7 @@ abstract class tk {
                 param1 > 0) {
                 discarded$12 = new IntrusiveDeque();
                 bq.field_E = param1;
-                wo.field_S = param4;
+                PlayerState.field_S = param4;
                 return;
               }
             } else {
@@ -103,7 +103,7 @@ abstract class tk {
                 param1 > 0) {
                 discarded$13 = new IntrusiveDeque();
                 bq.field_E = param1;
-                wo.field_S = param4;
+                PlayerState.field_S = param4;
                 return;
               }
             }
@@ -130,7 +130,7 @@ abstract class tk {
                   param1 > 0) {
                   discarded$16 = new IntrusiveDeque();
                   bq.field_E = param1;
-                  wo.field_S = param4;
+                  PlayerState.field_S = param4;
                   return;
                 }
                 if (param1 == 0) {
@@ -144,7 +144,7 @@ abstract class tk {
                   param1 > 0) {
                   discarded$14 = new IntrusiveDeque();
                   bq.field_E = param1;
-                  wo.field_S = param4;
+                  PlayerState.field_S = param4;
                   return;
                 }
               } else {
@@ -155,7 +155,7 @@ abstract class tk {
                   param1 > 0) {
                   discarded$15 = new IntrusiveDeque();
                   bq.field_E = param1;
-                  wo.field_S = param4;
+                  PlayerState.field_S = param4;
                   return;
                 }
               }
@@ -165,7 +165,7 @@ abstract class tk {
           }
         }
         bq.field_E = param1;
-        wo.field_S = param4;
+        PlayerState.field_S = param4;
     }
 
     final static boolean c(byte param0) {

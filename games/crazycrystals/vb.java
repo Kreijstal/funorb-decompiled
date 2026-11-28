@@ -4,7 +4,7 @@
 final class vb extends pn implements Cloneable {
     static long field_m;
 
-    final void a(int param0, int param1, int param2, f[][] param3, int param4, int param5, int param6, int param7) {
+    final void a(int param0, int param1, int param2, PuzzleTile[][] param3, int param4, int param5, int param6, int param7) {
         try {
           if (param0 < 92) {
             this.a(true, false);
@@ -21,7 +21,7 @@ final class vb extends pn implements Cloneable {
         return 2;
     }
 
-    final nj a(int param0, nj param1) {
+    final nj showTileTooltip(int param0, nj param1) {
         RuntimeException var3 = null;
         nj stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -30,7 +30,7 @@ final class vb extends pn implements Cloneable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 23525) {
-            this.b(-84, -83, 69, false, 69, 108);
+            this.drawTileForeground(-84, -83, 69, false, 69, 108);
           }
           stackIn_3_0 = PacketBuffer.a(dq.field_F, param1, new vb(new kp(-1)), (byte) -83, nk.field_m);
           return stackIn_3_0;
@@ -48,9 +48,9 @@ final class vb extends pn implements Cloneable {
         }
     }
 
-    final f a(int param0, ea param1, int param2, int param3, byte param4, int param5, f[][] param6) {
+    final PuzzleTile a(int param0, ea param1, int param2, int param3, byte param4, int param5, PuzzleTile[][] param6) {
         RuntimeException var8 = null;
-        f stackIn_3_0 = null;
+        PuzzleTile stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -64,7 +64,7 @@ final class vb extends pn implements Cloneable {
           mb.field_g = mb.field_g - ob.field_l;
           wd.field_j = wd.field_j - 1;
           fn.field_h.a(256, 12 * (param5 + param2), (param0 + param3) * 12, 0, (byte) -111);
-          this.field_l.a((byte) 92, param1);
+          this.field_l.copyTileAttribution((byte) 92, param1);
           stackIn_3_0 = this.field_l.a(param0, param1, param2, param3, (byte) -109, param5, param6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -87,11 +87,11 @@ final class vb extends pn implements Cloneable {
         }
     }
 
-    vb(f param0) {
+    vb(PuzzleTile param0) {
         super(param0);
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
+    final PuzzleTile a(PuzzleTile param0, int param1, int param2, PuzzleTile[][] param3, RgbSprite[] param4, byte param5) {
         RuntimeException var7 = null;
         ig stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -103,7 +103,7 @@ final class vb extends pn implements Cloneable {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          we.field_h = we.field_h + 24;
+          LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 24;
           fp.field_a = fp.field_a + 24;
           je.field_j = je.field_j + 12;
           b.field_a = b.field_a + 12;
@@ -112,7 +112,7 @@ final class vb extends pn implements Cloneable {
           }
           cn.field_e.a(64, 12 * param2, 12 * param1, 0, (byte) -111);
           stackIn_3_0 = new ig(param0, bd.field_n, this.field_l, true);
-          return (f) ((Object) stackIn_3_0);
+          return (PuzzleTile) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -139,7 +139,7 @@ final class vb extends pn implements Cloneable {
         }
     }
 
-    final void b(int param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final void drawTileForeground(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var7 = -78 % ((74 - param0) / 41);
         if (param1 != 24) {
           de.field_k.b(param4, param5 - param2, 2 * param1, 3 * param2);
@@ -152,11 +152,11 @@ final class vb extends pn implements Cloneable {
         de.field_k.b(param4, param5 - param2, 2 * param1, 3 * param2);
     }
 
-    final f a(int param0, byte param1, int param2) {
+    final PuzzleTile a(int param0, byte param1, int param2) {
         if (param1 != -110) {
-          return (f) null;
+          return (PuzzleTile) null;
         }
-        return (f) (this);
+        return (PuzzleTile) (this);
     }
 
     static {

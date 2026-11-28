@@ -19,7 +19,7 @@ final class CreatureType {
     int[] field_l;
     si field_k;
 
-    final int a(pd param0, int param1, boolean[] param2) {
+    final int findAbilitySlotForFood(pd param0, int param1, boolean[] param2) {
         int var4_int = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -75,7 +75,7 @@ final class CreatureType {
         }
     }
 
-    final int a(int param0, pd param1, boolean[] param2) {
+    final int findUnlockBranchForFood(int param0, pd param1, boolean[] param2) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_17_0 = 0;
@@ -142,7 +142,7 @@ final class CreatureType {
           }
           if (param0 < 2) {
             var5 = (boolean[]) null;
-            this.a(-53, (pd) null, (boolean[]) null);
+            this.findUnlockBranchForFood(-53, (pd) null, (boolean[]) null);
           }
           stackIn_41_0 = -1;
           return stackIn_41_0;
@@ -166,7 +166,7 @@ final class CreatureType {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, int param4) {
+    final static void drawMoveIcon(boolean param0, int param1, int param2, int param3, int param4) {
         int var6;
         int var7;
         int var8;
@@ -229,7 +229,7 @@ final class CreatureType {
           }
           return;
         }
-        CreatureType.a((byte) 117);
+        CreatureType.initializeAttackShapeNameIndex((byte) 117);
         var11 = al.a(-72, param3);
         var6Lifetime1 = var11.field_h;
         var7Lifetime1 = var11.kind;
@@ -375,7 +375,7 @@ final class CreatureType {
         return var1;
     }
 
-    final static void a(byte param0) {
+    final static void initializeAttackShapeNameIndex(byte param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -383,7 +383,7 @@ final class CreatureType {
         var2 = BachelorFridge.field_y;
         try {
           if (param0 > -59) {
-            CreatureType.a((byte) 26);
+            CreatureType.initializeAttackShapeNameIndex((byte) 26);
           }
           dl.field_h = new IntrusiveNodeHashTable(16);
           for (var1_int = 0; var1_int < ol.field_l.length; var1_int++) {

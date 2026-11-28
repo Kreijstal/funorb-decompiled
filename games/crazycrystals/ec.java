@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ec extends ln {
+final class ec extends ScoreModifier {
     static String field_n;
     static IntrusiveDeque field_l;
     static int[] field_i;
@@ -83,7 +83,7 @@ final class ec extends ln {
         super(param0, param1, param2, param3);
     }
 
-    final int a(int param0, byte param1) {
+    final int countPlayerApplications(int param0, byte param1) {
         int var3 = 111 / ((55 - param1) / 50);
         if (this.field_c <= 1) {
           return 0;

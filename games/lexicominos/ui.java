@@ -100,7 +100,7 @@ class ui extends cf {
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ResourceArchive.d(param1, (byte) 50)) {
+          if (ResourceArchive.containsNonAsciiAlphanumeric(param1, (byte) 50)) {
             return false;
           }
           if (hd.a(param1, 17)) {

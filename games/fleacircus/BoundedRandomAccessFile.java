@@ -333,14 +333,14 @@ final class BoundedRandomAccessFile {
                         var18 = -1 + (-var17 + bl.field_f);
                       }
                       if (var17 < 0) {
-                        ResourceArchive.a(param5, var17 + var18, var16Lifetime2, param2, (byte) -68);
+                        ResourceArchive.blendHalfRgbSpan(param5, var17 + var18, var16Lifetime2, param2, (byte) -68);
                       } else {
-                        ResourceArchive.a(param5, var18, var17 + var16Lifetime2, param2, (byte) -84);
+                        ResourceArchive.blendHalfRgbSpan(param5, var18, var17 + var16Lifetime2, param2, (byte) -84);
                       }
                     } else {
                       if (var17 >= 0 &&
                         bl.field_f > var17) {
-                        ResourceArchive.a(param5, var18, var17 + var16Lifetime2, param2, (byte) -122);
+                        ResourceArchive.blendHalfRgbSpan(param5, var18, var17 + var16Lifetime2, param2, (byte) -122);
                       }
                     }
                   }
@@ -409,16 +409,16 @@ final class BoundedRandomAccessFile {
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
                     var16Lifetime1 < bl.field_f) {
-                    ResourceArchive.a(param5, var17Lifetime1, var15Lifetime1 + var16Lifetime1, param2, (byte) -120);
+                    ResourceArchive.blendHalfRgbSpan(param5, var17Lifetime1, var15Lifetime1 + var16Lifetime1, param2, (byte) -120);
                   }
                 } else {
                   if (bl.field_f <= var16Lifetime1 + var17Lifetime1) {
                     var17Lifetime1 = -1 - var16Lifetime1 + bl.field_f;
                   }
                   if (var16Lifetime1 < 0) {
-                    ResourceArchive.a(param5, var16Lifetime1 + var17Lifetime1, var15Lifetime1, param2, (byte) -113);
+                    ResourceArchive.blendHalfRgbSpan(param5, var16Lifetime1 + var17Lifetime1, var15Lifetime1, param2, (byte) -113);
                   } else {
-                    ResourceArchive.a(param5, var17Lifetime1, var16Lifetime1 + var15Lifetime1, param2, (byte) -98);
+                    ResourceArchive.blendHalfRgbSpan(param5, var17Lifetime1, var16Lifetime1 + var15Lifetime1, param2, (byte) -98);
                   }
                 }
               }

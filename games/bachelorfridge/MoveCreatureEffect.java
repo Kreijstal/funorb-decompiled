@@ -72,7 +72,7 @@ final class MoveCreatureEffect extends EventEffect {
         if (param2 != 12) {
           field_k = (du) null;
         }
-        BattleCreature var5 = this.target.a(param2 ^ 30, param1);
+        BattleCreature var5 = this.target.resolveCreature(param2 ^ 30, param1);
         BattleCreature var4 = var5;
         if (null != param1.tiles[this.field_i][this.field_l].occupant) {
           return;
@@ -82,7 +82,7 @@ final class MoveCreatureEffect extends EventEffect {
           var4.tileY = this.field_l;
           var4.tileX = this.field_i;
           param1.tiles[this.field_i][this.field_l].occupant = var4;
-          var4.f(32);
+          var4.applyTileArrival(32);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "bj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

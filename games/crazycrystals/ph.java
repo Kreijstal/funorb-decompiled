@@ -155,7 +155,7 @@ final class ph extends og implements im, vd {
     final static void a(int param0, byte param1, int param2, ta param3) {
         try {
           pd.field_g[param2] = pd.field_g[param2] + param0;
-          bp.field_b.addElement(new kk(param3.field_j * 15 + (-30 + m.field_l[param2] * 15), -15 + 15 * param3.field_g, Integer.toString(param0)));
+          bp.field_b.addElement(new FloatingScoreLabel(param3.field_j * 15 + (-30 + m.field_l[param2] * 15), -15 + 15 * param3.field_g, Integer.toString(param0)));
           if (param1 != 107) {
             ta var5 = (ta) null;
             ph.a(67, (byte) 78, -61, (ta) null);

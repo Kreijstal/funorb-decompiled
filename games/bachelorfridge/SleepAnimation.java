@@ -28,7 +28,7 @@ final class SleepAnimation extends EventAnimation {
     private final void d(int param0) {
         CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
-        BattleCreature var2 = this.field_x.creature.a(74, this.screen.field_h);
+        BattleCreature var2 = this.field_x.creature.resolveCreature(74, this.screen.field_h);
         if (var2.isDown(-117)) {
           return;
         }
@@ -38,7 +38,7 @@ final class SleepAnimation extends EventAnimation {
         DamageEffect var3 = (DamageEffect) (this.field_x.effects.beginForward((byte) 90));
         al.a(107, this.field_x.moveId);
         while (var3 != null) {
-          var4 = var3.target.a(-27449, this.screen);
+          var4 = var3.target.resolveCreatureView(-27449, this.screen);
           var4.b(param0 + 10648, 6);
           var4.a(24831, 95, kna.field_g[29]);
           var3.apply(var2, this.screen.field_h, 12);

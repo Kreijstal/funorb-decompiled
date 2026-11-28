@@ -259,7 +259,7 @@ abstract class GameClient extends AppletShell {
           ProxyAuthenticationRequiredException.field_a = false;
         }
         if (sa.field_k == 0 &&
-          ResourceArchive.b(116)) {
+          ResourceArchive.ensureArchiveMasterIndexLoaded(116)) {
           sa.field_k = 1;
         }
         if (1 == sa.field_k) {
@@ -275,8 +275,8 @@ abstract class GameClient extends AppletShell {
         if (sa.field_k == 2) {
           if (FullscreenFocusCanvas.field_a != null &&
             FullscreenFocusCanvas.field_a.ensureIndexLoaded(-114)) {
-            if (FullscreenFocusCanvas.field_a.a("", (byte) -16)) {
-              if (FullscreenFocusCanvas.field_a.b("", false)) {
+            if (FullscreenFocusCanvas.field_a.hasGroupName("", (byte) -16)) {
+              if (FullscreenFocusCanvas.field_a.tryLoadGroupByName("", false)) {
                 cg.a((byte) -99, FullscreenFocusCanvas.field_a);
                 FullscreenFocusCanvas.field_a = null;
                 vc.e((byte) -44);

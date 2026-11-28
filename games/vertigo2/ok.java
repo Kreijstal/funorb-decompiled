@@ -20,14 +20,14 @@ final class ok {
         if (param7 == 12423) {
           param11 = ve.a(param1, param0, param9, param7 + 9488, param11, param12, param2);
           in.a(param8, param3, param6, param11, param5, param9, param10, param13, (byte) -66, param4);
-          ho.a(24285, param3, param10);
+          BlastDebrisBatch.refreshSocialListPanels(24285, param3, param10);
           ko.a(param11, param10, param12, true);
           return;
         }
         field_a = (String) null;
         param11 = ve.a(param1, param0, param9, param7 + 9488, param11, param12, param2);
         in.a(param8, param3, param6, param11, param5, param9, param10, param13, (byte) -66, param4);
-        ho.a(24285, param3, param10);
+        BlastDebrisBatch.refreshSocialListPanels(24285, param3, param10);
         ko.a(param11, param10, param12, true);
     }
 

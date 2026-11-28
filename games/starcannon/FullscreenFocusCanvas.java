@@ -272,7 +272,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments(new Object[]{ResourceArchive.a(BoundedRandomAccessFile.field_a, param4 + 16779)}, ll.b(114), "zap", -27504);
+                  JavaScriptBridge.callWithArguments(new Object[]{ResourceArchive.decodeBase37DisplayName(BoundedRandomAccessFile.field_a, param4 + 16779)}, ll.b(114), "zap", -27504);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

@@ -257,7 +257,7 @@ final class BitPacketBuffer extends PacketBuffer {
           pl.field_n = 1;
           oo.field_i = true;
           hn.field_t = false;
-          cn.field_r = false;
+          LevelCamera.field_r = false;
           lf.field_C = false;
           return;
         }
@@ -268,13 +268,13 @@ final class BitPacketBuffer extends PacketBuffer {
           lf.field_C = true;
           pn.field_L = 1;
           hn.field_t = true;
-          cn.field_r = true;
+          LevelCamera.field_r = true;
           return;
         }
         if (var2 != 2) {
           return;
         }
-        cn.field_r = true;
+        LevelCamera.field_r = true;
         hn.field_t = true;
         pl.field_n = 0;
         be.field_q = true;

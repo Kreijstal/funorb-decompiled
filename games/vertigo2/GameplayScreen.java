@@ -4,13 +4,13 @@
 final class GameplayScreen {
     private int field_N;
     private IntrusiveDeque field_z;
-    private wo[][] field_K;
+    private PlayerState[][] field_K;
     boolean field_i;
     static UiPanel field_l;
     private boolean[] field_p;
     private long field_j;
     private int field_x;
-    private bh field_m;
+    private LevelSimulation field_m;
     int field_s;
     private int field_k;
     private int[] field_q;
@@ -24,8 +24,8 @@ final class GameplayScreen {
     private Sprite field_b;
     static String field_e;
     private boolean field_g;
-    private am field_G;
-    lj field_D;
+    private LevelRenderer field_G;
+    MatchSession field_D;
     private int field_u;
     private int field_t;
     private boolean field_o;
@@ -72,7 +72,7 @@ final class GameplayScreen {
             }
           }
           jq.field_e = jq.field_e | var4_int;
-          bg.field_b.addFirst(new fa(param1), false);
+          LevelRenderable.field_b.addFirst(new fa(param1), false);
           if (!this.field_c) {
             fg.field_eb.addFirst(new nf(param1, param2, qr.field_j, sk.field_b, re.field_j, ki.field_c), false);
           }
@@ -94,7 +94,7 @@ final class GameplayScreen {
           uh.field_Wb.writeInt(mc.field_e, param1 ^ -24066);
           uh.field_Wb.writeInt(sl.field_l, param1 + 24066);
           uh.field_Wb.writeInt(ci.field_b, param1 ^ -24066);
-          uh.field_Wb.writeInt(lj.field_k, 0);
+          uh.field_Wb.writeInt(MatchSession.field_k, 0);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "tr.J(" + param0 + ',' + param1 + ')');
         }
@@ -153,8 +153,8 @@ final class GameplayScreen {
     }
 
     final void a(boolean param0, boolean param1) {
-        am stackIn_469_0 = null;
-        bh stackIn_469_1 = null;
+        LevelRenderer stackIn_469_0 = null;
+        LevelSimulation stackIn_469_1 = null;
         int stackIn_469_2 = 0;
         boolean stackIn_472_3 = false;
         hd stackIn_537_0 = null;
@@ -324,26 +324,26 @@ final class GameplayScreen {
                   break;
                 case 5:
                   ci.field_b = ci.field_b + 1;
-                  lj.field_k = lj.field_k + sl.field_l;
+                  MatchSession.field_k = MatchSession.field_k + sl.field_l;
                   if (var12 == 0) {
                     break;
                   }
                 default:
                   break;
                 case 7:
-                  lj.field_k = lj.field_k - sl.field_l;
+                  MatchSession.field_k = MatchSession.field_k - sl.field_l;
                   ci.field_b = ci.field_b - 1;
                   if (var12 == 0) {
                     break;
                   }
                 case 6:
-                  lj.field_k = lj.field_k - ci.field_b;
+                  MatchSession.field_k = MatchSession.field_k - ci.field_b;
                   sl.field_l = sl.field_l - 1;
                   if (var12 == 0) {
                     break;
                   }
                 case 4:
-                  lj.field_k = lj.field_k + ci.field_b;
+                  MatchSession.field_k = MatchSession.field_k + ci.field_b;
                   sl.field_l = sl.field_l + 1;
                   if (var12 == 0) {
                     break;
@@ -355,13 +355,13 @@ final class GameplayScreen {
               }
             }
           }
-          if (this.field_D.field_r.h(9979) == 0 &&
+          if (this.field_D.field_r.getSimulationPhase(9979) == 0 &&
             this.field_D.field_r.field_n < 100) {
             bm.a(rf.field_o, false, 4);
           }
-          var3_int = this.field_D.b(-6133);
+          var3_int = this.field_D.getLevelIndex(-6133);
           if (null == fo.field_e &&
-            this.field_D.field_r.h(9979) == 1) {
+            this.field_D.field_r.getSimulationPhase(9979) == 1) {
             bm.a(up.field_B[var3_int % up.field_B.length], false, 4);
           }
           this.field_s = this.field_s - 1;
@@ -575,27 +575,27 @@ final class GameplayScreen {
                     break;
                   case 5:
                     ci.field_b = ci.field_b + 1;
-                    lj.field_k = lj.field_k + sl.field_l;
+                    MatchSession.field_k = MatchSession.field_k + sl.field_l;
                     if (var12 == 0) {
                       break;
                     }
                     break;
                   case 6:
                     sl.field_l = sl.field_l - 1;
-                    lj.field_k = lj.field_k - ci.field_b;
+                    MatchSession.field_k = MatchSession.field_k - ci.field_b;
                     if (var12 == 0) {
                       break;
                     }
                   default:
                     break;
                   case 7:
-                    lj.field_k = lj.field_k - sl.field_l;
+                    MatchSession.field_k = MatchSession.field_k - sl.field_l;
                     ci.field_b = ci.field_b - 1;
                     if (var12 == 0) {
                       break;
                     }
                   case 4:
-                    lj.field_k = lj.field_k + ci.field_b;
+                    MatchSession.field_k = MatchSession.field_k + ci.field_b;
                     sl.field_l = sl.field_l + 1;
                     if (var12 == 0) {
                       break;
@@ -623,9 +623,9 @@ final class GameplayScreen {
             if (this.field_o) {
               if ((!MouseWheelInput.field_a) &&
                 (!tf.a((byte) 49))) {
-                var6 = this.field_G.a((byte) -126);
+                var6 = this.field_G.getRequestedCameraHeading((byte) -126);
                 if (UiPanel.field_eb[s.field_y] ||
-                  UiPanel.field_eb[am.field_t]) {
+                  UiPanel.field_eb[LevelRenderer.field_t]) {
                   var5 = var5 | lp.field_B[(var6 + 0) % 4];
                 }
                 if (UiPanel.field_eb[ga.field_gb] ||
@@ -642,9 +642,9 @@ final class GameplayScreen {
                 }
               }
             } else {
-              var6 = this.field_G.a((byte) -126);
+              var6 = this.field_G.getRequestedCameraHeading((byte) -126);
               if (UiPanel.field_eb[s.field_y] ||
-                UiPanel.field_eb[am.field_t]) {
+                UiPanel.field_eb[LevelRenderer.field_t]) {
                 var5 = var5 | lp.field_B[(var6 + 0) % 4];
               }
               if (UiPanel.field_eb[ga.field_gb] ||
@@ -674,8 +674,8 @@ final class GameplayScreen {
           else {
             stackIn_472_3 = true;
           }
-          ((am) (Object) stackIn_469_0).a(stackIn_469_1, (byte) stackIn_469_2, stackIn_472_3, this.field_n);
-          if (!this.field_D.field_r.f(17940)) {
+          ((LevelRenderer) (Object) stackIn_469_0).advanceMatchRenderState(stackIn_469_1, (byte) stackIn_469_2, stackIn_472_3, this.field_n);
+          if (!this.field_D.field_r.isLevelActive(17940)) {
             var4 = 0;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -684,13 +684,13 @@ final class GameplayScreen {
             if (this.field_w &&
               jq.a((byte) 29) < 10 &&
               this.field_D.field_r.field_n > 100 &&
-              this.field_D.field_r.h(9979) == 1) {
+              this.field_D.field_r.getSimulationPhase(9979) == 1) {
               this.field_w = false;
             }
             this.field_L[this.field_B] = var4;
             var5 = var3_int;
-            this.field_D.a(this.field_L, 20, this.field_F);
-            var3_int = this.field_D.b(-6133);
+            this.field_D.tickMatch(this.field_L, 20, this.field_F);
+            var3_int = this.field_D.getLevelIndex(-6133);
             if (var5 != var3_int &&
               var3_int < 10) {
               this.field_w = true;
@@ -717,16 +717,16 @@ final class GameplayScreen {
                   break;
               }
             }
-            if (this.field_D.c(-3317)) {
+            if (this.field_D.hasReachedLevelLimit(-3317)) {
               if (this.field_D.field_j != 3) {
                 ln.field_d.a(2, false);
                 lc.field_d = false;
                 an.field_c = true;
                 if (var12 != 0) {
-                  gj.a((byte) -78, true, am.field_n, 20);
+                  gj.a((byte) -78, true, LevelRenderer.field_n, 20);
                 }
               } else {
-                gj.a((byte) -78, true, am.field_n, 20);
+                gj.a((byte) -78, true, LevelRenderer.field_n, 20);
               }
             }
             decompiledFrameRemainder0 = (var12 != 0);
@@ -827,7 +827,7 @@ final class GameplayScreen {
         int var8 = 0;
         int var4Lifetime1;
         try {
-          var2_int = this.field_D.b(-6133);
+          var2_int = this.field_D.getLevelIndex(-6133);
           if (qe.field_U.length > var2_int &&
             this.field_D.field_j == 0) {
             if (this.field_w) {
@@ -842,13 +842,13 @@ final class GameplayScreen {
               var8 = var8 + (var7 / 2 + var5);
               SoftwareRasterizer.drawHorizontalLine(320 - (var4 - 30) / 2, var8, var4 - 30, 5921370);
               if (this.field_D.field_r.field_n >= 100 &&
-                1 == this.field_D.field_r.h(9979)) {
+                1 == this.field_D.field_r.getSimulationPhase(9979)) {
                 var8 += 5;
-                var4Lifetime1 = va.field_s.a(1, bg.field_a);
-                va.field_s.a(bg.field_a, 16777215, -1, 320, var8 + va.field_s.field_k, 2);
+                var4Lifetime1 = va.field_s.a(1, LevelRenderable.field_a);
+                va.field_s.a(LevelRenderable.field_a, 16777215, -1, 320, var8 + va.field_s.field_k, 2);
               }
             }
-            if (this.field_D.field_r.h(9979) == 1) {
+            if (this.field_D.field_r.getSimulationPhase(9979) == 1) {
               mo.a(true);
             }
           }
@@ -883,7 +883,7 @@ final class GameplayScreen {
 
     final void e(int param0) {
         try {
-          this.field_G.c((byte) 122);
+          this.field_G.resetAvatarAndBlastEffects((byte) 122);
           if (param0 > -62) {
             this.field_C = 108;
           }
@@ -947,26 +947,26 @@ final class GameplayScreen {
               if (jq.field_e == 0) {
                 if (uh.field_Xb != null) {
                   var3_int = param1 ? 1 : 0;
-                  gj.a((byte) -113, var3_int != 0, am.field_n, 5);
+                  gj.a((byte) -113, var3_int != 0, LevelRenderer.field_n, 5);
                   if (var4 == 0) {
                     return;
                   }
                 }
                 if (j.field_n == null) {
                   var3_int = param1 ? 1 : 0;
-                  gj.a((byte) -85, var3_int != 0, am.field_n, 0);
+                  gj.a((byte) -85, var3_int != 0, LevelRenderer.field_n, 0);
                   if (var4 == 0) {
                     return;
                   }
                 }
                 var3_int = param1 ? 1 : 0;
-                gj.a((byte) -100, var3_int != 0, am.field_n, 19);
+                gj.a((byte) -100, var3_int != 0, LevelRenderer.field_n, 19);
                 if (var4 == 0) {
                   return;
                 }
               }
               var3_intLifetime3 = param1 ? 1 : 0;
-              gj.a((byte) -53, var3_intLifetime3 != 0, am.field_n, 9);
+              gj.a((byte) -53, var3_intLifetime3 != 0, LevelRenderer.field_n, 9);
               if (var4 == 0) {
                 return;
               }
@@ -976,13 +976,13 @@ final class GameplayScreen {
               mb.field_y != null ||
               null != j.field_n) {
               var3_intLifetime1 = param1 ? 1 : 0;
-              gj.a((byte) 100, var3_intLifetime1 != 0, am.field_n, 10);
+              gj.a((byte) 100, var3_intLifetime1 != 0, LevelRenderer.field_n, 10);
               if (var4 == 0) {
                 return;
               }
             }
             var3_intLifetime2 = param1 ? 1 : 0;
-            gj.a((byte) 121, var3_intLifetime2 != 0, am.field_n, 0);
+            gj.a((byte) 121, var3_intLifetime2 != 0, LevelRenderer.field_n, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1023,7 +1023,7 @@ final class GameplayScreen {
               if (stackIn_48_0 < 0) {
                 if (this.field_g &&
                   var3_int == 9 &&
-                  param0.field_z != this.field_D.field_r.g(param1 ^ 116)) {
+                  param0.field_z != this.field_D.field_r.computeSimulationChecksum(param1 ^ 116)) {
                   lf.d(param1 + 77, 0);
                   rm.b((byte) -79);
                 }
@@ -1031,15 +1031,15 @@ final class GameplayScreen {
                   this.field_F[this.field_B]) {
                   this.field_x = this.field_x + 1;
                 }
-                this.field_D.a(this.field_L, param1 ^ 31, this.field_F);
+                this.field_D.tickMatch(this.field_L, param1 ^ 31, this.field_F);
                 if (this.field_B >= 0 &&
                   this.field_D.field_j == 1 &&
-                  15 <= this.field_D.b(-6133) - (this.field_D.field_i ^ 4012)) {
+                  15 <= this.field_D.getLevelIndex(-6133) - (this.field_D.field_i ^ 4012)) {
                   this.a(param1 ^ 1231, 10, 245);
                 }
                 var4 = 0;
                 while (!(this.field_D.field_l.length <= var4)) {
-                  this.field_K[var3_int][var4].a(this.field_D.field_r.field_f[var4], 16777215);
+                  this.field_K[var3_int][var4].copyPlayerStateFrom(this.field_D.field_r.field_f[var4], 16777215);
                   var4++;
                 }
               }
@@ -1116,7 +1116,7 @@ final class GameplayScreen {
     }
 
     final void a(byte param0) {
-        wo dupTemp$0 = null;
+        PlayerState dupTemp$0 = null;
         boolean stackIn_214_0 = false;
         int stackIn_235_0 = 0;
         int stackIn_235_1 = 0;
@@ -1282,28 +1282,28 @@ final class GameplayScreen {
                   break;
                 case 4:
                   sl.field_l = sl.field_l + 1;
-                  lj.field_k = lj.field_k + ci.field_b;
+                  MatchSession.field_k = MatchSession.field_k + ci.field_b;
                   if (var8 == 0) {
                     break;
                   }
                   break;
                 case 5:
                   ci.field_b = ci.field_b + 1;
-                  lj.field_k = lj.field_k + sl.field_l;
+                  MatchSession.field_k = MatchSession.field_k + sl.field_l;
                   if (var8 == 0) {
                     break;
                   }
                 default:
                   break;
                 case 7:
-                  lj.field_k = lj.field_k - sl.field_l;
+                  MatchSession.field_k = MatchSession.field_k - sl.field_l;
                   ci.field_b = ci.field_b - 1;
                   if (var8 == 0) {
                     break;
                   }
                 case 6:
                   sl.field_l = sl.field_l - 1;
-                  lj.field_k = lj.field_k - ci.field_b;
+                  MatchSession.field_k = MatchSession.field_k - ci.field_b;
                   if (var8 == 0) {
                     break;
                   }
@@ -1316,8 +1316,8 @@ final class GameplayScreen {
           }
           if (de.field_f == 13) {
             var2_int = 1;
-            if (this.field_D.field_r.field_w == 0 && (this.field_D.field_r.h(9979) == 3 ||
-              4 == this.field_D.field_r.h(param0 ^ 9864))) {
+            if (this.field_D.field_r.field_w == 0 && (this.field_D.field_r.getSimulationPhase(9979) == 3 ||
+              4 == this.field_D.field_r.getSimulationPhase(param0 ^ 9864))) {
               var2_int = 0;
             }
             boolean decompiledFrameRemainder4 = true;
@@ -1352,7 +1352,7 @@ final class GameplayScreen {
             }
             if (var2_int != 0) {
               var4 = var3;
-              gj.a((byte) 36, false, am.field_n, var4);
+              gj.a((byte) 36, false, LevelRenderer.field_n, var4);
               return;
             }
           }
@@ -1418,38 +1418,38 @@ final class GameplayScreen {
             }
           }
           if (this.field_B < 0 &&
-            1 == this.field_D.field_r.h(9979)) {
+            1 == this.field_D.field_r.getSimulationPhase(9979)) {
             if (s.field_y == de.field_f &&
               !eo.field_o ||
-              am.field_t == de.field_f) {
-              if (!this.field_G.a(true)) {
+              LevelRenderer.field_t == de.field_f) {
+              if (!this.field_G.isFocusTransitionActive(true)) {
                 var2_int = this.field_n;
                 this.field_n = this.field_n - 1;
                 if (this.field_n < 0) {
                   this.field_n = -1 + this.field_D.field_l.length;
                 }
-                this.field_G.a((byte) -17, var2_int, this.field_n);
+                this.field_G.startFocusTransition((byte) -17, var2_int, this.field_n);
                 if ((var8 != 0) && ((ga.field_gb == de.field_f &&
                   !eo.field_o ||
-                  de.field_f == od.field_Mb) && !this.field_G.a(true))) {
+                  de.field_f == od.field_Mb) && !this.field_G.isFocusTransitionActive(true))) {
                   var2_int = this.field_n;
                   this.field_n = this.field_n + 1;
                   if (this.field_n >= this.field_D.field_l.length) {
                     this.field_n = 0;
                   }
-                  this.field_G.a((byte) -17, var2_int, this.field_n);
+                  this.field_G.startFocusTransition((byte) -17, var2_int, this.field_n);
                 }
               }
             } else {
               if ((ga.field_gb == de.field_f &&
                 !eo.field_o ||
-                de.field_f == od.field_Mb) && !this.field_G.a(true)) {
+                de.field_f == od.field_Mb) && !this.field_G.isFocusTransitionActive(true)) {
                 var2_int = this.field_n;
                 this.field_n = this.field_n + 1;
                 if (this.field_n >= this.field_D.field_l.length) {
                   this.field_n = 0;
                 }
-                this.field_G.a((byte) -17, var2_int, this.field_n);
+                this.field_G.startFocusTransition((byte) -17, var2_int, this.field_n);
               }
             }
           }
@@ -1460,21 +1460,21 @@ final class GameplayScreen {
               (!tf.a((byte) 123))) {
               if (~tn.field_c == ~de.field_f ||
                 bc.field_b == de.field_f) {
-                this.field_G.a(15481);
+                this.field_G.rotateCameraLeft(15481);
               }
               if (ve.field_a == de.field_f ||
                 ~jb.field_y == ~de.field_f) {
-                this.field_G.b((byte) 119);
+                this.field_G.rotateCameraRight((byte) 119);
               }
             }
           } else {
             if (~tn.field_c == ~de.field_f ||
               bc.field_b == de.field_f) {
-              this.field_G.a(15481);
+              this.field_G.rotateCameraLeft(15481);
             }
             if (ve.field_a == de.field_f ||
               ~jb.field_y == ~de.field_f) {
-              this.field_G.b((byte) 119);
+              this.field_G.rotateCameraRight((byte) 119);
             }
           }
           if (this.field_o && (MouseWheelInput.field_a ||
@@ -1493,17 +1493,17 @@ final class GameplayScreen {
             this.field_C = this.field_C | 1;
           }
           if (~de.field_f == ~ga.field_fb) {
-            this.field_D.e(-4);
+            this.field_D.requestLevelRestore(-4);
           }
           if (this.field_A &&
             de.field_f == 59 &&
             this.field_D.field_j == 3) {
             ci.field_b = 0;
             mc.field_e = 0;
-            lj.field_k = 0;
+            MatchSession.field_k = 0;
             sl.field_l = 0;
             ByteStorage.a(this.field_D.field_e, this.field_D.field_l[0].field_H, true);
-            gj.a((byte) -66, false, am.field_n, 20);
+            gj.a((byte) -66, false, LevelRenderer.field_n, 20);
           }
           if (this.field_A) {
             regionExit3: {
@@ -1518,7 +1518,7 @@ final class GameplayScreen {
                     var3 = var2_int;
                     if (0 == var3 &&
                       var8 == 0) {
-                      this.field_D.a(30113, false);
+                      this.field_D.advanceOrReloadLevel(30113, false);
                       return;
                     } else {
                       if ((1 != var3) &&
@@ -1551,7 +1551,7 @@ final class GameplayScreen {
                       if (this.field_o) {
                         return;
                       }
-                      this.field_D.field_l[this.field_B].l((byte) -89);
+                      this.field_D.field_l[this.field_B].addJetpackCharge((byte) -89);
                       if (var8 == 0) {
                         return;
                       }
@@ -1562,7 +1562,7 @@ final class GameplayScreen {
                       if (this.field_o) {
                         return;
                       }
-                      this.field_D.field_l[this.field_B].d((byte) 4);
+                      this.field_D.field_l[this.field_B].addLife((byte) 4);
                       if (var8 == 0) {
                         return;
                       }
@@ -1594,7 +1594,7 @@ final class GameplayScreen {
                     return;
                   }
                 }
-                tk.a(param0 ^ -116, 0, 0, MouseWheelInput.field_e, wo.field_S);
+                tk.a(param0 ^ -116, 0, 0, MouseWheelInput.field_e, PlayerState.field_S);
                 if (var8 == 0) {
                   return;
                 }
@@ -1621,7 +1621,7 @@ final class GameplayScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_D.a(param0, (byte) 102);
+          this.field_D.applySimulationSnapshot(param0, (byte) 102);
           if (param1 < 99) {
             this.b(-118, -59);
           }
@@ -1682,20 +1682,20 @@ final class GameplayScreen {
         int stackIn_171_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
-        rn[] var3 = null;
+        MovingLevelTile[] var3 = null;
         RuntimeException var3_ref = null;
         int var4_int = 0;
-        rn[] var4 = null;
+        MovingLevelTile[] var4 = null;
         int var5 = 0;
-        wo var6_ref_wo = null;
+        PlayerState var6_ref_wo = null;
         int var6 = 0;
         int var7_int = 0;
-        wo var7 = null;
+        PlayerState var7 = null;
         int var8 = 0;
         String var8_ref_String = null;
-        rn var9_ref_rn = null;
+        MovingLevelTile var9_ref_rn = null;
         int var9 = 0;
-        rn var10_ref_rn = null;
+        MovingLevelTile var10_ref_rn = null;
         int var10 = 0;
         int var11_int = 0;
         Runtime var11 = null;
@@ -1714,7 +1714,7 @@ final class GameplayScreen {
         var14 = Vertigo2.field_L ? 1 : 0;
         try {
           if (!mf.a((byte) 126, 512)) {
-            this.field_m.a(false, this.field_D.field_r);
+            this.field_m.copySimulationStateFrom(false, this.field_D.field_r);
           }
           boolean decompiledFrameCompleted1 = true;
           if (!mf.a((byte) 126, 64)) {
@@ -1750,7 +1750,7 @@ final class GameplayScreen {
                 this.field_v = var3_int;
                 var4_intLifetime1 = 1;
               }
-              this.field_m.a(false, this.field_p, 128, this.field_q, var4_intLifetime1 != 0);
+              this.field_m.tickLevel(false, this.field_p, 128, this.field_q, var4_intLifetime1 != 0);
               var3_int++;
             }
           }
@@ -1758,15 +1758,15 @@ final class GameplayScreen {
             stackIn_37_0 = this.field_o;
           }
           if (stackIn_37_0 &&
-            1 == this.field_m.h(param1 ^ -9953)) {
+            1 == this.field_m.getSimulationPhase(param1 ^ -9953)) {
             var3_int = this.field_t;
             if (var3_int >= 10) {
               var3_int = 9;
             }
-            this.field_m.a(this.field_K[var3_int], this.field_B, param1 - 22719);
+            this.field_m.copyOtherPlayerStates(this.field_K[var3_int], this.field_B, param1 - 22719);
           }
-          var3 = this.field_D.field_r.m(9384);
-          var4 = this.field_m.m(param1 ^ -9396);
+          var3 = this.field_D.field_r.getLevelObjects(9384);
+          var4 = this.field_m.getLevelObjects(param1 ^ -9396);
           var5 = 0;
           while (true) {
             stackIn_46_0 = this.field_D.field_l.length;
@@ -1814,8 +1814,8 @@ final class GameplayScreen {
               stackIn_78_0 = this.field_D.field_e + this.field_D.field_c;
             }
             var5 = stackIn_78_0;
-            var6 = this.field_D.b(-6133);
-            this.field_G.a(this.field_B, -this.field_D.field_e + var5, 1 + (-this.field_D.field_e + var6), true, this.field_m, this.field_D.field_f, this.field_D.field_g, var6, this.field_n);
+            var6 = this.field_D.getLevelIndex(-6133);
+            this.field_G.drawMatchFrame(this.field_B, -this.field_D.field_e + var5, 1 + (-this.field_D.field_e + var6), true, this.field_m, this.field_D.field_f, this.field_D.field_g, var6, this.field_n);
             this.field_t = this.field_t + 1;
             if (param1 != -28) {
               this.field_J = -79;
@@ -1825,7 +1825,7 @@ final class GameplayScreen {
                 this.field_b = new Sprite(640, 480);
               }
               this.field_b.d();
-              this.field_G.a(this.field_B, -this.field_D.field_e + var5, 1 + (var6 - this.field_D.field_e), true, this.field_D.field_r, this.field_D.field_f, this.field_D.field_g, var6, this.field_n);
+              this.field_G.drawMatchFrame(this.field_B, -this.field_D.field_e + var5, 1 + (var6 - this.field_D.field_e), true, this.field_D.field_r, this.field_D.field_f, this.field_D.field_g, var6, this.field_n);
               ro.field_g.a(-125);
               this.field_b.d(0, 0, 128);
             }
@@ -1995,7 +1995,7 @@ final class GameplayScreen {
               if (mf.a((byte) 126, 256)) {
                 tk.field_c.a("Player Details:", var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a("Fall: " + var7.c((byte) -128), var10Lifetime1, var8Lifetime2, 65280, -1);
+                tk.field_c.a("Fall: " + var7.getVerticalVelocity((byte) -128), var10Lifetime1, var8Lifetime2, 65280, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
                 tk.field_c.a("vx: " + var7.field_c, var10Lifetime1, var8Lifetime2, 65280, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
@@ -2023,16 +2023,16 @@ final class GameplayScreen {
 
     GameplayScreen(boolean param0, String[] param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
         boolean stackIn_4_1 = false;
-        wo[] stackIn_33_0;
+        PlayerState[] stackIn_33_0;
         int stackIn_33_1;
-        wo stackIn_33_2;
-        wo stackIn_33_3;
+        PlayerState stackIn_33_2;
+        PlayerState stackIn_33_3;
         int stackIn_33_4;
         boolean stackIn_33_5;
         int stackIn_33_6;
         boolean stackIn_33_7;
-        wo stackIn_34_2 = null;
-        wo stackIn_34_3 = null;
+        PlayerState stackIn_34_2 = null;
+        PlayerState stackIn_34_3 = null;
         boolean stackIn_34_8 = false;
         int stackIn_37_0 = 0;
         RuntimeException stackIn_53_0 = null;
@@ -2063,7 +2063,7 @@ final class GameplayScreen {
           ki.field_c = 126;
           re.field_j = 8522;
           sk.field_b = 42354;
-          lj.field_k = 1986;
+          MatchSession.field_k = 1986;
           mc.field_e = 1951;
           sl.field_l = 1954;
           ci.field_b = 1982;
@@ -2102,12 +2102,12 @@ final class GameplayScreen {
               f.field_B = f.field_B + var13;
               break;
           }
-          this.field_D = new lj(param1, this.field_B, param4, param5, param6, param7, false, param3);
-          this.field_m = this.field_D.c((byte) -116);
-          this.field_G = new am(param4, this.field_D.field_l.length, param1);
+          this.field_D = new MatchSession(param1, this.field_B, param4, param5, param6, param7, false, param3);
+          this.field_m = this.field_D.copyLevelSimulation((byte) -116);
+          this.field_G = new LevelRenderer(param4, this.field_D.field_l.length, param1);
           var9_int = param1.length;
           this.field_a = new hd(this.field_B, var9_int);
-          this.field_K = new wo[10][var9_int];
+          this.field_K = new PlayerState[10][var9_int];
           this.field_p = new boolean[var9_int];
           this.field_q = new int[var9_int];
           this.field_F = new boolean[var9_int];
@@ -2136,7 +2136,7 @@ final class GameplayScreen {
                     stackIn_34_3 = null;
                     stackIn_34_8 = true;
                   }
-                  stackIn_33_0[stackIn_33_1] = new wo(stackIn_33_4, stackIn_33_5, stackIn_33_6, stackIn_33_7, stackIn_34_8, true);
+                  stackIn_33_0[stackIn_33_1] = new PlayerState(stackIn_33_4, stackIn_33_5, stackIn_33_6, stackIn_33_7, stackIn_34_8, true);
                   var11++;
                 }
                 var10++;

@@ -62,7 +62,7 @@ final class gd extends jq {
           var9 = this.field_h * param0 >> 12;
           var10 = this.field_m * param1 >> 12;
           var11 = this.field_n * param0 >> 12;
-          hi.a(var9, -35, var8, var10, var11, var7, var5, var4, var6, this.field_a);
+          BlastDebrisModel.drawClippedCubicCurve(var9, -35, var8, var10, var11, var7, var5, var4, var6, this.field_a);
           return;
         }
     }

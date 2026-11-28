@@ -39,7 +39,7 @@ final class ud {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_c.b("", (byte) 8)) {
+          if (this.field_c.hasGroupName("", (byte) 8)) {
             stackIn_3_0 = this.a(1620678500, "", param1, param2);
             return stackIn_3_0;
           }

@@ -30,7 +30,7 @@ final class FlySpecial extends SpecialOrder {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.creature.a(57, param0);
+          var3 = this.creature.resolveCreature(57, param0);
           var4 = new FlyEvent(this.moveId, new CreatureRef(var3));
           var4.field_s = this.field_k;
           var4.field_u = this.field_n;
@@ -101,7 +101,7 @@ final class FlySpecial extends SpecialOrder {
           var4 = var8;
           var2 = var4;
           var9 = new PacketBuffer(var13);
-          CreatureType.a((byte) -121);
+          CreatureType.initializeAttackShapeNameIndex((byte) -121);
           vi.b(16);
           TeleportAnimation.f(-93);
           hba.c(7);

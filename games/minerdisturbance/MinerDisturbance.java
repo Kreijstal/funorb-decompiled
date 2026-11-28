@@ -308,7 +308,7 @@ public final class MinerDisturbance extends ob {
         var5 = field_ab;
         try {
           if (null != fl.field_f &&
-            fl.field_f.a(false, "supervolcano")) {
+            fl.field_f.tryLoadGroupByName(false, "supervolcano")) {
             if (null == je.field_k) {
               je.field_k = td.a("permaice", fl.field_f, "supervolcano", (byte) 122);
               je.field_y = td.a("damagedpermaice", fl.field_f, "supervolcano", (byte) 123);
@@ -5795,7 +5795,7 @@ public final class MinerDisturbance extends ob {
         var4 = field_ab;
         try {
           if (fl.field_f != null &&
-            fl.field_f.a(false, "volcano")) {
+            fl.field_f.tryLoadGroupByName(false, "volcano")) {
             if (je.field_j[0] == null) {
               je.field_w = td.a("ores", fl.field_f, "volcano", (byte) 127);
               je.field_d[0] = td.a("rocks", fl.field_f, "volcano", (byte) 125);
@@ -6173,18 +6173,18 @@ public final class MinerDisturbance extends ob {
                 if (ig.field_c.ensureIndexLoaded((byte) 108) &&
                   ig.field_c.tryLoadAllGroups(-1)) {
                   if (fl.field_f.ensureIndexLoaded((byte) 84) &&
-                    fl.field_f.a(false, "")) {
+                    fl.field_f.tryLoadGroupByName(false, "")) {
                     if (fl.field_f.ensureIndexLoaded((byte) 96) &&
-                      fl.field_f.a(false, "shop")) {
+                      fl.field_f.tryLoadGroupByName(false, "shop")) {
                       if (0 >= pj.field_a && (!fl.field_f.ensureIndexLoaded((byte) 86) ||
-                        !fl.field_f.a(false, "membersexpansion"))) {
+                        !fl.field_f.tryLoadGroupByName(false, "membersexpansion"))) {
                         pa.a(true, u.a(ub.field_c, fl.field_f, ul.field_d, -7157, "membersexpansion"), 29.0f);
                         return;
                       }
                       if (ne.field_L.ensureIndexLoaded((byte) 108) &&
                         ne.field_L.tryLoadAllGroups(-1)) {
                         if (ob.field_q.ensureIndexLoaded((byte) 86) &&
-                          ob.field_q.a(false, "basic")) {
+                          ob.field_q.tryLoadGroupByName(false, "basic")) {
                           if (id.field_c.ensureIndexLoaded((byte) 107) &&
                             id.field_c.tryLoadAllGroups(-1)) {
                             pa.a(true, le.field_b, 50.0f);
@@ -6219,7 +6219,7 @@ public final class MinerDisturbance extends ob {
                             this.h((byte) 65);
                             BoundedRandomAccessFile.setTickRate(-122, 50);
                             ke.field_V = false;
-                            ResourceArchive.a(-6358, ph.field_a);
+                            ResourceArchive.playMusicTrack(-6358, ph.field_a);
                             oi.a(mm.field_a, ce.field_d, 97, 300);
                             ud.a(new ac(hd.field_d), 30, 30, 88);
                             ic.a(113, 4473924, 15885602, 16502531);
@@ -6738,7 +6738,7 @@ public final class MinerDisturbance extends ob {
             if (jk.field_ab != 0) {
               this.field_O = false;
               this.q(-46);
-              ResourceArchive.a(-6358, ph.field_a);
+              ResourceArchive.playMusicTrack(-6358, ph.field_a);
               fm.f((byte) 81);
               if (!kj.a(false)) {
                 if (ig.a(-20144)) {
@@ -6936,7 +6936,7 @@ public final class MinerDisturbance extends ob {
               }
               if (lj.field_t == 84) {
                 this.q(-46);
-                ResourceArchive.a(-6358, ph.field_a);
+                ResourceArchive.playMusicTrack(-6358, ph.field_a);
                 fm.f((byte) 81);
                 if (!kj.a(false)) {
                   jc.a(false, -107, 2);
@@ -7063,7 +7063,7 @@ public final class MinerDisturbance extends ob {
                 il.e(-31391)) {
                 this.field_O = false;
                 this.q(-46);
-                ResourceArchive.a(-6358, ph.field_a);
+                ResourceArchive.playMusicTrack(-6358, ph.field_a);
                 fm.f((byte) 81);
                 if (kj.a(false)) {
                   jc.a(false, -125, 6);

@@ -40,10 +40,10 @@ final class in {
           SoftwareRasterizer.field_j != om.field_D) && (SoftwareRasterizer.field_j == ro.field_g.field_d &&
           ro.field_g.field_i == SoftwareRasterizer.field_e)) {
           if (null != gd.field_j) {
-            ho.a(param8 ^ -66, false);
+            BlastDebrisBatch.layoutLobbyPanels(param8 ^ -66, false);
           } else {
             if (sj.field_d != null) {
-              ho.a(0, true);
+              BlastDebrisBatch.layoutLobbyPanels(0, true);
             } else {
               PcmOutputWorker.a(-127);
             }

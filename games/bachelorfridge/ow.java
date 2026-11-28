@@ -153,7 +153,7 @@ final class ow extends BoardChange {
             var5 = var8[var4];
             var6 = param1.tiles[var5.field_c][var5.field_a].occupant;
             if (var6 != null &&
-              var6.g(-75, 40)) {
+              var6.applyDamageOrHealing(-75, 40)) {
             }
             param1.tiles[var5.field_c][var5.field_a].field_j = 2;
           }

@@ -29,12 +29,12 @@ final class ela extends EventEffect {
     }
 
     final void apply(BattleCreature param0, BattleState param1, int param2) {
-        BattleCreature var4 = this.target.a(param2 ^ 18, param1);
+        BattleCreature var4 = this.target.resolveCreature(param2 ^ 18, param1);
         if (var4 == null) {
           return;
         }
         try {
-          var4.c(this.field_k, (byte) -79);
+          var4.rechargeReadyMoveAtIndex(this.field_k, (byte) -79);
           if (param2 != 12) {
             ela.releaseStatics((byte) 105);
           }

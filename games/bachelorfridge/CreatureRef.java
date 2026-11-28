@@ -6,7 +6,7 @@ final class CreatureRef extends IntrusiveNode {
     static String field_h;
     int field_g;
 
-    final CreatureActor a(int param0, BattleScreen param1) {
+    final CreatureActor resolveCreatureView(int param0, BattleScreen param1) {
         RuntimeException var3 = null;
         CreatureActor stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -33,7 +33,7 @@ final class CreatureRef extends IntrusiveNode {
         }
     }
 
-    final BattleCreature a(int param0, BattleState param1) {
+    final BattleCreature resolveCreature(int param0, BattleState param1) {
         BattleCreature var3 = null;
         RuntimeException var3_ref = null;
         BattleCreature stackIn_3_0 = null;

@@ -83,7 +83,7 @@ final class ib {
     }
 
     final static void a(String param0, boolean param1, int param2) {
-        h var3 = hp.field_b[param2];
+        RaiderDefinition var3 = hp.field_b[param2];
         if (var3 == null) {
           return;
         }
@@ -196,7 +196,7 @@ final class ib {
         return var1;
     }
 
-    final static int a(h param0, int param1) {
+    final static int a(RaiderDefinition param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;

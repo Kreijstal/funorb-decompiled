@@ -23,7 +23,7 @@ final class vl extends hl {
         if (DelegatingCanvas.field_f == ol.field_i) {
           return NodeHashTableIterator.field_i;
         }
-        if (DelegatingCanvas.field_f == wd.field_d) {
+        if (DelegatingCanvas.field_f == SpriteAnimationPlayer.field_d) {
           return bf.field_o;
         }
         if (param0 != -29455) {

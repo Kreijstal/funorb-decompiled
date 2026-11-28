@@ -44,8 +44,8 @@ abstract class ByteStorage {
           if (param0 != 30692) {
             return true;
           }
-          var8 = new AccountCreationResultPanel(vg.field_Z, param3);
-          vg.field_Z.c(var8, 0);
+          var8 = new AccountCreationResultPanel(TunnelCamera.field_Z, param3);
+          TunnelCamera.field_Z.c(var8, 0);
           if (mf.c(109)) {
             var8.o(param0 - 30583);
             return true;

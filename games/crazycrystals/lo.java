@@ -114,10 +114,10 @@ final class lo {
         int var3 = 103 % ((35 - param0) / 39);
         long var1 = System.currentTimeMillis();
         if (!(AccountRequestState.field_b <= var1)) {
-          r.field_f = r.field_f + (AccountRequestState.field_b - var1);
+          LevelLostScene.field_f = LevelLostScene.field_f + (AccountRequestState.field_b - var1);
         }
         AccountRequestState.field_b = var1;
-        return var1 + r.field_f;
+        return var1 + LevelLostScene.field_f;
     }
 
     public static void clearStaticReferences(int param0) {

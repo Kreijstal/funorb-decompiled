@@ -53,13 +53,13 @@ final class ib extends fj {
           if (!wc.field_Wb.ensureIndexLoaded(0)) {
             return 20;
           }
-          if (!wc.field_Wb.a("commonui", 0)) {
+          if (!wc.field_Wb.tryLoadGroupByName("commonui", 0)) {
             return 40;
           }
           if (!i.field_r.ensureIndexLoaded(param0 ^ 109)) {
             return 50;
           }
-          if (!i.field_r.a("commonui", 0)) {
+          if (!i.field_r.tryLoadGroupByName("commonui", 0)) {
             return 60;
           }
           if (!tf.field_k.ensureIndexLoaded(0)) {
@@ -73,23 +73,23 @@ final class ib extends fj {
             if (!IntrusiveNodeHashTableIterator.field_f.ensureIndexLoaded(param0 ^ 109)) {
               return 14;
             }
-            if (!IntrusiveNodeHashTableIterator.field_f.b("", -4308)) {
+            if (!IntrusiveNodeHashTableIterator.field_f.hasGroupName("", -4308)) {
               return 29;
             }
-            if (!IntrusiveNodeHashTableIterator.field_f.a("", 0)) {
+            if (!IntrusiveNodeHashTableIterator.field_f.tryLoadGroupByName("", 0)) {
               return 29;
             }
           }
           if (!wc.field_Wb.ensureIndexLoaded(param0 - 109)) {
             return 43;
           }
-          if (!wc.field_Wb.a("commonui", 0)) {
+          if (!wc.field_Wb.tryLoadGroupByName("commonui", 0)) {
             return 57;
           }
           if (!i.field_r.ensureIndexLoaded(0)) {
             return 71;
           }
-          if (!i.field_r.a("commonui", 0)) {
+          if (!i.field_r.tryLoadGroupByName("commonui", 0)) {
             return 80;
           }
           if (!tf.field_k.ensureIndexLoaded(0)) {
@@ -210,7 +210,7 @@ final class ib extends fj {
         var8 = Confined.field_J ? 1 : 0;
         try {
           var5_int = this.field_F + param2;
-          lc.a(param2 + this.field_K.field_u, -this.field_K.field_u + var5_int, param3 + this.field_z, param3, 14907);
+          TunnelMesh.pushAndIntersectRasterClip(param2 + this.field_K.field_u, -this.field_K.field_u + var5_int, param3 + this.field_z, param3, 14907);
           for (var6 = -this.field_H + param2; var6 < var5_int; var6 = var6 + param1.field_u) {
             param1.d(var6, param3);
           }
@@ -295,7 +295,7 @@ final class ib extends fj {
         int var6 = this.field_m + param0;
         this.a((byte) -80, this.field_X[0], var5, var6);
         if (65536 > this.field_R) {
-          lc.a((this.field_F * this.field_R >> 16) + var5, this.field_F + var5, var6 + this.field_z, var6, 14907);
+          TunnelMesh.pushAndIntersectRasterClip((this.field_F * this.field_R >> 16) + var5, this.field_F + var5, var6 + this.field_z, var6, 14907);
           this.a((byte) 124, this.field_X[1], var5, var6);
           ib.b(false);
         }

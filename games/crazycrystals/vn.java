@@ -107,7 +107,7 @@ final class vn extends ue {
                 var11 = oj.field_B;
                 if (mo.field_l <= 0 &&
                   (1 << var10 & 769) == 0) {
-                  var11 = p.field_k;
+                  var11 = PauseMenu.field_k;
                 }
                 if ((1 << var10 & var6) != 0) {
                   var11 = cn.field_c[var10];
@@ -418,7 +418,7 @@ final class vn extends ue {
           do {
             if (!ge.b(-26)) {
               this.a((byte) 95);
-              if (0 != pj.field_v) {
+              if (0 != WallTile.field_v) {
                 var2 = fk.field_s;
                 var3 = this.c((byte) -117);
                 var4 = 304 - var3 / 2 * 20 + 20;
@@ -432,8 +432,8 @@ final class vn extends ue {
                     (1 << var6 & var2) != 0)) {
                     if (to.field_a >= var4 &&
                       to.field_a < var4 + 32 &&
-                      var5 <= dp.field_h &&
-                      dp.field_h < 32 + var5) {
+                      var5 <= ProfileDataRequest.field_h &&
+                      ProfileDataRequest.field_h < 32 + var5) {
                       if (var6 != this.field_o) {
                         this.field_o = var6;
                       } else {
@@ -452,7 +452,7 @@ final class vn extends ue {
               }
               return;
             }
-            if (pj.field_q == 98) {
+            if (WallTile.field_q == 98) {
               while (true) {
                 if (0 >= this.field_b.field_c) {
                   this.field_b.field_c = 3;
@@ -465,7 +465,7 @@ final class vn extends ue {
               }
               this.field_b.field_i = false;
             }
-            if (pj.field_q == 99) {
+            if (WallTile.field_q == 99) {
               while (true) {
                 this.field_b.field_c = this.field_b.field_c + 1;
                 if (3 <= this.field_b.field_c) {
@@ -482,7 +482,7 @@ final class vn extends ue {
             if (this.a(112)) {
               return;
             }
-          } while (pj.field_q != 13 &&
+          } while (WallTile.field_q != 13 &&
             !this.field_b.a(true));
           this.field_b.field_i = false;
           if (null != this.field_t) {

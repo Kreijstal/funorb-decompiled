@@ -23,7 +23,7 @@ final class ShieldSpecial extends SpecialOrder {
           AccountRequestState.field_a = false;
           return;
         }
-        BattleCreature.d(false);
+        BattleCreature.initializeTutorialPanels(false);
         bf.field_h[CreatureType.field_n].a(-123);
     }
 
@@ -49,7 +49,7 @@ final class ShieldSpecial extends SpecialOrder {
         RuntimeException decompiledCaughtException = null;
         var8 = BachelorFridge.field_y;
         try {
-          var9 = this.creature.a(32, param0);
+          var9 = this.creature.resolveCreature(32, param0);
           if (param1 != 3) {
             ShieldSpecial.b(51);
           }

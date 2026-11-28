@@ -15,7 +15,7 @@ public final class CrazyCrystals extends NetworkGameClient {
     }
 
     private final void g(byte param0) {
-        uc stackIn_16_0 = null;
+        MenuOverlay stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         boolean stackIn_81_0 = false;
         int stackIn_91_0 = 0;
@@ -25,7 +25,7 @@ public final class CrazyCrystals extends NetworkGameClient {
         int stackIn_355_0 = 0;
         boolean stackIn_358_0 = false;
         int stackIn_376_0 = 0;
-        f[] stackIn_411_0 = null;
+        PuzzleTile[] stackIn_411_0 = null;
         int stackIn_412_1 = 0;
         boolean stackIn_443_0 = false;
         int stackIn_456_0 = 0;
@@ -37,7 +37,7 @@ public final class CrazyCrystals extends NetworkGameClient {
         double var2_double = 0.0;
         RuntimeException var2 = null;
         int var3 = 0;
-        we var3_ref_we = null;
+        LevelProgressUpdate var3_ref_we = null;
         double var4_double = 0.0;
         int var4 = 0;
         double var6 = 0.0;
@@ -59,7 +59,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                 stackIn_16_0 = uh.field_p;
                 stackIn_16_1 = 75;
                 if (var20 == 0) {
-                  if (!((uc) (Object) stackIn_16_0).b((byte) stackIn_16_1)) {
+                  if (!((MenuOverlay) (Object) stackIn_16_0).handleOverlayKeyEvent((byte) stackIn_16_1)) {
                     continue;
                   }
                   this.a(true);
@@ -71,14 +71,14 @@ public final class CrazyCrystals extends NetworkGameClient {
               stackIn_16_1 = 1;
               break;
             }
-            ((uc) (Object) stackIn_16_0).a(stackIn_16_1 != 0);
+            ((MenuOverlay) (Object) stackIn_16_0).updateOverlayPointer(stackIn_16_1 != 0);
             return;
           }
           fe.b(42806);
           if (!uh.field_n) {
             if (null != ab.field_D) {
-              ab.field_D = ab.field_D.b((byte) -39);
-              if (!r.field_m) {
+              ab.field_D = ab.field_D.updateResultScene((byte) -39);
+              if (!LevelLostScene.field_m) {
                 gh.i(127);
                 this.a(true);
                 return;
@@ -107,7 +107,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                 stackIn_91_0 = ~mo.field_f;
                 stackIn_91_1 = -1;
               } else {
-                var2_int = pj.field_q;
+                var2_int = WallTile.field_q;
                 stackIn_91_0 = ~var2_int;
                 stackIn_91_1 = -86;
                 if (var20 == 0) {
@@ -124,7 +124,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                           break;
                       }
                     } else {
-                      if (ab.field_D instanceof ja) {
+                      if (ab.field_D instanceof LevelCompleteScene) {
                         continue;
                       }
                       hc.a(false, false);
@@ -137,10 +137,10 @@ public final class CrazyCrystals extends NetworkGameClient {
                     continue;
                   }
                   gh.i(127);
-                  if (!(ab.field_D instanceof ja)) {
-                    uh.field_p = (uc) ((Object) new p(false));
+                  if (!(ab.field_D instanceof LevelCompleteScene)) {
+                    uh.field_p = (MenuOverlay) ((Object) new PauseMenu(false));
                   } else {
-                    ((ja) (ab.field_D)).c((byte) -41);
+                    ((LevelCompleteScene) (ab.field_D)).fastForwardResultPhases((byte) -41);
                     ab.field_D = null;
                   }
                   this.a(true);
@@ -279,21 +279,21 @@ public final class CrazyCrystals extends NetworkGameClient {
             }
             if (stackIn_191_0 == 0) {
               if (((var2_int & 2) != 0)) {
-                ab.field_D = (te) ((Object) new r());
+                ab.field_D = (ResultScene) ((Object) new LevelLostScene());
               }
               decompiledFrameRemainder3 = false;
             }
             else {
-              if (uo.field_o == FrameTimer.field_b[jo.field_o]) {
+              if (uo.field_o == FrameTimer.field_b[CrystalTile.field_o]) {
                 ei.field_F = ei.field_F + 8;
                 sm.field_f = sm.field_f + 8;
                 MusicPatchPcmStream.field_n = MusicPatchPcmStream.field_n + 4;
                 je.field_j = je.field_j + 5;
-                we.field_h = we.field_h + 8;
+                LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 8;
                 fp.field_a = fp.field_a + 8;
                 b.field_a = b.field_a + 4;
                 qk.field_F = qk.field_F + 5;
-                var3_ref_we = new we(jo.field_o, uo.field_o, we.field_h, b.field_a, je.field_j, fp.field_a);
+                var3_ref_we = new LevelProgressUpdate(CrystalTile.field_o, uo.field_o, LevelProgressUpdate.field_h, b.field_a, je.field_j, fp.field_a);
                 if (rc.a(-89)) {
                   ec.field_l.addLast(0, var3_ref_we);
                   if (var20 != 0) {
@@ -302,61 +302,61 @@ public final class CrazyCrystals extends NetworkGameClient {
                 } else {
                   lj.a(5, var3_ref_we, -93);
                 }
-                FrameTimer.field_b[jo.field_o] = uo.field_o + 1;
+                FrameTimer.field_b[CrystalTile.field_o] = uo.field_o + 1;
               }
-              if (uo.field_o <= FrameTimer.field_b[jo.field_o]) {
-                if (jo.field_o == 1) {
+              if (uo.field_o <= FrameTimer.field_b[CrystalTile.field_o]) {
+                if (CrystalTile.field_o == 1) {
                   if (9 == uo.field_o) {
-                    rc.a(1, we.field_h, b.field_a, 255, je.field_j, 0, fp.field_a);
+                    rc.a(1, LevelProgressUpdate.field_h, b.field_a, 255, je.field_j, 0, fp.field_a);
                   }
                   if (19 == uo.field_o) {
-                    rc.a(1, we.field_h, b.field_a, 254, je.field_j, 1, fp.field_a);
+                    rc.a(1, LevelProgressUpdate.field_h, b.field_a, 254, je.field_j, 1, fp.field_a);
                   }
                   if (uo.field_o == 39) {
-                    rc.a(1, we.field_h, b.field_a, 253, je.field_j, 2, fp.field_a);
+                    rc.a(1, LevelProgressUpdate.field_h, b.field_a, 253, je.field_j, 2, fp.field_a);
                   }
                   if (59 == uo.field_o) {
-                    rc.a(1, we.field_h, b.field_a, 252, je.field_j, 3, fp.field_a);
+                    rc.a(1, LevelProgressUpdate.field_h, b.field_a, 252, je.field_j, 3, fp.field_a);
                   }
                   if (uo.field_o == 69) {
-                    rc.a(1, we.field_h, b.field_a, 251, je.field_j, 4, fp.field_a);
+                    rc.a(1, LevelProgressUpdate.field_h, b.field_a, 251, je.field_j, 4, fp.field_a);
                   }
                 }
-                if (jo.field_o == 4) {
+                if (CrystalTile.field_o == 4) {
                   if (uo.field_o == 4) {
-                    rc.a(1, we.field_h, b.field_a, 250, je.field_j, 5, fp.field_a);
+                    rc.a(1, LevelProgressUpdate.field_h, b.field_a, 250, je.field_j, 5, fp.field_a);
                   }
                   if (14 == uo.field_o) {
-                    rc.a(1, we.field_h, b.field_a, 249, je.field_j, 6, fp.field_a);
+                    rc.a(1, LevelProgressUpdate.field_h, b.field_a, 249, je.field_j, 6, fp.field_a);
                   }
                   if (uo.field_o == 24) {
-                    rc.a(1, we.field_h, b.field_a, 248, je.field_j, 7, fp.field_a);
+                    rc.a(1, LevelProgressUpdate.field_h, b.field_a, 248, je.field_j, 7, fp.field_a);
                   }
                   NetworkArchiveRequest.field_y = NetworkArchiveRequest.field_y + q.field_a[2].field_d;
                   if (NetworkArchiveRequest.field_y >= 30) {
-                    rc.a(1, we.field_h, b.field_a, 243, je.field_j, 12, fp.field_a);
+                    rc.a(1, LevelProgressUpdate.field_h, b.field_a, 243, je.field_j, 12, fp.field_a);
                   }
                   if (uo.field_o == 11 &&
                     ProxyAuthenticationRequiredException.field_d != 0) {
-                    rc.a(1, we.field_h, b.field_a, 242, je.field_j, 13, fp.field_a);
+                    rc.a(1, LevelProgressUpdate.field_h, b.field_a, 242, je.field_j, 13, fp.field_a);
                   }
                   if (uo.field_o == 15 &&
                     3000 > tm.field_e) {
-                    rc.a(1, we.field_h, b.field_a, 241, je.field_j, 14, fp.field_a);
+                    rc.a(1, LevelProgressUpdate.field_h, b.field_a, 241, je.field_j, 14, fp.field_a);
                   }
                   if (uo.field_o == 9 &&
                     ProxyAuthenticationRequiredException.field_d != 0 &&
                     ol.field_B != 0) {
-                    rc.a(1, we.field_h, b.field_a, 240, je.field_j, 15, fp.field_a);
+                    rc.a(1, LevelProgressUpdate.field_h, b.field_a, 240, je.field_j, 15, fp.field_a);
                   }
                 }
                 if (ai.a(100, 0) &&
                   uo.field_o - dk.field_h == 12) {
-                  rc.a(1, we.field_h, b.field_a, 239, je.field_j, 16, fp.field_a);
+                  rc.a(1, LevelProgressUpdate.field_h, b.field_a, 239, je.field_j, 16, fp.field_a);
                 }
                 gh.j(-10935);
               }
-              ab.field_D = (te) ((Object) new ja());
+              ab.field_D = (ResultScene) ((Object) new LevelCompleteScene());
             }
           }
           boolean decompiledSharedTail0 = (null == li.field_a);
@@ -368,12 +368,12 @@ public final class CrazyCrystals extends NetworkGameClient {
             qh.field_o.isEmpty() &&
             0 == en.field_O &&
             null == cn.field_d &&
-            !(ab.field_D instanceof ja) &&
+            !(ab.field_D instanceof LevelCompleteScene) &&
             !go.field_i)) {
             ProxyAuthenticationRequiredException.a(127);
           }
           if (!uh.field_n &&
-            pj.field_v != 0) {
+            WallTile.field_v != 0) {
             if (to.field_a < 480) {
               if (null != ab.field_D) {
                 return;
@@ -384,12 +384,12 @@ public final class CrazyCrystals extends NetworkGameClient {
               var8 = 240.0 - var2_double;
               var10 = -var4_double + (240.0 + var6 / 2.0);
               var12 = (int)Math.floor(((double)to.field_a - var8) / (var6 * 2.0));
-              var13 = (int)Math.floor(((double)dp.field_h - var10) / (var6 * 2.0));
+              var13 = (int)Math.floor(((double)ProfileDataRequest.field_h - var10) / (var6 * 2.0));
               if (var12 >= 0 &&
                 var12 < tm.field_d[0].length &&
                 var13 >= 0 &&
                 var13 < tm.field_d.length) {
-                var14 = tm.field_d[var13][var12].a(23525, li.field_a);
+                var14 = tm.field_d[var13][var12].showTileTooltip(23525, li.field_a);
                 if (null != var14) {
                   li.field_a = var14;
                 }
@@ -401,8 +401,8 @@ public final class CrazyCrystals extends NetworkGameClient {
             boolean decompiledFrameCompleted1 = true;
             if (null == ab.field_D &&
               !vh.field_a &&
-              dp.field_h >= 48 &&
-              158 > dp.field_h) {
+              ProfileDataRequest.field_h >= 48 &&
+              158 > ProfileDataRequest.field_h) {
               var2_int = 0;
               var3 = 0;
               boolean decompiledNaturalLoopExit0 = false;
@@ -436,7 +436,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                   if (oe.field_a[var4] != null &&
                     var3 <= to.field_a &&
                     to.field_a < (var3 + 48)) {
-                    li.field_a = oe.field_a[var4].a(23525, li.field_a);
+                    li.field_a = oe.field_a[var4].showTileTooltip(23525, li.field_a);
                     break;
                   }
                   var3 += 52;
@@ -445,7 +445,7 @@ public final class CrazyCrystals extends NetworkGameClient {
               }
             }
             if (decompiledFrameCompleted1) {
-              stackIn_376_0 = ~dp.field_h;
+              stackIn_376_0 = ~ProfileDataRequest.field_h;
             }
             if (stackIn_376_0 > -159 ||
               null == li.field_a) {
@@ -465,15 +465,15 @@ public final class CrazyCrystals extends NetworkGameClient {
                       break;
                     }
                     if (stackIn_456_0 < stackIn_456_1 &&
-                      dp.field_h >= 12 + var2_int &&
-                      dp.field_h < var2_int + 60) {
+                      ProfileDataRequest.field_h >= 12 + var2_int &&
+                      ProfileDataRequest.field_h < var2_int + 60) {
                       stackIn_411_0 = lm.field_d;
                       if (var3 == 0) {
                         stackIn_412_1 = 15;
                       } else {
                         stackIn_412_1 = 25;
                       }
-                      li.field_a = ((f) (Object) stackIn_411_0[stackIn_412_1]).a(23525, li.field_a);
+                      li.field_a = ((PuzzleTile) (Object) stackIn_411_0[stackIn_412_1]).showTileTooltip(23525, li.field_a);
                       break;
                     }
                     var2_int += 48;
@@ -483,7 +483,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                 if ((decompiledFrameCompleted0) && (qh.field_o.isEmpty() &&
                   en.field_O == 0 &&
                   cn.field_d == null)) {
-                  var2_int = go.field_l.a(f.field_e, 152);
+                  var2_int = go.field_l.a(PuzzleTile.field_e, 152);
                   var3 = -(10 * var2_int) + 100;
                   if (3 <= var2_int) {
                     var3 += 10;
@@ -491,8 +491,8 @@ public final class CrazyCrystals extends NetworkGameClient {
                   var4 = var3 + var2_int * 20;
                   if (480 <= to.field_a &&
                     640 > to.field_a &&
-                    (var3 + 282) <= dp.field_h &&
-                    dp.field_h < var4 + 282) {
+                    (var3 + 282) <= ProfileDataRequest.field_h &&
+                    ProfileDataRequest.field_h < var4 + 282) {
                     stackIn_443_0 = !(qp.field_f);
                     qp.field_f = stackIn_443_0;
                   }
@@ -500,26 +500,26 @@ public final class CrazyCrystals extends NetworkGameClient {
               }
               if (decompiledFrameCompleted0) {
                 var2_int = 460;
-                if ((ab.field_D instanceof ja) &&
-                  (decompiledFrameRemainder0 = !(dp.field_h < var2_int)) &&
-                  (decompiledFrameRemainder0 = !(dp.field_h >= 20 + var2_int))) {
-                  ((ja) (ab.field_D)).c((byte) -41);
+                if ((ab.field_D instanceof LevelCompleteScene) &&
+                  (decompiledFrameRemainder0 = !(ProfileDataRequest.field_h < var2_int)) &&
+                  (decompiledFrameRemainder0 = !(ProfileDataRequest.field_h >= 20 + var2_int))) {
+                  ((LevelCompleteScene) (ab.field_D)).fastForwardResultPhases((byte) -41);
                   ab.field_D = null;
                   decompiledFrameRemainder0 = (var20 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  stackIn_456_0 = ~dp.field_h;
+                  stackIn_456_0 = ~ProfileDataRequest.field_h;
                   stackIn_456_1 = ~var2_int;
                 }
               }
               if (decompiledFrameRemainder0) {
                 if (stackIn_456_0 <= stackIn_456_1 &&
-                  dp.field_h < (var2_int + 20)) {
-                  uh.field_p = (uc) ((Object) new p(true));
+                  ProfileDataRequest.field_h < (var2_int + 20)) {
+                  uh.field_p = (MenuOverlay) ((Object) new PauseMenu(true));
                 }
                 var2_int -= 20;
-                if (dp.field_h >= var2_int &&
-                  20 + var2_int > dp.field_h) {
+                if (ProfileDataRequest.field_h >= var2_int &&
+                  20 + var2_int > ProfileDataRequest.field_h) {
                   hc.a(true, false);
                 }
               }
@@ -575,7 +575,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           vm.b((byte) 119);
           FullscreenFocusCanvas.clearStaticReferences(param0 ^ -45);
           oa.clearStaticReferences(-98);
-          f.a(100);
+          PuzzleTile.clearPuzzleTileGlobals(100);
           AudioOutput.clearStaticReferences();
           MidiPcmStream.e(64);
           am.clearStaticReferences(117);
@@ -585,15 +585,15 @@ public final class CrazyCrystals extends NetworkGameClient {
           fq.b(true);
           vh.b((byte) -114);
           nj.clearStaticReferences(12);
-          te.a((byte) -77);
-          uc.clearStaticReferences(0);
+          ResultScene.clearPlatformServicesReference((byte) -77);
+          MenuOverlay.clearStaticReferences(0);
           ob.resetStaticState(12554);
           pk.clearStaticReferences(120);
           BufferedRandomAccessFile.a(param0 - 6231);
           BufferedSocket.clearStaticReferences((byte) 45);
           bn.clearStaticReferences((byte) -3);
           kp.resetStaticState(false);
-          mj.a((byte) -64);
+          LaserTraceCursor.clearLaserCursorGlobals((byte) -64);
           ea.clearStaticReferences(-1);
           IntrusiveNode.clearStaticReferences(-24894);
           pl.clearDeclaredStaticReferences(-124);
@@ -645,22 +645,22 @@ public final class CrazyCrystals extends NetworkGameClient {
           rb.clearStaticReferences((byte) 100);
           rg.clearStaticReferences(-1);
           de.clearStaticReferences(3);
-          pj.resetStaticState(param0 ^ -39);
+          WallTile.resetStaticState(param0 ^ -39);
           bo.clearDeclaredStaticReferences(0);
           vn.clearStaticReferences(-100);
           m.clearStaticReferences((byte) -124);
-          jo.clearStaticReferences(6);
+          CrystalTile.clearStaticReferences(6);
           em.clearStaticReferences(param0 ^ -66);
           SpriteGeometry.clearStaticReferences((byte) 126);
           bl.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           nm.clearStaticReferences();
-          r.clearStaticReferences(27);
-          ff.clearDeclaredStaticReferences(param0 ^ -18779);
-          ja.clearStaticReferences(27348);
+          LevelLostScene.clearStaticReferences(27);
+          AnimatedResultScene.clearDeclaredStaticReferences(param0 ^ -18779);
+          LevelCompleteScene.clearStaticReferences(27348);
           kn.clearStaticReferences(-104);
-          c.clearStaticReferences(-1);
-          bb.clearStaticReferences(true);
+          LaserHubTile.clearStaticReferences(-1);
+          RockTile.clearStaticReferences(true);
           qf.clearDeclaredStaticReferences((byte) -72);
           ro.clearStaticReferences(4);
           gh.clearDeclaredStaticReferences(0);
@@ -678,7 +678,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           ua.clearStaticReferences(0);
           d.a(-8130);
           nc.clearStaticReferences(false);
-          p.b(-1);
+          PauseMenu.clearPauseMenuAssets(-1);
           nn.clearStaticReferences(-127);
           wm.clearStaticReferences(-1);
           IsaacRandom.clearStaticReferences((byte) -66);
@@ -697,7 +697,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           nb.clearStaticReferences();
           qj.clearStaticReferences(param0 ^ 84);
           hm.b(-2);
-          jg.clearStaticReferences(32767);
+          ModelMesh.clearStaticReferences(32767);
           cc.clearStaticReferences(-18277);
           so.a(-11774);
           on.clearStaticReferences((byte) -128);
@@ -798,8 +798,8 @@ public final class CrazyCrystals extends NetworkGameClient {
           hb.clearStaticReferences(true);
           lm.a(-26377);
           pp.clearStaticReferences((byte) 2);
-          we.resetStaticState(-22523);
-          dp.clearDeclaredStaticReferences(-127);
+          LevelProgressUpdate.resetStaticState(-22523);
+          ProfileDataRequest.clearDeclaredStaticReferences(-127);
           ca.resetStaticState(param0 ^ 89);
           ik.resetStaticState((byte) 105);
           nk.clearStaticReferences(-2);
@@ -809,9 +809,9 @@ public final class CrazyCrystals extends NetworkGameClient {
           mk.clearStaticReferences(-27838);
           mo.clearDeclaredStaticReferences(-60);
           jd.e((byte) 54);
-          hl.b(param0 + 25559);
+          LevelLostEntrancePhase.clearHoleTutorialText(param0 + 25559);
           fe.clearDeclaredStaticReferences((byte) -118);
-          l.clearStaticReferences((byte) -101);
+          ResultScenePhase.clearStaticReferences((byte) -101);
           o.clearStaticReferences(58);
           ec.clearStaticReferences(param0 - 85);
           ia.a(true);
@@ -821,8 +821,8 @@ public final class CrazyCrystals extends NetworkGameClient {
           fh.clearStaticReferences(124);
           le.clearStaticReferences(-1);
           go.clearDeclaredStaticReferences((byte) 54);
-          ln.clearStaticReferences((byte) -128);
-          kk.clearStaticReferences(param0 - 192);
+          ScoreModifier.clearStaticReferences((byte) -128);
+          FloatingScoreLabel.clearStaticReferences(param0 - 192);
           pb.clearStaticReferences(param0 ^ -31326);
           hk.clearDeclaredStaticReferences(6388);
           oh.clearDeclaredStaticReferences(32);
@@ -833,7 +833,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           rd.resetStaticState(true);
           ta.a(true);
           gj.clearStaticReferences(19);
-          ek.clearStaticReferences(16);
+          LevelCompleteEntrancePhase.clearStaticReferences(16);
           ul.clearStaticReferences(true);
           ad.releaseDeclaredStaticReferences(0);
           eq.f(1);
@@ -953,15 +953,15 @@ public final class CrazyCrystals extends NetworkGameClient {
           }
           boolean decompiledFrameRemainder0 = true;
           if (null == MouseInputHandler.field_b) {
-            if (r.field_m) {
+            if (LevelLostScene.field_m) {
               dq.a(-26477);
               ByteStorage.b(480);
             }
             if (!fj.a(136)) {
               if (null != uh.field_p) {
-                uh.field_p.a((byte) 127);
+                uh.field_p.drawOverlay((byte) 127);
               }
-              if (r.field_m) {
+              if (LevelLostScene.field_m) {
                 var3 = Bzip2State.field_n;
                 if (640 > var3) {
                   var4_ref_int__ = ge.field_d.field_w;
@@ -1024,7 +1024,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             var3Lifetime1 = (int)(Runtime.getRuntime().freeMemory() / 1024L);
             var4Lifetime1 = (int)(Runtime.getRuntime().totalMemory() / 1024L);
             an.field_q.b(-var3Lifetime1 + var4Lifetime1 + " kB / " + var4Lifetime1 + " kB", 636, 16, 16777215, -1);
-            an.field_q.b(p.field_j + " fps", 636, 30, 16777215, -1);
+            an.field_q.b(PauseMenu.field_j + " fps", 636, 30, 16777215, -1);
           }
           bq.a(var2, 0, 0, 4);
           return;
@@ -1044,15 +1044,15 @@ public final class CrazyCrystals extends NetworkGameClient {
             ak.field_f = null;
             vp.a(103);
           }
-          l.field_d = mi.c(1, -115);
+          ResultScenePhase.field_d = mi.c(1, -115);
           uf.field_e = mi.c(7, -123);
           CipherPacketBuffer.field_p = mi.c(9, -97);
-          vm.field_k = we.a(true, (byte) -127, true, true, 2);
-          ma.field_p = we.a(true, (byte) -111, true, true, 4);
-          rl.field_i = we.a(true, (byte) -51, true, param0, 8);
-          mg.field_c = we.a(true, (byte) -70, true, true, 3);
-          mg.field_g = we.a(true, (byte) -124, true, true, 5);
-          ba.field_k = we.a(true, (byte) -46, true, true, 0);
+          vm.field_k = LevelProgressUpdate.openAssetArchive(true, (byte) -127, true, true, 2);
+          ma.field_p = LevelProgressUpdate.openAssetArchive(true, (byte) -111, true, true, 4);
+          rl.field_i = LevelProgressUpdate.openAssetArchive(true, (byte) -51, true, param0, 8);
+          mg.field_c = LevelProgressUpdate.openAssetArchive(true, (byte) -70, true, true, 3);
+          mg.field_g = LevelProgressUpdate.openAssetArchive(true, (byte) -124, true, true, 5);
+          ba.field_k = LevelProgressUpdate.openAssetArchive(true, (byte) -46, true, true, 0);
           io.a(4096, lo.field_a, dj.field_ab);
           qd.a(-91, 60);
           return;
@@ -1126,18 +1126,18 @@ public final class CrazyCrystals extends NetworkGameClient {
           boolean decompiledFrameRemainder0 = true;
           if (null == fq.field_x) {
             if (dj.field_ab.ensureIndexLoaded((byte) 102) &&
-              dj.field_ab.a(-20402, "basic")) {
-              if (l.field_d.ensureIndexLoaded((byte) 102) &&
-                l.field_d.a(-20402, "")) {
+              dj.field_ab.tryLoadGroupByName(-20402, "basic")) {
+              if (ResultScenePhase.field_d.ensureIndexLoaded((byte) 102) &&
+                ResultScenePhase.field_d.tryLoadGroupByName(-20402, "")) {
                 if (uf.field_e.ensureIndexLoaded((byte) 102) &&
                   uf.field_e.tryLoadAllGroups(false)) {
                   if (CipherPacketBuffer.field_p.ensureIndexLoaded((byte) 102) &&
                     CipherPacketBuffer.field_p.tryLoadAllGroups(false)) {
                     if (vm.field_k.ensureIndexLoaded((byte) 102) &&
-                      vm.field_k.a(-20402, "initialset")) {
+                      vm.field_k.tryLoadGroupByName(-20402, "initialset")) {
                       if (ma.field_p.ensureIndexLoaded((byte) 102) &&
                         ma.field_p.tryLoadGroup(0, 81) &&
-                        ma.field_p.a(-20402, "initialset")) {
+                        ma.field_p.tryLoadGroupByName(-20402, "initialset")) {
                         if (!rl.field_i.ensureIndexLoaded((byte) 102)) {
                           td.a(20.0f, jl.field_f, false);
                           return;
@@ -1171,12 +1171,12 @@ public final class CrazyCrystals extends NetworkGameClient {
                         }
                       }
                       if (decompiledFrameRemainder0) {
-                        td.a(16.0f, kp.a(rk.field_e, uc.field_a, "initialset", 3, ma.field_p), false);
+                        td.a(16.0f, kp.a(rk.field_e, MenuOverlay.field_a, "initialset", 3, ma.field_p), false);
                         return;
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      td.a(16.0f, kp.a(rk.field_e, uc.field_a, "initialset", 3, vm.field_k), false);
+                      td.a(16.0f, kp.a(rk.field_e, MenuOverlay.field_a, "initialset", 3, vm.field_k), false);
                       return;
                     }
                   }
@@ -1186,17 +1186,17 @@ public final class CrazyCrystals extends NetworkGameClient {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  td.a(8.0f, vl.a(re.field_n, 0, 4164, dp.field_j, uf.field_e), false);
+                  td.a(8.0f, vl.a(re.field_n, 0, 4164, ProfileDataRequest.field_j, uf.field_e), false);
                   return;
                 }
               }
               if (decompiledFrameRemainder0) {
-                td.a(8.0f, kp.a(re.field_n, dp.field_j, "", 3, l.field_d), false);
+                td.a(8.0f, kp.a(re.field_n, ProfileDataRequest.field_j, "", 3, ResultScenePhase.field_d), false);
                 return;
               }
             }
             if (decompiledFrameRemainder0) {
-              td.a(8.0f, kp.a(re.field_n, dp.field_j, "basic", 3, dj.field_ab), false);
+              td.a(8.0f, kp.a(re.field_n, ProfileDataRequest.field_j, "basic", 3, dj.field_ab), false);
               return;
             }
           }
@@ -1205,16 +1205,16 @@ public final class CrazyCrystals extends NetworkGameClient {
             ba.b((byte) 126);
             td.a(28.0f, oi.field_b, false);
             this.a(-124);
-            h.field_d = bf.a(-1, "buttonframe", "", l.field_d);
-            DirectByteStorage.field_c = bf.a(-1, "hoverbuttonframe", "", l.field_d);
-            fo.field_g = bf.a(-1, "smallbuttonframe", "", l.field_d);
-            mi.field_x = bf.a(-1, "hoversmallbuttonframe", "", l.field_d);
-            jn.field_o = bf.a(-1, "hollowframe", "", l.field_d);
-            mg.field_b = bf.a(-1, "tinyhollowframe", "", l.field_d);
-            an.field_q = hp.a(CipherPacketBuffer.field_p, 0, "fonts_smallfont", l.field_d, "");
+            h.field_d = bf.a(-1, "buttonframe", "", ResultScenePhase.field_d);
+            DirectByteStorage.field_c = bf.a(-1, "hoverbuttonframe", "", ResultScenePhase.field_d);
+            fo.field_g = bf.a(-1, "smallbuttonframe", "", ResultScenePhase.field_d);
+            mi.field_x = bf.a(-1, "hoversmallbuttonframe", "", ResultScenePhase.field_d);
+            jn.field_o = bf.a(-1, "hollowframe", "", ResultScenePhase.field_d);
+            mg.field_b = bf.a(-1, "tinyhollowframe", "", ResultScenePhase.field_d);
+            an.field_q = hp.a(CipherPacketBuffer.field_p, 0, "fonts_smallfont", ResultScenePhase.field_d, "");
             var3 = CipherPacketBuffer.field_p.getFileByName(7693, "fonts_largefont", "");
-            var4_ref_wj__ = ep.a(l.field_d, "fonts_largefont", "", false);
-            bd.a(l.field_d, var3, var4_ref_wj__, 8);
+            var4_ref_wj__ = ep.a(ResultScenePhase.field_d, "fonts_largefont", "", false);
+            bd.a(ResultScenePhase.field_d, var3, var4_ref_wj__, 8);
             go.field_l = wi.a(0, var4_ref_wj__, var3);
             gj.field_m = pp.a(new int[]{}, (byte) 80, 1, var3, var4_ref_wj__);
             var5 = gj.field_m.field_K[0].length;
@@ -1229,10 +1229,10 @@ public final class CrazyCrystals extends NetworkGameClient {
             CipherPacketBuffer.field_p = null;
             lo.field_a = null;
             gj.field_m.field_K[2][1] = 16760896;
-            var6_ref_dl__ = bf.a(-1, "bgtiles_rocky", "", l.field_d);
-            var7 = bf.a(-1, "bgtiles_grass", "", l.field_d);
-            var8_ref_dl__ = bf.a(-1, "bgtiles_metal", "", l.field_d);
-            var9 = bf.a(-1, "bgtiles_tiles", "", l.field_d);
+            var6_ref_dl__ = bf.a(-1, "bgtiles_rocky", "", ResultScenePhase.field_d);
+            var7 = bf.a(-1, "bgtiles_grass", "", ResultScenePhase.field_d);
+            var8_ref_dl__ = bf.a(-1, "bgtiles_metal", "", ResultScenePhase.field_d);
+            var9 = bf.a(-1, "bgtiles_tiles", "", ResultScenePhase.field_d);
             var10 = var9.length + (var8_ref_dl__.length + var6_ref_dl__.length + java.lang.reflect.Array.getLength(var7)) - 12;
             tb.field_e = new RgbSprite[4 + var10];
             tb.field_e[0] = var6_ref_dl__[0];
@@ -1286,8 +1286,8 @@ public final class CrazyCrystals extends NetworkGameClient {
             do {
               if (var9.length <= var12) {
                 vp.field_a[4] = var11;
-                ec.field_j = bf.a(-1, "bgtiles_teleport", "", l.field_d);
-                mg.a(-104, l.field_d);
+                ec.field_j = bf.a(-1, "bgtiles_teleport", "", ResultScenePhase.field_d);
+                mg.a(-104, ResultScenePhase.field_d);
                 break;
               }
               incrementValue$5 = var11;
@@ -1355,24 +1355,24 @@ public final class CrazyCrystals extends NetworkGameClient {
           if (NanoFrameTimer.field_o == null) {
             td.a(32.0f, oi.field_b, false);
             this.a(-124);
-            NanoFrameTimer.field_o = bf.a(-1, "fgtiles_earth", "", l.field_d);
-            ByteStorage.field_b = ArchiveRequest.a("fgtiles_laserhub", l.field_d, 10, "");
-            MouseWheelInput.field_i = ArchiveRequest.a("sprites_rock", l.field_d, 10, "");
+            NanoFrameTimer.field_o = bf.a(-1, "fgtiles_earth", "", ResultScenePhase.field_d);
+            ByteStorage.field_b = ArchiveRequest.a("fgtiles_laserhub", ResultScenePhase.field_d, 10, "");
+            MouseWheelInput.field_i = ArchiveRequest.a("sprites_rock", ResultScenePhase.field_d, 10, "");
             vp.field_i = new RgbSprite[2][];
-            vp.field_i[0] = bf.a(-1, "sprites_crystal1", "", l.field_d);
-            vp.field_i[1] = bf.a(-1, "sprites_crystal2", "", l.field_d);
-            var3_array = bf.a(-1, "sprites_mirrors", "", l.field_d);
+            vp.field_i[0] = bf.a(-1, "sprites_crystal1", "", ResultScenePhase.field_d);
+            vp.field_i[1] = bf.a(-1, "sprites_crystal2", "", ResultScenePhase.field_d);
+            var3_array = bf.a(-1, "sprites_mirrors", "", ResultScenePhase.field_d);
             en.field_K = new RgbSprite[6];
             ImageProducerRasterBuffer.field_h = new RgbSprite[6];
             ResourceArchive.field_j = new RgbSprite[6];
             ig.field_q = var3_array[6];
             nf.field_g = var3_array[19];
-            ja.field_h = new RgbSprite[6];
+            LevelCompleteScene.field_h = new RgbSprite[6];
             var4 = 0;
             while (6 > var4) {
               en.field_K[var4] = var3_array[-var4 + 12];
               ImageProducerRasterBuffer.field_h[var4] = var3_array[-var4 + 25];
-              ja.field_h[var4] = var3_array[var4 + 13];
+              LevelCompleteScene.field_h[var4] = var3_array[var4 + 13];
               ResourceArchive.field_j[var4] = var3_array[var4];
               var4++;
               if (var13 != 0) {
@@ -1385,21 +1385,21 @@ public final class CrazyCrystals extends NetworkGameClient {
           if (null == ac.field_j) {
             td.a(36.0f, oi.field_b, false);
             this.a(-125);
-            var3_array = bf.a(-1, "sprites_lasers", "", l.field_d);
+            var3_array = bf.a(-1, "sprites_lasers", "", ResultScenePhase.field_d);
             jl.field_b = var3_array[3];
             ai.field_b = var3_array[5];
             Bzip2State.field_e = var3_array[1];
             en.field_M = var3_array[2];
             ce.field_eb = var3_array[4];
             ac.field_j = var3_array[0];
-            de.field_k = ArchiveRequest.a("sprites_ledge", l.field_d, 10, "");
-            qj.field_b = ArchiveRequest.a("sprites_stickyball", l.field_d, 10, "");
-            il.field_e = ArchiveRequest.a("sprites_pingpongball", l.field_d, 10, "");
-            var3_array = bf.a(-1, "sprites_ball_indicators", "", l.field_d);
+            de.field_k = ArchiveRequest.a("sprites_ledge", ResultScenePhase.field_d, 10, "");
+            qj.field_b = ArchiveRequest.a("sprites_stickyball", ResultScenePhase.field_d, 10, "");
+            il.field_e = ArchiveRequest.a("sprites_pingpongball", ResultScenePhase.field_d, 10, "");
+            var3_array = bf.a(-1, "sprites_ball_indicators", "", ResultScenePhase.field_d);
             na.field_eb = var3_array[1];
             qi.field_a = var3_array[5];
             mk.field_a = var3_array[2];
-            ln.field_d = var3_array[7];
+            ScoreModifier.field_d = var3_array[7];
             vp.field_d = var3_array[0];
             tl.field_b = var3_array[3];
             rf.field_C = var3_array[4];
@@ -1408,7 +1408,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             al.field_h = new RgbSprite[12];
             cp.field_d = new RgbSprite[12];
             AccountCreationResultPanel.field_qb = new RgbSprite[12];
-            var3_array = bf.a(-1, "sprites_spider", "", l.field_d);
+            var3_array = bf.a(-1, "sprites_spider", "", ResultScenePhase.field_d);
             var4 = 0;
             do {
               if (var4 >= 12) {
@@ -1447,17 +1447,17 @@ public final class CrazyCrystals extends NetworkGameClient {
           if (null == pa.field_H) {
             td.a(40.0f, oi.field_b, false);
             this.a(-127);
-            pa.field_H = ArchiveRequest.a("sprites_spider_bright", l.field_d, 10, "");
+            pa.field_H = ArchiveRequest.a("sprites_spider_bright", ResultScenePhase.field_d, 10, "");
             ArchiveRequest.field_p = new RgbSprite[4][4];
-            var3_array = bf.a(-1, "sprites_spider_web", "", l.field_d);
+            var3_array = bf.a(-1, "sprites_spider_web", "", ResultScenePhase.field_d);
             var4 = 0;
             do {
               if (16 <= var4) {
-                jd.field_A = ArchiveRequest.a("sprites_grave", l.field_d, 10, "");
-                fl.field_i = bf.a(-1, "sprites_key", "", l.field_d);
-                v.field_b = bf.a(-1, "sprites_safe", "", l.field_d);
-                bb.field_y = new RgbSprite[12];
-                var3_array = bf.a(-1, "sprites_safe_base", "", l.field_d);
+                jd.field_A = ArchiveRequest.a("sprites_grave", ResultScenePhase.field_d, 10, "");
+                fl.field_i = bf.a(-1, "sprites_key", "", ResultScenePhase.field_d);
+                v.field_b = bf.a(-1, "sprites_safe", "", ResultScenePhase.field_d);
+                RockTile.field_y = new RgbSprite[12];
+                var3_array = bf.a(-1, "sprites_safe_base", "", ResultScenePhase.field_d);
                 break;
               }
               ArchiveRequest.field_p[var4 >> 2][pf.b(3, var4)] = var3_array[var4];
@@ -1465,13 +1465,13 @@ public final class CrazyCrystals extends NetworkGameClient {
             } while (var13 == 0);
             var4 = 1;
             while (12 > var4) {
-              bb.field_y[var4] = var3_array[var4 - 1];
+              RockTile.field_y[var4] = var3_array[var4 - 1];
               var4++;
               if (var13 != 0) {
                 return;
               }
             }
-            al.field_a = ArchiveRequest.a("sprites_bomb", l.field_d, 10, "");
+            al.field_a = ArchiveRequest.a("sprites_bomb", ResultScenePhase.field_d, 10, "");
             vp.a(104);
             return;
           }
@@ -1484,12 +1484,12 @@ public final class CrazyCrystals extends NetworkGameClient {
             hj.field_b = new RgbSprite[8];
             bd.field_n = new RgbSprite[8];
             cl.field_n = new RgbSprite[8];
-            jg.field_i = new RgbSprite[8];
-            var3_array = bf.a(-1, "sprites_explosion", "", l.field_d);
+            ModelMesh.field_i = new RgbSprite[8];
+            var3_array = bf.a(-1, "sprites_explosion", "", ResultScenePhase.field_d);
             var4 = 0;
             while (var4 < 8) {
               ba.field_g[var4] = var3_array[7 * var4 + 0];
-              jg.field_i[var4] = var3_array[7 * var4 + 1];
+              ModelMesh.field_i[var4] = var3_array[7 * var4 + 1];
               hj.field_b[var4] = var3_array[var4 * 7 + 2];
               q.field_b[var4] = var3_array[7 * var4 + 3];
               pl.field_B[var4] = var3_array[4 + var4 * 7];
@@ -1506,20 +1506,20 @@ public final class CrazyCrystals extends NetworkGameClient {
           if (null == jf.field_b) {
             td.a(48.0f, oi.field_b, false);
             this.a(-124);
-            jf.field_b = bf.a(-1, "control_keys", "", l.field_d);
-            qh.a(9260, 52, 0, l.field_d);
-            qh.a(9260, 56, 1, l.field_d);
-            qh.a(9260, 60, 2, l.field_d);
-            qh.a(9260, 64, 3, l.field_d);
+            jf.field_b = bf.a(-1, "control_keys", "", ResultScenePhase.field_d);
+            qh.a(9260, 52, 0, ResultScenePhase.field_d);
+            qh.a(9260, 56, 1, ResultScenePhase.field_d);
+            qh.a(9260, 60, 2, ResultScenePhase.field_d);
+            qh.a(9260, 64, 3, ResultScenePhase.field_d);
             vp.a(118);
             return;
           }
           if (null == d.field_c) {
             td.a(68.0f, oi.field_b, false);
             this.a(-126);
-            ln.a(0, l.field_d);
-            am.a(l.field_d, uf.field_e, -88);
-            d.field_c = bf.a(-1, "achievements", "", l.field_d);
+            ScoreModifier.loadElectrocutionSprites(0, ResultScenePhase.field_d);
+            am.a(ResultScenePhase.field_d, uf.field_e, -88);
+            d.field_c = bf.a(-1, "achievements", "", ResultScenePhase.field_d);
             ro.field_q = ArchiveRequest.a("unachieved", dj.field_ab, 10, "basic");
             ah.field_b = ArchiveRequest.a("locked", dj.field_ab, 10, "basic");
             var3_ref = ArchiveRequest.a("orbcoin", dj.field_ab, 10, "basic");
@@ -1541,14 +1541,14 @@ public final class CrazyCrystals extends NetworkGameClient {
             oj.field_B = new RgbSprite(32, 32);
             oj.field_B.a();
             ro.field_q.d(0, 0, 32, 32);
-            p.field_k = new RgbSprite(32, 32);
-            p.field_k.a();
+            PauseMenu.field_k = new RgbSprite(32, 32);
+            PauseMenu.field_k.a();
             ah.field_b.d(0, 0, 32, 32);
             ne.field_i = new RgbSprite(20, 20);
             ne.field_i.a();
             var3_ref.d(0, 0, 20, 20);
             dk.field_o.setAsRasterTarget(6945);
-            l.field_d = null;
+            ResultScenePhase.field_d = null;
             dj.field_ab = null;
             uf.field_e = null;
             vp.a(102);
@@ -1620,68 +1620,68 @@ public final class CrazyCrystals extends NetworkGameClient {
           td.a(88.0f, ae.field_D, false);
           this.a(-126);
           kf.field_d = new int[30];
-          lm.field_d = new f[30];
+          lm.field_d = new PuzzleTile[30];
           kf.field_d[0] = 0;
-          lm.field_d[0] = (f) ((Object) new kp());
+          lm.field_d[0] = (PuzzleTile) ((Object) new kp());
           kf.field_d[1] = 8;
-          lm.field_d[1] = (f) ((Object) new pj(0));
+          lm.field_d[1] = (PuzzleTile) ((Object) new WallTile(0));
           kf.field_d[2] = 16;
-          lm.field_d[2] = (f) ((Object) new pj(1));
+          lm.field_d[2] = (PuzzleTile) ((Object) new WallTile(1));
           kf.field_d[3] = 24;
-          lm.field_d[3] = (f) ((Object) new pj(2));
+          lm.field_d[3] = (PuzzleTile) ((Object) new WallTile(2));
           kf.field_d[4] = 32;
-          lm.field_d[4] = (f) ((Object) new pj(3));
+          lm.field_d[4] = (PuzzleTile) ((Object) new WallTile(3));
           kf.field_d[5] = 40;
-          lm.field_d[5] = (f) ((Object) new pj(4));
+          lm.field_d[5] = (PuzzleTile) ((Object) new WallTile(4));
           kf.field_d[6] = 48;
-          lm.field_d[6] = (f) ((Object) new pj(5));
+          lm.field_d[6] = (PuzzleTile) ((Object) new WallTile(5));
           kf.field_d[7] = 56;
-          lm.field_d[7] = (f) ((Object) new pj(6));
+          lm.field_d[7] = (PuzzleTile) ((Object) new WallTile(6));
           kf.field_d[8] = 64;
-          lm.field_d[8] = (f) ((Object) new pj(7));
+          lm.field_d[8] = (PuzzleTile) ((Object) new WallTile(7));
           kf.field_d[9] = 72;
-          lm.field_d[9] = (f) ((Object) new pj(8));
+          lm.field_d[9] = (PuzzleTile) ((Object) new WallTile(8));
           kf.field_d[10] = 80;
-          lm.field_d[10] = (f) ((Object) new pj(9));
+          lm.field_d[10] = (PuzzleTile) ((Object) new WallTile(9));
           kf.field_d[11] = 88;
-          lm.field_d[11] = (f) ((Object) new de());
+          lm.field_d[11] = (PuzzleTile) ((Object) new de());
           kf.field_d[12] = 112;
-          lm.field_d[12] = (f) ((Object) new kn(new kp()));
+          lm.field_d[12] = (PuzzleTile) ((Object) new kn(new kp()));
           kf.field_d[13] = 120;
-          lm.field_d[13] = (f) ((Object) new c(new kp()));
+          lm.field_d[13] = (PuzzleTile) ((Object) new LaserHubTile(new kp()));
           kf.field_d[14] = 96;
-          lm.field_d[14] = (f) ((Object) new bb(new kp()));
+          lm.field_d[14] = (PuzzleTile) ((Object) new RockTile(new kp()));
           kf.field_d[15] = 104;
-          lm.field_d[15] = (f) ((Object) new jo(new kp(), 0));
+          lm.field_d[15] = (PuzzleTile) ((Object) new CrystalTile(new kp(), 0));
           kf.field_d[16] = 128;
-          lm.field_d[16] = (f) ((Object) new ro(0, new kp()));
+          lm.field_d[16] = (PuzzleTile) ((Object) new ro(0, new kp()));
           kf.field_d[17] = 129;
-          lm.field_d[17] = (f) ((Object) new ro(1, new kp()));
+          lm.field_d[17] = (PuzzleTile) ((Object) new ro(1, new kp()));
           kf.field_d[18] = 136;
-          lm.field_d[18] = (f) ((Object) new vb(new kp()));
+          lm.field_d[18] = (PuzzleTile) ((Object) new vb(new kp()));
           kf.field_d[19] = 144;
-          lm.field_d[19] = (f) ((Object) new cd(new kp(), 1, 0, 0, 1));
+          lm.field_d[19] = (PuzzleTile) ((Object) new cd(new kp(), 1, 0, 0, 1));
           kf.field_d[20] = 145;
-          lm.field_d[20] = (f) ((Object) new gh(new kp(), 1, 0));
+          lm.field_d[20] = (PuzzleTile) ((Object) new gh(new kp(), 1, 0));
           var3_int = 116 / ((param1 - 34) / 63);
           kf.field_d[21] = 146;
-          lm.field_d[21] = (f) ((Object) new mi(new kp()));
+          lm.field_d[21] = (PuzzleTile) ((Object) new mi(new kp()));
           kf.field_d[22] = 152;
-          lm.field_d[22] = (f) ((Object) new gi(0, new kp()));
+          lm.field_d[22] = (PuzzleTile) ((Object) new gi(0, new kp()));
           kf.field_d[23] = 160;
-          lm.field_d[23] = (f) ((Object) new ep(new jo(new kp(), 0), 0));
+          lm.field_d[23] = (PuzzleTile) ((Object) new ep(new CrystalTile(new kp(), 0), 0));
           kf.field_d[24] = 168;
-          lm.field_d[24] = (f) ((Object) new cj(new kp(), 2, 0, 0));
+          lm.field_d[24] = (PuzzleTile) ((Object) new cj(new kp(), 2, 0, 0));
           kf.field_d[25] = 105;
-          lm.field_d[25] = (f) ((Object) new jo(new kp(), 1));
+          lm.field_d[25] = (PuzzleTile) ((Object) new CrystalTile(new kp(), 1));
           kf.field_d[26] = 200;
-          lm.field_d[26] = (f) ((Object) new cb(new kp(), 0, 0));
+          lm.field_d[26] = (PuzzleTile) ((Object) new cb(new kp(), 0, 0));
           kf.field_d[27] = 248;
-          lm.field_d[27] = (f) ((Object) new fq(new kp(), 0, 0, 0));
+          lm.field_d[27] = (PuzzleTile) ((Object) new fq(new kp(), 0, 0, 0));
           kf.field_d[28] = 249;
-          lm.field_d[28] = (f) ((Object) new fq(new kp(), 1, 0, 0));
+          lm.field_d[28] = (PuzzleTile) ((Object) new fq(new kp(), 1, 0, 0));
           kf.field_d[29] = 250;
-          lm.field_d[29] = (f) ((Object) new fq(new kp(), 2, 0, 0));
+          lm.field_d[29] = (PuzzleTile) ((Object) new fq(new kp(), 2, 0, 0));
           MouseInputHandler.field_b = (ue) ((Object) new re());
           vp.a(103);
           DualLinkNode.field_i = true;
@@ -1712,8 +1712,8 @@ public final class CrazyCrystals extends NetworkGameClient {
         }
         try {
           AudioOutput.configureAudio(22050, true, 10);
-          hb.field_h = AudioOutput.createOutput(te.field_a, (java.awt.Component) ((Object) jd.field_D), 0, 0);
-          gf.field_c = AudioOutput.createOutput(te.field_a, (java.awt.Component) ((Object) jd.field_D), 1, 22050);
+          hb.field_h = AudioOutput.createOutput(ResultScene.field_a, (java.awt.Component) ((Object) jd.field_D), 0, 0);
+          gf.field_c = AudioOutput.createOutput(ResultScene.field_a, (java.awt.Component) ((Object) jd.field_D), 1, 22050);
           tb.field_d = new PcmStreamMixer();
           hb.field_h.setRootStream(tb.field_d);
           this.a(true, false, true, true, -1);
@@ -1781,7 +1781,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                         dg.a(false, 50);
                         ti.field_o = false;
                       }
-                      if (r.field_m &&
+                      if (LevelLostScene.field_m &&
                         Bzip2State.field_n < 640) {
                         if (Bzip2State.field_n < 136) {
                           gh.field_C = gh.field_C + 1;
@@ -1820,7 +1820,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                       decompiledFrameRemainder1 = (var5 != 0);
                     }
                     if ((decompiledFrameRemainder1) &&
-                      (decompiledFrameRemainder1 = !(!r.field_m))) {
+                      (decompiledFrameRemainder1 = !(!LevelLostScene.field_m))) {
                       if (!uh.field_n &&
                         Bzip2State.field_n < 640) {
                         if (Bzip2State.field_n < 136) {
@@ -1937,12 +1937,12 @@ public final class CrazyCrystals extends NetworkGameClient {
             }
             if (var2_intLifetime1 == 2) {
               stackIn_198_0 = go.field_l;
-              if (r.field_m) {
+              if (LevelLostScene.field_m) {
                 stackIn_199_1 = 240;
               } else {
                 stackIn_199_1 = 320;
               }
-              ja.a(stackIn_198_0, stackIn_199_1, 240, 23, 25, -17213);
+              LevelCompleteScene.requestReconnect(stackIn_198_0, stackIn_199_1, 240, 23, 25, -17213);
             }
             if (var5 == 0) {
               return;

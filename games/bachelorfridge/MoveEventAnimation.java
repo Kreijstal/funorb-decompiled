@@ -77,7 +77,7 @@ final class MoveEventAnimation extends MovementAnimation {
         int var4 = 0;
         int var5 = 0;
         int var6 = BachelorFridge.field_y;
-        CreatureActor var7 = this.field_p.a(-27449, this.field_s);
+        CreatureActor var7 = this.field_p.resolveCreatureView(-27449, this.field_s);
         int var3 = -27 % ((71 - param0) / 47);
         int fieldTemp$0 = this.field_n + 1;
         CreatureActor var2Lifetime1;
@@ -109,7 +109,7 @@ final class MoveEventAnimation extends MovementAnimation {
             return true;
           }
           if (this.field_z < this.field_n) {
-            var2 = this.field_p.a(-27449, this.field_s);
+            var2 = this.field_p.resolveCreatureView(-27449, this.field_s);
             var4 = this.field_q - this.field_z >> 1;
             var5 = -this.field_n - var4 + this.field_q;
             if (0 > var5) {
@@ -121,7 +121,7 @@ final class MoveEventAnimation extends MovementAnimation {
             return false;
           }
           var4Lifetime4 = this.field_n - this.field_m;
-          var2Lifetime4 = this.field_p.a(-27449, this.field_s);
+          var2Lifetime4 = this.field_p.resolveCreatureView(-27449, this.field_s);
           var2Lifetime4.field_o = (this.field_l << 16) * var4Lifetime4 / this.field_z;
           var2Lifetime4.field_r = var4Lifetime4 * (this.field_j << 16) / this.field_z;
           return false;
@@ -133,7 +133,7 @@ final class MoveEventAnimation extends MovementAnimation {
             return true;
           }
           if (this.field_z < this.field_n) {
-            var2Lifetime1 = this.field_p.a(-27449, this.field_s);
+            var2Lifetime1 = this.field_p.resolveCreatureView(-27449, this.field_s);
             var4Lifetime1 = this.field_q - this.field_z >> 1;
             var5Lifetime1 = -this.field_n - var4Lifetime1 + this.field_q;
             if (0 > var5Lifetime1) {
@@ -145,7 +145,7 @@ final class MoveEventAnimation extends MovementAnimation {
             return false;
           }
           var4Lifetime1Lifetime1 = this.field_n - this.field_m;
-          var2Lifetime1Lifetime1 = this.field_p.a(-27449, this.field_s);
+          var2Lifetime1Lifetime1 = this.field_p.resolveCreatureView(-27449, this.field_s);
           var2Lifetime1Lifetime1.field_o = (this.field_l << 16) * var4Lifetime1Lifetime1 / this.field_z;
           var2Lifetime1Lifetime1.field_r = var4Lifetime1Lifetime1 * (this.field_j << 16) / this.field_z;
           return false;
@@ -159,7 +159,7 @@ final class MoveEventAnimation extends MovementAnimation {
           return true;
         }
         if (this.field_z < this.field_n) {
-          var2Lifetime2 = this.field_p.a(-27449, this.field_s);
+          var2Lifetime2 = this.field_p.resolveCreatureView(-27449, this.field_s);
           var4Lifetime2 = this.field_q - this.field_z >> 1;
           var5Lifetime2 = -this.field_n - var4Lifetime2 + this.field_q;
           if (0 > var5Lifetime2) {
@@ -171,7 +171,7 @@ final class MoveEventAnimation extends MovementAnimation {
           return false;
         }
         var4Lifetime3 = this.field_n - this.field_m;
-        var2Lifetime3 = this.field_p.a(-27449, this.field_s);
+        var2Lifetime3 = this.field_p.resolveCreatureView(-27449, this.field_s);
         var2Lifetime3.field_o = (this.field_l << 16) * var4Lifetime3 / this.field_z;
         var2Lifetime3.field_r = var4Lifetime3 * (this.field_j << 16) / this.field_z;
         return false;
@@ -180,7 +180,7 @@ final class MoveEventAnimation extends MovementAnimation {
     private final void c(boolean param0) {
         CreatureActor var2;
         CreatureActor var3;
-        var3 = this.field_p.a(-27449, this.field_s);
+        var3 = this.field_p.resolveCreatureView(-27449, this.field_s);
         var2 = var3;
         var3.b(false);
         var3.field_r = 0;
@@ -201,7 +201,7 @@ final class MoveEventAnimation extends MovementAnimation {
         if (!hl.a((byte) -124, this.field_C)) {
           return;
         }
-        if (var3.field_s.g((byte) 85)) {
+        if (var3.field_s.isCarryingFlag((byte) 85)) {
           return;
         }
         if (var3.field_s.statusId == 33) {
@@ -218,8 +218,8 @@ final class MoveEventAnimation extends MovementAnimation {
         this(param0, param1.creature, param1.moveId, param1.field_p, param1.field_n, param1.field_t);
         CreatureActor var3 = null;
         try {
-          var3 = this.field_p.a(-27449, this.field_s);
-          var3.field_s.d(param1.moveId, (byte) -115);
+          var3 = this.field_p.resolveCreatureView(-27449, this.field_s);
+          var3.field_s.applyMoveCooldown(param1.moveId, (byte) -115);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -237,7 +237,7 @@ final class MoveEventAnimation extends MovementAnimation {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          var10 = this.field_p.a(114, this.field_s.field_h);
+          var10 = this.field_p.resolveCreature(114, this.field_s.field_h);
           var8 = this.field_s.b(var10, -23990);
           this.field_C = param2;
           if (this.field_C == 0) {

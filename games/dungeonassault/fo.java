@@ -53,7 +53,7 @@ final class fo {
         int var4 = ue.field_j[var2];
         int var5 = ue.field_j[var3];
         if (var5 != var4) {
-          bo.field_Jb.a(param1, -116);
+          bo.field_Jb.setBit(param1, -116);
           lm.a(var5, (byte) -113, var4);
         }
     }

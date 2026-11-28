@@ -309,7 +309,7 @@ final class bl {
           m.field_c = oh.a(hj.field_Z, "pieces", 11091, "piece_thief");
           sp.field_d = oh.a(hj.field_Z, "pieces", 11091, "piece_troglodyte");
           gd.field_A = oh.a(hj.field_Z, "pieces", 11091, "piece_troll");
-          h.field_E = oh.a(hj.field_Z, "pieces", 11091, "piece_vampire");
+          RaiderDefinition.field_E = oh.a(hj.field_Z, "pieces", 11091, "piece_vampire");
           NetworkGameClient.field_D = oh.a(hj.field_Z, "pieces", 11091, "piece_witch");
           up.field_b = oh.a(hj.field_Z, "pieces", 11091, "piece_zealot");
           gd.field_E = oh.a(hj.field_Z, "", 11091, "stat_attack");
@@ -355,7 +355,7 @@ final class bl {
           }
           la.field_b.a(new q[]{fb.field_f, rf.a(10)}, new int[]{9, 10});
           fl.field_i = fn.a(2);
-          wm.field_h = fl.field_i.b();
+          PackedBitSet.field_h = fl.field_i.b();
           SecondaryNodeDeque.field_a = rj.a((byte) 127);
           sm.field_g = BoundedRandomAccessFile.a(true);
           fo.field_a = wo.a(5, 1, 6, 5, 16744448);
@@ -514,8 +514,8 @@ final class bl {
         int var4 = 0;
         ac[] var5 = null;
         int var6 = 0;
-        h[] var7 = null;
-        h var8 = null;
+        RaiderDefinition[] var7 = null;
+        RaiderDefinition var8 = null;
         ac var9 = null;
         int var2Lifetime1;
         var4 = DungeonAssault.field_K;
@@ -588,15 +588,15 @@ final class bl {
         return var3;
     }
 
-    final static ai a(boolean param0, PacketBuffer param1, boolean param2) {
+    final static DungeonTileState a(boolean param0, PacketBuffer param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        ai var4 = null;
+        DungeonTileState var4 = null;
         PacketBuffer var5 = null;
-        ai stackIn_5_0 = null;
+        DungeonTileState stackIn_5_0 = null;
         PacketBuffer stackIn_5_1 = null;
         boolean stackIn_6_2 = false;
-        ai stackIn_8_0 = null;
+        DungeonTileState stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -607,7 +607,7 @@ final class bl {
             bl.a(false, (PacketBuffer) null, true);
           }
           var3_int = param1.readUnsignedByte(true);
-          var4 = new ai(var3_int);
+          var4 = new DungeonTileState(var3_int);
           var4.field_p = param1.readUnsignedByte(true);
           var4.field_g = param1.readUnsignedByte(true);
           var4.field_r = param1.readUnsignedByte(true);

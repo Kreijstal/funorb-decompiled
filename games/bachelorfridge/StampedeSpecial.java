@@ -24,7 +24,7 @@ final class StampedeSpecial extends SpecialOrder {
           if (param1 != 3) {
             field_t = (UiComponent) null;
           }
-          var7 = this.creature.a(69, param0);
+          var7 = this.creature.resolveCreature(69, param0);
           var4 = new StampedeEvent(this.moveId, new CreatureRef(var7), this.field_i);
           if (2 == this.field_i) {
             for (var5 = 0; var7.tileX > var5; var5++) {

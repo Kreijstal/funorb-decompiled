@@ -35,7 +35,7 @@ final class BananarangSpecial extends SpecialOrder {
         int var16Lifetime1;
         var19 = BachelorFridge.field_y;
         try {
-          var20 = this.creature.a(param1 + 110, param0);
+          var20 = this.creature.resolveCreature(param1 + 110, param0);
           var4 = new BananarangEvent(this.moveId, new CreatureRef(var20), this.field_i);
           var5 = param0.width;
           var6 = param0.height;

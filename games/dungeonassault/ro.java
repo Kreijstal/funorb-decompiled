@@ -5,7 +5,7 @@ final class ro extends kl {
     private int field_r;
     private int field_A;
     private int field_t;
-    private wd field_o;
+    private SpriteAnimationPlayer field_o;
     private go field_p;
     static boolean field_B;
     private int field_z;
@@ -58,7 +58,7 @@ final class ro extends kl {
         int var3 = this.field_j + 80;
         SoftwareRasterizer.fillRectangle(var2 - 5, -5 + var3, 210, 210, 0);
         rp.a(4, 202, (byte) 108, var2 - 1, 202, kc.field_S, -1 + var3);
-        this.field_o.a(200, var3, (byte) 102, var2, 200);
+        this.field_o.drawAnimation(200, var3, (byte) 102, var2, 200);
         if (this.field_w == null) {
           this.a(this.field_k, -80 + (this.field_j + this.field_i), this.field_a, (byte) 4, 80);
           if (this.field_t == 5) {
@@ -334,7 +334,7 @@ final class ro extends kl {
         this.field_f.addFirst(this.field_s, false);
         this.field_y.a((byte) -19);
         System.gc();
-        this.field_o.a(ga.field_n, bo.field_Lb, -10872);
+        this.field_o.startAnimation(ga.field_n, bo.field_Lb, -10872);
         this.field_A = 0;
         if (param0 == 2) {
           this.a(true, 16711680, al.field_n);
@@ -482,7 +482,7 @@ final class ro extends kl {
           this.field_n = new dd(40 + this.field_k, this.field_i + this.field_j - 118, 0, this.field_a - 80, var2_int, this.field_D);
           t.a(64, gl.field_Ib, true, true);
           this.field_y = rg.field_M[0];
-          this.field_o = new wd(this.field_y);
+          this.field_o = new SpriteAnimationPlayer(this.field_y);
           if (this.field_p.field_Y.field_l <= 0) {
             this.field_s = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -jm.field_i.field_v + this.field_j + this.field_i, IntrusiveNode.field_c, jm.field_i, -75, pe.field_n);
             this.field_f.addFirst(this.field_s, false);
@@ -589,7 +589,7 @@ final class ro extends kl {
         int var7Lifetime1;
         var8 = DungeonAssault.field_K;
         super.c((byte) -97);
-        this.field_o.a((byte) 109, 20);
+        this.field_o.advanceAnimation((byte) 109, 20);
         if (null == this.field_w) {
           var2 = 93 % ((-34 - param0) / 57);
           if (this.field_v != null) {
@@ -609,7 +609,7 @@ final class ro extends kl {
                     this.field_A >= this.field_x) {
                     this.field_y.a((byte) -19);
                     System.gc();
-                    this.field_o.a(ga.field_n, bo.field_Lb, -10872);
+                    this.field_o.startAnimation(ga.field_n, bo.field_Lb, -10872);
                     this.field_t = 2;
                     this.field_s.field_w = true;
                     return;
@@ -629,7 +629,7 @@ final class ro extends kl {
                 this.field_A >= this.field_x) {
                 this.field_y.a((byte) -19);
                 System.gc();
-                this.field_o.a(ga.field_n, bo.field_Lb, -10872);
+                this.field_o.startAnimation(ga.field_n, bo.field_Lb, -10872);
                 this.field_t = 2;
                 this.field_s.field_w = true;
                 return;
@@ -647,7 +647,7 @@ final class ro extends kl {
             if (2 == this.field_t) {
               if (ga.field_n == this.field_o.field_k) {
                 regionExit1: {
-                  this.field_o.a(ga.field_n, ce.field_v, -10872);
+                  this.field_o.startAnimation(ga.field_n, ce.field_v, -10872);
                   var3 = this.field_p.a(1, this.field_C);
                   var4 = NetworkGameClient.countSetBits(var3, 8);
                   if (var3 != 0) {
@@ -688,7 +688,7 @@ final class ro extends kl {
             } else {
               if (this.field_t == 4 &&
                 this.field_o.field_k == ga.field_n) {
-                this.field_o.a(ga.field_n, ce.field_v, -10872);
+                this.field_o.startAnimation(ga.field_n, ce.field_v, -10872);
                 this.d((byte) -108);
               }
             }
@@ -716,7 +716,7 @@ final class ro extends kl {
               this.field_A >= this.field_x) {
               this.field_y.a((byte) -19);
               System.gc();
-              this.field_o.a(ga.field_n, bo.field_Lb, -10872);
+              this.field_o.startAnimation(ga.field_n, bo.field_Lb, -10872);
               this.field_t = 2;
               this.field_s.field_w = true;
               return;
@@ -735,7 +735,7 @@ final class ro extends kl {
             if (ga.field_n != this.field_o.field_k) {
               return;
             }
-            this.field_o.a(ga.field_n, ce.field_v, -10872);
+            this.field_o.startAnimation(ga.field_n, ce.field_v, -10872);
             var3Lifetime1 = this.field_p.a(1, this.field_C);
             var4 = NetworkGameClient.countSetBits(var3Lifetime1, 8);
             if (var3Lifetime1 == 0) {
@@ -781,7 +781,7 @@ final class ro extends kl {
           }
           if (this.field_t == 4 &&
             this.field_o.field_k == ga.field_n) {
-            this.field_o.a(ga.field_n, ce.field_v, -10872);
+            this.field_o.startAnimation(ga.field_n, ce.field_v, -10872);
             this.d((byte) -108);
           }
         }
@@ -823,7 +823,7 @@ final class ro extends kl {
         var14 = DungeonAssault.field_K;
         var6 = this.field_D;
         if (this.field_t == 5) {
-          db.field_v.a(jk.a(new String[]{gh.a(this.field_p.field_Y.field_l, (byte) -120)}, wm.field_e, 30496), 30 + param0, param1 - 20, param2 - 60, 40, 16777215, -1, 1, 1, la.field_b.field_H);
+          db.field_v.a(jk.a(new String[]{gh.a(this.field_p.field_Y.field_l, (byte) -120)}, PackedBitSet.field_e, 30496), 30 + param0, param1 - 20, param2 - 60, 40, 16777215, -1, 1, 1, la.field_b.field_H);
         } else {
           if (this.field_t != 0) {
             if (this.field_t != 4) {
@@ -839,9 +839,9 @@ final class ro extends kl {
             db.field_v.b(Integer.toString(this.field_D), var7, var8, this.field_r, -1);
             var8 = var8 + (2 + db.field_v.field_H);
             db.field_v.a(li.field_e, var7, var8, this.field_r, -1);
-            db.field_v.b((int)(0.5 + 100.0 * this.field_p.field_Y.b(gm.field_d.field_N, this.field_D, 82)) + "%", var7, var8, this.field_r, -1);
+            db.field_v.b((int)(0.5 + 100.0 * this.field_p.field_Y.calculateDragonWakeRisk(gm.field_d.field_N, this.field_D, 82)) + "%", var7, var8, this.field_r, -1);
             var8 = var8 + (2 + db.field_v.field_H);
-            if (var6 > this.field_p.field_Y.c(-82)) {
+            if (var6 > this.field_p.field_Y.getMaximumHoardGoldToSteal(-82)) {
               db.field_v.a(oo.field_b, 30 + param0, -db.field_v.field_H + var8, param2 - 60, 30, this.field_r, -1, 1, 1, db.field_v.field_H);
             } else {
               if (var6 < 0) {
@@ -893,7 +893,7 @@ final class ro extends kl {
         double var2;
         int var4;
         int var5;
-        var2 = this.field_p.field_Y.b(gm.field_d.field_N, this.field_D, 69);
+        var2 = this.field_p.field_Y.calculateDragonWakeRisk(gm.field_d.field_N, this.field_D, 69);
         if (param0 > -52) {
           return;
         }
@@ -907,7 +907,7 @@ final class ro extends kl {
           stackIn_7_1 = 16711680;
         }
         this.field_r = stackIn_7_1;
-        stackIn_10_0 = (this.field_p.field_Y.b(gm.field_d.field_N, 0, 53) != 1.0) ? 0 : 1;
+        stackIn_10_0 = (this.field_p.field_Y.calculateDragonWakeRisk(gm.field_d.field_N, 0, 53) != 1.0) ? 0 : 1;
         var4 = stackIn_10_0;
         stackIn_28_0 = this.field_s;
         boolean decompiledFrameRemainder0 = true;
@@ -916,7 +916,7 @@ final class ro extends kl {
         } else {
           if (var2 < 1.0) {
             stackIn_28_0.field_w = true;
-            if (!(this.field_D <= this.field_p.field_Y.c(-114))) {
+            if (!(this.field_D <= this.field_p.field_Y.getMaximumHoardGoldToSteal(-114))) {
               this.field_s.field_w = false;
               this.field_r = 16711680;
             }
@@ -928,7 +928,7 @@ final class ro extends kl {
         }
         if (decompiledFrameRemainder0) {
           stackIn_28_0.field_w = stackIn_30_1;
-          if (this.field_D > this.field_p.field_Y.c(-114)) {
+          if (this.field_D > this.field_p.field_Y.getMaximumHoardGoldToSteal(-114)) {
             this.field_s.field_w = false;
             this.field_r = 16711680;
           }
@@ -939,7 +939,7 @@ final class ro extends kl {
         }
         if (rg.field_M[var5] != this.field_y) {
           this.field_y = rg.field_M[var5];
-          this.field_o = new wd(this.field_y);
+          this.field_o = new SpriteAnimationPlayer(this.field_y);
         }
         return;
     }

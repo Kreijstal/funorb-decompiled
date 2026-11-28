@@ -126,7 +126,7 @@ final class AirstrikeSpecial extends SpecialOrder {
         int var10Lifetime1;
         var18 = BachelorFridge.field_y;
         try {
-          var19 = this.creature.a(41, param0);
+          var19 = this.creature.resolveCreature(41, param0);
           var4 = new AirstrikeEvent(this.moveId, new CreatureRef(var19));
           var4.field_v = this.field_k;
           var4.field_r = this.field_n;
@@ -155,7 +155,7 @@ final class AirstrikeSpecial extends SpecialOrder {
               if (var23[var12Lifetime1][var13] == 1) {
                 var14 = this.field_k - (var8 - var12Lifetime1);
                 var15_int = this.field_n - var9 + var13;
-                if (param0.a(var14, var15_int, (byte) -127)) {
+                if (param0.isTileTerrainTraversable(var14, var15_int, (byte) -127)) {
                   incrementValue$1 = var10Lifetime1;
                   var10Lifetime1++;
                   var11[incrementValue$1] = new aj(var14, var15_int);

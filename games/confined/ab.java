@@ -25,7 +25,7 @@ final class ab {
             if (var5 < 0) {
               var4 = var4 + wm.field_bb;
             } else {
-              var6 = cl.a(param0 ^ -3, dl.field_c[var3_int], true);
+              var6 = PowerUpPickup.a(param0 ^ -3, dl.field_c[var3_int], true);
               var4 = var4 + kb.field_b;
               var7 = ef.field_vb - (var6 >> 1);
               if (qd.a(param1, var4, (jd.field_g << 1) + var6, param2, true, -jd.field_g + var7, (n.field_d << 1) + af.field_Z)) {
@@ -55,7 +55,7 @@ final class ab {
         RuntimeException var1_ref = null;
         var4 = Confined.field_J ? 1 : 0;
         try {
-          var5 = vb.field_e;
+          var5 = DequeCursor.field_e;
           var1 = var5;
           if (param0 < 98) {
             ab.resetStaticState((byte) -5);

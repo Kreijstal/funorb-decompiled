@@ -22,14 +22,14 @@ final class jh {
         this.field_a = 0;
         this.field_j = 0;
         if (this.field_k == 0) {
-          this.field_j = pj.field_q;
+          this.field_j = WallTile.field_q;
         }
         if (0 != this.field_k) {
           if (0 == this.field_k) {
-            if (97 != pj.field_q) {
+            if (97 != WallTile.field_q) {
               if (this.field_k == 0) {
-                if (pj.field_q != 98 &&
-                  99 != pj.field_q) {
+                if (WallTile.field_q != 98 &&
+                  99 != WallTile.field_q) {
                   return;
                 }
                 this.field_i = false;
@@ -48,7 +48,7 @@ final class jh {
           if (this.field_k != 0) {
             return;
           }
-          if (pj.field_q == 98) {
+          if (WallTile.field_q == 98) {
             this.field_i = false;
             if (0 <= this.field_c) {
               return;
@@ -56,7 +56,7 @@ final class jh {
             this.field_c = param0;
             return;
           }
-          if (99 != pj.field_q) {
+          if (99 != WallTile.field_q) {
             return;
           }
           this.field_i = false;
@@ -65,12 +65,12 @@ final class jh {
           }
           return;
         }
-        if (pj.field_q != 96) {
+        if (WallTile.field_q != 96) {
           if (0 == this.field_k) {
-            if (97 != pj.field_q) {
+            if (97 != WallTile.field_q) {
               if (this.field_k == 0) {
-                if (pj.field_q != 98 &&
-                  99 != pj.field_q) {
+                if (WallTile.field_q != 98 &&
+                  99 != WallTile.field_q) {
                   return;
                 }
                 this.field_i = false;
@@ -89,7 +89,7 @@ final class jh {
           if (this.field_k != 0) {
             return;
           }
-          if (pj.field_q == 98) {
+          if (WallTile.field_q == 98) {
             this.field_i = false;
             if (0 <= this.field_c) {
               return;
@@ -97,7 +97,7 @@ final class jh {
             this.field_c = param0;
             return;
           }
-          if (99 != pj.field_q) {
+          if (99 != WallTile.field_q) {
             return;
           }
           this.field_i = false;
@@ -110,10 +110,10 @@ final class jh {
           this.field_c = this.field_c - 1;
           this.field_i = false;
           if (0 == this.field_k) {
-            if (97 != pj.field_q) {
+            if (97 != WallTile.field_q) {
               if (this.field_k == 0) {
-                if (pj.field_q != 98 &&
-                  99 != pj.field_q) {
+                if (WallTile.field_q != 98 &&
+                  99 != WallTile.field_q) {
                   return;
                 }
                 this.field_i = false;
@@ -132,7 +132,7 @@ final class jh {
           if (this.field_k != 0) {
             return;
           }
-          if (pj.field_q == 98) {
+          if (WallTile.field_q == 98) {
             this.field_i = false;
             if (0 <= this.field_c) {
               return;
@@ -140,7 +140,7 @@ final class jh {
             this.field_c = param0;
             return;
           }
-          if (99 != pj.field_q) {
+          if (99 != WallTile.field_q) {
             return;
           }
           this.field_i = false;
@@ -153,11 +153,11 @@ final class jh {
         this.field_c = this.field_c - 1;
         this.field_i = false;
         if (0 == this.field_k) {
-          if (97 != pj.field_q) {
+          if (97 != WallTile.field_q) {
             if (this.field_k != 0) {
               return;
             }
-            if (pj.field_q == 98) {
+            if (WallTile.field_q == 98) {
               this.field_i = false;
               if (0 <= this.field_c) {
                 return;
@@ -165,7 +165,7 @@ final class jh {
               this.field_c = param0;
               return;
             }
-            if (99 != pj.field_q) {
+            if (99 != WallTile.field_q) {
               return;
             }
             this.field_i = false;
@@ -181,14 +181,14 @@ final class jh {
           this.field_i = false;
         }
         if (this.field_k == 0) {
-          if (pj.field_q == 98) {
+          if (WallTile.field_q == 98) {
             this.field_i = false;
             if (0 <= this.field_c) {
               return;
             }
             this.field_c = param0;
           } else {
-            if (99 == pj.field_q) {
+            if (99 == WallTile.field_q) {
               this.field_i = false;
               if (0 > this.field_c) {
                 this.field_c = param0;
@@ -247,7 +247,7 @@ final class jh {
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
         int var6 = this.a((byte) -24, param2, qh.field_i, param4, param1, param0, IsaacRandom.field_h);
-        int var7 = this.a((byte) -24, param2, to.field_a, param4, param1, param0, dp.field_h);
+        int var7 = this.a((byte) -24, param2, to.field_a, param4, param1, param0, ProfileDataRequest.field_h);
         this.a(0, var7, var6);
         if (param3 == 76) {
           return;
@@ -265,16 +265,16 @@ final class jh {
         this.field_g = 0;
         this.field_a = 0;
         this.field_j = 0;
-        if (pj.field_v != 0) {
+        if (WallTile.field_v != 0) {
           this.field_c = param1;
           this.field_h = me.field_c;
-          this.field_g = pj.field_v;
-          this.field_a = pj.field_v;
+          this.field_g = WallTile.field_v;
+          this.field_a = WallTile.field_v;
           this.field_i = true;
-          this.field_k = pj.field_v;
+          this.field_k = WallTile.field_v;
         }
         if (this.field_k == 0) {
-          if (pj.field_v == param0 &&
+          if (WallTile.field_v == param0 &&
             gg.field_c == 0) {
             this.field_k = 0;
             if (this.field_k == 0) {
@@ -331,7 +331,7 @@ final class jh {
           return;
         }
         if (0 == gg.field_c) {
-          if (pj.field_v == param0 &&
+          if (WallTile.field_v == param0 &&
             gg.field_c == 0) {
             this.field_k = 0;
             if (this.field_k == 0) {
@@ -380,7 +380,7 @@ final class jh {
             this.field_h = on.field_b;
           }
           this.field_h = this.field_h - 1;
-          if (pj.field_v == param0 &&
+          if (WallTile.field_v == param0 &&
             gg.field_c == 0) {
             this.field_k = 0;
             if (this.field_k != 0) {
@@ -486,7 +486,7 @@ final class jh {
         this.field_g = param0;
         this.field_a = 0;
         if (this.field_k == 0 &&
-          pj.field_q == 98) {
+          WallTile.field_q == 98) {
           if (0 >= this.field_c) {
             this.field_c = this.field_b;
           }
@@ -494,12 +494,12 @@ final class jh {
           this.field_i = false;
         }
         if (this.field_k == 0) {
-          this.field_j = pj.field_q;
+          this.field_j = WallTile.field_q;
         }
         if (0 != this.field_k) {
           return;
         }
-        if (pj.field_q != 99) {
+        if (WallTile.field_q != 99) {
           return;
         }
         this.field_c = this.field_c + 1;
@@ -522,7 +522,7 @@ final class jh {
         this.field_a = 0;
         this.field_g = 0;
         if (this.field_k == 0) {
-          this.field_j = pj.field_q;
+          this.field_j = WallTile.field_q;
         }
         int var2 = -49 / ((param0 + 70) / 53);
     }

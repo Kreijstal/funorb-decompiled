@@ -14,7 +14,7 @@ final class mr {
           q.field_v = cl.field_f;
           PacketBuffer.field_n = ja.field_h;
           gb.field_d = ca.field_c;
-          wo.field_s = ej.field_f;
+          PlayerState.field_s = ej.field_f;
           ej.field_f = param0;
           kf.field_c = kc.field_a;
           sd.field_N = hn.field_o;

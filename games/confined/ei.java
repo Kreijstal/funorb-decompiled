@@ -24,7 +24,7 @@ final class ei extends ug implements el {
             da.field_e.b(param1, (byte) -115);
             if (!ej.field_b) {
               ej.field_b = true;
-              he.field_d.a(h.field_R);
+              he.field_d.a(WingPod.field_R);
             }
           }
         }
@@ -39,7 +39,7 @@ final class ei extends ug implements el {
           if (param0 != 15102) {
             return;
           }
-          if (!hm.f((byte) 6)) {
+          if (!LightningArc.f((byte) 6)) {
             if (null != dn.field_d &&
               dn.field_d.field_f) {
               qh.c(4);
@@ -63,11 +63,11 @@ final class ei extends ug implements el {
     final static void h(byte param0) {
         he.field_f = -1;
         vf.field_o = null;
-        sa.field_R = false;
+        DampedProjectile.field_R = false;
         if (param0 > -93) {
           return;
         }
-        hm.field_qb = 0;
+        LightningArc.field_qb = 0;
         nm.field_I = -1;
     }
 
@@ -93,7 +93,7 @@ final class ei extends ug implements el {
               }
             } else {
               if (fj.field_x == param1) {
-                var3 = ql.field_A;
+                var3 = StageDirector.field_A;
                 this.field_z = this.field_z + 30;
               }
             }
@@ -187,7 +187,7 @@ final class ei extends ug implements el {
 
     final static bm o(int param0) {
         bm var1 = new bm(kb.field_a, em.field_e, DualLinkNode.field_p[0], ij.field_r[0], rg.field_I[0], sd.field_f[0], rj.field_f[0], an.field_p);
-        ql.a(false);
+        StageDirector.clearIndexedSpriteDecodeBuffers(false);
         if (param0 >= 20) {
           return var1;
         }

@@ -43,10 +43,10 @@ final class mm {
         int var2_intLifetime1;
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
-          var2_int = lj.field_p;
+          var2_int = MatchSession.field_p;
           if (param0.field_s == 2) {
             if (param0.field_n) {
-              var2_intLifetime1 = lj.field_p;
+              var2_intLifetime1 = MatchSession.field_p;
             } else {
               if (param0.field_o == 0 &&
                 0 == param0.field_m) {

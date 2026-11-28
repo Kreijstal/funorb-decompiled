@@ -95,7 +95,7 @@ abstract class jf {
         int var4;
         e[] var5;
         var4 = Confined.field_J ? 1 : 0;
-        var5 = ah.l(20253);
+        var5 = AcceleratingProjectile.l(20253);
         var2 = var5;
         if (param0 <= 123) {
           return (e) null;

@@ -294,12 +294,12 @@ abstract class tb {
             if (lb.field_l.a(true)) {
               var1_int = 1;
             }
-            if (pj.field_q != 13) {
+            if (WallTile.field_q != 13) {
               continue;
             }
             var2 = 1;
           }
-          lb.field_l.a(0, SecondaryNodeDeque.a(-1013410975, to.field_a, dp.field_h), SecondaryNodeDeque.a(-1013410975, qh.field_i, IsaacRandom.field_h));
+          lb.field_l.a(0, SecondaryNodeDeque.a(-1013410975, to.field_a, ProfileDataRequest.field_h), SecondaryNodeDeque.a(-1013410975, qh.field_i, IsaacRandom.field_h));
           if (lb.field_l.a(param0)) {
             var1_int = 1;
           }

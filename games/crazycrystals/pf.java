@@ -23,9 +23,9 @@ final class pf extends pn implements Cloneable {
         return true;
     }
 
-    final f a(int param0, ea param1, int param2, int param3, byte param4, int param5, f[][] param6) {
+    final PuzzleTile a(int param0, ea param1, int param2, int param3, byte param4, int param5, PuzzleTile[][] param6) {
         RuntimeException var8 = null;
-        f stackIn_3_0 = null;
+        PuzzleTile stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -59,7 +59,7 @@ final class pf extends pn implements Cloneable {
         }
     }
 
-    pf(int param0, int param1, f param2) {
+    pf(int param0, int param1, PuzzleTile param2) {
         super(param2);
         this.field_p = 0;
         this.field_t = false;
@@ -69,13 +69,13 @@ final class pf extends pn implements Cloneable {
         try {
           this.field_s = 3 & param1;
           this.field_o = param0 & 3;
-          this.a((byte) 94, param2);
+          this.copyTileAttribution((byte) 94, param2);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "pf.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(f[][] param0, int param1, int param2, boolean param3) {
+    final void a(PuzzleTile[][] param0, int param1, int param2, boolean param3) {
         try {
           this.field_p = this.field_x;
           this.field_r = this.field_t;
@@ -92,17 +92,17 @@ final class pf extends pn implements Cloneable {
         }
     }
 
-    final f a(int param0, byte param1, int param2) {
+    final PuzzleTile a(int param0, byte param1, int param2) {
         if (param1 != -110) {
-          return (f) null;
+          return (PuzzleTile) null;
         }
         if (512 > this.field_q) {
           this.field_q = this.field_q + 1;
         }
-        return (f) (this);
+        return (PuzzleTile) (this);
     }
 
-    final boolean a(int param0, f[][] param1, boolean param2, int param3, int param4, int param5, ea param6, int param7) {
+    final boolean a(int param0, PuzzleTile[][] param1, boolean param2, int param3, int param4, int param5, ea param6, int param7) {
         RuntimeException var9 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -137,7 +137,7 @@ final class pf extends pn implements Cloneable {
         }
     }
 
-    final f a(f param0, int param1, int param2, f[][] param3, RgbSprite[] param4, byte param5) {
+    final PuzzleTile a(PuzzleTile param0, int param1, int param2, PuzzleTile[][] param3, RgbSprite[] param4, byte param5) {
         RuntimeException var7 = null;
         ig stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
@@ -150,12 +150,12 @@ final class pf extends pn implements Cloneable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 == null) {
-            return (f) (this);
+            return (PuzzleTile) (this);
           }
           fn.field_j = fn.field_j + wd.field_j;
           ob.field_l = ob.field_l - 1;
           fp.field_a = fp.field_a + 32;
-          we.field_h = we.field_h + 32;
+          LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 32;
           je.field_j = je.field_j + 16;
           b.field_a = b.field_a + 16;
           fn.field_j = fn.field_j + 16;
@@ -164,8 +164,8 @@ final class pf extends pn implements Cloneable {
             this.field_x = -110;
           }
           FullscreenFocusCanvas.field_c.a(32, param2 * 12, 12 * param1, 0, (byte) -111);
-          stackIn_7_0 = new ig(param0, param4, (f) (this), false);
-          return (f) ((Object) stackIn_7_0);
+          stackIn_7_0 = new ig(param0, param4, (PuzzleTile) (this), false);
+          return (PuzzleTile) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -199,7 +199,7 @@ final class pf extends pn implements Cloneable {
         }
     }
 
-    final void a(int param0, int param1, int param2, f[][] param3, int param4, int param5, int param6, int param7) {
+    final void a(int param0, int param1, int param2, PuzzleTile[][] param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -218,7 +218,7 @@ final class pf extends pn implements Cloneable {
             b.field_a = b.field_a + 20;
             fp.field_a = fp.field_a + 40;
             je.field_j = je.field_j + 20;
-            we.field_h = we.field_h + 40;
+            LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 40;
             this.field_t = true;
             this.field_v = param2;
             this.field_w = param4;
@@ -238,7 +238,7 @@ final class pf extends pn implements Cloneable {
         }
     }
 
-    final boolean a(boolean param0, f[][] param1, mj param2) {
+    final boolean a(boolean param0, PuzzleTile[][] param1, LaserTraceCursor param2) {
         RuntimeException var4 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -305,7 +305,7 @@ final class pf extends pn implements Cloneable {
         }
     }
 
-    final void a(f[][] param0, int param1, byte param2, int param3) {
+    final void a(PuzzleTile[][] param0, int param1, byte param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -321,7 +321,7 @@ final class pf extends pn implements Cloneable {
             param0[param3 + 1][param1].a(param0, param1, (byte) 40, 1 + param3);
           }
           if (param2 != 40) {
-            this.a(-67, (ea) null, -94, -97, (byte) 87, 72, (f[][]) null);
+            this.a(-67, (ea) null, -94, -97, (byte) 87, 72, (PuzzleTile[][]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -356,10 +356,10 @@ final class pf extends pn implements Cloneable {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (ja.a(param1, (byte) 0)) {
+          if (LevelCompleteScene.isAsciiAlphanumeric(param1, (byte) 0)) {
             return true;
           }
-          var6 = ff.field_e;
+          var6 = AnimatedResultScene.field_e;
           var2 = var6;
           for (var3 = 0; var6.length > var3; var3++) {
             var4 = var6[var3];
@@ -390,7 +390,7 @@ final class pf extends pn implements Cloneable {
         }
     }
 
-    final boolean a(byte param0, f[][] param1, int param2, int param3, int param4, fq param5, int param6) {
+    final boolean a(byte param0, PuzzleTile[][] param1, int param2, int param3, int param4, fq param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -471,7 +471,7 @@ final class pf extends pn implements Cloneable {
         pp var4 = null;
         int var4_int = 0;
         int var5 = 0;
-        we var5_ref_we = null;
+        LevelProgressUpdate var5_ref_we = null;
         int[] var6 = null;
         int var8 = 0;
         CipherPacketBuffer var9 = null;
@@ -507,11 +507,11 @@ final class pf extends pn implements Cloneable {
           }
           if (var2 == 1) {
             var4_int = var9.readSignedSmart(0);
-            var5_ref_we = (we) (tb.field_b.beginForward(32073));
+            var5_ref_we = (LevelProgressUpdate) (tb.field_b.beginForward(32073));
             while (var5_ref_we != null) {
               if (var5_ref_we.field_j != var3 ||
                 var5_ref_we.field_g != var4_int) {
-                var5_ref_we = (we) (tb.field_b.nextForward(false));
+                var5_ref_we = (LevelProgressUpdate) (tb.field_b.nextForward(false));
                 continue;
               }
               break;
@@ -533,7 +533,7 @@ final class pf extends pn implements Cloneable {
         }
     }
 
-    final void a(int param0, f[][] param1, int param2, int param3) {
+    final void a(int param0, PuzzleTile[][] param1, int param2, int param3) {
         this.field_s = param3 & 3;
         if (param0 != -35) {
           return;
@@ -546,7 +546,7 @@ final class pf extends pn implements Cloneable {
         }
     }
 
-    final void b(int param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final void drawTileForeground(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var7;
         double var8_double;
         double var10;
@@ -586,7 +586,7 @@ final class pf extends pn implements Cloneable {
         return this.field_l.a(true, param1);
     }
 
-    final nj a(int param0, nj param1) {
+    final nj showTileTooltip(int param0, nj param1) {
         nj var3 = null;
         RuntimeException var3_ref = null;
         pf var4 = null;
@@ -597,7 +597,7 @@ final class pf extends pn implements Cloneable {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_l.a(param0, param1);
+          var3 = this.field_l.showTileTooltip(param0, param1);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;
@@ -620,7 +620,7 @@ final class pf extends pn implements Cloneable {
         }
     }
 
-    final f b(f[][] param0, int param1, byte param2, int param3) {
+    final PuzzleTile b(PuzzleTile[][] param0, int param1, byte param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
@@ -635,13 +635,13 @@ final class pf extends pn implements Cloneable {
             fp.field_a = fp.field_a + 2;
             je.field_j = je.field_j + 1;
             b.field_a = b.field_a + 1;
-            we.field_h = we.field_h + 2;
+            LevelProgressUpdate.field_h = LevelProgressUpdate.field_h + 2;
             param0[param1][param3 - 1].a(120, this.field_p, 0, param0, this.field_w, param1, 1, param3 - 1);
             param0[param1][param3 + 1].a(95, this.field_p, 0, param0, this.field_w, param1, -1, 1 + param3);
             param0[param1 - 1][param3].a(115, this.field_p, 1, param0, this.field_w, -1 + param1, 0, param3);
             param0[param1 + 1][param3].a(94, this.field_p, -1, param0, this.field_w, param1 + 1, 0, param3);
           }
-          return (f) (this);
+          return (PuzzleTile) (this);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

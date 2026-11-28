@@ -3238,8 +3238,8 @@ final class StickyEvent extends SpecialEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 16 / ((12 - param1) / 35);
-          this.creature.a(19, param0);
-          param0.a(0, this.field_r, this.field_q, true, this.e((byte) -18), 30);
+          this.creature.resolveCreature(19, param0);
+          param0.applyTerrainToTileMask(0, this.field_r, this.field_q, true, this.e((byte) -18), 30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

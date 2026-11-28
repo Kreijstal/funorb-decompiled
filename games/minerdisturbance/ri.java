@@ -82,11 +82,11 @@ final class ri {
           if (param0 != -26575) {
             field_c = (byte[]) null;
           }
-          if (1 == this.field_a.b((byte) -71)) {
+          if (1 == this.field_a.getGroupCapacity((byte) -71)) {
             stackIn_7_0 = this.a(-31093, 0, param2, param1);
             return stackIn_7_0;
           }
-          if (this.field_a.b(param2, -26727) != 1) {
+          if (this.field_a.getFileCapacity(param2, -26727) != 1) {
             throw new RuntimeException();
           }
           stackIn_12_0 = this.a(param0 ^ 7866, param2, 0, param1);
@@ -332,11 +332,11 @@ final class ri {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_d.b((byte) -71) == 1) {
+          if (this.field_d.getGroupCapacity((byte) -71) == 1) {
             stackIn_2_0 = this.a(param1, (byte) -72, param0, 0);
             return stackIn_2_0;
           }
-          if (this.field_d.b(param0, -26727) == 1) {
+          if (this.field_d.getFileCapacity(param0, -26727) == 1) {
             stackIn_5_0 = this.a(param1, (byte) -72, 0, param0);
             return stackIn_5_0;
           }

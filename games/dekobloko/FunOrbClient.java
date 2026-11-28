@@ -399,8 +399,8 @@ abstract class FunOrbClient extends GameApplet {
           if (UiComponentPart004.integerState0091 == 2) {
             if (NodeDeque.resourceArchiveState0025 != null &&
               NodeDeque.resourceArchiveState0025.ensureIndexLoaded((byte) 121)) {
-              if (NodeDeque.resourceArchiveState0025.computeBoolean0812("", integerArgument2 ^ -11)) {
-                if (NodeDeque.resourceArchiveState0025.computeBoolean0811("", (byte) -94)) {
+              if (NodeDeque.resourceArchiveState0025.hasGroupName("", integerArgument2 ^ -11)) {
+                if (NodeDeque.resourceArchiveState0025.tryLoadGroupByName("", (byte) -94)) {
                   TranslatedUiText.performAction1063(NodeDeque.resourceArchiveState0025, (byte) 117);
                   NodeDeque.resourceArchiveState0025 = null;
                   NodeDeque.performAction1737(true);

@@ -80,8 +80,8 @@ final class mn extends pd {
         SecondaryNodeDeque.field_d = null;
         tl.field_a.a((byte) -87);
         tl.field_a = null;
-        jo.field_p.a((byte) -96);
-        jo.field_p = null;
+        CrystalTile.field_p.a((byte) -96);
+        CrystalTile.field_p = null;
         AccountCreationResultPanel.field_mb.a((byte) -54);
         AccountCreationResultPanel.field_mb = null;
         io.field_M.a((byte) -98);
@@ -117,18 +117,18 @@ final class mn extends pd {
         this.field_k = 0;
     }
 
-    final f a(boolean param0, int param1, int param2, int param3, ta param4) {
+    final PuzzleTile a(boolean param0, int param1, int param2, int param3, ta param4) {
         RuntimeException var6 = null;
-        f stackIn_2_0 = null;
+        PuzzleTile stackIn_2_0 = null;
         int stackIn_6_0 = 0;
-        f stackIn_7_0 = null;
+        PuzzleTile stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_2_0 = (f) null;
+            stackIn_2_0 = (PuzzleTile) null;
             return stackIn_2_0;
           }
           this.field_k = this.field_k + param3;

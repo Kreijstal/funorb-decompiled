@@ -37,7 +37,7 @@ final class PizzaPartySpecial extends SpecialOrder {
         int[][] var20 = null;
         var15 = BachelorFridge.field_y;
         try {
-          var16 = this.creature.a(param1 + 9, param0);
+          var16 = this.creature.resolveCreature(param1 + 9, param0);
           var4 = new PizzaPartyEvent(this.moveId, new CreatureRef(var16));
           var4.field_t = this.field_n;
           var4.field_q = this.field_k;

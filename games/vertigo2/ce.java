@@ -52,20 +52,20 @@ final class ce {
     final static boolean a(byte param0, boolean param1) {
         long dupTemp$2 = 0L;
         int var2;
-        if (null == hb.field_q) {
-          hb.field_q = kr.field_g.requestSocket(-121, cl.field_d, nb.field_y);
+        if (null == PlayerAvatarRenderer.field_q) {
+          PlayerAvatarRenderer.field_q = kr.field_g.requestSocket(-121, cl.field_d, nb.field_y);
         }
-        if (hb.field_q.status == 0) {
+        if (PlayerAvatarRenderer.field_q.status == 0) {
           return false;
         }
         dupTemp$2 = gk.correctedCurrentTimeMillis(99);
         bm.field_H = dupTemp$2;
         gn.field_b = dupTemp$2;
         var2 = 67 % ((param0 - 60) / 39);
-        if (1 != hb.field_q.status) {
+        if (1 != PlayerAvatarRenderer.field_q.status) {
         }
         ProxyAuthenticationRequiredException.field_d = NodeHashTableIterator.field_h;
-        hb.field_q = null;
+        PlayerAvatarRenderer.field_q = null;
         return true;
     }
 

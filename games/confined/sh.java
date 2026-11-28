@@ -10,13 +10,13 @@ final class sh extends am {
         if (param0 <= 9) {
           return;
         }
-        vb var2 = new vb(this.field_J);
-        oe var3 = (oe) (var2.a((byte) 120));
+        DequeCursor var2 = new DequeCursor(this.field_J);
+        oe var3 = (oe) (var2.startFromTail((byte) 120));
         while (var3 != null) {
           if (var3.l(-6)) {
             var3.unlink(true);
           }
-          var3 = (oe) (var2.b(-92));
+          var3 = (oe) (var2.previousNode(-92));
         }
         this.field_H = (fj) ((Object) this.h(0));
     }
@@ -27,31 +27,31 @@ final class sh extends am {
     }
 
     final oe h(int param0) {
-        vb var2;
+        DequeCursor var2;
         oe var3;
         int var4;
         var4 = Confined.field_J ? 1 : 0;
-        var2 = new vb(this.field_J);
+        var2 = new DequeCursor(this.field_J);
         if (param0 != 0) {
           return (oe) null;
         }
-        var3 = (oe) (var2.a((byte) 120));
+        var3 = (oe) (var2.startFromTail((byte) 120));
         while (var3 != null) {
           if (var3.field_H) {
             return var3;
           }
-          var3 = (oe) (var2.b(param0 ^ -90));
+          var3 = (oe) (var2.previousNode(param0 ^ -90));
         }
         return null;
     }
 
     final void g(byte param0) {
         int var4 = Confined.field_J ? 1 : 0;
-        vb var2 = new vb(this.field_J);
-        oe var3 = (oe) (var2.a((byte) 120));
+        DequeCursor var2 = new DequeCursor(this.field_J);
+        oe var3 = (oe) (var2.startFromTail((byte) 120));
         while (var3 != null) {
           var3.field_H = false;
-          var3 = (oe) (var2.b(-102));
+          var3 = (oe) (var2.previousNode(-102));
         }
         this.field_H = null;
         if (param0 <= 103) {
@@ -100,11 +100,11 @@ final class sh extends am {
         if (param2 < 36) {
           return;
         }
-        vb var5 = new vb(this.field_J);
-        fj var6 = (fj) (var5.c(7));
+        DequeCursor var5 = new DequeCursor(this.field_J);
+        fj var6 = (fj) (var5.startFromHead(7));
         while (var6 != null) {
           var6.a(this.field_m + param0, param1, (byte) 38, this.field_q + param3);
-          var6 = (fj) (var5.a(0));
+          var6 = (fj) (var5.nextNode(0));
         }
     }
 
@@ -157,13 +157,13 @@ final class sh extends am {
     }
 
     final fj a(byte param0) {
-        vb var2;
+        DequeCursor var2;
         oe var3;
         int var4;
         String var5;
         var4 = Confined.field_J ? 1 : 0;
-        var2 = new vb(this.field_J);
-        var3 = (oe) (var2.a((byte) 120));
+        var2 = new DequeCursor(this.field_J);
+        var3 = (oe) (var2.startFromTail((byte) 120));
         if (param0 != -110) {
           var5 = (String) null;
           sh.a(64, (String) null, (String) null, false);
@@ -172,23 +172,23 @@ final class sh extends am {
           if (var3.field_H) {
             return var3.f(-1);
           }
-          var3 = (oe) (var2.b(-24));
+          var3 = (oe) (var2.previousNode(-24));
         }
         return null;
     }
 
     final void h(byte param0) {
         int var4 = Confined.field_J ? 1 : 0;
-        vb var2 = new vb(this.field_J);
+        DequeCursor var2 = new DequeCursor(this.field_J);
         if (param0 != -3) {
           this.h((byte) -125);
         }
-        oe var3 = (oe) (var2.a((byte) 120));
+        oe var3 = (oe) (var2.startFromTail((byte) 120));
         while (var3 != null) {
           if (var3.j(-53)) {
             var3.unlink(true);
           }
-          var3 = (oe) (var2.b(62));
+          var3 = (oe) (var2.previousNode(62));
         }
     }
 

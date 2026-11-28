@@ -25,7 +25,7 @@ final class kf {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param1.b(param2, 20095);
+          var4 = param1.getFlatFile(param2, 20095);
           var3 = var4;
           if (var4 == null) {
             stackIn_2_0 = null;

@@ -31,7 +31,7 @@ final class rc {
         RuntimeException decompiledCaughtException = null;
         var6 = DungeonAssault.field_K;
         try {
-          if (!param1.b(param2, param0, (byte) -82)) {
+          if (!param1.hasFileName(param2, param0, (byte) -82)) {
             param2 = param2 + ".jpg";
           }
           var7 = new RgbSprite(param1.getFileByName(param0, param2, (byte) -127), (java.awt.Component) ((Object) fi.d(false)));
@@ -113,7 +113,7 @@ final class rc {
             if (var4 < 0) {
               var5 = ui.field_b;
             } else {
-              if (var4 == h.field_h.field_b) {
+              if (var4 == RaiderDefinition.field_h.field_b) {
                 var5 = il.field_a;
               } else {
                 var5 = Bzip2State.field_l;
@@ -126,7 +126,7 @@ final class rc {
             var8 = -(var7 >> 1) + tm.field_e;
             if (var4 >= 0) {
               var2 = var2 + lc.field_j;
-              if (var4 != h.field_h.field_b) {
+              if (var4 != RaiderDefinition.field_h.field_b) {
                 stackIn_16_0 = (qk) (field_a);
               } else {
                 stackIn_16_0 = MidiPcmStream.field_y;

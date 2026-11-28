@@ -165,7 +165,7 @@ final class tq {
               var20 = ((PacketBuffer) ((Object) var1)).readString(128);
               var19 = ((PacketBuffer) ((Object) var1)).readString(128);
               var21 = ((PacketBuffer) ((Object) var1)).readString(128);
-              var22 = jg.a(var3_long, -126);
+              var22 = LevelTile.findLobbyPlayerById(var3_long, -126);
               var8_ref_bs = var22;
               stackIn_47_0 = (var19.equals("")) ? 0 : 1;
               var9 = stackIn_47_0;
@@ -192,7 +192,7 @@ final class tq {
             if (var2 == 6) {
               var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).readLong(-31016);
               var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-11);
-              var23 = jg.a(var3_longLifetime1, 86);
+              var23 = LevelTile.findLobbyPlayerById(var3_longLifetime1, 86);
               if (var23 == null) {
                 return;
               }
@@ -346,7 +346,7 @@ final class tq {
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(-31016);
                 var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-11);
-                var25 = jg.a(var3_longLifetime2, -126);
+                var25 = LevelTile.findLobbyPlayerById(var3_longLifetime2, -126);
                 if (var25 != null) {
                   if (var5Lifetime1Lifetime1 != 0) {
                     var25.field_Ub = lp.field_D;
@@ -365,7 +365,7 @@ final class tq {
                 return;
               }
               var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(-31016);
-              var29 = jg.a(var3_longLifetime2Lifetime1, -8);
+              var29 = LevelTile.findLobbyPlayerById(var3_longLifetime2Lifetime1, -8);
               if (var29 != null) {
                 if (var2 != 14) {
                   if (!var29.field_Ob) {

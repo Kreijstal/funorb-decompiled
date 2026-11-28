@@ -209,7 +209,7 @@ class AttackEvent extends CreatureEvent {
             var9 = (PacketBuffer) null;
             this.a((byte) 108, (PacketBuffer) null);
           }
-          var10 = this.creature.a(20, param0);
+          var10 = this.creature.resolveCreature(20, param0);
           if (var10.isDown(55)) {
             return;
           }
@@ -217,7 +217,7 @@ class AttackEvent extends CreatureEvent {
             var10.field_s = this.field_q;
           }
           var4 = (EventEffect) (this.field_o.beginForward((byte) 90));
-          var10.d(this.moveId, (byte) -94);
+          var10.applyMoveCooldown(this.moveId, (byte) -94);
           if (!this.field_r &&
             !this.field_n) {
             var5 = 0;
@@ -234,10 +234,10 @@ class AttackEvent extends CreatureEvent {
                   if (var6 == 0) {
                     return;
                   }
-                  var10.a(var6, var10, (byte) 2);
+                  var10.applyDamageAndRecordSource(var6, var10, (byte) 2);
                   return;
                 }
-                var10.a(-var5, var10, (byte) 2);
+                var10.applyDamageAndRecordSource(-var5, var10, (byte) 2);
                 return;
               }
               if (!(var4 instanceof DamageEffect)) {
@@ -245,10 +245,10 @@ class AttackEvent extends CreatureEvent {
                 var4 = (EventEffect) (this.field_o.nextForward(0));
                 continue;
               }
-              var6_ref_aga = var4.target.a(91, param0);
+              var6_ref_aga = var4.target.resolveCreature(91, param0);
               if (!((DamageEffect) (var4)).field_j) {
-                if (var6_ref_aga.a(13, (byte) -95)) {
-                  var10.a(5, var6_ref_aga, (byte) 2);
+                if (var6_ref_aga.hasStatus(13, (byte) -95)) {
+                  var10.applyDamageAndRecordSource(5, var6_ref_aga, (byte) 2);
                 }
                 var5 = var4.field_f;
                 if (var6_ref_aga.isDown(-120)) {

@@ -13,7 +13,7 @@ final class SuperSpeedAnimation extends EventAnimation {
         CreatureActor var6;
         CreatureActor var7;
         var5 = BachelorFridge.field_y;
-        var2 = this.field_w.creature.a(62, this.screen.field_h);
+        var2 = this.field_w.creature.resolveCreature(62, this.screen.field_h);
         if (var2.isDown(-114)) {
           return;
         }
@@ -22,7 +22,7 @@ final class SuperSpeedAnimation extends EventAnimation {
         if (!param0) {
           while (var3 != null) {
             var3.apply(var2, this.screen.field_h, 12);
-            var6 = var3.target.a(-27449, this.screen);
+            var6 = var3.target.resolveCreatureView(-27449, this.screen);
             var6.b(-1, 7);
             var6.a(24831, 98, kna.field_g[28]);
             var3 = (DamageEffect) (this.field_w.effects.nextForward(0));
@@ -31,7 +31,7 @@ final class SuperSpeedAnimation extends EventAnimation {
           this.isFinished((byte) -57);
           while (var3 != null) {
             var3.apply(var2, this.screen.field_h, 12);
-            var7 = var3.target.a(-27449, this.screen);
+            var7 = var3.target.resolveCreatureView(-27449, this.screen);
             var7.b(-1, 7);
             var7.a(24831, 98, kna.field_g[28]);
             var3 = (DamageEffect) (this.field_w.effects.nextForward(0));

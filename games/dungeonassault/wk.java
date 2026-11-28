@@ -32,7 +32,7 @@ final class wk {
             return false;
           }
           if (var4.field_h != null &&
-            !var4.field_q.a(false, var4.field_h)) {
+            !var4.field_q.tryLoadGroupByName(false, var4.field_h)) {
             this.a((byte) 12, var4.field_q.getGroupLoadPercentByName(var4.field_h, -1), var4);
             return false;
           }
@@ -40,7 +40,7 @@ final class wk {
             var4.field_h == null &&
             null != var4.field_f &&
             !var4.field_q.tryLoadAllGroups((byte) 59)) {
-            this.a((byte) 12, var4.field_q.b(100), var4);
+            this.a((byte) 12, var4.field_q.getArchiveLoadPercent(100), var4);
             return false;
           }
           this.field_d = this.field_d + 1;
@@ -182,7 +182,7 @@ final class wk {
             stackIn_14_0 = 3;
             return stackIn_14_0;
           }
-          if (wd.field_d == DelegatingCanvas.field_f) {
+          if (SpriteAnimationPlayer.field_d == DelegatingCanvas.field_f) {
             stackIn_17_0 = 1;
             return stackIn_17_0;
           }

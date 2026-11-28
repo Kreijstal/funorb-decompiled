@@ -102,7 +102,7 @@ final class bl extends l {
           nm.field_J = true;
           da.field_j = param1;
           if (0 == da.field_j) {
-            var3_int = dc.a(bc.field_c, qr.field_o, (byte) 101, rn.field_w, mf.field_c);
+            var3_int = dc.a(bc.field_c, qr.field_o, (byte) 101, MovingLevelTile.field_w, mf.field_c);
             var4 = 3 + var3_int;
             gd.field_s = new int[var4];
             mn.field_q = new String[var4];
@@ -111,7 +111,7 @@ final class bl extends l {
             }
             gi.field_n = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              mn.field_q[var5] = rn.field_w[var5];
+              mn.field_q[var5] = MovingLevelTile.field_w[var5];
             }
             mn.field_q[-3 + var4] = "";
             mn.field_q[var4 - 2] = dc.field_M;
@@ -121,7 +121,7 @@ final class bl extends l {
             gd.field_s[var4 - 1] = 1;
             gi.field_n[1] = 5;
           } else if (da.field_j == 1) {
-            var3_int = dc.a(bc.field_c, qr.field_o, (byte) 33, rn.field_w, mf.field_c);
+            var3_int = dc.a(bc.field_c, qr.field_o, (byte) 33, MovingLevelTile.field_w, mf.field_c);
             var4 = var3_int + 2;
             gd.field_s = new int[var4];
             mn.field_q = new String[var4];
@@ -130,7 +130,7 @@ final class bl extends l {
             }
             gi.field_n = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              mn.field_q[var5] = rn.field_w[var5];
+              mn.field_q[var5] = MovingLevelTile.field_w[var5];
             }
             mn.field_q[var4 - 2] = "";
             mn.field_q[-1 + var4] = lr.field_N;
@@ -139,9 +139,9 @@ final class bl extends l {
           } else if (2 != da.field_j) {
             if (da.field_j == 3) {
               if (!gi.field_s.privilegedTasksEnabled) {
-                var3_int = dc.a(bc.field_c, ko.field_U, (byte) 110, rn.field_w, mf.field_c);
+                var3_int = dc.a(bc.field_c, ko.field_U, (byte) 110, MovingLevelTile.field_w, mf.field_c);
               } else {
-                var3_int = dc.a(bc.field_c, tk.field_p, (byte) 91, rn.field_w, mf.field_c);
+                var3_int = dc.a(bc.field_c, tk.field_p, (byte) 91, MovingLevelTile.field_w, mf.field_c);
               }
               var4 = 2 + var3_int;
               gd.field_s = new int[var4];
@@ -151,14 +151,14 @@ final class bl extends l {
               }
               gi.field_n = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                mn.field_q[var5] = rn.field_w[var5];
+                mn.field_q[var5] = MovingLevelTile.field_w[var5];
               }
               mn.field_q[var4 - 2] = "";
               mn.field_q[var4 - 1] = lr.field_N;
               gd.field_s[-1 + var4] = 0;
               gi.field_n[0] = 5;
             } else if (da.field_j == 4) {
-              var3_int = dc.a(bc.field_c, lh.field_a, (byte) 50, rn.field_w, mf.field_c);
+              var3_int = dc.a(bc.field_c, lh.field_a, (byte) 50, MovingLevelTile.field_w, mf.field_c);
               var4 = 2 + var3_int;
               gd.field_s = new int[var4];
               mn.field_q = new String[var4];
@@ -167,7 +167,7 @@ final class bl extends l {
               }
               gi.field_n = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                mn.field_q[var5] = rn.field_w[var5];
+                mn.field_q[var5] = MovingLevelTile.field_w[var5];
               }
               mn.field_q[-2 + var4] = "";
               mn.field_q[var4 - 1] = lr.field_N;
@@ -177,7 +177,7 @@ final class bl extends l {
               if (da.field_j != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = dc.a(bc.field_c, w.field_D, (byte) 28, rn.field_w, mf.field_c);
+              var3_int = dc.a(bc.field_c, w.field_D, (byte) 28, MovingLevelTile.field_w, mf.field_c);
               var4 = 3 + var3_int;
               mn.field_q = new String[var4];
               gd.field_s = new int[var4];
@@ -186,7 +186,7 @@ final class bl extends l {
               }
               gi.field_n = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                mn.field_q[var5] = rn.field_w[var5];
+                mn.field_q[var5] = MovingLevelTile.field_w[var5];
               }
               mn.field_q[var4 - 3] = "";
               mn.field_q[var4 - 2] = eo.field_n;
@@ -197,10 +197,10 @@ final class bl extends l {
               gi.field_n[1] = 5;
             }
           } else {
-            var3_int = dc.a(bc.field_c, Vertigo2.a(new String[]{"<br><%0><br>"}, bc.field_a, -112), (byte) 36, rn.field_w, mf.field_c);
+            var3_int = dc.a(bc.field_c, Vertigo2.a(new String[]{"<br><%0><br>"}, bc.field_a, -112), (byte) 36, MovingLevelTile.field_w, mf.field_c);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(rn.field_w[var5])) {
+              if (!"<%0>".equals(MovingLevelTile.field_w[var5])) {
                 continue;
               }
               var4 = var5;
@@ -210,13 +210,13 @@ final class bl extends l {
               throw new IllegalStateException();
             }
             jo.field_g = new String[var4];
-            qq.a(rn.field_w, 0, jo.field_g, 0, var4);
+            qq.a(MovingLevelTile.field_w, 0, jo.field_g, 0, var4);
             field_z = new String[var3_int - var4 - 1];
-            qq.a(rn.field_w, 1 + var4, field_z, 0, -1 - var4 + var3_int);
-            var3_int = dc.a(bc.field_c, Vertigo2.a(new String[]{"<br><%0><br>"}, ro.field_f, -113), (byte) 102, rn.field_w, mf.field_c);
+            qq.a(MovingLevelTile.field_w, 1 + var4, field_z, 0, -1 - var4 + var3_int);
+            var3_int = dc.a(bc.field_c, Vertigo2.a(new String[]{"<br><%0><br>"}, ro.field_f, -113), (byte) 102, MovingLevelTile.field_w, mf.field_c);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(rn.field_w[var5])) {
+              if (!"<%0>".equals(MovingLevelTile.field_w[var5])) {
                 continue;
               }
               var4 = var5;
@@ -226,9 +226,9 @@ final class bl extends l {
               throw new IllegalStateException();
             }
             rp.field_e = new String[var4];
-            qq.a(rn.field_w, 0, rp.field_e, 0, var4);
+            qq.a(MovingLevelTile.field_w, 0, rp.field_e, 0, var4);
             ba.field_b = new String[-1 - var4 + var3_int];
-            qq.a(rn.field_w, var4 + 1, ba.field_b, 0, -var4 + var3_int - 1);
+            qq.a(MovingLevelTile.field_w, var4 + 1, ba.field_b, 0, -var4 + var3_int - 1);
             if (jo.field_g.length >= rp.field_e.length) {
               stackIn_29_0 = jo.field_g.length;
             } else {
@@ -250,7 +250,7 @@ final class bl extends l {
             gd.field_s[1] = 0;
             gi.field_n = new int[2];
             mn.field_q[1] = ca.field_d;
-            mn.field_q[0] = am.field_e;
+            mn.field_q[0] = LevelRenderer.field_e;
             gd.field_s[3] = 1;
             gi.field_n[1] = 2;
             gi.field_n[0] = 5;

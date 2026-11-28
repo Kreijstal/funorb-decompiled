@@ -111,13 +111,13 @@ class pj extends UiWidget {
           if (!param2.ensureIndexLoaded((byte) -121)) {
             return false;
           }
-          if (!param2.a(param1 + 16927, "commonui")) {
+          if (!param2.tryLoadGroupByName(param1 + 16927, "commonui")) {
             return false;
           }
           if (param0.ensureIndexLoaded((byte) -121) &&
-            param0.a(2, "commonui")) {
+            param0.tryLoadGroupByName(2, "commonui")) {
             if (param3.ensureIndexLoaded((byte) -121) &&
-              param3.a(2, "button.gif")) {
+              param3.tryLoadGroupByName(2, "button.gif")) {
               return true;
             }
             return false;

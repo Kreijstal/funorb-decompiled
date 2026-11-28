@@ -81,9 +81,9 @@ final class nh extends og implements vd {
         }
     }
 
-    final static jg a(int param0, CipherPacketBuffer param1) {
+    final static ModelMesh a(int param0, CipherPacketBuffer param1) {
         int var7 = 0;
-        jg stackIn_25_0 = null;
+        ModelMesh stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -92,7 +92,7 @@ final class nh extends og implements vd {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        jg var5 = null;
+        ModelMesh var5 = null;
         int var6 = 0;
         int var8 = 0;
         var8 = CrazyCrystals.field_B;
@@ -103,7 +103,7 @@ final class nh extends og implements vd {
           }
           var3 = fn.a(1, param1) ? 1 : 0;
           var4 = fn.a(param0 ^ -31742, param1) ? 1 : 0;
-          var5 = new jg();
+          var5 = new ModelMesh();
           var5.field_n = (short)param1.d((byte) -87, 16);
           var5.field_L = mh.a((byte) -2, param1, 16, var5.field_L);
           if (param0 != -31741) {

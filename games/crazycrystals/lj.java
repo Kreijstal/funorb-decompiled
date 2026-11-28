@@ -9,7 +9,7 @@ final class lj {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        we var7 = null;
+        LevelProgressUpdate var7 = null;
         dh stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -23,8 +23,8 @@ final class lj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 17153) {
-            var7 = (we) null;
-            lj.a(96, (we) null, -65);
+            var7 = (LevelProgressUpdate) null;
+            lj.a(96, (LevelProgressUpdate) null, -65);
           }
           var5_int = param0.getGroupIdByName(param1, param4 ^ -17154);
           var6 = param0.getFileIdByName(-2862, param3, var5_int);
@@ -62,7 +62,7 @@ final class lj {
         }
     }
 
-    final static void a(int param0, we param1, int param2) {
+    final static void a(int param0, LevelProgressUpdate param1, int param2) {
         try {
           tb.field_b.addLast(0, param1);
           pm.a(param0, param1, (byte) 71);
@@ -77,8 +77,8 @@ final class lj {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 30447) {
-          we var2 = (we) null;
-          lj.a(45, (we) null, 63);
+          LevelProgressUpdate var2 = (LevelProgressUpdate) null;
+          lj.a(45, (LevelProgressUpdate) null, 63);
         }
     }
 

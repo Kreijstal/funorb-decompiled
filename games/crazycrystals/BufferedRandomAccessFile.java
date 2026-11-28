@@ -280,8 +280,8 @@ final class BufferedRandomAccessFile {
         return this.field_d;
     }
 
-    final static dp a(byte param0, int param1) {
-        dp var2 = new dp();
+    final static ProfileDataRequest a(byte param0, int param1) {
+        ProfileDataRequest var2 = new ProfileDataRequest();
         if (param0 != 121) {
           field_h = (String) null;
         }

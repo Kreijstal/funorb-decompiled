@@ -598,7 +598,7 @@ final class nj extends IntrusiveNode {
         try {
           nj var4_ref = null;
           if (!nj.a(param0)) {
-            param0.a(param1, param2, (byte) -17);
+            param0.tryLoadFileByName(param1, param2, (byte) -17);
             return null;
           }
           byte[] var3 = param0.getFileByName(param1, (byte) -118, param2);

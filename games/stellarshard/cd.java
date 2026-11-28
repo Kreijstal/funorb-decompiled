@@ -490,7 +490,7 @@ final class cd extends rg {
         if (!lk.field_i.ensureIndexLoaded((byte) -36)) {
           return lg.field_e;
         }
-        if (!lk.field_i.a("commonui", (byte) -109)) {
+        if (!lk.field_i.tryLoadGroupByName("commonui", (byte) -109)) {
           return am.field_e + " - " + lk.field_i.getGroupLoadPercentByName(0, "commonui") + "%";
         }
         if (!wf.field_e.ensureIndexLoaded((byte) -36)) {
@@ -499,14 +499,14 @@ final class cd extends rg {
         if (param0 != -1064120735) {
           field_L = (qd) null;
         }
-        if (!wf.field_e.a("commonui", (byte) -109)) {
+        if (!wf.field_e.tryLoadGroupByName("commonui", (byte) -109)) {
           return le.field_l + " - " + wf.field_e.getGroupLoadPercentByName(0, "commonui") + "%";
         }
         if (!am.field_g.ensureIndexLoaded((byte) -36)) {
           return ve.field_b;
         }
         if (!am.field_g.tryLoadAllGroups((byte) -111)) {
-          return lj.field_B + " - " + am.field_g.b((byte) 1) + "%";
+          return lj.field_B + " - " + am.field_g.getArchiveLoadPercent((byte) 1) + "%";
         }
         return wl.field_W;
     }

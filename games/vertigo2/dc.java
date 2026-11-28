@@ -128,7 +128,7 @@ final class dc extends TextureOperator {
           var6 = 1 + var5;
           for (var14 = 0; var14 < we.field_M; var14++) {
             pl.field_q = 2147483647;
-            hb.field_p = 2147483647;
+            PlayerAvatarRenderer.field_p = 2147483647;
             hj.field_d = 2147483647;
             fq.field_g = 2147483647;
             var15 = this.field_y * rh.field_O[var14] + 2048;
@@ -222,22 +222,22 @@ final class dc extends TextureOperator {
                 }
                 if (var11 >= pl.field_q) {
                   if (hj.field_d <= var11) {
-                    if (hb.field_p > var11) {
-                      fq.field_g = hb.field_p;
-                      hb.field_p = var11;
+                    if (PlayerAvatarRenderer.field_p > var11) {
+                      fq.field_g = PlayerAvatarRenderer.field_p;
+                      PlayerAvatarRenderer.field_p = var11;
                     } else {
                       if (var11 < fq.field_g) {
                         fq.field_g = var11;
                       }
                     }
                   } else {
-                    fq.field_g = hb.field_p;
-                    hb.field_p = hj.field_d;
+                    fq.field_g = PlayerAvatarRenderer.field_p;
+                    PlayerAvatarRenderer.field_p = hj.field_d;
                     hj.field_d = var11;
                   }
                 } else {
-                  fq.field_g = hb.field_p;
-                  hb.field_p = hj.field_d;
+                  fq.field_g = PlayerAvatarRenderer.field_p;
+                  PlayerAvatarRenderer.field_p = hj.field_d;
                   hj.field_d = pl.field_q;
                   pl.field_q = var11;
                 }
@@ -257,7 +257,7 @@ final class dc extends TextureOperator {
                     var3[var14] = fq.field_g;
                   }
                 } else {
-                  var3[var14] = hb.field_p;
+                  var3[var14] = PlayerAvatarRenderer.field_p;
                 }
               } else {
                 var3[var14] = hj.field_d;

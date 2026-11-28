@@ -64,10 +64,10 @@ final class oc {
         RuntimeException decompiledCaughtException = null;
         var2 = Confined.field_J ? 1 : 0;
         try {
-          vg.field_Z.a(true, true, ih.field_b, jf.field_k);
-          vg.field_Z.i((byte) 70);
+          TunnelCamera.field_Z.a(true, true, ih.field_b, jf.field_k);
+          TunnelCamera.field_Z.i((byte) 70);
           while (nm.e((byte) -96)) {
-            vg.field_Z.a((byte) 101, ad.field_h, gk.field_r);
+            TunnelCamera.field_Z.a((byte) 101, ad.field_h, gk.field_r);
           }
           if (qn.field_n != -1) {
             var1_int = qn.field_n;

@@ -75,11 +75,11 @@ final class kn {
     }
 
     final static void a(int param0, String param1, int param2, int param3, int param4, int param5, String param6, String param7) {
-        h stackIn_5_0 = null;
+        RaiderDefinition stackIn_5_0 = null;
         cf stackIn_6_1 = null;
-        h stackIn_8_0 = null;
+        RaiderDefinition stackIn_8_0 = null;
         cf stackIn_9_1 = null;
-        h stackIn_13_0 = null;
+        RaiderDefinition stackIn_13_0 = null;
         cf stackIn_14_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -89,7 +89,7 @@ final class kn {
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
-        h var8 = null;
+        RaiderDefinition var8 = null;
         RuntimeException var8_ref = null;
         String var9 = null;
         try {

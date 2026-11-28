@@ -23,11 +23,11 @@ abstract class SpecialEvent extends CreatureEvent {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.a(this.moveId, 9) &&
-            param0.a(119, 9)) {
-            param0.d(119, (byte) -81);
+          if (!param0.hasEquippedMove(this.moveId, 9) &&
+            param0.hasEquippedMove(119, 9)) {
+            param0.applyMoveCooldown(119, (byte) -81);
           } else {
-            param0.d(this.moveId, (byte) -85);
+            param0.applyMoveCooldown(this.moveId, (byte) -85);
           }
           if (param1 == 119) {
             return;
@@ -60,7 +60,7 @@ abstract class SpecialEvent extends CreatureEvent {
           return;
         }
         try {
-          this.a(this.creature.a(109, param0), 119);
+          this.a(this.creature.resolveCreature(109, param0), 119);
           this.a(param0, -81);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "bca.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -86,16 +86,16 @@ abstract class SpecialEvent extends CreatureEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = 26 % ((param1 - 12) / 35);
-          var3 = this.creature.a(50, param0);
+          var3 = this.creature.resolveCreature(50, param0);
           if (this.moveId == 57) {
-            param0.a(-25, var3, 15);
+            param0.setTerrainAroundCreature(-25, var3, 15);
             return;
           }
           if (this.moveId != 62 &&
             this.moveId != 63) {
             return;
           }
-          param0.a(-25, var3, 14);
+          param0.setTerrainAroundCreature(-25, var3, 14);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -131,7 +131,7 @@ abstract class SpecialEvent extends CreatureEvent {
           BattleCreature var6 = (BattleCreature) null;
           this.a((BattleCreature) null, -54);
         }
-        BattleCreature var3 = this.creature.a(53, param0);
+        BattleCreature var3 = this.creature.resolveCreature(53, param0);
         if (this.field_p) {
           return;
         }

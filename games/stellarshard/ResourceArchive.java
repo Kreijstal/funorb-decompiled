@@ -11,7 +11,7 @@ final class ResourceArchive {
     private Object[][] field_d;
     private boolean field_a;
 
-    final static int a(CharSequence param0, byte param1) {
+    final static int parseDecimalInt(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -40,15 +40,15 @@ final class ResourceArchive {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStaticDeque(int param0) {
         if (param0 != 30300) {
           String var2 = (String) null;
-          ResourceArchive.a(-33, (String) null);
+          ResourceArchive.printDecodedError(-33, (String) null);
         }
         field_b = null;
     }
 
-    final static Sprite[] a(String param0, byte param1, String param2, ResourceArchive param3) {
+    final static Sprite[] loadSpriteArrayByName(String param0, byte param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -111,7 +111,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final boolean b(String param0, String param1, byte param2) {
+    final boolean tryLoadFileByName(String param0, String param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -228,7 +228,7 @@ final class ResourceArchive {
         }
     }
 
-    final static n a(int param0, ha param1) {
+    final static n decodeLogoMesh(int param0, ha param1) {
         int var7 = 0;
         n stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
@@ -448,7 +448,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int b(byte param0) {
+    final synchronized int getArchiveLoadPercent(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -476,10 +476,10 @@ final class ResourceArchive {
         return var4Lifetime1;
     }
 
-    final static void a(int param0, String param1) {
+    final static void printDecodedError(int param0, String param1) {
         System.out.println("Error: " + IntrusiveNode.a(param1, "\n", "%0a", 97));
         if (param0 != 17651) {
-          ResourceArchive.a(20);
+          ResourceArchive.releaseStaticDeque(20);
         }
     }
 
@@ -508,7 +508,7 @@ final class ResourceArchive {
           var4_int = this.field_h.field_q.a(rl.a(var7, (byte) 72), 0);
           if (param2 != -12) {
             var6 = (String) null;
-            this.b((String) null, (String) null, (byte) 114);
+            this.tryLoadFileByName((String) null, (String) null, (byte) 114);
           }
           if (!this.validateGroupId(var4_int, -7294)) {
             stackIn_7_0 = null;
@@ -593,7 +593,7 @@ final class ResourceArchive {
         throw new IllegalArgumentException(Integer.toString(param0));
     }
 
-    final boolean c(String param0, byte param1) {
+    final boolean hasGroupName(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -630,7 +630,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(String param0, byte param1) {
+    final boolean tryLoadGroupByName(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -963,11 +963,11 @@ final class ResourceArchive {
         }
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void clearSessionAndReloadPage(java.applet.Applet param0, byte param1) {
         try {
           if (param1 != 123) {
             CharSequence var3 = (CharSequence) null;
-            ResourceArchive.a((CharSequence) null, (byte) 96);
+            ResourceArchive.parseDecimalInt((CharSequence) null, (byte) 96);
           }
           MouseHandler.a(param0, "", (byte) 110);
           wf.a(63, param0);

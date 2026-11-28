@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ik extends ah {
+final class ik extends AcceleratingProjectile {
     static int[] field_cb;
-    private oi field_bb;
+    private DynamicLight field_bb;
 
-    final void a(PrimaryNodeDeque param0, byte param1) {
+    final void collectEntityLights(PrimaryNodeDeque param0, byte param1) {
         double[] var13 = null;
         double[] var12 = null;
         double[] var11 = null;
@@ -76,12 +76,12 @@ final class ik extends ah {
             if (var4 == 45) {
               if (0 == var3 ||
                 var2_int - 1 == var3) {
-                stackIn_17_0 = ql.field_k;
+                stackIn_17_0 = StageDirector.field_k;
                 return stackIn_17_0;
               }
             } else {
-              if (-1 == kh.field_W.indexOf(var4)) {
-                stackIn_21_0 = ql.field_k;
+              if (-1 == ProjectileRay.field_W.indexOf(var4)) {
+                stackIn_21_0 = StageDirector.field_k;
                 return stackIn_21_0;
               }
             }
@@ -101,9 +101,9 @@ final class ik extends ah {
         }
     }
 
-    ik(hn param0, dj param1) {
+    ik(GameSession param0, PlayerShip param1) {
         super(param0, param1, 0.4, 0.02, 64.0, un.field_h);
-        this.field_bb = new oi((pm) (this));
+        this.field_bb = new DynamicLight((TunnelEntity) (this));
         try {
           kj.a(pe.field_o, 96, param1);
         } catch (RuntimeException runtimeException) {
@@ -169,9 +169,9 @@ final class ik extends ah {
         }
     }
 
-    ik(hn param0, ee param1, double[] param2, double param3, double param4, double param5) {
+    ik(GameSession param0, MovingTunnelEntity param1, double[] param2, double param3, double param4, double param5) {
         super(param0, param1, 0.4, 0.02, 16.0, param2, param3, param4, param5, un.field_h);
-        this.field_bb = new oi((pm) (this));
+        this.field_bb = new DynamicLight((TunnelEntity) (this));
         try {
           kj.a(pe.field_o, 96, param1);
         } catch (RuntimeException runtimeException) {
@@ -179,7 +179,7 @@ final class ik extends ah {
         }
     }
 
-    final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
+    final void drawInTunnel(PrimaryNodeDeque param0, double param1, int param2, TunnelCamera param3, DynamicLight param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -216,11 +216,11 @@ final class ik extends ah {
           stackIn_7_0 = (!(param3.field_N * var12 + (param3.field_H * var10 + param3.field_P * var8) > 0.0)) ? 0 : 1;
           var14 = stackIn_7_0;
           if (var14 != 0) {
-            this.a(hn.field_f, this.field_ab, param4, (byte) 64, param1, param0, param3, 512);
+            this.a(GameSession.field_f, this.field_ab, param4, (byte) 64, param1, param0, param3, 512);
           }
           pa.a(-(this.field_C * var8) + this.field_E, 0.4 * this.field_C, (byte) -11, 256, -(this.field_C * var12) + this.field_D, this.field_t - this.field_C * var10, wb.field_a, param1, param3);
           if (var14 == 0) {
-            this.a(hn.field_f, this.field_ab, param4, (byte) 64, param1, param0, param3, 512);
+            this.a(GameSession.field_f, this.field_ab, param4, (byte) 64, param1, param0, param3, 512);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -249,17 +249,17 @@ final class ik extends ah {
         }
     }
 
-    final void g(int param0) {
+    final void handleDestruction(int param0) {
         int var2 = 0;
         int var3 = Confined.field_J ? 1 : 0;
         fl.a(this.a((byte) 108, ib.field_J, 1.5), 4);
         this.a(mg.field_b, false);
         for (var2 = 0; var2 < 5; var2++) {
-          ri.a((IntrusiveNode) (this), param0 - 26402, new mm(this.field_A, (ee) (this), this.field_ab, mg.field_b[var2]));
+          ri.a((IntrusiveNode) (this), param0 - 26402, new mm(this.field_A, (MovingTunnelEntity) (this), this.field_ab, mg.field_b[var2]));
         }
         if (param0 != 26402) {
           PrimaryNodeDeque var4 = (PrimaryNodeDeque) null;
-          this.a((PrimaryNodeDeque) null, (byte) 88);
+          this.collectEntityLights((PrimaryNodeDeque) null, (byte) 88);
         }
     }
 

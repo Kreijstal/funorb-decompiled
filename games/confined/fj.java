@@ -255,7 +255,7 @@ class fj extends IntrusiveNode {
               } else {
                 tj.a(1088164, 104, (byte) 89, 112, 112, 70);
                 tj.a(1088164, 70, (byte) 50, 212, 112, 70);
-                pn.field_a.a(hm.field_ib, 220, 60, 340, 40, 4243584, -1, 0, 0, 20);
+                pn.field_a.a(LightningArc.field_ib, 220, 60, 340, 40, 4243584, -1, 0, 0, 20);
                 tj.a(10110754, 120, (byte) 110, 232, 176, 120);
                 pn.field_a.a(oj.field_z, 240, 110, 320, 40, 4243584, -1, 0, 0, 20);
                 tj.a(11038741, 136, (byte) 107, 144, 144, 204);
@@ -287,7 +287,7 @@ class fj extends IntrusiveNode {
             kc.a(false, 259, 10, 96);
             pn.field_a.a(wm.field_fb, 132, 58, 412, 60, 4243584, -1, 3, 1, 20);
             pn.field_a.a(a.field_a, 152, 123, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(mb.field_H, 132, 188, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.a(ShockwaveBlast.field_H, 132, 188, 412, 60, 4243584, -1, 3, 1, 20);
             pn.field_a.a(b.a(new String[]{ic.field_d}, uh.field_d, 1177), 152, 253, 412, 60, 4243584, -1, 3, 1, 20);
           }
           incrementValue$17 = param0;
@@ -299,7 +299,7 @@ class fj extends IntrusiveNode {
             kc.a(false, 194, 6, 96);
             kc.a(false, 259, 13, 76);
             pn.field_a.a(b.a(new String[]{ek.field_k}, rf.field_b, 1177), 152, 58, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(b.a(new String[]{s.field_L}, ee.field_J, 1177), 132, 123, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.a(b.a(new String[]{s.field_L}, MovingTunnelEntity.field_J, 1177), 132, 123, 412, 60, 4243584, -1, 3, 1, 20);
             pn.field_a.a(nd.field_u, 152, 188, 412, 60, 4243584, -1, 3, 1, 20);
             pn.field_a.a(b.a(new String[]{cf.field_db}, kn.field_a, 1177), 132, 253, 412, 60, 4243584, -1, 3, 1, 20);
           }
@@ -375,7 +375,7 @@ class fj extends IntrusiveNode {
             var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(bk.field_i, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
             var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(SectorCacheStore.field_c, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
             var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(qi.field_d, 76, var2_intLifetime3 - 4, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
-            var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(hm.field_rb, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
+            var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(LightningArc.field_rb, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
             pn.field_a.c(lk.field_c, 76, 12 + var2_intLifetime3, 4243584, -1);
             var2_intLifetime3 += 18;
           }
@@ -565,9 +565,9 @@ class fj extends IntrusiveNode {
         this.a(this, 11579568, param3, param2);
         var5 = this.e((byte) -24) ? 1 : 0;
         if (param1) {
-          if (il.field_cb != 0 &&
+          if (ExpandingPulseProjectile.field_cb != 0 &&
             var5 != 0) {
-            this.a(ld.field_l, param3, (byte) 36, this, param2, il.field_cb, jh.field_R);
+            this.a(ld.field_l, param3, (byte) 36, this, param2, ExpandingPulseProjectile.field_cb, jh.field_R);
           }
           if (rh.field_X != 0) {
             if (!this.a(param3, wm.field_hb, (byte) 91, param2, this, m.field_a, rh.field_X)) {

@@ -65,7 +65,7 @@ final class GzipDecompressor {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param1.a(param0, true);
+          var4 = param1.getFlatFile(param0, true);
           var3 = var4;
           if (param2 != 10) {
             GzipDecompressor.clearStaticReferences(-107);

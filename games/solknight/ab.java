@@ -501,7 +501,7 @@ abstract class ab extends GameApplet {
         aa.a((byte) 30, vd.field_b);
         ff.a(this.field_z, wh.field_c, param1, (byte) 110, this.field_C, this.field_m, this.field_y, 5000, this.field_x, this.field_n, param5, 5000, vd.field_b, this.field_w);
         ArchiveRequest.a(-11400, this.field_C, this.field_y, wh.field_c, this.field_m, this.field_z, param5, vd.field_b, this.field_x);
-        Archive.a(0);
+        Archive.initializePunctuationKeyMappings(0);
         ah.field_d = ld.createMouseWheelInput(0);
         th.a((byte) -63, dc.field_q);
         if (!param4) {
@@ -747,10 +747,10 @@ abstract class ab extends GameApplet {
         if (kj.field_R == 2) {
           if (af.field_c != null &&
             af.field_c.ensureIndexLoaded((byte) -121)) {
-            if (!af.field_c.b(param0 - 95, "")) {
+            if (!af.field_c.hasGroupName(param0 - 95, "")) {
               af.field_c = null;
             } else {
-              if (af.field_c.a(2, "")) {
+              if (af.field_c.tryLoadGroupByName(2, "")) {
                 lj.a(26708, af.field_c);
                 af.field_c = null;
                 mh.a(8192);
@@ -969,7 +969,7 @@ abstract class ab extends GameApplet {
         int var4 = te.field_O - 1;
         byte[] var5 = new byte[var4];
         te.field_N.readCipheredBytes(70, var4, 0, var5);
-        ke.a((byte) -122, ia.g(-107), Archive.a(true, var5), var3 != 0);
+        ke.a((byte) -122, ia.g(-107), Archive.decodeCp1252(true, var5), var3 != 0);
     }
 
     static {

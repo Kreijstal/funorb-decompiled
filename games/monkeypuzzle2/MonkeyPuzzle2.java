@@ -350,7 +350,7 @@ public final class MonkeyPuzzle2 extends bi {
               return;
             }
             if (!this.m(0)) {
-              ResourceArchive.a(h.field_f, -24119, 100.0f);
+              ResourceArchive.setLoadingStatus(h.field_f, -24119, 100.0f);
               qi.a((java.awt.Canvas) (var5), (byte) -111);
               return;
             }
@@ -381,7 +381,7 @@ public final class MonkeyPuzzle2 extends bi {
               }
             }
           }
-          if (ResourceArchive.a(false)) {
+          if (ResourceArchive.isMessageDialogActive(false)) {
             af.a(15, NodeHashTableIterator.field_e, 15, -3);
           } else {
             if (kg.a((byte) 90)) {
@@ -455,7 +455,7 @@ public final class MonkeyPuzzle2 extends bi {
           } else {
             if (this.m(param0 ^ 15245)) {
               if (ek.a((byte) 25) &&
-                !ResourceArchive.a(false)) {
+                !ResourceArchive.isMessageDialogActive(false)) {
                 stackIn_33_0 = (null != AwtRasterBuffer.field_f);
                 var2_int = PcmOutputWorker.a(stackIn_33_0, -32323, (bi) (this));
                 if (var2_int == 2364824) {
@@ -516,7 +516,7 @@ public final class MonkeyPuzzle2 extends bi {
                         bl.a(50, uh.field_e);
                       }
                     } else {
-                      if (!ResourceArchive.a(false) &&
+                      if (!ResourceArchive.isMessageDialogActive(false) &&
                         !ek.a((byte) -126)) {
                         if (qh.field_b != -1) {
                           ProxyAuthenticationRequiredException.field_d[qh.field_b].a(-23);
@@ -534,7 +534,7 @@ public final class MonkeyPuzzle2 extends bi {
                   if (sc.field_e == 1) {
                     ej.field_b = ej.field_b + 1;
                     if (ej.field_b == 25) {
-                      if (ResourceArchive.a(false)) {
+                      if (ResourceArchive.isMessageDialogActive(false)) {
                         df.e(param0 ^ -15328);
                       } else {
                         sk.b(false);
@@ -556,7 +556,7 @@ public final class MonkeyPuzzle2 extends bi {
                         ProxyAuthenticationRequiredException.field_d[1] = new kk(1);
                         qh.field_b = dh.field_c;
                         uh.a((byte) -101, qh.field_b);
-                        if (ResourceArchive.a(false)) {
+                        if (ResourceArchive.isMessageDialogActive(false)) {
                           ue.a((byte) 122, false);
                         }
                       }
@@ -588,7 +588,7 @@ public final class MonkeyPuzzle2 extends bi {
           }
           stackIn_130_0 = (qh.field_b == 6) || (qh.field_b == 10);
           IntrusiveDeque.a(stackIn_130_0, 31645);
-          if (ResourceArchive.a(false)) {
+          if (ResourceArchive.isMessageDialogActive(false)) {
             var2_intLifetime1 = j.a(5);
             if (var2_intLifetime1 == 2) {
               rb.h(3591);
@@ -601,7 +601,7 @@ public final class MonkeyPuzzle2 extends bi {
                 }
               }
             }
-            if (!ResourceArchive.a(false)) {
+            if (!ResourceArchive.isMessageDialogActive(false)) {
               ProxyAuthenticationRequiredException.field_d[qh.field_b].a(true, false);
             }
           }
@@ -693,57 +693,57 @@ public final class MonkeyPuzzle2 extends bi {
                       if (df.field_p.ensureIndexLoaded(65) &&
                         df.field_p.tryLoadAllGroups(0)) {
                         if (wj.field_j.ensureIndexLoaded(123) &&
-                          wj.field_j.a(0, "basic")) {
+                          wj.field_j.tryLoadGroupByName(0, "basic")) {
                           if (wj.field_j.ensureIndexLoaded(param0 ^ -117) &&
-                            wj.field_j.a(0, "kartika13")) {
+                            wj.field_j.tryLoadGroupByName(0, "kartika13")) {
                             if ((ri.field_a.ensureIndexLoaded(param0 - 59) &&
-                              ri.field_a.a(0, "kartika13")) &&
+                              ri.field_a.tryLoadGroupByName(0, "kartika13")) &&
                               (decompiledFrameRemainder0 = !(param1))) {
-                              ResourceArchive.a(bd.field_a, -24119, 65.0f);
+                              ResourceArchive.setLoadingStatus(bd.field_a, -24119, 65.0f);
                               return false;
                             }
                             if (decompiledFrameRemainder0) {
-                              ResourceArchive.a(tk.a(wj.field_j, "basic", ed.field_a, 1, vb.field_i), -24119, 59.0f);
+                              ResourceArchive.setLoadingStatus(tk.a(wj.field_j, "basic", ed.field_a, 1, vb.field_i), -24119, 59.0f);
                               return false;
                             }
                           }
                           if (decompiledFrameRemainder0) {
-                            ResourceArchive.a(tk.a(wj.field_j, "basic", ed.field_a, param0 - 35, vb.field_i), -24119, 58.0f);
+                            ResourceArchive.setLoadingStatus(tk.a(wj.field_j, "basic", ed.field_a, param0 - 35, vb.field_i), -24119, 58.0f);
                             return false;
                           }
                         }
                         if (decompiledFrameRemainder0) {
-                          ResourceArchive.a(tk.a(wj.field_j, "basic", ed.field_a, 1, vb.field_i), -24119, 56.0f);
+                          ResourceArchive.setLoadingStatus(tk.a(wj.field_j, "basic", ed.field_a, 1, vb.field_i), -24119, 56.0f);
                           return false;
                         }
                       }
                       if (decompiledFrameRemainder0) {
-                        ResourceArchive.a(tk.a(hk.field_k, "", PacketBuffer.field_f, param0 ^ 37, tl.field_a), param0 - 24155, 55.0f);
+                        ResourceArchive.setLoadingStatus(tk.a(hk.field_k, "", PacketBuffer.field_f, param0 ^ 37, tl.field_a), param0 - 24155, 55.0f);
                         return false;
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      ResourceArchive.a(tk.a(ha.field_fb, "", ek.field_e, 1, DiskCacheWorker.field_b), param0 - 24155, 51.0f);
+                      ResourceArchive.setLoadingStatus(tk.a(ha.field_fb, "", ek.field_e, 1, DiskCacheWorker.field_b), param0 - 24155, 51.0f);
                       return false;
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    ResourceArchive.a(tk.a(hk.field_k, "", ed.field_a, 1, vb.field_i), param0 - 24155, 50.0f);
+                    ResourceArchive.setLoadingStatus(tk.a(hk.field_k, "", ed.field_a, 1, vb.field_i), param0 - 24155, 50.0f);
                     return false;
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  ResourceArchive.a(tk.a(fi.field_b, "", oh.field_a, 1, NodeHashTableIterator.field_a), -24119, 35.0f);
+                  ResourceArchive.setLoadingStatus(tk.a(fi.field_b, "", oh.field_a, 1, NodeHashTableIterator.field_a), -24119, 35.0f);
                   return false;
                 }
               }
               if (decompiledFrameRemainder0) {
-                ResourceArchive.a(tk.a(wi.field_d, "", fe.field_b, 1, ButtonWidget.field_y), -24119, 25.0f);
+                ResourceArchive.setLoadingStatus(tk.a(wi.field_d, "", fe.field_b, 1, ButtonWidget.field_y), -24119, 25.0f);
                 return false;
               }
             }
             if (decompiledFrameRemainder0) {
-              ResourceArchive.a(tk.a(cl.field_a, "", fe.field_b, 1, ButtonWidget.field_y), param0 ^ -24083, 15.0f);
+              ResourceArchive.setLoadingStatus(tk.a(cl.field_a, "", fe.field_b, 1, ButtonWidget.field_y), param0 ^ -24083, 15.0f);
               return false;
             }
           }
@@ -751,7 +751,7 @@ public final class MonkeyPuzzle2 extends bi {
             null != cl.field_a &&
             null != wi.field_d) {
             he.f(param0 - 36);
-            ResourceArchive.a(bd.field_a, -24119, 65.0f);
+            ResourceArchive.setLoadingStatus(bd.field_a, -24119, 65.0f);
             this.d(-25976);
             ri.a(fi.field_b, 0, cl.field_a, wi.field_d);
             fi.field_b = null;
@@ -762,7 +762,7 @@ public final class MonkeyPuzzle2 extends bi {
           }
           if (null != hk.field_k &&
             ha.field_fb != null) {
-            ResourceArchive.a(gd.field_a, -24119, 75.0f);
+            ResourceArchive.setLoadingStatus(gd.field_a, -24119, 75.0f);
             this.d(param0 ^ -25940);
             sj.a(ha.field_fb, wj.field_j, ri.field_a, hk.field_k, 0);
             ha.field_fb = null;
@@ -771,7 +771,7 @@ public final class MonkeyPuzzle2 extends bi {
             return false;
           }
           if (df.field_p != null) {
-            ResourceArchive.a(q.field_b, param0 - 24155, 90.0f);
+            ResourceArchive.setLoadingStatus(q.field_b, param0 - 24155, 90.0f);
             this.d(-25976);
             v.a((byte) -121, df.field_p);
             df.field_p = null;

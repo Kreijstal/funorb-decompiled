@@ -2856,7 +2856,7 @@ public final class stellarshard extends rb implements cf {
           MouseHandler.clearStaticReferences((byte) -20);
           MouseWheelInput.clearStaticReferences(31147);
           SoftwareRasterizer.clearStaticReferences();
-          ResourceArchive.a(30300);
+          ResourceArchive.releaseStaticDeque(30300);
           t.resetStaticState(param0 ^ 6079);
           wi.clearStaticReferences((byte) -93);
           PacketBuffer.clearStaticReferences((byte) -14);
@@ -3144,7 +3144,7 @@ public final class stellarshard extends rb implements cf {
                   if (bh.field_a.ensureIndexLoaded((byte) -36) &&
                     bh.field_a.tryLoadAllGroups((byte) -111)) {
                     if (fc.field_a.ensureIndexLoaded((byte) -36) &&
-                      fc.field_a.a("basic", (byte) -109)) {
+                      fc.field_a.tryLoadGroupByName("basic", (byte) -109)) {
                       if (MouseHandler.field_d.ensureIndexLoaded((byte) -36) &&
                         MouseHandler.field_d.tryLoadAllGroups((byte) -111)) {
                         if (jf.field_m.ensureIndexLoaded((byte) -36) &&

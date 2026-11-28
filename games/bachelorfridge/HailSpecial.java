@@ -44,7 +44,7 @@ final class HailSpecial extends SpecialOrder {
         int[][] var22 = null;
         var17 = BachelorFridge.field_y;
         try {
-          var18 = this.creature.a(59, param0);
+          var18 = this.creature.resolveCreature(59, param0);
           var4 = new HailEvent(this.moveId, new CreatureRef(var18));
           var4.field_q = this.field_k;
           var4.field_t = this.field_n;
@@ -58,7 +58,7 @@ final class HailSpecial extends SpecialOrder {
               if (1 == var22[var10][var11]) {
                 var12 = var10 - (var8 - this.field_k);
                 var13 = this.field_n - var9 + var11;
-                if (param0.a(var12, var13, (byte) -48)) {
+                if (param0.isTileTerrainTraversable(var12, var13, (byte) -48)) {
                   var14 = param0.tiles[var12][var13];
                   var15 = var14.occupant;
                   if (var15 != null) {

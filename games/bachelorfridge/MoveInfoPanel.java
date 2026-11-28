@@ -80,19 +80,19 @@ final class MoveInfoPanel {
                 }
                 if (this.field_m.field_M == 1 &&
                   var7 == 2) {
-                  this.field_m.a((byte) -30, var10.field_s.b(var3.field_zb, (byte) -116));
+                  this.field_m.a((byte) -30, var10.field_s.findMoveSlot(var3.field_zb, (byte) -116));
                   Crc32Table.a(38, (byte) 108);
                   return;
                 }
                 if (this.field_m.field_M == 2 &&
                   var7 == 1 &&
-                  var10.field_s.c((byte) -10, var6Lifetime1)) {
-                  this.field_m.b(var10.field_s.b(var3.field_zb, (byte) -122), -1);
+                  var10.field_s.isMoveAllowedByStatus((byte) -10, var6Lifetime1)) {
+                  this.field_m.b(var10.field_s.findMoveSlot(var3.field_zb, (byte) -122), -1);
                   return;
                 }
                 if (this.field_m.field_M == 2 &&
                   var7 == 4) {
-                  this.field_m.a(16776960, var10.field_s.b(var3.field_zb, (byte) -126));
+                  this.field_m.a(16776960, var10.field_s.findMoveSlot(var3.field_zb, (byte) -126));
                   return;
                 }
               }
@@ -275,7 +275,7 @@ final class MoveInfoPanel {
               var8_int = 105;
               var9 = 12;
               if (var25.field_s.statusId != 31 &&
-                !var25.field_s.g((byte) 85)) {
+                !var25.field_s.isCarryingFlag((byte) 85)) {
                 CreatureActor.field_h.a(lga.a(true, new String[]{"" + var25.field_s.statusTurns}, vla.field_p), var8_int + this.field_d.field_kb, var9 + this.field_d.field_rb, 2, -1);
                 var9 -= 15;
               }
@@ -305,12 +305,12 @@ final class MoveInfoPanel {
                   var26.kind != 2) {
                   if (var26.kind == 1) {
                     if (2 == this.field_m.field_M) {
-                      var25.field_s.c((byte) -10, var26.field_j);
+                      var25.field_s.isMoveAllowedByStatus((byte) -10, var26.field_j);
                     }
                   } else {
-                    if (!(this.field_m.field_h.a(this.field_m.field_Y, false) > 0) ||
+                    if (!(this.field_m.field_h.countSpecialOrders(this.field_m.field_Y, false) > 0) ||
                       var26.kind != 4) {
-                      var25.field_s.c((byte) -10, var26.field_j);
+                      var25.field_s.isMoveAllowedByStatus((byte) -10, var26.field_j);
                     }
                   }
                 }
@@ -372,7 +372,7 @@ final class MoveInfoPanel {
                     (this.field_m.field_Z == null ||
                     var8.field_zb != this.field_m.field_Z.moveId)) {
                     if (!var8.field_yb &&
-                      var25.field_s.c((byte) -10, var8.field_zb)) {
+                      var25.field_s.isMoveAllowedByStatus((byte) -10, var8.field_zb)) {
                       nia.field_l[var27.field_b].e(-5 + var8.field_kb + this.field_d.field_kb, -5 + (var8.field_rb + this.field_d.field_rb), 11250603);
                     } else {
                       nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].e(-5 + this.field_d.field_kb + var8.field_kb, -5 + this.field_d.field_rb + var8.field_rb, 14964736);
@@ -392,7 +392,7 @@ final class MoveInfoPanel {
                           (null == this.field_m.field_Z ||
                           var8.field_zb != this.field_m.field_Z.moveId)) {
                           if (!var8.field_yb &&
-                            var25.field_s.c((byte) -10, var8.field_zb)) {
+                            var25.field_s.isMoveAllowedByStatus((byte) -10, var8.field_zb)) {
                             nia.field_l[var27.field_b].e(-5 + this.field_d.field_kb + var8.field_kb, this.field_d.field_rb - (-var8.field_rb + 5), 11250603);
                           } else {
                             nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].e(this.field_d.field_kb + var8.field_kb - 5, this.field_d.field_rb + (var8.field_rb - 5), 15204352);
@@ -406,7 +406,7 @@ final class MoveInfoPanel {
                           (this.field_m.field_Z == null ||
                           var8.field_zb != this.field_m.field_Z.moveId)) {
                           if (!var8.field_yb &&
-                            var25.field_s.c((byte) -10, var8.field_zb)) {
+                            var25.field_s.isMoveAllowedByStatus((byte) -10, var8.field_zb)) {
                             nia.field_l[var27.field_b].e(this.field_d.field_kb + (var8.field_kb - 5), this.field_d.field_rb + (var8.field_rb - 5), 11250603);
                           } else {
                             nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].e(var8.field_kb + (this.field_d.field_kb - 5), this.field_d.field_rb - (-var8.field_rb + 5), 16754688);
@@ -423,7 +423,7 @@ final class MoveInfoPanel {
                         (this.field_m.field_Z == null ||
                         this.field_m.field_Z.moveId != var8.field_zb)) {
                         if (!var8.field_yb &&
-                          var25.field_s.c((byte) -10, var8.field_zb)) {
+                          var25.field_s.isMoveAllowedByStatus((byte) -10, var8.field_zb)) {
                           nia.field_l[var27.field_b].e(-5 + (var8.field_kb + this.field_d.field_kb), this.field_d.field_rb + (var8.field_rb - 5), 11250603);
                         } else {
                           nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].e(this.field_d.field_kb - (-var8.field_kb + 5), -5 + (this.field_d.field_rb + var8.field_rb), 818659);
@@ -442,7 +442,7 @@ final class MoveInfoPanel {
                   (this.field_m.field_Z == null ||
                   var8.field_zb != this.field_m.field_Z.moveId)) {
                   if (!var8.field_yb &&
-                    var25.field_s.c((byte) -10, var8.field_zb)) {
+                    var25.field_s.isMoveAllowedByStatus((byte) -10, var8.field_zb)) {
                     nia.field_l[var24.field_b].e(this.field_d.field_kb + var8.field_kb - 5, -5 + this.field_d.field_rb + var8.field_rb, 11250603);
                   } else {
                     nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].e(-5 + (this.field_d.field_kb + var8.field_kb), this.field_d.field_rb + var8.field_rb - 5, 51233);
@@ -455,7 +455,7 @@ final class MoveInfoPanel {
               }
               if (-1 != var8.field_zb &&
                 al.a(102, var8.field_zb).kind != 3) {
-                CreatureType.a(true, -4 + this.field_d.field_rb + var8.field_rb, var8.field_kb + (this.field_d.field_kb - 4), var8.field_zb, 90);
+                CreatureType.drawMoveIcon(true, -4 + this.field_d.field_rb + var8.field_rb, var8.field_kb + (this.field_d.field_kb - 4), var8.field_zb, 90);
               }
               var12 = 0;
               if (this.field_m.field_P.field_s.statusId != 40 &&
@@ -466,17 +466,17 @@ final class MoveInfoPanel {
                   var12 = stackIn_135_0;
                 } else if (var27.kind == 1) {
                   if (this.field_m.field_M == 2) {
-                    stackIn_143_0 = (var25.field_s.c((byte) -10, var27.field_j)) ? 1 : 0;
+                    stackIn_143_0 = (var25.field_s.isMoveAllowedByStatus((byte) -10, var27.field_j)) ? 1 : 0;
                   } else {
                     stackIn_143_0 = 0;
                   }
                   var12 = stackIn_143_0;
                 } else {
-                  if (this.field_m.field_h.a(this.field_m.field_Y, false) > 0 &&
+                  if (this.field_m.field_h.countSpecialOrders(this.field_m.field_Y, false) > 0 &&
                     var27.kind == 4) {
                     stackIn_152_0 = 0;
                   } else {
-                    stackIn_152_0 = (var25.field_s.c((byte) -10, var27.field_j)) ? 1 : 0;
+                    stackIn_152_0 = (var25.field_s.isMoveAllowedByStatus((byte) -10, var27.field_j)) ? 1 : 0;
                   }
                   var12 = stackIn_152_0;
                 }
@@ -485,9 +485,9 @@ final class MoveInfoPanel {
               }
               if (!var8.field_yb ||
                 var12 == 0) {
-                if (var25.field_s.f(0, var8.field_zb)) {
+                if (var25.field_s.isMoveCoolingDown(0, var8.field_zb)) {
                   var13_ref_oha = WhirlpoolDigest.field_e[var8.field_zb];
-                  var14_int = var25.field_s.b(var8.field_zb, (byte) -110);
+                  var14_int = var25.field_s.findMoveSlot(var8.field_zb, (byte) -110);
                   var15_int = -var25.field_s.field_K[var14_int] + var13_ref_oha.field_g;
                   if (var15_int != -2) {
                     CreatureActor.field_h.drawText(Integer.toString(var15_int), 2 + (this.field_d.field_kb + var8.field_kb), var8.field_rb + this.field_d.field_rb + 20, 2, -1);
@@ -509,22 +509,22 @@ final class MoveInfoPanel {
                   var14_int = 4 + mk.field_p;
                   var15_int = gd.field_m + 4;
                   if (!var8.field_yb) {
-                    stackIn_175_0 = (var25.field_s.f(0, var8.field_zb)) ? 1 : 0;
+                    stackIn_175_0 = (var25.field_s.isMoveCoolingDown(0, var8.field_zb)) ? 1 : 0;
                   } else {
                     stackIn_175_0 = 0;
                   }
                   var16 = stackIn_175_0;
                   if (!var8.field_yb) {
-                    stackIn_181_0 = (!var25.field_s.c((byte) -10, var8.field_zb)) ? 1 : 0;
+                    stackIn_181_0 = (!var25.field_s.isMoveAllowedByStatus((byte) -10, var8.field_zb)) ? 1 : 0;
                   } else {
                     stackIn_181_0 = 0;
                   }
                   var17 = stackIn_181_0;
-                  if (var25.field_s.a(false, var8.field_zb)) {
+                  if (var25.field_s.hasJustUsedMove(false, var8.field_zb)) {
                     var17 = 1;
                     var16 = 0;
                   }
-                  bi.a(var13, var17 != 0, 20, var28, var14_int, var12, var15_int, var16 != 0, var25.field_s.a(var28, -5313));
+                  bi.a(var13, var17 != 0, 20, var28, var14_int, var12, var15_int, var16 != 0, var25.field_s.getAttackDamageMultiplier(var28, -5313));
                 }
                 var8 = (jj) (this.field_d.children.nextForward(0));
               }
@@ -792,7 +792,7 @@ final class MoveInfoPanel {
           stackIn_11_0.field_A = stackIn_12_1;
           if (!var4.isDown(param1 ^ -100)) {
             param0.tiles[var4.tileX][var4.tileY].occupant = var4;
-            var4.d(51);
+            var4.recalculateCreatureStats(51);
           }
           stackIn_16_0 = var4;
           return stackIn_16_0;
@@ -896,8 +896,8 @@ final class MoveInfoPanel {
           this.field_m.field_P.field_s.statusId != 39) {
           if (!param3) {
             var10 = 0;
-          } else if (this.field_m.field_P.field_s.c((byte) -10, param4) &&
-            !this.field_m.field_P.field_s.f(param0 - 104, param4)) {
+          } else if (this.field_m.field_P.field_s.isMoveAllowedByStatus((byte) -10, param4) &&
+            !this.field_m.field_P.field_s.isMoveCoolingDown(param0 - 104, param4)) {
             if (param1 == 2) {
               stackIn_39_0 = (this.field_m.field_M != 1) ? 0 : 1;
               var10 = stackIn_39_0;

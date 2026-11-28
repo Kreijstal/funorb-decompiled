@@ -4,7 +4,7 @@
 final class AccountNameAvailabilityValidator extends mf {
     private boolean nameAvailable;
     private String checkedName;
-    static pm[] field_k;
+    static TunnelEntity[] field_k;
     static int field_h;
 
     final String a(String param0, boolean param1) {
@@ -72,7 +72,7 @@ final class AccountNameAvailabilityValidator extends mf {
         field_k = null;
     }
 
-    final static void a(double param0, int param1, double[] param2, double param3, vg param4, dj param5, int param6) {
+    final static void a(double param0, int param1, double[] param2, double param3, TunnelCamera param4, PlayerShip param5, int param6) {
         double var9_double = 0.0;
         double var11 = 0.0;
         double var13 = 0.0;
@@ -91,15 +91,15 @@ final class AccountNameAvailabilityValidator extends mf {
     final void e(int param0) {
         this.checkedName = null;
         if (param0 != 639775169) {
-          dj var3 = (dj) null;
-          AccountNameAvailabilityValidator.a(0.5264573121586292, 97, (double[]) null, -2.3170663679572066, (vg) null, (dj) null, -93);
+          PlayerShip var3 = (PlayerShip) null;
+          AccountNameAvailabilityValidator.a(0.5264573121586292, 97, (double[]) null, -2.3170663679572066, (TunnelCamera) null, (PlayerShip) null, -93);
         }
     }
 
     final fi a(byte param0, String param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
-        dj var4 = null;
+        PlayerShip var4 = null;
         CharSequence var5 = null;
         fi stackIn_4_0 = null;
         fi stackIn_11_0 = null;
@@ -110,11 +110,11 @@ final class AccountNameAvailabilityValidator extends mf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -44) {
-            var4 = (dj) null;
-            AccountNameAvailabilityValidator.a(0.033002690553074567, -88, (double[]) null, 1.6640993038654757, (vg) null, (dj) null, -56);
+            var4 = (PlayerShip) null;
+            AccountNameAvailabilityValidator.a(0.033002690553074567, -88, (double[]) null, 1.6640993038654757, (TunnelCamera) null, (PlayerShip) null, -56);
           }
           var5 = (CharSequence) ((Object) param1);
-          if (!lc.a(var5, 13684)) {
+          if (!TunnelMesh.isValidPlayerName(var5, 13684)) {
             stackIn_4_0 = fb.field_e;
             return stackIn_4_0;
           }
@@ -150,6 +150,6 @@ final class AccountNameAvailabilityValidator extends mf {
     }
 
     static {
-        field_k = new pm[5];
+        field_k = new TunnelEntity[5];
     }
 }

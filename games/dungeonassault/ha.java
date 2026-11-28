@@ -21,7 +21,7 @@ final class ha extends um {
         wi.field_kb = 0;
         jn.field_l = null;
         hc.field_b = 0;
-        h.field_f = null;
+        RaiderDefinition.field_f = null;
         ui.field_a = 0;
         ce.field_p = -1;
         bl.field_l = null;
@@ -29,12 +29,12 @@ final class ha extends um {
         ti.field_A = sj.a(SecondaryNodeDeque.field_a, 37);
         ti.field_A.field_v = 1;
         tk.field_k = sj.a(fl.field_i, 107);
-        PacketBuffer.field_n = sj.a(wm.field_h, 59);
+        PacketBuffer.field_n = sj.a(PackedBitSet.field_h, 59);
         PacketBuffer.field_n.field_v = param0;
         pp.field_K.addFirst(ti.field_A, false);
         pp.field_K.addFirst(tk.field_k, false);
         pp.field_K.addFirst(PacketBuffer.field_n, false);
-        o.field_n.a(1);
+        o.field_n.clearAllBits(1);
     }
 
     private final java.net.Socket a(int param0, byte param1, String param2, String param3) throws IOException {

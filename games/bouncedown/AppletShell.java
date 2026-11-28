@@ -456,7 +456,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           if (param1 != 0) {
             field_b = 10;
           }
-          var3 = param0.c(param1 ^ 121, param2);
+          var3 = param0.getFlatFile(param1 ^ 121, param2);
           if (var3 == null) {
             stackIn_7_0 = null;
             return (rj) (stackIn_7_0);

@@ -28,20 +28,20 @@ final class dl {
           if (!param1) {
             var4 = (java.awt.Component) null;
             dl.a((java.awt.Component) null, (byte) 72);
-            kh.a((byte) 35, param2);
+            ProjectileRay.a((byte) 35, param2);
             return;
           }
-          kh.a((byte) 35, param2);
+          ProjectileRay.a((byte) 35, param2);
           return;
         }
         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_l, 0, 192);
         if (!param1) {
           var4Lifetime1 = (java.awt.Component) null;
           dl.a((java.awt.Component) null, (byte) 72);
-          kh.a((byte) 35, param2);
+          ProjectileRay.a((byte) 35, param2);
           return;
         }
-        kh.a((byte) 35, param2);
+        ProjectileRay.a((byte) 35, param2);
     }
 
     final synchronized static byte[] a(int param0, int param1) {
@@ -121,8 +121,8 @@ final class dl {
               sc.field_f > 0) {
               fieldTemp$28 = sc.field_f - 1;
               sc.field_f = sc.field_f - 1;
-              var2_ref_byte__Lifetime4 = hf.field_Z[fieldTemp$28];
-              hf.field_Z[sc.field_f] = null;
+              var2_ref_byte__Lifetime4 = HomingProjectile.field_Z[fieldTemp$28];
+              HomingProjectile.field_Z[sc.field_f] = null;
               return var2_ref_byte__Lifetime4;
             }
             if (null == fh.field_a) {
@@ -153,8 +153,8 @@ final class dl {
               sc.field_f > 0) {
               fieldTemp$25 = sc.field_f - 1;
               sc.field_f = sc.field_f - 1;
-              var2_ref_byte__Lifetime6 = hf.field_Z[fieldTemp$25];
-              hf.field_Z[sc.field_f] = null;
+              var2_ref_byte__Lifetime6 = HomingProjectile.field_Z[fieldTemp$25];
+              HomingProjectile.field_Z[sc.field_f] = null;
               return var2_ref_byte__Lifetime6;
             }
             if (null == fh.field_a) {
@@ -178,8 +178,8 @@ final class dl {
             sc.field_f > 0) {
             fieldTemp$22 = sc.field_f - 1;
             sc.field_f = sc.field_f - 1;
-            var2_ref_byte__Lifetime7 = hf.field_Z[fieldTemp$22];
-            hf.field_Z[sc.field_f] = null;
+            var2_ref_byte__Lifetime7 = HomingProjectile.field_Z[fieldTemp$22];
+            HomingProjectile.field_Z[sc.field_f] = null;
             return var2_ref_byte__Lifetime7;
           }
           if (null == fh.field_a) {
@@ -212,8 +212,8 @@ final class dl {
               sc.field_f > 0) {
               fieldTemp$17 = sc.field_f - 1;
               sc.field_f = sc.field_f - 1;
-              var2_ref_byte__Lifetime1Lifetime1 = hf.field_Z[fieldTemp$17];
-              hf.field_Z[sc.field_f] = null;
+              var2_ref_byte__Lifetime1Lifetime1 = HomingProjectile.field_Z[fieldTemp$17];
+              HomingProjectile.field_Z[sc.field_f] = null;
               return var2_ref_byte__Lifetime1Lifetime1;
             }
             if (null == fh.field_a) {
@@ -252,8 +252,8 @@ final class dl {
           if (sc.field_f > 0) {
             fieldTemp$16 = sc.field_f - 1;
             sc.field_f = sc.field_f - 1;
-            var2_ref_byte__Lifetime1Lifetime2 = hf.field_Z[fieldTemp$16];
-            hf.field_Z[sc.field_f] = null;
+            var2_ref_byte__Lifetime1Lifetime2 = HomingProjectile.field_Z[fieldTemp$16];
+            HomingProjectile.field_Z[sc.field_f] = null;
             return var2_ref_byte__Lifetime1Lifetime2;
           }
           if (null == fh.field_a) {
@@ -293,8 +293,8 @@ final class dl {
           if (sc.field_f > 0) {
             fieldTemp$4 = sc.field_f - 1;
             sc.field_f = sc.field_f - 1;
-            var2_ref_byte__Lifetime2 = hf.field_Z[fieldTemp$4];
-            hf.field_Z[sc.field_f] = null;
+            var2_ref_byte__Lifetime2 = HomingProjectile.field_Z[fieldTemp$4];
+            HomingProjectile.field_Z[sc.field_f] = null;
             return var2_ref_byte__Lifetime2;
           }
           if (null == fh.field_a) {
@@ -334,8 +334,8 @@ final class dl {
         if (sc.field_f > 0) {
           fieldTemp$9 = sc.field_f - 1;
           sc.field_f = sc.field_f - 1;
-          var2_ref_byte__Lifetime3 = hf.field_Z[fieldTemp$9];
-          hf.field_Z[sc.field_f] = null;
+          var2_ref_byte__Lifetime3 = HomingProjectile.field_Z[fieldTemp$9];
+          HomingProjectile.field_Z[sc.field_f] = null;
           return var2_ref_byte__Lifetime3;
         }
         if (null != fh.field_a) {

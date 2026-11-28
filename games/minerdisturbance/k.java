@@ -74,20 +74,20 @@ final class k extends cb {
         if (!hj.field_i.ensureIndexLoaded((byte) 111)) {
           return ul.field_d;
         }
-        if (!hj.field_i.a(false, "commonui")) {
+        if (!hj.field_i.tryLoadGroupByName(false, "commonui")) {
           return ub.field_c + " - " + hj.field_i.getGroupLoadPercentByName("commonui", param0 + 22834) + "%";
         }
         if (!pb.field_r.ensureIndexLoaded((byte) 99)) {
           return GameCanvas.field_a;
         }
-        if (!pb.field_r.a(false, "commonui")) {
+        if (!pb.field_r.tryLoadGroupByName(false, "commonui")) {
           return mb.field_a + " - " + pb.field_r.getGroupLoadPercentByName("commonui", -121) + "%";
         }
         if (!oh.field_C.ensureIndexLoaded((byte) 85)) {
           return FullscreenFocusCanvas.field_e;
         }
         if (!oh.field_C.tryLoadAllGroups(-1)) {
-          return ec.field_f + " - " + oh.field_C.c(-14858) + "%";
+          return ec.field_f + " - " + oh.field_C.getArchiveLoadPercent(-14858) + "%";
         }
         if (param0 == -22962) {
           return nj.field_d;

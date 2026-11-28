@@ -246,7 +246,7 @@ final class ke extends ga implements ge, el, pg {
         this.field_H.field_C = oe.field_O;
         this.field_X.field_C = DualLinkNode.field_m;
         this.field_V.field_C = rm.field_D;
-        this.field_bb.field_C = hf.field_U;
+        this.field_bb.field_C = HomingProjectile.field_U;
         this.field_R.a(-18312, new AccountNameAvailabilityValidator(this.field_R));
         this.field_U.a(-18312, new bk(this.field_U));
         this.field_W.a(-18312, new qc(this.field_W, this.field_U));

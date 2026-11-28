@@ -68,7 +68,7 @@ final class ij {
             stackIn_2_0 = (kf) null;
             return stackIn_2_0;
           }
-          var4 = param2.b((byte) -74, param1);
+          var4 = param2.getFlatFile((byte) -74, param1);
           var3 = var4;
           if (var4 != null) {
             stackIn_7_0 = new kf(var4);

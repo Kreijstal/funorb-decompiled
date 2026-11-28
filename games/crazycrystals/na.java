@@ -130,15 +130,15 @@ class na extends ud implements vd {
         this.a((qm) (var2Lifetime1), (byte) -50);
     }
 
-    final static void a(int param0, boolean param1, f[][] param2, int param3, int param4) {
+    final static void a(int param0, boolean param1, PuzzleTile[][] param2, int param3, int param4) {
         try {
-          ul.a(new mj(param0, param3, -1, 0), param1, param2, (byte) 102);
-          ul.a(new mj(param0, param3, 1, 0), param1, param2, (byte) 48);
-          ul.a(new mj(param0, param3, 0, -1), param1, param2, (byte) 92);
+          ul.a(new LaserTraceCursor(param0, param3, -1, 0), param1, param2, (byte) 102);
+          ul.a(new LaserTraceCursor(param0, param3, 1, 0), param1, param2, (byte) 48);
+          ul.a(new LaserTraceCursor(param0, param3, 0, -1), param1, param2, (byte) 92);
           if (param4 != 77) {
-            na.a(-116, false, (f[][]) null, -41, 3);
+            na.a(-116, false, (PuzzleTile[][]) null, -41, 3);
           }
-          ul.a(new mj(param0, param3, 0, 1), param1, param2, (byte) 113);
+          ul.a(new LaserTraceCursor(param0, param3, 0, 1), param1, param2, (byte) 113);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "na.JA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

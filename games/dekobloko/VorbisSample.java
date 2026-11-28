@@ -733,7 +733,7 @@ final class VorbisSample extends HashNode {
         try {
           VorbisSample vorbisSampleLocal1 = null;
           if (!VorbisSample.computeBoolean1688(resourceArchiveArgument1)) {
-            resourceArchiveArgument1.computeBoolean0813(stringArgument3, true, stringArgument2);
+            resourceArchiveArgument1.tryLoadFileByName(stringArgument3, true, stringArgument2);
             return null;
           }
           byte[] byteArrayLocal2 = resourceArchiveArgument1.getFileByName(0, stringArgument3, stringArgument2);

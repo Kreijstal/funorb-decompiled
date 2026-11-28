@@ -14,7 +14,7 @@ final class Archive {
     static String field_c;
     private ArchiveIndex field_f;
 
-    final boolean a(int param0, String param1) {
+    final boolean tryLoadGroupByName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -105,17 +105,17 @@ final class Archive {
         }
     }
 
-    final int c(int param0) {
+    final int getGroupCapacity(int param0) {
         if (!this.ensureIndexLoaded(0)) {
           return -1;
         }
         if (param0 != -1) {
-          this.c(((int[]) (((Object[]) (this.field_k[1]))[0]))[2]);
+          this.getGroupCapacity(((int[]) (((Object[]) (this.field_k[1]))[0]))[2]);
         }
         return this.field_f.field_k.length;
     }
 
-    final synchronized byte[] b(int param0, int param1) {
+    final synchronized byte[] getFlatFile(int param0, int param1) {
         if (!this.ensureIndexLoaded(param1)) {
           return null;
         }
@@ -430,7 +430,7 @@ final class Archive {
         }
     }
 
-    final boolean d(int param0, String param1) {
+    final boolean hasGroupName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -529,7 +529,7 @@ final class Archive {
         return true;
     }
 
-    final boolean a(String param0, byte param1, String param2) {
+    final boolean tryLoadFileByName(String param0, byte param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -656,7 +656,7 @@ final class Archive {
         }
     }
 
-    final int c(int param0, int param1) {
+    final int getFileCapacity(int param0, int param1) {
         if (!this.validateGroupId(param1, 101)) {
           return 0;
         }
@@ -751,7 +751,7 @@ final class Archive {
         }
     }
 
-    final synchronized int a(byte param0) {
+    final synchronized int getArchiveLoadPercent(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -770,7 +770,7 @@ final class Archive {
           }
         }
         if (param0 != 127) {
-          this.a((byte) -72);
+          this.getArchiveLoadPercent((byte) -72);
         }
         if (var2 == 0) {
           return 100;
@@ -819,13 +819,13 @@ final class Archive {
         }
         if (param1 != 4) {
           String var4 = (String) null;
-          this.d(-3, (String) null);
+          this.hasGroupName(-3, (String) null);
           return false;
         }
         return false;
     }
 
-    final static Sprite[] f(int param0, int param1) {
+    final static Sprite[] createSolidColorSpriteArray(int param0, int param1) {
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
         var3[param1] = nb.a(64, param0, 119);

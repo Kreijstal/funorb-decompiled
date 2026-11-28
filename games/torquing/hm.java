@@ -405,7 +405,7 @@ final class hm extends am {
           if (0 < var6 &&
             var5 > 0) {
             var7Lifetime3 = param2 + param1 * SoftwareRasterizer.field_j;
-            ResourceArchive.a(0, var4_int, param3.field_y, -var6 + SoftwareRasterizer.field_j, SoftwareRasterizer.field_e, var6, var5, var7Lifetime3, 65280, param3.field_s - var6);
+            ResourceArchive.darkenRgbWithSpriteMask(0, var4_int, param3.field_y, -var6 + SoftwareRasterizer.field_j, SoftwareRasterizer.field_e, var6, var5, var7Lifetime3, 65280, param3.field_s - var6);
             return;
           }
           return;

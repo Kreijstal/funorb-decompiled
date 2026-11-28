@@ -153,7 +153,7 @@ abstract class rb extends GameApplet {
           }
           if (4 == var4) {
             if (uj.field_f) {
-              ResourceArchive.a(hf.a((byte) -126), (byte) 123);
+              ResourceArchive.clearSessionAndReloadPage(hf.a((byte) -126), (byte) 123);
             } else {
               eg.field_d = 10;
               cg.field_a = true;
@@ -170,7 +170,7 @@ abstract class rb extends GameApplet {
             qj.a((byte) 109, hf.a((byte) -17));
           }
           if (var4 == 8) {
-            ResourceArchive.a(hf.a((byte) -85), (byte) 123);
+            ResourceArchive.clearSessionAndReloadPage(hf.a((byte) -85), (byte) 123);
           }
           if (var4 == 9) {
             of.a((byte) 99, hf.a((byte) -101));
@@ -452,10 +452,10 @@ abstract class rb extends GameApplet {
         if (DiskCacheWorker.field_f == 2) {
           if (pg.field_db != null &&
             pg.field_db.ensureIndexLoaded((byte) -36)) {
-            if (!pg.field_db.c("", (byte) -116)) {
+            if (!pg.field_db.hasGroupName("", (byte) -116)) {
               pg.field_db = null;
             } else {
-              if (pg.field_db.a("", (byte) -109)) {
+              if (pg.field_db.tryLoadGroupByName("", (byte) -109)) {
                 WidgetContainer.a(pg.field_db, 1);
                 pg.field_db = null;
                 rg.g(-33);

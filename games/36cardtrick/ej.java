@@ -25,23 +25,23 @@ final class ej extends ta {
             if (!lb.field_a.ensureIndexLoaded(4)) {
               return 14;
             }
-            if (!lb.field_a.c(0, "")) {
+            if (!lb.field_a.hasGroupName(0, "")) {
               return 29;
             }
-            if (!lb.field_a.b(4, "")) {
+            if (!lb.field_a.tryLoadGroupByName(4, "")) {
               return 29;
             }
           }
           if (!jk.field_c.ensureIndexLoaded(4)) {
             return 43;
           }
-          if (!jk.field_c.b(4, "commonui")) {
+          if (!jk.field_c.tryLoadGroupByName(4, "commonui")) {
             return 57;
           }
           if (!aa.field_db.ensureIndexLoaded(4)) {
             return 71;
           }
-          if (!aa.field_db.b(4, "commonui")) {
+          if (!aa.field_db.tryLoadGroupByName(4, "commonui")) {
             return 80;
           }
           if (!sg.field_a.ensureIndexLoaded(4)) {
@@ -54,13 +54,13 @@ final class ej extends ta {
           if (!jk.field_c.ensureIndexLoaded(4)) {
             return 20;
           }
-          if (!jk.field_c.b(4, "commonui")) {
+          if (!jk.field_c.tryLoadGroupByName(4, "commonui")) {
             return 40;
           }
           if (!aa.field_db.ensureIndexLoaded(param0 ^ -6549)) {
             return 50;
           }
-          if (!aa.field_db.b(4, "commonui")) {
+          if (!aa.field_db.tryLoadGroupByName(4, "commonui")) {
             return 60;
           }
           if (!sg.field_a.ensureIndexLoaded(4)) {

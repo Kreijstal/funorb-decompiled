@@ -76,7 +76,7 @@ final class HailAnimation extends EventAnimation {
             if (var21[var11][var12] == 1) {
               var13 = var11 + (-var7 + var3);
               var14 = var4 - (-var12 + var8);
-              if (this.screen.field_h.a(var13, var14, (byte) 61)) {
+              if (this.screen.field_h.isTileTerrainTraversable(var13, var14, (byte) 61)) {
                 stackIn_15_0 = (this.screen.field_h.tiles[var13][var14].occupant != null) ? 0 : 1;
                 var15 = stackIn_15_0;
                 var16 = new kw(this.screen, var13, var14, var9, var10, var15 != 0);
@@ -128,7 +128,7 @@ final class HailAnimation extends EventAnimation {
     private final void f(byte param0) {
         CreatureActor var4 = null;
         int var5 = BachelorFridge.field_y;
-        BattleCreature var2 = this.field_z.creature.a(param0 + 178, this.screen.field_h);
+        BattleCreature var2 = this.field_z.creature.resolveCreature(param0 + 178, this.screen.field_h);
         if (param0 != -125) {
           return;
         }
@@ -137,7 +137,7 @@ final class HailAnimation extends EventAnimation {
         }
         EventEffect var3 = (EventEffect) (this.field_z.effects.beginForward((byte) 90));
         while (var3 != null) {
-          var4 = var3.target.a(param0 - 27324, this.screen);
+          var4 = var3.target.resolveCreatureView(param0 - 27324, this.screen);
           var4.b(param0 + 124, 6);
           var3.apply(var2, this.screen.field_h, 12);
           this.addChild(27799, new DamagePopupAnimation(this.screen, var4, var3.field_f));

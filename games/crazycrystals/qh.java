@@ -97,9 +97,9 @@ final class qh extends hk {
         int var6 = 0;
         int var7 = 0;
         ta var8 = null;
-        ln var9 = null;
+        ScoreModifier var9 = null;
         try {
-          var9 = (ln) (vm.field_j[param0].elementAt(ib.field_l[param0]));
+          var9 = (ScoreModifier) (vm.field_j[param0].elementAt(ib.field_l[param0]));
           var5 = (18 + (16384 * m.field_l[param0] + 73728)) / 37;
           if (var9.field_e < 0) {
             this.field_l = this.field_l + 1;

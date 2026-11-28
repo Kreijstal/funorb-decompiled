@@ -94,7 +94,7 @@ abstract class cb extends DualLinkNode {
             stackIn_5_0 = (String) (param0);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param1 + " - " + param2.a((byte) -111) + "%";
+          stackIn_7_0 = param1 + " - " + param2.getArchiveLoadPercent((byte) -111) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

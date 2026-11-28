@@ -93,7 +93,7 @@ final class ai {
           stackIn_3_2 = !(param2);
           var5_int = ((ResourceArchive) (Object) stackIn_2_0).getGroupIdByName(stackIn_2_1, stackIn_3_2);
           var6 = param0.getFileIdByName(param3, param2, var5_int);
-          stackIn_4_0 = ResourceArchive.a(param4, (byte) -114, var6, var5_int, param0);
+          stackIn_4_0 = ResourceArchive.loadBitmapFont(param4, (byte) -114, var6, var5_int, param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -115,7 +115,7 @@ final class AccountNameAvailabilityValidator extends gf {
             stackIn_3_0 = (String) (param0);
             return stackIn_3_0;
           }
-          stackIn_5_0 = param2 + " - " + param1.a((byte) -32) + "%";
+          stackIn_5_0 = param2 + " - " + param1.getArchiveLoadPercent((byte) -32) + "%";
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

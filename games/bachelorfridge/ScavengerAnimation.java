@@ -6,7 +6,7 @@ final class ScavengerAnimation extends EventAnimation {
     static Sprite field_w;
 
     final boolean isFinished(byte param0) {
-        CreatureActor var2 = this.field_v.creature.a(-27449, this.screen);
+        CreatureActor var2 = this.field_v.creature.resolveCreatureView(-27449, this.screen);
         int var3 = 61 / ((param0 - 71) / 47);
         int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
@@ -34,7 +34,7 @@ final class ScavengerAnimation extends EventAnimation {
     private final void e(byte param0) {
         EventEffect var3 = null;
         int var4 = BachelorFridge.field_y;
-        BattleCreature var2 = this.field_v.creature.a(73, this.screen.field_h);
+        BattleCreature var2 = this.field_v.creature.resolveCreature(73, this.screen.field_h);
         EventEffect var3Lifetime1;
         if (var2.isDown(82)) {
           return;

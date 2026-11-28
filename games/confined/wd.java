@@ -163,7 +163,7 @@ final class wd {
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lc.a(true, param2)) {
+          if (TunnelMesh.containsNonAsciiAlphanumeric(true, param2)) {
             return false;
           }
           if (wc.a(param2, param0 ^ -14)) {

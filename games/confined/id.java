@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class id extends ee {
+abstract class id extends MovingTunnelEntity {
     static int field_rb;
     da field_Eb;
     da field_tb;
     ek field_fb;
     tf field_nb;
-    oi field_ib;
+    DynamicLight field_ib;
     double field_qb;
     int field_ob;
     double field_Y;
-    private hm field_mb;
+    private LightningArc field_mb;
     double field_cb;
     private double field_T;
     boolean field_ab;
@@ -57,7 +57,7 @@ abstract class id extends ee {
         int var19;
         double var17Lifetime1;
         var19 = Confined.field_J ? 1 : 0;
-        this.field_A.field_x.b(3, param1, this.field_D);
+        this.field_A.field_x.interpolateCrossSectionCenter(3, param1, this.field_D);
         var3 = this.field_E - this.field_A.field_x.field_B;
         var5 = this.field_t - this.field_A.field_x.field_G;
         var7 = Math.sqrt(var5 * var5 + var3 * var3);
@@ -74,7 +74,7 @@ abstract class id extends ee {
         var11 = this.field_A.field_J.field_b * Math.sin(var9);
         var13 = this.field_A.field_J.field_b * Math.cos(var9);
         this.field_qb = var11;
-        var15 = this.field_A.field_x.a((byte) 78, this.field_C);
+        var15 = this.field_A.field_x.getMinimumRadiusAfterClearance((byte) 78, this.field_C);
         if (var7 > var15) {
           var7 = var15;
         }
@@ -112,10 +112,10 @@ abstract class id extends ee {
         }
     }
 
-    abstract pm h(byte param0);
+    abstract TunnelEntity h(byte param0);
 
-    final void a(double param0, byte param1, double param2, double param3) {
-        super.a(param0, param1, param2, param3);
+    final void shiftWorldOrigin(double param0, byte param1, double param2, double param3) {
+        super.shiftWorldOrigin(param0, param1, param2, param3);
         this.field_nb.a(param0, param3, param2, 100);
     }
 
@@ -211,18 +211,18 @@ abstract class id extends ee {
         }
     }
 
-    final void a(pm param0, int param1) {
+    final void dispatchEntityCollision(TunnelEntity param0, int param1) {
         try {
           if (param1 >= -81) {
-            this.a(-0.8161853895945157, (byte) -4, -0.33336518185274866, 0.5249105804573666);
+            this.shiftWorldOrigin(-0.8161853895945157, (byte) -4, -0.33336518185274866, 0.5249105804573666);
           }
-          param0.a(true, (ee) (this));
+          param0.onMovingEntityContact(true, (MovingTunnelEntity) (this));
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "id.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final double[] e(int param0) {
+    final double[] getPositionAndVelocity(int param0) {
         if (param0 != 3008) {
           this.field_db = true;
         }
@@ -234,12 +234,12 @@ abstract class id extends ee {
         if (param1 >= -52) {
           this.a(110, (byte) -60);
         }
-        this.field_A.field_x.b(3, param0, this.field_D);
+        this.field_A.field_x.interpolateCrossSectionCenter(3, param0, this.field_D);
         this.field_E = this.field_A.field_x.field_B + var3 * Math.sin(this.field_hb);
         this.field_t = this.field_A.field_x.field_G - var3 * Math.cos(this.field_hb);
         this.m(12);
         var3 = this.field_ub + this.field_Z * Math.sin(this.field_cb);
-        this.field_A.field_x.b(3, param0, this.field_L + this.field_D);
+        this.field_A.field_x.interpolateCrossSectionCenter(3, param0, this.field_L + this.field_D);
         this.field_K = this.field_A.field_x.field_B + var3 * Math.sin(this.field_hb) - this.field_E;
         this.field_G = this.field_A.field_x.field_G - Math.cos(this.field_hb) * var3 - this.field_t;
         if (this.field_yb) {
@@ -257,12 +257,12 @@ abstract class id extends ee {
         double var12 = this.field_A.field_B.field_Lb.field_j - this.field_D;
         this.a(param3, var8, (byte) 121, var12, var10, param0, param1);
         if (param2) {
-          pm var14 = (pm) null;
-          this.a(false, (pm) null);
+          TunnelEntity var14 = (TunnelEntity) null;
+          this.canBeTargetedBy(false, (TunnelEntity) null);
         }
     }
 
-    void a(PrimaryNodeDeque param0, byte param1) {
+    void collectEntityLights(PrimaryNodeDeque param0, byte param1) {
         try {
           this.field_fb.a(-104, param0);
           int var3_int = 70 / ((-2 - param1) / 62);
@@ -271,7 +271,7 @@ abstract class id extends ee {
         }
     }
 
-    final boolean a(boolean param0, pm param1) {
+    final boolean canBeTargetedBy(boolean param0, TunnelEntity param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -282,7 +282,7 @@ abstract class id extends ee {
           if (!param0) {
             this.a(0.3696081545462991, -1.49477050488514, 0.3668563040992294, -1.7765318072222878, -0.8734525371023923, (byte) -19, 1.6304989655706312, 1.0689660871787772, 0.6101916020456307);
           }
-          stackIn_6_0 = (this.field_ob < 128) && (param1.f(-63));
+          stackIn_6_0 = (this.field_ob < 128) && (param1.isAlliedWithPlayer(-63));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -343,11 +343,11 @@ abstract class id extends ee {
         }
     }
 
-    abstract pm i(byte param0);
+    abstract TunnelEntity i(byte param0);
 
     abstract void a(int param0, byte param1);
 
-    final boolean c(int param0) {
+    final boolean canBeHitByProjectileRay(int param0) {
         if (param0 != 5) {
           return false;
         }
@@ -391,7 +391,7 @@ abstract class id extends ee {
         this.field_L = this.field_L * 0.998;
         this.field_G = this.field_G * 0.998;
         int var3 = -11 / ((param0 - 37) / 43);
-        super.a(11878, param1);
+        super.updateForTunnelSegment(11878, param1);
         this.field_nb.c(16777215);
         if (this.field_ob > 0) {
           this.field_ob = this.field_ob - 16;
@@ -402,23 +402,23 @@ abstract class id extends ee {
     }
 
     final void l(int param0) {
-        this.field_mb = new hm((pm) (this), ca.field_r);
-        this.field_pb = new gk((pm) (this), nm.field_F);
+        this.field_mb = new LightningArc((TunnelEntity) (this), ca.field_r);
+        this.field_pb = new gk((TunnelEntity) (this), nm.field_F);
         if (param0 != 22475) {
           this.field_vb = true;
         }
         this.field_pb.field_m = 0;
     }
 
-    final boolean f(int param0) {
+    final boolean isAlliedWithPlayer(int param0) {
         if (param0 >= -54) {
-          this.field_mb = (hm) null;
+          this.field_mb = (LightningArc) null;
           return false;
         }
         return false;
     }
 
-    final boolean a(pm param0, byte param1) {
+    final boolean canBeHitByLightningArcFrom(TunnelEntity param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -427,7 +427,7 @@ abstract class id extends ee {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 72) {
-            stackIn_4_0 = param0.f(-59);
+            stackIn_4_0 = param0.isAlliedWithPlayer(-59);
             return stackIn_4_0;
           }
           return false;
@@ -484,12 +484,12 @@ abstract class id extends ee {
         this.field_Eb.a(-40, hd.field_e);
     }
 
-    id(hn param0, double param1, double param2, double param3, double param4, double param5, double param6, double param7, double param8, boolean param9, int param10, double param11, double param12) {
+    id(GameSession param0, double param1, double param2, double param3, double param4, double param5, double param6, double param7, double param8, boolean param9, int param10, double param11, double param12) {
         super(param0, param1, param2, param3, param7, param8);
         this.field_Eb = new da();
         this.field_tb = new da();
-        this.field_nb = new tf((ee) (this));
-        this.field_ib = new oi((pm) (this));
+        this.field_nb = new tf((MovingTunnelEntity) (this));
+        this.field_ib = new DynamicLight((TunnelEntity) (this));
         this.field_yb = false;
         this.field_eb = null;
         this.field_jb = 0;
@@ -501,7 +501,7 @@ abstract class id extends ee {
           this.field_G = param5;
           this.field_L = param6;
           this.field_nb.b(118);
-          this.field_fb = new ek((ee) (this), false, param9, param10);
+          this.field_fb = new ek((MovingTunnelEntity) (this), false, param9, param10);
           this.field_xb = param11;
           this.field_T = param12;
         } catch (RuntimeException runtimeException) {
@@ -509,14 +509,14 @@ abstract class id extends ee {
         }
     }
 
-    final double a(int param0, boolean param1, double param2) {
+    final double applyDamage(int param0, boolean param1, double param2) {
         if (param0 != 14170) {
           this.field_Q = 0.0065937605579924185;
         }
         return this.field_fb.a(0, false, param1, param2);
     }
 
-    id(hn param0, double param1, double param2, double param3, int param4, double param5, double param6) {
+    id(GameSession param0, double param1, double param2, double param3, int param4, double param5, double param6) {
         this(param0, 0.0, 0.0, param1, 0.0, 0.0, 0.0, param2, param3, true, param4, param5, param6);
         try {
           this.l(22475);
@@ -528,12 +528,12 @@ abstract class id extends ee {
 
     final void b(byte param0, int param1) {
         double var3 = this.field_ub + this.field_Z * Math.sin(this.field_cb);
-        this.field_A.field_x.b(3, param1, this.field_D);
+        this.field_A.field_x.interpolateCrossSectionCenter(3, param1, this.field_D);
         double var5 = this.field_A.field_x.field_B + var3 * Math.sin(this.field_hb);
         double var7 = this.field_A.field_x.field_G - Math.cos(this.field_hb) * var3;
         this.m(12);
         var3 = this.field_ub + this.field_Z * Math.sin(this.field_cb);
-        this.field_A.field_x.b(3, param1, this.field_L + this.field_D);
+        this.field_A.field_x.interpolateCrossSectionCenter(3, param1, this.field_L + this.field_D);
         double var9 = this.field_A.field_x.field_B + Math.sin(this.field_hb) * var3 - var5 + (var5 - this.field_E) * 0.1;
         double var11 = this.field_A.field_x.field_G - Math.cos(this.field_hb) * var3 - var7 + (-this.field_t + var7) * 0.1;
         var9 = var9 - this.field_K;
@@ -554,7 +554,7 @@ abstract class id extends ee {
         this.a(param0, 0.0, (byte) 119, -1.0, 0.0, param2, param3);
     }
 
-    void a(int param0, int param1) {
+    void updateForTunnelSegment(int param0, int param1) {
         int stackIn_34_1 = 0;
         Object stackIn_35_2 = null;
         double var3;
@@ -589,7 +589,7 @@ abstract class id extends ee {
           }
         } else {
           this.field_V = this.field_V + 1;
-          this.b((pm) (this.field_A.field_B), (byte) 106);
+          this.b((TunnelEntity) (this.field_A.field_B), (byte) 106);
           this.a(false, this.field_T, param0 + 15993);
         }
         if (this.field_gb) {
@@ -598,7 +598,7 @@ abstract class id extends ee {
         this.field_L = this.field_L * 0.98;
         this.field_K = this.field_K * 0.98;
         this.field_G = this.field_G * 0.98;
-        super.a(param0, param1);
+        super.updateForTunnelSegment(param0, param1);
         this.field_nb.c(param0 ^ 16765337);
         if (this.field_wb > 0) {
           this.field_Bb = this.field_Bb - 1;
@@ -622,9 +622,9 @@ abstract class id extends ee {
             this.field_jb = 50;
             stackIn_34_1 = 0;
             if (this.field_Ab == 1) {
-              stackIn_35_2 = new af(this.field_A, (ee) (this), this.field_Eb);
+              stackIn_35_2 = new af(this.field_A, (MovingTunnelEntity) (this), this.field_Eb);
             } else {
-              stackIn_35_2 = new uc(this.field_A, (ee) (this), this.field_Eb);
+              stackIn_35_2 = new uc(this.field_A, (MovingTunnelEntity) (this), this.field_Eb);
             }
             ri.a((IntrusiveNode) (this), stackIn_34_1, (IntrusiveNode) (stackIn_35_2));
             this.field_nb.b(param0 ^ 11792);
@@ -635,7 +635,7 @@ abstract class id extends ee {
         if (this.field_vb) {
           this.field_Q = this.field_Q * 0.92;
           this.field_mb.a(16736448, param0 ^ 11878, 50.0, 0.5);
-          if (this.field_mb.a((hm[]) null, false, this.field_lb)) {
+          if (this.field_mb.a((LightningArc[]) null, false, this.field_lb)) {
             this.field_nb.b(param0 - 11760);
             this.field_A.field_F.addLast((IntrusiveNode) (this.field_mb), (byte) -84);
             this.field_Q = this.field_Q + 4.0;

@@ -85,7 +85,7 @@ final class hp extends IntrusiveNode {
     }
 
     final static String d(int param0) {
-        if (l.field_b == lc.field_c) {
+        if (ResultScenePhase.field_b == lc.field_c) {
           return fh.field_i;
         }
         if (param0 != 5) {

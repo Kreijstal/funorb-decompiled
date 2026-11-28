@@ -78,7 +78,7 @@ final class MixedSupport014 {
             return false;
           }
           if (null != gameDomainSupport005Local3.stringState0402 &&
-            !gameDomainSupport005Local3.resourceArchiveState0013.computeBoolean0811(gameDomainSupport005Local3.stringState0402, (byte) -103)) {
+            !gameDomainSupport005Local3.resourceArchiveState0013.tryLoadGroupByName(gameDomainSupport005Local3.stringState0402, (byte) -103)) {
             this.performAction0197(gameDomainSupport005Local1, 30993, gameDomainSupport005Local3.resourceArchiveState0013.getGroupLoadPercentByName(20, gameDomainSupport005Local3.stringState0402));
             return false;
           }
@@ -86,7 +86,7 @@ final class MixedSupport014 {
             gameDomainSupport005Local3.stringState0402 == null &&
             null != gameDomainSupport005Local3.stringState0404 &&
             !gameDomainSupport005Local3.resourceArchiveState0013.tryLoadAllGroups(false)) {
-            this.performAction0197(gameDomainSupport005Local1, 30993, gameDomainSupport005Local3.resourceArchiveState0013.computeInteger0816((byte) -100));
+            this.performAction0197(gameDomainSupport005Local1, 30993, gameDomainSupport005Local3.resourceArchiveState0013.getArchiveLoadPercent((byte) -100));
             return false;
           }
           this.integerState0097 = this.integerState0097 + 1;

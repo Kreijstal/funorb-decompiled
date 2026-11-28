@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qj {
-    static ai[] field_c;
+    static DungeonTileState[] field_c;
     static String field_a;
     static String field_b;
     static String[] field_f;

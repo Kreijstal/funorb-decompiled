@@ -18,14 +18,14 @@ final class jc {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_e.b(0) == 1) {
+          if (this.field_e.getGroupCapacity(0) == 1) {
             stackIn_3_0 = this.b(0, 13242, param2, param0);
             return stackIn_3_0;
           }
           if (param1) {
             this.field_d = (NodeHashTable) null;
           }
-          if (this.field_e.a(param2, (byte) -91) != 1) {
+          if (this.field_e.getFileCapacity(param2, (byte) -91) != 1) {
             throw new RuntimeException();
           }
           stackIn_8_0 = this.b(param2, 13242, 0, param0);
@@ -175,7 +175,7 @@ final class jc {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1 == this.field_b.b(0)) {
+          if (1 == this.field_b.getGroupCapacity(0)) {
             stackIn_2_0 = this.a(param1 + 2059392520, 0, param2, param0);
             return stackIn_2_0;
           }
@@ -183,7 +183,7 @@ final class jc {
             stackIn_5_0 = (PcmSample) null;
             return stackIn_5_0;
           }
-          if (1 != this.field_b.a(param2, (byte) -91)) {
+          if (1 != this.field_b.getFileCapacity(param2, (byte) -91)) {
             throw new RuntimeException();
           }
           stackIn_9_0 = this.a(param1 + 2059392520, param2, 0, param0);

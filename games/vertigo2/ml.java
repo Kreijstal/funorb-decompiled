@@ -39,9 +39,9 @@ class ml extends va {
           ib.field_a >= param4 &&
           param3 >= ua.field_e &&
           WidgetContainer.field_D >= param2) {
-          bg.a(param0, 61, param4, param3, param1, param2);
+          LevelRenderable.fillUnclippedRasterRectangle(param0, 61, param4, param3, param1, param2);
         } else {
-          hb.b(param4, param2, 94, param0, param3, param1);
+          PlayerAvatarRenderer.fillClippedRasterRectangle(param4, param2, 94, param0, param3, param1);
         }
     }
 

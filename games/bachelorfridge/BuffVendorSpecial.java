@@ -20,7 +20,7 @@ final class BuffVendorSpecial extends SpecialOrder {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.creature.a(param1 + 47, param0);
+          var3 = this.creature.resolveCreature(param1 + 47, param0);
           if (param1 != 3) {
             stackIn_2_0 = (CreatureEvent) null;
             return stackIn_2_0;

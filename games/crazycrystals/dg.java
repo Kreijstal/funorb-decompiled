@@ -490,7 +490,7 @@ final class dg {
     final static void a(byte param0) {
         lo.field_b = null;
         ec.field_l.clear(22800);
-        FrameTimer.field_b[jo.field_o] = 0;
+        FrameTimer.field_b[CrystalTile.field_o] = 0;
         so.field_h.clear(22800);
         fk.field_s = 0;
         if (param0 <= -25) {
