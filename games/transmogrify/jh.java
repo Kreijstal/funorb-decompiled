@@ -11,10 +11,10 @@ final class jh extends ue {
     private int field_i;
     private int field_m;
     static String field_g;
-    private kg field_k;
+    private BitmapFont field_k;
     private int field_l;
 
-    final void a(kg param0, int param1, byte param2, String param3, int param4) {
+    final void a(BitmapFont param0, int param1, byte param2, String param3, int param4) {
         ol var9 = null;
         ol var10 = null;
         if (param3 == null) {
@@ -29,14 +29,14 @@ final class jh extends ue {
           this.field_d = param3;
           this.field_f = true;
           if (param2 >= -63) {
-            kg var7 = (kg) null;
-            this.a((String) null, (byte) -90, (kg) null, -10, 16);
+            BitmapFont var7 = (BitmapFont) null;
+            this.a((String) null, (byte) -90, (BitmapFont) null, -10, 16);
           }
           this.field_l = 2;
           this.field_k = param0;
           var9 = this.a((byte) 107, param4, param0, param3);
           var10 = var9;
-          var10.field_g[0] = param1 - param0.a(param3);
+          var10.field_g[0] = param1 - param0.stringWidth(param3);
           var10.field_g[param3.length()] = param1;
           eh.$cfr$intArgs$a$d8024809bc20(var10, 79, param3, param0, 0);
         } catch (RuntimeException runtimeException) {
@@ -58,7 +58,7 @@ final class jh extends ue {
         }
     }
 
-    final void a(int param0, int param1, int param2, kg param3, String param4) {
+    final void a(int param0, int param1, int param2, BitmapFont param3, String param4) {
         ol var8 = null;
         int var7 = 0;
         if (param4 == null) {
@@ -77,7 +77,7 @@ final class jh extends ue {
           this.field_f = true;
           this.field_k = param3;
           var8 = this.a((byte) 34, param2, param3, param4);
-          var7 = param3.a(param4);
+          var7 = param3.stringWidth(param4);
           if (param1 != 7531) {
             this.field_i = 41;
           }
@@ -89,7 +89,7 @@ final class jh extends ue {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, String param4, kg param5, int param6, int param7) {
+    final void a(int param0, int param1, int param2, int param3, String param4, BitmapFont param5, int param6, int param7) {
         ol stackIn_35_0;
         ol stackIn_35_1;
         int stackIn_35_2;
@@ -100,7 +100,7 @@ final class jh extends ue {
         ol stackIn_39_0;
         int stackIn_39_1;
         String stackIn_39_2;
-        kg stackIn_39_3;
+        BitmapFont stackIn_39_3;
         int stackIn_40_4;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -147,9 +147,9 @@ final class jh extends ue {
           this.field_f = false;
           this.field_l = param1;
           this.field_j = param3;
-          var17 = new String[1 + param5.b(param4, param3)];
+          var17 = new String[1 + param5.lineCount(param4, param3)];
           var18 = var17;
-          var10 = Math.max(1, param5.a(param4, new int[]{param3}, var18));
+          var10 = Math.max(1, param5.wrapText(param4, new int[]{param3}, var18));
           var11 = -73 / ((-6 - param0) / 50);
           if (this.field_i == 3 &&
             1 == var10) {
@@ -192,15 +192,15 @@ final class jh extends ue {
             var15 = new ol(stackIn_35_2, stackIn_35_3, stackIn_36_4);
             var15.field_g[0] = 0;
             if (var14 != null) {
-              var15.field_g[var14.length()] = param5.a(var14);
+              var15.field_g[var14.length()] = param5.stringWidth(var14);
               stackIn_39_0 = var15;
               stackIn_39_1 = 79;
               stackIn_39_2 = var14;
-              stackIn_39_3 = (kg) (param5);
+              stackIn_39_3 = (BitmapFont) (param5);
               if (param1 != 3) {
                 stackIn_40_4 = 0;
               } else {
-                stackIn_40_4 = this.a(param3, var14, param5.a(var14), 12);
+                stackIn_40_4 = this.a(param3, var14, param5.stringWidth(var14), 12);
               }
               eh.$cfr$intArgs$a$d8024809bc20(stackIn_39_0, stackIn_39_1, stackIn_39_2, stackIn_39_3, stackIn_40_4);
             }
@@ -228,7 +228,7 @@ final class jh extends ue {
         }
     }
 
-    final void a(String param0, byte param1, kg param2, int param3, int param4) {
+    final void a(String param0, byte param1, BitmapFont param2, int param3, int param4) {
         ol var7 = null;
         if (param0 == null) {
           this.field_b = null;
@@ -249,7 +249,7 @@ final class jh extends ue {
           int var6_int = -37 / ((param1 + 50) / 49);
           var7 = this.a((byte) 52, param3, param2, param0);
           var7.field_g[0] = param4;
-          var7.field_g[param0.length()] = param2.a(param0) + param4;
+          var7.field_g[param0.length()] = param2.stringWidth(param0) + param4;
           eh.$cfr$intArgs$a$d8024809bc20(var7, 79, param0, param2, 0);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "jh.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -265,7 +265,7 @@ final class jh extends ue {
         field_h = null;
     }
 
-    private final ol a(byte param0, int param1, kg param2, String param3) {
+    private final ol a(byte param0, int param1, BitmapFont param2, String param3) {
         ol var5 = null;
         RuntimeException var5_ref = null;
         ol var6 = null;

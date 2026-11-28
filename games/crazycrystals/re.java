@@ -107,7 +107,7 @@ final class re extends ue {
             if (!sg.field_a) {
               return;
             }
-            an.field_q.b(ll.field_a, 635, 476, 16711680, 0);
+            an.field_q.drawRightAligned(ll.field_a, 635, 476, 16711680, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -607,8 +607,8 @@ final class re extends ue {
           this.field_d[incrementValue$14] = (ik) ((Object) new mh(690, var2, 180, b.field_d, 2));
           var2 += 26;
           var2 += 10;
-          var3 = go.field_l.a(fa.field_m);
-          var4 = go.field_l.a(cc.field_b);
+          var3 = go.field_l.stringWidth(fa.field_m);
+          var4 = go.field_l.stringWidth(cc.field_b);
           var5 = var3;
           if (var4 > var5) {
             var5 = var4;

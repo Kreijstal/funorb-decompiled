@@ -77,12 +77,12 @@ final class NanoFrameTimer extends FrameTimer {
         return var4;
     }
 
-    final static ic a(String param0, ResourceArchive param1, boolean param2, String param3, ResourceArchive param4) {
+    final static CoverageBitmapFont a(String param0, ResourceArchive param1, boolean param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ic stackIn_2_0 = null;
-        ic stackIn_4_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -95,7 +95,7 @@ final class NanoFrameTimer extends FrameTimer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2) {
-            stackIn_2_0 = (ic) null;
+            stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
           var5_int = param4.getGroupIdByName(18659, param0);

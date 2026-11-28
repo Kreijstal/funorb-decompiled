@@ -36,8 +36,8 @@ final class LoginPanel extends og implements TextFieldListener, vd {
         try {
           var3 = this.field_J;
           var4 = param0;
-          var3.a(false, -84, var4);
-          this.field_z.k(-119);
+          var3.setText(false, -84, var4);
+          this.field_z.clearText(-119);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "vk.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -56,7 +56,7 @@ final class LoginPanel extends og implements TextFieldListener, vd {
 
     final void a(int param0, byte param1, int param2, int param3) {
         if (null != this.field_B) {
-          ai.field_h.a(this.field_B, 20 + (param2 + this.field_r), 15 + param0 + this.field_j, -40 + this.field_g, this.field_f, 16777215, -1, 1, 0, ai.field_h.field_o);
+          ai.field_h.drawParagraph(this.field_B, 20 + (param2 + this.field_r), 15 + param0 + this.field_j, -40 + this.field_g, this.field_f, 16777215, -1, 1, 0, ai.field_h.field_o);
         }
         if (null != this.field_H) {
           SoftwareRasterizer.drawHorizontalLine(10 + param2, 134 + param0, this.field_g - 20, 4210752);
@@ -232,7 +232,7 @@ final class LoginPanel extends og implements TextFieldListener, vd {
         RuntimeException decompiledCaughtException = null;
         ve var6 = null;
         RuntimeException var6_ref = null;
-        vc var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         mb var9 = null;
         ei var12 = null;
@@ -300,7 +300,7 @@ final class LoginPanel extends og implements TextFieldListener, vd {
           this.field_j = 15;
           var7 = ai.field_h;
           if (this.field_B != null) {
-            this.field_j = this.field_j + (5 + var7.b(this.field_B, -40 + this.field_g, var7.field_o));
+            this.field_j = this.field_j + (5 + var7.textHeight(this.field_B, -40 + this.field_g, var7.field_o));
           }
           var8 = ee.field_q;
           var9 = ua.a(-11662, le.b((byte) -20));
@@ -415,12 +415,12 @@ final class LoginPanel extends og implements TextFieldListener, vd {
     }
 
     final void e(byte param0) {
-        this.field_J.k(-100);
+        this.field_J.clearText(-100);
         if (param0 <= 45) {
           EditableTextField var3 = (EditableTextField) null;
           this.onTextChanged((EditableTextField) null, 105);
         }
-        this.field_z.k(-108);
+        this.field_z.clearText(-108);
     }
 
     public final void onTextSubmitted(int param0, EditableTextField param1) {

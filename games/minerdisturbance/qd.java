@@ -55,7 +55,7 @@ final class qd extends kn implements sh {
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = param1 + this.field_u;
         int var6 = param2 + this.field_t;
-        bn.field_d.a(kf.field_b, var5 + 20, var6 + 20, -40 + this.field_v, -50 + this.field_q, 16777215, -1, 1, 0, bn.field_d.field_I);
+        bn.field_d.drawParagraph(kf.field_b, var5 + 20, var6 + 20, -40 + this.field_v, -50 + this.field_q, 16777215, -1, 1, 0, bn.field_d.field_I);
         super.a(param0, param1, param2, param3);
     }
 

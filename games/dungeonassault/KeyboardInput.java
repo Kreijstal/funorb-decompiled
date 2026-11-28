@@ -24,10 +24,10 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             return stackIn_2_0;
           }
           if (param0) {
-            stackIn_7_0 = i.field_x.b(param1);
+            stackIn_7_0 = i.field_x.stringWidth(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = n.field_c.b(param1);
+          stackIn_5_0 = n.field_c.stringWidth(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -185,7 +185,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         }
     }
 
-    final static int a(se param0, byte param1, String[] param2, int param3, String param4) {
+    final static int a(BitmapFont param0, byte param1, String[] param2, int param3, String param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -213,7 +213,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         int var6Lifetime1;
         var14 = DungeonAssault.field_K;
         try {
-          var5_int = param0.b(param4);
+          var5_int = param0.stringWidth(param4);
           if (param3 >= var5_int &&
             param4.indexOf("<br>") == -1) {
             param2[0] = param4;
@@ -231,7 +231,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             if (32 == var11 ||
               var11 == 45) {
               var12 = param4.substring(var7, var9 + 1).trim();
-              var13 = param0.b(var12);
+              var13 = param0.stringWidth(var12);
               if (var13 >= param3) {
                 var7 = var9 + 1;
                 incrementValue$1 = var6Lifetime1;

@@ -87,10 +87,10 @@ final class ii extends ql implements jk {
             return stackIn_2_0;
           }
           if (!param1) {
-            stackIn_7_0 = pb.field_i.b(param0);
+            stackIn_7_0 = pb.field_i.stringWidth(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = fb.field_m.b(param0);
+          stackIn_5_0 = fb.field_m.stringWidth(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

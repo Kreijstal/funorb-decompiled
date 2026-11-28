@@ -120,29 +120,29 @@ final class MixedSupport042 {
         if (UiComponentPart029.renderingSupport009State0005 == bitmapFontArgument6) {
           integerLocal1 = 1;
         }
-        bitmapFontArgument6.performAction1069(stringArgument4, -integerLocal1 + integerArgument5, integerArgument1 - integerLocal1, 0, -1);
-        bitmapFontArgument6.performAction1069(stringArgument4, -integerLocal1 + integerArgument5, integerArgument1, 0, -1);
-        bitmapFontArgument6.performAction1069(stringArgument4, -integerLocal1 + integerArgument5, integerArgument1 + integerLocal1, 0, -1);
-        bitmapFontArgument6.performAction1069(stringArgument4, integerArgument5, integerArgument1 - integerLocal1, 0, -1);
-        bitmapFontArgument6.performAction1069(stringArgument4, integerArgument5, integerArgument1 + integerLocal1, 0, -1);
+        bitmapFontArgument6.drawString(stringArgument4, -integerLocal1 + integerArgument5, integerArgument1 - integerLocal1, 0, -1);
+        bitmapFontArgument6.drawString(stringArgument4, -integerLocal1 + integerArgument5, integerArgument1, 0, -1);
+        bitmapFontArgument6.drawString(stringArgument4, -integerLocal1 + integerArgument5, integerArgument1 + integerLocal1, 0, -1);
+        bitmapFontArgument6.drawString(stringArgument4, integerArgument5, integerArgument1 - integerLocal1, 0, -1);
+        bitmapFontArgument6.drawString(stringArgument4, integerArgument5, integerArgument1 + integerLocal1, 0, -1);
         if (integerArgument2 != 256) {
           return;
         }
         try {
-          bitmapFontArgument6.performAction1069(stringArgument4, integerArgument5 + integerLocal1, -integerLocal1 + integerArgument1, 0, -1);
-          bitmapFontArgument6.performAction1069(stringArgument4, integerLocal1 + integerArgument5, integerArgument1, 0, -1);
-          bitmapFontArgument6.performAction1069(stringArgument4, integerArgument5 + integerLocal1, integerArgument1 + integerLocal1, 0, -1);
+          bitmapFontArgument6.drawString(stringArgument4, integerArgument5 + integerLocal1, -integerLocal1 + integerArgument1, 0, -1);
+          bitmapFontArgument6.drawString(stringArgument4, integerLocal1 + integerArgument5, integerArgument1, 0, -1);
+          bitmapFontArgument6.drawString(stringArgument4, integerArgument5 + integerLocal1, integerArgument1 + integerLocal1, 0, -1);
           if (SceneWidget.renderingSupport009State0007 == bitmapFontArgument6) {
-            bitmapFontArgument6.performAction1069(stringArgument4, integerArgument5 + 1, -integerLocal1 + integerArgument1, 0, -1);
-            bitmapFontArgument6.performAction1069(stringArgument4, -1 + integerArgument5, -integerLocal1 + integerArgument1, 0, -1);
-            bitmapFontArgument6.performAction1069(stringArgument4, integerArgument5 + integerLocal1, integerArgument1 - 1, 0, -1);
-            bitmapFontArgument6.performAction1069(stringArgument4, integerArgument5 - integerLocal1, -1 + integerArgument1, 0, -1);
-            bitmapFontArgument6.performAction1069(stringArgument4, integerArgument5 + integerLocal1, integerArgument1 + 1, 0, -1);
-            bitmapFontArgument6.performAction1069(stringArgument4, integerArgument5 - integerLocal1, integerArgument1 + 1, 0, -1);
-            bitmapFontArgument6.performAction1069(stringArgument4, integerArgument5 + 1, integerLocal1 + integerArgument1, 0, -1);
-            bitmapFontArgument6.performAction1069(stringArgument4, -1 + integerArgument5, integerLocal1 + integerArgument1, 0, -1);
+            bitmapFontArgument6.drawString(stringArgument4, integerArgument5 + 1, -integerLocal1 + integerArgument1, 0, -1);
+            bitmapFontArgument6.drawString(stringArgument4, -1 + integerArgument5, -integerLocal1 + integerArgument1, 0, -1);
+            bitmapFontArgument6.drawString(stringArgument4, integerArgument5 + integerLocal1, integerArgument1 - 1, 0, -1);
+            bitmapFontArgument6.drawString(stringArgument4, integerArgument5 - integerLocal1, -1 + integerArgument1, 0, -1);
+            bitmapFontArgument6.drawString(stringArgument4, integerArgument5 + integerLocal1, integerArgument1 + 1, 0, -1);
+            bitmapFontArgument6.drawString(stringArgument4, integerArgument5 - integerLocal1, integerArgument1 + 1, 0, -1);
+            bitmapFontArgument6.drawString(stringArgument4, integerArgument5 + 1, integerLocal1 + integerArgument1, 0, -1);
+            bitmapFontArgument6.drawString(stringArgument4, -1 + integerArgument5, integerLocal1 + integerArgument1, 0, -1);
           }
-          bitmapFontArgument6.performAction1069(stringArgument4, integerArgument5, integerArgument1, integerArgument3, -1);
+          bitmapFontArgument6.drawString(stringArgument4, integerArgument5, integerArgument1, integerArgument3, -1);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "fl.H(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + (stringArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ',' + (bitmapFontArgument6 != null ? "{...}" : "null") + ')');
         }

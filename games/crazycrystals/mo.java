@@ -4,7 +4,7 @@
 final class mo extends IntrusiveNode {
     byte[] field_g;
     long field_k;
-    static vc field_m;
+    static BitmapFont field_m;
     static int[] field_h;
     static int field_f;
     static PcmSample field_i;

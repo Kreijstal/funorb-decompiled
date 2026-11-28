@@ -6,7 +6,7 @@ final class wi implements WidgetRenderer {
     private int field_l;
     private int field_c;
     static int[] field_d;
-    private kg field_i;
+    private BitmapFont field_i;
     private int field_o;
     static ResourceArchive field_e;
     static boolean field_p;
@@ -75,7 +75,7 @@ final class wi implements WidgetRenderer {
             return;
           }
           var11 = this.field_a + (this.field_n + this.field_b);
-          this.field_i.a(param4.field_k, param4.field_p + (param0 + var11), this.field_h + param1 + param4.field_n, param4.field_l - this.field_a - var11, param4.field_h - (this.field_a << 1), this.field_j, this.field_l, this.field_o, this.field_m, 0);
+          this.field_i.drawParagraph(param4.field_k, param4.field_p + (param0 + var11), this.field_h + param1 + param4.field_n, param4.field_l - this.field_a - var11, param4.field_h - (this.field_a << 1), this.field_j, this.field_l, this.field_o, this.field_m, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ final class wi implements WidgetRenderer {
         }
     }
 
-    wi(kg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    wi(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_o = 1;
         this.field_m = 1;
         try {

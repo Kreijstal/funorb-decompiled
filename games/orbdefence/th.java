@@ -125,7 +125,7 @@ final class th {
         }
     }
 
-    final static int a(kc param0, String param1, String[] param2, int param3, int param4) {
+    final static int a(BitmapFont param0, String param1, String[] param2, int param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -155,7 +155,7 @@ final class th {
           if (param4 >= -17) {
             field_d = (String) null;
           }
-          var5_int = param0.a(param1);
+          var5_int = param0.stringWidth(param1);
           if (param3 >= var5_int &&
             -1 == param1.indexOf("<br>")) {
             param2[0] = param1;
@@ -172,7 +172,7 @@ final class th {
             if (var10 == 32 ||
               45 == var10) {
               var11 = param1.substring(var7, var9 + 1).trim();
-              var12 = param0.a(var11);
+              var12 = param0.stringWidth(var11);
               if (param3 <= var12) {
                 incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;

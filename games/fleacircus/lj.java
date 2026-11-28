@@ -6,7 +6,7 @@ final class lj {
     static int[] field_j;
     static String field_g;
     static String field_i;
-    static fa field_a;
+    static BitmapFont field_a;
     static boolean field_e;
     static int field_h;
     static int[] field_d;

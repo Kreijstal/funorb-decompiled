@@ -979,7 +979,7 @@ final class fc {
             var12 = var12 + mk.field_h.field_E / 2;
           } else {
             var12 += 12;
-            var11Lifetime1 = var11Lifetime1 + mk.field_h.a('1');
+            var11Lifetime1 = var11Lifetime1 + mk.field_h.charWidth('1');
           }
           this.field_j.addFirst(-111, new gd(ib.field_g[var10] * this.field_l, var11Lifetime1, var12));
           var4 = (bd) (this.field_y.nextForward(param0 - 19074));
@@ -1093,7 +1093,7 @@ final class fc {
                     var14Lifetime1 = var2;
                     var14Lifetime1.b(var5Lifetime1, -this.field_F[var4Lifetime1][var6Lifetime1] + var3, var7Lifetime1);
                     if (!mg.field_B) {
-                      this.field_m.field_f.a(this.field_w[var4Lifetime1][var6Lifetime1], var14Lifetime1.field_p / 2 + var5Lifetime1, (this.field_m.field_b + var14Lifetime1.field_u) / 2 + var3, 0, var7Lifetime1);
+                      this.field_m.field_f.drawCentredCharacterAlpha(this.field_w[var4Lifetime1][var6Lifetime1], var14Lifetime1.field_p / 2 + var5Lifetime1, (this.field_m.field_b + var14Lifetime1.field_u) / 2 + var3, 0, var7Lifetime1);
                     }
                   }
                 }
@@ -1122,7 +1122,7 @@ final class fc {
                 stackIn_33_1 = stackOut_32_1;
                 if (stackIn_38_0 != stackIn_33_1) {
                   lg.field_c.b(var5Lifetime2, var6Lifetime2, var7Lifetime2);
-                  bi.field_a.a(var15.charAt(var8), var5Lifetime2 + lg.field_c.field_p / 2, (lg.field_c.field_u + pa.field_d) / 2 + var6Lifetime2, 0, var7Lifetime2);
+                  bi.field_a.drawCentredCharacterAlpha(var15.charAt(var8), var5Lifetime2 + lg.field_c.field_p / 2, (lg.field_c.field_u + pa.field_d) / 2 + var6Lifetime2, 0, var7Lifetime2);
                 }
                 var5Lifetime2 += 24;
               }
@@ -1165,8 +1165,8 @@ final class fc {
         }
         SoftwareRasterizer.resetClip();
         if (this.field_D) {
-          bi.field_a.b("FPS: " + TextFieldValidator.field_i, 10, 3 * pa.field_d + 20, 0, -1);
-          bi.field_a.b("LPS: " + ij.field_j, 10, pa.field_d * 4 + 25, 0, -1);
+          bi.field_a.drawString("FPS: " + TextFieldValidator.field_i, 10, 3 * pa.field_d + 20, 0, -1);
+          bi.field_a.drawString("LPS: " + ij.field_j, 10, pa.field_d * 4 + 25, 0, -1);
         }
         return;
     }
@@ -1331,7 +1331,7 @@ final class fc {
           }
           if (var4 == 0) {
             ef.field_d[var10.field_h].c(265, var3Lifetime2);
-            bi.field_a.c(df.field_d[var10.field_h], 260, var3Lifetime2 + bi.field_a.field_E, 0, -1);
+            bi.field_a.drawRightAligned(df.field_d[var10.field_h], 260, var3Lifetime2 + bi.field_a.field_E, 0, -1);
           }
         }
     }

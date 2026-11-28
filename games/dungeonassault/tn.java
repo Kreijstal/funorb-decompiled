@@ -107,7 +107,7 @@ final class tn extends bh {
         ol.field_i = sp.field_e;
     }
 
-    final static pp a(int param0, int param1, se param2, RgbSprite param3, int param4, String param5) {
+    final static pp a(int param0, int param1, BitmapFont param2, RgbSprite param3, int param4, String param5) {
         int var10_int = 0;
         pp stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
@@ -135,14 +135,14 @@ final class tn extends bh {
         var17 = DungeonAssault.field_K;
         try {
           jh.c();
-          var6_int = param2.b(param5);
+          var6_int = param2.stringWidth(param5);
           var7 = param2.field_E + param2.field_H;
           var8 = new RgbSprite(var6_int, var7);
           var8.e();
-          param2.b(param5, 0, param2.field_H, 16760960, -1);
+          param2.drawString(param5, 0, param2.field_H, 16760960, -1);
           if (param4 > -36) {
             var18 = (String) null;
-            tn.a(9, 109, (se) null, (RgbSprite) null, 59, (String) null);
+            tn.a(9, 109, (BitmapFont) null, (RgbSprite) null, 59, (String) null);
           }
           var9 = te.a(var6_int, var7, ag.field_c, 32, 32, 0.125);
           for (var10_int = 0; var9.field_B.length > var10_int; var10_int++) {
@@ -214,7 +214,7 @@ final class tn extends bh {
         field_W = null;
         if (param0 != -89) {
           String var2 = (String) null;
-          tn.a(-105, -33, (se) null, (RgbSprite) null, -20, (String) null);
+          tn.a(-105, -33, (BitmapFont) null, (RgbSprite) null, -20, (String) null);
         }
         field_U = null;
         field_I = null;

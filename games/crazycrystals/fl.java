@@ -4,7 +4,7 @@
 final class fl implements wo {
     private int field_c;
     private int field_n;
-    private vc field_p;
+    private BitmapFont field_p;
     private int field_h;
     static int field_g;
     private int field_j;
@@ -63,7 +63,7 @@ final class fl implements wo {
             return;
           }
           var10 = this.field_h + this.field_r + this.field_n;
-          this.field_p.a(param3.field_o, var10 + param2 + param3.field_r, this.field_o + (param0 + param3.field_j), param3.field_g - var10 - this.field_n, -(this.field_n << 1) + param3.field_f, this.field_e, this.field_c, this.field_k, this.field_q, 0);
+          this.field_p.drawParagraph(param3.field_o, var10 + param2 + param3.field_r, this.field_o + (param0 + param3.field_j), param3.field_g - var10 - this.field_n, -(this.field_n << 1) + param3.field_f, this.field_e, this.field_c, this.field_k, this.field_q, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -148,7 +148,7 @@ final class fl implements wo {
         }
     }
 
-    fl(vc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    fl(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_k = 1;
         this.field_q = 1;
         try {

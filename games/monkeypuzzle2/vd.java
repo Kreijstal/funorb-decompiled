@@ -132,12 +132,12 @@ final class vd {
         return k.field_f;
     }
 
-    final static vk a(boolean param0, String param1, ResourceArchive param2, ResourceArchive param3, String param4) {
+    final static BinaryBitmapFont a(boolean param0, String param1, ResourceArchive param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        vk stackIn_2_0 = null;
-        vk stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_2_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -151,7 +151,7 @@ final class vd {
         try {
           var5_int = param3.getGroupIdByName(param1, (byte) -105);
           if (!param0) {
-            stackIn_2_0 = (vk) null;
+            stackIn_2_0 = (BinaryBitmapFont) null;
             return stackIn_2_0;
           }
           var6 = param3.getFileIdByName(param4, var5_int, -28459);

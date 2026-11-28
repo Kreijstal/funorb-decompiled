@@ -60,22 +60,22 @@ final class MusicPatchPcmStream extends PcmStream {
               }
               var11 = param3.field_i;
               if (this.field_p.field_s[param3.field_E] != 0) {
-                param3.field_i = RawPcmStream.a(param3.field_w, var11.j(), 0, var11.h());
+                param3.field_i = RawPcmStream.createForSampleStep(param3.field_w, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_13_0 = this.field_p;
                 stackIn_13_1 = (kl) (param3);
                 stackIn_13_2 = -115;
                 stackIn_14_3 = !(param3.field_D.field_n[param3.field_r] >= 0);
                 ((MidiPcmStream) (Object) stackIn_13_0).a(stackIn_13_1, (byte) stackIn_13_2, stackIn_14_3);
-                param3.field_i.d(var9, var11.g());
+                param3.field_i.rampVolume(var9, var11.getTargetVolume());
               } else {
-                param3.field_i = RawPcmStream.a(param3.field_w, var11.j(), var11.g(), var11.h());
+                param3.field_i = RawPcmStream.createForSampleStep(param3.field_w, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.getPan());
               }
               if (param3.field_D.field_n[param3.field_r] < 0) {
                 param3.field_i.f(-1);
               }
               var11.i(var9);
               var11.mixInto(param0, param5, param1 - param5);
-              if (!var11.k()) {
+              if (!var11.hasRemainingRampFrames()) {
                 continue;
               }
               this.field_l.a(var11);
@@ -127,14 +127,14 @@ final class MusicPatchPcmStream extends PcmStream {
             param0.field_u = param0.field_u + var4_int * param1 & 1048575;
             if (var5 <= param1) {
               if (this.field_p.field_s[param0.field_E] != 0) {
-                param0.field_i = RawPcmStream.a(param0.field_w, param0.field_i.j(), 0, param0.field_i.h());
+                param0.field_i = RawPcmStream.createForSampleStep(param0.field_w, param0.field_i.getSampleStepMagnitude(), 0, param0.field_i.getPan());
                 stackIn_8_0 = this.field_p;
                 stackIn_8_1 = (kl) (param0);
                 stackIn_8_2 = -128;
                 stackIn_9_3 = !(param0.field_D.field_n[param0.field_r] >= 0);
                 ((MidiPcmStream) (Object) stackIn_8_0).a(stackIn_8_1, (byte) stackIn_8_2, stackIn_9_3);
               } else {
-                param0.field_i = RawPcmStream.a(param0.field_w, param0.field_i.j(), param0.field_i.g(), param0.field_i.h());
+                param0.field_i = RawPcmStream.createForSampleStep(param0.field_w, param0.field_i.getSampleStepMagnitude(), param0.field_i.getTargetVolume(), param0.field_i.getPan());
               }
               if (0 > param0.field_D.field_n[param0.field_r]) {
                 param0.field_i.f(-1);

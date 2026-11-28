@@ -5,7 +5,7 @@ final class DelayedPcmStream extends PcmStream {
     static int field_r;
     private int field_s;
     static String field_n;
-    static uc field_o;
+    static BitmapFont field_o;
     static Sprite field_p;
     static String field_t;
     static String field_u;
@@ -26,7 +26,7 @@ final class DelayedPcmStream extends PcmStream {
           de.field_a = new Sprite(var3, -cl.field_a.field_t + var4);
           de.field_a.e();
           if (param0 != 66) {
-            field_o = (uc) null;
+            field_o = (BitmapFont) null;
           }
           var2.b(0, -cl.field_a.field_t);
           de.field_a.field_r = cl.field_a.field_t;
@@ -102,7 +102,7 @@ final class DelayedPcmStream extends PcmStream {
           field_o = null;
           return;
         }
-        field_o = (uc) null;
+        field_o = (BitmapFont) null;
         field_n = null;
         field_p = null;
         field_t = null;

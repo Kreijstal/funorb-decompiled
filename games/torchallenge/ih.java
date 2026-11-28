@@ -301,7 +301,7 @@ final class ih extends kj implements sg {
     final void a(int param0, int param1, boolean param2, int param3) {
         int var5 = this.field_m + param1;
         int var6 = this.field_i + param0;
-        RasterBuffer.field_g.a(dk.field_g, 20 + var5, var6 + 20, -40 + this.field_p, this.field_l - 50, 16777215, -1, 1, 0, RasterBuffer.field_g.field_x);
+        RasterBuffer.field_g.drawParagraph(dk.field_g, 20 + var5, var6 + 20, -40 + this.field_p, this.field_l - 50, 16777215, -1, 1, 0, RasterBuffer.field_g.field_x);
         super.a(param0, param1, param2, param3);
     }
 

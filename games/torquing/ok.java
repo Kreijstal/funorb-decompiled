@@ -6,9 +6,9 @@ final class ok extends lg {
     static int field_E;
     static int[] field_C;
 
-    final static vn a(IndexedSprite[] param0, int param1, byte[] param2) {
+    final static BinaryBitmapFont a(IndexedSprite[] param0, int param1, byte[] param2) {
         int var8 = 0;
-        vn stackIn_9_0 = null;
+        BinaryBitmapFont stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -66,7 +66,7 @@ final class ok extends lg {
             var6[var8] = param0[var8].field_d;
             var7[var8] = param0[var8].field_l;
           }
-          stackIn_9_0 = new vn(param2, var17, var18, var19, var20, var21);
+          stackIn_9_0 = new BinaryBitmapFont(param2, var17, var18, var19, var20, var21);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -3,7 +3,7 @@
  */
 final class dh extends si {
     private int field_I;
-    private rf field_Q;
+    private BitmapFont field_Q;
     private boolean field_P;
     private int field_O;
     private int field_K;
@@ -15,7 +15,7 @@ final class dh extends si {
     static BitPacketBuffer field_N;
     static int field_M;
 
-    dh(int param0, int param1, int param2, int param3, vg param4, boolean param5, int param6, int param7, rf param8, int param9, String param10) {
+    dh(int param0, int param1, int param2, int param3, vg param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (cg) null, (fd) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -41,7 +41,7 @@ final class dh extends si {
           this.field_I = param7;
           this.field_z = param4;
           var12_int = -this.field_I + this.field_K;
-          var13 = this.field_Q.a(param10, var12_int, this.field_Q.field_x) + 2 * this.field_I;
+          var13 = this.field_Q.textHeight(param10, var12_int, this.field_Q.field_x) + 2 * this.field_I;
           if (param3 >= var13) {
             var13 = param3;
           } else {
@@ -186,7 +186,7 @@ final class dh extends si {
           return;
         }
         int var7 = !this.field_P ? 0 : -this.field_K + this.field_w - 2 * this.field_I;
-        this.field_Q.a(this.field_L, this.field_I + var5 + var7, this.field_I + var6, this.field_K - this.field_I, this.field_k - this.field_I * 2, this.field_O, -1, !this.field_P ? 2 : 0, 1, this.field_Q.field_x);
+        this.field_Q.drawParagraph(this.field_L, this.field_I + var5 + var7, this.field_I + var6, this.field_K - this.field_I, this.field_k - this.field_I * 2, this.field_O, -1, !this.field_P ? 2 : 0, 1, this.field_Q.field_x);
     }
 
     final String e(int param0) {

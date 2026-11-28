@@ -4,7 +4,7 @@
 final class rn {
     static double field_c;
     static ResourceArchive field_f;
-    static ok field_e;
+    static BitmapFont field_e;
     static String field_d;
     static String field_b;
     static e field_a;

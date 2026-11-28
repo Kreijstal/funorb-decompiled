@@ -35,8 +35,8 @@ final class ke {
         }
         ValidatedTextField.field_N = 0;
         em.field_B = 480;
-        BoundedRandomAccessFile.field_j = BoundedRandomAccessFile.field_e.b(rb.field_hb[var3.field_h], 100) + 72;
-        ii.field_B = 30 + BoundedRandomAccessFile.field_e.a(rb.field_hb[var3.field_h], 100) * (BoundedRandomAccessFile.field_e.field_D + BoundedRandomAccessFile.field_e.field_C);
+        BoundedRandomAccessFile.field_j = BoundedRandomAccessFile.field_e.maxLineWidth(rb.field_hb[var3.field_h], 100) + 72;
+        ii.field_B = 30 + BoundedRandomAccessFile.field_e.lineCount(rb.field_hb[var3.field_h], 100) * (BoundedRandomAccessFile.field_e.field_D + BoundedRandomAccessFile.field_e.field_C);
         if (ii.field_B < 62) {
           ii.field_B = 62;
           return;

@@ -495,16 +495,16 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         RaiderRecruitmentScreen.a(param2, param0, param1, 30);
         RaiderRecruitmentScreen.a(param2, 40 + param0, 144, 30);
         int var4 = 8 + param0 + la.field_b.field_H;
-        db.field_v.b(pb.field_I, param2 + 7, var4, 16777215, -1);
-        db.field_v.a(Integer.toString(gm.field_d.field_s / 10), 133 + param2, var4, 16777215, -1);
+        db.field_v.drawString(pb.field_I, param2 + 7, var4, 16777215, -1);
+        db.field_v.drawRightAligned(Integer.toString(gm.field_d.field_s / 10), 133 + param2, var4, 16777215, -1);
         var4 += 40;
         int var5 = ac.field_s > gm.field_d.field_s ? 16711680 : 16777215;
-        db.field_v.b(ef.field_f, 7 + param2, var4, var5, -1);
+        db.field_v.drawString(ef.field_f, 7 + param2, var4, var5, -1);
         int var6 = ac.field_s / 10;
         if (ac.field_s % 10 != 0) {
           var6++;
         }
-        db.field_v.a(Integer.toString(var6), param2 + 133, var4, var5, -1);
+        db.field_v.drawRightAligned(Integer.toString(var6), param2 + 133, var4, var5, -1);
     }
 
     private final void c(int param0) {

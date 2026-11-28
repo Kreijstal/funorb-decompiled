@@ -282,7 +282,7 @@ public final class TrackController extends GameShell {
             AgeValidator.a(stackIn_54_0, -131);
           }
           if (IsaacRandom.field_f) {
-            DisplayNameSelectionPanel.font.c(Integer.toString(dh.field_p), 10, 40, 0, -1);
+            DisplayNameSelectionPanel.font.drawString(Integer.toString(dh.field_p), 10, 40, 0, -1);
           }
           qd.a((java.awt.Canvas) (var7), 0, 0, param0 + 2741);
           return;
@@ -538,7 +538,7 @@ public final class TrackController extends GameShell {
         field_D = null;
     }
 
-    final void a(boolean param0) {
+    final void updateClient(boolean param0) {
         boolean discarded$0 = false;
         int stackIn_5_1 = 0;
         boolean stackIn_6_2 = false;
@@ -834,28 +834,28 @@ public final class TrackController extends GameShell {
                             var4_ref_ng__ = ie.a("", sg.field_a, "tcfont", param0 - 341);
                             var5_ref_oh = (BitmapFont) ((Object) ma.a(6488064, (byte) -123, 2, var4_ref_ng__, var3_ref_byte__, 15252224));
                             DisplayNameSelectionPanel.font = var5_ref_oh;
-                            var33 = ((de) (var5_ref_oh)).field_M[0];
+                            var33 = ((PalettedBitmapFont) (var5_ref_oh)).field_M[0];
                             var19 = var33;
                             var6_ref_int__ = var19;
-                            if (9 > ((de) (var5_ref_oh)).field_M.length) {
-                              ((de) ((Object) var5_ref_oh)).field_M = new int[9][];
+                            if (9 > ((PalettedBitmapFont) (var5_ref_oh)).field_M.length) {
+                              ((PalettedBitmapFont) ((Object) var5_ref_oh)).field_M = new int[9][];
                             }
-                            ((de) (var5_ref_oh)).field_M[0] = var33;
+                            ((PalettedBitmapFont) (var5_ref_oh)).field_M[0] = var33;
                             for (var7_int = 1; var7_int < 9; var7_int++) {
                               array$6 = new int[var33.length];
-                              ((de) (var5_ref_oh)).field_M[var7_int] = array$6;
-                              pd.a(var6_ref_int__, 0, ((de) (var5_ref_oh)).field_M[var7_int], 0, var33.length);
+                              ((PalettedBitmapFont) (var5_ref_oh)).field_M[var7_int] = array$6;
+                              pd.a(var6_ref_int__, 0, ((PalettedBitmapFont) (var5_ref_oh)).field_M[var7_int], 0, var33.length);
                             }
-                            ((de) (var5_ref_oh)).field_M[1][1] = 8110658;
-                            ((de) (var5_ref_oh)).field_M[2][1] = 4473924;
-                            ((de) (var5_ref_oh)).field_M[2][2] = 12303291;
-                            ((de) (var5_ref_oh)).field_M[3][1] = 12303291;
-                            ((de) (var5_ref_oh)).field_M[4][1] = 16711680;
-                            ((de) (var5_ref_oh)).field_M[5][1] = 16767035;
-                            ((de) (var5_ref_oh)).field_M[6][1] = 16777215;
-                            ((de) (var5_ref_oh)).field_M[7][1] = 16711680;
-                            ((de) (var5_ref_oh)).field_M[8][1] = 15252224;
-                            ((de) (var5_ref_oh)).field_M[8][2] = 0;
+                            ((PalettedBitmapFont) (var5_ref_oh)).field_M[1][1] = 8110658;
+                            ((PalettedBitmapFont) (var5_ref_oh)).field_M[2][1] = 4473924;
+                            ((PalettedBitmapFont) (var5_ref_oh)).field_M[2][2] = 12303291;
+                            ((PalettedBitmapFont) (var5_ref_oh)).field_M[3][1] = 12303291;
+                            ((PalettedBitmapFont) (var5_ref_oh)).field_M[4][1] = 16711680;
+                            ((PalettedBitmapFont) (var5_ref_oh)).field_M[5][1] = 16767035;
+                            ((PalettedBitmapFont) (var5_ref_oh)).field_M[6][1] = 16777215;
+                            ((PalettedBitmapFont) (var5_ref_oh)).field_M[7][1] = 16711680;
+                            ((PalettedBitmapFont) (var5_ref_oh)).field_M[8][1] = 15252224;
+                            ((PalettedBitmapFont) (var5_ref_oh)).field_M[8][2] = 0;
                             ba.field_b = (BitmapFont) ((Object) uk.a("comic12", el.field_L, fb.field_b, "", 8));
                             GameApplet.field_c = (BitmapFont) ((Object) uk.a("kartika13", el.field_L, fb.field_b, "", -43));
                             el.field_L = null;
@@ -1135,20 +1135,20 @@ public final class TrackController extends GameShell {
           var17.field_o = 178;
           var27.a();
           cl.a(aa.field_a, 0, var8Lifetime2, 0, 156, 4);
-          DisplayNameSelectionPanel.font.b(na.field_d, 78, DisplayNameSelectionPanel.font.field_G, 0, -1);
-          ba.field_b.b(bl.field_d, 78, ba.field_b.field_G + DisplayNameSelectionPanel.font.field_G, 15252224, -1);
+          DisplayNameSelectionPanel.font.drawCentred(na.field_d, 78, DisplayNameSelectionPanel.font.field_G, 0, -1);
+          ba.field_b.drawCentred(bl.field_d, 78, ba.field_b.field_G + DisplayNameSelectionPanel.font.field_G, 15252224, -1);
           var28.a();
           cl.a(aa.field_a, 0, var8Lifetime2, 0, 156, 4);
-          DisplayNameSelectionPanel.font.b(na.field_d, 78, DisplayNameSelectionPanel.font.field_G, 1, -1);
-          ba.field_b.b(bl.field_d, 78, DisplayNameSelectionPanel.font.field_G + ba.field_b.field_G, 15252224, -1);
+          DisplayNameSelectionPanel.font.drawCentred(na.field_d, 78, DisplayNameSelectionPanel.font.field_G, 1, -1);
+          ba.field_b.drawCentred(bl.field_d, 78, DisplayNameSelectionPanel.font.field_G + ba.field_b.field_G, 15252224, -1);
           var11.a();
           cl.a(aa.field_a, 0, var8Lifetime2, 0, 156, 4);
-          DisplayNameSelectionPanel.font.b(ca.field_d, 78, DisplayNameSelectionPanel.font.field_G, 0, -1);
-          ba.field_b.b(th.field_i, 78, ba.field_b.field_G + DisplayNameSelectionPanel.font.field_G, 15252224, -1);
+          DisplayNameSelectionPanel.font.drawCentred(ca.field_d, 78, DisplayNameSelectionPanel.font.field_G, 0, -1);
+          ba.field_b.drawCentred(th.field_i, 78, ba.field_b.field_G + DisplayNameSelectionPanel.font.field_G, 15252224, -1);
           var12.a();
           cl.a(aa.field_a, 0, var8Lifetime2, 0, 156, 4);
-          DisplayNameSelectionPanel.font.b(ca.field_d, 78, DisplayNameSelectionPanel.font.field_G, 1, -1);
-          ba.field_b.b(th.field_i, 78, DisplayNameSelectionPanel.font.field_G + ba.field_b.field_G, 15252224, -1);
+          DisplayNameSelectionPanel.font.drawCentred(ca.field_d, 78, DisplayNameSelectionPanel.font.field_G, 1, -1);
+          ba.field_b.drawCentred(th.field_i, 78, DisplayNameSelectionPanel.font.field_G + ba.field_b.field_G, 15252224, -1);
           ia.field_b.a(-91);
           sg.field_a = null;
           qi.d(param0 - 407);

@@ -36,7 +36,7 @@ final class MenuScreen {
         int stackIn_19_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_27_0 = 0;
-        pk stackIn_29_0;
+        PalettedBitmapFont stackIn_29_0;
         String stackIn_29_1;
         int stackIn_29_2;
         int stackIn_29_3;
@@ -45,12 +45,12 @@ final class MenuScreen {
         int stackIn_57_0 = 0;
         int stackIn_60_0 = 0;
         int stackIn_63_0 = 0;
-        pk stackIn_65_0;
+        PalettedBitmapFont stackIn_65_0;
         String stackIn_65_1;
         int stackIn_65_2;
         int stackIn_65_3;
         int stackIn_66_4;
-        pk stackIn_85_0;
+        PalettedBitmapFont stackIn_85_0;
         String stackIn_85_1;
         int stackIn_85_2;
         int stackIn_85_3;
@@ -98,8 +98,8 @@ final class MenuScreen {
         var9 = var24;
         var9 = var24;
         var9 = var24;
-        var10 = i.field_Q.a(hb.field_u[2]);
-        var11 = i.field_Q.a(hb.field_u[13]);
+        var10 = i.field_Q.stringWidth(hb.field_u[2]);
+        var11 = i.field_Q.stringWidth(hb.field_u[13]);
         stackIn_3_0 = (var11 < var10) ? var10 : var11;
         var12 = stackIn_3_0;
         if (param3 != 0) {
@@ -145,7 +145,7 @@ final class MenuScreen {
             } else {
               stackIn_66_4 = 1;
             }
-            ((pk) (Object) stackIn_65_0).c(stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, -1);
+            ((PalettedBitmapFont) (Object) stackIn_65_0).drawCentred(stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, -1);
             var20 = 168;
             var21 = 0;
             while (true) {
@@ -158,15 +158,15 @@ final class MenuScreen {
                   var21 <= var19 &&
                   n.field_t >= -3 + var20 &&
                   k.field_e >= (-2 + param1) &&
-                  n.field_t < (i.field_N.a((char)(49 + var21)) + (var20 + 3)) &&
+                  n.field_t < (i.field_N.charWidth((char)(49 + var21)) + (var20 + 3)) &&
                   k.field_e < (24 + i.field_N.field_t + (param1 + 6))) {
-                  this.a(15000804, -3 + var20, 11184810, 82, 8 + (i.field_N.field_t + 24), 6 + i.field_N.a((char)(var21 + 49)), 1052688, param1 - 2);
+                  this.a(15000804, -3 + var20, 11184810, 82, 8 + (i.field_N.field_t + 24), 6 + i.field_N.charWidth((char)(var21 + 49)), 1052688, param1 - 2);
                 } else if (~var21 != ~var18 &&
                   var21 <= var19) {
-                  this.a(14211288, -3 + var20, 8947848, 7, i.field_N.field_t + 24 + 8, 6 + i.field_N.a((char)(49 + var21)), 8947848, -2 + param1);
+                  this.a(14211288, -3 + var20, 8947848, 7, i.field_N.field_t + 24 + 8, 6 + i.field_N.charWidth((char)(49 + var21)), 8947848, -2 + param1);
                 }
               } else {
-                this.a(10526880, var20 - 3, 1052688, -121, 8 + (24 + i.field_N.field_t), i.field_N.a((char)(49 + var21)) + 6, 11184810, -2 + param1);
+                this.a(10526880, var20 - 3, 1052688, -121, 8 + (24 + i.field_N.field_t), i.field_N.charWidth((char)(49 + var21)) + 6, 11184810, -2 + param1);
               }
               i.field_Q.field_O[8][1] = 16776960;
               stackIn_85_0 = i.field_Q;
@@ -184,7 +184,7 @@ final class MenuScreen {
               } else {
                 stackIn_89_6 = 64;
               }
-              ((pk) (Object) stackIn_85_0).a(stackIn_85_1, stackIn_85_2, stackIn_85_3, stackIn_86_4, stackIn_88_5, stackIn_89_6);
+              ((PalettedBitmapFont) (Object) stackIn_85_0).drawStringAlpha(stackIn_85_1, stackIn_85_2, stackIn_85_3, stackIn_86_4, stackIn_88_5, stackIn_89_6);
               var20 += 40;
               var21++;
             }
@@ -194,7 +194,7 @@ final class MenuScreen {
             if (this.field_h == 3) {
               param1 = 307;
             }
-            var13 = 320 - (MatchingFieldValidator.field_m.a(var24) >> 1);
+            var13 = 320 - (MatchingFieldValidator.field_m.stringWidth(var24) >> 1);
             stackIn_97_0 = (40 < var7) ? 40 : var7;
             var14 = stackIn_97_0;
             var15 = 0;
@@ -217,15 +217,15 @@ final class MenuScreen {
                 n.field_t >= var13 &&
                 param1 <= k.field_e &&
                 k.field_e < (var14 + param1) &&
-                n.field_t < (MatchingFieldValidator.field_m.a(hq.field_d[var15]) + var13)) {
+                n.field_t < (MatchingFieldValidator.field_m.stringWidth(hq.field_d[var15]) + var13)) {
                 var16 = 9;
               }
-              var17 = MatchingFieldValidator.field_m.a(hq.field_d[var15]);
-              i.field_Q.c(hq.field_d[var15], var13 + (var17 >> 1), param1 + MatchingFieldValidator.field_m.field_x, var16, -1);
+              var17 = MatchingFieldValidator.field_m.stringWidth(hq.field_d[var15]);
+              i.field_Q.drawCentred(hq.field_d[var15], var13 + (var17 >> 1), param1 + MatchingFieldValidator.field_m.field_x, var16, -1);
               var13 = var13 + var17;
               if (2 != var15) {
-                var17 = MatchingFieldValidator.field_m.a(" / ");
-                i.field_Q.c(" / ", (var17 >> 1) + var13, MatchingFieldValidator.field_m.field_x + param1, 0, -1);
+                var17 = MatchingFieldValidator.field_m.stringWidth(" / ");
+                i.field_Q.drawCentred(" / ", (var17 >> 1) + var13, MatchingFieldValidator.field_m.field_x + param1, 0, -1);
                 var13 = var13 + var17;
               }
               var15++;
@@ -281,7 +281,7 @@ final class MenuScreen {
           } else {
             stackIn_30_4 = 1;
           }
-          ((pk) (Object) stackIn_29_0).c(stackIn_29_1, stackIn_29_2, stackIn_29_3, stackIn_30_4, -1);
+          ((PalettedBitmapFont) (Object) stackIn_29_0).drawCentred(stackIn_29_1, stackIn_29_2, stackIn_29_3, stackIn_30_4, -1);
           var15 = 168;
           param1 = 72;
           var16 = 0;
@@ -314,7 +314,7 @@ final class MenuScreen {
             var15 = var15 + (var17_ref_t.field_s + 10);
             var16++;
           }
-          i.field_Q.c(Js5Transport.field_n[var13], 314, 123 + MatchingFieldValidator.field_m.field_x, 0, -1);
+          i.field_Q.drawCentred(Js5Transport.field_n[var13], 314, 123 + MatchingFieldValidator.field_m.field_x, 0, -1);
           return;
         }
         if (this.field_h == 9) {
@@ -349,7 +349,7 @@ final class MenuScreen {
         if (decompiledSharedTail0) {
           stackIn_135_0 = (param0) ? 9 : 1;
           var14 = stackIn_135_0;
-          i.field_Q.c(var9, var6, param1 + 24, var14, -1);
+          i.field_Q.drawCentred(var9, var6, param1 + 24, var14, -1);
         }
     }
 
@@ -441,7 +441,7 @@ final class MenuScreen {
               }
               var9 = var5 + var4 >> 1;
               var10 = rf.field_q[this.field_h][var8];
-              var11 = MatchingFieldValidator.field_m.a(hb.field_u[var10]);
+              var11 = MatchingFieldValidator.field_m.stringWidth(hb.field_u[var10]);
               if ((var9 - (var11 >> 1)) <= param0 &&
                 param0 < (var9 + (var11 >> 1))) {
                 return var8;
@@ -474,7 +474,7 @@ final class MenuScreen {
                 var8Lifetime3 = wi.field_a[rn.field_j];
                 var9Lifetime3 = qc.field_ab[var8Lifetime3];
                 var10Lifetime3 = 165;
-                var11Lifetime1 = 6 + i.field_N.a((char)(var9Lifetime3 + 48)) + ((-1 + var9Lifetime3) * 40 + var10Lifetime3);
+                var11Lifetime1 = 6 + i.field_N.charWidth((char)(var9Lifetime3 + 48)) + ((-1 + var9Lifetime3) * 40 + var10Lifetime3);
                 if (param0 >= var10Lifetime3 &&
                   param0 < var11Lifetime1) {
                   return 1;
@@ -485,7 +485,7 @@ final class MenuScreen {
               while (rf.field_q[this.field_h].length > var9Lifetime4) {
                 var10Lifetime4 = rf.field_q[this.field_h][var9Lifetime4];
                 var16 = hb.field_u[var10Lifetime4];
-                var12 = i.field_N.a(var16);
+                var12 = i.field_N.stringWidth(var16);
                 var13_int = param0 - (-(var12 >> 1) + 164) - (var4 - 2);
                 var14 = -var8Lifetime4 - (-2 - param2);
                 stackIn_104_0 = ~var13_int;
@@ -511,11 +511,11 @@ final class MenuScreen {
         if ((decompiledFrameRemainder0) && (decompiledFrameCompleted1) && (param2 > -8 + lp.field_c &&
           param2 < MatchingFieldValidator.field_m.field_x + lp.field_c + 8)) {
           if ((ea.field_v - 8) < param0 &&
-            ea.field_v + i.field_N.a('<') > param0) {
+            ea.field_v + i.field_N.charWidth('<') > param0) {
             return -1;
           }
           if (param0 > (vd.field_f - 8) &&
-            vd.field_f + i.field_N.a('>') > param0) {
+            vd.field_f + i.field_N.charWidth('>') > param0) {
             return -1;
           }
         }
@@ -556,7 +556,7 @@ final class MenuScreen {
                 if (this.c(4, var9Lifetime1)) {
                   if (var17 != null) {
                     var12Lifetime1 = var8Lifetime1Lifetime1 + (var7 >> 1);
-                    var13_intLifetime1 = MatchingFieldValidator.field_m.a(var17);
+                    var13_intLifetime1 = MatchingFieldValidator.field_m.stringWidth(var17);
                     if ((-(var13_intLifetime1 >> 1) + var12Lifetime1) <= param0 &&
                       (var13_intLifetime1 >> 1) + var12Lifetime1 > param0) {
                       return var9Lifetime1;
@@ -886,9 +886,9 @@ final class MenuScreen {
           (decompiledFrameRemainder0 = !(re.field_c <= -8 + lp.field_c)) &&
           (decompiledFrameRemainder0 = !((8 + (MatchingFieldValidator.field_m.field_x + lp.field_c)) <= re.field_c))) {
           if ((!((-8 + ea.field_v) < wh.field_s) ||
-            !(wh.field_s < (ea.field_v + i.field_N.a('<')))) &&
+            !(wh.field_s < (ea.field_v + i.field_N.charWidth('<')))) &&
             (decompiledFrameRemainder0 = !(-8 + vd.field_f >= wh.field_s)) &&
-            (decompiledFrameRemainder0 = !(wh.field_s >= (vd.field_f + i.field_N.a('>'))))) {
+            (decompiledFrameRemainder0 = !(wh.field_s >= (vd.field_f + i.field_N.charWidth('>'))))) {
             fieldTemp$0 = ld.field_k + 1;
             ld.field_k = ld.field_k + 1;
             if (fieldTemp$0 == 3) {
@@ -964,7 +964,7 @@ final class MenuScreen {
                 break;
               }
               if (stackIn_55_0 >= stackIn_55_1 &&
-                wh.field_s < var7 + i.field_N.a((char)(var8 + 49)) + 3) {
+                wh.field_s < var7 + i.field_N.charWidth((char)(var8 + 49)) + 3) {
                 rn.field_j = rn.field_j + (-hg.field_d[rn.field_j] + var8);
                 break;
               }
@@ -1157,7 +1157,7 @@ final class MenuScreen {
                     break;
                   }
                   if (stackIn_81_0 <= stackIn_81_1 &&
-                    n.field_t < var6 + (i.field_N.a((char)(var7 + 49)) + 3)) {
+                    n.field_t < var6 + (i.field_N.charWidth((char)(var7 + 49)) + 3)) {
                     var3 = var7 + 10;
                   }
                   var6 += 40;
@@ -1195,7 +1195,7 @@ final class MenuScreen {
         boolean stackIn_24_0 = false;
         int stackIn_56_0 = 0;
         int stackIn_68_0 = 0;
-        pk stackIn_70_0 = null;
+        PalettedBitmapFont stackIn_70_0 = null;
         String stackIn_71_1 = null;
         int stackIn_83_0 = 0;
         boolean stackOut_7_0;
@@ -1335,18 +1335,18 @@ final class MenuScreen {
         }
         if (var7 == -1) {
           if (je.a((byte) 59)) {
-            i.field_Q.c(nh.field_p, 320, 230, 0, -1);
-            i.field_Q.a(ti.field_m, 47, 270, 534, 1000, 0, -1, 1, 0, 3 * MatchingFieldValidator.field_m.field_x / 2);
+            i.field_Q.drawCentred(nh.field_p, 320, 230, 0, -1);
+            i.field_Q.drawParagraph(ti.field_m, 47, 270, 534, 1000, 0, -1, 1, 0, 3 * MatchingFieldValidator.field_m.field_x / 2);
             if (var19 == 0) {
               return;
             }
           }
-          i.field_Q.c(nh.field_p, 320, 275, 0, -1);
+          i.field_Q.drawCentred(nh.field_p, 320, 275, 0, -1);
           if (var19 == 0) {
             return;
           }
         }
-        i.field_Q.c(k.field_b[var7], 320, 202, 0, -1);
+        i.field_Q.drawCentred(k.field_b[var7], 320, 202, 0, -1);
         stackIn_68_0 = ((var5 & 1 << var7) == 0) ? 0 : 1;
         var12Lifetime1 = stackIn_68_0;
         var13Lifetime1 = 3 * dd.field_c.field_x / 2;
@@ -1357,7 +1357,7 @@ final class MenuScreen {
         } else {
           stackIn_71_1 = TooltipPanel.field_t;
         }
-        ((pk) (Object) stackIn_70_0).c(stackIn_71_1, 321, 1 + var14 + dd.field_c.field_x, 1, -1);
+        ((PalettedBitmapFont) (Object) stackIn_70_0).drawCentred(stackIn_71_1, 321, 1 + var14 + dd.field_c.field_x, 1, -1);
         if (var12Lifetime1 != 0) {
           tj.field_n[var7].d(256, 30 + var14);
           if (var19 != 0) {
@@ -1392,19 +1392,19 @@ final class MenuScreen {
         if (var16 != 0) {
           var15 = al.field_f;
         }
-        qh.field_c.a(var15, 65, var14 - 3, 184, 1000, 0, -1, 0, 0, (3 + dd.field_c.field_x * 3) / 2);
+        qh.field_c.drawParagraph(var15, 65, var14 - 3, 184, 1000, 0, -1, 0, 0, (3 + dd.field_c.field_x * 3) / 2);
         var17 = Integer.toString(100 * ef.field_d[var7]);
         if (var16 != 0) {
           var17 = MenuLayer.field_b;
         }
-        qh.field_c.b(tl.field_s + var17, 401, var14 - 3 + qh.field_c.field_q, 0, -1);
+        qh.field_c.drawString(tl.field_s + var17, 401, var14 - 3 + qh.field_c.field_q, 0, -1);
         var14 = var14 + var13Lifetime1;
         var3Lifetime1 = 401;
-        qh.field_c.b(am.field_j, var3Lifetime1, var14 + (-3 + qh.field_c.field_x), 0, -1);
-        var3Lifetime1 = var3Lifetime1 + qh.field_c.a(am.field_j);
+        qh.field_c.drawString(am.field_j, var3Lifetime1, var14 + (-3 + qh.field_c.field_x), 0, -1);
+        var3Lifetime1 = var3Lifetime1 + qh.field_c.stringWidth(am.field_j);
         if (var16 != 0) {
           Model.field_r.d(var3Lifetime1, var14 + 1);
-          qh.field_c.b(nl.field_u, var3Lifetime1 + Model.field_r.field_s, qh.field_c.field_x + (-3 + var14), 0, -1);
+          qh.field_c.drawString(nl.field_u, var3Lifetime1 + Model.field_r.field_s, qh.field_c.field_x + (-3 + var14), 0, -1);
           if (var19 == 0) {
             return;
           }
@@ -1436,10 +1436,10 @@ final class MenuScreen {
             return stackIn_2_0;
           }
           if (param0) {
-            stackIn_7_0 = sp.field_Q.a(param2);
+            stackIn_7_0 = sp.field_Q.stringWidth(param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = bo.field_e.a(param2);
+          stackIn_5_0 = bo.field_e.stringWidth(param2);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2292,7 +2292,7 @@ final class MenuScreen {
                   break regionExit2;
                 }
                 if (ig.field_r[25] == null) {
-                  ig.field_r[25] = PcmSampleStream.a(DisplayNameSelectionPanel.field_F[25], 100, 96);
+                  ig.field_r[25] = PcmSampleStream.createForPlaybackRate(DisplayNameSelectionPanel.field_F[25], 100, 96);
                 }
                 if (ig.field_r[25].isLinked(17)) {
                   break regionExit1;
@@ -2364,7 +2364,7 @@ final class MenuScreen {
               }
               var7 = hb.field_u[20];
               var8Lifetime1 = n.field_t;
-              var9Lifetime1 = -(MatchingFieldValidator.field_m.a(var7) >> 1) + 320;
+              var9Lifetime1 = -(MatchingFieldValidator.field_m.stringWidth(var7) >> 1) + 320;
               var10Lifetime1 = 0;
               while (var10Lifetime1 < hq.field_d.length) {
                 if (var11 != 0) {
@@ -2372,10 +2372,10 @@ final class MenuScreen {
                   break;
                 }
                 if (var9Lifetime1 <= var8Lifetime1 &&
-                  var8Lifetime1 < MatchingFieldValidator.field_m.a(hq.field_d[var10Lifetime1]) + var9Lifetime1) {
+                  var8Lifetime1 < MatchingFieldValidator.field_m.stringWidth(hq.field_d[var10Lifetime1]) + var9Lifetime1) {
                   ld.field_k = var10Lifetime1;
                 }
-                var9Lifetime1 = var9Lifetime1 + (MatchingFieldValidator.field_m.a(hq.field_d[var10Lifetime1]) + MatchingFieldValidator.field_m.a(" / "));
+                var9Lifetime1 = var9Lifetime1 + (MatchingFieldValidator.field_m.stringWidth(hq.field_d[var10Lifetime1]) + MatchingFieldValidator.field_m.stringWidth(" / "));
                 var10Lifetime1++;
               }
               if ((decompiledFrameCompleted0) &&
@@ -2421,23 +2421,23 @@ final class MenuScreen {
     final void renderMenuScreen(int param0) {
         TooltipPanel dupTemp$0 = null;
         int stackIn_26_0 = 0;
-        pk stackIn_35_0 = null;
+        PalettedBitmapFont stackIn_35_0 = null;
         boolean stackIn_36_1 = false;
         int stackIn_38_2 = 0;
         boolean stackIn_39_3 = false;
         boolean stackIn_42_4;
         int stackIn_43_0 = 0;
-        pk stackIn_58_0 = null;
+        PalettedBitmapFont stackIn_58_0 = null;
         boolean stackIn_59_1 = false;
         int stackIn_61_2 = 0;
         boolean stackIn_62_3 = false;
         boolean stackIn_65_4 = false;
-        pk stackIn_67_0 = null;
+        PalettedBitmapFont stackIn_67_0 = null;
         boolean stackIn_68_1 = false;
         boolean stackIn_71_2 = false;
         int stackIn_73_3;
         boolean stackIn_74_4 = false;
-        pk stackIn_76_0 = null;
+        PalettedBitmapFont stackIn_76_0 = null;
         boolean stackIn_77_1 = false;
         int stackIn_79_2 = 0;
         boolean stackIn_80_3 = false;
@@ -2524,9 +2524,9 @@ final class MenuScreen {
               }
             }
             var11 = om.field_e;
-            qh.field_c.b(var11, 148, MatchingFieldValidator.field_m.field_x + 34, 2, -1);
+            qh.field_c.drawString(var11, 148, MatchingFieldValidator.field_m.field_x + 34, 2, -1);
             var12 = Integer.toString(ie.field_b.field_s);
-            qh.field_c.a(var12, 517, 34 + MatchingFieldValidator.field_m.field_x, 2, -1);
+            qh.field_c.drawRightAligned(var12, 517, 34 + MatchingFieldValidator.field_m.field_x, 2, -1);
             var4 = 135;
             var5 = re.countSetBits(252645135, SocketConnector.field_f);
             if (-48 + var5 * 48 < 338) {
@@ -2543,7 +2543,7 @@ final class MenuScreen {
                 stackIn_38_2 = 100;
                 stackIn_39_3 = (ie.field_b.field_L != 0);
                 stackIn_42_4 = (fa.field_b != 0);
-                stackIn_43_0 = ((pk) (Object) stackIn_35_0).a(ProxyAuthenticationRequiredException.$cfr$intArgs$a$feb7e63b59d8(stackIn_36_1, stackIn_38_2, stackIn_39_3, stackIn_42_4), 135, 169 - i.field_N.field_x, 370, 1000, 0, -1, 1, 0, i.field_N.field_x);
+                stackIn_43_0 = ((PalettedBitmapFont) (Object) stackIn_35_0).drawParagraph(ProxyAuthenticationRequiredException.$cfr$intArgs$a$feb7e63b59d8(stackIn_36_1, stackIn_38_2, stackIn_39_3, stackIn_42_4), 135, 169 - i.field_N.field_x, 370, 1000, 0, -1, 1, 0, i.field_N.field_x);
                 break;
               }
               stackIn_43_0Lifetime1 = -1;
@@ -2567,7 +2567,7 @@ final class MenuScreen {
             while (var4Lifetime2 < hg.field_b.length) {
               var5_ref_uf = hg.field_b[var4Lifetime2];
               var5_ref_uf.drawPanel(47, -116, var3);
-              dd.field_c.a(var4Lifetime2 + 1 + "/" + hg.field_b.length, 573, var3 + (var5_ref_uf.field_k - 3), 8421504, -1);
+              dd.field_c.drawRightAligned(var4Lifetime2 + 1 + "/" + hg.field_b.length, 573, var3 + (var5_ref_uf.field_k - 3), 8421504, -1);
               var3 = var3 + var5_ref_uf.field_k;
               var4Lifetime2++;
               if (var8 != 0) {
@@ -2616,31 +2616,31 @@ final class MenuScreen {
                 if (this.field_h != 6 &&
                   this.field_h != 8) {
                   if (7 == this.field_h) {
-                    qh.field_c.c(mf.field_s, 321, 1 + (dd.field_c.field_x + 167), 0, -1);
+                    qh.field_c.drawCentred(mf.field_s, 321, 1 + (dd.field_c.field_x + 167), 0, -1);
                     stackIn_58_0 = qh.field_c;
                     stackIn_59_1 = (0 != ie.field_b.field_s);
                     stackIn_61_2 = 0;
                     stackIn_62_3 = (ie.field_b.field_L != 0);
                     stackIn_65_4 = (fa.field_b != 0);
-                    ((pk) (Object) stackIn_58_0).c(tf.a(stackIn_59_1, stackIn_61_2, stackIn_62_3, stackIn_65_4), 321, 190 + dd.field_c.field_x + 1, 0, -1);
+                    ((PalettedBitmapFont) (Object) stackIn_58_0).drawCentred(tf.a(stackIn_59_1, stackIn_61_2, stackIn_62_3, stackIn_65_4), 321, 190 + dd.field_c.field_x + 1, 0, -1);
                     stackIn_67_0 = qh.field_c;
                     stackIn_68_1 = (ie.field_b.field_s != 0);
                     stackIn_71_2 = (fa.field_b != 0);
                     stackIn_73_3 = param0 ^ 95;
                     stackIn_74_4 = (ie.field_b.field_L != 0);
-                    ((pk) (Object) stackIn_67_0).c(FullscreenFocusCanvas.a(stackIn_68_1, stackIn_71_2, stackIn_73_3, stackIn_74_4), 321, 280 + dd.field_c.field_x + 1, 0, -1);
+                    ((PalettedBitmapFont) (Object) stackIn_67_0).drawCentred(FullscreenFocusCanvas.a(stackIn_68_1, stackIn_71_2, stackIn_73_3, stackIn_74_4), 321, 280 + dd.field_c.field_x + 1, 0, -1);
                     stackIn_76_0 = qh.field_c;
                     stackIn_77_1 = (0 != ie.field_b.field_s);
                     stackIn_79_2 = 2;
                     stackIn_80_3 = (ie.field_b.field_L != 0);
                     stackIn_83_4 = (fa.field_b != 0);
-                    ((pk) (Object) stackIn_76_0).c(qn.a(stackIn_77_1, stackIn_79_2, stackIn_80_3, stackIn_83_4), 321, 329 + dd.field_c.field_x, 0, -1);
+                    ((PalettedBitmapFont) (Object) stackIn_76_0).drawCentred(qn.a(stackIn_77_1, stackIn_79_2, stackIn_80_3, stackIn_83_4), 321, 329 + dd.field_c.field_x, 0, -1);
                     if (var8 == 0) {
                       break regionExit1;
                     }
                   }
                   if (10 == this.field_h) {
-                    i.field_Q.a(vf.field_m, 62, 250 + MatchingFieldValidator.field_m.field_x, 315, 1000, 0, -1, 0, 0, 3 * MatchingFieldValidator.field_m.field_x / 2);
+                    i.field_Q.drawParagraph(vf.field_m, 62, 250 + MatchingFieldValidator.field_m.field_x, 315, 1000, 0, -1, 0, 0, 3 * MatchingFieldValidator.field_m.field_x / 2);
                     if (var8 == 0) {
                       break regionExit1;
                     }
@@ -2967,9 +2967,9 @@ final class MenuScreen {
         var18 = Torquing.field_u;
         if (je.a((byte) 107)) {
           var3 = 90 + param0;
-          qh.field_c.c(rd.field_v, 320, var3 + qh.field_c.field_x, 0, -1);
+          qh.field_c.drawCentred(rd.field_v, 320, var3 + qh.field_c.field_x, 0, -1);
           var3 = var3 + qh.field_c.field_x * 3;
-          qh.field_c.a(ti.field_m, 130, var3, 380, 1000, 0, -1, 1, 0, qh.field_c.field_x * 3 / 2);
+          qh.field_c.drawParagraph(ti.field_m, 130, var3, 380, 1000, 0, -1, 1, 0, qh.field_c.field_x * 3 / 2);
           return;
         }
         if (null == IterableNodeHashTable.field_c) {
@@ -3037,11 +3037,11 @@ final class MenuScreen {
                     var15 = "";
                   }
                   if (decompiledFrameRemainder1) {
-                    qh.field_c.a(var15, 148, var10 + qh.field_c.field_x, var12, -1);
+                    qh.field_c.drawRightAligned(var15, 148, var10 + qh.field_c.field_x, var12, -1);
                     var16 = var14;
-                    qh.field_c.b(var16, 148, qh.field_c.field_x + var10, var12, -1);
+                    qh.field_c.drawString(var16, 148, qh.field_c.field_x + var10, var12, -1);
                     var17 = Integer.toString(var13);
-                    qh.field_c.a(var17, 517, var10 + qh.field_c.field_x, var12, -1);
+                    qh.field_c.drawRightAligned(var17, 517, var10 + qh.field_c.field_x, var12, -1);
                     var10 += 20;
                   }
                   var11++;
@@ -3056,12 +3056,12 @@ final class MenuScreen {
               var4 = AchievementProgressUpdate.field_o;
             }
           }
-          qh.field_c.a(n.field_r, 130, 13 + param0 + 220, 380, 1000, 0, -1, 1, 0, qh.field_c.field_x * 3 / 2);
+          qh.field_c.drawParagraph(n.field_r, 130, 13 + param0 + 220, 380, 1000, 0, -1, 1, 0, qh.field_c.field_x * 3 / 2);
           stackIn_34_0 = param0;
           stackIn_34_1 = 90;
         }
         var5Lifetime1 = stackIn_34_0 + stackIn_34_1;
-        i.field_Q.c(var4, 320, var5Lifetime1 + MatchingFieldValidator.field_m.field_x, 4, -1);
+        i.field_Q.drawCentred(var4, 320, var5Lifetime1 + MatchingFieldValidator.field_m.field_x, 4, -1);
     }
 
     MenuScreen(Torquing param0, int param1) {

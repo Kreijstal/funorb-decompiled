@@ -49,13 +49,13 @@ final class sf extends hl {
           }
           var2 -= 32;
           var2 = var2 > 8 ? 8 : var2;
-          var4 = v.field_j.b(da.field_m[var6.field_k]);
+          var4 = v.field_j.stringWidth(da.field_m[var6.field_k]);
           SoftwareRasterizer.resetClip();
           var5 = 40;
           SoftwareRasterizer.fillRoundedRectangleAlpha(4, var2 - 4, 8 + var4 + 56, var5, 8, 1, 128);
           SoftwareRasterizer.drawRoundedRectangleOutline(4, -4 + var2, 8 + (56 + var4), var5, 8, 16777215);
           me.field_c[var6.field_k].c(12, var2);
-          v.field_j.a(da.field_m[var6.field_k], 56, v.field_j.field_H / 2 + (var2 + 16), 16777215, 0);
+          v.field_j.drawString(da.field_m[var6.field_k], 56, v.field_j.field_H / 2 + (var2 + 16), 16777215, 0);
         }
     }
 
@@ -97,7 +97,7 @@ final class sf extends hl {
           ArchiveRequest.a(var7, param4.field_y, param1 + param4.field_u, (param4.field_C - this.field_x[0].field_u >> 1) + param4.field_r + param2, -104, this.field_x);
           stackIn_19_0 = (param3) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
-          this.field_e.a(param4.field_v, param1 + param4.field_u, param2 - (-param4.field_r + 2), param4.field_y, param4.field_C, var8, -1, 1, 1, this.field_e.field_C);
+          this.field_e.drawParagraph(param4.field_v, param1 + param4.field_u, param2 - (-param4.field_r + 2), param4.field_y, param4.field_C, var8, -1, 1, 1, this.field_e.field_C);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

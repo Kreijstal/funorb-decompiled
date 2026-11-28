@@ -3,7 +3,7 @@
  */
 final class sc {
     static sa field_d;
-    static rf field_f;
+    static BitmapFont field_f;
     static String[] field_b;
     static MouseWheelInput field_e;
     static he[] field_a;

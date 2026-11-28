@@ -206,7 +206,7 @@ final class vo extends va {
           stackIn_19_0 = (param0) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
           s.a((byte) 49, this.field_w, (param3.height - this.field_w[0].field_B >> 1) + param4 + param3.y, param3.width, param3.x + param1, var7);
-          this.field_l.a(param3.text, param1 + param3.x, -2 + (param4 + param3.y), param3.width, param3.height, var8, -1, 1, 1, this.field_l.field_z);
+          this.field_l.drawParagraph(param3.text, param1 + param3.x, -2 + (param4 + param3.y), param3.width, param3.height, var8, -1, 1, 1, this.field_l.field_z);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

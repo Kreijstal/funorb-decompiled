@@ -15,9 +15,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     public static boolean field_b;
     public static int field_e;
 
-    abstract void e(int param0);
+    abstract void updateClient(int param0);
 
-    abstract void c(byte param0);
+    abstract void clearClientResources(byte param0);
 
     public final void stop() {
         RuntimeException runtimeException = null;
@@ -36,7 +36,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    private final void a(byte param0) {
+    private final void processClientTick(byte param0) {
         long var2_long = 0L;
         long var4 = 0L;
         Throwable decompiledCaughtException = null;
@@ -57,7 +57,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           synchronized (var6) {
             wh.field_b = kk.field_b;
           }
-          this.e(-27);
+          this.updateClient(-27);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,7 +116,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void f(int param0);
+    abstract void disposeClient(int param0);
 
     final boolean c(int param0) {
         return true;
@@ -134,7 +134,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             lj.field_G = je.correctedCurrentTimeMillis(1);
             i.sleepMillis((byte) 125, 5000L);
             CachedArchiveSource.field_l = null;
-            this.a(false, true);
+            this.shutdownApplet(false, true);
             return;
           }
           return;
@@ -168,9 +168,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void d(int param0);
+    abstract void initializeClient(int param0);
 
-    private final void a(boolean param0, boolean param1) {
+    private final void shutdownApplet(boolean param0, boolean param1) {
         Exception exception = null;
         RuntimeException runtimeException = null;
         Object var3 = null;
@@ -188,7 +188,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             s.field_jb.destroy();
           }
           try {
-            this.f(-1);
+            this.disposeClient(-1);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
@@ -210,7 +210,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          this.c((byte) -104);
+          this.clearClientResources((byte) -104);
           if (oc.field_a != null) {
             try {
               System.exit(0);
@@ -458,7 +458,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 be.i(4);
                 this.a(true);
                 Bzip2State.field_e = IntrusiveDeque.a(DualLinkNode.field_h, cf.field_d, (byte) -35, (java.awt.Component) ((Object) EmailFormatValidator.field_q));
-                this.d(-31680);
+                this.initializeClient(-31680);
                 fh.field_e = ee.e(-1);
                 do {
                   boolean decompiledFrameRemainder0 = true;
@@ -477,11 +477,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   var3 = stackIn_99_0;
                   do {
                     if (!(var3 < mj.field_b)) {
-                      this.b((byte) -99);
+                      this.renderAppletFrame((byte) -99);
                       pb.a(wh.field_c, EmailFormatValidator.field_q, (byte) -80);
                       break;
                     }
-                    this.a((byte) 123);
+                    this.processClientTick((byte) 123);
                     var3++;
                   } while (var5 == 0);
                 } while (var5 == 0);
@@ -492,7 +492,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               hi.a((Throwable) (var1), (String) null, 1);
               this.a("crash", -1);
             }
-            this.a(true, true);
+            this.shutdownApplet(true, true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -691,7 +691,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    private final void b(byte param0) {
+    private final void renderAppletFrame(byte param0) {
         int fieldTemp$1 = 0;
         RuntimeException runtimeException = null;
         long var2_long = 0L;
@@ -727,7 +727,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               EmailFormatValidator.field_q.setLocation(var6.left + ib.field_j, IntrusiveDeque.field_g + var6.top);
             }
           }
-          this.a(param0 ^ 11538);
+          this.renderClientFrame(param0 ^ 11538);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -811,7 +811,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void a(int param0);
+    abstract void renderClientFrame(int param0);
 
     public final void focusGained(java.awt.event.FocusEvent param0) {
         RuntimeException runtimeException = null;

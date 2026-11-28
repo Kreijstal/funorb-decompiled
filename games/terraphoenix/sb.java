@@ -24,10 +24,10 @@ final class sb extends IntrusiveNode {
         }
     }
 
-    final static qj a(boolean param0, byte[] param1) {
-        qj var2 = null;
+    final static CoverageBitmapFont a(boolean param0, byte[] param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        qj stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -39,7 +39,7 @@ final class sb extends IntrusiveNode {
           if (param1 == null) {
             return null;
           }
-          var2 = new qj(param1, ConfirmedEmailAvailabilityValidator.field_s, hj.field_K, field_m, ArchiveRequest.field_p, ProxyAuthenticationRequiredException.field_a, qc.field_b);
+          var2 = new CoverageBitmapFont(param1, ConfirmedEmailAvailabilityValidator.field_s, hj.field_K, field_m, ArchiveRequest.field_p, ProxyAuthenticationRequiredException.field_a, qc.field_b);
           SocketConnector.a((byte) 95);
           stackIn_6_0 = var2;
           return stackIn_6_0;

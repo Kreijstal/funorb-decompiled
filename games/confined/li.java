@@ -10,7 +10,7 @@ final class li implements fe {
     private int field_d;
     private int field_g;
     private int field_b;
-    private ok field_i;
+    private BitmapFont field_i;
     static String field_f;
     static sg field_m;
     private int field_h;
@@ -65,7 +65,7 @@ final class li implements fe {
             return;
           }
           var13 = this.field_a + var14.field_W + var14.field_P;
-          this.field_i.a(param3.field_B, param1 + (param3.field_q + var13), param4 - (-param3.field_m - this.field_c), -this.field_a - (var13 - param3.field_F), param3.field_z - (this.field_a << 1), this.field_g, this.field_b, 1, 1, 0);
+          this.field_i.drawParagraph(param3.field_B, param1 + (param3.field_q + var13), param4 - (-param3.field_m - this.field_c), -this.field_a - (var13 - param3.field_F), param3.field_z - (this.field_a << 1), this.field_g, this.field_b, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,7 +146,7 @@ final class li implements fe {
         }
     }
 
-    li(ok param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    li(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_h = param6;
           this.field_i = param0;

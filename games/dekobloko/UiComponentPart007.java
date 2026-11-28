@@ -107,7 +107,7 @@ final class UiComponentPart007 extends ComponentContainer implements CallbackCon
         }
         BitmapFont bitmapFontLocal1 = GameDomainSupport003.bitmapFontState0015;
         if (this.stringArrayState0005 != null) {
-          bitmapFontLocal1.computeInteger1071(UiComponentPart011.stringState0188, integerArgument1 + this.integerState0110, integerArgument4 + this.integerState0104, this.integerState0107, 20, 16777215, -1, 0, 0, bitmapFontLocal1.integerState0518 + bitmapFontLocal1.integerState0523);
+          bitmapFontLocal1.drawParagraph(UiComponentPart011.stringState0188, integerArgument1 + this.integerState0110, integerArgument4 + this.integerState0104, this.integerState0107, 20, 16777215, -1, 0, 0, bitmapFontLocal1.integerState0518 + bitmapFontLocal1.integerState0523);
         }
     }
 

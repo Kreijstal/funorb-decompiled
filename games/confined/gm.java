@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gm extends AcceleratingProjectile {
-    static ok field_cb;
+    static BitmapFont field_cb;
     static int[] field_bb;
     private DynamicLight field_db;
     private TunnelEntity field_eb;

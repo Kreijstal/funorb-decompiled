@@ -17,11 +17,11 @@ final class MixedSupport016 {
     static String stringState0077;
     static volatile boolean booleanState0016;
 
-    final static RenderingSupport009 computeRenderingSupport0090204(String stringArgument1, ResourceArchive resourceArchiveArgument2, ResourceArchive resourceArchiveArgument3, byte byteArgument4, String stringArgument5) {
+    final static BinaryBitmapFont computeRenderingSupport0090204(String stringArgument1, ResourceArchive resourceArchiveArgument2, ResourceArchive resourceArchiveArgument3, byte byteArgument4, String stringArgument5) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
-        RenderingSupport009 stackRenderingSupport009Local4 = null;
+        BinaryBitmapFont stackRenderingSupport009Local4 = null;
         RuntimeException stackRuntimeExceptionLocal5 = null;
         StringBuilder stackStringBuilderLocal6 = null;
         String stackStringLocal7 = null;

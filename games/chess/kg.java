@@ -11,7 +11,7 @@ final class kg extends kn {
     static String field_T;
     private boolean field_S;
     private int field_U;
-    private lh field_Q;
+    private BitmapFont field_Q;
 
     public static void c(boolean param0) {
         field_O = null;
@@ -78,19 +78,19 @@ final class kg extends kn {
           this.field_N = -28;
           if (0 == param1) {
             var7 = !this.field_S ? 0 : this.field_y - (this.field_W + 2 * this.field_N);
-            this.field_Q.a(this.field_R, var5 + (var7 + this.field_N), var6 + this.field_N, this.field_W - this.field_N, -(2 * this.field_N) + this.field_C, this.field_U, -1, this.field_S ? 0 : 2, 1, this.field_Q.field_C);
+            this.field_Q.drawParagraph(this.field_R, var5 + (var7 + this.field_N), var6 + this.field_N, this.field_W - this.field_N, -(2 * this.field_N) + this.field_C, this.field_U, -1, this.field_S ? 0 : 2, 1, this.field_Q.field_C);
             return;
           }
           return;
         }
         if (0 == param1) {
           var7Lifetime1 = !this.field_S ? 0 : this.field_y - (this.field_W + 2 * this.field_N);
-          this.field_Q.a(this.field_R, var5 + (var7Lifetime1 + this.field_N), var6 + this.field_N, this.field_W - this.field_N, -(2 * this.field_N) + this.field_C, this.field_U, -1, this.field_S ? 0 : 2, 1, this.field_Q.field_C);
+          this.field_Q.drawParagraph(this.field_R, var5 + (var7Lifetime1 + this.field_N), var6 + this.field_N, this.field_W - this.field_N, -(2 * this.field_N) + this.field_C, this.field_U, -1, this.field_S ? 0 : 2, 1, this.field_Q.field_C);
           return;
         }
     }
 
-    kg(int param0, int param1, int param2, int param3, mf param4, boolean param5, int param6, int param7, lh param8, int param9, String param10) {
+    kg(int param0, int param1, int param2, int param3, mf param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (jm) null, (rg) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -116,7 +116,7 @@ final class kg extends kn {
           this.field_Q = param8;
           this.field_W = param6;
           var12_int = this.field_W - this.field_N;
-          var13 = this.field_Q.b(param10, var12_int, this.field_Q.field_C) + 2 * this.field_N;
+          var13 = this.field_Q.textHeight(param10, var12_int, this.field_Q.field_C) + 2 * this.field_N;
           if (var13 > param3) {
             this.a(param1, 34, var13, param2, param0);
           } else {

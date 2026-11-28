@@ -9,7 +9,7 @@ final class gk implements wo {
     static RgbSprite[] field_d;
     private int field_i;
     private int field_l;
-    private vc field_h;
+    private BitmapFont field_h;
     private int field_a;
     static String[] field_k;
     private int field_g;
@@ -63,7 +63,7 @@ final class gk implements wo {
             return;
           }
           var13 = this.field_g + var14.field_I + var14.field_J;
-          this.field_h.a(param3.field_o, var13 + param2 + param3.field_r, param3.field_j + (param0 + this.field_a), param3.field_g - this.field_g - var13, -(this.field_g << 1) + param3.field_f, this.field_c, this.field_l, 1, 1, 0);
+          this.field_h.drawParagraph(param3.field_o, var13 + param2 + param3.field_r, param3.field_j + (param0 + this.field_a), param3.field_g - this.field_g - var13, -(this.field_g << 1) + param3.field_f, this.field_c, this.field_l, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -92,7 +92,7 @@ final class gk implements wo {
         field_d = null;
     }
 
-    gk(vc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    gk(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_g = param1;
           this.field_f = param5;

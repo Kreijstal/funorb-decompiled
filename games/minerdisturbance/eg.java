@@ -18,7 +18,7 @@ class eg implements ad, cf {
     int field_j;
     int field_l;
     int field_e;
-    we field_k;
+    BitmapFont field_k;
     int field_n;
     static Sprite[] field_m;
     static int field_h;
@@ -265,7 +265,7 @@ class eg implements ad, cf {
             tk.b(true);
           }
           if (param0 != 13034) {
-            this.field_k = (we) null;
+            this.field_k = (BitmapFont) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -318,19 +318,19 @@ class eg implements ad, cf {
             if (0 != var12Lifetime1 &&
               var12Lifetime1 != 3) {
               if (1 == var12Lifetime1) {
-                this.field_k.b(this.a(param7, (byte) 101), (var9_int >> 1) + this.a(param7, param6, -4, param5), var11 + this.a(param7, param0, (byte) 26, param4), param3, param2);
+                this.field_k.drawCentred(this.a(param7, (byte) 101), (var9_int >> 1) + this.a(param7, param6, -4, param5), var11 + this.a(param7, param0, (byte) 26, param4), param3, param2);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_k.c(this.a(param7, (byte) -114), this.a(param7, param6, -4, param5) + var9_int, this.a(param7, param0, (byte) 26, param4) + var11, param3, param2);
+                  this.field_k.drawRightAligned(this.a(param7, (byte) -114), this.a(param7, param6, -4, param5) + var9_int, this.a(param7, param0, (byte) 26, param4) + var11, param3, param2);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_k.a(this.a(param7, (byte) -100), this.a(param7, param6, -4, param5), var11 + this.a(param7, param0, (byte) 26, param4), param3, param2);
+              this.field_k.drawString(this.a(param7, (byte) -100), this.a(param7, param6, -4, param5), var11 + this.a(param7, param0, (byte) 26, param4), param3, param2);
             }
           } else {
-            this.field_k.a(this.a(param7, (byte) 67), this.a(param7, param6, -4, param5), this.a(param7, param0, (byte) 26, param4), var9_int, var10, param3, param2, this.field_j, this.field_d, this.field_e);
+            this.field_k.drawParagraph(this.a(param7, (byte) 67), this.a(param7, param6, -4, param5), this.a(param7, param0, (byte) 26, param4), var9_int, var10, param3, param2, this.field_j, this.field_d, this.field_e);
           }
           tk.b(param1);
           return;
@@ -796,7 +796,7 @@ class eg implements ad, cf {
         }
     }
 
-    eg(we param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    eg(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -951,7 +951,7 @@ class eg implements ad, cf {
         }
     }
 
-    eg(we param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    eg(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_e = param9;
           this.field_i = param2;

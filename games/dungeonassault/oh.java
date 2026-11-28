@@ -4,7 +4,7 @@
 final class oh implements ca {
     static String field_a;
     static IntrusiveDeque field_j;
-    private se field_m;
+    private BitmapFont field_m;
     private int field_g;
     static int field_s;
     private int field_p;
@@ -182,7 +182,7 @@ final class oh implements ca {
           }
           if (null != this.field_m) {
             var10 = this.field_k + this.field_l + this.field_d;
-            this.field_m.a(param1.field_w, param1.field_q + param2 + var10, this.field_f + (param1.field_v + param3), -var10 - (this.field_k - param1.field_x), -(this.field_k << 1) + param1.field_s, this.field_p, this.field_i, this.field_c, this.field_r, 0);
+            this.field_m.drawParagraph(param1.field_w, param1.field_q + param2 + var10, this.field_f + (param1.field_v + param3), -var10 - (this.field_k - param1.field_x), -(this.field_k << 1) + param1.field_s, this.field_p, this.field_i, this.field_c, this.field_r, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -285,7 +285,7 @@ final class oh implements ca {
         }
     }
 
-    oh(se param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    oh(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_c = 1;
         this.field_r = 1;
         try {

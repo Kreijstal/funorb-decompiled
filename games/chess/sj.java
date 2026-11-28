@@ -9,7 +9,7 @@ final class sj implements jm {
     static String field_t;
     static ci field_k;
     static String field_c;
-    private lh field_l;
+    private BitmapFont field_l;
     static String[] field_e;
     static String field_m;
     private int field_o;
@@ -20,7 +20,7 @@ final class sj implements jm {
     static long field_h;
     private int field_b;
     static long field_i;
-    static lh field_d;
+    static BitmapFont field_d;
     private int field_q;
 
     final static boolean isAcceptedTextInputCharacter(byte param0, char param1) {
@@ -136,7 +136,7 @@ final class sj implements jm {
             sj.a((byte) 20);
           }
           if (this.field_l != null) {
-            this.field_l.b(var12.field_v, var8 + var7 / 2, this.field_l.field_q + (var9 + var12.field_M), this.field_s, this.field_g);
+            this.field_l.drawCentred(var12.field_v, var8 + var7 / 2, this.field_l.field_q + (var9 + var12.field_M), this.field_s, this.field_g);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -164,21 +164,21 @@ final class sj implements jm {
         try {
           var2_int = BufferedSocket.field_k;
           var3 = rf.field_b;
-          var4 = EditableTextField.field_P.field_xb.b(param0, 500);
-          var5 = EditableTextField.field_P.field_xb.c(param0, 500) + 6;
+          var4 = EditableTextField.field_P.field_xb.lineCount(param0, 500);
+          var5 = EditableTextField.field_P.field_xb.maxLineWidth(param0, 500) + 6;
           var6 = var4 * fe.field_g + 2;
           var7 = ao.a(var5, true, var2_int, 12);
           var8 = sg.a(var3, var6, 20, 0);
           int var9 = -59 / ((param1 + 64) / 37);
           SoftwareRasterizer.drawRectangleOutline(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, -2 + var5, -2 + var6, 16777088);
-          EditableTextField.field_P.field_xb.a(param0, 3 + var7, -EditableTextField.field_P.field_xb.field_C + jg.field_I + (var8 + 1), 500, 1000, 0, -1, 0, 0, fe.field_g);
+          EditableTextField.field_P.field_xb.drawParagraph(param0, 3 + var7, -EditableTextField.field_P.field_xb.field_C + jg.field_I + (var8 + 1), 500, 1000, 0, -1, 0, 0, fe.field_g);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "sj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    sj(lh param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    sj(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_l = param0;
           this.field_g = param2;

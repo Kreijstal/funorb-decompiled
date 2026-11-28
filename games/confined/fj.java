@@ -165,35 +165,35 @@ class fj extends IntrusiveNode {
             ta.a(114, 202, ui.field_a, 148, AwtRasterBuffer.field_g);
             ta.a(115, 400, qe.field_J, 172, si.field_a);
             MatchingFieldValidator.field_j.d(448, 148);
-            var2_int = pn.field_a.c(fh.field_e);
+            var2_int = pn.field_a.stringWidth(fh.field_e);
             var3 = (-var2_int + 578) / 2;
-            pn.field_a.c(fh.field_e, var3, 76, 16777215, -1);
+            pn.field_a.drawString(fh.field_e, var3, 76, 16777215, -1);
             tj.a(2652240, 70, (byte) 58, 94, -8 + var3, 70);
             tj.a(2652240, 70, (byte) 126, 94, 94, 166);
             tj.a(2652240, 70, (byte) 23, 484, var3 - (-var2_int - 8), 70);
             tj.a(2652240, 70, (byte) 53, 484, 484, 142);
             tj.a(7370619, 120, (byte) 52, 166, 166, 104);
             tj.a(7370619, 104, (byte) 36, 180, 166, 104);
-            pn.field_a.c(da.field_a, 188, 110, 9805732, -1);
-            pn.field_a.c(ci.field_d, 220, 142, 9805732, -1);
-            pn.field_a.c(MatchingFieldValidator.field_h, 232, 166, 9805732, -1);
-            var4 = pn.field_a.c(pn.field_b);
+            pn.field_a.drawString(da.field_a, 188, 110, 9805732, -1);
+            pn.field_a.drawString(ci.field_d, 220, 142, 9805732, -1);
+            pn.field_a.drawString(MatchingFieldValidator.field_h, 232, 166, 9805732, -1);
+            var4 = pn.field_a.stringWidth(pn.field_b);
             var5 = (512 - var4) / 2;
-            pn.field_a.c(pn.field_b, var5, 220, 16777215, -1);
+            pn.field_a.drawString(pn.field_b, var5, 220, 16777215, -1);
             tj.a(2652240, 206, (byte) 88, 94, 94, 288);
             tj.a(2652240, 214, (byte) 19, -8 + var5, 94, 214);
             tj.a(2652240, 214, (byte) 122, 418, var5 - (-var4 - 8), 214);
             tj.a(2652240, 214, (byte) 107, 418, 418, 206);
-            pn.field_a.c(BufferedRandomAccessFile.field_i, 84, 306, 4243584, -1);
+            pn.field_a.drawString(BufferedRandomAccessFile.field_i, 84, 306, 4243584, -1);
             var6 = 234;
             tj.a(2652240, 188, (byte) 54, 556, 526, 188);
             tj.a(2652240, 188, (byte) 49, 556, 556, 260);
             tj.a(2652240, 260, (byte) 81, 548, 556, 260);
-            pn.field_a.a(ba.field_T, 540, 12 + var6, 4243584, -1);
+            pn.field_a.drawRightAligned(ba.field_T, 540, 12 + var6, 4243584, -1);
             var6 += 20;
-            pn.field_a.a(ue.field_s, 540, 12 + var6, 4243584, -1);
+            pn.field_a.drawRightAligned(ue.field_s, 540, 12 + var6, 4243584, -1);
             var6 += 20;
-            pn.field_a.a(NanoFrameTimer.field_k, 540, var6 + 12, 4243584, -1);
+            pn.field_a.drawRightAligned(NanoFrameTimer.field_k, 540, var6 + 12, 4243584, -1);
             var6 += 20;
           }
           incrementValue$14 = param0;
@@ -212,27 +212,27 @@ class fj extends IntrusiveNode {
             ta.a(106, 528, qe.field_J, 222, si.field_a);
             tj.a(7370619, 170, (byte) 55, 294, 294, 154);
             tj.a(7370619, 154, (byte) 49, 308, 294, 154);
-            pn.field_a.c(ol.field_b, 316, 160, 9805732, -1);
-            pn.field_a.c(ci.field_d, 348, 192, 9805732, -1);
-            pn.field_a.c(MatchingFieldValidator.field_h, 360, 216, 9805732, -1);
-            pn.field_a.a(eg.field_m, 92, 60, 472, 100, 4243584, -1, 0, 0, 20);
+            pn.field_a.drawString(ol.field_b, 316, 160, 9805732, -1);
+            pn.field_a.drawString(ci.field_d, 348, 192, 9805732, -1);
+            pn.field_a.drawString(MatchingFieldValidator.field_h, 360, 216, 9805732, -1);
+            pn.field_a.drawParagraph(eg.field_m, 92, 60, 472, 100, 4243584, -1, 0, 0, 20);
             tj.a(2652240, 70, (byte) 34, 76, 84, 70);
             tj.a(2652240, 70, (byte) 81, 76, 76, 234);
             tj.a(2652240, 234, (byte) 31, 84, 76, 234);
-            pn.field_a.c(qj.field_a, 121, 126, 4243584, -1);
+            pn.field_a.drawString(qj.field_a, 121, 126, 4243584, -1);
             tj.a(2652240, 120, (byte) 31, 105, 113, 120);
             tj.a(2652240, 120, (byte) 97, 105, 105, 158);
             tj.a(2652240, 144, (byte) 99, 170, 105, 144);
             tj.a(2652240, 144, (byte) 110, 135, 135, 158);
             tj.a(2652240, 144, (byte) 115, 170, 170, 264);
             tj.a(2652240, 256, (byte) 33, 222, 222, 264);
-            var2_intLifetime1 = pn.field_a.c(u.field_U);
+            var2_intLifetime1 = pn.field_a.stringWidth(u.field_U);
             var3Lifetime1 = (768 - var2_intLifetime1) / 2;
             tj.a(2652240, 264, (byte) 14, var3Lifetime1 - 8, 170, 264);
-            pn.field_a.c(u.field_U, var3Lifetime1, 270, 4243584, -1);
+            pn.field_a.drawString(u.field_U, var3Lifetime1, 270, 4243584, -1);
             tj.a(2652240, 264, (byte) 34, 546, var2_intLifetime1 + (var3Lifetime1 + 8), 264);
             tj.a(2652240, 264, (byte) 37, 546, 546, 256);
-            pn.field_a.c(sg.field_u, 76, 308, 4243584, -1);
+            pn.field_a.drawString(sg.field_u, 76, 308, 4243584, -1);
           }
           incrementValue$15 = param0;
           param0--;
@@ -255,14 +255,14 @@ class fj extends IntrusiveNode {
               } else {
                 tj.a(1088164, 104, (byte) 89, 112, 112, 70);
                 tj.a(1088164, 70, (byte) 50, 212, 112, 70);
-                pn.field_a.a(LightningArc.field_ib, 220, 60, 340, 40, 4243584, -1, 0, 0, 20);
+                pn.field_a.drawParagraph(LightningArc.field_ib, 220, 60, 340, 40, 4243584, -1, 0, 0, 20);
                 tj.a(10110754, 120, (byte) 110, 232, 176, 120);
-                pn.field_a.a(oj.field_z, 240, 110, 320, 40, 4243584, -1, 0, 0, 20);
+                pn.field_a.drawParagraph(oj.field_z, 240, 110, 320, 40, 4243584, -1, 0, 0, 20);
                 tj.a(11038741, 136, (byte) 107, 144, 144, 204);
                 tj.a(11038741, 204, (byte) 52, 212, 144, 204);
                 tj.a(11038741, 204, (byte) 87, 212, 212, 170);
                 tj.a(11038741, 170, (byte) 104, 218, 212, 170);
-                pn.field_a.a(rj.field_d, 226, 160, 334, 60, 4243584, -1, 0, 0, 20);
+                pn.field_a.drawParagraph(rj.field_d, 226, 160, 334, 60, 4243584, -1, 0, 0, 20);
                 SoftwareRasterizer.setClip(90, 0, 640, 254);
                 IntrusiveDeque.field_c.d(-470, 224);
                 SoftwareRasterizer.setClip(110, 254, 640, 288);
@@ -271,8 +271,8 @@ class fj extends IntrusiveNode {
                 IntrusiveDeque.field_c.d(-470, 224);
                 SoftwareRasterizer.resetClip();
                 ol.a(122, 30613, 2, 9, 232);
-                pn.field_a.a(ug.field_Z, 178, 230, 252, 60, 4243584, -1, 0, 0, 20);
-                pn.field_a.a(b.field_j, 466, 296, 4243584, -1);
+                pn.field_a.drawParagraph(ug.field_Z, 178, 230, 252, 60, 4243584, -1, 0, 0, 20);
+                pn.field_a.drawRightAligned(b.field_j, 466, 296, 4243584, -1);
               }
               break;
             }
@@ -285,10 +285,10 @@ class fj extends IntrusiveNode {
             kc.a(false, 129, 1, 96);
             kc.a(false, 194, 14, 76);
             kc.a(false, 259, 10, 96);
-            pn.field_a.a(wm.field_fb, 132, 58, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(a.field_a, 152, 123, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(ShockwaveBlast.field_H, 132, 188, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(b.a(new String[]{ic.field_d}, uh.field_d, 1177), 152, 253, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(wm.field_fb, 132, 58, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(a.field_a, 152, 123, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(ShockwaveBlast.field_H, 132, 188, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(b.a(new String[]{ic.field_d}, uh.field_d, 1177), 152, 253, 412, 60, 4243584, -1, 3, 1, 20);
           }
           incrementValue$17 = param0;
           param0--;
@@ -298,10 +298,10 @@ class fj extends IntrusiveNode {
             kc.a(false, 129, 11, 76);
             kc.a(false, 194, 6, 96);
             kc.a(false, 259, 13, 76);
-            pn.field_a.a(b.a(new String[]{ek.field_k}, rf.field_b, 1177), 152, 58, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(b.a(new String[]{s.field_L}, MovingTunnelEntity.field_J, 1177), 132, 123, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(nd.field_u, 152, 188, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(b.a(new String[]{cf.field_db}, kn.field_a, 1177), 132, 253, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(b.a(new String[]{ek.field_k}, rf.field_b, 1177), 152, 58, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(b.a(new String[]{s.field_L}, MovingTunnelEntity.field_J, 1177), 132, 123, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(nd.field_u, 152, 188, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(b.a(new String[]{cf.field_db}, kn.field_a, 1177), 132, 253, 412, 60, 4243584, -1, 3, 1, 20);
           }
           if (param1 > -120) {
             return;
@@ -314,10 +314,10 @@ class fj extends IntrusiveNode {
             kc.a(false, 129, 5, 96);
             kc.a(false, 194, 17, 76);
             lb.a(259, 100, 128, 96, 0.2, ri.field_c);
-            pn.field_a.a(b.a(new String[]{qn.field_x}, mm.field_fb, 1177), 132, 58, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(b.a(new String[]{kc.field_r}, pk.field_f, 1177), 152, 123, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(rd.field_Ib, 132, 188, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(di.field_b, 152, 253, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(b.a(new String[]{qn.field_x}, mm.field_fb, 1177), 132, 58, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(b.a(new String[]{kc.field_r}, pk.field_f, 1177), 152, 123, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(rd.field_Ib, 132, 188, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(di.field_b, 152, 253, 412, 60, 4243584, -1, 3, 1, 20);
           }
           incrementValue$19 = param0;
           param0--;
@@ -327,10 +327,10 @@ class fj extends IntrusiveNode {
             kc.a(false, 129, 8, 76);
             kc.a(false, 194, 16, 96);
             lb.a(259, 42, 128, 76, 0.2, DiskArchiveRequest.field_A);
-            pn.field_a.a(b.a(new String[]{r.field_b}, qm.field_A, 1177), 152, 58, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(kd.field_q, 132, 123, 412, 40, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(DisplayNameSelectionPanel.field_S, 152, 168, 412, 80, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(GameAppletShell.field_g, 132, 253, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(b.a(new String[]{r.field_b}, qm.field_A, 1177), 152, 58, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(kd.field_q, 132, 123, 412, 40, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(DisplayNameSelectionPanel.field_S, 152, 168, 412, 80, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(GameAppletShell.field_g, 132, 253, 412, 60, 4243584, -1, 3, 1, 20);
           }
           incrementValue$20 = param0;
           param0--;
@@ -340,43 +340,43 @@ class fj extends IntrusiveNode {
             kc.a(false, 129, 9, 96);
             kc.a(false, 194, 15, 76);
             kc.a(false, 259, 7, 96);
-            pn.field_a.a(b.a(new String[]{AwtRasterBuffer.field_g}, on.field_b, 1177), 132, 58, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(di.field_e, 152, 123, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(field_D, 132, 188, 412, 60, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(vj.field_b, 152, 253, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(b.a(new String[]{AwtRasterBuffer.field_g}, on.field_b, 1177), 132, 58, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(di.field_e, 152, 123, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(field_D, 132, 188, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.drawParagraph(vj.field_b, 152, 253, 412, 60, 4243584, -1, 3, 1, 20);
           }
           incrementValue$21 = param0;
           param0--;
           if (incrementValue$21 == 0 &&
             !ll.a(6, 1)) {
             var2_intLifetime3 = 64;
-            pn.field_a.a(AccountRequestState.field_c, 76, 56, 130, 100, 9805732, -1, 2, 1, 18);
+            pn.field_a.drawParagraph(AccountRequestState.field_c, 76, 56, 130, 100, 9805732, -1, 2, 1, 18);
             tj.a(7370619, 106, (byte) 53, 227, 214, 106);
             tj.a(7370619, 65, (byte) 18, 227, 227, 147);
             tj.a(7370619, 65, (byte) 35, 240, 227, 65);
             tj.a(7370619, 147, (byte) 83, 240, 227, 147);
-            pn.field_a.a(tj.field_F + ": ", 400, var2_intLifetime3 + 12, 16777215, -1);
-            pn.field_a.c("10000, 20000, 30000, ...", 400, var2_intLifetime3 + 12, 4243584, -1);
+            pn.field_a.drawRightAligned(tj.field_F + ": ", 400, var2_intLifetime3 + 12, 16777215, -1);
+            pn.field_a.drawString("10000, 20000, 30000, ...", 400, var2_intLifetime3 + 12, 4243584, -1);
             var2_intLifetime3 += 18;
-            pn.field_a.a(wd.field_e + ": ", 400, 12 + var2_intLifetime3, 16777215, -1);
-            pn.field_a.c("20000, 40000, 60000, ...", 400, var2_intLifetime3 + 12, 4243584, -1);
+            pn.field_a.drawRightAligned(wd.field_e + ": ", 400, 12 + var2_intLifetime3, 16777215, -1);
+            pn.field_a.drawString("20000, 40000, 60000, ...", 400, var2_intLifetime3 + 12, 4243584, -1);
             var2_intLifetime3 += 18;
-            pn.field_a.a(na.field_Q + ": ", 400, var2_intLifetime3 + 12, 16777215, -1);
-            pn.field_a.c("25000, 45000, 65000, ...", 400, var2_intLifetime3 + 12, 4243584, -1);
+            pn.field_a.drawRightAligned(na.field_Q + ": ", 400, var2_intLifetime3 + 12, 16777215, -1);
+            pn.field_a.drawString("25000, 45000, 65000, ...", 400, var2_intLifetime3 + 12, 4243584, -1);
             var2_intLifetime3 += 18;
-            pn.field_a.a(km.field_a + ": ", 400, var2_intLifetime3 + 12, 16777215, -1);
-            pn.field_a.c("35000, 75000, 115000, ...", 400, var2_intLifetime3 + 12, 4243584, -1);
+            pn.field_a.drawRightAligned(km.field_a + ": ", 400, var2_intLifetime3 + 12, 16777215, -1);
+            pn.field_a.drawString("35000, 75000, 115000, ...", 400, var2_intLifetime3 + 12, 4243584, -1);
             var2_intLifetime3 += 18;
-            pn.field_a.a(ne.field_a + ": ", 400, var2_intLifetime3 + 12, 16777215, -1);
-            pn.field_a.c("55000, 95000, 135000, ...", 400, 12 + var2_intLifetime3, 4243584, -1);
+            pn.field_a.drawRightAligned(ne.field_a + ": ", 400, var2_intLifetime3 + 12, 16777215, -1);
+            pn.field_a.drawString("55000, 95000, 135000, ...", 400, 12 + var2_intLifetime3, 4243584, -1);
             var2_intLifetime3 += 18;
-            var2_intLifetime3 = var2_intLifetime3 + 18 * pn.field_a.a(aj.field_b, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18);
-            var2_intLifetime3 = var2_intLifetime3 + 18 * pn.field_a.a(af.field_bb, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18);
-            var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(EmailFormatValidator.field_i, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
-            var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(SectorCacheStore.field_c, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
-            var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(qi.field_d, 76, var2_intLifetime3 - 4, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
-            var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(LightningArc.field_rb, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
-            pn.field_a.c(lk.field_c, 76, 12 + var2_intLifetime3, 4243584, -1);
+            var2_intLifetime3 = var2_intLifetime3 + 18 * pn.field_a.drawParagraph(aj.field_b, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18);
+            var2_intLifetime3 = var2_intLifetime3 + 18 * pn.field_a.drawParagraph(af.field_bb, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18);
+            var2_intLifetime3 = var2_intLifetime3 + pn.field_a.drawParagraph(EmailFormatValidator.field_i, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
+            var2_intLifetime3 = var2_intLifetime3 + pn.field_a.drawParagraph(SectorCacheStore.field_c, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
+            var2_intLifetime3 = var2_intLifetime3 + pn.field_a.drawParagraph(qi.field_d, 76, var2_intLifetime3 - 4, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
+            var2_intLifetime3 = var2_intLifetime3 + pn.field_a.drawParagraph(LightningArc.field_rb, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
+            pn.field_a.drawString(lk.field_c, 76, 12 + var2_intLifetime3, 4243584, -1);
             var2_intLifetime3 += 18;
           }
           return;

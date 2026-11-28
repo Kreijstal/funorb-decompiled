@@ -82,7 +82,7 @@ final class InputAdapter001 implements CallbackContract004 {
           SoftwareRaster.drawLine(integerLocal2, integerLocal3, integerLocal15 + integerLocal2, integerLocal3 + integerLocal16, 1);
           if (this.bitmapFontState0004 != null) {
             integerLocal7 = this.integerState0046 + (uiComponentPart001Local8.integerState0035 + uiComponentPart001Local8.integerState0032);
-            this.bitmapFontState0004.computeInteger1071(uiComponentArgument5.stringState0078, integerArgument2 - (-uiComponentArgument5.integerState0110 - integerLocal7), uiComponentArgument5.integerState0104 + (integerArgument3 + this.integerState0044), -this.integerState0046 - (integerLocal7 - uiComponentArgument5.integerState0107), uiComponentArgument5.integerState0108 - (this.integerState0046 << 1), this.integerState0043, this.integerState0040, 1, 1, 0);
+            this.bitmapFontState0004.drawParagraph(uiComponentArgument5.stringState0078, integerArgument2 - (-uiComponentArgument5.integerState0110 - integerLocal7), uiComponentArgument5.integerState0104 + (integerArgument3 + this.integerState0044), -this.integerState0046 - (integerLocal7 - uiComponentArgument5.integerState0107), uiComponentArgument5.integerState0108 - (this.integerState0046 << 1), this.integerState0043, this.integerState0040, 1, 1, 0);
           }
           if (byteArgument4 <= -60) {
             return;

@@ -72,7 +72,7 @@ final class gr {
             if (var6 == 2) {
               var4 = lga.a(true, new String[]{bd.field_k}, iia.field_q);
               var8 = lga.a(true, new String[]{var3}, wla.field_n);
-              var7 = -485 + (DisableSpecial.field_r.field_sb + HailAnimation.field_A.field_sb + dc.field_r.a(var8) - dc.field_r.a(var4));
+              var7 = -485 + (DisableSpecial.field_r.field_sb + HailAnimation.field_A.field_sb + dc.field_r.stringWidth(var8) - dc.field_r.stringWidth(var4));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -115,7 +115,7 @@ final class gr {
                 var5 = "";
                 var4 = "<col=999999>" + var4 + kna.field_h + "</col>";
               }
-              var9 = dc.field_r.a(var4);
+              var9 = dc.field_r.stringWidth(var4);
               if (!SnowEvent.e(param0 - 1377)) {
                 if (HailAnimation.field_A.field_T &&
                   -HailAnimation.field_A.field_D + mk.field_p < var9) {

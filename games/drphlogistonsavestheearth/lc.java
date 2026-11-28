@@ -287,7 +287,7 @@ final class lc extends IntrusiveNode {
           var2 = (ml) (ff.field_O.beginForward(-11151));
           while (var2 != null) {
             if (var2.field_o.isLinked(-1387)) {
-              var2.field_i.e(var2.field_k * SecondaryNodeDeque.field_e / 80);
+              var2.field_i.setVolume(var2.field_k * SecondaryNodeDeque.field_e / 80);
             } else {
               var2.unlink(-16175);
             }

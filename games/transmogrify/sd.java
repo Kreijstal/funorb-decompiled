@@ -12,19 +12,19 @@ final class sd extends bi {
 
     final void a(int param0, byte param1, int param2) {
         super.a(param0, (byte) -127, param2);
-        ArchiveRequest.field_q.c(this.field_P, (this.field_l >> 1) + param2, 103 + param0, 16777215, -1);
+        ArchiveRequest.field_q.drawCentred(this.field_P, (this.field_l >> 1) + param2, 103 + param0, 16777215, -1);
         if (param1 > -79) {
           this.field_T = false;
           if (null == this.field_U) {
             return;
           }
           SoftwareRasterizer.drawHorizontalLine(param2 + 20, -7 + (param0 + 120), 260, 8421504);
-          ArchiveRequest.field_q.a(this.field_U, param2 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, ArchiveRequest.field_q.field_y);
+          ArchiveRequest.field_q.drawParagraph(this.field_U, param2 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, ArchiveRequest.field_q.field_y);
           return;
         }
         if (null != this.field_U) {
           SoftwareRasterizer.drawHorizontalLine(param2 + 20, -7 + (param0 + 120), 260, 8421504);
-          ArchiveRequest.field_q.a(this.field_U, param2 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, ArchiveRequest.field_q.field_y);
+          ArchiveRequest.field_q.drawParagraph(this.field_U, param2 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, ArchiveRequest.field_q.field_y);
           return;
         }
     }
@@ -41,7 +41,7 @@ final class sd extends bi {
         try {
           this.field_U = param1;
           if (this.field_U != null) {
-            var3_int = ArchiveRequest.field_q.a(this.field_U, 260, ArchiveRequest.field_q.field_y);
+            var3_int = ArchiveRequest.field_q.textHeight(this.field_U, 260, ArchiveRequest.field_q.field_y);
             this.a(300, var3_int + 150, false);
           }
           this.field_R = new qe(13, 50, 274, 30, 15, 2113632, 4210752);

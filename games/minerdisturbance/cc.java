@@ -109,10 +109,10 @@ abstract class cc extends kn {
           var3 = tf.field_a;
           if (var3 < 100) {
             var2 = 480 + (32 + (-var3 / 2 - 38));
-            var4 = ce.field_d.c(CipherPacketBuffer.field_A[var6.field_s], 640);
+            var4 = ce.field_d.maxLineWidth(CipherPacketBuffer.field_A[var6.field_s], 640);
             ArchiveIndex.a(var2 - 10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
             nj.field_c[var6.field_s].drawQuarterSize(590, var2);
-            ce.field_d.c(CipherPacketBuffer.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
+            ce.field_d.drawRightAligned(CipherPacketBuffer.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
             if (param0 >= -79) {
               cc.a(37, 30);
               return;
@@ -121,10 +121,10 @@ abstract class cc extends kn {
           }
           if (var3 >= 250) {
             var2Lifetime1 = -123 - (-(var3 / 2) - 480) - 58;
-            var4Lifetime1 = ce.field_d.c(CipherPacketBuffer.field_A[var6.field_s], 640);
+            var4Lifetime1 = ce.field_d.maxLineWidth(CipherPacketBuffer.field_A[var6.field_s], 640);
             ArchiveIndex.a(var2Lifetime1 - 10, 60, -var4Lifetime1 + 570, var4Lifetime1 + 60, (byte) 60, he.field_b);
             nj.field_c[var6.field_s].drawQuarterSize(590, var2Lifetime1);
-            ce.field_d.c(CipherPacketBuffer.field_A[var6.field_s], 582, var2Lifetime1 + ce.field_d.field_I, 1, -1);
+            ce.field_d.drawRightAligned(CipherPacketBuffer.field_A[var6.field_s], 582, var2Lifetime1 + ce.field_d.field_I, 1, -1);
             if (param0 >= -79) {
               cc.a(37, 30);
               return;
@@ -132,10 +132,10 @@ abstract class cc extends kn {
             return;
           }
           var2Lifetime2 = 424;
-          var4Lifetime2 = ce.field_d.c(CipherPacketBuffer.field_A[var6.field_s], 640);
+          var4Lifetime2 = ce.field_d.maxLineWidth(CipherPacketBuffer.field_A[var6.field_s], 640);
           ArchiveIndex.a(var2Lifetime2 - 10, 60, -var4Lifetime2 + 570, var4Lifetime2 + 60, (byte) 60, he.field_b);
           nj.field_c[var6.field_s].drawQuarterSize(590, var2Lifetime2);
-          ce.field_d.c(CipherPacketBuffer.field_A[var6.field_s], 582, var2Lifetime2 + ce.field_d.field_I, 1, -1);
+          ce.field_d.drawRightAligned(CipherPacketBuffer.field_A[var6.field_s], 582, var2Lifetime2 + ce.field_d.field_I, 1, -1);
         }
         if (param0 < -79) {
           return;

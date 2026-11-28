@@ -107,10 +107,10 @@ final class m extends TextureOperator {
         return var3;
     }
 
-    final static co a(byte[] param0, int param1) {
-        co var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, int param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        co stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -122,7 +122,7 @@ final class m extends TextureOperator {
           if (param1 != 0) {
             field_B = -85;
           }
-          var2 = new co(param0, ca.field_a, pc.field_a, mh.field_c, vi.field_w, se.field_y);
+          var2 = new BinaryBitmapFont(param0, ca.field_a, pc.field_a, mh.field_c, vi.field_w, se.field_y);
           la.a((byte) 113);
           stackIn_6_0 = var2;
           return stackIn_6_0;

@@ -12,7 +12,7 @@ final class ld implements WidgetRenderer {
     private int field_f;
     static int field_k;
     private int field_d;
-    private uc field_j;
+    private BitmapFont field_j;
     static String field_b;
 
     public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
@@ -61,7 +61,7 @@ final class ld implements WidgetRenderer {
           SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (this.field_j != null) {
             var13 = this.field_c + var6.field_C + var6.field_G;
-            this.field_j.a(param4.text, var13 + (param2 + param4.x), this.field_d + (param1 + param4.y), -this.field_c - var13 + param4.width, -(this.field_c << 1) + param4.height, this.field_i, this.field_f, 1, 1, 0);
+            this.field_j.drawParagraph(param4.text, var13 + (param2 + param4.x), this.field_d + (param1 + param4.y), -this.field_c - var13 + param4.width, -(this.field_c << 1) + param4.height, this.field_i, this.field_f, 1, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -250,7 +250,7 @@ final class ld implements WidgetRenderer {
         }
     }
 
-    ld(uc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    ld(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

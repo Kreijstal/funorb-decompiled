@@ -64,7 +64,7 @@ final class ki extends ek {
           GzipInflater.a(param1.field_h, this.field_r, var7, param1.field_o + param0, (-this.field_r[0].field_k + param1.field_q >> 1) + param3 + param1.field_i, (byte) -10);
           stackIn_18_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_18_0;
-          this.field_c.a(param1.field_r, param1.field_o + param0, -2 + (param3 + param1.field_i), param1.field_h, param1.field_q, var8, -1, 1, 1, this.field_c.field_s);
+          this.field_c.drawParagraph(param1.field_r, param1.field_o + param0, -2 + (param3 + param1.field_i), param1.field_h, param1.field_q, var8, -1, 1, 1, this.field_c.field_s);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

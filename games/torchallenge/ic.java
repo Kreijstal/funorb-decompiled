@@ -306,11 +306,11 @@ abstract class ic extends UiComponent implements gk {
               param5 != null) {
               var8 = param5;
             }
-            var11 = SecondaryNodeDequeIterator.field_e.a(var8);
+            var11 = SecondaryNodeDequeIterator.field_e.stringWidth(var8);
             var12 = 1;
             if (var11 > param3) {
               var11 = param3;
-              var12 = SecondaryNodeDequeIterator.field_e.a(var8, var11);
+              var12 = SecondaryNodeDequeIterator.field_e.lineCount(var8, var11);
             }
             var13 = var12 * var10;
             if (param1 <= 16) {
@@ -325,7 +325,7 @@ abstract class ic extends UiComponent implements gk {
             if (16 >= param1) {
               return;
             }
-            SecondaryNodeDequeIterator.field_e.a(var8, var14, var15, var11, var13, 6488064, -1, 0, 0, var10);
+            SecondaryNodeDequeIterator.field_e.drawParagraph(var8, var14, var15, var11, var13, 6488064, -1, 0, 0, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -648,11 +648,11 @@ abstract class ic extends UiComponent implements gk {
               param5 != null) {
               var8 = param5;
             }
-            var11 = SecondaryNodeDequeIterator.field_e.a(var8);
+            var11 = SecondaryNodeDequeIterator.field_e.stringWidth(var8);
             var12 = 1;
             if (var11 > param3) {
               var11 = param3;
-              var12 = SecondaryNodeDequeIterator.field_e.a(var8, var11);
+              var12 = SecondaryNodeDequeIterator.field_e.lineCount(var8, var11);
             }
             var13 = var12 * var10;
             if (param1 <= 16) {
@@ -667,7 +667,7 @@ abstract class ic extends UiComponent implements gk {
             if (16 >= param1) {
               return;
             }
-            SecondaryNodeDequeIterator.field_e.a(var8, var14, var15, var11, var13, 6488064, -1, 0, 0, var10);
+            SecondaryNodeDequeIterator.field_e.drawParagraph(var8, var14, var15, var11, var13, 6488064, -1, 0, 0, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

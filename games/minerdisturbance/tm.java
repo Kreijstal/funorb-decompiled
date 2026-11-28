@@ -530,7 +530,7 @@ final class tm extends IntrusiveNode {
           var12Lifetime2 = 0;
           if (this.field_B) {
             var12Lifetime2 = mm.field_a.field_I + mm.field_a.field_E;
-            mm.field_a.a(MouseWheelInput.field_f, var10Lifetime2, var11Lifetime2, 1, 8063303);
+            mm.field_a.drawString(MouseWheelInput.field_f, var10Lifetime2, var11Lifetime2, 1, 8063303);
           }
           var13Lifetime1 = 0;
           if (param0 != 94) {
@@ -558,8 +558,8 @@ final class tm extends IntrusiveNode {
               } else {
                 var7 = 360;
               }
-              ce.field_d.a(this.field_t[var13Lifetime1], -var7 + 360 + var10Lifetime2, var12Lifetime2 + var9Lifetime2 * var2_int + var11Lifetime2 - ce.field_d.field_I, var7, 480, 1, -1, 0, 0, var2_int);
-              var9Lifetime2 = var9Lifetime2 + ce.field_d.a(this.field_t[var13Lifetime1], var7);
+              ce.field_d.drawParagraph(this.field_t[var13Lifetime1], -var7 + 360 + var10Lifetime2, var12Lifetime2 + var9Lifetime2 * var2_int + var11Lifetime2 - ce.field_d.field_I, var7, 480, 1, -1, 0, 0, var2_int);
+              var9Lifetime2 = var9Lifetime2 + ce.field_d.lineCount(this.field_t[var13Lifetime1], var7);
               var13Lifetime1++;
               continue;
             }
@@ -600,16 +600,16 @@ final class tm extends IntrusiveNode {
             }
           }
           if (this.field_B) {
-            ce.field_d.a(ByteStorage.field_b, var10Lifetime2, (1 + var9Lifetime2) * var2_int + var11Lifetime2 + var12Lifetime2, 1, -1);
+            ce.field_d.drawString(ByteStorage.field_b, var10Lifetime2, (1 + var9Lifetime2) * var2_int + var11Lifetime2 + var12Lifetime2, 1, -1);
             if (var28 != 0) {
-              ce.field_d.a(aj.field_a, var10Lifetime2, var12Lifetime2 + (var11Lifetime2 + var2_int * (var9Lifetime2 + 1)), 1, -1);
-              ce.field_d.c(qe.field_d, -15 + (var10Lifetime2 + var7 + var13Lifetime1), var11Lifetime2 - (-(var2_int * (var9Lifetime2 + 1)) - var12Lifetime2), 1, -1);
-              ce.field_d.c(Integer.toString(this.field_q / 100), var13Lifetime1 + (var7 + var10Lifetime2), var11Lifetime2 - (-(var2_int * (1 + var9Lifetime2)) - var12Lifetime2), 1, -1);
+              ce.field_d.drawString(aj.field_a, var10Lifetime2, var12Lifetime2 + (var11Lifetime2 + var2_int * (var9Lifetime2 + 1)), 1, -1);
+              ce.field_d.drawRightAligned(qe.field_d, -15 + (var10Lifetime2 + var7 + var13Lifetime1), var11Lifetime2 - (-(var2_int * (var9Lifetime2 + 1)) - var12Lifetime2), 1, -1);
+              ce.field_d.drawRightAligned(Integer.toString(this.field_q / 100), var13Lifetime1 + (var7 + var10Lifetime2), var11Lifetime2 - (-(var2_int * (1 + var9Lifetime2)) - var12Lifetime2), 1, -1);
             }
           } else {
-            ce.field_d.a(aj.field_a, var10Lifetime2, var12Lifetime2 + (var11Lifetime2 + var2_int * (var9Lifetime2 + 1)), 1, -1);
-            ce.field_d.c(qe.field_d, -15 + (var10Lifetime2 + var7 + var13Lifetime1), var11Lifetime2 - (-(var2_int * (var9Lifetime2 + 1)) - var12Lifetime2), 1, -1);
-            ce.field_d.c(Integer.toString(this.field_q / 100), var13Lifetime1 + (var7 + var10Lifetime2), var11Lifetime2 - (-(var2_int * (1 + var9Lifetime2)) - var12Lifetime2), 1, -1);
+            ce.field_d.drawString(aj.field_a, var10Lifetime2, var12Lifetime2 + (var11Lifetime2 + var2_int * (var9Lifetime2 + 1)), 1, -1);
+            ce.field_d.drawRightAligned(qe.field_d, -15 + (var10Lifetime2 + var7 + var13Lifetime1), var11Lifetime2 - (-(var2_int * (var9Lifetime2 + 1)) - var12Lifetime2), 1, -1);
+            ce.field_d.drawRightAligned(Integer.toString(this.field_q / 100), var13Lifetime1 + (var7 + var10Lifetime2), var11Lifetime2 - (-(var2_int * (1 + var9Lifetime2)) - var12Lifetime2), 1, -1);
           }
           if (var8 != 0) {
             var14Lifetime1 = 0;
@@ -715,14 +715,14 @@ final class tm extends IntrusiveNode {
                 var7 > 1) {
                 var6 = 320;
               }
-              this.field_A = this.field_A + ce.field_d.a(this.field_t[var7], var6);
+              this.field_A = this.field_A + ce.field_d.lineCount(this.field_t[var7], var6);
               var7++;
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            this.field_A = this.field_A + ce.field_d.a(uf.field_v, var6);
+            this.field_A = this.field_A + ce.field_d.lineCount(uf.field_v, var6);
             this.field_A = this.field_A * var5_int;
             this.field_A = this.field_A + 10;
             if (this.field_B) {

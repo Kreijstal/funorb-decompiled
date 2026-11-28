@@ -23,28 +23,28 @@ final class MixedSupport045 implements CallbackContract007 {
           if (bitmapFontArgument8 == UiComponentPart029.renderingSupport009State0005) {
             integerLocal1 = 1;
           }
-          bitmapFontArgument8.computeInteger1071(stringArgument4, integerArgument11 - integerLocal1, -integerLocal1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
-          bitmapFontArgument8.computeInteger1071(stringArgument4, -integerLocal1 + integerArgument11, integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
-          bitmapFontArgument8.computeInteger1071(stringArgument4, integerArgument11 - integerLocal1, integerArgument3 + integerLocal1, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
-          bitmapFontArgument8.computeInteger1071(stringArgument4, integerArgument11, -integerLocal1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+          bitmapFontArgument8.drawParagraph(stringArgument4, integerArgument11 - integerLocal1, -integerLocal1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+          bitmapFontArgument8.drawParagraph(stringArgument4, -integerLocal1 + integerArgument11, integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+          bitmapFontArgument8.drawParagraph(stringArgument4, integerArgument11 - integerLocal1, integerArgument3 + integerLocal1, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+          bitmapFontArgument8.drawParagraph(stringArgument4, integerArgument11, -integerLocal1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
           if (byteArgument9 > -123) {
             MixedSupport045.performAction0554(false, -18, 81);
           }
-          bitmapFontArgument8.computeInteger1071(stringArgument4, integerArgument11, integerArgument3 + integerLocal1, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
-          bitmapFontArgument8.computeInteger1071(stringArgument4, integerArgument11 + integerLocal1, integerArgument3 - integerLocal1, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
-          bitmapFontArgument8.computeInteger1071(stringArgument4, integerArgument11 + integerLocal1, integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
-          bitmapFontArgument8.computeInteger1071(stringArgument4, integerLocal1 + integerArgument11, integerArgument3 + integerLocal1, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+          bitmapFontArgument8.drawParagraph(stringArgument4, integerArgument11, integerArgument3 + integerLocal1, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+          bitmapFontArgument8.drawParagraph(stringArgument4, integerArgument11 + integerLocal1, integerArgument3 - integerLocal1, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+          bitmapFontArgument8.drawParagraph(stringArgument4, integerArgument11 + integerLocal1, integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+          bitmapFontArgument8.drawParagraph(stringArgument4, integerLocal1 + integerArgument11, integerArgument3 + integerLocal1, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
           if (bitmapFontArgument8 == SceneWidget.renderingSupport009State0007) {
-            bitmapFontArgument8.computeInteger1071(stringArgument4, 1 + integerArgument11, -integerLocal1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
-            bitmapFontArgument8.computeInteger1071(stringArgument4, integerArgument11 - 1, -integerLocal1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
-            bitmapFontArgument8.computeInteger1071(stringArgument4, integerArgument11 + integerLocal1, -1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
-            bitmapFontArgument8.computeInteger1071(stringArgument4, -integerLocal1 + integerArgument11, integerArgument3 - 1, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
-            bitmapFontArgument8.computeInteger1071(stringArgument4, integerLocal1 + integerArgument11, 1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
-            bitmapFontArgument8.computeInteger1071(stringArgument4, integerArgument11 - integerLocal1, integerArgument3 + 1, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
-            bitmapFontArgument8.computeInteger1071(stringArgument4, integerArgument11 + 1, integerLocal1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
-            bitmapFontArgument8.computeInteger1071(stringArgument4, -1 + integerArgument11, integerArgument3 + integerLocal1, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+            bitmapFontArgument8.drawParagraph(stringArgument4, 1 + integerArgument11, -integerLocal1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+            bitmapFontArgument8.drawParagraph(stringArgument4, integerArgument11 - 1, -integerLocal1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+            bitmapFontArgument8.drawParagraph(stringArgument4, integerArgument11 + integerLocal1, -1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+            bitmapFontArgument8.drawParagraph(stringArgument4, -integerLocal1 + integerArgument11, integerArgument3 - 1, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+            bitmapFontArgument8.drawParagraph(stringArgument4, integerLocal1 + integerArgument11, 1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+            bitmapFontArgument8.drawParagraph(stringArgument4, integerArgument11 - integerLocal1, integerArgument3 + 1, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+            bitmapFontArgument8.drawParagraph(stringArgument4, integerArgument11 + 1, integerLocal1 + integerArgument3, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
+            bitmapFontArgument8.drawParagraph(stringArgument4, -1 + integerArgument11, integerArgument3 + integerLocal1, integerArgument1, integerArgument6, 65793, -1, integerArgument10, integerArgument2, integerArgument5);
           }
-          stackIntegerLocal3 = bitmapFontArgument8.computeInteger1071(stringArgument4, integerArgument11, integerArgument3, integerArgument1, integerArgument6, integerArgument7, -1, integerArgument10, integerArgument2, integerArgument5);
+          stackIntegerLocal3 = bitmapFontArgument8.drawParagraph(stringArgument4, integerArgument11, integerArgument3, integerArgument1, integerArgument6, integerArgument7, -1, integerArgument10, integerArgument2, integerArgument5);
           return stackIntegerLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal10) {
           caughtExceptionLocal9 = caughtParameterLocal10;

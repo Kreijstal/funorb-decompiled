@@ -36,7 +36,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements uja, Wi
         this.field_F = new InteractiveWidget(ne.field_m, (WidgetListener) null);
         this.field_C = new InteractiveWidget(bga.field_f, (WidgetListener) null);
         this.field_G.tooltip = FloodAnimation.field_z;
-        this.field_G.a(7, new AccountNameAvailabilityValidator(this.field_G));
+        this.field_G.setFieldValidator(7, new AccountNameAvailabilityValidator(this.field_G));
         this.field_F.field_z = false;
         this.field_F.renderer = (WidgetRenderer) ((Object) new ff());
         this.field_C.renderer = (WidgetRenderer) ((Object) new pka());
@@ -119,7 +119,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements uja, Wi
           int var3_int = -77 / ((-41 - param1) / 37);
           var4 = this.field_G;
           var5 = param0;
-          ((TextInputWidget) ((Object) var4)).a((byte) 122, var5, false);
+          ((TextInputWidget) ((Object) var4)).setText((byte) 122, var5, false);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "gda.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -5,7 +5,7 @@ class vf implements fe, pj {
     int field_r;
     int field_i;
     int field_j;
-    ok field_a;
+    BitmapFont field_a;
     int field_h;
     int field_p;
     int field_g;
@@ -292,19 +292,19 @@ class vf implements fe, pj {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_a.b(this.b(param6, -2), this.a(param3, 14525, param1, param6) + (var9_int >> 1), this.a(param6, -59, param2, param4) + var11, param7, param0);
+                this.field_a.drawCentred(this.b(param6, -2), this.a(param3, 14525, param1, param6) + (var9_int >> 1), this.a(param6, -59, param2, param4) + var11, param7, param0);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_a.a(this.b(param6, -2), var9_int + this.a(param3, 14525, param1, param6), this.a(param6, -28, param2, param4) + var11, param7, param0);
+                  this.field_a.drawRightAligned(this.b(param6, -2), var9_int + this.a(param3, 14525, param1, param6), this.a(param6, -28, param2, param4) + var11, param7, param0);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_a.c(this.b(param6, -2), this.a(param3, 14525, param1, param6), var11 + this.a(param6, -91, param2, param4), param7, param0);
+              this.field_a.drawString(this.b(param6, -2), this.a(param3, 14525, param1, param6), var11 + this.a(param6, -91, param2, param4), param7, param0);
             }
           } else {
-            this.field_a.a(this.b(param6, -2), this.a(param3, 14525, param1, param6), this.a(param6, -34, param2, param4), var9_int, var10, param7, param0, this.field_p, this.field_k, this.field_s);
+            this.field_a.drawParagraph(this.b(param6, -2), this.a(param3, 14525, param1, param6), this.a(param6, -34, param2, param4), var9_int, var10, param7, param0, this.field_p, this.field_k, this.field_s);
           }
           ib.b(false);
           return;
@@ -433,7 +433,7 @@ class vf implements fe, pj {
         }
     }
 
-    vf(ok param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    vf(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -673,7 +673,7 @@ class vf implements fe, pj {
         field_t = null;
     }
 
-    vf(ok param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    vf(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_b = param3;
           this.field_m = param10;

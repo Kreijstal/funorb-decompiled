@@ -317,7 +317,7 @@ final class SceneWidgetPart005 extends SceneWidget {
             }
             this.sceneWidgetPart009ArrayState0002[integerLocal1] = new IconLabelWidget(0L, sceneWidgetArgument3, (SceneWidget) null, sceneWidgetArgument4, (RgbSprite) (objectLocal21), stringArrayArgument7[integerLocal1]);
             this.performAction1768(this.sceneWidgetPart009ArrayState0002[integerLocal1], -16834);
-            integerLocal22 = bitmapFontLocal23.computeInteger1066(stringArrayArgument7[integerLocal1]);
+            integerLocal22 = bitmapFontLocal23.stringWidth(stringArrayArgument7[integerLocal1]);
             if (integerLocal22 > this.integerState0321) {
               this.integerState0321 = integerLocal22;
             }

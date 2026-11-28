@@ -152,17 +152,17 @@ class EditableTextField extends ck {
               }
             } else {
               if (param2 == 13) {
-                this.p(61);
+                this.clearText(61);
                 return true;
               }
               if (param2 == 96) {
                 if (0 < this.field_L) {
                   if (qk.field_e[82]) {
-                    stackIn_47_1 = this.o(88);
+                    stackIn_47_1 = this.findPreviousWordBoundary(88);
                   } else {
                     stackIn_47_1 = this.field_L - 1;
                   }
-                  this.a(stackIn_47_1, 6931);
+                  this.moveCaret(stackIn_47_1, 6931);
                   return true;
                 }
               } else {
@@ -171,18 +171,18 @@ class EditableTextField extends ck {
                     if (!qk.field_e[82]) {
                       stackIn_41_1 = 1 + this.field_L;
                     } else {
-                      stackIn_41_1 = this.f((byte) 116);
+                      stackIn_41_1 = this.findNextWordBoundary((byte) 116);
                     }
-                    this.a(stackIn_41_1, 6931);
+                    this.moveCaret(stackIn_41_1, 6931);
                     return true;
                   }
                 } else {
                   if (param2 == 102) {
-                    this.a(0, 6931);
+                    this.moveCaret(0, 6931);
                     return true;
                   }
                   if (param2 == 103) {
-                    this.a(this.field_w.length(), 6931);
+                    this.moveCaret(this.field_w.length(), 6931);
                     return true;
                   }
                   if (param2 == 84) {
@@ -223,7 +223,7 @@ class EditableTextField extends ck {
         }
     }
 
-    final void a(String param0, boolean param1, byte param2) {
+    final void setText(String param0, boolean param1, byte param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException stackIn_13_0 = null;
@@ -289,7 +289,7 @@ class EditableTextField extends ck {
           ((TextFieldListener) (this.field_n)).onTextChanged(this, 10000536);
         }
         if (param0 != 4746) {
-          discarded$0 = this.o(99);
+          discarded$0 = this.findPreviousWordBoundary(99);
         }
     }
 
@@ -325,7 +325,7 @@ class EditableTextField extends ck {
         }
     }
 
-    private final int o(int param0) {
+    private final int findPreviousWordBoundary(int param0) {
         int var2;
         int var3;
         var3 = DungeonAssault.field_K;
@@ -369,13 +369,13 @@ class EditableTextField extends ck {
           } else {
             stackIn_7_1 = 0;
           }
-          this.a(stackIn_7_1, 6931);
+          this.moveCaret(stackIn_7_1, 6931);
           var9 = kd.correctedCurrentTimeMillis(-2456);
           stackIn_10_1 = !(-this.field_O + var9 >= 250L);
           this.field_N = stackIn_10_1;
           if (this.field_N) {
-            this.field_M = this.o(88);
-            this.field_L = this.f((byte) 99);
+            this.field_M = this.findPreviousWordBoundary(88);
+            this.field_L = this.findNextWordBoundary((byte) 99);
             if (this.field_L > 0 &&
               this.field_w.charAt(-1 + this.field_L) == 32) {
               this.field_L = this.field_L - 1;
@@ -416,7 +416,7 @@ class EditableTextField extends ck {
           }
         }
         if (param2 != 0) {
-          this.j(31);
+          this.scrollCaretIntoView(31);
         }
     }
 
@@ -484,7 +484,7 @@ class EditableTextField extends ck {
         return var13;
     }
 
-    private final void a(int param0, int param1) {
+    private final void moveCaret(int param0, int param1) {
         this.field_L = param0;
         if (param1 != 6931) {
           field_P = false;
@@ -502,7 +502,7 @@ class EditableTextField extends ck {
         }
     }
 
-    private final int f(byte param0) {
+    private final int findNextWordBoundary(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -528,7 +528,7 @@ class EditableTextField extends ck {
         int var6 = 0;
         try {
           super.a(param0, param1, param2, param3);
-          this.j(-24768);
+          this.scrollCaretIntoView(-24768);
           if (1 == this.field_y) {
             if (this.field_o instanceof th) {
               var5 = (th) ((Object) this.field_o);
@@ -557,7 +557,7 @@ class EditableTextField extends ck {
         try {
           this.field_K = param2;
           this.field_o = hl.field_a.field_c;
-          this.a(param0, true, (byte) 57);
+          this.setText(param0, true, (byte) 57);
           this.field_Q = true;
           this.field_I = kd.correctedCurrentTimeMillis(-2456);
         } catch (RuntimeException runtimeException) {
@@ -632,7 +632,7 @@ class EditableTextField extends ck {
         }
     }
 
-    private final void j(int param0) {
+    private final void scrollCaretIntoView(int param0) {
         l var3;
         int var4;
         int var5;
@@ -682,7 +682,7 @@ class EditableTextField extends ck {
         return;
     }
 
-    final void p(int param0) {
+    final void clearText(int param0) {
         if (param0 <= 30) {
           EditableTextField.a((byte) 6, (CharSequence) null, 'ﾫ');
         }

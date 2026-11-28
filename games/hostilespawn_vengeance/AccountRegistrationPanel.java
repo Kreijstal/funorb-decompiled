@@ -11,7 +11,7 @@ final class AccountRegistrationPanel extends vd implements nk, qk, kn {
     private ph field_S;
     private TextInputField field_M;
     private cj field_T;
-    static nc field_L;
+    static CoverageBitmapFont field_L;
     private TextInputField field_N;
     private TextInputField field_F;
     static BufferedRandomAccessFile field_K;
@@ -144,7 +144,7 @@ final class AccountRegistrationPanel extends vd implements nk, qk, kn {
         try {
           var3 = this.field_P;
           var4 = param1;
-          ((EditableTextField) ((Object) var3)).a((byte) 88, false, var4);
+          ((EditableTextField) ((Object) var3)).setText((byte) 88, false, var4);
           if (param0) {
             return;
           }
@@ -459,7 +459,7 @@ final class AccountRegistrationPanel extends vd implements nk, qk, kn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -118) {
-            field_L = (nc) null;
+            field_L = (CoverageBitmapFont) null;
           }
           stackIn_3_0 = ll.field_e.getFileByName(param0, "", 0);
           return stackIn_3_0;

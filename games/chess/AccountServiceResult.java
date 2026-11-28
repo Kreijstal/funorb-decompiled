@@ -15,8 +15,8 @@ final class AccountServiceResult {
         field_b = null;
         field_d = null;
         if (param0 != 0) {
-          lh var2 = (lh) null;
-          AccountServiceResult.a(-104, 12, 19, -21, -33, 26, (lh) null, 114, 23, (byte) 6, -99, -41, -16);
+          BitmapFont var2 = (BitmapFont) null;
+          AccountServiceResult.a(-104, 12, 19, -21, -33, 26, (BitmapFont) null, 114, 23, (byte) 6, -99, -41, -16);
         }
     }
 
@@ -64,7 +64,7 @@ final class AccountServiceResult {
         return uc.b(-17260);
     }
 
-    final static ci a(int param0, int param1, int param2, int param3, int param4, int param5, lh param6, int param7, int param8, byte param9, int param10, int param11, int param12) {
+    final static ci a(int param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, int param7, int param8, byte param9, int param10, int param11, int param12) {
         ci var13 = null;
         RuntimeException var13_ref = null;
         int var14 = 0;

@@ -17,7 +17,7 @@ class fd extends ja {
     private int field_jb;
     private int field_K;
     private int field_O;
-    private we field_U;
+    private BitmapFont field_U;
     private int field_bb;
     private int field_db;
     private Sprite[] field_E;

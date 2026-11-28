@@ -8,7 +8,7 @@ class na extends ud implements vd {
     private boolean field_ib;
     static int field_kb;
     static String field_fb;
-    private vc field_jb;
+    private BitmapFont field_jb;
     private boolean field_hb;
     private co field_cb;
 
@@ -174,7 +174,7 @@ class na extends ud implements vd {
         }
     }
 
-    na(ol param0, vc param1, String param2, boolean param3, boolean param4) {
+    na(ol param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new jd((na) null, param1, param2), 77, 10, 10);
         try {
           this.field_gb = false;

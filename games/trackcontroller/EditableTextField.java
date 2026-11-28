@@ -64,17 +64,17 @@ class EditableTextField extends ButtonWidget {
                 }
               } else {
                 if (param3 == 13) {
-                  this.l(-90);
+                  this.clearText(-90);
                   return true;
                 }
                 if (param3 != 96) {
                   if (97 != param3) {
                     if (param3 == 102) {
-                      this.a(-19166, 0);
+                      this.moveCaret(-19166, 0);
                       return true;
                     }
                     if (param3 == 103) {
-                      this.a(-19166, this.field_s.length());
+                      this.moveCaret(-19166, this.field_s.length());
                       return true;
                     }
                     if (param3 == 84) {
@@ -104,9 +104,9 @@ class EditableTextField extends ButtonWidget {
                       if (!MatchingFieldValidator.keyDown[82]) {
                         stackIn_29_2 = 1 + this.field_Q;
                       } else {
-                        stackIn_29_2 = this.r(0);
+                        stackIn_29_2 = this.findNextWordBoundary(0);
                       }
-                      this.a(stackIn_28_1, stackIn_29_2);
+                      this.moveCaret(stackIn_28_1, stackIn_29_2);
                       return true;
                     }
                   }
@@ -114,11 +114,11 @@ class EditableTextField extends ButtonWidget {
                   if (this.field_Q > 0) {
                     stackIn_21_1 = -19166;
                     if (MatchingFieldValidator.keyDown[82]) {
-                      stackIn_22_2 = this.k(-1);
+                      stackIn_22_2 = this.findPreviousWordBoundary(-1);
                     } else {
                       stackIn_22_2 = -1 + this.field_Q;
                     }
-                    this.a(stackIn_21_1, stackIn_22_2);
+                    this.moveCaret(stackIn_21_1, stackIn_22_2);
                     return true;
                   }
                 }
@@ -214,13 +214,13 @@ class EditableTextField extends ButtonWidget {
           } else {
             stackIn_7_2 = var8_int;
           }
-          this.a(stackIn_6_1, stackIn_7_2);
+          this.moveCaret(stackIn_6_1, stackIn_7_2);
           var8_long = qg.correctedCurrentTimeMillis(false);
           stackIn_10_1 = !(-this.field_R + var8_long >= 250L);
           this.field_K = stackIn_10_1;
           if (this.field_K) {
-            this.field_N = this.k(param4 - 1);
-            this.field_Q = this.r(0);
+            this.field_N = this.findPreviousWordBoundary(param4 - 1);
+            this.field_Q = this.findNextWordBoundary(0);
             if (0 < this.field_Q &&
               32 == this.field_s.charAt(-1 + this.field_Q)) {
               this.field_Q = this.field_Q - 1;
@@ -265,7 +265,7 @@ class EditableTextField extends ButtonWidget {
         }
     }
 
-    final void a(boolean param0, String param1, int param2) {
+    final void setText(boolean param0, String param1, int param2) {
         int dupTemp$2 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -306,7 +306,7 @@ class EditableTextField extends ButtonWidget {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void moveCaret(int param0, int param1) {
         if (param0 != -19166) {
           return;
         }
@@ -318,7 +318,7 @@ class EditableTextField extends ButtonWidget {
 
     private final String getSelectedText(int param0) {
         if (param0 > -82) {
-          this.a(-5, 11);
+          this.moveCaret(-5, 11);
         }
         int var2 = this.field_Q <= this.field_N ? this.field_Q : this.field_N;
         int var3 = this.field_N < this.field_Q ? this.field_Q : this.field_N;
@@ -333,7 +333,7 @@ class EditableTextField extends ButtonWidget {
         this.deleteSelection(29388);
     }
 
-    private final int k(int param0) {
+    private final int findPreviousWordBoundary(int param0) {
         int var2;
         int var3;
         var3 = TrackController.field_F ? 1 : 0;
@@ -349,7 +349,7 @@ class EditableTextField extends ButtonWidget {
         return var2;
     }
 
-    private final int r(int param0) {
+    private final int findNextWordBoundary(int param0) {
         int var2;
         int var3;
         int var4;
@@ -411,7 +411,7 @@ class EditableTextField extends ButtonWidget {
         }
     }
 
-    private final void q(int param0) {
+    private final void scrollCaretIntoView(int param0) {
         int var2;
         dl var3;
         rb var4;
@@ -558,7 +558,7 @@ class EditableTextField extends ButtonWidget {
         RuntimeException var5 = null;
         try {
           super.a(param0, param1, param2, param3);
-          this.q(param2 ^ 92);
+          this.scrollCaretIntoView(param2 ^ 92);
           if (this.field_r == 1) {
             if (this.field_y instanceof dl) {
               var7 = (dl) ((Object) this.field_y);
@@ -606,7 +606,7 @@ class EditableTextField extends ButtonWidget {
         try {
           this.field_y = field_O.field_e;
           this.field_J = param2;
-          this.a(true, param0, -74);
+          this.setText(true, param0, -74);
           this.field_P = true;
           this.field_I = qg.correctedCurrentTimeMillis(false);
         } catch (RuntimeException runtimeException) {
@@ -623,7 +623,7 @@ class EditableTextField extends ButtonWidget {
         }
     }
 
-    final void l(int param0) {
+    final void clearText(int param0) {
         this.field_s = "";
         this.field_N = 0;
         this.field_Q = 0;
@@ -645,7 +645,7 @@ class EditableTextField extends ButtonWidget {
           this.notifyTextChanged(true);
         }
         if (param0 != 29388) {
-          this.q(93);
+          this.scrollCaretIntoView(93);
         }
     }
 

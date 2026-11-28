@@ -23,10 +23,10 @@ final class cj implements fe {
         }
     }
 
-    final static ce a(int param0, int param1, ResourceArchive param2, int param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(int param0, int param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         ResourceArchive var6 = null;
-        ce stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

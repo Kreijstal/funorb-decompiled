@@ -132,10 +132,10 @@ final class in {
         try {
           var3_int = -96 % ((-37 - param1) / 60);
           if (!param2) {
-            stackIn_4_0 = sj.field_d.b(param0);
+            stackIn_4_0 = sj.field_d.stringWidth(param0);
             return stackIn_4_0;
           }
-          stackIn_2_0 = MidiPcmStream.field_M.b(param0);
+          stackIn_2_0 = MidiPcmStream.field_M.stringWidth(param0);
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

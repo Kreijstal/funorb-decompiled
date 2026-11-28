@@ -11,7 +11,7 @@ final class sh extends fh {
         this(nb.field_c, param0);
     }
 
-    private sh(qe param0, int param1) {
+    private sh(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

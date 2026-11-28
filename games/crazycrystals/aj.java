@@ -15,7 +15,7 @@ final class aj extends ig {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, String param5) {
-        ef var6 = null;
+        BinaryBitmapFont var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
         int var8 = 0;
@@ -29,7 +29,7 @@ final class aj extends ig {
           var6 = go.field_l;
           param4 = param4 + ia.field_i;
           var7 = param2 + 48 * param3;
-          var8 = go.field_l.a(param5, 148);
+          var8 = go.field_l.lineCount(param5, 148);
           if (param0 != 32293) {
             return;
           }
@@ -46,7 +46,7 @@ final class aj extends ig {
           } else {
             var9 = 262913 * ((-(var9 * 64) + 3008) / 32);
           }
-          ((vc) ((Object) var6)).a(param5, 486, -((vc) ((Object) var6)).field_o + var7 + (18 + (-(var8 * 10) + 10)), 148, 1000, var9, -1, 0, 0, 20);
+          ((BitmapFont) ((Object) var6)).drawParagraph(param5, 486, -((BitmapFont) ((Object) var6)).field_o + var7 + (18 + (-(var8 * 10) + 10)), 148, 1000, var9, -1, 0, 0, 20);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

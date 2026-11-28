@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jn implements ca {
-    private se field_g;
+    private BitmapFont field_g;
     static int[] field_k;
     static int field_d;
     private int field_b;
@@ -49,21 +49,21 @@ final class jn implements ca {
           SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
           if (null != this.field_g) {
             var13 = this.field_e + var14.field_I + var14.field_M;
-            this.field_g.a(param1.field_w, param1.field_q + param2 + var13, this.field_m + param1.field_v + param3, -this.field_e - var13 + param1.field_x, -(this.field_e << 1) + param1.field_s, this.field_f, this.field_j, 1, 1, 0);
+            this.field_g.drawParagraph(param1.field_w, param1.field_q + param2 + var13, this.field_m + param1.field_v + param3, -this.field_e - var13 + param1.field_x, -(this.field_e << 1) + param1.field_s, this.field_f, this.field_j, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "jn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static String[] a(String param0, int[] param1, int param2, se param3) {
+    final static String[] a(String param0, int[] param1, int param2, BitmapFont param3) {
         int var6 = 0;
         ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         String[] var5 = null;
         int var7 = 0;
-        se var8 = null;
+        BitmapFont var8 = null;
         String[] var9 = null;
         String[] var10 = null;
         String[] stackIn_15_0 = null;
@@ -82,12 +82,12 @@ final class jn implements ca {
             wk.field_a = new String[16];
           }
           if (param2 > -59) {
-            var8 = (se) null;
-            jn.a((String) null, (int[]) null, -127, (se) null);
+            var8 = (BitmapFont) null;
+            jn.a((String) null, (int[]) null, -127, (BitmapFont) null);
           }
           do {
             try {
-              var4_int = param3.a(param0, param1, wk.field_a);
+              var4_int = param3.wrapText(param0, param1, wk.field_a);
               decompiledRegionSelector0 = 0;
             } catch (java.lang.ArrayIndexOutOfBoundsException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -144,7 +144,7 @@ final class jn implements ca {
         field_a = null;
     }
 
-    jn(se param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    jn(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_f = param3;
           this.field_j = param4;

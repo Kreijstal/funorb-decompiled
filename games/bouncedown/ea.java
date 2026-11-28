@@ -184,11 +184,11 @@ final class ea {
         tb.field_p.field_d = param0;
     }
 
-    final static ie a(byte[] param0, byte param1) {
-        ie var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, byte param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        ie stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -196,9 +196,9 @@ final class ea {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (ie) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new ie(param0, ConfirmedEmailAvailabilityValidator.field_n, ae.field_c, ih.field_V, qh.field_i, ph.field_c);
+          var2 = new BinaryBitmapFont(param0, ConfirmedEmailAvailabilityValidator.field_n, ae.field_c, ih.field_V, qh.field_i, ph.field_c);
           vb.a((byte) 122);
           if (param1 < 47) {
             field_b = 93;

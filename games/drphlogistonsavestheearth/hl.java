@@ -75,10 +75,10 @@ final class hl {
               var2 = var2 + pd.field_b;
             }
             if (0 <= var4) {
-              GameClientShell.field_o.c(var6, var8, ae.field_kb + var2, var5, -1);
+              GameClientShell.field_o.drawString(var6, var8, ae.field_kb + var2, var5, -1);
               var2 = var2 + (pa.field_a + (SpriteGeometry.field_F + pd.field_b));
             } else {
-              k.field_H.c(var6, var8, var2 + cd.field_b, var5, -1);
+              k.field_H.drawString(var6, var8, var2 + cd.field_b, var5, -1);
               var2 = var2 + LoginPanel.field_R;
             }
           }

@@ -8,12 +8,12 @@ final class bk {
     static pl field_a;
     static int field_b;
 
-    final static dj a(int param0, byte[] param1) {
-        dj var2 = null;
+    final static PalettedBitmapFont a(int param0, byte[] param1) {
+        PalettedBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        dj stackIn_5_0 = null;
-        dj stackIn_7_0 = null;
+        PalettedBitmapFont stackIn_5_0 = null;
+        PalettedBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -21,13 +21,13 @@ final class bk {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (dj) (stackIn_2_0);
+            return (PalettedBitmapFont) (stackIn_2_0);
           }
           if (param0 != -26395) {
-            stackIn_5_0 = (dj) null;
+            stackIn_5_0 = (PalettedBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new dj(param1, vg.field_I, b.field_b, ij.field_H, ob.field_a, rd.field_d, of.field_d);
+          var2 = new PalettedBitmapFont(param1, vg.field_I, b.field_b, ij.field_H, ob.field_a, rd.field_d, of.field_d);
           EditableTextField.o(-28210);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -355,7 +355,7 @@ final class bk {
         bk.b(-74);
     }
 
-    final static void a(int param0, int param1, fa param2, fa param3) {
+    final static void a(int param0, int param1, BitmapFont param2, BitmapFont param3) {
         try {
           pb.field_e = param3;
           if (param0 != -5237) {

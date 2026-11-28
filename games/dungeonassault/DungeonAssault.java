@@ -642,7 +642,7 @@ public final class DungeonAssault extends NetworkGameClient {
           MouseWheelInput.clearStaticReferences((byte) -109);
           SoftwareRasterizer.clearStaticReferences();
           ResourceArchive.clearStaticReferences(param0);
-          se.clearStaticReferences();
+          BitmapFont.clearStaticReferences();
           ig.a(-2898);
           dm.clearStaticReferences(0);
           PacketBuffer.clearStaticReferences(25);
@@ -1165,27 +1165,27 @@ public final class DungeonAssault extends NetworkGameClient {
             if (40 <= ke.field_e) {
               if (80 <= ke.field_e) {
                 if (ke.field_e < 230) {
-                  IntrusiveNode.field_c.a(ce.field_o[var3_ref.field_j], 48, 32 + IntrusiveNode.field_c.field_H >> 1, 0, -1, 128);
+                  IntrusiveNode.field_c.drawStringAlpha(ce.field_o[var3_ref.field_j], 48, 32 + IntrusiveNode.field_c.field_H >> 1, 0, -1, 128);
                 } else {
                   if (270 > ke.field_e) {
                     var5_intLifetime1 = (-ke.field_e + 270 << 8) / 40;
-                    IntrusiveNode.field_c.a(ce.field_o[var3_ref.field_j], 48, 32 + IntrusiveNode.field_c.field_H >> 1, 0, -1, var5_intLifetime1 >> 1);
+                    IntrusiveNode.field_c.drawStringAlpha(ce.field_o[var3_ref.field_j], 48, 32 + IntrusiveNode.field_c.field_H >> 1, 0, -1, var5_intLifetime1 >> 1);
                   }
                 }
               } else {
                 var5_intLifetime1 = (-40 + ke.field_e << 8) / 40;
-                IntrusiveNode.field_c.a(ce.field_o[var3_ref.field_j], 48, 32 + IntrusiveNode.field_c.field_H >> 1, 0, -1, var5_intLifetime1 >> 1);
+                IntrusiveNode.field_c.drawStringAlpha(ce.field_o[var3_ref.field_j], 48, 32 + IntrusiveNode.field_c.field_H >> 1, 0, -1, var5_intLifetime1 >> 1);
               }
             }
           }
           if (ResourceArchive.field_k >= 2 &&
             ld.field_b) {
-            IntrusiveNode.field_c.b(Integer.toString(bc.field_a), 20, 20, 16777215, 1);
+            IntrusiveNode.field_c.drawString(Integer.toString(bc.field_a), 20, 20, 16777215, 1);
             var4_long = Runtime.getRuntime().totalMemory();
             var6_long = Runtime.getRuntime().freeMemory();
             var8 = var4_long - var6_long;
-            IntrusiveNode.field_c.b((int)(var8 >> 10) + "kb", 4, IntrusiveNode.field_c.field_H * 2 + 8, 16777215, -1);
-            IntrusiveNode.field_c.b(CrossfadingMidiPcmStream.field_u, 20, 80, 16777215, 1);
+            IntrusiveNode.field_c.drawString((int)(var8 >> 10) + "kb", 4, IntrusiveNode.field_c.field_H * 2 + 8, 16777215, -1);
+            IntrusiveNode.field_c.drawString(CrossfadingMidiPcmStream.field_u, 20, 80, 16777215, 1);
           }
           var4 = AccountNameAvailabilityValidator.field_m[kj.field_n / 5];
           var5 = jg.field_c[kj.field_n / 5];

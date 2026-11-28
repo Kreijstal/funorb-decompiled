@@ -6,11 +6,11 @@ final class pe {
     static String field_a;
     static int[] field_b;
 
-    final static hh a(byte param0, ResourceArchive param1, int param2, ResourceArchive param3, int param4) {
+    final static CoverageBitmapFont a(byte param0, ResourceArchive param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
-        hh stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        hh stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -19,7 +19,7 @@ final class pe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -66) {
-            stackIn_2_0 = (hh) null;
+            stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
           if (rl.a(param4, 0, param2, param1)) {
@@ -27,7 +27,7 @@ final class pe {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (hh) (stackIn_5_0);
+          return (CoverageBitmapFont) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

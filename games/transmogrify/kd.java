@@ -124,9 +124,9 @@ final class kd implements WidgetRenderer {
               var2_int += 750;
             }
           }
-          var3Lifetime1 = hk.field_a.a(MusicPatchPcmStream.field_p);
-          hk.field_a.b(10325023, -1);
-          hk.field_a.a(MusicPatchPcmStream.field_p, 34 + (12 * AccountRegistrationPanel.field_K.field_n - var3Lifetime1 >> 1), param1 + ((-hk.field_a.field_y + AccountRegistrationPanel.field_K.field_m - hk.field_a.field_t >> 1) + 114 + hk.field_a.field_y), (int[]) null, qk.field_e);
+          var3Lifetime1 = hk.field_a.stringWidth(MusicPatchPcmStream.field_p);
+          hk.field_a.setColours(10325023, -1);
+          hk.field_a.drawTextRunWithOffsets(MusicPatchPcmStream.field_p, 34 + (12 * AccountRegistrationPanel.field_K.field_n - var3Lifetime1 >> 1), param1 + ((-hk.field_a.field_y + AccountRegistrationPanel.field_K.field_m - hk.field_a.field_t >> 1) + 114 + hk.field_a.field_y), (int[]) null, qk.field_e);
           if (0 <= jl.field_j &&
             3 > jl.field_j) {
             var4_int = 10;
@@ -144,9 +144,9 @@ final class kd implements WidgetRenderer {
             }
             if (var5_ref != null) {
               var6 = 4 + (hk.field_a.field_t + hk.field_a.field_y);
-              var7 = hk.field_a.b((String) (var5_ref), 160) * var6;
+              var7 = hk.field_a.lineCount((String) (var5_ref), 160) * var6;
               dk.a(var4_int + 10 + var7, mk.field_B, -28018, 451, o.field_i + 237 + param1, 180);
-              hk.field_a.a((String) (var5_ref), 461, o.field_i + 247 + param1, 160, var7, 0, -1, 1, 0, var6);
+              hk.field_a.drawParagraph((String) (var5_ref), 461, o.field_i + 247 + param1, 160, var7, 0, -1, 1, 0, var6);
             }
           } else {
             if (qe.field_F != null) {
@@ -178,7 +178,7 @@ final class kd implements WidgetRenderer {
             discarded$5 = var17.append("****");
           }
           boolean decompiledFrameRemainder0 = true;
-          IntrusiveNode.field_d.a(var17.toString(), 250, 333 + param1, 255, -1);
+          IntrusiveNode.field_d.drawRightAligned(var17.toString(), 250, 333 + param1, 255, -1);
           var7Lifetime1 = ni.scoreSubmittedWord((byte) -111);
           if (n.submittedWordCount != 10 && (!mg.field_d ||
             2 != n.submittedWordCount)) {
@@ -276,21 +276,21 @@ final class kd implements WidgetRenderer {
             }
           }
           for (var8_intLifetime2 = 0; n.submittedWordCount > var8_intLifetime2; var8_intLifetime2++) {
-            hk.field_a.a(var8_intLifetime2 + 1 + ". ", 464, 53 + (12 * var8_intLifetime2 + param1), 16711680, -1);
-            hk.field_a.b(IterableNodeHashTable.usedWords[var8_intLifetime2].toString(), 464, param1 + (12 * var8_intLifetime2 + 53), 16711680, -1);
-            hk.field_a.a(Integer.toString(IterableNodeHashTable.wordScores[var8_intLifetime2]), 627, param1 + 12 * var8_intLifetime2 + 53, 16711680, -1);
+            hk.field_a.drawRightAligned(var8_intLifetime2 + 1 + ". ", 464, 53 + (12 * var8_intLifetime2 + param1), 16711680, -1);
+            hk.field_a.drawString(IterableNodeHashTable.usedWords[var8_intLifetime2].toString(), 464, param1 + (12 * var8_intLifetime2 + 53), 16711680, -1);
+            hk.field_a.drawRightAligned(Integer.toString(IterableNodeHashTable.wordScores[var8_intLifetime2]), 627, param1 + 12 * var8_intLifetime2 + 53, 16711680, -1);
           }
-          hk.field_a.b(sg.varietyBonusLabel, 464, param1 + 173, 16711680, -1);
-          hk.field_a.a(Integer.toString(GameKeyHandler.field_c), 627, 173 + param1, 16711680, -1);
+          hk.field_a.drawString(sg.varietyBonusLabel, 464, param1 + 173, 16711680, -1);
+          hk.field_a.drawRightAligned(Integer.toString(GameKeyHandler.field_c), 627, 173 + param1, 16711680, -1);
           if (n.submittedWordCount == 10) {
-            hk.field_a.b(ub.timeBonusLabel, 464, 185 + param1, 16711680, -1);
-            hk.field_a.a(Integer.toString(wk.field_d), 627, 185 + param1, 16711680, -1);
+            hk.field_a.drawString(ub.timeBonusLabel, 464, 185 + param1, 16711680, -1);
+            hk.field_a.drawRightAligned(Integer.toString(wk.field_d), 627, 185 + param1, 16711680, -1);
           }
-          hk.field_a.b(ve.field_D, 464, 197 + param1, 16711680, -1);
-          hk.field_a.a(Integer.toString(eh.totalScore), 627, 197 + param1, 16711680, -1);
+          hk.field_a.drawString(ve.field_D, 464, 197 + param1, 16711680, -1);
+          hk.field_a.drawRightAligned(Integer.toString(eh.totalScore), 627, 197 + param1, 16711680, -1);
           if (WordDictionary.field_e) {
             dk.a(136, mk.field_B, -28018, 180, param1 + 88, 280);
-            IntrusiveNode.field_d.a(he.skipRoundPrompt, 190, param1 + 93, 260, 80, 0, -1, 1, 0, IntrusiveNode.field_d.field_y + 3);
+            IntrusiveNode.field_d.drawParagraph(he.skipRoundPrompt, 190, param1 + 93, 260, 80, 0, -1, 1, 0, IntrusiveNode.field_d.field_y + 3);
             stackIn_103_0 = 65280;
             stackIn_103_1 = 80;
             stackIn_103_2 = 16776867;
@@ -307,8 +307,8 @@ final class kd implements WidgetRenderer {
             jk.a(stackIn_106_0, stackIn_106_1, stackIn_106_2, stackIn_106_3, stackIn_106_4, stackIn_107_5, nh.field_h, 336, 16711680, (byte) 111);
           }
           if (ll.field_S) {
-            IntrusiveNode.field_d.a("FPS: " + ub.field_a, 630, 30, 65535, -1);
-            IntrusiveNode.field_d.a("LPS: " + oc.field_y, 630, 60, 65535, -1);
+            IntrusiveNode.field_d.drawRightAligned("FPS: " + ub.field_a, 630, 30, 65535, -1);
+            IntrusiveNode.field_d.drawRightAligned("LPS: " + oc.field_y, 630, 60, 65535, -1);
           }
           var15 = (AchievementUnlockEvent) (CrossfadingMidiPcmStream.field_u.beginForward((byte) -95));
           var8Lifetime2 = var15;
@@ -323,9 +323,9 @@ final class kd implements WidgetRenderer {
                 var9Lifetime2 = 8;
               }
             }
-            jk.field_x.a(16776867, var9Lifetime2 - 5, 3, 56 + IntrusiveNode.field_d.a(IntrusiveDeque.field_a[var15.field_i]), 0, 16776867);
+            jk.field_x.a(16776867, var9Lifetime2 - 5, 3, 56 + IntrusiveNode.field_d.stringWidth(IntrusiveDeque.field_a[var15.field_i]), 0, 16776867);
             fc.field_h[var15.field_i].e(8, var9Lifetime2);
-            IntrusiveNode.field_d.b(IntrusiveDeque.field_a[var15.field_i], 48, var9Lifetime2 + IntrusiveNode.field_d.field_y, 0, -1);
+            IntrusiveNode.field_d.drawString(IntrusiveDeque.field_a[var15.field_i], 48, var9Lifetime2 + IntrusiveNode.field_d.field_y, 0, -1);
           }
           var9Lifetime3 = SoftwareRasterizer.field_h[(2147483647 & nc.field_t) % SoftwareRasterizer.field_h.length];
           EmailFormatValidator.field_n = EmailFormatValidator.field_n - var9Lifetime3;

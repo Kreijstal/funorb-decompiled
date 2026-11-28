@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lg implements cg {
-    private rf field_d;
+    private BitmapFont field_d;
     static int field_i;
     private int field_c;
     private int field_l;
@@ -116,7 +116,7 @@ final class lg implements cg {
             return;
           }
           var13 = var14.field_J + (var14.field_O + this.field_j);
-          this.field_d.a(param2.field_p, var13 + param2.field_o + param4, this.field_l + (param3 + param2.field_m), param2.field_w - this.field_j - var13, -(this.field_j << 1) + param2.field_k, this.field_b, this.field_h, 1, 1, 0);
+          this.field_d.drawParagraph(param2.field_p, var13 + param2.field_o + param4, this.field_l + (param3 + param2.field_m), param2.field_w - this.field_j - var13, -(this.field_j << 1) + param2.field_k, this.field_b, this.field_h, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,7 +132,7 @@ final class lg implements cg {
         }
     }
 
-    lg(rf param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    lg(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_e = param7;
           this.field_h = param4;

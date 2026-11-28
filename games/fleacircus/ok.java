@@ -22,7 +22,7 @@ final class ok extends wi {
     private int field_F;
     static bd field_x;
     private int field_r;
-    private fa field_I;
+    private BitmapFont field_I;
     static String field_B;
     int field_C;
     private boolean field_A;
@@ -135,7 +135,7 @@ final class ok extends wi {
           SoftwareRasterizer.saveClip(ia.field_q);
           SoftwareRasterizer.setClip(this.field_l, this.field_a, this.field_l + this.field_n, this.field_a + this.field_d);
           SoftwareRasterizer.fillRectangleAlpha(1 + this.field_l, 1 + this.field_a, -2 + this.field_n, -2 + this.field_d, BufferedRandomAccessFile.field_a & this.field_E, (this.field_E >>> ii.field_b) * var2 >>> 8);
-          this.field_I.a(this.field_v, this.field_l + this.field_O, 1 + this.field_a + this.field_t, -this.field_O + (-this.field_q + this.field_n), -2 + this.field_d, this.field_N & BufferedRandomAccessFile.field_a, this.field_r & BufferedRandomAccessFile.field_a, (this.field_N >>> ii.field_b) * var2 >>> 8, this.field_u, this.field_K, this.field_D);
+          this.field_I.drawParagraphAlpha(this.field_v, this.field_l + this.field_O, 1 + this.field_a + this.field_t, -this.field_O + (-this.field_q + this.field_n), -2 + this.field_d, this.field_N & BufferedRandomAccessFile.field_a, this.field_r & BufferedRandomAccessFile.field_a, (this.field_N >>> ii.field_b) * var2 >>> 8, this.field_u, this.field_K, this.field_D);
           SoftwareRasterizer.drawRectangleOutlineAlpha(this.field_l, this.field_a, this.field_n, this.field_d, this.field_F & BufferedRandomAccessFile.field_a, (this.field_F >>> ii.field_b) * var2 >>> 8);
           SoftwareRasterizer.restoreClip(ia.field_q);
           SoftwareRasterizer.drawHorizontalLineAlpha(this.field_l, this.field_a + this.field_d, this.field_n, BufferedRandomAccessFile.field_a & this.field_M, (this.field_M >>> ii.field_b) * var2 >>> 8);
@@ -144,7 +144,7 @@ final class ok extends wi {
         }
     }
 
-    ok(int param0, int param1, String param2, fa param3) {
+    ok(int param0, int param1, String param2, BitmapFont param3) {
         this.field_K = 0;
         this.field_N = -16777216;
         this.field_O = 5;
@@ -161,9 +161,9 @@ final class ok extends wi {
           this.field_a = param1;
           this.field_v = param2;
           this.field_l = param0;
-          this.field_n = this.field_q - (-this.field_O + (-(this.field_I.b(this.field_v) / 3) - 5));
+          this.field_n = this.field_q - (-this.field_O + (-(this.field_I.stringWidth(this.field_v) / 3) - 5));
           this.field_D = this.field_I.field_N;
-          this.field_d = (int)((double)this.field_I.field_N * ((double)this.field_I.a(this.field_v, -this.field_O - this.field_q + this.field_n) + 0.5));
+          this.field_d = (int)((double)this.field_I.field_N * ((double)this.field_I.lineCount(this.field_v, -this.field_O - this.field_q + this.field_n) + 0.5));
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ok.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

@@ -32,7 +32,7 @@ final class gd extends IntrusiveNode {
     }
 
     final void a(byte param0) {
-        FrameTimer.field_a.a(this.field_k, this.field_n, this.field_h, 0, -1);
+        FrameTimer.field_a.drawCentred(this.field_k, this.field_n, this.field_h, 0, -1);
         if (param0 != -34) {
           this.c((byte) -119);
         }

@@ -37,7 +37,7 @@ class ii extends vb {
     private Sprite[] field_Z;
     private Sprite[] field_S;
     private boolean field_o;
-    private ta field_t;
+    private BitmapFont field_t;
     private int field_G;
     private Sprite[] field_Y;
     private int field_L;

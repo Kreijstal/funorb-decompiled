@@ -50,7 +50,7 @@ final class dc extends ic {
           MouseInputHandler.a(param2 + param1.field_m + (param1.field_u - this.field_t[0].field_v >> 1), (byte) -128, var7, param1.field_x, this.field_t, param1.field_p + param4);
           stackIn_18_0 = (!param3) ? 7105644 : 16777215;
           var8 = stackIn_18_0;
-          this.field_k.a(param1.field_s, param4 + param1.field_p, param1.field_m + param2 - 2, param1.field_x, param1.field_u, var8, -1, 1, 1, this.field_k.field_G);
+          this.field_k.drawParagraph(param1.field_s, param4 + param1.field_p, param1.field_m + param2 - 2, param1.field_x, param1.field_u, var8, -1, 1, 1, this.field_k.field_G);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

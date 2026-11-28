@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wj implements jm {
-    private lh field_a;
+    private BitmapFont field_a;
     static rh field_c;
     static int[] field_d;
     private int field_b;
@@ -10,7 +10,7 @@ final class wj implements jm {
     private int field_f;
     static ci field_g;
 
-    final static void a(le param0, int param1, int param2, le param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, lh param11, int param12, le param13, int param14, int param15, int param16, int param17, lh param18, int param19, int param20) {
+    final static void a(le param0, int param1, int param2, le param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, BitmapFont param11, int param12, le param13, int param14, int param15, int param16, int param17, BitmapFont param18, int param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -97,11 +97,11 @@ final class wj implements jm {
             stackIn_8_0 = 3249872;
           }
           var6_int = stackIn_8_0;
-          this.field_a.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_v + "</u>", param1 + param4.field_u, param2 + param4.field_r, param4.field_y, param4.field_C, var6_int, -1, this.field_b, this.field_f, this.field_a.field_t + this.field_a.field_C);
+          this.field_a.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_v + "</u>", param1 + param4.field_u, param2 + param4.field_r, param4.field_y, param4.field_C, var6_int, -1, this.field_b, this.field_f, this.field_a.field_t + this.field_a.field_C);
           if (!param4.d((byte) -67)) {
             return;
           }
-          var7 = this.field_a.b(param4.field_v);
+          var7 = this.field_a.stringWidth(param4.field_v);
           var8 = this.field_a.field_C + this.field_a.field_t;
           var9 = param1 + param4.field_u;
           if (this.field_b == 2) {
@@ -151,7 +151,7 @@ final class wj implements jm {
         this.field_f = 1;
     }
 
-    wj(lh param0, int param1, int param2) {
+    wj(BitmapFont param0, int param1, int param2) {
         try {
           this.field_b = param1;
           this.field_f = param2;

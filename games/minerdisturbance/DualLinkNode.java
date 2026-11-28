@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class DualLinkNode extends IntrusiveNode {
-    static ih field_r;
+    static CoverageBitmapFont field_r;
     DualLinkNode field_q;
     long field_p;
     static String field_o;
@@ -62,7 +62,7 @@ class DualLinkNode extends IntrusiveNode {
         field_r = null;
         field_s = null;
         if (param0 != -483) {
-          field_r = (ih) null;
+          field_r = (CoverageBitmapFont) null;
           field_o = null;
           return;
         }
@@ -83,14 +83,14 @@ class DualLinkNode extends IntrusiveNode {
           }
           for (var1_int = 0; var1_int < 25; var1_int++) {
             if (dn.field_t[var1_int] != null) {
-              if (dn.field_t[var1_int].k()) {
+              if (dn.field_t[var1_int].isSamplePositionOutOfRange()) {
                 dn.field_t[var1_int] = null;
               } else {
                 kf.a(dn.field_t[var1_int], (byte) -113);
               }
             }
             if (gl.field_u[var1_int] != null) {
-              if (gl.field_u[var1_int].k()) {
+              if (gl.field_u[var1_int].isSamplePositionOutOfRange()) {
                 gl.field_u[var1_int] = null;
               } else {
                 kf.a(gl.field_u[var1_int], (byte) -54);

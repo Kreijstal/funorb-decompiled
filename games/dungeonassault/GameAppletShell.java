@@ -115,7 +115,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           nj.field_e = kd.correctedCurrentTimeMillis(-2456);
           CombatState.sleepMillis(0, 5000L);
           ImageProducerRasterBuffer.field_o = null;
-          this.a((byte) 116, false);
+          this.shutdownApplet((byte) 116, false);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "kg.destroy()");
         }
@@ -258,11 +258,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   var3 = stackIn_100_0;
                   do {
                     if (!(var3 < nk.field_Kb)) {
-                      this.c((byte) -68);
+                      this.renderAppletFrame((byte) -68);
                       NodeHashTableIterator.a(i.field_A, AwtRasterBuffer.field_h, (byte) -32);
                       break;
                     }
-                    this.c(-1);
+                    this.processClientTick(-1);
                     var3++;
                   } while (var5 == 0);
                 } while (var5 == 0);
@@ -273,7 +273,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               sm.a((Throwable) (var1), 1, (String) null);
               this.a((byte) -112, "crash");
             }
-            this.a((byte) 116, true);
+            this.shutdownApplet((byte) 116, true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -331,7 +331,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             try {
               JavaScriptBridge.callWithoutArguments((byte) -21, DebouncedFieldValidator.c(true), "loggedout");
               if (param0 != -112) {
-                this.c(116);
+                this.processClientTick(116);
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -545,7 +545,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    private final void c(int param0) {
+    private final void processClientTick(int param0) {
         long var2_long = 0L;
         long var4 = 0L;
         Throwable decompiledCaughtException = null;
@@ -642,7 +642,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    private final void c(byte param0) {
+    private final void renderAppletFrame(byte param0) {
         int fieldTemp$1 = 0;
         RuntimeException runtimeException = null;
         long var2_long = 0L;
@@ -699,7 +699,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     abstract void initializeGame(byte param0);
 
-    private final void a(byte param0, boolean param1) {
+    private final void shutdownApplet(byte param0, boolean param1) {
         Exception exception = null;
         Throwable throwable = null;
         RuntimeException runtimeException = null;

@@ -27,7 +27,7 @@ final class pe extends v {
         try {
           this.field_hb = param1;
           if (null != this.field_hb) {
-            var3_int = dl.field_H.b(this.field_hb, 260, dl.field_H.field_x);
+            var3_int = dl.field_H.textHeight(this.field_hb, 260, dl.field_H.field_x);
             this.b(0, 150 + var3_int, 300);
           }
           this.field_bb = new ek(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -93,10 +93,10 @@ final class pe extends v {
 
     final void c(int param0, int param1, int param2) {
         super.c(param0, param1, param2);
-        dl.field_H.a(this.field_fb, (this.field_p >> 1) + param2, 103 + param1, 16777215, -1);
+        dl.field_H.drawCentred(this.field_fb, (this.field_p >> 1) + param2, 103 + param1, 16777215, -1);
         if (this.field_hb != null) {
           SoftwareRasterizer.drawHorizontalLine(20 + param2, 120 + (param1 - 7), 260, 8421504);
-          dl.field_H.a(this.field_hb, 20 + param2, 8 + param1 + 120, 260, 100, 16777215, -1, 1, 0, dl.field_H.field_x);
+          dl.field_H.drawParagraph(this.field_hb, 20 + param2, 8 + param1 + 120, 260, 100, 16777215, -1, 1, 0, dl.field_H.field_x);
         }
     }
 

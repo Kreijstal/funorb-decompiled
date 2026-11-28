@@ -15,7 +15,7 @@ final class cg extends WidgetContainer implements n {
         }
         int var5 = param0 + this.x;
         int var6 = this.y + param3;
-        qk.field_e.a(WidgetContainer.field_A, 20 + var5, 20 + var6, -40 + this.width, this.height - 50, 16777215, -1, 1, 0, qk.field_e.field_s);
+        qk.field_e.drawParagraph(WidgetContainer.field_A, 20 + var5, 20 + var6, -40 + this.width, this.height - 50, 16777215, -1, 1, 0, qk.field_e.field_s);
         super.a(param0, -125, param2, param3);
     }
 

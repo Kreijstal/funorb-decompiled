@@ -24,7 +24,7 @@ abstract class SocketConnector {
             if (!var2.field_i.isLinked(param1 - 9948)) {
               var2.unlink(param1 - 9951);
             } else {
-              var2.field_j.i(128 + var2.field_k * kc.field_g >> 8);
+              var2.field_j.setVolume(128 + var2.field_k * kc.field_g >> 8);
             }
             var2 = (od) (lb.field_f.nextForward(true));
           }
@@ -35,7 +35,7 @@ abstract class SocketConnector {
             var2Lifetime1 = (od) (nc.field_q.beginForward((byte) -95));
             while (var2Lifetime1 != null) {
               if (var2Lifetime1.field_i.isLinked(8)) {
-                var2Lifetime1.field_j.i(128 + var2Lifetime1.field_k * kc.field_g >> 8);
+                var2Lifetime1.field_j.setVolume(128 + var2Lifetime1.field_k * kc.field_g >> 8);
               } else {
                 var2Lifetime1.unlink(5);
               }

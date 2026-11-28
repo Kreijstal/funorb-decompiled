@@ -897,7 +897,7 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, RgbSprite[] param7, int param8, int param9, RgbSprite[] param10, se param11, se param12, int param13, boolean param14) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, RgbSprite[] param7, int param8, int param9, RgbSprite[] param10, BitmapFont param11, BitmapFont param12, int param13, boolean param14) {
         try {
           RgbSprite[] var16 = (RgbSprite[]) null;
           lp.a(param2, param8, param0, 87, param4, param10, om.field_a, param11, 0, field_p, param1, param5, (RgbSprite[]) null, param13, param6, param3, param7, 480, param12, sm.field_c, param9);
@@ -1043,8 +1043,8 @@ final class AgeValidator extends TextFieldValidator {
             lg.field_u = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "menu_text");
             MouseWheelInput.field_g = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "button_frame");
             DelegatingCanvas.field_c = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "arrow");
-            Bzip2State.field_e = (se) ((Object) ah.a(hf.field_pb, 200, "large_font", "benefits", AccountCreationResultPanel.field_Qb));
-            tg.field_l = (se) ((Object) ah.a(hf.field_pb, 200, "small_font", "benefits", AccountCreationResultPanel.field_Qb));
+            Bzip2State.field_e = (BitmapFont) ((Object) ah.a(hf.field_pb, 200, "large_font", "benefits", AccountCreationResultPanel.field_Qb));
+            tg.field_l = (BitmapFont) ((Object) ah.a(hf.field_pb, 200, "small_font", "benefits", AccountCreationResultPanel.field_Qb));
             var27 = SoftwareRasterizer.field_b;
             var2 = SoftwareRasterizer.field_i;
             var3 = SoftwareRasterizer.field_c;
@@ -1058,18 +1058,18 @@ final class AgeValidator extends TextFieldValidator {
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_y / 2;
             var12.e();
-            Bzip2State.field_e.c(jk.a(new String[]{mj.field_f}, IntrusiveDeque.field_a, 30496), var6, 40, 16777215, -1);
-            tg.field_l.c(jk.a(new String[]{mj.field_f}, AchievementIconEntry.field_t, 30496), var6, 60, 16777215, -1);
-            Bzip2State.field_e.c(jk.a(new String[]{SecondaryNodeDeque.field_f}, bh.field_K, 30496), var6, 110, 16777215, -1);
-            tg.field_l.c(jk.a(new String[]{SecondaryNodeDeque.field_f}, jm.field_b, 30496), var6, 130, 16777215, -1);
-            Bzip2State.field_e.c(je.field_l, var6, 180, 16777215, -1);
-            tg.field_l.c(cg.field_c, var6, 200, 16777215, -1);
+            Bzip2State.field_e.drawCentred(jk.a(new String[]{mj.field_f}, IntrusiveDeque.field_a, 30496), var6, 40, 16777215, -1);
+            tg.field_l.drawCentred(jk.a(new String[]{mj.field_f}, AchievementIconEntry.field_t, 30496), var6, 60, 16777215, -1);
+            Bzip2State.field_e.drawCentred(jk.a(new String[]{SecondaryNodeDeque.field_f}, bh.field_K, 30496), var6, 110, 16777215, -1);
+            tg.field_l.drawCentred(jk.a(new String[]{SecondaryNodeDeque.field_f}, jm.field_b, 30496), var6, 130, 16777215, -1);
+            Bzip2State.field_e.drawCentred(je.field_l, var6, 180, 16777215, -1);
+            tg.field_l.drawCentred(cg.field_c, var6, 200, 16777215, -1);
             uc.a(1, 3, var12.field_y, var12, 0, var12.field_v, 0, false);
             gn.field_c.e();
             var12.h(18 - gn.field_c.field_w, -gn.field_c.field_A + 241);
             for (var7 = 0; var7 < PacketBuffer.field_l.length; var7++) {
               en.field_b[var7].e();
-              tg.field_l.a(PacketBuffer.field_l[var7], 3, 3, en.field_b[var7].field_y - 6, -6 + en.field_b[var7].field_v, uj.field_d, -1, 1, 1, tg.field_l.field_H + tg.field_l.field_E);
+              tg.field_l.drawParagraph(PacketBuffer.field_l[var7], 3, 3, en.field_b[var7].field_y - 6, -6 + en.field_b[var7].field_v, uj.field_d, -1, 1, 1, tg.field_l.field_H + tg.field_l.field_E);
               uc.a(1, 3, en.field_b[var7].field_y, en.field_b[var7], 0, en.field_b[var7].field_v, 0, false);
             }
             PacketBuffer.field_l = null;
@@ -1094,8 +1094,8 @@ final class AgeValidator extends TextFieldValidator {
             var3Lifetime1 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(rp.field_e);
             var14 = jk.a(new String[]{kl.field_c[wo.field_g]}, rn.field_e, 30496);
-            var5 = Bzip2State.field_e.b(var14, PackedBitSet.field_b);
-            var6Lifetime1 = Bzip2State.field_e.a(var14, PackedBitSet.field_b, Bzip2State.field_e.field_E + Bzip2State.field_e.field_H);
+            var5 = Bzip2State.field_e.maxLineWidth(var14, PackedBitSet.field_b);
+            var6Lifetime1 = Bzip2State.field_e.textHeight(var14, PackedBitSet.field_b, Bzip2State.field_e.field_E + Bzip2State.field_e.field_H);
             var7Lifetime1 = (-var5 + PackedBitSet.field_b) / 2 + lj.field_m;
             var8 = (-var6Lifetime1 + e.field_d) / 2 + cb.field_b;
             var5 += 6;
@@ -1141,7 +1141,7 @@ final class AgeValidator extends TextFieldValidator {
             MenuScreen.field_z.a();
             var9 = new RgbSprite(MenuScreen.field_z.field_E, MenuScreen.field_z.field_G);
             var9.e();
-            Bzip2State.field_e.a(var14, lj.field_m, cb.field_b, PackedBitSet.field_b, e.field_d, 16777215, -1, 1, 1, Bzip2State.field_e.field_H + Bzip2State.field_e.field_E);
+            Bzip2State.field_e.drawParagraph(var14, lj.field_m, cb.field_b, PackedBitSet.field_b, e.field_d, 16777215, -1, 1, 1, Bzip2State.field_e.field_H + Bzip2State.field_e.field_E);
             uc.a(1, 3, var9.field_E, var9, 0, var9.field_G, 0, false);
             MenuScreen.field_z.e();
             var9.h(0, 0);
@@ -1163,7 +1163,7 @@ final class AgeValidator extends TextFieldValidator {
             var5_ref_String = jk.a(new String[]{lg.field_m}, je.field_a, 30496);
             lg.field_m = null;
             var16.e();
-            tg.field_l.a(var5_ref_String, 3, 3, var16.field_y - 6, var16.field_v - 6, 16777215, -1, 0, 1, tg.field_l.field_H + tg.field_l.field_E);
+            tg.field_l.drawParagraph(var5_ref_String, 3, 3, var16.field_y - 6, var16.field_v - 6, 16777215, -1, 0, 1, tg.field_l.field_H + tg.field_l.field_E);
             uc.a(1, 3, var16.field_y, var16, 0, var16.field_v, 0, false);
             rf.field_Q.e();
             var16.h(199 - rf.field_Q.field_w, 83 - rf.field_Q.field_A);
@@ -1176,12 +1176,12 @@ final class AgeValidator extends TextFieldValidator {
             var2Lifetime3 = SoftwareRasterizer.field_i;
             var3Lifetime3 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(rp.field_e);
-            var4 = 6 + tg.field_l.b(rp.field_h, 640);
+            var4 = 6 + tg.field_l.maxLineWidth(rp.field_h, 640);
             var5Lifetime1 = 20 + ol.field_b.field_E + var4;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = ol.field_b.field_E + (var6Lifetime2 + 20);
             rf.field_Q.e();
-            tg.field_l.b(rp.field_h, var7Lifetime2 - rf.field_Q.field_w, tg.field_l.field_H + 155 - (rf.field_Q.field_A - tg.field_l.field_E), 16777215, -1);
+            tg.field_l.drawString(rp.field_h, var7Lifetime2 - rf.field_Q.field_w, tg.field_l.field_H + 155 - (rf.field_Q.field_A - tg.field_l.field_E), 16777215, -1);
             uc.a(1, 3, var4, rf.field_Q, -rf.field_Q.field_w + (var7Lifetime2 - 4), 50, -rf.field_Q.field_A + 155, false);
             var8Lifetime1 = -((-tg.field_l.field_E - tg.field_l.field_H + (-3 + ol.field_b.field_G)) / 2) + (155 - rf.field_Q.field_A);
             ol.field_b.h(-rf.field_Q.field_w + var6Lifetime2, var8Lifetime1);

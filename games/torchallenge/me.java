@@ -85,9 +85,9 @@ final class me implements j {
           if (param3 != 97) {
             this.field_h = 7;
           }
-          this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_v + "</u>", param2 + param0.field_m, param0.field_i + param1, param0.field_p, param0.field_l, var6_int, -1, this.field_h, this.field_f, this.field_c.field_x + this.field_c.field_K);
+          this.field_c.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_v + "</u>", param2 + param0.field_m, param0.field_i + param1, param0.field_p, param0.field_l, var6_int, -1, this.field_h, this.field_f, this.field_c.field_x + this.field_c.field_K);
           if (param0.c(94)) {
-            var7 = this.field_c.a(param0.field_v);
+            var7 = this.field_c.stringWidth(param0.field_v);
             var8 = this.field_c.field_x + this.field_c.field_K;
             var9 = param2 + param0.field_m;
             if (this.field_h == 2) {

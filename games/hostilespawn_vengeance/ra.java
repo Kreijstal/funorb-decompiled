@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ra implements nn {
-    static nc field_e;
+    static CoverageBitmapFont field_e;
     static String field_f;
     private int field_m;
     private int field_k;
@@ -11,7 +11,7 @@ final class ra implements nn {
     static int field_a;
     static int[] field_i;
     private int field_h;
-    private vm field_l;
+    private BitmapFont field_l;
     private int field_g;
     private int field_j;
     private int field_c;
@@ -132,7 +132,7 @@ final class ra implements nn {
             return;
           }
           var13 = this.field_c + var14.field_J + var14.field_P;
-          this.field_l.a(param3.field_n, param1 + param3.field_v + var13, param0 + param3.field_m + this.field_k, param3.field_s - this.field_c - var13, param3.field_x - (this.field_c << 1), this.field_d, this.field_m, 1, 1, 0);
+          this.field_l.drawParagraph(param3.field_n, param1 + param3.field_v + var13, param0 + param3.field_m + this.field_k, param3.field_s - this.field_c - var13, param3.field_x - (this.field_c << 1), this.field_d, this.field_m, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -148,7 +148,7 @@ final class ra implements nn {
         }
     }
 
-    ra(vm param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    ra(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_k = param2;
           this.field_d = param3;

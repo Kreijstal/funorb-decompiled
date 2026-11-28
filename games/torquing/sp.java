@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sp extends im {
-    static uc field_R;
-    static uc field_Q;
+    static BitmapFont field_R;
+    static BitmapFont field_Q;
     private kf field_T;
     private String field_S;
     private boolean field_O;
@@ -25,7 +25,7 @@ final class sp extends im {
         try {
           this.field_N = param1;
           if (this.field_N != null) {
-            var3_int = LoginPanel.field_E.a(this.field_N, 260, LoginPanel.field_E.field_x);
+            var3_int = LoginPanel.field_E.textHeight(this.field_N, 260, LoginPanel.field_E.field_x);
             this.a(300, (byte) -25, 150 + var3_int);
           }
           this.field_T = new kf(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -44,7 +44,7 @@ final class sp extends im {
         if (param0 == -7361) {
           return;
         }
-        field_R = (uc) null;
+        field_R = (BitmapFont) null;
     }
 
     final void a(boolean param0, int param1, String param2, float param3) {
@@ -102,10 +102,10 @@ final class sp extends im {
     final void b(int param0, int param1, byte param2) {
         if (param2 <= -16) {
           super.b(param0, param1, (byte) -75);
-          LoginPanel.field_E.c(this.field_S, param1 + (this.width >> 1), param0 + 103, 16777215, -1);
+          LoginPanel.field_E.drawCentred(this.field_S, param1 + (this.width >> 1), param0 + 103, 16777215, -1);
           if (null != this.field_N) {
             SoftwareRasterizer.drawHorizontalLine(20 + param1, -7 + (param0 + 120), 260, 8421504);
-            LoginPanel.field_E.a(this.field_N, 20 + param1, 8 + param0 + 120, 260, 100, 16777215, -1, 1, 0, LoginPanel.field_E.field_x);
+            LoginPanel.field_E.drawParagraph(this.field_N, 20 + param1, 8 + param0 + 120, 260, 100, 16777215, -1, 1, 0, LoginPanel.field_E.field_x);
           }
           return;
         }

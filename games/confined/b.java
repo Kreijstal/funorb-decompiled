@@ -4,7 +4,7 @@
 final class b implements fe {
     private int field_c;
     private int field_m;
-    private ok field_g;
+    private BitmapFont field_g;
     private int field_i;
     static int field_f;
     private int field_n;
@@ -61,7 +61,7 @@ final class b implements fe {
           }
           if (null != this.field_g) {
             var10 = this.field_i + this.field_h + this.field_l;
-            this.field_g.a(param3.field_B, param1 + param3.field_q + var10, this.field_o + (param3.field_m + param4), param3.field_F - (this.field_l + var10), param3.field_z - (this.field_l << 1), this.field_b, this.field_n, this.field_e, this.field_p, 0);
+            this.field_g.drawParagraph(param3.field_B, param1 + param3.field_q + var10, this.field_o + (param3.field_m + param4), param3.field_F - (this.field_l + var10), param3.field_z - (this.field_l << 1), this.field_b, this.field_n, this.field_e, this.field_p, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -429,7 +429,7 @@ final class b implements fe {
         field_j = null;
     }
 
-    b(ok param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    b(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_e = 1;
         this.field_p = 1;
         try {

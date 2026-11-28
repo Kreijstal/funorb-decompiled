@@ -276,11 +276,11 @@ final class pa extends dg {
         }
     }
 
-    final static ic a(byte[] param0, int param1) {
-        ic var2 = null;
+    final static CoverageBitmapFont a(byte[] param0, int param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        ic stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -288,12 +288,12 @@ final class pa extends dg {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (ic) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (param1 != -1) {
             field_N = (String) null;
           }
-          var2 = new ic(param0, kb.field_c, ml.field_b, NetworkArchiveRequest.field_q, hb.field_a, ImageProducerRasterBuffer.field_i, EmailFormatValidator.field_k);
+          var2 = new CoverageBitmapFont(param0, kb.field_c, ml.field_b, NetworkArchiveRequest.field_q, hb.field_a, ImageProducerRasterBuffer.field_i, EmailFormatValidator.field_k);
           rh.d(-41);
           stackIn_6_0 = var2;
           return stackIn_6_0;

@@ -26,7 +26,7 @@ final class mh extends nb implements jk {
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = param2 + this.field_t;
         int var6 = this.field_o + param1;
-        ql.field_Q.a(vb.field_k, 20 + var5, var6 + 20, this.field_j - 40, -50 + this.field_v, 16777215, -1, 1, 0, ql.field_Q.field_E);
+        ql.field_Q.drawParagraph(vb.field_k, 20 + var5, var6 + 20, this.field_j - 40, -50 + this.field_v, 16777215, -1, 1, 0, ql.field_Q.field_E);
         super.a(param0, param1, param2, param3);
     }
 

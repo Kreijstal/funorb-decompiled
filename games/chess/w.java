@@ -63,7 +63,7 @@ final class w extends ci {
           for (var12 = 0; var12 < be.field_b.length; var12++) {
             var13 = new ci(0L, param3, vh.field_b[var12]);
             var14 = new ci(0L, param3, be.field_b[var12]);
-            var15 = param3.field_xb.b(be.field_b[var12]);
+            var15 = param3.field_xb.stringWidth(be.field_b[var12]);
             if (var15 > var11) {
               var11 = var15;
             }

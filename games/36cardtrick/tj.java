@@ -90,7 +90,7 @@ final class tj extends g implements qh {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_o + param0;
         int var6 = this.field_i + param1;
-        j.field_C.a(FrameTimer.field_e, var5 + 20, 20 + var6, this.field_h - 40, -50 + this.field_q, 16777215, param2, 1, 0, j.field_C.field_s);
+        j.field_C.drawParagraph(FrameTimer.field_e, var5 + 20, 20 + var6, this.field_h - 40, -50 + this.field_q, 16777215, param2, 1, 0, j.field_C.field_s);
         super.a(param0, param1, -1, param3);
     }
 

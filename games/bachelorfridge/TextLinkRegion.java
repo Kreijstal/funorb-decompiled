@@ -99,12 +99,12 @@ final class TextLinkRegion extends IntrusiveNode {
             var12 = new Sprite(195, 221);
             var6 = var12.field_q / 2;
             var12.b();
-            ShuffleEvent.field_q.a(lga.a(true, new String[]{RageEvent.field_q}, LevitateAnimation.field_x), var6, 40, 16777215, -1);
-            g.field_f.a(lga.a(true, new String[]{RageEvent.field_q}, ni.field_k), var6, 60, 16777215, -1);
-            ShuffleEvent.field_q.a(lga.a(true, new String[]{SpecialOrder.field_l}, ra.field_p), var6, 110, 16777215, -1);
-            g.field_f.a(lga.a(true, new String[]{SpecialOrder.field_l}, vca.field_i), var6, 130, 16777215, -1);
-            ShuffleEvent.field_q.a(MatchingFieldValidator.field_g, var6, 180, 16777215, -1);
-            g.field_f.a(ema.field_Lb, var6, 200, 16777215, -1);
+            ShuffleEvent.field_q.drawCentred(lga.a(true, new String[]{RageEvent.field_q}, LevitateAnimation.field_x), var6, 40, 16777215, -1);
+            g.field_f.drawCentred(lga.a(true, new String[]{RageEvent.field_q}, ni.field_k), var6, 60, 16777215, -1);
+            ShuffleEvent.field_q.drawCentred(lga.a(true, new String[]{SpecialOrder.field_l}, ra.field_p), var6, 110, 16777215, -1);
+            g.field_f.drawCentred(lga.a(true, new String[]{SpecialOrder.field_l}, vca.field_i), var6, 130, 16777215, -1);
+            ShuffleEvent.field_q.drawCentred(MatchingFieldValidator.field_g, var6, 180, 16777215, -1);
+            g.field_f.drawCentred(ema.field_Lb, var6, 200, 16777215, -1);
             sb.a(0, 3, var12, var12.field_p, 0, var12.field_q, 1, 117);
             uea.field_j.b();
             var12.draw(18 - uea.field_j.field_t, -uea.field_j.field_u + 241);
@@ -135,7 +135,7 @@ final class TextLinkRegion extends IntrusiveNode {
             var3Lifetime1 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ie.field_b);
             var14 = lga.a(true, new String[]{aa.field_m[SuperSpeedAllEvent.field_q]}, Crc32Table.field_c);
-            var5 = ShuffleEvent.field_q.c(var14, TeleportEvent.field_r);
+            var5 = ShuffleEvent.field_q.maxLineWidth(var14, TeleportEvent.field_r);
             var6Lifetime1 = ShuffleEvent.field_q.measureWrappedHeight(var14, TeleportEvent.field_r, ShuffleEvent.field_q.field_B + ShuffleEvent.field_q.field_u);
             var7Lifetime1 = StatusEffectInfo.field_c + (TeleportEvent.field_r - var5) / 2;
             var5 += 6;
@@ -217,7 +217,7 @@ final class TextLinkRegion extends IntrusiveNode {
             var2Lifetime3 = SoftwareRasterizer.field_i;
             var3Lifetime3 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ie.field_b);
-            var4 = 6 + g.field_f.c(fja.field_c, 640);
+            var4 = 6 + g.field_f.maxLineWidth(fja.field_c, 640);
             var5Lifetime1 = 20 + kka.field_h.field_n + var4;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
             var7Lifetime2 = 20 + kka.field_h.field_n + var6Lifetime2;

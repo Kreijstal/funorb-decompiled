@@ -4,7 +4,7 @@
 final class fa extends rg {
     static int field_P;
     static String field_T;
-    static ok field_Q;
+    static BitmapFont field_Q;
     static int field_S;
     static double field_R;
     static RgbSprite field_U;
@@ -149,7 +149,7 @@ final class fa extends rg {
 
     final static boolean a(byte param0) {
         if (param0 > -29) {
-          field_Q = (ok) null;
+          field_Q = (BitmapFont) null;
         }
         return !fb.field_a.c(17237) ? true : false;
     }

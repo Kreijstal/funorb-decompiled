@@ -27,12 +27,12 @@ final class hp extends IntrusiveNode {
         }
     }
 
-    final static ef a(ResourceArchive param0, int param1, String param2, ResourceArchive param3, String param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, int param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         String var7 = null;
-        ef stackIn_3_0 = null;
+        BinaryBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

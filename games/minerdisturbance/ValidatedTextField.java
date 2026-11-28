@@ -70,7 +70,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         return this.field_S;
     }
 
-    final void a(FieldValidator param0, int param1) {
+    final void setFieldValidator(FieldValidator param0, int param1) {
         if (param1 != 1048576) {
           return;
         }

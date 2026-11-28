@@ -1779,8 +1779,8 @@ public final class DekoBlokoClient extends FunOrbClient {
           if (2 <= PasswordValidator.integerState0776) {
             longLocal14 = Runtime.getRuntime().totalMemory() / 1024L;
             longLocal15 = -(Runtime.getRuntime().freeMemory() / 1024L) + longLocal14;
-            UiComponentPart029.renderingSupport009State0005.performAction1069("FPS: " + MixedSupport065.integerState0347, 12, 38, 16777215, 1);
-            UiComponentPart029.renderingSupport009State0005.performAction1069(longLocal15 + "/" + longLocal14 + " kB", 12, 52, 16777215, 1);
+            UiComponentPart029.renderingSupport009State0005.drawString("FPS: " + MixedSupport065.integerState0347, 12, 38, 16777215, 1);
+            UiComponentPart029.renderingSupport009State0005.drawString(longLocal15 + "/" + longLocal14 + " kB", 12, 52, 16777215, 1);
           }
           UiComponentPart019.performAction1045(1, 0, 0, canvasLocal8);
           return;
@@ -1838,7 +1838,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                 MixedSupport116.rawPcmStreamArrayArrayState0001[0][integerLocal2].performAction0461(PcmPlayer.integerState0209 / 50);
                 MixedSupport116.rawPcmStreamArrayArrayState0001[0][integerLocal2] = null;
               } else {
-                MixedSupport116.rawPcmStreamArrayArrayState0001[0][integerLocal2].performAction0456(PcmPlayer.integerState0209 / 50, GameDomainSupport005.integerState0578 * integerLocal4);
+                MixedSupport116.rawPcmStreamArrayArrayState0001[0][integerLocal2].rampVolume(PcmPlayer.integerState0209 / 50, GameDomainSupport005.integerState0578 * integerLocal4);
               }
             }
             if (null != MixedSupport116.rawPcmStreamArrayArrayState0001[1][integerLocal2]) {
@@ -1847,7 +1847,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                 MixedSupport116.rawPcmStreamArrayArrayState0001[1][integerLocal2].performAction0461(PcmPlayer.integerState0209 / 50);
                 MixedSupport116.rawPcmStreamArrayArrayState0001[1][integerLocal2] = null;
               } else {
-                MixedSupport116.rawPcmStreamArrayArrayState0001[1][integerLocal2].performAction0456(PcmPlayer.integerState0209 / 50, integerLocal6 * GameDomainSupport005.integerState0578);
+                MixedSupport116.rawPcmStreamArrayArrayState0001[1][integerLocal2].rampVolume(PcmPlayer.integerState0209 / 50, integerLocal6 * GameDomainSupport005.integerState0578);
               }
             }
             integerLocal2++;
@@ -2241,7 +2241,7 @@ public final class DekoBlokoClient extends FunOrbClient {
               } else {
                 sceneWidgetPart013Local46.sceneWidgetState0140.performAction1764(68, 0, integerLocal67, ComponentContainer.integerState0377, 0);
               }
-              sceneWidgetPart013Local46.sceneWidgetState0141.stringState0598 = BitmapFont.computeString1074(sceneWidgetPart013Local46.sceneWidgetState0141.bitmapFontState0020, stringLocal68, 78);
+              sceneWidgetPart013Local46.sceneWidgetState0141.stringState0598 = BitmapFont.truncateWithEllipsis(sceneWidgetPart013Local46.sceneWidgetState0141.bitmapFontState0020, stringLocal68, 78);
               sceneWidgetPart013Local46.sceneWidgetState0141.performAction1764(78, 0, integerLocal67, ComponentContainer.integerState0377, 70);
               if (sceneWidgetPart013Local46.sceneWidgetState0141.booleanState0218 &&
                 !sceneWidgetPart013Local46.sceneWidgetState0141.stringState0598.equals(stringLocal68)) {
@@ -2251,7 +2251,7 @@ public final class DekoBlokoClient extends FunOrbClient {
               if (sceneWidgetPart013Local46.booleanState0201) {
                 sceneWidgetPart013Local46.sceneWidgetState0144.integerState0916 = 2;
                 sceneWidgetPart013Local46.sceneWidgetState0132.stringState0598 = "/" + sceneWidgetPart013Local46.integerState0840;
-                integerLocal69 = (-sceneWidgetPart013Local46.sceneWidgetState0132.bitmapFontState0020.computeInteger1066("/") + 348) / 2;
+                integerLocal69 = (-sceneWidgetPart013Local46.sceneWidgetState0132.bitmapFontState0020.stringWidth("/") + 348) / 2;
                 sceneWidgetPart013Local46.sceneWidgetState0144.performAction1764(integerLocal69 - 150, 0, integerLocal67, ComponentContainer.integerState0377, 150);
                 sceneWidgetPart013Local46.sceneWidgetState0132.performAction1764(198 - integerLocal69, 0, integerLocal67, ComponentContainer.integerState0377, integerLocal69);
               } else {
@@ -2434,7 +2434,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                 }
                 stringLocal79 = stringBuilderLocal77.toString();
                 sceneWidgetPart013Local46.sceneWidgetState0135.stringState0598 = stringLocal79;
-                integerLocal109 = sceneWidgetPart013Local46.sceneWidgetState0135.bitmapFontState0020.computeInteger1067(stringLocal79, sceneWidgetPart013Local46.integerState0896 - 2 * sceneWidgetPart013Local46.sceneWidgetState0135.integerState0893);
+                integerLocal109 = sceneWidgetPart013Local46.sceneWidgetState0135.bitmapFontState0020.lineCount(stringLocal79, sceneWidgetPart013Local46.integerState0896 - 2 * sceneWidgetPart013Local46.sceneWidgetState0135.integerState0893);
                 sceneWidgetPart013Local46.sceneWidgetState0135.performAction1764(sceneWidgetPart013Local46.integerState0896, 0, integerLocal67, integerLocal109 * ComponentContainer.integerState0377, 0);
                 integerLocal67 = integerLocal67 + ComponentContainer.integerState0377 * integerLocal109;
               }
@@ -2451,7 +2451,7 @@ public final class DekoBlokoClient extends FunOrbClient {
             }
             stringLocal70 = GameplayControls.computeString1751(stringLocal68, sceneWidgetPart013Local46.integerState0844, true);
             if (stringLocal70 != null) {
-              integerLocal104 = sceneWidgetPart013Local46.sceneWidgetState0145.bitmapFontState0020.computeInteger1067(stringLocal70, -SecondaryNodeHashTable.integerState0540 + (sceneWidgetPart013Local46.integerState0896 - SecondaryNodeHashTable.integerState0540));
+              integerLocal104 = sceneWidgetPart013Local46.sceneWidgetState0145.bitmapFontState0020.lineCount(stringLocal70, -SecondaryNodeHashTable.integerState0540 + (sceneWidgetPart013Local46.integerState0896 - SecondaryNodeHashTable.integerState0540));
               sceneWidgetPart013Local46.sceneWidgetState0145.integerState0917 = sceneWidgetPart013Local46.integerState0846 * 256 / MixedSupport089.integerState0547;
               sceneWidgetPart013Local46.sceneWidgetState0145.stringState0598 = stringLocal70;
               sceneWidgetPart013Local46.sceneWidgetState0145.performAction1764(-(SecondaryNodeHashTable.integerState0540 * 2) + sceneWidgetPart013Local46.integerState0896, 0, integerLocal67, integerLocal104 * ComponentContainer.integerState0377, SecondaryNodeHashTable.integerState0540);

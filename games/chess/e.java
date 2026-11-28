@@ -3,7 +3,7 @@
  */
 final class e extends ma implements mj {
     private int[] field_K;
-    private lh field_R;
+    private BitmapFont field_R;
     private fb[] field_S;
     static double field_L;
     static ci field_M;
@@ -36,7 +36,7 @@ final class e extends ma implements mj {
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, -117, param3);
-        this.field_R.a(this.field_P, 14 + (param3 + this.field_u), param0 - (-this.field_r - 10), -28 + this.field_y, this.field_C, 16777215, -1, 0, 0, this.field_R.field_C);
+        this.field_R.drawParagraph(this.field_P, 14 + (param3 + this.field_u), param0 - (-this.field_r - 10), -28 + this.field_y, this.field_C, 16777215, -1, 0, 0, this.field_R.field_C);
         if (param2 >= -80) {
           this.field_S = (fb[]) null;
         }
@@ -178,7 +178,7 @@ final class e extends ma implements mj {
         }
     }
 
-    e(vn param0, lh param1, String param2) {
+    e(vn param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (jm) null);
         int var4_int = 0;
         this.field_Q = 0;
@@ -186,7 +186,7 @@ final class e extends ma implements mj {
           this.field_N = param0;
           this.field_P = param2;
           this.field_R = param1;
-          var4_int = this.field_P != null ? this.field_R.b(this.field_P, 260, this.field_R.field_C) : 0;
+          var4_int = this.field_P != null ? this.field_R.textHeight(this.field_P, 260, this.field_R.field_C) : 0;
           this.a(0, 34, 22 + var4_int, 288, 0);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "e.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

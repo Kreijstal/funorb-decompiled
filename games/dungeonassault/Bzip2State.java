@@ -35,7 +35,7 @@ final class Bzip2State {
     int[] field_m;
     byte[] field_y;
     boolean[] field_E;
-    static se field_e;
+    static BitmapFont field_e;
     byte[] field_J;
     int field_I;
     static int field_z;

@@ -22,14 +22,14 @@ final class ii extends ma implements mj {
         if (param2 <= -80) {
           var5 = param3 + this.field_u;
           var6 = this.field_r + param0;
-          rb.field_b.a(pe.field_e, 20 + var5, 20 + var6, this.field_y - 40, this.field_C - 50, 16777215, -1, 1, 0, rb.field_b.field_C);
+          rb.field_b.drawParagraph(pe.field_e, 20 + var5, 20 + var6, this.field_y - 40, this.field_C - 50, 16777215, -1, 1, 0, rb.field_b.field_C);
           super.a(param0, param1, -90, param3);
           return;
         }
         this.field_M = (fb) null;
         var5Lifetime1 = param3 + this.field_u;
         var6Lifetime1 = this.field_r + param0;
-        rb.field_b.a(pe.field_e, 20 + var5Lifetime1, 20 + var6Lifetime1, this.field_y - 40, this.field_C - 50, 16777215, -1, 1, 0, rb.field_b.field_C);
+        rb.field_b.drawParagraph(pe.field_e, 20 + var5Lifetime1, 20 + var6Lifetime1, this.field_y - 40, this.field_C - 50, 16777215, -1, 1, 0, rb.field_b.field_C);
         super.a(param0, param1, -90, param3);
     }
 

@@ -10,7 +10,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static int field_g;
     static int field_d;
 
-    final static void a(Sprite[] param0, int param1, int param2, Sprite[] param3, int param4, int param5, int param6, int param7, boolean param8, int param9, int param10, qe param11, int param12, int param13, qe param14) {
+    final static void a(Sprite[] param0, int param1, int param2, Sprite[] param3, int param4, int param5, int param6, int param7, boolean param8, int param9, int param10, BitmapFont param11, int param12, int param13, BitmapFont param14) {
         try {
           int var15_int = -85 / ((param5 + 30) / 62);
           Sprite[] var16 = (Sprite[]) null;
@@ -143,7 +143,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           int var7 = 0;
           int var8 = 0;
           Throwable var8_ref_Throwable = null;
-          qe var9 = null;
+          BitmapFont var9 = null;
           String var10 = null;
           CharSequence var11 = null;
           int var6_intLifetime1;
@@ -169,8 +169,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               r.field_c = wc.field_d;
             }
             if (param4 != -1) {
-              var9 = (qe) null;
-              FullscreenFocusCanvas.a((Sprite[]) null, -12, 123, (Sprite[]) null, 4, 6, -76, 11, true, -78, -110, (qe) null, 9, 62, (qe) null);
+              var9 = (BitmapFont) null;
+              FullscreenFocusCanvas.a((Sprite[]) null, -12, 123, (Sprite[]) null, 4, 6, -76, 11, true, -78, -110, (BitmapFont) null, 9, 62, (BitmapFont) null);
             }
             if (wc.field_d == r.field_c &&
               ag.a(127, 1)) {

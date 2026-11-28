@@ -32,7 +32,7 @@ final class we {
           if (param0) {
             field_a = (char[]) null;
           }
-          PacketBuffer.a(-1630758008, PcmSampleStream.b(param1, 100, 96));
+          PacketBuffer.a(-1630758008, PcmSampleStream.createForPlaybackRate(param1, 100, 96));
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "we.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

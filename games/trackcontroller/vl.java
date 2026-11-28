@@ -143,9 +143,9 @@ final class vl extends ok {
             SoftwareRasterizer.drawRectangleOutline(var9, var10, 6 + var5, var6 + 6, var3);
             SoftwareRasterizer.fillRectangle(1 + var9, 1 + var10, var5 + 4, var6 + 4, var4);
             if (1 < var7) {
-              GameApplet.field_c.a(param1, var9 + 3, GameApplet.field_c.field_H + (var10 - (-3 + GameApplet.field_c.field_G)), var5, 1000, var3, -1, 0, 0, var8);
+              GameApplet.field_c.drawParagraph(param1, var9 + 3, GameApplet.field_c.field_H + (var10 - (-3 + GameApplet.field_c.field_G)), var5, 1000, var3, -1, 0, 0, var8);
             } else {
-              GameApplet.field_c.c(param1, var9 + 3, var10 + (3 + GameApplet.field_c.field_H), var3, -1);
+              GameApplet.field_c.drawString(param1, var9 + 3, var10 + (3 + GameApplet.field_c.field_H), var3, -1);
             }
           }
           return;

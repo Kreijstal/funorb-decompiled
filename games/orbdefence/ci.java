@@ -12,7 +12,7 @@ final class ci implements td {
     private int field_i;
     private int field_n;
     private int field_a;
-    private kc field_f;
+    private BitmapFont field_f;
     private int field_d;
     private int field_k;
     static Boolean field_h;
@@ -77,7 +77,7 @@ final class ci implements td {
             return;
           }
           var10 = this.field_g + this.field_j + this.field_a;
-          this.field_f.a(param2.field_l, var10 + param2.field_s + param1, this.field_c + (param2.field_n + param0), param2.field_m - (var10 + this.field_g), -(this.field_g << 1) + param2.field_r, this.field_n, this.field_o, this.field_l, this.field_e, 0);
+          this.field_f.drawParagraph(param2.field_l, var10 + param2.field_s + param1, this.field_c + (param2.field_n + param0), param2.field_m - (var10 + this.field_g), -(this.field_g << 1) + param2.field_r, this.field_n, this.field_o, this.field_l, this.field_e, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -105,7 +105,7 @@ final class ci implements td {
         return 113;
     }
 
-    ci(kc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    ci(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_e = 1;
         this.field_l = 1;
         try {

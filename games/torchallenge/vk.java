@@ -30,7 +30,7 @@ final class vk {
           var2 = (e) (tj.field_e.first((byte) 107));
           while (var2 != null) {
             if (var2.field_k.isLinked(11163)) {
-              var2.field_n.f(128 + ArchiveRequest.field_r * var2.field_l >> 8);
+              var2.field_n.setVolume(128 + ArchiveRequest.field_r * var2.field_l >> 8);
             } else {
               var2.unlink(true);
             }
@@ -43,7 +43,7 @@ final class vk {
           while (var2Lifetime1 != null) {
             stackIn_15_0 = var2Lifetime1.field_k.isLinked(11163);
             if (stackIn_15_0) {
-              var2Lifetime1.field_n.f(128 + ArchiveRequest.field_r * var2Lifetime1.field_l >> 8);
+              var2Lifetime1.field_n.setVolume(128 + ArchiveRequest.field_r * var2Lifetime1.field_l >> 8);
             } else {
               var2Lifetime1.unlink(true);
             }

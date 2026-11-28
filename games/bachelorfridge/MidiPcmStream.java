@@ -188,7 +188,7 @@ final class MidiPcmStream extends PcmStream {
             param1 == var3.field_n) {
             if (var3.field_z != null) {
               var3.field_z.fadeOutAndUnlink(AudioOutput.field_j / 100);
-              if (var3.field_z.e()) {
+              if (var3.field_z.hasRemainingRampFrames()) {
                 this.field_k.field_j.a(var3.field_z);
               }
               var3.a(-91);
@@ -498,7 +498,7 @@ final class MidiPcmStream extends PcmStream {
         try {
           param1.field_r = AudioOutput.field_j / 100;
           if (0 <= param1.field_p && (param1.field_z == null ||
-            param1.field_z.h())) {
+            param1.field_z.isSamplePositionOutOfRange())) {
             param1.a(123);
             param1.unlink(false);
             if (0 < param1.field_k &&
@@ -580,7 +580,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             param1.field_z.mixInto(param2, param0, param3);
           }
-          if (param1.field_z.e()) {
+          if (param1.field_z.hasRemainingRampFrames()) {
             this.field_k.field_j.a(param1.field_z);
           }
           param1.a(117);

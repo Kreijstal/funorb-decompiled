@@ -124,7 +124,7 @@ class DualLinkNode extends IntrusiveNode {
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (null == gi.field_f) {
             if (ek.field_G != null) {
-              ek.field_G.a(BufferedSocket.field_m, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              ek.field_G.drawParagraph(BufferedSocket.field_m, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -136,7 +136,7 @@ class DualLinkNode extends IntrusiveNode {
             var6.drawTransparent(245, 199);
           } else {
             if (ek.field_G != null) {
-              ek.field_G.a(BufferedSocket.field_m, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              ek.field_G.drawParagraph(BufferedSocket.field_m, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
           if (eh.field_k > ll.field_d) {
@@ -168,7 +168,7 @@ class DualLinkNode extends IntrusiveNode {
               var5++;
             }
             if (var2_ref != null) {
-              ek.field_G.a("Screenshot(s) " + (String) (var2_ref) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+              ek.field_G.drawParagraph("Screenshot(s) " + (String) (var2_ref) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             }
           }
           var2Lifetime1 = 106 / ((param0 - 2) / 44);

@@ -114,15 +114,15 @@ final class fa extends IntrusiveNode {
     final void a(int param0, int param1) {
         int var3 = -119 / ((param1 + 68) / 41);
         this.field_l = param0;
-        this.field_n.h(128 + oo.field_d * param0 >> 8);
+        this.field_n.setVolume(128 + oo.field_d * param0 >> 8);
     }
 
     fa(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_n = param0;
-          this.field_l = param0.i();
+          this.field_l = param0.getTargetVolume();
           this.field_o = param1;
-          this.field_n.h(oo.field_d * this.field_l + 128 >> 8);
+          this.field_n.setVolume(oo.field_d * this.field_l + 128 >> 8);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

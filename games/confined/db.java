@@ -11,7 +11,7 @@ class db extends vf {
         this(gm.field_cb, param0);
     }
 
-    db(ok param0, int param1) {
+    db(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_C, -1, 2147483647, false);
     }
 

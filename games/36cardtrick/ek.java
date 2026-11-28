@@ -8,7 +8,7 @@ class ek implements ci, ne {
     int field_j;
     private int field_d;
     int field_o;
-    ee field_c;
+    BitmapFont field_c;
     static int field_e;
     int field_l;
     int field_k;
@@ -407,7 +407,7 @@ class ek implements ci, ne {
           }
           boolean decompiledFrameRemainder0 = true;
           if (this.field_g) {
-            this.field_c.a(this.b(11, param7), this.a(param7, param0, param4, -3), this.b(param7, 116, param5, param1), var9_int, var10, param3, param6, this.field_i, this.field_f, this.field_b);
+            this.field_c.drawParagraph(this.b(11, param7), this.a(param7, param0, param4, -3), this.b(param7, 116, param5, param1), var9_int, var10, param3, param6, this.field_i, this.field_f, this.field_b);
           } else {
             var12 = this.field_f;
             if (0 == var12) {
@@ -426,16 +426,16 @@ class ek implements ci, ne {
             if (var12Lifetime1 != 0 &&
               3 != var12Lifetime1) {
               if (var12Lifetime1 == 1) {
-                this.field_c.a(this.b(param2 + 1, param7), (var9_int >> 1) + this.a(param7, param0, param4, param2 - 111), this.b(param7, 126, param5, param1) + var11, param3, param6);
+                this.field_c.drawCentred(this.b(param2 + 1, param7), (var9_int >> 1) + this.a(param7, param0, param4, param2 - 111), this.b(param7, 126, param5, param1) + var11, param3, param6);
               } else {
                 if ((2 == var12Lifetime1)) {
-                  this.field_c.c(this.b(95, param7), this.a(param7, param0, param4, -3) + var9_int, this.b(param7, 116, param5, param1) + var11, param3, param6);
+                  this.field_c.drawRightAligned(this.b(95, param7), this.a(param7, param0, param4, -3) + var9_int, this.b(param7, 116, param5, param1) + var11, param3, param6);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_c.b(this.b(11, param7), this.a(param7, param0, param4, param2 - 111), this.b(param7, param2 ^ 22, param5, param1) + var11, param3, param6);
+              this.field_c.drawString(this.b(11, param7), this.a(param7, param0, param4, param2 - 111), this.b(param7, param2 ^ 22, param5, param1) + var11, param3, param6);
             }
           }
           gg.a(14756);
@@ -554,7 +554,7 @@ class ek implements ci, ne {
         }
     }
 
-    ek(ee param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    ek(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -705,7 +705,7 @@ class ek implements ci, ne {
     protected ek() {
     }
 
-    ek(ee param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    ek(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_i = param7;
           this.field_n = param2;

@@ -344,7 +344,7 @@ final class dc extends TextureOperator {
         int var6Lifetime1;
         var13 = Vertigo2.field_L ? 1 : 0;
         try {
-          var5_int = param4.c(param1);
+          var5_int = param4.stringWidth(param1);
           if (var5_int <= param0 &&
             param1.indexOf("<br>") == -1) {
             param3[0] = param1;
@@ -364,7 +364,7 @@ final class dc extends TextureOperator {
             if (32 == var10 ||
               var10 == 45) {
               var11 = param1.substring(var7, var9 + 1).trim();
-              var12 = param4.c(var11);
+              var12 = param4.stringWidth(var11);
               if (param0 <= var12) {
                 incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;

@@ -12,7 +12,7 @@ final class cg extends IntrusiveNode {
         try {
           param1.d(param6, param3);
           int var8_int = 118 % ((param4 - 3) / 50);
-          param0.a(param7, param1.field_p / 2 + param6, param3 + (param5 + param1.field_u) / 2, param2);
+          param0.drawCentredCharacter(param7, param1.field_p / 2 + param6, param3 + (param5 + param1.field_u) / 2, param2);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "cg.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
@@ -59,7 +59,7 @@ final class cg extends IntrusiveNode {
         int var6Lifetime1;
         var13 = Lexicominos.field_L ? 1 : 0;
         try {
-          var5_int = param1.b(param3);
+          var5_int = param1.stringWidth(param3);
           if (param4 >= var5_int &&
             -1 == param3.indexOf("<br>")) {
             args[0] = param3;
@@ -79,7 +79,7 @@ final class cg extends IntrusiveNode {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param3.substring(var7, 1 + var9).trim();
-              var12 = param1.b(var11);
+              var12 = param1.stringWidth(var11);
               if (var12 >= param4) {
                 incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;

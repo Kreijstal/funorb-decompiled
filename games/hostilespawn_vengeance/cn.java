@@ -9,7 +9,7 @@ class cn implements nn, mi {
     static String field_c;
     int field_o;
     int field_n;
-    vm field_g;
+    BitmapFont field_g;
     int field_q;
     int field_i;
     static RgbSprite field_h;
@@ -203,7 +203,7 @@ class cn implements nn, mi {
         }
     }
 
-    final static void a(int param0, vm param1, int param2, vm param3) {
+    final static void a(int param0, BitmapFont param1, int param2, BitmapFont param3) {
         try {
           cg.field_a = param2;
           lj.field_u = param1;
@@ -309,7 +309,7 @@ class cn implements nn, mi {
 
     public final int a(boolean param0, ag param1) {
         RuntimeException var3 = null;
-        vm var4 = null;
+        BitmapFont var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -317,8 +317,8 @@ class cn implements nn, mi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            var4 = (vm) null;
-            cn.a(114, (vm) null, 6, (vm) null);
+            var4 = (BitmapFont) null;
+            cn.a(114, (BitmapFont) null, 6, (BitmapFont) null);
           }
           this.a(param1, 1);
           stackIn_3_0 = param1.field_l.a(3915) + this.field_q + this.field_p;
@@ -526,19 +526,19 @@ class cn implements nn, mi {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_g.b(this.c(param0, 3), this.a(param0, param6, param2, -26318) + (var9_int >> 1), var11 + this.a(-1, param0, param4, param3), param5, param1);
+                this.field_g.drawCentred(this.c(param0, 3), this.a(param0, param6, param2, -26318) + (var9_int >> 1), var11 + this.a(-1, param0, param4, param3), param5, param1);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_g.a(this.c(param0, 3), this.a(param0, param6, param2, -26318) + var9_int, this.a(-1, param0, param4, param3) + var11, param5, param1);
+                  this.field_g.drawRightAligned(this.c(param0, 3), this.a(param0, param6, param2, -26318) + var9_int, this.a(-1, param0, param4, param3) + var11, param5, param1);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_g.c(this.c(param0, 3), this.a(param0, param6, param2, -26318), this.a(-1, param0, param4, param3) + var11, param5, param1);
+              this.field_g.drawString(this.c(param0, 3), this.a(param0, param6, param2, -26318), this.a(-1, param0, param4, param3) + var11, param5, param1);
             }
           } else {
-            this.field_g.a(this.c(param0, 3), this.a(param0, param6, param2, -26318), this.a(-1, param0, param4, param3), var9_int, var10, param5, param1, this.field_k, this.field_b, this.field_a);
+            this.field_g.drawParagraph(this.c(param0, 3), this.a(param0, param6, param2, -26318), this.a(-1, param0, param4, param3), var9_int, var10, param5, param1, this.field_k, this.field_b, this.field_a);
           }
           eh.b(false);
           return;
@@ -734,14 +734,14 @@ class cn implements nn, mi {
         }
     }
 
-    cn(vm param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    cn(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
     protected cn() {
     }
 
-    cn(vm param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    cn(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_f = param6;
           this.field_i = param4;

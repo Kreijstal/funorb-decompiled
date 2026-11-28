@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uj extends IntrusiveNode {
-    static rf field_i;
+    static BitmapFont field_i;
     static BufferedRandomAccessFile field_h;
     static BufferedSocket field_j;
 

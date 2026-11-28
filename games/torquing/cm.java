@@ -7,7 +7,7 @@ final class cm extends uj {
     private int field_i;
     private int field_e;
     static String field_j;
-    private uc field_g;
+    private BitmapFont field_g;
     static int field_n;
     private int field_f;
     private int field_o;
@@ -15,7 +15,7 @@ final class cm extends uj {
     private int field_h;
     private boolean field_l;
 
-    final void a(int param0, int param1, uc param2, int param3, String param4) {
+    final void a(int param0, int param1, BitmapFont param2, int param3, String param4) {
         kp var8 = null;
         int var7 = 0;
         if (param4 == null) {
@@ -31,7 +31,7 @@ final class cm extends uj {
           this.field_l = true;
           this.field_g = param2;
           var8 = this.a(param2, param3, param4, param1 ^ 1);
-          var7 = param2.a(param4);
+          var7 = param2.stringWidth(param4);
           var8.field_b[param1] = -(var7 >> 1) + param0;
           var8.field_b[param4.length()] = (var7 >> 1) + param0;
           rd.a(param2, param1 + 10580, 0, param4, var8);
@@ -40,7 +40,7 @@ final class cm extends uj {
         }
     }
 
-    final void a(int param0, uc param1, byte param2, int param3, int param4, String param5, int param6, int param7) {
+    final void a(int param0, BitmapFont param1, byte param2, int param3, int param4, String param5, int param6, int param7) {
         kp stackIn_37_0;
         kp stackIn_37_1;
         int stackIn_37_2;
@@ -48,7 +48,7 @@ final class cm extends uj {
         kp stackIn_38_0 = null;
         kp stackIn_38_1 = null;
         int stackIn_38_4 = 0;
-        uc stackIn_42_0 = null;
+        BitmapFont stackIn_42_0 = null;
         int stackIn_42_1 = 0;
         int stackIn_43_2 = 0;
         RuntimeException stackIn_48_0 = null;
@@ -98,9 +98,9 @@ final class cm extends uj {
           this.field_g = param1;
           this.field_d = param5;
           this.field_i = param4;
-          var16 = new String[1 + param1.c(param5, param4)];
+          var16 = new String[1 + param1.lineCount(param5, param4)];
           var17 = var16;
-          var10 = Math.max(1, param1.a(param5, new int[]{param4}, var17));
+          var10 = Math.max(1, param1.wrapText(param5, new int[]{param4}, var17));
           if (this.field_o == 3 &&
             var10 == 1) {
             this.field_o = 1;
@@ -142,13 +142,13 @@ final class cm extends uj {
             var14 = new kp(stackIn_37_2, stackIn_37_3, stackIn_38_4);
             var14.field_b[0] = 0;
             if (var13 != null) {
-              var14.field_b[var13.length()] = param1.a(var13);
-              stackIn_42_0 = (uc) (param1);
+              var14.field_b[var13.length()] = param1.stringWidth(var13);
+              stackIn_42_0 = (BitmapFont) (param1);
               stackIn_42_1 = 10580;
               if (param6 != 3) {
                 stackIn_43_2 = 0;
               } else {
-                stackIn_43_2 = this.a(-127, param1.a(var13), var13, param4);
+                stackIn_43_2 = this.a(-127, param1.stringWidth(var13), var13, param4);
               }
               rd.a(stackIn_42_0, stackIn_42_1, stackIn_43_2, var13, var14);
             }
@@ -194,7 +194,7 @@ final class cm extends uj {
         }
     }
 
-    private final kp a(uc param0, int param1, String param2, int param3) {
+    private final kp a(BitmapFont param0, int param1, String param2, int param3) {
         kp var5 = null;
         RuntimeException var5_ref = null;
         kp var6 = null;
@@ -248,7 +248,7 @@ final class cm extends uj {
         }
     }
 
-    final void a(int param0, int param1, uc param2, String param3, int param4) {
+    final void a(int param0, int param1, BitmapFont param2, String param3, int param4) {
         kp var8 = null;
         kp var9 = null;
         if (param3 == null) {
@@ -272,7 +272,7 @@ final class cm extends uj {
           this.field_g = param2;
           var8 = this.a(param2, param0, param3, 1);
           var9 = var8;
-          var9.field_b[0] = param4 - param2.a(param3);
+          var9.field_b[0] = param4 - param2.stringWidth(param3);
           var9.field_b[param3.length()] = param4;
           rd.a(param2, param1 ^ -29070, 0, param3, var9);
         } catch (RuntimeException runtimeException) {
@@ -280,7 +280,7 @@ final class cm extends uj {
         }
     }
 
-    final void a(String param0, byte param1, uc param2, int param3, int param4) {
+    final void a(String param0, byte param1, BitmapFont param2, int param3, int param4) {
         kp var8 = null;
         kp var9 = null;
         if (param0 == null) {
@@ -303,7 +303,7 @@ final class cm extends uj {
           var9 = var8;
           int var7 = -83 / ((param1 + 22) / 59);
           var8.field_b[0] = param4;
-          var9.field_b[param0.length()] = param2.a(param0) + param4;
+          var9.field_b[param0.length()] = param2.stringWidth(param0) + param4;
           rd.a(param2, 10580, 0, param0, var9);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "cm.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

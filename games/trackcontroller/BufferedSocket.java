@@ -167,12 +167,12 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static ck a(int param0, byte[] param1) {
-        ck var2 = null;
+    final static CoverageBitmapFont a(int param0, byte[] param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
         Object stackIn_2_0 = null;
-        ck stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -180,13 +180,13 @@ final class BufferedSocket implements Runnable {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (ck) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (param0 != 12587) {
             var3 = (CharSequence) null;
             BufferedSocket.encodeCp1252Bytes((byte) -122, (CharSequence) null);
           }
-          var2 = new ck(param1, ka.field_f, vb.field_a, cf.field_p, j.field_f, CrossfadingMidiPcmStream.field_z, qk.field_M);
+          var2 = new CoverageBitmapFont(param1, ka.field_f, vb.field_a, cf.field_p, j.field_f, CrossfadingMidiPcmStream.field_z, qk.field_M);
           ff.b(26);
           stackIn_6_0 = var2;
           return stackIn_6_0;

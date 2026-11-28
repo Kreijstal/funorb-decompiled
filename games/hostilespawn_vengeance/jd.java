@@ -11,7 +11,7 @@ final class jd extends IntrusiveNode {
     static int field_l;
     static int field_q;
     int field_r;
-    static vm field_s;
+    static BitmapFont field_s;
     int field_j;
     static String[] field_v;
     int field_m;

@@ -138,12 +138,12 @@ final class MenuScreen extends DungeonAssaultScreen {
               this.b((byte) 59);
             } else {
               if (this.field_B == 11) {
-                IntrusiveNode.field_c.a(ul.field_d, 80, 80, 480, 1000, 16777215, -1, 0, 0, IntrusiveNode.field_c.field_R);
+                IntrusiveNode.field_c.drawParagraph(ul.field_d, 80, 80, 480, 1000, 16777215, -1, 0, 0, IntrusiveNode.field_c.field_R);
               } else {
                 if (this.field_B == 0) {
                   fp.field_d.a(320, 25, 1699);
                   if (DualLinkNode.field_k) {
-                    kk.field_l.c("Press CTRL-S to start a random single player debug test game", 320, 44, 16777215, 0);
+                    kk.field_l.drawCentred("Press CTRL-S to start a random single player debug test game", 320, 44, 16777215, 0);
                   }
                 }
               }
@@ -355,14 +355,14 @@ final class MenuScreen extends DungeonAssaultScreen {
     private final void a(byte param0, int param1) {
         int var3 = tg.field_f[this.field_B][param1];
         String var4 = ui.a(var3, 19435);
-        int var5 = IntrusiveNode.field_c.b(var4);
+        int var5 = IntrusiveNode.field_c.stringWidth(var4);
         int var6 = IntrusiveNode.field_c.field_H + IntrusiveNode.field_c.field_E;
         RgbSprite var7 = new RgbSprite(var5, var6);
         jh.a(var7);
         if (param0 != -125) {
           return;
         }
-        IntrusiveNode.field_c.b(var4, 0, IntrusiveNode.field_c.field_H, 16760960, -1);
+        IntrusiveNode.field_c.drawString(var4, 0, IntrusiveNode.field_c.field_H, 16760960, -1);
         jh.b();
         this.field_A[param1] = rb.a(8, var7, 16760960, (byte) 105);
         this.field_s[param1] = rb.a(16, var7, 6307840, (byte) -124);
@@ -619,7 +619,7 @@ final class MenuScreen extends DungeonAssaultScreen {
           var7 = jk.a(stackIn_42_0, f.field_b, 30496);
           var10 = var7;
           var10Lifetime1 = var7;
-          db.field_v.b(var7, 239, var6 + 195, 16777215, -1);
+          db.field_v.drawString(var7, 239, var6 + 195, 16777215, -1);
           var8 = 210;
           if (var5 != 0) {
             PacketBuffer.field_j[var3Lifetime1].a(89, var8);
@@ -660,27 +660,27 @@ final class MenuScreen extends DungeonAssaultScreen {
           }
           var18 = new String[16];
           var21 = var18;
-          var11 = la.field_b.a(var9.toString(), new int[]{306}, var21);
+          var11 = la.field_b.wrapText(var9.toString(), new int[]{306}, var21);
           for (var12 = 0; var12 < var11; var12++) {
-            la.field_b.b(var18[var12], 239, var8, 16777215, -1);
+            la.field_b.drawString(var18[var12], 239, var8, 16777215, -1);
             var8 = var8 + var6;
           }
           var12Lifetime1 = 355 - cf.field_f.field_G;
           var13 = (2 * var12Lifetime1 + cf.field_f.field_G) / 2 + IntrusiveNode.field_c.field_E;
           SoftwareRasterizer.drawHorizontalLine(239, var12Lifetime1 - 6, 306, 8421504);
-          la.field_b.b(op.field_a + sg.field_c[var3Lifetime1], 239, var13, 16777215, -1);
+          la.field_b.drawString(op.field_a + sg.field_c[var3Lifetime1], 239, var13, 16777215, -1);
           var14 = 120;
-          la.field_b.b(mp.field_f, var14 + 239, var13, 16777215, -1);
-          var15 = 239 + var14 + la.field_b.b(mp.field_f);
+          la.field_b.drawString(mp.field_f, var14 + 239, var13, 16777215, -1);
+          var15 = 239 + var14 + la.field_b.stringWidth(mp.field_f);
           for (var16 = 0; sg.field_d[var3Lifetime1] > var16; var16++) {
             cf.field_f.h(var15, var12Lifetime1);
             var15 = var15 + cf.field_f.field_y / 3;
           }
         } else {
-          la.field_b.c(DelegatingCanvas.field_h, 392, 260, 16777215, -1);
+          la.field_b.drawCentred(DelegatingCanvas.field_h, 392, 260, 16777215, -1);
           if (ed.c(true)) {
             var5 = 300;
-            db.field_v.a(ld.field_a, 239, var5, 306, 100, 16777215, -1, 1, 0, db.field_v.field_H);
+            db.field_v.drawParagraph(ld.field_a, 239, var5, 306, 100, 16777215, -1, 1, 0, db.field_v.field_H);
           }
         }
     }
@@ -701,7 +701,7 @@ final class MenuScreen extends DungeonAssaultScreen {
         int var13;
         var4 = tg.field_f[this.field_B][param0];
         var5 = ui.a(var4, 19435);
-        var6 = IntrusiveNode.field_c.b(var5);
+        var6 = IntrusiveNode.field_c.stringWidth(var5);
         if (param1 != -31) {
           this.field_x = (ae) null;
         }
@@ -1013,7 +1013,7 @@ final class MenuScreen extends DungeonAssaultScreen {
           discarded$0 = this.a(-114, 14);
         }
         var3 = var3 + " " + tg.a('#', jk.a(new String[]{jg.field_e}, g.a(false, false, (byte) -111, var2 != 0), 30496), 3, "<br><br>");
-        IntrusiveNode.field_c.a(var3, 80, 80, 480, 10 * IntrusiveNode.field_c.field_R, 16777215, -1, 1, 0, IntrusiveNode.field_c.field_R);
+        IntrusiveNode.field_c.drawParagraph(var3, 80, 80, 480, 10 * IntrusiveNode.field_c.field_R, 16777215, -1, 1, 0, IntrusiveNode.field_c.field_R);
     }
 
     private final int e(int param0, int param1) {

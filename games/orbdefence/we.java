@@ -93,9 +93,9 @@ final class we extends ta implements ai {
         if (param1 != 0) {
           return;
         }
-        kc var5 = lm.field_f;
+        BitmapFont var5 = lm.field_f;
         if (null != this.field_D) {
-          var5.a(MouseWheelInput.field_c, this.field_s + param3, this.field_n + param0, this.field_m, 20, 16777215, -1, 0, 0, var5.field_B + var5.field_H);
+          var5.drawParagraph(MouseWheelInput.field_c, this.field_s + param3, this.field_n + param0, this.field_m, 20, 16777215, -1, 0, 0, var5.field_B + var5.field_H);
         }
     }
 

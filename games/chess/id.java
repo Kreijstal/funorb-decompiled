@@ -49,7 +49,7 @@ final class id {
         }
     }
 
-    final static void a(int param0, int param1, int param2, RgbSprite[] param3, boolean param4, byte param5, lh param6, int param7, RgbSprite[] param8, int param9, int param10, int param11) {
+    final static void a(int param0, int param1, int param2, RgbSprite[] param3, boolean param4, byte param5, BitmapFont param6, int param7, RgbSprite[] param8, int param9, int param10, int param11) {
         try {
           int var12_int = 19 % ((-8 - param5) / 42);
           n.a(param6, param7, param4, param3, param1, param2, param10, param11, param0, param6, param9, 126, param10, param11, param8);

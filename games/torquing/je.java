@@ -9,7 +9,7 @@ final class je implements WidgetRenderer {
     static int field_a;
     static DisplayNameSelectionPanel field_g;
     static Sprite field_e;
-    private uc field_h;
+    private BitmapFont field_h;
     static boolean field_c;
 
     public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
@@ -37,11 +37,11 @@ final class je implements WidgetRenderer {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
-          this.field_h.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.text + "</u>", param4.x + param2, param4.y + param1, param4.width, param4.height, var6_int, -1, this.field_b, this.field_d, this.field_h.field_t + this.field_h.field_x);
+          this.field_h.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.text + "</u>", param4.x + param2, param4.y + param1, param4.width, param4.height, var6_int, -1, this.field_b, this.field_d, this.field_h.field_t + this.field_h.field_x);
           if (!param4.g(2)) {
             return;
           }
-          var7 = this.field_h.a(param4.text);
+          var7 = this.field_h.stringWidth(param4.text);
           var8 = this.field_h.field_x + this.field_h.field_t;
           var9 = param4.x + param2;
           var10 = param4.y + param1;
@@ -228,7 +228,7 @@ final class je implements WidgetRenderer {
         this.field_h = TranslucentSpriteLayer.field_e;
     }
 
-    je(uc param0, int param1, int param2) {
+    je(BitmapFont param0, int param1, int param2) {
         try {
           this.field_d = param2;
           this.field_h = param0;

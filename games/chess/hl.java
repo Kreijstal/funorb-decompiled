@@ -13,7 +13,7 @@ class hl implements jm, mg {
     static ci field_d;
     int field_c;
     int field_i;
-    lh field_e;
+    BitmapFont field_e;
     int field_r;
     static boolean field_h;
     int field_n;
@@ -99,7 +99,7 @@ class hl implements jm, mg {
         }
     }
 
-    hl(lh param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    hl(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -266,7 +266,7 @@ class hl implements jm, mg {
           var9_int = this.b(param2, 0);
           var10 = this.c((byte) 18, param2);
           if (this.field_o) {
-            this.field_e.a(this.a(-29558, param2), this.a(param6, 2668, param3, param2), this.a(122, param2, param7, param1), var9_int, var10, param5, param4, this.field_l, this.field_c, this.field_j);
+            this.field_e.drawParagraph(this.a(-29558, param2), this.a(param6, 2668, param3, param2), this.a(122, param2, param7, param1), var9_int, var10, param5, param4, this.field_l, this.field_c, this.field_j);
           } else {
             var13 = this.field_c;
             if (0 == var13) {
@@ -285,16 +285,16 @@ class hl implements jm, mg {
             if (var13Lifetime1 != 0 &&
               var13Lifetime1 != 3) {
               if (var13Lifetime1 == 1) {
-                this.field_e.b(this.a(-29558, param2), this.a(param6, 2668, param3, param2) + (var9_int >> 1), var12 + this.a(100, param2, param7, param1), param5, param4);
+                this.field_e.drawCentred(this.a(-29558, param2), this.a(param6, 2668, param3, param2) + (var9_int >> 1), var12 + this.a(100, param2, param7, param1), param5, param4);
               } else {
                 if ((var13Lifetime1 == 2)) {
-                  this.field_e.c(this.a(-29558, param2), var9_int + this.a(param6, 2668, param3, param2), var12 + this.a(37, param2, param7, param1), param5, param4);
+                  this.field_e.drawRightAligned(this.a(-29558, param2), var9_int + this.a(param6, 2668, param3, param2), var12 + this.a(37, param2, param7, param1), param5, param4);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_e.a(this.a(-29558, param2), this.a(param6, 2668, param3, param2), this.a(117, param2, param7, param1) + var12, param5, param4);
+              this.field_e.drawString(this.a(-29558, param2), this.a(param6, 2668, param3, param2), this.a(117, param2, param7, param1) + var12, param5, param4);
             }
           }
           fd.a(28773);
@@ -768,7 +768,7 @@ class hl implements jm, mg {
         }
     }
 
-    hl(lh param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    hl(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_b = param6;
           this.field_j = param9;

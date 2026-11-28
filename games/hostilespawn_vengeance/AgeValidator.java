@@ -7,7 +7,7 @@ final class AgeValidator extends TextFieldValidator {
     static RgbSprite field_p;
     static RgbSprite field_o;
 
-    final static void a(int param0, byte param1, vm param2, String param3, pm param4) {
+    final static void a(int param0, byte param1, BitmapFont param2, String param3, pm param4) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -32,7 +32,7 @@ final class AgeValidator extends TextFieldValidator {
           while (var7 < param3.length()) {
             var9 = param3.charAt(var7);
             if (var9 == 60) {
-              var6 = (var5_int >> 8) - (-param4.field_b[0] - param2.a(param3.substring(0, var7)));
+              var6 = (var5_int >> 8) - (-param4.field_b[0] - param2.stringWidth(param3.substring(0, var7)));
             }
             if (var6 != -1) {
               param4.field_b[var7] = var6;
@@ -40,7 +40,7 @@ final class AgeValidator extends TextFieldValidator {
               if (var9 == 32) {
                 var5_int = var5_int + param0;
               }
-              param4.field_b[var7] = param4.field_b[0] + ((var5_int >> 8) - (-param2.a(param3.substring(0, 1 + var7)) + param2.a((char) var9)));
+              param4.field_b[var7] = param4.field_b[0] + ((var5_int >> 8) - (-param2.stringWidth(param3.substring(0, 1 + var7)) + param2.charWidth((char) var9)));
             }
             if (var9 == 62) {
               var6 = -1;
@@ -80,7 +80,7 @@ final class AgeValidator extends TextFieldValidator {
         try {
           if (param1 != -84) {
             pm var8 = (pm) null;
-            AgeValidator.a(-5, (byte) -60, (vm) null, (String) null, (pm) null);
+            AgeValidator.a(-5, (byte) -60, (BitmapFont) null, (String) null, (pm) null);
           }
           var6_int = param4.field_u << 3;
           param3 = (param3 << 4) + (15 & var6_int);
@@ -167,7 +167,7 @@ final class AgeValidator extends TextFieldValidator {
           var3 = 0;
           if (param0 >= -5) {
             var9 = (pm) null;
-            AgeValidator.a(20, (byte) 120, (vm) null, (String) null, (pm) null);
+            AgeValidator.a(20, (byte) 120, (BitmapFont) null, (String) null, (pm) null);
           }
           var4 = 0;
           if (param1 == 1 &&
@@ -216,7 +216,7 @@ final class AgeValidator extends TextFieldValidator {
                   if (var7 == 3) {
                     if (var3 != 0 &&
                       null == rc.field_c) {
-                      rc.field_c = RawPcmStream.a(TextInputField.field_V[35], var5_int, var6);
+                      rc.field_c = RawPcmStream.createForPlaybackRate(TextInputField.field_V[35], var5_int, var6);
                       rc.field_c.d(120);
                       eh.field_c.b(rc.field_c);
                     }
@@ -405,7 +405,7 @@ final class AgeValidator extends TextFieldValidator {
     final static void a(boolean param0, int param1) {
         if (param0) {
           pm var3 = (pm) null;
-          AgeValidator.a(-17, (byte) 69, (vm) null, (String) null, (pm) null);
+          AgeValidator.a(-17, (byte) 69, (BitmapFont) null, (String) null, (pm) null);
         }
         if (p.field_m[param1] == null) {
           p.field_m[param1] = pi.a(10, 6413, 3, EmailFormatValidator.field_p[param1], 1);

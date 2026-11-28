@@ -3,7 +3,7 @@
  */
 final class a {
     private String field_d;
-    static jb field_g;
+    static BinaryBitmapFont field_g;
     static java.math.BigInteger field_b;
     static String field_c;
     static byte[][] field_e;

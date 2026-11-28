@@ -247,12 +247,12 @@ final class AccountRegistrationPanel extends ga implements ge, el, pg {
         this.field_X.field_C = DualLinkNode.field_m;
         this.field_V.field_C = rm.field_D;
         this.field_bb.field_C = HomingProjectile.field_U;
-        this.field_R.a(-18312, new AccountNameAvailabilityValidator(this.field_R));
-        this.field_U.a(-18312, new EmailFormatValidator(this.field_U));
-        this.field_W.a(-18312, new ConfirmedEmailAvailabilityValidator(this.field_W, this.field_U));
-        this.field_H.a(-18312, new PasswordValidator(this.field_H, this.field_R, this.field_U));
-        this.field_X.a(-18312, new MatchingFieldValidator(this.field_X, this.field_H));
-        this.field_V.a(-18312, new AgeValidator(this.field_V));
+        this.field_R.setFieldValidator(-18312, new AccountNameAvailabilityValidator(this.field_R));
+        this.field_U.setFieldValidator(-18312, new EmailFormatValidator(this.field_U));
+        this.field_W.setFieldValidator(-18312, new ConfirmedEmailAvailabilityValidator(this.field_W, this.field_U));
+        this.field_H.setFieldValidator(-18312, new PasswordValidator(this.field_H, this.field_R, this.field_U));
+        this.field_X.setFieldValidator(-18312, new MatchingFieldValidator(this.field_X, this.field_H));
+        this.field_V.setFieldValidator(-18312, new AgeValidator(this.field_V));
         this.field_S.field_L = false;
         this.field_S.field_n = (fe) ((Object) new je());
         this.field_Y.field_n = (fe) ((Object) new hk());
@@ -513,7 +513,7 @@ final class AccountRegistrationPanel extends ga implements ge, el, pg {
           }
           var3 = this.field_R;
           var4 = param1;
-          ((EditableTextField) ((Object) var3)).a(false, false, var4);
+          ((EditableTextField) ((Object) var3)).setText(false, false, var4);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ke.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

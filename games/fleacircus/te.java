@@ -49,7 +49,7 @@ final class te {
     }
 
     final void a(hb param0, UiComponent param1, int param2, int param3, int param4) {
-        fa stackIn_21_0 = null;
+        BitmapFont stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_22_2 = 0;
         int stackIn_24_2;
@@ -125,7 +125,7 @@ final class te {
             } else {
               stackIn_28_8 = 256;
             }
-            ((fa) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param0.field_i, param0.field_h, param0.field_d);
+            ((BitmapFont) (Object) stackIn_21_0).drawParagraphAlpha(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param0.field_i, param0.field_h, param0.field_d);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

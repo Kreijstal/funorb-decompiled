@@ -3,7 +3,7 @@
  */
 final class la {
     static int field_c;
-    static gp field_b;
+    static BinaryBitmapFont field_b;
     static boolean field_f;
     static int field_g;
     private int field_h;

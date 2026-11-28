@@ -257,9 +257,9 @@ final class sg {
           var4 = -50 / ((param1 + 36) / 58);
           if (this.field_e <= -1) {
             if (!AccountRequestState.a((byte) -116)) {
-              bi.field_a.a(TextFieldValidator.field_k, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
+              bi.field_a.drawParagraph(TextFieldValidator.field_k, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
             } else {
-              bi.field_a.a(TextFieldValidator.field_k + "<br><br>" + al.field_G, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
+              bi.field_a.drawParagraph(TextFieldValidator.field_k + "<br><br>" + al.field_G, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
             }
             return;
           }
@@ -271,14 +271,14 @@ final class sg {
             stackIn_16_0 = (var5 == 0) ? 1 : 0;
           }
           var6 = stackIn_16_0;
-          bi.field_a.a(df.field_d[this.field_e], 155, 58, 0, -1);
+          bi.field_a.drawCentred(df.field_d[this.field_e], 155, 58, 0, -1);
           var7 = bi.field_a.field_C;
           var8 = 58 + var7;
           if (var5 == 0) {
-            bi.field_a.a(uc.field_mb, 155, var8, 16711680, -1);
+            bi.field_a.drawCentred(uc.field_mb, 155, var8, 16711680, -1);
             this.a(e.field_u, 0, 91, var8);
           } else {
-            bi.field_a.a(ni.field_c, 155, var8, 0, -1);
+            bi.field_a.drawCentred(ni.field_c, 155, var8, 0, -1);
             this.a(ef.field_d[this.field_e], 0, 91, var8);
           }
           var8 = var8 + (128 + bi.field_a.field_E);
@@ -288,20 +288,20 @@ final class sg {
             var10 = var9;
             var10Lifetime2 = var9;
           }
-          bi.field_a.a(var9, 48, -bi.field_a.field_E + var8, 242, 1000, 0, -1, 1, 0, var7);
+          bi.field_a.drawParagraph(var9, 48, -bi.field_a.field_E + var8, 242, 1000, 0, -1, 1, 0, var7);
           var8 = var8 + 2 * var7;
           var10Lifetime1 = Integer.toString(hi.field_c[this.field_e] * 100);
           if (var6 != 0) {
             var10Lifetime1 = "?";
           }
-          bi.field_a.a(w.field_s + var10Lifetime1, 169, var8, 0, -1);
+          bi.field_a.drawCentred(w.field_s + var10Lifetime1, 169, var8, 0, -1);
           var8 = var8 + var7;
-          var11 = bi.field_a.b(he.field_i);
+          var11 = bi.field_a.stringWidth(he.field_i);
           if (var6 == 0) {
             var12 = hi.field_c[this.field_e];
             var13 = (var12 - 1) * 10 + (var11 + (ob.field_e.field_p >> 2));
             var14 = -var13 + 338 >> 1;
-            bi.field_a.b(he.field_i, var14, var8, 0, -1);
+            bi.field_a.drawString(he.field_i, var14, var8, 0, -1);
             var14 = var14 + var11;
             while (0 < var12) {
               ob.field_e.c(var14, -bi.field_a.field_E + var8);
@@ -309,12 +309,12 @@ final class sg {
               var12--;
             }
           } else {
-            var12 = var11 - (-(ob.field_e.field_p >> 2) - bi.field_a.b(id.field_t));
+            var12 = var11 - (-(ob.field_e.field_p >> 2) - bi.field_a.stringWidth(id.field_t));
             var13 = 338 - var12 >> 1;
-            bi.field_a.b(he.field_i, var13, var8, 0, -1);
+            bi.field_a.drawString(he.field_i, var13, var8, 0, -1);
             var13 = var13 + var11;
             ob.field_e.c(var13, var8 - bi.field_a.field_E);
-            bi.field_a.b(id.field_t, var13 + (ob.field_e.field_p >> 2), var8, 0, -1);
+            bi.field_a.drawString(id.field_t, var13 + (ob.field_e.field_p >> 2), var8, 0, -1);
           }
           var8 = var8 + ob.field_e.field_u;
           return;
@@ -1432,11 +1432,11 @@ final class sg {
                       var10 = id.field_w[63 & var19[var8_int]].field_h;
                       stackIn_88_0 = (var6 != var8_int) ? 0 : 10161935;
                       var11 = stackIn_88_0;
-                      bi.field_a.b(var9, 66, pa.field_d + (var7 + (24 - pa.field_d) / 2), var11, -1);
-                      bi.field_a.c(Integer.toString(var19[var8_int] >> 6), 301, pa.field_d + (var7 + (24 - pa.field_d) / 2), var11, -1);
+                      bi.field_a.drawString(var9, 66, pa.field_d + (var7 + (24 - pa.field_d) / 2), var11, -1);
+                      bi.field_a.drawRightAligned(Integer.toString(var19[var8_int] >> 6), 301, pa.field_d + (var7 + (24 - pa.field_d) / 2), var11, -1);
                       this.a(-(var10.field_u / 2) + var7 + 12, param0 ^ -109, 64, var10, -(var10.field_p / 2) + 36);
                       var2 = "";
-                      bi.field_a.c(1 + var8_int + ".", 50, var7 - (-pa.field_d - (24 - pa.field_d) / 2), var11, -1);
+                      bi.field_a.drawRightAligned(1 + var8_int + ".", 50, var7 - (-pa.field_d - (24 - pa.field_d) / 2), var11, -1);
                     }
                     var7 += 27;
                   }
@@ -1444,8 +1444,8 @@ final class sg {
                     ((var6 == -1))) {
                     var8 = og.field_c;
                     var16 = el.field_c.field_m.field_h;
-                    bi.field_a.b(var8, 66, var7 + pa.field_d + (-pa.field_d + 24) / 2, 10161935, -1);
-                    bi.field_a.c(Integer.toString(el.field_c.field_J), 301, pa.field_d + var7 + (-pa.field_d + 24) / 2, 10161935, -1);
+                    bi.field_a.drawString(var8, 66, var7 + pa.field_d + (-pa.field_d + 24) / 2, 10161935, -1);
+                    bi.field_a.drawRightAligned(Integer.toString(el.field_c.field_J), 301, pa.field_d + var7 + (-pa.field_d + 24) / 2, 10161935, -1);
                     this.a(12 + var7 - var16.field_u / 2, param0 ^ -102, 64, var16, 36 - var16.field_p / 2);
                   }
                   decompiledFrameRemainder0 = false;
@@ -1458,16 +1458,16 @@ final class sg {
               }
             } else {
               var2 = PcmOutputWorker.field_a;
-              jh.field_d.a(al.field_G, 20, -jh.field_d.field_E + 280, 271, 1000, 0, -1, 1, 0, var3);
+              jh.field_d.drawParagraph(al.field_G, 20, -jh.field_d.field_E + 280, 271, 1000, 0, -1, 1, 0, var3);
             }
-            bi.field_a.a(var2, 20, -bi.field_a.field_E + 200, 271, 1000, 0, -1, 1, 0, var3);
+            bi.field_a.drawParagraph(var2, 20, -bi.field_a.field_E + 200, 271, 1000, 0, -1, 1, 0, var3);
           } else {
             if (this.field_d != 5) {
               if (7 != this.field_d) {
                 if (this.field_d == 6) {
                   var2_intLifetime1 = 50 + bi.field_a.field_E;
                   var3 = bi.field_a.field_G + (bi.field_a.field_t + 4);
-                  var2_intLifetime1 = var2_intLifetime1 + var3 * bi.field_a.a(me.field_u, 40, -bi.field_a.field_E + var2_intLifetime1, 254, 1000, 0, -1, 1, 0, var3);
+                  var2_intLifetime1 = var2_intLifetime1 + var3 * bi.field_a.drawParagraph(me.field_u, 40, -bi.field_a.field_E + var2_intLifetime1, 254, 1000, 0, -1, 1, 0, var3);
                   stackIn_50_0 = var2_intLifetime1;
                   stackIn_50_1 = bi.field_a;
                   if (MouseWheelInput.field_a == 0) {
@@ -1491,7 +1491,7 @@ final class sg {
                     stackIn_55_2 = stackIn_51_2;
                     stackIn_55_5 = true;
                   }
-                  var2_intLifetime1 = stackIn_55_0 + ((BinaryBitmapFont) (Object) stackIn_55_1).a(ii.a(stackIn_55_2 != 0, stackIn_54_3, stackIn_54_4, stackIn_55_5), 40, var2_intLifetime1 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3) * var3;
+                  var2_intLifetime1 = stackIn_55_0 + ((BinaryBitmapFont) (Object) stackIn_55_1).drawParagraph(ii.a(stackIn_55_2 != 0, stackIn_54_3, stackIn_54_4, stackIn_55_5), 40, var2_intLifetime1 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3) * var3;
                   var2_intLifetime1 = var2_intLifetime1 + (gg.field_a[0].field_x * 2 + var3);
                   stackIn_58_0 = var2_intLifetime1;
                   stackIn_58_1 = bi.field_a;
@@ -1522,7 +1522,7 @@ final class sg {
                     stackIn_63_4 = stackIn_59_4;
                     stackIn_63_5 = true;
                   }
-                  var2_intLifetime1 = stackIn_63_0 + ((BinaryBitmapFont) (Object) stackIn_63_1).a(ac.a(stackIn_63_2 != 0, stackIn_63_3, stackIn_63_4 != 0, stackIn_63_5), 40, -bi.field_a.field_E + var2_intLifetime1, 254, 1000, 0, -1, 1, 0, var3) * var3;
+                  var2_intLifetime1 = stackIn_63_0 + ((BinaryBitmapFont) (Object) stackIn_63_1).drawParagraph(ac.a(stackIn_63_2 != 0, stackIn_63_3, stackIn_63_4 != 0, stackIn_63_5), 40, -bi.field_a.field_E + var2_intLifetime1, 254, 1000, 0, -1, 1, 0, var3) * var3;
                   var2_intLifetime1 = var2_intLifetime1 + gg.field_a[0].field_x;
                   stackIn_66_0 = var2_intLifetime1;
                   stackIn_66_1 = var3;
@@ -1549,7 +1549,7 @@ final class sg {
                     stackIn_71_3 = stackIn_67_3;
                     stackIn_71_4 = true;
                   }
-                  var2_intLifetime1 = stackIn_71_0 + stackIn_71_1 * ((BinaryBitmapFont) (Object) stackIn_71_2).a(AwtRasterBuffer.a(stackIn_71_3 != 0, stackIn_71_4, false, -11902), 40, var2_intLifetime1 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3);
+                  var2_intLifetime1 = stackIn_71_0 + stackIn_71_1 * ((BinaryBitmapFont) (Object) stackIn_71_2).drawParagraph(AwtRasterBuffer.a(stackIn_71_3 != 0, stackIn_71_4, false, -11902), 40, var2_intLifetime1 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3);
                 } else {
                   if (this.field_d != 3 &&
                     this.field_d != 12) {
@@ -1558,26 +1558,26 @@ final class sg {
                       if (this.field_d == 8) {
                         var2_intLifetime1 = pa.field_d + (pa.field_d >> 1);
                         var3 = 40;
-                        jh.field_d.a(kk.field_n, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
-                        mk.field_h.c(cb.field_D, 294, SoftwareRasterizer.field_a - 10, 0, -1);
+                        jh.field_d.drawParagraph(kk.field_n, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
+                        mk.field_h.drawRightAligned(cb.field_D, 294, SoftwareRasterizer.field_a - 10, 0, -1);
                       } else {
                         if (this.field_d == 9) {
                           var2_intLifetime1 = (pa.field_d >> 1) + pa.field_d;
                           var3 = 40;
-                          jh.field_d.a(TriangleMesh.field_D, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
-                          mk.field_h.c(NanoFrameTimer.field_k, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
+                          jh.field_d.drawParagraph(TriangleMesh.field_D, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
+                          mk.field_h.drawRightAligned(NanoFrameTimer.field_k, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
                         } else {
                           if (this.field_d == 10) {
                             var2_intLifetime1 = pa.field_d + (pa.field_d >> 1);
                             var3 = 40;
-                            jh.field_d.a(tf.field_b, 40, var3 - jh.field_d.field_E, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
-                            mk.field_h.c(bl.field_a, 294, SoftwareRasterizer.field_a - 10, 0, -1);
+                            jh.field_d.drawParagraph(tf.field_b, 40, var3 - jh.field_d.field_E, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
+                            mk.field_h.drawRightAligned(bl.field_a, 294, SoftwareRasterizer.field_a - 10, 0, -1);
                           } else {
                             if ((this.field_d == 11)) {
                               var2_intLifetime1 = (pa.field_d >> 1) + pa.field_d;
                               var3 = 40;
-                              jh.field_d.a(kk.field_q, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
-                              mk.field_h.c(eg.field_E, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
+                              jh.field_d.drawParagraph(kk.field_q, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
+                              mk.field_h.drawRightAligned(eg.field_E, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
                             }
                           }
                         }
@@ -1588,15 +1588,15 @@ final class sg {
                       var13 = ve.field_b;
                       for (var5 = 0; var5 < var13.length; var5++) {
                         var6_ref_String = var13[var5];
-                        var3 = var3 + var2_intLifetime1 * jh.field_d.a(var6_ref_String, 40, var3 - jh.field_d.field_E, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
+                        var3 = var3 + var2_intLifetime1 * jh.field_d.drawParagraph(var6_ref_String, 40, var3 - jh.field_d.field_E, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
                         var3 = var3 + var2_intLifetime1;
                       }
-                      mk.field_h.c(eg.field_E, 294, SoftwareRasterizer.field_a - 10, 0, -1);
+                      mk.field_h.drawRightAligned(eg.field_E, 294, SoftwareRasterizer.field_a - 10, 0, -1);
                     }
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    mk.field_h.c(NanoFrameTimer.field_k, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
+                    mk.field_h.drawRightAligned(NanoFrameTimer.field_k, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
                   }
                 }
               } else {
@@ -1683,7 +1683,7 @@ final class sg {
                   if (((this.field_d == 1)) &&
                     (!(AccountRequestState.a((byte) -114)))) {
                     var2_int = (pa.field_d >> 1) + pa.field_d;
-                    jh.field_d.a(fl.field_b, 12, -jh.field_d.field_E + 370, 278, 1000, 0, -1, 0, 0, var2_int);
+                    jh.field_d.drawParagraph(fl.field_b, 12, -jh.field_d.field_E + 370, 278, 1000, 0, -1, 0, 0, var2_int);
                   }
                 } else {
                   var2_int = 18;
@@ -1691,10 +1691,10 @@ final class sg {
                   var8 = oj.field_c;
                   for (var5 = 0; var5 < var8.length; var5++) {
                     var12 = var8[var5];
-                    var3 = var3 + var2_int * jh.field_d.a(var12, 12, var3 - jh.field_d.field_E, 278, 1000, 0, -1, 0, 0, var2_int);
+                    var3 = var3 + var2_int * jh.field_d.drawParagraph(var12, 12, var3 - jh.field_d.field_E, 278, 1000, 0, -1, 0, 0, var2_int);
                     var3 = var3 + var2_int;
                   }
-                  mk.field_h.b(bl.field_a, 12, -10 + SoftwareRasterizer.field_a, 0, -1);
+                  mk.field_h.drawString(bl.field_a, 12, -10 + SoftwareRasterizer.field_a, 0, -1);
                 }
               } else {
                 var2_intLifetime2 = 18;
@@ -1704,11 +1704,11 @@ final class sg {
                 var5Lifetime1 = var10;
                 while (var9.length > var10) {
                   var6 = var9[var10];
-                  var3Lifetime1 = var3Lifetime1 + var2_intLifetime2 * jh.field_d.a(var6, 12, -jh.field_d.field_E + var3Lifetime1, 278, 1000, 0, -1, 0, 0, var2_intLifetime2);
+                  var3Lifetime1 = var3Lifetime1 + var2_intLifetime2 * jh.field_d.drawParagraph(var6, 12, -jh.field_d.field_E + var3Lifetime1, 278, 1000, 0, -1, 0, 0, var2_intLifetime2);
                   var3Lifetime1 = var3Lifetime1 + var2_intLifetime2;
                   var10++;
                 }
-                mk.field_h.b(cb.field_D, 12, SoftwareRasterizer.field_a - 10, 0, -1);
+                mk.field_h.drawString(cb.field_D, 12, SoftwareRasterizer.field_a - 10, 0, -1);
               }
               decompiledFrameRemainder0 = false;
             }

@@ -157,10 +157,10 @@ final class tf extends ca {
               var1_int = var1_int + LoginPanel.field_N;
             }
             if (var4 >= 0) {
-              cj.field_a.c(var6, var8Lifetime1, var1_int + hi.field_g, var5, -1);
+              cj.field_a.drawString(var6, var8Lifetime1, var1_int + hi.field_g, var5, -1);
               var1_int = var1_int + (LoginPanel.field_N + ig.field_h + EmailFormatValidator.field_p);
             } else {
-              uj.field_i.c(var6, var8Lifetime1, ha.field_a + var1_int, var5, -1);
+              uj.field_i.drawString(var6, var8Lifetime1, ha.field_a + var1_int, var5, -1);
               var1_int = var1_int + s.field_g;
             }
           }
@@ -178,7 +178,7 @@ final class tf extends ca {
         try {
           this.field_ob = param1;
           if (null != this.field_ob) {
-            var3_int = wi.field_e.a(this.field_ob, 260, wi.field_e.field_x);
+            var3_int = wi.field_e.textHeight(this.field_ob, 260, wi.field_e.field_x);
             this.b(300, 1688990433, var3_int + 150);
           }
           this.field_fb = new hd(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -221,10 +221,10 @@ final class tf extends ca {
 
     final void c(int param0, int param1, int param2) {
         super.c(param0, 59, param2);
-        wi.field_e.b(this.field_lb, param2 + (this.field_w >> 1), 103 + param0, 16777215, -1);
+        wi.field_e.drawCentred(this.field_lb, param2 + (this.field_w >> 1), 103 + param0, 16777215, -1);
         if (this.field_ob != null) {
           SoftwareRasterizer.drawHorizontalLine(20 + param2, 120 + (param0 - 7), 260, 8421504);
-          wi.field_e.a(this.field_ob, param2 + 20, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, wi.field_e.field_x);
+          wi.field_e.drawParagraph(this.field_ob, param2 + 20, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, wi.field_e.field_x);
         }
         if (param1 >= 26) {
           return;

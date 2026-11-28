@@ -76,29 +76,29 @@ final class AdminCheatOverlay {
         var5 = this.field_b;
         if (0 == var5) {
           param0 = 320;
-          FrameTimer.field_f.c(qd.field_h[0], 320, 468, 13881286, 0);
+          FrameTimer.field_f.drawCentred(qd.field_h[0], 320, 468, 13881286, 0);
           param2 = 76;
           param2 += 64;
           pf.field_a[0].b(0, 0);
           param2 += 160;
           param0 -= 265;
-          AccountRequestState.field_f.b("<col=fcfe7f>1.</col> " + qd.field_h[1], param0, param2, 16777215, 0);
+          AccountRequestState.field_f.drawString("<col=fcfe7f>1.</col> " + qd.field_h[1], param0, param2, 16777215, 0);
           param2 += 16;
-          AccountRequestState.field_f.b("<col=fcfe7f>2.</col> " + qd.field_h[2], param0, param2, 16777215, 0);
+          AccountRequestState.field_f.drawString("<col=fcfe7f>2.</col> " + qd.field_h[2], param0, param2, 16777215, 0);
           param2 += 16;
-          AccountRequestState.field_f.b("<col=fcfe7f>3.</col> " + qd.field_h[3], param0, param2, 16777215, 0);
+          AccountRequestState.field_f.drawString("<col=fcfe7f>3.</col> " + qd.field_h[3], param0, param2, 16777215, 0);
           param0 += 330;
           param2 += 16;
           param2 -= 48;
-          AccountRequestState.field_f.b("<col=fcfe7f>4.</col> " + qd.field_h[4], param0, param2, 16777215, 0);
+          AccountRequestState.field_f.drawString("<col=fcfe7f>4.</col> " + qd.field_h[4], param0, param2, 16777215, 0);
           param2 += 16;
-          AccountRequestState.field_f.b("<col=fcfe7f>5.</col> " + qd.field_h[5], param0, param2, 16777215, 0);
+          AccountRequestState.field_f.drawString("<col=fcfe7f>5.</col> " + qd.field_h[5], param0, param2, 16777215, 0);
           param2 += 16;
           param2 += 46;
           sj.a(65280, 20, param2, 608, 14, 32, qd.field_h[6], 0);
         } else {
           if (var5 == 1) {
-            FrameTimer.field_f.c(nd.field_o[0], 320, 468, 13881286, -1);
+            FrameTimer.field_f.drawCentred(nd.field_o[0], 320, 468, 13881286, -1);
             param2 = 76;
             param0 = 320;
             param0 += 42;
@@ -107,9 +107,9 @@ final class AdminCheatOverlay {
             param2 += 9;
             for (var5 = 1; var5 <= 14; var5++) {
               if (var5 >= 10) {
-                AccountRequestState.field_f.b("<col=fcfe7f>" + var5 + ".</col> " + nd.field_o[var5].toUpperCase(), param0, param2, 16777215, 0);
+                AccountRequestState.field_f.drawString("<col=fcfe7f>" + var5 + ".</col> " + nd.field_o[var5].toUpperCase(), param0, param2, 16777215, 0);
               } else {
-                AccountRequestState.field_f.b("<col=fcfe7f>0" + var5 + ".</col> " + nd.field_o[var5].toUpperCase(), param0, param2, 16777215, 0);
+                AccountRequestState.field_f.drawString("<col=fcfe7f>0" + var5 + ".</col> " + nd.field_o[var5].toUpperCase(), param0, param2, 16777215, 0);
               }
               param2 += 16;
             }
@@ -119,7 +119,7 @@ final class AdminCheatOverlay {
             if (2 != var5) {
               if (var5 == 3) {
                 param0 = 320;
-                FrameTimer.field_f.c(dd.field_O[0], 320, 468, 13881286, -1);
+                FrameTimer.field_f.drawCentred(dd.field_O[0], 320, 468, 13881286, -1);
                 param2 = 76;
                 param2 += 32;
                 pf.field_a[3].b(0, 0);
@@ -129,9 +129,9 @@ final class AdminCheatOverlay {
                 var4 = param2;
                 for (var5 = 1; 16 >= var5; var5++) {
                   if (10 <= var5) {
-                    AccountRequestState.field_f.b(var5 + ". ", 32 + param0, param2 - 9, 16580223, 0);
+                    AccountRequestState.field_f.drawString(var5 + ". ", 32 + param0, param2 - 9, 16580223, 0);
                   } else {
-                    AccountRequestState.field_f.b("0" + var5 + ". ", param0 + 32, param2 - 9, 16580223, 0);
+                    AccountRequestState.field_f.drawString("0" + var5 + ". ", param0 + 32, param2 - 9, 16580223, 0);
                   }
                   param2 = param2 + 11 * (1 + sj.a(16777215, 20, param2, 320 + param0 - 16, 12, param0 + 48, dd.field_O[var5], 0));
                   if (param2 > 429) {
@@ -142,7 +142,7 @@ final class AdminCheatOverlay {
               } else {
                 if (4 != var5) {
                   if (var5 == 5) {
-                    FrameTimer.field_f.c(oi.field_M[0], 320, 468, 13881286, -1);
+                    FrameTimer.field_f.drawCentred(oi.field_M[0], 320, 468, 13881286, -1);
                     param2 = 76;
                     param0 = 320;
                     param0 = 64;
@@ -160,75 +160,75 @@ final class AdminCheatOverlay {
                       if (7 != var5) {
                         if (8 == var5) {
                           param2 = 100;
-                          FrameTimer.field_f.c(vb.field_f[0], 320, 468, 13881286, -1);
+                          FrameTimer.field_f.drawCentred(vb.field_f[0], 320, 468, 13881286, -1);
                           param0 = 320;
                           param2 += 32;
                           param0 = 32;
-                          AccountRequestState.field_f.b(vb.field_f[1], param0, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[1], param0, param2, 16580223, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b(vb.field_f[2], 48 + param0, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[2], 48 + param0, param2, 16777215, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b(vb.field_f[3], param0, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[3], param0, param2, 16580223, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b("S", 48 + param0, param2, 16580223, 0);
-                          AccountRequestState.field_f.b(vb.field_f[4], 64 + param0, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString("S", 48 + param0, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[4], 64 + param0, param2, 16777215, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b("M", 48 + param0, param2, 16580223, 0);
-                          AccountRequestState.field_f.b(vb.field_f[5], param0 + 64, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString("M", 48 + param0, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[5], param0 + 64, param2, 16777215, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b("I", param0 + 48, param2, 16580223, 0);
-                          AccountRequestState.field_f.b(vb.field_f[6], param0 + 64, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString("I", param0 + 48, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[6], param0 + 64, param2, 16777215, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b("O", param0 + 48, param2, 16580223, 0);
-                          AccountRequestState.field_f.b(vb.field_f[7], param0 + 64, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString("O", param0 + 48, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[7], param0 + 64, param2, 16777215, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b("R", param0 + 48, param2, 16580223, 0);
-                          AccountRequestState.field_f.b(vb.field_f[8], 64 + param0, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString("R", param0 + 48, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[8], 64 + param0, param2, 16777215, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b("W", 48 + param0, param2, 16580223, 0);
-                          AccountRequestState.field_f.b(vb.field_f[18], param0 + 64, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString("W", 48 + param0, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[18], param0 + 64, param2, 16777215, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b("L", param0 + 48, param2, 16580223, 0);
-                          AccountRequestState.field_f.b(vb.field_f[9], 64 + param0, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString("L", param0 + 48, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[9], 64 + param0, param2, 16777215, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b("N", 48 + param0, param2, 16580223, 0);
-                          AccountRequestState.field_f.b(vb.field_f[10], 64 + param0, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString("N", 48 + param0, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[10], 64 + param0, param2, 16777215, 0);
                           param0 += 256;
                           param2 -= 192;
                           param2 += 24;
-                          AccountRequestState.field_f.b("C", 48 + param0, param2, 16580223, 0);
-                          AccountRequestState.field_f.b(vb.field_f[11], param0 + 64, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString("C", 48 + param0, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[11], param0 + 64, param2, 16777215, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b("TAB", 40 + param0, param2, 16580223, 0);
-                          AccountRequestState.field_f.b(vb.field_f[12], param0 + 64, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString("TAB", 40 + param0, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[12], param0 + 64, param2, 16777215, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b("A", param0 + 48, param2, 16580223, 0);
-                          AccountRequestState.field_f.b(vb.field_f[13], 64 + param0, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString("A", param0 + 48, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[13], 64 + param0, param2, 16777215, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b("G", param0 + 48, param2, 16580223, 0);
-                          AccountRequestState.field_f.b(vb.field_f[14], 64 + param0, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString("G", param0 + 48, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[14], 64 + param0, param2, 16777215, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b("V", param0 + 48, param2, 16580223, 0);
-                          AccountRequestState.field_f.b(vb.field_f[15], 64 + param0, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString("V", param0 + 48, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[15], 64 + param0, param2, 16777215, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b("[,]", param0 + 44, param2, 16580223, 0);
-                          AccountRequestState.field_f.b(vb.field_f[16], param0 + 64, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString("[,]", param0 + 44, param2, 16580223, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[16], param0 + 64, param2, 16777215, 0);
                           param2 += 24;
-                          AccountRequestState.field_f.b(vb.field_f[17], 44 + param0, param2, 16777215, 0);
+                          AccountRequestState.field_f.drawString(vb.field_f[17], 44 + param0, param2, 16777215, 0);
                           if (mm.field_e >= 2) {
                             param2 += 28;
-                            AccountRequestState.field_f.c("ADMIN CHEATS", 320, param2, 16580223, 0);
+                            AccountRequestState.field_f.drawCentred("ADMIN CHEATS", 320, param2, 16580223, 0);
                             param2 += 20;
-                            AccountRequestState.field_f.c("<col=fcfe7f>K -</col> Kill all enemies on map.", 320, param2, 16777215, 0);
+                            AccountRequestState.field_f.drawCentred("<col=fcfe7f>K -</col> Kill all enemies on map.", 320, param2, 16777215, 0);
                             param2 += 16;
-                            AccountRequestState.field_f.c("<col=fcfe7f>T -</col> Give current soldier full walking tus.", 320, param2, 16777215, 0);
+                            AccountRequestState.field_f.drawCentred("<col=fcfe7f>T -</col> Give current soldier full walking tus.", 320, param2, 16777215, 0);
                             param2 += 16;
-                            AccountRequestState.field_f.c("<col=fcfe7f>Q -</col> Toggle QA helpermode.", 320, param2, 16777215, 0);
+                            AccountRequestState.field_f.drawCentred("<col=fcfe7f>Q -</col> Toggle QA helpermode.", 320, param2, 16777215, 0);
                           }
                         }
                       } else {
                         param2 = 80;
-                        FrameTimer.field_f.c(o.field_a[0], 320, 468, 13881286, -1);
+                        FrameTimer.field_f.drawCentred(o.field_a[0], 320, 468, 13881286, -1);
                         param0 = 320;
                         param0 = 32;
                         param2 += 32;
@@ -243,26 +243,26 @@ final class AdminCheatOverlay {
                     } else {
                       param2 = 80;
                       param0 = 320;
-                      FrameTimer.field_f.c(k.field_d[0], 320, 468, 13881286, -1);
+                      FrameTimer.field_f.drawCentred(k.field_d[0], 320, 468, 13881286, -1);
                       param0 = 20;
                       pf.field_a[7].b(0, param2);
                       param2 += 125;
-                      AccountRequestState.field_f.b("1.", param0, param2 - 9, 16580223, 0);
+                      AccountRequestState.field_f.drawString("1.", param0, param2 - 9, 16580223, 0);
                       param2 = param2 + (14 + 14 * sj.a(16777215, 20, param2, 620, 14, param0 + 16, k.field_d[1], 0));
-                      AccountRequestState.field_f.b("2.", param0, -9 + param2, 16580223, 0);
+                      AccountRequestState.field_f.drawString("2.", param0, -9 + param2, 16580223, 0);
                       param2 = param2 + (14 + 14 * sj.a(16777215, param1 + 20, param2, 620, 14, 16 + param0, k.field_d[2], 0));
-                      AccountRequestState.field_f.b("3.", param0, -9 + param2, 16580223, 0);
+                      AccountRequestState.field_f.drawString("3.", param0, -9 + param2, 16580223, 0);
                       param2 = param2 + (1 + sj.a(16777215, param1 + 20, param2, 620, 14, 16 + param0, k.field_d[3], 0)) * 14;
-                      AccountRequestState.field_f.b("4.", param0, param2 - 9, 16580223, 0);
+                      AccountRequestState.field_f.drawString("4.", param0, param2 - 9, 16580223, 0);
                       param2 = param2 + (sj.a(16777215, 20, param2, 620, 14, param0 + 16, k.field_d[4], 0) * 14 + 14);
-                      AccountRequestState.field_f.b("5.", param0, -9 + param2, 16580223, 0);
+                      AccountRequestState.field_f.drawString("5.", param0, -9 + param2, 16580223, 0);
                       param2 = param2 + 14 * (sj.a(16777215, param1 + 20, param2, 620, 14, 16 + param0, k.field_d[5], 0) + 1);
                     }
                   }
                 } else {
                   param0 = 320;
                   param2 = 76;
-                  FrameTimer.field_f.c(MessageKeys.field_a[0], 320, 468, 13881286, -1);
+                  FrameTimer.field_f.drawCentred(MessageKeys.field_a[0], 320, 468, 13881286, -1);
                   param0 = 96;
                   param2 += 48;
                   sj.a(16777215, 20, param2, 610, 14, param0, MessageKeys.field_a[1], 0);
@@ -289,25 +289,25 @@ final class AdminCheatOverlay {
             } else {
               param0 = 320;
               param2 = 76;
-              FrameTimer.field_f.c(mb.field_p[0], 320, 468, 13881286, -1);
+              FrameTimer.field_f.drawCentred(mb.field_p[0], 320, 468, 13881286, -1);
               pf.field_a[2].b(0, 0);
               param0 += 64;
               param2 += 32;
               param2 -= 32;
               param2 += 48;
-              AccountRequestState.field_f.b("1.", param0, -9 + param2, 16580223, 0);
+              AccountRequestState.field_f.drawString("1.", param0, -9 + param2, 16580223, 0);
               sj.a(16777215, 20, param2, 616, 14, 16 + param0, mb.field_p[1], 0);
               param2 += 48;
-              AccountRequestState.field_f.b("2.", param0, -9 + param2, 16580223, 0);
+              AccountRequestState.field_f.drawString("2.", param0, -9 + param2, 16580223, 0);
               sj.a(16777215, 20, param2, 616, 14, param0 + 16, mb.field_p[2], 0);
               param2 += 48;
-              AccountRequestState.field_f.b("3.", param0, param2 - 9, 16580223, 0);
+              AccountRequestState.field_f.drawString("3.", param0, param2 - 9, 16580223, 0);
               sj.a(16777215, param1 + 20, param2, 616, 14, param0 + 16, mb.field_p[3], 0);
               param2 += 48;
-              AccountRequestState.field_f.b("4.", param0, param2 - 9, 16580223, 0);
+              AccountRequestState.field_f.drawString("4.", param0, param2 - 9, 16580223, 0);
               sj.a(16777215, 20, param2, 616, 14, param0 + 16, mb.field_p[4], 0);
               param2 += 48;
-              AccountRequestState.field_f.b("5.", param0, param2 - 9, 16580223, 0);
+              AccountRequestState.field_f.drawString("5.", param0, param2 - 9, 16580223, 0);
               sj.a(16777215, 20, param2, 616, 14, 16 + param0, mb.field_p[5], 0);
               param2 += 48;
               sj.a(65280, param1 + 20, param2, 592, 14, 48, mb.field_p[6], 0);

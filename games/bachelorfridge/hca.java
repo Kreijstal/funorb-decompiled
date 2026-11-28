@@ -91,7 +91,7 @@ final class hca {
           this.field_c = new UiComponent();
           this.field_c.field_kb = this.field_d - 15;
           this.field_c.field_rb = -10 + this.field_b;
-          this.field_c.field_sb = 30 + g.field_g.c(this.field_a, 300);
+          this.field_c.field_sb = 30 + g.field_g.maxLineWidth(this.field_a, 300);
           this.field_c.field_p = g.field_g.measureWrappedHeight(this.field_a, 300, 14) + 20;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "hca.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

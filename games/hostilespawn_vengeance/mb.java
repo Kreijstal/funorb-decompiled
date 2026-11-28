@@ -10,7 +10,7 @@ final class mb extends ce {
     private int field_h;
     private boolean field_o;
     static int field_p;
-    private vm field_q;
+    private BitmapFont field_q;
     private int field_t;
     private int field_r;
     static he field_s;
@@ -18,7 +18,7 @@ final class mb extends ce {
     static ResourceArchive field_m;
     private String field_l;
 
-    final void a(int param0, int param1, int param2, int param3, vm param4, String param5, int param6, int param7) {
+    final void a(int param0, int param1, int param2, int param3, BitmapFont param4, String param5, int param6, int param7) {
         pm stackIn_33_0;
         pm stackIn_33_1;
         int stackIn_33_2;
@@ -71,9 +71,9 @@ final class mb extends ce {
           this.field_n = param2;
           this.field_j = param6;
           this.field_l = param5;
-          var16 = new String[param4.a(param5, param2) + 1];
+          var16 = new String[param4.lineCount(param5, param2) + 1];
           var17 = var16;
-          var10 = Math.max(1, param4.a(param5, new int[]{param2}, var17));
+          var10 = Math.max(1, param4.wrapText(param5, new int[]{param2}, var17));
           if (this.field_h == 3 &&
             var10 == 1) {
             this.field_h = 1;
@@ -115,11 +115,11 @@ final class mb extends ce {
             var14 = new pm(stackIn_33_2, stackIn_33_3, stackIn_34_4);
             var14.field_b[0] = 0;
             if (var13 != null) {
-              var14.field_b[var13.length()] = param4.a(var13);
+              var14.field_b[var13.length()] = param4.stringWidth(var13);
               if (param6 != 3) {
                 stackIn_38_0 = 0;
               } else {
-                stackIn_38_0 = this.a(param4.a(var13), param2, 41, var13);
+                stackIn_38_0 = this.a(param4.stringWidth(var13), param2, 41, var13);
               }
               AgeValidator.a(stackIn_38_0, (byte) 98, param4, var13, var14);
             }
@@ -147,7 +147,7 @@ final class mb extends ce {
         }
     }
 
-    private final pm a(byte param0, String param1, vm param2, int param3) {
+    private final pm a(byte param0, String param1, BitmapFont param2, int param3) {
         pm var5 = null;
         RuntimeException var5_ref = null;
         pm var6 = null;
@@ -260,7 +260,7 @@ final class mb extends ce {
         }
     }
 
-    final void a(int param0, int param1, String param2, vm param3, byte param4) {
+    final void a(int param0, int param1, String param2, BitmapFont param3, byte param4) {
         pm var8 = null;
         pm var9 = null;
         if (param2 == null) {
@@ -283,17 +283,17 @@ final class mb extends ce {
           var9 = var8;
           if (param4 != -2) {
             String var7 = (String) null;
-            this.a((vm) null, 45, -44, -47, (String) null);
+            this.a((BitmapFont) null, 45, -44, -47, (String) null);
           }
           var8.field_b[0] = param1;
-          var9.field_b[param2.length()] = param3.a(param2) + param1;
+          var9.field_b[param2.length()] = param3.stringWidth(param2) + param1;
           AgeValidator.a(0, (byte) -69, param3, param2, var9);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "mb.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    final void a(vm param0, int param1, int param2, int param3, String param4) {
+    final void a(BitmapFont param0, int param1, int param2, int param3, String param4) {
         pm var8 = null;
         pm var9 = null;
         if (param4 == null) {
@@ -317,7 +317,7 @@ final class mb extends ce {
         try {
           var8 = this.a((byte) 53, param4, param0, param1);
           var9 = var8;
-          var9.field_b[0] = -param0.a(param4) + param3;
+          var9.field_b[0] = -param0.stringWidth(param4) + param3;
           var9.field_b[param4.length()] = param3;
           AgeValidator.a(0, (byte) 65, param0, param4, var9);
         } catch (RuntimeException runtimeException) {
@@ -391,7 +391,7 @@ final class mb extends ce {
         field_s = null;
     }
 
-    final void a(int param0, String param1, int param2, int param3, vm param4) {
+    final void a(int param0, String param1, int param2, int param3, BitmapFont param4) {
         pm var8 = null;
         int var7 = 0;
         if (param1 == null) {
@@ -413,7 +413,7 @@ final class mb extends ce {
           this.field_q = param4;
           this.field_j = 1;
           var8 = this.a((byte) 53, param1, param4, param0);
-          var7 = param4.a(param1);
+          var7 = param4.stringWidth(param1);
           var8.field_b[0] = -(var7 >> 1) + param2;
           var8.field_b[param1.length()] = param2 + (var7 >> 1);
           AgeValidator.a(0, (byte) -54, param4, param1, var8);

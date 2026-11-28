@@ -102,7 +102,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements rf, oi 
         this.field_H = new ig(sf.field_e, (lf) null);
         this.field_G = new ig(bb.field_l, (lf) null);
         this.field_E.field_x = fc.field_d;
-        this.field_E.a((byte) -2, new AccountNameAvailabilityValidator(this.field_E));
+        this.field_E.setFieldValidator((byte) -2, new AccountNameAvailabilityValidator(this.field_E));
         this.field_H.field_E = false;
         this.field_H.field_u = (uk) ((Object) new b());
         this.field_G.field_u = (uk) ((Object) new ll());
@@ -236,7 +236,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements rf, oi 
           int var5 = 52 % ((param0 - 61) / 62);
           var3 = this.field_E;
           var4 = param1;
-          ((EditableTextField) ((Object) var3)).a((byte) 20, var4, false);
+          ((EditableTextField) ((Object) var3)).setText((byte) 20, var4, false);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "lj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -106,7 +106,7 @@ final class dl extends jla {
           stackIn_7_0 = ((1 & var9) != 0) ? 24 : 40;
           var13 = stackIn_7_0;
           SoftwareRasterizer.fillRectangleAlpha(var4, -var6 + var5Lifetime1, var8, 2 * var6 + var7, 0, var13);
-          this.field_g.a(var10, var8 / 2 + var4, var5Lifetime1, var11, -1);
+          this.field_g.drawCentred(var10, var8 / 2 + var4, var5Lifetime1, var11, -1);
           var14 = 1;
           var15 = "";
           for (var16 = 0; var16 < var2; var16++) {
@@ -196,7 +196,7 @@ final class dl extends jla {
         } else {
           var11.draw(var9 - (var11.field_n >> 1), var10 - 22);
         }
-        ((BitmapFont) ((Object) var7)).a(var6, var9, 6 + var10, var8, -1);
+        ((BitmapFont) ((Object) var7)).drawCentred(var6, var9, 6 + var10, var8, -1);
     }
 
     final void l(int param0) {

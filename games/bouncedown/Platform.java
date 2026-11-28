@@ -14,7 +14,7 @@ final class Platform {
     static String[] field_f;
     static String field_i;
 
-    final void a(int param0, int param1) {
+    final void drawPlatform(int param0, int param1) {
         int var3;
         int var4;
         int var5_int;
@@ -36,7 +36,7 @@ final class Platform {
             var4 = param1 + (int)this.field_c;
             var5_int = -(od.field_f.field_s * (2 + this.field_b)) + (16 + ((int)this.field_h + 16));
             var5_int -= 64;
-            var6 = od.field_f.b(hf.field_c);
+            var6 = od.field_f.stringWidth(hf.field_c);
             var7 = od.field_f.field_s;
             CipherPacketBuffer.a(var4, hf.field_c, var5_int, 16744512, param0 + 7);
             ve.a(8 + (var7 + 16), var5_int - 27, ig.field_d, (byte) -82, 8 + (var6 + 8), -8 + var4 - var6 / 2);
@@ -99,7 +99,7 @@ final class Platform {
           }
         }
         if (param0 != 1) {
-          this.a(87, 11);
+          this.drawPlatform(87, 11);
         }
     }
 
@@ -114,7 +114,7 @@ final class Platform {
         field_e = null;
     }
 
-    final void a(int param0) {
+    final void updatePlatform(int param0) {
         int var2;
         int var3;
         var3 = Bounce.field_N;
@@ -179,7 +179,7 @@ final class Platform {
         }
     }
 
-    final static void b(int param0) {
+    final static void handleClearLoginFlagPacket(int param0) {
         hf.field_b = false;
         if (param0 != 16) {
           field_a = (RgbSprite[]) null;
@@ -187,7 +187,7 @@ final class Platform {
         jc.field_g.readUnsignedByte((byte) -72);
     }
 
-    final void a(int param0, int param1, double param2) {
+    final void respawnPlatform(int param0, int param1, double param2) {
         this.field_c = param2;
         this.field_h = 32.0 * Math.random() + 480.0;
         this.field_d = param1;
@@ -210,12 +210,12 @@ final class Platform {
         this.field_j = 0.0;
     }
 
-    final static String a(int param0, char param1, int param2) {
+    final static String repeatCharacter(int param0, char param1, int param2) {
         int var5 = Bounce.field_N;
         char[] var3 = new char[param0];
         int var4 = 0;
         if (param2 != -13810) {
-          Platform.b(32);
+          Platform.handleClearLoginFlagPacket(32);
         }
         while (var4 < param0) {
           var3[var4] = param1;

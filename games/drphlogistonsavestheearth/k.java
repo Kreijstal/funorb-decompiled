@@ -5,7 +5,7 @@ final class k extends si {
     static AudioOutput field_J;
     static int field_L;
     static int[] field_M;
-    static rf field_H;
+    static BitmapFont field_H;
     private IntrusiveDeque field_K;
     static int[] field_I;
 
@@ -54,7 +54,7 @@ final class k extends si {
         }
         rh var5 = new rh(this.field_K);
         if (param2 != -21) {
-          field_H = (rf) null;
+          field_H = (BitmapFont) null;
         }
         vg var6 = (vg) (var5.a(-119));
         while (var6 != null) {

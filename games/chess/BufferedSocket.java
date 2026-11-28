@@ -245,9 +245,9 @@ final class BufferedSocket implements Runnable {
         vk.field_a = wk.a(param3, 1, "jagex_logo_grey", "commonui");
         bj.field_db = ao.a(param3, "button", 2993, "commonui");
         AccountNameAvailabilityValidator.field_p = AccountRegistrationPanel.a(param3, "validation", "commonui", (byte) -117);
-        rc.field_a = (lh) ((Object) rc.a("commonui", 19131, "arezzo12", param3, param1));
-        rb.field_b = (lh) ((Object) rc.a("commonui", 19131, "arezzo14", param3, param1));
-        tk.field_a = (lh) ((Object) rc.a("commonui", 19131, "arezzo14bold", param3, param1));
+        rc.field_a = (BitmapFont) ((Object) rc.a("commonui", 19131, "arezzo12", param3, param1));
+        rb.field_b = (BitmapFont) ((Object) rc.a("commonui", 19131, "arezzo14", param3, param1));
+        tk.field_a = (BitmapFont) ((Object) rc.a("commonui", 19131, "arezzo14bold", param3, param1));
         RgbSprite var17 = new RgbSprite(param2.getFileByName("button.gif", 30045, ""), (java.awt.Component) ((Object) DirectByteStorage.field_h));
         jn.a("dropdown", 8221, "commonui", param3);
         rk[] var5 = qm.a(1, "commonui", "screen_options", param3);

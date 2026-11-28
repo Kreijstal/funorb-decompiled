@@ -6,7 +6,7 @@ final class jh extends jd {
     private RgbSprite[] field_u;
     static String field_t;
     private int field_w;
-    static ie field_s;
+    static BinaryBitmapFont field_s;
     static byte[][] field_r;
     private int field_v;
 
@@ -47,7 +47,7 @@ final class jh extends jd {
           var9 = 113 / ((-60 - param2) / 56);
           stackIn_16_0 = (param3) ? 16777215 : 7105644;
           var8 = stackIn_16_0;
-          this.field_b.a(param1.field_h, param1.field_r + param4, -2 + (param0 + param1.field_i), param1.field_k, param1.field_m, var8, -1, 1, 1, this.field_b.field_s);
+          this.field_b.drawParagraph(param1.field_h, param1.field_r + param4, -2 + (param0 + param1.field_i), param1.field_k, param1.field_m, var8, -1, 1, 1, this.field_b.field_s);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

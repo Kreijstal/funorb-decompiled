@@ -106,11 +106,11 @@ final class kf extends IntrusiveNode {
         }
     }
 
-    final static ic a(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
-        ic stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        ic stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -119,7 +119,7 @@ final class kf extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            stackIn_2_0 = (ic) null;
+            stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
           if (tc.a(param2, param3, 25479, param0)) {
@@ -127,7 +127,7 @@ final class kf extends IntrusiveNode {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (ic) (stackIn_5_0);
+          return (CoverageBitmapFont) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

@@ -145,7 +145,7 @@ final class ta {
             ta.encodeCp1252Bytes((byte) 99, (CharSequence) null);
           }
           param2.d(param1, param3);
-          pn.field_a.b(param4, param2.field_t / 2 + param1, 15 + param3, 0, -1);
+          pn.field_a.drawCentred(param4, param2.field_t / 2 + param1, 15 + param3, 0, -1);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ta.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

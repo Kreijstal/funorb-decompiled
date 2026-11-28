@@ -30,7 +30,7 @@ final class MixedSupport052 {
           SoftwareRaster.fillRectangle(244, 198, 367, 141, 0);
           if (null == MixedSupport021.rgbSpriteArrayState0008) {
             if (null != MixedSupport013.bitmapFontState0007) {
-              MixedSupport013.bitmapFontState0007.computeInteger1071(SoftwareFramebuffer.stringState0616, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              MixedSupport013.bitmapFontState0007.drawParagraph(SoftwareFramebuffer.stringState0616, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -41,7 +41,7 @@ final class MixedSupport052 {
             rgbSpriteLocal9.performAction0278(245, 199);
           } else {
             if (null != MixedSupport013.bitmapFontState0007) {
-              MixedSupport013.bitmapFontState0007.computeInteger1071(SoftwareFramebuffer.stringState0616, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              MixedSupport013.bitmapFontState0007.drawParagraph(SoftwareFramebuffer.stringState0616, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
           integerLocal3 = -96 / ((integerArgument1 + 79) / 41);
@@ -74,7 +74,7 @@ final class MixedSupport052 {
               integerLocal8++;
             }
             if (objectLocal5 != null) {
-              MixedSupport013.bitmapFontState0007.computeInteger1071("Screenshot(s) " + (String) (objectLocal5) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+              MixedSupport013.bitmapFontState0007.drawParagraph("Screenshot(s) " + (String) (objectLocal5) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
               return;
             }
           }

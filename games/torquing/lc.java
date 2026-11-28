@@ -142,14 +142,14 @@ final class lc extends ro {
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (null == nc.field_d) {
             if (null != DelayedPcmStream.field_o) {
-              DelayedPcmStream.field_o.a(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              DelayedPcmStream.field_o.drawParagraph(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
           var6 = nc.field_d[da.field_a];
           if (var6 == null) {
             if (DelayedPcmStream.field_o != null) {
-              DelayedPcmStream.field_o.a(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              DelayedPcmStream.field_o.drawParagraph(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var6.d(245, 199);
@@ -188,7 +188,7 @@ final class lc extends ro {
             if (var2 == null) {
               return;
             }
-            DelayedPcmStream.field_o.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            DelayedPcmStream.field_o.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

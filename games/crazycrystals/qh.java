@@ -46,7 +46,7 @@ final class qh extends hk {
             return false;
           }
           td.a((float)param1, oi.field_b, false);
-          fe.field_g.a(param0 - 9384);
+          fe.field_g.renderClientFrame(param0 - 9384);
           while (var4_int < 23 * (1 + param2) >> 2) {
             array$0 = new RgbSprite[bp.field_c[var4_int]];
             vj.field_a[var4_int] = array$0;

@@ -77,9 +77,9 @@ final class ud extends IntrusiveNode {
     ud(RawPcmStream param0, IntrusiveNode param1) {
         try {
           this.field_h = param0;
-          this.field_l = param0.e();
+          this.field_l = param0.getTargetVolume();
           this.field_m = param1;
-          this.field_h.h(128 + this.field_l * wc.field_a >> 8);
+          this.field_h.setVolume(128 + this.field_l * wc.field_a >> 8);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -214,7 +214,7 @@ final class IterableNodeHashTable implements Iterable {
         int var2 = ab.field_g[9];
         var1.field_l = var1.field_k.length;
         if (param0 == -86) {
-          MusicPatchPcmStream.field_p = RawPcmStream.a(var1, 100, var2);
+          MusicPatchPcmStream.field_p = RawPcmStream.createForPlaybackRate(var1, 100, var2);
           MusicPatchPcmStream.field_p.e(-1);
           MusicPatchPcmStream.field_p.e(0, var1.field_k.length);
           ok.field_a = we.a(MusicPatchPcmStream.field_p, 6222);

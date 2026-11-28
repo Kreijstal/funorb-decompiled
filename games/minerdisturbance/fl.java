@@ -5,7 +5,7 @@ final class fl implements ad {
     private int field_i;
     private int field_m;
     static ResourceArchive field_f;
-    private we field_k;
+    private BitmapFont field_k;
     static int field_c;
     static boolean field_d;
     private int field_g;
@@ -51,7 +51,7 @@ final class fl implements ad {
             SoftwareRasterizer.fillCircle(var7 * var12.a(var10, true) / var12.a((byte) -84) + var8, var9, this.field_a, this.field_i);
           }
           if (this.field_k != null) {
-            this.field_k.b(var12.field_s, var7 / 2 + var8, var12.field_P + (this.field_k.field_G + var9), this.field_e, this.field_g);
+            this.field_k.drawCentred(var12.field_s, var7 / 2 + var8, var12.field_P + (this.field_k.field_G + var9), this.field_e, this.field_g);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,7 +127,7 @@ final class fl implements ad {
         }
     }
 
-    fl(we param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    fl(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_a = param5;
           this.field_i = param6;

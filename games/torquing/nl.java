@@ -7,7 +7,7 @@ final class nl extends am {
     private int field_w;
     private int field_t;
     static String field_u;
-    static vn field_s;
+    static BinaryBitmapFont field_s;
     private int[] field_v;
 
     final int[] a(byte param0, int param1) {

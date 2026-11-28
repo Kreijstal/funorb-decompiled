@@ -34,7 +34,7 @@ final class tq extends vv {
           this.field_m = param0;
           var8 = this.a(param2, param4 - 30329, param0, param1);
           var9 = var8;
-          var9.field_a[0] = param3 - param0.a(param1);
+          var9.field_a[0] = param3 - param0.stringWidth(param1);
           var9.field_a[param1.length()] = param3;
           jia.a(param0, var9, 0, (byte) -79, param1);
         } catch (RuntimeException runtimeException) {
@@ -58,7 +58,7 @@ final class tq extends vv {
           this.field_f = true;
           this.field_m = param2;
           var8 = this.a(param0, -30327, param2, param3);
-          var7 = param2.a(param3);
+          var7 = param2.stringWidth(param3);
           var8.field_a[0] = param4 - (var7 >> 1);
           var8.field_a[param3.length()] = (var7 >> 1) + param4;
           jia.a(param2, var8, 0, (byte) -75, param3);
@@ -125,9 +125,9 @@ final class tq extends vv {
           this.field_l = param5;
           this.field_p = param7;
           this.field_k = param1;
-          var16 = new String[param0.b(param4, param7) + 1];
+          var16 = new String[param0.lineCount(param4, param7) + 1];
           var17 = var16;
-          var10 = Math.max(1, param0.a(param4, new int[]{param7}, var17));
+          var10 = Math.max(1, param0.wrapText(param4, new int[]{param7}, var17));
           if (this.field_i == 3 &&
             1 == var10) {
             this.field_i = 1;
@@ -169,13 +169,13 @@ final class tq extends vv {
             var14 = new mla(stackIn_36_2, stackIn_36_3, stackIn_37_4);
             var14.field_a[0] = 0;
             if (var13 != null) {
-              var14.field_a[var13.length()] = param0.a(var13);
+              var14.field_a[var13.length()] = param0.stringWidth(var13);
               stackIn_40_0 = (BitmapFont) (param0);
               stackIn_40_1 = var14;
               if (param5 != 3) {
                 stackIn_41_2 = 0;
               } else {
-                stackIn_41_2 = this.a(-1, var13, param0.a(var13), param7);
+                stackIn_41_2 = this.a(-1, var13, param0.stringWidth(var13), param7);
               }
               jia.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, (byte) -96, var13);
             }
@@ -262,7 +262,7 @@ final class tq extends vv {
           var7 = this.a(param3, param0 ^ -30327, param2, param1);
           var8 = var7;
           var7.field_a[0] = param4;
-          var8.field_a[param1.length()] = param4 + param2.a(param1);
+          var8.field_a[param1.length()] = param4 + param2.stringWidth(param1);
           jia.a(param2, var8, param0, (byte) -109, param1);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "tq.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

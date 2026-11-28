@@ -634,7 +634,7 @@ final class RenderingSupport007 {
           } else {
             stringLocal13 = MixedSupport113.stringState0490;
           }
-          integerLocal14 = UiComponentPart029.renderingSupport009State0005.computeInteger1067(stringLocal13, 171);
+          integerLocal14 = UiComponentPart029.renderingSupport009State0005.lineCount(stringLocal13, 171);
           MixedSupport045.computeInteger0552(171, 0, -UiComponentPart029.renderingSupport009State0005.integerState0518 + 274 - integerLocal14 * 8, stringLocal13, 16, 1000, 16769088, UiComponentPart029.renderingSupport009State0005, (byte) -124, 0, integerLocal8 + 80);
           stackIntegerLocal4 = 8 * integerLocal14 + 282;
           stackIntegerLocal5 = 256;
@@ -1742,8 +1742,8 @@ final class RenderingSupport007 {
             }
             MixedSupport045.computeInteger0552(gameDomainSupport002Local6.integerState0176, 1, integerLocal8, stringLocal7, 20, integerLocal9, integerLocal18, MixedSupport001.renderingSupport009State0001, (byte) -128, 1, gameDomainSupport002Local6.integerState0174 + integerLocal5);
           } else {
-            integerLocal19 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport101.stringState0434);
-            integerLocal13 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport040.stringState0179);
+            integerLocal19 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport101.stringState0434);
+            integerLocal13 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport040.stringState0179);
             if (integerLocal13 > integerLocal19) {
               integerLocal19 = integerLocal13;
             }
@@ -1904,7 +1904,7 @@ final class RenderingSupport007 {
         return false;
     }
 
-    private final void performAction0853(RenderingSupport009 renderingSupport009Argument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, String stringArgument8, int integerArgument9, int integerArgument10) {
+    private final void performAction0853(BinaryBitmapFont renderingSupport009Argument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, String stringArgument8, int integerArgument9, int integerArgument10) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -2111,8 +2111,8 @@ final class RenderingSupport007 {
         if (integerLocal1 == 6) {
           boolean frameRemainderLocal14 = true;
           if (this.mixedSupport116State0002.computeBoolean1517(true)) {
-            integerLocal3 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport101.stringState0434);
-            integerLocal4 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport040.stringState0179);
+            integerLocal3 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport101.stringState0434);
+            integerLocal4 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport040.stringState0179);
             if (integerLocal4 > integerLocal3) {
               integerLocal3 = integerLocal4;
             }
@@ -2170,8 +2170,8 @@ final class RenderingSupport007 {
         }
         if (7 == integerLocal1) {
           if (this.mixedSupport116State0002.computeBoolean1517(true)) {
-            integerLocal9 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport101.stringState0434);
-            integerLocal10 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport040.stringState0179);
+            integerLocal9 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport101.stringState0434);
+            integerLocal10 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport040.stringState0179);
             if (integerLocal10 > integerLocal9) {
               integerLocal9 = integerLocal10;
             }

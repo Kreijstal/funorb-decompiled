@@ -6,7 +6,7 @@ final class ClientLookupTables {
     static String field_b;
     static re field_h;
     static int[] field_g;
-    static nc field_e;
+    static CoverageBitmapFont field_e;
     static RgbSprite[] field_d;
     static int field_a;
     static int[][] field_f;

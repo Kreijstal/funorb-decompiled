@@ -35,7 +35,7 @@ final class hm extends ta implements ai {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_s + param3;
         int var6 = this.field_n + param0;
-        lm.field_f.a(bm.field_b, var5 + 20, 20 + var6, this.field_m - 40, this.field_r - 50, 16777215, -1, 1, 0, lm.field_f.field_H);
+        lm.field_f.drawParagraph(bm.field_b, var5 + 20, 20 + var6, this.field_m - 40, this.field_r - 50, 16777215, -1, 1, 0, lm.field_f.field_H);
         super.a(param0, param1, param2, param3);
     }
 

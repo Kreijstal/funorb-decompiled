@@ -34,7 +34,7 @@ final class kc {
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (ed.field_a == null) {
             if (fj.field_f != null) {
-              fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              fj.field_f.drawParagraph(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -43,7 +43,7 @@ final class kc {
           var7Lifetime1 = var6;
           if (var6 == null) {
             if (fj.field_f != null) {
-              fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              fj.field_f.drawParagraph(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var6.e(245, 199);
@@ -82,7 +82,7 @@ final class kc {
             if (var2 == null) {
               return;
             }
-            fj.field_f.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            fj.field_f.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             return;
           }
           return;

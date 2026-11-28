@@ -190,13 +190,13 @@ final class jia extends k {
           for (var7 = 1; var7 < param4.length(); var7++) {
             var8 = param4.charAt(var7);
             if (60 == var8) {
-              var6 = (var5_int >> 8) + (param1.field_a[0] + param0.a(param4.substring(0, var7)));
+              var6 = (var5_int >> 8) + (param1.field_a[0] + param0.stringWidth(param4.substring(0, var7)));
             }
             if (-1 == var6) {
               if (32 == var8) {
                 var5_int = var5_int + param2;
               }
-              param1.field_a[var7] = param1.field_a[0] + (var5_int >> 8) + param0.a(param4.substring(0, var7 + 1)) - param0.a((char) var8);
+              param1.field_a[var7] = param1.field_a[0] + (var5_int >> 8) + param0.stringWidth(param4.substring(0, var7 + 1)) - param0.charWidth((char) var8);
             } else {
               param1.field_a[var7] = var6;
             }

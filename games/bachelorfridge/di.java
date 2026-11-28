@@ -120,7 +120,7 @@ final class di extends pu {
             if (!var2.field_h.isLinked((byte) -106)) {
               var2.unlink(false);
             } else {
-              var2.field_i.f(var2.field_f * b.field_u + 128 >> 8);
+              var2.field_i.setVolume(var2.field_f * b.field_u + 128 >> 8);
             }
             var2 = (cq) (SocketConnector.field_d.nextForward(0));
           }
@@ -129,7 +129,7 @@ final class di extends pu {
             while (var2Lifetime1 != null) {
               stackIn_14_0 = var2Lifetime1.field_h.isLinked((byte) -106);
               if (stackIn_14_0) {
-                var2Lifetime1.field_i.f(var2Lifetime1.field_f * b.field_u + 128 >> 8);
+                var2Lifetime1.field_i.setVolume(var2Lifetime1.field_f * b.field_u + 128 >> 8);
               } else {
                 var2Lifetime1.unlink(false);
               }

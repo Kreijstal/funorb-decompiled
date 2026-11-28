@@ -17,7 +17,7 @@ final class aj {
     ci field_h;
     int field_l;
     private boolean field_b;
-    ee field_o;
+    BitmapFont field_o;
     ci field_m;
     static java.awt.Color field_p;
     static td field_q;
@@ -52,7 +52,7 @@ final class aj {
             var7 = this.field_o.field_x + this.field_o.field_s;
           }
           var8 = SoftwareRasterizer.field_l >> 2;
-          var9 = this.field_o.a(param1);
+          var9 = this.field_o.stringWidth(param1);
           var10 = this.field_o.field_x + this.field_o.field_s;
           var12 = 53 % ((param3 - 76) / 36);
           var11 = 1;
@@ -67,11 +67,11 @@ final class aj {
             if (null == ma.field_d) {
               ma.field_d = new String[16];
             }
-            var11Lifetime1 = this.field_o.a(param1, new int[]{var13}, ma.field_d);
+            var11Lifetime1 = this.field_o.wrapText(param1, new int[]{var13}, ma.field_d);
             var9 = 0;
             var10 = var10 + (var11Lifetime1 - 1) * var7;
             for (var14Lifetime2 = 0; var14Lifetime2 < var11Lifetime1; var14Lifetime2++) {
-              var15 = this.field_o.a(ma.field_d[var14Lifetime2]);
+              var15 = this.field_o.stringWidth(ma.field_d[var14Lifetime2]);
               if (var15 > var9) {
                 var9 = var15;
               }
@@ -87,7 +87,7 @@ final class aj {
           }
           SoftwareRasterizer.drawRectangleOutline(var13, var14Lifetime1, var9 + var5_int, var10 + var6, this.field_g);
           SoftwareRasterizer.fillRectangle(1 + var13, var14Lifetime1 + 1, -2 + var5_int + var9, var10 + var6 - 2, this.field_d);
-          this.field_o.a(param1, this.field_l + var13, this.field_e + var14Lifetime1, var9, var10, this.field_k, -1, 0, 0, var7);
+          this.field_o.drawParagraph(param1, this.field_l + var13, this.field_e + var14Lifetime1, var9, var10, this.field_k, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,8 +106,8 @@ final class aj {
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         SoftwareRasterizer.drawLine(param2, param0, param1, param5, param3);
         if (param4 != 0) {
-          ee var8 = (ee) null;
-          this.a(-29, (ee) null);
+          BitmapFont var8 = (BitmapFont) null;
+          this.a(-29, (BitmapFont) null);
         }
     }
 
@@ -134,7 +134,7 @@ final class aj {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_o.a(param1);
+          var5_int = this.field_o.stringWidth(param1);
           var6 = this.field_o.field_q + this.field_o.field_x;
           var7 = param2;
           if (!(SoftwareRasterizer.field_l >= var7 + var5_int + 6)) {
@@ -147,13 +147,13 @@ final class aj {
           int var9 = 32 / ((-25 - param3) / 44);
           SoftwareRasterizer.drawRectangleOutline(var7, var8, 6 + var5_int, var6 + 6, this.field_k);
           SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, var5_int + 4, var6 + 4, this.field_d);
-          this.field_o.b(param1, 3 + var7, this.field_o.field_q + 3 + var8, this.field_k, -1);
+          this.field_o.drawString(param1, 3 + var7, this.field_o.field_q + 3 + var8, this.field_k, -1);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "aj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, ee param1) {
+    final void a(int param0, BitmapFont param1) {
         ek var17 = null;
         nd var4 = null;
         RgbSprite[] var5 = null;
@@ -300,7 +300,7 @@ final class aj {
     }
 
     final void a(int param0, byte param1, String param2, int param3) {
-        ee var6 = null;
+        BitmapFont var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -308,8 +308,8 @@ final class aj {
         RuntimeException var5 = null;
         try {
           if (param1 != -53) {
-            var6 = (ee) null;
-            this.a(-126, (ee) null);
+            var6 = (BitmapFont) null;
+            this.a(-126, (BitmapFont) null);
           }
           if (this.field_b) {
             this.a(param3, param2, param0, (byte) 115);

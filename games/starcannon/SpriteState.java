@@ -25,8 +25,8 @@ abstract class SpriteState extends DualLinkNode {
           field_n = null;
           return;
         }
-        qe var2 = (qe) null;
-        SpriteState.a(17, -126, (qe) null, (qe) null);
+        BitmapFont var2 = (BitmapFont) null;
+        SpriteState.a(17, -126, (BitmapFont) null, (BitmapFont) null);
         field_n = null;
     }
 
@@ -73,7 +73,7 @@ abstract class SpriteState extends DualLinkNode {
     SpriteState() {
     }
 
-    final static void a(int param0, int param1, qe param2, qe param3) {
+    final static void a(int param0, int param1, BitmapFont param2, BitmapFont param3) {
         try {
           rh.field_h = param2;
           ai.field_h = param3;

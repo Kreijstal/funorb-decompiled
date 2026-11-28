@@ -438,7 +438,7 @@ class ik implements rd, ub {
           boolean decompiledFrameRemainder0 = true;
           var10 = this.a((byte) -83, param0);
           if (this.field_i) {
-            this.field_f.a(this.c(349, param0), this.a(40, param0, param6, param1), this.a(param0, -4, param3, param4), var9_int, var10, param2, param5, this.field_p, this.field_m, this.field_n);
+            this.field_f.drawParagraph(this.c(349, param0), this.a(40, param0, param6, param1), this.a(param0, -4, param3, param4), var9_int, var10, param2, param5, this.field_p, this.field_m, this.field_n);
           } else {
             var12 = this.field_m;
             if (var12 == 0) {
@@ -457,16 +457,16 @@ class ik implements rd, ub {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (1 == var12Lifetime1) {
-                this.field_f.a(this.c(349, param0), (var9_int >> 1) + this.a(40, param0, param6, param1), this.a(param0, -4, param3, param4) + var11, param2, param5);
+                this.field_f.drawCentred(this.c(349, param0), (var9_int >> 1) + this.a(40, param0, param6, param1), this.a(param0, -4, param3, param4) + var11, param2, param5);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_f.c(this.c(349, param0), var9_int + this.a(40, param0, param6, param1), var11 + this.a(param0, -4, param3, param4), param2, param5);
+                  this.field_f.drawRightAligned(this.c(349, param0), var9_int + this.a(40, param0, param6, param1), var11 + this.a(param0, -4, param3, param4), param2, param5);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_f.b(this.c(349, param0), this.a(40, param0, param6, param1), var11 + this.a(param0, -4, param3, param4), param2, param5);
+              this.field_f.drawString(this.c(349, param0), this.a(40, param0, param6, param1), var11 + this.a(param0, -4, param3, param4), param2, param5);
             }
           }
           pd.a(-22949);

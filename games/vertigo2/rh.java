@@ -68,7 +68,7 @@ final class rh extends WidgetContainer implements ij {
 
     final void a(boolean param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        this.field_M.a(this.field_K, 14 + (param2 + this.x), 10 + (param3 + this.y), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_M.field_z);
+        this.field_M.drawParagraph(this.field_K, 14 + (param2 + this.x), 10 + (param3 + this.y), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_M.field_z);
         if (param0) {
           rh.b(81, -4);
         }
@@ -82,7 +82,7 @@ final class rh extends WidgetContainer implements ij {
           this.field_L = param0;
           this.field_M = param1;
           this.field_K = param2;
-          var4_int = this.field_K != null ? this.field_M.a(this.field_K, 260, this.field_M.field_z) : 0;
+          var4_int = this.field_K != null ? this.field_M.textHeight(this.field_K, 260, this.field_M.field_z) : 0;
           this.setBounds(false, 0, 0, 22 + var4_int, 288);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

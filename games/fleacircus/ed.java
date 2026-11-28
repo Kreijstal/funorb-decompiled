@@ -75,8 +75,8 @@ final class ed {
             sd.field_c = kl.a(252, ub.field_b, "benefits", "menu_text");
             df.field_b = kl.a(252, ub.field_b, "benefits", "button_frame");
             MouseWheelInput.field_f = kl.a(252, ub.field_b, "benefits", "arrow");
-            ql.field_k = (fa) ((Object) ub.a("benefits", ub.field_b, "large_font", SecondaryNodeDeque.field_b, 32));
-            qj.field_H = (fa) ((Object) ub.a("benefits", ub.field_b, "small_font", SecondaryNodeDeque.field_b, 32));
+            ql.field_k = (BitmapFont) ((Object) ub.a("benefits", ub.field_b, "large_font", SecondaryNodeDeque.field_b, 32));
+            qj.field_H = (BitmapFont) ((Object) ub.a("benefits", ub.field_b, "small_font", SecondaryNodeDeque.field_b, 32));
             var27 = SoftwareRasterizer.field_a;
             var2 = SoftwareRasterizer.field_d;
             var3 = SoftwareRasterizer.field_k;
@@ -90,18 +90,18 @@ final class ed {
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_w / 2;
             var12.f();
-            ql.field_k.a(db.a(IterableNodeHashTable.field_b, new String[]{pi.field_e}, true), var6, 40, 16777215, -1);
-            qj.field_H.a(db.a(jj.field_Y, new String[]{pi.field_e}, true), var6, 60, 16777215, -1);
-            ql.field_k.a(db.a(NetworkGameClient.field_w, new String[]{id.field_i}, true), var6, 110, 16777215, -1);
-            qj.field_H.a(db.a(lj.field_i, new String[]{id.field_i}, true), var6, 130, 16777215, -1);
-            ql.field_k.a(MidiPcmStream.field_N, var6, 180, 16777215, -1);
-            qj.field_H.a(pg.field_b, var6, 200, 16777215, -1);
+            ql.field_k.drawCentred(db.a(IterableNodeHashTable.field_b, new String[]{pi.field_e}, true), var6, 40, 16777215, -1);
+            qj.field_H.drawCentred(db.a(jj.field_Y, new String[]{pi.field_e}, true), var6, 60, 16777215, -1);
+            ql.field_k.drawCentred(db.a(NetworkGameClient.field_w, new String[]{id.field_i}, true), var6, 110, 16777215, -1);
+            qj.field_H.drawCentred(db.a(lj.field_i, new String[]{id.field_i}, true), var6, 130, 16777215, -1);
+            ql.field_k.drawCentred(MidiPcmStream.field_N, var6, 180, 16777215, -1);
+            qj.field_H.drawCentred(pg.field_b, var6, 200, 16777215, -1);
             rg.a(0, var12, var12.field_w, var12.field_t, 1, -68, 3, 0);
             wh.field_b.f();
             var12.d(-wh.field_b.field_q + 18, 241 - wh.field_b.field_v);
             for (var7 = 0; var7 < vg.field_u.length; var7++) {
               of.field_h[var7].f();
-              qj.field_H.a(vg.field_u[var7], 3, 3, -6 + of.field_h[var7].field_w, -6 + of.field_h[var7].field_t, SecondaryNodeDequeIterator.field_e, -1, 1, 1, qj.field_H.field_H + qj.field_H.field_K);
+              qj.field_H.drawParagraph(vg.field_u[var7], 3, 3, -6 + of.field_h[var7].field_w, -6 + of.field_h[var7].field_t, SecondaryNodeDequeIterator.field_e, -1, 1, 1, qj.field_H.field_H + qj.field_H.field_K);
               rg.a(0, of.field_h[var7], of.field_h[var7].field_w, of.field_h[var7].field_t, 1, -121, 3, 0);
             }
             vg.field_u = null;
@@ -126,8 +126,8 @@ final class ed {
             var3Lifetime1 = SoftwareRasterizer.field_k;
             SoftwareRasterizer.saveClip(ab.field_c);
             var14 = db.a(hb.field_q, new String[]{ng.field_g[di.field_d]}, true);
-            var5 = ql.field_k.c(var14, wa.field_m);
-            var6Lifetime1 = ql.field_k.b(var14, wa.field_m, ql.field_k.field_K + ql.field_k.field_H);
+            var5 = ql.field_k.maxLineWidth(var14, wa.field_m);
+            var6Lifetime1 = ql.field_k.textHeight(var14, wa.field_m, ql.field_k.field_K + ql.field_k.field_H);
             var7Lifetime1 = MidiPcmStream.field_V + (wa.field_m - var5) / 2;
             var5 += 6;
             var8 = (-var6Lifetime1 + bh.field_l) / 2 + IterableNodeHashTable.field_i;
@@ -173,7 +173,7 @@ final class ed {
             pb.field_g.a();
             var9 = new RgbSprite(pb.field_g.field_x, pb.field_g.field_r);
             var9.f();
-            ql.field_k.a(var14, MidiPcmStream.field_V, IterableNodeHashTable.field_i, wa.field_m, bh.field_l, 16777215, -1, 1, 1, ql.field_k.field_H + ql.field_k.field_K);
+            ql.field_k.drawParagraph(var14, MidiPcmStream.field_V, IterableNodeHashTable.field_i, wa.field_m, bh.field_l, 16777215, -1, 1, 1, ql.field_k.field_H + ql.field_k.field_K);
             rg.a(0, var9, var9.field_x, var9.field_r, 1, -14, 3, 0);
             pb.field_g.f();
             var9.d(0, 0);
@@ -195,7 +195,7 @@ final class ed {
             var5_ref_String = db.a(NetworkArchiveRequest.field_B, new String[]{DualLinkNode.field_k}, true);
             DualLinkNode.field_k = null;
             var16.f();
-            qj.field_H.a(var5_ref_String, 3, 3, var16.field_w - 6, var16.field_t - 6, 16777215, -1, 0, 1, qj.field_H.field_H + qj.field_H.field_K);
+            qj.field_H.drawParagraph(var5_ref_String, 3, 3, var16.field_w - 6, var16.field_t - 6, 16777215, -1, 0, 1, qj.field_H.field_H + qj.field_H.field_K);
             rg.a(0, var16, var16.field_w, var16.field_t, 1, -27, 3, 0);
             GameAppletShell.field_b.f();
             var16.d(199 - GameAppletShell.field_b.field_q, 83 - GameAppletShell.field_b.field_v);
@@ -208,12 +208,12 @@ final class ed {
             var2Lifetime3 = SoftwareRasterizer.field_d;
             var3Lifetime3 = SoftwareRasterizer.field_k;
             SoftwareRasterizer.saveClip(ab.field_c);
-            var4 = qj.field_H.c(ContextualRuntimeException.field_d, 640) + 6;
+            var4 = qj.field_H.maxLineWidth(ContextualRuntimeException.field_d, 640) + 6;
             var5Lifetime1 = var4 + ArchiveRequest.field_s.field_x + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (ArchiveRequest.field_s.field_x + var6Lifetime2);
             GameAppletShell.field_b.f();
-            qj.field_H.c(ContextualRuntimeException.field_d, -GameAppletShell.field_b.field_q + var7Lifetime2, qj.field_H.field_K + qj.field_H.field_H + (-GameAppletShell.field_b.field_v + 155), 16777215, -1);
+            qj.field_H.drawString(ContextualRuntimeException.field_d, -GameAppletShell.field_b.field_q + var7Lifetime2, qj.field_H.field_K + qj.field_H.field_H + (-GameAppletShell.field_b.field_v + 155), 16777215, -1);
             rg.a(-GameAppletShell.field_b.field_q + (var7Lifetime2 - 4), GameAppletShell.field_b, var4, 50, 1, -90, 3, 155 - GameAppletShell.field_b.field_v);
             var8Lifetime1 = -((-qj.field_H.field_K + (-qj.field_H.field_H - 3) + ArchiveRequest.field_s.field_r) / 2) + 155 - GameAppletShell.field_b.field_v;
             ArchiveRequest.field_s.d(var6Lifetime2 - GameAppletShell.field_b.field_q, var8Lifetime1);

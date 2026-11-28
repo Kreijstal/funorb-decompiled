@@ -11,11 +11,11 @@ final class DelegatingCanvas extends java.awt.Canvas {
     static rk field_g;
     static String[] field_b;
 
-    final static pm a(byte[] param0, int param1) {
-        pm var2 = null;
+    final static CoverageBitmapFont a(byte[] param0, int param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_4_0 = null;
-        pm stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -26,9 +26,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
           }
           if (param0 == null) {
             stackIn_4_0 = null;
-            return (pm) (stackIn_4_0);
+            return (CoverageBitmapFont) (stackIn_4_0);
           }
-          var2 = new pm(param0, be.field_a, FullscreenFocusCanvas.field_c, wm.field_b, b.field_c, AccountNameAvailabilityValidator.field_r, vk.field_d);
+          var2 = new CoverageBitmapFont(param0, be.field_a, FullscreenFocusCanvas.field_c, wm.field_b, b.field_c, AccountNameAvailabilityValidator.field_r, vk.field_d);
           ch.k(param1 + 4210625);
           stackIn_6_0 = var2;
           return stackIn_6_0;

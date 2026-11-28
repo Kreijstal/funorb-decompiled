@@ -71,7 +71,7 @@ final class GameDomainSupport002 {
         try {
           this.integerState0179 = integerArgument1;
           this.stringState0142 = stringArgument2;
-          this.integerState0176 = bitmapFontArgument3.computeInteger1066(this.stringState0142) + 46;
+          this.integerState0176 = bitmapFontArgument3.stringWidth(this.stringState0142) + 46;
           this.integerState0175 = 30;
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ec.<init>(" + integerArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + (bitmapFontArgument3 != null ? "{...}" : "null") + ')');

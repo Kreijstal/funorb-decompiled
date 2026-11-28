@@ -3,7 +3,7 @@
  */
 final class MixedSupport121 implements CallbackContract004 {
     static String[] stringArrayState0047;
-    static RenderingSupport009 renderingSupport009State0006;
+    static BinaryBitmapFont renderingSupport009State0006;
     static SecondaryNodeHashTable secondaryNodeHashTableState0005;
     static SceneWidget sceneWidgetState0117;
     static SceneWidget sceneWidgetState0118;

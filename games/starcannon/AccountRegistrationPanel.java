@@ -27,7 +27,7 @@ final class AccountRegistrationPanel extends vk implements dc, ga, qk {
         try {
           var3 = this.field_J;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a((byte) -91, false, var4);
+          ((EditableTextField) ((Object) var3)).setText((byte) -91, false, var4);
           if (param1 > -120) {
             var5 = (String) null;
             this.a((String) null, (byte) -101);
@@ -73,12 +73,12 @@ final class AccountRegistrationPanel extends vk implements dc, ga, qk {
         this.field_G.field_p = lh.field_n;
         this.field_K.field_p = SecondaryNodeDequeIterator.field_a;
         this.field_D.field_p = ej.field_q;
-        this.field_J.a(new AccountNameAvailabilityValidator(this.field_J), 0);
-        this.field_z.a(new EmailFormatValidator(this.field_z), 0);
-        this.field_E.a(new ConfirmedEmailAvailabilityValidator(this.field_E, this.field_z), 0);
-        this.field_L.a(new PasswordValidator(this.field_L, this.field_J, this.field_z), 0);
-        this.field_G.a(new MatchingFieldValidator(this.field_G, this.field_L), 0);
-        this.field_K.a(new AgeValidator(this.field_K), 0);
+        this.field_J.setFieldValidator(new AccountNameAvailabilityValidator(this.field_J), 0);
+        this.field_z.setFieldValidator(new EmailFormatValidator(this.field_z), 0);
+        this.field_E.setFieldValidator(new ConfirmedEmailAvailabilityValidator(this.field_E, this.field_z), 0);
+        this.field_L.setFieldValidator(new PasswordValidator(this.field_L, this.field_J, this.field_z), 0);
+        this.field_G.setFieldValidator(new MatchingFieldValidator(this.field_G, this.field_L), 0);
+        this.field_K.setFieldValidator(new AgeValidator(this.field_K), 0);
         this.field_M.field_u = false;
         this.field_M.field_o = (de) ((Object) new gb());
         this.field_I.field_o = (de) ((Object) new wa());

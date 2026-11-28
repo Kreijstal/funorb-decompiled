@@ -20,7 +20,7 @@ final class wg extends tc {
           if (!param0) {
             field_u = (GzipDecompressor) null;
           }
-          stackIn_3_0 = Platform.a(param1.field_h.length(), '*', -13810);
+          stackIn_3_0 = Platform.repeatCharacter(param1.field_h.length(), '*', -13810);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,7 +64,7 @@ final class wg extends tc {
         }
     }
 
-    private wg(tj param0, int param1) {
+    private wg(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

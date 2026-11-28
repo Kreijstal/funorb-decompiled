@@ -3,7 +3,7 @@
  */
 final class wi {
     static RgbSprite field_a;
-    static rf field_e;
+    static BitmapFont field_e;
     static he[] field_c;
     private int[] field_g;
     static java.applet.Applet field_d;

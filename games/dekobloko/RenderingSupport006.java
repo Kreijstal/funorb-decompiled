@@ -11,7 +11,7 @@ final class RenderingSupport006 extends HashNode {
     static String stringState0268;
     int integerState0334;
     private int[] integerArrayState0110;
-    static RenderingSupport009 renderingSupport009State0003;
+    static BinaryBitmapFont renderingSupport009State0003;
 
     private final void performAction0746(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, int integerArgument14, boolean booleanArgument15, boolean booleanArgument16) {
         int integerLocal1 = 0;
@@ -312,15 +312,15 @@ final class RenderingSupport006 extends HashNode {
         try {
           stackBooleanLocal8 = (booleanArgument3);
           this.booleanState0081 = stackBooleanLocal8;
-          integerLocal13 = renderingSupport009State0003.computeInteger1080(stringArgument1, 2147483647);
-          integerLocal15 = renderingSupport009State0003.computeInteger1081(stringArgument1, 2147483647, 8);
+          integerLocal13 = renderingSupport009State0003.maxLineWidth(stringArgument1, 2147483647);
+          integerLocal15 = renderingSupport009State0003.textHeight(stringArgument1, 2147483647, 8);
           integerLocal13--;
           this.rgbSpriteState0022 = new RgbSprite(integerLocal13, integerLocal15);
           integerArrayLocal35 = SoftwareRaster.integerArrayState0063;
           integerLocal16 = SoftwareRaster.integerState0285;
           integerLocal17 = SoftwareRaster.integerState0284;
           this.rgbSpriteState0022.performAction0256();
-          renderingSupport009State0003.computeInteger1071(stringArgument1, 0, 0, 1 + integerLocal13, integerLocal15, integerArgument2, -1, 1, 1, 8);
+          renderingSupport009State0003.drawParagraph(stringArgument1, 0, 0, 1 + integerLocal13, integerLocal15, integerArgument2, -1, 1, 1, 8);
           SoftwareRaster.setRasterBuffer(integerArrayLocal35, integerLocal16, integerLocal17);
           this.integerArrayState0110 = new int[integerLocal13 * integerLocal15];
           integerArrayLocal34 = new int[integerLocal15 * integerLocal13];

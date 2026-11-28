@@ -30,11 +30,11 @@ abstract class dm {
         field_b = null;
     }
 
-    final static c a(int param0, ResourceArchive param1, String param2, ResourceArchive param3, String param4) {
+    final static BinaryBitmapFont a(int param0, ResourceArchive param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        c stackIn_1_0 = null;
+        BinaryBitmapFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -84,7 +84,7 @@ abstract class dm {
 
     abstract void a(PacketBuffer param0, byte param1);
 
-    final static void a(lh param0, ResourceArchive param1, int param2) {
+    final static void a(BitmapFont param0, ResourceArchive param1, int param2) {
         int var8 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -100,7 +100,7 @@ abstract class dm {
         int var9 = 0;
         Throwable var10 = null;
         Throwable var11 = null;
-        lh var12 = null;
+        BitmapFont var12 = null;
         int[] var16 = null;
         var9 = Chess.field_G;
         try {
@@ -122,8 +122,8 @@ abstract class dm {
             return;
           }
           dh.a(121, var4);
-          var12 = (lh) null;
-          AwtRasterBuffer.field_g = AccountServiceResult.a(1513239, 65793, 2245737, 65793, 0, 5138823, (lh) null, 4020342, 65793, (byte) 116, param2, 8947848, 1127256);
+          var12 = (BitmapFont) null;
+          AwtRasterBuffer.field_g = AccountServiceResult.a(1513239, 65793, 2245737, 65793, 0, 5138823, (BitmapFont) null, 4020342, 65793, (byte) 116, param2, 8947848, 1127256);
           wk.field_c = AccountServiceResult.a(0, 0, 0, 0, 16764006, 0, param0, 0, 0, (byte) -95, 0, 0, 0);
           va.field_d = AccountServiceResult.a(0, 0, 0, 0, 16777215, 0, param0, 0, 0, (byte) -28, 0, 0, 0);
           var5 = SoftwareRasterizer.field_h;

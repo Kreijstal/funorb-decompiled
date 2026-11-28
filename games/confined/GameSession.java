@@ -308,7 +308,7 @@ final class GameSession {
             var12 = var12 - 240 * var13 * var13 / 1600;
           }
           db.field_w[var10Lifetime1].c(var12 + 4, 340, 32, 32);
-          pn.field_a.c(he.field_b[var10Lifetime1], 32 + (4 + (var12 + 4)), 362, 16777215, -1);
+          pn.field_a.drawString(he.field_b[var10Lifetime1], 32 + (4 + (var12 + 4)), 362, 16777215, -1);
         }
     }
 

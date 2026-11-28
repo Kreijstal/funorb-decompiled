@@ -239,9 +239,9 @@ final class m extends ue {
         int stackIn_6_0 = 0;
         re stackIn_10_0 = null;
         int stackIn_11_1 = 0;
-        ef stackIn_37_0 = null;
+        BinaryBitmapFont stackIn_37_0 = null;
         String stackIn_38_1 = null;
-        ef stackIn_46_0 = null;
+        BinaryBitmapFont stackIn_46_0 = null;
         String stackIn_47_1 = null;
         ik stackIn_57_0 = null;
         int stackIn_58_1 = 0;
@@ -289,20 +289,20 @@ final class m extends ue {
           return;
         }
         if (this.field_q) {
-          go.field_l.c(this.field_j, 320, 106, 16777215, -1);
+          go.field_l.drawCentred(this.field_j, 320, 106, 16777215, -1);
         }
         var4 = CrazyCrystals.field_C;
         var5 = DisplayNameSelectionPanel.a(al.field_c, param0 ^ 119, this.field_k, lo.field_b);
-        go.field_l.a(ae.field_G, 100, 136, 16760896, -1);
-        go.field_l.b(vn.field_m, 340, 136, 16760896, -1);
-        go.field_l.b(tg.field_a, 440, 136, 16760896, -1);
-        go.field_l.b(AnimatedResultScene.field_d, 560, 136, 16760896, -1);
+        go.field_l.drawString(ae.field_G, 100, 136, 16760896, -1);
+        go.field_l.drawRightAligned(vn.field_m, 340, 136, 16760896, -1);
+        go.field_l.drawRightAligned(tg.field_a, 440, 136, 16760896, -1);
+        go.field_l.drawRightAligned(AnimatedResultScene.field_d, 560, 136, 16760896, -1);
         for (var6 = 0; var6 < 10; var6++) {
           var7 = 8438015;
           if (~var6 == ~var5) {
             var7 = 16777215;
           }
-          go.field_l.b(1 + var6 + ". ", 100, 161 + 20 * var6, var7, -1);
+          go.field_l.drawRightAligned(1 + var6 + ". ", 100, 161 + 20 * var6, var7, -1);
         }
         if (null != this.field_k) {
           if (this.field_k.field_n) {
@@ -316,22 +316,22 @@ final class m extends ue {
                   if (var5 == var8) {
                     var9 = 16777215;
                   }
-                  go.field_l.a(var6_ref_String__[var8], 100, 161 + var8 * 20, var9, -1);
+                  go.field_l.drawString(var6_ref_String__[var8], 100, 161 + var8 * 20, var9, -1);
                   var10 = var19[var8];
                   var11 = var10 % 100;
                   var10 = var10 / 100;
                   var12 = var10 % 100;
                   var10 = var10 / 100;
                   var13 = -var11 + var12;
-                  go.field_l.b(Integer.toString(1 + var13), 340, 161 + 20 * var8, var9, -1);
+                  go.field_l.drawRightAligned(Integer.toString(1 + var13), 340, 161 + 20 * var8, var9, -1);
                   stackIn_37_0 = go.field_l;
                   if (-1 + this.field_t != var12) {
                     stackIn_38_1 = Integer.toString(var12 + 1);
                   } else {
                     stackIn_38_1 = ah.field_d;
                   }
-                  ((ef) (Object) stackIn_37_0).b(stackIn_38_1, 440, 161 + 20 * var8, var9, -1);
-                  go.field_l.b(Integer.toString(var10), 560, 161 + 20 * var8, var9, -1);
+                  ((BinaryBitmapFont) (Object) stackIn_37_0).drawRightAligned(stackIn_38_1, 440, 161 + 20 * var8, var9, -1);
+                  go.field_l.drawRightAligned(Integer.toString(var10), 560, 161 + 20 * var8, var9, -1);
                 }
               }
             } else {
@@ -340,25 +340,25 @@ final class m extends ue {
             if (var5 < 0 &&
               null != lo.field_b &&
               lo.field_b.field_k == this.field_k.field_g) {
-              go.field_l.a(je.field_g, 100, 366, 16777215, -1);
-              go.field_l.b(Integer.toString(dk.field_q + 1), 340, 366, 16777215, -1);
+              go.field_l.drawString(je.field_g, 100, 366, 16777215, -1);
+              go.field_l.drawRightAligned(Integer.toString(dk.field_q + 1), 340, 366, 16777215, -1);
               stackIn_46_0 = go.field_l;
               if (this.field_t - 1 == oc.field_b) {
                 stackIn_47_1 = ah.field_d;
               } else {
                 stackIn_47_1 = Integer.toString(1 + oc.field_b);
               }
-              ((ef) (Object) stackIn_46_0).b(stackIn_47_1, 440, 366, 16777215, -1);
-              go.field_l.b(Integer.toString(kp.field_m), 560, 366, 16777215, -1);
+              ((BinaryBitmapFont) (Object) stackIn_46_0).drawRightAligned(stackIn_47_1, 440, 366, 16777215, -1);
+              go.field_l.drawRightAligned(Integer.toString(kp.field_m), 560, 366, 16777215, -1);
             }
           } else {
             var4 = wp.field_a;
           }
         }
         if (null != var4) {
-          go.field_l.c((String) (var4), 320, 251, 16777215, -1);
+          go.field_l.drawCentred((String) (var4), 320, 251, 16777215, -1);
         }
-        go.field_l.c(this.field_r, 320, 391, 16760896, -1);
+        go.field_l.drawCentred(this.field_r, 320, 391, 16760896, -1);
         var15 = 0;
         var6Lifetime1 = var15;
         while (this.field_d.length > var15) {
@@ -399,9 +399,9 @@ final class m extends ue {
         }
         if (!rc.a(param0 ^ -163)) {
           this.field_r = nl.field_g;
-          var2 = go.field_l.a(EditableTextField.field_Q[0]);
-          var3 = go.field_l.a(EditableTextField.field_Q[1]);
-          var4 = go.field_l.a(EditableTextField.field_Q[2]);
+          var2 = go.field_l.stringWidth(EditableTextField.field_Q[0]);
+          var3 = go.field_l.stringWidth(EditableTextField.field_Q[1]);
+          var4 = go.field_l.stringWidth(EditableTextField.field_Q[2]);
           var5 = 60 + (var2 + 60 + var3 + var4);
           var6 = (640 - var5) / 2;
           this.field_d[0] = (ik) ((Object) new mh(var6, 417, EditableTextField.field_Q[0], 0));

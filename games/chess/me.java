@@ -8,7 +8,7 @@ final class me {
     static hg field_b;
     static rk[] field_c;
 
-    final static void a(String param0, int param1, fj param2, lh param3, byte param4) {
+    final static void a(String param0, int param1, fj param2, BitmapFont param3, byte param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -33,13 +33,13 @@ final class me {
           for (var7 = 1; var7 < param0.length(); var7++) {
             var8 = param0.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) + param2.field_i[0] + param3.b(param0.substring(0, var7));
+              var6 = (var5_int >> 8) + param2.field_i[0] + param3.stringWidth(param0.substring(0, var7));
             }
             if (-1 == var6) {
               if (var8 == 32) {
                 var5_int = var5_int + param1;
               }
-              param2.field_i[var7] = param2.field_i[0] + (var5_int >> 8) + param3.b(param0.substring(0, 1 + var7)) - param3.a((char) var8);
+              param2.field_i[var7] = param2.field_i[0] + (var5_int >> 8) + param3.stringWidth(param0.substring(0, 1 + var7)) - param3.charWidth((char) var8);
             } else {
               param2.field_i[var7] = var6;
             }
@@ -81,8 +81,8 @@ final class me {
         field_c = null;
         field_e = null;
         if (param0 != 18854) {
-          lh var2 = (lh) null;
-          me.a((String) null, 27, (fj) null, (lh) null, (byte) 90);
+          BitmapFont var2 = (BitmapFont) null;
+          me.a((String) null, 27, (fj) null, (BitmapFont) null, (byte) 90);
         }
     }
 

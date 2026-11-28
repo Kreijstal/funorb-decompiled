@@ -34,7 +34,7 @@ final class gb extends IntrusiveNode {
           if (null != cea.field_i &&
             null != hl.field_C) {
             param1 = param1 - (-hl.field_C.field_B + hl.field_C.field_u);
-            var9 = hl.field_C.a(param5);
+            var9 = hl.field_C.stringWidth(param5);
             var9 += 10;
             cea.field_i.b();
             if ((var9 & 1) == 1) {

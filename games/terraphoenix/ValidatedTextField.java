@@ -38,7 +38,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         return (String) null;
     }
 
-    final void a(FieldValidator param0, int param1) {
+    final void setFieldValidator(FieldValidator param0, int param1) {
         try {
           if (param1 != 5859) {
             field_cb = -97;

@@ -52,7 +52,7 @@ final class nb {
     }
 
     final void a(int param0, fe param1, on param2, int param3, int param4) {
-        we stackIn_19_0 = null;
+        BitmapFont stackIn_19_0 = null;
         String stackIn_19_1 = null;
         int stackIn_19_2 = 0;
         int stackIn_20_3 = 0;
@@ -127,7 +127,7 @@ final class nb {
             } else {
               stackIn_26_8 = this.field_b;
             }
-            ((we) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param2.field_j, param2.field_d, param2.field_e);
+            ((BitmapFont) (Object) stackIn_19_0).drawParagraphAlpha(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param2.field_j, param2.field_d, param2.field_e);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

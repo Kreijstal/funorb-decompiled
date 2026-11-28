@@ -44,7 +44,7 @@ final class fh {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_b.b(param3);
+          var5_int = this.field_b.stringWidth(param3);
           var6 = this.field_b.field_p + this.field_b.field_u;
           var7 = param1;
           if (!(6 + (var7 + var5_int) <= SoftwareRasterizer.field_k)) {
@@ -56,7 +56,7 @@ final class fh {
           }
           SoftwareRasterizer.drawRectangleOutline(var7, var8, 6 + var5_int, var6 + 6, this.field_w);
           SoftwareRasterizer.fillRectangle(var7 + 1, var8 + 1, 4 + var5_int, var6 + 4, this.field_u);
-          this.field_b.b(param3, var7 + 3, 3 + (var8 + this.field_b.field_u), this.field_w, -1);
+          this.field_b.drawString(param3, var7 + 3, 3 + (var8 + this.field_b.field_u), this.field_w, -1);
           int var9 = 1 % ((param2 + 66) / 37);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "fh.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -92,7 +92,7 @@ final class fh {
             var7 = this.field_b.field_p + this.field_b.field_s;
           }
           var8 = SoftwareRasterizer.field_k >> 2;
-          var9 = this.field_b.b(param1);
+          var9 = this.field_b.stringWidth(param1);
           if (param2 != 16) {
             this.a(107, -67, -114, -53, -30, true);
           }
@@ -109,11 +109,11 @@ final class fh {
               var13 = var9 / var8;
               var12 = var8 + (-1 + var9 % var8 + var13) / var13 * 2;
             }
-            var11Lifetime1 = this.field_b.a(param1, new int[]{var12}, wg.field_h);
+            var11Lifetime1 = this.field_b.wrapText(param1, new int[]{var12}, wg.field_h);
             var9 = 0;
             var10 = var10 + var7 * (-1 + var11Lifetime1);
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_b.b(wg.field_h[var13Lifetime2]);
+              var14 = this.field_b.stringWidth(wg.field_h[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -129,7 +129,7 @@ final class fh {
           }
           SoftwareRasterizer.drawRectangleOutline(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_r);
           SoftwareRasterizer.fillRectangle(1 + var12, var13Lifetime1 + 1, -2 + (var9 + var5_int), -2 + var6 + var10, this.field_u);
-          this.field_b.a(param1, this.field_v + var12, this.field_m + var13Lifetime1, var9, var10, this.field_w, -1, 0, 0, var7);
+          this.field_b.drawParagraph(param1, this.field_v + var12, this.field_m + var13Lifetime1, var9, var10, this.field_w, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

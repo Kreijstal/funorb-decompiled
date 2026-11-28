@@ -59,7 +59,7 @@ final class f implements WidgetActionListener {
           SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_k) {
             var13 = var14.field_Q + (var14.field_R + this.field_c);
-            this.field_k.a(param1.text, var13 + (param1.x + param2), this.field_j + param0 + param1.y, -this.field_c + (-var13 + param1.width), param1.height - (this.field_c << 1), this.field_e, this.field_f, 1, 1, 0);
+            this.field_k.drawParagraph(param1.text, var13 + (param1.x + param2), this.field_j + param0 + param1.y, -this.field_c + (-var13 + param1.width), param1.height - (this.field_c << 1), this.field_e, this.field_f, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "f.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

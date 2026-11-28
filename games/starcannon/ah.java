@@ -5,7 +5,7 @@ final class ah {
     static int field_c;
     static PlatformTask field_e;
     int field_j;
-    static qe field_d;
+    static BitmapFont field_d;
     String field_k;
     static String[] field_f;
     static boolean field_i;
@@ -22,7 +22,7 @@ final class ah {
           field_f = null;
           return;
         }
-        field_d = (qe) null;
+        field_d = (BitmapFont) null;
         field_d = null;
         field_e = null;
         field_a = null;

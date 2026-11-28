@@ -296,12 +296,12 @@ abstract class si extends UiWidget implements oh {
         }
     }
 
-    final static ol a(Archive param0, String param1, boolean param2, String param3, Archive param4) {
+    final static CoverageBitmapFont a(Archive param0, String param1, boolean param2, String param3, Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ol stackIn_2_0 = null;
-        ol stackIn_4_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -314,7 +314,7 @@ abstract class si extends UiWidget implements oh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            stackIn_2_0 = (ol) null;
+            stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
           var5_int = param4.getGroupIdByName(91, param1);

@@ -9,7 +9,7 @@ final class mi {
     static String field_b;
     static ResourceArchive field_e;
 
-    final static void a(pp param0, String param1, se param2, int param3, RgbSprite param4) {
+    final static void a(pp param0, String param1, BitmapFont param2, int param3, RgbSprite param4) {
         int var9_int = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -37,11 +37,11 @@ final class mi {
         var16 = DungeonAssault.field_K;
         try {
           jh.c();
-          var5_int = param2.b(param1);
+          var5_int = param2.stringWidth(param1);
           var6 = param2.field_E + param2.field_H;
           var7 = new RgbSprite(var5_int, var6);
           var7.e();
-          param2.b(param1, 0, param2.field_H, 16760960, -1);
+          param2.drawString(param1, 0, param2.field_H, 16760960, -1);
           var8 = te.a(var5_int, var6, ag.field_c, 32, 32, 0.125);
           for (var9_int = 0; var8.field_B.length > var9_int; var9_int++) {
             if (var7.field_B[var9_int] == 0) {

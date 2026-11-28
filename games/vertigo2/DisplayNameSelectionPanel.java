@@ -221,7 +221,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements nc, ij 
             discarded$0 = this.canSubmitDisplayName(-123);
           }
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(var4, -86, false);
+          ((EditableTextField) ((Object) var3)).setText(var4, -86, false);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ne.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -235,7 +235,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements nc, ij 
         this.field_L = new d(bm.field_y, (uf) null);
         this.field_M = new d(mp.field_c, (uf) null);
         this.field_H.field_q = BlastDebrisBatch.field_d;
-        this.field_H.a(true, new AccountNameAvailabilityValidator(this.field_H));
+        this.field_H.setFieldValidator(true, new AccountNameAvailabilityValidator(this.field_H));
         this.field_L.field_F = false;
         this.field_L.listener = (WidgetListener) ((Object) new vo());
         this.field_M.listener = (WidgetListener) ((Object) new jc());

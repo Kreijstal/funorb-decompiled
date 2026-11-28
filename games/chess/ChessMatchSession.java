@@ -132,7 +132,7 @@ final class ChessMatchSession {
         String[] stackIn_6_2;
         int stackIn_6_3;
         String stackIn_7_4 = null;
-        c stackIn_9_0;
+        BinaryBitmapFont stackIn_9_0;
         String stackIn_9_1;
         int stackIn_9_2;
         int stackIn_9_3;
@@ -176,7 +176,7 @@ final class ChessMatchSession {
           stackIn_9_3 = 240;
           stackIn_10_4 = (0 != this.field_C) ? 1 : 16777215;
           stackIn_13_5 = (0 != this.field_C) ? 16777215 : 1;
-          ((c) (Object) stackIn_9_0).b(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_10_4, stackIn_13_5);
+          ((BinaryBitmapFont) (Object) stackIn_9_0).drawCentred(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_10_4, stackIn_13_5);
         }
     }
 
@@ -272,7 +272,7 @@ final class ChessMatchSession {
         int var18_int;
         String var18;
         int var19;
-        c var19_ref_c;
+        BinaryBitmapFont var19_ref_c;
         int var20;
         String var20_ref_String;
         int var21;
@@ -428,12 +428,12 @@ final class ChessMatchSession {
           if (this.field_t.e(0, 65)) {
             SoftwareRasterizer.fillRoundedRectangleAlpha(548, var17Lifetime2, 89, 50, 9, 1, 128);
             SoftwareRasterizer.drawRoundedRectangleOutline(548, var17Lifetime2, 89, 50, 9, 1);
-            v.field_j.a(DualLinkNode.field_k, 548, var17Lifetime2, 89, 50, 16777215, 0, var15, 1, 1, v.field_j.field_C);
+            v.field_j.drawParagraphAlpha(DualLinkNode.field_k, 548, var17Lifetime2, 89, 50, 16777215, 0, var15, 1, 1, v.field_j.field_C);
           }
           if (this.field_t.e(4096, param0 + 217)) {
             SoftwareRasterizer.fillRoundedRectangleAlpha(548, var17Lifetime2, 89, 50, 9, 16777215, 128);
             SoftwareRasterizer.drawRoundedRectangleOutline(548, var17Lifetime2, 89, 50, 9, 16777215);
-            v.field_j.a(sj.field_c, 548, var17Lifetime2, 89, 50, 0, 16777215, var15, 1, 1, v.field_j.field_C);
+            v.field_j.drawParagraphAlpha(sj.field_c, 548, var17Lifetime2, 89, 50, 0, 16777215, var15, 1, 1, v.field_j.field_C);
           }
           if (!this.field_b) {
             if (this.field_B.field_l != 0) {
@@ -443,7 +443,7 @@ final class ChessMatchSession {
             }
             SoftwareRasterizer.fillRoundedRectangleAlpha(548, -jj.field_b.field_C + 150, 89, var16Lifetime2, 9, var13, 128);
             SoftwareRasterizer.drawRoundedRectangleOutline(548, -jj.field_b.field_C + 150, 89, var16Lifetime2, 9, var13);
-            jj.field_b.b(var18, 592, 152, var14, var13, var15);
+            jj.field_b.drawCentredAlpha(var18, 592, 152, var14, var13, var15);
           } else {
             if (0 <= this.field_B.field_l) {
               var19_ref_c = v.field_k;
@@ -453,7 +453,7 @@ final class ChessMatchSession {
               var18 = var30;
               SoftwareRasterizer.fillRoundedRectangleAlpha(548, -jj.field_b.field_C + 150, 89, var16Lifetime2, 9, var13, 128);
               SoftwareRasterizer.drawRoundedRectangleOutline(548, -jj.field_b.field_C + 150, 89, var16Lifetime2, 9, var13);
-              ((lh) ((Object) var19_ref_c)).a(var30, 549, 150 - ((lh) ((Object) var19_ref_c)).field_C, 87, var16Lifetime2, var14, -1, var15, 1, 1, ((lh) ((Object) var19_ref_c)).field_C);
+              ((BitmapFont) ((Object) var19_ref_c)).drawParagraphAlpha(var30, 549, 150 - ((BitmapFont) ((Object) var19_ref_c)).field_C, 87, var16Lifetime2, var14, -1, var15, 1, 1, ((BitmapFont) ((Object) var19_ref_c)).field_C);
             }
           }
         }
@@ -473,13 +473,13 @@ final class ChessMatchSession {
           for (var19Lifetime1 = -1 + var33.length; var19Lifetime1 > 0; var19Lifetime1--) {
             var33[var19Lifetime1] = 340;
           }
-          var19Lifetime1Lifetime1 = v.field_j.a(var16_ref_String, var36, var17_ref_String__);
+          var19Lifetime1Lifetime1 = v.field_j.wrapText(var16_ref_String, var36, var17_ref_String__);
           var20Lifetime1 = -(var19Lifetime1Lifetime1 * v.field_j.field_C) + (-v.field_j.field_t + 474);
           var21Lifetime1 = (int)(((double)var19Lifetime1Lifetime1 + 0.5) * (double)v.field_j.field_C);
           var22Lifetime1 = v.field_j.field_C / 2 - 1;
           SoftwareRasterizer.fillRoundedRectangleAlpha(-var22Lifetime1 + 150, var20Lifetime1, var22Lifetime1 * 2 + 340, var21Lifetime1, var22Lifetime1, var13, 128);
           SoftwareRasterizer.drawRoundedRectangleOutline(150 - var22Lifetime1, var20Lifetime1, 340 + 2 * var22Lifetime1, var21Lifetime1, var22Lifetime1, var13);
-          v.field_j.a(var16_ref_String, 150, var20Lifetime1, 340, var21Lifetime1, var14, var13, var15 / 2 + 128, 1, 1, v.field_j.field_C);
+          v.field_j.drawParagraphAlpha(var16_ref_String, 150, var20Lifetime1, 340, var21Lifetime1, var14, var13, var15 / 2 + 128, 1, 1, v.field_j.field_C);
         }
         if (param0 != -106) {
           return;
@@ -488,7 +488,7 @@ final class ChessMatchSession {
         var17Lifetime1 = var16Lifetime1 + 4;
         SoftwareRasterizer.fillRoundedRectangleAlpha(548, var16Lifetime1, 89, 50, 8, 65793, 64);
         SoftwareRasterizer.fillRoundedRectangleAlpha(552, var17Lifetime1, 81, 42, 8, 65793, 128);
-        jj.field_b.a(gg.field_k, 552, var17Lifetime1, 81, 42, 16777215, -1, 1, 1, jj.field_b.field_C);
+        jj.field_b.drawParagraph(gg.field_k, 552, var17Lifetime1, 81, 42, 16777215, -1, 1, 1, jj.field_b.field_C);
         if (var3 != 0) {
           cl.field_g.e();
           if (this.c(param0 + 131)) {
@@ -727,7 +727,7 @@ final class ChessMatchSession {
             }
           }
           qh.field_b.field_q = qh.field_b.field_q.toUpperCase();
-          var3 = 10 + jj.field_b.b(qh.field_b.field_q);
+          var3 = 10 + jj.field_b.stringWidth(qh.field_b.field_q);
           var4 = -qh.field_b.field_c + 108;
           if (var3 < var4) {
             qh.field_b.field_l = var4;
@@ -815,7 +815,7 @@ final class ChessMatchSession {
         int var6;
         int var7;
         String var9;
-        c var10;
+        BinaryBitmapFont var10;
         int var11;
         int var12;
         int var13;
@@ -908,7 +908,7 @@ final class ChessMatchSession {
             }
             var10 = v.field_k;
             var11 = var6;
-            var12 = ((lh) ((Object) var10)).b(var9) + 2 * var7;
+            var12 = ((BitmapFont) ((Object) var10)).stringWidth(var9) + 2 * var7;
             var13 = -var12 + (ec.field_d.field_i + ec.field_d.field_l);
             var14 = ec.field_d.field_k - 2 - var6;
             stackIn_54_0 = (this.field_B.field_l != this.field_B.field_k) ? 1 : 0;
@@ -920,7 +920,7 @@ final class ChessMatchSession {
             var18 = 127 + (int)(Math.sin((double)qb.field_a / 7.9) * 127.0);
             SoftwareRasterizer.fillRoundedRectangleAlpha(var13, var14, var12, var11, var11 / 2 - 1, var16, 128);
             SoftwareRasterizer.drawRoundedRectangleOutline(var13, var14, var12, var11, var11 / 2 - 1, var16);
-            ((lh) ((Object) var10)).a(var9, var13 + var7, var14 + ((lh) ((Object) var10)).field_C, var17, var16, var18);
+            ((BitmapFont) ((Object) var10)).drawStringAlpha(var9, var13 + var7, var14 + ((BitmapFont) ((Object) var10)).field_C, var17, var16, var18);
           }
         }
         sf.b(param0);
@@ -970,7 +970,7 @@ final class ChessMatchSession {
         }
         if (sk.field_t >= 2 &&
           ql.field_c) {
-          jj.field_b.a("FPS: " + ie.field_a, 0, jj.field_b.field_q, 1, -1);
+          jj.field_b.drawString("FPS: " + ie.field_a, 0, jj.field_b.field_q, 1, -1);
         }
     }
 

@@ -1246,7 +1246,7 @@ final class ja {
         int var9_int = 0;
         String var9 = null;
         int var10 = 0;
-        sc var10_ref_sc = null;
+        BinaryBitmapFont var10_ref_sc = null;
         int var11_int = 0;
         gj var11 = null;
         String[] var12 = null;
@@ -1379,7 +1379,7 @@ final class ja {
               hg.field_ab.e(var10, var11_int - 5, 192);
               TextFieldValidator.field_g[var9_int].e(var10, var11_int, 80, 60, 255);
             }
-            ob.field_I.c(gb.field_g[var9_int], 40 + var10, var11_int + 70, 16777215, 0);
+            ob.field_I.drawCentred(gb.field_g[var9_int], 40 + var10, var11_int + 70, 16777215, 0);
             var9_int++;
           }
         }
@@ -1411,7 +1411,7 @@ final class ja {
               var12 = var11.field_i[dm.field_e];
               var32 = var11.field_l[dm.field_e];
               var14 = ValidatedTextField.a(dm.field_e, -1, mm.field_A, var11);
-              var10_ref_sc.a("10. ");
+              var10_ref_sc.stringWidth("10. ");
               var15 = jd.field_c.field_H + 140;
               var16 = 310;
               var17 = 320;
@@ -1429,9 +1429,9 @@ final class ja {
               if (~var2 == ~var14) {
                 var22 = 16759807;
               }
-              var10_ref_sc.b(bg.field_d, var18Lifetime1, var15, var22, -1);
-              var10_ref_sc.c(nh.field_e, var16 + (var19Lifetime1 - 320) / 4, var15, var22, -1);
-              var10_ref_sc.a(we.field_F, var19Lifetime1, var15, var22, -1);
+              var10_ref_sc.drawString(bg.field_d, var18Lifetime1, var15, var22, -1);
+              var10_ref_sc.drawCentred(nh.field_e, var16 + (var19Lifetime1 - 320) / 4, var15, var22, -1);
+              var10_ref_sc.drawRightAligned(we.field_F, var19Lifetime1, var15, var22, -1);
               var15 += 20;
               var2 = 0;
               while (var2 < 10) {
@@ -1459,12 +1459,12 @@ final class ja {
                     var22Lifetime1 = 16759807;
                   }
                   boolean decompiledFrameRemainder4 = true;
-                  jd.field_c.a(1 + var2 + ". ", var18Lifetime2Lifetime1 - 1, var15, 0, 0);
-                  jd.field_c.b(var24, var18Lifetime2Lifetime1 - 1, var15, 0, 0);
-                  jd.field_c.a(1 + var2 + ". ", var18Lifetime2Lifetime1, -1 + var15, 0, 0);
-                  jd.field_c.b(var24, var18Lifetime2Lifetime1, var15 - 1, 0, 0);
-                  jd.field_c.a(var2 + 1 + ". ", var18Lifetime2Lifetime1, var15, var22Lifetime1, -1);
-                  jd.field_c.b(var24, var18Lifetime2Lifetime1, var15, var22Lifetime1, -1);
+                  jd.field_c.drawRightAligned(1 + var2 + ". ", var18Lifetime2Lifetime1 - 1, var15, 0, 0);
+                  jd.field_c.drawString(var24, var18Lifetime2Lifetime1 - 1, var15, 0, 0);
+                  jd.field_c.drawRightAligned(1 + var2 + ". ", var18Lifetime2Lifetime1, -1 + var15, 0, 0);
+                  jd.field_c.drawString(var24, var18Lifetime2Lifetime1, var15 - 1, 0, 0);
+                  jd.field_c.drawRightAligned(var2 + 1 + ". ", var18Lifetime2Lifetime1, var15, var22Lifetime1, -1);
+                  jd.field_c.drawString(var24, var18Lifetime2Lifetime1, var15, var22Lifetime1, -1);
                   var25 = var23 % 105;
                   if (var25 >= 100) {
                     var26 = 0;
@@ -1472,9 +1472,9 @@ final class ja {
                       hg.field_ab.a(-11 + var16 + ((var19Lifetime2Lifetime1 - 320) / 4 + (8 * (100 - (var25 - 2 * var26)) + (int)(Math.sin((double)var2 + 0.005 * (double)ji.correctedCurrentTimeMillis(-78)) * 8.0))), var15 - 14);
                       var26++;
                     }
-                    jd.field_c.c(this.b(var25, -70), (-320 + var19Lifetime2Lifetime1) / 4 + var16, var15 - 1, 0, 0);
-                    jd.field_c.c(this.b(var25, -86), var16 + ((var19Lifetime2Lifetime1 - 320) / 4 - 1), var15, 0, 0);
-                    jd.field_c.c(this.b(var25, -75), (var19Lifetime2Lifetime1 - 320) / 4 + var16, var15, var22Lifetime1, -1);
+                    jd.field_c.drawCentred(this.b(var25, -70), (-320 + var19Lifetime2Lifetime1) / 4 + var16, var15 - 1, 0, 0);
+                    jd.field_c.drawCentred(this.b(var25, -86), var16 + ((var19Lifetime2Lifetime1 - 320) / 4 - 1), var15, 0, 0);
+                    jd.field_c.drawCentred(this.b(var25, -75), (var19Lifetime2Lifetime1 - 320) / 4 + var16, var15, var22Lifetime1, -1);
                     decompiledFrameRemainder4 = false;
                   }
                   else {
@@ -1483,18 +1483,18 @@ final class ja {
                       var26Lifetime1 = 11 + (-1 + var25) / 11 * 11;
                       var27 = jc.field_f[n.field_a][-1 + var26Lifetime1];
                       ab.field_g[12 * var27].a(-11 + (var19Lifetime2Lifetime1 - 320) / 4 - (-var16 - (int)(8.0 * Math.sin(0.005 * (double)ji.correctedCurrentTimeMillis(122) + (double)var2))), var15 - 16);
-                      jd.field_c.c(this.b(var25, -114), var16 + (var19Lifetime2Lifetime1 - 320) / 4, var15 - 1, 0, 0);
-                      jd.field_c.c(this.b(var25, -124), -1 + var16 + (-320 + var19Lifetime2Lifetime1) / 4, var15, 0, 0);
-                      jd.field_c.c(this.b(var25, -81), var16 + (-320 + var19Lifetime2Lifetime1) / 4, var15, var22Lifetime1, -1);
+                      jd.field_c.drawCentred(this.b(var25, -114), var16 + (var19Lifetime2Lifetime1 - 320) / 4, var15 - 1, 0, 0);
+                      jd.field_c.drawCentred(this.b(var25, -124), -1 + var16 + (-320 + var19Lifetime2Lifetime1) / 4, var15, 0, 0);
+                      jd.field_c.drawCentred(this.b(var25, -81), var16 + (-320 + var19Lifetime2Lifetime1) / 4, var15, var22Lifetime1, -1);
                     } else {
-                      jd.field_c.c(this.b(var25, -126), -1 + (var16 + (-320 + var19Lifetime2Lifetime1) / 4), var15, 0, 0);
-                      jd.field_c.c(this.b(var25, -80), (-320 + var19Lifetime2Lifetime1) / 4 + var16, -1 + var15, 0, 0);
-                      jd.field_c.c(this.b(var25, -75), var16 + (-320 + var19Lifetime2Lifetime1) / 4, var15, var22Lifetime1, -1);
+                      jd.field_c.drawCentred(this.b(var25, -126), -1 + (var16 + (-320 + var19Lifetime2Lifetime1) / 4), var15, 0, 0);
+                      jd.field_c.drawCentred(this.b(var25, -80), (-320 + var19Lifetime2Lifetime1) / 4 + var16, -1 + var15, 0, 0);
+                      jd.field_c.drawCentred(this.b(var25, -75), var16 + (-320 + var19Lifetime2Lifetime1) / 4, var15, var22Lifetime1, -1);
                     }
                   }
-                  jd.field_c.a(this.a(var23 / 105, -1001), var19Lifetime2Lifetime1 - 1, var15, 0, 0);
-                  jd.field_c.a(this.a(var23 / 105, -1001), var19Lifetime2Lifetime1, var15 - 1, 0, 0);
-                  jd.field_c.a(this.a(var23 / 105, -1001), var19Lifetime2Lifetime1, var15, var22Lifetime1, -1);
+                  jd.field_c.drawRightAligned(this.a(var23 / 105, -1001), var19Lifetime2Lifetime1 - 1, var15, 0, 0);
+                  jd.field_c.drawRightAligned(this.a(var23 / 105, -1001), var19Lifetime2Lifetime1, var15 - 1, 0, 0);
+                  jd.field_c.drawRightAligned(this.a(var23 / 105, -1001), var19Lifetime2Lifetime1, var15, var22Lifetime1, -1);
                   var9 = "";
                 }
                 var15 += 20;
@@ -1505,9 +1505,9 @@ final class ja {
                 var14 == -1 &&
                 ~n.field_a == ~il.field_f.field_b)) {
                 SoftwareRasterizer.fillRoundedRectangleAlpha(148, var15 - 12, 344, 16, 6, 16759807, 64);
-                jd.field_c.b(gb.field_h, 168, var15, 16759807, -1);
-                jd.field_c.c(this.b(wf.field_c.field_x, -88), 348, var15, 16759807, -1);
-                jd.field_c.a(this.a(wf.field_c.field_e[0].field_d, -1001), 462, var15, 16759807, -1);
+                jd.field_c.drawString(gb.field_h, 168, var15, 16759807, -1);
+                jd.field_c.drawCentred(this.b(wf.field_c.field_x, -88), 348, var15, 16759807, -1);
+                jd.field_c.drawRightAligned(this.a(wf.field_c.field_e[0].field_d, -1001), 462, var15, 16759807, -1);
               }
             }
           }
@@ -1524,14 +1524,14 @@ final class ja {
           stackIn_93_1 = 240;
         }
         var10Lifetime1 = stackIn_93_0 + stackIn_93_1;
-        ob.field_I.c(var9, 320, var10Lifetime1, 16777215, -1);
+        ob.field_I.drawCentred(var9, 320, var10Lifetime1, 16777215, -1);
         if (!n.b((byte) -92)) {
           stackIn_96_0 = h.field_L;
         } else {
           stackIn_96_0 = qk.field_a;
         }
         var9Lifetime1 = stackIn_96_0;
-        jd.field_c.c(var9Lifetime1, 320, 220 + ob.field_I.field_H + 140, 16777215, -1);
+        jd.field_c.drawCentred(var9Lifetime1, 320, 220 + ob.field_I.field_H + 140, 16777215, -1);
     }
 
     private final void a(byte param0, boolean param1, int param2) {
@@ -1547,7 +1547,7 @@ final class ja {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        sc var12 = null;
+        BinaryBitmapFont var12 = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -1616,12 +1616,12 @@ final class ja {
             var7 > 24) {
             if (16777215 == var11) {
               BufferedSocket.field_a.a(param0 - 56);
-              cc.field_t.c(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + (var4 + (cc.field_t.field_H + (var13Lifetime1 >> 1))), 0, -1);
+              cc.field_t.drawCentred(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + (var4 + (cc.field_t.field_H + (var13Lifetime1 >> 1))), 0, -1);
               vj.field_b.d();
               decompiledFrameRemainder1 = (var19 != 0);
             }
             if (decompiledFrameRemainder1) {
-              cc.field_t.c(var8.toLowerCase(), (var9 >> 1) + var5, (var13Lifetime1 >> 1) + (ProxyAuthenticationRequiredException.field_d[0].field_t + (cc.field_t.field_H + var4)), 1, -1);
+              cc.field_t.drawCentred(var8.toLowerCase(), (var9 >> 1) + var5, (var13Lifetime1 >> 1) + (ProxyAuthenticationRequiredException.field_d[0].field_t + (cc.field_t.field_H + var4)), 1, -1);
               if (var11 == 16777215) {
                 SoftwareRasterizer.blurRectangle(2, 2, 10 + var5, var4 - 1, var6 + (-var5 - 20), var15);
               }
@@ -1630,7 +1630,7 @@ final class ja {
                 SoftwareRasterizer.blurRectangle(10, 2, var5 + 10, var4 - 1, -20 - var5 + var6, var15);
               }
               BufferedSocket.field_a.a(param0 - 56);
-              cc.field_t.c(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + (var4 + (cc.field_t.field_H + (var13Lifetime1 >> 1))), 0, -1);
+              cc.field_t.drawCentred(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + (var4 + (cc.field_t.field_H + (var13Lifetime1 >> 1))), 0, -1);
               vj.field_b.d();
             }
           }
@@ -1639,27 +1639,27 @@ final class ja {
             var5 = 150;
             if (var11 == 16777215) {
               BufferedSocket.field_a.a(param0 ^ -56);
-              cc.field_t.b(var8.toLowerCase(), var5, (var13Lifetime1 >> 1) + ProxyAuthenticationRequiredException.field_d[0].field_t + (var4 + cc.field_t.field_H), 0, -1);
+              cc.field_t.drawString(var8.toLowerCase(), var5, (var13Lifetime1 >> 1) + ProxyAuthenticationRequiredException.field_d[0].field_t + (var4 + cc.field_t.field_H), 0, -1);
               vj.field_b.d();
               if (var19 != 0) {
-                cc.field_t.b(var8.toLowerCase(), var5, (var13Lifetime1 >> 1) + (cc.field_t.field_H + (var4 + ProxyAuthenticationRequiredException.field_d[0].field_t)), 1, -1);
+                cc.field_t.drawString(var8.toLowerCase(), var5, (var13Lifetime1 >> 1) + (cc.field_t.field_H + (var4 + ProxyAuthenticationRequiredException.field_d[0].field_t)), 1, -1);
                 if (16777215 != var11) {
                   SoftwareRasterizer.blurRectangle(10, 2, -10 + var5, -1 + var4, -20 + (var6 - var5), var15);
                 }
                 SoftwareRasterizer.blurRectangle(2, 2, -10 + var5, var4 - 1, -20 + (-var5 + var6), var15);
                 BufferedSocket.field_a.a(-40);
-                cc.field_t.b(var8.toLowerCase(), var5, var4 + cc.field_t.field_H - (-ProxyAuthenticationRequiredException.field_d[0].field_t - (var13Lifetime1 >> 1)), 0, -1);
+                cc.field_t.drawString(var8.toLowerCase(), var5, var4 + cc.field_t.field_H - (-ProxyAuthenticationRequiredException.field_d[0].field_t - (var13Lifetime1 >> 1)), 0, -1);
                 vj.field_b.d();
               }
             } else {
-              cc.field_t.b(var8.toLowerCase(), var5, (var13Lifetime1 >> 1) + (cc.field_t.field_H + (var4 + ProxyAuthenticationRequiredException.field_d[0].field_t)), 1, -1);
+              cc.field_t.drawString(var8.toLowerCase(), var5, (var13Lifetime1 >> 1) + (cc.field_t.field_H + (var4 + ProxyAuthenticationRequiredException.field_d[0].field_t)), 1, -1);
               SoftwareRasterizer.blurRectangle(10, 2, -10 + var5, -1 + var4, -20 + (var6 - var5), var15);
               if (16777215 == var11 ||
                 var19 != 0) {
                 SoftwareRasterizer.blurRectangle(2, 2, -10 + var5, var4 - 1, -20 + (-var5 + var6), var15);
               }
               BufferedSocket.field_a.a(-40);
-              cc.field_t.b(var8.toLowerCase(), var5, var4 + cc.field_t.field_H - (-ProxyAuthenticationRequiredException.field_d[0].field_t - (var13Lifetime1 >> 1)), 0, -1);
+              cc.field_t.drawString(var8.toLowerCase(), var5, var4 + cc.field_t.field_H - (-ProxyAuthenticationRequiredException.field_d[0].field_t - (var13Lifetime1 >> 1)), 0, -1);
               vj.field_b.d();
             }
           }
@@ -1667,15 +1667,15 @@ final class ja {
           if (var14 == 0) {
             if (!(tc.field_b > 0) ||
               n.b((byte) -117)) {
-              me.field_n.a(8 + cc.field_t.a(var8.toLowerCase()) + var5, -4 + var4);
+              me.field_n.a(8 + cc.field_t.stringWidth(var8.toLowerCase()) + var5, -4 + var4);
               decompiledFrameRemainder0 = (var11 == 16759807);
               if (decompiledFrameRemainder0) {
-                jd.field_c.a(of.field_I, 340, 210, 160, 80, 16711680, 0, 1, 1, 18);
+                jd.field_c.drawParagraph(of.field_I, 340, 210, 160, 80, 16711680, 0, 1, 1, 18);
                 decompiledFrameRemainder0 = (var19 != 0);
               }
             }
             if (decompiledFrameRemainder0) {
-              DelegatingCanvas.field_d.a(var5 + (cc.field_t.a(var8.toLowerCase()) + 8), var4 - 4);
+              DelegatingCanvas.field_d.a(var5 + (cc.field_t.stringWidth(var8.toLowerCase()) + 8), var4 - 4);
               if (var11 == 16759807) {
                 var16 = 2;
                 if (var7 == 22) {
@@ -1690,7 +1690,7 @@ final class ja {
                     var16 = 22;
                   }
                 }
-                jd.field_c.a(CrossfadingMidiPcmStream.a(-415993727, new String[]{gj.field_j[var16]}, wl.field_b), 340, 210, 160, 80, 16711680, -1, 1, 1, 18);
+                jd.field_c.drawParagraph(CrossfadingMidiPcmStream.a(-415993727, new String[]{gj.field_j[var16]}, wl.field_b), 340, 210, 160, 80, 16711680, -1, 1, 1, 18);
               }
             }
           }
@@ -1702,16 +1702,16 @@ final class ja {
           var15Lifetime1 = var5 + (-var14Lifetime1 + var9 >> 1);
           var16 = 32;
           if (var11 != 16777215) {
-            cc.field_t.a(var8.toLowerCase(), var5 + (var9 >> 1), (var13Lifetime1 >> 1) + (var4 + cc.field_t.field_H + ProxyAuthenticationRequiredException.field_d[0].field_t), 1, -1);
+            cc.field_t.drawRightAligned(var8.toLowerCase(), var5 + (var9 >> 1), (var13Lifetime1 >> 1) + (var4 + cc.field_t.field_H + ProxyAuthenticationRequiredException.field_d[0].field_t), 1, -1);
             SoftwareRasterizer.blurRectangle(10, 2, 10 + var5, -1 + var4, -20 + var6 - var5, var16);
             BufferedSocket.field_a.a(-40);
-            cc.field_t.a(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + cc.field_t.field_H + (var4 + (var13Lifetime1 >> 1)), 0, -1);
+            cc.field_t.drawRightAligned(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + cc.field_t.field_H + (var4 + (var13Lifetime1 >> 1)), 0, -1);
             vj.field_b.d();
           }
           if (var11 == 16777215 ||
             var19 != 0) {
             BufferedSocket.field_a.a(param0 ^ -56);
-            cc.field_t.a(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + cc.field_t.field_H + (var4 + (var13Lifetime1 >> 1)), 0, -1);
+            cc.field_t.drawRightAligned(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + cc.field_t.field_H + (var4 + (var13Lifetime1 >> 1)), 0, -1);
             vj.field_b.d();
           }
           var15Lifetime1 = var15Lifetime1 + (FrameTimer.field_c + 16);
@@ -1994,7 +1994,7 @@ final class ja {
     private final void b(int param0) {
         int stackIn_15_0 = 0;
         boolean stackIn_18_0 = false;
-        sc stackIn_21_0 = null;
+        BinaryBitmapFont stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_21_2 = 0;
         int stackIn_22_3 = 0;
@@ -2086,7 +2086,7 @@ final class ja {
           break;
         }
         if (decompiledNaturalLoopExit1) {
-          var11 = jd.field_c.a(CrossfadingMidiPcmStream.a(-415993727, new String[]{"          "}, PcmOutputWorker.field_i[na.field_a]), var22, var9);
+          var11 = jd.field_c.wrapText(CrossfadingMidiPcmStream.a(-415993727, new String[]{"          "}, PcmOutputWorker.field_i[na.field_a]), var22, var9);
           stackIn_15_0 = 0;
         }
         var12 = stackIn_15_0;
@@ -2105,9 +2105,9 @@ final class ja {
               } else {
                 stackIn_22_3 = 0;
               }
-              ((sc) (Object) stackIn_21_0).b(stackIn_21_1, stackIn_21_2 + stackIn_22_3, var8 * (-(var11 / 2) + var12) + var7 / 2 + var5, 16777215, 0);
+              ((BinaryBitmapFont) (Object) stackIn_21_0).drawString(stackIn_21_1, stackIn_21_2 + stackIn_22_3, var8 * (-(var11 / 2) + var12) + var7 / 2 + var5, 16777215, 0);
             } else {
-              ob.field_I.b(var9[var12], var4 + 12, (var12 - var11 / 2) * var8 + (var5 + var7 / 2), 16777215, 0);
+              ob.field_I.drawString(var9[var12], var4 + 12, (var12 - var11 / 2) * var8 + (var5 + var7 / 2), 16777215, 0);
             }
             var12++;
             continue;
@@ -2120,7 +2120,7 @@ final class ja {
         if (stackIn_26_0 > -74) {
           field_d = (String) null;
         }
-        ob.field_I.c(PcmOutputWorker.a(PcmOutputWorker.field_i.length, (byte) -2, na.field_a + 1), 555, 380, 16777215, -1);
+        ob.field_I.drawCentred(PcmOutputWorker.a(PcmOutputWorker.field_i.length, (byte) -2, na.field_a + 1), 555, 380, 16777215, -1);
         if (na.field_a != 0) {
           if (na.field_a != 1) {
             boolean decompiledFrameRemainder1 = true;
@@ -2366,16 +2366,16 @@ final class ja {
 
     final void b(byte param0) {
         int discarded$0 = 0;
-        sc stackIn_36_0 = null;
+        BinaryBitmapFont stackIn_36_0 = null;
         int stackIn_36_1 = 0;
         boolean stackIn_36_2 = false;
         boolean stackIn_37_3 = false;
         boolean stackIn_40_4 = false;
-        sc stackIn_42_0 = null;
+        BinaryBitmapFont stackIn_42_0 = null;
         boolean stackIn_42_1 = false;
         boolean stackIn_43_2 = false;
         boolean stackIn_46_3 = false;
-        sc stackIn_48_0 = null;
+        BinaryBitmapFont stackIn_48_0 = null;
         int stackIn_48_1 = 0;
         boolean stackIn_49_2 = false;
         boolean stackIn_52_3 = false;
@@ -2516,23 +2516,23 @@ final class ja {
                     il.field_f.field_i = wf.field_c.field_e[0].field_d;
                     var2Lifetime1 = ob.field_I.field_H + 160;
                     var3Lifetime1 = ob.field_I.field_B + (ob.field_I.field_E + 4);
-                    ob.field_I.c(RasterBuffer.field_b, 320, var2Lifetime1, 16777215, -1);
+                    ob.field_I.drawCentred(RasterBuffer.field_b, 320, var2Lifetime1, 16777215, -1);
                     stackIn_36_0 = ob.field_I;
                     stackIn_36_1 = -113;
                     stackIn_36_2 = false;
                     stackIn_37_3 = (0 != il.field_f.field_i);
                     stackIn_40_4 = (dm.field_f != 0);
-                    ((sc) (Object) stackIn_36_0).c(sa.$cfr$intArgs$a$c7de0d339b2a(stackIn_36_1, stackIn_36_2, stackIn_37_3, stackIn_40_4), 320, var3Lifetime1 + var2Lifetime1, 16777215, -1);
+                    ((BinaryBitmapFont) (Object) stackIn_36_0).drawCentred(sa.$cfr$intArgs$a$c7de0d339b2a(stackIn_36_1, stackIn_36_2, stackIn_37_3, stackIn_40_4), 320, var3Lifetime1 + var2Lifetime1, 16777215, -1);
                     stackIn_42_0 = ob.field_I;
                     stackIn_42_1 = false;
                     stackIn_43_2 = (dm.field_f != 0);
                     stackIn_46_3 = (0 != il.field_f.field_i);
-                    ((sc) (Object) stackIn_42_0).c(sd.a(stackIn_42_1, stackIn_43_2, stackIn_46_3, 30775), 320, var2Lifetime1 + 5 * var3Lifetime1 + 30, 16777215, -1);
+                    ((BinaryBitmapFont) (Object) stackIn_42_0).drawCentred(sd.a(stackIn_42_1, stackIn_43_2, stackIn_46_3, 30775), 320, var2Lifetime1 + 5 * var3Lifetime1 + 30, 16777215, -1);
                     stackIn_48_0 = ob.field_I;
                     stackIn_48_1 = -14189;
                     stackIn_49_2 = (il.field_f.field_i != 0);
                     stackIn_52_3 = (dm.field_f != 0);
-                    ((sc) (Object) stackIn_48_0).c(tj.a(stackIn_48_1, stackIn_49_2, stackIn_52_3, false), 320, 60 + 8 * var3Lifetime1 + var2Lifetime1, 16777215, -1);
+                    ((BinaryBitmapFont) (Object) stackIn_48_0).drawCentred(tj.a(stackIn_48_1, stackIn_49_2, stackIn_52_3, false), 320, 60 + 8 * var3Lifetime1 + var2Lifetime1, 16777215, -1);
                     if (var10 != 0) {
                       this.a((byte) 125, false);
                     }
@@ -2746,20 +2746,20 @@ final class ja {
           var17 = this.field_h;
         }
         if (var17 == -1) {
-          ob.field_I.c(kd.field_f, 320, 264, 16777215, -1);
+          ob.field_I.drawCentred(kd.field_f, 320, 264, 16777215, -1);
           if (!n.b((byte) 62)) {
             return;
           }
-          ob.field_I.c(qk.field_a, 320, 32 + (3 * ob.field_I.field_H + 232), 16777215, -1);
+          ob.field_I.drawCentred(qk.field_a, 320, 32 + (3 * ob.field_I.field_H + 232), 16777215, -1);
           if (var24 == 0) {
             return;
           }
         }
         var14Lifetime1 = 220;
         var5Lifetime2 = 470;
-        ob.field_I.c(BufferedRandomAccessFile.field_e, var5Lifetime2 - 1, var14Lifetime1, 0, 0);
-        ob.field_I.c(BufferedRandomAccessFile.field_e, var5Lifetime2, -1 + var14Lifetime1, 0, 0);
-        ob.field_I.c(BufferedRandomAccessFile.field_e, var5Lifetime2, var14Lifetime1, 11154431, -1);
+        ob.field_I.drawCentred(BufferedRandomAccessFile.field_e, var5Lifetime2 - 1, var14Lifetime1, 0, 0);
+        ob.field_I.drawCentred(BufferedRandomAccessFile.field_e, var5Lifetime2, -1 + var14Lifetime1, 0, 0);
+        ob.field_I.drawCentred(BufferedRandomAccessFile.field_e, var5Lifetime2, var14Lifetime1, 11154431, -1);
         var14Lifetime1 += 24;
         var20 = Integer.toString(100 * wd.field_D[var17]);
         if (var11[var17] &&
@@ -2769,20 +2769,20 @@ final class ja {
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameCompleted0 = true;
         boolean decompiledFrameRemainder0 = true;
-        ob.field_I.c(var20, -1 + var5Lifetime2, var14Lifetime1, 0, 0);
-        ob.field_I.c(var20, var5Lifetime2, -1 + var14Lifetime1, 0, 0);
-        ob.field_I.c(var20, var5Lifetime2, var14Lifetime1, 16777215, -1);
+        ob.field_I.drawCentred(var20, -1 + var5Lifetime2, var14Lifetime1, 0, 0);
+        ob.field_I.drawCentred(var20, var5Lifetime2, -1 + var14Lifetime1, 0, 0);
+        ob.field_I.drawCentred(var20, var5Lifetime2, var14Lifetime1, 16777215, -1);
         var5Lifetime2 = 470;
         var14Lifetime1 = 280;
-        ob.field_I.c(nf.field_n, -1 + var5Lifetime2, var14Lifetime1, 0, 0);
-        ob.field_I.c(nf.field_n, var5Lifetime2, -1 + var14Lifetime1, 0, 0);
-        ob.field_I.c(nf.field_n, var5Lifetime2, var14Lifetime1, 11154431, -1);
+        ob.field_I.drawCentred(nf.field_n, -1 + var5Lifetime2, var14Lifetime1, 0, 0);
+        ob.field_I.drawCentred(nf.field_n, var5Lifetime2, -1 + var14Lifetime1, 0, 0);
+        ob.field_I.drawCentred(nf.field_n, var5Lifetime2, var14Lifetime1, 11154431, -1);
         if (var11[var17] &&
           0 == (var16 & 1 << var17)) {
           var14Lifetime1 += 32;
-          ob.field_I.c(var20, var5Lifetime2 - 1, var14Lifetime1, 0, 0);
-          ob.field_I.c(var20, var5Lifetime2, var14Lifetime1 - 1, 0, 0);
-          ob.field_I.c(var20, var5Lifetime2, var14Lifetime1, 16777215, -1);
+          ob.field_I.drawCentred(var20, var5Lifetime2 - 1, var14Lifetime1, 0, 0);
+          ob.field_I.drawCentred(var20, var5Lifetime2, var14Lifetime1 - 1, 0, 0);
+          ob.field_I.drawCentred(var20, var5Lifetime2, var14Lifetime1, 16777215, -1);
           decompiledFrameRemainder0 = (var24 != 0);
         }
         if (decompiledFrameRemainder0) {
@@ -2810,15 +2810,15 @@ final class ja {
         var14Lifetime2 = 220;
         var5Lifetime3 = 170;
         if (var21 != 0) {
-          ob.field_I.c(BufferedSocket.field_g, -1 + var5Lifetime3, var14Lifetime2, 0, 0);
-          ob.field_I.c(BufferedSocket.field_g, var5Lifetime3, var14Lifetime2 - 1, 0, 0);
-          ob.field_I.c(BufferedSocket.field_g, var5Lifetime3, var14Lifetime2, 2293572, -1);
+          ob.field_I.drawCentred(BufferedSocket.field_g, -1 + var5Lifetime3, var14Lifetime2, 0, 0);
+          ob.field_I.drawCentred(BufferedSocket.field_g, var5Lifetime3, var14Lifetime2 - 1, 0, 0);
+          ob.field_I.drawCentred(BufferedSocket.field_g, var5Lifetime3, var14Lifetime2, 2293572, -1);
         }
         if (var21 == 0 ||
           var24 != 0) {
-          ob.field_I.c(hc.field_k, var5Lifetime3 - 1, var14Lifetime2, 0, 0);
-          ob.field_I.c(hc.field_k, var5Lifetime3, -1 + var14Lifetime2, 0, 0);
-          ob.field_I.c(hc.field_k, var5Lifetime3, var14Lifetime2, 16720452, -1);
+          ob.field_I.drawCentred(hc.field_k, var5Lifetime3 - 1, var14Lifetime2, 0, 0);
+          ob.field_I.drawCentred(hc.field_k, var5Lifetime3, -1 + var14Lifetime2, 0, 0);
+          ob.field_I.drawCentred(hc.field_k, var5Lifetime3, var14Lifetime2, 16720452, -1);
         }
         var22Lifetime1 = 160;
         var20Lifetime1 = AccountRequestState.field_b[var17];
@@ -2827,14 +2827,14 @@ final class ja {
           (1 << var17 & var16) == 0) {
           var20Lifetime1 = od.field_h;
         }
-        ob.field_I.a(var20Lifetime1, -1 + var5Lifetime3 - var22Lifetime1 / 2, 8 + var14Lifetime2, var22Lifetime1, 480, 0, 0, 1, 0, ob.field_I.field_H);
-        ob.field_I.a(var20Lifetime1, var5Lifetime3 - var22Lifetime1 / 2, 8 + var14Lifetime2 - 1, var22Lifetime1, 480, 0, 0, 1, 0, ob.field_I.field_H);
-        ob.field_I.a(var20Lifetime1, var5Lifetime3 - var22Lifetime1 / 2, 8 + var14Lifetime2, var22Lifetime1, 480, 16777215, -1, 1, 0, ob.field_I.field_H);
+        ob.field_I.drawParagraph(var20Lifetime1, -1 + var5Lifetime3 - var22Lifetime1 / 2, 8 + var14Lifetime2, var22Lifetime1, 480, 0, 0, 1, 0, ob.field_I.field_H);
+        ob.field_I.drawParagraph(var20Lifetime1, var5Lifetime3 - var22Lifetime1 / 2, 8 + var14Lifetime2 - 1, var22Lifetime1, 480, 0, 0, 1, 0, ob.field_I.field_H);
+        ob.field_I.drawParagraph(var20Lifetime1, var5Lifetime3 - var22Lifetime1 / 2, 8 + var14Lifetime2, var22Lifetime1, 480, 16777215, -1, 1, 0, ob.field_I.field_H);
         var14Lifetime3 = 350;
         var5Lifetime4 = 320;
-        ob.field_I.c(gj.field_j[var17], var5Lifetime4 - 1, var14Lifetime3, 0, 0);
-        ob.field_I.c(gj.field_j[var17], var5Lifetime4, -1 + var14Lifetime3, 0, 0);
-        ob.field_I.c(gj.field_j[var17], var5Lifetime4, var14Lifetime3, 16777215, -1);
+        ob.field_I.drawCentred(gj.field_j[var17], var5Lifetime4 - 1, var14Lifetime3, 0, 0);
+        ob.field_I.drawCentred(gj.field_j[var17], var5Lifetime4, -1 + var14Lifetime3, 0, 0);
+        ob.field_I.drawCentred(gj.field_j[var17], var5Lifetime4, var14Lifetime3, 16777215, -1);
         var23Lifetime1 = 200;
         if (var21 != 0) {
           bd.field_o[var17].c(256, var23Lifetime1);
@@ -2870,10 +2870,10 @@ final class ja {
         }
         try {
           param1 = param1.toUpperCase();
-          var3_int = cc.field_t.a(param1);
-          cc.field_t.c(param1, 320, 96, 1, -1);
+          var3_int = cc.field_t.stringWidth(param1);
+          cc.field_t.drawCentred(param1, 320, 96, 1, -1);
           SoftwareRasterizer.blurRectangle(5, 5, -(var3_int / 2) + 315, 59, 10 + var3_int, 42);
-          cc.field_t.c(param1, 320, 96, 0, -1);
+          cc.field_t.drawCentred(param1, 320, 96, 0, -1);
           BufferedSocket.field_a.a(-40);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ja.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

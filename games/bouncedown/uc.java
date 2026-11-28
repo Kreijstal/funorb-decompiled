@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uc extends lc implements rc {
-    private tj field_F;
+    private BitmapFont field_F;
     private wd[] field_H;
     private int field_B;
     private int[] field_J;
@@ -13,7 +13,7 @@ final class uc extends lc implements rc {
     static lj field_E;
     static int field_C;
 
-    uc(sh param0, tj param1, String param2) {
+    uc(sh param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (fc) null);
         int var4_int = 0;
         this.field_B = 0;
@@ -21,7 +21,7 @@ final class uc extends lc implements rc {
           this.field_I = param0;
           this.field_F = param1;
           this.field_z = param2;
-          var4_int = null != this.field_z ? this.field_F.b(this.field_z, 260, this.field_F.field_s) : 0;
+          var4_int = null != this.field_z ? this.field_F.textHeight(this.field_z, 260, this.field_F.field_s) : 0;
           this.b(var4_int + 22, 80, 288, 0, 0);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "uc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -74,12 +74,12 @@ final class uc extends lc implements rc {
     final void a(int param0, int param1, int param2, int param3) {
         if (param2 > 33) {
           super.a(param0, param1, 50, param3);
-          this.field_F.a(this.field_z, 14 + (param3 + this.field_r), this.field_i + (param1 + 10), -28 + this.field_k, this.field_m, 16777215, -1, 0, 0, this.field_F.field_s);
+          this.field_F.drawParagraph(this.field_z, 14 + (param3 + this.field_r), this.field_i + (param1 + 10), -28 + this.field_k, this.field_m, 16777215, -1, 0, 0, this.field_F.field_s);
           return;
         }
         this.a(78, 87);
         super.a(param0, param1, 50, param3);
-        this.field_F.a(this.field_z, 14 + (param3 + this.field_r), this.field_i + (param1 + 10), -28 + this.field_k, this.field_m, 16777215, -1, 0, 0, this.field_F.field_s);
+        this.field_F.drawParagraph(this.field_z, 14 + (param3 + this.field_r), this.field_i + (param1 + 10), -28 + this.field_k, this.field_m, 16777215, -1, 0, 0, this.field_F.field_s);
     }
 
     final void a(String param0, int param1, byte param2) {
@@ -177,7 +177,7 @@ final class uc extends lc implements rc {
           if (param0 >= 6) {
             return;
           }
-          this.field_F = (tj) null;
+          this.field_F = (BitmapFont) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -217,9 +217,9 @@ final class uc extends lc implements rc {
           fd.field_m = nc.a("jagex_logo_grey", param0, "commonui", 0);
           ih.field_T = SectorCacheStore.a(param0, "commonui", (byte) 111, "button");
           la.field_E = ri.a("commonui", param0, false, "validation");
-          GzipDecompressor.field_d = (tj) ((Object) eg.a(param2, "arezzo12", 127, param0, "commonui"));
-          FrameTimer.field_a = (tj) ((Object) eg.a(param2, "arezzo14", 122, param0, "commonui"));
-          ne.field_v = (tj) ((Object) eg.a(param2, "arezzo14bold", 117, param0, "commonui"));
+          GzipDecompressor.field_d = (BitmapFont) ((Object) eg.a(param2, "arezzo12", 127, param0, "commonui"));
+          FrameTimer.field_a = (BitmapFont) ((Object) eg.a(param2, "arezzo14", 122, param0, "commonui"));
+          ne.field_v = (BitmapFont) ((Object) eg.a(param2, "arezzo14bold", 117, param0, "commonui"));
           if (param1 <= 77) {
             field_E = (lj) null;
           }

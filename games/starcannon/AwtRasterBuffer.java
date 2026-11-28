@@ -4,7 +4,7 @@
 abstract class AwtRasterBuffer {
     int[] field_g;
     int field_b;
-    static qe field_a;
+    static BitmapFont field_a;
     static int[] field_f;
     java.awt.Image field_c;
     int field_d;

@@ -10,7 +10,7 @@ final class im implements ca {
     static boolean field_a;
     static volatile boolean field_d;
     private int field_k;
-    private se field_j;
+    private BitmapFont field_j;
     static RgbSprite field_m;
     static me field_b;
     private int field_h;
@@ -53,7 +53,7 @@ final class im implements ca {
           if (this.field_j == null) {
             return;
           }
-          this.field_j.c(var12.field_w, var7 / 2 + var8, this.field_j.field_R + var9 + var12.field_N, this.field_c, this.field_g);
+          this.field_j.drawCentred(var12.field_w, var7 / 2 + var8, this.field_j.field_R + var9 + var12.field_N, this.field_c, this.field_g);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,7 +90,7 @@ final class im implements ca {
         }
     }
 
-    im(se param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    im(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_g = param2;
           this.field_c = param1;

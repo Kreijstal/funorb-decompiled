@@ -158,9 +158,9 @@ final class kd extends vk implements ga {
         if (param0 != 0) {
           return;
         }
-        qe var5 = nb.field_c;
+        BitmapFont var5 = nb.field_c;
         if (null != this.field_z) {
-          var5.a(ca.field_X, this.field_s + param1, param3 + this.field_j, this.field_i, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_p);
+          var5.drawParagraph(ca.field_X, this.field_s + param1, param3 + this.field_j, this.field_i, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_p);
         }
     }
 

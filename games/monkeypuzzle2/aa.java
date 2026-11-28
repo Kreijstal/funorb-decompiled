@@ -83,7 +83,7 @@ abstract class aa {
         return this.field_c.length;
     }
 
-    final static int a(ta param0, int param1, String param2, boolean param3, String[] param4) {
+    final static int a(BitmapFont param0, int param1, String param2, boolean param3, String[] param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -111,7 +111,7 @@ abstract class aa {
         int var6Lifetime1;
         var13 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var5_int = param0.a(param2);
+          var5_int = param0.stringWidth(param2);
           if (var5_int <= param1 &&
             param2.indexOf("<br>") == -1) {
             param4[0] = param2;
@@ -132,7 +132,7 @@ abstract class aa {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param2.substring(var7, 1 + var9).trim();
-              var12 = param0.a(var11);
+              var12 = param0.stringWidth(var11);
               if (param1 <= var12) {
                 incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;

@@ -25,7 +25,7 @@ final class rc {
         of.field_g = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, qe param11, int param12, Sprite[] param13, int param14, int param15, Sprite[] param16, Sprite[] param17, qe param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, BitmapFont param11, int param12, Sprite[] param13, int param14, int param15, Sprite[] param16, Sprite[] param17, BitmapFont param18, int param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -39,12 +39,12 @@ final class rc {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
-        qe var22 = null;
+        BitmapFont var22 = null;
         try {
           hc.a(param14, param18, param5, param11, param0, new gi(param17), param10, param8, param9, param7, new gi(param16), param2, new gi(param13), (byte) -11, param4, param12, param1, param6, param15, param20, param19);
           if (param3 != 31944) {
-            var22 = (qe) null;
-            rc.a(99, 83, 77, -44, -89, -63, -125, 91, -84, -62, 14, (qe) null, 39, (Sprite[]) null, 86, -46, (Sprite[]) null, (Sprite[]) null, (qe) null, -10, -23);
+            var22 = (BitmapFont) null;
+            rc.a(99, 83, 77, -44, -89, -63, -125, 91, -84, -62, 14, (BitmapFont) null, 39, (Sprite[]) null, 86, -46, (Sprite[]) null, (Sprite[]) null, (BitmapFont) null, -10, -23);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

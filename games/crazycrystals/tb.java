@@ -161,11 +161,11 @@ abstract class tb {
           if (param1) {
             tb.a(false);
           }
-          an.field_q.a(param4, -1 + param3, param0, 0, -1);
-          an.field_q.a(param4, param3 + 1, param0, 0, -1);
-          an.field_q.a(param4, param3, param0 - 1, 0, -1);
-          an.field_q.a(param4, param3, 1 + param0, 0, -1);
-          an.field_q.a(param4, param3, param0, param2, -1);
+          an.field_q.drawString(param4, -1 + param3, param0, 0, -1);
+          an.field_q.drawString(param4, param3 + 1, param0, 0, -1);
+          an.field_q.drawString(param4, param3, param0 - 1, 0, -1);
+          an.field_q.drawString(param4, param3, 1 + param0, 0, -1);
+          an.field_q.drawString(param4, param3, param0, param2, -1);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "tb.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

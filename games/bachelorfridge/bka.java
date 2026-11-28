@@ -91,7 +91,7 @@ final class bka implements WidgetRenderer {
           if (this.field_a == null) {
             return;
           }
-          this.field_a.a(var12.text, var8 + var7 / 2, var12.field_D + (var9 + this.field_a.field_F), this.field_d, this.field_b);
+          this.field_a.drawCentred(var12.text, var8 + var7 / 2, var12.field_D + (var9 + this.field_a.field_F), this.field_d, this.field_b);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

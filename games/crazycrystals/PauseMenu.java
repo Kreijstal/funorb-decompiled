@@ -40,7 +40,7 @@ final class PauseMenu extends MenuOverlay {
     private final void drawPauseMenuRow(int param0, int param1, int param2, boolean param3) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
-        uj stackIn_34_0 = null;
+        PalettedBitmapFont stackIn_34_0 = null;
         String stackIn_35_1 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
@@ -71,44 +71,44 @@ final class PauseMenu extends MenuOverlay {
             if (1 != param2) {
               if (param2 != 2) {
                 if (param2 == 3) {
-                  gj.field_m.b(cc.field_b, this.field_g, param1 + 17, var9, -1);
+                  gj.field_m.drawRightAligned(cc.field_b, this.field_g, param1 + 17, var9, -1);
                   ak.a((byte) 61, this.field_g, param1, qd.field_r, var5_int);
                 } else {
                   if (qh.field_k != param2) {
                     if (param2 == rk.field_g) {
-                      var10 = gj.field_m.a(q.field_d);
-                      var11 = gj.field_m.a(fk.field_t);
-                      var12 = gj.field_m.a(LoginPanel.field_D);
+                      var10 = gj.field_m.stringWidth(q.field_d);
+                      var11 = gj.field_m.stringWidth(fk.field_t);
+                      var12 = gj.field_m.stringWidth(LoginPanel.field_D);
                       if (var12 > var11) {
                         var11 = var12;
                       }
                       var13 = 240 + (var10 - var11) / 2;
-                      gj.field_m.b(q.field_d, var13, 17 + param1, var9, -1);
+                      gj.field_m.drawRightAligned(q.field_d, var13, 17 + param1, var9, -1);
                       stackIn_34_0 = gj.field_m;
                       if (MouseWheelInput.field_j) {
                         stackIn_35_1 = fk.field_t;
                       } else {
                         stackIn_35_1 = LoginPanel.field_D;
                       }
-                      ((uj) (Object) stackIn_34_0).a(stackIn_35_1, var13, param1 + 17, var9, -1);
+                      ((PalettedBitmapFont) (Object) stackIn_34_0).drawString(stackIn_35_1, var13, param1 + 17, var9, -1);
                     } else {
                       if (sj.field_c == param2) {
-                        gj.field_m.c(nd.field_k, 240, 17 + param1, var9, -1);
+                        gj.field_m.drawCentred(nd.field_k, 240, 17 + param1, var9, -1);
                       }
                     }
                   } else {
-                    gj.field_m.c(vl.field_e, 240, param1 + 17, var9, -1);
+                    gj.field_m.drawCentred(vl.field_e, 240, param1 + 17, var9, -1);
                   }
                 }
               } else {
-                gj.field_m.b(fa.field_m, this.field_g, param1 + 17, var9, -1);
+                gj.field_m.drawRightAligned(fa.field_m, this.field_g, param1 + 17, var9, -1);
                 ak.a((byte) 61, this.field_g, param1, gi.field_m, var5_int);
               }
             } else {
-              gj.field_m.c(jd.field_J, 240, 17 + param1, var9, -1);
+              gj.field_m.drawCentred(jd.field_J, 240, 17 + param1, var9, -1);
             }
           } else {
-            gj.field_m.c(nc.field_k, 240, 17 + param1, var9, -1);
+            gj.field_m.drawCentred(nc.field_k, 240, 17 + param1, var9, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -294,8 +294,8 @@ final class PauseMenu extends MenuOverlay {
           gj.field_n = -(PasswordValidator.field_p * 26 / 2) + 241;
           this.field_e = new jh(PasswordValidator.field_p);
           this.field_e.a(-1, param0, this.field_e.a((byte) -24, 26, qh.field_i, 325, gj.field_n, 157, IsaacRandom.field_h));
-          var2_int = go.field_l.a(fa.field_m);
-          var3 = go.field_l.a(cc.field_b);
+          var2_int = go.field_l.stringWidth(fa.field_m);
+          var3 = go.field_l.stringWidth(cc.field_b);
           if (var3 > var2_int) {
             var2_int = var3;
           }

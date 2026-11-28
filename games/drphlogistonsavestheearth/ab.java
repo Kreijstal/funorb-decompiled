@@ -13,7 +13,7 @@ final class ab {
         field_c = null;
     }
 
-    final static int a(int param0, String param1, String[] param2, rf param3, int param4) {
+    final static int a(int param0, String param1, String[] param2, BitmapFont param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -40,7 +40,7 @@ final class ab {
         int var6Lifetime1;
         var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var5_int = param3.b(param1);
+          var5_int = param3.stringWidth(param1);
           if (var5_int <= param0 &&
             param1.indexOf("<br>") == -1) {
             param2[0] = param1;
@@ -60,7 +60,7 @@ final class ab {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param1.substring(var7, var9 + 1).trim();
-              var12 = param3.b(var11);
+              var12 = param3.stringWidth(var11);
               if (param0 <= var12) {
                 var7 = var9 + 1;
                 incrementValue$1 = var6Lifetime1;

@@ -467,7 +467,7 @@ final class gj {
             } else {
               stackIn_27_8 = 256;
             }
-            ((BitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param3.field_e, param3.field_i, param3.field_n);
+            ((BitmapFont) (Object) stackIn_20_0).drawParagraphAlpha(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param3.field_e, param3.field_i, param3.field_n);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

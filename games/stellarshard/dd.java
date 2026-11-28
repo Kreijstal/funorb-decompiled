@@ -72,9 +72,9 @@ final class dd {
         }
     }
 
-    final static bm a(int param0, byte param1, ResourceArchive param2, ResourceArchive param3, int param4) {
+    final static CoverageBitmapFont a(int param0, byte param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
-        bm stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

@@ -33,12 +33,12 @@ final class kk {
         }
     }
 
-    final static ef a(wb[] param0, byte[] param1, int param2, int param3, int param4) {
+    final static PalettedBitmapFont a(wb[] param0, byte[] param1, int param2, int param3, int param4) {
         int var11_int = 0;
         byte[] array$0 = null;
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
-        ef stackIn_26_0 = null;
+        PalettedBitmapFont stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -52,7 +52,7 @@ final class kk {
         int[] var8 = null;
         int[] var9 = null;
         byte[][] var10 = null;
-        ef var11 = null;
+        PalettedBitmapFont var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         int var14 = 0;
@@ -155,7 +155,7 @@ final class kk {
               var19Lifetime1 = var19Lifetime1 + var17;
             }
           }
-          var11 = new ef(param1, var36, var37, var35, var34, var9, var38);
+          var11 = new PalettedBitmapFont(param1, var36, var37, var35, var34, var9, var38);
           var11.field_s = var11.field_s - 1;
           var11.field_x = var11.field_x - 1;
           var11.field_q = var11.field_q - 1;

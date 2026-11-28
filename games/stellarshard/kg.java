@@ -33,7 +33,7 @@ final class kg extends dg {
           return;
         }
         int var7 = this.field_A ? -(this.field_C * 2) + this.field_p - this.field_I : 0;
-        this.field_F.a(this.field_G, var5 + var7 + this.field_C, this.field_C + var6, -this.field_C + this.field_I, this.field_t - this.field_C * 2, this.field_B, -1, !this.field_A ? 2 : 0, 1, this.field_F.field_N);
+        this.field_F.drawParagraph(this.field_G, var5 + var7 + this.field_C, this.field_C + var6, -this.field_C + this.field_I, this.field_t - this.field_C * 2, this.field_B, -1, !this.field_A ? 2 : 0, 1, this.field_F.field_N);
     }
 
     final static void a(int param0, af param1, boolean param2) {
@@ -90,7 +90,7 @@ final class kg extends dg {
           this.field_I = param6;
           this.field_y = param4;
           var12_int = -this.field_C + this.field_I;
-          var13 = this.field_F.b(param10, var12_int, this.field_F.field_N) + this.field_C * 2;
+          var13 = this.field_F.textHeight(param10, var12_int, this.field_F.field_N) + this.field_C * 2;
           if (var13 > param3) {
             this.b(param2, param0, param1, var13, 23987);
           } else {

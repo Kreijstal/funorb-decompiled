@@ -507,7 +507,7 @@ final class GasCloudAnimation extends EventAnimation {
               } else {
                 var13.field_Ub.a(rg.field_h, 31407, 68, 0, var32);
               }
-              var13.field_Hb.field_Z = BitmapFont.a(var13.field_Hb.field_jb, var33, 78);
+              var13.field_Hb.field_Z = BitmapFont.truncateWithEllipsis(var13.field_Hb.field_jb, var33, 78);
               var13.field_Hb.a(rg.field_h, 31407, 78, 70, var32);
               if (var13.field_Hb.field_T &&
                 !var13.field_Hb.field_Z.equals(var33)) {
@@ -520,7 +520,7 @@ final class GasCloudAnimation extends EventAnimation {
               } else {
                 var13.field_Yb.field_Z = "/" + var13.field_Pb;
                 var13.field_yb.field_N = 2;
-                var34_int = (-var13.field_Yb.field_jb.a("/") + 348) / 2;
+                var34_int = (-var13.field_Yb.field_jb.stringWidth("/") + 348) / 2;
                 var13.field_yb.a(rg.field_h, 31407, var34_int - 150, 150, var32);
                 var13.field_Yb.a(rg.field_h, 31407, -var34_int + 198, var34_int, var32);
               }
@@ -624,7 +624,7 @@ final class GasCloudAnimation extends EventAnimation {
                 }
                 var39 = var38.toString();
                 var13.field_cc.field_Z = var39;
-                var40Lifetime1 = var13.field_cc.field_jb.b(var39, -(var13.field_cc.field_L * 2) + var13.field_sb);
+                var40Lifetime1 = var13.field_cc.field_jb.lineCount(var39, -(var13.field_cc.field_L * 2) + var13.field_sb);
                 var13.field_cc.a(rg.field_h * var40Lifetime1, 31407, var13.field_sb, 0, var32);
                 var32 = var32 + var40Lifetime1 * rg.field_h;
               }
@@ -641,7 +641,7 @@ final class GasCloudAnimation extends EventAnimation {
             }
             var34 = qfa.a(var13.field_ec, var33, -83);
             if (var34 != null) {
-              var35_intLifetime1 = var13.field_ac.field_jb.b(var34, -gba.field_Bb + (var13.field_sb - gba.field_Bb));
+              var35_intLifetime1 = var13.field_ac.field_jb.lineCount(var34, -gba.field_Bb + (var13.field_sb - gba.field_Bb));
               var13.field_ac.field_Z = var34;
               var13.field_ac.field_cb = var13.field_Mb * 256 / DiveBomberAnimation.field_x;
               var13.field_ac.a(rg.field_h * var35_intLifetime1, 31407, var13.field_sb - 2 * gba.field_Bb, gba.field_Bb, var32);

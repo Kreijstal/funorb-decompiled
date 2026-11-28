@@ -51,22 +51,22 @@ final class MusicPatchPcmStream extends PcmStream {
               }
               var11 = param0.field_v;
               if (this.field_m.field_o[param0.field_p] == 0) {
-                param0.field_v = PcmSampleStream.a(param0.field_I, var11.l(), var11.i(), var11.h());
+                param0.field_v = PcmSampleStream.createForSampleStep(param0.field_I, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.getPan());
               } else {
-                param0.field_v = PcmSampleStream.a(param0.field_I, var11.l(), 0, var11.h());
+                param0.field_v = PcmSampleStream.createForSampleStep(param0.field_I, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_12_0 = this.field_m;
                 stackIn_12_1 = (lp) (param0);
                 stackIn_12_2 = 4917;
                 stackIn_13_3 = !(param0.field_x.field_r[param0.field_y] >= 0);
                 ((MidiPcmStream) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_12_2, stackIn_13_3);
-                param0.field_v.a(var9, var11.i());
+                param0.field_v.rampVolume(var9, var11.getTargetVolume());
               }
               if (0 > param0.field_x.field_r[param0.field_y]) {
                 param0.field_v.e(-1);
               }
               var11.fadeOutAndUnlink(var9);
               var11.mixInto(param1, param3, -param3 + param2);
-              if (!var11.e()) {
+              if (!var11.hasRemainingRampFrames()) {
                 continue;
               }
               this.field_o.b(var11);
@@ -358,9 +358,9 @@ final class MusicPatchPcmStream extends PcmStream {
             param1.field_m = 1048575 & var4_int * param2 + param1.field_m;
             if (param2 >= var5) {
               if (0 == this.field_m.field_o[param1.field_p]) {
-                param1.field_v = PcmSampleStream.a(param1.field_I, param1.field_v.l(), param1.field_v.i(), param1.field_v.h());
+                param1.field_v = PcmSampleStream.createForSampleStep(param1.field_I, param1.field_v.getSampleStepMagnitude(), param1.field_v.getTargetVolume(), param1.field_v.getPan());
               } else {
-                param1.field_v = PcmSampleStream.a(param1.field_I, param1.field_v.l(), 0, param1.field_v.h());
+                param1.field_v = PcmSampleStream.createForSampleStep(param1.field_I, param1.field_v.getSampleStepMagnitude(), 0, param1.field_v.getPan());
                 stackIn_7_0 = this.field_m;
                 stackIn_7_1 = (lp) (param1);
                 stackIn_7_2 = 4917;

@@ -11,9 +11,9 @@ final class ah extends ub {
     private int field_l;
     private int field_o;
     static hg field_g;
-    private lh field_h;
+    private BitmapFont field_h;
 
-    final void a(int param0, String param1, int param2, int param3, lh param4) {
+    final void a(int param0, String param1, int param2, int param3, BitmapFont param4) {
         fj var8 = null;
         int var7 = 0;
         if (param1 == null) {
@@ -32,7 +32,7 @@ final class ah extends ub {
           this.field_h = param4;
           this.field_l = 1;
           var8 = this.a(param3, -110, param4, param1);
-          var7 = param4.b(param1);
+          var7 = param4.stringWidth(param1);
           var8.field_i[param0] = -(var7 >> 1) + param2;
           var8.field_i[param1.length()] = param2 + (var7 >> 1);
           me.a(param1, 0, var8, param4, (byte) 79);
@@ -41,7 +41,7 @@ final class ah extends ub {
         }
     }
 
-    private final fj a(int param0, int param1, lh param2, String param3) {
+    private final fj a(int param0, int param1, BitmapFont param2, String param3) {
         fj var5 = null;
         RuntimeException var5_ref = null;
         fj var6 = null;
@@ -107,7 +107,7 @@ final class ah extends ub {
         }
     }
 
-    final void a(String param0, int param1, lh param2, int param3, int param4) {
+    final void a(String param0, int param1, BitmapFont param2, int param3, int param4) {
         fj var7 = null;
         fj var8 = null;
         if (param4 != 8829) {
@@ -129,14 +129,14 @@ final class ah extends ub {
           var7 = this.a(param3, -125, param2, param0);
           var8 = var7;
           var7.field_i[0] = param1;
-          var8.field_i[param0.length()] = param2.b(param0) + param1;
+          var8.field_i[param0.length()] = param2.stringWidth(param0) + param1;
           me.a(param0, 0, var8, param2, (byte) 79);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ah.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3, lh param4) {
+    final void a(int param0, int param1, int param2, String param3, BitmapFont param4) {
         fj var8 = null;
         fj var9 = null;
         if (param3 == null) {
@@ -154,7 +154,7 @@ final class ah extends ub {
           this.field_k = param3;
           var8 = this.a(param1, -109, param4, param3);
           var9 = var8;
-          var9.field_i[param0] = param2 - param4.b(param3);
+          var9.field_i[param0] = param2 - param4.stringWidth(param3);
           var9.field_i[param3.length()] = param2;
           me.a(param3, 0, var9, param4, (byte) 79);
         } catch (RuntimeException runtimeException) {
@@ -162,7 +162,7 @@ final class ah extends ub {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4, String param5, int param6, lh param7) {
+    final void a(int param0, byte param1, int param2, int param3, int param4, String param5, int param6, BitmapFont param7) {
         fj stackIn_36_0;
         fj stackIn_36_1;
         int stackIn_36_2;
@@ -216,9 +216,9 @@ final class ah extends ub {
           this.field_h = param7;
           this.field_l = param0;
           this.field_n = param3;
-          var16 = new String[param7.b(param5, param6) + 1];
+          var16 = new String[param7.lineCount(param5, param6) + 1];
           var17 = var16;
-          var10 = Math.max(1, param7.a(param5, new int[]{param6}, var17));
+          var10 = Math.max(1, param7.wrapText(param5, new int[]{param6}, var17));
           if (this.field_m == 3 &&
             var10 == 1) {
             this.field_m = 1;
@@ -263,10 +263,10 @@ final class ah extends ub {
             var14 = new fj(stackIn_36_2, stackIn_36_3, stackIn_37_4);
             var14.field_i[0] = 0;
             if (var13 != null) {
-              var14.field_i[var13.length()] = param7.b(var13);
+              var14.field_i[var13.length()] = param7.stringWidth(var13);
               stackIn_40_0 = var13;
               if (param0 == 3) {
-                stackIn_41_1 = this.a(param7.b(var13), true, var13, param6);
+                stackIn_41_1 = this.a(param7.stringWidth(var13), true, var13, param6);
               } else {
                 stackIn_41_1 = 0;
               }

@@ -25,7 +25,7 @@ final class ah {
           var2 = (ud) (uc.field_j.beginBackward((byte) 51));
           while (var2 != null) {
             if (var2.field_m.isLinked(false)) {
-              var2.field_h.h(wc.field_a * var2.field_l + 128 >> 8);
+              var2.field_h.setVolume(wc.field_a * var2.field_l + 128 >> 8);
             } else {
               var2.unlink(10);
             }
@@ -40,7 +40,7 @@ final class ah {
               if (!var2Lifetime1.field_m.isLinked(false)) {
                 var2Lifetime1.unlink(10);
               } else {
-                var2Lifetime1.field_h.h(wc.field_a * var2Lifetime1.field_l + 128 >> 8);
+                var2Lifetime1.field_h.setVolume(wc.field_a * var2Lifetime1.field_l + 128 >> 8);
               }
               var2Lifetime1 = (ud) (la.field_j.nextBackward(-33));
             }
@@ -106,7 +106,7 @@ final class ah {
           }
           of.field_d.drawScaled(-var4 + var2, var3 - var4 + k.field_c, 2 * var4, var4 * 2);
           if (k.field_c > 10) {
-            BufferedSocket.field_b.a(rg.field_a, 320, 240, 16711680, -1);
+            BufferedSocket.field_b.drawCentred(rg.field_a, 320, 240, 16711680, -1);
           }
           if (param1 == 7) {
             return;

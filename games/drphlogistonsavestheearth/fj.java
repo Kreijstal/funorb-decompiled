@@ -23,7 +23,7 @@ final class fj extends IntrusiveNode {
         this.field_h = param0;
     }
 
-    final static void a(int param0, rf param1, byte param2, rf param3) {
+    final static void a(int param0, BitmapFont param1, byte param2, BitmapFont param3) {
         try {
           ol.field_h = param0;
           uj.field_i = param3;

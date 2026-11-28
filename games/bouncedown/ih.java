@@ -46,7 +46,7 @@ class ih extends fd {
     static RgbSprite[] field_T;
     private int field_v;
     private RgbSprite field_gb;
-    private tj field_u;
+    private BitmapFont field_u;
     private RgbSprite field_cb;
 
     public static void clearDeclaredStaticReferences(byte param0) {

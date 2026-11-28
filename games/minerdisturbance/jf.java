@@ -21,9 +21,9 @@ final class jf {
         fh.field_a = jn.a("jagex_logo_grey", param2 - 29571, "commonui", param0);
         r.field_a = td.a("button", param0, "commonui", (byte) 109);
         AccountServiceResult.field_g = md.a("validation", param0, 10, "commonui");
-        sl.field_q = (we) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo12", param0));
-        bn.field_d = (we) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo14", param0));
-        Bzip2State.field_g = (we) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo14bold", param0));
+        sl.field_q = (BitmapFont) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo12", param0));
+        bn.field_d = (BitmapFont) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo14", param0));
+        Bzip2State.field_g = (BitmapFont) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo14bold", param0));
         Sprite var17 = new Sprite(param1.getFileByName("", param2 ^ 18, "button.gif"), (java.awt.Component) ((Object) ef.field_c));
         pb.a("commonui", param0, "dropdown", (byte) -77);
         ln[] var5 = tb.a("screen_options", "commonui", param0, 1);

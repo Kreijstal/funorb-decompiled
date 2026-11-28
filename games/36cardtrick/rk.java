@@ -59,10 +59,10 @@ final class rk extends jc {
 
     final void b(int param0, byte param1, int param2) {
         super.b(param0, param1, param2);
-        vd.field_p.a(this.field_bb, param0 + (this.field_h >> 1), param2 + 103, 16777215, -1);
+        vd.field_p.drawCentred(this.field_bb, param0 + (this.field_h >> 1), param2 + 103, 16777215, -1);
         if (this.field_db != null) {
           SoftwareRasterizer.drawHorizontalLine(20 + param0, -7 + param2 + 120, 260, 8421504);
-          vd.field_p.a(this.field_db, 20 + param0, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, vd.field_p.field_s);
+          vd.field_p.drawParagraph(this.field_db, 20 + param0, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, vd.field_p.field_s);
         }
     }
 
@@ -125,7 +125,7 @@ final class rk extends jc {
         try {
           this.field_db = param1;
           if (null != this.field_db) {
-            var3_int = vd.field_p.b(this.field_db, 260, vd.field_p.field_s);
+            var3_int = vd.field_p.textHeight(this.field_db, 260, vd.field_p.field_s);
             this.a(var3_int + 150, 300, -1);
           }
           this.field_Y = new ng(13, 50, 274, 30, 15, 2113632, 4210752);

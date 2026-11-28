@@ -153,10 +153,10 @@ final class ci extends IntrusiveNode {
               var1_int = var1_int + RaiderDefinition.field_q;
             }
             if (var4 < 0) {
-              n.field_c.b(var6, var8Lifetime1, li.field_g + var1_int, var5, -1);
+              n.field_c.drawString(var6, var8Lifetime1, li.field_g + var1_int, var5, -1);
               var1_int = var1_int + ag.field_a;
             } else {
-              i.field_x.b(var6, var8Lifetime1, i.field_n + var1_int, var5, -1);
+              i.field_x.drawString(var6, var8Lifetime1, i.field_n + var1_int, var5, -1);
               var1_int = var1_int + (field_j + RaiderDefinition.field_q + mj.field_g);
             }
           }

@@ -8,7 +8,7 @@ class jc implements td, rj {
     int field_r;
     int field_i;
     int field_p;
-    kc field_g;
+    BitmapFont field_g;
     int field_q;
     static int[][] field_f;
     private int field_l;
@@ -60,19 +60,19 @@ class jc implements td, rj {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_g.c(this.a((byte) -95, param7), (var9_int >> 1) + this.a(param2, 5, param7, param1), this.a(param6, param7, (byte) -120, param0) + var11, param5, param3);
+                this.field_g.drawCentred(this.a((byte) -95, param7), (var9_int >> 1) + this.a(param2, 5, param7, param1), this.a(param6, param7, (byte) -120, param0) + var11, param5, param3);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_g.a(this.a((byte) -95, param7), this.a(param2, 5, param7, param1) + var9_int, this.a(param6, param7, (byte) -122, param0) + var11, param5, param3);
+                  this.field_g.drawRightAligned(this.a((byte) -95, param7), this.a(param2, 5, param7, param1) + var9_int, this.a(param6, param7, (byte) -122, param0) + var11, param5, param3);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_g.b(this.a((byte) -95, param7), this.a(param2, 5, param7, param1), var11 + this.a(param6, param7, (byte) -120, param0), param5, param3);
+              this.field_g.drawString(this.a((byte) -95, param7), this.a(param2, 5, param7, param1), var11 + this.a(param6, param7, (byte) -120, param0), param5, param3);
             }
           } else {
-            this.field_g.a(this.a((byte) -95, param7), this.a(param2, 5, param7, param1), this.a(param6, param7, (byte) -125, param0), var9_int, var10, param5, param3, this.field_h, this.field_c, this.field_t);
+            this.field_g.drawParagraph(this.a((byte) -95, param7), this.a(param2, 5, param7, param1), this.a(param6, param7, (byte) -125, param0), var9_int, var10, param5, param3, this.field_h, this.field_c, this.field_t);
           }
           ValidatedTextField.g((byte) -105);
           if (param4 < 27) {
@@ -247,7 +247,7 @@ class jc implements td, rj {
         int stackIn_9_1;
         String stackIn_9_2;
         int stackIn_9_3;
-        kc stackIn_9_4;
+        BitmapFont stackIn_9_4;
         int stackIn_9_5;
         Object stackIn_9_6;
         pj stackIn_9_7;
@@ -308,7 +308,7 @@ class jc implements td, rj {
         }
         try {
           if (param3 != -4394) {
-            this.field_g = (kc) null;
+            this.field_g = (BitmapFont) null;
           }
           this.a((byte) 88, param2, param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -800,7 +800,7 @@ class jc implements td, rj {
         }
     }
 
-    jc(kc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    jc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -858,7 +858,7 @@ class jc implements td, rj {
     protected jc() {
     }
 
-    jc(kc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    jc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_t = param9;
           this.field_i = param2;

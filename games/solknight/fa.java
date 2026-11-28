@@ -37,10 +37,10 @@ final class fa {
             return stackIn_2_0;
           }
           if (!param1) {
-            stackIn_7_0 = ke.field_H.b(param0);
+            stackIn_7_0 = ke.field_H.stringWidth(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = kb.field_f.b(param0);
+          stackIn_5_0 = kb.field_f.stringWidth(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

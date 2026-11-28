@@ -1678,7 +1678,7 @@ public final class TorChallenge extends GameClientBase {
         }
     }
 
-    final void b(int param0) {
+    final void disposeClient(int param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -1835,7 +1835,7 @@ public final class TorChallenge extends GameClientBase {
         }
     }
 
-    final void b(byte param0) {
+    final void clearClientResources(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {

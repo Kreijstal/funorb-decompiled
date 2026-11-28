@@ -47,7 +47,7 @@ final class qm extends db {
         }
     }
 
-    private qm(ok param0, int param1) {
+    private qm(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

@@ -25,7 +25,7 @@ final class mh extends aa {
         this(ug.field_e, param0);
     }
 
-    private mh(fa param0, int param1) {
+    private mh(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

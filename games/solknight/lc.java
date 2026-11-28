@@ -74,11 +74,11 @@ final class lc extends IntrusiveNode {
         field_m = null;
     }
 
-    final static hd a(Archive param0, int param1, String param2, String param3, Archive param4) {
+    final static BinaryBitmapFont a(Archive param0, int param1, String param2, String param3, Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        hd stackIn_3_0 = null;
+        BinaryBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -154,7 +154,7 @@ final class lc extends IntrusiveNode {
           for (var7 = 1; param2.length() > var7; var7++) {
             var8 = param2.charAt(var7);
             if (60 == var8) {
-              var6 = param3.field_c[0] + (var5_int >> 8) + param4.b(param2.substring(0, var7));
+              var6 = param3.field_c[0] + (var5_int >> 8) + param4.stringWidth(param2.substring(0, var7));
             }
             if (var6 != -1) {
               param3.field_c[var7] = var6;
@@ -162,7 +162,7 @@ final class lc extends IntrusiveNode {
               if (32 == var8) {
                 var5_int = var5_int + param1;
               }
-              param3.field_c[var7] = (var5_int >> 8) + param3.field_c[0] - (-param4.b(param2.substring(0, 1 + var7)) + param4.a((char) var8));
+              param3.field_c[var7] = (var5_int >> 8) + param3.field_c[0] - (-param4.stringWidth(param2.substring(0, 1 + var7)) + param4.charWidth((char) var8));
             }
             if (var8 == 62) {
               var6 = -1;

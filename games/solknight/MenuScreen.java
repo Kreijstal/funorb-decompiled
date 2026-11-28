@@ -451,7 +451,7 @@ final class MenuScreen {
           if (var4 == null) {
             return jb.field_a[this.field_d];
           }
-          var5 = BufferedSocket.field_b.b(var4) + 20;
+          var5 = BufferedSocket.field_b.stringWidth(var4) + 20;
           return LoginPanel.field_P[this.field_d] + (jb.field_a[this.field_d] + var5) >> 1;
         }
         if (param1 != 55) {
@@ -480,7 +480,7 @@ final class MenuScreen {
         int var9;
         int var10;
         int var11;
-        hd var12;
+        BinaryBitmapFont var12;
         int var13;
         int var14;
         int var15;
@@ -513,12 +513,12 @@ final class MenuScreen {
         var13 = -w.field_b[0].field_r + var11 + (-w.field_b[6].field_r + (-var12.field_F - var12.field_s));
         if (12 != var6 &&
           var6 != 13) {
-          var12.a(var7, var5 + (var10 >> 1), (var13 >> 1) + (var12.field_F + (var4 + w.field_b[0].field_r)), var8, var9);
+          var12.drawCentred(var7, var5 + (var10 >> 1), (var13 >> 1) + (var12.field_F + (var4 + w.field_b[0].field_r)), var8, var9);
           return;
         }
         var14 = 9 + (wb.field_a + 64);
         var15 = var5 + (-var14 + var10 >> 1);
-        var12.c(var7, var15, (var13 >> 1) + var4 - (-var12.field_F - w.field_b[0].field_r), var8, var9);
+        var12.drawString(var7, var15, (var13 >> 1) + var4 - (-var12.field_F - w.field_b[0].field_r), var8, var9);
         var15 = var15 + (wb.field_a + 8);
         if (12 == var6) {
           stackIn_24_0 = wc.field_a;
@@ -639,7 +639,7 @@ final class MenuScreen {
           if (var4 == null) {
             return jb.field_a[this.field_d];
           }
-          var5 = 20 + BufferedSocket.field_b.b(var4);
+          var5 = 20 + BufferedSocket.field_b.stringWidth(var4);
           return jb.field_a[this.field_d] + (LoginPanel.field_P[this.field_d] - var5) >> 1;
         }
         return jb.field_a[this.field_d];
@@ -648,17 +648,17 @@ final class MenuScreen {
     final void b(boolean param0, int param1) {
         int stackIn_5_0;
         int stackIn_5_1;
-        hd stackIn_5_2;
+        BinaryBitmapFont stackIn_5_2;
         int stackIn_5_3;
         boolean stackIn_6_4 = false;
         boolean stackIn_8_5;
         boolean stackIn_9_6 = false;
         int stackIn_11_0 = 0;
-        hd stackIn_11_1 = null;
+        BinaryBitmapFont stackIn_11_1 = null;
         boolean stackIn_12_2 = false;
         boolean stackIn_15_3 = false;
         int stackIn_17_0 = 0;
-        hd stackIn_17_1 = null;
+        BinaryBitmapFont stackIn_17_1 = null;
         boolean stackIn_18_2 = false;
         int stackIn_20_3;
         boolean stackIn_20_4;
@@ -674,7 +674,7 @@ final class MenuScreen {
         }
         if (this.field_d == 8) {
           var3 = 4 + BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_m;
-          var4 = var3 * BufferedSocket.field_b.b(ba.field_r, 600);
+          var4 = var3 * BufferedSocket.field_b.lineCount(ba.field_r, 600);
           stackIn_5_0 = var4;
           stackIn_5_1 = var3;
           stackIn_5_2 = BufferedSocket.field_b;
@@ -682,14 +682,14 @@ final class MenuScreen {
           stackIn_6_4 = (lk.field_e == 0) ? false : true;
           stackIn_8_5 = false;
           stackIn_9_6 = (SecondaryNodeDequeIterator.field_d == 0) ? false : true;
-          var4Lifetime1 = stackIn_5_0 + stackIn_5_1 * ((hd) (Object) stackIn_5_2).b(ai.$cfr$intArgs$a$c7de0d339b2a(stackIn_5_3, stackIn_6_4, stackIn_8_5, stackIn_9_6), 600);
+          var4Lifetime1 = stackIn_5_0 + stackIn_5_1 * ((BinaryBitmapFont) (Object) stackIn_5_2).lineCount(ai.$cfr$intArgs$a$c7de0d339b2a(stackIn_5_3, stackIn_6_4, stackIn_8_5, stackIn_9_6), 600);
           ah.field_i[this.field_d] = var4Lifetime1 + 2;
           var4Lifetime1 = var4Lifetime1 + (var3 + 41);
           stackIn_11_0 = var4Lifetime1;
           stackIn_11_1 = BufferedSocket.field_b;
           stackIn_12_2 = (SecondaryNodeDequeIterator.field_d == 0) ? false : true;
           stackIn_15_3 = (lk.field_e == 0) ? false : true;
-          var4Lifetime2 = stackIn_11_0 + ((hd) (Object) stackIn_11_1).b(GameKeyHandler.a(stackIn_12_2, stackIn_15_3, false, (byte) 8), 600) * var3;
+          var4Lifetime2 = stackIn_11_0 + ((BinaryBitmapFont) (Object) stackIn_11_1).lineCount(GameKeyHandler.a(stackIn_12_2, stackIn_15_3, false, (byte) 8), 600) * var3;
           si.field_F[this.field_d] = var4Lifetime2 + 2 - ah.field_i[this.field_d];
           var4Lifetime2 += 41;
           stackIn_17_0 = var4Lifetime2;
@@ -698,7 +698,7 @@ final class MenuScreen {
           stackIn_20_3 = param1 - 3451;
           stackIn_20_4 = false;
           stackIn_21_5 = (SecondaryNodeDequeIterator.field_d == 0) ? false : true;
-          var4Lifetime3 = stackIn_17_0 + ((hd) (Object) stackIn_17_1).b(SecondaryNodeDequeIterator.a(stackIn_18_2, stackIn_20_3, stackIn_20_4, stackIn_21_5), 600) * var3;
+          var4Lifetime3 = stackIn_17_0 + ((BinaryBitmapFont) (Object) stackIn_17_1).lineCount(SecondaryNodeDequeIterator.a(stackIn_18_2, stackIn_20_3, stackIn_20_4, stackIn_21_5), 600) * var3;
           dd.field_b = 480 - var4Lifetime3 >> 1;
           ah.field_i[this.field_d] = ah.field_i[this.field_d] + dd.field_b;
         }
@@ -725,18 +725,18 @@ final class MenuScreen {
     final void d(int param0) {
         boolean stackIn_37_1 = false;
         int stackIn_59_0 = 0;
-        hd stackIn_59_1 = null;
+        BinaryBitmapFont stackIn_59_1 = null;
         int stackIn_59_2 = 0;
         boolean stackIn_60_3 = false;
         boolean stackIn_62_4;
         boolean stackIn_63_5 = false;
         int stackIn_65_0 = 0;
         int stackIn_65_1 = 0;
-        hd stackIn_65_2 = null;
+        BinaryBitmapFont stackIn_65_2 = null;
         boolean stackIn_66_3 = false;
         boolean stackIn_69_4 = false;
         int stackIn_71_0 = 0;
-        hd stackIn_71_1 = null;
+        BinaryBitmapFont stackIn_71_1 = null;
         boolean stackIn_72_2 = false;
         int stackIn_74_3;
         boolean stackIn_74_4;
@@ -842,7 +842,7 @@ final class MenuScreen {
           uj.a((var6Lifetime1 << 1) + 40, var7 + 50, -20 + var2Lifetime2, h.field_d, var4 - 20, 2);
         }
         if (this.field_d == 0) {
-          SocketConnector.field_g.a(uc.field_h[kb.field_b], 480, 95, 16776960, 1);
+          SocketConnector.field_g.drawCentred(uc.field_h[kb.field_b], 480, 95, 16776960, 1);
           var8 = 28;
           var9 = 110;
           var10 = 316;
@@ -859,7 +859,7 @@ final class MenuScreen {
                 7 != this.field_d) {
                 if (8 != this.field_d) {
                   if (this.field_d == 9) {
-                    BufferedSocket.field_b.a(ua.field_E, 30, 80, 580, 300, 0, -1, 0, 0, 0);
+                    BufferedSocket.field_b.drawParagraph(ua.field_E, 30, 80, 580, 300, 0, -1, 0, 0, 0);
                   } else {
                     if (this.field_d != 5) {
                       if ((6 == this.field_d)) {
@@ -868,8 +868,8 @@ final class MenuScreen {
                         var10Lifetime1 = var9Lifetime1 - 10 >> 1;
                         var11Lifetime1 = -37 + (-var8 + 480) + var10Lifetime1 >> 1;
                         fi.a(var9Lifetime1, true, 1, 230, 638, var8, var11Lifetime1);
-                        BufferedSocket.field_b.a(Integer.toString(100 * ImageProducerRasterBuffer.field_m), 112, -103 + (var11Lifetime1 + 155), 16777215, -1);
-                        SocketConnector.field_g.a(ValidatedTextField.field_X, 112, 57 + var11Lifetime1, 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s);
+                        BufferedSocket.field_b.drawCentred(Integer.toString(100 * ImageProducerRasterBuffer.field_m), 112, -103 + (var11Lifetime1 + 155), 16777215, -1);
+                        SocketConnector.field_g.drawParagraph(ValidatedTextField.field_X, 112, 57 + var11Lifetime1, 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s);
                         if (ob.field_l > 0) {
                           var15 = 5000;
                           var13_ref_String = w.field_d;
@@ -881,13 +881,13 @@ final class MenuScreen {
                           var13_ref_String = ud.field_j;
                           var14_ref_String = ai.field_d;
                         }
-                        BufferedSocket.field_b.a(var12_ref_String, 222, -103 + (71 + var11Lifetime1), 194, 82, 16776960, 16777215, 1, 1, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
-                        BufferedSocket.field_b.a(Integer.toString(var15), 528, var11Lifetime1 + 155 - 103, 16777215, -1);
-                        SocketConnector.field_g.a(var13_ref_String, 528, -103 + (160 + var11Lifetime1), 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s);
-                        BufferedSocket.field_b.a(var14_ref_String, 320, var11Lifetime1 + 229 - 103, 16776960, -1);
+                        BufferedSocket.field_b.drawParagraph(var12_ref_String, 222, -103 + (71 + var11Lifetime1), 194, 82, 16776960, 16777215, 1, 1, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
+                        BufferedSocket.field_b.drawCentred(Integer.toString(var15), 528, var11Lifetime1 + 155 - 103, 16777215, -1);
+                        SocketConnector.field_g.drawParagraph(var13_ref_String, 528, -103 + (160 + var11Lifetime1), 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s);
+                        BufferedSocket.field_b.drawCentred(var14_ref_String, 320, var11Lifetime1 + 229 - 103, 16776960, -1);
                         h.field_b.drawScaled(45, var11Lifetime1 + 200 - 103, 100 * h.field_b.field_q / h.field_b.field_r, 100);
                         h.field_b.drawScaled(-(100 * h.field_b.field_q / h.field_b.field_r) + 595, -103 + (var11Lifetime1 + 200), h.field_b.field_q * 100 / h.field_b.field_r, 100);
-                        BufferedSocket.field_b.a(ti.field_a, 320, 277 - (-var11Lifetime1 + 103), 16727871, -1);
+                        BufferedSocket.field_b.drawCentred(ti.field_a, 320, 277 - (-var11Lifetime1 + 103), 16727871, -1);
                         ah.field_i[this.field_d] = var8 + var11Lifetime1;
                       }
                     } else {
@@ -896,18 +896,18 @@ final class MenuScreen {
                         this.field_d != ri.field_f) {
                         var8--;
                       }
-                      var9Lifetime1Lifetime2 = BufferedSocket.field_b.b(AccountRegistrationPanel.field_N[var8], 564);
+                      var9Lifetime1Lifetime2 = BufferedSocket.field_b.lineCount(AccountRegistrationPanel.field_N[var8], 564);
                       var10Lifetime1Lifetime1 = 220 + var9Lifetime1Lifetime2 * 28;
                       var11Lifetime1Lifetime1 = 118;
                       var12 = -10 + var11Lifetime1Lifetime1 >> 1;
                       var13 = -37 + (480 + (-var10Lifetime1Lifetime1 + var12)) >> 1;
                       fi.a(var11Lifetime1Lifetime1, true, 1, 230, 638, var10Lifetime1Lifetime1, var13);
-                      BufferedSocket.field_b.a(LoginPanel.a(he.field_e, new String[]{Integer.toString(1 + var8)}, -63), 222, -32 + var13, 194, 82, 16776960, 16777215, 1, 1, BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s);
-                      BufferedSocket.field_b.a(Integer.toString(ImageProducerRasterBuffer.field_m * 100), 112, var13 + 52, 16777215, -1);
-                      SocketConnector.field_g.a(ValidatedTextField.field_X, 112, var13 + 57, 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F);
-                      BufferedSocket.field_b.a(Integer.toString(ImageProducerRasterBuffer.field_m * 100 + lk.field_e), 528, 52 + var13, 16777215, -1);
-                      SocketConnector.field_g.a(EmailFormatValidator.field_m, 528, -103 + (160 + var13), 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F);
-                      BufferedSocket.field_b.a(gd.field_b, 320, 229 + var13 - 103, 16776960, -1);
+                      BufferedSocket.field_b.drawParagraph(LoginPanel.a(he.field_e, new String[]{Integer.toString(1 + var8)}, -63), 222, -32 + var13, 194, 82, 16776960, 16777215, 1, 1, BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s);
+                      BufferedSocket.field_b.drawCentred(Integer.toString(ImageProducerRasterBuffer.field_m * 100), 112, var13 + 52, 16777215, -1);
+                      SocketConnector.field_g.drawParagraph(ValidatedTextField.field_X, 112, var13 + 57, 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F);
+                      BufferedSocket.field_b.drawCentred(Integer.toString(ImageProducerRasterBuffer.field_m * 100 + lk.field_e), 528, 52 + var13, 16777215, -1);
+                      SocketConnector.field_g.drawParagraph(EmailFormatValidator.field_m, 528, -103 + (160 + var13), 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F);
+                      BufferedSocket.field_b.drawCentred(gd.field_b, 320, 229 + var13 - 103, 16776960, -1);
                       var14 = var8 + 1 << 3;
                       if (var8 == 0) {
                         var14 = 16;
@@ -917,29 +917,29 @@ final class MenuScreen {
                       }
                       td.field_e[var14 + hg.field_y].d(83, 248 + var13 - 103);
                       td.field_e[hg.field_y + var14].d(526, var13 + 145);
-                      BufferedSocket.field_b.a(MidiPcmStream.field_y[var8], 320, -103 + (var13 + 277), 16727871, -1);
-                      BufferedSocket.field_b.a(AccountRegistrationPanel.field_N[var8], 38, var13 + 193, 564, 480, 16777215, -1, 1, 0, 28);
+                      BufferedSocket.field_b.drawCentred(MidiPcmStream.field_y[var8], 320, -103 + (var13 + 277), 16727871, -1);
+                      BufferedSocket.field_b.drawParagraph(AccountRegistrationPanel.field_N[var8], 38, var13 + 193, 564, 480, 16777215, -1, 1, 0, 28);
                       ah.field_i[this.field_d] = var13 + var10Lifetime1Lifetime1;
                     }
                   }
                 } else {
                   var8 = dd.field_b;
                   var9Lifetime1Lifetime1 = 4 + (BufferedSocket.field_b.field_m + BufferedSocket.field_b.field_s);
-                  var8 = var8 + var9Lifetime1Lifetime1 * BufferedSocket.field_b.a(ba.field_r, 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1);
+                  var8 = var8 + var9Lifetime1Lifetime1 * BufferedSocket.field_b.drawParagraph(ba.field_r, 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1);
                   stackIn_59_0 = var8;
                   stackIn_59_1 = BufferedSocket.field_b;
                   stackIn_59_2 = 71;
                   stackIn_60_3 = (lk.field_e != 0);
                   stackIn_62_4 = false;
                   stackIn_63_5 = (SecondaryNodeDequeIterator.field_d != 0);
-                  var8 = stackIn_59_0 + ((hd) (Object) stackIn_59_1).a(ai.$cfr$intArgs$a$c7de0d339b2a(stackIn_59_2, stackIn_60_3, stackIn_62_4, stackIn_63_5), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1) * var9Lifetime1Lifetime1;
+                  var8 = stackIn_59_0 + ((BinaryBitmapFont) (Object) stackIn_59_1).drawParagraph(ai.$cfr$intArgs$a$c7de0d339b2a(stackIn_59_2, stackIn_60_3, stackIn_62_4, stackIn_63_5), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1) * var9Lifetime1Lifetime1;
                   var8 = var8 + (41 + var9Lifetime1Lifetime1);
                   stackIn_65_0 = var8;
                   stackIn_65_1 = var9Lifetime1Lifetime1;
                   stackIn_65_2 = BufferedSocket.field_b;
                   stackIn_66_3 = (SecondaryNodeDequeIterator.field_d != 0);
                   stackIn_69_4 = (lk.field_e != 0);
-                  var8 = stackIn_65_0 + stackIn_65_1 * ((hd) (Object) stackIn_65_2).a(GameKeyHandler.a(stackIn_66_3, stackIn_69_4, false, (byte) 8), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1);
+                  var8 = stackIn_65_0 + stackIn_65_1 * ((BinaryBitmapFont) (Object) stackIn_65_2).drawParagraph(GameKeyHandler.a(stackIn_66_3, stackIn_69_4, false, (byte) 8), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1);
                   var8 += 41;
                   stackIn_71_0 = var8;
                   stackIn_71_1 = BufferedSocket.field_b;
@@ -947,7 +947,7 @@ final class MenuScreen {
                   stackIn_74_3 = -116;
                   stackIn_74_4 = false;
                   stackIn_75_5 = (SecondaryNodeDequeIterator.field_d != 0);
-                  var8 = stackIn_71_0 + ((hd) (Object) stackIn_71_1).a(SecondaryNodeDequeIterator.a(stackIn_72_2, stackIn_74_3, stackIn_74_4, stackIn_75_5), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1) * var9Lifetime1Lifetime1;
+                  var8 = stackIn_71_0 + ((BinaryBitmapFont) (Object) stackIn_71_1).drawParagraph(SecondaryNodeDequeIterator.a(stackIn_72_2, stackIn_74_3, stackIn_74_4, stackIn_75_5), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1) * var9Lifetime1Lifetime1;
                 }
                 break regionExit1;
               }
@@ -974,7 +974,7 @@ final class MenuScreen {
 
     private final void b(byte param0) {
         int var2 = SocketConnector.field_g.field_F + SocketConnector.field_g.field_s;
-        int var3 = SocketConnector.field_g.b(c.field_E, 600);
+        int var3 = SocketConnector.field_g.lineCount(c.field_E, 600);
         int var4 = (4 + var3) * var2 + 60;
         int var5 = -var4 + 574 >> 1;
         ah.field_i[this.field_d] = -30 + var5 + var4;
@@ -982,20 +982,20 @@ final class MenuScreen {
         if (param0 <= 39) {
           field_c = (long[][]) null;
         }
-        var5 = var5 + SocketConnector.field_g.a(c.field_E, 20, var5, 600, 640, 16777215, -1, 1, 0, var2) * var2;
+        var5 = var5 + SocketConnector.field_g.drawParagraph(c.field_E, 20, var5, 600, 640, 16777215, -1, 1, 0, var2) * var2;
         var5 = var5 + (var2 << 1);
-        SocketConnector.field_g.a(IterableNodeHashTable.field_i, 320, var5, 16776960, -1);
+        SocketConnector.field_g.drawCentred(IterableNodeHashTable.field_i, 320, var5, 16776960, -1);
         var5 = var5 + var2;
-        SocketConnector.field_g.a(pg.field_c, 320, var5, 16776960, -1);
+        SocketConnector.field_g.drawCentred(pg.field_c, 320, var5, 16776960, -1);
         var5 = var5 + var2;
-        SocketConnector.field_g.a(h.field_c, 320, var5, 16776960, -1);
+        SocketConnector.field_g.drawCentred(h.field_c, 320, var5, 16776960, -1);
     }
 
     private final void a(int param0) {
         int var9 = 0;
         String stackIn_29_0 = null;
         String var2;
-        hd var3;
+        BinaryBitmapFont var3;
         sd var4_ref_sd;
         int var4;
         String[] var5;
@@ -1037,24 +1037,24 @@ final class MenuScreen {
                     if (var7 == var9) {
                       var10 = 16776960;
                     }
-                    var3.b(var9 + 1 + ". ", 73, var8, var10, -1);
-                    var3.c(var12, 73, var8, var10, -1);
-                    var3.b(LoginPanel.a("<%0>%", new String[]{Integer.toString(var11 % 101)}, -63), 380, var8, var10, -1);
+                    var3.drawRightAligned(var9 + 1 + ". ", 73, var8, var10, -1);
+                    var3.drawString(var12, 73, var8, var10, -1);
+                    var3.drawRightAligned(LoginPanel.a("<%0>%", new String[]{Integer.toString(var11 % 101)}, -63), 380, var8, var10, -1);
                     var2 = "";
-                    var3.b(Integer.toString(var11 / 101), 582, var8, var10, -1);
+                    var3.drawRightAligned(Integer.toString(var11 / 101), 582, var8, var10, -1);
                   }
                   var8 += 21;
                 }
                 if (SectorCacheStore.field_b != null &&
                   var7 == -1) {
-                  var3.c(ne.field_g, 73, var8, 16776960, -1);
-                  var3.b(LoginPanel.a("<%0>%", new String[]{Integer.toString(SectorCacheStore.field_b.field_r[0] % 101)}, -63), 380, var8, 16776960, -1);
-                  var3.b(Integer.toString(SectorCacheStore.field_b.field_r[0] / 101), 582, var8, 16776960, -1);
+                  var3.drawString(ne.field_g, 73, var8, 16776960, -1);
+                  var3.drawRightAligned(LoginPanel.a("<%0>%", new String[]{Integer.toString(SectorCacheStore.field_b.field_r[0] % 101)}, -63), 380, var8, 16776960, -1);
+                  var3.drawRightAligned(Integer.toString(SectorCacheStore.field_b.field_r[0] / 101), 582, var8, 16776960, -1);
                 }
                 if ((var2.length() == 0)) {
                   var8Lifetime1 = 106 + var3.field_F;
-                  var3.b(ne.field_a, 380, var8Lifetime1, 1134591, -1);
-                  var3.b(MidiPcmStream.field_K, 582, var8Lifetime1, 1134591, -1);
+                  var3.drawRightAligned(ne.field_a, 380, var8Lifetime1, 1134591, -1);
+                  var3.drawRightAligned(MidiPcmStream.field_K, 582, var8Lifetime1, 1134591, -1);
                 }
                 break regionExit1;
               }
@@ -1065,14 +1065,14 @@ final class MenuScreen {
           }
         }
         var4 = 105 + (106 + var3.field_F);
-        var3.a(var2, 327, var4, 1134591, -1);
+        var3.drawCentred(var2, 327, var4, 1134591, -1);
         if (il.b(507)) {
           stackIn_29_0 = MidiPcmStream.field_n;
         } else {
           stackIn_29_0 = BufferedSocket.field_o;
         }
         var2Lifetime1 = stackIn_29_0;
-        var3.a(var2Lifetime1, 320, 106 + var3.field_F + 252, 1134591, -1);
+        var3.drawCentred(var2Lifetime1, 320, 106 + var3.field_F + 252, 1134591, -1);
     }
 
     private final void a(boolean param0, int param1) {
@@ -1162,15 +1162,15 @@ final class MenuScreen {
         }
         if (var7 != -1) {
           var8Lifetime1 = BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_m;
-          BufferedSocket.field_b.a(BufferedCacheFile.field_m[var7], 320, 226, 16776960, -1);
+          BufferedSocket.field_b.drawCentred(BufferedCacheFile.field_m[var7], 320, 226, 16776960, -1);
           var9 = var8Lifetime1;
           var10 = 226 + BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s;
           stackIn_46_0 = ((var5 & 1 << var7) == 0) ? 0 : 1;
           var11 = stackIn_46_0;
           if (var11 == 0) {
-            BufferedSocket.field_b.a(MouseWheelInput.field_b, 320, var10, 16727871, -1);
+            BufferedSocket.field_b.drawCentred(MouseWheelInput.field_b, 320, var10, 16727871, -1);
           } else {
-            BufferedSocket.field_b.a(hc.field_f, 320, var10, 16777215, -1);
+            BufferedSocket.field_b.drawCentred(hc.field_f, 320, var10, 16777215, -1);
           }
           if (var11 == 0) {
             if (ob.field_l <= 0) {
@@ -1187,27 +1187,27 @@ final class MenuScreen {
           }
           var10 = var10 + (BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s);
           var12 = new String[16];
-          var13 = BufferedSocket.field_b.a(kk.field_a[var7], new int[]{410}, var12);
+          var13 = BufferedSocket.field_b.wrapText(kk.field_a[var7], new int[]{410}, var12);
           for (var14 = 0; var13 > var14; var14++) {
-            BufferedSocket.field_b.c(var12[var14], 190, var10, 16777215, -1);
+            BufferedSocket.field_b.drawString(var12[var14], 190, var10, 16777215, -1);
             var10 = var10 + var9;
           }
           var10 += 5;
-          BufferedSocket.field_b.c(ff.field_d + 100 * fc.field_n[var7], 190, var10, 16777215, -1);
+          BufferedSocket.field_b.drawString(ff.field_d + 100 * fc.field_n[var7], 190, var10, 16777215, -1);
           var10 = var10 + var9;
           var3Lifetime1 = 190;
-          BufferedSocket.field_b.c(cf.field_b, var3Lifetime1, var10, 16777215, -1);
-          var3Lifetime1 = var3Lifetime1 + BufferedSocket.field_b.b(cf.field_b);
+          BufferedSocket.field_b.drawString(cf.field_b, var3Lifetime1, var10, 16777215, -1);
+          var3Lifetime1 = var3Lifetime1 + BufferedSocket.field_b.stringWidth(cf.field_b);
           for (var14Lifetime1 = 0; var14Lifetime1 < fc.field_n[var7]; var14Lifetime1++) {
             pg.field_a.d(var3Lifetime1, -BufferedSocket.field_b.field_m + var10);
             var3Lifetime1 = var3Lifetime1 + pg.field_a.field_p / 3;
           }
         } else {
           if (il.b(param1 ^ -509)) {
-            BufferedSocket.field_b.a(GzipDecompressor.field_b, 25, -BufferedSocket.field_b.field_F + 241, 590, 1000, 16776960, -1, 1, 0, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
-            BufferedSocket.field_b.a(MidiPcmStream.field_n, 25, 2 * BufferedSocket.field_b.field_F + 241, 590, 1000, 16776960, -1, 1, 0, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
+            BufferedSocket.field_b.drawParagraph(GzipDecompressor.field_b, 25, -BufferedSocket.field_b.field_F + 241, 590, 1000, 16776960, -1, 1, 0, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
+            BufferedSocket.field_b.drawParagraph(MidiPcmStream.field_n, 25, 2 * BufferedSocket.field_b.field_F + 241, 590, 1000, 16776960, -1, 1, 0, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
           } else {
-            BufferedSocket.field_b.a(GzipDecompressor.field_b, 320, 296, 16776960, -1);
+            BufferedSocket.field_b.drawCentred(GzipDecompressor.field_b, 320, 296, 16776960, -1);
           }
         }
     }

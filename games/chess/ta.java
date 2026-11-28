@@ -8,7 +8,7 @@ final class ta extends pk {
     private RgbSprite field_o;
     static long field_t;
     private RgbSprite field_v;
-    private lh field_x;
+    private BitmapFont field_x;
     private int field_q;
     private boolean field_p;
     RgbSprite field_m;
@@ -50,7 +50,7 @@ final class ta extends pk {
           }
         }
         if (this.field_x != null) {
-          this.field_x.b(this.field_w, this.field_i + this.field_m.field_v / 2, this.field_m.field_u / 2 + (this.field_k + this.field_x.field_C / 2), this.field_r, this.field_u);
+          this.field_x.drawCentred(this.field_w, this.field_i + this.field_m.field_v / 2, this.field_m.field_u / 2 + (this.field_k + this.field_x.field_C / 2), this.field_r, this.field_u);
         }
         if (param0) {
           return;

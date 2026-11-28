@@ -9,7 +9,7 @@ abstract class SocketConnector {
     static volatile int field_a;
     static int field_f;
     String field_c;
-    static hd field_g;
+    static BinaryBitmapFont field_g;
     int field_b;
 
     final java.net.Socket a(int param0) throws IOException {
@@ -30,7 +30,7 @@ abstract class SocketConnector {
             var4 = (PcmSample) null;
             SocketConnector.a((byte) -126, (PcmSample) null, -3);
           }
-          stackIn_3_0 = ValidatedTextField.a(true, RawPcmStream.a(param1, 100, param2));
+          stackIn_3_0 = ValidatedTextField.a(true, RawPcmStream.createForPlaybackRate(param1, 100, param2));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -3,7 +3,7 @@
  */
 class mn extends aa implements ng {
     private boolean field_eb;
-    private uc field_cb;
+    private BitmapFont field_cb;
     private boolean field_Y;
     private boolean field_ab;
     static int[] field_Z;
@@ -303,7 +303,7 @@ class mn extends aa implements ng {
         field_Z = null;
     }
 
-    mn(ln param0, uc param1, String param2, boolean param3, boolean param4) {
+    mn(ln param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new fo((mn) null, param1, param2), 77, 10, 10);
         try {
           this.field_cb = param1;

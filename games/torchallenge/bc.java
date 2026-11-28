@@ -691,7 +691,7 @@ class bc implements j, gd {
           boolean decompiledFrameRemainder0 = true;
           var10 = this.d(param1, (byte) -4);
           if (this.field_j) {
-            this.field_g.a(this.a(param1, -6782), this.a(param0, param4, param1, true), this.b(-161, param1, param3, param2), var9_int, var10, param5, param7, this.field_e, this.field_i, this.field_n);
+            this.field_g.drawParagraph(this.a(param1, -6782), this.a(param0, param4, param1, true), this.b(-161, param1, param3, param2), var9_int, var10, param5, param7, this.field_e, this.field_i, this.field_n);
           } else {
             var12 = this.field_i;
             if (var12 == 0) {
@@ -710,16 +710,16 @@ class bc implements j, gd {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (1 == var12Lifetime1) {
-                this.field_g.a(this.a(param1, -6782), (var9_int >> 1) + this.a(param0, param4, param1, true), var11 + this.b(param6 - 164, param1, param3, param2), param5, param7);
+                this.field_g.drawCentred(this.a(param1, -6782), (var9_int >> 1) + this.a(param0, param4, param1, true), var11 + this.b(param6 - 164, param1, param3, param2), param5, param7);
               } else {
                 if ((2 == var12Lifetime1)) {
-                  this.field_g.b(this.a(param1, -6782), var9_int + this.a(param0, param4, param1, true), this.b(param6 ^ -164, param1, param3, param2) + var11, param5, param7);
+                  this.field_g.drawRightAligned(this.a(param1, -6782), var9_int + this.a(param0, param4, param1, true), this.b(param6 ^ -164, param1, param3, param2) + var11, param5, param7);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_g.c(this.a(param1, -6782), this.a(param0, param4, param1, true), var11 + this.b(-161, param1, param3, param2), param5, param7);
+              this.field_g.drawString(this.a(param1, -6782), this.a(param0, param4, param1, true), var11 + this.b(-161, param1, param3, param2), param5, param7);
             }
           }
           ie.b((byte) -9);

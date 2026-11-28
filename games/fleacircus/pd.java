@@ -80,10 +80,10 @@ final class pd extends IntrusiveNode {
         kb.a(param2, param1);
     }
 
-    final static n a(byte[] param0, boolean param1) {
-        n var2 = null;
+    final static CoverageBitmapFont a(byte[] param0, boolean param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        n stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -95,7 +95,7 @@ final class pd extends IntrusiveNode {
           if (!param1) {
             field_i = (String) null;
           }
-          var2 = new n(param0, vg.field_I, b.field_b, ij.field_H, ob.field_a, rd.field_d, of.field_d);
+          var2 = new CoverageBitmapFont(param0, vg.field_I, b.field_b, ij.field_H, ob.field_a, rd.field_d, of.field_d);
           EditableTextField.o(-28210);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -116,9 +116,9 @@ final class pd extends IntrusiveNode {
     pd(RawPcmStream param0, IntrusiveNode param1) {
         try {
           this.field_m = param0;
-          this.field_j = param0.g();
+          this.field_j = param0.getTargetVolume();
           this.field_n = param1;
-          this.field_m.h(this.field_j * gf.field_d + 128 >> 8);
+          this.field_m.setVolume(this.field_j * gf.field_d + 128 >> 8);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "pd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

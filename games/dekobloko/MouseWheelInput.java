@@ -32,7 +32,7 @@ abstract class MouseWheelInput {
           for (integerLocal1 = 1; stringArgument4.length() > integerLocal1; integerLocal1++) {
             integerLocal13 = stringArgument4.charAt(integerLocal1);
             if (integerLocal13 == 60) {
-              integerLocal12 = textLineMetricsArgument1.characterXPositions[0] + ((integerLocal10 >> 8) + bitmapFontArgument2.computeInteger1066(stringArgument4.substring(0, integerLocal1)));
+              integerLocal12 = textLineMetricsArgument1.characterXPositions[0] + ((integerLocal10 >> 8) + bitmapFontArgument2.stringWidth(stringArgument4.substring(0, integerLocal1)));
             }
             if (-1 != integerLocal12) {
               textLineMetricsArgument1.characterXPositions[integerLocal1] = integerLocal12;
@@ -40,7 +40,7 @@ abstract class MouseWheelInput {
               if (32 == integerLocal13) {
                 integerLocal10 = integerLocal10 + integerArgument3;
               }
-              textLineMetricsArgument1.characterXPositions[integerLocal1] = (integerLocal10 >> 8) + textLineMetricsArgument1.characterXPositions[0] - (-bitmapFontArgument2.computeInteger1066(stringArgument4.substring(0, integerLocal1 + 1)) + bitmapFontArgument2.computeInteger1064((char) integerLocal13));
+              textLineMetricsArgument1.characterXPositions[integerLocal1] = (integerLocal10 >> 8) + textLineMetricsArgument1.characterXPositions[0] - (-bitmapFontArgument2.stringWidth(stringArgument4.substring(0, integerLocal1 + 1)) + bitmapFontArgument2.charWidth((char) integerLocal13));
             }
             if (integerLocal13 == 62) {
               integerLocal12 = -1;

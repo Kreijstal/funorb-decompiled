@@ -78,7 +78,7 @@ final class GameDomainSupport001 {
         String stackStringLocal24 = null;
         RuntimeException caughtExceptionLocal25 = null;
         RuntimeException runtimeExceptionLocal26 = null;
-        RenderingSupport009 renderingSupport009Local27 = null;
+        BinaryBitmapFont renderingSupport009Local27 = null;
         SceneWidget sceneWidgetLocal28 = null;
         SceneWidget sceneWidgetLocal29 = null;
         SceneWidget sceneWidgetLocal30 = null;
@@ -135,9 +135,9 @@ final class GameDomainSupport001 {
           renderingSupport009Local27 = MixedSupport016.computeRenderingSupport0090204("largefont", resourceArchiveArgument5, resourceArchiveArgument2, (byte) 91, "lobby");
           MixedSupport121.renderingSupport009State0006 = MixedSupport016.computeRenderingSupport0090204("generalfont", resourceArchiveArgument5, resourceArchiveArgument2, (byte) 121, "lobby");
           TextLineMetrics.renderingSupport009State0004 = MixedSupport016.computeRenderingSupport0090204("chatfont", resourceArchiveArgument5, resourceArchiveArgument2, (byte) 102, "lobby");
-          renderingSupport009Local27.performAction1076(indexedSpriteArrayLocal5, integerArrayLocal15);
-          MixedSupport121.renderingSupport009State0006.performAction1076(indexedSpriteArrayLocal5, integerArrayLocal15);
-          TextLineMetrics.renderingSupport009State0004.performAction1076(indexedSpriteArrayLocal5, integerArrayLocal15);
+          renderingSupport009Local27.setInlineSprites(indexedSpriteArrayLocal5, integerArrayLocal15);
+          MixedSupport121.renderingSupport009State0006.setInlineSprites(indexedSpriteArrayLocal5, integerArrayLocal15);
+          TextLineMetrics.renderingSupport009State0004.setInlineSprites(indexedSpriteArrayLocal5, integerArrayLocal15);
           sceneWidgetLocal28 = new SceneWidget(0L, (SceneWidget) null);
           sceneWidgetLocal28.integerState0908 = ComponentContainer.integerState0377;
           sceneWidgetLocal28.integerState0910 = 16777215;

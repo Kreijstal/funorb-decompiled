@@ -126,7 +126,7 @@ final class tk extends ng {
         byte[] var1 = null;
         RuntimeException var1_ref = null;
         ge[] var2 = null;
-        rh var3 = null;
+        PalettedBitmapFont var3 = null;
         int[] var4 = null;
         int var6 = 0;
         byte[] var7 = null;

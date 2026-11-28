@@ -366,7 +366,7 @@ class jla {
 
     private final void h(int param0) {
         SoftwareRasterizer.fillVerticalGradient(0, 0, 640, 480, 65280, 4227136);
-        LinkTextWidget.field_D.a(hl.field_E, 320, 240, 16777215, -1);
+        LinkTextWidget.field_D.drawCentred(hl.field_E, 320, 240, 16777215, -1);
         if (param0 >= -120) {
           this.field_e = (jd) null;
         }
@@ -1573,7 +1573,7 @@ class jla {
           break;
         }
         var2Lifetime1 = stackIn_11_0;
-        g.field_g.b(BoardChange.a((byte) -117, ie.field_a), 600, 460, FullHealAnimation.field_v, -1);
+        g.field_g.drawRightAligned(BoardChange.a((byte) -117, ie.field_a), 600, 460, FullHealAnimation.field_v, -1);
         return;
     }
 
@@ -1880,7 +1880,7 @@ class jla {
         }
         var4Lifetime1 = BufferedSocket.field_b[this.field_b][param1];
         var5 = this.d(false, var4Lifetime1);
-        var6Lifetime1 = dja.field_l.a(var5);
+        var6Lifetime1 = dja.field_l.stringWidth(var5);
         var7 = this.a(param1, true);
         var8 = this.b(param1, 40);
         var9 = this.a(param1, (byte) -121);
@@ -2125,13 +2125,13 @@ class jla {
               this.h(param0 - 137);
               if ((var3 != 0) &&
                 (this.field_b == 10)) {
-                var2 = LinkTextWidget.field_D.b(LevitateEvent.field_s, 480);
+                var2 = LinkTextWidget.field_D.lineCount(LevitateEvent.field_s, 480);
                 hp.a(uma.field_J[0].field_n + 480 + uma.field_J[2].field_n, -uma.field_J[0].field_n + 80, (byte) 113, 30 * var2 + (uma.field_J[0].field_o + uma.field_J[6].field_o), uma.field_J, -uma.field_J[0].field_o + (200 - LinkTextWidget.field_D.field_u));
                 LinkTextWidget.field_D.drawParagraph(LevitateEvent.field_s, 80, 188, 480, 1000, 3518976, -1, 0, 0, 30);
               }
             } else {
               if (this.field_b == 10) {
-                var2 = LinkTextWidget.field_D.b(LevitateEvent.field_s, 480);
+                var2 = LinkTextWidget.field_D.lineCount(LevitateEvent.field_s, 480);
                 hp.a(uma.field_J[0].field_n + 480 + uma.field_J[2].field_n, -uma.field_J[0].field_n + 80, (byte) 113, 30 * var2 + (uma.field_J[0].field_o + uma.field_J[6].field_o), uma.field_J, -uma.field_J[0].field_o + (200 - LinkTextWidget.field_D.field_u));
                 LinkTextWidget.field_D.drawParagraph(LevitateEvent.field_s, 80, 188, 480, 1000, 3518976, -1, 0, 0, 30);
               }
@@ -2183,7 +2183,7 @@ class jla {
         }
         g.field_g.drawParagraph(EventAnimation.field_j[3], 125, -((var5 + 11) * g.field_g.field_u / param0) + 470, var3, 2 * g.field_g.field_u, 3518976, -1, 0, 0, g.field_g.field_u);
         WidgetTheme.a(180, 198, -1271, 32, (-var5 + 3) * g.field_g.field_u / 2 + 385, 120, 10, 3518976);
-        var3 = g.field_g.a(EventAnimation.field_j[8]);
+        var3 = g.field_g.stringWidth(EventAnimation.field_j[8]);
         g.field_g.drawText(EventAnimation.field_j[8], 25, 470 - 3 * g.field_g.field_u / 2, 3518976, -1);
         WidgetTheme.a(362, 91, -1271, 45, 435, 68, 5, 3518976);
     }

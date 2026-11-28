@@ -39,7 +39,7 @@ final class sb extends IntrusiveNode {
 
     final void c(int param0) {
         int var2 = 60 % ((param0 + 38) / 54);
-        dd.field_c.a(this.field_o, -80 + this.field_k, this.field_m, 160, 1000, 16776960, -1, this.field_j, 1, 0, dd.field_c.field_t + dd.field_c.field_x);
+        dd.field_c.drawParagraphAlpha(this.field_o, -80 + this.field_k, this.field_m, 160, 1000, 16776960, -1, this.field_j, 1, 0, dd.field_c.field_t + dd.field_c.field_x);
     }
 
     sb(String param0, int param1, int param2, int param3) {

@@ -201,10 +201,10 @@ final class jn {
               var1_int = var1_int + ln.field_D;
             }
             if (0 <= var4) {
-              sp.field_Q.b(var6, var8Lifetime1, var1_int + LevelRun.field_p, var5, -1);
+              sp.field_Q.drawString(var6, var8Lifetime1, var1_int + LevelRun.field_p, var5, -1);
               var1_int = var1_int + (WidgetContainer.field_z + (ln.field_D + kp.field_d));
             } else {
-              bo.field_e.b(var6, var8Lifetime1, var1_int + bp.field_f, var5, -1);
+              bo.field_e.drawString(var6, var8Lifetime1, var1_int + bp.field_f, var5, -1);
               var1_int = var1_int + bp.field_e;
             }
           }

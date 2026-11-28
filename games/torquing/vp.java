@@ -120,9 +120,9 @@ final class vp extends WidgetContainer implements ng {
         if (param1 >= -7) {
           return;
         }
-        uc var5 = TranslucentSpriteLayer.field_e;
+        BitmapFont var5 = TranslucentSpriteLayer.field_e;
         if (null != this.field_J) {
-          var5.a(LevelRun.field_I, param3 + this.x, param2 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_t + var5.field_x);
+          var5.drawParagraph(LevelRun.field_I, param3 + this.x, param2 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_t + var5.field_x);
         }
     }
 

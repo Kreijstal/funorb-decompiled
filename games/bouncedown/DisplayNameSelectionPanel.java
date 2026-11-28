@@ -98,12 +98,12 @@ final class DisplayNameSelectionPanel extends lc implements rf, rc {
         field_F = null;
     }
 
-    final static ie a(int param0, ResourceArchive param1, String param2, ResourceArchive param3, String param4) {
+    final static BinaryBitmapFont a(int param0, ResourceArchive param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ie stackIn_2_0 = null;
-        ie stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_2_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -121,7 +121,7 @@ final class DisplayNameSelectionPanel extends lc implements rf, rc {
             stackIn_4_0 = qe.a(39, param3, var5_int, var6, param1);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (ie) null;
+          stackIn_2_0 = (BinaryBitmapFont) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -164,7 +164,7 @@ final class DisplayNameSelectionPanel extends lc implements rf, rc {
         try {
           var3 = this.field_E;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(false, var4, true);
+          ((EditableTextField) ((Object) var3)).setText(false, var4, true);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "q.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -186,7 +186,7 @@ final class DisplayNameSelectionPanel extends lc implements rf, rc {
         this.field_z = new wd(ClientException.field_b, (sk) null);
         this.field_D = new wd(qa.field_g, (sk) null);
         this.field_E.field_q = ej.field_e;
-        this.field_E.a(new AccountNameAvailabilityValidator(this.field_E), true);
+        this.field_E.setFieldValidator(new AccountNameAvailabilityValidator(this.field_E), true);
         this.field_z.field_y = false;
         this.field_z.field_j = (fc) ((Object) new jh());
         this.field_D.field_j = (fc) ((Object) new r());

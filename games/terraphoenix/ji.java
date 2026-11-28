@@ -22,7 +22,7 @@ final class ji extends IntrusiveNode {
             var8 = (String) null;
             ji.a(74, (String) null, false, (String) null);
           }
-          stackIn_3_0 = AccountRequestState.field_f.a(param4, param0, param3 - 20, -param0 + param6, 480, param2, -1, 0, 0, param1);
+          stackIn_3_0 = AccountRequestState.field_f.drawParagraph(param4, param0, param3 - 20, -param0 + param6, 480, param2, -1, 0, 0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

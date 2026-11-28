@@ -6,7 +6,7 @@ final class ec extends mh {
     static int field_cb;
     static int field_bb;
 
-    final static void a(tj param0, int param1, int param2, int param3, tj param4, int param5, RgbSprite[] param6, int param7, int param8, int param9, int param10, int param11, RgbSprite[] param12, int param13, int param14, int param15, RgbSprite[] param16, int param17, int param18, int param19, int param20) {
+    final static void a(BitmapFont param0, int param1, int param2, int param3, BitmapFont param4, int param5, RgbSprite[] param6, int param7, int param8, int param9, int param10, int param11, RgbSprite[] param12, int param13, int param14, int param15, RgbSprite[] param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;

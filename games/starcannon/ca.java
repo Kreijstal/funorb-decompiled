@@ -15,7 +15,7 @@ class ca extends rd {
     private int field_V;
     private int field_db;
     private Sprite[] field_v;
-    private qe field_B;
+    private BitmapFont field_B;
     private int field_H;
     private boolean field_I;
     private int field_w;

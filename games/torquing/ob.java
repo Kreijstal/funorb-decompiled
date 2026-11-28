@@ -13,12 +13,12 @@ final class ob {
         field_a = null;
     }
 
-    final static pk a(int param0, int[] param1, byte[] param2, boolean param3, IndexedSprite[] param4) {
+    final static PalettedBitmapFont a(int param0, int[] param1, byte[] param2, boolean param3, IndexedSprite[] param4) {
         int var12_int = 0;
         byte[] array$0 = null;
         int var24_int = 0;
         int incrementValue$2 = 0;
-        pk stackIn_42_0 = null;
+        PalettedBitmapFont stackIn_42_0 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -35,7 +35,7 @@ final class ob {
         int[] var9 = null;
         int var10 = 0;
         byte[][] var11 = null;
-        pk var12 = null;
+        PalettedBitmapFont var12 = null;
         byte[] var13 = null;
         byte[] var14 = null;
         int var15 = 0;
@@ -161,7 +161,7 @@ final class ob {
               var20Lifetime1 = var20Lifetime1 + var18;
             }
           }
-          var12 = new pk(param2, var40, var41, var38, var39, var37, var42);
+          var12 = new PalettedBitmapFont(param2, var40, var41, var38, var39, var37, var42);
           var12.field_x = var12.field_x - 1;
           if (param1.length == 0) {
             var12.field_t = var12.field_t - 1;

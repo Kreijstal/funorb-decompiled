@@ -154,13 +154,13 @@ final class re {
           stackIn_3_1 = (ResourceArchive) (param3);
           stackIn_3_2 = (ResourceArchive) (param0);
           stackIn_4_3 = !(param1);
-          sp.field_R = (uc) ((Object) dc.a(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_4_3, "arezzo12"));
-          TranslucentSpriteLayer.field_e = (uc) ((Object) dc.a("commonui", param3, param0, false, "arezzo14"));
+          sp.field_R = (BitmapFont) ((Object) dc.a(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_4_3, "arezzo12"));
+          TranslucentSpriteLayer.field_e = (BitmapFont) ((Object) dc.a("commonui", param3, param0, false, "arezzo14"));
           stackIn_6_0 = "commonui";
           stackIn_6_1 = (ResourceArchive) (param3);
           stackIn_6_2 = (ResourceArchive) (param0);
           stackIn_7_3 = !(param1);
-          LoginPanel.field_E = (uc) ((Object) dc.a(stackIn_6_0, stackIn_6_1, stackIn_6_2, stackIn_7_3, "arezzo14bold"));
+          LoginPanel.field_E = (BitmapFont) ((Object) dc.a(stackIn_6_0, stackIn_6_1, stackIn_6_2, stackIn_7_3, "arezzo14bold"));
           if (!param1) {
             field_c = 47;
           }

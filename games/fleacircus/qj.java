@@ -6,7 +6,7 @@ final class qj extends dk {
     static String field_I;
     static String field_E;
     static boolean field_G;
-    static fa field_H;
+    static BitmapFont field_H;
     static int field_K;
     static String field_F;
 

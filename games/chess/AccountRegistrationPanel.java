@@ -198,7 +198,7 @@ final class AccountRegistrationPanel extends ma implements nn, mj, wl {
         try {
           var3 = this.field_T;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(0, false, var4);
+          ((EditableTextField) ((Object) var3)).setText(0, false, var4);
           if (param1 < -119) {
             return;
           }
@@ -465,12 +465,12 @@ final class AccountRegistrationPanel extends ma implements nn, mj, wl {
         this.field_Z.field_j = wk.field_a;
         this.field_W.field_j = fm.field_P;
         this.field_P.field_j = pa.field_k;
-        this.field_T.a(-96, new AccountNameAvailabilityValidator(this.field_T));
-        this.field_Q.a(-123, new EmailFormatValidator(this.field_Q));
-        this.field_L.a(-66, new ConfirmedEmailAvailabilityValidator(this.field_L, this.field_Q));
-        this.field_U.a(-115, new PasswordValidator(this.field_U, this.field_T, this.field_Q));
-        this.field_Z.a(-110, new MatchingFieldValidator(this.field_Z, this.field_U));
-        this.field_W.a(-86, new AgeValidator(this.field_W));
+        this.field_T.setFieldValidator(-96, new AccountNameAvailabilityValidator(this.field_T));
+        this.field_Q.setFieldValidator(-123, new EmailFormatValidator(this.field_Q));
+        this.field_L.setFieldValidator(-66, new ConfirmedEmailAvailabilityValidator(this.field_L, this.field_Q));
+        this.field_U.setFieldValidator(-115, new PasswordValidator(this.field_U, this.field_T, this.field_Q));
+        this.field_Z.setFieldValidator(-110, new MatchingFieldValidator(this.field_Z, this.field_U));
+        this.field_W.setFieldValidator(-86, new AgeValidator(this.field_W));
         this.field_V.field_H = false;
         this.field_V.field_n = (jm) ((Object) new sf());
         this.field_M.field_n = (jm) ((Object) new wj());

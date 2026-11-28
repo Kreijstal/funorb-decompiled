@@ -400,9 +400,9 @@ final class ProxyAuthenticationRequiredException extends IOException {
           TextInputField.field_ab = MouseInput.a("commonui", 116, "jagex_logo_grey", param3);
           km.field_y = jd.a((byte) 33, "commonui", param3, "button");
           cf.field_u = DelayedPacket.loadNamedRgbSprites(param3, 113, "commonui", "validation");
-          jn.field_G = (vm) ((Object) th.a(param3, -107, "arezzo12", param1, "commonui"));
-          jd.field_s = (vm) ((Object) th.a(param3, 25, "arezzo14", param1, "commonui"));
-          pe.field_eb = (vm) ((Object) th.a(param3, 9, "arezzo14bold", param1, "commonui"));
+          jn.field_G = (BitmapFont) ((Object) th.a(param3, -107, "arezzo12", param1, "commonui"));
+          jd.field_s = (BitmapFont) ((Object) th.a(param3, 25, "arezzo14", param1, "commonui"));
+          pe.field_eb = (BitmapFont) ((Object) th.a(param3, 9, "arezzo14bold", param1, "commonui"));
           var17 = new RgbSprite(param2.getFileByName("", "button.gif", param0 ^ 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
           qm.a("commonui", 0, "dropdown", param3);
           var5 = sg.a(true, "commonui", param3, "screen_options");

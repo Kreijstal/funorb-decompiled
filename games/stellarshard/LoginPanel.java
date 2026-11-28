@@ -104,7 +104,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, oi 
           this.field_k = 15;
           var7 = si.field_V;
           if (null != this.field_G) {
-            this.field_k = this.field_k + (5 + var7.b(this.field_G, -40 + this.field_p, var7.field_N));
+            this.field_k = this.field_k + (5 + var7.textHeight(this.field_G, -40 + this.field_p, var7.field_N));
           }
           var8 = k.field_c;
           var9 = AccountServiceResult.a(hf.a((byte) -15), (byte) -122);
@@ -182,8 +182,8 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, oi 
 
     final void e(byte param0) {
         int var2 = 114 / ((param0 + 74) / 33);
-        this.field_Q.d(true);
-        this.field_K.d(true);
+        this.field_Q.clearText(true);
+        this.field_K.clearText(true);
     }
 
     final String f(byte param0) {
@@ -325,7 +325,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, oi 
 
     final void a(int param0, byte param1, int param2, int param3) {
         if (null != this.field_G) {
-          si.field_V.a(this.field_G, param3 + this.field_w + 20, 15 + this.field_k + param2, this.field_p - 40, this.field_t, 16777215, -1, 1, 0, si.field_V.field_N);
+          si.field_V.drawParagraph(this.field_G, param3 + this.field_w + 20, 15 + this.field_k + param2, this.field_p - 40, this.field_t, 16777215, -1, 1, 0, si.field_V.field_N);
         }
         if (this.field_E != null) {
           SoftwareRasterizer.drawHorizontalLine(param3 + 10, 134 + param2, -20 + this.field_p, 4210752);
@@ -411,8 +411,8 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, oi 
         try {
           var3 = this.field_Q;
           var4 = param0;
-          var3.a((byte) 20, var4, false);
-          this.field_K.d(true);
+          var3.setText((byte) 20, var4, false);
+          this.field_K.clearText(true);
           if (param1 != 15) {
             field_L = (java.awt.Frame) null;
           }

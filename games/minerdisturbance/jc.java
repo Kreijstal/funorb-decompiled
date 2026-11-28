@@ -151,7 +151,7 @@ abstract class jc extends fe implements rk {
         }
     }
 
-    final static int a(byte param0, we param1, String[] param2, int param3, String param4) {
+    final static int a(byte param0, BitmapFont param1, String[] param2, int param3, String param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -179,7 +179,7 @@ abstract class jc extends fe implements rk {
         int var6Lifetime1;
         var13 = MinerDisturbance.field_ab;
         try {
-          var5_int = param1.a(param4);
+          var5_int = param1.stringWidth(param4);
           if (var5_int <= param3 &&
             -1 == param4.indexOf("<br>")) {
             param2[0] = param4;
@@ -200,7 +200,7 @@ abstract class jc extends fe implements rk {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param4.substring(var7, 1 + var9).trim();
-              var12 = param1.a(var11);
+              var12 = param1.stringWidth(var11);
               if (var12 >= param3) {
                 var7 = 1 + var9;
                 incrementValue$1 = var6Lifetime1;

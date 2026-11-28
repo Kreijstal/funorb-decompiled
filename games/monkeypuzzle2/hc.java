@@ -183,7 +183,7 @@ final class hc {
     }
 
     final void a(ak param0, UiWidget param1, byte param2, int param3, int param4) {
-        ta stackIn_21_0;
+        BitmapFont stackIn_21_0;
         String stackIn_21_1;
         int stackIn_21_2;
         int stackIn_21_3;
@@ -267,7 +267,7 @@ final class hc {
             } else {
               stackIn_28_8 = 256;
             }
-            ((ta) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param0.field_l, param0.field_o, param0.field_a);
+            ((BitmapFont) (Object) stackIn_21_0).drawParagraphAlpha(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param0.field_l, param0.field_o, param0.field_a);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -207,14 +207,14 @@ final class vj extends ql {
         if (this.field_m + ImageProducerRasterBuffer.field_p > 0) {
           SoftwareRasterizer.fillRectangleAlpha(100, 40, 90, 20, 0, 128);
           SoftwareRasterizer.drawRectangleOutline(100, 40, 90, 20, 16776960);
-          id.field_A.c(ph.field_z + ImageProducerRasterBuffer.field_p, 105, 55, 16776960, -1);
+          id.field_A.drawString(ph.field_z + ImageProducerRasterBuffer.field_p, 105, 55, 16776960, -1);
         }
         var3 = 81 / ((-48 - param0) / 38);
         if (this.field_m > 0 ||
           ha.field_t == 16) {
           SoftwareRasterizer.fillRectangleAlpha(410, 40, 140, 20, 0, 128);
           SoftwareRasterizer.drawRectangleOutline(410, 40, 140, 20, 16776960);
-          id.field_A.c(KeyboardInput.field_a + this.field_m, 415, 55, 16776960, -1);
+          id.field_A.drawString(KeyboardInput.field_a + this.field_m, 415, 55, 16776960, -1);
         }
     }
 

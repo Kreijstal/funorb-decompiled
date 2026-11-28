@@ -28,7 +28,7 @@ final class gm {
               return;
             }
             if (null != pa.field_a[var1_int] &&
-              !pa.field_a[var1_int].k()) {
+              !pa.field_a[var1_int].isSamplePositionOutOfRange()) {
               var1_int++;
               continue;
             }

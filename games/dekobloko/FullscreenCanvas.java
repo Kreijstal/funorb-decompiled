@@ -21,9 +21,9 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
     public final void focusGained(java.awt.event.FocusEvent focusEventArgument1) {
     }
 
-    final static RenderingSupport009 computeRenderingSupport0091382(ResourceArchive resourceArchiveArgument1, byte byteArgument2, int integerArgument3, int integerArgument4, ResourceArchive resourceArchiveArgument5) {
+    final static BinaryBitmapFont computeRenderingSupport0091382(ResourceArchive resourceArchiveArgument1, byte byteArgument2, int integerArgument3, int integerArgument4, ResourceArchive resourceArchiveArgument5) {
         RuntimeException runtimeExceptionLocal1 = null;
-        RenderingSupport009 stackRenderingSupport009Local2 = null;
+        BinaryBitmapFont stackRenderingSupport009Local2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
         StringBuilder stackStringBuilderLocal4 = null;
         String stackStringLocal5 = null;

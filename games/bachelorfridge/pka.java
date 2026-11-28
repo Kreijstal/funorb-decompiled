@@ -34,7 +34,7 @@ final class pka implements WidgetRenderer {
           var6_int = stackIn_6_0;
           this.field_c.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.text + "</u>", param0 + param1.x, param3 + param1.y, param1.width, param1.height, var6_int, -1, this.field_d, this.field_e, this.field_c.field_u + this.field_c.field_B);
           if (param1.isFocused(1023)) {
-            var7 = this.field_c.a(param1.text);
+            var7 = this.field_c.stringWidth(param1.text);
             var8 = this.field_c.field_u + this.field_c.field_B;
             var9 = param1.x + param0;
             var10 = param3 + param1.y;

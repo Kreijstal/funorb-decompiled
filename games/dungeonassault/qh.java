@@ -153,7 +153,7 @@ final class qh {
           }
           if (null == of.field_q) {
             if (null != tg.field_l) {
-              tg.field_l.a(bg.field_t, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              tg.field_l.drawParagraph(bg.field_t, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -162,7 +162,7 @@ final class qh {
           var7Lifetime1 = var6;
           if (var6 == null) {
             if (tg.field_l != null) {
-              tg.field_l.a(bg.field_t, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              tg.field_l.drawParagraph(bg.field_t, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var6.h(245, 199);
@@ -198,7 +198,7 @@ final class qh {
             if (var2 == null) {
               return;
             }
-            tg.field_l.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            tg.field_l.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

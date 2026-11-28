@@ -391,14 +391,14 @@ public final class StarCannon extends ag {
                     if (MouseWheelSource.field_c > -1) {
                         /* Inlined CFG state: 55. */
                         {
-                            var3 = af.field_y.a(vk.field_w);
+                            var3 = af.field_y.stringWidth(vk.field_w);
                             ba.a(24, gb.field_v, (byte) -127, -var3 + 604 - 17, 17 + var3, 455 + param0);
                             nb.a(param0 + 455, (byte) 122, var3 + 17, ma.field_e, -17 - var3 + 604, 128, 24);
-                            af.field_y.c(vk.field_w, 596, 472 + param0, 16777215, -1);
+                            af.field_y.drawRightAligned(vk.field_w, 596, 472 + param0, 16777215, -1);
                             ba.a(24, ma.field_a, (byte) 21, 604, 35, 455 + param0);
                             nb.a(455 + param0, (byte) 122, 35, ha.field_a, 604, 128, 24);
                             MatchingFieldValidator.field_l.e(609, param0 + 460);
-                            af.field_y.a(Integer.toString(MouseWheelSource.field_c), 626, 472 + param0, 16777215, -1);
+                            af.field_y.drawString(Integer.toString(MouseWheelSource.field_c), 626, 472 + param0, 16777215, -1);
                             var4_ref_String = be.field_b;
                             var5 = 65535;
                             var6 = 32896;
@@ -477,10 +477,10 @@ public final class StarCannon extends ag {
                     }
                 }
                 case 68: {
-                    var3 = af.field_y.a(var4_ref_String);
+                    var3 = af.field_y.stringWidth(var4_ref_String);
                     ba.a(24, gb.field_v, (byte) -122, 1, var3 + 17, 455 + param0);
                     nb.a(param0 + 455, (byte) 122, var3 + 17, ma.field_e, 1, 128, 24);
-                    af.field_y.a(var4_ref_String, 10, 472 + param0, 16777215, -1);
+                    af.field_y.drawString(var4_ref_String, 10, 472 + param0, 16777215, -1);
                     var8 = 23 + var3;
                     ba.a(24, ma.field_a, (byte) -115, var8 - 5, 10 + var7 * 5, param0 + 455);
                     nb.a(param0 + 455, (byte) 122, 10 + var7 * 5, ha.field_a, var8 - 5, 128, 24);
@@ -550,12 +550,12 @@ public final class StarCannon extends ag {
                             var14 = new id[1];
                             var10_ref_id__ = var14;
                             var14[0] = af.field_w[16 + qb.field_e];
-                            af.field_y.a(var10_ref_id__, (int[]) null);
-                            af.field_y.a(var16, 319, 48, var6, -1, 256 - param0 * 10);
-                            af.field_y.a(var16, 321, 48, var5, -1, -(param0 * 10) + 256);
-                            af.field_y.a(var16, 320, 47, var5, -1, -(10 * param0) + 256);
-                            af.field_y.a(var16, 320, 49, var6, -1, -(param0 * 10) + 256);
-                            af.field_y.a(var16, 320, 48, 16777215, -1, -(param0 * 10) + 256);
+                            af.field_y.setInlineSprites(var10_ref_id__, (int[]) null);
+                            af.field_y.drawCentredAlpha(var16, 319, 48, var6, -1, 256 - param0 * 10);
+                            af.field_y.drawCentredAlpha(var16, 321, 48, var5, -1, -(param0 * 10) + 256);
+                            af.field_y.drawCentredAlpha(var16, 320, 47, var5, -1, -(10 * param0) + 256);
+                            af.field_y.drawCentredAlpha(var16, 320, 49, var6, -1, -(param0 * 10) + 256);
+                            af.field_y.drawCentredAlpha(var16, 320, 48, 16777215, -1, -(param0 * 10) + 256);
                             dupTemp$3 = af.field_w[qb.field_e + 16];
                             dupTemp$3.field_f = dupTemp$3.field_f - var9;
                             statePc = 79;
@@ -594,12 +594,12 @@ public final class StarCannon extends ag {
                     if (!a.field_a) {
                         /* Inlined CFG state: 87. */
                         {
-                            var3 = af.field_y.a(rd.field_o);
+                            var3 = af.field_y.stringWidth(rd.field_o);
                             ba.a(24, gb.field_v, (byte) -118, -var3 + 311, 17 + var3, -param0 + 1);
                             nb.a(1 - param0, (byte) 122, var3 + 17, ma.field_e, 311 - var3, 128, 24);
-                            af.field_y.c(rd.field_o, 320, -param0 + 18, 16777215, -1);
+                            af.field_y.drawRightAligned(rd.field_o, 320, -param0 + 18, 16777215, -1);
                             var17 = Integer.toString(var9);
-                            var3 = 11 + af.field_y.a(var17);
+                            var3 = 11 + af.field_y.stringWidth(var17);
                             var11 = 5 - var3 % 5;
                             if (var11 < 5) {
                                 /* Inlined CFG state: 89. */
@@ -621,7 +621,7 @@ public final class StarCannon extends ag {
                 case 90: {
                     ba.a(24, ma.field_a, (byte) -113, 328, var3, -param0 + 1);
                     nb.a(-param0 + 1, (byte) 122, var3, ha.field_a, 328, 128, 24);
-                    af.field_y.a(var17, 333, -param0 + 18, 16777215, -1);
+                    af.field_y.drawString(var17, 333, -param0 + 18, 16777215, -1);
                     statePc = 91;
                     continue scanLoop1;
                 }
@@ -760,7 +760,7 @@ public final class StarCannon extends ag {
                     }
                 }
                 case 115: {
-                    af.field_y.a(var10_ref_String, 0, 0, 640, 480, 16777215, -1, -(10 * param0) + 256, 1, 1, af.field_y.field_p);
+                    af.field_y.drawParagraphAlpha(var10_ref_String, 0, 0, 640, 480, 16777215, -1, -(10 * param0) + 256, 1, 1, af.field_y.field_p);
                     statePc = 116;
                     continue scanLoop1;
                 }
@@ -805,11 +805,11 @@ public final class StarCannon extends ag {
                     if (var7 >= var3) {
                         /* Inlined CFG state: 131. */
                         {
-                            af.field_y.a(s.field_h, 319, 38, 0, -1, var3);
-                            af.field_y.a(s.field_h, 321, 38, 0, -1, var3);
-                            af.field_y.a(s.field_h, 320, 37, 0, -1, var3);
-                            af.field_y.a(s.field_h, 320, 39, 0, -1, var3);
-                            af.field_y.a(s.field_h, 320, 38, 16777215, -1, var3);
+                            af.field_y.drawCentredAlpha(s.field_h, 319, 38, 0, -1, var3);
+                            af.field_y.drawCentredAlpha(s.field_h, 321, 38, 0, -1, var3);
+                            af.field_y.drawCentredAlpha(s.field_h, 320, 37, 0, -1, var3);
+                            af.field_y.drawCentredAlpha(s.field_h, 320, 39, 0, -1, var3);
+                            af.field_y.drawCentredAlpha(s.field_h, 320, 38, 16777215, -1, var3);
                             statePc = 132;
                             continue scanLoop1;
                         }
@@ -920,7 +920,7 @@ public final class StarCannon extends ag {
                     }
                 }
                 case 140: {
-                    var4 = a.field_b.a(ne.field_i);
+                    var4 = a.field_b.stringWidth(ne.field_i);
                     var5 = -60 + (-var4 + 640) >> 1;
                     var6 = -var5 + 640;
                     var7 = var6 - var5;
@@ -944,7 +944,7 @@ public final class StarCannon extends ag {
                             BufferedSocket.a(true, var7, 10596798, 0, var8, 16711680, var5, var11 >> 1);
                             BufferedSocket.a(true, var7, 0, 10596798, (var11 >> 1) + var8, 16711680, var5, -(var11 >> 1) + var11);
                             SoftwareRasterizer.intersectClip(var5 + 19, var8 + 14, var7 + (var5 - 19), -14 + (var11 + var8));
-                            a.field_b.b(ne.field_i, 320, (a.field_b.field_p - a.field_b.field_q >> 1) + 240, 16777215, -1);
+                            a.field_b.drawCentred(ne.field_i, 320, (a.field_b.field_p - a.field_b.field_q >> 1) + 240, 16777215, -1);
                             SoftwareRasterizer.restoreClip(var21);
                             statePc = 144;
                             continue scanLoop1;
@@ -1522,7 +1522,7 @@ public final class StarCannon extends ag {
 
     }
 
-    final void b(int param0) {
+    final void updateClient(int param0) {
         boolean stackIn_6_1 = false;
         boolean stackIn_39_1 = false;
         int var2;
@@ -1543,7 +1543,7 @@ public final class StarCannon extends ag {
         stackIn_6_1 = (n.field_a != null);
         this.b(stackIn_6_1, -1);
         if (param0 != 320) {
-          this.a(-100);
+          this.disposeClient(-100);
         }
         if (fa.field_E) {
           this.t(-23523);
@@ -1678,7 +1678,7 @@ public final class StarCannon extends ag {
         int var11Lifetime1;
         var12 = field_A;
         if (param1 != -1444) {
-          this.b(66);
+          this.updateClient(66);
         }
         o.a(false);
         if (param0) {
@@ -1698,7 +1698,7 @@ public final class StarCannon extends ag {
                     if (FrameTimer.field_f.ensureIndexLoaded((byte) 103) &&
                       FrameTimer.field_f.tryLoadGroupByName("basic", -9883)) {
                       ma.a(fa.field_z, -13923, 70.0f);
-                      this.d((byte) 22);
+                      this.renderClientFrame((byte) 22);
                       if (!param0) {
                         return;
                       }
@@ -1781,7 +1781,7 @@ public final class StarCannon extends ag {
         }
         if (null != se.field_l) {
           ma.a(GzipDecompressor.field_d, -13923, 75.0f);
-          this.d((byte) 22);
+          this.renderClientFrame((byte) 22);
           var3_ref = new ja(lj.field_h, AccountNameAvailabilityValidator.field_p);
           fb.field_t = dl.a(var3_ref, (byte) 84, "music/star cannon level 1 final", "", se.field_l);
           TextFieldValidator.field_i = dl.a(var3_ref, (byte) 66, "music/star cannon level 2 final", "", se.field_l);
@@ -1794,7 +1794,7 @@ public final class StarCannon extends ag {
         }
         if (fl.field_f == null) {
           ma.a(sj.field_C, -13923, 80.0f);
-          this.d((byte) 22);
+          this.renderClientFrame((byte) 22);
           gg.field_f = SecondaryNodeDequeIterator.a("smlships", 126, "", jg.field_F);
           AccountNameAvailabilityValidator.field_j = SecondaryNodeDequeIterator.a("destroyer", -121, "", jg.field_F);
           FullscreenFocusCanvas.field_e = SecondaryNodeDequeIterator.a("cruiser", param1 ^ -1484, "", jg.field_F);
@@ -1889,7 +1889,7 @@ public final class StarCannon extends ag {
         }
         if (null == kj.field_y[3]) {
           ma.a(sj.field_C, -13923, 90.0f);
-          this.d((byte) 22);
+          this.renderClientFrame((byte) 22);
           vk.a("", 93, "mainmenubar", jg.field_F);
           ie.field_A = SecondaryNodeDequeIterator.a("zenon", 102, "", jg.field_F);
           vk.a("", 120, "moon", jg.field_F);
@@ -1928,7 +1928,7 @@ public final class StarCannon extends ag {
           return;
         }
         ma.a(sj.field_C, -13923, 95.0f);
-        this.d((byte) 22);
+        this.renderClientFrame((byte) 22);
         af.field_y = od.a("", jg.field_F, "b12", param1 + 1443, BoundedRandomAccessFile.field_c);
         a.field_b = od.a("", jg.field_F, "font", -1, BoundedRandomAccessFile.field_c);
         var20 = SecondaryNodeDequeIterator.a("screenshots", -105, "", jg.field_F);
@@ -1939,7 +1939,7 @@ public final class StarCannon extends ag {
         lf.field_eb = null;
         var4_array = new id[1];
         var4_array[0] = af.field_w[16 + qb.field_e];
-        af.field_y.a(var4_array, (int[]) null);
+        af.field_y.setInlineSprites(var4_array, (int[]) null);
         lf.field_V = vk.a("basic", 111, "unachieved", FrameTimer.field_f);
         li.a(lf.field_V, (byte) -100);
         sc.field_a = vk.a("basic", param1 ^ -1517, "locked", FrameTimer.field_f);
@@ -2232,7 +2232,7 @@ public final class StarCannon extends ag {
                   var3 = 42997;
                 }
                 var11 = gf.field_c[39];
-                dupTemp$0 = PcmSampleStream.a(var11, 100, 255 * nb.field_g / 100);
+                dupTemp$0 = PcmSampleStream.createForPlaybackRate(var11, 100, 255 * nb.field_g / 100);
                 var12 = dupTemp$0;
                 ah.field_a = dupTemp$0;
                 var12.d(var3);
@@ -3182,7 +3182,7 @@ public final class StarCannon extends ag {
         }
     }
 
-    final void c(byte param0) {
+    final void clearClientResources(byte param0) {
         StarCannon.clearStaticReferences(122);
         bj.resetStaticState(-1);
         eb.a(true);
@@ -3199,7 +3199,7 @@ public final class StarCannon extends ag {
         MouseWheelSource.clearStaticReferences(15686);
         SoftwareRasterizer.clearStaticReferences();
         ResourceArchive.clearStaticReferences(0);
-        qe.clearStaticReferences();
+        BitmapFont.clearStaticReferences();
         oh.clearStaticReferences(-1);
         ec.clearStaticReferences(82);
         PacketBuffer.clearStaticReferences((byte) -59);
@@ -3416,7 +3416,7 @@ public final class StarCannon extends ag {
         this.field_u = null;
     }
 
-    final void d(byte param0) {
+    final void renderClientFrame(byte param0) {
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
         Object stackIn_7_1 = null;
@@ -3562,7 +3562,7 @@ public final class StarCannon extends ag {
             var4 = var5 / 2 - 32;
           }
           j.field_c[var3.field_g].c(8, var4);
-          af.field_y.a(AgeValidator.field_j[var3.field_g], 48, var4 + af.field_y.field_p, 65535, -1);
+          af.field_y.drawString(AgeValidator.field_j[var3.field_g], 48, var4 + af.field_y.field_p, 65535, -1);
         }
         if (nh.field_e != 0) {
           var4Lifetime1 = 256 * IsaacRandom.field_e / 50;
@@ -3584,7 +3584,7 @@ public final class StarCannon extends ag {
         return;
     }
 
-    final void f(int param0) {
+    final void initializeClient(int param0) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -3620,7 +3620,7 @@ public final class StarCannon extends ag {
         wa.a(0, -75, 16777215, 0, rj.field_l, (java.applet.Applet) (this));
     }
 
-    final void a(int param0) {
+    final void disposeClient(int param0) {
         if (n.field_a != null) {
           re.a(param0 ^ -25109);
         }

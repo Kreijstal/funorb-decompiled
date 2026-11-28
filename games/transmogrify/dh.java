@@ -269,9 +269,9 @@ final class dh extends aj implements df {
           return;
         }
         int var5 = -1 % ((77 - param3) / 34);
-        kg var6 = vd.field_h;
+        BitmapFont var6 = vd.field_h;
         if (null != this.field_y) {
-          var6.a(ae.field_d, param0 + this.field_p, this.field_n + param1, this.field_l, 20, 16777215, -1, 0, 0, var6.field_t + var6.field_y);
+          var6.drawParagraph(ae.field_d, param0 + this.field_p, this.field_n + param1, this.field_l, 20, 16777215, -1, 0, 0, var6.field_t + var6.field_y);
         }
     }
 

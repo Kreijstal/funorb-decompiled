@@ -3,7 +3,7 @@
  */
 class SceneWidgetNode extends DualNode {
     static String stringState0318;
-    static RenderingSupport010 renderingSupport010State0002;
+    static PalettedBitmapFont renderingSupport010State0002;
     static long longState0023;
     static PcmPlayer pcmPlayerState0002;
     static String stringState0319;

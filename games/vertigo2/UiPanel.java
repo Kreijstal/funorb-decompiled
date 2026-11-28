@@ -427,7 +427,7 @@ class UiPanel extends fh {
             this.field_J != null) {
             var24Lifetime2 = var27 + this.field_J;
           }
-          if (this.field_z.c(var24Lifetime2) <= this.field_Fb - 2 * this.field_R &&
+          if (this.field_z.stringWidth(var24Lifetime2) <= this.field_Fb - 2 * this.field_R &&
             var24Lifetime2.indexOf("<br>") < 0) {
             if (this.field_ab != 1) {
               if (this.field_ab == 2) {
@@ -437,22 +437,22 @@ class UiPanel extends fh {
               var23 = var23 + (-this.field_z.field_M + (this.field_db - this.field_z.field_z)) / 2;
             }
             if (this.field_O == 0) {
-              this.field_z.a(var24Lifetime2, this.field_R + (this.field_ob + var22), var23 + (this.field_C + this.field_z.field_z), var18, -1, this.field_U);
+              this.field_z.drawStringAlpha(var24Lifetime2, this.field_R + (this.field_ob + var22), var23 + (this.field_C + this.field_z.field_z), var18, -1, this.field_U);
             } else {
               if (1 == this.field_O) {
-                this.field_z.b(var24Lifetime2, var22 + this.field_ob - (-this.field_R - (-(2 * this.field_R) + this.field_Fb) / 2), this.field_z.field_z + var23 + this.field_C, var18, -1, this.field_U);
+                this.field_z.drawCentredAlpha(var24Lifetime2, var22 + this.field_ob - (-this.field_R - (-(2 * this.field_R) + this.field_Fb) / 2), this.field_z.field_z + var23 + this.field_C, var18, -1, this.field_U);
               } else {
                 if (2 != this.field_O) {
-                  this.field_z.a(var24Lifetime2, var22 + this.field_ob + this.field_R, var23 + this.field_C, -(2 * this.field_R) + this.field_Fb, this.field_db, var18, -1, this.field_U, this.field_O, this.field_ab, this.field_qb);
+                  this.field_z.drawParagraphAlpha(var24Lifetime2, var22 + this.field_ob + this.field_R, var23 + this.field_C, -(2 * this.field_R) + this.field_Fb, this.field_db, var18, -1, this.field_U, this.field_O, this.field_ab, this.field_qb);
                 } else {
-                  this.field_z.c(var24Lifetime2, -(this.field_R * 2) + this.field_Fb + (this.field_ob + this.field_R) + var22, this.field_z.field_z + this.field_C + var23, var18, -1, this.field_U);
+                  this.field_z.drawRightAlignedAlpha(var24Lifetime2, -(this.field_R * 2) + this.field_Fb + (this.field_ob + this.field_R) + var22, this.field_z.field_z + this.field_C + var23, var18, -1, this.field_U);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_z.a(var24Lifetime2, this.field_R + (this.field_ob + var22), this.field_C + var23, -(2 * this.field_R) + this.field_Fb, this.field_db, var18, -1, this.field_U, this.field_O, this.field_ab, this.field_qb);
+            this.field_z.drawParagraphAlpha(var24Lifetime2, this.field_R + (this.field_ob + var22), this.field_C + var23, -(2 * this.field_R) + this.field_Fb, this.field_db, var18, -1, this.field_U, this.field_O, this.field_ab, this.field_qb);
           }
         }
         if (null != this.field_M) {
@@ -533,7 +533,7 @@ class UiPanel extends fh {
         int var3 = 0;
         if (this.field_S != null &&
           null != this.field_z) {
-          var4_int = this.field_z.a(this.field_S, param1);
+          var4_int = this.field_z.maxLineWidth(this.field_S, param1);
           if (var4_int > var3) {
             var3 = var4_int;
           }

@@ -6,10 +6,10 @@ final class rl {
     static int field_a;
     static double field_b;
 
-    final static tb a(int param0, byte[] param1) {
-        tb var2 = null;
+    final static CoverageBitmapFont a(int param0, byte[] param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        tb stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -18,7 +18,7 @@ final class rl {
           if (param1 == null) {
             return null;
           }
-          var2 = new tb(param1, ValidatedTextField.field_P, mb.field_b, da.field_c, ra.field_ab, fk.field_d, cb.field_b);
+          var2 = new CoverageBitmapFont(param1, ValidatedTextField.field_P, mb.field_b, da.field_c, ra.field_ab, fk.field_d, cb.field_b);
           gb.a(param0 + 32415);
           if (param0 != -32466) {
             field_c = (float[][]) null;

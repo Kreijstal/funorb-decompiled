@@ -120,12 +120,12 @@ final class AccountRegistrationPanel extends WidgetContainer implements jf, n, r
         this.field_U.field_x = be.field_y;
         this.field_R.field_x = bl.field_c;
         this.field_W.field_x = hd.field_j;
-        this.field_J.a(new AccountNameAvailabilityValidator(this.field_J), 5859);
-        this.field_S.a(new EmailFormatValidator(this.field_S), 5859);
-        this.field_I.a(new ConfirmedEmailAvailabilityValidator(this.field_I, this.field_S), 5859);
-        this.field_H.a(new PasswordValidator(this.field_H, this.field_J, this.field_S), 5859);
-        this.field_U.a(new MatchingFieldValidator(this.field_U, this.field_H), 5859);
-        this.field_R.a(new AgeValidator(this.field_R), 5859);
+        this.field_J.setFieldValidator(new AccountNameAvailabilityValidator(this.field_J), 5859);
+        this.field_S.setFieldValidator(new EmailFormatValidator(this.field_S), 5859);
+        this.field_I.setFieldValidator(new ConfirmedEmailAvailabilityValidator(this.field_I, this.field_S), 5859);
+        this.field_H.setFieldValidator(new PasswordValidator(this.field_H, this.field_J, this.field_S), 5859);
+        this.field_U.setFieldValidator(new MatchingFieldValidator(this.field_U, this.field_H), 5859);
+        this.field_R.setFieldValidator(new AgeValidator(this.field_R), 5859);
         this.field_O.field_A = false;
         this.field_O.listener = (WidgetActionListener) ((Object) new ic());
         this.field_M.listener = (WidgetActionListener) ((Object) new qh());
@@ -263,7 +263,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements jf, n, r
           int var3_int = -6 / ((param1 - 2) / 51);
           var4 = this.field_J;
           var5 = param0;
-          ((EditableTextField) ((Object) var4)).a(false, (byte) -123, var5);
+          ((EditableTextField) ((Object) var4)).setText(false, (byte) -123, var5);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "pl.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

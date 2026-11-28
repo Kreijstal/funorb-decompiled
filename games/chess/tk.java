@@ -9,7 +9,7 @@ final class tk {
     static BitPacketBuffer field_h;
     static String field_f;
     static int field_b;
-    static lh field_a;
+    static BitmapFont field_a;
     static ci field_d;
     static ResourceArchive field_g;
     static int field_e;

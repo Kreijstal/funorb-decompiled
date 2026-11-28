@@ -9,17 +9,17 @@ final class ai {
     private DualLinkNode[] field_f;
     private int field_b;
     static boolean field_c;
-    static qe field_h;
+    static BitmapFont field_h;
 
     final static void a(boolean param0, boolean param1, byte param2) {
-        qe var4 = null;
-        qe var4Lifetime1;
+        BitmapFont var4 = null;
+        BitmapFont var4Lifetime1;
         if (!param1) {
           SoftwareRasterizer.clearRaster();
           wa.a(true, param1);
           if (param2 <= 83) {
-            var4 = (qe) null;
-            ai.a(-76, (Sprite[]) null, 116, -1, (Sprite[]) null, 61, (qe) null, 62, (qe) null, 22, -36, -35, -61, -45);
+            var4 = (BitmapFont) null;
+            ai.a(-76, (Sprite[]) null, 116, -1, (Sprite[]) null, 61, (BitmapFont) null, 62, (BitmapFont) null, 22, -36, -35, -61, -45);
             return;
           }
           return;
@@ -27,8 +27,8 @@ final class ai {
         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_f, 0, 192);
         wa.a(true, param1);
         if (param2 <= 83) {
-          var4Lifetime1 = (qe) null;
-          ai.a(-76, (Sprite[]) null, 116, -1, (Sprite[]) null, 61, (qe) null, 62, (qe) null, 22, -36, -35, -61, -45);
+          var4Lifetime1 = (BitmapFont) null;
+          ai.a(-76, (Sprite[]) null, 116, -1, (Sprite[]) null, 61, (BitmapFont) null, 62, (BitmapFont) null, 22, -36, -35, -61, -45);
           return;
         }
     }
@@ -69,14 +69,14 @@ final class ai {
         return false;
     }
 
-    final static i a(ResourceArchive param0, String param1, boolean param2, String param3, ResourceArchive param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, String param1, boolean param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         ResourceArchive stackIn_2_0 = null;
         String stackIn_2_1 = null;
         boolean stackIn_3_2 = false;
-        i stackIn_4_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -127,7 +127,7 @@ final class ai {
         }
     }
 
-    final static void a(int param0, Sprite[] param1, int param2, int param3, Sprite[] param4, int param5, qe param6, int param7, qe param8, int param9, int param10, int param11, int param12, int param13) {
+    final static void a(int param0, Sprite[] param1, int param2, int param3, Sprite[] param4, int param5, BitmapFont param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12, int param13) {
         try {
           SecondaryNodeDequeIterator.a(123);
           if (param12 != 25574) {
@@ -479,7 +479,7 @@ final class ai {
         field_a = null;
         field_g = null;
         if (param0 != 0) {
-          field_h = (qe) null;
+          field_h = (BitmapFont) null;
           field_h = null;
           return;
         }

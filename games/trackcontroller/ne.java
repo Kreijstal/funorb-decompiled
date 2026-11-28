@@ -43,7 +43,7 @@ final class ne implements t {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
-          this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_s + "</u>", param4 + param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, var6_int, -1, this.field_c, this.field_f, this.field_e.field_u + this.field_e.field_G);
+          this.field_e.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_s + "</u>", param4 + param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, var6_int, -1, this.field_c, this.field_f, this.field_e.field_u + this.field_e.field_G);
           if (param1.h(-95)) {
             var7 = this.field_e.stringWidth(param1.field_s);
             var8 = this.field_e.field_u + this.field_e.field_G;

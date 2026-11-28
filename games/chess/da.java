@@ -30,7 +30,7 @@ final class da extends ArchiveProvider {
     private long field_o;
     private boolean field_D;
 
-    final static void a(ci param0, ci param1, ci param2, ci param3, pd param4, ci param5, ci param6, ci param7, boolean param8, boolean param9, ci param10, lh param11) {
+    final static void a(ci param0, ci param1, ci param2, ci param3, pd param4, ci param5, ci param6, ci param7, boolean param8, boolean param9, ci param10, BitmapFont param11) {
         String stackIn_27_0 = null;
         int stackIn_31_0 = 0;
         RuntimeException stackIn_41_0 = null;

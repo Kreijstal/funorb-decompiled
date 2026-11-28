@@ -60,7 +60,7 @@ final class wn {
           SoftwareRasterizer.saveClip(this.field_a);
           this.field_h.d();
           SoftwareRasterizer.restoreClip(this.field_a);
-          this.field_f.b(param4, param3, param5, param0, param2);
+          this.field_f.drawString(param4, param3, param5, param0, param2);
           SoftwareRasterizer.setRasterBuffer(var10, var8, var9);
           SoftwareRasterizer.restoreClip(this.field_a);
           this.field_e = true;
@@ -240,7 +240,7 @@ final class wn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 1) {
-            stackIn_4_0 = this.field_f.c(param1);
+            stackIn_4_0 = this.field_f.stringWidth(param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = -4;
@@ -261,7 +261,7 @@ final class wn {
 
     final void a(int param0, int param1, int param2, int param3, int param4, String param5) {
         try {
-          this.a(param2, (byte) 52, param4, param0 - this.field_f.c(param5), param5, param3);
+          this.a(param2, (byte) 52, param4, param0 - this.field_f.stringWidth(param5), param5, param3);
           if (param1 >= -7) {
             String var8 = (String) null;
             this.a(123, 84, -103, 23, -80, (String) null);
@@ -298,7 +298,7 @@ final class wn {
 
     final void a(String param0, int param1, int param2, int param3, int param4, int param5) {
         try {
-          this.a(param1, (byte) 115, param2, param3 - this.field_f.c(param0) / param5, param0, param4);
+          this.a(param1, (byte) 115, param2, param3 - this.field_f.stringWidth(param0) / param5, param0, param4);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "wn.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -608,7 +608,7 @@ final class wn {
         }
         try {
           SoftwareRasterizer.restoreClip(this.field_a);
-          this.field_f.a(param2, param5, param4, param7, param3, param9, param1, param0, param8, this.field_f.field_D + 4);
+          this.field_f.drawParagraph(param2, param5, param4, param7, param3, param9, param1, param0, param8, this.field_f.field_D + 4);
           SoftwareRasterizer.setRasterBuffer(var16, var12, var13);
           SoftwareRasterizer.restoreClip(this.field_a);
           this.field_e = true;

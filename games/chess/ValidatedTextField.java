@@ -37,7 +37,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final void a(int param0, FieldValidator param1) {
+    final void setFieldValidator(int param0, FieldValidator param1) {
         try {
           this.field_Y = param1;
           if (param0 >= -63) {

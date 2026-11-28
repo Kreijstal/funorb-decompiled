@@ -94,13 +94,13 @@ final class RenderingSupport003 {
         mixedSupport061State0002 = null;
     }
 
-    final static RenderingSupport010 computeRenderingSupport0100569(byte byteArgument1, int integerArgument2, int integerArgument3, IndexedSprite[] indexedSpriteArrayArgument4, byte[] byteArrayArgument5, int integerArgument6) {
+    final static PalettedBitmapFont computeRenderingSupport0100569(byte byteArgument1, int integerArgument2, int integerArgument3, IndexedSprite[] indexedSpriteArrayArgument4, byte[] byteArrayArgument5, int integerArgument6) {
         int integerLocal1 = 0;
         byte[] byteArrayLocal2 = null;
         int previousIntegerLocal3 = 0;
         int integerLocal4 = 0;
         int previousIntegerLocal5 = 0;
-        RenderingSupport010 stackRenderingSupport010Local6 = null;
+        PalettedBitmapFont stackRenderingSupport010Local6 = null;
         RuntimeException stackRuntimeExceptionLocal7 = null;
         StringBuilder stackStringBuilderLocal8 = null;
         String stackStringLocal9 = null;
@@ -117,7 +117,7 @@ final class RenderingSupport003 {
         byte[][] byteArrayArrayLocal20 = null;
         int integerLocal21 = 0;
         int integerLocal22 = 0;
-        RenderingSupport010 renderingSupport010Local23 = null;
+        PalettedBitmapFont renderingSupport010Local23 = null;
         byte[] byteArrayLocal24 = null;
         byte[] byteArrayLocal25 = null;
         int integerLocal26 = 0;
@@ -213,7 +213,7 @@ final class RenderingSupport003 {
               integerLocal48 = integerLocal48 + integerLocal29;
             }
           }
-          renderingSupport010Local23 = new RenderingSupport010(byteArrayArgument5, integerArrayLocal41, integerArrayLocal42, integerArrayLocal39, integerArrayLocal40, integerArrayLocal18, byteArrayArrayLocal43);
+          renderingSupport010Local23 = new PalettedBitmapFont(byteArrayArgument5, integerArrayLocal41, integerArrayLocal42, integerArrayLocal39, integerArrayLocal40, integerArrayLocal18, byteArrayArrayLocal43);
           renderingSupport010Local23.integerState0517 = renderingSupport010Local23.integerState0517 - integerArgument3;
           renderingSupport010Local23.integerState0523 = renderingSupport010Local23.integerState0523 - integerArgument3;
           renderingSupport010Local23.integerState0518 = renderingSupport010Local23.integerState0518 - integerArgument3;

@@ -408,7 +408,7 @@ final class BattleScreen extends dfa {
               this.g(-1);
             }
             if (this.field_n < 0) {
-              ShuffleSpecial.field_r.draw(-ShuffleSpecial.field_r.field_q + b.field_t.a(BufferedSocket.field_a) + 20, 5);
+              ShuffleSpecial.field_r.draw(-ShuffleSpecial.field_r.field_q + b.field_t.stringWidth(BufferedSocket.field_a) + 20, 5);
               b.field_t.drawText(BufferedSocket.field_a, 5, -8 + b.field_t.field_u, 0, -1);
             }
             if (this.field_Y != null &&
@@ -446,15 +446,15 @@ final class BattleScreen extends dfa {
         }
         if (BananarangSpecial.field_r >= 2) {
           var3Lifetime1 = this.field_h.computeChecksum((byte) -10);
-          jha.field_g.a("Client: " + Integer.toHexString(var3Lifetime1), 320, 20, 8421631, -1);
-          jha.field_g.a("Server: " + Integer.toHexString(this.field_g), 320, 40, 8421504, -1);
+          jha.field_g.drawCentred("Client: " + Integer.toHexString(var3Lifetime1), 320, 20, 8421631, -1);
+          jha.field_g.drawCentred("Server: " + Integer.toHexString(this.field_g), 320, 40, 8421504, -1);
           var4Lifetime1 = var3Lifetime1 ^ this.field_g;
           stackIn_65_0 = jha.field_g;
           stackIn_65_1 = "Diff: " + Integer.toHexString(var4Lifetime1);
           stackIn_65_2 = 320;
           stackIn_65_3 = 60;
           stackIn_66_4 = (var4Lifetime1 == 0) ? 8421504 : 16711680;
-          ((BinaryBitmapFont) (Object) stackIn_65_0).a(stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, -1);
+          ((BinaryBitmapFont) (Object) stackIn_65_0).drawCentred(stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, -1);
         }
         SoftwareRasterizer.resetClip();
         if (this.field_d) {
@@ -655,26 +655,26 @@ final class BattleScreen extends dfa {
         var7 = BachelorFridge.field_y;
         var2 = 0;
         if (this.field_h.field_J > this.field_h.field_A) {
-          var2Lifetime1 = CreatureActor.field_h.a(cd.field_o[this.field_h.field_o - 1]);
+          var2Lifetime1 = CreatureActor.field_h.stringWidth(cd.field_o[this.field_h.field_o - 1]);
         } else {
-          var2Lifetime1 = Math.max(CreatureActor.field_h.a(cd.field_o[this.field_h.field_o - 1]), CreatureActor.field_h.a(tw.field_b));
+          var2Lifetime1 = Math.max(CreatureActor.field_h.stringWidth(cd.field_o[this.field_h.field_o - 1]), CreatureActor.field_h.stringWidth(tw.field_b));
         }
         SoftwareRasterizer.fillRoundedRectangleAlpha(635 + (-var2Lifetime1 - 10), -ScavengerAnimation.field_w.field_p + i.field_a.field_rb - 26, var2Lifetime1 + 20, 32, 7, 65793, 128);
         if (this.field_h.field_J <= this.field_h.field_A) {
-          CreatureActor.field_h.b(tw.field_b, 630, i.field_a.field_rb - ScavengerAnimation.field_w.field_p - 12, 0, -1);
+          CreatureActor.field_h.drawRightAligned(tw.field_b, 630, i.field_a.field_rb - ScavengerAnimation.field_w.field_p - 12, 0, -1);
         } else {
-          CreatureActor.field_h.b(lga.a(true, new String[]{Integer.toString((this.field_h.field_A - 1) / 2 + 1), Integer.toString(this.field_h.field_J / 2)}, FishRainSpecial.field_q), 630, -12 + i.field_a.field_rb - ScavengerAnimation.field_w.field_p, 0, -1);
+          CreatureActor.field_h.drawRightAligned(lga.a(true, new String[]{Integer.toString((this.field_h.field_A - 1) / 2 + 1), Integer.toString(this.field_h.field_J / 2)}, FishRainSpecial.field_q), 630, -12 + i.field_a.field_rb - ScavengerAnimation.field_w.field_p, 0, -1);
         }
         if (param0 > -61) {
           var8 = (CreatureActor) null;
           this.b((CreatureActor) null, true);
         }
-        CreatureActor.field_h.b(cd.field_o[-1 + this.field_h.field_o], 630, -ScavengerAnimation.field_w.field_p + i.field_a.field_rb, 0, -1);
+        CreatureActor.field_h.drawRightAligned(cd.field_o[-1 + this.field_h.field_o], 630, -ScavengerAnimation.field_w.field_p + i.field_a.field_rb, 0, -1);
         var3 = -(this.field_h.playerCount * 132) + 592;
         ScavengerAnimation.field_w.draw(var3, 4 - ScavengerAnimation.field_w.field_p + i.field_a.field_rb);
         for (var4 = 0; var4 < this.field_h.playerCount; var4++) {
           var5 = var4 * 132 + 40;
-          b.field_t.a(this.field_h.field_y[var4], var3 + (var5 + 67), 10 - ScavengerAnimation.field_w.field_p + (i.field_a.field_rb + 12), var4 + 2, -1);
+          b.field_t.drawCentred(this.field_h.field_y[var4], var3 + (var5 + 67), 10 - ScavengerAnimation.field_w.field_p + (i.field_a.field_rb + 12), var4 + 2, -1);
           SoftwareRasterizer.fillRoundedRectangleAlpha(7 + (var3 + var5), 14 - ScavengerAnimation.field_w.field_p + i.field_a.field_rb + 10, 130, 16, 7, 65793, 128);
           if (this.field_h.field_o == 1) {
             for (var6 = 0; 7 > var6; var6++) {
@@ -698,13 +698,13 @@ final class BattleScreen extends dfa {
             }
           }
           if (this.field_h.hasPlayerOfferedDraw((byte) -60, var4)) {
-            b.field_t.a(lga.a(true, new String[]{this.field_h.field_y[var4]}, DisableSpecial.field_p), 72 + var3 + (var5 - 5), 50 + i.field_a.field_rb - ScavengerAnimation.field_w.field_p, 0, -1);
+            b.field_t.drawCentred(lga.a(true, new String[]{this.field_h.field_y[var4]}, DisableSpecial.field_p), 72 + var3 + (var5 - 5), 50 + i.field_a.field_rb - ScavengerAnimation.field_w.field_p, 0, -1);
           } else {
             if (this.field_h.hasPlayerResigned((byte) 106, var4)) {
-              b.field_t.a(ZombiesAnimation.field_w, 72 + (-5 + var5 + var3), 26 + (-ScavengerAnimation.field_w.field_p + (i.field_a.field_rb + 24)), 0, -1);
+              b.field_t.drawCentred(ZombiesAnimation.field_w, 72 + (-5 + var5 + var3), 26 + (-ScavengerAnimation.field_w.field_p + (i.field_a.field_rb + 24)), 0, -1);
             } else {
               if (this.field_h.rosters[var4].field_c) {
-                b.field_t.a(cf.field_a, 72 + (-5 + var3 + var5), 50 + (i.field_a.field_rb - ScavengerAnimation.field_w.field_p), 0, -1);
+                b.field_t.drawCentred(cf.field_a, 72 + (-5 + var3 + var5), 50 + (i.field_a.field_rb - ScavengerAnimation.field_w.field_p), 0, -1);
               }
             }
           }
@@ -1142,8 +1142,8 @@ final class BattleScreen extends dfa {
           var2 = mk.field_p;
           var3 = gd.field_m;
           var4 = this.a(-18254, this.field_s.field_r, this.field_s.field_q);
-          var5 = CreatureActor.field_h.c(BuffVendorAnimation.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_d, 100) + 20;
-          var6 = 20 + CreatureActor.field_h.c(BuffVendorAnimation.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_a, 100);
+          var5 = CreatureActor.field_h.maxLineWidth(BuffVendorAnimation.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_d, 100) + 20;
+          var6 = 20 + CreatureActor.field_h.maxLineWidth(BuffVendorAnimation.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_a, 100);
           var5 = Math.max(var5, var6);
           if (640 < var2 + var5) {
             var2 = var2 + (640 - var2 - var5);
@@ -1153,7 +1153,7 @@ final class BattleScreen extends dfa {
             var3 = var3 + (i.field_a.field_rb - var3 - var7);
           }
           SoftwareRasterizer.fillRoundedRectangleAlpha(var2, var3, var5, var7, 5, 65793, 192);
-          CreatureActor.field_h.a(BuffVendorAnimation.field_w[var4].field_a, var2 + (var5 >> 1), var3 + 15, 0, -1);
+          CreatureActor.field_h.drawCentred(BuffVendorAnimation.field_w[var4].field_a, var2 + (var5 >> 1), var3 + 15, 0, -1);
           CreatureActor.field_h.drawParagraph(BuffVendorAnimation.field_w[var4].field_d, 10 + var2, var3 + 20, -20 + var5, 80, 0, -1, 1, 0, 12);
         }
         if (param0 != 8910) {

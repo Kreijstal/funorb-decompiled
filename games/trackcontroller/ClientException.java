@@ -117,10 +117,10 @@ final class ClientException extends RuntimeException {
               var1_int = var1_int + of.field_f;
             }
             if (0 > var4) {
-              r.field_k.c(var6, var8Lifetime1, ai.field_h + var1_int, var5, -1);
+              r.field_k.drawString(var6, var8Lifetime1, ai.field_h + var1_int, var5, -1);
               var1_int = var1_int + dh.field_l;
             } else {
-              mk.field_b.c(var6, var8Lifetime1, dk.field_a + var1_int, var5, -1);
+              mk.field_b.drawString(var6, var8Lifetime1, dk.field_a + var1_int, var5, -1);
               var1_int = var1_int + (na.field_e + of.field_f + ArchiveIndex.field_m);
             }
             var3++;

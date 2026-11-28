@@ -73,10 +73,10 @@ final class NodeHashTable implements Iterable {
             NodeHashTable.performAction1500(115, true, -31, -28, 79, (byte) 85, -127);
           }
           if (booleanArgument3) {
-            stackIntegerLocal3 = MixedSupport010.bitmapFontState0005.computeInteger1066(stringArgument2);
+            stackIntegerLocal3 = MixedSupport010.bitmapFontState0005.stringWidth(stringArgument2);
             return stackIntegerLocal3;
           }
-          stackIntegerLocal2 = EditableTextField.bitmapFontState0019.computeInteger1066(stringArgument2);
+          stackIntegerLocal2 = EditableTextField.bitmapFontState0019.stringWidth(stringArgument2);
           return stackIntegerLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;

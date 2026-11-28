@@ -323,17 +323,17 @@ final class fo {
         boolean decompiledFrameRemainder0 = true;
         if (fm.field_d < SocketConnector.field_c[GameKeyHandler.field_d]) {
           va.field_s.a(16777215, (byte) 120, -1, 180, Vertigo2.a(new String[]{Integer.toString(1 + GameKeyHandler.field_d)}, fa.field_r, -123), 210);
-          tk.field_c.a(Vertigo2.a(new String[]{gl.a(-36, true, false, fm.field_d)}, wq.field_L, -121), 460, 240, 16777215, -1);
-          tk.field_c.a(Vertigo2.a(new String[]{gl.a(-99, true, false, (int) SocketConnector.field_c[GameKeyHandler.field_d])}, or.field_g, -20), 460, 260, 16777215, -1);
-          tk.field_c.a(Vertigo2.a(new String[]{gl.a(-65, true, false, -fm.field_d + SocketConnector.field_c[GameKeyHandler.field_d])}, to.field_f, -120), 460, 280, 65280, -1);
+          tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-36, true, false, fm.field_d)}, wq.field_L, -121), 460, 240, 16777215, -1);
+          tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-99, true, false, (int) SocketConnector.field_c[GameKeyHandler.field_d])}, or.field_g, -20), 460, 260, 16777215, -1);
+          tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-65, true, false, -fm.field_d + SocketConnector.field_c[GameKeyHandler.field_d])}, to.field_f, -120), 460, 280, 65280, -1);
           if (te.field_B[GameKeyHandler.field_d] < fm.field_d) {
             if (fm.field_d <= sf.field_e[GameKeyHandler.field_d]) {
               if (SocketConnector.field_c[GameKeyHandler.field_d] > sf.field_e[GameKeyHandler.field_d]) {
-                tk.field_c.b(hd.field_h, 180, 240, 16777215, -1);
+                tk.field_c.drawString(hd.field_h, 180, 240, 16777215, -1);
                 kq.field_Kb.c(208, 256);
                 var2 = -24 % ((33 - param0) / 60);
               } else {
-                tk.field_c.b(HuffmanCodec.field_c, 180, 240, 16777215, -1);
+                tk.field_c.drawString(HuffmanCodec.field_c, 180, 240, 16777215, -1);
                 kq.field_Kb.c(208, 256);
                 var2Lifetime3 = -24 % ((33 - param0) / 60);
               }
@@ -346,29 +346,29 @@ final class fo {
               }
               else {
                 if (SocketConnector.field_c[GameKeyHandler.field_d] <= bp.field_E[GameKeyHandler.field_d]) {
-                  tk.field_c.b(HuffmanCodec.field_c, 180, 240, 16777215, -1);
+                  tk.field_c.drawString(HuffmanCodec.field_c, 180, 240, 16777215, -1);
                   hh.field_a.c(208, 256);
                 } else {
-                  tk.field_c.b(hd.field_h, 180, 240, 16777215, -1);
+                  tk.field_c.drawString(hd.field_h, 180, 240, 16777215, -1);
                   hh.field_a.c(208, 256);
                 }
               }
             }
           } else {
             if (te.field_B[GameKeyHandler.field_d] < SocketConnector.field_c[GameKeyHandler.field_d]) {
-              tk.field_c.b(hd.field_h, 180, 240, 16777215, -1);
+              tk.field_c.drawString(hd.field_h, 180, 240, 16777215, -1);
               MouseWheelInput.field_c.c(208, 256);
             } else {
-              tk.field_c.b(HuffmanCodec.field_c, 180, 240, 16777215, -1);
+              tk.field_c.drawString(HuffmanCodec.field_c, 180, 240, 16777215, -1);
               MouseWheelInput.field_c.c(208, 256);
             }
           }
         } else {
           va.field_s.a(16777215, (byte) 124, -1, 180, Vertigo2.a(new String[]{Integer.toString(1 + GameKeyHandler.field_d)}, Bzip2State.field_k, -11), 210);
-          tk.field_c.a(Vertigo2.a(new String[]{gl.a(-89, true, false, fm.field_d)}, wq.field_L, -127), 460, 240, 16777215, -1);
-          tk.field_c.a(Vertigo2.a(new String[]{gl.a(-72, true, false, (int) SocketConnector.field_c[GameKeyHandler.field_d])}, he.field_t, 62), 460, 260, 16777215, -1);
-          tk.field_c.a(Vertigo2.a(new String[]{gl.a(-48, true, false, fm.field_d - SocketConnector.field_c[GameKeyHandler.field_d])}, lr.field_K, 39), 460, 280, 16711680, -1);
-          tk.field_c.b(HuffmanCodec.field_c, 180, 240, 16777215, -1);
+          tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-89, true, false, fm.field_d)}, wq.field_L, -127), 460, 240, 16777215, -1);
+          tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-72, true, false, (int) SocketConnector.field_c[GameKeyHandler.field_d])}, he.field_t, 62), 460, 260, 16777215, -1);
+          tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-48, true, false, fm.field_d - SocketConnector.field_c[GameKeyHandler.field_d])}, lr.field_K, 39), 460, 280, 16711680, -1);
+          tk.field_c.drawString(HuffmanCodec.field_c, 180, 240, 16777215, -1);
           if (SocketConnector.field_c[GameKeyHandler.field_d] <= te.field_B[GameKeyHandler.field_d]) {
             MouseWheelInput.field_c.c(208, 256);
           } else {
@@ -499,14 +499,14 @@ final class fo {
               var7Lifetime1 == 12) {
               var14 = UiWidget.field_z;
             }
-            var15 = tk.field_c.a(var14, new int[]{310}, var13);
+            var15 = tk.field_c.wrapText(var14, new int[]{310}, var13);
             for (var16 = 0; var16 < var15; var16++) {
-              tk.field_c.b(var13[var16], 250, var10, 16777215, -1);
+              tk.field_c.drawString(var13[var16], 250, var10, 16777215, -1);
               var10 = var10 + var8Lifetime1;
             }
-            tk.field_c.b(pl.field_j + aq.field_d[var7Lifetime1], 250, -(GzipDecompressor.field_c.field_t * 2) + var12 - tk.field_c.field_M, 16777215, -1);
-            tk.field_c.b(vl.field_f, 250, -tk.field_c.field_M + var12, 16777215, -1);
-            var16Lifetime1 = tk.field_c.c(vl.field_f) + 250;
+            tk.field_c.drawString(pl.field_j + aq.field_d[var7Lifetime1], 250, -(GzipDecompressor.field_c.field_t * 2) + var12 - tk.field_c.field_M, 16777215, -1);
+            tk.field_c.drawString(vl.field_f, 250, -tk.field_c.field_M + var12, 16777215, -1);
+            var16Lifetime1 = tk.field_c.stringWidth(vl.field_f) + 250;
             var17 = -((GzipDecompressor.field_c.field_t + va.field_s.field_j) / 2) + (var12 - tk.field_c.field_M);
             for (var18 = 0; var18 < MouseInputHandler.field_d[var7Lifetime1]; var18++) {
               GzipDecompressor.field_c.e(var16Lifetime1, var17);
@@ -526,7 +526,7 @@ final class fo {
         String var17 = null;
         int var10_int = param8 + param2 + param0;
         if (-1 != param5) {
-          tk.field_c.a(param5 + 1 + ". ", 60, param1, param7, -1);
+          tk.field_c.drawRightAligned(param5 + 1 + ". ", 60, param1, param7, -1);
         }
         if (var10_int != 0) {
           param0 = (param0 * 200 + var10_int) / (2 * var10_int);
@@ -534,22 +534,22 @@ final class fo {
           param8 = (var10_int + param8 * 200) / (var10_int * 2);
         }
         String var12 = param6;
-        tk.field_c.b(var12, 60, param1, param7, -1);
+        tk.field_c.drawString(var12, 60, param1, param7, -1);
         String var13 = "" + param4;
-        tk.field_c.c(var13, pn.field_K[0], param1, param7, -1);
+        tk.field_c.drawCentred(var13, pn.field_K[0], param1, param7, -1);
         String var14 = var10_int < 50 ? Integer.toString(var10_int) : "50+";
         String var11 = var14;
-        tk.field_c.c(var14, pn.field_K[1], param1, param7, -1);
+        tk.field_c.drawCentred(var14, pn.field_K[1], param1, param7, -1);
         if (param3 <= 22) {
           return;
         }
         try {
           var15 = param8 + "%";
-          tk.field_c.c(var15, pn.field_K[2], param1, param7, -1);
+          tk.field_c.drawCentred(var15, pn.field_K[2], param1, param7, -1);
           var16 = param2 + "%";
-          tk.field_c.c(var16, pn.field_K[3], param1, param7, -1);
+          tk.field_c.drawCentred(var16, pn.field_K[3], param1, param7, -1);
           var17 = param0 + "%";
-          tk.field_c.c(var17, pn.field_K[4], param1, param7, -1);
+          tk.field_c.drawCentred(var17, pn.field_K[4], param1, param7, -1);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "fo.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
@@ -912,9 +912,9 @@ final class fo {
                 var5_ref_String__[var8].equals("")) {
                 var9 = 16777215;
                 var10 = -var15[var8];
-                tk.field_c.a(1 + var8 + ". ", 360, var7, var9, -1);
-                tk.field_c.b(var5_ref_String__[var8], 360, var7, var9, -1);
-                tk.field_c.a(gl.a(-53, false, true, var10), 580, var7, var9, -1);
+                tk.field_c.drawRightAligned(1 + var8 + ". ", 360, var7, var9, -1);
+                tk.field_c.drawString(var5_ref_String__[var8], 360, var7, var9, -1);
+                tk.field_c.drawRightAligned(gl.a(-53, false, true, var10), 580, var7, var9, -1);
                 var4Lifetime1 = "";
                 var3Lifetime2 = "";
               }
@@ -930,8 +930,8 @@ final class fo {
         if (param0 != -14189) {
           return;
         }
-        tk.field_c.b(var3Lifetime2, 350, var5, 16777215, -1);
-        tk.field_c.a(var4Lifetime1, 590, var5, 16777215, -1);
+        tk.field_c.drawString(var3Lifetime2, 350, var5, 16777215, -1);
+        tk.field_c.drawRightAligned(var4Lifetime1, 590, var5, 16777215, -1);
     }
 
     private final int b(int param0, int param1) {
@@ -1174,13 +1174,13 @@ final class fo {
                     var11 = 15637810;
                   }
                   var12 = var18[var10];
-                  tk.field_c.a(var10 + 1 + ". ", 60, var8, var11, -1);
-                  tk.field_c.b(var6_ref_String__[var10], 60, var8, var11, -1);
+                  tk.field_c.drawRightAligned(var10 + 1 + ". ", 60, var8, var11, -1);
+                  tk.field_c.drawString(var6_ref_String__[var10], 60, var8, var11, -1);
                   var13Lifetime2 = Integer.toString(var12);
                   if (var3 != 0) {
                     var13Lifetime2 = gl.a(-127, false, true, -var12);
                   }
-                  tk.field_c.a(var13Lifetime2, 360, var8, var11, -1);
+                  tk.field_c.drawRightAligned(var13Lifetime2, 360, var8, var11, -1);
                   var2 = "";
                 }
                 var8 += 23;
@@ -1190,8 +1190,8 @@ final class fo {
                 ((var3 == 0))) {
                 var8 += 4;
                 var10Lifetime1 = uh.field_Xb.field_o[0];
-                tk.field_c.b(qe.field_V, 60, var8, 15637810, -1);
-                tk.field_c.a(Integer.toString(var10Lifetime1), 360, var8, 15637810, -1);
+                tk.field_c.drawString(qe.field_V, 60, var8, 15637810, -1);
+                tk.field_c.drawRightAligned(Integer.toString(var10Lifetime1), 360, var8, 15637810, -1);
               }
               break regionExit1;
             }
@@ -1790,14 +1790,14 @@ final class fo {
                       if (null != SocketConnector.field_c &&
                         ap.field_d.field_t >= 0 &&
                         ap.field_d.field_t < 50) {
-                        tk.field_c.c(Vertigo2.a(new String[]{gl.a(-49, true, false, var2)}, wq.field_L, ~param0), 404, 125, 16777215, -1);
+                        tk.field_c.drawCentred(Vertigo2.a(new String[]{gl.a(-49, true, false, var2)}, wq.field_L, ~param0), 404, 125, 16777215, -1);
                       }
                       MouseWheelInput.field_c.a(350, 140, 28, 26);
-                      tk.field_c.b(gl.a(-42, false, false, te.field_B[ap.field_d.field_t]), 390, 160, 16777215, -1);
+                      tk.field_c.drawString(gl.a(-42, false, false, te.field_B[ap.field_d.field_t]), 390, 160, 16777215, -1);
                       kq.field_Kb.a(350, 175, 28, 26);
-                      tk.field_c.b(gl.a(param0 + 1, false, false, sf.field_e[ap.field_d.field_t]), 390, 195, 16777215, -1);
+                      tk.field_c.drawString(gl.a(param0 + 1, false, false, sf.field_e[ap.field_d.field_t]), 390, 195, 16777215, -1);
                       hh.field_a.a(350, 210, 28, 26);
-                      tk.field_c.b(gl.a(-88, false, false, bp.field_E[ap.field_d.field_t]), 390, 230, 16777215, -1);
+                      tk.field_c.drawString(gl.a(-88, false, false, bp.field_E[ap.field_d.field_t]), 390, 230, 16777215, -1);
                     }
                     this.e(-14189);
                   } else {

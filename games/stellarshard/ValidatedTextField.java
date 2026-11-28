@@ -43,7 +43,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         return this.field_x;
     }
 
-    final void a(byte param0, FieldValidator param1) {
+    final void setFieldValidator(byte param0, FieldValidator param1) {
         try {
           if (param0 != -2) {
             this.field_O = 50;

@@ -99,7 +99,7 @@ final class NanoFrameTimer extends FrameTimer {
         return var6 / (long)this.field_j;
     }
 
-    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4, int param5, Sprite[] param6, int param7, qe param8, int param9, int param10, boolean param11) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4, int param5, Sprite[] param6, int param7, BitmapFont param8, int param9, int param10, boolean param11) {
         try {
           FullscreenFocusCanvas.a(param3, param4, param2, param6, param4, -109, param2, param7, param11, param5, param0, param8, param10, param1, param8);
           if (param9 != -11) {
@@ -112,8 +112,8 @@ final class NanoFrameTimer extends FrameTimer {
 
     public static void b(int param0) {
         if (param0 != -22720) {
-          qe var2 = (qe) null;
-          NanoFrameTimer.a(91, -55, 77, (Sprite[]) null, -30, 57, (Sprite[]) null, 31, (qe) null, 69, -32, false);
+          BitmapFont var2 = (BitmapFont) null;
+          NanoFrameTimer.a(91, -55, 77, (Sprite[]) null, -30, 57, (Sprite[]) null, 31, (BitmapFont) null, 69, -32, false);
         }
         field_i = null;
     }

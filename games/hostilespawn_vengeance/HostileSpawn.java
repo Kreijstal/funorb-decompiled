@@ -129,8 +129,8 @@ public final class HostileSpawn extends NetworkGameClient {
           var6 = 0;
           do {
             if (var5.length <= var6) {
-              al.field_Z.a(var5, (int[]) null);
-              id.field_A.a(var5, (int[]) null);
+              al.field_Z.setInlineSprites(var5, (int[]) null);
+              id.field_A.setInlineSprites(var5, (int[]) null);
               il.field_c = jd.a((byte) 33, "", vd.field_C, "infoscreen");
               qi.field_H = MouseInput.a("", 27, "numkeys", vd.field_C);
               pl.field_f = MouseInput.a("", 114, "secweaponkeys", vd.field_C);
@@ -1173,7 +1173,7 @@ public final class HostileSpawn extends NetworkGameClient {
           uc.resetStaticState(212563556);
           kl.clearStaticReferences(126);
           fm.a((byte) -102);
-          vm.clearStaticReferences();
+          BitmapFont.clearStaticReferences();
           be.clearStaticReferences(param0 ^ 28);
           pc.b(1);
           bb.clearStaticReferences((byte) -85);
@@ -2002,7 +2002,7 @@ public final class HostileSpawn extends NetworkGameClient {
               var3 = var4 / 2 - 32;
             }
             fj.field_Kb[var2.field_h].b(8, var3);
-            al.field_Z.c(il.field_b[var2.field_h], 48, id.field_A.field_y + var3, 65280, -1);
+            al.field_Z.drawString(il.field_b[var2.field_h], 48, id.field_A.field_y + var3, 65280, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

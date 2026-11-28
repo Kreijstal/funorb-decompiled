@@ -34,7 +34,7 @@ final class UiComponentPart026 extends UiComponentPart030 {
         try {
           this.stringState0458 = stringArgument2;
           if (this.stringState0458 != null) {
-            integerLocal1 = GameDomainSupport002.bitmapFontState0012.computeInteger1081(this.stringState0458, 260, GameDomainSupport002.bitmapFontState0012.integerState0518);
+            integerLocal1 = GameDomainSupport002.bitmapFontState0012.textHeight(this.stringState0458, 260, GameDomainSupport002.bitmapFontState0012.integerState0518);
             this.performAction0161(112, 300, integerLocal1 + 150);
           }
           this.uiComponentPart027State0002 = new UiComponentPart027(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -347,13 +347,13 @@ final class UiComponentPart026 extends UiComponentPart030 {
 
     final void performAction0165(int integerArgument1, int integerArgument2, int integerArgument3) {
         super.performAction0165(-128, integerArgument2, integerArgument3);
-        GameDomainSupport002.bitmapFontState0012.performAction1082(this.stringState0459, (this.integerState0107 >> 1) + integerArgument3, 103 + integerArgument2, 16777215, -1);
+        GameDomainSupport002.bitmapFontState0012.drawCentred(this.stringState0459, (this.integerState0107 >> 1) + integerArgument3, 103 + integerArgument2, 16777215, -1);
         if (integerArgument1 >= -127) {
           return;
         }
         if (null != this.stringState0458) {
           SoftwareRaster.drawHorizontalLine(integerArgument3 + 20, integerArgument2 + 113, 260, 8421504);
-          GameDomainSupport002.bitmapFontState0012.computeInteger1071(this.stringState0458, integerArgument3 + 20, 128 + integerArgument2, 260, 100, 16777215, -1, 1, 0, GameDomainSupport002.bitmapFontState0012.integerState0518);
+          GameDomainSupport002.bitmapFontState0012.drawParagraph(this.stringState0458, integerArgument3 + 20, 128 + integerArgument2, 260, 100, 16777215, -1, 1, 0, GameDomainSupport002.bitmapFontState0012.integerState0518);
         }
     }
 

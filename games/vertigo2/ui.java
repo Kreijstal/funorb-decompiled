@@ -272,7 +272,7 @@ final class ui {
             if (var6 == 2) {
               var4 = Vertigo2.a(new String[]{ea.field_b}, di.field_B, -114);
               var8 = Vertigo2.a(new String[]{var3}, af.field_L, -128);
-              var7 = -485 + (dj.field_d.field_Fb + field_b.field_Fb) - (-GameKeyHandler.field_f.c(var8) + GameKeyHandler.field_f.c(var4));
+              var7 = -485 + (dj.field_d.field_Fb + field_b.field_Fb) - (-GameKeyHandler.field_f.stringWidth(var8) + GameKeyHandler.field_f.stringWidth(var4));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -315,7 +315,7 @@ final class ui {
                 var5 = "";
                 var4 = "<col=999999>" + var4 + ah.field_k + "</col>";
               }
-              var9 = GameKeyHandler.field_f.c(var4);
+              var9 = GameKeyHandler.field_f.stringWidth(var4);
               if (!tb.a((byte) 122)) {
                 if (dj.field_d.field_pb &&
                   var9 > (-dj.field_d.field_ob + PacketBuffer.field_n)) {

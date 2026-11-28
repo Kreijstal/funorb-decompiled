@@ -9,7 +9,7 @@ final class lc implements ml {
     static String field_h;
     private int field_a;
     static int[] field_b;
-    private ta field_g;
+    private BitmapFont field_g;
 
     public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         int stackIn_7_0 = 0;
@@ -38,9 +38,9 @@ final class lc implements ml {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
-          this.field_g.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_s + "</u>", param3 + param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, var6_int, -1, this.field_a, this.field_c, this.field_g.field_C + this.field_g.field_D);
+          this.field_g.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_s + "</u>", param3 + param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, var6_int, -1, this.field_a, this.field_c, this.field_g.field_C + this.field_g.field_D);
           if (param1.b((byte) 75)) {
-            var7 = this.field_g.a(param1.field_s);
+            var7 = this.field_g.stringWidth(param1.field_s);
             var8 = this.field_g.field_C + this.field_g.field_D;
             var9 = param3 + param1.field_r;
             if (2 != this.field_a) {
@@ -162,7 +162,7 @@ final class lc implements ml {
         this.field_g = ButtonWidget.field_z;
     }
 
-    lc(ta param0, int param1, int param2) {
+    lc(BitmapFont param0, int param1, int param2) {
         try {
           this.field_c = param2;
           this.field_g = param0;

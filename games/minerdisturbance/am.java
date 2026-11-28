@@ -7,7 +7,7 @@ final class am extends jc {
     static String field_N;
     private int field_M;
     private boolean field_P;
-    private we field_O;
+    private BitmapFont field_O;
     private String field_L;
     private int field_Q;
 
@@ -19,7 +19,7 @@ final class am extends jc {
           return;
         }
         int var7 = !this.field_P ? 0 : -(this.field_K * 2) + (-this.field_Q + this.field_v);
-        this.field_O.a(this.field_L, this.field_K + (var7 + var5), this.field_K + var6, this.field_Q - this.field_K, -(this.field_K * 2) + this.field_q, this.field_M, -1, !this.field_P ? 2 : 0, 1, this.field_O.field_I);
+        this.field_O.drawParagraph(this.field_L, this.field_K + (var7 + var5), this.field_K + var6, this.field_Q - this.field_K, -(this.field_K * 2) + this.field_q, this.field_M, -1, !this.field_P ? 2 : 0, 1, this.field_O.field_I);
     }
 
     public static void clearDeclaredStaticReferences(int param0) {
@@ -93,7 +93,7 @@ final class am extends jc {
         }
     }
 
-    am(int param0, int param1, int param2, int param3, fe param4, boolean param5, int param6, int param7, we param8, int param9, String param10) {
+    am(int param0, int param1, int param2, int param3, fe param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (ad) null, (rm) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -119,7 +119,7 @@ final class am extends jc {
           this.field_Q = param6;
           this.field_O = param8;
           var12_int = -this.field_K + this.field_Q;
-          var13 = this.field_O.b(param10, var12_int, this.field_O.field_I) + 2 * this.field_K;
+          var13 = this.field_O.textHeight(param10, var12_int, this.field_O.field_I) + 2 * this.field_K;
           if (param3 >= var13) {
             var13 = param3;
           } else {

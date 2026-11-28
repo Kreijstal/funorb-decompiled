@@ -71,14 +71,14 @@ final class MusicPatchPcmStream extends PcmStream {
             if (var5 <= param0) {
               boolean decompiledSharedTail0 = (this.field_s.field_H[param1.field_E] == 0);
               if (!decompiledSharedTail0) {
-                param1.field_A = RawPcmStream.a(param1.field_r, param1.field_A.e(), 0, param1.field_A.f());
+                param1.field_A = RawPcmStream.createForSampleStep(param1.field_r, param1.field_A.getSampleStepMagnitude(), 0, param1.field_A.getPan());
                 stackIn_15_0 = this.field_s;
                 stackIn_16_1 = !(param1.field_p.field_r[param1.field_z] >= 0);
                 ((MidiPcmStream) (Object) stackIn_15_0).a(stackIn_16_1, param1, -107);
                 decompiledSharedTail0 = (HostileSpawn.field_I);
               }
               if (decompiledSharedTail0) {
-                param1.field_A = RawPcmStream.a(param1.field_r, param1.field_A.e(), param1.field_A.i(), param1.field_A.f());
+                param1.field_A = RawPcmStream.createForSampleStep(param1.field_r, param1.field_A.getSampleStepMagnitude(), param1.field_A.getTargetVolume(), param1.field_A.getPan());
               }
               if (param1.field_p.field_r[param1.field_z] < 0) {
                 param1.field_A.d(-1);
@@ -3288,22 +3288,22 @@ final class MusicPatchPcmStream extends PcmStream {
               var11 = param2.field_A;
               boolean decompiledSharedTail0 = (0 == this.field_s.field_H[param2.field_E]);
               if (!decompiledSharedTail0) {
-                param2.field_A = RawPcmStream.a(param2.field_r, var11.e(), 0, var11.f());
+                param2.field_A = RawPcmStream.createForSampleStep(param2.field_r, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_24_0 = this.field_s;
                 stackIn_25_1 = !(param2.field_p.field_r[param2.field_z] >= 0);
                 ((MidiPcmStream) (Object) stackIn_24_0).a(stackIn_25_1, param2, -115);
-                param2.field_A.d(var9, var11.i());
+                param2.field_A.rampVolume(var9, var11.getTargetVolume());
                 decompiledSharedTail0 = (var12 != 0);
               }
               if (decompiledSharedTail0) {
-                param2.field_A = RawPcmStream.a(param2.field_r, var11.e(), var11.i(), var11.f());
+                param2.field_A = RawPcmStream.createForSampleStep(param2.field_r, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.getPan());
               }
               if (param2.field_p.field_r[param2.field_z] < 0) {
                 param2.field_A.d(-1);
               }
               var11.h(var9);
               var11.mixInto(param1, param4, param0 - param4);
-              if (var11.m()) {
+              if (var11.hasRemainingRampFrames()) {
                 this.field_q.b(var11);
               }
               if (var12 == 0) {

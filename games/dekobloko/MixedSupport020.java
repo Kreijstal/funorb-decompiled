@@ -188,7 +188,7 @@ final class MixedSupport020 extends HashNode {
             if (GameDomainSupport002.sceneWidgetPart008State0002 == sceneWidgetPart008Argument4) {
               integerLocal35 += 42;
             }
-            stringLocal52 = BitmapFont.computeString1074(sceneWidgetPart012Local26.sceneWidgetState0122.bitmapFontState0020, stringLocal51, integerLocal35);
+            stringLocal52 = BitmapFont.truncateWithEllipsis(sceneWidgetPart012Local26.sceneWidgetState0122.bitmapFontState0020, stringLocal51, integerLocal35);
             stringLocal34 = stringLocal52;
             stackIntegerLocal8 = (stringLocal52.equals(sceneWidgetPart012Local26.stringState0534)) ? 0 : 1;
             integerLocal36 = stackIntegerLocal8;
@@ -290,7 +290,7 @@ final class MixedSupport020 extends HashNode {
             objectLocal40 = stringLocal38;
             objectLocal54 = stringLocal38;
             if (stringLocal38 != null) {
-              integerLocal60 = sceneWidgetPart012Local26.sceneWidgetState0123.bitmapFontState0020.computeInteger1067(stringLocal38, -SecondaryNodeHashTable.integerState0540 + sceneWidgetPart012Local26.integerState0896 - SecondaryNodeHashTable.integerState0540);
+              integerLocal60 = sceneWidgetPart012Local26.sceneWidgetState0123.bitmapFontState0020.lineCount(stringLocal38, -SecondaryNodeHashTable.integerState0540 + sceneWidgetPart012Local26.integerState0896 - SecondaryNodeHashTable.integerState0540);
               sceneWidgetPart012Local26.sceneWidgetState0123.integerState0917 = 256 * sceneWidgetPart012Local26.integerState0785 / MixedSupport089.integerState0547;
               sceneWidgetPart012Local26.sceneWidgetState0123.stringState0598 = stringLocal38;
               sceneWidgetPart012Local26.sceneWidgetState0123.performAction1764(sceneWidgetPart012Local26.integerState0896 - SecondaryNodeHashTable.integerState0540 * 2, 0, integerLocal33, ComponentContainer.integerState0377 * integerLocal60, SecondaryNodeHashTable.integerState0540);
@@ -613,10 +613,10 @@ final class MixedSupport020 extends HashNode {
               integerLocal10 = integerLocal10 + AccountFieldStatusIndicator.integerState0575;
             }
             if (0 <= integerLocal15) {
-              MixedSupport010.bitmapFontState0005.performAction1069(stringLocal17, integerLocal23, MixedSupport001.integerState0013 + integerLocal10, integerLocal16, -1);
+              MixedSupport010.bitmapFontState0005.drawString(stringLocal17, integerLocal23, MixedSupport001.integerState0013 + integerLocal10, integerLocal16, -1);
               integerLocal10 = integerLocal10 + (AccountFieldStatusIndicator.integerState0575 - (-BufferedSocket.integerState0665 - NineSliceSprite.integerState0100));
             } else {
-              EditableTextField.bitmapFontState0019.performAction1069(stringLocal17, integerLocal23, MixedSupport085.integerState0531 + integerLocal10, integerLocal16, -1);
+              EditableTextField.bitmapFontState0019.drawString(stringLocal17, integerLocal23, MixedSupport085.integerState0531 + integerLocal10, integerLocal16, -1);
               integerLocal10 = integerLocal10 + RenderingSupport007.integerState0362;
             }
             integerLocal14++;

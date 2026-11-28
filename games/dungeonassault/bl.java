@@ -353,7 +353,7 @@ final class bl {
             fb.field_f.field_a = 0;
             fb.field_f.field_b = 0;
           }
-          la.field_b.a(new q[]{fb.field_f, rf.a(10)}, new int[]{9, 10});
+          la.field_b.setInlineSprites(new q[]{fb.field_f, rf.a(10)}, new int[]{9, 10});
           fl.field_i = fn.a(2);
           PackedBitSet.field_h = fl.field_i.b();
           SecondaryNodeDeque.field_a = rj.a((byte) 127);

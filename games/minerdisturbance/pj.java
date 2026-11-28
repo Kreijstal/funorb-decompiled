@@ -270,9 +270,9 @@ final class pj implements uj {
         }
     }
 
-    final static p a(int param0, int param1, ResourceArchive param2, int param3, ResourceArchive param4) {
+    final static PalettedBitmapFont a(int param0, int param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
-        p stackIn_6_0 = null;
+        PalettedBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

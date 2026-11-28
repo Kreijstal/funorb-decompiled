@@ -8,7 +8,7 @@ class fa extends mg {
     private String field_l;
     private long field_j;
 
-    final static void a(vc param0, vc param1, boolean param2, boolean param3, int param4, int param5, int param6, int param7, int param8, int param9, RgbSprite[] param10, RgbSprite[] param11, int param12, int param13, int param14, int param15, int param16) {
+    final static void a(BitmapFont param0, BitmapFont param1, boolean param2, boolean param3, int param4, int param5, int param6, int param7, int param8, int param9, RgbSprite[] param10, RgbSprite[] param11, int param12, int param13, int param14, int param15, int param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -26,7 +26,7 @@ class fa extends mg {
           MouseInputHandler.a(126, param13, param3);
           if (!param2) {
             var18 = (RgbSprite[]) null;
-            fa.a((vc) null, (vc) null, true, false, 27, -22, 78, -62, -125, 77, (RgbSprite[]) null, (RgbSprite[]) null, -82, -3, -91, -105, 37);
+            fa.a((BitmapFont) null, (BitmapFont) null, true, false, 27, -22, 78, -62, -125, 77, (RgbSprite[]) null, (RgbSprite[]) null, -82, -3, -91, -105, 37);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -120,7 +120,7 @@ class fa extends mg {
         try {
           if (!param3) {
             RgbSprite[] var5 = (RgbSprite[]) null;
-            fa.a((vc) null, (vc) null, true, false, 27, -113, -121, 67, 2, -38, (RgbSprite[]) null, (RgbSprite[]) null, 66, -114, 40, 57, 65);
+            fa.a((BitmapFont) null, (BitmapFont) null, true, false, 27, -113, -121, 67, 2, -38, (RgbSprite[]) null, (RgbSprite[]) null, 66, -114, 40, 57, 65);
           }
           pl.e(-125);
           qe.field_g.g((byte) -100);

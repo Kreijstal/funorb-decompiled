@@ -69,7 +69,7 @@ final class hh implements uk {
           SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_c != null) {
             var13 = this.field_b + var14.field_I + var14.field_L;
-            this.field_c.a(param3.field_m, var13 + (param1 + param3.field_w), this.field_e + (param3.field_k + param2), -var13 + (-this.field_b + param3.field_p), param3.field_t - (this.field_b << 1), this.field_f, this.field_g, 1, 1, 0);
+            this.field_c.drawParagraph(param3.field_m, var13 + (param1 + param3.field_w), this.field_e + (param3.field_k + param2), -var13 + (-this.field_b + param3.field_p), param3.field_t - (this.field_b << 1), this.field_f, this.field_g, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "hh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

@@ -12,11 +12,11 @@ class nk extends ik {
 
     void a(boolean param0, int param1, int param2) {
         if (param2 == 1) {
-          go.field_l.a(this.field_i, this.field_a, 15 + this.field_d, param1, -1);
+          go.field_l.drawString(this.field_i, this.field_a, 15 + this.field_d, param1, -1);
           return;
         }
         this.a(true, 102, -32);
-        go.field_l.a(this.field_i, this.field_a, 15 + this.field_d, param1, -1);
+        go.field_l.drawString(this.field_i, this.field_a, 15 + this.field_d, param1, -1);
     }
 
     public static void clearStaticReferences(int param0) {
@@ -93,7 +93,7 @@ class nk extends ik {
           this.field_i = param2;
           this.field_a = param0;
           this.field_d = param1;
-          this.field_b = go.field_l.a(param2);
+          this.field_b = go.field_l.stringWidth(param2);
           if (param3 == 1) {
             this.field_a = this.field_a - this.field_b;
           } else {

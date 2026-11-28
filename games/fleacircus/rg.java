@@ -6,7 +6,7 @@ final class rg extends ef {
     static int field_p;
     static String field_q;
     static int field_n;
-    static fa field_o;
+    static BitmapFont field_o;
 
     final uj a(boolean param0) {
         if (!param0) {

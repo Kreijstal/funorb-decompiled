@@ -48,7 +48,7 @@ final class fh {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -79 % ((25 - param0) / 61);
-          stackIn_1_0 = sg.a((byte) 20, RawPcmStream.a(param1, param2, param3));
+          stackIn_1_0 = sg.a((byte) 20, RawPcmStream.createForPlaybackRate(param1, param2, param3));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,7 +85,7 @@ final class fh {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -79 % ((25 - param0) / 61);
-          stackIn_1_0 = sg.a((byte) 20, RawPcmStream.a(param1, param2, param3));
+          stackIn_1_0 = sg.a((byte) 20, RawPcmStream.createForPlaybackRate(param1, param2, param3));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

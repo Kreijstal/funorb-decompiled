@@ -55,7 +55,7 @@ final class LoginPanel extends vk implements TextFieldListener, ga {
 
     final void a(int param0, int param1, byte param2, int param3) {
         if (this.field_J != null) {
-          nb.field_c.a(this.field_J, 20 + param1 + this.field_s, 15 + (param3 + this.field_j), this.field_i - 40, this.field_f, 16777215, -1, 1, 0, nb.field_c.field_p);
+          nb.field_c.drawParagraph(this.field_J, 20 + param1 + this.field_s, 15 + (param3 + this.field_j), this.field_i - 40, this.field_f, 16777215, -1, 1, 0, nb.field_c.field_p);
         }
         if (this.field_y != null) {
           SoftwareRasterizer.drawHorizontalLine(10 + param1, param3 + 134, -20 + this.field_i, 4210752);
@@ -102,7 +102,7 @@ final class LoginPanel extends vk implements TextFieldListener, ga {
         RuntimeException decompiledCaughtException = null;
         gb var6 = null;
         RuntimeException var6_ref = null;
-        qe var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         mj var9 = null;
         ad var11 = null;
@@ -170,7 +170,7 @@ final class LoginPanel extends vk implements TextFieldListener, ga {
           this.field_j = 15;
           var7 = nb.field_c;
           if (null != this.field_J) {
-            this.field_j = this.field_j + (var7.a(this.field_J, -40 + this.field_i, var7.field_p) + 5);
+            this.field_j = this.field_j + (var7.textHeight(this.field_J, -40 + this.field_i, var7.field_p) + 5);
           }
           var8 = AccountRequestState.field_b;
           var9 = kl.a(ll.b(95), (byte) 84);
@@ -247,8 +247,8 @@ final class LoginPanel extends vk implements TextFieldListener, ga {
     }
 
     final void a(boolean param0) {
-        this.field_I.i(19293);
-        this.field_G.i(19293);
+        this.field_I.clearText(19293);
+        this.field_G.clearText(19293);
         if (param0) {
           EditableTextField var3 = (EditableTextField) null;
           this.onTextSubmitted(false, (EditableTextField) null);
@@ -418,11 +418,11 @@ final class LoginPanel extends vk implements TextFieldListener, ga {
         try {
           var3 = this.field_I;
           var4 = param1;
-          var3.a((byte) -91, false, var4);
+          var3.setText((byte) -91, false, var4);
           if (param0 != -79) {
             this.field_I = (EditableTextField) null;
           }
-          this.field_G.i(19293);
+          this.field_G.clearText(19293);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "rg.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

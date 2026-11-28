@@ -39,7 +39,7 @@ class SceneWidget extends SceneWidgetNode {
     int integerState0901;
     int integerState0902;
     int integerState0903;
-    static RenderingSupport009 renderingSupport009State0007;
+    static BinaryBitmapFont renderingSupport009State0007;
     int integerState0904;
     RgbSprite rgbSpriteState0067;
     private int integerState0905;
@@ -264,7 +264,7 @@ class SceneWidget extends SceneWidgetNode {
             this.stringState0599 != null) {
             stringLocal20 = stringLocal18 + this.stringState0599;
           }
-          if (this.bitmapFontState0020.computeInteger1066(stringLocal20) <= this.integerState0896 - 2 * this.integerState0893 &&
+          if (this.bitmapFontState0020.stringWidth(stringLocal20) <= this.integerState0896 - 2 * this.integerState0893 &&
             0 > stringLocal20.indexOf("<br>")) {
             if (this.integerState0885 != 1) {
               if (this.integerState0885 == 2) {
@@ -274,22 +274,22 @@ class SceneWidget extends SceneWidgetNode {
               integerLocal12 = integerLocal12 + (this.integerState0915 - this.bitmapFontState0020.integerState0518 - this.bitmapFontState0020.integerState0523) / 2;
             }
             if (this.integerState0916 == 0) {
-              this.bitmapFontState0020.performAction1087(stringLocal20, this.integerState0893 + (this.integerState0892 + integerLocal11), this.bitmapFontState0020.integerState0518 + (integerLocal12 + this.integerState0886), integerLocal8, -1, this.integerState0917);
+              this.bitmapFontState0020.drawStringAlpha(stringLocal20, this.integerState0893 + (this.integerState0892 + integerLocal11), this.bitmapFontState0020.integerState0518 + (integerLocal12 + this.integerState0886), integerLocal8, -1, this.integerState0917);
             } else {
               if (this.integerState0916 == 1) {
-                this.bitmapFontState0020.performAction1083(stringLocal20, (-(2 * this.integerState0893) + this.integerState0896) / 2 + (this.integerState0892 - (-this.integerState0893 - integerLocal11)), this.bitmapFontState0020.integerState0518 + (this.integerState0886 + integerLocal12), integerLocal8, -1, this.integerState0917);
+                this.bitmapFontState0020.drawCentredAlpha(stringLocal20, (-(2 * this.integerState0893) + this.integerState0896) / 2 + (this.integerState0892 - (-this.integerState0893 - integerLocal11)), this.bitmapFontState0020.integerState0518 + (this.integerState0886 + integerLocal12), integerLocal8, -1, this.integerState0917);
               } else {
                 if (2 == this.integerState0916) {
-                  this.bitmapFontState0020.performAction1070(stringLocal20, -(this.integerState0893 * 2) + (this.integerState0896 + this.integerState0892 + this.integerState0893) + integerLocal11, this.integerState0886 + (integerLocal12 + this.bitmapFontState0020.integerState0518), integerLocal8, -1, this.integerState0917);
+                  this.bitmapFontState0020.drawRightAlignedAlpha(stringLocal20, -(this.integerState0893 * 2) + (this.integerState0896 + this.integerState0892 + this.integerState0893) + integerLocal11, this.integerState0886 + (integerLocal12 + this.bitmapFontState0020.integerState0518), integerLocal8, -1, this.integerState0917);
                 } else {
-                  this.bitmapFontState0020.computeInteger1072(stringLocal20, integerLocal11 + this.integerState0893 + this.integerState0892, integerLocal12 + this.integerState0886, -(2 * this.integerState0893) + this.integerState0896, this.integerState0915, integerLocal8, -1, this.integerState0917, this.integerState0916, this.integerState0885, this.integerState0908);
+                  this.bitmapFontState0020.drawParagraphAlpha(stringLocal20, integerLocal11 + this.integerState0893 + this.integerState0892, integerLocal12 + this.integerState0886, -(2 * this.integerState0893) + this.integerState0896, this.integerState0915, integerLocal8, -1, this.integerState0917, this.integerState0916, this.integerState0885, this.integerState0908);
                 }
               }
             }
             frameRemainderLocal21 = false;
           }
           else {
-            this.bitmapFontState0020.computeInteger1072(stringLocal20, integerLocal11 + this.integerState0893 + this.integerState0892, this.integerState0886 + integerLocal12, -(this.integerState0893 * 2) + this.integerState0896, this.integerState0915, integerLocal8, -1, this.integerState0917, this.integerState0916, this.integerState0885, this.integerState0908);
+            this.bitmapFontState0020.drawParagraphAlpha(stringLocal20, integerLocal11 + this.integerState0893 + this.integerState0892, this.integerState0886 + integerLocal12, -(this.integerState0893 * 2) + this.integerState0896, this.integerState0915, integerLocal8, -1, this.integerState0917, this.integerState0916, this.integerState0885, this.integerState0908);
           }
         }
         if (this.nodeDequeState0034 != null) {
@@ -303,12 +303,12 @@ class SceneWidget extends SceneWidgetNode {
         return;
     }
 
-    final static RenderingSupport009 computeRenderingSupport0091773(byte[] byteArrayArgument1, byte byteArgument2) {
-        RenderingSupport009 renderingSupport009Local1 = null;
+    final static BinaryBitmapFont computeRenderingSupport0091773(byte[] byteArrayArgument1, byte byteArgument2) {
+        BinaryBitmapFont renderingSupport009Local1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         byte[] byteArrayLocal3 = null;
         Object stackObjectLocal4 = null;
-        RenderingSupport009 stackRenderingSupport009Local5 = null;
+        BinaryBitmapFont stackRenderingSupport009Local5 = null;
         RuntimeException stackRuntimeExceptionLocal6 = null;
         StringBuilder stackStringBuilderLocal7 = null;
         String stackStringLocal8 = null;
@@ -316,9 +316,9 @@ class SceneWidget extends SceneWidgetNode {
         try {
           if (byteArrayArgument1 == null) {
             stackObjectLocal4 = null;
-            return (RenderingSupport009) (stackObjectLocal4);
+            return (BinaryBitmapFont) (stackObjectLocal4);
           }
-          renderingSupport009Local1 = new RenderingSupport009(byteArrayArgument1, InputAdapter003.integerArrayState0206, MixedSupport039.integerArrayState0047, MixedSupport123.integerArrayState0208, MixedSupport052.integerArrayState0054, SceneWidgetPart011.byteArrayArrayState0008);
+          renderingSupport009Local1 = new BinaryBitmapFont(byteArrayArgument1, InputAdapter003.integerArrayState0206, MixedSupport039.integerArrayState0047, MixedSupport123.integerArrayState0208, MixedSupport052.integerArrayState0054, SceneWidgetPart011.byteArrayArrayState0008);
           MixedSupport089.performAction1138(127);
           if (byteArgument2 != -5) {
             byteArrayLocal3 = (byte[]) null;
@@ -422,7 +422,7 @@ class SceneWidget extends SceneWidgetNode {
           }
         }
         if (integerArgument1 >= -16) {
-          renderingSupport009State0007 = (RenderingSupport009) null;
+          renderingSupport009State0007 = (BinaryBitmapFont) null;
         }
     }
 
@@ -740,7 +740,7 @@ class SceneWidget extends SceneWidgetNode {
         int integerLocal6;
         if (this.stringState0598 != null &&
           this.bitmapFontState0020 != null) {
-          integerLocal3 = this.bitmapFontState0020.computeInteger1080(this.stringState0598, integerArgument2);
+          integerLocal3 = this.bitmapFontState0020.maxLineWidth(this.stringState0598, integerArgument2);
           if (integerLocal3 > integerLocal5) {
             integerLocal5 = integerLocal3;
           }

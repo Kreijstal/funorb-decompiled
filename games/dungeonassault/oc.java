@@ -214,7 +214,7 @@ final class oc extends kl {
           var9 = var13;
           for (var10 = 0; var13.length > var10; var10++) {
             var11 = var13[var10];
-            la.field_b.c(var11, var5_int >> 1, var8, 16777215, -1);
+            la.field_b.drawCentred(var11, var5_int >> 1, var8, 16777215, -1);
             var8 = var8 + la.field_b.field_H;
           }
           this.field_o = new RgbSprite(var5_int + 4, 4 + var7);
@@ -230,11 +230,11 @@ final class oc extends kl {
           var9_ref = var14;
           stackIn_19_0 = (this.field_x) ? 16744448 : 8421504;
           var10Lifetime1 = stackIn_19_0;
-          var5_int = IntrusiveNode.field_c.b(var14);
+          var5_int = IntrusiveNode.field_c.stringWidth(var14);
           var7Lifetime1 = IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_H;
           this.field_y = new RgbSprite(var5_int, var7Lifetime1);
           this.field_y.e();
-          IntrusiveNode.field_c.b(var14, 0, IntrusiveNode.field_c.field_H, var10Lifetime1, -1);
+          IntrusiveNode.field_c.drawString(var14, 0, IntrusiveNode.field_c.field_H, var10Lifetime1, -1);
           this.field_I = rb.a(16, this.field_y, var10Lifetime1, (byte) 100);
           this.field_y.d(65793);
           jh.b();

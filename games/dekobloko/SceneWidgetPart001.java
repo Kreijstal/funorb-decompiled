@@ -56,7 +56,7 @@ final class SceneWidgetPart001 extends SceneWidget {
           for (integerLocal1 = 0; integerLocal1 < DelegatingCanvas.stringArrayState0007.length; integerLocal1++) {
             sceneWidgetLocal21 = new SceneWidget(0L, sceneWidgetArgument4, CipherPacketBuffer.stringArrayState0049[integerLocal1]);
             sceneWidgetLocal22 = new SceneWidget(0L, sceneWidgetArgument4, DelegatingCanvas.stringArrayState0007[integerLocal1]);
-            integerLocal23 = sceneWidgetArgument4.bitmapFontState0020.computeInteger1066(DelegatingCanvas.stringArrayState0007[integerLocal1]);
+            integerLocal23 = sceneWidgetArgument4.bitmapFontState0020.stringWidth(DelegatingCanvas.stringArrayState0007[integerLocal1]);
             if (integerLocal23 > integerLocal20) {
               integerLocal20 = integerLocal23;
             }

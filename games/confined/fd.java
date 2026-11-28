@@ -9,7 +9,7 @@ final class fd {
     private int field_h;
     private long[] field_l;
     private long[] field_a;
-    static ok field_k;
+    static BitmapFont field_k;
     static RgbSprite field_e;
     private byte[] field_f;
     private byte[] field_c;
@@ -261,7 +261,7 @@ final class fd {
         hc.field_s = ak.field_L[param1];
         b.field_k = th.field_eb[param1];
         if (param0 != 30177) {
-          field_k = (ok) null;
+          field_k = (BitmapFont) null;
         }
     }
 

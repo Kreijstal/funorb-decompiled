@@ -93,10 +93,10 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         try {
           var3_int = -38 / ((param0 + 45) / 58);
           if (!param2) {
-            stackIn_4_0 = fe.field_a.a(param1);
+            stackIn_4_0 = fe.field_a.stringWidth(param1);
             return stackIn_4_0;
           }
-          stackIn_2_0 = ImageProducerRasterBuffer.field_o.a(param1);
+          stackIn_2_0 = ImageProducerRasterBuffer.field_o.stringWidth(param1);
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -289,10 +289,10 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         try {
           var3_int = -38 / ((param0 + 45) / 58);
           if (!param2) {
-            stackIn_4_0 = fe.field_a.a(param1);
+            stackIn_4_0 = fe.field_a.stringWidth(param1);
             return stackIn_4_0;
           }
-          stackIn_2_0 = ImageProducerRasterBuffer.field_o.a(param1);
+          stackIn_2_0 = ImageProducerRasterBuffer.field_o.stringWidth(param1);
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

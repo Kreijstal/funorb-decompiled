@@ -176,7 +176,7 @@ final class jb {
           }
           var6 = this.field_h[var4];
           var7 = var6.field_a;
-          pn.field_a.a(var7, var6.field_j - 0, var6.field_b, var6.field_f, var6.field_i, var5, -1, 1, 1, 1);
+          pn.field_a.drawParagraph(var7, var6.field_j - 0, var6.field_b, var6.field_f, var6.field_i, var5, -1, 1, 1, 1);
         }
         return;
     }
@@ -229,7 +229,7 @@ final class jb {
         if (this.field_e != 14) {
           return;
         }
-        pn.field_a.a(1 + this.field_q + "/" + 9, 560, 312, 16777215, -1);
+        pn.field_a.drawRightAligned(1 + this.field_q + "/" + 9, 560, 312, 16777215, -1);
         if (param0 < 76) {
           return;
         }
@@ -238,9 +238,9 @@ final class jb {
 
     final void f(byte param0) {
         int var4_int = 0;
-        ce stackIn_33_0 = null;
+        BinaryBitmapFont stackIn_33_0 = null;
         String stackIn_34_1 = null;
-        ce stackIn_41_0 = null;
+        BinaryBitmapFont stackIn_41_0 = null;
         String stackIn_42_1 = null;
         qn var2;
         int var3;
@@ -280,15 +280,15 @@ final class jb {
           var2 = this.field_d;
         }
         var3 = DiskCacheWorker.a(WingPod.field_W, var2, 113, TunnelMesh.field_J);
-        pn.field_a.c(IntrusiveNodeHashTable.field_b, 125, 29 + this.field_c, 4243584, -1);
-        pn.field_a.a(tk.field_d, 400, 29 + this.field_c, 4243584, -1);
-        pn.field_a.a(e.field_d, 545, this.field_c + 29, 4243584, -1);
+        pn.field_a.drawString(IntrusiveNodeHashTable.field_b, 125, 29 + this.field_c, 4243584, -1);
+        pn.field_a.drawRightAligned(tk.field_d, 400, 29 + this.field_c, 4243584, -1);
+        pn.field_a.drawRightAligned(e.field_d, 545, this.field_c + 29, 4243584, -1);
         for (var4_int = 0; var4_int < 10; var4_int++) {
           var5 = 4243584;
           if (var3 == var4_int) {
             var5 = 16777215;
           }
-          pn.field_a.a(var4_int + 1 + ".", 115, this.field_c + var4_int * 20 + 54, var5, -1);
+          pn.field_a.drawRightAligned(var4_int + 1 + ".", 115, this.field_c + var4_int * 20 + 54, var5, -1);
         }
         var4 = km.field_b;
         var5Lifetime1 = 1;
@@ -309,15 +309,15 @@ final class jb {
                   if (var8 == var3) {
                     var9 = 16777215;
                   }
-                  pn.field_a.c(ok.a(var6_ref_String__[var8]), 125, 54 + (this.field_c + var8 * 20), var9, -1);
+                  pn.field_a.drawString(BitmapFont.escapeMarkup(var6_ref_String__[var8]), 125, 54 + (this.field_c + var8 * 20), var9, -1);
                   stackIn_33_0 = pn.field_a;
                   if (var12 != 25) {
                     stackIn_34_1 = Integer.toString(var12);
                   } else {
                     stackIn_34_1 = kc.field_q;
                   }
-                  ((ce) (Object) stackIn_33_0).a(stackIn_34_1, 400, this.field_c + 54 + 20 * var8, var9, -1);
-                  pn.field_a.a(Integer.toString(var11), 545, 20 * var8 + this.field_c + 54, var9, -1);
+                  ((BinaryBitmapFont) (Object) stackIn_33_0).drawRightAligned(stackIn_34_1, 400, this.field_c + 54 + 20 * var8, var9, -1);
+                  pn.field_a.drawRightAligned(Integer.toString(var11), 545, 20 * var8 + this.field_c + 54, var9, -1);
                 }
               }
             } else {
@@ -326,7 +326,7 @@ final class jb {
             if (var3 < 0 &&
               null != TunnelMesh.field_J &&
               var2.field_w == TunnelMesh.field_J.field_r) {
-              pn.field_a.c(ok.a(ConfirmedEmailAvailabilityValidator.field_m), 125, 259 + this.field_c, 16777215, -1);
+              pn.field_a.drawString(BitmapFont.escapeMarkup(ConfirmedEmailAvailabilityValidator.field_m), 125, 259 + this.field_c, 16777215, -1);
               var6 = TunnelMesh.field_J.field_s[0];
               var7 = var6 / 25;
               var8Lifetime1 = var6 % 25 + 1;
@@ -336,20 +336,20 @@ final class jb {
               } else {
                 stackIn_42_1 = Integer.toString(var8Lifetime1);
               }
-              ((ce) (Object) stackIn_41_0).a(stackIn_42_1, 400, this.field_c + 259, 16777215, -1);
-              pn.field_a.a(Integer.toString(var7), 545, this.field_c + 259, 16777215, -1);
+              ((BinaryBitmapFont) (Object) stackIn_41_0).drawRightAligned(stackIn_42_1, 400, this.field_c + 259, 16777215, -1);
+              pn.field_a.drawRightAligned(Integer.toString(var7), 545, this.field_c + 259, 16777215, -1);
               var5Lifetime1 = 0;
             }
           }
         }
         if (var4 != null) {
-          pn.field_a.b((String) (var4), 320, 144 + this.field_c, 4243584, -1);
+          pn.field_a.drawCentred((String) (var4), 320, 144 + this.field_c, 4243584, -1);
         }
         if (tj.a(true)) {
-          pn.field_a.b(oc.field_b, 320, this.field_c + 259, 4243584, -1);
+          pn.field_a.drawCentred(oc.field_b, 320, this.field_c + 259, 4243584, -1);
         } else {
           if (var5Lifetime1 != 0) {
-            pn.field_a.b(sg.field_s, 320, 259 + this.field_c, 4243584, -1);
+            pn.field_a.drawCentred(sg.field_s, 320, 259 + this.field_c, 4243584, -1);
           }
         }
         return;
@@ -611,14 +611,14 @@ final class jb {
         if (var2 >= 0) {
           tf.a((byte) 59, var2, this.field_c, this.field_l);
         } else {
-          pn.field_a.b(rg.field_J, 320, this.field_c + 36, 4243584, -1);
+          pn.field_a.drawCentred(rg.field_J, 320, this.field_c + 36, 4243584, -1);
         }
         if (tj.a(true)) {
-          pn.field_a.b(oc.field_b, 320, 190 + this.field_c, 4243584, -1);
+          pn.field_a.drawCentred(oc.field_b, 320, 190 + this.field_c, 4243584, -1);
         }
         if (var2 == 5 &&
           0 != (32 & this.field_l)) {
-          pn.field_a.b(lk.field_a, 320, this.field_c + 190, 4243584, -1);
+          pn.field_a.drawCentred(lk.field_a, 320, this.field_c + 190, 4243584, -1);
         }
     }
 
@@ -654,8 +654,8 @@ final class jb {
             var8 += 133;
           }
           if (var7.field_d == 4) {
-            var9 = pn.field_a.c(uc.field_Z);
-            var10 = pn.field_a.c(sj.field_pb);
+            var9 = pn.field_a.stringWidth(uc.field_Z);
+            var10 = pn.field_a.stringWidth(sj.field_pb);
             if (var9 < var10) {
               var9 = var10;
             }
@@ -663,16 +663,16 @@ final class jb {
           }
           if (var7.field_d == 5 ||
             var7.field_d == 6) {
-            var9Lifetime1 = pn.field_a.c(DiskCacheWorker.field_k);
-            var10Lifetime1 = pn.field_a.c(DelegatingCanvas.field_c);
+            var9Lifetime1 = pn.field_a.stringWidth(DiskCacheWorker.field_k);
+            var10Lifetime1 = pn.field_a.stringWidth(DelegatingCanvas.field_c);
             if (var10Lifetime1 > var9Lifetime1) {
               var9Lifetime1 = var10Lifetime1;
             }
-            var10Lifetime1Lifetime1 = pn.field_a.c(al.field_a.toUpperCase());
+            var10Lifetime1Lifetime1 = pn.field_a.stringWidth(al.field_a.toUpperCase());
             if (var9Lifetime1 < var10Lifetime1Lifetime1) {
               var9Lifetime1 = var10Lifetime1Lifetime1;
             }
-            var10Lifetime1Lifetime2 = pn.field_a.c(di.field_c.toUpperCase());
+            var10Lifetime1Lifetime2 = pn.field_a.stringWidth(di.field_c.toUpperCase());
             if (var9Lifetime1 < var10Lifetime1Lifetime2) {
               var9Lifetime1 = var10Lifetime1Lifetime2;
             }
@@ -887,37 +887,37 @@ final class jb {
                 WingPod.field_W == -2 + var2) {
                 var7 = 16777215;
               }
-              pn.field_a.a(var4, 0 + var3.field_j, var5, var3.field_f, var6, var7, -1, 1, 1, 20);
+              pn.field_a.drawParagraph(var4, 0 + var3.field_j, var5, var3.field_f, var6, var7, -1, 1, 1, 20);
             } else {
               if (4 == var3.field_d) {
-                var8 = pn.field_a.c(ef.field_ub);
-                var9 = pn.field_a.c(uc.field_Z);
-                var10 = pn.field_a.c(sj.field_pb);
+                var8 = pn.field_a.stringWidth(ef.field_ub);
+                var9 = pn.field_a.stringWidth(uc.field_Z);
+                var10 = pn.field_a.stringWidth(sj.field_pb);
                 if (var10 > var9) {
                   var9 = var10;
                 }
               } else {
-                var8 = pn.field_a.c(qa.field_e);
-                var10 = pn.field_a.c(cc.field_p);
-                var9 = pn.field_a.c(DiskCacheWorker.field_k);
+                var8 = pn.field_a.stringWidth(qa.field_e);
+                var10 = pn.field_a.stringWidth(cc.field_p);
+                var9 = pn.field_a.stringWidth(DiskCacheWorker.field_k);
                 if (var10 > var8) {
                   var8 = var10;
                 }
-                var10 = pn.field_a.c(DelegatingCanvas.field_c);
+                var10 = pn.field_a.stringWidth(DelegatingCanvas.field_c);
                 if (var9 < var10) {
                   var9 = var10;
                 }
-                var10 = pn.field_a.c(al.field_a.toUpperCase());
+                var10 = pn.field_a.stringWidth(al.field_a.toUpperCase());
                 if (var10 > var9) {
                   var9 = var10;
                 }
-                var10 = pn.field_a.c(di.field_c.toUpperCase());
+                var10 = pn.field_a.stringWidth(di.field_c.toUpperCase());
                 if (var10 > var9) {
                   var9 = var10;
                 }
               }
               var10 = (var8 - var9 + var3.field_f) / 2;
-              pn.field_a.a(var4, 0 + var3.field_j, var5, var10, var6, var7, -1, 2, 1, 20);
+              pn.field_a.drawParagraph(var4, 0 + var3.field_j, var5, var10, var6, var7, -1, 2, 1, 20);
               if (var3.field_d != 4) {
                 if (var3.field_d == 5) {
                   if (ConfirmedEmailAvailabilityValidator.field_n) {
@@ -945,15 +945,15 @@ final class jb {
                 }
                 var11_ref_String = stackIn_37_0;
               }
-              pn.field_a.a(var11_ref_String, var10 + (var3.field_j - 0), var5, -var10 + var3.field_f, var6, var7, -1, 0, 1, 20);
+              pn.field_a.drawParagraph(var11_ref_String, var10 + (var3.field_j - 0), var5, -var10 + var3.field_f, var6, var7, -1, 0, 1, 20);
             }
           } else {
-            var8 = pn.field_a.c(AwtRasterBuffer.field_h);
-            var9 = pn.field_a.c(mg.field_d);
+            var8 = pn.field_a.stringWidth(AwtRasterBuffer.field_h);
+            var9 = pn.field_a.stringWidth(mg.field_d);
             if (var8 < var9) {
               var8 = var9;
             }
-            var9 = pn.field_a.c(TunnelEntity.field_u);
+            var9 = pn.field_a.stringWidth(TunnelEntity.field_u);
             if (var8 < var9) {
               var8 = var9;
             }
@@ -979,7 +979,7 @@ final class jb {
             } else {
               var11 = fa.field_S * 128 / 128;
             }
-            pn.field_a.a(var4, var3.field_j + 0, var5, -5 + (var10 - var3.field_j), var6, var7, -1, 2, 1, 20);
+            pn.field_a.drawParagraph(var4, var3.field_j + 0, var5, -5 + (var10 - var3.field_j), var6, var7, -1, 2, 1, 20);
             SoftwareRasterizer.fillRectangle(var11 - 2 + var10 - 0, var5 + 7, 3, 8, var7);
             SoftwareRasterizer.fillRectangle(-2 + (var10 + var11), 8 + (7 + var5), 4, 2, var7);
             SoftwareRasterizer.fillRectangle(0 + var11 + (var10 - 2), var5 + 7 + 10, 5, 6, var7);
@@ -1063,10 +1063,10 @@ final class jb {
         if (this.field_e != 14) {
           return;
         }
-        pn.field_a.b(p.field_b, 320, 120, 4243584, -1);
-        pn.field_a.b(fb.a(this.field_t, this.field_n, 0, this.field_i), 320, 140, 4243584, -1);
-        pn.field_a.b(ConfirmedEmailAvailabilityValidator.a(this.field_n, this.field_i, 2, this.field_t), 320, 240, 4243584, -1);
-        pn.field_a.b(AcceleratingProjectile.a(this.field_i, this.field_n, -125, this.field_t), 320, 300, param0, -1);
+        pn.field_a.drawCentred(p.field_b, 320, 120, 4243584, -1);
+        pn.field_a.drawCentred(fb.a(this.field_t, this.field_n, 0, this.field_i), 320, 140, 4243584, -1);
+        pn.field_a.drawCentred(ConfirmedEmailAvailabilityValidator.a(this.field_n, this.field_i, 2, this.field_t), 320, 240, 4243584, -1);
+        pn.field_a.drawCentred(AcceleratingProjectile.a(this.field_i, this.field_n, -125, this.field_t), 320, 300, param0, -1);
     }
 
     final void c(int param0) {
@@ -1185,12 +1185,12 @@ final class jb {
         if (var3 == 7) {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_p.f((byte) -79)) {
-            var4 = pn.field_a.c(AwtRasterBuffer.field_h);
-            var5 = pn.field_a.c(mg.field_d);
+            var4 = pn.field_a.stringWidth(AwtRasterBuffer.field_h);
+            var5 = pn.field_a.stringWidth(mg.field_d);
             if (var4 < var5) {
               var4 = var5;
             }
-            var5Lifetime3 = pn.field_a.c(TunnelEntity.field_u);
+            var5Lifetime3 = pn.field_a.stringWidth(TunnelEntity.field_u);
             if (var5Lifetime3 > var4) {
               var4 = var5Lifetime3;
             }
@@ -1253,12 +1253,12 @@ final class jb {
             if (this.field_p.d((byte) 55)) {
               this.e((byte) -128);
             }
-            var4Lifetime1 = pn.field_a.c(AwtRasterBuffer.field_h);
-            var5Lifetime1 = pn.field_a.c(mg.field_d);
+            var4Lifetime1 = pn.field_a.stringWidth(AwtRasterBuffer.field_h);
+            var5Lifetime1 = pn.field_a.stringWidth(mg.field_d);
             if (var5Lifetime1 > var4Lifetime1) {
               var4Lifetime1 = var5Lifetime1;
             }
-            var5Lifetime1Lifetime1 = pn.field_a.c(TunnelEntity.field_u);
+            var5Lifetime1Lifetime1 = pn.field_a.stringWidth(TunnelEntity.field_u);
             if (var4Lifetime1 < var5Lifetime1Lifetime1) {
               var4Lifetime1 = var5Lifetime1Lifetime1;
             }
@@ -1308,12 +1308,12 @@ final class jb {
             if (this.field_p.d((byte) 55)) {
               this.e((byte) -122);
             }
-            var4Lifetime2 = pn.field_a.c(AwtRasterBuffer.field_h);
-            var5Lifetime2 = pn.field_a.c(mg.field_d);
+            var4Lifetime2 = pn.field_a.stringWidth(AwtRasterBuffer.field_h);
+            var5Lifetime2 = pn.field_a.stringWidth(mg.field_d);
             if (var5Lifetime2 > var4Lifetime2) {
               var4Lifetime2 = var5Lifetime2;
             }
-            var5Lifetime2Lifetime1 = pn.field_a.c(TunnelEntity.field_u);
+            var5Lifetime2Lifetime1 = pn.field_a.stringWidth(TunnelEntity.field_u);
             if (var5Lifetime2Lifetime1 > var4Lifetime2) {
               var4Lifetime2 = var5Lifetime2Lifetime1;
             }

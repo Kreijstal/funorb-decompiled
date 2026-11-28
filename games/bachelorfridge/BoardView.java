@@ -703,7 +703,7 @@ final class BoardView {
                 sia.field_g.draw(-28 + var8, var9 - 14);
                 if (this.field_i.b(var5, true) != null &&
                   var5.field_s.ownerIndex == this.field_i.field_n) {
-                  CreatureActor.field_h.a("" + var6.field_v, -16 + var8 + 2, -26 + (30 + var9), 2 + var6.ownerIndex, -1);
+                  CreatureActor.field_h.drawCentred("" + var6.field_v, -16 + var8 + 2, -26 + (30 + var9), 2 + var6.ownerIndex, -1);
                   var14 = this.field_i.b(var5, true).moveId;
                   stackIn_37_0 = var9 - 15;
                   if (this.field_i.field_L % 128 >= 64) {
@@ -713,7 +713,7 @@ final class BoardView {
                   }
                   cba.a(stackIn_37_0, stackIn_38_1 * 4, -29 + var8, var14, -60);
                 } else {
-                  CreatureActor.field_h.a("" + var6.field_v, var8 + 2 - 16, var9 + 30 - 26, var6.ownerIndex + 2, -1);
+                  CreatureActor.field_h.drawCentred("" + var6.field_v, var8 + 2 - 16, var9 + 30 - 26, var6.ownerIndex + 2, -1);
                 }
                 if (this.field_i.field_h.field_o == 3 &&
                   var6.isCarryingFlag((byte) 85)) {

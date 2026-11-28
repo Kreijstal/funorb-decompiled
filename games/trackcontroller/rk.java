@@ -177,7 +177,7 @@ final class rk extends wd {
         try {
           this.field_db = param1;
           if (this.field_db != null) {
-            var3_int = p.field_a.a(this.field_db, 260, p.field_a.field_G);
+            var3_int = p.field_a.textHeight(this.field_db, 260, p.field_a.field_G);
             this.a(300, (byte) -115, var3_int + 150);
           }
           this.field_S = new dg(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -192,10 +192,10 @@ final class rk extends wd {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, param1, param2);
-        p.field_a.b(this.field_cb, (this.field_x >> 1) + param0, 103 + param2, 16777215, -1);
+        p.field_a.drawCentred(this.field_cb, (this.field_x >> 1) + param0, 103 + param2, 16777215, -1);
         if (null != this.field_db) {
           SoftwareRasterizer.drawHorizontalLine(param0 + 20, 120 + (param2 - 7), 260, 8421504);
-          p.field_a.a(this.field_db, 20 + param0, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, p.field_a.field_G);
+          p.field_a.drawParagraph(this.field_db, 20 + param0, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, p.field_a.field_G);
         }
     }
 

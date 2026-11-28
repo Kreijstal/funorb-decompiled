@@ -35,7 +35,7 @@ class TextInputWidget extends InteractiveWidget {
         }
     }
 
-    private final int j(int param0) {
+    private final int findPreviousWordBoundary(int param0) {
         int var2;
         int var3;
         var3 = BachelorFridge.field_y;
@@ -61,7 +61,7 @@ class TextInputWidget extends InteractiveWidget {
         field_G = null;
     }
 
-    final void j(byte param0) {
+    final void clearText(byte param0) {
         int var2 = -106 / ((52 - param0) / 41);
         this.field_K = 0;
         this.text = "";
@@ -69,7 +69,7 @@ class TextInputWidget extends InteractiveWidget {
         this.notifyTextChanged((byte) -118);
     }
 
-    private final int e(byte param0) {
+    private final int findNextWordBoundary(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -210,13 +210,13 @@ class TextInputWidget extends InteractiveWidget {
           } else {
             stackIn_6_2 = 0;
           }
-          this.a(stackIn_5_1, stackIn_6_2);
+          this.moveCaret(stackIn_5_1, stackIn_6_2);
           var8_long = f.correctedCurrentTimeMillis((byte) 73);
           stackIn_9_1 = !(var8_long - this.field_A >= 250L);
           this.field_L = stackIn_9_1;
           if (this.field_L) {
-            this.field_K = this.j(0);
-            this.field_H = this.e((byte) -26);
+            this.field_K = this.findPreviousWordBoundary(0);
+            this.field_H = this.findNextWordBoundary((byte) -26);
             if (this.field_H > 0 &&
               this.text.charAt(this.field_H - 1) == 32) {
               this.field_H = this.field_H - 1;
@@ -239,7 +239,7 @@ class TextInputWidget extends InteractiveWidget {
         }
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void moveCaret(boolean param0, int param1) {
         if (!param0) {
           return;
         }
@@ -267,7 +267,7 @@ class TextInputWidget extends InteractiveWidget {
         try {
           this.renderer = fda.field_i.field_s;
           this.field_I = param2;
-          this.a((byte) -26, param0, true);
+          this.setText((byte) -26, param0, true);
           this.field_D = true;
           this.field_F = f.correctedCurrentTimeMillis((byte) 73);
         } catch (RuntimeException runtimeException) {
@@ -315,7 +315,7 @@ class TextInputWidget extends InteractiveWidget {
         return this.text.substring(var2Lifetime1, var3Lifetime1);
     }
 
-    private final void d(byte param0) {
+    private final void scrollCaretIntoView(byte param0) {
         vv var3;
         int var4;
         int var5;
@@ -392,7 +392,7 @@ class TextInputWidget extends InteractiveWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           super.updateMouseOver(param0, param1, param2, param3 + 0);
-          this.d((byte) -75);
+          this.scrollCaretIntoView((byte) -75);
           if (param3 != 20) {
             return;
           }
@@ -427,7 +427,7 @@ class TextInputWidget extends InteractiveWidget {
         }
     }
 
-    final void a(byte param0, String param1, boolean param2) {
+    final void setText(byte param0, String param1, boolean param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -545,17 +545,17 @@ class TextInputWidget extends InteractiveWidget {
                 }
               } else {
                 if (param1 == 13) {
-                  this.j((byte) -85);
+                  this.clearText((byte) -85);
                   return true;
                 }
                 if (param1 != 96) {
                   if (97 != param1) {
                     if (param1 == 102) {
-                      this.a(true, 0);
+                      this.moveCaret(true, 0);
                       return true;
                     }
                     if (103 == param1) {
-                      this.a(true, this.text.length());
+                      this.moveCaret(true, this.text.length());
                       return true;
                     }
                     if (84 == param1) {
@@ -583,9 +583,9 @@ class TextInputWidget extends InteractiveWidget {
                       if (!InvincibleEvent.field_q[82]) {
                         stackIn_35_2 = 1 + this.field_H;
                       } else {
-                        stackIn_35_2 = this.e((byte) -26);
+                        stackIn_35_2 = this.findNextWordBoundary((byte) -26);
                       }
-                      this.a(stackIn_34_1, stackIn_35_2);
+                      this.moveCaret(stackIn_34_1, stackIn_35_2);
                       return true;
                     }
                   }
@@ -593,11 +593,11 @@ class TextInputWidget extends InteractiveWidget {
                   if (this.field_H > 0) {
                     stackIn_27_1 = true;
                     if (InvincibleEvent.field_q[82]) {
-                      stackIn_28_2 = this.j(0);
+                      stackIn_28_2 = this.findPreviousWordBoundary(0);
                     } else {
                       stackIn_28_2 = -1 + this.field_H;
                     }
-                    this.a(stackIn_27_1, stackIn_28_2);
+                    this.moveCaret(stackIn_27_1, stackIn_28_2);
                     return true;
                   }
                 }

@@ -42,11 +42,11 @@ final class qh {
         this.a(-123, 110);
     }
 
-    final static hg a(Archive param0, int param1, Archive param2, int param3, int param4) {
+    final static BinaryBitmapFont a(Archive param0, int param1, Archive param2, int param3, int param4) {
         RuntimeException var5 = null;
         Archive var6 = null;
         Object stackIn_4_0 = null;
-        hg stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -63,7 +63,7 @@ final class qh {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (hg) (stackIn_4_0);
+          return (BinaryBitmapFont) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

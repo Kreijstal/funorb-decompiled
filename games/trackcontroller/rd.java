@@ -84,7 +84,7 @@ final class rd {
             } else {
               var12 = var8;
             }
-            var11Lifetime1 = this.field_c.a(param0, new int[]{var12}, IsaacRandom.field_g);
+            var11Lifetime1 = this.field_c.wrapText(param0, new int[]{var12}, IsaacRandom.field_g);
             var10 = var10 + (var11Lifetime1 - 1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
@@ -104,7 +104,7 @@ final class rd {
           }
           SoftwareRasterizer.drawRectangleOutline(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_a);
           SoftwareRasterizer.fillRectangle(1 + var12, var13Lifetime1 + 1, var5_int + (var9 - 2), var10 + (var6 - 2), this.field_t);
-          this.field_c.a(param0, var12 + this.field_p, this.field_m + var13Lifetime1, var9, var10, this.field_n, -1, 0, 0, var7);
+          this.field_c.drawParagraph(param0, var12 + this.field_p, this.field_m + var13Lifetime1, var9, var10, this.field_n, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -276,7 +276,7 @@ final class rd {
           if (param0) {
             field_l = (MouseWheelInput) null;
           }
-          this.field_c.c(param3, var7 + 3, 3 + var8 + this.field_c.field_H, this.field_n, -1);
+          this.field_c.drawString(param3, var7 + 3, 3 + var8 + this.field_c.field_H, this.field_n, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

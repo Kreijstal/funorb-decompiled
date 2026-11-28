@@ -289,11 +289,11 @@ abstract class qd extends vk {
         }
     }
 
-    final static lk a(byte[] param0, byte param1) {
+    final static BinaryBitmapFont a(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        lk var3 = null;
-        lk stackIn_4_0 = null;
+        BinaryBitmapFont var3 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -303,7 +303,7 @@ abstract class qd extends vk {
             return null;
           }
           var2_int = -11 % ((29 - param1) / 41);
-          var3 = new lk(param0, fc.field_d, field_H, gg.field_d, gh.field_C, og.field_c);
+          var3 = new BinaryBitmapFont(param0, fc.field_d, field_H, gg.field_d, gh.field_C, og.field_c);
           rc.b((byte) -49);
           stackIn_4_0 = var3;
           return stackIn_4_0;

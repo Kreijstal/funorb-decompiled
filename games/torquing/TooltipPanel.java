@@ -13,7 +13,7 @@ final class TooltipPanel {
     static ResourceArchive field_l;
     IndexedSprite field_e;
     static String field_t;
-    uc field_b;
+    BitmapFont field_b;
     static int[] field_r;
     private Sprite[] field_a;
     private String[] field_h;
@@ -70,7 +70,7 @@ final class TooltipPanel {
             var9 = var5;
             for (var10 = 0; var9.length > var10; var10++) {
               var11 = var9[var10];
-              var12 = (this.availableTextWidth(this.field_u[this.field_f], this.field_b.field_x + 4) - this.field_b.a(var11)) / 2;
+              var12 = (this.availableTextWidth(this.field_u[this.field_f], this.field_b.field_x + 4) - this.field_b.stringWidth(var11)) / 2;
               this.field_a[this.field_f] = new Sprite(var12, 0);
               if (this.field_h[this.field_f] != param1) {
                 this.field_h[this.field_f] = null;
@@ -255,7 +255,7 @@ final class TooltipPanel {
             param1 = param1 + this.field_s;
           }
           var6 = new String[16];
-          var7 = this.field_b.a(param2, var11, var6);
+          var7 = this.field_b.wrapText(param2, var11, var6);
           var8 = new String[var7];
           for (var9 = 0; var9 < var7; var9++) {
             var8[var9] = var6[var9];
@@ -468,7 +468,7 @@ final class TooltipPanel {
             var7 = this.field_u[var4] + (param2 + this.field_b.field_x);
             var8 = this.field_i[var4];
             for (var9 = 0; var9 < var8.length; var9++) {
-              this.field_b.b(var8[var9], param0 + var6, var7, this.field_j, -1);
+              this.field_b.drawString(var8[var9], param0 + var6, var7, this.field_j, -1);
               var7 = var7 + this.field_s;
             }
           }
@@ -495,7 +495,7 @@ final class TooltipPanel {
         field_q = null;
     }
 
-    TooltipPanel(uc param0, int param1, int param2, int param3, IndexedSprite param4, int param5, int param6) {
+    TooltipPanel(BitmapFont param0, int param1, int param2, int param3, IndexedSprite param4, int param5, int param6) {
         try {
           this.field_b = param0;
           this.field_k = param3;

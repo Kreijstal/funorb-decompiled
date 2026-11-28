@@ -10,7 +10,7 @@ class ButtonWidget extends UiWidget {
     boolean field_u;
     static IntrusiveDeque field_v;
     static String field_y;
-    static ta field_z;
+    static BitmapFont field_z;
 
     final void e(int param0) {
         if (param0 != 13104) {

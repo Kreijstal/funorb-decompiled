@@ -63,9 +63,9 @@ final class lf extends kl {
           super.b(-91);
           var3 = this.field_k + (this.field_a >> 1);
           var4 = this.field_j + 10;
-          IntrusiveNode.field_c.c(this.field_t, var3, IntrusiveNode.field_c.field_H + var4, 16777215, -1);
+          IntrusiveNode.field_c.drawCentred(this.field_t, var3, IntrusiveNode.field_c.field_H + var4, 16777215, -1);
           var4 = var4 + IntrusiveNode.field_c.field_H;
-          la.field_b.a(this.field_r, 20 + this.field_k, var4, this.field_a - 40, -(jm.field_i.field_v * 2) + (-24 - var4) + (this.field_i + this.field_j), 16777215, -1, 1, 1, la.field_b.field_H);
+          la.field_b.drawParagraph(this.field_r, 20 + this.field_k, var4, this.field_a - 40, -(jm.field_i.field_v * 2) + (-24 - var4) + (this.field_i + this.field_j), 16777215, -1, 1, 1, la.field_b.field_H);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "lf.F(" + param0 + ')');
         }

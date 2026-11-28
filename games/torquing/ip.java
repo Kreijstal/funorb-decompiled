@@ -77,11 +77,11 @@ final class ip {
           var2 = (mc) (uj.field_a.beginBackward(0));
           while (var2 != null) {
             var3 = var2.field_j;
-            if (var3.e()) {
+            if (var3.isSamplePositionOutOfRange()) {
               var2.unlink(0);
             } else {
               if (var3.field_m == param1.field_m &&
-                var3.k() == param1.k() &&
+                var3.getSampleStepMagnitude() == param1.getSampleStepMagnitude() &&
                 var3.g() * 9 < param1.g() * 10 &&
                 param1.g() * 9 < var3.g() * 10) {
                 return;

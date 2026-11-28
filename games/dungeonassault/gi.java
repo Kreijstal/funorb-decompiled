@@ -83,9 +83,9 @@ final class gi extends ii implements vg {
         if (param0 != 0) {
           return;
         }
-        se var5 = lp.field_C;
+        BitmapFont var5 = lp.field_C;
         if (null != this.field_M) {
-          var5.a(sc.field_p, param1 + this.field_q, param3 + this.field_v, this.field_x, 20, 16777215, -1, 0, 0, var5.field_E + var5.field_H);
+          var5.drawParagraph(sc.field_p, param1 + this.field_q, param3 + this.field_v, this.field_x, 20, 16777215, -1, 0, 0, var5.field_E + var5.field_H);
         }
     }
 

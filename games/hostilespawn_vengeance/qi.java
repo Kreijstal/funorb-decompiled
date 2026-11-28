@@ -10,7 +10,7 @@ final class qi extends vd implements qk {
     private int field_E;
     static String field_G;
     private ph[] field_K;
-    private vm field_L;
+    private BitmapFont field_L;
     static int field_J;
 
     final static IndexedSprite[] a(int param0, byte param1, int param2, ResourceArchive param3) {
@@ -171,13 +171,13 @@ final class qi extends vd implements qk {
     final void a(int param0, int param1, byte param2, int param3) {
         if (param2 >= 42) {
           super.a(param0, param1, (byte) 80, param3);
-          this.field_L.a(this.field_I, param1 - (-this.field_v - 14), this.field_m + param0 + 10, this.field_s - 28, this.field_x, 16777215, -1, 0, 0, this.field_L.field_y);
+          this.field_L.drawParagraph(this.field_I, param1 - (-this.field_v - 14), this.field_m + param0 + 10, this.field_s - 28, this.field_x, 16777215, -1, 0, 0, this.field_L.field_y);
           return;
         }
         ResourceArchive var6 = (ResourceArchive) null;
         qi.a(79, (byte) 30, -49, (ResourceArchive) null);
         super.a(param0, param1, (byte) 80, param3);
-        this.field_L.a(this.field_I, param1 - (-this.field_v - 14), this.field_m + param0 + 10, this.field_s - 28, this.field_x, 16777215, -1, 0, 0, this.field_L.field_y);
+        this.field_L.drawParagraph(this.field_I, param1 - (-this.field_v - 14), this.field_m + param0 + 10, this.field_s - 28, this.field_x, 16777215, -1, 0, 0, this.field_L.field_y);
     }
 
     final static AccountServiceResult createAccountSuccessResult(boolean param0, boolean param1) {
@@ -233,7 +233,7 @@ final class qi extends vd implements qk {
         }
     }
 
-    qi(dg param0, vm param1, String param2) {
+    qi(dg param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (nn) null);
         int var4_int = 0;
         this.field_E = 0;
@@ -241,7 +241,7 @@ final class qi extends vd implements qk {
           this.field_F = param0;
           this.field_I = param2;
           this.field_L = param1;
-          var4_int = null == this.field_I ? 0 : this.field_L.b(this.field_I, 260, this.field_L.field_y);
+          var4_int = null == this.field_I ? 0 : this.field_L.textHeight(this.field_I, 260, this.field_L.field_y);
           this.a(288, 0, 0, 0, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

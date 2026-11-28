@@ -207,7 +207,7 @@ abstract class FrameTimer {
         int stackIn_65_2;
         int stackIn_65_3;
         int stackIn_66_4;
-        nc stackIn_85_0;
+        CoverageBitmapFont stackIn_85_0;
         String stackIn_85_1;
         int stackIn_85_2;
         int stackIn_85_3;
@@ -293,14 +293,14 @@ abstract class FrameTimer {
                   if (var1_int == 1) {
                     var2 -= 24;
                     if (var5 == 0) {
-                      ClientLookupTables.field_e.c(var8_ref_String, 572, 32 + var3, 16772608, 0);
+                      ClientLookupTables.field_e.drawString(var8_ref_String, 572, 32 + var3, 16772608, 0);
                     } else {
                       MouseWheelInput.a(7, 42 + var3, var6, 0, var8_ref_String, al.field_Z, 572);
                     }
                   }
                 } else {
                   if (var5 == 0) {
-                    ClientLookupTables.field_e.a(var8_ref_String, 68, var3 + 32, 16772608, 0);
+                    ClientLookupTables.field_e.drawRightAligned(var8_ref_String, 68, var3 + 32, 16772608, 0);
                   } else {
                     ec.a(7, var3 + 42, false, al.field_Z, 68, var6, var8_ref_String);
                   }
@@ -361,11 +361,11 @@ abstract class FrameTimer {
               if (VolumeRampingMidiPcmStream.field_cb[var1_intLifetime2]) {
                 var8Lifetime1 = 12 + var5Lifetime1;
                 var9Lifetime1 = var6Lifetime1 + 3;
-                ClientLookupTables.field_e.a('2', var8Lifetime1 - 1, var9Lifetime1, 65793);
-                ClientLookupTables.field_e.a('2', var8Lifetime1 + 1, var9Lifetime1, 65793);
-                ClientLookupTables.field_e.a('2', var8Lifetime1, -1 + var9Lifetime1, 65793);
-                ClientLookupTables.field_e.a('2', var8Lifetime1, 1 + var9Lifetime1, 65793);
-                ClientLookupTables.field_e.a('2', var8Lifetime1, var9Lifetime1, 16772608);
+                ClientLookupTables.field_e.drawCharacter('2', var8Lifetime1 - 1, var9Lifetime1, 65793);
+                ClientLookupTables.field_e.drawCharacter('2', var8Lifetime1 + 1, var9Lifetime1, 65793);
+                ClientLookupTables.field_e.drawCharacter('2', var8Lifetime1, -1 + var9Lifetime1, 65793);
+                ClientLookupTables.field_e.drawCharacter('2', var8Lifetime1, 1 + var9Lifetime1, 65793);
+                ClientLookupTables.field_e.drawCharacter('2', var8Lifetime1, var9Lifetime1, 16772608);
               }
               if (hf.field_i == var1_intLifetime2) {
                 var7Lifetime1 = 1;
@@ -382,7 +382,7 @@ abstract class FrameTimer {
               } else {
                 stackIn_86_4 = 16776960;
               }
-              ((nc) (Object) stackIn_85_0).b(stackIn_85_1, stackIn_85_2, stackIn_85_3, stackIn_86_4, -1);
+              ((CoverageBitmapFont) (Object) stackIn_85_0).drawCentred(stackIn_85_1, stackIn_85_2, stackIn_85_3, stackIn_86_4, -1);
             }
             var5Lifetime1 += 46;
           }

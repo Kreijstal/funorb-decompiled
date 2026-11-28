@@ -337,14 +337,14 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           for (var1_int = 0; var1_int < 25; var1_int++) {
             if (dn.field_t[var1_int] != null) {
-              if (dn.field_t[var1_int].k()) {
+              if (dn.field_t[var1_int].isSamplePositionOutOfRange()) {
                 dn.field_t[var1_int] = null;
               } else {
                 mg.a(1963987425, dn.field_t[var1_int]);
               }
             }
             if (gl.field_u[var1_int] != null) {
-              if (gl.field_u[var1_int].k()) {
+              if (gl.field_u[var1_int].isSamplePositionOutOfRange()) {
                 gl.field_u[var1_int] = null;
               } else {
                 mg.a(param0 ^ 1963987389, gl.field_u[var1_int]);

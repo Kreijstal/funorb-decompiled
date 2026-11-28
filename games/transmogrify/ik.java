@@ -4,7 +4,7 @@
 class ik extends a implements df {
     private boolean field_db;
     static tf field_cb;
-    private kg field_hb;
+    private BitmapFont field_hb;
     private boolean field_jb;
     private boolean field_gb;
     private qe field_fb;
@@ -155,7 +155,7 @@ class ik extends a implements df {
         }
     }
 
-    ik(da param0, kg param1, String param2, boolean param3, boolean param4) {
+    ik(da param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new ee((ik) null, param1, param2), 77, 10, 10);
         try {
           this.field_eb = param3 ? true : false;

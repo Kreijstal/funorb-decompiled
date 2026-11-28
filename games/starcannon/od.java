@@ -35,11 +35,11 @@ class od extends hh {
         }
     }
 
-    final static lk a(String param0, ResourceArchive param1, String param2, int param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(String param0, ResourceArchive param1, String param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        lk stackIn_3_0 = null;
+        BinaryBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

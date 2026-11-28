@@ -78,8 +78,8 @@ final class la {
             el.field_g = ArchiveRequest.a("menu_text", oj.field_H, 10, "benefits");
             fl.field_a = ArchiveRequest.a("button_frame", oj.field_H, 10, "benefits");
             DisplayNameSelectionPanel.field_H = ArchiveRequest.a("arrow", oj.field_H, 10, "benefits");
-            ra.field_c = (vc) ((Object) hp.a(MusicPatchPcmStream.field_m, 0, "large_font", oj.field_H, "benefits"));
-            rn.field_k = (vc) ((Object) hp.a(MusicPatchPcmStream.field_m, 0, "small_font", oj.field_H, "benefits"));
+            ra.field_c = (BitmapFont) ((Object) hp.a(MusicPatchPcmStream.field_m, 0, "large_font", oj.field_H, "benefits"));
+            rn.field_k = (BitmapFont) ((Object) hp.a(MusicPatchPcmStream.field_m, 0, "small_font", oj.field_H, "benefits"));
             var28 = SoftwareRasterizer.field_i;
             var2 = SoftwareRasterizer.field_l;
             var3 = SoftwareRasterizer.field_d;
@@ -93,18 +93,18 @@ final class la {
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_l / 2;
             var12.a();
-            ra.field_c.c(AgeValidator.a(new String[]{pb.field_b}, qo.field_i, 3), var6, 40, 16777215, -1);
-            rn.field_k.c(AgeValidator.a(new String[]{pb.field_b}, fj.field_a, 3), var6, 60, 16777215, -1);
-            ra.field_c.c(AgeValidator.a(new String[]{fp.field_b}, fq.field_z, 3), var6, 110, 16777215, -1);
-            rn.field_k.c(AgeValidator.a(new String[]{fp.field_b}, ro.field_s, 3), var6, 130, 16777215, -1);
-            ra.field_c.c(NanoFrameTimer.field_f, var6, 180, 16777215, -1);
-            rn.field_k.c(IntrusiveNode.field_c, var6, 200, 16777215, -1);
+            ra.field_c.drawCentred(AgeValidator.a(new String[]{pb.field_b}, qo.field_i, 3), var6, 40, 16777215, -1);
+            rn.field_k.drawCentred(AgeValidator.a(new String[]{pb.field_b}, fj.field_a, 3), var6, 60, 16777215, -1);
+            ra.field_c.drawCentred(AgeValidator.a(new String[]{fp.field_b}, fq.field_z, 3), var6, 110, 16777215, -1);
+            rn.field_k.drawCentred(AgeValidator.a(new String[]{fp.field_b}, ro.field_s, 3), var6, 130, 16777215, -1);
+            ra.field_c.drawCentred(NanoFrameTimer.field_f, var6, 180, 16777215, -1);
+            rn.field_k.drawCentred(IntrusiveNode.field_c, var6, 200, 16777215, -1);
             hb.a(3, var12.field_u, 0, var12.field_l, var12, -35, 1, 0);
             uh.field_q.a();
             var12.a(-uh.field_q.field_v + 18, -uh.field_q.field_t + 241);
             for (var7 = 0; var7 < hf.field_c.length; var7++) {
               NetworkArchiveRequest.field_v[var7].a();
-              rn.field_k.a(hf.field_c[var7], 3, 3, NetworkArchiveRequest.field_v[var7].field_l - 6, -6 + NetworkArchiveRequest.field_v[var7].field_u, qm.field_n, -1, 1, 1, rn.field_k.field_u + rn.field_k.field_o);
+              rn.field_k.drawParagraph(hf.field_c[var7], 3, 3, NetworkArchiveRequest.field_v[var7].field_l - 6, -6 + NetworkArchiveRequest.field_v[var7].field_u, qm.field_n, -1, 1, 1, rn.field_k.field_u + rn.field_k.field_o);
               hb.a(3, NetworkArchiveRequest.field_v[var7].field_u, 0, NetworkArchiveRequest.field_v[var7].field_l, NetworkArchiveRequest.field_v[var7], -76, 1, 0);
             }
             hf.field_c = null;
@@ -129,8 +129,8 @@ final class la {
             var3Lifetime1 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(SpriteGeometry.field_m);
             var14 = AgeValidator.a(new String[]{qf.field_t[v.field_d]}, Bzip2State.field_C, 3);
-            var5 = ra.field_c.c(var14, wn.field_c);
-            var6Lifetime1 = ra.field_c.b(var14, wn.field_c, ra.field_c.field_u + ra.field_c.field_o);
+            var5 = ra.field_c.maxLineWidth(var14, wn.field_c);
+            var6Lifetime1 = ra.field_c.textHeight(var14, wn.field_c, ra.field_c.field_u + ra.field_c.field_o);
             var7Lifetime1 = (wn.field_c - var5) / 2 + SecondaryIntrusiveDeque.field_e;
             var8 = fk.field_u + (-var6Lifetime1 + sc.field_h) / 2;
             var5 += 6;
@@ -176,7 +176,7 @@ final class la {
             MouseInputHandler.field_c.e();
             var9 = new RgbSprite(MouseInputHandler.field_c.field_n, MouseInputHandler.field_c.field_o);
             var9.a();
-            ra.field_c.a(var14, SecondaryIntrusiveDeque.field_e, fk.field_u, wn.field_c, sc.field_h, 16777215, -1, 1, 1, ra.field_c.field_u + ra.field_c.field_o);
+            ra.field_c.drawParagraph(var14, SecondaryIntrusiveDeque.field_e, fk.field_u, wn.field_c, sc.field_h, 16777215, -1, 1, 1, ra.field_c.field_u + ra.field_c.field_o);
             hb.a(3, var9.field_o, 0, var9.field_n, var9, -42, 1, 0);
             MouseInputHandler.field_c.a();
             var9.a(0, 0);
@@ -198,7 +198,7 @@ final class la {
             var17 = AgeValidator.a(new String[]{gh.field_A}, nk.field_l, 3);
             gh.field_A = null;
             var16.a();
-            rn.field_k.a(var17, 3, 3, var16.field_l - 6, var16.field_u - 6, 16777215, -1, 0, 1, rn.field_k.field_o + rn.field_k.field_u);
+            rn.field_k.drawParagraph(var17, 3, 3, var16.field_l - 6, var16.field_u - 6, 16777215, -1, 0, 1, rn.field_k.field_o + rn.field_k.field_u);
             hb.a(3, var16.field_u, 0, var16.field_l, var16, -38, 1, 0);
             ArchiveRequest.field_o.a();
             var16.a(-ArchiveRequest.field_o.field_v + 199, -ArchiveRequest.field_o.field_t + 83);
@@ -211,12 +211,12 @@ final class la {
             var2Lifetime3 = SoftwareRasterizer.field_l;
             var3Lifetime3 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(SpriteGeometry.field_m);
-            var4 = 6 + rn.field_k.c(fp.field_d, 640);
+            var4 = 6 + rn.field_k.maxLineWidth(fp.field_d, 640);
             var5Lifetime1 = var4 + (mb.field_b.field_n + 20);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (var6Lifetime2 + mb.field_b.field_n);
             ArchiveRequest.field_o.a();
-            rn.field_k.a(fp.field_d, var7Lifetime2 - ArchiveRequest.field_o.field_v, -ArchiveRequest.field_o.field_t + 155 + rn.field_k.field_o + rn.field_k.field_u, 16777215, -1);
+            rn.field_k.drawString(fp.field_d, var7Lifetime2 - ArchiveRequest.field_o.field_v, -ArchiveRequest.field_o.field_t + 155 + rn.field_k.field_o + rn.field_k.field_u, 16777215, -1);
             hb.a(3, 50, 155 - ArchiveRequest.field_o.field_t, var4, ArchiveRequest.field_o, -91, 1, -ArchiveRequest.field_o.field_v + var7Lifetime2 - 4);
             var8Lifetime1 = 155 - ArchiveRequest.field_o.field_t - (-rn.field_k.field_o + (mb.field_b.field_o - 3 - rn.field_k.field_u)) / 2;
             mb.field_b.a(var6Lifetime2 - ArchiveRequest.field_o.field_v, var8Lifetime1);

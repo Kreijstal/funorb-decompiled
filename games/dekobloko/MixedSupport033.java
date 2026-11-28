@@ -136,12 +136,12 @@ final class MixedSupport033 extends HashNode {
             if (booleanArgument2) {
               renderingSupport007Local19.performAction0852(new GameDomainSupport002(15), 124);
               integerLocal13 = 86;
-              integerLocal16 = MixedSupport001.renderingSupport009State0001.computeInteger1066(ComponentContainer.stringState0308);
-              integerLocal17 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport027.stringState0131);
+              integerLocal16 = MixedSupport001.renderingSupport009State0001.stringWidth(ComponentContainer.stringState0308);
+              integerLocal17 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport027.stringState0131);
               if (integerLocal17 > integerLocal16) {
                 integerLocal16 = integerLocal17;
               }
-              integerLocal22 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport100.stringState0421);
+              integerLocal22 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport100.stringState0421);
               if (integerLocal16 < integerLocal22) {
                 integerLocal16 = integerLocal22;
               }
@@ -150,32 +150,32 @@ final class MixedSupport033 extends HashNode {
             }
             if (booleanArgument7) {
               renderingSupport007Local19.performAction0852(new GameDomainSupport002(17), 107);
-              integerLocal20 = MixedSupport001.renderingSupport009State0001.computeInteger1066(ResourceArchive.stringState0287);
-              integerLocal21 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport062.stringState0261);
+              integerLocal20 = MixedSupport001.renderingSupport009State0001.stringWidth(ResourceArchive.stringState0287);
+              integerLocal21 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport062.stringState0261);
               if (integerLocal20 < integerLocal21) {
                 integerLocal20 = integerLocal21;
               }
-              integerLocal23 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport066.stringState0294);
+              integerLocal23 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport066.stringState0294);
               if (integerLocal23 > integerLocal20) {
                 integerLocal20 = integerLocal23;
               }
-              integerLocal24 = MixedSupport001.renderingSupport009State0001.computeInteger1066(UiComponentPart033.stringState0623);
+              integerLocal24 = MixedSupport001.renderingSupport009State0001.stringWidth(UiComponentPart033.stringState0623);
               if (integerLocal24 > integerLocal20) {
                 integerLocal20 = integerLocal24;
               }
-              integerLocal25 = MixedSupport001.renderingSupport009State0001.computeInteger1066(ProxySocketFactory.stringState0493);
+              integerLocal25 = MixedSupport001.renderingSupport009State0001.stringWidth(ProxySocketFactory.stringState0493);
               if (integerLocal20 < integerLocal25) {
                 integerLocal20 = integerLocal25;
               }
-              integerLocal26 = MixedSupport001.renderingSupport009State0001.computeInteger1066(PcmPlayerService.stringState0467);
+              integerLocal26 = MixedSupport001.renderingSupport009State0001.stringWidth(PcmPlayerService.stringState0467);
               if (integerLocal26 > integerLocal20) {
                 integerLocal20 = integerLocal26;
               }
-              integerLocal27 = MixedSupport001.renderingSupport009State0001.computeInteger1066(SceneWidgetPart005.stringState0254);
+              integerLocal27 = MixedSupport001.renderingSupport009State0001.stringWidth(SceneWidgetPart005.stringState0254);
               if (integerLocal20 < integerLocal27) {
                 integerLocal20 = integerLocal27;
               }
-              integerLocal28 = MixedSupport001.renderingSupport009State0001.computeInteger1066(MixedSupport024.stringState0117);
+              integerLocal28 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport024.stringState0117);
               if (integerLocal20 < integerLocal28) {
                 integerLocal20 = integerLocal28;
               }

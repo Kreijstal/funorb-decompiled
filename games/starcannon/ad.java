@@ -5,7 +5,7 @@ final class ad extends kf {
     static int[] field_D;
     private String field_A;
     static int field_y;
-    private qe field_F;
+    private BitmapFont field_F;
     private boolean field_E;
     private int field_B;
     static Sprite[] field_z;
@@ -13,7 +13,7 @@ final class ad extends kf {
     private int field_w;
     private int field_x;
 
-    ad(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, qe param8, int param9, String param10) {
+    ad(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (de) null, (qg) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -39,7 +39,7 @@ final class ad extends kf {
           this.field_F = param8;
           this.field_t = param4;
           var12_int = this.field_w - this.field_B;
-          var13 = this.field_F.a(param10, var12_int, this.field_F.field_p) + this.field_B * 2;
+          var13 = this.field_F.textHeight(param10, var12_int, this.field_F.field_p) + this.field_B * 2;
           if (var13 <= param3) {
             var13 = param3;
           } else {
@@ -131,7 +131,7 @@ final class ad extends kf {
           return;
         }
         int var7 = this.field_E ? -this.field_w + this.field_i - this.field_B * 2 : 0;
-        this.field_F.a(this.field_A, var7 + (var5 + this.field_B), var6 + this.field_B, -this.field_B + this.field_w, -(2 * this.field_B) + this.field_f, this.field_x, -1, this.field_E ? 0 : 2, 1, this.field_F.field_p);
+        this.field_F.drawParagraph(this.field_A, var7 + (var5 + this.field_B), var6 + this.field_B, -this.field_B + this.field_w, -(2 * this.field_B) + this.field_f, this.field_x, -1, this.field_E ? 0 : 2, 1, this.field_F.field_p);
     }
 
     final static void a(int param0, int[] param1, boolean param2) {
@@ -141,7 +141,7 @@ final class ad extends kf {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        lk var4 = null;
+        BinaryBitmapFont var4 = null;
         int[] var5_ref_int__ = null;
         int var5 = 0;
         int var6 = 0;
@@ -167,7 +167,7 @@ final class ad extends kf {
                 }
                 if (var7 != 12 &&
                   var7 != 13) {
-                  var9 = var4.a(var8);
+                  var9 = var4.stringWidth(var8);
                   if (!(var9 <= var3_int)) {
                     var3_int = var9;
                   }
@@ -180,29 +180,29 @@ final class ad extends kf {
                   }
                 }
               } else {
-                var9 = var4.a(ec.field_d);
+                var9 = var4.stringWidth(ec.field_d);
                 if (var3_int < var9) {
                   var3_int = var9;
                 }
-                var9 = var4.a(fd.field_d);
+                var9 = var4.stringWidth(fd.field_d);
                 if (var3_int < var9) {
                   var3_int = var9;
                 }
-                var9 = var4.a(gh.field_A);
+                var9 = var4.stringWidth(gh.field_A);
                 if (var3_int < var9) {
                   var3_int = var9;
                 }
               }
             } else {
-              var9 = var4.a(ConfirmedEmailAvailabilityValidator.field_k);
+              var9 = var4.stringWidth(ConfirmedEmailAvailabilityValidator.field_k);
               if (var9 > var3_int) {
                 var3_int = var9;
               }
-              var9 = var4.a(fl.field_g);
+              var9 = var4.stringWidth(fl.field_g);
               if (var3_int < var9) {
                 var3_int = var9;
               }
-              var9 = var4.a(DisplayNameSelectionPanel.field_D);
+              var9 = var4.stringWidth(DisplayNameSelectionPanel.field_D);
               if (var9 > var3_int) {
                 var3_int = var9;
               }

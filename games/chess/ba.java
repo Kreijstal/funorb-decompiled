@@ -159,11 +159,11 @@ final class ba extends ma implements nn, mj {
           var33 = (CharSequence) ((Object) ij.field_c);
           var21 = MatchingFieldValidator.a(vf.field_d, new String[]{rl.a(var33, (byte) -70)}, (byte) -80);
           var9 = MatchingFieldValidator.a(sa.field_d, new String[]{var17}, (byte) -74);
-          var10 = sc.field_a.b(var21);
-          var11 = sc.field_a.b(var9);
+          var10 = sc.field_a.stringWidth(var21);
+          var11 = sc.field_a.stringWidth(var9);
           if (var10 <= var11) {
             var6Lifetime1 = var6Lifetime1 - var11;
-            if (var6Lifetime1 >= sc.field_a.b(sg.field_c.toString())) {
+            if (var6Lifetime1 >= sc.field_a.stringWidth(sg.field_c.toString())) {
               return true;
             }
             rb.a(' ', sg.field_c, -1 + sg.field_c.length(), (byte) 116);
@@ -177,8 +177,8 @@ final class ba extends ma implements nn, mj {
               if (!dn.field_b) {
                 if (null == pd.field_Rb) {
                   var23 = var8 + var19 + ": ";
-                  var6Lifetime1 = var6Lifetime1 - sc.field_a.b(var23);
-                  if (var6Lifetime1 < sc.field_a.b(sg.field_c.toString())) {
+                  var6Lifetime1 = var6Lifetime1 - sc.field_a.stringWidth(var23);
+                  if (var6Lifetime1 < sc.field_a.stringWidth(sg.field_c.toString())) {
                     rb.a(' ', sg.field_c, -1 + sg.field_c.length(), (byte) 116);
                   }
                   return true;
@@ -189,8 +189,8 @@ final class ba extends ma implements nn, mj {
                   if (null == kb.field_P) {
                     var24 = "[" + MatchingFieldValidator.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
                     var25 = var24 + var19 + ": ";
-                    var6Lifetime1 = var6Lifetime1 - sc.field_a.b(var25);
-                    if (var6Lifetime1 < sc.field_a.b(sg.field_c.toString())) {
+                    var6Lifetime1 = var6Lifetime1 - sc.field_a.stringWidth(var25);
+                    if (var6Lifetime1 < sc.field_a.stringWidth(sg.field_c.toString())) {
                       rb.a(' ', sg.field_c, -1 + sg.field_c.length(), (byte) 116);
                     }
                     return true;
@@ -198,8 +198,8 @@ final class ba extends ma implements nn, mj {
                   var8 = "[" + kb.field_P + "] ";
                 }
                 var26 = var8 + var19 + ": ";
-                var6Lifetime1 = var6Lifetime1 - sc.field_a.b(var26);
-                if (var6Lifetime1 >= sc.field_a.b(sg.field_c.toString())) {
+                var6Lifetime1 = var6Lifetime1 - sc.field_a.stringWidth(var26);
+                if (var6Lifetime1 >= sc.field_a.stringWidth(sg.field_c.toString())) {
                   return true;
                 }
                 rb.a(' ', sg.field_c, -1 + sg.field_c.length(), (byte) 116);
@@ -211,8 +211,8 @@ final class ba extends ma implements nn, mj {
               if (!qj.field_d) {
                 var29 = "[" + MatchingFieldValidator.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
                 var30 = var29 + var19 + ": ";
-                var6Lifetime1 = var6Lifetime1 - sc.field_a.b(var30);
-                if (var6Lifetime1 >= sc.field_a.b(sg.field_c.toString())) {
+                var6Lifetime1 = var6Lifetime1 - sc.field_a.stringWidth(var30);
+                if (var6Lifetime1 >= sc.field_a.stringWidth(sg.field_c.toString())) {
                   return true;
                 }
                 rb.a(' ', sg.field_c, -1 + sg.field_c.length(), (byte) 116);
@@ -221,8 +221,8 @@ final class ba extends ma implements nn, mj {
               if (null == kb.field_P) {
                 var27 = "[" + MatchingFieldValidator.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
                 var28 = var27 + var19 + ": ";
-                var6Lifetime1 = var6Lifetime1 - sc.field_a.b(var28);
-                if (var6Lifetime1 >= sc.field_a.b(sg.field_c.toString())) {
+                var6Lifetime1 = var6Lifetime1 - sc.field_a.stringWidth(var28);
+                if (var6Lifetime1 >= sc.field_a.stringWidth(sg.field_c.toString())) {
                   return true;
                 }
                 rb.a(' ', sg.field_c, -1 + sg.field_c.length(), (byte) 116);
@@ -231,17 +231,17 @@ final class ba extends ma implements nn, mj {
               var8 = "[" + kb.field_P + "] ";
             }
             var31 = var8 + var19 + ": ";
-            var6Lifetime1 = var6Lifetime1 - sc.field_a.b(var31);
-            if (var6Lifetime1 >= sc.field_a.b(sg.field_c.toString())) {
+            var6Lifetime1 = var6Lifetime1 - sc.field_a.stringWidth(var31);
+            if (var6Lifetime1 >= sc.field_a.stringWidth(sg.field_c.toString())) {
               return true;
             }
             rb.a(' ', sg.field_c, -1 + sg.field_c.length(), (byte) 116);
             return true;
           }
           var22 = var8 + var19 + ": ";
-          var6Lifetime1 = var6Lifetime1 - sc.field_a.b(var22);
+          var6Lifetime1 = var6Lifetime1 - sc.field_a.stringWidth(var22);
         }
-        if (var6Lifetime1 >= sc.field_a.b(sg.field_c.toString())) {
+        if (var6Lifetime1 >= sc.field_a.stringWidth(sg.field_c.toString())) {
           return true;
         }
         rb.a(' ', sg.field_c, -1 + sg.field_c.length(), (byte) 116);

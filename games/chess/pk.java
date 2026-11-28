@@ -5,7 +5,7 @@ abstract class pk {
     static String field_h;
     static boolean field_g;
     static boolean field_j;
-    static c field_a;
+    static BinaryBitmapFont field_a;
     boolean field_e;
     boolean field_f;
     boolean field_d;

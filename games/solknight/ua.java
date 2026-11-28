@@ -110,7 +110,7 @@ final class ua extends WidgetContainer implements ka {
         }
         BitmapFont var5 = field_G;
         if (this.field_D != null) {
-          var5.a(nb.field_d, param2 + this.field_m, this.field_j + param0, this.field_t, 20, 16777215, -1, 0, 0, var5.field_s + var5.field_F);
+          var5.drawParagraph(nb.field_d, param2 + this.field_m, this.field_j + param0, this.field_t, 20, 16777215, -1, 0, 0, var5.field_s + var5.field_F);
         }
     }
 
@@ -260,10 +260,10 @@ final class ua extends WidgetContainer implements ka {
         }
     }
 
-    final static ol a(boolean param0, byte[] param1) {
-        ol var2 = null;
+    final static CoverageBitmapFont a(boolean param0, byte[] param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        ol stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -275,7 +275,7 @@ final class ua extends WidgetContainer implements ka {
           if (!param0) {
             field_H = -117;
           }
-          var2 = new ol(param1, ph.field_h, qf.field_d, sa.field_l, uj.field_b, ig.field_H, jc.field_c);
+          var2 = new CoverageBitmapFont(param1, ph.field_h, qf.field_d, sa.field_l, uj.field_b, ig.field_H, jc.field_c);
           og.a((byte) -97);
           stackIn_6_0 = var2;
           return stackIn_6_0;

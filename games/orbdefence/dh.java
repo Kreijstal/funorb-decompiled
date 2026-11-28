@@ -4,7 +4,7 @@
 import java.util.*;
 
 class dh extends hl implements ai {
-    private kc field_db;
+    private BitmapFont field_db;
     private dg field_ab;
     static tl field_bb;
     static RgbSprite field_X;
@@ -218,7 +218,7 @@ class dh extends hl implements ai {
         }
     }
 
-    dh(sk param0, kc param1, String param2, boolean param3, boolean param4) {
+    dh(sk param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new ec((dh) null, param1, param2), 77, 10, 10);
         try {
           this.field_eb = false;

@@ -738,7 +738,7 @@ final class rd extends id {
                 SoftwareRasterizer.drawCircleOutline(-1 + var25, var26, var27, 16711680);
                 SoftwareRasterizer.drawCircleOutline(var25, var26, var27, 16711680);
               }
-              pn.field_a.b(di.field_f, var25, -8 + var26 - var27, 16711680, -1);
+              pn.field_a.drawCentred(di.field_f, var25, -8 + var26 - var27, 16711680, -1);
             }
           }
           return;

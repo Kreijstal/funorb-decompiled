@@ -158,11 +158,11 @@ final class qj extends IntrusiveNode {
         }
     }
 
-    final static fn a(ResourceArchive param0, ResourceArchive param1, int param2, int param3, int param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, ResourceArchive param1, int param2, int param3, int param4) {
         RuntimeException var5 = null;
         java.applet.Applet var6 = null;
         Object stackIn_4_0 = null;
-        fn stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -179,7 +179,7 @@ final class qj extends IntrusiveNode {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (fn) (stackIn_4_0);
+          return (BinaryBitmapFont) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

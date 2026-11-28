@@ -488,7 +488,7 @@ final class qi extends jd {
             var11 = var17.readUnsignedByte((byte) -118);
             if ((1 & var11) == 0) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.readByte(Slime.a(param1, -12011));
+                var8[var12] = var17.readByte(Slime.xorIntegers(param1, -12011));
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {

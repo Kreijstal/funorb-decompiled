@@ -40,7 +40,7 @@ final class sl extends ro {
           this.field_p = param1;
           this.field_o = true;
           var8 = this.a(param2, (byte) 45, param1, param0);
-          var7 = param1.c(param2);
+          var7 = param1.stringWidth(param2);
           var8.field_c[0] = param4 - (var7 >> 1);
           var8.field_c[param2.length()] = param4 + (var7 >> 1);
           tn.$cfr$intArgs$a$95d5eaff65e7(var8, param2, param1, 28, 0);
@@ -79,7 +79,7 @@ final class sl extends ro {
           var7 = this.a(param2, (byte) 45, param1, param3);
           var8 = var7;
           var7.field_c[0] = param4;
-          var8.field_c[param2.length()] = param1.c(param2) + param4;
+          var8.field_c[param2.length()] = param1.stringWidth(param2) + param4;
           tn.$cfr$intArgs$a$95d5eaff65e7(var8, param2, param1, 17, 0);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "sl.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -154,9 +154,9 @@ final class sl extends ro {
           this.field_n = param4;
           this.field_j = param0;
           this.field_t = param7;
-          var16 = new String[param2 + param3.b(param1, param6)];
+          var16 = new String[param2 + param3.lineCount(param1, param6)];
           var17 = var16;
-          var10 = Math.max(1, param3.a(param1, new int[]{param6}, var17));
+          var10 = Math.max(1, param3.wrapText(param1, new int[]{param6}, var17));
           if (3 == this.field_j &&
             1 == var10) {
             this.field_j = 1;
@@ -198,13 +198,13 @@ final class sl extends ro {
             var14 = new lq(stackIn_34_2, stackIn_34_3, stackIn_35_4);
             var14.field_c[0] = 0;
             if (var13 != null) {
-              var14.field_c[var13.length()] = param3.c(var13);
+              var14.field_c[var13.length()] = param3.stringWidth(var13);
               stackIn_38_0 = var14;
               stackIn_38_1 = var13;
               stackIn_38_2 = (BitmapFont) (param3);
               stackIn_38_3 = 83;
               if (param4 == 3) {
-                stackIn_39_4 = this.a(var13, false, param3.c(var13), param6);
+                stackIn_39_4 = this.a(var13, false, param3.stringWidth(var13), param6);
               } else {
                 stackIn_39_4 = 0;
               }
@@ -255,7 +255,7 @@ final class sl extends ro {
           this.field_p = param2;
           var8 = this.a(param4, (byte) 45, param2, param3);
           var9 = var8;
-          var9.field_c[0] = -param2.c(param4) + param0;
+          var9.field_c[0] = -param2.stringWidth(param4) + param0;
           var9.field_c[param4.length()] = param0;
           tn.$cfr$intArgs$a$95d5eaff65e7(var9, param4, param2, 119, 0);
         } catch (RuntimeException runtimeException) {

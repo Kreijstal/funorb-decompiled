@@ -4,7 +4,7 @@
 final class nd implements jm {
     private int field_f;
     private int field_e;
-    private lh field_m;
+    private BitmapFont field_m;
     private int field_a;
     private int field_d;
     static IntrusiveDeque field_h;
@@ -66,7 +66,7 @@ final class nd implements jm {
             return;
           }
           var10 = this.field_o + (this.field_c + this.field_f);
-          this.field_m.a(param4.field_v, var10 + (param4.field_u + param1), this.field_e + param4.field_r + param2, param4.field_y + (-var10 - this.field_o), -(this.field_o << 1) + param4.field_C, this.field_g, this.field_i, this.field_j, this.field_n, 0);
+          this.field_m.drawParagraph(param4.field_v, var10 + (param4.field_u + param1), this.field_e + param4.field_r + param2, param4.field_y + (-var10 - this.field_o), -(this.field_o << 1) + param4.field_C, this.field_g, this.field_i, this.field_j, this.field_n, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,7 +82,7 @@ final class nd implements jm {
         }
     }
 
-    nd(lh param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    nd(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_j = 1;
         this.field_n = 1;
         try {

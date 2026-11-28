@@ -67,7 +67,7 @@ final class rh {
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (null == nl.field_f) {
             if (null != rn.field_k) {
-              rn.field_k.a(vl.field_b, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              rn.field_k.drawParagraph(vl.field_b, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -77,7 +77,7 @@ final class rh {
             var6.a(245, 199);
           } else {
             if (null != rn.field_k) {
-              rn.field_k.a(vl.field_b, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              rn.field_k.drawParagraph(vl.field_b, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
           if (param0) {
@@ -114,7 +114,7 @@ final class rh {
             if (var2 == null) {
               return;
             }
-            rn.field_k.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            rn.field_k.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             return;
           }
           return;

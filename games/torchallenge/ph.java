@@ -62,7 +62,7 @@ final class ph implements j {
             SoftwareRasterizer.fillCircle(var8 + var7 * var13.a(-20, var10) / var13.a(-1), var9, this.field_k, this.field_c);
           }
           if (this.field_l != null) {
-            this.field_l.a(var13.field_v, var7 / 2 + var8, this.field_l.field_G + (var9 + var13.field_Y), this.field_g, this.field_i);
+            this.field_l.drawCentred(var13.field_v, var7 / 2 + var8, this.field_l.field_G + (var9 + var13.field_Y), this.field_g, this.field_i);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

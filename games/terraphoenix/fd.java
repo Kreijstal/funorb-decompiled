@@ -371,7 +371,7 @@ class fd implements WidgetActionListener, w {
           var9_int = this.a(28889, param5);
           var10 = this.b(127, param5);
           if (this.field_c) {
-            this.field_j.a(this.b(param5, 32032), this.a(param2, param5, param3, (byte) 127), this.a(param5, (byte) -33, param1, param4), var9_int, var10, param0, param7, this.field_h, this.field_a, this.field_m);
+            this.field_j.drawParagraph(this.b(param5, 32032), this.a(param2, param5, param3, (byte) 127), this.a(param5, (byte) -33, param1, param4), var9_int, var10, param0, param7, this.field_h, this.field_a, this.field_m);
           } else {
             var12 = this.field_a;
             if (var12 == 0) {
@@ -390,16 +390,16 @@ class fd implements WidgetActionListener, w {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_j.c(this.b(param5, param6 + 31962), this.a(param2, param5, param3, (byte) 124) + (var9_int >> 1), var11 + this.a(param5, (byte) -33, param1, param4), param0, param7);
+                this.field_j.drawCentred(this.b(param5, param6 + 31962), this.a(param2, param5, param3, (byte) 124) + (var9_int >> 1), var11 + this.a(param5, (byte) -33, param1, param4), param0, param7);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_j.a(this.b(param5, 32032), var9_int + this.a(param2, param5, param3, (byte) 125), this.a(param5, (byte) -33, param1, param4) + var11, param0, param7);
+                  this.field_j.drawRightAligned(this.b(param5, 32032), var9_int + this.a(param2, param5, param3, (byte) 125), this.a(param5, (byte) -33, param1, param4) + var11, param0, param7);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_j.b(this.b(param5, 32032), this.a(param2, param5, param3, (byte) 126), this.a(param5, (byte) -33, param1, param4) + var11, param0, param7);
+              this.field_j.drawString(this.b(param5, 32032), this.a(param2, param5, param3, (byte) 126), this.a(param5, (byte) -33, param1, param4) + var11, param0, param7);
             }
           }
           MessageKeys.a(false);

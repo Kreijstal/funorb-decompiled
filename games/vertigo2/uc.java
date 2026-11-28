@@ -38,10 +38,10 @@ final class uc {
             field_a = (UiPanel) null;
           }
           if (!param1) {
-            stackIn_6_0 = mf.field_c.c(param0);
+            stackIn_6_0 = mf.field_c.stringWidth(param0);
             return stackIn_6_0;
           }
-          stackIn_4_0 = gb.field_b.c(param0);
+          stackIn_4_0 = gb.field_b.stringWidth(param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

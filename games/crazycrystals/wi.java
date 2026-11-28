@@ -93,9 +93,9 @@ abstract class wi {
         }
     }
 
-    final static ef a(int param0, wj[] param1, byte[] param2) {
+    final static BinaryBitmapFont a(int param0, wj[] param1, byte[] param2) {
         int var8 = 0;
-        ef stackIn_8_0 = null;
+        BinaryBitmapFont stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -148,7 +148,7 @@ abstract class wi {
             var6[var8] = param1[var8].field_e;
             var7[var8] = param1[var8].field_j;
           }
-          stackIn_8_0 = new ef(param2, var16, var17, var18, var19, var20);
+          stackIn_8_0 = new BinaryBitmapFont(param2, var16, var17, var18, var19, var20);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

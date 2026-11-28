@@ -123,7 +123,7 @@ abstract class mh extends wk {
         }
     }
 
-    final static void a(int param0, int param1, int param2, oh param3, int param4, int param5, int param6, tj param7, int param8, int param9, int param10, byte param11, int param12, int param13, int param14, tj param15, int param16, int param17, int param18, oh param19, oh param20) {
+    final static void a(int param0, int param1, int param2, oh param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, byte param11, int param12, int param13, int param14, BitmapFont param15, int param16, int param17, int param18, oh param19, oh param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

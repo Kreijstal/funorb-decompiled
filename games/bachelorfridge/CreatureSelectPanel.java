@@ -26,8 +26,8 @@ final class CreatureSelectPanel {
         var4 = BachelorFridge.field_y;
         ByteStorage.field_e.draw(0, 0);
         ShieldAnimation.field_v.draw(77, 44);
-        jha.field_g.a(InsanoSauceSpecial.field_p, 320, 68, 16776960, -1);
-        WidgetWrapper.field_z.a(InsanoSauceSpecial.field_p, 320, 68, 65793, -1);
+        jha.field_g.drawCentred(InsanoSauceSpecial.field_p, 320, 68, 16776960, -1);
+        WidgetWrapper.field_z.drawCentred(InsanoSauceSpecial.field_p, 320, 68, 65793, -1);
         var2 = 0;
         while (var2 < 8) {
           var5 = this.field_b[var2];
@@ -69,7 +69,7 @@ final class CreatureSelectPanel {
         }
         var7 = stackIn_17_0;
         var3 = var7;
-        WidgetWrapper.field_z.a(var7, 542, 452, 65793, -1);
+        WidgetWrapper.field_z.drawCentred(var7, 542, 452, 65793, -1);
         stackIn_22_0 = jha.field_g;
         stackIn_22_1 = var7;
         stackIn_22_2 = 542;
@@ -84,7 +84,7 @@ final class CreatureSelectPanel {
         } else {
           stackIn_23_4 = 11250603;
         }
-        ((BinaryBitmapFont) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_23_4, -1);
+        ((BinaryBitmapFont) (Object) stackIn_22_0).drawCentred(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_23_4, -1);
         jha.field_g.drawParagraph(st.field_e, 300, 360, 300, 100, 16776960, -1, 1, 0, 14);
         WidgetWrapper.field_z.drawParagraph(st.field_e, 300, 340, 300, 100, 65793, -1, 1, 0, 14);
     }

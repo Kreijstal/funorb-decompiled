@@ -55,7 +55,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         this.field_N.recordInputChange(true);
     }
 
-    final void a(FieldValidator param0, int param1) {
+    final void setFieldValidator(FieldValidator param0, int param1) {
         try {
           this.field_N = param0;
           if (param1 <= 74) {

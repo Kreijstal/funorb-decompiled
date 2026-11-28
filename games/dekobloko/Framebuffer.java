@@ -10,7 +10,7 @@ abstract class Framebuffer {
     static boolean[][] booleanArrayArrayState0002;
     static String stringState0154;
     static String stringState0155;
-    static RenderingSupport010 renderingSupport010State0001;
+    static PalettedBitmapFont renderingSupport010State0001;
     static int integerState0192;
 
     final void performAction0420(byte byteArgument1) {

@@ -423,7 +423,7 @@ final class hm extends am {
         }
     }
 
-    final static void a(boolean param0, int param1, Sprite[] param2, int param3, uc param4, int param5, Sprite[] param6, int param7, int param8, int param9, int param10, int param11) {
+    final static void a(boolean param0, int param1, Sprite[] param2, int param3, BitmapFont param4, int param5, Sprite[] param6, int param7, int param8, int param9, int param10, int param11) {
         try {
           if (param7 != 3) {
             field_s = (int[]) null;

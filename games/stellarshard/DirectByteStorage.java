@@ -45,11 +45,11 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    final static bm a(int param0, byte[] param1) {
-        bm var2 = null;
+    final static CoverageBitmapFont a(int param0, byte[] param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        bm stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -57,9 +57,9 @@ final class DirectByteStorage extends ByteStorage {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (bm) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new bm(param1, ak.field_c, RasterBuffer.field_c, vc.field_b, ih.field_d, gj.field_w, ih.field_b);
+          var2 = new CoverageBitmapFont(param1, ak.field_c, RasterBuffer.field_c, vc.field_b, ih.field_d, gj.field_w, ih.field_b);
           if (param0 != 2376) {
             field_g = (Sprite[]) null;
           }

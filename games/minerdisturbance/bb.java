@@ -5,7 +5,7 @@ final class bb {
     static String field_b;
     static IntrusiveDeque field_a;
 
-    final static void a(String param0, int param1, we param2, int param3, int param4) {
+    final static void a(String param0, int param1, BitmapFont param2, int param3, int param4) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -18,7 +18,7 @@ final class bb {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = param2.a(param0);
+          var5_int = param2.stringWidth(param0);
           var6 = param2.field_N + param2.field_E;
           var7 = im.field_c;
           if (var5_int + (var7 - param4) > SoftwareRasterizer.field_g) {
@@ -30,7 +30,7 @@ final class bb {
           }
           SoftwareRasterizer.drawRectangleOutline(var7, var8, 6 + var5_int, var6 + 6, param1);
           SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, param3);
-          param2.a(param0, 3 + var7, var8 + 3 + param2.field_N, param1, -1);
+          param2.drawString(param0, 3 + var7, var8 + 3 + param2.field_N, param1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

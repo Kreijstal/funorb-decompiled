@@ -13,7 +13,7 @@ final class pn {
     static double field_h;
     static String field_b;
     private boolean field_i;
-    static ce field_a;
+    static BinaryBitmapFont field_a;
     private int field_e;
 
     final pn d(int param0, int param1) {
@@ -156,7 +156,7 @@ final class pn {
     }
 
     final void a(int param0, int param1, fj param2, byte param3, qh param4) {
-        ok stackIn_21_0 = null;
+        BitmapFont stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_22_2 = 0;
         int stackIn_24_2;
@@ -230,7 +230,7 @@ final class pn {
             } else {
               stackIn_28_8 = 256;
             }
-            ((ok) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param4.field_p, param4.field_k, param4.field_s);
+            ((BitmapFont) (Object) stackIn_21_0).drawParagraphAlpha(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param4.field_p, param4.field_k, param4.field_s);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -61,7 +61,7 @@ class ci extends ei {
     boolean field_F;
     int field_y;
     int field_A;
-    lh field_xb;
+    BitmapFont field_xb;
     static String field_x;
     private int field_H;
 
@@ -398,7 +398,7 @@ class ci extends ei {
             null != this.field_S) {
             var23Lifetime2 = var26 + this.field_S;
           }
-          if (this.field_xb.b(var23Lifetime2) <= -(this.field_z * 2) + this.field_M &&
+          if (this.field_xb.stringWidth(var23Lifetime2) <= -(this.field_z * 2) + this.field_M &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (this.field_cb == 1) {
               var22 = var22 + (-this.field_xb.field_t + (this.field_pb - this.field_xb.field_C)) / 2;
@@ -408,22 +408,22 @@ class ci extends ei {
               }
             }
             if (0 == this.field_fb) {
-              this.field_xb.a(var23Lifetime2, var21 + this.field_z + this.field_U, this.field_xb.field_C + (var22 + this.field_wb), var18, -1, this.field_eb);
+              this.field_xb.drawStringAlpha(var23Lifetime2, var21 + this.field_z + this.field_U, this.field_xb.field_C + (var22 + this.field_wb), var18, -1, this.field_eb);
             } else {
               if (this.field_fb == 1) {
-                this.field_xb.b(var23Lifetime2, var21 + (this.field_z + this.field_U) + (this.field_M - 2 * this.field_z) / 2, this.field_wb + (var22 + this.field_xb.field_C), var18, -1, this.field_eb);
+                this.field_xb.drawCentredAlpha(var23Lifetime2, var21 + (this.field_z + this.field_U) + (this.field_M - 2 * this.field_z) / 2, this.field_wb + (var22 + this.field_xb.field_C), var18, -1, this.field_eb);
               } else {
                 if (this.field_fb != 2) {
-                  this.field_xb.a(var23Lifetime2, var21 + (this.field_U + this.field_z), var22 + this.field_wb, -(this.field_z * 2) + this.field_M, this.field_pb, var18, -1, this.field_eb, this.field_fb, this.field_cb, this.field_K);
+                  this.field_xb.drawParagraphAlpha(var23Lifetime2, var21 + (this.field_U + this.field_z), var22 + this.field_wb, -(this.field_z * 2) + this.field_M, this.field_pb, var18, -1, this.field_eb, this.field_fb, this.field_cb, this.field_K);
                 } else {
-                  this.field_xb.c(var23Lifetime2, this.field_z + this.field_U + (var21 + this.field_M - this.field_z * 2), this.field_wb + var22 + this.field_xb.field_C, var18, -1, this.field_eb);
+                  this.field_xb.drawRightAlignedAlpha(var23Lifetime2, this.field_z + this.field_U + (var21 + this.field_M - this.field_z * 2), this.field_wb + var22 + this.field_xb.field_C, var18, -1, this.field_eb);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_xb.a(var23Lifetime2, var21 + (this.field_U + this.field_z), var22 + this.field_wb, -(2 * this.field_z) + this.field_M, this.field_pb, var18, -1, this.field_eb, this.field_fb, this.field_cb, this.field_K);
+            this.field_xb.drawParagraphAlpha(var23Lifetime2, var21 + (this.field_U + this.field_z), var22 + this.field_wb, -(2 * this.field_z) + this.field_M, this.field_pb, var18, -1, this.field_eb, this.field_fb, this.field_cb, this.field_K);
           }
         }
         if (this.field_I != null) {
@@ -445,7 +445,7 @@ class ci extends ei {
         int var4_intLifetime1;
         if (this.field_db != null &&
           null != this.field_xb) {
-          var4_int = this.field_xb.c(this.field_db, param0);
+          var4_int = this.field_xb.maxLineWidth(this.field_db, param0);
           if (var4_int > var3) {
             var3 = var4_int;
           }

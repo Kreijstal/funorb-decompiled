@@ -64,14 +64,14 @@ final class uu extends UiComponent {
         WidgetWrapper.field_z.drawText(this.field_Bb, 102, 26, 65793, -1);
         g.field_g.drawParagraph(this.field_xb, 102, 36, 240, 70, 8553090, -1, 0, 0, 14);
         String var3 = lga.a(param0, new String[]{ti.a((byte) 124, 2, (long)this.field_wb, kt.field_k, param0)}, vla.field_u);
-        jha.field_g.a(var3, 43, 86, 16699649, -1);
-        WidgetWrapper.field_z.a(var3, 43, 86, 65793, -1);
+        jha.field_g.drawCentred(var3, 43, 86, 16699649, -1);
+        WidgetWrapper.field_z.drawCentred(var3, 43, 86, 65793, -1);
         SoftwareRasterizer.fillRoundedRectangle(294, 70, 80, 20, 9, 8698113);
-        jha.field_g.a(qd.field_l, 334, 84, 16777215, -1);
-        WidgetWrapper.field_z.a(qd.field_l, 334, 84, 16204, -1);
+        jha.field_g.drawCentred(qd.field_l, 334, 84, 16777215, -1);
+        WidgetWrapper.field_z.drawCentred(qd.field_l, 334, 84, 16204, -1);
         if (ProxySocketConnector.field_f <= 0 &&
           !fw.field_h[this.field_Cb].field_e) {
-          jha.field_g.b(dj.field_b, 288, 92, 16736256, -1);
+          jha.field_g.drawRightAligned(dj.field_b, 288, 92, 16736256, -1);
         }
         SoftwareRasterizer.drawRectangleBorder(8, 10, 75, 83, 2, 16694784);
         hga.field_U.a((byte) -27);

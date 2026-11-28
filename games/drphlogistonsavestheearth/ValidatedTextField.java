@@ -24,7 +24,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         return this.field_X;
     }
 
-    final void a(FieldValidator param0, byte param1) {
+    final void setFieldValidator(FieldValidator param0, byte param1) {
         if (param1 != -57) {
           return;
         }
@@ -98,12 +98,12 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final static bm a(ResourceArchive param0, String param1, String param2, ResourceArchive param3, int param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, String param1, String param2, ResourceArchive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        bm stackIn_1_0 = null;
+        CoverageBitmapFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -255,7 +255,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           this.field_I = -param1 - this.field_o + ck.field_c;
           if (param3 > -127) {
             FieldValidator var6 = (FieldValidator) null;
-            this.a((FieldValidator) null, (byte) -8);
+            this.setFieldValidator((FieldValidator) null, (byte) -8);
           }
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "qg.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

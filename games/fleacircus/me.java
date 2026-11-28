@@ -5,7 +5,7 @@ final class me implements ComponentLayout {
     static String field_e;
     private int field_d;
     static String field_b;
-    private fa field_j;
+    private BitmapFont field_j;
     static String field_c;
     static PcmSample field_k;
     static String field_a;
@@ -39,11 +39,11 @@ final class me implements ComponentLayout {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
-          this.field_j.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_i + "</u>", param1 + param3.field_y, param4 + param3.field_z, param3.field_u, param3.field_j, var6_int, -1, this.field_h, this.field_d, this.field_j.field_H + this.field_j.field_K);
+          this.field_j.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_i + "</u>", param1 + param3.field_y, param4 + param3.field_z, param3.field_u, param3.field_j, var6_int, -1, this.field_h, this.field_d, this.field_j.field_H + this.field_j.field_K);
           if (!param3.e(1)) {
             return;
           }
-          var7 = this.field_j.b(param3.field_i);
+          var7 = this.field_j.stringWidth(param3.field_i);
           var8 = this.field_j.field_H + this.field_j.field_K;
           var9 = param3.field_y + param1;
           var10 = param4 + param3.field_z;
@@ -180,7 +180,7 @@ final class me implements ComponentLayout {
         }
     }
 
-    me(fa param0, int param1, int param2) {
+    me(BitmapFont param0, int param1, int param2) {
         try {
           this.field_h = param1;
           this.field_d = param2;

@@ -14,7 +14,7 @@ final class sg {
     de field_d;
     static java.awt.Frame field_i;
     static int field_k;
-    qe field_l;
+    BitmapFont field_l;
     de field_t;
     int field_b;
     static int field_e;
@@ -53,7 +53,7 @@ final class sg {
             var7 = this.field_l.field_q + this.field_l.field_p;
           }
           var8 = SoftwareRasterizer.field_j >> 2;
-          var9 = this.field_l.a(param2);
+          var9 = this.field_l.stringWidth(param2);
           var10 = this.field_l.field_q + this.field_l.field_p;
           var11 = 1;
           if (var9 > var8 ||
@@ -67,11 +67,11 @@ final class sg {
             if (null == vd.field_f) {
               vd.field_f = new String[16];
             }
-            var11Lifetime1 = this.field_l.a(param2, new int[]{var12}, vd.field_f);
+            var11Lifetime1 = this.field_l.wrapText(param2, new int[]{var12}, vd.field_f);
             var10 = var10 + (var11Lifetime1 - 1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_l.a(vd.field_f[var13Lifetime2]);
+              var14 = this.field_l.stringWidth(vd.field_f[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -87,7 +87,7 @@ final class sg {
           }
           SoftwareRasterizer.drawRectangleOutline(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_h);
           SoftwareRasterizer.fillRectangle(1 + var12, var13Lifetime1 + 1, var5_int + (var9 - 2), param0 + (var6 + var10), this.field_s);
-          this.field_l.a(param2, var12 + this.field_r, var13Lifetime1 + this.field_u, var9, var10, this.field_a, -1, 0, 0, var7);
+          this.field_l.drawParagraph(param2, var12 + this.field_r, var13Lifetime1 + this.field_u, var9, var10, this.field_a, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,7 +116,7 @@ final class sg {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_l.a(param2);
+          var5_int = this.field_l.stringWidth(param2);
           var6 = this.field_l.field_r + this.field_l.field_q;
           var7 = param0;
           if (SoftwareRasterizer.field_j < 6 + (var5_int + var7)) {
@@ -131,7 +131,7 @@ final class sg {
           }
           SoftwareRasterizer.drawRectangleOutline(var7, var8, 6 + var5_int, var6 + 6, this.field_a);
           SoftwareRasterizer.fillRectangle(var7 + 1, var8 + 1, var5_int + 4, var6 + 4, this.field_s);
-          this.field_l.a(param2, 3 + var7, 3 + (var8 + this.field_l.field_r), this.field_a, -1);
+          this.field_l.drawString(param2, 3 + var7, 3 + (var8 + this.field_l.field_r), this.field_a, -1);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "sg.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -183,7 +183,7 @@ final class sg {
         }
     }
 
-    final void a(byte param0, qe param1) {
+    final void a(byte param0, BitmapFont param1) {
         hd var18 = null;
         w var4 = null;
         Sprite[] var5 = null;

@@ -224,13 +224,13 @@ final class sa {
           var11 = new RgbSprite(var6_int, var9);
           var11.e();
           if (param1 != null) {
-            db.field_v.c(param1, var6_int >> 1, var10, param4, -1);
+            db.field_v.drawCentred(param1, var6_int >> 1, var10, param4, -1);
             var10 = var10 + 2 * la.field_b.field_H;
           }
           var12 = var7;
           for (var13 = 0; var13 < var12.length; var13++) {
             var14 = var12[var13];
-            la.field_b.c(var14, var6_int >> 1, var10, param4, -1);
+            la.field_b.drawCentred(var14, var6_int >> 1, var10, param4, -1);
             var10 = var10 + la.field_b.field_H;
           }
           jh.b();

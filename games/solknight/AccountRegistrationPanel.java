@@ -199,12 +199,12 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, ka, 
         this.field_K.field_z = wi.field_k;
         this.field_S.field_z = ImageProducerRasterBuffer.field_i;
         this.field_L.field_z = wi.field_h;
-        this.field_P.a(new AccountNameAvailabilityValidator(this.field_P), false);
-        this.field_I.a(new EmailFormatValidator(this.field_I), false);
-        this.field_M.a(new ConfirmedEmailAvailabilityValidator(this.field_M, this.field_I), false);
-        this.field_O.a(new PasswordValidator(this.field_O, this.field_P, this.field_I), false);
-        this.field_K.a(new MatchingFieldValidator(this.field_K, this.field_O), false);
-        this.field_S.a(new AgeValidator(this.field_S), false);
+        this.field_P.setFieldValidator(new AccountNameAvailabilityValidator(this.field_P), false);
+        this.field_I.setFieldValidator(new EmailFormatValidator(this.field_I), false);
+        this.field_M.setFieldValidator(new ConfirmedEmailAvailabilityValidator(this.field_M, this.field_I), false);
+        this.field_O.setFieldValidator(new PasswordValidator(this.field_O, this.field_P, this.field_I), false);
+        this.field_K.setFieldValidator(new MatchingFieldValidator(this.field_K, this.field_O), false);
+        this.field_S.setFieldValidator(new AgeValidator(this.field_S), false);
         this.field_R.field_B = false;
         this.field_R.field_w = (j) ((Object) new gh());
         this.field_D.field_w = (j) ((Object) new ri());
@@ -566,7 +566,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, ka, 
             UiWidget var5 = (UiWidget) null;
             this.a('`', (byte) -72, -5, (UiWidget) null);
           }
-          ((EditableTextField) ((Object) var3)).a(109, false, var4);
+          ((EditableTextField) ((Object) var3)).setText(109, false, var4);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "rf.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

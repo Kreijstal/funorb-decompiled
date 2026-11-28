@@ -96,11 +96,11 @@ final class cb {
           var4 = (gj.field_d.field_z - 4) * DisplayNameSelectionPanel.k(param0 ^ -547) >> 9;
           SoftwareRasterizer.fillRectangle(var2_int + 2, var3 + 3, var4, 2, 16772608);
           gj.field_d.e(var2_int, var3);
-          al.field_Z.c(hk.field_k.toUpperCase(), 8, 472, 16776960, -1);
-          al.field_Z.b(bi.field_c[AccountNameAvailabilityValidator.field_s].toUpperCase(), 320, 471, 16776960, -1);
+          al.field_Z.drawString(hk.field_k.toUpperCase(), 8, 472, 16776960, -1);
+          al.field_Z.drawCentred(bi.field_c[AccountNameAvailabilityValidator.field_s].toUpperCase(), 320, 471, 16776960, -1);
           var5 = ProxySocketFactory.field_i.toUpperCase();
-          var6 = al.field_Z.a(var5);
-          al.field_Z.a(var5, param0, 472, 16776960, -1);
+          var6 = al.field_Z.stringWidth(var5);
+          al.field_Z.drawRightAligned(var5, param0, 472, 16776960, -1);
           ec.a(7, 472, false, al.field_Z, 631 - var6 - 5, 16776960, Integer.toString(cf.field_s));
           stackIn_2_0 = -11003;
           stackIn_2_1 = Math.max(eh.field_g, 0);
@@ -111,7 +111,7 @@ final class cb {
           }
           AwtRasterBuffer.a(stackIn_2_0, stackIn_2_1, stackIn_3_2);
           if (le.field_D > 0) {
-            AccountRegistrationPanel.field_L.b(jh.a((byte) -93, le.field_D / 50), 320, 52, 16711680, 0);
+            AccountRegistrationPanel.field_L.drawCentred(jh.a((byte) -93, le.field_D / 50), 320, 52, 16711680, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

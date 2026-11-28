@@ -11,7 +11,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ng 
     private lg field_K;
     private boolean field_F;
     private EditableTextField field_C;
-    static uc field_E;
+    static BitmapFont field_E;
     private EditableTextField field_L;
     private boolean field_G;
     static char[] field_H;
@@ -54,11 +54,11 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ng 
     }
 
     final void h(int param0) {
-        this.field_C.i((byte) 85);
+        this.field_C.clearText((byte) 85);
         if (param0 != 16180) {
           return;
         }
-        this.field_L.i((byte) 77);
+        this.field_L.clearText((byte) 77);
     }
 
     LoginPanel(String param0, String param1, boolean param2, boolean param3, boolean param4) {
@@ -81,7 +81,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ng 
         RuntimeException decompiledCaughtException = null;
         rf var6 = null;
         RuntimeException var6_ref = null;
-        uc var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         he var9 = null;
         na var12 = null;
@@ -149,7 +149,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ng 
           this.y = 15;
           var7 = TranslucentSpriteLayer.field_e;
           if (this.field_N != null) {
-            this.y = this.y + (5 + var7.a(this.field_N, this.width - 40, var7.field_x));
+            this.y = this.y + (5 + var7.textHeight(this.field_N, this.width - 40, var7.field_x));
           }
           var8 = hq.field_c;
           var9 = go.a(false, ip.a(9));
@@ -260,12 +260,12 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ng 
         String var4 = null;
         try {
           if (param0 >= -54) {
-            field_E = (uc) null;
+            field_E = (BitmapFont) null;
           }
           var3 = this.field_C;
           var4 = param1;
-          var3.a(false, var4, true);
-          this.field_L.i((byte) 68);
+          var3.setText(false, var4, true);
+          this.field_L.clearText((byte) 68);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pe.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -364,7 +364,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ng 
 
     final void a(int param0, byte param1, int param2, int param3) {
         if (null != this.field_N) {
-          TranslucentSpriteLayer.field_e.a(this.field_N, param3 + this.x + 20, param2 + this.y + 15, -40 + this.width, this.height, 16777215, -1, 1, 0, TranslucentSpriteLayer.field_e.field_x);
+          TranslucentSpriteLayer.field_e.drawParagraph(this.field_N, param3 + this.x + 20, param2 + this.y + 15, -40 + this.width, this.height, 16777215, -1, 1, 0, TranslucentSpriteLayer.field_e.field_x);
         }
         if (param1 >= -7) {
           this.field_C = (EditableTextField) null;

@@ -50,7 +50,7 @@ final class v extends ik {
           stackIn_18_0 = (!param2) ? 7105644 : 16777215;
           var8 = stackIn_18_0;
           fe.a(this.field_C, var7, param3.field_j, param4 ^ -3283, param1 + param3.field_t, param0 + param3.field_o + (param3.field_v - this.field_C[0].field_x >> 1));
-          this.field_f.a(param3.field_u, param3.field_t + param1, param3.field_o + (param0 - 2), param3.field_j, param3.field_v, var8, -1, 1, 1, this.field_f.field_E);
+          this.field_f.drawParagraph(param3.field_u, param3.field_t + param1, param3.field_o + (param0 - 2), param3.field_j, param3.field_v, var8, -1, 1, 1, this.field_f.field_E);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

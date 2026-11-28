@@ -82,7 +82,7 @@ final class na extends hh {
           if (param0 != 34) {
             na.clearDeclaredStaticReferences(123);
           }
-          this.field_u.a(param1.field_w, param2 + param1.field_q, param3 - (-param1.field_v + 2), param1.field_x, param1.field_s, var8, -1, 1, 1, this.field_u.field_H);
+          this.field_u.drawParagraph(param1.field_w, param2 + param1.field_q, param3 - (-param1.field_v + 2), param1.field_x, param1.field_s, var8, -1, 1, 1, this.field_u.field_H);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

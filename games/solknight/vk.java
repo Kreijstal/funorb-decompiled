@@ -37,7 +37,7 @@ final class vk extends jf {
           this.field_l = param0;
           var7 = this.a(param0, param4, param3, (byte) 125);
           var7.field_c[0] = param2;
-          var7.field_c[param4.length()] = param0.b(param4) + param2;
+          var7.field_c[param4.length()] = param0.stringWidth(param4) + param2;
           lc.a(123, 0, param4, var7, param0);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "vk.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -60,7 +60,7 @@ final class vk extends jf {
           this.field_h = 1;
           this.field_j = true;
           var8 = this.a(param3, param4, param2, (byte) 127);
-          var7 = param3.b(param4);
+          var7 = param3.stringWidth(param4);
           var8.field_c[0] = -(var7 >> 1) + param0;
           var8.field_c[param4.length()] = (var7 >> 1) + param0;
           lc.a(125, param1, param4, var8, param3);
@@ -90,7 +90,7 @@ final class vk extends jf {
           this.field_h = 2;
           var8 = this.a(param1, param3, param2, (byte) 127);
           var9 = var8;
-          var9.field_c[0] = param4 - param1.b(param3);
+          var9.field_c[0] = param4 - param1.stringWidth(param3);
           if (param0 != -13323) {
             this.field_d = -67;
           }
@@ -319,9 +319,9 @@ final class vk extends jf {
           this.field_f = param7;
           this.field_j = false;
           this.field_o = param1;
-          var16 = new String[param4.b(param0, param5) + 1];
+          var16 = new String[param4.lineCount(param0, param5) + 1];
           var17 = var16;
-          var10 = Math.max(1, param4.a(param0, new int[]{param5}, var17));
+          var10 = Math.max(1, param4.wrapText(param0, new int[]{param5}, var17));
           if (this.field_f == 3 &&
             var10 == 1) {
             this.field_f = 1;
@@ -363,12 +363,12 @@ final class vk extends jf {
             var14 = new le(stackIn_38_2, stackIn_38_3, stackIn_39_4);
             var14.field_c[0] = 0;
             if (var13 != null) {
-              var14.field_c[var13.length()] = param4.b(var13);
+              var14.field_c[var13.length()] = param4.stringWidth(var13);
               stackIn_42_0 = 114;
               if (param2 != 3) {
                 stackIn_43_1 = 0;
               } else {
-                stackIn_43_1 = this.a(param4.b(var13), param5, 21107, var13);
+                stackIn_43_1 = this.a(param4.stringWidth(var13), param5, 21107, var13);
               }
               lc.a(stackIn_42_0, stackIn_43_1, var13, var14, param4);
             }

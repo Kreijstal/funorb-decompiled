@@ -29,10 +29,10 @@ final class ao extends d {
             field_R = (String) null;
           }
           if (!param2) {
-            stackIn_6_0 = oc.field_s.c(param1);
+            stackIn_6_0 = oc.field_s.stringWidth(param1);
             return stackIn_6_0;
           }
-          stackIn_4_0 = hd.field_f.c(param1);
+          stackIn_4_0 = hd.field_f.stringWidth(param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

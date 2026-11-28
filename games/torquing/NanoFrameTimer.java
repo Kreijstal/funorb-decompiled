@@ -173,7 +173,7 @@ final class NanoFrameTimer extends FrameTimer {
           }
         } else {
           if (ig.field_r[param0] == null) {
-            ig.field_r[param0] = PcmSampleStream.a(DisplayNameSelectionPanel.field_F[param0], 100, param2);
+            ig.field_r[param0] = PcmSampleStream.createForPlaybackRate(DisplayNameSelectionPanel.field_F[param0], 100, param2);
             ig.field_r[param0].d(-1);
           }
           if (Bzip2State.field_a != ig.field_r[param0]) {

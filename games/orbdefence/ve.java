@@ -27,7 +27,7 @@ final class ve extends ej {
         try {
           this.field_P = param1;
           if (null != this.field_P) {
-            var3_int = qc.field_b.a(this.field_P, 260, qc.field_b.field_H);
+            var3_int = qc.field_b.textHeight(this.field_P, 260, qc.field_b.field_H);
             this.a(150 + var3_int, (byte) -81, 300);
           }
           this.field_T = new dg(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -188,10 +188,10 @@ final class ve extends ej {
 
     final void a(int param0, int param1, int param2) {
         super.a(param0, param1, param2);
-        qc.field_b.c(this.field_S, param0 + (this.field_m >> 1), param1 + 103, 16777215, -1);
+        qc.field_b.drawCentred(this.field_S, param0 + (this.field_m >> 1), param1 + 103, 16777215, -1);
         if (null != this.field_P) {
           SoftwareRasterizer.drawHorizontalLine(param0 + 20, param1 + 113, 260, 8421504);
-          qc.field_b.a(this.field_P, param0 + 20, 120 + param1 + 8, 260, 100, 16777215, -1, 1, 0, qc.field_b.field_H);
+          qc.field_b.drawParagraph(this.field_P, param0 + 20, 120 + param1 + 8, 260, 100, 16777215, -1, 1, 0, qc.field_b.field_H);
         }
     }
 

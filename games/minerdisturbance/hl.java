@@ -30,10 +30,10 @@ final class hl implements uj {
             hl.b((byte) 12);
           }
           if (param1) {
-            stackIn_6_0 = IntrusiveDeque.field_b.a(param0);
+            stackIn_6_0 = IntrusiveDeque.field_b.stringWidth(param0);
             return stackIn_6_0;
           }
-          stackIn_4_0 = gh.field_b.a(param0);
+          stackIn_4_0 = gh.field_b.stringWidth(param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

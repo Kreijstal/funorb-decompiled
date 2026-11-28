@@ -163,7 +163,7 @@ final class IntrusiveNodeHashTable implements Iterable {
             if (!var2.field_j.isLinked(3000)) {
               var2.unlink(-69);
             } else {
-              var2.field_h.f(var2.field_l * wj.field_O + 128 >> 8);
+              var2.field_h.setVolume(var2.field_l * wj.field_O + 128 >> 8);
             }
             var2 = (qb) (jn.field_H.nextForward(12684));
           }
@@ -172,7 +172,7 @@ final class IntrusiveNodeHashTable implements Iterable {
             while (var2Lifetime1 != null) {
               stackIn_14_0 = var2Lifetime1.field_j.isLinked(3000);
               if (stackIn_14_0) {
-                var2Lifetime1.field_h.f(var2Lifetime1.field_l * wj.field_O + 128 >> 8);
+                var2Lifetime1.field_h.setVolume(var2Lifetime1.field_l * wj.field_O + 128 >> 8);
               } else {
                 var2Lifetime1.unlink(119);
               }

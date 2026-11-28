@@ -175,10 +175,10 @@ final class fb {
             return stackIn_2_0;
           }
           if (param2) {
-            stackIn_7_0 = ai.field_h.a(param0);
+            stackIn_7_0 = ai.field_h.stringWidth(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = rh.field_h.a(param0);
+          stackIn_5_0 = rh.field_h.stringWidth(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -378,10 +378,10 @@ final class fb {
             return stackIn_2_0;
           }
           if (param2) {
-            stackIn_7_0 = ai.field_h.a(param0);
+            stackIn_7_0 = ai.field_h.stringWidth(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = rh.field_h.a(param0);
+          stackIn_5_0 = rh.field_h.stringWidth(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

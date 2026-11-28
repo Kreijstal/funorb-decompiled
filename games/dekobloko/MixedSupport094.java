@@ -13,12 +13,12 @@ final class MixedSupport094 implements CallbackContract004 {
     static String stringState0397;
     static int[] integerArrayState0178;
 
-    final static RenderingSupport011 computeRenderingSupport0111201(byte[] byteArrayArgument1, byte byteArgument2) {
-        RenderingSupport011 renderingSupport011Local1 = null;
+    final static CoverageBitmapFont computeRenderingSupport0111201(byte[] byteArrayArgument1, byte byteArgument2) {
+        CoverageBitmapFont renderingSupport011Local1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         Object stackObjectLocal3 = null;
-        RenderingSupport011 stackRenderingSupport011Local4 = null;
-        RenderingSupport011 stackRenderingSupport011Local5 = null;
+        CoverageBitmapFont stackRenderingSupport011Local4 = null;
+        CoverageBitmapFont stackRenderingSupport011Local5 = null;
         RuntimeException stackRuntimeExceptionLocal6 = null;
         StringBuilder stackStringBuilderLocal7 = null;
         String stackStringLocal8 = null;
@@ -26,13 +26,13 @@ final class MixedSupport094 implements CallbackContract004 {
         try {
           if (byteArrayArgument1 == null) {
             stackObjectLocal3 = null;
-            return (RenderingSupport011) (stackObjectLocal3);
+            return (CoverageBitmapFont) (stackObjectLocal3);
           }
           if (byteArgument2 <= 7) {
-            stackRenderingSupport011Local4 = (RenderingSupport011) null;
+            stackRenderingSupport011Local4 = (CoverageBitmapFont) null;
             return stackRenderingSupport011Local4;
           }
-          renderingSupport011Local1 = new RenderingSupport011(byteArrayArgument1, InputAdapter003.integerArrayState0206, MixedSupport039.integerArrayState0047, MixedSupport123.integerArrayState0208, MixedSupport052.integerArrayState0054, NetworkSupport006.integerArrayState0152, SceneWidgetPart011.byteArrayArrayState0008);
+          renderingSupport011Local1 = new CoverageBitmapFont(byteArrayArgument1, InputAdapter003.integerArrayState0206, MixedSupport039.integerArrayState0047, MixedSupport123.integerArrayState0208, MixedSupport052.integerArrayState0054, NetworkSupport006.integerArrayState0152, SceneWidgetPart011.byteArrayArrayState0008);
           MixedSupport089.performAction1138(126);
           stackRenderingSupport011Local5 = renderingSupport011Local1;
           return stackRenderingSupport011Local5;
@@ -286,9 +286,9 @@ final class MixedSupport094 implements CallbackContract004 {
           if (byteArgument4 > -60) {
             return;
           }
-          this.bitmapFontState0017.computeInteger1071("<u=" + Integer.toString(integerLocal6, 16) + ">" + uiComponentArgument5.stringState0078 + "</u>", uiComponentArgument5.integerState0110 + integerArgument2, uiComponentArgument5.integerState0104 + integerArgument3, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, integerLocal6, -1, this.integerState0570, this.integerState0571, this.bitmapFontState0017.integerState0523 + this.bitmapFontState0017.integerState0518);
+          this.bitmapFontState0017.drawParagraph("<u=" + Integer.toString(integerLocal6, 16) + ">" + uiComponentArgument5.stringState0078 + "</u>", uiComponentArgument5.integerState0110 + integerArgument2, uiComponentArgument5.integerState0104 + integerArgument3, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, integerLocal6, -1, this.integerState0570, this.integerState0571, this.bitmapFontState0017.integerState0523 + this.bitmapFontState0017.integerState0518);
           if (uiComponentArgument5.computeBoolean0220(true)) {
-            integerLocal8 = this.bitmapFontState0017.computeInteger1066(uiComponentArgument5.stringState0078);
+            integerLocal8 = this.bitmapFontState0017.stringWidth(uiComponentArgument5.stringState0078);
             integerLocal9 = this.bitmapFontState0017.integerState0523 + this.bitmapFontState0017.integerState0518;
             integerLocal10 = uiComponentArgument5.integerState0110 + integerArgument2;
             if (2 != this.integerState0570) {

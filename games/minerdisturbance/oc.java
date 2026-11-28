@@ -207,12 +207,12 @@ final class oc extends hn {
         }
     }
 
-    final static ih a(ResourceArchive param0, byte param1, String param2, String param3, ResourceArchive param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, byte param1, String param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ih stackIn_2_0 = null;
-        ih stackIn_4_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -226,7 +226,7 @@ final class oc extends hn {
         try {
           var5_int = param4.getGroupIdByName(127, param2);
           if (param1 != 125) {
-            stackIn_2_0 = (ih) null;
+            stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
           var6 = param4.getFileIdByName(param3, var5_int, -103);

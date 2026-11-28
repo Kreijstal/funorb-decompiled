@@ -7,7 +7,7 @@ final class AccountRequestState {
     static int field_d;
     static AccountRequestState field_a;
     static String field_b;
-    static ud field_f;
+    static BinaryBitmapFont field_f;
     static Sprite[] field_c;
     static String field_g;
     static String field_e;

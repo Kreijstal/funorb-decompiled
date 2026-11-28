@@ -325,7 +325,7 @@ final class DisplayNameSelectionPanel extends kj implements tb, sg {
         try {
           var3 = this.field_P;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(var4, false, (byte) -21);
+          ((EditableTextField) ((Object) var3)).setText(var4, false, (byte) -21);
           if (param1 > -84) {
             this.submitDisplayName(66);
           }
@@ -361,7 +361,7 @@ final class DisplayNameSelectionPanel extends kj implements tb, sg {
         this.field_J = new ng(FrameTimer.field_g, (gg) null);
         this.field_K = new ng(nh.field_fb, (gg) null);
         this.field_P.field_r = AgeValidator.field_o;
-        this.field_P.a(-27997, new AccountNameAvailabilityValidator(this.field_P));
+        this.field_P.setFieldValidator(-27997, new AccountNameAvailabilityValidator(this.field_P));
         this.field_J.field_F = false;
         this.field_J.field_q = (j) ((Object) new cl());
         this.field_K.field_q = (j) ((Object) new me());

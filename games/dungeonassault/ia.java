@@ -87,7 +87,7 @@ final class ia extends ii implements vg {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = param1 + this.field_q;
         int var6 = param3 + this.field_v;
-        lp.field_C.a(AgeValidator.field_q, var5 + 20, 20 + var6, this.field_x - 40, this.field_s - 50, 16777215, -1, 1, 0, lp.field_C.field_H);
+        lp.field_C.drawParagraph(AgeValidator.field_q, var5 + 20, 20 + var6, this.field_x - 40, this.field_s - 50, 16777215, -1, 1, 0, lp.field_C.field_H);
         super.a(param0, param1, param2, param3);
     }
 
@@ -180,7 +180,7 @@ final class ia extends ii implements vg {
         field_R = null;
     }
 
-    final static String a(int param0, se param1, String param2, int param3) {
+    final static String a(int param0, BitmapFont param1, String param2, int param3) {
         String var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -195,7 +195,7 @@ final class ia extends ii implements vg {
         RuntimeException decompiledCaughtException = null;
         var5 = DungeonAssault.field_K;
         try {
-          if (param0 >= param1.b(param2)) {
+          if (param0 >= param1.stringWidth(param2)) {
             stackIn_3_0 = (String) (param2);
             return stackIn_3_0;
           }
@@ -206,7 +206,7 @@ final class ia extends ii implements vg {
           var4 = "...";
           do {
             param2 = param2.substring(0, -1 + param2.length());
-          } while (param0 < param1.b(param2 + var4));
+          } while (param0 < param1.stringWidth(param2 + var4));
           stackIn_10_0 = param2 + var4;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

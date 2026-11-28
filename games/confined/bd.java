@@ -72,11 +72,11 @@ final class bd {
         }
     }
 
-    bd(int param0, String param1, ok param2) {
+    bd(int param0, String param1, BitmapFont param2) {
         try {
           this.field_d = param0;
           this.field_a = param1;
-          this.field_f = 100 + param2.c(this.field_a);
+          this.field_f = 100 + param2.stringWidth(this.field_a);
           this.field_i = 30;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "bd.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

@@ -147,7 +147,7 @@ final class tb {
         fm.field_V = false;
     }
 
-    final static void a(int param0, lh param1, int param2, RgbSprite[] param3, lh param4, int param5, RgbSprite[] param6, int param7, int param8, int param9, int param10, RgbSprite[] param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, BitmapFont param1, int param2, RgbSprite[] param3, BitmapFont param4, int param5, RgbSprite[] param6, int param7, int param8, int param9, int param10, RgbSprite[] param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

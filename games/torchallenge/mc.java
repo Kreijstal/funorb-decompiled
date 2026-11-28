@@ -139,7 +139,7 @@ final class mc implements j {
           }
           if (this.field_b != null) {
             var10 = this.field_n + this.field_h + this.field_c;
-            this.field_b.a(param0.field_v, param0.field_m + (param2 + var10), this.field_d + (param1 + param0.field_i), -this.field_c + (-var10 + param0.field_p), -(this.field_c << 1) + param0.field_l, this.field_m, this.field_l, this.field_i, this.field_e, 0);
+            this.field_b.drawParagraph(param0.field_v, param0.field_m + (param2 + var10), this.field_d + (param1 + param0.field_i), -this.field_c + (-var10 + param0.field_p), -(this.field_c << 1) + param0.field_l, this.field_m, this.field_l, this.field_i, this.field_e, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

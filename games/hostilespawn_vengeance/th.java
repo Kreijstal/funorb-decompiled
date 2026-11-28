@@ -55,12 +55,12 @@ final class th extends le {
         this.a(this.field_Kb.field_sb, this.field_Kb.field_qb, param1, (byte) 58, param2, param3);
     }
 
-    final static fn a(int param0, byte[] param1) {
-        fn var2 = null;
+    final static BinaryBitmapFont a(int param0, byte[] param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         String var3 = null;
         Object stackIn_2_0 = null;
-        fn stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -68,9 +68,9 @@ final class th extends le {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (fn) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new fn(param1, field_Jb, nh.field_O, TextInputField.field_X, ConfirmedEmailAvailabilityValidator.field_r, ja.field_e);
+          var2 = new BinaryBitmapFont(param1, field_Jb, nh.field_O, TextInputField.field_X, ConfirmedEmailAvailabilityValidator.field_r, ja.field_e);
           uj.d(-63);
           if (param0 != -5427) {
             var3 = (String) null;
@@ -163,12 +163,12 @@ final class th extends le {
         }
     }
 
-    final static nc a(ResourceArchive param0, int param1, String param2, ResourceArchive param3, String param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, int param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        nc stackIn_1_0 = null;
+        CoverageBitmapFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

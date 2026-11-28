@@ -101,7 +101,7 @@ final class il extends ResultScenePhase {
             this.field_g.f(-1);
             tb.field_d.b(this.field_g);
           }
-          this.field_g.c(var5_intLifetime1, var6Lifetime1);
+          this.field_g.setVolumeAndPan(var5_intLifetime1, var6Lifetime1);
           this.field_f = 2;
           return (ResultScenePhase) (this);
         }

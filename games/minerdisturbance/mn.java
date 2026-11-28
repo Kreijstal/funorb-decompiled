@@ -8,7 +8,7 @@ final class mn extends gk {
     static String[] field_u;
     static String field_v;
 
-    private mn(we param0, int param1) {
+    private mn(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

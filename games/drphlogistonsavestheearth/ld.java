@@ -43,7 +43,7 @@ final class ld {
             }
           }
         }
-        cb.field_b.a(MouseInput.field_f, 285, -cb.field_b.field_x + 122 + (var2 + 64), 200, 140, 0, -1, param0, 0, cb.field_b.field_x);
+        cb.field_b.drawParagraph(MouseInput.field_f, 285, -cb.field_b.field_x + 122 + (var2 + 64), 200, 140, 0, -1, param0, 0, cb.field_b.field_x);
     }
 
     private final void f(byte param0) {
@@ -81,7 +81,7 @@ final class ld {
           var6 = (int)(2.55 * (double)var9[var3]);
           if (0 < var6) {
             AccountRegistrationPanel.field_W[var3].a(-50 + var9[var3] / 2, var9[var3] / 2 - 50, var6);
-            cb.field_b.a(GzipDecompressor.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
+            cb.field_b.drawParagraph(GzipDecompressor.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
           }
         }
     }
@@ -144,7 +144,7 @@ final class ld {
           var6 = (int)((double)var10[var3] * 2.55);
           if (var6 > 0) {
             mk.field_g[var3].a(-50 + var10[var3] / 2, var10[var3] / 2 - 50, var6);
-            cb.field_b.a(GzipDecompressor.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
+            cb.field_b.drawParagraph(GzipDecompressor.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
           }
         }
         if (l.field_n[sd.field_a.levelNumber][7] < ul.field_d &&
@@ -159,7 +159,7 @@ final class ld {
         }
         int var3 = ul.field_j[this.field_c][param0];
         if (this.field_c == 2) {
-          return this.b(param0, true) + cb.field_b.b(hg.field_ob[var3]);
+          return this.b(param0, true) + cb.field_b.stringWidth(hg.field_ob[var3]);
         }
         if (10 == this.field_c &&
           ul.field_j[this.field_c][param0] != 5 &&
@@ -181,9 +181,9 @@ final class ld {
         if (this.field_c == 2 &&
           !oh.a(0)) {
           if (param0 >= 3) {
-            return 320 - cb.field_b.b(hg.field_ob[var3]) / 2;
+            return 320 - cb.field_b.stringWidth(hg.field_ob[var3]) / 2;
           }
-          return 140 * (param0 - 1) + 320 - cb.field_b.b(hg.field_ob[var3]) / 2;
+          return 140 * (param0 - 1) + 320 - cb.field_b.stringWidth(hg.field_ob[var3]) / 2;
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_c == 10 &&
@@ -246,7 +246,7 @@ final class ld {
             var6 = 0;
           }
           param1[0].a(var5, var6, var3_int);
-          cb.field_b.a(GzipDecompressor.field_a[sd.field_a.levelNumber][0], 225, kj.field_f[sd.field_a.levelNumber][0], 405, 640, var3_int * 65793, -1, 0, 0, cb.field_b.field_x);
+          cb.field_b.drawParagraph(GzipDecompressor.field_a[sd.field_a.levelNumber][0], 225, kj.field_f[sd.field_a.levelNumber][0], 405, 640, var3_int * 65793, -1, 0, 0, cb.field_b.field_x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -490,7 +490,7 @@ final class ld {
         boolean stackIn_22_2 = false;
         boolean stackIn_25_3 = false;
         int var2;
-        jb var3;
+        BinaryBitmapFont var3;
         String var4;
         String var5;
         String var6;
@@ -523,7 +523,7 @@ final class ld {
           var4Lifetime1 = kk.field_d[7];
         }
         var6 = "<br><br>" + gd.field_e + " " + ih.field_P + " " + var4Lifetime1;
-        var3.a(var5 + " " + var6, 50, 130 + var2, 540, 480, 0, -1, 1, 0, var3.field_E);
+        var3.drawParagraph(var5 + " " + var6, 50, 130 + var2, 540, 480, 0, -1, 1, 0, var3.field_E);
         var7 = NodeHashTableIterator.field_e;
         dj.a(var7, 75, lf.field_b, param0, 385);
         return;
@@ -883,32 +883,32 @@ final class ld {
         var5 = 198;
         var6 = (31 + cb.field_b.field_x) / 2;
         AwtRasterBuffer.field_c.a(50, var4);
-        cb.field_b.c(hd.field_O, var5, var4 + var6, 4210752, -1);
+        cb.field_b.drawString(hd.field_O, var5, var4 + var6, 4210752, -1);
         SoftwareRasterizer.drawHorizontalLineAlpha(50, var4 + 33, 540, 0, 25);
         var4 += 40;
         ul.field_h.a(50, var4);
         AccountRequestState.field_d.a(83, var4);
         lk.field_k.a(116, var4);
         ArchiveRequest.field_D.a(149, var4);
-        cb.field_b.c(ch.field_w, var5, var6 + var4, 4210752, -1);
+        cb.field_b.drawString(ch.field_w, var5, var6 + var4, 4210752, -1);
         SoftwareRasterizer.drawHorizontalLineAlpha(50, var4 + 33, 540, 0, 25);
         var4 += 40;
         if (param0 >= -9) {
           this.b(false);
         }
         jl.field_h.a(50, var4);
-        cb.field_b.c(mk.field_a, var5, var4 + var6, 4210752, -1);
+        cb.field_b.drawString(mk.field_a, var5, var4 + var6, 4210752, -1);
         SoftwareRasterizer.drawHorizontalLineAlpha(50, var4 + 33, 540, 0, 25);
         var4 += 40;
         wg.field_c.a(50, var4);
-        cb.field_b.c(hj.field_c, var5, var4 + var6, 4210752, -1);
+        cb.field_b.drawString(hj.field_c, var5, var4 + var6, 4210752, -1);
         SoftwareRasterizer.drawHorizontalLineAlpha(50, var4 + 33, 540, 0, 25);
         var4 += 56;
         lc.field_s.a(50, var4);
         ki.field_b.a(83, var4 - 16);
         fk.field_l.a(83, 17 + var4);
         si.field_D.a(116, var4);
-        cb.field_b.c(fm.field_c, var5, var4 + var6, 4210752, -1);
+        cb.field_b.drawString(fm.field_c, var5, var4 + var6, 4210752, -1);
         var7 = di.field_e[0];
         var8 = 480 + (30 + var2);
         var9 = 50;
@@ -930,7 +930,7 @@ final class ld {
           c.field_a[var11].a(var9, var10);
         }
         var11Lifetime1 = (int)((double)EmailFormatValidator.field_q.field_x * 14.5);
-        EmailFormatValidator.field_q.a(var7, 50, var8, 540, var11Lifetime1, 0, 16777215, 0, 0, EmailFormatValidator.field_q.field_x);
+        EmailFormatValidator.field_q.drawParagraph(var7, 50, var8, 540, var11Lifetime1, 0, 16777215, 0, 0, EmailFormatValidator.field_q.field_x);
         SoftwareRasterizer.drawRectangleOutline(40, var8, 560, var11Lifetime1, 1);
         if (0 == gf.field_b) {
           stackIn_16_0 = lf.field_b;
@@ -1002,7 +1002,7 @@ final class ld {
           var6 = (int)((double)var9[var3] * 2.55);
           if (var6 > 0) {
             pc.field_b[var3].a(-50 + var9[var3] / 2, -50 + var9[var3] / 2, var6);
-            cb.field_b.a(GzipDecompressor.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
+            cb.field_b.drawParagraph(GzipDecompressor.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
           }
           var3--;
         }
@@ -1019,7 +1019,7 @@ final class ld {
         int var4;
         int var5;
         int var6;
-        jb var7;
+        BinaryBitmapFont var7;
         int var8;
         Object var9;
         int var10;
@@ -1078,7 +1078,7 @@ final class ld {
           var14Lifetime3 = stackIn_22_0;
           if (8 == var8) {
             var15_ref_String__ = new String[]{hg.field_ob[20], hg.field_ob[21], hg.field_ob[22]};
-            var16 = var7.b(var15_ref_String__[1]) / 2 + 15;
+            var16 = var7.stringWidth(var15_ref_String__[1]) / 2 + 15;
             for (var18_int = 0; 3 > var18_int; var18_int++) {
               if (pj.field_H) {
                 if (ck.field_c >= -var16 + 320) {
@@ -1103,7 +1103,7 @@ final class ld {
               } else {
                 var15_ref_String__[var18_int] = "<lt>" + var15_ref_String__[var18_int] + "<gt>";
               }
-              var7.b(var15_ref_String__[var18_int], (var18_int - 1) * 2 * var16 + 320, var7.field_x + var4, var10, -1, var14Lifetime3);
+              var7.drawCentredAlpha(var15_ref_String__[var18_int], (var18_int - 1) * 2 * var16 + 320, var7.field_x + var4, var10, -1, var14Lifetime3);
             }
             return;
           }
@@ -1117,20 +1117,20 @@ final class ld {
           if (var9 == null) {
             var9 = "ERROR: missing text";
           }
-          var7.c((String) (var9), var11, var4 + var7.field_x, var10, -1, var14Lifetime3);
+          var7.drawStringAlpha((String) (var9), var11, var4 + var7.field_x, var10, -1, var14Lifetime3);
           if (param1 &&
             ((String) (var9)).length() != 0) {
-            var7.a("{", var11, var7.field_x + var4, var10, -1, var14Lifetime3);
-            var7.c("}", var7.b((String) (var9)) + var11, var7.field_x + var4, var10, -1, var14Lifetime3);
+            var7.drawRightAlignedAlpha("{", var11, var7.field_x + var4, var10, -1, var14Lifetime3);
+            var7.drawStringAlpha("}", var7.stringWidth((String) (var9)) + var11, var7.field_x + var4, var10, -1, var14Lifetime3);
           }
           if (var8 == 10 ||
             11 == var8) {
-            DiskCacheWorker.field_c = cb.field_b.b(hg.field_ob[10]);
-            var15 = cb.field_b.b(hg.field_ob[11]);
+            DiskCacheWorker.field_c = cb.field_b.stringWidth(hg.field_ob[10]);
+            var15 = cb.field_b.stringWidth(hg.field_ob[11]);
             if (var15 > DiskCacheWorker.field_c) {
               DiskCacheWorker.field_c = var15;
             }
-            var16 = DiskCacheWorker.field_c + ul.field_b[this.field_c] + cb.field_b.b(" ");
+            var16 = DiskCacheWorker.field_c + ul.field_b[this.field_c] + cb.field_b.stringWidth(" ");
             if (var8 != 10) {
               stackIn_63_0 = SecondaryNodeDequeIterator.field_b;
             } else {
@@ -1176,7 +1176,7 @@ final class ld {
               hb.field_g <= 0) {
               var9Lifetime1 = s.field_f;
             }
-            cb.field_b.c((String) (var9Lifetime1), 285, 64 + (var17Lifetime1 + 122), 0, -1);
+            cb.field_b.drawString((String) (var9Lifetime1), 285, 64 + (var17Lifetime1 + 122), 0, -1);
             var20 = 0;
             if (hb.field_g <= 0 &&
               var14Lifetime1 >= 3) {
@@ -1190,7 +1190,7 @@ final class ld {
                 var9Lifetime1Lifetime1 = pe.field_i;
               }
             }
-            cb.field_b.a((String) (var9Lifetime1Lifetime1), 285, var17Lifetime1 + 122 + 94, 320, 240, var20, -1, 0, 0, cb.field_b.field_x);
+            cb.field_b.drawParagraph((String) (var9Lifetime1Lifetime1), 285, var17Lifetime1 + 122 + 94, 320, 240, var20, -1, 0, 0, cb.field_b.field_x);
             if (!(var14Lifetime1 > gf.field_D)) {
               if (hb.field_g <= 0 &&
                 var14Lifetime1 >= 3) {
@@ -1198,12 +1198,12 @@ final class ld {
               } else {
                 var9Lifetime1Lifetime2 = af.field_a;
               }
-              cb.field_b.c((String) (var9Lifetime1Lifetime2), 285, 94 + (122 + var17Lifetime1) + 100, 0, -1);
+              cb.field_b.drawString((String) (var9Lifetime1Lifetime2), 285, 94 + (122 + var17Lifetime1) + 100, 0, -1);
             }
           }
           if (var15 != -1 &&
             -1 != var16) {
-            cb.field_b.c(a.a(5044, ek.field_q, new String[]{Integer.toString(var15 + 1), Integer.toString(1 + var16)}), 285, var17Lifetime1 + 122 + 20, 0, -1);
+            cb.field_b.drawString(a.a(5044, ek.field_q, new String[]{Integer.toString(var15 + 1), Integer.toString(1 + var16)}), 285, var17Lifetime1 + 122 + 20, 0, -1);
           }
         }
     }
@@ -1358,7 +1358,7 @@ final class ld {
         int var5;
         int var6;
         int var7;
-        jb var7_ref_jb;
+        BinaryBitmapFont var7_ref_jb;
         int var8;
         String[] var8_ref_String__;
         int var9;
@@ -1720,7 +1720,7 @@ final class ld {
                               if (this.field_e.e(-748)) {
                                 var7_ref_jb = cb.field_b;
                                 var8_ref_String__ = new String[]{hg.field_ob[20], hg.field_ob[21], hg.field_ob[22]};
-                                var9 = var7_ref_jb.b(var8_ref_String__[1]);
+                                var9 = var7_ref_jb.stringWidth(var8_ref_String__[1]);
                                 var10 = -1;
                                 for (var11 = 0; var11 < 3; var11++) {
                                   if ((320 - var9) > ck.field_c) {
@@ -1860,7 +1860,7 @@ final class ld {
         int var22;
         int var23;
         int var24;
-        jb var25;
+        BinaryBitmapFont var25;
         int var14Lifetime1;
         int var19Lifetime1;
         var24 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
@@ -1956,10 +1956,10 @@ final class ld {
         var14Lifetime1 = stackIn_51_0;
         if (var14Lifetime1 != -1) {
           if (oh.a(0)) {
-            EmailFormatValidator.field_q.b(ClientException.field_f, 320, 116 + (var4 + var6), 1, -1);
+            EmailFormatValidator.field_q.drawCentred(ClientException.field_f, 320, 116 + (var4 + var6), 1, -1);
           }
           SoftwareRasterizer.drawRectangleOutline(166, 163 + (var25.field_E + var4), 128, 128, 0);
-          var25.c("<u>" + sc.field_b[var14Lifetime1] + "</u>", 166, var4 + 150, 0, -1);
+          var25.drawString("<u>" + sc.field_b[var14Lifetime1] + "</u>", 166, var4 + 150, 0, -1);
           stackIn_60_0 = ((var11 & 1 << var14Lifetime1) == 0) ? 0 : 1;
           var15 = stackIn_60_0;
           var16 = null;
@@ -1977,11 +1977,11 @@ final class ld {
             di.field_b[var14Lifetime1].a(166, var25.field_E + (var4 + 163));
             var16_ref = vc.field_d;
           }
-          var25.c(var16_ref, 166, 150 + var4 + var25.field_E, 0, -1);
-          var25.c(rc.field_f + rd.field_J[var14Lifetime1], 390, 150 + var4 + var25.field_E, 0, -1);
-          var25.c(bj.field_d, 390, var25.field_x + var4 - (-150 - var25.field_E), 0, -1);
+          var25.drawString(var16_ref, 166, 150 + var4 + var25.field_E, 0, -1);
+          var25.drawString(rc.field_f + rd.field_J[var14Lifetime1], 390, 150 + var4 + var25.field_E, 0, -1);
+          var25.drawString(bj.field_d, 390, var25.field_x + var4 - (-150 - var25.field_E), 0, -1);
           var17 = 7 + (-(ce.field_b.field_c / 4) + var25.field_x + (var25.field_E + var4) + 150);
-          var18 = var25.b(bj.field_d) + 390;
+          var18 = var25.stringWidth(bj.field_d) + 390;
           for (var19 = 0; qh.field_a[var14Lifetime1] > var19; var19++) {
             ce.field_b.b(5 * var19 + var18, var17);
           }
@@ -1990,15 +1990,15 @@ final class ld {
           var21 = 185 + var4 + var25.field_E;
           var22 = 297;
           var23 = var19Lifetime1 * 5;
-          var25.a(jk.field_K[var14Lifetime1], var20, var21, var22, var23, 0, -1, 0, 1, var19Lifetime1);
+          var25.drawParagraph(jk.field_K[var14Lifetime1], var20, var21, var22, var23, 0, -1, 0, 1, var19Lifetime1);
         } else {
-          var25.a(NodeHashTableIterator.field_j, 166, -var25.field_x + var4 + 150, 500, 200, 0, -1, 0, 0, var25.field_x);
+          var25.drawParagraph(NodeHashTableIterator.field_j, 166, -var25.field_x + var4 + 150, 500, 200, 0, -1, 0, 0, var25.field_x);
           if (oh.a(0)) {
-            EmailFormatValidator.field_q.a(ClientException.field_f, 213, 116 + (var4 + var6 / 2), 300, 200, 1, -1, 1, 0, EmailFormatValidator.field_q.field_x);
+            EmailFormatValidator.field_q.drawParagraph(ClientException.field_f, 213, 116 + (var4 + var6 / 2), 300, 200, 1, -1, 1, 0, EmailFormatValidator.field_q.field_x);
           }
         }
         if (5 == this.field_c) {
-          var25.c(BufferedRandomAccessFile.field_i + ": " + sd.field_a.field_H, 310, var25.field_E + (150 + var4), 4210752, -1);
+          var25.drawString(BufferedRandomAccessFile.field_i + ": " + sd.field_a.field_H, 310, var25.field_E + (150 + var4), 4210752, -1);
         }
         return;
     }
@@ -2020,7 +2020,7 @@ final class ld {
         String stackIn_38_0 = null;
         int var2;
         String var3;
-        jb var4;
+        BinaryBitmapFont var4;
         int var5;
         int var6;
         int var7;
@@ -2102,17 +2102,17 @@ final class ld {
                     var19 = 16711680;
                     SoftwareRasterizer.fillRectangleAlpha(300, var17 - var4.field_x, 241, var5, 33023, (int)(32.0 * ji.a(65535, (double)ul.field_d / 30.0)) + 64);
                   }
-                  var4.a(var18 + 1 + ". ", 325, var17, var19, -1);
-                  var4.c(var21, 325, var17, var19, -1);
-                  var4.a(Integer.toString(var20), 535, var17, var19, -1);
+                  var4.drawRightAligned(var18 + 1 + ". ", 325, var17, var19, -1);
+                  var4.drawString(var21, 325, var17, var19, -1);
+                  var4.drawRightAligned(Integer.toString(var20), 535, var17, var19, -1);
                   var3 = "";
                 }
                 var17 = var17 + var5;
               }
               if (((null != sd.field_a)) &&
                 ((var13 == 0))) {
-                var4.c(SecondaryNodeDequeIterator.field_d, 325, var17, 16711680, -1);
-                var4.a(Integer.toString(sd.field_a.field_H), 535, var17, 16711680, -1);
+                var4.drawString(SecondaryNodeDequeIterator.field_d, 325, var17, 16711680, -1);
+                var4.drawRightAligned(Integer.toString(sd.field_a.field_H), 535, var17, 16711680, -1);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -2122,7 +2122,7 @@ final class ld {
           }
         }
         var11 = var4.field_x + var10 + (140 + var5 * 9 / 2);
-        EmailFormatValidator.field_q.b(var3, 430, var11, 4210752, -1);
+        EmailFormatValidator.field_q.drawCentred(var3, 430, var11, 4210752, -1);
         if (!oh.a(0)) {
           stackIn_38_0 = mi.field_h;
         } else {
@@ -2130,7 +2130,7 @@ final class ld {
         }
         var3Lifetime1 = stackIn_38_0;
         var11Lifetime1 = var4.field_x + (140 + var10) + var5 * 10;
-        var4.a(var3Lifetime1, 85, var5 / 2 + var11Lifetime1, 465, 100, 4210752, -1, 1, 0, EmailFormatValidator.field_q.field_x);
+        var4.drawParagraph(var3Lifetime1, 85, var5 / 2 + var11Lifetime1, 465, 100, 4210752, -1, 1, 0, EmailFormatValidator.field_q.field_x);
     }
 
     private final void c(int param0, int param1) {

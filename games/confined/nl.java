@@ -67,8 +67,8 @@ final class nl {
           field_d = null;
           return;
         }
-        ok var2 = (ok) null;
-        nl.a((ok) null, -61, (ok) null, 56);
+        BitmapFont var2 = (BitmapFont) null;
+        nl.a((BitmapFont) null, -61, (BitmapFont) null, 56);
         field_e = null;
         field_d = null;
     }
@@ -122,7 +122,7 @@ final class nl {
         }
     }
 
-    final static void a(ok param0, int param1, ok param2, int param3) {
+    final static void a(BitmapFont param0, int param1, BitmapFont param2, int param3) {
         try {
           dn.field_f = param2;
           wg.field_a = param1;

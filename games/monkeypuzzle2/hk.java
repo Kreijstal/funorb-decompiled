@@ -634,9 +634,9 @@ final class hk extends IntrusiveNode {
     hk(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_g = param0;
-          this.field_j = param0.f();
+          this.field_j = param0.getTargetVolume();
           this.field_h = param1;
-          this.field_g.g(re.field_e * this.field_j / 256);
+          this.field_g.setVolume(re.field_e * this.field_j / 256);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

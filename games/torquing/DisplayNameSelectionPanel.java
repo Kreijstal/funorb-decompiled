@@ -200,7 +200,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ba, ng 
         try {
           var3 = this.field_H;
           var4 = param1;
-          ((EditableTextField) ((Object) var3)).a(false, var4, true);
+          ((EditableTextField) ((Object) var3)).setText(false, var4, true);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "th.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -214,7 +214,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ba, ng 
         this.field_B = new lg(NodeHashTableIterator.field_d, (ca) null);
         this.field_E = new lg(TranslucentSpriteLayer.field_j, (ca) null);
         this.field_H.field_n = ag.field_d;
-        this.field_H.a(new AccountNameAvailabilityValidator(this.field_H), 83);
+        this.field_H.setFieldValidator(new AccountNameAvailabilityValidator(this.field_H), 83);
         this.field_B.field_x = false;
         this.field_B.renderer = (WidgetRenderer) ((Object) new rf());
         this.field_E.renderer = (WidgetRenderer) ((Object) new je());

@@ -6,7 +6,7 @@ final class gj extends ta {
     static String[] field_o;
     static mk field_k;
     static int field_n;
-    static uj field_m;
+    static PalettedBitmapFont field_m;
     private ta field_p;
 
     gj() {

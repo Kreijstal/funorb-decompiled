@@ -10,11 +10,11 @@ final class tn extends pn {
     static volatile int field_s;
     static String field_m;
 
-    final static ef a(byte[] param0, int param1) {
-        ef var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, int param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        ef stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -22,12 +22,12 @@ final class tn extends pn {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (ef) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param1 != 0) {
             tn.b(false);
           }
-          var2 = new ef(param0, uo.field_k, MouseWheelInput.field_a, uo.field_l, je.field_c, ui.field_c);
+          var2 = new BinaryBitmapFont(param0, uo.field_k, MouseWheelInput.field_a, uo.field_l, je.field_c, ui.field_c);
           ok.a(2188450);
           stackIn_6_0 = var2;
           return stackIn_6_0;

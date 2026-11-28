@@ -8,7 +8,7 @@ final class sk extends WidgetContainer implements ql {
     private String field_E;
     private ha field_H;
     private int field_C;
-    private ta field_A;
+    private BitmapFont field_A;
     static int[] field_D;
     static String field_F;
 
@@ -80,7 +80,7 @@ final class sk extends WidgetContainer implements ql {
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        this.field_A.a(this.field_E, 14 + param3 + this.field_r, 10 + param2 + this.field_e, this.field_l - 28, this.field_p, 16777215, -1, 0, 0, this.field_A.field_C);
+        this.field_A.drawParagraph(this.field_E, 14 + param3 + this.field_r, 10 + param2 + this.field_e, this.field_l - 28, this.field_p, 16777215, -1, 0, 0, this.field_A.field_C);
     }
 
     final static kc a(String param0, long param1, boolean param2, boolean param3, String param4) {
@@ -163,7 +163,7 @@ final class sk extends WidgetContainer implements ql {
         this.field_B = var3;
     }
 
-    sk(ha param0, ta param1, String param2) {
+    sk(ha param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (ml) null);
         int var4_int = 0;
         this.field_C = 0;
@@ -171,7 +171,7 @@ final class sk extends WidgetContainer implements ql {
           this.field_H = param0;
           this.field_E = param2;
           this.field_A = param1;
-          var4_int = null != this.field_E ? this.field_A.a(this.field_E, 260, this.field_A.field_C) : 0;
+          var4_int = null != this.field_E ? this.field_A.textHeight(this.field_E, 260, this.field_A.field_C) : 0;
           this.a(22 + var4_int, 13361, 0, 288, 0);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

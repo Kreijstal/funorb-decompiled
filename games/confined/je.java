@@ -117,7 +117,7 @@ final class je extends vf {
           stackIn_19_0 = (param2) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
           qj.a(this.field_u, param3.field_m + param4 + (param3.field_z - this.field_u[0].field_x >> 1), param3.field_F, 55, param1 + param3.field_q, var7);
-          this.field_a.a(param3.field_B, param1 + param3.field_q, param4 + param3.field_m - 2, param3.field_F, param3.field_z, var8, -1, 1, 1, this.field_a.field_C);
+          this.field_a.drawParagraph(param3.field_B, param1 + param3.field_q, param4 + param3.field_m - 2, param3.field_F, param3.field_z, var8, -1, 1, 1, this.field_a.field_C);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -3187,7 +3187,7 @@ final class LoginMenuScreen extends pj implements ke {
 
     final void a(int param0, int param1, byte param2, int param3) {
         RuntimeException runtimeException = null;
-        rf var5 = null;
+        BitmapFont var5 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           super.a(param0, param1, param2, param3);
@@ -3196,7 +3196,7 @@ final class LoginMenuScreen extends pj implements ke {
           }
           var5 = DualLinkNode.field_i;
           if (this.field_J != null) {
-            var5.a(ch.field_t, param0 + this.field_o, this.field_m + param3, this.field_w, 20, 16777215, -1, 0, 0, var5.field_S + var5.field_x);
+            var5.drawParagraph(ch.field_t, param0 + this.field_o, this.field_m + param3, this.field_w, 20, 16777215, -1, 0, 0, var5.field_S + var5.field_x);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

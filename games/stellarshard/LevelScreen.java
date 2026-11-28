@@ -231,7 +231,7 @@ final class LevelScreen extends ib {
                       decompiledFrameRemainder0 = (var8 != 0);
                     }
                   }
-                  if ((decompiledFrameRemainder0) && ((320 - l.field_f.b(of.field_D)) <= param1 &&
+                  if ((decompiledFrameRemainder0) && ((320 - l.field_f.stringWidth(of.field_D)) <= param1 &&
                     param1 < 320 &&
                     !param5)) {
                     if (null != vf.field_L) {
@@ -261,7 +261,7 @@ final class LevelScreen extends ib {
                   this.field_o = true;
                 }
                 if (!this.field_o) {
-                  if ((!(param1 < (320 - l.field_f.b(vl.field_h)))) &&
+                  if ((!(param1 < (320 - l.field_f.stringWidth(vl.field_h)))) &&
                     (!(param1 >= 320)) &&
                     (!param5)) {
                     stackIn_108_0 = !(MouseWheelInput.field_e);
@@ -1098,7 +1098,7 @@ final class LevelScreen extends ib {
         int var8_int = 0;
         RuntimeException var8 = null;
         try {
-          var8_int = l.field_f.b(param5);
+          var8_int = l.field_f.stringWidth(param5);
           param3 += 4;
           param0 = param0 + var8_int / 2;
           if (ni.field_e > (-4 - var8_int + param0) &&
@@ -1118,7 +1118,7 @@ final class LevelScreen extends ib {
           if (param2) {
             param6 = 16777215;
           }
-          l.field_f.b(param5, param0 - 2, param1 + param3, param6, -1);
+          l.field_f.drawRightAligned(param5, param0 - 2, param1 + param3, param6, -1);
           if (param6 == 16777215 &&
             0 != fb.field_n &&
             param4) {
@@ -1201,14 +1201,14 @@ final class LevelScreen extends ib {
 
     final void a(byte param0) {
         int incrementValue$0 = 0;
-        ub stackIn_104_0 = null;
+        BinaryBitmapFont stackIn_104_0 = null;
         boolean stackIn_105_1 = false;
         boolean stackIn_109_2 = false;
         boolean stackIn_113_3 = false;
         int stackIn_116_1 = 0;
         int stackIn_116_2 = 0;
         boolean stackIn_117_3 = false;
-        ub stackIn_126_0 = null;
+        BinaryBitmapFont stackIn_126_0 = null;
         boolean stackIn_127_1 = false;
         boolean stackIn_131_2 = false;
         int stackIn_134_3;
@@ -1216,7 +1216,7 @@ final class LevelScreen extends ib {
         int stackIn_138_1 = 0;
         int stackIn_138_2 = 0;
         boolean stackIn_139_3 = false;
-        ub stackIn_145_0 = null;
+        BinaryBitmapFont stackIn_145_0 = null;
         boolean stackIn_146_1 = false;
         boolean stackIn_150_2 = false;
         int stackIn_153_3;
@@ -1225,7 +1225,7 @@ final class LevelScreen extends ib {
         int stackIn_156_1 = 0;
         int stackIn_196_0 = 0;
         int stackIn_197_0 = 0;
-        ub stackIn_255_0;
+        BinaryBitmapFont stackIn_255_0;
         String stackIn_255_1;
         int stackIn_255_2;
         int stackIn_255_3;
@@ -1236,7 +1236,7 @@ final class LevelScreen extends ib {
         RuntimeException decompiledCaughtException = null;
         double var2_double = 0.0;
         int var2_int = 0;
-        ub var2 = null;
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         String var3_ref_String = null;
         int var3 = 0;
@@ -1405,11 +1405,11 @@ final class LevelScreen extends ib {
                 DebouncedFieldValidator.a(dj.field_c, 8, -1, false, 320, var2_int, 415);
               }
               var3_ref_String = sg.field_d + qi.level + wc.field_l + ue.field_a;
-              l.field_f.a(var3_ref_String, -1, 260, 640, 180, 0, -1, 1, 1, l.field_f.field_N);
-              l.field_f.a(var3_ref_String, 1, 260, 640, 180, 0, -1, 1, 1, l.field_f.field_N);
-              l.field_f.a(var3_ref_String, 0, 259, 640, 180, 0, -1, 1, 1, l.field_f.field_N);
-              l.field_f.a(var3_ref_String, 0, 261, 640, 180, 0, -1, 1, 1, l.field_f.field_N);
-              l.field_f.a(var3_ref_String, 0, 260, 640, 180, 10742263, -1, 1, 1, l.field_f.field_N);
+              l.field_f.drawParagraph(var3_ref_String, -1, 260, 640, 180, 0, -1, 1, 1, l.field_f.field_N);
+              l.field_f.drawParagraph(var3_ref_String, 1, 260, 640, 180, 0, -1, 1, 1, l.field_f.field_N);
+              l.field_f.drawParagraph(var3_ref_String, 0, 259, 640, 180, 0, -1, 1, 1, l.field_f.field_N);
+              l.field_f.drawParagraph(var3_ref_String, 0, 261, 640, 180, 0, -1, 1, 1, l.field_f.field_N);
+              l.field_f.drawParagraph(var3_ref_String, 0, 260, 640, 180, 10742263, -1, 1, 1, l.field_f.field_N);
               decompiledFrameRemainder2 = (var14 != 0);
             }
           }
@@ -1420,12 +1420,12 @@ final class LevelScreen extends ib {
             var4 = 4 + (var2.field_x + var2.field_r);
             SoftwareRasterizer.fillRectangleAlpha(112, 190, 416, 20 + 5 * var4 + 60, 0, 192);
             ed.a(-6313, 103, 183, fg.field_P, 434, 80 + var4 * 5 + 14);
-            var2.c(qj.field_b, 320, var3, 10742263, -1);
+            var2.drawCentred(qj.field_b, 320, var3, 10742263, -1);
             stackIn_104_0 = var2;
             stackIn_105_1 = !(tf.field_a.isEmpty(0));
             stackIn_109_2 = (ProxyAuthenticationRequiredException.field_a != 0);
             stackIn_113_3 = (0 != te.field_c);
-            ((ub) (Object) stackIn_104_0).c(ch.a(stackIn_105_1, stackIn_109_2, stackIn_113_3, 0), 320, var4 + var3, 10742263, -1);
+            ((BinaryBitmapFont) (Object) stackIn_104_0).drawCentred(ch.a(stackIn_105_1, stackIn_109_2, stackIn_113_3, 0), 320, var4 + var3, 10742263, -1);
             stackIn_116_1 = 320;
             stackIn_116_2 = -4;
             stackIn_117_3 = (ld.field_F == 0);
@@ -1438,7 +1438,7 @@ final class LevelScreen extends ib {
             stackIn_131_2 = !(tf.field_a.isEmpty(0));
             stackIn_134_3 = -72;
             stackIn_135_4 = (ProxyAuthenticationRequiredException.field_a != 0);
-            ((ub) (Object) stackIn_126_0).c(pe.$cfr$intArgs$a$3214d41809e1(stackIn_127_1, stackIn_131_2, stackIn_134_3, stackIn_135_4), 320, 30 + (3 * var4 + var3), 10742263, -1);
+            ((BinaryBitmapFont) (Object) stackIn_126_0).drawCentred(pe.$cfr$intArgs$a$3214d41809e1(stackIn_127_1, stackIn_131_2, stackIn_134_3, stackIn_135_4), 320, 30 + (3 * var4 + var3), 10742263, -1);
             stackIn_138_1 = 320;
             stackIn_138_2 = param0 ^ -87;
             stackIn_139_3 = (ld.field_F == 1);
@@ -1458,7 +1458,7 @@ final class LevelScreen extends ib {
             stackIn_150_2 = (ProxyAuthenticationRequiredException.field_a != 0);
             stackIn_153_3 = 6;
             stackIn_154_4 = !(tf.field_a.isEmpty(param0 - 85));
-            ((ub) (Object) stackIn_145_0).c(stellarshard.a(stackIn_146_1, stackIn_150_2, stackIn_153_3, stackIn_154_4), 320, 4 * var4 + var3 + 60, 10742263, -1);
+            ((BinaryBitmapFont) (Object) stackIn_145_0).drawCentred(stellarshard.a(stackIn_146_1, stackIn_150_2, stackIn_153_3, stackIn_154_4), 320, 4 * var4 + var3 + 60, 10742263, -1);
             SoftwareRasterizer.fillRectangleAlpha(112, 190, 416, 80 + var4 * 5, 16777215, n.field_L);
           }
           if (decompiledFrameCompleted1) {
@@ -1477,81 +1477,81 @@ final class LevelScreen extends ib {
             DebouncedFieldValidator.a(li.field_b, 9, -1, false, 320, 5883647, 439);
             var2_intLifetime1 = 84;
             var3Lifetime1 = 104;
-            qj.field_a.c(MouseHandler.field_a, 320, var3Lifetime1 + 12, 10742263, -1);
+            qj.field_a.drawCentred(MouseHandler.field_a, 320, var3Lifetime1 + 12, 10742263, -1);
             var3Lifetime1 += 14;
-            qj.field_a.c(hj.field_c, 320, var3Lifetime1 + 12, 10742263, -1);
+            qj.field_a.drawCentred(hj.field_c, 320, var3Lifetime1 + 12, 10742263, -1);
             var3Lifetime1 += 22;
-            qj.field_a.a(ValidatedTextField.field_V, 160, var3Lifetime1 - 6, 416, 32, 10742263, -1, 0, 0, 13);
+            qj.field_a.drawParagraph(ValidatedTextField.field_V, 160, var3Lifetime1 - 6, 416, 32, 10742263, -1, 0, 0, 13);
             e.field_g[8].e(var2_intLifetime1, -36 + (var3Lifetime1 + 4));
             var3Lifetime1 += 12;
             var2_intLifetime1 -= 64;
             var4Lifetime1 = var3Lifetime1;
             e.field_g[0].e(var2_intLifetime1, var3Lifetime1);
             var3Lifetime1 += 40;
-            qj.field_a.a(ei.field_A, var2_intLifetime1 + 68, 12 + var3Lifetime1, 16777215, -1);
+            qj.field_a.drawString(ei.field_A, var2_intLifetime1 + 68, 12 + var3Lifetime1, 16777215, -1);
             e.field_g[1].e(var2_intLifetime1, var3Lifetime1);
             var3Lifetime1 += 40;
-            qj.field_a.a(gf.field_a, var2_intLifetime1 + 68, 12 + var3Lifetime1, 16777215, -1);
+            qj.field_a.drawString(gf.field_a, var2_intLifetime1 + 68, 12 + var3Lifetime1, 16777215, -1);
             e.field_g[2].e(var2_intLifetime1, var3Lifetime1);
             var3Lifetime1 += 40;
-            qj.field_a.a(PacketBuffer.field_l, var2_intLifetime1 + 68, var3Lifetime1 + 12, 16777215, -1);
+            qj.field_a.drawString(PacketBuffer.field_l, var2_intLifetime1 + 68, var3Lifetime1 + 12, 16777215, -1);
             e.field_g[3].e(var2_intLifetime1, var3Lifetime1);
             var3Lifetime1 += 40;
-            qj.field_a.a(he.field_l, 68 + var2_intLifetime1, 12 + var3Lifetime1, 16777215, -1);
+            qj.field_a.drawString(he.field_l, 68 + var2_intLifetime1, 12 + var3Lifetime1, 16777215, -1);
             e.field_g[4].e(var2_intLifetime1, var3Lifetime1);
             var3Lifetime1 += 40;
-            qj.field_a.a(td.field_e, var2_intLifetime1 + 68, var3Lifetime1 + 12, 16777215, -1);
+            qj.field_a.drawString(td.field_e, var2_intLifetime1 + 68, var3Lifetime1 + 12, 16777215, -1);
             var2_intLifetime1 += 192;
             var3Lifetime1Lifetime1 = var4Lifetime1;
             e.field_g[5].e(var2_intLifetime1, var3Lifetime1Lifetime1);
             var3Lifetime1Lifetime1 += 40;
-            qj.field_a.a(SocketConnector.field_f, 68 + var2_intLifetime1, var3Lifetime1Lifetime1 + 12, 16777215, -1);
+            qj.field_a.drawString(SocketConnector.field_f, 68 + var2_intLifetime1, var3Lifetime1Lifetime1 + 12, 16777215, -1);
             e.field_g[6].e(var2_intLifetime1, var3Lifetime1Lifetime1);
             var3Lifetime1Lifetime1 += 40;
-            qj.field_a.a(PcmResampler.field_h, 68 + var2_intLifetime1, 12 + var3Lifetime1Lifetime1, 16777215, -1);
+            qj.field_a.drawString(PcmResampler.field_h, 68 + var2_intLifetime1, 12 + var3Lifetime1Lifetime1, 16777215, -1);
             e.field_g[7].e(var2_intLifetime1, var3Lifetime1Lifetime1);
             var3Lifetime1Lifetime1 += 40;
-            qj.field_a.a(we.field_e, var2_intLifetime1 + 68, 12 + var3Lifetime1Lifetime1, 16777215, -1);
+            qj.field_a.drawString(we.field_e, var2_intLifetime1 + 68, 12 + var3Lifetime1Lifetime1, 16777215, -1);
             e.field_g[9].e(var2_intLifetime1, var3Lifetime1Lifetime1);
             var3Lifetime1Lifetime1 += 40;
-            qj.field_a.a(te.field_b, 68 + var2_intLifetime1, var3Lifetime1Lifetime1 + 12, 16777215, -1);
+            qj.field_a.drawString(te.field_b, 68 + var2_intLifetime1, var3Lifetime1Lifetime1 + 12, 16777215, -1);
             e.field_g[10].e(var2_intLifetime1, var3Lifetime1Lifetime1);
             var3Lifetime1Lifetime1 += 40;
-            qj.field_a.a(ha.field_x, var2_intLifetime1 + 68, 12 + var3Lifetime1Lifetime1, 16777215, -1);
+            qj.field_a.drawString(ha.field_x, var2_intLifetime1 + 68, 12 + var3Lifetime1Lifetime1, 16777215, -1);
             var2_intLifetime1 += 192;
             var3Lifetime1Lifetime2 = var4Lifetime1;
             e.field_g[11].e(var2_intLifetime1, var3Lifetime1Lifetime2);
             var3Lifetime1Lifetime2 += 40;
-            qj.field_a.a(fc.field_c, var2_intLifetime1 + 68, 12 + var3Lifetime1Lifetime2, 16777215, -1);
+            qj.field_a.drawString(fc.field_c, var2_intLifetime1 + 68, 12 + var3Lifetime1Lifetime2, 16777215, -1);
             e.field_g[12].e(var2_intLifetime1, var3Lifetime1Lifetime2);
             var3Lifetime1Lifetime2 += 40;
-            qj.field_a.a(ClientException.field_e, var2_intLifetime1 + 68, var3Lifetime1Lifetime2 + 12, 16777215, -1);
+            qj.field_a.drawString(ClientException.field_e, var2_intLifetime1 + 68, var3Lifetime1Lifetime2 + 12, 16777215, -1);
             e.field_g[13].e(var2_intLifetime1, var3Lifetime1Lifetime2);
             var3Lifetime1Lifetime2 += 40;
-            qj.field_a.a(nb.field_O, 68 + var2_intLifetime1, var3Lifetime1Lifetime2 + 12, 16777215, -1);
+            qj.field_a.drawString(nb.field_O, 68 + var2_intLifetime1, var3Lifetime1Lifetime2 + 12, 16777215, -1);
             e.field_g[14].e(var2_intLifetime1, var3Lifetime1Lifetime2);
             var3Lifetime1Lifetime2 += 40;
-            qj.field_a.a(ja.field_k, var2_intLifetime1 + 68, var3Lifetime1Lifetime2 + 12, 16777215, -1);
+            qj.field_a.drawString(ja.field_k, var2_intLifetime1 + 68, var3Lifetime1Lifetime2 + 12, 16777215, -1);
             e.field_g[15].e(var2_intLifetime1, var3Lifetime1Lifetime2);
             var3Lifetime1Lifetime2 += 40;
-            qj.field_a.a(rd.field_b, 68 + var2_intLifetime1, 12 + var3Lifetime1Lifetime2, 16777215, -1);
+            qj.field_a.drawString(rd.field_b, 68 + var2_intLifetime1, 12 + var3Lifetime1Lifetime2, 16777215, -1);
             var2_intLifetime1 += 144;
             var3Lifetime1Lifetime3 = var4Lifetime1;
             var3Lifetime1Lifetime4 = 400;
             var2_intLifetime1Lifetime1 = 320;
             var5_ref_String = nb.field_N;
-            qj.field_a.c(var5_ref_String, 1 + var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4, 0, -1);
-            qj.field_a.c(var5_ref_String, var2_intLifetime1Lifetime1 - 1, var3Lifetime1Lifetime4, 0, -1);
-            qj.field_a.c(var5_ref_String, var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4 + 1, 0, -1);
-            qj.field_a.c(var5_ref_String, var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4 - 1, 0, -1);
-            qj.field_a.c(var5_ref_String, var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4, 16777215, -1);
+            qj.field_a.drawCentred(var5_ref_String, 1 + var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4, 0, -1);
+            qj.field_a.drawCentred(var5_ref_String, var2_intLifetime1Lifetime1 - 1, var3Lifetime1Lifetime4, 0, -1);
+            qj.field_a.drawCentred(var5_ref_String, var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4 + 1, 0, -1);
+            qj.field_a.drawCentred(var5_ref_String, var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4 - 1, 0, -1);
+            qj.field_a.drawCentred(var5_ref_String, var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4, 16777215, -1);
             var5_ref_StringLifetime1 = cm.field_e;
             var3Lifetime1Lifetime4 += 16;
-            qj.field_a.c(var5_ref_StringLifetime1, 1 + var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4, 0, -1);
-            qj.field_a.c(var5_ref_StringLifetime1, var2_intLifetime1Lifetime1 - 1, var3Lifetime1Lifetime4, 0, -1);
-            qj.field_a.c(var5_ref_StringLifetime1, var2_intLifetime1Lifetime1, 1 + var3Lifetime1Lifetime4, 0, -1);
-            qj.field_a.c(var5_ref_StringLifetime1, var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4 - 1, 0, -1);
-            qj.field_a.c(var5_ref_StringLifetime1, var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4, 16777215, -1);
+            qj.field_a.drawCentred(var5_ref_StringLifetime1, 1 + var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4, 0, -1);
+            qj.field_a.drawCentred(var5_ref_StringLifetime1, var2_intLifetime1Lifetime1 - 1, var3Lifetime1Lifetime4, 0, -1);
+            qj.field_a.drawCentred(var5_ref_StringLifetime1, var2_intLifetime1Lifetime1, 1 + var3Lifetime1Lifetime4, 0, -1);
+            qj.field_a.drawCentred(var5_ref_StringLifetime1, var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4 - 1, 0, -1);
+            qj.field_a.drawCentred(var5_ref_StringLifetime1, var2_intLifetime1Lifetime1, var3Lifetime1Lifetime4, 16777215, -1);
             SoftwareRasterizer.fillRectangleAlpha(12, 96, 616, 336, 16777215, n.field_L);
           }
           boolean decompiledFrameCompleted0 = true;
@@ -1562,13 +1562,13 @@ final class LevelScreen extends ib {
             ed.a(-6313, 119, 98, fg.field_P, 402, 302);
             DebouncedFieldValidator.a(li.field_b, 9, -1, false, 320, 5883647, 439);
             if (DualLinkNode.a(-1)) {
-              qj.field_a.c(pd.field_p, 320, 159, 0, -1);
-              qj.field_a.c(pd.field_p, 320, 161, 0, -1);
-              qj.field_a.c(pd.field_p, 319, 160, 0, -1);
-              qj.field_a.c(pd.field_p, 321, 160, 0, -1);
-              qj.field_a.c(pd.field_p, 320, 160, 16777215, -1);
+              qj.field_a.drawCentred(pd.field_p, 320, 159, 0, -1);
+              qj.field_a.drawCentred(pd.field_p, 320, 161, 0, -1);
+              qj.field_a.drawCentred(pd.field_p, 319, 160, 0, -1);
+              qj.field_a.drawCentred(pd.field_p, 321, 160, 0, -1);
+              qj.field_a.drawCentred(pd.field_p, 320, 160, 16777215, -1);
               if (DualLinkNode.a(param0 ^ -86)) {
-                qj.field_a.a(hj.field_e, 220, 192, 200, 200, 16777215, 0, 1, 0, qj.field_a.field_N);
+                qj.field_a.drawParagraph(hj.field_e, 220, 192, 200, 200, 16777215, 0, 1, 0, qj.field_a.field_N);
               }
               DebouncedFieldValidator.a(wl.field_T, 8, -1, false, 320, 5883647, 411);
               decompiledFrameRemainder1 = (var14 != 0);
@@ -1579,20 +1579,20 @@ final class LevelScreen extends ib {
               }
               boolean decompiledFrameRemainder0 = true;
               if (!gh.field_d.field_s) {
-                qj.field_a.c(wk.field_g, 320, 159, 0, -1);
-                qj.field_a.c(wk.field_g, 320, 161, 0, -1);
-                qj.field_a.c(wk.field_g, 319, 160, 0, -1);
-                qj.field_a.c(wk.field_g, 321, 160, 0, -1);
-                qj.field_a.c(wk.field_g, 320, 160, 16777215, -1);
+                qj.field_a.drawCentred(wk.field_g, 320, 159, 0, -1);
+                qj.field_a.drawCentred(wk.field_g, 320, 161, 0, -1);
+                qj.field_a.drawCentred(wk.field_g, 319, 160, 0, -1);
+                qj.field_a.drawCentred(wk.field_g, 321, 160, 0, -1);
+                qj.field_a.drawCentred(wk.field_g, 320, 160, 16777215, -1);
                 decompiledFrameRemainder0 = (var14 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (gh.field_d.field_u == null) {
-                  qj.field_a.c(ib.field_d, 320, 159, 0, -1);
-                  qj.field_a.c(ib.field_d, 320, 161, 0, -1);
-                  qj.field_a.c(ib.field_d, 319, 160, 0, -1);
-                  qj.field_a.c(ib.field_d, 321, 160, 0, -1);
-                  qj.field_a.c(ib.field_d, 320, 160, 16777215, -1);
+                  qj.field_a.drawCentred(ib.field_d, 320, 159, 0, -1);
+                  qj.field_a.drawCentred(ib.field_d, 320, 161, 0, -1);
+                  qj.field_a.drawCentred(ib.field_d, 319, 160, 0, -1);
+                  qj.field_a.drawCentred(ib.field_d, 321, 160, 0, -1);
+                  qj.field_a.drawCentred(ib.field_d, 320, 160, 16777215, -1);
                   decompiledFrameRemainder0 = (var14 != 0);
                 }
                 if (decompiledFrameRemainder0) {
@@ -1655,16 +1655,16 @@ final class LevelScreen extends ib {
                           var12 = vg.field_s + (String) (var12);
                         }
                         var13 = 162;
-                        qj.field_a.a((String) (var12), var13 + 1, var9Lifetime1 + 16, 0, -1);
-                        qj.field_a.a((String) (var12), -1 + var13, var9Lifetime1 + 16, 0, -1);
-                        qj.field_a.a((String) (var12), var13, 1 + var9Lifetime1 + 16, 0, -1);
-                        qj.field_a.a((String) (var12), var13, -1 + var9Lifetime1 + 16, 0, -1);
-                        qj.field_a.a((String) (var12), var13, 16 + var9Lifetime1, var2_intLifetime2, -1);
-                        qj.field_a.b("" + var11, 477, var9Lifetime1 + 16, 0, -1);
-                        qj.field_a.b("" + var11, 479, 16 + var9Lifetime1, 0, -1);
-                        qj.field_a.b("" + var11, 478, var9Lifetime1 - 1 + 16, 0, -1);
-                        qj.field_a.b("" + var11, 478, var9Lifetime1 + 1 + 16, 0, -1);
-                        qj.field_a.b("" + var11, 478, var9Lifetime1 + 16, var2_intLifetime2, -1);
+                        qj.field_a.drawString((String) (var12), var13 + 1, var9Lifetime1 + 16, 0, -1);
+                        qj.field_a.drawString((String) (var12), -1 + var13, var9Lifetime1 + 16, 0, -1);
+                        qj.field_a.drawString((String) (var12), var13, 1 + var9Lifetime1 + 16, 0, -1);
+                        qj.field_a.drawString((String) (var12), var13, -1 + var9Lifetime1 + 16, 0, -1);
+                        qj.field_a.drawString((String) (var12), var13, 16 + var9Lifetime1, var2_intLifetime2, -1);
+                        qj.field_a.drawRightAligned("" + var11, 477, var9Lifetime1 + 16, 0, -1);
+                        qj.field_a.drawRightAligned("" + var11, 479, 16 + var9Lifetime1, 0, -1);
+                        qj.field_a.drawRightAligned("" + var11, 478, var9Lifetime1 - 1 + 16, 0, -1);
+                        qj.field_a.drawRightAligned("" + var11, 478, var9Lifetime1 + 1 + 16, 0, -1);
+                        qj.field_a.drawRightAligned("" + var11, 478, var9Lifetime1 + 16, var2_intLifetime2, -1);
                       }
                       var9Lifetime1 += 20;
                       var10++;
@@ -1675,26 +1675,26 @@ final class LevelScreen extends ib {
                     break;
                   }
                   if (var7Lifetime1 == 0) {
-                    qj.field_a.c(pd.field_p, 320, 159, 0, -1);
-                    qj.field_a.c(pd.field_p, 320, 161, 0, -1);
-                    qj.field_a.c(pd.field_p, 319, 160, 0, -1);
-                    qj.field_a.c(pd.field_p, 321, 160, 0, -1);
-                    qj.field_a.c(pd.field_p, 320, 160, 16777215, -1);
+                    qj.field_a.drawCentred(pd.field_p, 320, 159, 0, -1);
+                    qj.field_a.drawCentred(pd.field_p, 320, 161, 0, -1);
+                    qj.field_a.drawCentred(pd.field_p, 319, 160, 0, -1);
+                    qj.field_a.drawCentred(pd.field_p, 321, 160, 0, -1);
+                    qj.field_a.drawCentred(pd.field_p, 320, 160, 16777215, -1);
                   }
                   SoftwareRasterizer.setClip(129, 0, 511, 479);
-                  qj.field_a.c(sj.field_C, 320 - bf.field_c, 366, 0, -1);
-                  qj.field_a.c(sj.field_C, -bf.field_c + 320, 368, 0, -1);
-                  qj.field_a.c(sj.field_C, 319 - bf.field_c, 367, 0, -1);
-                  qj.field_a.c(sj.field_C, -bf.field_c + 321, 367, 0, -1);
-                  qj.field_a.c(sj.field_C, 320 - bf.field_c, 367, 16777215, -1);
+                  qj.field_a.drawCentred(sj.field_C, 320 - bf.field_c, 366, 0, -1);
+                  qj.field_a.drawCentred(sj.field_C, -bf.field_c + 320, 368, 0, -1);
+                  qj.field_a.drawCentred(sj.field_C, 319 - bf.field_c, 367, 0, -1);
+                  qj.field_a.drawCentred(sj.field_C, -bf.field_c + 321, 367, 0, -1);
+                  qj.field_a.drawCentred(sj.field_C, 320 - bf.field_c, 367, 16777215, -1);
                   SoftwareRasterizer.resetClip();
                 }
               }
               DebouncedFieldValidator.a("                                                ", 8, -1, false, 320, 5883647, 411);
               var3Lifetime2 = -1;
               while (var3Lifetime2 <= 1) {
-                l.field_f.c(od.field_w[1 + var3Lifetime2], 192 * var3Lifetime2 + 319, 435, 0, 0);
-                l.field_f.c(od.field_w[1 + var3Lifetime2], 320 + 192 * var3Lifetime2, 434, 0, 0);
+                l.field_f.drawCentred(od.field_w[1 + var3Lifetime2], 192 * var3Lifetime2 + 319, 435, 0, 0);
+                l.field_f.drawCentred(od.field_w[1 + var3Lifetime2], 320 + 192 * var3Lifetime2, 434, 0, 0);
                 if (var14 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -1708,7 +1708,7 @@ final class LevelScreen extends ib {
                 } else {
                   stackIn_256_4 = 5883647;
                 }
-                ((ub) (Object) stackIn_255_0).c(stackIn_255_1, stackIn_255_2, stackIn_255_3, stackIn_256_4, -1);
+                ((BinaryBitmapFont) (Object) stackIn_255_0).drawCentred(stackIn_255_1, stackIn_255_2, stackIn_255_3, stackIn_256_4, -1);
                 var3Lifetime2++;
               }
             }
@@ -1806,12 +1806,12 @@ final class LevelScreen extends ib {
                         !((32 + var2_intLifetime3) < ni.field_e) &&
                         !(var3Lifetime3 > KeyHandler.field_a) &&
                         !(KeyHandler.field_a > var3Lifetime3 + 32)) {
-                        qj.field_a.c(NanoFrameTimer.field_e[var7Lifetime2], 320, 230, 16777215, -1);
+                        qj.field_a.drawCentred(NanoFrameTimer.field_e[var7Lifetime2], 320, 230, 16777215, -1);
                         var6Lifetime2 = 0;
                         if ((1 << var7Lifetime2 & var4Lifetime2) != 0) {
-                          qj.field_a.c(AccountCreationResultPanel.field_ob, 320, qj.field_a.field_N + 234, 16777215, -1);
+                          qj.field_a.drawCentred(AccountCreationResultPanel.field_ob, 320, qj.field_a.field_N + 234, 16777215, -1);
                         } else {
-                          qj.field_a.c(tf.field_c, 320, 234 + qj.field_a.field_N, 16711680, -1);
+                          qj.field_a.drawCentred(tf.field_c, 320, 234 + qj.field_a.field_N, 16711680, -1);
                         }
                         var9Lifetime2 = qj.field_a.field_N * 5 / 2 + 323 - 96;
                         if ((1 << var7Lifetime2 & var4Lifetime2) != 0) {
@@ -1824,7 +1824,7 @@ final class LevelScreen extends ib {
                           uf.field_g.e(132, var9Lifetime2);
                         }
                         var9Lifetime2 = var9Lifetime2 + qj.field_a.field_N;
-                        qj.field_a.a(hc.field_t[var7Lifetime2] + "<br><br>" + bb.field_h + wf.field_d[var7Lifetime2] + "<br><br>" + dd.field_b + am.field_d[var7Lifetime2], 280, -qj.field_a.field_N + var9Lifetime2, 228, 92, 10742263, -1, 1, 1, 2 + qj.field_a.field_N);
+                        qj.field_a.drawParagraph(hc.field_t[var7Lifetime2] + "<br><br>" + bb.field_h + wf.field_d[var7Lifetime2] + "<br><br>" + dd.field_b + am.field_d[var7Lifetime2], 280, -qj.field_a.field_N + var9Lifetime2, 228, 92, 10742263, -1, 1, 1, 2 + qj.field_a.field_N);
                         var10Lifetime1 = am.field_d[var7Lifetime2];
                         var11 = 0;
                         while (var10Lifetime1 > var11) {
@@ -1849,9 +1849,9 @@ final class LevelScreen extends ib {
                 if (var6Lifetime2 != 0) {
                   var7Lifetime2 = 330 - (-(qj.field_a.field_N * 5 / 2) + 96);
                   var7Lifetime2 = var7Lifetime2 + qj.field_a.field_N;
-                  qj.field_a.c(id.field_l, 320, var7Lifetime2, 10742263, -1);
+                  qj.field_a.drawCentred(id.field_l, 320, var7Lifetime2, 10742263, -1);
                   if (DualLinkNode.a(-1)) {
-                    qj.field_a.c(hj.field_e, 320, var7Lifetime2 + 100, 10742263, -1);
+                    qj.field_a.drawCentred(hj.field_e, 320, var7Lifetime2 + 100, 10742263, -1);
                   }
                 }
                 stackIn_407_0 = 108;

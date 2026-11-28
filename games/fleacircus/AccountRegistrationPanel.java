@@ -598,12 +598,12 @@ final class AccountRegistrationPanel extends gj implements dc, da, pe {
           this.field_M.field_m = a.field_h;
           this.field_S.field_m = va.field_k;
           this.field_T.field_m = gf.field_f;
-          this.field_K.a(true, new AccountNameAvailabilityValidator(this.field_K));
-          this.field_U.a(true, new EmailFormatValidator(this.field_U));
-          this.field_H.a(true, new ConfirmedEmailAvailabilityValidator(this.field_H, this.field_U));
-          this.field_F.a(true, new PasswordValidator(this.field_F, this.field_K, this.field_U));
-          this.field_M.a(true, new MatchingFieldValidator(this.field_M, this.field_F));
-          this.field_S.a(true, new AgeValidator(this.field_S));
+          this.field_K.setFieldValidator(true, new AccountNameAvailabilityValidator(this.field_K));
+          this.field_U.setFieldValidator(true, new EmailFormatValidator(this.field_U));
+          this.field_H.setFieldValidator(true, new ConfirmedEmailAvailabilityValidator(this.field_H, this.field_U));
+          this.field_F.setFieldValidator(true, new PasswordValidator(this.field_F, this.field_K, this.field_U));
+          this.field_M.setFieldValidator(true, new MatchingFieldValidator(this.field_M, this.field_F));
+          this.field_S.setFieldValidator(true, new AgeValidator(this.field_S));
           this.field_I.field_D = false;
           this.field_I.field_p = (ComponentLayout) ((Object) new ri());
           this.field_R.field_p = (ComponentLayout) ((Object) new me());
@@ -695,7 +695,7 @@ final class AccountRegistrationPanel extends gj implements dc, da, pe {
             discarded$1 = this.a(4, (UiComponent) null, (String) null, 11, 117);
           }
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(false, (byte) -91, var4);
+          ((EditableTextField) ((Object) var3)).setText(false, (byte) -91, var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

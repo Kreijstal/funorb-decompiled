@@ -50,16 +50,16 @@ final class nc extends ue {
         stackIn_17_2 = true;
         stackIn_18_3 = (this.field_i == null) ? false : true;
         var5 = hj.a(stackIn_15_0, stackIn_17_1, stackIn_17_2, stackIn_18_3);
-        var6 = go.field_l.a(var11);
-        var7 = go.field_l.a(var3);
+        var6 = go.field_l.stringWidth(var11);
+        var7 = go.field_l.stringWidth(var3);
         if (var7 > var6) {
           var6 = var7;
         }
-        var7Lifetime1 = go.field_l.a(var4);
+        var7Lifetime1 = go.field_l.stringWidth(var4);
         if (var6 < var7Lifetime1) {
           var6 = var7Lifetime1;
         }
-        var7Lifetime2 = go.field_l.a(var5);
+        var7Lifetime2 = go.field_l.stringWidth(var5);
         if (var6 < var7Lifetime2) {
           var6 = var7Lifetime2;
         }
@@ -74,10 +74,10 @@ final class nc extends ue {
         if (this.field_j != 20) {
           return;
         }
-        go.field_l.c(var11, 320, 150, 16760896, -1);
-        go.field_l.c(var3, 320, 170, 16760896, -1);
-        go.field_l.c(var4, 320, 275, 16760896, -1);
-        go.field_l.c(var5, 320, 340, 16760896, -1);
+        go.field_l.drawCentred(var11, 320, 150, 16760896, -1);
+        go.field_l.drawCentred(var3, 320, 170, 16760896, -1);
+        go.field_l.drawCentred(var4, 320, 275, 16760896, -1);
+        go.field_l.drawCentred(var5, 320, 340, 16760896, -1);
         super.b(param0 ^ 0);
     }
 

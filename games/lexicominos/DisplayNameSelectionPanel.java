@@ -20,7 +20,7 @@ final class DisplayNameSelectionPanel extends nb implements ag, jk {
         try {
           var3 = this.field_E;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(var4, -1, false);
+          ((EditableTextField) ((Object) var3)).setText(var4, -1, false);
           if (param1 < 103) {
             DisplayNameSelectionPanel.clearStaticReferences(89);
           }
@@ -308,7 +308,7 @@ final class DisplayNameSelectionPanel extends nb implements ag, jk {
         this.field_G = new kf(PasswordValidator.field_l, (vd) null);
         this.field_B = new kf(he.field_a, (vd) null);
         this.field_E.field_q = ValidatedTextField.field_Q;
-        this.field_E.a(new AccountNameAvailabilityValidator(this.field_E), (byte) 23);
+        this.field_E.setFieldValidator(new AccountNameAvailabilityValidator(this.field_E), (byte) 23);
         this.field_G.field_D = false;
         this.field_G.field_i = (rd) ((Object) new v());
         this.field_B.field_i = (rd) ((Object) new uj());

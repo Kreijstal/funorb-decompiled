@@ -52,7 +52,7 @@ final class RichTextLayout extends TextLayout {
           }
           this.booleanState0030 = true;
           textLineMetricsLocal9 = this.computeTextLineMetrics0392(-95, integerArgument1, bitmapFontArgument5, stringArgument3);
-          integerLocal8 = bitmapFontArgument5.computeInteger1066(stringArgument3);
+          integerLocal8 = bitmapFontArgument5.stringWidth(stringArgument3);
           textLineMetricsLocal9.characterXPositions[0] = integerArgument2 - (integerLocal8 >> 1);
           textLineMetricsLocal9.characterXPositions[stringArgument3.length()] = integerArgument2 + (integerLocal8 >> 1);
           MouseWheelInput.populateTextCaretPositions(textLineMetricsLocal9, bitmapFontArgument5, 0, stringArgument3, byteArgument4 ^ -9);
@@ -152,7 +152,7 @@ final class RichTextLayout extends TextLayout {
           textLineMetricsLocal1 = this.computeTextLineMetrics0392(-27, integerArgument4, bitmapFontArgument2, stringArgument3);
           textLineMetricsLocal2 = textLineMetricsLocal1;
           textLineMetricsLocal1.characterXPositions[0] = integerArgument1;
-          textLineMetricsLocal2.characterXPositions[stringArgument3.length()] = bitmapFontArgument2.computeInteger1066(stringArgument3) + integerArgument1;
+          textLineMetricsLocal2.characterXPositions[stringArgument3.length()] = bitmapFontArgument2.stringWidth(stringArgument3) + integerArgument1;
           MouseWheelInput.populateTextCaretPositions(textLineMetricsLocal2, bitmapFontArgument2, 0, stringArgument3, -1);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ea.T(" + integerArgument1 + ',' + (bitmapFontArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ',' + integerArgument4 + ',' + integerArgument5 + ')');
@@ -214,9 +214,9 @@ final class RichTextLayout extends TextLayout {
           this.integerState0159 = integerArgument5;
           this.booleanState0030 = false;
           this.integerState0158 = integerArgument6;
-          stringArrayLocal24 = new String[bitmapFontArgument3.computeInteger1067(stringArgument1, integerArgument4) + 1];
+          stringArrayLocal24 = new String[bitmapFontArgument3.lineCount(stringArgument1, integerArgument4) + 1];
           stringArrayLocal25 = stringArrayLocal24;
-          integerLocal18 = Math.max(1, bitmapFontArgument3.computeInteger1073(stringArgument1, new int[]{integerArgument4}, stringArrayLocal25));
+          integerLocal18 = Math.max(1, bitmapFontArgument3.wrapText(stringArgument1, new int[]{integerArgument4}, stringArrayLocal25));
           if (this.integerState0164 == 3 &&
             integerLocal18 == 1) {
             this.integerState0164 = 1;
@@ -261,11 +261,11 @@ final class RichTextLayout extends TextLayout {
             textLineMetricsLocal22 = new TextLineMetrics(stackIntegerLocal3, stackIntegerLocal4, stackIntegerLocal7);
             textLineMetricsLocal22.characterXPositions[0] = 0;
             if (stringLocal21 != null) {
-              textLineMetricsLocal22.characterXPositions[stringLocal21.length()] = bitmapFontArgument3.computeInteger1066(stringLocal21);
+              textLineMetricsLocal22.characterXPositions[stringLocal21.length()] = bitmapFontArgument3.stringWidth(stringLocal21);
               stackTextLineMetricsLocal8 = textLineMetricsLocal22;
               stackBitmapFontLocal9 = (BitmapFont) (bitmapFontArgument3);
               if (integerArgument6 == 3) {
-                stackIntegerLocal10 = this.computeInteger0230((byte) 64, bitmapFontArgument3.computeInteger1066(stringLocal21), stringLocal21, integerArgument4);
+                stackIntegerLocal10 = this.computeInteger0230((byte) 64, bitmapFontArgument3.stringWidth(stringLocal21), stringLocal21, integerArgument4);
               } else {
                 stackIntegerLocal10 = 0;
               }
@@ -341,7 +341,7 @@ final class RichTextLayout extends TextLayout {
           this.integerState0158 = 2;
           textLineMetricsLocal1 = this.computeTextLineMetrics0392(88, integerArgument4, bitmapFontArgument2, stringArgument5);
           textLineMetricsLocal2 = textLineMetricsLocal1;
-          textLineMetricsLocal2.characterXPositions[integerArgument1] = -bitmapFontArgument2.computeInteger1066(stringArgument5) + integerArgument3;
+          textLineMetricsLocal2.characterXPositions[integerArgument1] = -bitmapFontArgument2.stringWidth(stringArgument5) + integerArgument3;
           textLineMetricsLocal2.characterXPositions[stringArgument5.length()] = integerArgument3;
           MouseWheelInput.populateTextCaretPositions(textLineMetricsLocal2, bitmapFontArgument2, 0, stringArgument5, -1);
         } catch (RuntimeException runtimeException) {

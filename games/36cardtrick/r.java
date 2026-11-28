@@ -188,7 +188,7 @@ class r extends ek {
         return 'b';
     }
 
-    r(ee param0, int param1) {
+    r(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_s, -1, 2147483647, false);
     }
 
@@ -262,7 +262,7 @@ class r extends ek {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, RgbSprite[] param5, int param6, ee param7, int param8, RgbSprite[] param9, int param10) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, RgbSprite[] param5, int param6, BitmapFont param7, int param8, RgbSprite[] param9, int param10) {
         try {
           wd.a(31668);
           if (param2 != -250) {

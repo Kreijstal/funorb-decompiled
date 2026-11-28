@@ -218,14 +218,14 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
         if (integerArgument2 < -103) {
           integerLocal1 = integerArgument1 + this.integerState0110;
           integerLocal2 = this.integerState0104 + integerArgument4;
-          GameDomainSupport003.bitmapFontState0015.computeInteger1071(GameDomainSupport003.stringState0234, integerLocal1 + 20, integerLocal2 + 20, this.integerState0107 - 40, this.integerState0108 - 50, 16777215, -1, 1, 0, GameDomainSupport003.bitmapFontState0015.integerState0518);
+          GameDomainSupport003.bitmapFontState0015.drawParagraph(GameDomainSupport003.stringState0234, integerLocal1 + 20, integerLocal2 + 20, this.integerState0107 - 40, this.integerState0108 - 50, 16777215, -1, 1, 0, GameDomainSupport003.bitmapFontState0015.integerState0518);
           super.performAction0162(integerArgument1, -109, integerArgument3, integerArgument4);
           return;
         }
         integerState0437 = 48;
         integerLocal3 = integerArgument1 + this.integerState0110;
         integerLocal4 = this.integerState0104 + integerArgument4;
-        GameDomainSupport003.bitmapFontState0015.computeInteger1071(GameDomainSupport003.stringState0234, integerLocal3 + 20, integerLocal4 + 20, this.integerState0107 - 40, this.integerState0108 - 50, 16777215, -1, 1, 0, GameDomainSupport003.bitmapFontState0015.integerState0518);
+        GameDomainSupport003.bitmapFontState0015.drawParagraph(GameDomainSupport003.stringState0234, integerLocal3 + 20, integerLocal4 + 20, this.integerState0107 - 40, this.integerState0108 - 50, 16777215, -1, 1, 0, GameDomainSupport003.bitmapFontState0015.integerState0518);
         super.performAction0162(integerArgument1, -109, integerArgument3, integerArgument4);
     }
 

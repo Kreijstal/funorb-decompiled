@@ -243,7 +243,7 @@ final class ClientException extends RuntimeException {
             if (ja.field_f == param1) {
               var22 += 42;
             }
-            var34 = BitmapFont.a(var13.field_Sb.field_z, var33, var22);
+            var34 = BitmapFont.truncateWithEllipsis(var13.field_Sb.field_z, var33, var22);
             var21 = var34;
             stackIn_57_0 = (var34.equals(var13.field_Wb)) ? 0 : 1;
             var23 = stackIn_57_0;
@@ -350,7 +350,7 @@ final class ClientException extends RuntimeException {
             var26 = var31;
             var25Lifetime1 = var24;
             if (var24 != null) {
-              var25_intLifetime1 = var13.field_Qb.field_z.b(var24, var13.field_Fb + (-NetworkArchiveRequest.field_G - NetworkArchiveRequest.field_G));
+              var25_intLifetime1 = var13.field_Qb.field_z.lineCount(var24, var13.field_Fb + (-NetworkArchiveRequest.field_G - NetworkArchiveRequest.field_G));
               var13.field_Qb.field_U = var13.field_Ub * 256 / lp.field_D;
               var13.field_Qb.field_S = var24;
               var13.field_Qb.a(125, -(NetworkArchiveRequest.field_G * 2) + var13.field_Fb, Archive.field_f * var25_intLifetime1, var20, NetworkArchiveRequest.field_G);

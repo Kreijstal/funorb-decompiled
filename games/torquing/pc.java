@@ -3,7 +3,7 @@
  */
 class pc implements WidgetRenderer, fe {
     int field_e;
-    uc field_m;
+    BitmapFont field_m;
     int field_h;
     private boolean field_l;
     int field_g;
@@ -427,19 +427,19 @@ class pc implements WidgetRenderer, fe {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_m.c(this.c((byte) 65, param1), (var9_int >> 1) + this.a(param4, param2, 2, param1), this.a((byte) 113, param1, param5, param6) + var11, param3, param7);
+                this.field_m.drawCentred(this.c((byte) 65, param1), (var9_int >> 1) + this.a(param4, param2, 2, param1), this.a((byte) 113, param1, param5, param6) + var11, param3, param7);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_m.a(this.c((byte) 65, param1), this.a(param4, param2, 2, param1) + var9_int, this.a((byte) 72, param1, param5, param6) + var11, param3, param7);
+                  this.field_m.drawRightAligned(this.c((byte) 65, param1), this.a(param4, param2, 2, param1) + var9_int, this.a((byte) 72, param1, param5, param6) + var11, param3, param7);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_m.b(this.c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
+              this.field_m.drawString(this.c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
             }
           } else {
-            this.field_m.a(this.c((byte) 65, param1), this.a(param4, param2, 2, param1), this.a((byte) 78, param1, param5, param6), var9_int, var10, param3, param7, this.field_f, this.field_g, this.field_a);
+            this.field_m.drawParagraph(this.c((byte) 65, param1), this.a(param4, param2, 2, param1), this.a((byte) 78, param1, param5, param6), var9_int, var10, param3, param7, this.field_f, this.field_g, this.field_a);
           }
           r.a(127);
           return;
@@ -466,7 +466,7 @@ class pc implements WidgetRenderer, fe {
         field_d = null;
     }
 
-    pc(uc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    pc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -819,7 +819,7 @@ class pc implements WidgetRenderer, fe {
         }
     }
 
-    pc(uc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    pc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_a = param9;
           this.field_o = param4;

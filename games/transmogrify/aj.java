@@ -345,9 +345,9 @@ class aj extends UiWidget implements pb {
           vf.field_a = pc.a("commonui", "jagex_logo_grey", param2, 113);
           mc.field_b = ContextualRuntimeException.a(param2, (byte) 125, "commonui", "button");
           ai.field_b = ik.a("commonui", param2, (byte) -46, "validation");
-          al.field_i = (kg) ((Object) ua.a(param2, "commonui", 32, param1, "arezzo12"));
-          vd.field_h = (kg) ((Object) ua.a(param2, "commonui", 32, param1, "arezzo14"));
-          ArchiveRequest.field_q = (kg) ((Object) ua.a(param2, "commonui", param3 - 2394310, param1, "arezzo14bold"));
+          al.field_i = (BitmapFont) ((Object) ua.a(param2, "commonui", 32, param1, "arezzo12"));
+          vd.field_h = (BitmapFont) ((Object) ua.a(param2, "commonui", 32, param1, "arezzo14"));
+          ArchiveRequest.field_q = (BitmapFont) ((Object) ua.a(param2, "commonui", param3 - 2394310, param1, "arezzo14bold"));
           var17 = new Sprite(param0.getFileByName("", (byte) 100, "button.gif"), (java.awt.Component) ((Object) AchievementNotice.field_k));
           gk.a("commonui", param3 ^ -2392393, param2, "dropdown");
           var5 = MusicPatchPcmStream.a((byte) -43, param2, "screen_options", "commonui");

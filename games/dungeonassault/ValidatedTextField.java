@@ -21,14 +21,14 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           this.field_U = -this.field_q + hj.field_S - param0;
           if (!param3) {
             FieldValidator var6 = (FieldValidator) null;
-            this.a((FieldValidator) null, -106);
+            this.setFieldValidator((FieldValidator) null, -106);
           }
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "uh.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final void a(FieldValidator param0, int param1) {
+    final void setFieldValidator(FieldValidator param0, int param1) {
         try {
           this.field_W = param0;
           if (param1 != 10508) {

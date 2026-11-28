@@ -44,9 +44,9 @@ final class BinaryBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (SoftwareRasterizer.field_k == null) {
-            BinaryBitmapFont.a(SoftwareRasterizer.field_b, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
+            BinaryBitmapFont.blitGlyphRows(SoftwareRasterizer.field_b, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            BinaryBitmapFont.a(SoftwareRasterizer.field_b, this.field_N[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_k, SoftwareRasterizer.field_d);
+            BinaryBitmapFont.blitGlyphClippedRows(SoftwareRasterizer.field_b, this.field_N[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_k, SoftwareRasterizer.field_d);
           }
           return;
         }
@@ -58,7 +58,7 @@ final class BinaryBitmapFont extends BitmapFont {
         this.field_N = param5;
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blitGlyphAlphaRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -81,7 +81,7 @@ final class BinaryBitmapFont extends BitmapFont {
         }
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void blitGlyphRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -160,10 +160,10 @@ final class BinaryBitmapFont extends BitmapFont {
           param4 <= 0) {
           return;
         }
-        BinaryBitmapFont.a(SoftwareRasterizer.field_b, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        BinaryBitmapFont.blitGlyphAlphaRows(SoftwareRasterizer.field_b, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
+    private final static void blitGlyphClippedRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
         int var15 = 0;
         int var20 = 0;
         int incrementValue$1 = 0;

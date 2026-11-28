@@ -8,7 +8,7 @@ final class al extends cj {
     static boolean field_T;
     private String field_R;
     private int field_V;
-    static nc field_Z;
+    static CoverageBitmapFont field_Z;
     static String field_S;
     private RgbSprite field_P;
     static String field_X;

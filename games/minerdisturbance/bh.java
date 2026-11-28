@@ -96,26 +96,26 @@ final class bh extends wf implements sh {
         }
     }
 
-    final static vm a(byte param0, byte[] param1) {
-        vm var2 = null;
+    final static BinaryBitmapFont a(byte param0, byte[] param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        vm stackIn_2_0 = null;
+        BinaryBitmapFont stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        vm stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 78) {
-            stackIn_2_0 = (vm) null;
+            stackIn_2_0 = (BinaryBitmapFont) null;
             return stackIn_2_0;
           }
           if (param1 == null) {
             stackIn_5_0 = null;
-            return (vm) (stackIn_5_0);
+            return (BinaryBitmapFont) (stackIn_5_0);
           }
-          var2 = new vm(param1, bg.field_d, oc.field_e, qk.field_b, ng.field_e, ClientException.field_b);
+          var2 = new BinaryBitmapFont(param1, bg.field_d, oc.field_e, qk.field_b, ng.field_e, ClientException.field_b);
           ec.a((byte) 106);
           stackIn_7_0 = var2;
           return stackIn_7_0;

@@ -49,7 +49,7 @@ final class ib implements rd {
           SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (null != this.field_c) {
             var13 = var14.field_L - (-var14.field_I - this.field_d);
-            this.field_c.a(param3.field_u, var13 + (param1 + param3.field_t), param3.field_o + param0 + this.field_f, param3.field_j - this.field_d - var13, param3.field_v - (this.field_d << 1), this.field_e, this.field_l, 1, 1, 0);
+            this.field_c.drawParagraph(param3.field_u, var13 + (param1 + param3.field_t), param3.field_o + param0 + this.field_f, param3.field_j - this.field_d - var13, param3.field_v - (this.field_d << 1), this.field_e, this.field_l, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ib.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

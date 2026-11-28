@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cb {
-    static jb field_b;
+    static BinaryBitmapFont field_b;
     static gk field_a;
     static boolean[] field_c;
 

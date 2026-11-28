@@ -204,7 +204,7 @@ class wk implements si {
         }
     }
 
-    final static void a(int param0, Sprite[] param1, Sprite[] param2, int param3, int param4, int param5, int param6, boolean param7, int param8, int param9, int param10, uc param11, int param12, int param13, uc param14) {
+    final static void a(int param0, Sprite[] param1, Sprite[] param2, int param3, int param4, int param5, int param6, boolean param7, int param8, int param9, int param10, BitmapFont param11, int param12, int param13, BitmapFont param14) {
         Sprite[] var16 = (Sprite[]) null;
         pl.a(param12, 0, param4, (Sprite[]) null, param13, param1, cc.field_c, qa.field_l, param14, param2, param3, param11, param0, 0, param9, param6, param10, 480, TooltipPanel.field_c, param5, 127);
         if (param8 <= 109) {
@@ -237,8 +237,8 @@ class wk implements si {
 
     public static void a(byte param0) {
         if (param0 > -63) {
-          uc var2 = (uc) null;
-          wk.a(102, (Sprite[]) null, (Sprite[]) null, -29, -22, -52, 122, false, 50, -59, -118, (uc) null, -35, 64, (uc) null);
+          BitmapFont var2 = (BitmapFont) null;
+          wk.a(102, (Sprite[]) null, (Sprite[]) null, -29, -22, -52, 122, false, 50, -59, -118, (BitmapFont) null, -35, 64, (BitmapFont) null);
         }
         field_a = null;
     }

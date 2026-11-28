@@ -2520,7 +2520,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 127, "quickchat_shortcut_keys,4");
                 if (var2 != null) {
-                  nb.field_h[4] = c.a(Slime.a((int) param0, -99), var2);
+                  nb.field_h[4] = c.a(Slime.xorIntegers((int) param0, -99), var2);
                 }
                 var2 = AgeValidator.a((byte) 96, "quickchat_shortcut_keys,5");
                 if (null != var2) {
@@ -2772,7 +2772,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 97, "hs_mode_name,2");
                 if (null != var2) {
-                  of.field_d[2] = c.a(Slime.a((int) param0, -99), var2);
+                  of.field_d[2] = c.a(Slime.xorIntegers((int) param0, -99), var2);
                 }
                 var2 = AgeValidator.a((byte) 110, "rating_mode_name,0");
                 if (null != var2) {
@@ -2875,7 +2875,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 119, "mustlogin2,6");
                 if (var2 != null) {
-                  hc.field_e[6] = c.a(Slime.a((int) param0, -99), var2);
+                  hc.field_e[6] = c.a(Slime.xorIntegers((int) param0, -99), var2);
                 }
                 var2 = AgeValidator.a((byte) 90, "mustlogin2,7");
                 if (var2 != null) {
@@ -2931,7 +2931,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 114, "mustlogin4,5");
                 if (var2 != null) {
-                  vg.field_a[5] = c.a(Slime.a((int) param0, -99), var2);
+                  vg.field_a[5] = c.a(Slime.xorIntegers((int) param0, -99), var2);
                 }
                 var2 = AgeValidator.a((byte) 119, "mustlogin4,6");
                 if (var2 != null) {
@@ -2939,7 +2939,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 85, "mustlogin4,7");
                 if (var2 != null) {
-                  vg.field_a[7] = c.a(Slime.a((int) param0, -99), var2);
+                  vg.field_a[7] = c.a(Slime.xorIntegers((int) param0, -99), var2);
                 }
                 var2 = AgeValidator.a((byte) 124, "mustlogin_notloggedin");
                 if (var2 != null) {
@@ -2955,7 +2955,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 106, "mustlogin_alternate,3");
                 if (var2 != null) {
-                  qi.field_s[3] = c.a(Slime.a((int) param0, -99), var2);
+                  qi.field_s[3] = c.a(Slime.xorIntegers((int) param0, -99), var2);
                 }
                 var2 = AgeValidator.a((byte) 98, "mustlogin_alternate,4");
             }
@@ -2965,11 +2965,11 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 117, "mustlogin_alternate,5");
                 if (var2 != null) {
-                  qi.field_s[5] = c.a(Slime.a((int) param0, -99), var2);
+                  qi.field_s[5] = c.a(Slime.xorIntegers((int) param0, -99), var2);
                 }
                 var2 = AgeValidator.a((byte) 120, "mustlogin_alternate,6");
                 if (null != var2) {
-                  qi.field_s[6] = c.a(Slime.a((int) param0, -99), var2);
+                  qi.field_s[6] = c.a(Slime.xorIntegers((int) param0, -99), var2);
                 }
                 var2 = AgeValidator.a((byte) 123, "mustlogin_alternate,7");
                 if (var2 != null) {
@@ -2989,7 +2989,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 116, "subscription_cost_monthly,3");
                 if (var2 != null) {
-                  ag.field_b[3] = c.a(Slime.a((int) param0, -99), var2);
+                  ag.field_b[3] = c.a(Slime.xorIntegers((int) param0, -99), var2);
                 }
                 var2 = AgeValidator.a((byte) 103, "subscription_cost_monthly,4");
                 if (null != var2) {

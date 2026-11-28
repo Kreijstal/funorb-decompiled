@@ -133,18 +133,18 @@ final class GameDomainSupport005 {
             rgbSpriteLocal24 = new RgbSprite(195, 221);
             integerLocal17 = rgbSpriteLocal24.integerState0258 / 2;
             rgbSpriteLocal24.performAction0256();
-            NetworkSupport001.bitmapFontState0002.performAction1082(NodeHashTableIterator.substituteIndexedPlaceholders(84, MixedSupport004.stringState0015, new String[]{SoftwareFramebuffer.stringState0617}), integerLocal17, 40, 16777215, -1);
-            MixedSupport013.bitmapFontState0007.performAction1082(NodeHashTableIterator.substituteIndexedPlaceholders(90, UiComponentPart025.stringState0450, new String[]{SoftwareFramebuffer.stringState0617}), integerLocal17, 60, 16777215, -1);
-            NetworkSupport001.bitmapFontState0002.performAction1082(NodeHashTableIterator.substituteIndexedPlaceholders(126, MixedSupport112.stringState0486, new String[]{PlayerNameAvailabilityValidator.stringState0291}), integerLocal17, 110, 16777215, -1);
-            MixedSupport013.bitmapFontState0007.performAction1082(NodeHashTableIterator.substituteIndexedPlaceholders(94, SocketFactory.stringState0611, new String[]{PlayerNameAvailabilityValidator.stringState0291}), integerLocal17, 130, 16777215, -1);
-            NetworkSupport001.bitmapFontState0002.performAction1082(SocketFactory.stringState0615, integerLocal17, 180, 16777215, -1);
-            MixedSupport013.bitmapFontState0007.performAction1082(MixedSupport112.stringState0487, integerLocal17, 200, 16777215, -1);
+            NetworkSupport001.bitmapFontState0002.drawCentred(NodeHashTableIterator.substituteIndexedPlaceholders(84, MixedSupport004.stringState0015, new String[]{SoftwareFramebuffer.stringState0617}), integerLocal17, 40, 16777215, -1);
+            MixedSupport013.bitmapFontState0007.drawCentred(NodeHashTableIterator.substituteIndexedPlaceholders(90, UiComponentPart025.stringState0450, new String[]{SoftwareFramebuffer.stringState0617}), integerLocal17, 60, 16777215, -1);
+            NetworkSupport001.bitmapFontState0002.drawCentred(NodeHashTableIterator.substituteIndexedPlaceholders(126, MixedSupport112.stringState0486, new String[]{PlayerNameAvailabilityValidator.stringState0291}), integerLocal17, 110, 16777215, -1);
+            MixedSupport013.bitmapFontState0007.drawCentred(NodeHashTableIterator.substituteIndexedPlaceholders(94, SocketFactory.stringState0611, new String[]{PlayerNameAvailabilityValidator.stringState0291}), integerLocal17, 130, 16777215, -1);
+            NetworkSupport001.bitmapFontState0002.drawCentred(SocketFactory.stringState0615, integerLocal17, 180, 16777215, -1);
+            MixedSupport013.bitmapFontState0007.drawCentred(MixedSupport112.stringState0487, integerLocal17, 200, 16777215, -1);
             MatchingFieldValidator.performAction1425(3, 1, 0, integerArgument1 ^ 388, rgbSpriteLocal24, 0, rgbSpriteLocal24.integerState0258, rgbSpriteLocal24.integerState0255);
             MixedSupport054.rgbSpriteState0019.performAction0256();
             rgbSpriteLocal24.performAction0278(18 - MixedSupport054.rgbSpriteState0019.integerState0259, 241 - MixedSupport054.rgbSpriteState0019.integerState0256);
             for (integerLocal18 = 0; integerLocal18 < UiComponentPart009.stringArrayState0008.length; integerLocal18++) {
               MixedSupport140.rgbSpriteArrayState0031[integerLocal18].performAction0256();
-              MixedSupport013.bitmapFontState0007.computeInteger1071(UiComponentPart009.stringArrayState0008[integerLocal18], 3, 3, -6 + MixedSupport140.rgbSpriteArrayState0031[integerLocal18].integerState0258, -6 + MixedSupport140.rgbSpriteArrayState0031[integerLocal18].integerState0255, MixedSupport088.integerState0546, -1, 1, 1, MixedSupport013.bitmapFontState0007.integerState0518 + MixedSupport013.bitmapFontState0007.integerState0523);
+              MixedSupport013.bitmapFontState0007.drawParagraph(UiComponentPart009.stringArrayState0008[integerLocal18], 3, 3, -6 + MixedSupport140.rgbSpriteArrayState0031[integerLocal18].integerState0258, -6 + MixedSupport140.rgbSpriteArrayState0031[integerLocal18].integerState0255, MixedSupport088.integerState0546, -1, 1, 1, MixedSupport013.bitmapFontState0007.integerState0518 + MixedSupport013.bitmapFontState0007.integerState0523);
               MatchingFieldValidator.performAction1425(3, 1, 0, 2, MixedSupport140.rgbSpriteArrayState0031[integerLocal18], 0, MixedSupport140.rgbSpriteArrayState0031[integerLocal18].integerState0258, MixedSupport140.rgbSpriteArrayState0031[integerLocal18].integerState0255);
             }
             UiComponentPart009.stringArrayState0008 = null;
@@ -169,8 +169,8 @@ final class GameDomainSupport005 {
             integerLocal37 = SoftwareRaster.integerState0284;
             SoftwareRaster.saveClip(LoginPanel.integerArrayState0055);
             stringLocal25 = NodeHashTableIterator.substituteIndexedPlaceholders(120, MixedSupport097.stringState0413, new String[]{ComponentDecorator.stringArrayState0020[MixedSupport107.integerState0683]});
-            integerLocal16 = NetworkSupport001.bitmapFontState0002.computeInteger1080(stringLocal25, UiComponent.integerState0106);
-            integerLocal41 = NetworkSupport001.bitmapFontState0002.computeInteger1081(stringLocal25, UiComponent.integerState0106, NetworkSupport001.bitmapFontState0002.integerState0518 + NetworkSupport001.bitmapFontState0002.integerState0523);
+            integerLocal16 = NetworkSupport001.bitmapFontState0002.maxLineWidth(stringLocal25, UiComponent.integerState0106);
+            integerLocal41 = NetworkSupport001.bitmapFontState0002.textHeight(stringLocal25, UiComponent.integerState0106, NetworkSupport001.bitmapFontState0002.integerState0518 + NetworkSupport001.bitmapFontState0002.integerState0523);
             integerLocal43 = MixedSupport101.integerState0591 + (-integerLocal16 + UiComponent.integerState0106) / 2;
             integerLocal16 += 6;
             integerLocal19 = BufferedSocket.integerState0668 + (SecondaryNodeHashTable.integerState0543 - integerLocal41) / 2;
@@ -216,7 +216,7 @@ final class GameDomainSupport005 {
             MouseInput.rgbSpriteState0073.performAction0269();
             rgbSpriteLocal21 = new RgbSprite(MouseInput.rgbSpriteState0073.integerState0254, MouseInput.rgbSpriteState0073.integerState0260);
             rgbSpriteLocal21.performAction0256();
-            NetworkSupport001.bitmapFontState0002.computeInteger1071(stringLocal25, MixedSupport101.integerState0591, BufferedSocket.integerState0668, UiComponent.integerState0106, SecondaryNodeHashTable.integerState0543, 16777215, -1, 1, 1, NetworkSupport001.bitmapFontState0002.integerState0518 + NetworkSupport001.bitmapFontState0002.integerState0523);
+            NetworkSupport001.bitmapFontState0002.drawParagraph(stringLocal25, MixedSupport101.integerState0591, BufferedSocket.integerState0668, UiComponent.integerState0106, SecondaryNodeHashTable.integerState0543, 16777215, -1, 1, 1, NetworkSupport001.bitmapFontState0002.integerState0518 + NetworkSupport001.bitmapFontState0002.integerState0523);
             MatchingFieldValidator.performAction1425(3, 1, 0, 2, rgbSpriteLocal21, 0, rgbSpriteLocal21.integerState0254, rgbSpriteLocal21.integerState0260);
             MouseInput.rgbSpriteState0073.performAction0256();
             rgbSpriteLocal21.performAction0278(0, 0);
@@ -238,7 +238,7 @@ final class GameDomainSupport005 {
             stringLocal27 = NodeHashTableIterator.substituteIndexedPlaceholders(122, UiComponentPart007.stringState0111, new String[]{KeyboardInputHandler.stringState0358});
             KeyboardInputHandler.stringState0358 = null;
             rgbSpriteLocal26.performAction0256();
-            MixedSupport013.bitmapFontState0007.computeInteger1071(stringLocal27, 3, 3, rgbSpriteLocal26.integerState0258 - 6, rgbSpriteLocal26.integerState0255 - 6, 16777215, -1, 0, 1, MixedSupport013.bitmapFontState0007.integerState0518 + MixedSupport013.bitmapFontState0007.integerState0523);
+            MixedSupport013.bitmapFontState0007.drawParagraph(stringLocal27, 3, 3, rgbSpriteLocal26.integerState0258 - 6, rgbSpriteLocal26.integerState0255 - 6, 16777215, -1, 0, 1, MixedSupport013.bitmapFontState0007.integerState0518 + MixedSupport013.bitmapFontState0007.integerState0523);
             MatchingFieldValidator.performAction1425(3, 1, 0, 2, rgbSpriteLocal26, 0, rgbSpriteLocal26.integerState0258, rgbSpriteLocal26.integerState0255);
             PlayerBoardUpdateQueue.rgbSpriteState0030.performAction0256();
             rgbSpriteLocal26.performAction0278(-PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0259 + 199, -PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0256 + 83);
@@ -251,12 +251,12 @@ final class GameDomainSupport005 {
             integerLocal34 = SoftwareRaster.integerState0285;
             integerLocal39 = SoftwareRaster.integerState0284;
             SoftwareRaster.saveClip(LoginPanel.integerArrayState0055);
-            integerLocal15 = 6 + MixedSupport013.bitmapFontState0007.computeInteger1080(UiComponentPart016.stringState0297, 640);
+            integerLocal15 = 6 + MixedSupport013.bitmapFontState0007.maxLineWidth(UiComponentPart016.stringState0297, 640);
             integerLocal40 = 20 + (integerLocal15 + MixedSupport098.rgbSpriteState0040.integerState0254);
             integerLocal42 = -(integerLocal40 / 2) + 427;
             integerLocal44 = 20 + (integerLocal42 + MixedSupport098.rgbSpriteState0040.integerState0254);
             PlayerBoardUpdateQueue.rgbSpriteState0030.performAction0256();
-            MixedSupport013.bitmapFontState0007.performAction1069(UiComponentPart016.stringState0297, integerLocal44 - PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0259, MixedSupport013.bitmapFontState0007.integerState0523 + (MixedSupport013.bitmapFontState0007.integerState0518 + (-PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0256 + 155)), 16777215, -1);
+            MixedSupport013.bitmapFontState0007.drawString(UiComponentPart016.stringState0297, integerLocal44 - PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0259, MixedSupport013.bitmapFontState0007.integerState0523 + (MixedSupport013.bitmapFontState0007.integerState0518 + (-PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0256 + 155)), 16777215, -1);
             MatchingFieldValidator.performAction1425(3, 1, -PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0259 + (integerLocal44 - 4), integerArgument1 ^ 388, PlayerBoardUpdateQueue.rgbSpriteState0030, -PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0256 + 155, integerLocal15, 50);
             integerLocal45 = -PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0256 + 155 - (-MixedSupport013.bitmapFontState0007.integerState0518 - 3 + MixedSupport098.rgbSpriteState0040.integerState0260 - MixedSupport013.bitmapFontState0007.integerState0523) / 2;
             MixedSupport098.rgbSpriteState0040.performAction0278(integerLocal42 - PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0259, integerLocal45);

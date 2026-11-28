@@ -75,7 +75,7 @@ public final class Terraphoenix extends GameShell {
         int stackIn_27_1 = 0;
         int stackIn_70_0 = 0;
         int stackIn_272_0 = 0;
-        ud stackIn_272_1 = null;
+        BinaryBitmapFont stackIn_272_1 = null;
         StringBuilder stackIn_272_2 = null;
         boolean stackIn_273_3 = false;
         int stackIn_276_4;
@@ -361,7 +361,7 @@ public final class Terraphoenix extends GameShell {
                     }
                     if (DiskArchiveRequest.field_I == 1 &&
                       bk.c(-25704)) {
-                      var3Lifetime1 = FrameTimer.field_f.b(FullscreenFocusCanvas.field_c);
+                      var3Lifetime1 = FrameTimer.field_f.stringWidth(FullscreenFocusCanvas.field_c);
                       if ((320 - var3Lifetime1 / 2) <= ef.field_j &&
                         ef.field_j <= var3Lifetime1 / 2 + 320 &&
                         MouseWheelInput.field_b >= 280 &&
@@ -428,7 +428,7 @@ public final class Terraphoenix extends GameShell {
                       }
                       if (-1 == wf.field_t &&
                         bk.c(-25704)) {
-                        var3Lifetime1 = FrameTimer.field_f.b(FullscreenFocusCanvas.field_c);
+                        var3Lifetime1 = FrameTimer.field_f.stringWidth(FullscreenFocusCanvas.field_c);
                         if (ef.field_j >= (-(var3Lifetime1 / 2) + 320) &&
                           (var3Lifetime1 / 2 + 320) >= ef.field_j &&
                           MouseWheelInput.field_b >= 240 &&
@@ -496,7 +496,7 @@ public final class Terraphoenix extends GameShell {
               stackIn_273_3 = (ge.field_e != 0);
               stackIn_276_4 = 98;
               stackIn_277_5 = (TutorialText.field_a != 0);
-              var3Lifetime1 = stackIn_272_0 + ((ud) (Object) stackIn_272_1).c(((StringBuilder) (Object) stackIn_272_2).append(oe.$cfr$intArgs$a$feb7e63b59d8(stackIn_273_3, stackIn_276_4, stackIn_277_5, false)).toString(), 310) * 14;
+              var3Lifetime1 = stackIn_272_0 + ((BinaryBitmapFont) (Object) stackIn_272_1).lineCount(((StringBuilder) (Object) stackIn_272_2).append(oe.$cfr$intArgs$a$feb7e63b59d8(stackIn_273_3, stackIn_276_4, stackIn_277_5, false)).toString(), 310) * 14;
               var3Lifetime1 += 24;
               if (this.a(false, 224, (byte) -44, var3Lifetime1, FullscreenFocusCanvas.field_c) &&
                 1 == DiskArchiveRequest.field_I) {
@@ -901,9 +901,9 @@ public final class Terraphoenix extends GameShell {
           if (-4 == ConfirmedEmailAvailabilityValidator.field_q) {
             this.field_bb = jh.field_l[19];
           }
-          PcmPlayerPump.field_h = 8 + 16 * AccountRequestState.field_f.c(this.field_bb, 484);
+          PcmPlayerPump.field_h = 8 + 16 * AccountRequestState.field_f.lineCount(this.field_bb, 484);
           if (ProxyAuthenticationRequiredException.field_f < PcmPlayerPump.field_h) {
-            PcmPlayerPump.field_h = 8 + 16 * AccountRequestState.field_f.c(this.field_bb, 475);
+            PcmPlayerPump.field_h = 8 + 16 * AccountRequestState.field_f.lineCount(this.field_bb, 475);
           }
           if (this.field_S != null &&
             ProxyAuthenticationRequiredException.field_f >= PcmPlayerPump.field_h) {
@@ -926,7 +926,7 @@ public final class Terraphoenix extends GameShell {
             this.field_S.a(416, qg.field_a, 11, PcmPlayerPump.field_h, -689, 511, ProxyAuthenticationRequiredException.field_f, ProxyAuthenticationRequiredException.field_f);
           }
           if (this.field_S != null) {
-            PcmPlayerPump.field_h = 16 * AccountRequestState.field_f.c(this.field_bb.substring(0, this.field_cb), 475) + 8;
+            PcmPlayerPump.field_h = 16 * AccountRequestState.field_f.lineCount(this.field_bb.substring(0, this.field_cb), 475) + 8;
             this.field_S.a(-92, true);
             var3Lifetime2 = 12;
             if (this.field_S.e((byte) -96) ||
@@ -991,7 +991,7 @@ public final class Terraphoenix extends GameShell {
               this.field_cb = this.field_cb + 1;
               this.field_mb = 0;
               if (PcmPlayerPump.field_h - ProxyAuthenticationRequiredException.field_f <= qg.field_a) {
-                PcmPlayerPump.field_h = AccountRequestState.field_f.c(this.field_bb.substring(0, this.field_cb), 475) * 16 + 8;
+                PcmPlayerPump.field_h = AccountRequestState.field_f.lineCount(this.field_bb.substring(0, this.field_cb), 475) * 16 + 8;
                 qg.field_a = -ProxyAuthenticationRequiredException.field_f + PcmPlayerPump.field_h;
                 if (0 > qg.field_a) {
                   qg.field_a = 0;
@@ -1589,10 +1589,10 @@ public final class Terraphoenix extends GameShell {
               }
             }
             var3 += 16;
-            SoftwareRasterizer.fillRectangleAlpha(592 + (-FrameTimer.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]) - 2), var3 - 2, 44 + FrameTimer.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]), 40, 0, 64);
+            SoftwareRasterizer.fillRectangleAlpha(592 + (-FrameTimer.field_f.stringWidth(RandomAccessCacheFile.field_g[var2.field_n]) - 2), var3 - 2, 44 + FrameTimer.field_f.stringWidth(RandomAccessCacheFile.field_g[var2.field_n]), 40, 0, 64);
             hf.field_w[var2.field_n].drawScaled(600, var3, 32, 32);
-            FrameTimer.field_f.a(RandomAccessCacheFile.field_g[var2.field_n], 592, FrameTimer.field_f.field_s + var3, 16776960, -1);
-            jl.a(jc.field_G, 43, -5 + var3, 40 + FrameTimer.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]) + 7, (byte) -101, 592 - FrameTimer.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]) - 5);
+            FrameTimer.field_f.drawRightAligned(RandomAccessCacheFile.field_g[var2.field_n], 592, FrameTimer.field_f.field_s + var3, 16776960, -1);
+            jl.a(jc.field_G, 43, -5 + var3, 40 + FrameTimer.field_f.stringWidth(RandomAccessCacheFile.field_g[var2.field_n]) + 7, (byte) -101, 592 - FrameTimer.field_f.stringWidth(RandomAccessCacheFile.field_g[var2.field_n]) - 5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1641,7 +1641,7 @@ public final class Terraphoenix extends GameShell {
                           if (aj.field_b.ensureIndexLoaded(param1 + 107) &&
                             aj.field_b.tryLoadAllGroups((byte) -128)) {
                             DualLinkNode.a(IsaacCipher.field_h, (byte) 58, 50.0f);
-                            this.a((byte) -89);
+                            this.renderClientFrame((byte) -89);
                             if (!param0) {
                               return;
                             }
@@ -1679,7 +1679,7 @@ public final class Terraphoenix extends GameShell {
           }
           if (fc.field_a != null) {
             DualLinkNode.a(u.field_f, (byte) -122, 60.0f);
-            this.a((byte) -89);
+            this.renderClientFrame((byte) -89);
             ImageProducerRasterBuffer.field_k = new byte[PasswordValidator.field_n.length][];
             var3_int = 0;
             while (PasswordValidator.field_n.length > var3_int) {
@@ -1695,7 +1695,7 @@ public final class Terraphoenix extends GameShell {
           }
           if (h.field_j != null) {
             DualLinkNode.a(IndexedSpriteState.field_e, (byte) -119, 70.0f);
-            this.a((byte) -89);
+            this.renderClientFrame((byte) -89);
             ca.field_a = new tk[8];
             ca.field_a[7] = tk.a(h.field_j, "", "terraphoenix_music_title");
             ca.field_a[0] = tk.a(h.field_j, "", "terraphoenix_music_title(no voices)");
@@ -1711,7 +1711,7 @@ public final class Terraphoenix extends GameShell {
           }
           if (null == IntrusiveDeque.field_c) {
             DualLinkNode.a(AccountNameAvailabilityValidator.field_q, (byte) -88, 90.0f);
-            this.a((byte) -89);
+            this.renderClientFrame((byte) -89);
             be.field_u = new Sprite(64, 32);
             be.field_u.a();
             var3_int = 0;
@@ -1745,7 +1745,7 @@ public final class Terraphoenix extends GameShell {
             return;
           }
           DualLinkNode.a(AccountNameAvailabilityValidator.field_q, (byte) -74, 80.0f);
-          this.a((byte) -89);
+          this.renderClientFrame((byte) -89);
           var3 = new da(ee.field_G, mi.field_h);
           var4 = new PcmResampler(22050, PcmPlayerService.field_u);
           mi.field_h = null;
@@ -2107,7 +2107,7 @@ public final class Terraphoenix extends GameShell {
         }
     }
 
-    final void f(int param0) {
+    final void initializeClient(int param0) {
         int[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         int stackIn_10_2 = 0;
@@ -2293,8 +2293,8 @@ public final class Terraphoenix extends GameShell {
                     }
                   }
                 }
-                FrameTimer.field_f.b(var14_ref, 320, var9, var8, 0);
-                AccountRequestState.field_f.a(qc.field_e, -FrameTimer.field_f.b(var14_ref) + 320, -20 + var9, -16 + FrameTimer.field_f.b(var14_ref), 24, var8, 0, 2, 1, 12);
+                FrameTimer.field_f.drawString(var14_ref, 320, var9, var8, 0);
+                AccountRequestState.field_f.drawParagraph(qc.field_e, -FrameTimer.field_f.stringWidth(var14_ref) + 320, -20 + var9, -16 + FrameTimer.field_f.stringWidth(var14_ref), 24, var8, 0, 2, 1, 12);
               }
               if (var13 <= 0 ||
                 var15 != 0) {
@@ -2411,8 +2411,8 @@ public final class Terraphoenix extends GameShell {
               this.field_xb = var11;
             }
             boolean decompiledFrameRemainder3 = true;
-            FrameTimer.field_f.a(sk.field_d, 320, var9, var8Lifetime4, 1);
-            FrameTimer.field_f.b("--------------", 320, var9, var8Lifetime4, 1);
+            FrameTimer.field_f.drawRightAligned(sk.field_d, 320, var9, var8Lifetime4, 1);
+            FrameTimer.field_f.drawString("--------------", 320, var9, var8Lifetime4, 1);
             this.a("|", 100 * SectorCacheStore.field_e / 128 + 320, var8Lifetime4, var9, 118);
             var9 = var9 + var10;
             var11++;
@@ -2430,8 +2430,8 @@ public final class Terraphoenix extends GameShell {
               this.field_xb = var11;
             }
             boolean decompiledFrameRemainder2 = true;
-            FrameTimer.field_f.a(qb.field_d, 320, var9, var8Lifetime5, 1);
-            FrameTimer.field_f.b("--------------", 320, var9, var8Lifetime5, 1);
+            FrameTimer.field_f.drawRightAligned(qb.field_d, 320, var9, var8Lifetime5, 1);
+            FrameTimer.field_f.drawString("--------------", 320, var9, var8Lifetime5, 1);
             this.a("|", 320 + AccountCreationResultPanel.field_sb * 100 / 128, var8Lifetime5, var9, 106);
             var11++;
             var9 = var9 + var10;
@@ -2601,7 +2601,7 @@ public final class Terraphoenix extends GameShell {
                         var12_int = (4144959 & wa.field_s >> 2) + ((16711422 & wa.field_s) >> 1);
                         var10 = 1;
                       }
-                      AccountRequestState.field_f.b(var7, 360, var6, var12_int, -1);
+                      AccountRequestState.field_f.drawString(var7, 360, var6, var12_int, -1);
                       var6 += 20;
                     }
                     var5++;
@@ -2620,19 +2620,19 @@ public final class Terraphoenix extends GameShell {
                   }
                   if (var10 != 0) {
                     if (var9 == 0) {
-                      AccountRequestState.field_f.a(bl.field_g + "<br><br>" + SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                      AccountRequestState.field_f.drawParagraph(bl.field_g + "<br><br>" + SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                       if (var13 != 0) {
-                        AccountRequestState.field_f.a(SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
-                        AccountRequestState.field_f.a(bl.field_g, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                        AccountRequestState.field_f.drawParagraph(SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                        AccountRequestState.field_f.drawParagraph(bl.field_g, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                       }
                     } else {
-                      AccountRequestState.field_f.a(SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                      AccountRequestState.field_f.drawParagraph(SocketConnector.field_c, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                       if (var13 != 0) {
-                        AccountRequestState.field_f.a(bl.field_g, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                        AccountRequestState.field_f.drawParagraph(bl.field_g, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                       }
                     }
                   } else {
-                    AccountRequestState.field_f.a(bl.field_g, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
+                    AccountRequestState.field_f.drawParagraph(bl.field_g, 466, 92, 150, 150, 16777215, -1, 1, 1, 12);
                   }
                   if (var9 != 0) {
                     this.field_Q.b(456, 329);
@@ -2654,7 +2654,7 @@ public final class Terraphoenix extends GameShell {
                     }
                   }
                   this.a(0, 461, 159, 252, 160);
-                  AccountRequestState.field_f.b(((ga) (var11)).a(-1426, 160), 470, 263, 65280, -1);
+                  AccountRequestState.field_f.drawString(((ga) (var11)).a(-1426, 160), 470, 263, 65280, -1);
                   if (((ga) (var11)).field_m != null) {
                     var12 = Bzip2State.field_a[((ga) (var11)).field_m.field_f];
                     var12.drawScaled(509, 281, 64, 64);
@@ -2747,7 +2747,7 @@ public final class Terraphoenix extends GameShell {
         }
     }
 
-    final void b(byte param0) {
+    final void disposeClient(byte param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -2789,10 +2789,10 @@ public final class Terraphoenix extends GameShell {
             var4_int = 640 - rk.field_c;
           }
           SoftwareRasterizer.addRadialGlow(param2 << 4, param1 << 4, 2900, var4_int, sh.field_E);
-          AccountRequestState.field_f.a(cc.field_l, -(rk.field_c / 2) + 320, -600 - (-(24 * ((0 + nd.field_k) % 50)) - 120), 12, 240, wa.field_s, 0, 64, 1, 1, 24);
-          AccountRequestState.field_f.a(cc.field_l, -(rk.field_c / 2) + 320, 120 + (-25 + (nd.field_k + 25) % 50) * 24, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
-          AccountRequestState.field_f.a(cc.field_l, 320 - (-(rk.field_c / 2) + 12), 120 + (nd.field_k + 12) % 50 * 24 - 600, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
-          AccountRequestState.field_f.a(cc.field_l, rk.field_c / 2 + 320 - 12, 120 + (-25 + (nd.field_k + 37) % 50) * 24, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
+          AccountRequestState.field_f.drawParagraphAlpha(cc.field_l, -(rk.field_c / 2) + 320, -600 - (-(24 * ((0 + nd.field_k) % 50)) - 120), 12, 240, wa.field_s, 0, 64, 1, 1, 24);
+          AccountRequestState.field_f.drawParagraphAlpha(cc.field_l, -(rk.field_c / 2) + 320, 120 + (-25 + (nd.field_k + 25) % 50) * 24, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
+          AccountRequestState.field_f.drawParagraphAlpha(cc.field_l, 320 - (-(rk.field_c / 2) + 12), 120 + (nd.field_k + 12) % 50 * 24 - 600, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
+          AccountRequestState.field_f.drawParagraphAlpha(cc.field_l, rk.field_c / 2 + 320 - 12, 120 + (-25 + (nd.field_k + 37) % 50) * 24, 12, 240, wa.field_s, 0, 64, 1, 1, 24);
           var5 = 0;
           do {
             if (var5 >= 640) {
@@ -3822,8 +3822,8 @@ public final class Terraphoenix extends GameShell {
               this.field_xb = var11;
             }
             boolean decompiledFrameRemainder3 = true;
-            FrameTimer.field_f.a(sk.field_d, 320, var9, var8Lifetime1, 1);
-            FrameTimer.field_f.b("--------------", 320, var9, var8Lifetime1, 1);
+            FrameTimer.field_f.drawRightAligned(sk.field_d, 320, var9, var8Lifetime1, 1);
+            FrameTimer.field_f.drawString("--------------", 320, var9, var8Lifetime1, 1);
             this.a("|", 320 + 100 * SectorCacheStore.field_e / 128, var8Lifetime1, var9, 120);
             var11++;
             var9 = var9 + var10;
@@ -3840,8 +3840,8 @@ public final class Terraphoenix extends GameShell {
             if (var12 == var8Lifetime2) {
               this.field_xb = var11;
             }
-            FrameTimer.field_f.a(qb.field_d, 320, var9, var8Lifetime2, 1);
-            FrameTimer.field_f.b("--------------", 320, var9, var8Lifetime2, 1);
+            FrameTimer.field_f.drawRightAligned(qb.field_d, 320, var9, var8Lifetime2, 1);
+            FrameTimer.field_f.drawString("--------------", 320, var9, var8Lifetime2, 1);
             this.a("|", 320 + 100 * AccountCreationResultPanel.field_sb / 128, var8Lifetime2, var9, 111);
             var9 = var9 + var10;
             if (me.field_o > 0) {
@@ -3948,7 +3948,7 @@ public final class Terraphoenix extends GameShell {
             MouseWheelInput.field_b <= (50 + param3)) {
             var6_int = 16777215;
           }
-          FrameTimer.field_f.a(param4, param1, param3, 192, 50, var6_int, 0, 1, 1, FrameTimer.field_f.field_s);
+          FrameTimer.field_f.drawParagraph(param4, param1, param3, 192, 50, var6_int, 0, 1, 1, FrameTimer.field_f.field_s);
           SoftwareRasterizer.drawRectangleOutline(param1 - 1, -1 + param3, 194, 52, 0);
           SoftwareRasterizer.drawRectangleOutline(1 + param1, param3 + 1, 190, 48, 0);
           SoftwareRasterizer.drawRectangleOutline(param1, param3, 192, 50, var6_int);
@@ -4131,12 +4131,12 @@ public final class Terraphoenix extends GameShell {
                       MouseWheelInput.field_b >= var7 &&
                       var7 + 32 >= MouseWheelInput.field_b ||
                       wf.field_t == var12) {
-                      FrameTimer.field_f.c(RandomAccessCacheFile.field_g[var12], 320, 120, 16777215, 0);
+                      FrameTimer.field_f.drawCentred(RandomAccessCacheFile.field_g[var12], 320, 120, 16777215, 0);
                       var10 = 0;
                       if ((var8 & 1 << var12) == 0) {
-                        FrameTimer.field_f.c(hf.field_z, 320, FrameTimer.field_f.field_s + 120, -wa.field_s + 16776960, 0);
+                        FrameTimer.field_f.drawCentred(hf.field_z, 320, FrameTimer.field_f.field_s + 120, -wa.field_s + 16776960, 0);
                       } else {
-                        FrameTimer.field_f.c(GameKeyHandler.field_b, 320, 120 + FrameTimer.field_f.field_s, 16777215, 0);
+                        FrameTimer.field_f.drawCentred(GameKeyHandler.field_b, 320, 120 + FrameTimer.field_f.field_s, 16777215, 0);
                       }
                       var5Lifetime1 = FrameTimer.field_f.field_s * 4 / 2 + 120;
                       if ((1 << var12 & var8) == 0) {
@@ -4153,7 +4153,7 @@ public final class Terraphoenix extends GameShell {
                       } else {
                         hf.field_w[var12].b(120, var5Lifetime1);
                       }
-                      var5Lifetime1 = var5Lifetime1 + (AccountRequestState.field_f.field_w + AccountRequestState.field_f.field_w * AccountRequestState.field_f.a(eb.field_J[var12].toUpperCase() + "<br>" + "<br>" + i.field_e + d.field_L[var12] + "<br>" + vj.field_L + ImageProducerRasterBuffer.field_m[var12], 268, var5Lifetime1, 252, 480, 16777215, -1, 0, 0, AccountRequestState.field_f.field_w));
+                      var5Lifetime1 = var5Lifetime1 + (AccountRequestState.field_f.field_w + AccountRequestState.field_f.field_w * AccountRequestState.field_f.drawParagraph(eb.field_J[var12].toUpperCase() + "<br>" + "<br>" + i.field_e + d.field_L[var12] + "<br>" + vj.field_L + ImageProducerRasterBuffer.field_m[var12], 268, var5Lifetime1, 252, 480, 16777215, -1, 0, 0, AccountRequestState.field_f.field_w));
                       var13 = 0;
                       while (!(ImageProducerRasterBuffer.field_m[var12] <= var13)) {
                         IsaacCipher.field_k.drawQuarterSize(460 + var13 * -8, 250);
@@ -4188,9 +4188,9 @@ public final class Terraphoenix extends GameShell {
                 stackIn_160_1 = FrameTimer.field_f.field_s / 2;
               }
               var5Lifetime1Lifetime1 = stackIn_160_0 + stackIn_160_1;
-              FrameTimer.field_f.a(kk.field_a, 120, 140, 400, 128, 16777215, 0, 1, 0, FrameTimer.field_f.field_s);
+              FrameTimer.field_f.drawParagraph(kk.field_a, 120, 140, 400, 128, 16777215, 0, 1, 0, FrameTimer.field_f.field_s);
               if (bk.c(-25704)) {
-                var12 = FrameTimer.field_f.b(FullscreenFocusCanvas.field_c);
+                var12 = FrameTimer.field_f.stringWidth(FullscreenFocusCanvas.field_c);
                 var13Lifetime1 = -wa.field_s + 16776960;
                 if (ef.field_j >= 320 - var12 / 2 &&
                   ef.field_j <= (320 + var12 / 2) &&
@@ -4215,7 +4215,7 @@ public final class Terraphoenix extends GameShell {
                   SoftwareRasterizer.drawHorizontalLineAlpha(-(var12 / 2) + 320, 240 - (-FrameTimer.field_f.field_s - (50 - nd.field_k) / 2), var12, 16776960 - wa.field_s, -(5 * nd.field_k) + 255);
                   SoftwareRasterizer.drawHorizontalLineAlpha(-(var12 / 2) + 320, 240 - (-nd.field_k + 50) / 2, var12, 16776960 - wa.field_s, 255 - 5 * nd.field_k);
                 }
-                FrameTimer.field_f.c(FullscreenFocusCanvas.field_c, 320, 260, var13Lifetime1, 0);
+                FrameTimer.field_f.drawCentred(FullscreenFocusCanvas.field_c, 320, 260, var13Lifetime1, 0);
                 SoftwareRasterizer.drawVerticalLineAlpha(-(var12 / 2) + 320 - (50 - nd.field_k), 240, FrameTimer.field_f.field_s, var13Lifetime1, -(nd.field_k * 5) + 255);
                 SoftwareRasterizer.drawVerticalLineAlpha(-nd.field_k + 50 + (320 + var12 / 2), 240, FrameTimer.field_f.field_s, var13Lifetime1, -(5 * nd.field_k) + 255);
               }
@@ -4246,7 +4246,7 @@ public final class Terraphoenix extends GameShell {
         }
     }
 
-    final void a(int param0) {
+    final void clearClientResources(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -4900,7 +4900,7 @@ public final class Terraphoenix extends GameShell {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          FrameTimer.field_f.c(param0, param1, param3, param2, 1);
+          FrameTimer.field_f.drawCentred(param0, param1, param3, param2, 1);
           if (param4 <= 102) {
             this.field_gb = 25;
           }
@@ -5290,7 +5290,7 @@ public final class Terraphoenix extends GameShell {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ud var6 = null;
+        BinaryBitmapFont var6 = null;
         String var7_ref_String = null;
         int var7 = 0;
         int var8_int = 0;
@@ -5309,7 +5309,7 @@ public final class Terraphoenix extends GameShell {
         String var15 = null;
         int var16 = 0;
         int var17 = 0;
-        ud var6Lifetime1;
+        BinaryBitmapFont var6Lifetime1;
         int var3Lifetime1;
         int var8_intLifetime1;
         int var9Lifetime1;
@@ -5335,9 +5335,9 @@ public final class Terraphoenix extends GameShell {
               var6 = FrameTimer.field_f;
               var7_ref_String = dd.field_N;
               var8_int = 90 + var6.field_s + 126;
-              var6.c(var7_ref_String, 320, var8_int, 16777215, 0);
+              var6.drawCentred(var7_ref_String, 320, var8_int, 16777215, 0);
               if (bk.c(param0 - 16802664)) {
-                var9 = FrameTimer.field_f.b(FullscreenFocusCanvas.field_c);
+                var9 = FrameTimer.field_f.stringWidth(FullscreenFocusCanvas.field_c);
                 var10 = 16776960 - wa.field_s;
                 boolean decompiledSharedTail0 = (((-(var9 / 2) + 320) <= ef.field_j) &&
                   (ef.field_j <= var9 / 2 + 320) &&
@@ -5361,7 +5361,7 @@ public final class Terraphoenix extends GameShell {
                     nd.field_k = nd.field_k + 50;
                   }
                 }
-                FrameTimer.field_f.c(FullscreenFocusCanvas.field_c, 320, 300, var10, 0);
+                FrameTimer.field_f.drawCentred(FullscreenFocusCanvas.field_c, 320, 300, var10, 0);
                 SoftwareRasterizer.drawVerticalLineAlpha(320 - var9 / 2 + (-50 + nd.field_k), 280, FrameTimer.field_f.field_s, var10, -(nd.field_k * 5) + 255);
                 SoftwareRasterizer.drawVerticalLineAlpha(320 + (var9 / 2 + 50 - nd.field_k), 280, FrameTimer.field_f.field_s, var10, 255 - 5 * nd.field_k);
               }
@@ -5403,32 +5403,32 @@ public final class Terraphoenix extends GameShell {
                         var14 = -wa.field_s + 16776960;
                       }
                       var15 = var8[var5];
-                      var6Lifetime1.a(var5 + 1 + ". ", 128, var13, var14, 0);
-                      var6Lifetime1.b(var15, 128, var13, var14, 0);
+                      var6Lifetime1.drawRightAligned(var5 + 1 + ". ", 128, var13, var14, 0);
+                      var6Lifetime1.drawString(var15, 128, var13, var14, 0);
                       if (var10_ref_int__[var5] < 10000) {
-                        var6Lifetime1.a(Integer.toString(var10_ref_int__[var5]), 512, var13, var14, 0);
+                        var6Lifetime1.drawRightAligned(Integer.toString(var10_ref_int__[var5]), 512, var13, var14, 0);
                       } else {
                         var16 = var10_ref_int__[var5] % 1000;
                         if (var16 < 100) {
                           if (var16 > 10) {
-                            var6Lifetime1.a(var10_ref_int__[var5] / 1000 + ng.field_w + "0" + var16, 512, var13, var14, 0);
+                            var6Lifetime1.drawRightAligned(var10_ref_int__[var5] / 1000 + ng.field_w + "0" + var16, 512, var13, var14, 0);
                           } else {
-                            var6Lifetime1.a(var10_ref_int__[var5] / 1000 + ng.field_w + "00" + var16, 512, var13, var14, 0);
+                            var6Lifetime1.drawRightAligned(var10_ref_int__[var5] / 1000 + ng.field_w + "00" + var16, 512, var13, var14, 0);
                           }
                         } else {
-                          var6Lifetime1.a(var10_ref_int__[var5] / 1000 + ng.field_w + var16, 512, var13, var14, 0);
+                          var6Lifetime1.drawRightAligned(var10_ref_int__[var5] / 1000 + ng.field_w + var16, 512, var13, var14, 0);
                         }
                       }
                       var7 = 1;
                     } else {
-                      var6Lifetime1.a(var5 + 1 + ". ", 128, var13, 8355711, 0);
+                      var6Lifetime1.drawRightAligned(var5 + 1 + ". ", 128, var13, 8355711, 0);
                     }
                   } else {
                     var14 = 16777215;
                     var15 = kj.field_f;
-                    var6Lifetime1.b(var15, 128, var13, var14, -1);
+                    var6Lifetime1.drawString(var15, 128, var13, var14, -1);
                     var7 = 1;
-                    var6Lifetime1.a(Integer.toString(DisplayNameSelectionPanel.field_H), 512, var13, var14, 0);
+                    var6Lifetime1.drawRightAligned(Integer.toString(DisplayNameSelectionPanel.field_H), 512, var13, var14, 0);
                   }
                   var13 += 28;
                   var5++;
@@ -5436,7 +5436,7 @@ public final class Terraphoenix extends GameShell {
               }
               if (decompiledFrameCompleted1) {
                 if (var7 != 0) {
-                  AccountRequestState.field_f.c(sl.field_a, 320, 400, 16777215, 0);
+                  AccountRequestState.field_f.drawCentred(sl.field_a, 320, 400, 16777215, 0);
                   var8_intLifetime1 = 0;
                   while (3 > var8_intLifetime1) {
                     var9_ref_String = rb.field_b[var8_intLifetime1];
@@ -5463,7 +5463,7 @@ public final class Terraphoenix extends GameShell {
                         ProxyAuthenticationRequiredException.field_g = 10;
                       }
                     }
-                    FrameTimer.field_f.c(var9_ref_String, var10Lifetime1, var11Lifetime1, var12, 0);
+                    FrameTimer.field_f.drawCentred(var9_ref_String, var10Lifetime1, var11Lifetime1, var12, 0);
                     var8_intLifetime1++;
                   }
                 }
@@ -5487,7 +5487,7 @@ public final class Terraphoenix extends GameShell {
                     var8_ref = IntrusiveDeque.field_d;
                   }
                   var9Lifetime1 = var6Lifetime1.field_s + 216;
-                  var6Lifetime1.c(var8_ref, 320, var9Lifetime1, -wa.field_s + 16776960, -1);
+                  var6Lifetime1.drawCentred(var8_ref, 320, var9Lifetime1, -wa.field_s + 16776960, -1);
                 }
               }
             }
@@ -6001,7 +6001,7 @@ public final class Terraphoenix extends GameShell {
         }
     }
 
-    final void a(ud param0, int param1, int param2, int param3, int param4, int param5, String param6) {
+    final void a(BinaryBitmapFont param0, int param1, int param2, int param3, int param4, int param5, String param6) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -6010,14 +6010,14 @@ public final class Terraphoenix extends GameShell {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
         try {
-          param0.c(param6, -1 + param4, param1, param3, -1);
+          param0.drawCentred(param6, -1 + param4, param1, param3, -1);
           if (param5 != -31335) {
             this.field_K = -23;
           }
-          param0.c(param6, param4 + 1, param1, param3, -1);
-          param0.c(param6, param4, param1 - 1, param3, -1);
-          param0.c(param6, param4, param1 + 1, param3, -1);
-          param0.c(param6, param4, param1, param2, -1);
+          param0.drawCentred(param6, param4 + 1, param1, param3, -1);
+          param0.drawCentred(param6, param4, param1 - 1, param3, -1);
+          param0.drawCentred(param6, param4, param1 + 1, param3, -1);
+          param0.drawCentred(param6, param4, param1, param2, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -6162,16 +6162,16 @@ public final class Terraphoenix extends GameShell {
             SoftwareRasterizer.resetClip();
             SoftwareRasterizer.drawRectangleOutline(24, 88, 425, 325, 16776960 - wa.field_s);
             if (0 == ConfirmedEmailAvailabilityValidator.field_q) {
-              FrameTimer.field_f.b(ef.field_b + " " + var3 + " " + (this.field_Bb + 1), 32, 112, wa.field_s, 0);
+              FrameTimer.field_f.drawString(ef.field_b + " " + var3 + " " + (this.field_Bb + 1), 32, 112, wa.field_s, 0);
             }
             if (1 == ConfirmedEmailAvailabilityValidator.field_q) {
-              FrameTimer.field_f.b(bh.field_b + " " + var3 + " " + (this.field_Bb - 2), 32, 112, wa.field_s, 0);
+              FrameTimer.field_f.drawString(bh.field_b + " " + var3 + " " + (this.field_Bb - 2), 32, 112, wa.field_s, 0);
             }
             if (ConfirmedEmailAvailabilityValidator.field_q == 2) {
-              FrameTimer.field_f.b(jh.field_h + " " + var3 + " " + (-7 + this.field_Bb), 32, 112, wa.field_s, 0);
+              FrameTimer.field_f.drawString(jh.field_h + " " + var3 + " " + (-7 + this.field_Bb), 32, 112, wa.field_s, 0);
             }
             if (ConfirmedEmailAvailabilityValidator.field_q == 3) {
-              FrameTimer.field_f.b(IterableNodeHashTable.field_d + " " + var3 + " " + (-10 + this.field_Bb), 32, 112, wa.field_s, 0);
+              FrameTimer.field_f.drawString(IterableNodeHashTable.field_d + " " + var3 + " " + (-10 + this.field_Bb), 32, 112, wa.field_s, 0);
             }
             if (this.field_P != -1) {
               this.field_ab[this.field_P].b(453, 89);
@@ -6617,20 +6617,20 @@ public final class Terraphoenix extends GameShell {
                 if (0 < var10) {
                   nb.field_d[6].b(452, var11);
                   if (var10 > 1) {
-                    AccountRequestState.field_f.a(var10 + kk.field_b[19], 486, var11 + 1, 138, 30, 16777215, -1, 0, 1, 14);
+                    AccountRequestState.field_f.drawParagraph(var10 + kk.field_b[19], 486, var11 + 1, 138, 30, 16777215, -1, 0, 1, 14);
                   }
                   if (var10 == 1) {
-                    AccountRequestState.field_f.a(var10 + kk.field_b[20], 486, -19 + (var11 + 20), 138, 30, 16777215, -1, 0, 1, 14);
+                    AccountRequestState.field_f.drawParagraph(var10 + kk.field_b[20], 486, -19 + (var11 + 20), 138, 30, 16777215, -1, 0, 1, 14);
                   }
                   var11 -= 34;
                 }
                 if (this.field_Fb > 0) {
                   qc.field_f[7].drawScaled(452, var11, -1 + nb.field_d[6].field_r, -1 + nb.field_d[6].field_t);
                   if (this.field_Fb > 1) {
-                    AccountRequestState.field_f.a(this.field_Fb + kk.field_b[21], 486, -19 + (20 + var11), 138, 30, 16777215, -1, 0, 1, 14);
+                    AccountRequestState.field_f.drawParagraph(this.field_Fb + kk.field_b[21], 486, -19 + (20 + var11), 138, 30, 16777215, -1, 0, 1, 14);
                   }
                   if (1 == this.field_Fb) {
-                    AccountRequestState.field_f.a(this.field_Fb + kk.field_b[22], 486, -19 + (var11 + 20), 138, 30, 16777215, -1, 0, 1, 14);
+                    AccountRequestState.field_f.drawParagraph(this.field_Fb + kk.field_b[22], 486, -19 + (var11 + 20), 138, 30, 16777215, -1, 0, 1, 14);
                   }
                   var11 -= 34;
                 }
@@ -7344,7 +7344,7 @@ public final class Terraphoenix extends GameShell {
                 MouseWheelInput.field_b <= 390) {
                 var10 = 16777215;
               }
-              FrameTimer.field_f.a(lk.field_c, 224, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
+              FrameTimer.field_f.drawParagraph(lk.field_c, 224, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
               SoftwareRasterizer.drawRectangleOutline(223, 339, 194, 52, 0);
               SoftwareRasterizer.drawRectangleOutline(225, 341, 190, 48, 0);
               SoftwareRasterizer.drawRectangleOutline(224, 340, 192, 50, var10);
@@ -7360,7 +7360,7 @@ public final class Terraphoenix extends GameShell {
                   MouseWheelInput.field_b <= 390) {
                   var10 = 16777215;
                 }
-                FrameTimer.field_f.a(g.field_qb, 64, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
+                FrameTimer.field_f.drawParagraph(g.field_qb, 64, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
                 SoftwareRasterizer.drawRectangleOutline(63, 339, 194, 52, 0);
                 SoftwareRasterizer.drawRectangleOutline(65, 341, 190, 48, 0);
                 SoftwareRasterizer.drawRectangleOutline(64, 340, 192, 50, var10);
@@ -7382,8 +7382,8 @@ public final class Terraphoenix extends GameShell {
                   390 >= MouseWheelInput.field_b) {
                   var10 = 16777215;
                 }
-                AccountRequestState.field_f.a(dj.field_f, 352, 280, 256, 50, 7829367 | var10, -1, 1, 1, AccountRequestState.field_f.field_s);
-                FrameTimer.field_f.a(lk.field_c, 384, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
+                AccountRequestState.field_f.drawParagraph(dj.field_f, 352, 280, 256, 50, 7829367 | var10, -1, 1, 1, AccountRequestState.field_f.field_s);
+                FrameTimer.field_f.drawParagraph(lk.field_c, 384, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
                 SoftwareRasterizer.drawRectangleOutline(383, 339, 194, 52, 0);
                 SoftwareRasterizer.drawRectangleOutline(385, 341, 190, 48, 0);
                 SoftwareRasterizer.drawRectangleOutline(384, 340, 192, 50, var10);
@@ -7398,7 +7398,7 @@ public final class Terraphoenix extends GameShell {
                   390 >= MouseWheelInput.field_b) {
                   var10 = 16777215;
                 }
-                FrameTimer.field_f.a(hd.field_m, 64, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
+                FrameTimer.field_f.drawParagraph(hd.field_m, 64, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
                 SoftwareRasterizer.drawRectangleOutline(63, 339, 194, 52, 0);
                 SoftwareRasterizer.drawRectangleOutline(65, 341, 190, 48, 0);
                 SoftwareRasterizer.drawRectangleOutline(64, 340, 192, 50, var10);
@@ -7420,13 +7420,13 @@ public final class Terraphoenix extends GameShell {
                   MouseWheelInput.field_b <= 390) {
                   var10 = 16777215;
                 }
-                FrameTimer.field_f.a(lk.field_c, 384, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
+                FrameTimer.field_f.drawParagraph(lk.field_c, 384, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
                 SoftwareRasterizer.drawRectangleOutline(383, 339, 194, 52, 0);
                 SoftwareRasterizer.drawRectangleOutline(385, 341, 190, 48, 0);
                 SoftwareRasterizer.drawRectangleOutline(384, 340, 192, 50, var10);
               }
             }
-            FrameTimer.field_f.c(var3, 320, 468, 13881286, 0);
+            FrameTimer.field_f.drawCentred(var3, 320, 468, 13881286, 0);
             k.field_f.a(0);
           }
           this.v(0);
@@ -7875,21 +7875,21 @@ public final class Terraphoenix extends GameShell {
         }
     }
 
-    final void a(byte param0) {
+    final void renderClientFrame(byte param0) {
         int stackIn_50_0 = 0;
         int stackIn_51_1 = 0;
         int stackIn_184_0;
         int stackIn_184_1;
-        ud stackIn_184_2;
+        BinaryBitmapFont stackIn_184_2;
         StringBuilder stackIn_184_3;
         boolean stackIn_185_4 = false;
         int stackIn_188_5;
         boolean stackIn_189_6 = false;
-        ud stackIn_193_0 = null;
+        BinaryBitmapFont stackIn_193_0 = null;
         boolean stackIn_193_1 = false;
         boolean stackIn_194_2 = false;
         boolean stackIn_198_3 = false;
-        ud stackIn_202_0 = null;
+        BinaryBitmapFont stackIn_202_0 = null;
         boolean stackIn_203_1 = false;
         boolean stackIn_207_2 = false;
         int stackIn_519_0 = 0;
@@ -7907,7 +7907,7 @@ public final class Terraphoenix extends GameShell {
         int var6 = 0;
         String var6_ref_String = null;
         int var7 = 0;
-        ud var7_ref_ud = null;
+        BinaryBitmapFont var7_ref_ud = null;
         String var7_ref_String = null;
         Runtime var8_ref_Runtime = null;
         int var8 = 0;
@@ -8051,12 +8051,12 @@ public final class Terraphoenix extends GameShell {
               if (mm.field_e >= 2) {
                 var8_ref_Runtime = Runtime.getRuntime();
                 var9 = (int)(var8_ref_Runtime.totalMemory() - var8_ref_Runtime.freeMemory()) >> 20;
-                FrameTimer.field_f.b(UiWidget.field_k + "fps, " + var9 + "MiB", 20, 20, 16777215, 0);
+                FrameTimer.field_f.drawString(UiWidget.field_k + "fps, " + var9 + "MiB", 20, 20, 16777215, 0);
                 if (this.field_ob) {
-                  AccountRequestState.field_f.b("NO RECRUITING", 20, 50, 16777215, 0);
+                  AccountRequestState.field_f.drawString("NO RECRUITING", 20, 50, 16777215, 0);
                 }
                 if (this.field_fb) {
-                  AccountRequestState.field_f.b("NO RESEARCHED ITEMS", 20, 80, 16777215, 0);
+                  AccountRequestState.field_f.drawString("NO RESEARCHED ITEMS", 20, 80, 16777215, 0);
                 }
               }
               this.c(false);
@@ -8134,7 +8134,7 @@ public final class Terraphoenix extends GameShell {
               stackIn_185_4 = (ge.field_e != 0);
               stackIn_188_5 = 119;
               stackIn_189_6 = (0 != TutorialText.field_a);
-              var8 = stackIn_184_0 + stackIn_184_1 * ((ud) (Object) stackIn_184_2).a(((StringBuilder) (Object) stackIn_184_3).append(oe.$cfr$intArgs$a$feb7e63b59d8(stackIn_185_4, stackIn_188_5, stackIn_189_6, false)).toString(), 330 - var3_intLifetime1 / 2, var8, var3_intLifetime1 - 10, 128, 16777215, 0, 1, 0, 14);
+              var8 = stackIn_184_0 + stackIn_184_1 * ((BinaryBitmapFont) (Object) stackIn_184_2).drawParagraph(((StringBuilder) (Object) stackIn_184_3).append(oe.$cfr$intArgs$a$feb7e63b59d8(stackIn_185_4, stackIn_188_5, stackIn_189_6, false)).toString(), 330 - var3_intLifetime1 / 2, var8, var3_intLifetime1 - 10, 128, 16777215, 0, 1, 0, 14);
               var8 += 24;
               if (!this.a(false, 224, (byte) -44, var8, FullscreenFocusCanvas.field_c)) {
               }
@@ -8143,7 +8143,7 @@ public final class Terraphoenix extends GameShell {
               stackIn_193_1 = false;
               stackIn_194_2 = (ge.field_e != 0);
               stackIn_198_3 = (TutorialText.field_a != 0);
-              ((ud) (Object) stackIn_193_0).c(MessageKeys.a(stackIn_193_1, stackIn_194_2, stackIn_198_3, 2), 320, var8, 16777215, 0);
+              ((BinaryBitmapFont) (Object) stackIn_193_0).drawCentred(MessageKeys.a(stackIn_193_1, stackIn_194_2, stackIn_198_3, 2), 320, var8, 16777215, 0);
               var8 += 24;
               if (this.a(false, 224, (byte) -44, var8, vf.field_b)) {
               }
@@ -8151,7 +8151,7 @@ public final class Terraphoenix extends GameShell {
               stackIn_202_0 = var7_ref_ud;
               stackIn_203_1 = (0 != TutorialText.field_a);
               stackIn_207_2 = (0 != ge.field_e);
-              ((ud) (Object) stackIn_202_0).c(dg.a(stackIn_203_1, stackIn_207_2, (byte) -76, false), 320, var8 - (-(var9Lifetime1 * 5) - 64), 65535, -1);
+              ((BinaryBitmapFont) (Object) stackIn_202_0).drawCentred(dg.a(stackIn_203_1, stackIn_207_2, (byte) -76, false), 320, var8 - (-(var9Lifetime1 * 5) - 64), 65535, -1);
               k.field_f.a(param0 ^ -89);
             }
             this.v(0);
@@ -8363,7 +8363,7 @@ public final class Terraphoenix extends GameShell {
                 var8Lifetime1 = 475;
               }
               SoftwareRasterizer.setClip(9, 415, 512, 472);
-              AccountRequestState.field_f.a(var6_ref_String + "<trans=0>" + var7_ref_String, 17, -qg.field_a + 420, 12 + var8Lifetime1, 480, var5Lifetime1Lifetime1, 0, 3, 0, 16);
+              AccountRequestState.field_f.drawParagraph(var6_ref_String + "<trans=0>" + var7_ref_String, 17, -qg.field_a + 420, 12 + var8Lifetime1, 480, var5Lifetime1Lifetime1, 0, 3, 0, 16);
               SoftwareRasterizer.resetClip();
               if (this.field_S != null) {
                 SoftwareRasterizer.drawHorizontalLineAlpha(9, 415, 512, 0, 192);
@@ -8383,13 +8383,13 @@ public final class Terraphoenix extends GameShell {
               if ((!(this.field_cb < this.field_bb.length()) ||
                 this.field_cb % 4 >= 2) &&
                 this.field_cb <= 30) {
-                FrameTimer.field_f.c(MouseWheelInput.field_c, 320, 128, 0, -1);
-                FrameTimer.field_f.c(Integer.toString(ge.field_e), 320, 152, 0, -1);
+                FrameTimer.field_f.drawCentred(MouseWheelInput.field_c, 320, 128, 0, -1);
+                FrameTimer.field_f.drawCentred(Integer.toString(ge.field_e), 320, 152, 0, -1);
                 decompiledFrameRemainder0 = (var10 != 0);
               }
               if (decompiledFrameRemainder0) {
-                FrameTimer.field_f.c(MouseWheelInput.field_c, 320, 128, 16776960, -1);
-                FrameTimer.field_f.c(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
+                FrameTimer.field_f.drawCentred(MouseWheelInput.field_c, 320, 128, 16776960, -1);
+                FrameTimer.field_f.drawCentred(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
                 decompiledFrameRemainder0 = (var10 != 0);
               }
             }
@@ -8399,23 +8399,23 @@ public final class Terraphoenix extends GameShell {
               if ((!(this.field_cb < this.field_bb.length()) ||
                 this.field_cb % 4 >= 2) &&
                 30 >= this.field_cb) {
-                FrameTimer.field_f.c(MouseWheelInput.field_c, 320, 128, 0, -1);
-                FrameTimer.field_f.c(Integer.toString(ge.field_e), 320, 152, 0, -1);
+                FrameTimer.field_f.drawCentred(MouseWheelInput.field_c, 320, 128, 0, -1);
+                FrameTimer.field_f.drawCentred(Integer.toString(ge.field_e), 320, 152, 0, -1);
                 if (!(Archive.field_a >= 2)) {
-                  FrameTimer.field_f.c(AccountServiceResult.field_f, 320, 200, 0, -1);
+                  FrameTimer.field_f.drawCentred(AccountServiceResult.field_f, 320, 200, 0, -1);
                   if (var10 != 0) {
-                    FrameTimer.field_f.c(MouseWheelInput.field_c, 320, 128, 16776960, -1);
-                    FrameTimer.field_f.c(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
+                    FrameTimer.field_f.drawCentred(MouseWheelInput.field_c, 320, 128, 16776960, -1);
+                    FrameTimer.field_f.drawCentred(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
                     if (2 > Archive.field_a) {
-                      FrameTimer.field_f.c(AccountServiceResult.field_f, 320, 200, 16776960, -1);
+                      FrameTimer.field_f.drawCentred(AccountServiceResult.field_f, 320, 200, 16776960, -1);
                     }
                   }
                 }
               } else {
-                FrameTimer.field_f.c(MouseWheelInput.field_c, 320, 128, 16776960, -1);
-                FrameTimer.field_f.c(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
+                FrameTimer.field_f.drawCentred(MouseWheelInput.field_c, 320, 128, 16776960, -1);
+                FrameTimer.field_f.drawCentred(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
                 if (2 > Archive.field_a) {
-                  FrameTimer.field_f.c(AccountServiceResult.field_f, 320, 200, 16776960, -1);
+                  FrameTimer.field_f.drawCentred(AccountServiceResult.field_f, 320, 200, 16776960, -1);
                 }
               }
             }
@@ -8461,10 +8461,10 @@ public final class Terraphoenix extends GameShell {
               if (this.field_Eb.length > var5Lifetime2) {
                 var4Lifetime2 += 12;
                 stackIn_519_0 = ~var3_intLifetime2;
-                stackIn_519_1 = ~AccountRequestState.field_f.b(this.field_Eb[var5Lifetime2]);
+                stackIn_519_1 = ~AccountRequestState.field_f.stringWidth(this.field_Eb[var5Lifetime2]);
                 if (var10 == 0) {
                   if (stackIn_519_0 > stackIn_519_1) {
-                    var3_intLifetime2 = AccountRequestState.field_f.b(this.field_Eb[var5Lifetime2]);
+                    var3_intLifetime2 = AccountRequestState.field_f.stringWidth(this.field_Eb[var5Lifetime2]);
                   }
                   var5Lifetime2++;
                   continue;
@@ -8503,7 +8503,7 @@ public final class Terraphoenix extends GameShell {
             var7Lifetime1 = 0;
             while (this.field_Eb.length > var7Lifetime1) {
               var6Lifetime2 += 12;
-              AccountRequestState.field_f.c(this.field_Eb[var7Lifetime1], var5Lifetime2, -2 + var6Lifetime2, 16777215, -1);
+              AccountRequestState.field_f.drawCentred(this.field_Eb[var7Lifetime1], var5Lifetime2, -2 + var6Lifetime2, 16777215, -1);
               var7Lifetime1++;
               if (var10 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -8548,21 +8548,21 @@ public final class Terraphoenix extends GameShell {
           if (mm.field_e >= 2) {
             var3 = Runtime.getRuntime();
             var4Lifetime3 = (int)(var3.totalMemory() - var3.freeMemory()) >> 20;
-            FrameTimer.field_f.b(UiWidget.field_k + "fps, " + var4Lifetime3 + "MiB", 20, 20, 16777215, 0);
+            FrameTimer.field_f.drawString(UiWidget.field_k + "fps, " + var4Lifetime3 + "MiB", 20, 20, 16777215, 0);
             if (this.field_ob) {
-              AccountRequestState.field_f.b("NO RECRUITING", 20, 50, 16777215, 0);
+              AccountRequestState.field_f.drawString("NO RECRUITING", 20, 50, 16777215, 0);
             }
             if (this.field_fb) {
-              AccountRequestState.field_f.b("NO RESEARCHED ITEMS", 20, 80, 16777215, 0);
+              AccountRequestState.field_f.drawString("NO RESEARCHED ITEMS", 20, 80, 16777215, 0);
             }
             if (this.field_E) {
-              AccountRequestState.field_f.b("GRENADES", 20, 100, 16777215, 0);
+              AccountRequestState.field_f.drawString("GRENADES", 20, 100, 16777215, 0);
             }
             if (this.field_H) {
-              AccountRequestState.field_f.b("PISTOLS", 20, 120, 16777215, 0);
+              AccountRequestState.field_f.drawString("PISTOLS", 20, 120, 16777215, 0);
             }
             if (this.field_Ab) {
-              AccountRequestState.field_f.b("LAUNCHERS", 20, 140, 16777215, 0);
+              AccountRequestState.field_f.drawString("LAUNCHERS", 20, 140, 16777215, 0);
             }
           }
           AccountNameAvailabilityValidator.a(0, var2, 0, (byte) 125);
@@ -8651,7 +8651,7 @@ public final class Terraphoenix extends GameShell {
           kk.a(50, 100);
           var3 = new IndexedSprite[1];
           var3[0] = qb.a("sightingpic", (byte) -36, "", ab.field_a);
-          AccountRequestState.field_f.a(var3, (int[]) null);
+          AccountRequestState.field_f.setInlineSprites(var3, (int[]) null);
           wg.field_f = il.a("options", "", ab.field_a, -1);
           il.a("help", "", ab.field_a, -1);
           aa.field_j = il.a("next", "", ab.field_a, param0 + 2019);
@@ -8822,7 +8822,7 @@ public final class Terraphoenix extends GameShell {
         }
     }
 
-    final void a(boolean param0) {
+    final void updateClient(boolean param0) {
         int stackIn_4_1 = 0;
         boolean stackIn_5_2 = false;
         int stackIn_65_1 = 0;
@@ -9066,7 +9066,7 @@ public final class Terraphoenix extends GameShell {
             var6 = 60;
             var7 = 430;
             var8 = 300;
-            var9 = AccountRequestState.field_f.b("%") + var8;
+            var9 = AccountRequestState.field_f.stringWidth("%") + var8;
             var10 = 1 + this.field_Bb;
             if (ConfirmedEmailAvailabilityValidator.field_q == 1) {
               var10 -= 3;
@@ -9125,156 +9125,156 @@ public final class Terraphoenix extends GameShell {
             }
             var11 = 105;
             if (this.field_X.field_f == 1) {
-              FrameTimer.field_f.b(hm.field_J, 48, var11, 16776960 - wa.field_s, 0);
+              FrameTimer.field_f.drawString(hm.field_J, 48, var11, 16776960 - wa.field_s, 0);
             }
             if (this.field_X.field_f == 2) {
-              FrameTimer.field_f.b(sk.field_a, 48, var11, 16776960 - wa.field_s, 0);
+              FrameTimer.field_f.drawString(sk.field_a, 48, var11, 16776960 - wa.field_s, 0);
             }
             var11 += 32;
             var12 = 0;
             if (this.field_X.field_e.field_g > 0) {
-              AccountRequestState.field_f.b(pe.field_c[0], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_g), 300, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[0], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(Integer.toString(this.field_X.field_e.field_g), 300, var11, wa.field_s, 0);
               if (!bk.c(-25704)) {
-                AccountRequestState.field_f.a(this.field_X.field_e.field_g * 100 + hh.field_l, var7, var11, wa.field_s, 0);
+                AccountRequestState.field_f.drawRightAligned(this.field_X.field_e.field_g * 100 + hh.field_l, var7, var11, wa.field_s, 0);
               }
               var11 += 12;
               var12 = var12 + this.field_X.field_e.field_g * 100;
             }
             if (this.field_X.field_e.field_j > 0) {
-              AccountRequestState.field_f.b(pe.field_c[1], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_j), 300, var11, wa.field_s, 0);
-              AccountRequestState.field_f.a(this.field_X.field_e.field_j * 500 + hh.field_l, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[1], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(Integer.toString(this.field_X.field_e.field_j), 300, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(this.field_X.field_e.field_j * 500 + hh.field_l, var7, var11, wa.field_s, 0);
               var12 = var12 + 500 * this.field_X.field_e.field_j;
               var11 += 12;
             }
             if (this.field_X.field_e.field_m > 0) {
-              AccountRequestState.field_f.b(pe.field_c[28], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_m), 300, var11, wa.field_s, 0);
-              AccountRequestState.field_f.a(this.field_X.field_e.field_m * 100 + hh.field_l, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[28], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(Integer.toString(this.field_X.field_e.field_m), 300, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(this.field_X.field_e.field_m * 100 + hh.field_l, var7, var11, wa.field_s, 0);
               var11 += 12;
               var12 = var12 + this.field_X.field_e.field_m * 100;
             }
             if (0 < this.field_X.field_e.field_b) {
-              AccountRequestState.field_f.b(pe.field_c[2], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_b), 300, var11, wa.field_s, 0);
-              AccountRequestState.field_f.a(1000 * this.field_X.field_e.field_b + hh.field_l, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[2], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(Integer.toString(this.field_X.field_e.field_b), 300, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(1000 * this.field_X.field_e.field_b + hh.field_l, var7, var11, wa.field_s, 0);
               var12 = var12 + 1000 * this.field_X.field_e.field_b;
               var11 += 12;
             }
             if (1 == this.field_X.field_e.field_i) {
-              AccountRequestState.field_f.b(pe.field_c[3], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[3], var6, var11, wa.field_s, 0);
               if (!bk.c(param0 - 25704)) {
-                AccountRequestState.field_f.a(DelegatingCanvas.field_e, var7, var11, wa.field_s, 0);
+                AccountRequestState.field_f.drawRightAligned(DelegatingCanvas.field_e, var7, var11, wa.field_s, 0);
               }
               var11 += 12;
               var12 += 1000;
             }
             if (this.field_X.field_e.field_i == 2) {
-              AccountRequestState.field_f.b(pe.field_c[4], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[4], var6, var11, wa.field_s, 0);
               if (!bk.c(-25704)) {
-                AccountRequestState.field_f.a(mb.field_u, var7, var11, wa.field_s, 0);
+                AccountRequestState.field_f.drawRightAligned(mb.field_u, var7, var11, wa.field_s, 0);
               }
               var12 += 2500;
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == 3) {
-              AccountRequestState.field_f.b(pe.field_c[5], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.a(mb.field_u, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[5], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(mb.field_u, var7, var11, wa.field_s, 0);
               var12 += 2500;
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == 4) {
-              AccountRequestState.field_f.b(pe.field_c[6], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.a(mb.field_u, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[6], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(mb.field_u, var7, var11, wa.field_s, 0);
               var12 += 2500;
               var11 += 12;
             }
             if (5 == this.field_X.field_e.field_i) {
-              AccountRequestState.field_f.b(pe.field_c[7], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.a(ee.field_N, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[7], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(ee.field_N, var7, var11, wa.field_s, 0);
               var12 += 3000;
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == 6) {
-              AccountRequestState.field_f.b(pe.field_c[8], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.a(NodeHashTableIterator.field_c, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[8], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(NodeHashTableIterator.field_c, var7, var11, wa.field_s, 0);
               var11 += 12;
               var12 += 6000;
             }
             if (this.field_X.field_e.field_i == 7) {
-              AccountRequestState.field_f.b(pe.field_c[9], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.a(oa.field_b, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[9], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(oa.field_b, var7, var11, wa.field_s, 0);
               var11 += 12;
               var12 += 10000;
             }
             if (8 == this.field_X.field_e.field_i) {
-              AccountRequestState.field_f.b(pe.field_c[10], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.a(oa.field_b, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[10], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(oa.field_b, var7, var11, wa.field_s, 0);
               var12 += 10000;
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == 9) {
-              AccountRequestState.field_f.b(pe.field_c[11], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.a(fh.field_l, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[11], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(fh.field_l, var7, var11, wa.field_s, 0);
               var11 += 12;
               var12 += 5000;
             }
             if (this.field_X.field_e.field_i == 10) {
-              AccountRequestState.field_f.b(pe.field_c[12], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.a(fh.field_l, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[12], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(fh.field_l, var7, var11, wa.field_s, 0);
               var12 += 5000;
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == 11) {
-              AccountRequestState.field_f.b(pe.field_c[13], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.a(bj.field_a, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[13], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(bj.field_a, var7, var11, wa.field_s, 0);
               var11 += 12;
               var12 += 25000;
             }
             if (this.field_X.field_e.field_i == 12) {
-              AccountRequestState.field_f.b(pe.field_c[14], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.a(DelegatingCanvas.field_e, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[14], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(DelegatingCanvas.field_e, var7, var11, wa.field_s, 0);
               var12 += 1000;
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == -1) {
-              AccountRequestState.field_f.b(pe.field_c[15], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[15], var6, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == -2) {
-              AccountRequestState.field_f.b(pe.field_c[16], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[16], var6, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == -3) {
-              AccountRequestState.field_f.b(pe.field_c[17], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[17], var6, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == -4) {
-              AccountRequestState.field_f.b(pe.field_c[18], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[18], var6, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (-5 == this.field_X.field_e.field_i) {
-              AccountRequestState.field_f.b(pe.field_c[19], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[19], var6, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (this.field_X.field_e.field_i == -6) {
-              AccountRequestState.field_f.b(pe.field_c[20], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[20], var6, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (this.field_X.field_e.field_f > 0) {
-              AccountRequestState.field_f.b(pe.field_c[21], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_f), 300, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[21], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(Integer.toString(this.field_X.field_e.field_f), 300, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (this.field_X.field_e.field_k > 0) {
-              AccountRequestState.field_f.b(pe.field_c[22], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_k), 300, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[22], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(Integer.toString(this.field_X.field_e.field_k), 300, var11, wa.field_s, 0);
               var11 += 12;
             }
             if (this.field_X.field_e.field_h > 0) {
-              AccountRequestState.field_f.b(pe.field_c[23], var6, var11, wa.field_s, 0);
-              AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_h), 300, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[23], var6, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawString(Integer.toString(this.field_X.field_e.field_h), 300, var11, wa.field_s, 0);
               var11 += 12;
             }
             var11 += 12;
@@ -9287,11 +9287,11 @@ public final class Terraphoenix extends GameShell {
                 if (var16 == 0) {
                   if (stackIn_180_0 < stackIn_180_1) {
                     if (var13 == 0) {
-                      AccountRequestState.field_f.b(od.field_c[var14].field_j, 240, var11, wa.field_s, 0);
-                      AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_l.field_a[var14]), 400, var11, wa.field_s, 0);
+                      AccountRequestState.field_f.drawString(od.field_c[var14].field_j, 240, var11, wa.field_s, 0);
+                      AccountRequestState.field_f.drawString(Integer.toString(this.field_X.field_e.field_l.field_a[var14]), 400, var11, wa.field_s, 0);
                     } else {
-                      AccountRequestState.field_f.b(od.field_c[var14].field_j, 40, var11, wa.field_s, 0);
-                      AccountRequestState.field_f.b(Integer.toString(this.field_X.field_e.field_l.field_a[var14]), 200, var11, wa.field_s, 0);
+                      AccountRequestState.field_f.drawString(od.field_c[var14].field_j, 40, var11, wa.field_s, 0);
+                      AccountRequestState.field_f.drawString(Integer.toString(this.field_X.field_e.field_l.field_a[var14]), 200, var11, wa.field_s, 0);
                     }
                     stackIn_171_0 = (var13 != 0) ? 0 : 1;
                     var13 = stackIn_171_0;
@@ -9314,42 +9314,42 @@ public final class Terraphoenix extends GameShell {
               }
               var15 = stackIn_180_0 + stackIn_180_1;
               if (var14 > 0) {
-                AccountRequestState.field_f.b(PcmResampler.field_b, var6, var11, 16777215, 0);
-                AccountRequestState.field_f.a(100 * var15 / var14 + "%", var9, var11, 16777215, 0);
+                AccountRequestState.field_f.drawString(PcmResampler.field_b, var6, var11, 16777215, 0);
+                AccountRequestState.field_f.drawRightAligned(100 * var15 / var14 + "%", var9, var11, 16777215, 0);
                 var12 = var12 * var15 / var14;
               }
               var11 += 12;
-              AccountRequestState.field_f.b(MapTile.field_o, var6, var11, 16777215, 0);
-              AccountRequestState.field_f.a(Integer.toString(var12), var8, var11, 16777215, 0);
+              AccountRequestState.field_f.drawString(MapTile.field_o, var6, var11, 16777215, 0);
+              AccountRequestState.field_f.drawRightAligned(Integer.toString(var12), var8, var11, 16777215, 0);
               var11 += 12;
               break;
             }
             if (Archive.field_a == 1) {
               if (!bk.c(param0 - 25704)) {
-                AccountRequestState.field_f.b(pe.field_c[24], var6, var11, 16777215, 0);
-                AccountRequestState.field_f.a(Integer.toString(var12 / 2), var8, var11, 16777215, 0);
+                AccountRequestState.field_f.drawString(pe.field_c[24], var6, var11, 16777215, 0);
+                AccountRequestState.field_f.drawRightAligned(Integer.toString(var12 / 2), var8, var11, 16777215, 0);
               }
               var12 = var12 + var12 / 2;
               var11 += 12;
               if (this.field_X.field_e.field_b + this.field_X.field_e.field_j > 0 &&
                 this.field_X.field_d > 0) {
-                AccountRequestState.field_f.b(pe.field_c[25], var6, var11, 16777215, 0);
+                AccountRequestState.field_f.drawString(pe.field_c[25], var6, var11, 16777215, 0);
                 var14Lifetime1 = this.field_Bb * ((this.field_X.field_e.field_b + this.field_X.field_e.field_j) * 250) / this.field_X.field_d;
-                AccountRequestState.field_f.a(Integer.toString(var14Lifetime1), var8, var11, 16777215, 0);
+                AccountRequestState.field_f.drawRightAligned(Integer.toString(var14Lifetime1), var8, var11, 16777215, 0);
                 var12 = var12 + var14Lifetime1;
                 var11 += 12;
               }
             }
             if (2 == Archive.field_a) {
-              AccountRequestState.field_f.b(pe.field_c[24], var6, var11, 16777215, 0);
-              AccountRequestState.field_f.a(Integer.toString(var12), var8, var11, 16777215, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[24], var6, var11, 16777215, 0);
+              AccountRequestState.field_f.drawRightAligned(Integer.toString(var12), var8, var11, 16777215, 0);
               var12 = var12 + var12;
               var11 += 12;
               if (this.field_X.field_e.field_j + this.field_X.field_e.field_b > 0 &&
                 this.field_X.field_d > 0) {
-                AccountRequestState.field_f.b(pe.field_c[25], var6, var11, 16777215, 0);
+                AccountRequestState.field_f.drawString(pe.field_c[25], var6, var11, 16777215, 0);
                 var14Lifetime2 = 500 * ((this.field_X.field_e.field_j + this.field_X.field_e.field_b) * this.field_Bb) / this.field_X.field_d;
-                AccountRequestState.field_f.a(Integer.toString(var14Lifetime2), var8, var11, 16777215, 0);
+                AccountRequestState.field_f.drawRightAligned(Integer.toString(var14Lifetime2), var8, var11, 16777215, 0);
                 var12 = var12 + var14Lifetime2;
                 var11 += 12;
               }
@@ -9357,12 +9357,12 @@ public final class Terraphoenix extends GameShell {
             this.field_X.field_H = var12;
             if (!bk.c(-25704)) {
               var11 += 2;
-              AccountRequestState.field_f.b(pe.field_c[26], var6, var11, 16777215, 0);
-              AccountRequestState.field_f.a(Integer.toString(var12), var8, var11, 16777215, 0);
+              AccountRequestState.field_f.drawString(pe.field_c[26], var6, var11, 16777215, 0);
+              AccountRequestState.field_f.drawRightAligned(Integer.toString(var12), var8, var11, 16777215, 0);
               var11 += 14;
               var11 += 14;
-              FrameTimer.field_f.b(pe.field_c[27], 60, var11, 16777215, 0);
-              FrameTimer.field_f.a(Integer.toString(var12 + ge.field_e), var8, var11, 16777215, 0);
+              FrameTimer.field_f.drawString(pe.field_c[27], 60, var11, 16777215, 0);
+              FrameTimer.field_f.drawRightAligned(Integer.toString(var12 + ge.field_e), var8, var11, 16777215, 0);
               var11 += 12;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -9370,8 +9370,8 @@ public final class Terraphoenix extends GameShell {
               -1 == this.field_X.field_e.field_i &&
               this.field_X.field_e.field_e != this.field_X.field_e.field_f + this.field_X.field_e.field_k + this.field_X.field_e.field_h) {
               if (bk.c(-25704)) {
-                AccountRequestState.field_f.a(BitPacketBuffer.field_q, 16, 290, 288, 60, 16777215, 0, 1, 2, AccountRequestState.field_f.field_s);
-                AccountRequestState.field_f.a(DisplayNameSelectionPanel.field_L, 336, 290, 288, 60, 16777215, 0, 1, 2, AccountRequestState.field_f.field_s);
+                AccountRequestState.field_f.drawParagraph(BitPacketBuffer.field_q, 16, 290, 288, 60, 16777215, 0, 1, 2, AccountRequestState.field_f.field_s);
+                AccountRequestState.field_f.drawParagraph(DisplayNameSelectionPanel.field_L, 336, 290, 288, 60, 16777215, 0, 1, 2, AccountRequestState.field_f.field_s);
                 stackIn_222_0 = (this.a(false, 384, (byte) -44, 370, ba.field_c)) ? 0 : 1;
                 var14Lifetime3 = stackIn_222_0;
                 discarded$0 = this.a(var14Lifetime3 != 0, 64, (byte) -44, 370, FullscreenFocusCanvas.field_c);
@@ -9382,7 +9382,7 @@ public final class Terraphoenix extends GameShell {
                   discarded$1 = this.a(true, 384, (byte) -44, 340, ba.field_c);
                   decompiledFrameRemainder0 = (this.field_Bb == 12);
                   if (decompiledFrameRemainder0) {
-                    AccountRequestState.field_f.a(vb.field_c, 352, 290, 256, 50, 16777215, 0, 1, 1, AccountRequestState.field_f.field_s);
+                    AccountRequestState.field_f.drawParagraph(vb.field_c, 352, 290, 256, 50, 16777215, 0, 1, 1, AccountRequestState.field_f.field_s);
                     decompiledFrameRemainder0 = (var16 != 0);
                   }
                 }
@@ -9390,7 +9390,7 @@ public final class Terraphoenix extends GameShell {
                   (!(12 <= this.field_Bb))) {
                   var14Lifetime3Lifetime1 = -wa.field_s + 16776960;
                   var15Lifetime1 = 24;
-                  FrameTimer.field_f.a(me.field_n, 384, 270, 192, 50, var14Lifetime3Lifetime1, 0, 1, 1, FrameTimer.field_f.field_s);
+                  FrameTimer.field_f.drawParagraph(me.field_n, 384, 270, 192, 50, var14Lifetime3Lifetime1, 0, 1, 1, FrameTimer.field_f.field_s);
                   SoftwareRasterizer.fillRectangleAlpha(384, 340 + var15Lifetime1, 80, 50, 0, 128);
                   var14Lifetime3Lifetime1 = -wa.field_s + 16776960;
                   if (384 <= ef.field_j &&
@@ -9399,7 +9399,7 @@ public final class Terraphoenix extends GameShell {
                     340 + var15Lifetime1 + 50 >= MouseWheelInput.field_b) {
                     var14Lifetime3Lifetime1 = 16777215;
                   }
-                  FrameTimer.field_f.a(ClientException.field_c, 384, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1, 0, 1, 1, FrameTimer.field_f.field_s);
+                  FrameTimer.field_f.drawParagraph(ClientException.field_c, 384, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1, 0, 1, 1, FrameTimer.field_f.field_s);
                   SoftwareRasterizer.drawRectangleOutline(383, 340 + var15Lifetime1 - 1, 82, 52, 0);
                   SoftwareRasterizer.drawRectangleOutline(385, 1 + var15Lifetime1 + 340, 78, 48, 0);
                   SoftwareRasterizer.drawRectangleOutline(384, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1);
@@ -9411,17 +9411,17 @@ public final class Terraphoenix extends GameShell {
                     MouseWheelInput.field_b <= (50 + (var15Lifetime1 + 340))) {
                     var14Lifetime3Lifetime1 = 16777215;
                   }
-                  FrameTimer.field_f.a(bc.field_b, 496, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1, 0, 1, 1, FrameTimer.field_f.field_s);
+                  FrameTimer.field_f.drawParagraph(bc.field_b, 496, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1, 0, 1, 1, FrameTimer.field_f.field_s);
                   SoftwareRasterizer.drawRectangleOutline(495, -1 + var15Lifetime1 + 340, 82, 52, 0);
                   SoftwareRasterizer.drawRectangleOutline(497, 340 + (var15Lifetime1 + 1), 78, 48, 0);
                   SoftwareRasterizer.drawRectangleOutline(496, 340 + var15Lifetime1, 80, 50, var14Lifetime3Lifetime1);
                   boolean decompiledSharedTail0 = (null == si.field_ib);
                   if (!decompiledSharedTail0) {
-                    AccountRequestState.field_f.a(UiWidget.field_t, 352, 310, 256, 50, 16777215, 0, 1, 1, AccountRequestState.field_f.field_s);
+                    AccountRequestState.field_f.drawParagraph(UiWidget.field_t, 352, 310, 256, 50, 16777215, 0, 1, 1, AccountRequestState.field_f.field_s);
                     decompiledSharedTail0 = (var16 != 0);
                   }
                   if (decompiledSharedTail0) {
-                    AccountRequestState.field_f.a(rj.field_d, 352, 310, 256, 50, 16777215, 0, 1, 1, AccountRequestState.field_f.field_s);
+                    AccountRequestState.field_f.drawParagraph(rj.field_d, 352, 310, 256, 50, 16777215, 0, 1, 1, AccountRequestState.field_f.field_s);
                   }
                   if (var16 != 0) {
                     discarded$2 = this.a(true, 384, (byte) -44, 340, ba.field_c);
@@ -9431,7 +9431,7 @@ public final class Terraphoenix extends GameShell {
             } else {
               discarded$2 = this.a(true, 384, (byte) -44, 340, ba.field_c);
             }
-            FrameTimer.field_f.c(var3, 320, 468, 13881286, 0);
+            FrameTimer.field_f.drawCentred(var3, 320, 468, 13881286, 0);
             k.field_f.a(0);
           }
           this.v(param0 + 0);

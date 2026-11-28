@@ -10,7 +10,7 @@ final class jn extends fc {
     static p[] field_F;
     static String[] field_I;
     static int field_J;
-    static vm field_G;
+    static BitmapFont field_G;
     static IntrusiveDeque field_H;
 
     final static void l(int param0) {

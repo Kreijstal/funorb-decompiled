@@ -9,7 +9,7 @@ abstract class AwtRasterBuffer {
     static IntrusiveDeque field_c;
     int[] field_b;
     static ci field_g;
-    static lh field_d;
+    static BitmapFont field_d;
     static kb field_a;
     static long[] field_f;
 

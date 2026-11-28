@@ -893,7 +893,7 @@ final class LevelRun {
 
     final void renderLevelRun(boolean param0) {
         SceneMeshBatch discarded$0 = null;
-        vn stackIn_60_0;
+        BinaryBitmapFont stackIn_60_0;
         String stackIn_60_1;
         int stackIn_60_2;
         int stackIn_60_3;
@@ -997,13 +997,13 @@ final class LevelRun {
             bd.field_w.e(-bd.field_w.field_s + 640, 0, 162);
             var3_ref_String = wh.a(this.field_k, (byte) -119);
             if (this.field_d != ig.field_q) {
-              dd.field_c.a(var3_ref_String, 628, 23, 16711680, -1);
+              dd.field_c.drawRightAligned(var3_ref_String, 628, 23, 16711680, -1);
               if (10000 > this.field_k &&
                 !this.field_J) {
                 if (this.field_v == 0) {
-                  dd.field_c.c(var3_ref_String, 344, 262, 16711680, -1);
+                  dd.field_c.drawCentred(var3_ref_String, 344, 262, 16711680, -1);
                 } else {
-                  dd.field_c.c(var3_ref_String, 258, 224, 16711680, -1);
+                  dd.field_c.drawCentred(var3_ref_String, 258, 224, 16711680, -1);
                 }
               }
             }
@@ -1016,7 +1016,7 @@ final class LevelRun {
             } else {
               stackIn_61_4 = 16776960;
             }
-            ((vn) (Object) stackIn_60_0).a(stackIn_60_1, stackIn_60_2, stackIn_60_3, stackIn_61_4, -1);
+            ((BinaryBitmapFont) (Object) stackIn_60_0).drawRightAligned(stackIn_60_1, stackIn_60_2, stackIn_60_3, stackIn_61_4, -1);
             var4Lifetime2 = 0;
             var5_intLifetime2 = 528;
             while (8 > var4Lifetime2) {
@@ -1039,7 +1039,7 @@ final class LevelRun {
             if (this.field_w) {
               FramedPanelLayer.field_f.d(553, 143);
             }
-            dd.field_c.b(this.field_T, 538, 102, 16711680, -1);
+            dd.field_c.drawString(this.field_T, 538, 102, 16711680, -1);
           }
           if (this.field_r > 0) {
             var3Lifetime2 = (this.field_r - 1) / 1000;
@@ -1451,7 +1451,7 @@ final class LevelRun {
                 var14 = this.field_D[var11_int];
                 this.a(538, 0, var14.field_h, var14.field_c);
                 if (null == ig.field_r[13]) {
-                  ig.field_r[13] = PcmSampleStream.a(DisplayNameSelectionPanel.field_F[13], 100, 96);
+                  ig.field_r[13] = PcmSampleStream.createForPlaybackRate(DisplayNameSelectionPanel.field_F[13], 100, 96);
                 }
                 if (!ig.field_r[13].isLinked(17)) {
                   ig.field_r[13].c(0);

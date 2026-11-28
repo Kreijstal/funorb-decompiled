@@ -51,13 +51,13 @@ final class tf {
         String var4 = null;
         int var5 = 0;
         int var7 = 0;
-        ce stackIn_11_0 = null;
+        BinaryBitmapFont stackIn_11_0 = null;
         String stackIn_12_1 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         var7 = Confined.field_J ? 1 : 0;
         try {
-          pn.field_a.b(he.field_b[param1], 320, param2 + 36, 16777215, -1);
+          pn.field_a.drawCentred(he.field_b[param1], 320, param2 + 36, 16777215, -1);
           if ((1 << param1 & param3) == 0) {
             kn.field_g.d(256, param2 + 44);
           } else {
@@ -68,8 +68,8 @@ final class tf {
           } else {
             var4 = jf.field_c[param1];
           }
-          var5 = pn.field_a.b(var4, 171);
-          pn.field_a.a(var4, 80, -166 - pn.field_a.field_C + (-(var5 * 10) + 274 + param2), 171, 1000, 4243584, -1, 0, 0, 20);
+          var5 = pn.field_a.lineCount(var4, 171);
+          pn.field_a.drawParagraph(var4, 80, -166 - pn.field_a.field_C + (-(var5 * 10) + 274 + param2), 171, 1000, 4243584, -1, 0, 0, 20);
           if (param0 != 59) {
             return;
           }
@@ -79,15 +79,15 @@ final class tf {
           } else {
             stackIn_12_1 = fj.field_r;
           }
-          ((ce) (Object) stackIn_11_0).c(stackIn_12_1, 80, 10 * var5 + 118 + param2, 16777215, -1);
-          pn.field_a.a(hh.field_a, 500, 103 + param2, 4243584, -1);
-          pn.field_a.a(ei.field_ib, 500, 123 + param2, 4243584, -1);
+          ((BinaryBitmapFont) (Object) stackIn_11_0).drawString(stackIn_12_1, 80, 10 * var5 + 118 + param2, 16777215, -1);
+          pn.field_a.drawRightAligned(hh.field_a, 500, 103 + param2, 4243584, -1);
+          pn.field_a.drawRightAligned(ei.field_ib, 500, 123 + param2, 4243584, -1);
           if ((32800 & ~param3 & 1 << param1) != 0) {
-            pn.field_a.c("???", 500, 103 + param2, 16777215, -1);
-            pn.field_a.c("???", 500, param2 + 123, 16777215, -1);
+            pn.field_a.drawString("???", 500, 103 + param2, 16777215, -1);
+            pn.field_a.drawString("???", 500, param2 + 123, 16777215, -1);
             return;
           }
-          pn.field_a.c(Integer.toString(PcmOutputWorker.field_b[param1]), 500, param2 + 103, 16777215, -1);
+          pn.field_a.drawString(Integer.toString(PcmOutputWorker.field_b[param1]), 500, param2 + 103, 16777215, -1);
           for (var6 = 0; eg.field_j[param1] > var6; var6++) {
             PcmOutputWorker.field_h.d(var6 * 5 + 500, param2 + 108);
           }

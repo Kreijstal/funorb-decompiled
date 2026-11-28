@@ -182,12 +182,12 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         this.field_F.tooltip = eu.field_a;
         this.field_D.tooltip = wq.field_m;
         this.field_H.tooltip = ala.field_c;
-        this.field_C.a(7, new AccountNameAvailabilityValidator(this.field_C));
-        this.field_I.a(7, new EmailFormatValidator(this.field_I));
-        this.field_K.a(7, new ConfirmedEmailAvailabilityValidator(this.field_K, this.field_I));
-        this.field_G.a(7, new PasswordValidator(this.field_G, this.field_C, this.field_I));
-        this.field_F.a(7, new MatchingFieldValidator(this.field_F, this.field_G));
-        this.field_D.a(7, new AgeValidator(this.field_D));
+        this.field_C.setFieldValidator(7, new AccountNameAvailabilityValidator(this.field_C));
+        this.field_I.setFieldValidator(7, new EmailFormatValidator(this.field_I));
+        this.field_K.setFieldValidator(7, new ConfirmedEmailAvailabilityValidator(this.field_K, this.field_I));
+        this.field_G.setFieldValidator(7, new PasswordValidator(this.field_G, this.field_C, this.field_I));
+        this.field_F.setFieldValidator(7, new MatchingFieldValidator(this.field_F, this.field_G));
+        this.field_D.setFieldValidator(7, new AgeValidator(this.field_D));
         this.field_L.field_z = false;
         this.field_L.renderer = (WidgetRenderer) ((Object) new ff());
         this.field_M.renderer = (WidgetRenderer) ((Object) new pka());
@@ -291,7 +291,7 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         try {
           var3 = this.field_C;
           var4 = param0;
-          ((TextInputWidget) ((Object) var3)).a((byte) 121, var4, false);
+          ((TextInputWidget) ((Object) var3)).setText((byte) 121, var4, false);
           int var3_int = 112 / ((param1 + 41) / 37);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ue.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

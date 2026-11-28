@@ -58,7 +58,7 @@ abstract class bi extends jla {
             stackIn_16_0 = 0;
           }
           var15 = stackIn_16_0;
-          var16 = 10 + CreatureActor.field_h.c(var11, 200);
+          var16 = 10 + CreatureActor.field_h.maxLineWidth(var11, 200);
           stackIn_19_0 = (var14 == 0) ? 0 : 10;
           stackIn_21_1 = CreatureActor.field_h.measureWrappedHeight(var11, 200, var13);
           stackIn_21_2 = CreatureActor.field_h.field_F;
@@ -172,7 +172,7 @@ abstract class bi extends jla {
           } else {
             var11.drawTransparentWithIntensity(-(var11.field_n >> 1) + var9, -22 + var10, 128);
           }
-          ((BitmapFont) ((Object) var7)).a(var6, var9, var10 + 6, var8, -1);
+          ((BitmapFont) ((Object) var7)).drawCentred(var6, var9, var10 + 6, var8, -1);
           return;
         }
     }

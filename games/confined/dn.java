@@ -7,7 +7,7 @@ final class dn {
     static ef field_b;
     static String field_a;
     static String[] field_e;
-    static ok field_f;
+    static BitmapFont field_f;
 
     public static void clearStaticReferences(int param0) {
         field_b = null;

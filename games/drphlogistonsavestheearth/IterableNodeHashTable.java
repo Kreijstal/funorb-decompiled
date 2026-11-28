@@ -24,11 +24,11 @@ final class IterableNodeHashTable implements Iterable {
         field_b = null;
     }
 
-    final static bm a(int param0, ResourceArchive param1, int param2, ResourceArchive param3, int param4) {
+    final static CoverageBitmapFont a(int param0, ResourceArchive param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        bm stackIn_5_0 = null;
-        bm stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_5_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -38,13 +38,13 @@ final class IterableNodeHashTable implements Iterable {
         try {
           if (!fl.a(param0, param1, param2, (byte) -98)) {
             stackIn_2_0 = null;
-            return (bm) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (param4 == 65245) {
             stackIn_7_0 = af.a(119, param3.getFile(param2, param0, (byte) 35));
             return stackIn_7_0;
           }
-          stackIn_5_0 = (bm) null;
+          stackIn_5_0 = (CoverageBitmapFont) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

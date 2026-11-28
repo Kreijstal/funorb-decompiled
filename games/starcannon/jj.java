@@ -19,9 +19,9 @@ final class jj extends vk implements dc, ga {
         return "</col></u>";
     }
 
-    final static lk a(int param0, ResourceArchive param1, int param2, byte param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(int param0, ResourceArchive param1, int param2, byte param3, ResourceArchive param4) {
         RuntimeException var5 = null;
-        lk stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

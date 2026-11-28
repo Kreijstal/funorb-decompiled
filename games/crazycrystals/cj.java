@@ -99,7 +99,7 @@ final class cj extends qf implements Cloneable {
           return;
         }
         if (param0) {
-          an.field_q.c(Integer.toString(this.field_D), param2 + param1, 6 + (param3 / 2 + param4), 16760896, -1);
+          an.field_q.drawCentred(Integer.toString(this.field_D), param2 + param1, 6 + (param3 / 2 + param4), 16760896, -1);
         }
     }
 

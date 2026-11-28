@@ -160,7 +160,7 @@ final class nm extends gk {
         if (!this.field_H.isLinked((byte) 105)) {
           this.field_B = false;
           this.field_n.h(0);
-          this.field_n.d(0);
+          this.field_n.setSampleStepMagnitude(0);
           return;
         }
         var46 = this.field_t.field_A.field_B;
@@ -233,12 +233,12 @@ final class nm extends gk {
         }
         var36 = -(var13Lifetime1 * var32) - var11Lifetime1 * var30 - var34 * var15Lifetime1 + 2.0;
         if (var36 < 0.01) {
-          this.field_n.d(0);
+          this.field_n.setSampleStepMagnitude(0);
           return;
         }
         var38 = -(var13Lifetime1 * var46.field_G) - var11Lifetime1 * var46.field_K - var15Lifetime1 * var46.field_L + 2.0;
         if (var38 < 0.01) {
-          this.field_n.d(0);
+          this.field_n.setSampleStepMagnitude(0);
           return;
         }
         var40 = (double)(this.field_s.field_n * 256) / (double)AudioOutput.field_k;
@@ -250,7 +250,7 @@ final class nm extends gk {
         } else {
           stackIn_35_1 = 1600;
         }
-        ((RawPcmStream) (Object) stackIn_34_0).d(stackIn_35_1);
+        ((RawPcmStream) (Object) stackIn_34_0).setSampleStepMagnitude(stackIn_35_1);
         if (this.field_x) {
           cb.field_a.a(this.field_n);
           this.field_x = false;

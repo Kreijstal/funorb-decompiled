@@ -194,7 +194,7 @@ final class ih extends bf {
           return;
         }
         try {
-          rc.field_a.b(param2, (param0.field_y >> 1) + (param1 + param0.field_u), param0.field_r + (param4 - 5), 16777215, -1);
+          rc.field_a.drawCentred(param2, (param0.field_y >> 1) + (param1 + param0.field_u), param0.field_r + (param4 - 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ih.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

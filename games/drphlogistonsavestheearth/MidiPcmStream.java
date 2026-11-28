@@ -155,7 +155,7 @@ final class MidiPcmStream extends PcmStream {
             }
             param3.field_x = var6_int;
           }
-          param3.field_D.h(this.b(950080514, param3));
+          param3.field_D.setSampleStepMagnitude(this.b(950080514, param3));
           var7 = param3.field_q;
           var8 = 0;
           param3.field_j = param3.field_j + var7.field_k;
@@ -245,7 +245,7 @@ final class MidiPcmStream extends PcmStream {
             }
           }
           if (var8 == 0) {
-            param3.field_D.a(param3.field_l, this.a(param3, 15), this.b(param3, -16385));
+            param3.field_D.rampVolumeAndPan(param3.field_l, this.a(param3, 15), this.b(param3, -16385));
             if (param2 == -128) {
               return false;
             }
@@ -260,7 +260,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             param3.field_D.mixInto(param1, param0, param4);
           }
-          if (param3.field_D.g()) {
+          if (param3.field_D.hasRemainingRampFrames()) {
             this.field_H.field_r.a(param3.field_D);
           }
           param3.d(-101);
@@ -407,7 +407,7 @@ final class MidiPcmStream extends PcmStream {
             var5 = var5 << 8;
             if (var6 >= var5) {
               var6 = -var6 - 1 + (var5 + var5);
-              param0.field_D.a(true);
+              param0.field_D.setReversePlayback(true);
             }
             decompiledSharedTail0 = (DrPhlogistonSavesTheEarth.field_D);
           }
@@ -999,7 +999,7 @@ final class MidiPcmStream extends PcmStream {
               ~var3.field_u == ~param0) {
               if (var3.field_D != null) {
                 var3.field_D.k(AudioOutput.field_d / 100);
-                if (var3.field_D.g()) {
+                if (var3.field_D.hasRemainingRampFrames()) {
                   this.field_H.field_r.a(var3.field_D);
                 }
                 var3.d(-79);
@@ -1355,15 +1355,15 @@ final class MidiPcmStream extends PcmStream {
         var7.field_E = 0;
         var7.field_m = 0;
         if (this.field_E[param3] == 0) {
-          var7.field_D = PcmSampleStream.b(var6, this.b(950080514, var7), this.a(var7, 15), this.b(var7, -16385));
+          var7.field_D = PcmSampleStream.createForSampleStep(var6, this.b(950080514, var7), this.a(var7, 15), this.b(var7, -16385));
           if (var9 != 0) {
-            var7.field_D = PcmSampleStream.b(var6, this.b(950080514, var7), 0, this.b(var7, -16385));
+            var7.field_D = PcmSampleStream.createForSampleStep(var6, this.b(950080514, var7), 0, this.b(var7, -16385));
             stackIn_19_1 = var7;
             stackIn_20_2 = !(var10.field_p[param2] >= 0);
             this.a(stackIn_19_1, stackIn_20_2, (byte) 101);
           }
         } else {
-          var7.field_D = PcmSampleStream.b(var6, this.b(950080514, var7), 0, this.b(var7, -16385));
+          var7.field_D = PcmSampleStream.createForSampleStep(var6, this.b(950080514, var7), 0, this.b(var7, -16385));
           stackIn_19_1 = var7;
           stackIn_20_2 = !(var10.field_p[param2] >= 0);
           this.a(stackIn_19_1, stackIn_20_2, (byte) 101);

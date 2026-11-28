@@ -11,7 +11,7 @@ final class BufferedSocket implements Runnable {
     private PlatformTask field_d;
     static int field_h;
     static String field_o;
-    static hd field_b;
+    static BinaryBitmapFont field_b;
     private int field_j;
     private InputStream field_l;
     private java.net.Socket field_e;
@@ -260,7 +260,7 @@ final class BufferedSocket implements Runnable {
             return 0;
           }
         } else {
-          field_b = (hd) null;
+          field_b = (BinaryBitmapFont) null;
           if (param1 < sa.field_m) {
             if (ke.field_I > param1) {
               return -1;
@@ -462,7 +462,7 @@ final class BufferedSocket implements Runnable {
           var1_int = 0;
           var2 = 0;
           if (param0 <= 64) {
-            field_b = (hd) null;
+            field_b = (BinaryBitmapFont) null;
           }
           while (DelegatingCanvas.a((byte) -56)) {
             bc.field_K.a(true);

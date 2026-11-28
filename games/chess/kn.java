@@ -93,10 +93,10 @@ abstract class kn extends mf implements ra {
             field_G = (RgbSprite) null;
           }
           if (!param0) {
-            stackIn_6_0 = AwtRasterBuffer.field_d.b(param2);
+            stackIn_6_0 = AwtRasterBuffer.field_d.stringWidth(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = ce.field_a.b(param2);
+          stackIn_4_0 = ce.field_a.stringWidth(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

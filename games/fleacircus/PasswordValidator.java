@@ -261,10 +261,10 @@ final class PasswordValidator extends TextFieldValidator {
               var1_int = var1_int + ge.field_h;
             }
             if (var5 >= 0) {
-              lj.field_a.c(var7, var9Lifetime1, SpriteGeometry.field_y + var1_int, var6, -1);
+              lj.field_a.drawString(var7, var9Lifetime1, SpriteGeometry.field_y + var1_int, var6, -1);
               var1_int = var1_int + (ge.field_h + id.field_c + hb.field_t);
             } else {
-              pb.field_e.c(var7, var9Lifetime1, var1_int + kh.field_g, var6, -1);
+              pb.field_e.drawString(var7, var9Lifetime1, var1_int + kh.field_g, var6, -1);
               var1_int = var1_int + cm.field_f;
             }
           }

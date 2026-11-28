@@ -5,7 +5,7 @@ final class og {
     static Sprite field_b;
     static int field_e;
     static tf field_d;
-    static hh field_a;
+    static CoverageBitmapFont field_a;
     static String[] field_c;
 
     public static void clearStaticReferences(boolean param0) {

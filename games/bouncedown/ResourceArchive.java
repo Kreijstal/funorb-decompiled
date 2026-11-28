@@ -3,7 +3,7 @@
  */
 final class ResourceArchive {
     static int field_a;
-    static ie field_e;
+    static BinaryBitmapFont field_e;
     static java.applet.Applet field_j;
     static int[] field_i;
     private boolean field_b;

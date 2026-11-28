@@ -8,7 +8,7 @@ final class ec extends ScoreModifier {
     static boolean field_g;
     static am field_k;
     static oi field_h;
-    static vc field_m;
+    static BitmapFont field_m;
     static RgbSprite[] field_j;
 
     final static void a(boolean param0, String param1, java.applet.Applet param2, byte param3) {

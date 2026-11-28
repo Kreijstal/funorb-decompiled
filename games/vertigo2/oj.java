@@ -202,7 +202,7 @@ final class oj extends WidgetContainer implements ij {
         }
         BitmapFont var5 = qc.field_x;
         if (null != this.field_E) {
-          var5.a(jd.field_a, this.x + param2, param3 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_M + var5.field_z);
+          var5.drawParagraph(jd.field_a, this.x + param2, param3 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_M + var5.field_z);
         }
     }
 

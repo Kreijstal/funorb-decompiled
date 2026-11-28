@@ -24,7 +24,7 @@ final class Slime {
     private RawPcmStream field_g;
     double field_q;
 
-    final void a(int param0, boolean param1, int param2) {
+    final void drawSlimeAndPlayerHud(int param0, boolean param1, int param2) {
         int var4;
         int var5;
         int var6_int;
@@ -43,7 +43,7 @@ final class Slime {
         var10 = Bounce.field_N;
         var4 = 0;
         if (param1) {
-          this.a((Platform[]) null, (PcmStreamMixer) null, 62, (PcmSample[]) null, -0.16860739722231136, (byte) 54);
+          this.updateSlimePhysics((Platform[]) null, (PcmStreamMixer) null, 62, (PcmSample[]) null, -0.16860739722231136, (byte) 54);
         }
         SoftwareRasterizer.resetClip();
         var5 = 0;
@@ -55,21 +55,21 @@ final class Slime {
             var4 = param2 / 2;
             SoftwareRasterizer.fillRectangle(2, -32 + (2 + var5), -4 + param2, 156, 0);
             ve.a(160, var5 - 32, ConfirmedEmailAvailabilityValidator.field_p, (byte) -99, param2, 0);
-            ResourceArchive.field_e.a(PcmResampler.field_f, var4, var5 + 64, 16777215, -1);
-            jh.field_s.a(gd.field_b[EmailFormatValidator.field_m] + "<lt> <gt>" + gd.field_b[ee.field_a], var4, 24 + var5 + 64, 11579647, -1);
+            ResourceArchive.field_e.drawCentred(PcmResampler.field_f, var4, var5 + 64, 16777215, -1);
+            jh.field_s.drawCentred(gd.field_b[EmailFormatValidator.field_m] + "<lt> <gt>" + gd.field_b[ee.field_a], var4, 24 + var5 + 64, 11579647, -1);
           }
           if (param0 == 1) {
             var4 = -1 + (-(param2 / 2) + 640);
             var5 = param2 / 2 + 32;
             SoftwareRasterizer.fillRectangle(640 - param2 + 2, var5 - 30, param2 - 4, 156, 0);
             ve.a(160, -32 + var5, ConfirmedEmailAvailabilityValidator.field_p, (byte) -116, param2, 640 - param2);
-            ResourceArchive.field_e.a(c.field_a, var4, var5 + 64, 16777215, -1);
+            ResourceArchive.field_e.drawCentred(c.field_a, var4, var5 + 64, 16777215, -1);
             if (2 != field_a) {
-              jh.field_s.a(wa.field_a, var4, var5 + 64 + 24, 16744576, -1);
-              jh.field_s.a(MusicPatchPcmStream.field_k, var4, 20 + var5 + 64 + 24, 16744576, -1);
+              jh.field_s.drawCentred(wa.field_a, var4, var5 + 64 + 24, 16744576, -1);
+              jh.field_s.drawCentred(MusicPatchPcmStream.field_k, var4, 20 + var5 + 64 + 24, 16744576, -1);
             } else {
-              ResourceArchive.field_e.a(wa.field_a, var4, 18 + (var5 + 64), 16744576, -1);
-              ResourceArchive.field_e.a(MusicPatchPcmStream.field_k, var4, 14 + (var5 + 64) + 18, 16744576, -1);
+              ResourceArchive.field_e.drawCentred(wa.field_a, var4, 18 + (var5 + 64), 16744576, -1);
+              ResourceArchive.field_e.drawCentred(MusicPatchPcmStream.field_k, var4, 14 + (var5 + 64) + 18, 16744576, -1);
             }
           }
           if (param0 == 2) {
@@ -77,8 +77,8 @@ final class Slime {
             var4 = param2 / 2;
             SoftwareRasterizer.fillRectangle(2, 2 + (var5 - 32), param2 - 4, 156, 0);
             ve.a(160, -32 + var5, ConfirmedEmailAvailabilityValidator.field_p, (byte) -112, param2, 0);
-            ResourceArchive.field_e.a(bk.field_b, var4, var5 + 64, 16777215, -1);
-            jh.field_s.a(gd.field_b[nb.field_g] + "<lt> <gt>" + gd.field_b[db.field_S], var4, var5 + 64 + 24, 8454016, -1);
+            ResourceArchive.field_e.drawCentred(bk.field_b, var4, var5 + 64, 16777215, -1);
+            jh.field_s.drawCentred(gd.field_b[nb.field_g] + "<lt> <gt>" + gd.field_b[db.field_S], var4, var5 + 64 + 24, 8454016, -1);
           }
         }
         SoftwareRasterizer.setClip(param2, 0, 512 + param2, 446);
@@ -205,7 +205,7 @@ final class Slime {
         }
     }
 
-    final void a(Platform[] param0, PcmStreamMixer param1, int param2, PcmSample[] param3, double param4, byte param5) {
+    final void updateSlimePhysics(Platform[] param0, PcmStreamMixer param1, int param2, PcmSample[] param3, double param4, byte param5) {
         RuntimeException stackIn_249_0 = null;
         StringBuilder stackIn_249_1 = null;
         String stackIn_250_2 = null;
@@ -388,7 +388,7 @@ final class Slime {
                 if (wd.field_x) {
                   if (null == this.field_r) {
                     if (64.0 < this.field_o) {
-                      this.field_r = RawPcmStream.a(param3[8], 100, 0);
+                      this.field_r = RawPcmStream.createForPlaybackRate(param3[8], 100, 0);
                       var10 = (int)(128.0 - this.field_o);
                       if (var10 < 0) {
                         var10 = 0;
@@ -422,7 +422,7 @@ final class Slime {
                     }
                   } else {
                     if (126.0 > this.field_o) {
-                      this.field_g = RawPcmStream.a(param3[3], 100, 0);
+                      this.field_g = RawPcmStream.createForPlaybackRate(param3[3], 100, 0);
                       var10 = (int)(-32.0 + this.field_o);
                       if (var10 < 0) {
                         var10 = 0;
@@ -526,10 +526,10 @@ final class Slime {
               }
             }
             if (var9 == 0) {
-              this.a(param3, false);
+              this.fadeOutGrowthSound(param3, false);
             }
             if (var8_int == 0) {
-              this.a(param3, (byte) 106);
+              this.fadeOutShrinkSound(param3, (byte) 106);
             }
           }
           if (this.field_p > 0) {
@@ -574,11 +574,11 @@ final class Slime {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int xorIntegers(int param0, int param1) {
         return param0 ^ param1;
     }
 
-    final void a(boolean param0) {
+    final void resetSlime(boolean param0) {
         this.field_c = 0.0;
         this.field_o = 96.0;
         this.field_d = 0.0;
@@ -598,7 +598,7 @@ final class Slime {
         this.field_f = 0;
     }
 
-    final void a(PcmSample[] param0, boolean param1) {
+    final void fadeOutGrowthSound(PcmSample[] param0, boolean param1) {
         if (param1) {
           return;
         }
@@ -614,7 +614,7 @@ final class Slime {
         }
     }
 
-    final static void b(int param0) {
+    final static void evaluateDivisionGuard(int param0) {
         int var1 = 28 / ((73 - param0) / 37);
     }
 
@@ -626,10 +626,10 @@ final class Slime {
         }
     }
 
-    final void a(PcmSample[] param0, byte param1) {
+    final void fadeOutShrinkSound(PcmSample[] param0, byte param1) {
         try {
           if (param1 != 106) {
-            this.a((Platform[]) null, (PcmStreamMixer) null, -3, (PcmSample[]) null, -0.052863935081619066, (byte) 41);
+            this.updateSlimePhysics((Platform[]) null, (PcmStreamMixer) null, -3, (PcmSample[]) null, -0.052863935081619066, (byte) 41);
           }
           if (this.field_r != null) {
             if (wd.field_x) {
@@ -643,10 +643,10 @@ final class Slime {
     }
 
     Slime() {
-        this.a(true);
+        this.resetSlime(true);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void rasterizeGouraudTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17;
         var17 = Bounce.field_N;
         if (param13 < param9) {

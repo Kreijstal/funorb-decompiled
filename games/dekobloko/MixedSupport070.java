@@ -132,7 +132,7 @@ final class MixedSupport070 implements CallbackContract004 {
             return;
           }
           integerLocal10 = this.integerState0404 + this.integerState0401 + this.integerState0400;
-          this.bitmapFontState0016.computeInteger1071(uiComponentArgument5.stringState0078, integerArgument2 + uiComponentArgument5.integerState0110 + integerLocal10, this.integerState0399 + integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107 - (this.integerState0400 + integerLocal10), -(this.integerState0400 << 1) + uiComponentArgument5.integerState0108, this.integerState0397, this.integerState0405, this.integerState0403, this.integerState0398, 0);
+          this.bitmapFontState0016.drawParagraph(uiComponentArgument5.stringState0078, integerArgument2 + uiComponentArgument5.integerState0110 + integerLocal10, this.integerState0399 + integerArgument3 + uiComponentArgument5.integerState0104, uiComponentArgument5.integerState0107 - (this.integerState0400 + integerLocal10), -(this.integerState0400 << 1) + uiComponentArgument5.integerState0108, this.integerState0397, this.integerState0405, this.integerState0403, this.integerState0398, 0);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
           caughtExceptionLocal5 = caughtParameterLocal12;

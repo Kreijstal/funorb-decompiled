@@ -70,19 +70,19 @@ final class ih {
         if (var7 > var6) {
           var6 = var7;
         }
-        var7Lifetime1 = pn.field_a.c(p.field_b);
+        var7Lifetime1 = pn.field_a.stringWidth(p.field_b);
         if (var7Lifetime1 > var6) {
           var6 = var7Lifetime1;
         }
-        var7Lifetime2 = pn.field_a.c(fb.a(param2, param3, 0, param0));
+        var7Lifetime2 = pn.field_a.stringWidth(fb.a(param2, param3, 0, param0));
         if (var6 < var7Lifetime2) {
           var6 = var7Lifetime2;
         }
-        var7Lifetime3 = pn.field_a.c(ConfirmedEmailAvailabilityValidator.a(param3, param0, 2, param2));
+        var7Lifetime3 = pn.field_a.stringWidth(ConfirmedEmailAvailabilityValidator.a(param3, param0, 2, param2));
         if (var7Lifetime3 > var6) {
           var6 = var7Lifetime3;
         }
-        var7Lifetime4 = pn.field_a.c(AcceleratingProjectile.a(param0, param3, -108, param2));
+        var7Lifetime4 = pn.field_a.stringWidth(AcceleratingProjectile.a(param0, param3, -108, param2));
         if (var6 < var7Lifetime4) {
           var6 = var7Lifetime4;
         }

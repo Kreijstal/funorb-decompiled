@@ -141,10 +141,10 @@ class WidgetContainer extends UiWidget implements ga {
           field_w = (int[]) null;
         }
         if (hl.field_d != null &&
-          !hl.field_d.h()) {
+          !hl.field_d.isSamplePositionOutOfRange()) {
           return;
         }
-        hl.field_d = PcmSampleStream.a(ke.field_h[6], 100, 96);
+        hl.field_d = PcmSampleStream.createForPlaybackRate(ke.field_h[6], 100, 96);
         na.a((byte) 35, hl.field_d);
     }
 

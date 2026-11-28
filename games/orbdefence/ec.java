@@ -8,7 +8,7 @@ final class ec extends ta implements ai {
     static String field_J;
     static int[] field_E;
     static String field_H;
-    private kc field_I;
+    private BitmapFont field_I;
     private String field_A;
     private int field_D;
     private int[] field_C;
@@ -46,7 +46,7 @@ final class ec extends ta implements ai {
         this.field_D = param0;
     }
 
-    ec(dh param0, kc param1, String param2) {
+    ec(dh param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (td) null);
         int var4_int = 0;
         this.field_D = 0;
@@ -54,7 +54,7 @@ final class ec extends ta implements ai {
           this.field_G = param0;
           this.field_A = param2;
           this.field_I = param1;
-          var4_int = null != this.field_A ? this.field_I.a(this.field_A, 260, this.field_I.field_H) : 0;
+          var4_int = null != this.field_A ? this.field_I.textHeight(this.field_A, 260, this.field_I.field_H) : 0;
           this.a(0, 0, var4_int + 22, (byte) -90, 288);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -264,7 +264,7 @@ final class ec extends ta implements ai {
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        this.field_I.a(this.field_A, param3 + this.field_s + 14, param0 + this.field_n + 10, -28 + this.field_m, this.field_r, 16777215, -1, 0, 0, this.field_I.field_H);
+        this.field_I.drawParagraph(this.field_A, param3 + this.field_s + 14, param0 + this.field_n + 10, -28 + this.field_m, this.field_r, 16777215, -1, 0, 0, this.field_I.field_H);
     }
 
     final static boolean k(int param0) {

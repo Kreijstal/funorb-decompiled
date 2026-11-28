@@ -6,7 +6,7 @@ import java.util.*;
 final class an extends nk {
     String field_p;
     static Calendar field_t;
-    static ef field_q;
+    static BinaryBitmapFont field_q;
     static String[] field_o;
     static boolean field_r;
     static PcmSample field_s;

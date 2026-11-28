@@ -12,7 +12,7 @@ final class wi extends eg {
     private int field_D;
     static ae field_s;
     static int field_t;
-    static we field_A;
+    static BitmapFont field_A;
     static RawPcmStream field_v;
     static String field_z;
 
@@ -54,7 +54,7 @@ final class wi extends eg {
           stackIn_18_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_18_0;
           pk.a(param1 + param2.field_u, this.field_E, var7, false, param3 + param2.field_t + (param2.field_q - this.field_E[0].field_A >> 1), param2.field_v);
-          this.field_k.a(param2.field_s, param2.field_u + param1, param3 + param2.field_t - 2, param2.field_v, param2.field_q, var8, -1, 1, 1, this.field_k.field_I);
+          this.field_k.drawParagraph(param2.field_s, param2.field_u + param1, param3 + param2.field_t - 2, param2.field_v, param2.field_q, var8, -1, 1, 1, this.field_k.field_I);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

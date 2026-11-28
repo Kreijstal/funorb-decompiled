@@ -77,12 +77,12 @@ final class AccountRegistrationPanel extends og implements im, vd, fd {
         this.field_I.field_t = ad.field_j;
         this.field_z.field_t = tf.field_a;
         this.field_F.field_t = na.field_fb;
-        this.field_N.a(true, new AccountNameAvailabilityValidator(this.field_N));
-        this.field_A.a(true, new EmailFormatValidator(this.field_A));
-        this.field_K.a(true, new ConfirmedEmailAvailabilityValidator(this.field_K, this.field_A));
-        this.field_M.a(true, new PasswordValidator(this.field_M, this.field_N, this.field_A));
-        this.field_I.a(true, new MatchingFieldValidator(this.field_I, this.field_M));
-        this.field_z.a(true, new AgeValidator(this.field_z));
+        this.field_N.setFieldValidator(true, new AccountNameAvailabilityValidator(this.field_N));
+        this.field_A.setFieldValidator(true, new EmailFormatValidator(this.field_A));
+        this.field_K.setFieldValidator(true, new ConfirmedEmailAvailabilityValidator(this.field_K, this.field_A));
+        this.field_M.setFieldValidator(true, new PasswordValidator(this.field_M, this.field_N, this.field_A));
+        this.field_I.setFieldValidator(true, new MatchingFieldValidator(this.field_I, this.field_M));
+        this.field_z.setFieldValidator(true, new AgeValidator(this.field_z));
         this.field_G.field_x = false;
         this.field_G.field_i = (wo) ((Object) new ve());
         this.field_E.field_i = (wo) ((Object) new ok());
@@ -443,7 +443,7 @@ final class AccountRegistrationPanel extends og implements im, vd, fd {
           if (param1 != -23752) {
             this.field_L = (nh) null;
           }
-          ((EditableTextField) ((Object) var3)).a(false, -100, var4);
+          ((EditableTextField) ((Object) var3)).setText(false, -100, var4);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "dc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

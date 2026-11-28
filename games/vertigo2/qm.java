@@ -165,7 +165,7 @@ final class qm extends WidgetContainer implements ij {
     final void a(boolean param0, int param1, int param2, int param3) {
         int var5 = this.x + param2;
         int var6 = this.y + param3;
-        qc.field_x.a(kl.field_Jb, var5 + 20, var6 + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, qc.field_x.field_z);
+        qc.field_x.drawParagraph(kl.field_Jb, var5 + 20, var6 + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, qc.field_x.field_z);
         super.a(param0, param1, param2, param3);
     }
 

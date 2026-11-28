@@ -191,10 +191,10 @@ final class wp {
               var1_int = var1_int + bn.field_c;
             }
             if (var4 < 0) {
-              ec.field_m.a(var6, var8Lifetime1, sc.field_g + var1_int, var5, -1);
+              ec.field_m.drawString(var6, var8Lifetime1, sc.field_g + var1_int, var5, -1);
               var1_int = var1_int + io.field_O;
             } else {
-              gh.field_F.a(var6, var8Lifetime1, var1_int + kb.field_h, var5, -1);
+              gh.field_F.drawString(var6, var8Lifetime1, var1_int + kb.field_h, var5, -1);
               var1_int = var1_int + (MouseInputHandler.field_a + bn.field_c + gh.field_w);
             }
           }

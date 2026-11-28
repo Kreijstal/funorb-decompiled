@@ -153,7 +153,7 @@ final class fk extends kl {
         }
         DungeonAssaultScreen.drawRaiderStatBars(50 + this.field_k, this.field_j + 136, (Raider) (var5), 0);
         if (var5 != null) {
-          db.field_v.a(((Raider) (var5)).field_n.field_F.toUpperCase(), 45 + this.field_k, this.field_j + 62, 139, 58, 16777215, -1, 1, 1, db.field_v.field_H);
+          db.field_v.drawParagraph(((Raider) (var5)).field_n.field_F.toUpperCase(), 45 + this.field_k, this.field_j + 62, 139, 58, 16777215, -1, 1, 1, db.field_v.field_H);
         }
     }
 

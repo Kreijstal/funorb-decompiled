@@ -119,10 +119,10 @@ final class AgeValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!param1) {
-            stackIn_7_0 = RasterBuffer.field_a.a(param2);
+            stackIn_7_0 = RasterBuffer.field_a.stringWidth(param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = lha.field_b.a(param2);
+          stackIn_5_0 = lha.field_b.stringWidth(param2);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

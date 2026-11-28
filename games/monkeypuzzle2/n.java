@@ -16,10 +16,10 @@ final class n {
         field_b = null;
     }
 
-    final static vk a(ResourceArchive param0, ResourceArchive param1, byte param2, int param3, int param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, ResourceArchive param1, byte param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        vk stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -29,7 +29,7 @@ final class n {
         try {
           if (!wg.a(param3, param4, param0, -3)) {
             stackIn_2_0 = null;
-            return (vk) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param2 <= 114) {
             field_d = (float[][]) null;

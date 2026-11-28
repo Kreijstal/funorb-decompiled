@@ -32,7 +32,7 @@ final class DisplayNameSelectionPanel extends og implements fd, vd {
         this.field_B = new pc(hb.field_i, (bi) null);
         this.field_C = new pc(GameAppletShell.field_k, (bi) null);
         this.field_G.field_t = ac.field_k;
-        this.field_G.a(true, new AccountNameAvailabilityValidator(this.field_G));
+        this.field_G.setFieldValidator(true, new AccountNameAvailabilityValidator(this.field_G));
         this.field_B.field_x = false;
         this.field_B.field_i = (wo) ((Object) new ve());
         this.field_C.field_i = (wo) ((Object) new ok());
@@ -431,7 +431,7 @@ final class DisplayNameSelectionPanel extends og implements fd, vd {
           }
           var3 = this.field_G;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(false, -65, var4);
+          ((EditableTextField) ((Object) var3)).setText(false, -65, var4);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "qk.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

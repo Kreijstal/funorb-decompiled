@@ -74,11 +74,11 @@ final class i {
         throw new IllegalStateException();
     }
 
-    final static wa a(boolean param0, byte[] param1) {
-        wa var2 = null;
+    final static PalettedBitmapFont a(boolean param0, byte[] param1) {
+        PalettedBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
-        wa stackIn_6_0 = null;
+        PalettedBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -87,7 +87,7 @@ final class i {
           if (param1 == null) {
             return null;
           }
-          var2 = new wa(param1, jd.field_g, wc.field_a, wh.field_b, m.field_a, vc.field_g, fl.field_a);
+          var2 = new PalettedBitmapFont(param1, jd.field_g, wc.field_a, wh.field_b, m.field_a, vc.field_g, fl.field_a);
           md.$cfr$intArgs$a$6121ff5511c4(-118);
           if (param0) {
             var3 = (byte[]) null;

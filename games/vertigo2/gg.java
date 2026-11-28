@@ -69,9 +69,9 @@ final class gg extends IntrusiveNode {
     gg(SamplePlaybackStream param0, IntrusiveNode param1) {
         try {
           this.field_r = param0;
-          this.field_p = param0.h();
+          this.field_p = param0.getTargetVolume();
           this.field_q = param1;
-          this.field_r.g(DelegatingCanvas.field_e * this.field_p + 128 >> 8);
+          this.field_r.setVolume(DelegatingCanvas.field_e * this.field_p + 128 >> 8);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "gg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

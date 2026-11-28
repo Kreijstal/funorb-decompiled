@@ -5,7 +5,7 @@ import java.util.*;
 
 final class pf {
     private static long field_a;
-    static ta field_c;
+    static BitmapFont field_c;
     static String field_b;
 
     final synchronized static long correctedCurrentTimeMillis(int param0) {
@@ -73,7 +73,7 @@ final class pf {
           Long var3 = null;
           Object[] var4 = null;
           if (!param0) {
-            field_c = (ta) null;
+            field_c = (BitmapFont) null;
           }
           try {
             var1 = Runtime.class.getMethod("maxMemory", new Class[]{});

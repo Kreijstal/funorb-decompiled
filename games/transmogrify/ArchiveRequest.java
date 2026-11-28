@@ -12,7 +12,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     static Sprite[] field_l;
     static Sprite field_s;
     static int unlockedAchievementMask;
-    static kg field_q;
+    static BitmapFont field_q;
 
     final static String a(byte param0, int param1) {
         int var2 = -95 % ((param0 - 72) / 37);

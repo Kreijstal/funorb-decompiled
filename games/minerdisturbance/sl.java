@@ -3,7 +3,7 @@
  */
 final class sl extends IntrusiveNode {
     int field_p;
-    static we field_q;
+    static BitmapFont field_q;
     int field_o;
     int field_n;
     int field_r;

@@ -49,7 +49,7 @@ final class FloatingScoreLabel {
     }
 
     final void drawScoreLabel(byte param0) {
-        an.field_q.c(this.field_h, this.field_d, this.field_i >> 4, 16760896, -1);
+        an.field_q.drawCentred(this.field_h, this.field_d, this.field_i >> 4, 16760896, -1);
         if (param0 != 35) {
           this.updateScoreLabel(-48);
         }

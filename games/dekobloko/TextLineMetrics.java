@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TextLineMetrics {
-    static RenderingSupport009 renderingSupport009State0004;
+    static BinaryBitmapFont renderingSupport009State0004;
     static int[] integerArrayState0167;
     int topY;
     static NineSliceSprite mixedSupport015State0003;
@@ -34,7 +34,7 @@ final class TextLineMetrics {
 
     final static void performAction1104(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4, int integerArgument5) {
         MixedSupport042.performAction0537(integerArgument4 + 20, 256, 16777215, MixedSupport088.stringState0371, integerArgument2, SceneWidget.renderingSupport009State0007);
-        UiComponentPart029.renderingSupport009State0005.computeInteger1071(LoginCredentials.tutorialTips[integerArgument1], integerArgument2, integerArgument4 + 24, 120, 200, 16777215, -1, 0, 0, 16);
+        UiComponentPart029.renderingSupport009State0005.drawParagraph(LoginCredentials.tutorialTips[integerArgument1], integerArgument2, integerArgument4 + 24, 120, 200, 16777215, -1, 0, 0, 16);
         if (integerArgument1 == 0) {
           MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument5][0].performAction0280(30 + integerArgument2, integerArgument4 + 101, 18, 18);
           MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument5][0].performAction0280(48 + integerArgument2, 101 + integerArgument4, 18, 18);
@@ -51,7 +51,7 @@ final class TextLineMetrics {
             MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument5][4].performAction0280(66 + integerArgument2, integerArgument4 + 83, 18, 18);
             return;
           }
-          renderingSupport009State0004 = (RenderingSupport009) null;
+          renderingSupport009State0004 = (BinaryBitmapFont) null;
           if (integerArgument1 == 1) {
             MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument5][4].performAction0280(integerArgument2 + 30, integerArgument4 + 101, 18, 18);
             MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument5][4].performAction0280(48 + integerArgument2, 101 + integerArgument4, 18, 18);
@@ -63,7 +63,7 @@ final class TextLineMetrics {
           return;
         }
         if (byteArgument3 < 59) {
-          renderingSupport009State0004 = (RenderingSupport009) null;
+          renderingSupport009State0004 = (BinaryBitmapFont) null;
           if (integerArgument1 != 1) {
             return;
           }

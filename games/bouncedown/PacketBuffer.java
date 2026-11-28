@@ -519,7 +519,7 @@ class PacketBuffer extends IntrusiveNode {
         return -32768 + this.readUnsignedShort(-1640531527);
     }
 
-    final static void a(tj param0, String param1, int param2, boolean param3, bh param4) {
+    final static void a(BitmapFont param0, String param1, int param2, boolean param3, bh param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -545,7 +545,7 @@ class PacketBuffer extends IntrusiveNode {
           while (param1.length() > var7) {
             var8 = param1.charAt(var7);
             if (var8 == 60) {
-              var6 = param4.field_a[0] + (var5_int >> 8) + param0.b(param1.substring(0, var7));
+              var6 = param4.field_a[0] + (var5_int >> 8) + param0.stringWidth(param1.substring(0, var7));
             }
             if (var6 != -1) {
               param4.field_a[var7] = var6;
@@ -553,7 +553,7 @@ class PacketBuffer extends IntrusiveNode {
               if (var8 == 32) {
                 var5_int = var5_int + param2;
               }
-              param4.field_a[var7] = param4.field_a[0] + (var5_int >> 8) - (-param0.b(param1.substring(0, 1 + var7)) + param0.a((char) var8));
+              param4.field_a[var7] = param4.field_a[0] + (var5_int >> 8) - (-param0.stringWidth(param1.substring(0, 1 + var7)) + param0.charWidth((char) var8));
             }
             if (62 == var8) {
               var6 = -1;

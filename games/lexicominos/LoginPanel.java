@@ -85,8 +85,8 @@ final class LoginPanel extends nb implements TextFieldListener, jk {
           }
           var3 = this.field_G;
           var4 = param1;
-          var3.a(var4, param0 - 4, false);
-          this.field_B.j(0);
+          var3.setText(var4, param0 - 4, false);
+          this.field_B.clearText(0);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ti.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -346,7 +346,7 @@ final class LoginPanel extends nb implements TextFieldListener, jk {
           this.field_o = 15;
           var7 = ql.field_Q;
           if (null != this.field_F) {
-            this.field_o = this.field_o + (5 + var7.a(this.field_F, this.field_j - 40, var7.field_E));
+            this.field_o = this.field_o + (5 + var7.textHeight(this.field_F, this.field_j - 40, var7.field_E));
           }
           var8 = nb.field_y;
           var9 = kb.a((byte) -31, kk.c(-14047));
@@ -423,8 +423,8 @@ final class LoginPanel extends nb implements TextFieldListener, jk {
     }
 
     final void d(byte param0) {
-        this.field_G.j(0);
-        this.field_B.j(0);
+        this.field_G.clearText(0);
+        this.field_B.clearText(0);
         if (param0 > -59) {
           CharSequence var3 = (CharSequence) null;
           LoginPanel.a(-96, (CharSequence) null, 81, true);
@@ -433,7 +433,7 @@ final class LoginPanel extends nb implements TextFieldListener, jk {
 
     final void a(byte param0, int param1, int param2, int param3) {
         if (null != this.field_F) {
-          ql.field_Q.a(this.field_F, 20 + (this.field_t + param2), 15 + (param1 + this.field_o), this.field_j - 40, this.field_v, 16777215, -1, 1, 0, ql.field_Q.field_E);
+          ql.field_Q.drawParagraph(this.field_F, 20 + (this.field_t + param2), 15 + (param1 + this.field_o), this.field_j - 40, this.field_v, 16777215, -1, 1, 0, ql.field_Q.field_E);
         }
         if (this.field_H != null) {
           SoftwareRasterizer.drawHorizontalLine(param2 + 10, param1 + 134, this.field_j - 20, 4210752);

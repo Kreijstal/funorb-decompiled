@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class hd implements de, lg {
-    qe field_f;
+    BitmapFont field_f;
     int field_e;
     int field_c;
     int field_a;
@@ -30,7 +30,7 @@ class hd implements de, lg {
         }
     }
 
-    hd(qe param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    hd(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -195,19 +195,19 @@ class hd implements de, lg {
             if (var12Lifetime1 != 0 &&
               3 != var12Lifetime1) {
               if (1 == var12Lifetime1) {
-                this.field_f.b(this.a(param3, false), this.a(param3, param2, (byte) 125, param0) + (var9_int >> 1), this.a(param3, param5, param1, false) + var11, param4, param7);
+                this.field_f.drawCentred(this.a(param3, false), this.a(param3, param2, (byte) 125, param0) + (var9_int >> 1), this.a(param3, param5, param1, false) + var11, param4, param7);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_f.c(this.a(param3, false), var9_int + this.a(param3, param2, (byte) 125, param0), this.a(param3, param5, param1, false) + var11, param4, param7);
+                  this.field_f.drawRightAligned(this.a(param3, false), var9_int + this.a(param3, param2, (byte) 125, param0), this.a(param3, param5, param1, false) + var11, param4, param7);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_f.a(this.a(param3, false), this.a(param3, param2, (byte) 125, param0), this.a(param3, param5, param1, false) + var11, param4, param7);
+              this.field_f.drawString(this.a(param3, false), this.a(param3, param2, (byte) 125, param0), this.a(param3, param5, param1, false) + var11, param4, param7);
             }
           } else {
-            this.field_f.a(this.a(param3, false), this.a(param3, param2, (byte) 125, param0), this.a(param3, param5, param1, false), var9_int, var10, param4, param7, this.field_h, this.field_a, this.field_k);
+            this.field_f.drawParagraph(this.a(param3, false), this.a(param3, param2, (byte) 125, param0), this.a(param3, param5, param1, false), var9_int, var10, param4, param7, this.field_h, this.field_a, this.field_k);
           }
           if (param6 != 26296) {
             field_g = (String[]) null;
@@ -663,7 +663,7 @@ class hd implements de, lg {
         }
     }
 
-    hd(qe param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    hd(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_c = param5;
           this.field_o = param2;

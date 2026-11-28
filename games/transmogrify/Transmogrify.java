@@ -243,18 +243,18 @@ public final class Transmogrify extends SessionGameApplet {
         int fieldTemp$0 = 0;
         int stackIn_39_0;
         int stackIn_39_1;
-        mi stackIn_39_2;
+        BinaryBitmapFont stackIn_39_2;
         int stackIn_39_3;
         int stackIn_40_4 = 0;
         int stackIn_43_0;
         int stackIn_43_1;
-        mi stackIn_43_2;
+        BinaryBitmapFont stackIn_43_2;
         int stackIn_43_3;
         int stackIn_43_4;
         boolean stackIn_43_5;
         int stackIn_44_0 = 0;
         int stackIn_44_1 = 0;
-        mi stackIn_44_2 = null;
+        BinaryBitmapFont stackIn_44_2 = null;
         int stackIn_44_3 = 0;
         int stackIn_44_4 = 0;
         boolean stackIn_44_6 = false;
@@ -262,7 +262,7 @@ public final class Transmogrify extends SessionGameApplet {
         int stackIn_47_1;
         int stackIn_47_2;
         int stackIn_47_3;
-        mi stackIn_47_4;
+        BinaryBitmapFont stackIn_47_4;
         int stackIn_47_5;
         int stackIn_47_6;
         int stackIn_48_7 = 0;
@@ -270,7 +270,7 @@ public final class Transmogrify extends SessionGameApplet {
         int stackIn_51_1;
         int stackIn_51_2;
         int stackIn_51_3;
-        mi stackIn_51_4;
+        BinaryBitmapFont stackIn_51_4;
         int stackIn_51_5;
         int stackIn_51_6;
         int stackIn_51_7;
@@ -278,7 +278,7 @@ public final class Transmogrify extends SessionGameApplet {
         int stackIn_52_1;
         int stackIn_52_2;
         int stackIn_52_3;
-        mi stackIn_52_4;
+        BinaryBitmapFont stackIn_52_4;
         int stackIn_52_5;
         int stackIn_52_6;
         int stackIn_52_7;
@@ -355,7 +355,7 @@ public final class Transmogrify extends SessionGameApplet {
                   if (qf.field_d == 5) {
                     var2_int = 130;
                     var3 = IntrusiveNode.field_d.field_t + (IntrusiveNode.field_d.field_D + 4);
-                    var2_int = var2_int + var3 * IntrusiveNode.field_d.b(sd.field_Q, 341);
+                    var2_int = var2_int + var3 * IntrusiveNode.field_d.lineCount(sd.field_Q, 341);
                     stackIn_39_0 = var2_int;
                     stackIn_39_1 = var3;
                     stackIn_39_2 = IntrusiveNode.field_d;
@@ -386,7 +386,7 @@ public final class Transmogrify extends SessionGameApplet {
                       stackIn_44_4 = stackIn_40_4;
                       stackIn_44_6 = true;
                     }
-                    var2_intLifetime1 = stackIn_44_0 + stackIn_44_1 * ((mi) (Object) stackIn_44_2).b(aj.a(stackIn_44_3 != 0, stackIn_44_4 != 0, stackIn_43_5, stackIn_44_6), 341);
+                    var2_intLifetime1 = stackIn_44_0 + stackIn_44_1 * ((BinaryBitmapFont) (Object) stackIn_44_2).lineCount(aj.a(stackIn_44_3 != 0, stackIn_44_4 != 0, stackIn_43_5, stackIn_44_6), 341);
                     fd.field_a[5] = var2_intLifetime1 + 10;
                     stackIn_47_0 = fd.field_b;
                     stackIn_47_1 = 5;
@@ -429,7 +429,7 @@ public final class Transmogrify extends SessionGameApplet {
                       stackIn_52_7 = stackIn_48_7;
                       stackIn_52_8 = true;
                     }
-                    stackIn_52_0[stackIn_52_1] = stackIn_52_2 + stackIn_52_3 * ((mi) (Object) stackIn_52_4).b(AchievementNotice.$cfr$intArgs$a$c7de0d339b2a(stackIn_52_5, stackIn_52_6 != 0, stackIn_52_7 != 0, stackIn_52_8), 341);
+                    stackIn_52_0[stackIn_52_1] = stackIn_52_2 + stackIn_52_3 * ((BinaryBitmapFont) (Object) stackIn_52_4).lineCount(AchievementNotice.$cfr$intArgs$a$c7de0d339b2a(stackIn_52_5, stackIn_52_6 != 0, stackIn_52_7 != 0, stackIn_52_8), 341);
                   }
                 }
               } else {
@@ -731,7 +731,7 @@ public final class Transmogrify extends SessionGameApplet {
                             FullscreenFocusCanvas.field_d[5] = r.a(pc.field_a, "", "trans05_place_tile_3").a();
                             FullscreenFocusCanvas.field_d[6] = r.a(pc.field_a, "", "trans06_incorrect_letter").a();
                             FullscreenFocusCanvas.field_d[7] = r.a(pc.field_a, "", "trans07_popup_warning").a();
-                            lj.field_u = PcmSampleStream.a(FullscreenFocusCanvas.field_d[1], 100, 255);
+                            lj.field_u = PcmSampleStream.createForPlaybackRate(FullscreenFocusCanvas.field_d[1], 100, 255);
                             pc.field_a = null;
                             el.b(-6491);
                             return false;
@@ -821,8 +821,8 @@ public final class Transmogrify extends SessionGameApplet {
             le.field_A.field_K[1] = new int[]{0, 16777215, 7829367};
             hk.field_a = am.a("", AccountNameAvailabilityValidator.field_k, (byte) 72, SessionGameApplet.field_y, "arialish12");
             gb.field_a = null;
-            IntrusiveNode.field_d.a(ue.field_c, (int[]) null);
-            hk.field_a.a(ue.field_c, (int[]) null);
+            IntrusiveNode.field_d.setInlineSprites(ue.field_c, (int[]) null);
+            hk.field_a.setInlineSprites(ue.field_c, (int[]) null);
             LoginPanel.field_z = pc.a("basic", "unachieved", AccountNameAvailabilityValidator.field_k, param0 ^ 33);
             nh.a(LoginPanel.field_z, (byte) 59);
             var4Lifetime1 = IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_y;
@@ -840,12 +840,12 @@ public final class Transmogrify extends SessionGameApplet {
             SecondaryNodeDeque.field_h = ContextualRuntimeException.a(oi.field_g, (byte) 125, "", "button_frame");
             eh.field_c = ContextualRuntimeException.a(oi.field_g, (byte) 121, "", "button_frame_hi");
             jk.field_x = new mg(MusicPatchPcmStream.a((byte) -43, oi.field_g, "var_button", ""));
-            var5_int = IntrusiveNode.field_d.a(mc.countdownLabels[0]);
-            var6_int = IntrusiveNode.field_d.a(mc.countdownLabels[1]);
+            var5_int = IntrusiveNode.field_d.stringWidth(mc.countdownLabels[0]);
+            var6_int = IntrusiveNode.field_d.stringWidth(mc.countdownLabels[1]);
             if (var5_int < var6_int) {
               var5_int = var6_int;
             }
-            var6_intLifetime3 = IntrusiveNode.field_d.a(mc.countdownLabels[2]);
+            var6_intLifetime3 = IntrusiveNode.field_d.stringWidth(mc.countdownLabels[2]);
             tb.field_b = new Sprite[3];
             if (var6_intLifetime3 > var5_int) {
               var5_int = var6_intLifetime3;
@@ -862,7 +862,7 @@ public final class Transmogrify extends SessionGameApplet {
                   SoftwareRasterizer.field_h[var9_int] = 7500402;
                 }
               }
-              IntrusiveNode.field_d.c(mc.countdownLabels[var8_int], var5_int >> 1, IntrusiveNode.field_d.field_y + 2, 1, -1);
+              IntrusiveNode.field_d.drawCentred(mc.countdownLabels[var8_int], var5_int >> 1, IntrusiveNode.field_d.field_y + 2, 1, -1);
             }
             DualLinkNode.field_k.a(param0 + 199);
             el.b(-6491);
@@ -1188,7 +1188,7 @@ public final class Transmogrify extends SessionGameApplet {
           al.clearStaticReferences(-84);
           pg.clearStaticReferences((byte) -119);
           l.a((byte) 108);
-          kg.clearStaticReferences();
+          BitmapFont.clearStaticReferences();
           tb.clearStaticReferences(true);
           fj.clearStaticReferences((byte) -101);
           el.clearStaticReferences((byte) 99);

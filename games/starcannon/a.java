@@ -3,7 +3,7 @@
  */
 final class a {
     static IntrusiveDeque field_f;
-    static lk field_b;
+    static BinaryBitmapFont field_b;
     static int field_e;
     static boolean field_a;
     static int field_d;

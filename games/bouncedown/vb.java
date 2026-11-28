@@ -7,7 +7,7 @@ final class vb implements fc {
     private int field_l;
     static String[] field_k;
     private int field_j;
-    private tj field_n;
+    private BitmapFont field_n;
     private int field_a;
     private int field_b;
     static RgbSprite[] field_m;
@@ -282,7 +282,7 @@ final class vb implements fc {
           }
           if (null != this.field_n) {
             var11 = this.field_i + this.field_a + this.field_d;
-            this.field_n.a(param1.field_h, var11 + (param4 + param1.field_r), this.field_f + param1.field_i + param0, param1.field_k - (var11 + this.field_i), param1.field_m - (this.field_i << 1), this.field_c, this.field_b, this.field_e, this.field_j, 0);
+            this.field_n.drawParagraph(param1.field_h, var11 + (param4 + param1.field_r), this.field_f + param1.field_i + param0, param1.field_k - (var11 + this.field_i), param1.field_m - (this.field_i << 1), this.field_c, this.field_b, this.field_e, this.field_j, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -311,7 +311,7 @@ final class vb implements fc {
         qh.field_i = null;
     }
 
-    vb(tj param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    vb(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_j = 1;
         this.field_e = 1;
         try {

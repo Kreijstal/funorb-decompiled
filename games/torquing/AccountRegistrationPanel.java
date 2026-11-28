@@ -25,7 +25,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, ng, 
           }
           var3 = this.field_E;
           var4 = param1;
-          ((EditableTextField) ((Object) var3)).a(false, var4, true);
+          ((EditableTextField) ((Object) var3)).setText(false, var4, true);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ki.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -220,12 +220,12 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, ng, 
         this.field_L.field_n = ud.field_j;
         this.field_I.field_n = IsaacPacketBuffer.field_p;
         this.field_F.field_n = l.field_b;
-        this.field_E.a(new AccountNameAvailabilityValidator(this.field_E), 112);
-        this.field_K.a(new EmailFormatValidator(this.field_K), 99);
-        this.field_G.a(new ConfirmedEmailAvailabilityValidator(this.field_G, this.field_K), 110);
-        this.field_B.a(new PasswordValidator(this.field_B, this.field_E, this.field_K), 126);
-        this.field_L.a(new MatchingFieldValidator(this.field_L, this.field_B), 86);
-        this.field_I.a(new AgeValidator(this.field_I), 76);
+        this.field_E.setFieldValidator(new AccountNameAvailabilityValidator(this.field_E), 112);
+        this.field_K.setFieldValidator(new EmailFormatValidator(this.field_K), 99);
+        this.field_G.setFieldValidator(new ConfirmedEmailAvailabilityValidator(this.field_G, this.field_K), 110);
+        this.field_B.setFieldValidator(new PasswordValidator(this.field_B, this.field_E, this.field_K), 126);
+        this.field_L.setFieldValidator(new MatchingFieldValidator(this.field_L, this.field_B), 86);
+        this.field_I.setFieldValidator(new AgeValidator(this.field_I), 76);
         this.field_J.field_x = false;
         this.field_J.renderer = (WidgetRenderer) ((Object) new rf());
         this.field_N.renderer = (WidgetRenderer) ((Object) new je());

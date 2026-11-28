@@ -111,7 +111,7 @@ final class lb extends WidgetContainer implements ql {
         int var5 = param3 + this.field_r;
         if (param0 == 30) {
           var6 = this.field_e + param2;
-          ButtonWidget.field_z.a(p.field_b, var5 + 20, 20 + var6, -40 + this.field_l, this.field_p - 50, 16777215, -1, 1, 0, ButtonWidget.field_z.field_C);
+          ButtonWidget.field_z.drawParagraph(p.field_b, var5 + 20, 20 + var6, -40 + this.field_l, this.field_p - 50, 16777215, -1, 1, 0, ButtonWidget.field_z.field_C);
           super.a(param0 + 0, param1, param2, param3);
           return;
         }
@@ -164,7 +164,7 @@ final class lb extends WidgetContainer implements ql {
           var1_int = param0 ? 1 : 0;
           for (var2 = 0; n.field_a > var2; var2++) {
             if (n.field_b[var2] != null &&
-              !n.field_b[var2].h()) {
+              !n.field_b[var2].isSamplePositionOutOfRange()) {
               continue;
             }
             var1_int = 1;
@@ -174,7 +174,7 @@ final class lb extends WidgetContainer implements ql {
             return;
           }
           var3 = pf.a((byte) -103, 4);
-          n.field_b[var2] = PcmSampleStream.a(ke.field_h[var3 + 8], 100, 96);
+          n.field_b[var2] = PcmSampleStream.createForPlaybackRate(ke.field_h[var3 + 8], 100, 96);
           na.a((byte) 42, n.field_b[var2]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

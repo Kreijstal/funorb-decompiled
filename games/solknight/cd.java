@@ -6,10 +6,10 @@ final class cd {
     static String field_c;
     static int[] field_b;
 
-    final static ol a(Archive param0, int param1, int param2, boolean param3, Archive param4) {
+    final static CoverageBitmapFont a(Archive param0, int param1, int param2, boolean param3, Archive param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        ol stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -19,7 +19,7 @@ final class cd {
         try {
           if (!l.a(71, param1, param2, param0)) {
             stackIn_2_0 = null;
-            return (ol) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (!param3) {
             cd.a(75);

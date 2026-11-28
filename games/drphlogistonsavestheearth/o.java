@@ -12,7 +12,7 @@ final class o extends em {
     static String field_f;
     private String field_j;
     static int[] field_k;
-    private rf field_o;
+    private BitmapFont field_o;
     private int field_h;
 
     final static void a(boolean param0, int param1, java.awt.Canvas param2) {
@@ -74,7 +74,7 @@ final class o extends em {
         field_k = null;
     }
 
-    final void a(rf param0, int param1, int param2, int param3, int param4, String param5, int param6, int param7) {
+    final void a(BitmapFont param0, int param1, int param2, int param3, int param4, String param5, int param6, int param7) {
         mi stackIn_37_0;
         mi stackIn_37_1;
         int stackIn_37_2;
@@ -129,10 +129,10 @@ final class o extends em {
           this.field_q = param6;
           this.field_m = param1;
           this.field_p = false;
-          var17 = new String[param0.a(param5, param1) + 1];
+          var17 = new String[param0.lineCount(param5, param1) + 1];
           var18 = var17;
           var11 = -79 % ((-53 - param3) / 42);
-          var10 = Math.max(1, param0.a(param5, new int[]{param1}, var18));
+          var10 = Math.max(1, param0.wrapText(param5, new int[]{param1}, var18));
           if (this.field_q == 3 &&
             var10 == 1) {
             this.field_q = 1;
@@ -174,12 +174,12 @@ final class o extends em {
             var15 = new mi(stackIn_37_2, stackIn_37_3, stackIn_38_4);
             var15.field_a[0] = 0;
             if (var14 != null) {
-              var15.field_a[var14.length()] = param0.b(var14);
+              var15.field_a[var14.length()] = param0.stringWidth(var14);
               stackIn_42_0 = false;
               if (param2 != 3) {
                 stackIn_43_1 = 0;
               } else {
-                stackIn_43_1 = this.a(param1, var14, param0.b(var14), 0);
+                stackIn_43_1 = this.a(param1, var14, param0.stringWidth(var14), 0);
               }
               DebouncedFieldValidator.a(stackIn_42_0, stackIn_43_1, var14, param0, var15);
             }
@@ -207,7 +207,7 @@ final class o extends em {
         }
     }
 
-    final void a(rf param0, String param1, int param2, int param3, int param4) {
+    final void a(BitmapFont param0, String param1, int param2, int param3, int param4) {
         mi var7 = null;
         mi var8 = null;
         if (param1 == null) {
@@ -229,14 +229,14 @@ final class o extends em {
           var7 = this.a(param0, (byte) 76, param3, param1);
           var8 = var7;
           var7.field_a[0] = param2;
-          var8.field_a[param1.length()] = param0.b(param1) + param2;
+          var8.field_a[param1.length()] = param0.stringWidth(param1) + param2;
           DebouncedFieldValidator.a(false, 0, param1, param0, var8);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "o.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void a(rf param0, int param1, int param2, String param3, boolean param4) {
+    final void a(BitmapFont param0, int param1, int param2, String param3, boolean param4) {
         mi var8 = null;
         int var7 = 0;
         if (param3 == null) {
@@ -255,7 +255,7 @@ final class o extends em {
             this.field_i = 109;
           }
           var8 = this.a(param0, (byte) 76, param2, param3);
-          var7 = param0.b(param3);
+          var7 = param0.stringWidth(param3);
           var8.field_a[0] = -(var7 >> 1) + param1;
           var8.field_a[param3.length()] = (var7 >> 1) + param1;
           DebouncedFieldValidator.a(param4, 0, param3, param0, var8);
@@ -264,7 +264,7 @@ final class o extends em {
         }
     }
 
-    final void a(rf param0, int param1, boolean param2, int param3, String param4) {
+    final void a(BitmapFont param0, int param1, boolean param2, int param3, String param4) {
         mi var8 = null;
         mi var9 = null;
         if (param4 == null) {
@@ -285,7 +285,7 @@ final class o extends em {
           this.field_p = true;
           var8 = this.a(param0, (byte) 76, param3, param4);
           var9 = var8;
-          var9.field_a[0] = -param0.b(param4) + param1;
+          var9.field_a[0] = -param0.stringWidth(param4) + param1;
           var9.field_a[param4.length()] = param1;
           DebouncedFieldValidator.a(param2, 0, param4, param0, var9);
         } catch (RuntimeException runtimeException) {
@@ -293,7 +293,7 @@ final class o extends em {
         }
     }
 
-    private final mi a(rf param0, byte param1, int param2, String param3) {
+    private final mi a(BitmapFont param0, byte param1, int param2, String param3) {
         mi var5 = null;
         RuntimeException var5_ref = null;
         String var6 = null;
@@ -308,7 +308,7 @@ final class o extends em {
         try {
           if (param1 != 76) {
             var6 = (String) null;
-            this.a((rf) null, -123, false, -9, (String) null);
+            this.a((BitmapFont) null, -123, false, -9, (String) null);
           }
           var7 = new mi(param2 - param0.field_x, param0.field_S + param2, param3.length());
           var5 = var7;

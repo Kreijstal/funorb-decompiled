@@ -114,7 +114,7 @@ final class bk {
         int var6Lifetime1;
         var13 = SolKnight.field_L ? 1 : 0;
         try {
-          var5_int = param2.b(param1);
+          var5_int = param2.stringWidth(param1);
           if (var5_int <= param3 &&
             -1 == param1.indexOf("<br>")) {
             param4[0] = param1;
@@ -131,7 +131,7 @@ final class bk {
             if (var10 == 32 ||
               45 == var10) {
               var11 = param1.substring(var7, 1 + var9).trim();
-              var12 = param2.b(var11);
+              var12 = param2.stringWidth(var11);
               if (var12 >= param3) {
                 incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;

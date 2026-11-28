@@ -212,7 +212,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
         return this.getValidationStatus((byte) -111, this.field_j.field_v);
     }
 
-    final static int a(String param0, int param1, lh param2, String[] param3, int param4) {
+    final static int a(String param0, int param1, BitmapFont param2, String[] param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -239,7 +239,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
         int var6Lifetime1;
         var13 = Chess.field_G;
         try {
-          var5_int = param2.b(param0);
+          var5_int = param2.stringWidth(param0);
           if (param4 >= var5_int &&
             param0.indexOf("<br>") == -1) {
             param3[0] = param0;
@@ -259,7 +259,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param0.substring(var7, 1 + var9).trim();
-              var12 = param2.b(var11);
+              var12 = param2.stringWidth(var11);
               if (param4 <= var12) {
                 var7 = var9 + 1;
                 incrementValue$1 = var6Lifetime1;

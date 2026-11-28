@@ -248,7 +248,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               td.a((String) null, (Throwable) (var1), (byte) -128);
               this.redirectToErrorPage((byte) -127, "crash");
             }
-            this.a(0, true);
+            this.shutdownApplet(0, true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -431,7 +431,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void b(int param0);
+    abstract void disposeClient(int param0);
 
     final void redirectToErrorPage(byte param0, String param1) {
         try {
@@ -489,7 +489,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public abstract void init();
 
-    abstract void b(byte param0);
+    abstract void clearClientResources(byte param0);
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         RuntimeException runtimeException = null;
@@ -688,7 +688,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         return super.getCodeBase();
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void shutdownApplet(int param0, boolean param1) {
         Exception exception = null;
         RuntimeException runtimeException = null;
         Object var3 = null;
@@ -710,7 +710,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             field_p = true;
           }
           try {
-            this.b(55);
+            this.disposeClient(55);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
@@ -732,7 +732,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          this.b((byte) 114);
+          this.clearClientResources((byte) 114);
           if (null != gi.field_b) {
             try {
               System.exit(0);
@@ -944,7 +944,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             vd.field_a = ol.correctedCurrentTimeMillis(256);
             c.sleepMillis(79, 5000L);
             u.field_a = null;
-            this.a(0, false);
+            this.shutdownApplet(0, false);
             return;
           }
           return;

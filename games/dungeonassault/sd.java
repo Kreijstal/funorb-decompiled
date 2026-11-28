@@ -23,7 +23,7 @@ final class sd extends da {
         try {
           int var6_int = -14 / ((param2 + 15) / 36);
           param1.h(param0, param5);
-          db.field_v.b(Integer.toString(param4), 20 + param0, param5 + (la.field_b.field_H + param1.field_v >> 1), param3, -1);
+          db.field_v.drawString(Integer.toString(param4), 20 + param0, param5 + (la.field_b.field_H + param1.field_v >> 1), param3, -1);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "sd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

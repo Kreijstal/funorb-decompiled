@@ -84,12 +84,12 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final void a(FieldValidator param0, int param1) {
+    final void setFieldValidator(FieldValidator param0, int param1) {
         try {
           this.field_L = param0;
           if (param1 != 0) {
             FieldValidator var4 = (FieldValidator) null;
-            this.a((FieldValidator) null, 118);
+            this.setFieldValidator((FieldValidator) null, 118);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "ng.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

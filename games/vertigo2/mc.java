@@ -52,7 +52,7 @@ final class mc {
           }
           var10 = -33 / ((-35 - param2) / 50);
           var8 = SoftwareRasterizer.field_e >> 2;
-          var9 = this.field_n.c(param0);
+          var9 = this.field_n.stringWidth(param0);
           var11 = this.field_n.field_M + this.field_n.field_z;
           var12 = 1;
           if (var9 > var8 ||
@@ -66,11 +66,11 @@ final class mc {
             } else {
               var13 = var8;
             }
-            var12Lifetime1 = this.field_n.a(param0, new int[]{var13}, vo.field_u);
+            var12Lifetime1 = this.field_n.wrapText(param0, new int[]{var13}, vo.field_u);
             var11 = var11 + var7 * (-1 + var12Lifetime1);
             var9 = 0;
             for (var14Lifetime2 = 0; var14Lifetime2 < var12Lifetime1; var14Lifetime2++) {
-              var15 = this.field_n.c(vo.field_u[var14Lifetime2]);
+              var15 = this.field_n.stringWidth(vo.field_u[var14Lifetime2]);
               if (var9 < var15) {
                 var9 = var15;
               }
@@ -86,7 +86,7 @@ final class mc {
           }
           SoftwareRasterizer.drawRectangleOutline(var13, var14Lifetime1, var9 + var5_int, var11 + var6, this.field_b);
           SoftwareRasterizer.fillRectangle(1 + var13, 1 + var14Lifetime1, -2 + (var5_int + var9), var11 - (-var6 + 2), this.field_d);
-          this.field_n.a(param0, this.field_m + var13, this.field_r + var14Lifetime1, var9, var11, this.field_j, -1, 0, 0, var7);
+          this.field_n.drawParagraph(param0, this.field_m + var13, this.field_r + var14Lifetime1, var9, var11, this.field_j, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,7 +113,7 @@ final class mc {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_n.c(param1);
+          var5_int = this.field_n.stringWidth(param1);
           var6 = this.field_n.field_M + this.field_n.field_t;
           var7 = param0;
           if (param3 < 115) {
@@ -128,7 +128,7 @@ final class mc {
           }
           SoftwareRasterizer.drawRectangleOutline(var7, var8, 6 + var5_int, var6 + 6, this.field_j);
           SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, 4 + var5_int, var6 + 4, this.field_d);
-          this.field_n.b(param1, var7 + 3, this.field_n.field_t + var8 + 3, this.field_j, -1);
+          this.field_n.drawString(param1, var7 + 3, this.field_n.field_t + var8 + 3, this.field_j, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -46,7 +46,7 @@ final class vca extends IntrusiveNode {
         int var9 = 0;
         Sprite var10 = null;
         try {
-          var6_int = 2 + (param4.a(param3) + param3.length() * 4);
+          var6_int = 2 + (param4.stringWidth(param3) + param3.length() * 4);
           var7 = 8 + (param4.field_B + param4.field_u + 2);
           this.field_g = new Sprite(var6_int, var7);
           bu.a(0, this.field_g);

@@ -151,9 +151,9 @@ final class cj extends rb {
           this.field_n = param0;
           this.field_m = param2;
           this.field_f = param7;
-          var16 = new String[param0.b(param6, param5) + 1];
+          var16 = new String[param0.lineCount(param6, param5) + 1];
           var17 = var16;
-          var10 = Math.max(1, param0.a(param6, new int[]{param5}, var17));
+          var10 = Math.max(1, param0.wrapText(param6, new int[]{param5}, var17));
           if (this.field_f == 3 &&
             var10 == 1) {
             this.field_f = 1;

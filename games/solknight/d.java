@@ -34,7 +34,7 @@ final class d {
             }
             EmailFormatValidator.field_n.a();
             SoftwareRasterizer.clearRaster();
-            BufferedSocket.field_b.a(LoginPanel.a(ma.field_m, new String[]{Integer.toString(ob.field_j)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
+            BufferedSocket.field_b.drawCentred(LoginPanel.a(ma.field_m, new String[]{Integer.toString(ob.field_j)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
             Bzip2State.field_e.a(true);
             EmailFormatValidator.field_n.a(ProxyAuthenticationRequiredException.field_a, 46, 107, 0, 125);
           }
@@ -45,49 +45,49 @@ final class d {
             }
             EmailFormatValidator.field_n.a();
             SoftwareRasterizer.clearRaster();
-            BufferedSocket.field_b.a(LoginPanel.a(ArchiveIndex.field_p, new String[]{Integer.toString(lk.field_e)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
+            BufferedSocket.field_b.drawCentred(LoginPanel.a(ArchiveIndex.field_p, new String[]{Integer.toString(lk.field_e)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
             Bzip2State.field_e.a(true);
             EmailFormatValidator.field_n.a(ci.field_ib, 46, 109, 0, 475);
           }
           if (fg.field_a > 0) {
             if (fg.field_a >= 500) {
               if (SectorCacheStore.field_h == 1) {
-                BufferedSocket.field_b.a(kc.field_M, 320, 32, 16711680, 8421504);
+                BufferedSocket.field_b.drawCentred(kc.field_M, 320, 32, 16711680, 8421504);
               }
               if (2 == SectorCacheStore.field_h) {
-                BufferedSocket.field_b.a(IterableNodeHashTable.field_a, 320, 32, 16776960, 8421504);
+                BufferedSocket.field_b.drawCentred(IterableNodeHashTable.field_a, 320, 32, 16776960, 8421504);
               }
             } else {
               if (1 == SectorCacheStore.field_h) {
-                BufferedSocket.field_b.a(LoginPanel.a(pk.field_T, new String[]{Integer.toString(fg.field_a / 50)}, -63), 320, 32, 16711680, 8421504);
+                BufferedSocket.field_b.drawCentred(LoginPanel.a(pk.field_T, new String[]{Integer.toString(fg.field_a / 50)}, -63), 320, 32, 16711680, 8421504);
               }
               if (SectorCacheStore.field_h == 2) {
-                BufferedSocket.field_b.a(LoginPanel.a(og.field_i, new String[]{Integer.toString(fg.field_a / 50)}, -63), 320, 32, 16776960, 8421504);
+                BufferedSocket.field_b.drawCentred(LoginPanel.a(og.field_i, new String[]{Integer.toString(fg.field_a / 50)}, -63), 320, 32, 16776960, 8421504);
               }
             }
           }
-          var2_int = 30 + SocketConnector.field_g.b(LoginPanel.a(DelegatingCanvas.field_a, new String[]{Integer.toString(100)}, -63));
-          var3 = 30 + SocketConnector.field_g.b(LoginPanel.a(nb.field_b, new String[]{Integer.toString(1300)}, -63));
+          var2_int = 30 + SocketConnector.field_g.stringWidth(LoginPanel.a(DelegatingCanvas.field_a, new String[]{Integer.toString(100)}, -63));
+          var3 = 30 + SocketConnector.field_g.stringWidth(LoginPanel.a(nb.field_b, new String[]{Integer.toString(1300)}, -63));
           if (var2_int < var3) {
             var2_int = var3;
           }
-          var3Lifetime1 = 30 + SocketConnector.field_g.b(DebouncedFieldValidator.field_b);
+          var3Lifetime1 = 30 + SocketConnector.field_g.stringWidth(DebouncedFieldValidator.field_b);
           if (var3Lifetime1 > var2_int) {
             var2_int = var3Lifetime1;
           }
           uj.a(var2_int + 15, 47, 0, GameApplet.field_f, 433, 2);
-          SocketConnector.field_g.c(LoginPanel.a(DelegatingCanvas.field_a, new String[]{Integer.toString(ud.field_k * 100 / GameKeyHandler.field_a[7])}, -63), 30, 467, 16777215, -1);
+          SocketConnector.field_g.drawString(LoginPanel.a(DelegatingCanvas.field_a, new String[]{Integer.toString(ud.field_k * 100 / GameKeyHandler.field_a[7])}, -63), 30, 467, 16777215, -1);
           if (-ud.field_k + (GameKeyHandler.field_a[kb.field_b] - lk.field_f) > 0) {
-            SocketConnector.field_g.c(LoginPanel.a(nb.field_b, new String[]{Integer.toString(-ud.field_k + (GameKeyHandler.field_a[kb.field_b] - lk.field_f))}, -63), 30, 455, 16777215, -1);
+            SocketConnector.field_g.drawString(LoginPanel.a(nb.field_b, new String[]{Integer.toString(-ud.field_k + (GameKeyHandler.field_a[kb.field_b] - lk.field_f))}, -63), 30, 455, 16777215, -1);
           }
           if (-ud.field_k + GameKeyHandler.field_a[kb.field_b] - lk.field_f <= 0) {
-            SocketConnector.field_g.c(DebouncedFieldValidator.field_b, 30, 455, 16777215, -1);
+            SocketConnector.field_g.drawString(DebouncedFieldValidator.field_b, 30, 455, 16777215, -1);
           }
-          var2_intLifetime1 = 74 + SocketConnector.field_g.b(field_a);
+          var2_intLifetime1 = 74 + SocketConnector.field_g.stringWidth(field_a);
           var4 = h.field_b;
           var5 = 641 - var2_intLifetime1;
-          SocketConnector.field_g.c(field_a, var5, 461, 16777215, -1);
-          var5 = var5 + (SocketConnector.field_g.b(field_a) + 1);
+          SocketConnector.field_g.drawString(field_a, var5, 461, 16777215, -1);
+          var5 = var5 + (SocketConnector.field_g.stringWidth(field_a) + 1);
           for (var6 = 0; uf.field_p > var6; var6++) {
             var4.drawScaledAveraged(var5, -(var4.field_r * 12 / var4.field_q) + 470, 12, var4.field_r * 12 / var4.field_q);
             var5 += 22;
@@ -100,7 +100,7 @@ final class d {
           if (0 < uf.field_p) {
             if (lk.field_b < 50 &&
               lk.field_e == 0) {
-              BufferedSocket.field_b.a(ac.field_a, 320, 33, 16777215, 1);
+              BufferedSocket.field_b.drawCentred(ac.field_a, 320, 33, 16777215, 1);
             }
             if (wc.field_c < 200) {
               var6Lifetime1 = 0;
@@ -122,7 +122,7 @@ final class d {
                   var6Lifetime1 = var6Lifetime1 + 1285 * (-wc.field_c + 200);
                 }
               }
-              BufferedSocket.field_b.a(LoginPanel.a(fj.field_j, new String[]{ci.field_gb[kb.field_b], Integer.toString(kb.field_b + 1)}, -63), 0, 0, 640, 480, var6Lifetime1, -1, 1, 1, 24);
+              BufferedSocket.field_b.drawParagraph(LoginPanel.a(fj.field_j, new String[]{ci.field_gb[kb.field_b], Integer.toString(kb.field_b + 1)}, -63), 0, 0, 640, 480, var6Lifetime1, -1, 1, 1, 24);
             }
           }
           return;

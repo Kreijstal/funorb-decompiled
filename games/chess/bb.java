@@ -35,7 +35,7 @@ final class bb {
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        c var7 = null;
+        BinaryBitmapFont var7 = null;
         ci var8 = null;
         ci var9 = null;
         ci var10 = null;
@@ -108,11 +108,11 @@ final class bb {
           var7 = dm.a(0, param0, "largefont", param2, "lobby");
           v.field_k = dm.a(0, param0, "generalfont", param2, "lobby");
           pk.field_a = dm.a(param3 ^ -105, param0, "chatfont", param2, "lobby");
-          var7.a(var5, var24);
-          v.field_k.a(var5, var24);
-          pk.field_a.a(var5, var24);
+          var7.setInlineSprites(var5, var24);
+          v.field_k.setInlineSprites(var5, var24);
+          pk.field_a.setInlineSprites(var5, var24);
           var8 = new ci(0L, (ci) null);
-          var8.field_xb = (lh) ((Object) var7);
+          var8.field_xb = (BitmapFont) ((Object) var7);
           var8.field_K = fe.field_g;
           var8.field_ib = 16777215;
           if (param3 != -105) {
@@ -123,7 +123,7 @@ final class bb {
           var9.field_fb = 1;
           var10 = new ci(0L, (ci) null);
           var10.field_ib = 16777215;
-          var10.field_xb = (lh) ((Object) v.field_k);
+          var10.field_xb = (BitmapFont) ((Object) v.field_k);
           var10.field_K = fe.field_g;
           var11 = var10;
           var10.field_cb = 1;
@@ -157,7 +157,7 @@ final class bb {
           DualLinkNode.field_j.field_Ab = il.a(0, 2039583, 30, false, true, 3815994);
           EditableTextField.field_P = new ci(0L, (ci) null);
           EditableTextField.field_P.field_cb = 1;
-          EditableTextField.field_P.field_xb = (lh) ((Object) v.field_k);
+          EditableTextField.field_P.field_xb = (BitmapFont) ((Object) v.field_k);
           EditableTextField.field_P.field_ib = 13421772;
           EditableTextField.field_P.field_K = fe.field_g;
           sj.field_k = new ci(0L, EditableTextField.field_P);
@@ -169,7 +169,7 @@ final class bb {
           var15 = new ci(0L, sj.field_k);
           var15.field_K = fe.field_g;
           var15.field_ib = 16777215;
-          var15.field_xb = (lh) ((Object) var7);
+          var15.field_xb = (BitmapFont) ((Object) var7);
           ic.field_c = new ci(0L, EditableTextField.field_P);
           ic.field_c.field_Ab = il.a(0, 2236962, 16, false, false, 2236962);
           ic.field_c.field_z = 2;

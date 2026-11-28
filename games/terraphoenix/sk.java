@@ -50,7 +50,7 @@ final class sk implements WidgetActionListener {
           if (null == this.field_g) {
             return;
           }
-          this.field_g.c(var12.text, var8 + var7 / 2, var12.field_K + (var9 + this.field_g.field_w), this.field_i, this.field_f);
+          this.field_g.drawCentred(var12.text, var8 + var7 / 2, var12.field_K + (var9 + this.field_g.field_w), this.field_i, this.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

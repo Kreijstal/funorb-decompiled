@@ -78,7 +78,7 @@ final class ri {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        vk var20 = null;
+        BinaryBitmapFont var20 = null;
         int var9Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
@@ -116,7 +116,7 @@ final class ri {
           var9Lifetime1 = -116 + ei.field_a;
           var10 = p.field_a - 90;
           var11 = 10 + var8;
-          var20.a(pi.field_m, var6 >> 1, 56, 1, -1);
+          var20.drawCentred(pi.field_m, var6 >> 1, 56, 1, -1);
           var12 = 10;
           for (var13 = 0; rb.field_hb.length > var13; var13++) {
             boolean decompiledFrameRemainder0 = true;
@@ -181,26 +181,26 @@ final class ri {
           if (var5 >= 0) {
             var13Lifetime1 = var20.field_D + var20.field_C;
             var14 = 10 + var13Lifetime1;
-            var20.a(rb.field_hb[var5], 110, var14, 1, 6776679);
+            var20.drawCentred(rb.field_hb[var5], 110, var14, 1, 6776679);
             var14 = var14 + var13Lifetime1;
             stackIn_54_0 = ((1 << var5 & var4) == 0) ? 0 : 1;
             var15 = stackIn_54_0;
             if (var15 != 0) {
-              var20.a(vj.field_e, 110, var14, 1, 16343907);
+              var20.drawCentred(vj.field_e, 110, var14, 1, 16343907);
             } else {
-              var20.a(NanoFrameTimer.field_e, 110, var14, 16711681, 16343907);
+              var20.drawCentred(NanoFrameTimer.field_e, 110, var14, 16711681, 16343907);
             }
             var14 = var14 + var13Lifetime1;
             var16 = new String[16];
-            var17Lifetime1 = var20.a(ki.field_r[var5], new int[]{191}, var16);
+            var17Lifetime1 = var20.wrapText(ki.field_r[var5], new int[]{191}, var16);
             for (var18 = 0; var18 < var17Lifetime1; var18++) {
-              var20.b(var16[var18], 15, var14, 1, -1);
+              var20.drawString(var16[var18], 15, var14, 1, -1);
               var14 = var14 + var13Lifetime1;
             }
             var12Lifetime1 = 135;
-            var20.b(a.field_c, 15, var12Lifetime1, 1, -1);
+            var20.drawString(a.field_c, 15, var12Lifetime1, 1, -1);
             var12Lifetime1 = var12Lifetime1 - var13Lifetime1;
-            var20.b(wk.field_c + ve.field_y[var5], 15, var12Lifetime1, 1, -1);
+            var20.drawString(wk.field_c + ve.field_y[var5], 15, var12Lifetime1, 1, -1);
             for (var18Lifetime1 = 0; f.field_j[var5] > var18Lifetime1; var18Lifetime1++) {
               aj.field_e.b(15 * var18Lifetime1 + 15, 143);
             }
@@ -212,7 +212,7 @@ final class ri {
             }
           } else {
             if (ok.a(false)) {
-              sb.field_r.a(el.field_c, 20, 15, -40 + ke.field_f[1].field_k, ke.field_f[1].field_j - 40, 9330743, -1, 1, 1, 0);
+              sb.field_r.drawParagraph(el.field_c, 20, 15, -40 + ke.field_f[1].field_k, ke.field_f[1].field_j - 40, 9330743, -1, 1, 1, 0);
             }
           }
           ac.field_a.setAsRasterTarget((byte) 109);

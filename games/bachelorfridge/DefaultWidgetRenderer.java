@@ -498,10 +498,10 @@ class DefaultWidgetRenderer implements WidgetRenderer, WidgetMetrics {
             if (var13Lifetime1 != 0 &&
               var13Lifetime1 != 3) {
               if (1 == var13Lifetime1) {
-                this.field_l.a(this.c(param4, 1), (var10 >> 1) + this.a((byte) 52, param4, param3, param1), var12 + this.a(param0, param6, param4, (byte) -116), param7, param5);
+                this.field_l.drawCentred(this.c(param4, 1), (var10 >> 1) + this.a((byte) 52, param4, param3, param1), var12 + this.a(param0, param6, param4, (byte) -116), param7, param5);
               } else {
                 if ((var13Lifetime1 == 2)) {
-                  this.field_l.b(this.c(param4, 1), this.a((byte) 67, param4, param3, param1) + var10, this.a(param0, param6, param4, (byte) -34) + var12, param7, param5);
+                  this.field_l.drawRightAligned(this.c(param4, 1), this.a((byte) 67, param4, param3, param1) + var10, this.a(param0, param6, param4, (byte) -34) + var12, param7, param5);
                 }
               }
               decompiledFrameRemainder0 = false;

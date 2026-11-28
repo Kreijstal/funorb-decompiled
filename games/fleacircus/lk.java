@@ -17,7 +17,7 @@ final class lk extends UiComponent {
     private int field_G;
     static fh field_A;
     private RgbSprite field_M;
-    static fa field_Q;
+    static BitmapFont field_Q;
     boolean field_H;
 
     private final RgbSprite b(int param0, int param1, int param2) {

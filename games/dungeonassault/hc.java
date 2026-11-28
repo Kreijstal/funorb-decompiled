@@ -5,11 +5,11 @@ import java.io.*;
 
 final class hc {
     static int field_c;
-    static se field_f;
+    static BitmapFont field_f;
     static int field_b;
     static RgbSprite field_a;
     static String field_g;
-    static se field_e;
+    static BitmapFont field_e;
     static int field_d;
 
     final static boolean b(int param0) {
@@ -108,7 +108,7 @@ final class hc {
           var11Lifetime11 = var2;
         }
         if (param0 != 9) {
-          field_e = (se) null;
+          field_e = (BitmapFont) null;
         } else {
           var21 = new StringWriter();
           var20 = new PrintWriter((Writer) ((Object) var21));

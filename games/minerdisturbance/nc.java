@@ -6,7 +6,7 @@ final class nc implements ad {
     static boolean field_e;
     private int field_a;
     static String field_b;
-    private we field_c;
+    private BitmapFont field_c;
 
     final static void a(java.applet.Applet param0, String param1, byte param2) {
         try {
@@ -84,11 +84,11 @@ final class nc implements ad {
           if (param0 != 12088) {
             field_b = (String) null;
           }
-          this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_s + "</u>", param1 + param2.field_u, param2.field_t + param3, param2.field_v, param2.field_q, var6_int, -1, this.field_a, this.field_d, this.field_c.field_I + this.field_c.field_E);
+          this.field_c.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_s + "</u>", param1 + param2.field_u, param2.field_t + param3, param2.field_v, param2.field_q, var6_int, -1, this.field_a, this.field_d, this.field_c.field_I + this.field_c.field_E);
           if (!param2.k(-105)) {
             return;
           }
-          var7 = this.field_c.a(param2.field_s);
+          var7 = this.field_c.stringWidth(param2.field_s);
           var8 = this.field_c.field_E + this.field_c.field_I;
           var9 = param2.field_u + param1;
           var10 = param3 + param2.field_t;
@@ -128,7 +128,7 @@ final class nc implements ad {
         this.field_c = bn.field_d;
     }
 
-    nc(we param0, int param1, int param2) {
+    nc(BitmapFont param0, int param1, int param2) {
         try {
           this.field_c = param0;
           this.field_a = param1;

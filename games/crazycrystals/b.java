@@ -118,7 +118,7 @@ final class b {
                 }
                 var19 = param2[var7];
                 var8 = var19;
-                if (go.field_l.a(var19) > 146) {
+                if (go.field_l.stringWidth(var19) > 146) {
                 }
               }
             }

@@ -26,7 +26,7 @@ final class ib {
         int var1_int = 0;
         for (var2 = 0; var2 < jk.field_A; var2++) {
           if (null == jk.field_C[var2] ||
-            jk.field_C[var2].h()) {
+            jk.field_C[var2].isSamplePositionOutOfRange()) {
             var1_int = 1;
             break;
           }
@@ -35,7 +35,7 @@ final class ib {
           return;
         }
         try {
-          jk.field_C[var2] = PcmSampleStream.a(ke.field_h[2], param0, 96);
+          jk.field_C[var2] = PcmSampleStream.createForPlaybackRate(ke.field_h[2], param0, 96);
           na.a((byte) 38, jk.field_C[var2]);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ib.B(" + param0 + ')');

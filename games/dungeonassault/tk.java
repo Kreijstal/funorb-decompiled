@@ -15,7 +15,7 @@ final class tk {
     int[] field_h;
     int[] field_c;
     int field_g;
-    private se field_o;
+    private BitmapFont field_o;
     static pp field_k;
     static String field_b;
     int[] field_y;
@@ -51,7 +51,7 @@ final class tk {
         gh.a(23321, ha.field_o, false);
     }
 
-    private final int a(RgbSprite[] param0, RgbSprite[] param1, int[] param2, se param3, int param4, String[] param5, int param6) {
+    private final int a(RgbSprite[] param0, RgbSprite[] param1, int[] param2, BitmapFont param3, int param4, String[] param5, int param6) {
         int var11 = 0;
         int var8_int = 0;
         RuntimeException var8 = null;
@@ -234,8 +234,8 @@ final class tk {
             if (this.field_o != null) {
               if (this.field_t[var2] != null) {
                 var7 = this.field_o.field_E + this.field_o.field_H;
-                var8 = this.field_o.b(this.field_t[var2], 616);
-                var9 = this.field_o.c(this.field_t[var2], 616);
+                var8 = this.field_o.maxLineWidth(this.field_t[var2], 616);
+                var9 = this.field_o.lineCount(this.field_t[var2], 616);
                 if (this.field_p != null) {
                   stackIn_21_0 = 116;
                   if (var9 >= 2) {
@@ -254,7 +254,7 @@ final class tk {
                   }
                   sn.a(stackIn_21_0, stackIn_24_1, stackIn_24_2, stackIn_24_3, stackIn_24_4 - stackIn_25_5 - this.field_o.field_H, var8 + 22);
                 }
-                this.field_o.a(this.field_t[var2], 12, 415, 616, 60, 16777215, 0, 1, 1, var7);
+                this.field_o.drawParagraph(this.field_t[var2], 12, 415, 616, 60, 16777215, 0, 1, 1, var7);
               }
               if (var3 < 25 &&
                 this.field_B[var2]) {
@@ -276,7 +276,7 @@ final class tk {
         }
     }
 
-    tk(RgbSprite[] param0, int[] param1, int param2, se param3, String[] param4, RgbSprite[] param5) {
+    tk(RgbSprite[] param0, int[] param1, int param2, BitmapFont param3, String[] param4, RgbSprite[] param5) {
         try {
           this.field_g = this.a(param5, param0, param1, param3, param2, param4, 2048);
         } catch (RuntimeException runtimeException) {

@@ -181,7 +181,7 @@ final class WidgetTheme {
             var7 = this.field_m.field_u + this.field_m.field_B;
           }
           var8 = SoftwareRasterizer.field_i >> 2;
-          var9 = this.field_m.a(param1);
+          var9 = this.field_m.stringWidth(param1);
           var10 = this.field_m.field_u + this.field_m.field_B;
           var11 = 1;
           if (var8 < var9 ||
@@ -195,11 +195,11 @@ final class WidgetTheme {
               var13 = var9 / var8;
               var12 = var8 + 2 * ((var13 + var9 % var8 - 1) / var13);
             }
-            var11Lifetime1 = this.field_m.a(param1, new int[]{var12}, IntrusiveDequeCursor.field_a);
+            var11Lifetime1 = this.field_m.wrapText(param1, new int[]{var12}, IntrusiveDequeCursor.field_a);
             var10 = var10 + (var11Lifetime1 - 1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_m.a(IntrusiveDequeCursor.field_a[var13Lifetime2]);
+              var14 = this.field_m.stringWidth(IntrusiveDequeCursor.field_a[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
@@ -244,7 +244,7 @@ final class WidgetTheme {
         int var8 = 0;
         int var9 = 0;
         try {
-          var5_int = this.field_m.a(param0);
+          var5_int = this.field_m.stringWidth(param0);
           var6 = this.field_m.field_B + this.field_m.field_v;
           var7 = param3;
           if (var7 + (var5_int + 6) > SoftwareRasterizer.field_i) {

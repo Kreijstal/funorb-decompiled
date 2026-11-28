@@ -79,7 +79,7 @@ final class lc extends td implements ButtonListener {
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        this.field_F.a(this.field_H, 14 + param1 + this.field_p, param2 + this.field_m + 10, this.field_x - 28, this.field_u, 16777215, -1, 0, 0, this.field_F.field_G);
+        this.field_F.drawParagraph(this.field_H, 14 + param1 + this.field_p, param2 + this.field_m + 10, this.field_x - 28, this.field_u, 16777215, -1, 0, 0, this.field_F.field_G);
     }
 
     final ButtonWidget a(int param0, tg param1, String param2) {
@@ -152,7 +152,7 @@ final class lc extends td implements ButtonListener {
           this.field_F = param1;
           this.field_D = param0;
           this.field_H = param2;
-          var4_int = null == this.field_H ? 0 : this.field_F.a(this.field_H, 260, this.field_F.field_G);
+          var4_int = null == this.field_H ? 0 : this.field_F.textHeight(this.field_H, 260, this.field_F.field_G);
           this.a(22 + var4_int, -3050, 0, 288, 0);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

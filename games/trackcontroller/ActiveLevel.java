@@ -482,8 +482,8 @@ final class ActiveLevel extends LevelGrid {
             var7--;
           }
           var8Lifetime2 = DisplayNameSelectionPanel.font.stringWidth(DirectByteStorage.field_f);
-          DisplayNameSelectionPanel.font.b(8, -1);
-          DisplayNameSelectionPanel.font.a(DirectByteStorage.field_f, 466 + (-var8Lifetime2 + j.field_b[0].field_s >> 1), -20 + var6, (int[]) null, jj.field_fb);
+          DisplayNameSelectionPanel.font.setColours(8, -1);
+          DisplayNameSelectionPanel.font.drawTextRunWithOffsets(DirectByteStorage.field_f, 466 + (-var8Lifetime2 + j.field_b[0].field_s >> 1), -20 + var6, (int[]) null, jj.field_fb);
         }
         if (0 != this.field_s) {
           j.field_b[1].drawTransparent(466, var6);
@@ -507,7 +507,7 @@ final class ActiveLevel extends LevelGrid {
               }
               if (var9 == 0) {
                 bb.field_b[var12].drawQuarterSize(467, 26 + var6 + 71 + 10);
-                DisplayNameSelectionPanel.font.a(wa.field_k[var12], 499, var6 + 71 + 36, 124, 1000, 4, -1, 0, 0, 25);
+                DisplayNameSelectionPanel.font.drawParagraph(wa.field_k[var12], 499, var6 + 71 + 36, 124, 1000, 4, -1, 0, 0, 25);
               }
               var9--;
               var10--;
@@ -518,7 +518,7 @@ final class ActiveLevel extends LevelGrid {
             var13 = var6 + (var12Lifetime1 * var12Lifetime1 >> 2);
             cl.a(nd.field_L, 457, 124, 71 + var13, 176, 4);
             bb.field_b[var11].drawQuarterSize(467, 26 + (81 + var13));
-            DisplayNameSelectionPanel.font.a(wa.field_k[var11], 499, 10 + (var13 + 71) + 26, 124, 1000, 4, -1, 0, 0, 25);
+            DisplayNameSelectionPanel.font.drawParagraph(wa.field_k[var11], 499, 10 + (var13 + 71) + 26, 124, 1000, 4, -1, 0, 0, 25);
           }
           j.field_b[2].drawTransparent(466, var6);
           return;
@@ -1098,7 +1098,7 @@ final class ActiveLevel extends LevelGrid {
             }
           }
           cl.a(nd.field_L, 58, 98, 376, 332, 4);
-          DisplayNameSelectionPanel.font.a(ki.field_a, 73, -DisplayNameSelectionPanel.font.field_G + 386 + DisplayNameSelectionPanel.font.field_G, 302, 1000, 5, -1, 0, 0, 26);
+          DisplayNameSelectionPanel.font.drawParagraph(ki.field_a, 73, -DisplayNameSelectionPanel.font.field_G + 386 + DisplayNameSelectionPanel.font.field_G, 302, 1000, 5, -1, 0, 0, 26);
           return;
         }
         var3Lifetime1 = null;
@@ -1152,7 +1152,7 @@ final class ActiveLevel extends LevelGrid {
         }
         if (var3Lifetime1 != null) {
           cl.a(nd.field_L, 110, 98, 376, 228, 4);
-          DisplayNameSelectionPanel.font.a((String) (var3Lifetime1), 125, -DisplayNameSelectionPanel.font.field_G + (DisplayNameSelectionPanel.font.field_G + 386), 198, 1000, 5, -1, 0, 0, 26);
+          DisplayNameSelectionPanel.font.drawParagraph((String) (var3Lifetime1), 125, -DisplayNameSelectionPanel.font.field_G + (DisplayNameSelectionPanel.font.field_G + 386), 198, 1000, 5, -1, 0, 0, 26);
         }
         if (this.level.levelIndex == 1 &&
           !param0) {
@@ -1160,7 +1160,7 @@ final class ActiveLevel extends LevelGrid {
             return;
           }
           cl.a(nd.field_L, 58, 72, 64, 332, 4);
-          DisplayNameSelectionPanel.font.a(uk.field_d, 73, -DisplayNameSelectionPanel.font.field_G + 74 + DisplayNameSelectionPanel.font.field_G, 302, 1000, 5, -1, 0, 0, 26);
+          DisplayNameSelectionPanel.font.drawParagraph(uk.field_d, 73, -DisplayNameSelectionPanel.font.field_G + 74 + DisplayNameSelectionPanel.font.field_G, 302, 1000, 5, -1, 0, 0, 26);
         }
         return;
     }
@@ -1275,17 +1275,17 @@ final class ActiveLevel extends LevelGrid {
 
     final void a(boolean param0) {
         cl.a(nd.field_L, 457, 124, 10, 176, 4);
-        DisplayNameSelectionPanel.font.c(AccountServiceResult.field_d, 471, 40, 5, -1);
-        DisplayNameSelectionPanel.font.a(Integer.toString(this.field_T), 622, 40, 5, -1);
-        DisplayNameSelectionPanel.font.c(ba.field_e, 471, 66, 5, -1);
-        DisplayNameSelectionPanel.font.a(Integer.toString(this.field_q >> 1), 622, 66, 5, -1);
-        DisplayNameSelectionPanel.font.c(hb.field_c, 471, 92, 5, -1);
-        DisplayNameSelectionPanel.font.a(Integer.toString(this.field_X >> 1), 622, 92, 5, -1);
+        DisplayNameSelectionPanel.font.drawString(AccountServiceResult.field_d, 471, 40, 5, -1);
+        DisplayNameSelectionPanel.font.drawRightAligned(Integer.toString(this.field_T), 622, 40, 5, -1);
+        DisplayNameSelectionPanel.font.drawString(ba.field_e, 471, 66, 5, -1);
+        DisplayNameSelectionPanel.font.drawRightAligned(Integer.toString(this.field_q >> 1), 622, 66, 5, -1);
+        DisplayNameSelectionPanel.font.drawString(hb.field_c, 471, 92, 5, -1);
+        DisplayNameSelectionPanel.font.drawRightAligned(Integer.toString(this.field_X >> 1), 622, 92, 5, -1);
         if (param0) {
           return;
         }
-        DisplayNameSelectionPanel.font.c(LevelView.field_r + this.level.levelIndex + u.field_k, 471, 118, 5, -1);
-        DisplayNameSelectionPanel.font.a(this.level.name, 622, 118, 5, -1);
+        DisplayNameSelectionPanel.font.drawString(LevelView.field_r + this.level.levelIndex + u.field_k, 471, 118, 5, -1);
+        DisplayNameSelectionPanel.font.drawRightAligned(this.level.name, 622, 118, 5, -1);
     }
 
     private final IntrusiveDeque i(int param0) {
@@ -1503,14 +1503,14 @@ final class ActiveLevel extends LevelGrid {
         if (!this.field_F) {
           cl.a(nd.field_L, -(-156 + this.field_Y >> 1) - 10 + this.field_t, 72, this.field_C - 10, 20 + this.field_Y, param0 - 24657);
           cl.a(DualLinkNode.field_l, this.field_t, 26, 26 + this.field_C, 156, 4);
-          DisplayNameSelectionPanel.font.b(this.field_y, 78 + this.field_t, this.field_C + DisplayNameSelectionPanel.font.field_G, 5, -1);
-          DisplayNameSelectionPanel.font.b(var2_ref, 78 + this.field_t, DisplayNameSelectionPanel.font.field_G + this.field_C + 24, var3Lifetime2, -1);
+          DisplayNameSelectionPanel.font.drawCentred(this.field_y, 78 + this.field_t, this.field_C + DisplayNameSelectionPanel.font.field_G, 5, -1);
+          DisplayNameSelectionPanel.font.drawCentred(var2_ref, 78 + this.field_t, DisplayNameSelectionPanel.font.field_G + this.field_C + 24, var3Lifetime2, -1);
         } else {
           cl.a(nd.field_L, -(this.field_Y - 156 >> 1) + (this.field_t - 10), 98, -26 + (-10 + this.field_C), 20 + this.field_Y, 4);
           cl.a(DualLinkNode.field_l, this.field_t, 26, 26 + this.field_C, 156, param0 - 24657);
-          DisplayNameSelectionPanel.font.b(this.field_y, 78 + this.field_t, this.field_C + DisplayNameSelectionPanel.font.field_G - 26, 5, -1);
-          DisplayNameSelectionPanel.font.b(this.field_L, this.field_t + 78, DisplayNameSelectionPanel.font.field_G + this.field_C, 5, -1);
-          DisplayNameSelectionPanel.font.b(var2_ref, 78 + this.field_t, this.field_C + (26 + (DisplayNameSelectionPanel.font.field_G - 2)), var3Lifetime2, -1);
+          DisplayNameSelectionPanel.font.drawCentred(this.field_y, 78 + this.field_t, this.field_C + DisplayNameSelectionPanel.font.field_G - 26, 5, -1);
+          DisplayNameSelectionPanel.font.drawCentred(this.field_L, this.field_t + 78, DisplayNameSelectionPanel.font.field_G + this.field_C, 5, -1);
+          DisplayNameSelectionPanel.font.drawCentred(var2_ref, 78 + this.field_t, this.field_C + (26 + (DisplayNameSelectionPanel.font.field_G - 2)), var3Lifetime2, -1);
         }
         this.b(false, -28786);
         if (ak.field_b != -1) {

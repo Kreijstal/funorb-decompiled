@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class le extends lj {
-    static sa field_A;
+    static PalettedBitmapFont field_A;
     private String[] field_D;
     private nj field_B;
     private IntrusiveDeque field_E;
@@ -68,7 +68,7 @@ class le extends lj {
           if (param1 <= -11) {
             return false;
           }
-          field_A = (sa) null;
+          field_A = (PalettedBitmapFont) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -186,7 +186,7 @@ class le extends lj {
 
     final static Boolean d(boolean param0) {
         if (!param0) {
-          field_A = (sa) null;
+          field_A = (PalettedBitmapFont) null;
         }
         Boolean var1 = ch.field_f;
         ch.field_f = null;

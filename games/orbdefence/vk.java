@@ -73,7 +73,7 @@ final class vk extends jc {
           rl.a(this.field_A, param2.field_m, 2, param0 + param2.field_n + (param2.field_r - this.field_A[0].field_t >> 1), var7, param1 + param2.field_s);
           stackIn_18_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_18_0;
-          this.field_g.a(param2.field_l, param2.field_s + param1, param2.field_n + param0 - 2, param2.field_m, param2.field_r, var8, -1, 1, 1, this.field_g.field_H);
+          this.field_g.drawParagraph(param2.field_l, param2.field_s + param1, param2.field_n + param0 - 2, param2.field_m, param2.field_r, var8, -1, 1, 1, this.field_g.field_H);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

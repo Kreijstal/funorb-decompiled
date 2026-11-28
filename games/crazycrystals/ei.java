@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ei extends om {
-    private vc field_B;
+    private BitmapFont field_B;
     static int field_E;
     static int field_F;
     private String field_I;
@@ -21,7 +21,7 @@ final class ei extends om {
           return;
         }
         int var7 = this.field_y ? this.field_g - (this.field_z + this.field_C * 2) : 0;
-        this.field_B.a(this.field_I, var7 + (var5 + this.field_C), var6 + this.field_C, -this.field_C + this.field_z, this.field_f - 2 * this.field_C, this.field_H, -1, this.field_y ? 0 : 2, 1, this.field_B.field_o);
+        this.field_B.drawParagraph(this.field_I, var7 + (var5 + this.field_C), var6 + this.field_C, -this.field_C + this.field_z, this.field_f - 2 * this.field_C, this.field_H, -1, this.field_y ? 0 : 2, 1, this.field_B.field_o);
         if (param1 < -12) {
           return;
         }
@@ -257,7 +257,7 @@ final class ei extends om {
         return (String) null;
     }
 
-    ei(int param0, int param1, int param2, int param3, qm param4, boolean param5, int param6, int param7, vc param8, int param9, String param10) {
+    ei(int param0, int param1, int param2, int param3, qm param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (wo) null, (bi) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -283,7 +283,7 @@ final class ei extends om {
           this.field_C = param7;
           this.field_z = param6;
           var12_int = -this.field_C + this.field_z;
-          var13 = this.field_B.b(param10, var12_int, this.field_B.field_o) + this.field_C * 2;
+          var13 = this.field_B.textHeight(param10, var12_int, this.field_B.field_o) + this.field_C * 2;
           if (var13 <= param3) {
             var13 = param3;
           } else {

@@ -141,14 +141,14 @@ final class IconLabelWidget extends SceneWidget {
         try {
           integerLocal1 = HashNode.integerState0069;
           integerLocal2 = MixedSupport101.integerState0590;
-          integerLocal3 = MixedSupport125.sceneWidgetState0125.bitmapFontState0020.computeInteger1067(stringArgument1, 500);
-          integerLocal4 = MixedSupport125.sceneWidgetState0125.bitmapFontState0020.computeInteger1080(stringArgument1, 500) + 6;
+          integerLocal3 = MixedSupport125.sceneWidgetState0125.bitmapFontState0020.lineCount(stringArgument1, 500);
+          integerLocal4 = MixedSupport125.sceneWidgetState0125.bitmapFontState0020.maxLineWidth(stringArgument1, 500) + 6;
           integerLocal5 = ComponentContainer.integerState0377 * integerLocal3 + 2;
           integerLocal6 = MixedSupport139.computeInteger1726(12, -18265, integerLocal4, integerLocal1);
           integerLocal7 = MixedSupport088.computeInteger1136(20, integerArgument2 + 2, integerLocal5, integerLocal2);
           SoftwareRaster.drawRectangleOutline(integerLocal6, integerLocal7, integerLocal4, integerLocal5, 0);
           SoftwareRaster.fillRectangle(1 + integerLocal6, integerLocal7 + 1, integerLocal4 - 2, integerLocal5 + integerArgument2, 16777088);
-          MixedSupport125.sceneWidgetState0125.bitmapFontState0020.computeInteger1071(stringArgument1, 3 + integerLocal6, -MixedSupport125.sceneWidgetState0125.bitmapFontState0020.integerState0518 + (MouseInput.integerState0928 + (integerLocal7 + 1)), 500, 1000, 0, -1, 0, 0, ComponentContainer.integerState0377);
+          MixedSupport125.sceneWidgetState0125.bitmapFontState0020.drawParagraph(stringArgument1, 3 + integerLocal6, -MixedSupport125.sceneWidgetState0125.bitmapFontState0020.integerState0518 + (MouseInput.integerState0928 + (integerLocal7 + 1)), 500, 1000, 0, -1, 0, 0, ComponentContainer.integerState0377);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "qd.E(" + (stringArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
         }

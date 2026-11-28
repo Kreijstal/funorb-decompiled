@@ -41,12 +41,12 @@ abstract class rl extends sp {
         this.field_bb.field_J = 0;
     }
 
-    final static ge a(Archive param0, int param1, Archive param2, String param3, String param4) {
+    final static CoverageBitmapFont a(Archive param0, int param1, Archive param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ge stackIn_2_0 = null;
-        ge stackIn_4_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -60,7 +60,7 @@ abstract class rl extends sp {
         try {
           var5_int = param0.getGroupIdByName((byte) 120, param3);
           if (param1 != 12) {
-            stackIn_2_0 = (ge) null;
+            stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
           var6 = param0.getFileIdByName(var5_int, param4, 117);

@@ -66,7 +66,7 @@ abstract class GameClient extends AppletShell {
                                 return;
                               }
                               if (var2 == 18) {
-                                Platform.b(param0 + 20);
+                                Platform.handleClearLoginFlagPacket(param0 + 20);
                                 return;
                               }
                               ValidatedTextField.a((Throwable) null, (byte) 100, "MGS1: " + la.a(-112));
@@ -178,7 +178,7 @@ abstract class GameClient extends AppletShell {
             kc.a((byte) 18);
             va.a(2);
             ConfirmedEmailAvailabilityValidator.a(PcmResampler.field_a, true, 2);
-            Slime.b(-20);
+            Slime.evaluateDivisionGuard(-20);
             dl.field_b = true;
             EmailFormatValidator.field_n = fa.correctedCurrentTimeMillis(126) + 15000L;
           }

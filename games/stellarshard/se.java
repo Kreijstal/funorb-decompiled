@@ -180,7 +180,7 @@ final class se extends WidgetContainer implements oi {
     final void a(int param0, byte param1, int param2, int param3) {
         int var5 = param3 + this.field_w;
         int var6 = param2 + this.field_k;
-        si.field_V.a(e.field_b, 20 + var5, 20 + var6, -40 + this.field_p, this.field_t - 50, 16777215, -1, 1, 0, si.field_V.field_N);
+        si.field_V.drawParagraph(e.field_b, 20 + var5, 20 + var6, -40 + this.field_p, this.field_t - 50, 16777215, -1, 1, 0, si.field_V.field_N);
         super.a(param0, param1, param2, param3);
     }
 

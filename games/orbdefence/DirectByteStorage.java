@@ -30,11 +30,11 @@ final class DirectByteStorage extends ByteStorage {
         return var4;
     }
 
-    final static sc a(byte[] param0, int param1) {
-        sc var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, int param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        sc stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -42,9 +42,9 @@ final class DirectByteStorage extends ByteStorage {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (sc) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new sc(param0, jd.field_g, wc.field_a, wh.field_b, m.field_a, fl.field_a);
+          var2 = new BinaryBitmapFont(param0, jd.field_g, wc.field_a, wh.field_b, m.field_a, fl.field_a);
           if (param1 >= -19) {
             field_d = false;
           }

@@ -8,7 +8,7 @@ final class v {
     static int field_d;
     private int[] field_e;
 
-    final static int a(vc param0, String param1, int param2, int param3, String[] param4) {
+    final static int a(BitmapFont param0, String param1, int param2, int param3, String[] param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -36,7 +36,7 @@ final class v {
         int var6Lifetime1;
         var13 = CrazyCrystals.field_B;
         try {
-          var5_int = param0.a(param1);
+          var5_int = param0.stringWidth(param1);
           if (param3 >= var5_int &&
             param1.indexOf("<br>") == -1) {
             param4[0] = param1;
@@ -57,7 +57,7 @@ final class v {
             if (32 == var10 ||
               var10 == 45) {
               var11 = param1.substring(var7, 1 + var9).trim();
-              var12 = param0.a(var11);
+              var12 = param0.stringWidth(var11);
               if (var12 >= param3) {
                 var7 = 1 + var9;
                 incrementValue$1 = var6Lifetime1;

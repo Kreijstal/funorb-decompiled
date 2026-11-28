@@ -3,7 +3,7 @@
  */
 final class lb implements ComponentLayout {
     private int field_i;
-    private fa field_h;
+    private BitmapFont field_h;
     private int field_g;
     private int field_d;
     private int field_l;
@@ -16,11 +16,11 @@ final class lb implements ComponentLayout {
     private int field_f;
     private int field_b;
 
-    final static jh a(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        jh stackIn_5_0 = null;
-        jh stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_5_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -30,13 +30,13 @@ final class lb implements ComponentLayout {
         try {
           if (!ha.a(param0, -32180, param2, param3)) {
             stackIn_2_0 = null;
-            return (jh) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param1 == 5592405) {
             stackIn_7_0 = lc.a(param4.getFile(param2, (byte) 122, param3), false);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (jh) null;
+          stackIn_5_0 = (BinaryBitmapFont) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,7 +100,7 @@ final class lb implements ComponentLayout {
           }
           if (null != this.field_h) {
             var10 = this.field_d + (this.field_e + this.field_g);
-            this.field_h.a(param3.field_i, param3.field_y + param1 + var10, this.field_a + param3.field_z + param4, -var10 - (this.field_d - param3.field_u), -(this.field_d << 1) + param3.field_j, this.field_j, this.field_c, this.field_f, this.field_k, 0);
+            this.field_h.drawParagraph(param3.field_i, param3.field_y + param1 + var10, this.field_a + param3.field_z + param4, -var10 - (this.field_d - param3.field_u), -(this.field_d << 1) + param3.field_j, this.field_j, this.field_c, this.field_f, this.field_k, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,7 +117,7 @@ final class lb implements ComponentLayout {
         }
     }
 
-    lb(fa param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    lb(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_k = 1;
         this.field_f = 1;
         try {

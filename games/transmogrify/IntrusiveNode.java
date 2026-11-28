@@ -6,7 +6,7 @@ class IntrusiveNode {
     static boolean field_a;
     long key;
     IntrusiveNode next;
-    static mi field_d;
+    static BinaryBitmapFont field_d;
     static String field_e;
 
     public static void resetStaticState(boolean param0) {
@@ -201,7 +201,7 @@ class IntrusiveNode {
         try {
           ResourceArchive.field_f.a(be.field_x, MidiPcmStream.field_R, true, 4);
           if (param0 != -1) {
-            field_d = (mi) null;
+            field_d = (BinaryBitmapFont) null;
           }
           ResourceArchive.field_f.l(0);
           while (pc.b(param0 ^ -97)) {

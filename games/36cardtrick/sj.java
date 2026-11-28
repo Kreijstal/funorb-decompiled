@@ -212,10 +212,10 @@ final class sj {
               var1_int = var1_int + a.field_o;
             }
             if (var4 >= 0) {
-              c.field_u.b(var6, var8Lifetime1, var1_int + field_c, var5, -1);
+              c.field_u.drawString(var6, var8Lifetime1, var1_int + field_c, var5, -1);
               var1_int = var1_int + (a.field_o - (-e.field_i - tl.field_b));
             } else {
-              mb.field_a.b(var6, var8Lifetime1, mg.field_q + var1_int, var5, -1);
+              mb.field_a.drawString(var6, var8Lifetime1, mg.field_q + var1_int, var5, -1);
               var1_int = var1_int + sa.field_d;
             }
           }

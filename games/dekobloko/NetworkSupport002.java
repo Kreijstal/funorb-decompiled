@@ -198,7 +198,7 @@ final class NetworkSupport002 {
           if (integerArgument1 < 50) {
             return;
           }
-          integerLocal5 = this.bitmapFontState0008.computeInteger1066(stringArgument2);
+          integerLocal5 = this.bitmapFontState0008.stringWidth(stringArgument2);
           integerLocal7 = this.bitmapFontState0008.integerState0523 + this.bitmapFontState0008.integerState0517;
           integerLocal8 = integerArgument3;
           if (SoftwareRaster.integerState0285 < integerLocal8 + (integerLocal5 + 6)) {
@@ -210,7 +210,7 @@ final class NetworkSupport002 {
           }
           SoftwareRaster.drawRectangleOutline(integerLocal8, integerLocal9, integerLocal5 + 6, 6 + integerLocal7, this.integerState0088);
           SoftwareRaster.fillRectangle(1 + integerLocal8, integerLocal9 + 1, integerLocal5 + 4, 4 + integerLocal7, this.integerState0087);
-          this.bitmapFontState0008.performAction1069(stringArgument2, integerLocal8 + 3, integerLocal9 - (-3 - this.bitmapFontState0008.integerState0517), this.integerState0088, -1);
+          this.bitmapFontState0008.drawString(stringArgument2, integerLocal8 + 3, integerLocal9 - (-3 - this.bitmapFontState0008.integerState0517), this.integerState0088, -1);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal10) {
           caughtExceptionLocal4 = caughtParameterLocal10;
@@ -263,7 +263,7 @@ final class NetworkSupport002 {
             return;
           }
           integerLocal9 = SoftwareRaster.integerState0285 >> 2;
-          integerLocal10 = this.bitmapFontState0008.computeInteger1066(stringArgument3);
+          integerLocal10 = this.bitmapFontState0008.stringWidth(stringArgument3);
           integerLocal11 = this.bitmapFontState0008.integerState0518 + this.bitmapFontState0008.integerState0523;
           integerLocal12 = 1;
           if (integerLocal10 > integerLocal9 ||
@@ -277,11 +277,11 @@ final class NetworkSupport002 {
             if (ArchiveRequestManager.stringArrayState0013 == null) {
               ArchiveRequestManager.stringArrayState0013 = new String[16];
             }
-            integerLocal17 = this.bitmapFontState0008.computeInteger1073(stringArgument3, new int[]{integerLocal13}, ArchiveRequestManager.stringArrayState0013);
+            integerLocal17 = this.bitmapFontState0008.wrapText(stringArgument3, new int[]{integerLocal13}, ArchiveRequestManager.stringArrayState0013);
             integerLocal11 = integerLocal11 + (-1 + integerLocal17) * integerLocal8;
             integerLocal10 = 0;
             for (integerLocal19 = 0; integerLocal17 > integerLocal19; integerLocal19++) {
-              integerLocal15 = this.bitmapFontState0008.computeInteger1066(ArchiveRequestManager.stringArrayState0013[integerLocal19]);
+              integerLocal15 = this.bitmapFontState0008.stringWidth(ArchiveRequestManager.stringArrayState0013[integerLocal19]);
               if (integerLocal15 > integerLocal10) {
                 integerLocal10 = integerLocal15;
               }
@@ -297,7 +297,7 @@ final class NetworkSupport002 {
           }
           SoftwareRaster.drawRectangleOutline(integerLocal13, integerLocal18, integerLocal5 + integerLocal10, integerLocal11 + integerLocal7, this.integerState0083);
           SoftwareRaster.fillRectangle(1 + integerLocal13, 1 + integerLocal18, integerLocal5 + (integerLocal10 - 2), integerLocal11 - (-integerLocal7 + 2), this.integerState0087);
-          this.bitmapFontState0008.computeInteger1071(stringArgument3, this.integerState0084 + integerLocal13, this.integerState0081 + integerLocal18, integerLocal10, integerLocal11, this.integerState0088, -1, 0, 0, integerLocal8);
+          this.bitmapFontState0008.drawParagraph(stringArgument3, this.integerState0084 + integerLocal13, this.integerState0081 + integerLocal18, integerLocal10, integerLocal11, this.integerState0088, -1, 0, 0, integerLocal8);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal20) {
           caughtExceptionLocal4 = caughtParameterLocal20;

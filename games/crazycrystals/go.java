@@ -5,7 +5,7 @@ final class go extends ScoreModifier {
     static String field_k;
     static boolean field_i;
     static String field_g;
-    static ef field_l;
+    static BinaryBitmapFont field_l;
     static String field_j;
     static long field_h;
 
@@ -93,7 +93,7 @@ final class go extends ScoreModifier {
         ne.field_b = false;
         ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(param0 ^ 287);
         if (param0 != 480) {
-          field_l = (ef) null;
+          field_l = (BinaryBitmapFont) null;
         }
     }
 
@@ -128,7 +128,7 @@ final class go extends ScoreModifier {
           }
           var9Lifetime1 = 0;
           if (param2) {
-            field_l = (ef) null;
+            field_l = (BinaryBitmapFont) null;
           }
           while (var9Lifetime1 < param0) {
             var8.b(-24 + (240 - param1 * 12), var9Lifetime1 * 24 + (-(param0 * 12) + 234), 24, 36);

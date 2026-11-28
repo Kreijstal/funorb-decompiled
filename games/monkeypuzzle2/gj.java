@@ -27,11 +27,11 @@ final class gj {
           return;
         }
         gg var2 = (gg) null;
-        gj.a(-38, -19, -44, 117, -100, -28, 19, -46, 44, (ta) null, 126, -70, (ta) null, 108, (gg) null, 59, 98, 43, 6, (gg) null, (gg) null);
+        gj.a(-38, -19, -44, 117, -100, -28, 19, -46, 44, (BitmapFont) null, 126, -70, (BitmapFont) null, 108, (gg) null, 59, 98, 43, 6, (gg) null, (gg) null);
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, ta param9, int param10, int param11, ta param12, int param13, gg param14, int param15, int param16, int param17, int param18, gg param19, gg param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, BitmapFont param12, int param13, gg param14, int param15, int param16, int param17, int param18, gg param19, gg param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

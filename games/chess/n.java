@@ -31,7 +31,7 @@ final class n {
         return new vg(ob.d((byte) -124), hh.d((byte) -122));
     }
 
-    final static void a(lh param0, int param1, boolean param2, RgbSprite[] param3, int param4, int param5, int param6, int param7, int param8, lh param9, int param10, int param11, int param12, int param13, RgbSprite[] param14) {
+    final static void a(BitmapFont param0, int param1, boolean param2, RgbSprite[] param3, int param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12, int param13, RgbSprite[] param14) {
         try {
           RgbSprite[] var16 = (RgbSprite[]) null;
           tb.a(le.field_f, param9, -26472, param3, param0, param12, (RgbSprite[]) null, param8, kg.field_V, param4, param13, param14, 480, 0, param5, kj.field_h, 0, param7, param6, param10, param1);

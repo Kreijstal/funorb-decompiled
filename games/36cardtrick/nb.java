@@ -4,7 +4,7 @@
 final class nb implements ci {
     static wb[] field_d;
     private int field_c;
-    private ee field_b;
+    private BitmapFont field_b;
     private int field_a;
     static int field_e;
 
@@ -38,9 +38,9 @@ final class nb implements ci {
           if (param2 != 11447) {
             this.field_c = 116;
           }
-          this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_r + "</u>", param1.field_o + param0, param1.field_i + param3, param1.field_h, param1.field_q, var6_int, -1, this.field_c, this.field_a, this.field_b.field_x + this.field_b.field_s);
+          this.field_b.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_r + "</u>", param1.field_o + param0, param1.field_i + param3, param1.field_h, param1.field_q, var6_int, -1, this.field_c, this.field_a, this.field_b.field_x + this.field_b.field_s);
           if (param1.d(114)) {
-            var7 = this.field_b.a(param1.field_r);
+            var7 = this.field_b.stringWidth(param1.field_r);
             var8 = this.field_b.field_x + this.field_b.field_s;
             var9 = param0 + param1.field_o;
             if (this.field_c == 2) {
@@ -154,7 +154,7 @@ final class nb implements ci {
         this.field_a = 1;
     }
 
-    nb(ee param0, int param1, int param2) {
+    nb(BitmapFont param0, int param1, int param2) {
         try {
           this.field_c = param1;
           this.field_a = param2;

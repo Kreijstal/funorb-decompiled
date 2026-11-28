@@ -467,7 +467,7 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
 
     final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         super.performAction0162(integerArgument1, -106, integerArgument3, integerArgument4);
-        MixedSupport011.bitmapFontState0006.performAction1069(MixedSupport137.stringState0589, 4 + integerArgument1 + this.integerState0110, 4 + MixedSupport011.bitmapFontState0006.integerState0518 + integerArgument4 + this.integerState0104, 16777215, -1);
+        MixedSupport011.bitmapFontState0006.drawString(MixedSupport137.stringState0589, 4 + integerArgument1 + this.integerState0110, 4 + MixedSupport011.bitmapFontState0006.integerState0518 + integerArgument4 + this.integerState0104, 16777215, -1);
         if (integerArgument2 >= -103) {
           InteractiveComponent interactiveComponentLocal1 = (InteractiveComponent) null;
           this.performAction0313((byte) -51, -52, (InteractiveComponent) null, -94, 59);

@@ -10,7 +10,7 @@ final class la extends am {
     static e field_N;
     private int field_K;
     static int field_O;
-    private ok field_P;
+    private BitmapFont field_P;
     static long[] field_S;
     private int field_J;
     static ej field_M;
@@ -37,7 +37,7 @@ final class la extends am {
           return;
         }
         int var7 = !this.field_L ? 0 : -(this.field_U * 2) + this.field_F - this.field_J;
-        this.field_P.a(this.field_Q, var5 - (-var7 - this.field_U), var6 + this.field_U, -this.field_U + this.field_J, -(this.field_U * 2) + this.field_z, this.field_K, -1, this.field_L ? 0 : 2, 1, this.field_P.field_C);
+        this.field_P.drawParagraph(this.field_Q, var5 - (-var7 - this.field_U), var6 + this.field_U, -this.field_U + this.field_J, -(this.field_U * 2) + this.field_z, this.field_K, -1, this.field_L ? 0 : 2, 1, this.field_P.field_C);
     }
 
     final static void j(int param0) {
@@ -48,7 +48,7 @@ final class la extends am {
         }
     }
 
-    la(int param0, int param1, int param2, int param3, fj param4, boolean param5, int param6, int param7, ok param8, int param9, String param10) {
+    la(int param0, int param1, int param2, int param3, fj param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (fe) null, (uk) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -74,7 +74,7 @@ final class la extends am {
           this.field_L = stackIn_4_1;
           this.field_J = param6;
           var12_int = this.field_J - this.field_U;
-          var13 = this.field_P.b(param10, var12_int, this.field_P.field_C) + this.field_U * 2;
+          var13 = this.field_P.textHeight(param10, var12_int, this.field_P.field_C) + this.field_U * 2;
           if (var13 <= param3) {
             var13 = param3;
           } else {

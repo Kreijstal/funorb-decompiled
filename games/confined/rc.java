@@ -8,7 +8,7 @@ final class rc implements fe {
     private int field_g;
     private int field_h;
     static int[] field_b;
-    private ok field_d;
+    private BitmapFont field_d;
     private int field_j;
     private int field_c;
     static String field_a;
@@ -82,7 +82,7 @@ final class rc implements fe {
             }
           }
           if (null != this.field_d) {
-            this.field_d.b(var6.field_B, var8 + var7 / 2, this.field_d.field_v + (var9 + var6.field_Q), this.field_g, this.field_c);
+            this.field_d.drawCentred(var6.field_B, var8 + var7 / 2, this.field_d.field_v + (var9 + var6.field_Q), this.field_g, this.field_c);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -248,7 +248,7 @@ final class rc implements fe {
         }
     }
 
-    rc(ok param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    rc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

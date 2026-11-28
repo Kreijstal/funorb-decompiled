@@ -7,7 +7,7 @@ final class ee extends aj implements df {
     private int[] field_E;
     private int field_w;
     static int field_D;
-    private kg field_A;
+    private BitmapFont field_A;
     private ik field_x;
     static String field_C;
     static String field_y;
@@ -20,7 +20,7 @@ final class ee extends aj implements df {
         field_C = null;
     }
 
-    ee(ik param0, kg param1, String param2) {
+    ee(ik param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_w = 0;
@@ -28,7 +28,7 @@ final class ee extends aj implements df {
           this.field_A = param1;
           this.field_z = param2;
           this.field_x = param0;
-          var4_int = null != this.field_z ? this.field_A.a(this.field_z, 260, this.field_A.field_y) : 0;
+          var4_int = null != this.field_z ? this.field_A.textHeight(this.field_z, 260, this.field_A.field_y) : 0;
           this.a(-108, 0, 0, 288, var4_int + 22);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -71,7 +71,7 @@ final class ee extends aj implements df {
 
     final void a(int param0, int param1, int param2, byte param3) {
         super.a(param0, param1, param2, (byte) 113);
-        this.field_A.a(this.field_z, 14 + this.field_p + param0, this.field_n + (param1 + 10), -28 + this.field_l, this.field_h, 16777215, -1, 0, 0, this.field_A.field_y);
+        this.field_A.drawParagraph(this.field_z, 14 + this.field_p + param0, this.field_n + (param1 + 10), -28 + this.field_l, this.field_h, 16777215, -1, 0, 0, this.field_A.field_y);
         int var5 = -84 / ((77 - param3) / 34);
     }
 
@@ -193,7 +193,7 @@ final class ee extends aj implements df {
           var4.a(73, var5, 7, this.field_l - 14, 30);
           this.a((UiWidget) (var4), (byte) -83);
           if (param1 != 8283) {
-            this.field_A = (kg) null;
+            this.field_A = (BitmapFont) null;
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;

@@ -167,7 +167,7 @@ final class MouseInputListener implements java.awt.event.MouseListener, java.awt
           if (param1 != -11) {
             MouseInputListener.a(-96);
           }
-          stackIn_3_0 = ik.a(RawPcmStream.a(param0, 100, 96), -129);
+          stackIn_3_0 = ik.a(RawPcmStream.createForPlaybackRate(param0, 100, 96), -129);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

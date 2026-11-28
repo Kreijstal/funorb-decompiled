@@ -24,9 +24,9 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     abstract byte[] getData(int param0);
 
-    final static n a(int param0, int param1, int param2, ResourceArchive param3, ResourceArchive param4) {
+    final static CoverageBitmapFont a(int param0, int param1, int param2, ResourceArchive param3, ResourceArchive param4) {
         RuntimeException var5 = null;
-        n stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

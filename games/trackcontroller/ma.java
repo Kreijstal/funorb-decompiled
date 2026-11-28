@@ -6,14 +6,14 @@ final class ma implements t {
     static int field_c;
     static String field_a;
 
-    final static de a(int param0, byte param1, int param2, IndexedSprite[] param3, byte[] param4, int param5) {
+    final static PalettedBitmapFont a(int param0, byte param1, int param2, IndexedSprite[] param3, byte[] param4, int param5) {
         int var16_int = 0;
         byte[] array$0 = null;
         int var26 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
-        de stackIn_6_0 = null;
-        de stackIn_32_0 = null;
+        PalettedBitmapFont stackIn_6_0 = null;
+        PalettedBitmapFont stackIn_32_0 = null;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -29,7 +29,7 @@ final class ma implements t {
         byte[][] var11 = null;
         int var13 = 0;
         int var14 = 0;
-        de var16 = null;
+        PalettedBitmapFont var16 = null;
         byte[] var17 = null;
         byte[] var18 = null;
         int var19 = 0;
@@ -81,7 +81,7 @@ final class ma implements t {
           var13 = SoftwareRasterizer.stride;
           var14 = SoftwareRasterizer.field_k;
           if (param1 >= -120) {
-            stackIn_6_0 = (de) null;
+            stackIn_6_0 = (PalettedBitmapFont) null;
             return stackIn_6_0;
           }
           var44 = new int[4];
@@ -128,7 +128,7 @@ final class ma implements t {
               var24Lifetime2 = var24Lifetime2 + var22;
             }
           }
-          var16 = new de(param4, var38, var39, var36, var37, var10, var40);
+          var16 = new PalettedBitmapFont(param4, var38, var39, var36, var37, var10, var40);
           var16.field_u = var16.field_u - param2;
           var16.field_H = var16.field_H - param2;
           var16.field_G = var16.field_G - param2;

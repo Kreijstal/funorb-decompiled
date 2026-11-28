@@ -74,7 +74,7 @@ final class bb implements uk {
           }
           if (this.field_g != null) {
             var10 = this.field_q + (this.field_e + this.field_b);
-            this.field_g.a(param3.field_m, param1 - (-param3.field_w - var10), param2 + param3.field_k + this.field_c, param3.field_p - (var10 + this.field_q), -(this.field_q << 1) + param3.field_t, this.field_o, this.field_a, this.field_n, this.field_p, 0);
+            this.field_g.drawParagraph(param3.field_m, param1 - (-param3.field_w - var10), param2 + param3.field_k + this.field_c, param3.field_p - (var10 + this.field_q), -(this.field_q << 1) + param3.field_t, this.field_o, this.field_a, this.field_n, this.field_p, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

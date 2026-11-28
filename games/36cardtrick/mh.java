@@ -42,7 +42,7 @@ class mh {
         }
     }
 
-    final static int a(boolean param0, int param1, ee param2, String param3, String[] param4) {
+    final static int a(boolean param0, int param1, BitmapFont param2, String param3, String[] param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -70,7 +70,7 @@ class mh {
         int var6Lifetime1;
         var13 = Main.field_T;
         try {
-          var5_int = param2.a(param3);
+          var5_int = param2.stringWidth(param3);
           if (var5_int <= param1 &&
             param3.indexOf("<br>") == -1) {
             param4[0] = param3;
@@ -91,7 +91,7 @@ class mh {
             if (var10 == 32 ||
               45 == var10) {
               var11 = param3.substring(var7, var9 + 1).trim();
-              var12 = param2.a(var11);
+              var12 = param2.stringWidth(var11);
               if (param1 <= var12) {
                 var7 = 1 + var9;
                 incrementValue$1 = var6Lifetime1;

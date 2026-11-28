@@ -17,7 +17,7 @@ class hh implements ca, th {
     private int field_q;
     int field_l;
     int field_j;
-    se field_u;
+    BitmapFont field_u;
     int field_v;
     int field_t;
     int field_a;
@@ -67,7 +67,7 @@ class hh implements ca, th {
         field_s = null;
     }
 
-    hh(se param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    hh(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -168,11 +168,11 @@ class hh implements ca, th {
         }
     }
 
-    final static gp a(ResourceArchive param0, ResourceArchive param1, int param2, byte param3, int param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, ResourceArchive param1, int param2, byte param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        gp stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -182,7 +182,7 @@ class hh implements ca, th {
         try {
           if (!kk.a(param1, 1, param2, param4)) {
             stackIn_2_0 = null;
-            return (gp) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           var5_int = 12 / ((43 - param3) / 54);
           stackIn_4_0 = wh.a(param0.getFile(5, param2, param4), (byte) -122);
@@ -383,7 +383,7 @@ class hh implements ca, th {
           var11 = 62 / ((param0 - 50) / 41);
           var10 = this.d(-106, param5);
           if (this.field_m) {
-            this.field_u.a(this.b(param5, -444136767), this.a(param3, param6, param5, -64), this.a(param4, param5, param7, -16736), var9_int, var10, param2, param1, this.field_f, this.field_d, this.field_a);
+            this.field_u.drawParagraph(this.b(param5, -444136767), this.a(param3, param6, param5, -64), this.a(param4, param5, param7, -16736), var9_int, var10, param2, param1, this.field_f, this.field_d, this.field_a);
           } else {
             var13 = this.field_d;
             if (var13 == 0) {
@@ -402,16 +402,16 @@ class hh implements ca, th {
             if (0 != var13Lifetime1 &&
               var13Lifetime1 != 3) {
               if (var13Lifetime1 == 1) {
-                this.field_u.c(this.b(param5, -444136767), (var9_int >> 1) + this.a(param3, param6, param5, -102), this.a(param4, param5, param7, -16736) + var12, param2, param1);
+                this.field_u.drawCentred(this.b(param5, -444136767), (var9_int >> 1) + this.a(param3, param6, param5, -102), this.a(param4, param5, param7, -16736) + var12, param2, param1);
               } else {
                 if ((var13Lifetime1 == 2)) {
-                  this.field_u.a(this.b(param5, -444136767), this.a(param3, param6, param5, -104) + var9_int, this.a(param4, param5, param7, -16736) + var12, param2, param1);
+                  this.field_u.drawRightAligned(this.b(param5, -444136767), this.a(param3, param6, param5, -104) + var9_int, this.a(param4, param5, param7, -16736) + var12, param2, param1);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_u.b(this.b(param5, -444136767), this.a(param3, param6, param5, -109), this.a(param4, param5, param7, -16736) + var12, param2, param1);
+              this.field_u.drawString(this.b(param5, -444136767), this.a(param3, param6, param5, -109), this.a(param4, param5, param7, -16736) + var12, param2, param1);
             }
           }
           ti.c(true);
@@ -798,7 +798,7 @@ class hh implements ca, th {
         }
     }
 
-    hh(se param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    hh(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_q = param6;
           this.field_d = param8;

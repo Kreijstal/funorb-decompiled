@@ -75,10 +75,10 @@ final class bk {
               var2 = var2 + eb.field_h;
             }
             if (var4 >= 0) {
-              hd.field_f.b(var6, var8, hq.field_r + var2, var5, -1);
+              hd.field_f.drawString(var6, var8, hq.field_r + var2, var5, -1);
               var2 = var2 + (ml.field_v + vo.field_y + eb.field_h);
             } else {
-              oc.field_s.b(var6, var8, jm.field_G + var2, var5, -1);
+              oc.field_s.drawString(var6, var8, jm.field_G + var2, var5, -1);
               var2 = var2 + cd.field_a;
             }
           }

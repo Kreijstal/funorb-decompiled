@@ -244,7 +244,7 @@ final class DisplayNameSelectionPanel extends ii implements mg, vg {
           }
           var3 = this.field_R;
           var4 = param1;
-          ((EditableTextField) ((Object) var3)).a(var4, false, (byte) 74);
+          ((EditableTextField) ((Object) var3)).setText(var4, false, (byte) 74);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "gk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -324,7 +324,7 @@ final class DisplayNameSelectionPanel extends ii implements mg, vg {
         this.field_M = new ck(DebouncedFieldValidator.field_g, (pg) null);
         this.field_N = new ck(Bzip2State.field_v, (pg) null);
         this.field_R.field_i = ByteStorage.field_d;
-        this.field_R.a(new AccountNameAvailabilityValidator(this.field_R), 10508);
+        this.field_R.setFieldValidator(new AccountNameAvailabilityValidator(this.field_R), 10508);
         this.field_M.field_B = false;
         this.field_M.field_o = (ca) ((Object) new na());
         this.field_N.field_o = (ca) ((Object) new oa());

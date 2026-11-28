@@ -30,7 +30,7 @@ final class bo extends ok {
           }
           var4_int = param2;
           if (null != param1.field_b) {
-            IntrusiveNode.field_c.a(param1.field_b, param3 + 3, var4_int, 194, 0, 0, -1, 1, 0, IntrusiveNode.field_c.field_H);
+            IntrusiveNode.field_c.drawParagraph(param1.field_b, param3 + 3, var4_int, 194, 0, 0, -1, 1, 0, IntrusiveNode.field_c.field_H);
             var4_int = var4_int + param1.field_g;
             var4_int += 7;
             SoftwareRasterizer.drawHorizontalLine(param3, var4_int, 200, 0);
@@ -41,7 +41,7 @@ final class bo extends ok {
           var6 = var5;
           for (var7 = 0; var7 < var6.length; var7++) {
             var8 = var6[var7];
-            la.field_b.b(var8, param3 + 3, var4_int, 0, -1);
+            la.field_b.drawString(var8, param3 + 3, var4_int, 0, -1);
             var4_int = var4_int + la.field_b.field_H;
           }
           return;

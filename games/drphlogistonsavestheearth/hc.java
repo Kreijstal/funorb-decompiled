@@ -37,7 +37,7 @@ class hc extends of {
     private int field_O;
     private int field_Z;
     private RgbSprite field_cb;
-    private rf field_T;
+    private BitmapFont field_T;
     private boolean field_C;
     private int field_X;
     private RgbSprite[] field_ib;

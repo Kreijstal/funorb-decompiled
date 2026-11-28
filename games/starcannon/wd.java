@@ -62,7 +62,7 @@ final class wd extends oa {
 
     private final void a(int param0, int param1) {
         if (this.field_o[param0] != null) {
-          this.field_o[param0].e(param1 * 256 / AudioOutput.field_n);
+          this.field_o[param0].setSampleStepMagnitude(param1 * 256 / AudioOutput.field_n);
         }
     }
 

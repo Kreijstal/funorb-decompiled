@@ -14,7 +14,7 @@ final class BoundedRandomAccessFile {
     static float[][] field_f;
     static int field_j;
     static boolean field_d;
-    static vk field_e;
+    static BinaryBitmapFont field_e;
     private RandomAccessFile field_a;
 
     final int read(int param0, byte[] param1, byte param2, int param3) throws IOException {
@@ -97,7 +97,7 @@ final class BoundedRandomAccessFile {
         if (param0 == -69) {
           return bh.field_b;
         }
-        field_e = (vk) null;
+        field_e = (BinaryBitmapFont) null;
         return bh.field_b;
     }
 

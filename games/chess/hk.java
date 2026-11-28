@@ -59,7 +59,7 @@ final class hk extends wc {
         return sc.a(param2, 121, param3, 1, param0);
     }
 
-    private hk(lh param0, int param1) {
+    private hk(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

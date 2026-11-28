@@ -8,7 +8,7 @@ class bd extends oh implements da {
     static java.awt.Image field_kb;
     private boolean field_rb;
     private boolean field_nb;
-    private fa field_qb;
+    private BitmapFont field_qb;
     private boolean field_pb;
 
     final void n(int param0) {
@@ -109,7 +109,7 @@ class bd extends oh implements da {
         field_kb = null;
     }
 
-    bd(f param0, fa param1, String param2, boolean param3, boolean param4) {
+    bd(f param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new bm((bd) null, param1, param2), 77, 10, 10);
         try {
           this.field_qb = param1;

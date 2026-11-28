@@ -12,7 +12,7 @@ final class pe extends wb {
     static RgbSprite[] field_fb;
     private boolean field_kb;
     private ba field_ib;
-    static vm field_eb;
+    static BitmapFont field_eb;
 
     final void f(byte param0) {
         this.field_kb = true;
@@ -37,10 +37,10 @@ final class pe extends wb {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, param1, param2);
-        field_eb.b(this.field_bb, (this.field_s >> 1) + param2, 103 + param0, 16777215, -1);
+        field_eb.drawCentred(this.field_bb, (this.field_s >> 1) + param2, 103 + param0, 16777215, -1);
         if (null != this.field_cb) {
           SoftwareRasterizer.drawHorizontalLine(param2 + 20, -7 + (120 + param0), 260, 8421504);
-          field_eb.a(this.field_cb, param2 + 20, param0 + 128, 260, 100, 16777215, -1, 1, 0, field_eb.field_y);
+          field_eb.drawParagraph(this.field_cb, param2 + 20, param0 + 128, 260, 100, 16777215, -1, 1, 0, field_eb.field_y);
         }
     }
 
@@ -114,7 +114,7 @@ final class pe extends wb {
         try {
           this.field_cb = param1;
           if (null != this.field_cb) {
-            var3_int = field_eb.b(this.field_cb, 260, field_eb.field_y);
+            var3_int = field_eb.textHeight(this.field_cb, 260, field_eb.field_y);
             this.a(300, 15767, var3_int + 150);
           }
           this.field_ib = new ba(13, 50, 274, 30, 15, 2113632, 4210752);

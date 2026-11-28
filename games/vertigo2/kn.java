@@ -59,7 +59,7 @@ final class kn implements WidgetListener {
           }
           if (null != this.field_b) {
             var10 = this.field_d + (this.field_i + this.field_n);
-            this.field_b.a(param3.text, var10 + (param1 + param3.x), this.field_g + param4 + param3.y, param3.width - (var10 + this.field_n), -(this.field_n << 1) + param3.height, this.field_e, this.field_j, this.field_o, this.field_l, 0);
+            this.field_b.drawParagraph(param3.text, var10 + (param1 + param3.x), this.field_g + param4 + param3.y, param3.width - (var10 + this.field_n), -(this.field_n << 1) + param3.height, this.field_e, this.field_j, this.field_o, this.field_l, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

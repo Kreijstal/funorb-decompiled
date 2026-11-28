@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qa {
-    static oh field_b;
+    static BinaryBitmapFont field_b;
     static int field_c;
     private String field_a;
 
@@ -22,7 +22,7 @@ final class qa {
         try {
           var7 = new jk(param1);
           if (!param5) {
-            field_b = (oh) null;
+            field_b = (BinaryBitmapFont) null;
           }
           var8 = new jk(param2);
           stackIn_3_0 = pa.a(param4, var7, var8, param6, param3, 18, param0);
@@ -154,7 +154,7 @@ final class qa {
 
     public static void clearStaticReferences(byte param0) {
         if (param0 != -31) {
-          field_b = (oh) null;
+          field_b = (BinaryBitmapFont) null;
         }
         field_b = null;
     }
@@ -193,7 +193,7 @@ final class qa {
         }
         int var3 = var2 + param0;
         if (param1 != 8) {
-          field_b = (oh) null;
+          field_b = (BinaryBitmapFont) null;
         }
         return var3;
     }

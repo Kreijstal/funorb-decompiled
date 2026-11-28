@@ -356,7 +356,7 @@ public final class BachelorFridge extends NetworkGameClient {
               } else {
                 var4 = var5 / 2 - 32;
               }
-              SoftwareRasterizer.fillRoundedRectangleAlpha(4, 8 + var4, LinkTextWidget.field_D.a(EventEffect.field_g[var3.field_h]) + 56, LinkTextWidget.field_D.field_B + LinkTextWidget.field_D.field_u, 5, 0, 128);
+              SoftwareRasterizer.fillRoundedRectangleAlpha(4, 8 + var4, LinkTextWidget.field_D.stringWidth(EventEffect.field_g[var3.field_h]) + 56, LinkTextWidget.field_D.field_B + LinkTextWidget.field_D.field_u, 5, 0, 128);
               og.field_a[var3.field_h].drawQuarterSize(8, var4);
               LinkTextWidget.field_D.drawText(EventEffect.field_g[var3.field_h], 48, -2 + (8 + var4) + LinkTextWidget.field_D.field_u, 12320512, -1);
             }
@@ -1579,8 +1579,8 @@ public final class BachelorFridge extends NetworkGameClient {
           DiveBomberAnimation.field_w = jr.a("basic", (byte) 124, vb.field_j, "smallfridgefont", BoardTile.field_b);
           iia.a(DiveBomberAnimation.field_w, 1);
           TileEffectAnimation.field_j = new String[2][2];
-          DiveBomberAnimation.field_w.a(fu.field_l[0], new int[]{60}, TileEffectAnimation.field_j[0]);
-          DiveBomberAnimation.field_w.a(fu.field_l[1], new int[]{60}, TileEffectAnimation.field_j[1]);
+          DiveBomberAnimation.field_w.wrapText(fu.field_l[0], new int[]{60}, TileEffectAnimation.field_j[0]);
+          DiveBomberAnimation.field_w.wrapText(fu.field_l[1], new int[]{60}, TileEffectAnimation.field_j[1]);
           var2Lifetime1 = BoardTile.field_b.getFileByName((byte) 123, "tinyfont", "basic");
           var3Lifetime1 = RageSpecial.a(29611, "basic", "tinyfont", vb.field_j);
           CreatureActor.field_h = hl.a(16777215, (byte) 107, var3Lifetime1, 65793, var2Lifetime1);

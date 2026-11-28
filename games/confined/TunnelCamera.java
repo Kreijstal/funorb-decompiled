@@ -4,7 +4,7 @@
 final class TunnelCamera extends TunnelEntity {
     static String field_Q;
     da field_W;
-    static ce field_I;
+    static BinaryBitmapFont field_I;
     double field_O;
     static PcmStreamMixer field_G;
     da field_X;

@@ -69,7 +69,7 @@ final class LoginPanel extends ta implements TextFieldListener, ai {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (null != this.field_L) {
-          lm.field_f.a(this.field_L, 20 + this.field_s + param3, this.field_n + (param0 + 15), this.field_m - 40, this.field_r, 16777215, -1, 1, 0, lm.field_f.field_H);
+          lm.field_f.drawParagraph(this.field_L, 20 + this.field_s + param3, this.field_n + (param0 + 15), this.field_m - 40, this.field_r, 16777215, -1, 1, 0, lm.field_f.field_H);
         }
         if (this.field_K != null) {
           SoftwareRasterizer.drawHorizontalLine(param3 + 10, param0 + 134, -20 + this.field_m, 4210752);
@@ -78,8 +78,8 @@ final class LoginPanel extends ta implements TextFieldListener, ai {
     }
 
     final void m(int param0) {
-        this.field_N.e((byte) -128);
-        this.field_C.e((byte) -128);
+        this.field_N.clearText((byte) -128);
+        this.field_C.clearText((byte) -128);
         if (param0 > -7) {
           this.field_I = (s) null;
         }
@@ -206,11 +206,11 @@ final class LoginPanel extends ta implements TextFieldListener, ai {
         try {
           var3 = this.field_N;
           var4 = param1;
-          var3.a(0, false, var4);
+          var3.setText(0, false, var4);
           if (param0 < 119) {
             this.field_N = (EditableTextField) null;
           }
-          this.field_C.e((byte) -126);
+          this.field_C.clearText((byte) -126);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "pk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -246,7 +246,7 @@ final class LoginPanel extends ta implements TextFieldListener, ai {
         RuntimeException decompiledCaughtException = null;
         vk var6 = null;
         RuntimeException var6_ref = null;
-        kc var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         df var9 = null;
         h var12 = null;
@@ -314,7 +314,7 @@ final class LoginPanel extends ta implements TextFieldListener, ai {
           this.field_n = 15;
           var7 = lm.field_f;
           if (null != this.field_L) {
-            this.field_n = this.field_n + (var7.a(this.field_L, -40 + this.field_m, var7.field_H) + 5);
+            this.field_n = this.field_n + (var7.textHeight(this.field_L, -40 + this.field_m, var7.field_H) + 5);
           }
           var8 = GzipDecompressor.field_d;
           var9 = PcmOutputWorker.a(true, uj.b((byte) -120));

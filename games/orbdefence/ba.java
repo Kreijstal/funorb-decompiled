@@ -69,9 +69,9 @@ final class ba {
           SoftwareRasterizer.setClip(300, 0, 640, 480);
           dh.field_X.c(210 - dh.field_X.field_s / 2, 0);
           SoftwareRasterizer.resetClip();
-          ob.field_I.a(gb.field_e, 85, 30, 16777215, -1);
-          jd.field_c.a(cf.field_g, 200, 40, 16777215, -1);
-          ob.field_I.a(nh.field_a, 339, 30, 16777215, -1);
+          ob.field_I.drawRightAligned(gb.field_e, 85, 30, 16777215, -1);
+          jd.field_c.drawRightAligned(cf.field_g, 200, 40, 16777215, -1);
+          ob.field_I.drawRightAligned(nh.field_a, 339, 30, 16777215, -1);
           SoftwareRasterizer.setClip(0, 0, 640, 2);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 480, 11184810, 4605510);
           BufferedSocket.field_a.a(-40);

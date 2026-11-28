@@ -61,7 +61,7 @@ final class jf extends mg {
           this.field_F = param6;
           this.field_E = param7;
           var12_int = this.field_F - this.field_E;
-          var13 = this.field_D.a(param10, var12_int, this.field_D.field_E) + 2 * this.field_E;
+          var13 = this.field_D.textHeight(param10, var12_int, this.field_D.field_E) + 2 * this.field_E;
           if (var13 > param3) {
             this.a(var13, param2, true, param1, param0);
           } else {
@@ -121,7 +121,7 @@ final class jf extends mg {
           return;
         }
         int var7 = !this.field_J ? 0 : -(2 * this.field_E) + (-this.field_F + this.field_j);
-        this.field_D.a(this.field_Q, var5 - (-var7 - this.field_E), var6 + this.field_E, -this.field_E + this.field_F, this.field_v - 2 * this.field_E, this.field_H, -1, this.field_J ? 0 : 2, 1, this.field_D.field_E);
+        this.field_D.drawParagraph(this.field_Q, var5 - (-var7 - this.field_E), var6 + this.field_E, -this.field_E + this.field_F, this.field_v - 2 * this.field_E, this.field_H, -1, this.field_J ? 0 : 2, 1, this.field_D.field_E);
     }
 
     final static int countSetBits(byte param0, int param1) {

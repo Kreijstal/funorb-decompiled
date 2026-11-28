@@ -144,37 +144,37 @@ final class fe extends ResultScenePhase {
     final static void b(int param0) {
         int var1_int = 0;
         int var2 = CrazyCrystals.field_B;
-        sc.field_i[0] = new am(RawPcmStream.a(fk.field_x[0], 100, 0));
-        sc.field_i[1] = new am(RawPcmStream.a(fk.field_x[1], 100, 0));
-        EditableTextField.field_B = new am(RawPcmStream.a(nk.field_j, 100, 0));
-        ua.field_a = new am(RawPcmStream.a(uk.field_i, 100, 0));
-        cb.field_n = new am(RawPcmStream.a(aq.field_t, 100, 0));
-        tm.field_f = new am(RawPcmStream.a(qf.field_w, 100, 0));
+        sc.field_i[0] = new am(RawPcmStream.createForPlaybackRate(fk.field_x[0], 100, 0));
+        sc.field_i[1] = new am(RawPcmStream.createForPlaybackRate(fk.field_x[1], 100, 0));
+        EditableTextField.field_B = new am(RawPcmStream.createForPlaybackRate(nk.field_j, 100, 0));
+        ua.field_a = new am(RawPcmStream.createForPlaybackRate(uk.field_i, 100, 0));
+        cb.field_n = new am(RawPcmStream.createForPlaybackRate(aq.field_t, 100, 0));
+        tm.field_f = new am(RawPcmStream.createForPlaybackRate(qf.field_w, 100, 0));
         for (var1_int = 0; var1_int < 4; var1_int++) {
-          il.field_h[var1_int] = new am(RawPcmStream.a(fo.field_i[var1_int], 100, 0));
+          il.field_h[var1_int] = new am(RawPcmStream.createForPlaybackRate(fo.field_i[var1_int], 100, 0));
         }
         if (param0 != 42806) {
           return;
         }
         try {
-          AccountServiceResult.field_e = new am(RawPcmStream.a(rn.field_p, 100, 0));
-          td.field_e = new am(RawPcmStream.a(ti.field_l, 100, 0));
-          AwtRasterBuffer.field_a = new am(RawPcmStream.a(mg.field_d, 100, 0));
-          dn.field_d = new am(RawPcmStream.a(io.field_H, 100, 0));
-          wp.field_b = new am(RawPcmStream.a(cf.field_f, 100, 0));
-          bn.field_h = new am(RawPcmStream.a(lm.field_a, 100, 0));
-          pm.field_b = new am(RawPcmStream.a(jc.field_a, 100, 0));
-          so.field_g = new am(RawPcmStream.a(oa.field_e, 100, 0));
-          fn.field_h = new am(RawPcmStream.a(gk.field_j, 100, 0));
-          FullscreenFocusCanvas.field_c = new am(RawPcmStream.a(MouseWheelInput.field_k, (int)(Math.random() * 11.0) + 95, 0));
-          cn.field_e = new am(RawPcmStream.a(lb.field_d, 95 + (int)(Math.random() * 11.0), 0));
-          jj.field_c = new am(RawPcmStream.a(an.field_s, 100, 0));
-          m.field_n = new am(RawPcmStream.a(cl.field_m, 100, 0));
-          MouseInputHandler.field_d = new am(RawPcmStream.a(ab.field_z, 100, 0));
-          rb.field_g = new am(RawPcmStream.a(AccountCreationResultPanel.field_nb, 100, 0));
-          ScoreModifier.field_f = new am(RawPcmStream.a(tg.field_c, 100, 0));
-          oj.field_E = new am(RawPcmStream.a(ProxyAuthenticationRequiredException.field_b, 100, 0));
-          LaserHubTile.field_q = new am(RawPcmStream.a(EditableTextField.field_H, 100, 0));
+          AccountServiceResult.field_e = new am(RawPcmStream.createForPlaybackRate(rn.field_p, 100, 0));
+          td.field_e = new am(RawPcmStream.createForPlaybackRate(ti.field_l, 100, 0));
+          AwtRasterBuffer.field_a = new am(RawPcmStream.createForPlaybackRate(mg.field_d, 100, 0));
+          dn.field_d = new am(RawPcmStream.createForPlaybackRate(io.field_H, 100, 0));
+          wp.field_b = new am(RawPcmStream.createForPlaybackRate(cf.field_f, 100, 0));
+          bn.field_h = new am(RawPcmStream.createForPlaybackRate(lm.field_a, 100, 0));
+          pm.field_b = new am(RawPcmStream.createForPlaybackRate(jc.field_a, 100, 0));
+          so.field_g = new am(RawPcmStream.createForPlaybackRate(oa.field_e, 100, 0));
+          fn.field_h = new am(RawPcmStream.createForPlaybackRate(gk.field_j, 100, 0));
+          FullscreenFocusCanvas.field_c = new am(RawPcmStream.createForPlaybackRate(MouseWheelInput.field_k, (int)(Math.random() * 11.0) + 95, 0));
+          cn.field_e = new am(RawPcmStream.createForPlaybackRate(lb.field_d, 95 + (int)(Math.random() * 11.0), 0));
+          jj.field_c = new am(RawPcmStream.createForPlaybackRate(an.field_s, 100, 0));
+          m.field_n = new am(RawPcmStream.createForPlaybackRate(cl.field_m, 100, 0));
+          MouseInputHandler.field_d = new am(RawPcmStream.createForPlaybackRate(ab.field_z, 100, 0));
+          rb.field_g = new am(RawPcmStream.createForPlaybackRate(AccountCreationResultPanel.field_nb, 100, 0));
+          ScoreModifier.field_f = new am(RawPcmStream.createForPlaybackRate(tg.field_c, 100, 0));
+          oj.field_E = new am(RawPcmStream.createForPlaybackRate(ProxyAuthenticationRequiredException.field_b, 100, 0));
+          LaserHubTile.field_q = new am(RawPcmStream.createForPlaybackRate(EditableTextField.field_H, 100, 0));
           e.b((byte) -122);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "fe.G(" + param0 + ')');

@@ -3,12 +3,12 @@
  */
 final class r implements fc {
     static int[] field_c;
-    private tj field_b;
+    private BitmapFont field_b;
     private int field_e;
     static String field_d;
     private int field_a;
 
-    final static int a(tj param0, String[] param1, String param2, int param3, int param4) {
+    final static int a(BitmapFont param0, String[] param1, String param2, int param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -35,7 +35,7 @@ final class r implements fc {
         int var6Lifetime1;
         var13 = Bounce.field_N;
         try {
-          var5_int = param0.b(param2);
+          var5_int = param0.stringWidth(param2);
           if (param4 >= var5_int &&
             param2.indexOf("<br>") == -1) {
             param1[0] = param2;
@@ -52,7 +52,7 @@ final class r implements fc {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param2.substring(var7, 1 + var9).trim();
-              var12 = param0.b(var11);
+              var12 = param0.stringWidth(var11);
               if (param4 <= var12) {
                 var7 = 1 + var9;
                 incrementValue$1 = var6Lifetime1;
@@ -142,9 +142,9 @@ final class r implements fc {
             stackIn_5_0 = 3249872;
           }
           var7 = stackIn_5_0;
-          this.field_b.a("<u=" + Integer.toString(var7, 16) + ">" + param1.field_h + "</u>", param4 + param1.field_r, param1.field_i + param0, param1.field_k, param1.field_m, var7, -1, this.field_a, this.field_e, this.field_b.field_s + this.field_b.field_x);
+          this.field_b.drawParagraph("<u=" + Integer.toString(var7, 16) + ">" + param1.field_h + "</u>", param4 + param1.field_r, param1.field_i + param0, param1.field_k, param1.field_m, var7, -1, this.field_a, this.field_e, this.field_b.field_s + this.field_b.field_x);
           if (param1.e(1)) {
-            var8 = this.field_b.b(param1.field_h);
+            var8 = this.field_b.stringWidth(param1.field_h);
             var9 = this.field_b.field_x + this.field_b.field_s;
             var10 = param1.field_r + param4;
             if (this.field_a == 2) {
@@ -185,7 +185,7 @@ final class r implements fc {
         this.field_a = 1;
     }
 
-    r(tj param0, int param1, int param2) {
+    r(BitmapFont param0, int param1, int param2) {
         try {
           this.field_b = param0;
           this.field_e = param2;

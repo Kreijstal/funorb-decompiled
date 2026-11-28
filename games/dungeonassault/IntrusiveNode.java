@@ -6,7 +6,7 @@ class IntrusiveNode {
     static hh field_b;
     IntrusiveNode previous;
     static long field_g;
-    static gp field_c;
+    static BinaryBitmapFont field_c;
     long key;
     static String[] field_f;
     static RgbSprite field_d;
@@ -43,7 +43,7 @@ class IntrusiveNode {
           field_f = null;
           return;
         }
-        field_c = (gp) null;
+        field_c = (BinaryBitmapFont) null;
         field_d = null;
         field_c = null;
         field_f = null;

@@ -457,10 +457,10 @@ final class FridgeScreen {
         }
         this.field_b = String.valueOf(50);
         this.field_b = this.field_b + ":: ";
-        if (this.field_d < jha.field_g.a(this.field_b)) {
+        if (this.field_d < jha.field_g.stringWidth(this.field_b)) {
           this.field_d = this.field_d + 1;
         } else {
-          this.field_d = -jha.field_g.a(this.field_b);
+          this.field_d = -jha.field_g.stringWidth(this.field_b);
         }
     }
 

@@ -13,7 +13,7 @@ class ha extends pc implements ql {
     private boolean field_hb;
     private boolean field_bb;
     static boolean field_db;
-    private ta field_ib;
+    private BitmapFont field_ib;
 
     final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
@@ -99,7 +99,7 @@ class ha extends pc implements ql {
         return jk.field_y[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + uc.field_f[var5] + "-" + var6 + " " + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + ":" + var10 / 10 + var10 % 10 + " GMT";
     }
 
-    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, Sprite[] param5, int param6, int param7, int param8, int param9, ta param10) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, Sprite[] param5, int param6, int param7, int param8, int param9, BitmapFont param10) {
         try {
           cf.a((byte) 66);
           int var11_int = -74 / ((68 - param1) / 47);
@@ -119,7 +119,7 @@ class ha extends pc implements ql {
         field_fb = null;
     }
 
-    ha(kj param0, ta param1, String param2, boolean param3, boolean param4) {
+    ha(kj param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new sk((ha) null, param1, param2), 77, 10, 10);
         try {
           this.field_hb = param3 ? true : false;

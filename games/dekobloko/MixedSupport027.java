@@ -29,10 +29,10 @@ final class MixedSupport027 {
         }
     }
 
-    final static RenderingSupport011 computeRenderingSupport0110388(ResourceArchive resourceArchiveArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, ResourceArchive resourceArchiveArgument5) {
+    final static CoverageBitmapFont computeRenderingSupport0110388(ResourceArchive resourceArchiveArgument1, int integerArgument2, int integerArgument3, byte byteArgument4, ResourceArchive resourceArchiveArgument5) {
         RuntimeException runtimeExceptionLocal1 = null;
-        RenderingSupport011 stackRenderingSupport011Local2 = null;
-        RenderingSupport011 stackRenderingSupport011Local3 = null;
+        CoverageBitmapFont stackRenderingSupport011Local2 = null;
+        CoverageBitmapFont stackRenderingSupport011Local3 = null;
         RuntimeException stackRuntimeExceptionLocal4 = null;
         StringBuilder stackStringBuilderLocal5 = null;
         String stackStringLocal6 = null;
@@ -47,7 +47,7 @@ final class MixedSupport027 {
             stackRenderingSupport011Local3 = MixedSupport094.computeRenderingSupport0111201(resourceArchiveArgument1.getFile(integerArgument3, 75, integerArgument2), (byte) 25);
             return stackRenderingSupport011Local3;
           }
-          stackRenderingSupport011Local2 = (RenderingSupport011) null;
+          stackRenderingSupport011Local2 = (CoverageBitmapFont) null;
           return stackRenderingSupport011Local2;
         } catch (java.lang.RuntimeException caughtParameterLocal10) {
           caughtExceptionLocal9 = caughtParameterLocal10;

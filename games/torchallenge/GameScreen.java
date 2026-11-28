@@ -741,7 +741,7 @@ final class GameScreen {
                 hb.field_c.drawQuarterSize(var5_int + var15, var16 + var6 + var23);
               } else if (pa.field_s[ok.field_b][var27]) {
                 DisplayNameSelectionPanel.field_M[2].drawTransparent(var5_int, var23 + var6);
-                tf.field_x.a(Integer.toString(1 + var27), var5_int + (DisplayNameSelectionPanel.field_M[2].fullWidth >> 1), var23 - 2 + (9 + (DisplayNameSelectionPanel.field_M[2].fullHeight >> 1)) + var6, var17, -1);
+                tf.field_x.drawCentred(Integer.toString(1 + var27), var5_int + (DisplayNameSelectionPanel.field_M[2].fullWidth >> 1), var23 - 2 + (9 + (DisplayNameSelectionPanel.field_M[2].fullHeight >> 1)) + var6, var17, -1);
               } else {
                 je.field_b.drawQuarterSize(-1 + (var5_int + var15), var23 + (var6 + var16));
               }
@@ -1942,11 +1942,11 @@ final class GameScreen {
             var19 = this.field_b;
           }
           if (var19 == -1) {
-            tf.field_x.a(kk.field_c, 320, -var7 + (var14Lifetime1 / 2 + var21 - (var20 - 18)), 0, -1);
+            tf.field_x.drawCentred(kk.field_c, 320, -var7 + (var14Lifetime1 / 2 + var21 - (var20 - 18)), 0, -1);
             if (!GameClientBase.p(-99)) {
               return;
             }
-            SecondaryNodeDequeIterator.field_e.a(gb.field_e, 320, SecondaryNodeDequeIterator.field_e.field_x + (var21 - (-(var14Lifetime1 / 2) + var7) + 2), 0, -1);
+            SecondaryNodeDequeIterator.field_e.drawCentred(gb.field_e, 320, SecondaryNodeDequeIterator.field_e.field_x + (var21 - (-(var14Lifetime1 / 2) + var7) + 2), 0, -1);
             if (var28 == 0) {
               return;
             }
@@ -1961,11 +1961,11 @@ final class GameScreen {
           var13 = 2 * var5 + var9 * (2 * var11 + var6Lifetime2);
           var6Lifetime3 = 128;
           if (var23 == 0) {
-            tf.field_x.a(IntrusiveNode.field_a, 320, 4 + (var14Lifetime2 + var16), 0, -1);
+            tf.field_x.drawCentred(IntrusiveNode.field_a, 320, 4 + (var14Lifetime2 + var16), 0, -1);
           }
           if (var23 != 0 ||
             var28 != 0) {
-            tf.field_x.a(cd.field_p, 320, var14Lifetime2 + var16 + 4, 0, -1);
+            tf.field_x.drawCentred(cd.field_p, 320, var14Lifetime2 + var16 + 4, 0, -1);
           }
           var15 = var15 + var5;
           var8Lifetime3 = 128;
@@ -2001,9 +2001,9 @@ final class GameScreen {
           if (kf.field_b == 3) {
             var13 += 10;
           }
-          var25 = SecondaryNodeDequeIterator.field_e.a(jc.field_j[var19], new int[]{var13}, var24);
+          var25 = SecondaryNodeDequeIterator.field_e.wrapText(jc.field_j[var19], new int[]{var13}, var24);
           var15 = var22 + (var6Lifetime3 + var15);
-          tf.field_x.c(BufferedSocket.field_n[var19], var15, var21, 0, -1);
+          tf.field_x.drawString(BufferedSocket.field_n[var19], var15, var21, 0, -1);
           var21 = var21 + var20;
           var12Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x + SecondaryNodeDequeIterator.field_e.field_K;
           var20 = var12Lifetime1 + 2;
@@ -2013,7 +2013,7 @@ final class GameScreen {
               var26 = 2;
               break;
             }
-            SecondaryNodeDequeIterator.field_e.c(var24[var26], var15, var21, 0, -1);
+            SecondaryNodeDequeIterator.field_e.drawString(var24[var26], var15, var21, 0, -1);
             var21 = var21 + var20;
             var26++;
           } while (var28 == 0);
@@ -2021,10 +2021,10 @@ final class GameScreen {
           do {
             if (var26 <= var27) {
               var21 = var21 + (var20 >> 1);
-              SecondaryNodeDequeIterator.field_e.c(vj.field_a + 100 * re.field_w[var19], var15, var21, 0, -1);
+              SecondaryNodeDequeIterator.field_e.drawString(vj.field_a + 100 * re.field_w[var19], var15, var21, 0, -1);
               var21 = var21 + (var20 + (var20 >> 1));
-              SecondaryNodeDequeIterator.field_e.c(ca.field_c, var15, var21, 0, -1);
-              var15 = var15 + SecondaryNodeDequeIterator.field_e.a(ca.field_c);
+              SecondaryNodeDequeIterator.field_e.drawString(ca.field_c, var15, var21, 0, -1);
+              var15 = var15 + SecondaryNodeDequeIterator.field_e.stringWidth(ca.field_c);
               var16 = -(hh.field_b.fullHeight - SecondaryNodeDequeIterator.field_e.field_x >> 1) - SecondaryNodeDequeIterator.field_e.field_x + var21;
               break;
             }
@@ -2772,13 +2772,13 @@ final class GameScreen {
                       }
                     }
                     if (decompiledFrameRemainder1) {
-                      var2_intLifetime2 = tf.field_x.a(qc.field_e);
+                      var2_intLifetime2 = tf.field_x.stringWidth(qc.field_e);
                       stackIn_85_0 = tf.field_x;
                       stackIn_85_1 = false;
                       stackIn_85_2 = 8586514;
                       stackIn_86_3 = (tf.field_o != 0);
                       stackIn_90_4 = (eh.field_l != 0);
-                      var3_intLifetime2 = ((BitmapFont) (Object) stackIn_85_0).a(si.a(stackIn_85_1, stackIn_85_2, stackIn_86_3, stackIn_90_4));
+                      var3_intLifetime2 = ((BitmapFont) (Object) stackIn_85_0).stringWidth(si.a(stackIn_85_1, stackIn_85_2, stackIn_86_3, stackIn_90_4));
                       if (var3_intLifetime2 > var2_intLifetime2) {
                         var2_intLifetime2 = var3_intLifetime2;
                       }
@@ -2786,7 +2786,7 @@ final class GameScreen {
                       stackIn_97_1 = 96;
                       stackIn_98_2 = (eh.field_l != 0);
                       stackIn_102_3 = (tf.field_o != 0);
-                      var3_intLifetime3 = ((BitmapFont) (Object) stackIn_97_0).a(qf.$cfr$intArgs$a$c7de0d339b2a(stackIn_97_1, stackIn_98_2, stackIn_102_3, false));
+                      var3_intLifetime3 = ((BitmapFont) (Object) stackIn_97_0).stringWidth(qf.$cfr$intArgs$a$c7de0d339b2a(stackIn_97_1, stackIn_98_2, stackIn_102_3, false));
                       if (var3_intLifetime3 > var2_intLifetime2) {
                         var2_intLifetime2 = var3_intLifetime3;
                       }
@@ -2794,7 +2794,7 @@ final class GameScreen {
                       stackIn_109_1 = false;
                       stackIn_110_2 = (0 != tf.field_o);
                       stackIn_114_3 = (eh.field_l != 0);
-                      var3_intLifetime4 = ((BitmapFont) (Object) stackIn_109_0).a(vb.a(stackIn_109_1, stackIn_110_2, stackIn_114_3, false));
+                      var3_intLifetime4 = ((BitmapFont) (Object) stackIn_109_0).stringWidth(vb.a(stackIn_109_1, stackIn_110_2, stackIn_114_3, false));
                       if (var3_intLifetime4 > var2_intLifetime2) {
                         var2_intLifetime2 = var3_intLifetime4;
                       }
@@ -2810,23 +2810,23 @@ final class GameScreen {
                       var8 = 208;
                       var9 = 28;
                       var10 = 0;
-                      tf.field_x.a(qc.field_e, 320, var8, var10, -1);
+                      tf.field_x.drawCentred(qc.field_e, 320, var8, var10, -1);
                       stackIn_121_0 = tf.field_x;
                       stackIn_121_1 = false;
                       stackIn_121_2 = 8586514;
                       stackIn_122_3 = (tf.field_o != 0);
                       stackIn_126_4 = (eh.field_l != 0);
-                      ((BitmapFont) (Object) stackIn_121_0).a(si.a(stackIn_121_1, stackIn_121_2, stackIn_122_3, stackIn_126_4), 320, var9 + var8, var10, -1);
+                      ((BitmapFont) (Object) stackIn_121_0).drawCentred(si.a(stackIn_121_1, stackIn_121_2, stackIn_122_3, stackIn_126_4), 320, var9 + var8, var10, -1);
                       stackIn_129_0 = tf.field_x;
                       stackIn_129_1 = -15;
                       stackIn_130_2 = (eh.field_l != 0);
                       stackIn_134_3 = (tf.field_o != 0);
-                      ((BitmapFont) (Object) stackIn_129_0).a(qf.$cfr$intArgs$a$c7de0d339b2a(stackIn_129_1, stackIn_130_2, stackIn_134_3, false), 320, -18 + 2 * var9 + (var8 + 63), var10, -1);
+                      ((BitmapFont) (Object) stackIn_129_0).drawCentred(qf.$cfr$intArgs$a$c7de0d339b2a(stackIn_129_1, stackIn_130_2, stackIn_134_3, false), 320, -18 + 2 * var9 + (var8 + 63), var10, -1);
                       stackIn_137_0 = tf.field_x;
                       stackIn_137_1 = false;
                       stackIn_138_2 = (tf.field_o != 0);
                       stackIn_142_3 = (0 != eh.field_l);
-                      ((BitmapFont) (Object) stackIn_137_0).a(vb.a(stackIn_137_1, stackIn_138_2, stackIn_142_3, false), 320, 108 + var9 * 2 + (var8 + 18), var10, -1);
+                      ((BitmapFont) (Object) stackIn_137_0).drawCentred(vb.a(stackIn_137_1, stackIn_138_2, stackIn_142_3, false), 320, 108 + var9 * 2 + (var8 + 18), var10, -1);
                       decompiledFrameRemainder1 = (var11 != 0);
                     }
                   }
@@ -2954,10 +2954,10 @@ final class GameScreen {
           SecondaryNodeDequeIterator.a(116);
           if (2 <= fa.field_g) {
             var3 = "FPS:" + oh.field_e;
-            tf.field_x.b(var3, 636, 80, 0, -1);
+            tf.field_x.drawRightAligned(var3, 636, 80, 0, -1);
             var4 = Runtime.getRuntime().totalMemory();
             var6 = Runtime.getRuntime().freeMemory();
-            tf.field_x.b((var4 - var6) / 1024L + " kB / " + var4 / 1024L + " kB", 636, 100, 0, -1);
+            tf.field_x.drawRightAligned((var4 - var6) / 1024L + " kB / " + var4 / 1024L + " kB", 636, 100, 0, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4952,7 +4952,7 @@ final class GameScreen {
                   var16 = we.field_c[28][0];
               }
               var17 = 24;
-              tf.field_x.a(var16, (var14 >> 1) + var2_int, 18 + (var3 + (-var17 + var5 >> 1)), 0, -1);
+              tf.field_x.drawCentred(var16, (var14 >> 1) + var2_int, 18 + (var3 + (-var17 + var5 >> 1)), 0, -1);
               var3 = lg.field_d[8][3] + lg.field_d[8][8];
               var2_int = bg.field_I[var13][0];
               var4 = bg.field_I[var13][2];
@@ -5024,7 +5024,7 @@ final class GameScreen {
                   var16 = we.field_c[28][0];
               }
               var17 = 24;
-              tf.field_x.a(var16, var2_int + (var14 >> 1), var3 + ((var5 - var17 >> 1) + 18), 0, -1);
+              tf.field_x.drawCentred(var16, var2_int + (var14 >> 1), var3 + ((var5 - var17 >> 1) + 18), 0, -1);
               var3 = lg.field_d[8][8] + lg.field_d[8][3];
               var2_int = bg.field_I[var13][0];
               var5 = jj.field_a[ok.field_b].fullHeight;
@@ -5104,7 +5104,7 @@ final class GameScreen {
           }
           var8 = var7[0] + me.field_a[ok.field_b] + var7[1];
           var9 = 384;
-          var10 = tf.field_x.a(var8, var9);
+          var10 = tf.field_x.lineCount(var8, var9);
           var11 = 26;
           var12 = var11 * var10;
           var13 = -var9 + 640 >> 1;
@@ -5129,13 +5129,13 @@ final class GameScreen {
           }
           if (var18 >= 0) {
             ch.a(var18, -(2 * var15) + var13, -(2 * var16) + var14, var12 + 4 * var16, true, var9 + 4 * var15, ph.field_m);
-            tf.field_x.a(var8, var13, var14, var9, var12, 0, -1, var18, 0, 0, 26);
+            tf.field_x.drawParagraphAlpha(var8, var13, var14, var9, var12, 0, -1, var18, 0, 0, 26);
             if (var20 == 0) {
               return;
             }
           }
           GzipDecoder.drawNineSlice(ph.field_m, var16 * 4 + var12, 4 * var15 + var9, (byte) -66, -(var16 * 2) + var14, var13 - var15 * 2);
-          tf.field_x.a(var8, var13, var14, var9, var12, 0, -1, 0, 0, 26);
+          tf.field_x.drawParagraph(var8, var13, var14, var9, var12, 0, -1, 0, 0, 26);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5256,7 +5256,7 @@ final class GameScreen {
         }
     }
 
-    private final String a(int param0, int param1, byte param2, nf param3) {
+    private final String a(int param0, int param1, byte param2, BinaryBitmapFont param3) {
         String var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -5268,7 +5268,7 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = SecondaryNodeDeque.field_b;
-          var6 = (param3.a("10. ") >> 1) + DebouncedFieldValidator.field_i[0].fullWidth;
+          var6 = (param3.stringWidth("10. ") >> 1) + DebouncedFieldValidator.field_i[0].fullWidth;
           GzipDecoder.drawNineSlice(DebouncedFieldValidator.field_i, DebouncedFieldValidator.field_i[6].fullHeight + param0 * param1 + DebouncedFieldValidator.field_i[0].fullHeight, var6 * 2 + 315, (byte) -81, 123 - DebouncedFieldValidator.field_i[0].fullHeight, -var6 + 162);
           if (param2 == 6) {
             stackIn_4_0 = var5;
@@ -5474,15 +5474,15 @@ final class GameScreen {
           var10 = RasterBuffer.helpTopicTitles[TextFieldValidator.field_j];
           var2_int = DebouncedFieldValidator.field_i[0].fullWidth + 63;
           var3 = 129 - (-var5 + 6) + (DebouncedFieldValidator.field_i[0].fullHeight + 8);
-          tf.field_x.c(var10, var2_int, var3, 0, -1);
+          tf.field_x.drawString(var10, var2_int, var3, 0, -1);
           if (ol.field_b[TextFieldValidator.field_j] != null) {
             var11_ref_String__ = new String[16];
-            var12 = SecondaryNodeDequeIterator.field_e.a(ol.field_b[TextFieldValidator.field_j], new int[]{-32 - DebouncedFieldValidator.field_i[2].fullWidth + (-DebouncedFieldValidator.field_i[0].fullWidth + 557)}, var11_ref_String__);
+            var12 = SecondaryNodeDequeIterator.field_e.wrapText(ol.field_b[TextFieldValidator.field_j], new int[]{-32 - DebouncedFieldValidator.field_i[2].fullWidth + (-DebouncedFieldValidator.field_i[0].fullWidth + 557)}, var11_ref_String__);
             var13 = 0;
             var14 = var3 + (var5 + 4);
             while (var13 < var12) {
               var3 = var14;
-              SecondaryNodeDequeIterator.field_e.c(var11_ref_String__[var13], var2_int, var14, 0, -1);
+              SecondaryNodeDequeIterator.field_e.drawString(var11_ref_String__[var13], var2_int, var14, 0, -1);
               var14 = var14 + var5 * 2 / 3;
               var13++;
               if (var21 != 0) {
@@ -5504,7 +5504,7 @@ final class GameScreen {
             ec.field_a[3].drawTransparent(var2_intLifetime1, var3);
             var3 = var3 + (ec.field_a[3].fullHeight + 18 + 4);
             var2_intLifetime1 = ec.field_a[3].fullWidth / 2 + var2_intLifetime1;
-            ProxySocketConnector.field_p.a(gh.field_y, var2_intLifetime1, var3, 8015912, -1);
+            ProxySocketConnector.field_p.drawCentred(gh.field_y, var2_intLifetime1, var3, 8015912, -1);
             decompiledFrameRemainder0 = (var21 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -5518,7 +5518,7 @@ final class GameScreen {
                 var7 = var8 + 4 + var3 + 96;
                 this.a(-1, var3, 0, 0, var2_intLifetime1, 22158, 50, var11);
                 var2_intLifetime1 = var2_intLifetime1 + var9;
-                ProxySocketConnector.field_p.a(me.field_a[var11], var6, var7, 8015912, -1);
+                ProxySocketConnector.field_p.drawCentred(me.field_a[var11], var6, var7, 8015912, -1);
                 var11++;
                 if (var21 != 0) {
                   return;
@@ -5543,8 +5543,8 @@ final class GameScreen {
                       if (stackIn_48_0 == stackIn_48_1) {
                         this.b(50, true);
                       }
-                      var11Lifetime1 = SecondaryNodeDequeIterator.field_e.b(p.field_d[0][var16_int], var9, 0);
-                      SecondaryNodeDequeIterator.field_e.a(p.field_d[0][var16_int], var2_intLifetime1, var3 - SecondaryNodeDequeIterator.field_e.field_x, var9, var11Lifetime1, 0, -1, 0, 0, 0);
+                      var11Lifetime1 = SecondaryNodeDequeIterator.field_e.textHeight(p.field_d[0][var16_int], var9, 0);
+                      SecondaryNodeDequeIterator.field_e.drawParagraph(p.field_d[0][var16_int], var2_intLifetime1, var3 - SecondaryNodeDequeIterator.field_e.field_x, var9, var11Lifetime1, 0, -1, 0, 0, 0);
                       if (1 == jf.field_ob[var16_int].length) {
                         var15 = jf.field_ob[var16_int][0];
                       } else if (var13Lifetime1 != 2) {
@@ -5554,8 +5554,8 @@ final class GameScreen {
                       }
                       var2_intLifetime1 = DebouncedFieldValidator.field_i[0].fullWidth + (47 + var9);
                       var3 = 129 + (SecondaryNodeDequeIterator.field_e.field_x + (DebouncedFieldValidator.field_i[0].fullHeight + 40)) - (-(var16_int * 38) - 14);
-                      var11Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.b(var15, var9, 0);
-                      SecondaryNodeDequeIterator.field_e.a(var15, var2_intLifetime1, -SecondaryNodeDequeIterator.field_e.field_x + var3, var9, var11Lifetime1Lifetime1, 0, -1, 0, 0, 0);
+                      var11Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.textHeight(var15, var9, 0);
+                      SecondaryNodeDequeIterator.field_e.drawParagraph(var15, var2_intLifetime1, -SecondaryNodeDequeIterator.field_e.field_x + var3, var9, var11Lifetime1Lifetime1, 0, -1, 0, 0, 0);
                       if (var16_int == var12Lifetime1) {
                         this.a(97);
                       }
@@ -5665,7 +5665,7 @@ final class GameScreen {
                       var11Lifetime2Lifetime1 += 16;
                       SoftwareRasterizer.restoreClip(pf.field_g);
                       var12Lifetime1Lifetime1 = -SecondaryNodeDequeIterator.field_e.field_K + (af.field_f[3] + (var3 + 8 + var8));
-                      SecondaryNodeDequeIterator.field_e.c(IntrusiveDeque.field_d[0], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 0, -1);
+                      SecondaryNodeDequeIterator.field_e.drawString(IntrusiveDeque.field_d[0], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 0, -1);
                       var11Lifetime2Lifetime1 = var13Lifetime1Lifetime1 + var2_intLifetime1 - 240;
                       var12Lifetime1Lifetime1 = var3;
                       SoftwareRasterizer.intersectClip(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, var11Lifetime2Lifetime1 + 240, var12Lifetime1Lifetime1 + 64);
@@ -5674,8 +5674,8 @@ final class GameScreen {
                       SoftwareRasterizer.restoreClip(pf.field_g);
                       var12Lifetime1Lifetime1 = 16 + (var3 + af.field_f[3] + var8 - SecondaryNodeDequeIterator.field_e.field_K);
                       var11Lifetime2Lifetime1 = -50 - nh.field_db[2] + (var13Lifetime1Lifetime1 + var2_intLifetime1);
-                      var14Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.b(IntrusiveDeque.field_d[1], 220, 0);
-                      SecondaryNodeDequeIterator.field_e.a(IntrusiveDeque.field_d[1], var11Lifetime2Lifetime1, -SecondaryNodeDequeIterator.field_e.field_x + var12Lifetime1Lifetime1, 220, var14Lifetime1Lifetime1, 0, -1, 0, 0, 0);
+                      var14Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.textHeight(IntrusiveDeque.field_d[1], 220, 0);
+                      SecondaryNodeDequeIterator.field_e.drawParagraph(IntrusiveDeque.field_d[1], var11Lifetime2Lifetime1, -SecondaryNodeDequeIterator.field_e.field_x + var12Lifetime1Lifetime1, 220, var14Lifetime1Lifetime1, 0, -1, 0, 0, 0);
                       var12Lifetime1Lifetime1 = -16 + (-ob.field_b[3] + 391 - DebouncedFieldValidator.field_i[0].fullHeight);
                       var11Lifetime2Lifetime1 = var2_intLifetime1;
                       SoftwareRasterizer.intersectClip(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, var11Lifetime2Lifetime1 + 360, ob.field_b[3] + (var12Lifetime1Lifetime1 + 16));
@@ -5684,11 +5684,11 @@ final class GameScreen {
                       var11Lifetime2Lifetime1 = var2_intLifetime1 + 16;
                       SoftwareRasterizer.restoreClip(pf.field_g);
                       var12Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x + (-(var8 * 3) + (-16 - DebouncedFieldValidator.field_i[0].fullHeight)) + (391 - ob.field_b[3]);
-                      var14Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.b(IntrusiveDeque.field_d[2], 240, 0);
-                      SecondaryNodeDequeIterator.field_e.a(IntrusiveDeque.field_d[2], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1 - SecondaryNodeDequeIterator.field_e.field_x, 240, var14Lifetime1Lifetime1, 0, -1, 0, 0, 0);
+                      var14Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.textHeight(IntrusiveDeque.field_d[2], 240, 0);
+                      SecondaryNodeDequeIterator.field_e.drawParagraph(IntrusiveDeque.field_d[2], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1 - SecondaryNodeDequeIterator.field_e.field_x, 240, var14Lifetime1Lifetime1, 0, -1, 0, 0, 0);
                       var11Lifetime2Lifetime1 = var2_intLifetime1 + oj.field_e[0];
                       var12Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x - var8 + (391 + (-DebouncedFieldValidator.field_i[0].fullHeight - ob.field_b[3] - 16));
-                      SecondaryNodeDequeIterator.field_e.c(IntrusiveDeque.field_d[3], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 0, -1);
+                      SecondaryNodeDequeIterator.field_e.drawString(IntrusiveDeque.field_d[3], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 0, -1);
                       df.field_O = true;
                       decompiledFrameRemainder0 = (var21 != 0);
                     }
@@ -5701,22 +5701,22 @@ final class GameScreen {
                         dk.field_c[0][0].drawTransparent(var2_intLifetime1, var3);
                         var6Lifetime1 = var4 / 8 + var12Lifetime1Lifetime1;
                         var7Lifetime1 = -SecondaryNodeDequeIterator.field_e.field_K + dk.field_c[3][0].fullHeight + (var3 + (4 + var8));
-                        ProxySocketConnector.field_p.a(k.field_a[0], var6Lifetime1, var7Lifetime1, 8015912, -1);
+                        ProxySocketConnector.field_p.drawCentred(k.field_a[0], var6Lifetime1, var7Lifetime1, 8015912, -1);
                         var3 = 16 + var11Lifetime2Lifetime2 + (-dk.field_c[1][0].fullHeight + dk.field_c[3][0].fullHeight) / 2;
                         var2_intLifetime1 = (var4 / 4 - dk.field_c[1][0].fullWidth) / 2 + (var4 / 4 + var12Lifetime1Lifetime1);
                         var6Lifetime1 = var4 / 8 + var12Lifetime1Lifetime1 + var4 / 4;
                         dk.field_c[1][0].drawTransparent(var2_intLifetime1, var3);
-                        ProxySocketConnector.field_p.a(k.field_a[1], var6Lifetime1, var7Lifetime1, 8015912, -1);
+                        ProxySocketConnector.field_p.drawCentred(k.field_a[1], var6Lifetime1, var7Lifetime1, 8015912, -1);
                         var3 = 16 + (var11Lifetime2Lifetime2 + (dk.field_c[3][0].fullHeight - dk.field_c[2][0].fullHeight) / 2);
                         var2_intLifetime1 = (-dk.field_c[2][0].fullWidth + var4 / 4) / 2 + (var12Lifetime1Lifetime1 + var4 / 2);
                         var6Lifetime1 = var4 / 8 + (var12Lifetime1Lifetime1 + var4 / 2);
                         dk.field_c[2][0].drawTransparent(var2_intLifetime1, var3);
-                        ProxySocketConnector.field_p.a(k.field_a[2], var6Lifetime1, var7Lifetime1, 8015912, -1);
+                        ProxySocketConnector.field_p.drawCentred(k.field_a[2], var6Lifetime1, var7Lifetime1, 8015912, -1);
                         var2_intLifetime1 = 3 * var4 / 4 + (var12Lifetime1Lifetime1 + (var4 / 4 - dk.field_c[3][0].fullWidth) / 2);
                         var3 = var11Lifetime2Lifetime2 + (16 + (dk.field_c[3][0].fullHeight - dk.field_c[3][0].fullHeight) / 2);
                         var6Lifetime1 = var12Lifetime1Lifetime1 + var4 * 3 / 4 + var4 / 8;
                         dk.field_c[3][0].drawTransparent(var2_intLifetime1, var3);
-                        ProxySocketConnector.field_p.a(k.field_a[3], var6Lifetime1, var7Lifetime1, 8015912, -1);
+                        ProxySocketConnector.field_p.drawCentred(k.field_a[3], var6Lifetime1, var7Lifetime1, 8015912, -1);
                         decompiledFrameRemainder0 = (var21 != 0);
                       }
                       if (decompiledFrameRemainder0) {
@@ -5726,7 +5726,7 @@ final class GameScreen {
                           ec.field_a[0].drawTransparent(var2_intLifetime1, var3);
                           var6Lifetime1Lifetime1 = 8 + (var2_intLifetime1 + ec.field_a[0].fullWidth);
                           var7Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x + ((ec.field_a[0].storedHeight - var8) / 2 + var3);
-                          ProxySocketConnector.field_p.c(kl.field_d[0], var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 8015912, -1);
+                          ProxySocketConnector.field_p.drawString(kl.field_d[0], var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 8015912, -1);
                           var3 = -ec.field_a[1].fullHeight + (-ec.field_a[1].storedHeight + ec.field_a[1].fullHeight) / 2 - 2 + (var3 + ec.field_a[0].fullHeight / 2);
                           var2_intLifetime1 = 32 + var4 / 2 + (16 + (DebouncedFieldValidator.field_i[0].fullWidth + 47) - (-ec.field_a[1].storedWidth + ec.field_a[1].fullWidth) / 2);
                           if (kf.field_b == 3) {
@@ -5760,11 +5760,11 @@ final class GameScreen {
                             ec.field_a[6].drawTransparent(var6Lifetime1Lifetime2, var3);
                             var7Lifetime1Lifetime2 = SecondaryNodeDequeIterator.field_e.field_x + 8 + (ec.field_a[6].fullHeight + var3);
                             var6Lifetime1Lifetime2 = ec.field_a[6].fullHeight / 2 + var6Lifetime1Lifetime2;
-                            ProxySocketConnector.field_p.a(kl.field_d[1], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
+                            ProxySocketConnector.field_p.drawCentred(kl.field_d[1], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
                             var6Lifetime1Lifetime2 = (-ec.field_a[7 + ok.field_b].fullWidth + var4 / 4) / 2 + var4 / 2 + (var2_intLifetime1 + 16);
                             ec.field_a[7 + ok.field_b].drawTransparent(var6Lifetime1Lifetime2, var3);
                             var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + ec.field_a[7 + ok.field_b].fullHeight / 2;
-                            ProxySocketConnector.field_p.a(kl.field_d[2], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
+                            ProxySocketConnector.field_p.drawCentred(kl.field_d[2], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
                             decompiledFrameRemainder0 = (var21 != 0);
                           }
                           if ((decompiledFrameRemainder0) &&
@@ -5775,7 +5775,7 @@ final class GameScreen {
                             ec.field_a[5].drawTransparent(var6Lifetime1Lifetime2, var3);
                             var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + ec.field_a[5].fullWidth / 2;
                             var7Lifetime1Lifetime2 = 8 + (var3 + ec.field_a[5].fullHeight + SecondaryNodeDequeIterator.field_e.field_x);
-                            ProxySocketConnector.field_p.a(kl.field_d[3], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
+                            ProxySocketConnector.field_p.drawCentred(kl.field_d[3], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
                             var11Lifetime2Lifetime4 = AccountServiceResult.field_k % 240;
                             if (119 <= var11Lifetime2Lifetime4) {
                               var6Lifetime1Lifetime2 = var4 / 2 + var2_intLifetime1;
@@ -5820,8 +5820,8 @@ final class GameScreen {
                         } else {
                           this.b(50, true);
                         }
-                        var18Lifetime1 = SecondaryNodeDequeIterator.field_e.b(p.field_d[1][var19Lifetime1], var9, 0);
-                        SecondaryNodeDequeIterator.field_e.a(p.field_d[1][var19Lifetime1], var2_intLifetime1, -SecondaryNodeDequeIterator.field_e.field_x + var3, var9, var18Lifetime1, 0, -1, 0, 0, 0);
+                        var18Lifetime1 = SecondaryNodeDequeIterator.field_e.textHeight(p.field_d[1][var19Lifetime1], var9, 0);
+                        SecondaryNodeDequeIterator.field_e.drawParagraph(p.field_d[1][var19Lifetime1], var2_intLifetime1, -SecondaryNodeDequeIterator.field_e.field_x + var3, var9, var18Lifetime1, 0, -1, 0, 0, 0);
                         if (var15_array[var19Lifetime1][var13Lifetime1Lifetime2]) {
                           if (p.field_c[var19Lifetime1].length != 1) {
                             var16 = p.field_c[var19Lifetime1][0] + p.field_c[var19Lifetime1][1];
@@ -5835,8 +5835,8 @@ final class GameScreen {
                         }
                         var3 = 14 + var19Lifetime1 * 38 + (40 + SecondaryNodeDequeIterator.field_e.field_x) + 129 + DebouncedFieldValidator.field_i[0].fullHeight;
                         var2_intLifetime1 = var9 + (DebouncedFieldValidator.field_i[0].fullWidth + 47);
-                        var18Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.b(var16, var9, 0);
-                        SecondaryNodeDequeIterator.field_e.a(var16, var2_intLifetime1, var3 - SecondaryNodeDequeIterator.field_e.field_x, var9, var18Lifetime1Lifetime1, var17Lifetime2, -1, 0, 0, 0);
+                        var18Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.textHeight(var16, var9, 0);
+                        SecondaryNodeDequeIterator.field_e.drawParagraph(var16, var2_intLifetime1, var3 - SecondaryNodeDequeIterator.field_e.field_x, var9, var18Lifetime1Lifetime1, var17Lifetime2, -1, 0, 0, 0);
                         if (~var14Lifetime1Lifetime2 == ~var19Lifetime1 ||
                           !var15_array[var19Lifetime1][var13Lifetime1Lifetime2]) {
                           this.a(param0 - 71);
@@ -5881,7 +5881,7 @@ final class GameScreen {
             stackIn_169_0 = 588 - DebouncedFieldValidator.field_i[0].fullWidth;
           }
           var2_intLifetime2 = stackIn_169_0;
-          SecondaryNodeDequeIterator.field_e.b(gj.a(param0, (byte) -123, 1 + TextFieldValidator.field_j), var2_intLifetime2, var3, 0, -1);
+          SecondaryNodeDequeIterator.field_e.drawRightAligned(gj.a(param0, (byte) -123, 1 + TextFieldValidator.field_j), var2_intLifetime2, var3, 0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -6011,7 +6011,7 @@ final class GameScreen {
             var10 == 13) {
             var22 = UiComponent.field_s + 137;
             var23 = var6 + (-var22 + var12 >> 1);
-            var19.c(var11, var23, (var21 >> 1) + var20Lifetime1 + (var5_int + ba.field_b[0].storedHeight), var17, -1);
+            var19.drawString(var11, var23, (var21 >> 1) + var20Lifetime1 + (var5_int + ba.field_b[0].storedHeight), var17, -1);
             var23 = var23 + (8 + UiComponent.field_s);
             SoftwareRasterizer.drawRectangleOutline(var23, var5_int + (var13 / 2 - 1), 129, 2, var17);
             if (var10 != 12) {
@@ -6033,7 +6033,7 @@ final class GameScreen {
               return;
             }
           }
-          var19.a(var11, var6 + (var12 >> 1), (var21 >> 1) + (var20Lifetime1 + var5_int + ba.field_b[0].storedHeight), var17, -1);
+          var19.drawCentred(var11, var6 + (var12 >> 1), (var21 >> 1) + (var20Lifetime1 + var5_int + ba.field_b[0].storedHeight), var17, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -6146,7 +6146,7 @@ final class GameScreen {
           var3 = 2 + SecondaryNodeDequeIterator.field_e.field_K + SecondaryNodeDequeIterator.field_e.field_x;
           var4 = 13;
           if (GameClientBase.p(-91)) {
-            var5 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + DebouncedFieldValidator.field_i[0].fullWidth;
+            var5 = (SecondaryNodeDequeIterator.field_e.stringWidth("10. ") >> 1) + DebouncedFieldValidator.field_i[0].fullWidth;
             GzipDecoder.drawNineSlice(DebouncedFieldValidator.field_i, var3 * var4 + (DebouncedFieldValidator.field_i[0].fullHeight + DebouncedFieldValidator.field_i[6].fullHeight), var5 * 2 + 315, (byte) 61, -DebouncedFieldValidator.field_i[0].fullHeight + 123, -var5 + 162);
             var2 = MouseInputHandler.field_c;
             decompiledFrameRemainder1 = (var17 != 0);
@@ -6158,7 +6158,7 @@ final class GameScreen {
             var5_ref_ae = rc.field_r;
             if (!var5_ref_ae.field_n) {
               var2 = lh.field_y;
-              var6 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + DebouncedFieldValidator.field_i[0].fullWidth;
+              var6 = (SecondaryNodeDequeIterator.field_e.stringWidth("10. ") >> 1) + DebouncedFieldValidator.field_i[0].fullWidth;
               GzipDecoder.drawNineSlice(DebouncedFieldValidator.field_i, DebouncedFieldValidator.field_i[6].fullHeight + DebouncedFieldValidator.field_i[0].fullHeight + var4 * var3, 2 * var6 + 315, (byte) -110, 123 - DebouncedFieldValidator.field_i[0].fullHeight, -var6 + 162);
               decompiledFrameRemainder1 = (var17 != 0);
             }
@@ -6197,8 +6197,8 @@ final class GameScreen {
                   if (var7[var8] != null) {
                     var2 = MouseInputHandler.field_c;
                     var9 = bg.a(var8, kf.field_a, 21179, var5_ref_ae);
-                    var10 = SecondaryNodeDequeIterator.field_e.a("10. ") >> 1;
-                    var11 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + DebouncedFieldValidator.field_i[0].fullWidth;
+                    var10 = SecondaryNodeDequeIterator.field_e.stringWidth("10. ") >> 1;
+                    var11 = (SecondaryNodeDequeIterator.field_e.stringWidth("10. ") >> 1) + DebouncedFieldValidator.field_i[0].fullWidth;
                     GzipDecoder.drawNineSlice(DebouncedFieldValidator.field_i, DebouncedFieldValidator.field_i[6].fullHeight + DebouncedFieldValidator.field_i[0].fullHeight + var3 * var4, 2 * var11 + 315, (byte) 113, 123 - DebouncedFieldValidator.field_i[0].fullHeight, -var11 + 162);
                     var12 = SecondaryNodeDequeIterator.field_e.field_x + 123;
                     var13 = 0;
@@ -6219,9 +6219,9 @@ final class GameScreen {
                           if (var9 == var13) {
                             var16 = 16711680;
                           }
-                          SecondaryNodeDequeIterator.field_e.b(var13 + 1 + ". ", 162 + var10, var12, var16, -1);
-                          SecondaryNodeDequeIterator.field_e.c(var14_ref_String, var10 + 162, var12, var16, -1);
-                          SecondaryNodeDequeIterator.field_e.b(Integer.toString(var15_int), 477, var12, var16, -1);
+                          SecondaryNodeDequeIterator.field_e.drawRightAligned(var13 + 1 + ". ", 162 + var10, var12, var16, -1);
+                          SecondaryNodeDequeIterator.field_e.drawString(var14_ref_String, var10 + 162, var12, var16, -1);
+                          SecondaryNodeDequeIterator.field_e.drawRightAligned(Integer.toString(var15_int), 477, var12, var16, -1);
                           var12 = var12 + var3;
                         }
                       }
@@ -6235,9 +6235,9 @@ final class GameScreen {
                         var14 = 16711680;
                         var15 = LevelDecoder.field_a;
                         if (null != var15) {
-                          SecondaryNodeDequeIterator.field_e.c(var15, 162 + var10, var12Lifetime1, var14, -1);
+                          SecondaryNodeDequeIterator.field_e.drawString(var15, 162 + var10, var12Lifetime1, var14, -1);
                         }
-                        SecondaryNodeDequeIterator.field_e.b(Integer.toString(tf.field_o), 477, var12Lifetime1, var14, -1);
+                        SecondaryNodeDequeIterator.field_e.drawRightAligned(Integer.toString(tf.field_o), 477, var12Lifetime1, var14, -1);
                       }
                       if (var17 != 0) {
                         var2 = this.a(var4, var3, (byte) 6, SecondaryNodeDequeIterator.field_e);
@@ -6259,14 +6259,14 @@ final class GameScreen {
           if (param0 < 22) {
             this.field_b = 122;
           }
-          SecondaryNodeDequeIterator.field_e.a(var2, 320, var5Lifetime1, var6Lifetime1, -1);
+          SecondaryNodeDequeIterator.field_e.drawCentred(var2, 320, var5Lifetime1, var6Lifetime1, -1);
           if (!GameClientBase.p(-107)) {
             stackIn_76_0 = e.field_j;
           } else {
             stackIn_76_0 = gb.field_e;
           }
           var2Lifetime1 = stackIn_76_0;
-          SecondaryNodeDequeIterator.field_e.a(var2Lifetime1, 320, SecondaryNodeDequeIterator.field_e.field_x + (123 + var3 * (-1 + var4)), 6488064, -1);
+          SecondaryNodeDequeIterator.field_e.drawCentred(var2Lifetime1, 320, SecondaryNodeDequeIterator.field_e.field_x + (123 + var3 * (-1 + var4)), 6488064, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -48,18 +48,18 @@ final class vg {
         int var7 = Transmogrify.field_A ? 1 : 0;
         String[] var8 = new String[16];
         String[] var3 = var8;
-        int var4 = IntrusiveNode.field_d.a(db.field_b[ra.field_a], lk.field_e, var3);
+        int var4 = IntrusiveNode.field_d.wrapText(db.field_b[ra.field_a], lk.field_e, var3);
         int var5 = 0;
         int var6 = 156 + param0;
         while (var4 > var5) {
-          IntrusiveNode.field_d.b(var8[var5], 54, var6, 119, -1);
+          IntrusiveNode.field_d.drawString(var8[var5], 54, var6, 119, -1);
           var5++;
           var6 += 22;
         }
         if (param1 >= -25) {
           this.a(true, -9, -1, 116);
         }
-        IntrusiveNode.field_d.a(ArchiveRequest.a((byte) 117, 1 + ra.field_a), 548, param0 + 142, 0, -1);
+        IntrusiveNode.field_d.drawRightAligned(ArchiveRequest.a((byte) 117, 1 + ra.field_a), 548, param0 + 142, 0, -1);
         SpriteState.field_t.c(166, param0);
     }
 
@@ -202,13 +202,13 @@ final class vg {
         }
         if (var8 != -1) {
           var9Lifetime1 = IntrusiveNode.field_d.field_t + (IntrusiveNode.field_d.field_D + 2);
-          IntrusiveNode.field_d.c(IntrusiveDeque.field_a[var8], 438, param2 + 206, 0, -1);
+          IntrusiveNode.field_d.drawCentred(IntrusiveDeque.field_a[var8], 438, param2 + 206, 0, -1);
           stackIn_46_0 = ((var6 & 1 << var8) == 0) ? 0 : 1;
           var10 = stackIn_46_0;
           if (var10 != 0) {
-            IntrusiveNode.field_d.c(rl.field_i, 438, 206 + (var9Lifetime1 + param2), 0, -1);
+            IntrusiveNode.field_d.drawCentred(rl.field_i, 438, 206 + (var9Lifetime1 + param2), 0, -1);
           } else {
-            IntrusiveNode.field_d.c(LoginPanel.field_x, 438, var9Lifetime1 + 206 + param2, 16711680, -1);
+            IntrusiveNode.field_d.drawCentred(LoginPanel.field_x, 438, var9Lifetime1 + 206 + param2, 16711680, -1);
           }
           if (var10 == 0) {
             LoginPanel.field_z.c(263, 206 + var9Lifetime1 + param2);
@@ -217,20 +217,20 @@ final class vg {
           }
           var11 = 4 + (IntrusiveNode.field_d.field_y * 2 + (206 + param2));
           var12 = new String[16];
-          var13 = IntrusiveNode.field_d.a(bl.achievementDescriptions[var8], new int[]{219}, var12);
+          var13 = IntrusiveNode.field_d.wrapText(bl.achievementDescriptions[var8], new int[]{219}, var12);
           var11 = var11 + ((-var13 + 4) * var9Lifetime1 >> 1);
           for (var14 = 0; var14 < var13; var14++) {
-            IntrusiveNode.field_d.b(var12[var14], 394, var11, 0, -1);
+            IntrusiveNode.field_d.drawString(var12[var14], 394, var11, 0, -1);
             var11 = var11 + var9Lifetime1;
           }
           if (var13 < 3) {
             var11 = var11 + var9Lifetime1;
           }
-          IntrusiveNode.field_d.b(BufferedSocket.field_f + EditableTextField.field_B[var8], 394, var11, 0, -1);
+          IntrusiveNode.field_d.drawString(BufferedSocket.field_f + EditableTextField.field_B[var8], 394, var11, 0, -1);
           var4Lifetime1 = 394;
           var11 = var11 + var9Lifetime1;
-          IntrusiveNode.field_d.b(DisplayNameSelectionPanel.field_F, var4Lifetime1, var11, 0, -1);
-          var4Lifetime1 = var4Lifetime1 + IntrusiveNode.field_d.a(DisplayNameSelectionPanel.field_F);
+          IntrusiveNode.field_d.drawString(DisplayNameSelectionPanel.field_F, var4Lifetime1, var11, 0, -1);
+          var4Lifetime1 = var4Lifetime1 + IntrusiveNode.field_d.stringWidth(DisplayNameSelectionPanel.field_F);
           for (var14Lifetime1 = 0; wd.field_k[var8] > var14Lifetime1; var14Lifetime1++) {
             og.field_b.c(var4Lifetime1, -IntrusiveNode.field_d.field_y + var11);
             var4Lifetime1 = var4Lifetime1 + og.field_b.field_n / 3;
@@ -238,10 +238,10 @@ final class vg {
         } else {
           var5Lifetime1 = param2 + 206 - IntrusiveNode.field_d.field_y;
           var9Lifetime1 = IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_y;
-          var5Lifetime1 = var5Lifetime1 + var9Lifetime1 * IntrusiveNode.field_d.a(aj.field_v, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
+          var5Lifetime1 = var5Lifetime1 + var9Lifetime1 * IntrusiveNode.field_d.drawParagraph(aj.field_v, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
           var5Lifetime1 = var5Lifetime1 + var9Lifetime1;
           if (IntrusiveDeque.b((byte) 95)) {
-            IntrusiveNode.field_d.a(tj.field_t, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
+            IntrusiveNode.field_d.drawParagraph(tj.field_t, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
           }
         }
     }
@@ -788,7 +788,7 @@ final class vg {
         int var13_int = 0;
         String var3;
         int var4;
-        mi var5_ref_mi;
+        BinaryBitmapFont var5_ref_mi;
         int var5;
         o var6;
         int var7;
@@ -840,9 +840,9 @@ final class vg {
                       var8 = 1;
                       var14 = 255;
                     }
-                    var5_ref_mi.a(var13_int + 1 + ". ", 268, var12, var14, -1);
-                    var5_ref_mi.b(var17, 268, var12, var14, -1);
-                    var5_ref_mi.a(Integer.toString(var15), 520, var12, var14, -1);
+                    var5_ref_mi.drawRightAligned(var13_int + 1 + ". ", 268, var12, var14, -1);
+                    var5_ref_mi.drawString(var17, 268, var12, var14, -1);
+                    var5_ref_mi.drawRightAligned(Integer.toString(var15), 520, var12, var14, -1);
                     var18 = BufferedRandomAccessFile.field_l[var16].field_a;
                     var18.f(528, -1 + (-var5_ref_mi.field_y + (var12 + var5_ref_mi.field_C)) - (24 - (-var18.field_m + 24) / 2));
                     var3 = "";
@@ -852,8 +852,8 @@ final class vg {
                 if (((-2147483648 != SecondaryNodeDeque.field_g)) &&
                   ((var8 == 0)) &&
                   ((SecondaryNodeDeque.field_g != 0))) {
-                  var5_ref_mi.b(NodeHashTableIterator.field_a, 268, var12, 255, -1);
-                  var5_ref_mi.a(Integer.toString(SecondaryNodeDeque.field_g), 520, var12, 255, -1);
+                  var5_ref_mi.drawString(NodeHashTableIterator.field_a, 268, var12, 255, -1);
+                  var5_ref_mi.drawRightAligned(Integer.toString(SecondaryNodeDeque.field_g), 520, var12, 255, -1);
                   var13 = MouseInputHandler.field_c.field_a;
                   var13.f(528, (24 - var13.field_m) / 2 + (-1 + var5_ref_mi.field_C - var5_ref_mi.field_y) + (var12 - 24));
                 }
@@ -866,10 +866,10 @@ final class vg {
           }
         }
         var5 = param1 + 163;
-        IntrusiveNode.field_d.a(var3, 224, var5, 346, 1000, 119, -1, 1, 0, -4 + (IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_y));
+        IntrusiveNode.field_d.drawParagraph(var3, 224, var5, 346, 1000, 119, -1, 1, 0, -4 + (IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_y));
         if (0 == var3.length()) {
           var5Lifetime1 = 331 + param1;
-          og.field_a.a(sg.field_o, 224, var5Lifetime1, 346, 1000, 119, -1, 1, 0, og.field_a.field_y - (-og.field_a.field_t + 4));
+          og.field_a.drawParagraph(sg.field_o, 224, var5Lifetime1, 346, 1000, 119, -1, 1, 0, og.field_a.field_y - (-og.field_a.field_t + 4));
         }
     }
 
@@ -911,16 +911,16 @@ final class vg {
                 if (this.field_i == 5) {
                   var3 = 130 + param1;
                   var4 = 4 + IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_D;
-                  var5 = var4 * IntrusiveNode.field_d.b(sd.field_Q, 341);
-                  IntrusiveNode.field_d.a(sd.field_Q, 150, var3, 341, var5, 0, -1, 1, 0, var4);
+                  var5 = var4 * IntrusiveNode.field_d.lineCount(sd.field_Q, 341);
+                  IntrusiveNode.field_d.drawParagraph(sd.field_Q, 150, var3, 341, var5, 0, -1, 1, 0, var4);
                   var3 = var3 + var5;
                   stackIn_10_0 = true;
                   stackIn_11_1 = (hc.field_u == 0) ? false : true;
                   stackIn_13_2 = false;
                   stackIn_14_3 = (SecondaryNodeDeque.field_g == 0) ? false : true;
                   var8 = aj.a(stackIn_10_0, stackIn_11_1, stackIn_13_2, stackIn_14_3);
-                  var5Lifetime1 = var4 * IntrusiveNode.field_d.b(var8, 341);
-                  IntrusiveNode.field_d.a(var8, 150, var3, 341, var5Lifetime1, 0, -1, 1, 0, var4);
+                  var5Lifetime1 = var4 * IntrusiveNode.field_d.lineCount(var8, 341);
+                  IntrusiveNode.field_d.drawParagraph(var8, 150, var3, 341, var5Lifetime1, 0, -1, 1, 0, var4);
                   var3 = var3 + var5Lifetime1;
                   var3 = var3 + (jk.field_x.a(true) + var4);
                   stackIn_16_0 = -85;
@@ -928,8 +928,8 @@ final class vg {
                   stackIn_17_2 = (SecondaryNodeDeque.field_g == 0) ? false : true;
                   stackIn_20_3 = (hc.field_u == 0) ? false : true;
                   var9 = AchievementNotice.$cfr$intArgs$a$c7de0d339b2a(stackIn_16_0, stackIn_16_1, stackIn_17_2, stackIn_20_3);
-                  var5Lifetime2 = var4 * IntrusiveNode.field_d.b(var9, 341);
-                  IntrusiveNode.field_d.a(var9, 150, var3, 341, var5Lifetime2, 0, -1, 1, 0, var4);
+                  var5Lifetime2 = var4 * IntrusiveNode.field_d.lineCount(var9, 341);
+                  IntrusiveNode.field_d.drawParagraph(var9, 150, var3, 341, var5Lifetime2, 0, -1, 1, 0, var4);
                   var3 = var3 + var5Lifetime2;
                   var3 = var3 + jk.field_x.a(true);
                   stackIn_22_0 = false;
@@ -937,8 +937,8 @@ final class vg {
                   stackIn_25_2 = -106;
                   stackIn_26_3 = (SecondaryNodeDeque.field_g == 0) ? false : true;
                   var10 = BufferedRandomAccessFile.a(stackIn_22_0, stackIn_23_1, stackIn_25_2, stackIn_26_3);
-                  var5Lifetime3 = IntrusiveNode.field_d.b(var10, 341) * var4;
-                  IntrusiveNode.field_d.a(var10, 150, var3, 341, var5Lifetime3, 0, -1, 1, 0, var4);
+                  var5Lifetime3 = IntrusiveNode.field_d.lineCount(var10, 341) * var4;
+                  IntrusiveNode.field_d.drawParagraph(var10, 150, var3, 341, var5Lifetime3, 0, -1, 1, 0, var4);
                 }
               } else {
                 this.a(true, -2, param1);
@@ -1146,7 +1146,7 @@ final class vg {
         int var8;
         String var9;
         int var10;
-        mi var11;
+        BinaryBitmapFont var11;
         int var12;
         Sprite var12_ref_ti;
         int var13;
@@ -1180,20 +1180,20 @@ final class vg {
           var8 != 13) {
           if (var8 == 17) {
             var12_ref_ti = BufferedRandomAccessFile.field_l[am.field_n].field_a;
-            var13 = var11.a(var9);
+            var13 = var11.stringWidth(var9);
             var14 = 36 + var13;
             var15 = var6 + var7 - var14 >> 1;
             var12_ref_ti.c(var13 + (var15 + (36 - var12_ref_ti.field_n) / 2), -24 + var5 + (var11.field_C - 1) + (-var12_ref_ti.field_m + 24) / 2);
             if (!param0) {
-              var11.b(var9, var15, var11.field_y + var5, var10, -1);
+              var11.drawString(var9, var15, var11.field_y + var5, var10, -1);
             } else {
-              le.field_A.b(var9, var15, var11.field_y + var5, var10, -1);
+              le.field_A.drawString(var9, var15, var11.field_y + var5, var10, -1);
             }
           } else if (!ResourceArchive.field_g[this.field_i]) {
             if (!param0) {
-              var11.c(var9, var7 + var6 >> 1, var11.field_y + var5, var10, -1);
+              var11.drawCentred(var9, var7 + var6 >> 1, var11.field_y + var5, var10, -1);
             } else {
-              le.field_A.c(var9, var6 + var7 >> 1, var5 + var11.field_y, var10, -1);
+              le.field_A.drawCentred(var9, var6 + var7 >> 1, var5 + var11.field_y, var10, -1);
             }
           } else {
             var12 = 16710412;
@@ -1209,8 +1209,8 @@ final class vg {
           }
         } else {
           if (this.field_c == -1) {
-            var12 = var11.a(de.field_c[12]);
-            var13 = var11.a(de.field_c[13]);
+            var12 = var11.stringWidth(de.field_c[12]);
+            var13 = var11.stringWidth(de.field_c[13]);
             if (var13 > var12) {
               var12 = var13;
             }
@@ -1226,9 +1226,9 @@ final class vg {
           var12 = 80 * var12 / 256;
           SoftwareRasterizer.drawRectangleOutline(var12 + (this.field_c - 1), 3 + var5, 3, -6 + fd.field_b[this.field_i], var10);
           if (param0) {
-            le.field_A.a(var9, this.field_c, var5 + var11.field_y, var10, -1);
+            le.field_A.drawRightAligned(var9, this.field_c, var5 + var11.field_y, var10, -1);
           } else {
-            var11.a(var9, this.field_c, var5 + var11.field_y, var10, -1);
+            var11.drawRightAligned(var9, this.field_c, var5 + var11.field_y, var10, -1);
           }
         }
     }

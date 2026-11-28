@@ -31,7 +31,7 @@ final class pc extends ci {
           if (param3 != -42) {
             this.a(false);
           }
-          var6_int = param4.field_xb.b(param4.field_db, -(param4.field_z * 2) + param2, param4.field_K);
+          var6_int = param4.field_xb.textHeight(param4.field_db, -(param4.field_z * 2) + param2, param4.field_K);
           param4.a(0, param2, -2147483648, var6_int, param1);
           param0.a((byte) 127, param4);
           param1 = param1 + (0 + var6_int);
@@ -216,15 +216,15 @@ final class pc extends ci {
               discarded$1 = this.field_Pb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_xb.b(cl.field_h);
+            var17 = param6.field_xb.stringWidth(cl.field_h);
             if (var16Lifetime2 < var17) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_xb.b(nb.field_Gb);
+            var17Lifetime2 = param6.field_xb.stringWidth(nb.field_Gb);
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_xb.b(qh.field_d);
+            var17Lifetime3 = param6.field_xb.stringWidth(qh.field_d);
             if (var16Lifetime2 < var17Lifetime3) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -325,7 +325,7 @@ final class pc extends ci {
           this.field_Eb.a((byte) 125, this.field_Hb);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Hb.field_xb.b(this.field_Hb.field_db, var15_int);
+          var17Lifetime1 = this.field_Hb.field_xb.lineCount(this.field_Hb.field_db, var15_int);
           this.field_Hb.a(13, var15_int, -2147483648, fe.field_g * var17Lifetime1, var16Lifetime1);
           var16Lifetime1 = var16Lifetime1 + fe.field_g * var17Lifetime1;
           this.field_Eb.a(0, 13 + var15_int + 13, -2147483648, var16Lifetime1 + 10, 24);
@@ -452,7 +452,7 @@ final class pc extends ci {
         this.a(param0, (byte) 88);
         if (this.field_Ib != null) {
           this.field_Ib.field_db = this.field_Pb.toString();
-          this.field_Ib.field_mb = (this.field_M - this.field_Ib.field_xb.b(this.field_Ib.field_db)) / 2;
+          this.field_Ib.field_mb = (this.field_M - this.field_Ib.field_xb.stringWidth(this.field_Ib.field_db)) / 2;
           this.field_Ib.field_M = -this.field_Ib.field_mb + this.field_M;
           if (this.field_Kb != null &&
             this.field_Kb.field_L != 0) {

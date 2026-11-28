@@ -11,7 +11,7 @@ final class mc implements ml {
     static int[][] field_e;
     private int field_k;
     static String field_i;
-    private ta field_f;
+    private BitmapFont field_f;
     private int field_g;
 
     public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
@@ -53,7 +53,7 @@ final class mc implements ml {
           if (null == this.field_f) {
             return;
           }
-          this.field_f.a(var13.field_s, var7 / 2 + var8, this.field_f.field_t + (var9 + var13.field_F), this.field_j, this.field_c);
+          this.field_f.drawCentred(var13.field_s, var7 / 2 + var8, this.field_f.field_t + (var9 + var13.field_F), this.field_j, this.field_c);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -93,7 +93,7 @@ final class mc implements ml {
         }
     }
 
-    mc(ta param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    mc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_f = param0;
           this.field_c = param2;

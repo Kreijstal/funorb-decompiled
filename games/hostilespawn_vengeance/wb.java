@@ -250,10 +250,10 @@ abstract class wb extends ul {
             wb.clearDeclaredStaticReferences(119);
           }
           if (!param1) {
-            stackIn_6_0 = lj.field_u.a(param2);
+            stackIn_6_0 = lj.field_u.stringWidth(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = na.field_c.a(param2);
+          stackIn_4_0 = na.field_c.stringWidth(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -8,7 +8,7 @@ final class tb implements ci {
     private int field_a;
     static String field_e;
     private int field_j;
-    private ee field_g;
+    private BitmapFont field_g;
     static int field_d;
     private int field_i;
     static java.awt.Canvas field_c;
@@ -52,7 +52,7 @@ final class tb implements ci {
           if (this.field_g == null) {
             return;
           }
-          this.field_g.a(var12.field_r, var7 / 2 + var8, this.field_g.field_E + var9 + var12.field_J, this.field_k, this.field_i);
+          this.field_g.drawCentred(var12.field_r, var7 / 2 + var8, this.field_g.field_E + var9 + var12.field_J, this.field_k, this.field_i);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,7 +160,7 @@ final class tb implements ci {
         field_c = null;
     }
 
-    tb(ee param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    tb(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_i = param2;
           this.field_l = param3;

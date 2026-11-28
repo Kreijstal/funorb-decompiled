@@ -576,7 +576,7 @@ final class MidiPcmStream extends PcmStream {
             var4.field_u == param0) {
             if (var4.field_y != null) {
               var4.field_y.f(AudioOutput.field_p / 100);
-              if (var4.field_y.e()) {
+              if (var4.field_y.hasRemainingRampFrames()) {
                 this.field_m.field_m.a(var4.field_y);
               }
               var4.b(false);
@@ -658,7 +658,7 @@ final class MidiPcmStream extends PcmStream {
             var4_int = var4_int << 8;
             var5 = (int)((long)this.field_P[param2.field_u] * (long)var6 >> 6);
             if (var5 >= var4_int) {
-              param2.field_y.b(true);
+              param2.field_y.setReversePlayback(true);
               var5 = -var5 + var4_int + var4_int - 1;
             }
           } else {
@@ -1164,9 +1164,9 @@ final class MidiPcmStream extends PcmStream {
         var7.field_p = -1;
         var7.field_z = 0;
         if (this.field_P[param0] == 0) {
-          var7.field_y = PcmSampleStream.a(var6, this.a(var7, (byte) 106), this.b(var7, (byte) -77), this.a(var7, 1135851910));
+          var7.field_y = PcmSampleStream.createForSampleStep(var6, this.a(var7, (byte) 106), this.b(var7, (byte) -77), this.a(var7, 1135851910));
         } else {
-          var7.field_y = PcmSampleStream.a(var6, this.a(var7, (byte) 123), 0, this.a(var7, 1135851910));
+          var7.field_y = PcmSampleStream.createForSampleStep(var6, this.a(var7, (byte) 123), 0, this.a(var7, 1135851910));
           stackIn_19_1 = false;
           stackIn_20_2 = !(var10.field_k[param1] >= 0);
           this.a(stackIn_19_1, stackIn_20_2, var7);
@@ -1230,7 +1230,7 @@ final class MidiPcmStream extends PcmStream {
             }
             param4.field_x = var6_int;
           }
-          param4.field_y.e(this.a(param4, (byte) 94));
+          param4.field_y.setSampleStepMagnitude(this.a(param4, (byte) 94));
           if (param0 < 116) {
             return true;
           }
@@ -1288,7 +1288,7 @@ final class MidiPcmStream extends PcmStream {
             }
           }
           if (var8 == 0) {
-            param4.field_y.a(param4.field_r, this.b(param4, (byte) -77), this.a(param4, 1135851910));
+            param4.field_y.rampVolumeAndPan(param4.field_r, this.b(param4, (byte) -77), this.a(param4, 1135851910));
             return false;
           }
           param4.field_y.f(param4.field_r);
@@ -1297,7 +1297,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             param4.field_y.mixInto(param3, param1, param2);
           }
-          if (param4.field_y.e()) {
+          if (param4.field_y.hasRemainingRampFrames()) {
             this.field_m.field_m.a(param4.field_y);
           }
           param4.b(false);

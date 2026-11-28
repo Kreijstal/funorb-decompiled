@@ -12,11 +12,11 @@ final class tc {
     ResourceArchive field_a;
     static int field_h;
 
-    final static dj a(ResourceArchive param0, String param1, ResourceArchive param2, byte param3, String param4) {
+    final static PalettedBitmapFont a(ResourceArchive param0, String param1, ResourceArchive param2, byte param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        dj stackIn_3_0 = null;
+        PalettedBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

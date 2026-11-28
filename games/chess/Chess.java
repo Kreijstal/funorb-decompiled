@@ -727,7 +727,7 @@ public final class Chess extends NetworkGameClient {
         if (sk.field_t >= 2) {
           var3 = Runtime.getRuntime();
           var4 = (int)(var3.totalMemory() - var3.freeMemory()) >> 20;
-          v.field_j.a(ie.field_a + " fps; " + var4 + "MiB", 30, 70, 267386880, -1);
+          v.field_j.drawString(ie.field_a + " fps; " + var4 + "MiB", 30, 70, 267386880, -1);
         }
         sf.b(16777215);
         kf.a(0, (byte) 98, (java.awt.Canvas) (var6), 0);
@@ -1564,7 +1564,7 @@ public final class Chess extends NetworkGameClient {
         MouseWheelInput.clearStaticReferences((byte) 30);
         SoftwareRasterizer.clearStaticReferences();
         ResourceArchive.clearStaticReferences((byte) 73);
-        lh.clearStaticReferences();
+        BitmapFont.clearStaticReferences();
         jf.clearStaticReferences((byte) -8);
         PacketBuffer.clearStaticReferences((byte) -128);
         ud.clearStaticReferences((byte) -109);

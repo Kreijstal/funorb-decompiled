@@ -57,9 +57,9 @@ final class fc {
           jk.field_g = vk.a("commonui", 63, "jagex_logo_grey", param3);
           t.field_r = SecondaryNodeDequeIterator.a("button", 94, "commonui", param3);
           FrameTimer.field_g = hb.a(-990, "commonui", param3, "validation");
-          nb.field_b = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo12", param1));
-          nb.field_c = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo14", param1));
-          AwtRasterBuffer.field_a = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo14bold", param1));
+          nb.field_b = (BitmapFont) ((Object) ai.a(param3, "commonui", true, "arezzo12", param1));
+          nb.field_c = (BitmapFont) ((Object) ai.a(param3, "commonui", true, "arezzo14", param1));
+          AwtRasterBuffer.field_a = (BitmapFont) ((Object) ai.a(param3, "commonui", true, "arezzo14bold", param1));
           var18 = new Sprite(param0.getFileByName("button.gif", (byte) -95, ""), (java.awt.Component) ((Object) kj.field_E));
           o.a(param3, "commonui", "dropdown", false);
           var5 = fg.a(param3, "screen_options", "commonui", false);

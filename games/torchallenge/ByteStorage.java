@@ -424,7 +424,7 @@ abstract class ByteStorage {
           } else {
             var20Lifetime6 = SocketConnector.field_k;
           }
-          tf.field_x.a(Integer.toString(var20Lifetime6), var10Lifetime4 + param0, param1 + var11Lifetime4 + ((var13Lifetime2 - var18Lifetime1 >> 1) + 18), 0, -1);
+          tf.field_x.drawCentred(Integer.toString(var20Lifetime6), var10Lifetime4 + param0, param1 + var11Lifetime4 + ((var13Lifetime2 - var18Lifetime1 >> 1) + 18), 0, -1);
           if (param4 != 0 &&
             param4 != 1) {
             if (param4 == 2) {
@@ -433,7 +433,7 @@ abstract class ByteStorage {
               var9 = DualLinkNode.field_j + (o.field_l / 50 + 1);
               var10Lifetime5 = af.field_f[0];
               var13Lifetime3 = af.field_f[3];
-              tf.field_x.c(var9, 13 + var10Lifetime5, (var13Lifetime3 - var18Lifetime1 >> 1) + (var11Lifetime5 + 18), 0, -1);
+              tf.field_x.drawString(var9, 13 + var10Lifetime5, (var13Lifetime3 - var18Lifetime1 >> 1) + (var11Lifetime5 + 18), 0, -1);
             }
           } else {
             var21Lifetime2 = 0;
@@ -450,12 +450,12 @@ abstract class ByteStorage {
             var11Lifetime5 = af.field_f[1];
             var13Lifetime3 = af.field_f[3];
             var12Lifetime5 = af.field_f[2];
-            tf.field_x.c(var9, 13 + var10Lifetime5 + param0, param1 + var11Lifetime5 + (var13Lifetime3 - var18Lifetime1 >> 1) + 18, 0, -1);
+            tf.field_x.drawString(var9, 13 + var10Lifetime5 + param0, param1 + var11Lifetime5 + (var13Lifetime3 - var18Lifetime1 >> 1) + 18, 0, -1);
             if (1 < var22Lifetime2Lifetime1) {
               var11Lifetime5 = SecondaryNodeDequeIterator.field_e.field_x + ((var13Lifetime3 - SecondaryNodeDequeIterator.field_e.field_K - SecondaryNodeDequeIterator.field_e.field_x >> 1) + var11Lifetime5);
               var29 = vj.field_b + var22Lifetime2Lifetime1;
               var10Lifetime5 = var12Lifetime5 + var10Lifetime5;
-              SecondaryNodeDequeIterator.field_e.b(var29, var10Lifetime5 + (param0 - 13), param1 + var11Lifetime5, 0, -1);
+              SecondaryNodeDequeIterator.field_e.drawRightAligned(var29, var10Lifetime5 + (param0 - 13), param1 + var11Lifetime5, 0, -1);
             }
           }
           if ((0 == param4 ||

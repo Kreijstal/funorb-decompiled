@@ -59,7 +59,7 @@ final class og implements rd {
           if (this.field_i == null) {
             return;
           }
-          this.field_i.a(var12.field_u, var7 / 2 + var8, var12.field_H + var9 + this.field_i.field_C, this.field_e, this.field_g);
+          this.field_i.drawCentred(var12.field_u, var7 / 2 + var8, var12.field_H + var9 + this.field_i.field_C, this.field_e, this.field_g);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

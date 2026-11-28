@@ -49,7 +49,7 @@ final class cp extends gd {
         super(param0, param1, 0, 0, 0);
         int stackIn_7_0 = 0;
         int stackIn_13_0 = 0;
-        gp stackIn_17_0 = null;
+        BinaryBitmapFont stackIn_17_0 = null;
         String stackIn_17_1 = null;
         int stackIn_18_2 = 0;
         int stackIn_20_3;
@@ -116,17 +116,17 @@ final class cp extends gd {
             } else {
               stackIn_21_4 = 8421504;
             }
-            ((gp) (Object) stackIn_17_0).b(stackIn_17_1, stackIn_18_2, stackIn_20_3, stackIn_21_4, -1);
+            ((BinaryBitmapFont) (Object) stackIn_17_0).drawString(stackIn_17_1, stackIn_18_2, stackIn_20_3, stackIn_21_4, -1);
           }
           var14 = var14 + (la.field_b.field_H + 2);
           if (var8 == 0) {
             if (var9 == 0) {
-              la.field_b.b(jk.a(new String[]{Integer.toString(var5 / 10)}, n.field_a, 30496), 52, var14, 12632256, -1);
+              la.field_b.drawString(jk.a(new String[]{Integer.toString(var5 / 10)}, n.field_a, 30496), 52, var14, 12632256, -1);
             } else {
-              la.field_b.b(MatchingFieldValidator.field_q, 52, var14, 16711680, -1);
+              la.field_b.drawString(MatchingFieldValidator.field_q, 52, var14, 16711680, -1);
             }
           } else {
-            la.field_b.b(LoginPanel.field_T, 52, var14, 16711680, -1);
+            la.field_b.drawString(LoginPanel.field_T, 52, var14, 16711680, -1);
           }
           var14 += 4;
           var12.e();

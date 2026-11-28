@@ -112,10 +112,10 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             AccountNameAvailabilityValidator.resetStaticState(107);
           }
           if (!param1) {
-            stackIn_6_0 = mb.field_a.a(param2);
+            stackIn_6_0 = mb.field_a.stringWidth(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = c.field_u.a(param2);
+          stackIn_4_0 = c.field_u.stringWidth(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

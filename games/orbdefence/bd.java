@@ -13,7 +13,7 @@ final class bd extends dm {
     static mi field_u;
     private String field_t;
     private int field_l;
-    private kc field_h;
+    private BitmapFont field_h;
     static String field_m;
     private int field_i;
 
@@ -31,7 +31,7 @@ final class bd extends dm {
         return var1Lifetime1;
     }
 
-    final void a(int param0, kc param1, int param2, String param3, int param4) {
+    final void a(int param0, BitmapFont param1, int param2, String param3, int param4) {
         ed var8 = null;
         ed var9 = null;
         if (param3 == null) {
@@ -55,7 +55,7 @@ final class bd extends dm {
           this.field_s = true;
           var8 = this.a((byte) 121, param4, param3, param1);
           var9 = var8;
-          var9.field_g[0] = -param1.a(param3) + param0;
+          var9.field_g[0] = -param1.stringWidth(param3) + param0;
           var9.field_g[param3.length()] = param0;
           ByteStorage.a(var9, 0, param3, param1, 404465128);
         } catch (RuntimeException runtimeException) {
@@ -63,7 +63,7 @@ final class bd extends dm {
         }
     }
 
-    final void a(int param0, String param1, int param2, int param3, kc param4) {
+    final void a(int param0, String param1, int param2, int param3, BitmapFont param4) {
         ed var8 = null;
         ed var9 = null;
         if (param1 == null) {
@@ -83,14 +83,14 @@ final class bd extends dm {
           var9 = var8;
           int var7 = -66 / ((8 - param2) / 61);
           var8.field_g[0] = param0;
-          var9.field_g[param1.length()] = param4.a(param1) + param0;
+          var9.field_g[param1.length()] = param4.stringWidth(param1) + param0;
           ByteStorage.a(var9, 0, param1, param4, 404465128);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "bd.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3, kc param4) {
+    final void a(int param0, int param1, int param2, String param3, BitmapFont param4) {
         ed var8 = null;
         int var7 = 0;
         if (param3 == null) {
@@ -109,7 +109,7 @@ final class bd extends dm {
           this.field_s = true;
           this.field_h = param4;
           var8 = this.a((byte) 115, param1, param3, param4);
-          var7 = param4.a(param3);
+          var7 = param4.stringWidth(param3);
           var8.field_g[0] = param0 - (var7 >> 1);
           var8.field_g[param3.length()] = (var7 >> 1) + param0;
           ByteStorage.a(var8, 0, param3, param4, 404465128);
@@ -118,7 +118,7 @@ final class bd extends dm {
         }
     }
 
-    final void a(int param0, String param1, int param2, kc param3, int param4, int param5, int param6, int param7) {
+    final void a(int param0, String param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7) {
         ed stackIn_36_0;
         ed stackIn_36_1;
         int stackIn_36_2;
@@ -172,9 +172,9 @@ final class bd extends dm {
           this.field_h = param3;
           this.field_r = param7;
           this.field_l = param2;
-          var16 = new String[1 + param3.b(param1, param4)];
+          var16 = new String[1 + param3.lineCount(param1, param4)];
           var17 = var16;
-          var10 = Math.max(1, param3.a(param1, new int[]{param4}, var17));
+          var10 = Math.max(1, param3.wrapText(param1, new int[]{param4}, var17));
           if (this.field_r == 3 &&
             var10 == 1) {
             this.field_r = 1;
@@ -216,12 +216,12 @@ final class bd extends dm {
             var14 = new ed(stackIn_36_2, stackIn_36_3, stackIn_37_4);
             var14.field_g[0] = 0;
             if (var13 != null) {
-              var14.field_g[var13.length()] = param3.a(var13);
+              var14.field_g[var13.length()] = param3.stringWidth(var13);
               stackIn_40_0 = var14;
               if (param2 != 3) {
                 stackIn_41_1 = 0;
               } else {
-                stackIn_41_1 = this.a(var13, param4, param3.a(var13), (byte) 74);
+                stackIn_41_1 = this.a(var13, param4, param3.stringWidth(var13), (byte) 74);
               }
               ByteStorage.a(stackIn_40_0, stackIn_41_1, var13, param3, 404465128);
             }
@@ -262,7 +262,7 @@ final class bd extends dm {
         field_o = null;
     }
 
-    private final ed a(byte param0, int param1, String param2, kc param3) {
+    private final ed a(byte param0, int param1, String param2, BitmapFont param3) {
         ed var5 = null;
         RuntimeException var5_ref = null;
         ed var6 = null;

@@ -5,7 +5,7 @@ final class eg implements de {
     private int field_e;
     static int field_l;
     private int field_d;
-    private qe field_k;
+    private BitmapFont field_k;
     private int field_m;
     static String field_i;
     static int[] field_a;
@@ -126,7 +126,7 @@ final class eg implements de {
           SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
           if (this.field_k != null) {
             var14 = var15.field_I + var15.field_K + this.field_d;
-            this.field_k.a(param4.field_k, var14 + param4.field_s + param0, this.field_e + param4.field_j + param3, -this.field_d + (-var14 + param4.field_i), param4.field_f - (this.field_d << 1), this.field_c, this.field_m, 1, 1, 0);
+            this.field_k.drawParagraph(param4.field_k, var14 + param4.field_s + param0, this.field_e + param4.field_j + param3, -this.field_d + (-var14 + param4.field_i), param4.field_f - (this.field_d << 1), this.field_c, this.field_m, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "eg.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -163,7 +163,7 @@ final class eg implements de {
         field_a = null;
     }
 
-    eg(qe param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    eg(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_k = param0;
           this.field_m = param4;

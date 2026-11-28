@@ -86,8 +86,8 @@ final class bg extends IntrusiveNode {
             nj.field_f = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "menu_text", true);
             DualLinkNode.field_r = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "button_frame", true);
             sc.field_c = ProxyAuthenticationRequiredException.a("benefits", ce.field_a, "arrow", true);
-            md.field_a = (rf) ((Object) kc.a(sb.field_g, ce.field_a, "benefits", 125, "large_font"));
-            sc.field_f = (rf) ((Object) kc.a(sb.field_g, ce.field_a, "benefits", 64, "small_font"));
+            md.field_a = (BitmapFont) ((Object) kc.a(sb.field_g, ce.field_a, "benefits", 125, "large_font"));
+            sc.field_f = (BitmapFont) ((Object) kc.a(sb.field_g, ce.field_a, "benefits", 64, "small_font"));
             var28 = SoftwareRasterizer.field_l;
             var2 = SoftwareRasterizer.field_k;
             var3 = SoftwareRasterizer.field_c;
@@ -101,18 +101,18 @@ final class bg extends IntrusiveNode {
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_y / 2;
             var12.c();
-            md.field_a.b(a.a(5044, ja.field_g, new String[]{DebouncedFieldValidator.field_f}), var6, 40, 16777215, -1);
-            sc.field_f.b(a.a(5044, ek.field_p, new String[]{DebouncedFieldValidator.field_f}), var6, 60, 16777215, -1);
-            md.field_a.b(a.a(param0 ^ -14537, gk.field_a, new String[]{fl.field_d}), var6, 110, 16777215, -1);
-            sc.field_f.b(a.a(param0 ^ -14537, IsaacRandom.field_g, new String[]{fl.field_d}), var6, 130, 16777215, -1);
-            md.field_a.b(lc.field_k, var6, 180, 16777215, -1);
-            sc.field_f.b(nb.field_c, var6, 200, 16777215, -1);
+            md.field_a.drawCentred(a.a(5044, ja.field_g, new String[]{DebouncedFieldValidator.field_f}), var6, 40, 16777215, -1);
+            sc.field_f.drawCentred(a.a(5044, ek.field_p, new String[]{DebouncedFieldValidator.field_f}), var6, 60, 16777215, -1);
+            md.field_a.drawCentred(a.a(param0 ^ -14537, gk.field_a, new String[]{fl.field_d}), var6, 110, 16777215, -1);
+            sc.field_f.drawCentred(a.a(param0 ^ -14537, IsaacRandom.field_g, new String[]{fl.field_d}), var6, 130, 16777215, -1);
+            md.field_a.drawCentred(lc.field_k, var6, 180, 16777215, -1);
+            sc.field_f.drawCentred(nb.field_c, var6, 200, 16777215, -1);
             p.a(var12.field_y, 3, 0, var12.field_w, 1, 0, 0, var12);
             t.field_d.c();
             var12.d(18 - t.field_d.field_D, -t.field_d.field_v + 241);
             for (var7 = 0; var7 < bc.field_b.length; var7++) {
               ByteStorage.field_c[var7].c();
-              sc.field_f.a(bc.field_b[var7], 3, 3, -6 + ByteStorage.field_c[var7].field_y, ByteStorage.field_c[var7].field_w - 6, rh.field_e, -1, 1, 1, sc.field_f.field_x + sc.field_f.field_S);
+              sc.field_f.drawParagraph(bc.field_b[var7], 3, 3, -6 + ByteStorage.field_c[var7].field_y, ByteStorage.field_c[var7].field_w - 6, rh.field_e, -1, 1, 1, sc.field_f.field_x + sc.field_f.field_S);
               p.a(ByteStorage.field_c[var7].field_y, 3, 0, ByteStorage.field_c[var7].field_w, 1, 0, 0, ByteStorage.field_c[var7]);
             }
             bc.field_b = null;
@@ -137,8 +137,8 @@ final class bg extends IntrusiveNode {
             var3Lifetime1 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ha.field_d);
             var14 = a.a(5044, rg.field_d, new String[]{ka.field_p[gd.field_a]});
-            var5 = md.field_a.b(var14, ca.field_db);
-            var6Lifetime1 = md.field_a.a(var14, ca.field_db, md.field_a.field_S + md.field_a.field_x);
+            var5 = md.field_a.maxLineWidth(var14, ca.field_db);
+            var6Lifetime1 = md.field_a.textHeight(var14, ca.field_db, md.field_a.field_S + md.field_a.field_x);
             var7Lifetime1 = (ca.field_db - var5) / 2 + KeyboardInput.field_a;
             var5 += 6;
             var7Lifetime1 -= 3;
@@ -184,7 +184,7 @@ final class bg extends IntrusiveNode {
             hf.field_z.b();
             var9 = new RgbSprite(hf.field_z.field_z, hf.field_z.field_C);
             var9.c();
-            md.field_a.a(var14, KeyboardInput.field_a, ph.field_e, ca.field_db, af.field_d, 16777215, -1, 1, 1, md.field_a.field_x + md.field_a.field_S);
+            md.field_a.drawParagraph(var14, KeyboardInput.field_a, ph.field_e, ca.field_db, af.field_d, 16777215, -1, 1, 1, md.field_a.field_x + md.field_a.field_S);
             p.a(var9.field_z, 3, 0, var9.field_C, 1, 0, 0, var9);
             hf.field_z.c();
             var9.d(0, 0);
@@ -209,7 +209,7 @@ final class bg extends IntrusiveNode {
             var17 = a.a(5044, jl.field_i, new String[]{df.field_b});
             df.field_b = null;
             var16.c();
-            sc.field_f.a(var17, 3, 3, -6 + var16.field_y, var16.field_w - 6, 16777215, -1, 0, 1, sc.field_f.field_S + sc.field_f.field_x);
+            sc.field_f.drawParagraph(var17, 3, 3, -6 + var16.field_y, var16.field_w - 6, 16777215, -1, 0, 1, sc.field_f.field_S + sc.field_f.field_x);
             p.a(var16.field_y, 3, 0, var16.field_w, 1, 0, 0, var16);
             hf.field_D.c();
             var16.d(-hf.field_D.field_D + 199, -hf.field_D.field_v + 83);
@@ -222,12 +222,12 @@ final class bg extends IntrusiveNode {
             var2Lifetime3 = SoftwareRasterizer.field_k;
             var3Lifetime3 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ha.field_d);
-            var4 = sc.field_f.b(ej.field_b, 640) + 6;
+            var4 = sc.field_f.maxLineWidth(ej.field_b, 640) + 6;
             var5Lifetime1 = 20 + var4 + sa.field_e.field_z;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
             var7Lifetime2 = var6Lifetime2 - (-sa.field_e.field_z - 20);
             hf.field_D.c();
-            sc.field_f.c(ej.field_b, -hf.field_D.field_D + var7Lifetime2, sc.field_f.field_S + (sc.field_f.field_x - hf.field_D.field_v + 155), 16777215, -1);
+            sc.field_f.drawString(ej.field_b, -hf.field_D.field_D + var7Lifetime2, sc.field_f.field_S + (sc.field_f.field_x - hf.field_D.field_v + 155), 16777215, -1);
             p.a(var4, 3, 0, 50, 1, -hf.field_D.field_v + 155, var7Lifetime2 + (-hf.field_D.field_D - 4), hf.field_D);
             var8Lifetime1 = -((-sc.field_f.field_S - sc.field_f.field_x + (sa.field_e.field_C - 3)) / 2) - hf.field_D.field_v + 155;
             sa.field_e.d(var6Lifetime2 - hf.field_D.field_D, var8Lifetime1);

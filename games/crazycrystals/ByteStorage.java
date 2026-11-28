@@ -140,7 +140,7 @@ abstract class ByteStorage {
                   break;
                 }
                 if (stackIn_247_0 < stackIn_247_1) {
-                  go.field_l.b(Integer.toString(gm.field_c[var4_int]), 608, 12 + var3_int + 5, 8438015, -1);
+                  go.field_l.drawRightAligned(Integer.toString(gm.field_c[var4_int]), 608, 12 + var3_int + 5, 8438015, -1);
                   vp.field_i[var4_int][SecondaryIntrusiveDeque.field_d % vp.field_i[var4_int].length].a(506, -24 + var3_int);
                 }
                 var3_int += 48;
@@ -151,12 +151,12 @@ abstract class ByteStorage {
                   uh.field_p == null &&
                   null == ab.field_D &&
                   !gn.d(false)) {
-                  go.field_l.a(fa.field_i, 484, -go.field_l.field_o + 15 + 4 + var3_int, 152, 1000, 16760896, -1, 1, 0, 20);
+                  go.field_l.drawParagraph(fa.field_i, 484, -go.field_l.field_o + 15 + 4 + var3_int, 152, 1000, 16760896, -1, 1, 0, 20);
                   if (qh.field_o.isEmpty() &&
                     en.field_O == 0 &&
                     cn.field_d == null) {
                     var4_intLifetime1 = 16760896;
-                    var5_int = go.field_l.a(PuzzleTile.field_e, 152);
+                    var5_int = go.field_l.lineCount(PuzzleTile.field_e, 152);
                     var6 = -(10 * var5_int) + 100;
                     if (var5_int >= 3) {
                       var6 += 10;
@@ -168,7 +168,7 @@ abstract class ByteStorage {
                       var7 + 4 + var3_int > IsaacRandom.field_h) {
                       var4_intLifetime1 = 16777215;
                     }
-                    go.field_l.a(PuzzleTile.field_e, 484, -go.field_l.field_o + (15 + (4 + var3_int + var6)), 152, 1000, var4_intLifetime1, -1, 1, 0, 20);
+                    go.field_l.drawParagraph(PuzzleTile.field_e, 484, -go.field_l.field_o + (15 + (4 + var3_int + var6)), 152, 1000, var4_intLifetime1, -1, 1, 0, 20);
                   }
                 }
                 decompiledFrameRemainder1 = (var11 != 0);
@@ -376,17 +376,17 @@ abstract class ByteStorage {
             }
           }
           var3 = AgeValidator.a(new String[]{Integer.toString(uo.field_o + 1), Integer.toString(var2)}, lg.field_e, 3);
-          go.field_l.c(var3, 559, 22, 0, -1);
-          go.field_l.c(var3, 561, 22, 0, -1);
-          go.field_l.c(var3, 560, 21, 0, -1);
-          go.field_l.c(var3, 560, 23, 0, -1);
-          go.field_l.c(var3, 560, 22, 16760896, -1);
+          go.field_l.drawCentred(var3, 559, 22, 0, -1);
+          go.field_l.drawCentred(var3, 561, 22, 0, -1);
+          go.field_l.drawCentred(var3, 560, 21, 0, -1);
+          go.field_l.drawCentred(var3, 560, 23, 0, -1);
+          go.field_l.drawCentred(var3, 560, 22, 16760896, -1);
           var4Lifetime1 = ((kb) (rc.field_a.elementAt(uo.field_o))).field_e;
-          go.field_l.c(var4Lifetime1, 559, 42, 0, -1);
-          go.field_l.c(var4Lifetime1, 561, 42, 0, -1);
-          go.field_l.c(var4Lifetime1, 560, 41, 0, -1);
-          go.field_l.c(var4Lifetime1, 560, 43, 0, -1);
-          go.field_l.c(var4Lifetime1, 560, 42, 12640511, -1);
+          go.field_l.drawCentred(var4Lifetime1, 559, 42, 0, -1);
+          go.field_l.drawCentred(var4Lifetime1, 561, 42, 0, -1);
+          go.field_l.drawCentred(var4Lifetime1, 560, 41, 0, -1);
+          go.field_l.drawCentred(var4Lifetime1, 560, 43, 0, -1);
+          go.field_l.drawCentred(var4Lifetime1, 560, 42, 12640511, -1);
           if (!vh.field_a) {
             if (!(ab.field_D instanceof LevelCompleteScene) &&
               !go.field_i) {
@@ -444,7 +444,7 @@ abstract class ByteStorage {
                   stackIn_293_0Lifetime1 = ~q.field_a[var7Lifetime1].field_i;
                   stackIn_293_1Lifetime1 = -1;
                   if (stackIn_293_0Lifetime1 < stackIn_293_1Lifetime1) {
-                    an.field_q.c(Integer.toString(q.field_a[var7Lifetime1].field_i), 23 + var6Lifetime1, 160, LevelCompleteEntrancePhase.field_f[var7Lifetime1], -1);
+                    an.field_q.drawCentred(Integer.toString(q.field_a[var7Lifetime1].field_i), 23 + var6Lifetime1, 160, LevelCompleteEntrancePhase.field_f[var7Lifetime1], -1);
                   }
                   var6Lifetime1 += 52;
                 }
@@ -469,7 +469,7 @@ abstract class ByteStorage {
                 var5Lifetime1 = PasswordValidator.field_n;
               }
               if (var5Lifetime1 != null) {
-                go.field_l.a((String) (var5Lifetime1), 486, 54, 148, 114, 16760896, -1, 1, 1, 20);
+                go.field_l.drawParagraph((String) (var5Lifetime1), 486, 54, 148, 114, 16760896, -1, 1, 1, 20);
               }
             }
           }

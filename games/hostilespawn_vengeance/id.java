@@ -20,7 +20,7 @@ final class id implements Serializable {
     int[] field_u;
     boolean[] field_q;
     int[] field_c;
-    static nc field_A;
+    static CoverageBitmapFont field_A;
     int[] field_i;
     int[] field_g;
     boolean[] field_e;

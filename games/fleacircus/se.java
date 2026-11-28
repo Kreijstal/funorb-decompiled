@@ -22,10 +22,10 @@ final class se {
             field_c = (GzipDecompressor) null;
           }
           if (!param2) {
-            stackIn_6_0 = pb.field_e.b(param1);
+            stackIn_6_0 = pb.field_e.stringWidth(param1);
             return stackIn_6_0;
           }
-          stackIn_4_0 = lj.field_a.b(param1);
+          stackIn_4_0 = lj.field_a.stringWidth(param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -179,15 +179,15 @@ final class ak extends ga implements el {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        ok var5 = null;
-        ok var5Lifetime1;
+        BitmapFont var5 = null;
+        BitmapFont var5Lifetime1;
         super.a(param0, param1, (byte) 97, param3);
         if (param2 < 36) {
           field_O = (String) null;
           if (param1 == 0) {
             var5 = gm.field_cb;
             if (this.field_H != null) {
-              var5.a(qd.field_a, this.field_q + param3, this.field_m + param0, this.field_F, 20, 16777215, -1, 0, 0, var5.field_C + var5.field_D);
+              var5.drawParagraph(qd.field_a, this.field_q + param3, this.field_m + param0, this.field_F, 20, 16777215, -1, 0, 0, var5.field_C + var5.field_D);
             }
             return;
           }
@@ -196,7 +196,7 @@ final class ak extends ga implements el {
         if (param1 == 0) {
           var5Lifetime1 = gm.field_cb;
           if (this.field_H != null) {
-            var5Lifetime1.a(qd.field_a, this.field_q + param3, this.field_m + param0, this.field_F, 20, 16777215, -1, 0, 0, var5Lifetime1.field_C + var5Lifetime1.field_D);
+            var5Lifetime1.drawParagraph(qd.field_a, this.field_q + param3, this.field_m + param0, this.field_F, 20, 16777215, -1, 0, 0, var5Lifetime1.field_C + var5Lifetime1.field_D);
           }
           return;
         }

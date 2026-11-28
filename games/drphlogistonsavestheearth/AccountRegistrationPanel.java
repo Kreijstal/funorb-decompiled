@@ -79,7 +79,7 @@ final class AccountRegistrationPanel extends pj implements ra, ke, fh {
         try {
           var3 = this.field_K;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(false, var4, param1 ^ -19116);
+          ((EditableTextField) ((Object) var3)).setText(false, var4, param1 ^ -19116);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "v.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -464,12 +464,12 @@ final class AccountRegistrationPanel extends pj implements ra, ke, fh {
         this.field_ab.field_v = ch.field_u;
         this.field_Q.field_v = ci.field_K;
         this.field_T.field_v = DebouncedFieldValidator.field_g;
-        this.field_K.a(new AccountNameAvailabilityValidator(this.field_K), (byte) -57);
-        this.field_P.a(new EmailFormatValidator(this.field_P), (byte) -57);
-        this.field_J.a(new ConfirmedEmailAvailabilityValidator(this.field_J, this.field_P), (byte) -57);
-        this.field_S.a(new PasswordValidator(this.field_S, this.field_K, this.field_P), (byte) -57);
-        this.field_ab.a(new MatchingFieldValidator(this.field_ab, this.field_S), (byte) -57);
-        this.field_Q.a(new AgeValidator(this.field_Q), (byte) -57);
+        this.field_K.setFieldValidator(new AccountNameAvailabilityValidator(this.field_K), (byte) -57);
+        this.field_P.setFieldValidator(new EmailFormatValidator(this.field_P), (byte) -57);
+        this.field_J.setFieldValidator(new ConfirmedEmailAvailabilityValidator(this.field_J, this.field_P), (byte) -57);
+        this.field_S.setFieldValidator(new PasswordValidator(this.field_S, this.field_K, this.field_P), (byte) -57);
+        this.field_ab.setFieldValidator(new MatchingFieldValidator(this.field_ab, this.field_S), (byte) -57);
+        this.field_Q.setFieldValidator(new AgeValidator(this.field_Q), (byte) -57);
         this.field_R.field_E = false;
         this.field_R.field_l = (cg) ((Object) new ie());
         this.field_L.field_l = (cg) ((Object) new uk());

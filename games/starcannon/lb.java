@@ -95,7 +95,7 @@ final class lb {
         }
     }
 
-    final static int a(int param0, String[] param1, String param2, qe param3, int param4) {
+    final static int a(int param0, String[] param1, String param2, BitmapFont param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -120,7 +120,7 @@ final class lb {
         int var12 = 0;
         int var6Lifetime1;
         try {
-          var5_int = param3.a(param2);
+          var5_int = param3.stringWidth(param2);
           if (param0 >= var5_int &&
             param2.indexOf("<br>") == -1) {
             param1[0] = param2;
@@ -140,7 +140,7 @@ final class lb {
             if (var10 == 32 ||
               45 == var10) {
               var11 = param2.substring(var7, var9 + 1).trim();
-              var12 = param3.a(var11);
+              var12 = param3.stringWidth(var11);
               if (var12 >= param0) {
                 var7 = 1 + var9;
                 incrementValue$1 = var6Lifetime1;
@@ -189,7 +189,7 @@ final class lb {
         }
     }
 
-    final static void a(nh param0, qe param1, int param2, String param3, int param4) {
+    final static void a(nh param0, BitmapFont param1, int param2, String param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -214,13 +214,13 @@ final class lb {
           for (var7 = 1; var7 < param3.length(); var7++) {
             var8 = param3.charAt(var7);
             if (var8 == 60) {
-              var6 = param0.field_d[0] + ((var5_int >> 8) + param1.a(param3.substring(0, var7)));
+              var6 = param0.field_d[0] + ((var5_int >> 8) + param1.stringWidth(param3.substring(0, var7)));
             }
             if (var6 == -1) {
               if (var8 == 32) {
                 var5_int = var5_int + param4;
               }
-              param0.field_d[var7] = param0.field_d[0] + (var5_int >> 8) - (-param1.a(param3.substring(0, 1 + var7)) + param1.a((char) var8));
+              param0.field_d[var7] = param0.field_d[0] + (var5_int >> 8) - (-param1.stringWidth(param3.substring(0, 1 + var7)) + param1.charWidth((char) var8));
             } else {
               param0.field_d[var7] = var6;
             }
@@ -346,7 +346,7 @@ final class lb {
     public static void a(byte param0) {
         if (param0 != -49) {
           String var2 = (String) null;
-          lb.a((nh) null, (qe) null, -33, (String) null, -39);
+          lb.a((nh) null, (BitmapFont) null, -33, (String) null, -39);
         }
         field_d = null;
         field_l = null;

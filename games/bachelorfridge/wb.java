@@ -161,7 +161,7 @@ final class wb extends lw {
             }
             stackIn_20_0 = var7.field_Db;
             if (var11 > 0) {
-              stackIn_21_1 = BitmapFont.a(var7.field_Db.field_jb, var7.field_xb, var11);
+              stackIn_21_1 = BitmapFont.truncateWithEllipsis(var7.field_Db.field_jb, var7.field_xb, var11);
             } else {
               stackIn_21_1 = var7.field_xb;
             }

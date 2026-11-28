@@ -200,10 +200,10 @@ final class SectorCacheStore {
             field_e = -88;
           }
           if (param0) {
-            stackIn_6_0 = jc.field_h.b(param1);
+            stackIn_6_0 = jc.field_h.stringWidth(param1);
             return stackIn_6_0;
           }
-          stackIn_4_0 = EditableTextField.field_E.b(param1);
+          stackIn_4_0 = EditableTextField.field_E.stringWidth(param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

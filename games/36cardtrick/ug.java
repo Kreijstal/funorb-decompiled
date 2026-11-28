@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ug implements ci {
-    private ee field_c;
+    private BitmapFont field_c;
     static int field_h;
     private int field_b;
     private int field_e;
@@ -54,7 +54,7 @@ final class ug implements ci {
         }
     }
 
-    ug(ee param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    ug(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_f = param4;
           this.field_g = param7;
@@ -117,7 +117,7 @@ final class ug implements ci {
             return;
           }
           var13 = this.field_a + (var14.field_H + var14.field_E);
-          this.field_c.a(param1.field_r, param1.field_o + param0 + var13, this.field_d + param3 + param1.field_i, param1.field_h - var13 - this.field_a, -(this.field_a << 1) + param1.field_q, this.field_b, this.field_f, 1, 1, 0);
+          this.field_c.drawParagraph(param1.field_r, param1.field_o + param0 + var13, this.field_d + param3 + param1.field_i, param1.field_h - var13 - this.field_a, -(this.field_a << 1) + param1.field_q, this.field_b, this.field_f, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

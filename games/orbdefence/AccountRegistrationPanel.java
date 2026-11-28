@@ -96,12 +96,12 @@ final class AccountRegistrationPanel extends ta implements ff, ai, bf {
         this.field_J.field_i = fk.field_a;
         this.field_E.field_i = df.field_c;
         this.field_P.field_i = OrbDefence.field_C;
-        this.field_B.a(new AccountNameAvailabilityValidator(this.field_B), 67);
-        this.field_O.a(new EmailFormatValidator(this.field_O), 45);
-        this.field_G.a(new ConfirmedEmailAvailabilityValidator(this.field_G, this.field_O), 79);
-        this.field_D.a(new PasswordValidator(this.field_D, this.field_B, this.field_O), 34);
-        this.field_J.a(new MatchingFieldValidator(this.field_J, this.field_D), 53);
-        this.field_E.a(new AgeValidator(this.field_E), 33);
+        this.field_B.setFieldValidator(new AccountNameAvailabilityValidator(this.field_B), 67);
+        this.field_O.setFieldValidator(new EmailFormatValidator(this.field_O), 45);
+        this.field_G.setFieldValidator(new ConfirmedEmailAvailabilityValidator(this.field_G, this.field_O), 79);
+        this.field_D.setFieldValidator(new PasswordValidator(this.field_D, this.field_B, this.field_O), 34);
+        this.field_J.setFieldValidator(new MatchingFieldValidator(this.field_J, this.field_D), 53);
+        this.field_E.setFieldValidator(new AgeValidator(this.field_E), 33);
         this.field_K.field_F = false;
         this.field_K.field_j = (td) ((Object) new vk());
         this.field_F.field_j = (td) ((Object) new qc());
@@ -205,7 +205,7 @@ final class AccountRegistrationPanel extends ta implements ff, ai, bf {
         try {
           var3 = this.field_B;
           var4 = param1;
-          ((EditableTextField) ((Object) var3)).a(0, false, var4);
+          ((EditableTextField) ((Object) var3)).setText(0, false, var4);
           if (param0 >= 104) {
             return;
           }

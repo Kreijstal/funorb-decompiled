@@ -23,8 +23,8 @@ final class DungeonTileState {
     int field_a;
 
     final static void measureRaidTutorialPanelWidth(int param0) {
-        IterableNodeHashTable.field_b = IntrusiveNode.field_c.b(DualLinkNode.field_m[13]);
-        int var1 = IntrusiveNode.field_c.b(DualLinkNode.field_m[14]);
+        IterableNodeHashTable.field_b = IntrusiveNode.field_c.stringWidth(DualLinkNode.field_m[13]);
+        int var1 = IntrusiveNode.field_c.stringWidth(DualLinkNode.field_m[14]);
         if (param0 <= -74) {
           if (var1 > IterableNodeHashTable.field_b) {
             IterableNodeHashTable.field_b = var1;

@@ -340,10 +340,10 @@ class na extends rg {
               var1_int = var1_int + n.field_d;
             }
             if (var4 < 0) {
-              rn.field_e.c(var6, var8Lifetime1, dh.field_Ab + var1_int, var5, -1);
+              rn.field_e.drawString(var6, var8Lifetime1, dh.field_Ab + var1_int, var5, -1);
               var1_int = var1_int + wm.field_bb;
             } else {
-              dn.field_f.c(var6, var8Lifetime1, var1_int + nm.field_z, var5, -1);
+              dn.field_f.drawString(var6, var8Lifetime1, var1_int + nm.field_z, var5, -1);
               var1_int = var1_int + (n.field_d + kb.field_b + af.field_Z);
             }
           }

@@ -253,7 +253,7 @@ final class aa {
                   break scanLoop1;
                 }
                 MouseWheelInput.a(16777215, 155, 50 + var2, 10, ak.field_m[this.field_c] - 30, 0, (byte) 63, var2 + 590);
-                v.field_j.a(ad.field_d, var2 + 50, 155, 540, 480, 16444375, -1, 0, 0, v.field_j.field_q);
+                v.field_j.drawParagraph(ad.field_d, var2 + 50, 155, 540, 480, 16444375, -1, 0, 0, v.field_j.field_q);
                 if (var10 == 0) {
                   break scanLoop1;
                 }
@@ -547,7 +547,7 @@ final class aa {
           var8 = "{<col=b0b0b0>" + var8 + "</col>}";
         }
         var10 = 2043695;
-        v.field_j.a(var8, var6, v.field_j.field_C + param2, var9, var10);
+        v.field_j.drawString(var8, var6, v.field_j.field_C + param2, var9, var10);
         if (var7 == 14 ||
           var7 == 15) {
           var11 = 75 + var6;
@@ -676,8 +676,8 @@ final class aa {
         }
         tb.field_a.b(-param0, 0);
         SoftwareRasterizer.drawRectangleShadow(tb.field_a.field_s + 1 - param0, tb.field_a.field_r + 1, tb.field_a.field_w - 1, tb.field_a.field_t - 1, 1);
-        v.field_j.a(var4, 15 - param0, v.field_j.field_q + 155, 4096, -1);
-        jj.field_d.a(var3, 15 - param0, 165, 250, 640, 4096, -1, 0, 0, -1 + jj.field_d.field_q);
+        v.field_j.drawString(var4, 15 - param0, v.field_j.field_q + 155, 4096, -1);
+        jj.field_d.drawParagraph(var3, 15 - param0, 165, 250, 640, 4096, -1, 0, 0, -1 + jj.field_d.field_q);
         if (var5 != -1) {
           var6 = jd.field_c[var5];
           var7 = 285 - param0;
@@ -1815,8 +1815,8 @@ final class aa {
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        c var19 = null;
-        c var21 = null;
+        BinaryBitmapFont var19 = null;
+        BinaryBitmapFont var21 = null;
         int[] var24 = null;
         int var7Lifetime1;
         int var10Lifetime1;
@@ -1945,9 +1945,9 @@ final class aa {
           boolean decompiledFrameCompleted0 = true;
           var13Lifetime1 = stackIn_66_0;
           if (-1 != var13Lifetime1) {
-            var21.b("<u=000001>" + da.field_m[var13Lifetime1] + "</u>", param2 + 320, 210, 1, -1);
+            var21.drawCentred("<u=000001>" + da.field_m[var13Lifetime1] + "</u>", param2 + 320, 210, 1, -1);
             if (PcmOutputWorker.a(param0 + 18207)) {
-              jj.field_b.b(bf.field_N, 320 + param2, var11, 1, -1);
+              jj.field_b.drawCentred(bf.field_N, 320 + param2, var11, 1, -1);
             }
             stackIn_72_0 = ((1 << var13Lifetime1 & var9) == 0) ? 0 : 1;
             var14_int = stackIn_72_0;
@@ -1959,17 +1959,17 @@ final class aa {
               ArchiveIndex.field_n.a(var10Lifetime1, var11);
               var15_ref_String = hm.field_d;
             }
-            var21.a(var15_ref_String, var10Lifetime1, ArchiveIndex.field_n.field_h + var11 + var21.field_q, 1, -1);
+            var21.drawString(var15_ref_String, var10Lifetime1, ArchiveIndex.field_n.field_h + var11 + var21.field_q, 1, -1);
             var10Lifetime1 = var10Lifetime1 + (16 + ArchiveIndex.field_n.field_k + 20);
             var16 = 460 + var5;
-            var19.a(ai.field_a[var13Lifetime1], var10Lifetime1, var11, -var10Lifetime1 + (-10 + var16), 480, 1, -1, 0, 0, var21.field_C);
+            var19.drawParagraph(ai.field_a[var13Lifetime1], var10Lifetime1, var11, -var10Lifetime1 + (-10 + var16), 480, 1, -1, 0, 0, var21.field_C);
             var11 += 7;
-            var21.a(pd.field_Ob + ma.field_J[var13Lifetime1], var10Lifetime1, var11 + 4 * var21.field_q, 1, -1);
+            var21.drawString(pd.field_Ob + ma.field_J[var13Lifetime1], var10Lifetime1, var11 + 4 * var21.field_q, 1, -1);
             var11 = var11 + (-(ao.field_e.field_h / 4) + 128);
-            var21.a(SecondaryNodeDequeIterator.field_d, var10Lifetime1, var21.field_C + var11, 1, -1);
+            var21.drawString(SecondaryNodeDequeIterator.field_d, var10Lifetime1, var21.field_C + var11, 1, -1);
             var17 = 0;
             while (var17 < se.field_ab[var13Lifetime1]) {
-              ao.field_e.c(var17 * 5 + var21.b(SecondaryNodeDequeIterator.field_d) + (10 + var10Lifetime1), var11);
+              ao.field_e.c(var17 * 5 + var21.stringWidth(SecondaryNodeDequeIterator.field_d) + (10 + var10Lifetime1), var11);
               var17++;
               if (var18 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -1978,10 +1978,10 @@ final class aa {
             }
             if ((decompiledFrameCompleted0) &&
               (var18 != 0)) {
-              var21.b(gh.field_d, param2 + 320, 210, 1, -1);
+              var21.drawCentred(gh.field_d, param2 + 320, 210, 1, -1);
             }
           } else {
-            var21.b(gh.field_d, param2 + 320, 210, 1, -1);
+            var21.drawCentred(gh.field_d, param2 + 320, 210, 1, -1);
           }
           var14 = new int[]{1, 16777215, 3100495, 3100495, 3100495};
           var15 = 4;
@@ -2071,7 +2071,7 @@ final class aa {
         String var27 = null;
         String var28 = null;
         int var29 = 0;
-        c var31 = null;
+        BinaryBitmapFont var31 = null;
         String var32 = null;
         String var33 = null;
         String var34 = null;
@@ -2141,12 +2141,12 @@ final class aa {
                 var13 = ce.field_b.field_j[var10_int];
                 var14 = 140 + var31.field_C;
                 var15 = 1;
-                var31.a(ao.field_j, var8, var14, var15, -1);
-                var31.c(tk.field_f, -220 + var9Lifetime1, var14, var15, -1);
-                var31.c(ChessBoardRenderer.field_y, var9Lifetime1 - 150, var14, var15, -1);
-                var31.b(fm.field_O, -115 + var9Lifetime1, var14, var15, -1);
-                var31.b(mh.field_g, var9Lifetime1 - 65, var14, var15, -1);
-                var31.b(kl.field_a, var9Lifetime1 - 15, var14, var15, -1);
+                var31.drawString(ao.field_j, var8, var14, var15, -1);
+                var31.drawRightAligned(tk.field_f, -220 + var9Lifetime1, var14, var15, -1);
+                var31.drawRightAligned(ChessBoardRenderer.field_y, var9Lifetime1 - 150, var14, var15, -1);
+                var31.drawCentred(fm.field_O, -115 + var9Lifetime1, var14, var15, -1);
+                var31.drawCentred(mh.field_g, var9Lifetime1 - 65, var14, var15, -1);
+                var31.drawCentred(kl.field_a, var9Lifetime1 - 15, var14, var15, -1);
                 SoftwareRasterizer.drawHorizontalLineAlpha(-35 + var8, 1 + var14, 50 + var9Lifetime1 - var8, 1, 128);
                 SoftwareRasterizer.drawHorizontalLineAlpha(var8 - 35, var14 + 1 + 2, -var8 + var9Lifetime1 + 50, 1, 128);
                 var14 += 20;
@@ -2169,9 +2169,9 @@ final class aa {
                       var16 = 1;
                       var18 = 13732679;
                     }
-                    var31.c(var17 + 1 + ". ", var8, var14, var18, -1);
-                    var31.a(var32, var8, var14, var18, -1);
-                    var31.c(Integer.toString(var22_int), -220 + var9Lifetime1, var14, var18, -1);
+                    var31.drawRightAligned(var17 + 1 + ". ", var8, var14, var18, -1);
+                    var31.drawString(var32, var8, var14, var18, -1);
+                    var31.drawRightAligned(Integer.toString(var22_int), -220 + var9Lifetime1, var14, var18, -1);
                     if (var23_int > 50) {
                       stackIn_35_0 = "50+";
                     } else {
@@ -2179,7 +2179,7 @@ final class aa {
                     }
                     var33 = stackIn_35_0;
                     var25 = var33;
-                    var31.c(var33, var9Lifetime1 - 150, var14, var18, -1);
+                    var31.drawRightAligned(var33, var9Lifetime1 - 150, var14, var18, -1);
                     if (var23_int != 0) {
                       var26 = MatchingFieldValidator.a(LoginPanel.field_S, new String[]{Integer.toString(100 * var19 / var23_int)}, (byte) -95);
                       var27 = MatchingFieldValidator.a(LoginPanel.field_S, new String[]{Integer.toString(var21 * 100 / var23_int)}, (byte) -59);
@@ -2189,9 +2189,9 @@ final class aa {
                       var27 = Chess.field_C;
                       var26 = Chess.field_C;
                     }
-                    var31.b(var26, var9Lifetime1 - 115, var14, var18, -1);
-                    var31.b(var27, -65 + var9Lifetime1, var14, var18, -1);
-                    var31.b(var28, var9Lifetime1 - 15, var14, var18, -1);
+                    var31.drawCentred(var26, var9Lifetime1 - 115, var14, var18, -1);
+                    var31.drawCentred(var27, -65 + var9Lifetime1, var14, var18, -1);
+                    var31.drawCentred(var28, var9Lifetime1 - 15, var14, var18, -1);
                     SoftwareRasterizer.drawHorizontalLineAlpha(var8 - 35, var14 + 1, var9Lifetime1 - var8 + 50, 1, 32);
                     SoftwareRasterizer.drawVerticalLineAlpha(-278 + var9Lifetime1, -19 + var14, 20, 1, 16);
                     SoftwareRasterizer.drawVerticalLineAlpha(-215 + var9Lifetime1, 1 - (-var14 + 20), 20, 1, 16);
@@ -2207,8 +2207,8 @@ final class aa {
                   (var16 == 0 &&
                   var11_ref_String.length() == 0)) {
                   var17Lifetime1 = 13732679;
-                  var31.a(ci.field_J, var8, var14, var17Lifetime1, -1);
-                  var31.c(Integer.toString(ce.field_b.field_k), var9Lifetime1 - 220, var14, var17Lifetime1, -1);
+                  var31.drawString(ci.field_J, var8, var14, var17Lifetime1, -1);
+                  var31.drawRightAligned(Integer.toString(ce.field_b.field_k), var9Lifetime1 - 220, var14, var17Lifetime1, -1);
                   var18 = ce.field_b.field_m;
                   var19 = ce.field_b.field_r;
                   var20 = ce.field_b.field_p;
@@ -2220,7 +2220,7 @@ final class aa {
                   }
                   var34 = stackIn_46_0;
                   var25Lifetime1 = var34;
-                  var31.c(var34, -150 + var9Lifetime1, var14, var17Lifetime1, -1);
+                  var31.drawRightAligned(var34, -150 + var9Lifetime1, var14, var17Lifetime1, -1);
                   if (0 != var21) {
                     var22 = MatchingFieldValidator.a(LoginPanel.field_S, new String[]{Integer.toString(100 * var18 / var21)}, (byte) -102);
                     var23 = MatchingFieldValidator.a(LoginPanel.field_S, new String[]{Integer.toString(var19 * 100 / var21)}, (byte) -88);
@@ -2232,19 +2232,19 @@ final class aa {
                     var23 = Chess.field_C;
                     var22 = Chess.field_C;
                   }
-                  var31.b(var22, var9Lifetime1 - 115, var14, var17Lifetime1, -1);
-                  var31.b(var23, -65 + var9Lifetime1, var14, var17Lifetime1, -1);
-                  var31.b(var24, var9Lifetime1 - 15, var14, var17Lifetime1, -1);
+                  var31.drawCentred(var22, var9Lifetime1 - 115, var14, var17Lifetime1, -1);
+                  var31.drawCentred(var23, -65 + var9Lifetime1, var14, var17Lifetime1, -1);
+                  var31.drawCentred(var24, var9Lifetime1 - 15, var14, var17Lifetime1, -1);
                 }
               }
             }
             var12 = 100 + var31.field_C + 140;
-            var31.b(var11_ref_String, param1 + 330, var12, 1, -1);
+            var31.drawCentred(var11_ref_String, param1 + 330, var12, 1, -1);
             if (var29 != 0) {
-              v.field_j.b(bf.field_N, param1 + 320, 240, 1, -1);
+              v.field_j.drawCentred(bf.field_N, param1 + 320, 240, 1, -1);
             }
           } else {
-            v.field_j.b(bf.field_N, param1 + 320, 240, 1, -1);
+            v.field_j.drawCentred(bf.field_N, param1 + 320, 240, 1, -1);
           }
           var10 = new int[]{1, 16777215, 3100495, 3100495, 3100495};
           var11 = 4;
@@ -2397,14 +2397,14 @@ final class aa {
                   continue;
                 }
               } else {
-                var13 = v.field_j.a(var10_ref_String, var20, var11_ref_String__);
+                var13 = v.field_j.wrapText(var10_ref_String, var20, var11_ref_String__);
               }
               break;
             }
             var14 = var13 * var9 + var9 / 2;
             SoftwareRasterizer.fillRoundedRectangleAlpha(331, 191, 218, 18 + var14, 9, 13421772, 96);
             SoftwareRasterizer.fillRoundedRectangleAlpha(335, 195, 210, var14 + 10, 9, 1, 170);
-            v.field_j.a(var10_ref_String, 340, 200, 200, var14, 16777215, 1, 1, 1, var9);
+            v.field_j.drawParagraph(var10_ref_String, 340, 200, 200, var14, 16777215, 1, 1, 1, var9);
             decompiledFrameRemainder1 = (var15 != 0);
           }
           if (decompiledFrameRemainder1) {
@@ -2423,7 +2423,7 @@ final class aa {
                   var10 = (var11 - var9Lifetime1) * v.field_j.field_q + var6;
                   var12 = 256 * (-var7 + var10) / (var6 - var7);
                   if (var12 >= 0) {
-                    v.field_j.a(var8[var11], ak.field_k[10], var10 + v.field_j.field_C, 16777215, 1, var12);
+                    v.field_j.drawStringAlpha(var8[var11], ak.field_k[10], var10 + v.field_j.field_C, 16777215, 1, var12);
                   }
                   var11--;
                   continue;
@@ -2446,7 +2446,7 @@ final class aa {
           aa.a((java.applet.Applet) null, -125, (String) null);
         }
         nb.b(0, 25);
-        qh.field_b.field_J = (lh) ((Object) jj.field_b);
+        qh.field_b.field_J = (BitmapFont) ((Object) jj.field_b);
         stackIn_57_0 = qh.field_b;
         stackIn_59_1 = (hl.field_h) || (pk.field_j);
         stackIn_57_0.field_C = stackIn_59_1;

@@ -136,14 +136,14 @@ final class uj implements rd {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
-          this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_u + "</u>", param1 + param3.field_t, param3.field_o + param0, param3.field_j, param3.field_v, var6_int, -1, this.field_b, this.field_e, this.field_d.field_E + this.field_d.field_G);
+          this.field_d.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_u + "</u>", param1 + param3.field_t, param3.field_o + param0, param3.field_j, param3.field_v, var6_int, -1, this.field_b, this.field_e, this.field_d.field_E + this.field_d.field_G);
           if (param4 != -3284) {
             return;
           }
           if (!param3.a(18337)) {
             return;
           }
-          var7 = this.field_d.b(param3.field_u);
+          var7 = this.field_d.stringWidth(param3.field_u);
           var8 = this.field_d.field_G + this.field_d.field_E;
           var9 = param3.field_t + param1;
           var10 = param3.field_o + param0;

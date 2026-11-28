@@ -128,7 +128,7 @@ final class DisplayNameSelectionPanel extends g implements wi, qh {
           }
           var3 = this.field_E;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(var4, -18845, false);
+          ((EditableTextField) ((Object) var3)).setText(var4, -18845, false);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "fh.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -142,7 +142,7 @@ final class DisplayNameSelectionPanel extends g implements wi, qh {
         this.field_F = new hl(bl.field_g, (pl) null);
         this.field_H = new hl(cj.field_m, (pl) null);
         this.field_E.field_n = re.field_h;
-        this.field_E.a((byte) 68, new AccountNameAvailabilityValidator(this.field_E));
+        this.field_E.setFieldValidator((byte) 68, new AccountNameAvailabilityValidator(this.field_E));
         this.field_F.field_B = false;
         this.field_F.field_v = (ci) ((Object) new ki());
         this.field_H.field_v = (ci) ((Object) new nb());

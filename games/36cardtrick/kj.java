@@ -30,7 +30,7 @@ class kj extends cj {
     private RgbSprite field_B;
     private boolean field_F;
     private int field_r;
-    private ee field_Y;
+    private BitmapFont field_Y;
     private int field_ab;
     private RgbSprite[] field_T;
     private int field_R;

@@ -109,7 +109,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
           this.integerState0104 = 15;
           bitmapFontLocal19 = GameDomainSupport003.bitmapFontState0015;
           if (this.stringState0225 != null) {
-            this.integerState0104 = this.integerState0104 + (5 + bitmapFontLocal19.computeInteger1081(this.stringState0225, this.integerState0107 - 40, bitmapFontLocal19.integerState0518));
+            this.integerState0104 = this.integerState0104 + (5 + bitmapFontLocal19.textHeight(this.stringState0225, this.integerState0107 - 40, bitmapFontLocal19.integerState0518));
           }
           stringLocal20 = MixedSupport125.stringState0548;
           mixedSupport061Local21 = DiagnosticSupport002.computeMixedSupport0610765(UiComponentPart029.computeApplet1485(25144), -10314);
@@ -374,7 +374,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
               if (integerLocal18 <= 0) {
                 stackStringLocal7 = sceneWidgetPart014Local14.stringState0606;
               } else {
-                stackStringLocal7 = BitmapFont.computeString1074(sceneWidgetPart014Local14.sceneWidgetState0147.bitmapFontState0020, sceneWidgetPart014Local14.stringState0606, integerLocal18);
+                stackStringLocal7 = BitmapFont.truncateWithEllipsis(sceneWidgetPart014Local14.sceneWidgetState0147.bitmapFontState0020, sceneWidgetPart014Local14.stringState0606, integerLocal18);
               }
               stackSceneWidgetLocal6.stringState0598 = stackStringLocal7;
               stackIntegerLocal8 = (sceneWidgetPart014Local14.sceneWidgetState0147.stringState0598.equals(sceneWidgetPart014Local14.stringState0606)) ? 0 : 1;
@@ -575,7 +575,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
 
     final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (this.stringState0225 != null) {
-          GameDomainSupport003.bitmapFontState0015.computeInteger1071(this.stringState0225, integerArgument1 + (this.integerState0110 + 20), integerArgument4 + (this.integerState0104 + 15), this.integerState0107 - 40, this.integerState0108, 16777215, -1, 1, 0, GameDomainSupport003.bitmapFontState0015.integerState0518);
+          GameDomainSupport003.bitmapFontState0015.drawParagraph(this.stringState0225, integerArgument1 + (this.integerState0110 + 20), integerArgument4 + (this.integerState0104 + 15), this.integerState0107 - 40, this.integerState0108, 16777215, -1, 1, 0, GameDomainSupport003.bitmapFontState0015.integerState0518);
         }
         if (integerArgument2 > -103) {
           sceneWidgetState0048 = (SceneWidget) null;

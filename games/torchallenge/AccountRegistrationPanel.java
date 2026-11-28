@@ -81,11 +81,11 @@ final class AccountRegistrationPanel extends kj implements tl, sg, tb {
         return eb.a(this.field_Q.field_v, this.field_W.field_D, this.field_X.field_v, 193, this, var2, this.field_cb.field_v);
     }
 
-    final static qj a(int param0, ResourceArchive param1, int param2, ResourceArchive param3, byte param4) {
+    final static CoverageBitmapFont a(int param0, ResourceArchive param1, int param2, ResourceArchive param3, byte param4) {
         RuntimeException var5 = null;
-        qj stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        qj stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -94,7 +94,7 @@ final class AccountRegistrationPanel extends kj implements tl, sg, tb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 69) {
-            stackIn_2_0 = (qj) null;
+            stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
           if (SpriteLoader.a(param4 ^ 229, param1, param0, param2)) {
@@ -102,7 +102,7 @@ final class AccountRegistrationPanel extends kj implements tl, sg, tb {
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (qj) (stackIn_5_0);
+          return (CoverageBitmapFont) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -355,7 +355,7 @@ final class AccountRegistrationPanel extends kj implements tl, sg, tb {
         }
         try {
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(var4, false, (byte) -21);
+          ((EditableTextField) ((Object) var3)).setText(var4, false, (byte) -21);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "dg.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -477,12 +477,12 @@ final class AccountRegistrationPanel extends kj implements tl, sg, tb {
         this.field_K.field_r = bi.field_c;
         this.field_S.field_r = SecondaryNodeDeque.field_d;
         this.field_W.field_r = qa.field_c;
-        this.field_Q.a(-27997, new AccountNameAvailabilityValidator(this.field_Q));
-        this.field_cb.a(-27997, new EmailFormatValidator(this.field_cb));
-        this.field_P.a(-27997, new ConfirmedEmailAvailabilityValidator(this.field_P, this.field_cb));
-        this.field_X.a(-27997, new PasswordValidator(this.field_X, this.field_Q, this.field_cb));
-        this.field_K.a(-27997, new MatchingFieldValidator(this.field_K, this.field_X));
-        this.field_S.a(-27997, new AgeValidator(this.field_S));
+        this.field_Q.setFieldValidator(-27997, new AccountNameAvailabilityValidator(this.field_Q));
+        this.field_cb.setFieldValidator(-27997, new EmailFormatValidator(this.field_cb));
+        this.field_P.setFieldValidator(-27997, new ConfirmedEmailAvailabilityValidator(this.field_P, this.field_cb));
+        this.field_X.setFieldValidator(-27997, new PasswordValidator(this.field_X, this.field_Q, this.field_cb));
+        this.field_K.setFieldValidator(-27997, new MatchingFieldValidator(this.field_K, this.field_X));
+        this.field_S.setFieldValidator(-27997, new AgeValidator(this.field_S));
         this.field_Z.field_F = false;
         this.field_Z.field_q = (j) ((Object) new cl());
         this.field_V.field_q = (j) ((Object) new me());

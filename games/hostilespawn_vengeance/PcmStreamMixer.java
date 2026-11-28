@@ -124,7 +124,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final void a(PcmSample param0, int param1, int param2) {
-        this.b(RawPcmStream.a(param0, param1, param2));
+        this.b(RawPcmStream.createForPlaybackRate(param0, param1, param2));
     }
 
     final PcmStream firstChildStream() {

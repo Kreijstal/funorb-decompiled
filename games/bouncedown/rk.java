@@ -77,10 +77,10 @@ final class rk {
         }
     }
 
-    final static o a(ResourceArchive param0, ResourceArchive param1, byte param2, int param3, int param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, ResourceArchive param1, byte param2, int param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
-        o stackIn_4_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

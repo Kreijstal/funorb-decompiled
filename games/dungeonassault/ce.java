@@ -36,9 +36,9 @@ final class ce extends kl {
         super.b(-51);
         int var2 = (this.field_a >> 1) + this.field_k;
         int var3 = this.field_j + 10;
-        IntrusiveNode.field_c.c(Raider.field_l.toUpperCase(), var2, var3 + IntrusiveNode.field_c.field_H, 16777215, -1);
+        IntrusiveNode.field_c.drawCentred(Raider.field_l.toUpperCase(), var2, var3 + IntrusiveNode.field_c.field_H, 16777215, -1);
         var3 = var3 + IntrusiveNode.field_c.field_H;
-        la.field_b.a(hl.field_k, 20 + this.field_k, var3, -40 + this.field_a, this.field_i + this.field_j - var3 - (24 + jm.field_i.field_v * 2), 16777215, -1, 1, 1, la.field_b.field_H);
+        la.field_b.drawParagraph(hl.field_k, 20 + this.field_k, var3, -40 + this.field_a, this.field_i + this.field_j - var3 - (24 + jm.field_i.field_v * 2), 16777215, -1, 1, 1, la.field_b.field_H);
         int var4 = this.field_k + (this.field_a - 200 >> 1);
         int var5 = 60 + var3;
         int var6 = -121 / ((41 - param0) / 63);
@@ -51,7 +51,7 @@ final class ce extends kl {
             var7 = var9 + "|";
           }
           var8 = this.field_u.length() <= 12 ? 16777215 : 16711680;
-          la.field_b.b(var7, var4, (la.field_b.field_H + 20 >> 1) + var5, var8, -1);
+          la.field_b.drawString(var7, var4, (la.field_b.field_H + 20 >> 1) + var5, var8, -1);
         }
     }
 

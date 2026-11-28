@@ -272,7 +272,7 @@ final class nj extends hl {
           if (param0 != -101) {
             nj.clearStaticReferences(-5);
           }
-          var4 = AgeValidator.field_o.field_xb.b(param1, 272, AgeValidator.field_o.field_K);
+          var4 = AgeValidator.field_o.field_xb.textHeight(param1, 272, AgeValidator.field_o.field_K);
           var5 = -(var4 / 2) + 7 + (var3 / 2 - 110);
           la.field_c.a((-320 + var2_int) / 2, 320, -2147483648, -(var5 * 2) + var3 - 120, var5);
           la.field_c.field_Ab = wh.a(-82, la.field_c.field_pb, 3, 11579568, 8421504, 2105376);

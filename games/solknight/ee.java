@@ -144,10 +144,10 @@ final class ee extends IntrusiveNode {
               var1_int = var1_int + g.field_l;
             }
             if (var4 < 0) {
-              ke.field_H.c(var6, var8Lifetime1, var1_int + ArchiveIndex.field_g, var5, -1);
+              ke.field_H.drawString(var6, var8Lifetime1, var1_int + ArchiveIndex.field_g, var5, -1);
               var1_int = var1_int + uc.field_i;
             } else {
-              kb.field_f.c(var6, var8Lifetime1, var1_int + ph.field_k, var5, -1);
+              kb.field_f.drawString(var6, var8Lifetime1, var1_int + ph.field_k, var5, -1);
               var1_int = var1_int + (we.field_c + (EditableTextField.field_N + g.field_l));
             }
           }

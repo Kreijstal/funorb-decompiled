@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MatchingFieldValidator extends TextFieldValidator {
-    static vn field_m;
+    static BinaryBitmapFont field_m;
     static int field_r;
     static int field_p;
     static int field_o;
@@ -74,7 +74,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -121) {
-            field_m = (vn) null;
+            field_m = (BinaryBitmapFont) null;
           }
           if (this.field_n instanceof FieldValidatorProvider) {
             var3 = ((FieldValidatorProvider) ((Object) this.field_n)).getFieldValidator(param0 ^ 10235);
@@ -107,7 +107,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(uc param0, int param1, uc param2, int param3) {
+    final static void a(BitmapFont param0, int param1, BitmapFont param2, int param3) {
         try {
           if (param3 < 13) {
             MatchingFieldValidator.clearStaticReferences((byte) 48);

@@ -146,9 +146,9 @@ final class nd extends lc implements rc {
         if (param0 != 0) {
           return;
         }
-        tj var5 = FrameTimer.field_a;
+        BitmapFont var5 = FrameTimer.field_a;
         if (this.field_D != null) {
-          var5.a(nk.field_e, param3 + this.field_r, param1 + this.field_i, this.field_k, 20, 16777215, -1, 0, 0, var5.field_s + var5.field_x);
+          var5.drawParagraph(nk.field_e, param3 + this.field_r, param1 + this.field_i, this.field_k, 20, 16777215, -1, 0, 0, var5.field_s + var5.field_x);
         }
         if (param2 < 33) {
           field_F = (int[]) null;

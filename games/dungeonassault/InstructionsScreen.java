@@ -89,7 +89,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         int[] var14;
         var4 = nk.field_Fb[param1];
         var5 = this.getMenuActionLabel(-13, var4);
-        var6 = IntrusiveNode.field_c.b(var5);
+        var6 = IntrusiveNode.field_c.stringWidth(var5);
         var7 = this.a((byte) -4, param1);
         var8 = this.a(param1, (byte) -93);
         var9 = this.a(false, param1);
@@ -286,7 +286,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
           }
           pi.a(0, (String) (var4), cm.field_M, 30 + var6, IntrusiveNode.field_c, var5 + var7);
           var7 = var7 + (5 + var5);
-          la.field_b.a((String) (var3), 30 + var6, var7, var8 - 60, -30 + var9, 16777215, -1, 0, 0, la.field_b.field_H + la.field_b.field_E);
+          la.field_b.drawParagraph((String) (var3), 30 + var6, var7, var8 - 60, -30 + var9, 16777215, -1, 0, 0, la.field_b.field_H + la.field_b.field_E);
         }
         oh.a((byte) 36);
         this.field_D.d();
@@ -347,14 +347,14 @@ final class InstructionsScreen extends DungeonAssaultScreen {
     private final void b(int param0, int param1) {
         int var3 = nk.field_Fb[param0];
         String var4 = this.getMenuActionLabel(-13, var3);
-        int var5 = IntrusiveNode.field_c.b(var4);
+        int var5 = IntrusiveNode.field_c.stringWidth(var4);
         int var6 = IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_H;
         if (param1 > -85) {
           return;
         }
         RgbSprite var7 = new RgbSprite(var5, var6);
         jh.a(var7);
-        IntrusiveNode.field_c.b(var4, 0, IntrusiveNode.field_c.field_H, 16760960, -1);
+        IntrusiveNode.field_c.drawString(var4, 0, IntrusiveNode.field_c.field_H, 16760960, -1);
         jh.b();
         this.field_v = rb.a(8, var7, 16760960, (byte) 77);
         this.field_C = rb.a(16, var7, 6307840, (byte) -105);
@@ -484,10 +484,10 @@ final class InstructionsScreen extends DungeonAssaultScreen {
           var9 = var7;
           for (var10 = 0; var9.length > var10; var10++) {
             var11 = var9[var10];
-            if (param4 * 3 >> 2 <= la.field_b.b(var11)) {
-              la.field_b.b(var11, param0, var8, 16777215, -1);
+            if (param4 * 3 >> 2 <= la.field_b.stringWidth(var11)) {
+              la.field_b.drawString(var11, param0, var8, 16777215, -1);
             } else {
-              la.field_b.b(var11, param0, var8, 16777215, -1);
+              la.field_b.drawString(var11, param0, var8, 16777215, -1);
             }
             var8 = var8 + (la.field_b.field_E + la.field_b.field_H);
           }
@@ -577,7 +577,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         int[] var14;
         var4 = nk.field_Fb[param1];
         var5 = this.getMenuActionLabel(param0 ^ -14, var4);
-        var6 = IntrusiveNode.field_c.b(var5);
+        var6 = IntrusiveNode.field_c.stringWidth(var5);
         if (param0 != 1) {
           return;
         }

@@ -14,7 +14,7 @@ public final class Bounce extends GameClient {
     private int field_H;
     public static int field_N;
 
-    private final void k(int param0) {
+    private final void openGameArchives(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -26,7 +26,7 @@ public final class Bounce extends GameClient {
           pa.field_c = fa.a((byte) -76, 1);
           IntrusiveNode.field_e = fa.a((byte) -76, 2);
           if (param0 != -16) {
-            this.e(-122);
+            this.renderClientFrame(-122);
           }
           MidiPcmStream.field_D = fa.a((byte) -76, 5);
           ca.field_e = fa.a((byte) -76, 3);
@@ -40,7 +40,7 @@ public final class Bounce extends GameClient {
         }
     }
 
-    private final boolean a(String param0, boolean param1, int param2, boolean param3, int param4, byte param5, int param6) {
+    private final boolean drawMenuOption(String param0, boolean param1, int param2, boolean param3, int param4, byte param5, int param6) {
         RuntimeException stackIn_46_0 = null;
         StringBuilder stackIn_46_1 = null;
         String stackIn_47_2 = null;
@@ -48,7 +48,7 @@ public final class Bounce extends GameClient {
         int var8_int = 0;
         RuntimeException var8 = null;
         try {
-          var8_int = od.field_f.b(param0);
+          var8_int = od.field_f.stringWidth(param0);
           param2 = param2 - var8_int / 2;
           if (param2 - 8 < uc.field_C &&
             param2 + 16 + var8_int >= uc.field_C &&
@@ -63,7 +63,7 @@ public final class Bounce extends GameClient {
           if (param5 != 93) {
             return false;
           }
-          od.field_f.b(param0, param2, param4, param6, -1);
+          od.field_f.drawString(param0, param2, param4, param6, -1);
           if (param6 == 16777215 &&
             this.field_K != 0 &&
             param1) {
@@ -89,13 +89,13 @@ public final class Bounce extends GameClient {
         }
     }
 
-    final void d(byte param0) {
+    final void clearClientResources(byte param0) {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = field_N;
         try {
-          Bounce.k((byte) -99);
+          Bounce.clearBouncedownGlobals((byte) -99);
           kc.clearStaticReferences(17345);
           nf.clearStaticReferences(-60);
           ab.clearStaticReferences((byte) -104);
@@ -174,7 +174,7 @@ public final class Bounce extends GameClient {
           fd.a(false);
           oh.a((byte) -59);
           oc.clearStaticReferences(false);
-          tj.clearStaticReferences();
+          BitmapFont.clearStaticReferences();
           DualLinkNode.clearStaticReferences((byte) 115);
           li.clearStaticReferences(111);
           nk.clearStaticReferences(-74);
@@ -328,7 +328,7 @@ public final class Bounce extends GameClient {
         }
     }
 
-    private final void l(int param0) {
+    private final void updateGameAndMenu(int param0) {
         int fieldTemp$0 = 0;
         Slime dupTemp$1 = null;
         Slime dupTemp$2 = null;
@@ -355,7 +355,7 @@ public final class Bounce extends GameClient {
         int stackIn_464_1 = 0;
         int stackIn_478_0 = 0;
         Throwable decompiledCaughtException = null;
-        ie var2 = null;
+        BinaryBitmapFont var2 = null;
         Object var2_ref = null;
         int var2_int = 0;
         RuntimeException var2_ref2 = null;
@@ -554,7 +554,7 @@ public final class Bounce extends GameClient {
             var2 = ResourceArchive.field_e;
             var3_int = var2.field_s + 200;
             var4 = 4 + var2.field_x + var2.field_F;
-            var5 = ResourceArchive.field_e.b(qe.field_c);
+            var5 = ResourceArchive.field_e.stringWidth(qe.field_c);
             var6 = 320 - var5 / 2;
             var7 = 3 * var4 + var3_int;
             if ((var6 - 8) < uc.field_C &&
@@ -566,7 +566,7 @@ public final class Bounce extends GameClient {
               ProxyAuthenticationRequiredException.d(-6144);
               rj.field_j = 2;
             }
-            var5Lifetime1 = ResourceArchive.field_e.b(db.field_T);
+            var5Lifetime1 = ResourceArchive.field_e.stringWidth(db.field_T);
             var6Lifetime1 = -(var5Lifetime1 / 2) + 320;
             var7Lifetime1 = var4 / 2 + 4 * var4 + var3_int + 32;
             if ((var6Lifetime1 - 8) < uc.field_C &&
@@ -695,7 +695,7 @@ public final class Bounce extends GameClient {
             MusicPatchPcmStream.field_o.field_n = -1 + vk.field_b;
             if (vk.field_b == 1) {
               he.field_n[0].field_n = 0;
-              this.c(false, fa.field_c);
+              this.prepareSinglePlayerScoreSubmission(false, fa.field_c);
               if (kb.field_a <= 0) {
                 MusicPatchPcmStream.field_o.field_n = 11;
                 MusicPatchPcmStream.field_o.field_e = true;
@@ -800,12 +800,12 @@ public final class Bounce extends GameClient {
               else {
                 if (stackIn_464_0 >= stackIn_464_1 &&
                   he.field_n[var2_int].field_p <= 0) {
-                  he.field_n[var2_int].a(il.field_a, false);
-                  he.field_n[var2_int].a(il.field_a, (byte) 106);
+                  he.field_n[var2_int].fadeOutGrowthSound(il.field_a, false);
+                  he.field_n[var2_int].fadeOutShrinkSound(il.field_a, (byte) 106);
                 } else {
                   if (null == MusicPatchPcmStream.field_o ||
                     !PcmResampler.field_g) {
-                    he.field_n[var2_int].a(ua.field_c, EmailFormatValidator.field_l, ua.field_b, il.field_a, ta.field_c, (byte) 90);
+                    he.field_n[var2_int].updateSlimePhysics(ua.field_c, EmailFormatValidator.field_l, ua.field_b, il.field_a, ta.field_c, (byte) 90);
                   }
                   if (!PcmResampler.field_g) {
                     if (he.field_n[var2_int].field_h != 0) {
@@ -842,13 +842,13 @@ public final class Bounce extends GameClient {
                   break scanLoop1;
                 }
                 if (stackIn_478_0 > 0) {
-                  ua.field_c[var2_int].a(116, IsaacRandom.a(true), (double)(int)(Math.random() * 384.0 + 64.0));
+                  ua.field_c[var2_int].respawnPlatform(116, IsaacRandom.a(true), (double)(int)(Math.random() * 384.0 + 64.0));
                   var3 = Math.random() * 32.0;
                   if (ua.field_c[(-4 + ua.field_b + var2_int) % (-3 + ua.field_b)].field_h + 32.0 + var3 > ua.field_c[var2_int].field_h) {
                     ua.field_c[var2_int].field_h = ua.field_c[(var2_int - (-ua.field_b + 4)) % (-3 + ua.field_b)].field_h + 32.0 + var3;
                   }
                 }
-                ua.field_c[var2_int].a(-64);
+                ua.field_c[var2_int].updatePlatform(-64);
                 var2_int++;
               }
             }
@@ -866,7 +866,7 @@ public final class Bounce extends GameClient {
         }
     }
 
-    final void a(byte param0) {
+    final void updateClient(byte param0) {
         boolean stackIn_5_1 = false;
         int stackIn_71_1 = 0;
         boolean stackIn_72_2 = false;
@@ -884,7 +884,7 @@ public final class Bounce extends GameClient {
           stackIn_5_1 = (sj.field_f != null);
           this.a(stackIn_5_1, -73);
           if (ri.field_z) {
-            this.k(-16);
+            this.openGameArchives(-16);
             ri.field_z = false;
           }
           if (param0 != 37) {
@@ -903,7 +903,7 @@ public final class Bounce extends GameClient {
             if (!hi.a((byte) -118)) {
               return;
             }
-            this.b(false, param0 + 3097);
+            this.loadGameAssets(false, param0 + 3097);
             if (var3 == 0) {
               return;
             }
@@ -955,7 +955,7 @@ public final class Bounce extends GameClient {
                 return;
               }
               if (!g.a(false)) {
-                this.l(-124);
+                this.updateGameAndMenu(-124);
                 decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
@@ -988,12 +988,12 @@ public final class Bounce extends GameClient {
                   }
                 }
                 if (var3 != 0) {
-                  this.b(true, 3134);
+                  this.loadGameAssets(true, 3134);
                 }
               }
             }
           } else {
-            this.b(true, 3134);
+            this.loadGameAssets(true, 3134);
           }
           do {
             if (!s.a(true, ce.field_n)) {
@@ -1023,7 +1023,7 @@ public final class Bounce extends GameClient {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final static void sortLeaderboardIndices(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int incrementValue$0 = 0;
         int stackIn_12_0 = 0;
         boolean stackIn_16_0 = false;
@@ -1093,10 +1093,10 @@ public final class Bounce extends GameClient {
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              Bounce.a(var9, var8, 22668, param3, param4, param5, param6);
+              Bounce.sortLeaderboardIndices(var9, var8, 22668, param3, param4, param5, param6);
               stackIn_44_0 = param0;
             }
-            Bounce.a(stackIn_44_0, param1, param2, var8, var10, param5, param6);
+            Bounce.sortLeaderboardIndices(stackIn_44_0, param1, param2, var8, var10, param5, param6);
             return;
           }
           var7_intLifetime1 = -1 + param1;
@@ -1143,7 +1143,7 @@ public final class Bounce extends GameClient {
         }
     }
 
-    final void b(byte param0) {
+    final void disposeClient(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -1171,7 +1171,7 @@ public final class Bounce extends GameClient {
         }
     }
 
-    public static void k(byte param0) {
+    public static void clearBouncedownGlobals(byte param0) {
         try {
           field_A = null;
           field_G = null;
@@ -1181,7 +1181,7 @@ public final class Bounce extends GameClient {
         }
     }
 
-    private final void b(boolean param0, int param1) {
+    private final void loadGameAssets(boolean param0, int param1) {
         Throwable decompiledCaughtException = null;
         PcmResampler var3 = null;
         Object var3_ref = null;
@@ -1234,7 +1234,7 @@ public final class Bounce extends GameClient {
             }
             ed.a((byte) -127);
             AgeValidator.a(SecondaryNodeDequeIterator.field_a, param1 - 3248, 85.0f);
-            this.e(4);
+            this.renderClientFrame(4);
             var3 = new PcmResampler(22050, AudioOutput.field_r);
             il.field_a[0] = ei.a(pa.field_c, "", "dissolve1").b().resample(var3);
             il.field_a[3] = ei.a(pa.field_c, "", "slime_grows").b().resample(var3);
@@ -1245,7 +1245,7 @@ public final class Bounce extends GameClient {
             il.field_a[8] = ei.a(pa.field_c, "", "slime_reduces").b().resample(var3);
             il.field_a[9] = ei.a(pa.field_c, "", "squish").b().resample(var3);
             AgeValidator.a(SecondaryNodeDequeIterator.field_a, -21, 90.0f);
-            this.e(4);
+            this.renderClientFrame(4);
             il.field_a[11] = te.a(IntrusiveNode.field_e, "", "slime_eek").a().resample(var3);
             il.field_a[12] = te.a(IntrusiveNode.field_e, "", "slime_falls").a().resample(var3);
             il.field_a[13] = te.a(IntrusiveNode.field_e, "", "slime_laughs").a().resample(var3);
@@ -1253,7 +1253,7 @@ public final class Bounce extends GameClient {
             il.field_a[15] = te.a(IntrusiveNode.field_e, "", "slime_ow").a().resample(var3);
             AgeValidator.a(va.field_g, -125, 95.0f);
             var3_ref = null;
-            this.e(4);
+            this.renderClientFrame(4);
             AccountCreationResultPanel.field_mb = be.a(ca.field_e, "", "bounce down title screen");
             wj.field_c = be.a(ca.field_e, "", "bounce");
             ca.field_e = null;
@@ -1290,11 +1290,11 @@ public final class Bounce extends GameClient {
             var3_int = 0;
             do {
               if (var3_int >= 480) {
-                ua.field_c[ua.field_b].a(81, 6, (double)(int)(64.0 + Math.random() * 384.0));
+                ua.field_c[ua.field_b].respawnPlatform(81, 6, (double)(int)(64.0 + Math.random() * 384.0));
                 ua.field_b = ua.field_b + 1;
-                ua.field_c[ua.field_b].a(89, 6, (double)(int)(Math.random() * 384.0 + 64.0));
+                ua.field_c[ua.field_b].respawnPlatform(89, 6, (double)(int)(Math.random() * 384.0 + 64.0));
                 ua.field_b = ua.field_b + 1;
-                ua.field_c[ua.field_b].a(60, 6, (double)(int)(384.0 * Math.random() + 64.0));
+                ua.field_c[ua.field_b].respawnPlatform(60, 6, (double)(int)(384.0 * Math.random() + 64.0));
                 ua.field_b = ua.field_b + 1;
                 he.field_n[0] = new Slime();
                 he.field_n[1] = new Slime();
@@ -1303,7 +1303,7 @@ public final class Bounce extends GameClient {
                 jl.field_h = this;
                 break;
               }
-              ua.field_c[ua.field_b].a(42, 0, (double)(int)(Math.random() * 384.0 + 64.0));
+              ua.field_c[ua.field_b].respawnPlatform(42, 0, (double)(int)(Math.random() * 384.0 + 64.0));
               ua.field_c[ua.field_b].field_h = (double)var3_int;
               ua.field_b = ua.field_b + 1;
               var3_int += 64;
@@ -1326,7 +1326,7 @@ public final class Bounce extends GameClient {
             return;
           }
           AgeValidator.a(he.field_i, -75, 99.0f);
-          this.e(4);
+          this.renderClientFrame(4);
           ResourceArchive.field_e = DisplayNameSelectionPanel.a(param1 ^ -3135, va.field_c, "b12", ub.field_a, "");
           jh.field_s = DisplayNameSelectionPanel.a(-1, va.field_c, "comic20", ub.field_a, "");
           od.field_f = DisplayNameSelectionPanel.a(-1, va.field_c, "newfont", ub.field_a, "");
@@ -1402,7 +1402,7 @@ public final class Bounce extends GameClient {
         }
     }
 
-    final void c(byte param0) {
+    final void initializeClient(byte param0) {
         this.a(9, 0, 10, 3, 7, 8764, false, 8);
         AudioOutput.configureAudio(22050, true, 10);
         f.field_a = AudioOutput.createOutput(DebouncedFieldValidator.field_e, (java.awt.Component) ((Object) ch.field_h), 0, 512);
@@ -1427,12 +1427,12 @@ public final class Bounce extends GameClient {
         }
     }
 
-    private final void c(boolean param0, int param1) {
+    private final void prepareSinglePlayerScoreSubmission(boolean param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
           if (param0) {
-            this.c((byte) -116);
+            this.initializeClient((byte) -116);
           }
           if (0 < param1 &&
             !jh.b(767564065)) {
@@ -1452,13 +1452,13 @@ public final class Bounce extends GameClient {
         }
     }
 
-    final void e(int param0) {
+    final void renderClientFrame(int param0) {
         boolean discarded$0 = false;
         boolean discarded$1 = false;
         Object stackIn_5_0 = null;
         Object stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
-        ie stackIn_320_0 = null;
+        BinaryBitmapFont stackIn_320_0 = null;
         int stackIn_320_1 = 0;
         boolean stackIn_320_2 = false;
         boolean stackIn_321_3 = false;
@@ -1468,7 +1468,7 @@ public final class Bounce extends GameClient {
         boolean stackIn_328_2;
         int stackIn_328_3;
         boolean stackIn_329_4 = false;
-        ie stackIn_332_0 = null;
+        BinaryBitmapFont stackIn_332_0 = null;
         int stackIn_332_1 = 0;
         boolean stackIn_332_2 = false;
         boolean stackIn_333_3 = false;
@@ -1478,7 +1478,7 @@ public final class Bounce extends GameClient {
         boolean stackIn_340_2;
         int stackIn_340_3;
         boolean stackIn_341_4 = false;
-        ie stackIn_344_0 = null;
+        BinaryBitmapFont stackIn_344_0 = null;
         boolean stackIn_345_1 = false;
         boolean stackIn_349_2 = false;
         int stackIn_362_0 = 0;
@@ -1492,7 +1492,7 @@ public final class Bounce extends GameClient {
         Object var5 = null;
         ab var5_ref = null;
         int var6_int = 0;
-        ie var6 = null;
+        BinaryBitmapFont var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -1555,12 +1555,12 @@ public final class Bounce extends GameClient {
               var5_int = 0;
               break;
             }
-            ua.field_c[var5_int].a(1, var3);
+            ua.field_c[var5_int].drawPlatform(1, var3);
             var5_int++;
           } while (var9 == 0);
           scanLoop1: while (true) {
             if (vk.field_b > var5_int) {
-              he.field_n[var5_int].a(var5_int, false, var3);
+              he.field_n[var5_int].drawSlimeAndPlayerHud(var5_int, false, var3);
               var5_int++;
               if (var9 == 0) {
                 continue;
@@ -1692,13 +1692,13 @@ public final class Bounce extends GameClient {
                 5 == jk.field_q ||
                 6 == jk.field_q) {
                 eh.field_b = null;
-                this.c(false, fa.field_c);
+                this.prepareSinglePlayerScoreSubmission(false, fa.field_c);
               }
               jk.field_q = -1;
               var5_int = 0;
               scanLoop3: while (true) {
                 if (3 > var5_int) {
-                  he.field_n[var5_int].a(true);
+                  he.field_n[var5_int].resetSlime(true);
                   var5_int++;
                   if (var9 == 0) {
                     continue;
@@ -1792,13 +1792,13 @@ public final class Bounce extends GameClient {
               he.field_n[0].field_n = 1;
             }
             if (PcmResampler.field_g) {
-              var5_int = od.field_f.b(ui.field_j + "100000");
+              var5_int = od.field_f.stringWidth(ui.field_j + "100000");
               SoftwareRasterizer.fillRectangle(-4 - var5_int / 2 + 322, 451, 8 + (var5_int - 4), 26, 0);
               ve.a(30, 449, ig.field_d, (byte) -100, var5_int + 8, -(var5_int / 2) + 316);
-              var6_int = od.field_f.b(ui.field_j + fa.field_c);
-              var7 = od.field_f.b(ui.field_j);
-              od.field_f.b(ui.field_j, 320 - var6_int / 2, 471, 16777215, -1);
-              od.field_f.b(Integer.toString(fa.field_c), var7 + (320 - var6_int / 2), 473, 16777215, -1);
+              var6_int = od.field_f.stringWidth(ui.field_j + fa.field_c);
+              var7 = od.field_f.stringWidth(ui.field_j);
+              od.field_f.drawString(ui.field_j, 320 - var6_int / 2, 471, 16777215, -1);
+              od.field_f.drawString(Integer.toString(fa.field_c), var7 + (320 - var6_int / 2), 473, 16777215, -1);
             }
           }
           var5_ref = (ab) (LoginPanel.field_F.beginForward((byte) -48));
@@ -1824,13 +1824,13 @@ public final class Bounce extends GameClient {
                 var6_intLifetime1 = 8;
               }
             }
-            SoftwareRasterizer.drawRectangleOutline(4, var6_intLifetime1 - 4, 56 + od.field_f.b(lj.field_b[var5_ref.field_h]), 40, 0);
-            SoftwareRasterizer.drawRectangleOutline(5, var6_intLifetime1 - 3, od.field_f.b(lj.field_b[var5_ref.field_h]) + 54, 38, 16741888);
-            SoftwareRasterizer.drawRectangleOutline(6, var6_intLifetime1 - 2, 52 + od.field_f.b(lj.field_b[var5_ref.field_h]), 36, 0);
+            SoftwareRasterizer.drawRectangleOutline(4, var6_intLifetime1 - 4, 56 + od.field_f.stringWidth(lj.field_b[var5_ref.field_h]), 40, 0);
+            SoftwareRasterizer.drawRectangleOutline(5, var6_intLifetime1 - 3, od.field_f.stringWidth(lj.field_b[var5_ref.field_h]) + 54, 38, 16741888);
+            SoftwareRasterizer.drawRectangleOutline(6, var6_intLifetime1 - 2, 52 + od.field_f.stringWidth(lj.field_b[var5_ref.field_h]), 36, 0);
             DualLinkNode.field_h[var5_ref.field_h].b(8, var6_intLifetime1, 32, 32);
-            od.field_f.b(lj.field_b[var5_ref.field_h], 47, var6_intLifetime1 + od.field_f.field_s, 0, 0);
-            od.field_f.b(lj.field_b[var5_ref.field_h], 48, od.field_f.field_s + (-1 + var6_intLifetime1), 0, 0);
-            od.field_f.b(lj.field_b[var5_ref.field_h], 48, od.field_f.field_s + var6_intLifetime1, 16746496, -1);
+            od.field_f.drawString(lj.field_b[var5_ref.field_h], 47, var6_intLifetime1 + od.field_f.field_s, 0, 0);
+            od.field_f.drawString(lj.field_b[var5_ref.field_h], 48, od.field_f.field_s + (-1 + var6_intLifetime1), 0, 0);
+            od.field_f.drawString(lj.field_b[var5_ref.field_h], 48, od.field_f.field_s + var6_intLifetime1, 16746496, -1);
           }
           boolean decompiledFrameRemainder0 = true;
           if (-1 != rj.field_j) {
@@ -1850,7 +1850,7 @@ public final class Bounce extends GameClient {
               if (decompiledFrameRemainder0) {
                 bh.field_d = NetworkArchiveRequest.a(-77, 4);
                 rj.field_j = -1;
-                this.c(false, fa.field_c);
+                this.prepareSinglePlayerScoreSubmission(false, fa.field_c);
                 decompiledFrameRemainder0 = (var9 != 0);
               }
             }
@@ -1861,35 +1861,35 @@ public final class Bounce extends GameClient {
               var8 = var6.field_F + var6.field_x + 4;
               SoftwareRasterizer.fillRectangle(112, 190, 416, 64 + 5 * var8 + 20, 0);
               ve.a(84 + (5 * var8 + 6), 187, ig.field_d, (byte) -94, 422, 109);
-              var6.a(tc.field_q, 320, var7Lifetime2, 16777088, -1);
+              var6.drawCentred(tc.field_q, 320, var7Lifetime2, 16777088, -1);
               stackIn_320_0 = var6;
               stackIn_320_1 = param0 ^ 0;
               stackIn_320_2 = false;
               stackIn_321_3 = (kb.field_a != 0);
               stackIn_325_4 = (fa.field_c != 0);
-              ((ie) (Object) stackIn_320_0).a(he.a(stackIn_320_1, stackIn_320_2, stackIn_321_3, stackIn_325_4), 320, var7Lifetime2 + var8, 16777088, -1);
+              ((BinaryBitmapFont) (Object) stackIn_320_0).drawCentred(he.a(stackIn_320_1, stackIn_320_2, stackIn_321_3, stackIn_325_4), 320, var7Lifetime2 + var8, 16777088, -1);
               stackIn_328_0 = this;
               stackIn_328_1 = qe.field_c;
               stackIn_328_2 = this.field_L;
               stackIn_328_3 = 320;
               stackIn_329_4 = (qf.field_b == 0);
-              discarded$0 = this.a(stackIn_328_1, stackIn_328_2, stackIn_328_3, stackIn_329_4, var7Lifetime2 + var8 * 3, (byte) 93, 13535232);
+              discarded$0 = this.drawMenuOption(stackIn_328_1, stackIn_328_2, stackIn_328_3, stackIn_329_4, var7Lifetime2 + var8 * 3, (byte) 93, 13535232);
               stackIn_332_0 = var6;
               stackIn_332_1 = 59;
               stackIn_332_2 = false;
               stackIn_333_3 = (kb.field_a != 0);
               stackIn_337_4 = (0 != fa.field_c);
-              ((ie) (Object) stackIn_332_0).a(ld.$cfr$intArgs$a$c7de0d339b2a(stackIn_332_1, stackIn_332_2, stackIn_333_3, stackIn_337_4), 320, 32 + (var7Lifetime2 + 3 * var8), 16777088, -1);
+              ((BinaryBitmapFont) (Object) stackIn_332_0).drawCentred(ld.$cfr$intArgs$a$c7de0d339b2a(stackIn_332_1, stackIn_332_2, stackIn_333_3, stackIn_337_4), 320, 32 + (var7Lifetime2 + 3 * var8), 16777088, -1);
               stackIn_340_0 = this;
               stackIn_340_1 = db.field_T;
               stackIn_340_2 = this.field_L;
               stackIn_340_3 = 320;
               stackIn_341_4 = (qf.field_b == 1);
-              discarded$1 = this.a(stackIn_340_1, stackIn_340_2, stackIn_340_3, stackIn_341_4, var8 / 2 + var7Lifetime2 + var8 * 4 + 32, (byte) 93, 13535232);
+              discarded$1 = this.drawMenuOption(stackIn_340_1, stackIn_340_2, stackIn_340_3, stackIn_341_4, var8 / 2 + var7Lifetime2 + var8 * 4 + 32, (byte) 93, 13535232);
               stackIn_344_0 = var6;
               stackIn_345_1 = (fa.field_c != 0);
               stackIn_349_2 = (kb.field_a != 0);
-              ((ie) (Object) stackIn_344_0).a(rk.a(stackIn_345_1, stackIn_349_2, 4, false), 320, 64 + (var8 * 4 + var7Lifetime2), 16777088, -1);
+              ((BinaryBitmapFont) (Object) stackIn_344_0).drawCentred(rk.a(stackIn_345_1, stackIn_349_2, 4, false), 320, 64 + (var8 * 4 + var7Lifetime2), 16777088, -1);
             }
           }
           boolean decompiledSharedTail0 = !(vc.d((byte) 119));

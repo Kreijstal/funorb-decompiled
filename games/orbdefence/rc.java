@@ -3,7 +3,7 @@
  */
 final class rc {
     int field_f;
-    static kc field_a;
+    static BitmapFont field_a;
     static ba field_m;
     byte[] field_e;
     int field_g;

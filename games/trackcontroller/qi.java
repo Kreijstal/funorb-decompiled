@@ -90,7 +90,7 @@ final class qi {
             } else {
               stackIn_25_8 = this.field_a;
             }
-            ((BitmapFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param4.field_f, param4.field_l, param4.field_n);
+            ((BitmapFont) (Object) stackIn_18_0).drawParagraphAlpha(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param4.field_f, param4.field_l, param4.field_n);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -16,7 +16,7 @@ final class hb implements cg {
     static String field_b;
     private int field_n;
     static String field_m;
-    private rf field_f;
+    private BitmapFont field_f;
     static int field_q;
     private int field_j;
 
@@ -57,7 +57,7 @@ final class hb implements cg {
           }
           if (null != this.field_f) {
             var10 = this.field_l + (this.field_e + this.field_h);
-            this.field_f.a(param2.field_p, var10 + (param4 + param2.field_o), this.field_n + param3 + param2.field_m, param2.field_w - this.field_l - var10, param2.field_k - (this.field_l << 1), this.field_i, this.field_c, this.field_j, this.field_d, 0);
+            this.field_f.drawParagraph(param2.field_p, var10 + (param4 + param2.field_o), this.field_n + param3 + param2.field_m, param2.field_w - this.field_l - var10, param2.field_k - (this.field_l << 1), this.field_i, this.field_c, this.field_j, this.field_d, 0);
           }
           if (param1 > 94) {
             return;
@@ -240,7 +240,7 @@ final class hb implements cg {
         }
     }
 
-    hb(rf param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    hb(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_d = 1;
         this.field_j = 1;
         try {

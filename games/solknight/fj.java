@@ -23,7 +23,7 @@ final class fj extends IntrusiveNode {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
-        hd var9 = null;
+        BinaryBitmapFont var9 = null;
         int[] var10_ref_int__ = null;
         int var10 = 0;
         int var12 = 0;
@@ -45,7 +45,7 @@ final class fj extends IntrusiveNode {
             }
             if (var12 != 12 &&
               var12 != 13) {
-              var14 = var9.b(var13);
+              var14 = var9.stringWidth(var13);
               if (var14 > var7_int) {
                 var7_int = var14;
               }

@@ -15,7 +15,7 @@ final class mk implements ad {
     private int field_g;
     private int field_k;
     private int field_l;
-    private we field_n;
+    private BitmapFont field_n;
 
     public static void clearStaticReferences(byte param0) {
         int var1 = 93 / ((param0 - 30) / 58);
@@ -72,7 +72,7 @@ final class mk implements ad {
           }
           if (null != this.field_n) {
             var10 = this.field_l + this.field_i + this.field_c;
-            this.field_n.a(param2.field_s, param1 + param2.field_u + var10, this.field_k + param2.field_t + param3, -this.field_l - var10 + param2.field_v, param2.field_q - (this.field_l << 1), this.field_e, this.field_h, this.field_g, this.field_m, 0);
+            this.field_n.drawParagraph(param2.field_s, param1 + param2.field_u + var10, this.field_k + param2.field_t + param3, -this.field_l - var10 + param2.field_v, param2.field_q - (this.field_l << 1), this.field_e, this.field_h, this.field_g, this.field_m, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -107,7 +107,7 @@ final class mk implements ad {
         }
     }
 
-    mk(we param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    mk(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_m = 1;
         this.field_g = 1;
         try {

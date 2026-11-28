@@ -26,7 +26,7 @@ final class LoginPanel extends gj implements TextFieldListener, da {
 
     final void b(int param0, int param1, boolean param2, int param3) {
         if (null != this.field_O) {
-          ug.field_e.a(this.field_O, 20 + this.field_y + param1, 15 + this.field_z + param0, -40 + this.field_u, this.field_j, 16777215, -1, 1, 0, ug.field_e.field_H);
+          ug.field_e.drawParagraph(this.field_O, 20 + this.field_y + param1, 15 + this.field_z + param0, -40 + this.field_u, this.field_j, 16777215, -1, 1, 0, ug.field_e.field_H);
         }
         if (this.field_N != null) {
           SoftwareRasterizer.drawHorizontalLine(param1 + 10, param0 + 134, this.field_u - 20, 4210752);
@@ -144,8 +144,8 @@ final class LoginPanel extends gj implements TextFieldListener, da {
         int var4 = 0;
         int var3 = 0;
         int var5 = fleas.field_A ? 1 : 0;
-        fa var6 = MatchingFieldValidator.field_p;
-        fa var7 = var6;
+        BitmapFont var6 = MatchingFieldValidator.field_p;
+        BitmapFont var7 = var6;
         if (param0) {
           var2 = (kb) (pb.field_f.beginForward((byte) 47));
           if (var2 == null) {
@@ -160,10 +160,10 @@ final class LoginPanel extends gj implements TextFieldListener, da {
                 var3 = 123 - var4 / 2;
               }
             }
-            SoftwareRasterizer.fillRectangleAlpha(0, -4 + var3, var6.b(wa.field_f[var2.field_q]) + 64, 40, 16755200, 128);
-            SoftwareRasterizer.drawRectangleOutlineAlpha(0, var3 - 4, var6.b(wa.field_f[var2.field_q]) + 64, 40, 16746496, 128);
+            SoftwareRasterizer.fillRectangleAlpha(0, -4 + var3, var6.stringWidth(wa.field_f[var2.field_q]) + 64, 40, 16755200, 128);
+            SoftwareRasterizer.drawRectangleOutlineAlpha(0, var3 - 4, var6.stringWidth(wa.field_f[var2.field_q]) + 64, 40, 16746496, 128);
             il.field_d[var2.field_q].c(8, var3);
-            var6.c(wa.field_f[var2.field_q], 48, var3 + var7.field_H, 0, -1);
+            var6.drawString(wa.field_f[var2.field_q], 48, var3 + var7.field_H, 0, -1);
           }
           return;
         }
@@ -186,8 +186,8 @@ final class LoginPanel extends gj implements TextFieldListener, da {
           if (param0 > -100) {
             this.field_P = false;
           }
-          var3.a(false, (byte) -127, var4);
-          this.field_J.r(32);
+          var3.setText(false, (byte) -127, var4);
+          this.field_J.clearText(32);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ul.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -240,9 +240,9 @@ final class LoginPanel extends gj implements TextFieldListener, da {
     }
 
     final void a(int param0) {
-        this.field_H.r(32);
+        this.field_H.clearText(32);
         int var2 = 38 / ((29 - param0) / 45);
-        this.field_J.r(32);
+        this.field_J.clearText(32);
     }
 
     LoginPanel(String param0, String param1, boolean param2, boolean param3, boolean param4) {
@@ -265,7 +265,7 @@ final class LoginPanel extends gj implements TextFieldListener, da {
         RuntimeException decompiledCaughtException = null;
         ri var6 = null;
         RuntimeException var6_ref = null;
-        fa var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         wh var9 = null;
         ml var12 = null;
@@ -333,7 +333,7 @@ final class LoginPanel extends gj implements TextFieldListener, da {
           this.field_z = 15;
           var7 = ug.field_e;
           if (this.field_O != null) {
-            this.field_z = this.field_z + (var7.b(this.field_O, this.field_u - 40, var7.field_H) + 5);
+            this.field_z = this.field_z + (var7.textHeight(this.field_O, this.field_u - 40, var7.field_H) + 5);
           }
           var8 = se.field_e;
           var9 = ByteStorage.a(true, BoundedRandomAccessFile.getApplet((byte) -107));

@@ -23,7 +23,7 @@ final class lb extends ld {
         try {
           this.field_S = param1;
           if (null != this.field_S) {
-            var3_int = uc.field_g.b(this.field_S, 260, uc.field_g.field_F);
+            var3_int = uc.field_g.textHeight(this.field_S, 260, uc.field_g.field_F);
             this.b(300, -2038584927, 150 + var3_int);
           }
           this.field_Y = new c(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -149,10 +149,10 @@ final class lb extends ld {
     final void a(int param0, byte param1, int param2) {
         int var4 = 90 / ((param1 + 55) / 39);
         super.a(param0, (byte) 52, param2);
-        uc.field_g.a(this.field_U, (this.field_t >> 1) + param0, param2 + 103, 16777215, -1);
+        uc.field_g.drawCentred(this.field_U, (this.field_t >> 1) + param0, param2 + 103, 16777215, -1);
         if (this.field_S != null) {
           SoftwareRasterizer.drawHorizontalLine(param0 + 20, -7 + (120 + param2), 260, 8421504);
-          uc.field_g.a(this.field_S, param0 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, uc.field_g.field_F);
+          uc.field_g.drawParagraph(this.field_S, param0 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, uc.field_g.field_F);
         }
     }
 

@@ -20,7 +20,7 @@ final class jk extends aj implements df {
           var11 = !param5 ? param3 : param2;
           var13 = !param5 ? param0 : param8;
           field_x.a(var13, -5 + param4, 3, 10 + param1, -5 + param7, var11);
-          IntrusiveNode.field_d.c(param6, (param1 >> 1) + param7, (-IntrusiveNode.field_d.field_t - IntrusiveNode.field_d.field_y + var10_int) / 2 + (IntrusiveNode.field_d.field_y + param4), 0, -1);
+          IntrusiveNode.field_d.drawCentred(param6, (param1 >> 1) + param7, (-IntrusiveNode.field_d.field_t - IntrusiveNode.field_d.field_y + var10_int) / 2 + (IntrusiveNode.field_d.field_y + param4), 0, -1);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "jk.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
@@ -101,7 +101,7 @@ final class jk extends aj implements df {
     final void a(int param0, int param1, int param2, byte param3) {
         int var5 = param0 + this.field_p;
         int var6 = this.field_n + param1;
-        vd.field_h.a(wb.field_d, var5 + 20, 20 + var6, this.field_l - 40, -50 + this.field_h, 16777215, -1, 1, 0, vd.field_h.field_y);
+        vd.field_h.drawParagraph(wb.field_d, var5 + 20, 20 + var6, this.field_l - 40, -50 + this.field_h, 16777215, -1, 1, 0, vd.field_h.field_y);
         super.a(param0, param1, param2, (byte) 123);
         int var7 = -112 / ((param3 - 77) / 34);
     }

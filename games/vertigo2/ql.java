@@ -45,7 +45,7 @@ final class ql extends um implements ij {
           this.a((byte) 54, -43, -84, (UiWidget) null);
         }
         super.a(param0, param1, param2, param3);
-        bl.field_N.b(jq.field_d, param2 - (-this.x - 4), bl.field_N.field_z + (this.y + param3 + 4), 16777215, -1);
+        bl.field_N.drawString(jq.field_d, param2 - (-this.x - 4), bl.field_N.field_z + (this.y + param3 + 4), 16777215, -1);
     }
 
     public static void releaseDeclaredStaticReferences(int param0) {
@@ -145,7 +145,7 @@ final class ql extends um implements ij {
             if (0 >= var10) {
               stackIn_21_1 = var6.field_Mb;
             } else {
-              stackIn_21_1 = BitmapFont.a(var6.field_Jb.field_z, var6.field_Mb, var10);
+              stackIn_21_1 = BitmapFont.truncateWithEllipsis(var6.field_Jb.field_z, var6.field_Mb, var10);
             }
             stackIn_20_0.field_S = stackIn_21_1;
             stackIn_24_0 = (var6.field_Jb.field_S.equals(var6.field_Mb)) ? 0 : 1;

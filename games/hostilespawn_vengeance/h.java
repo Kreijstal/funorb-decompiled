@@ -9,7 +9,7 @@ final class h implements nn {
     static MouseWheelInput field_b;
     private int field_e;
     private int field_h;
-    private vm field_d;
+    private BitmapFont field_d;
     private int field_i;
 
     public static void clearStaticReferences(byte param0) {
@@ -57,7 +57,7 @@ final class h implements nn {
           if (null == this.field_d) {
             return;
           }
-          this.field_d.b(var12.field_n, var8 + var7 / 2, var12.field_H + var9 + this.field_d.field_u, this.field_c, this.field_i);
+          this.field_d.drawCentred(var12.field_n, var8 + var7 / 2, var12.field_H + var9 + this.field_d.field_u, this.field_c, this.field_i);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,7 +73,7 @@ final class h implements nn {
         }
     }
 
-    h(vm param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    h(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_h = param5;
           this.field_g = param4;

@@ -117,13 +117,13 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           for (var7 = param0; param2.length() > var7; var7++) {
             var8 = param2.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) + param3.field_a[0] + param4.b(param2.substring(0, var7));
+              var6 = (var5_int >> 8) + param3.field_a[0] + param4.stringWidth(param2.substring(0, var7));
             }
             if (-1 == var6) {
               if (32 == var8) {
                 var5_int = var5_int + param1;
               }
-              param3.field_a[var7] = (var5_int >> 8) + (param3.field_a[0] + param4.b(param2.substring(0, 1 + var7))) - param4.a((char) var8);
+              param3.field_a[var7] = (var5_int >> 8) + (param3.field_a[0] + param4.stringWidth(param2.substring(0, 1 + var7))) - param4.charWidth((char) var8);
             } else {
               param3.field_a[var7] = var6;
             }

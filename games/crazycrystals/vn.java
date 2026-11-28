@@ -29,12 +29,12 @@ final class vn extends ue {
         int stackIn_63_0 = 0;
         int stackIn_74_0 = 0;
         String stackIn_77_0 = null;
-        ef stackIn_79_0 = null;
+        BinaryBitmapFont stackIn_79_0 = null;
         String stackIn_80_1 = null;
         int stackIn_82_2;
         int stackIn_82_3;
         int stackIn_83_4 = 0;
-        ef stackIn_85_0 = null;
+        BinaryBitmapFont stackIn_85_0 = null;
         String stackIn_86_1 = null;
         ik stackIn_106_0 = null;
         boolean stackIn_107_1 = false;
@@ -85,7 +85,7 @@ final class vn extends ue {
           return;
         }
         if (this.field_n) {
-          go.field_l.c(PcmOutputWorker.field_a, 320, this.field_v - 5, 16777215, -1);
+          go.field_l.drawCentred(PcmOutputWorker.field_a, 320, this.field_v - 5, 16777215, -1);
         }
         var5 = this.field_o;
         var6 = fk.field_s;
@@ -144,12 +144,12 @@ final class vn extends ue {
         if (0 > var5) {
           if (!this.field_n ||
             0 != var6) {
-            go.field_l.c(cd.field_A, 320, -5 + this.field_h, 8438015, -1);
+            go.field_l.drawCentred(cd.field_A, 320, -5 + this.field_h, 8438015, -1);
           }
         } else {
           stackIn_63_0 = ((var6 & 1 << var5) == 0) ? 0 : 1;
           var10Lifetime1 = stackIn_63_0;
-          go.field_l.c(MouseWheelInput.field_e[var5], 320, -5 + this.field_h, 16760896, -1);
+          go.field_l.drawCentred(MouseWheelInput.field_e[var5], 320, -5 + this.field_h, 16760896, -1);
           var11Lifetime1 = ro.field_q;
           if (mo.field_l <= 0 &&
             (1 << var5 & 769) == 0) {
@@ -173,9 +173,9 @@ final class vn extends ue {
             stackIn_77_0 = an.field_o[var5];
           }
           var13 = stackIn_77_0;
-          var14 = 1 + go.field_l.a(var13, 191);
+          var14 = 1 + go.field_l.lineCount(var13, 191);
           var9Lifetime1Lifetime1 = -(var14 * 20 / 2) + (15 + this.field_h) + 64;
-          var9Lifetime1Lifetime1 = var9Lifetime1Lifetime1 + 20 * go.field_l.a(var13, 50, -go.field_l.field_o + var9Lifetime1Lifetime1, 191, 1000, 8438015, -1, 2, 0, 20);
+          var9Lifetime1Lifetime1 = var9Lifetime1Lifetime1 + 20 * go.field_l.drawParagraph(var13, 50, -go.field_l.field_o + var9Lifetime1Lifetime1, 191, 1000, 8438015, -1, 2, 0, 20);
           stackIn_79_0 = go.field_l;
           if (var10Lifetime1 == 0) {
             stackIn_80_1 = fl.field_l;
@@ -189,29 +189,29 @@ final class vn extends ue {
           } else {
             stackIn_83_4 = 16728064;
           }
-          ((ef) (Object) stackIn_79_0).b(stackIn_80_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, -1);
-          go.field_l.b(GzipDecompressor.field_d, 510, -5 + (64 + this.field_h), 8438015, -1);
+          ((BinaryBitmapFont) (Object) stackIn_79_0).drawRightAligned(stackIn_80_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, -1);
+          go.field_l.drawRightAligned(GzipDecompressor.field_d, 510, -5 + (64 + this.field_h), 8438015, -1);
           stackIn_85_0 = go.field_l;
           if (var12 == 0) {
             stackIn_86_1 = Integer.toString(tm.field_a[var5]);
           } else {
             stackIn_86_1 = "?";
           }
-          ((ef) (Object) stackIn_85_0).a(stackIn_86_1, 510, -5 + (64 + this.field_h), 16760896, -1);
-          go.field_l.b(lc.field_b, 510, this.field_h + 64 + 15, 8438015, -1);
+          ((BinaryBitmapFont) (Object) stackIn_85_0).drawString(stackIn_86_1, 510, -5 + (64 + this.field_h), 16760896, -1);
+          go.field_l.drawRightAligned(lc.field_b, 510, this.field_h + 64 + 15, 8438015, -1);
           if (var12 == 0) {
             for (var15 = 0; var15 < eq.field_l[var5]; var15++) {
               ne.field_i.a(5 * var15 + 510, this.field_h + 64);
             }
           } else {
-            go.field_l.a("?", 510, 15 + this.field_h + 64, 16760896, -1);
+            go.field_l.drawString("?", 510, 15 + this.field_h + 64, 16760896, -1);
           }
         }
         if ((var6 & 4096) != 0) {
-          an.field_q.c(pp.field_i, 320, this.field_j, 8438015, -1);
+          an.field_q.drawCentred(pp.field_i, 320, this.field_j, 8438015, -1);
         }
         if (rc.a(param0 - 110)) {
-          go.field_l.c(el.field_f, 320, this.field_e, 16760896, -1);
+          go.field_l.drawCentred(el.field_f, 320, this.field_e, 16760896, -1);
         }
         for (var10Lifetime2 = 0; var10Lifetime2 < this.field_d.length; var10Lifetime2++) {
           if (null != this.field_d[var10Lifetime2]) {

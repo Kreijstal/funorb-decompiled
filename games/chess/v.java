@@ -8,12 +8,12 @@ final class v {
     private int field_c;
     static String field_b;
     static FrameTimer field_e;
-    static c field_k;
+    static BinaryBitmapFont field_k;
     static int field_m;
     static int field_d;
     private int field_g;
     static RgbSprite field_i;
-    static c field_j;
+    static BinaryBitmapFont field_j;
     static long field_a;
 
     private final void a(int param0, Object param1, int param2, long param3) {

@@ -59,7 +59,7 @@ final class ic extends EventEffect {
           if (param2 != -31855) {
             field_i = (jd) null;
           }
-          stackIn_3_0 = tw.a(PcmSampleStream.b(param1, 100, param0), (byte) -36);
+          stackIn_3_0 = tw.a(PcmSampleStream.createForPlaybackRate(param1, 100, param0), (byte) -36);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

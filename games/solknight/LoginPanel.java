@@ -245,7 +245,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ka 
           this.field_j = 15;
           var7 = ua.field_G;
           if (this.field_K != null) {
-            this.field_j = this.field_j + (var7.b(this.field_K, -40 + this.field_t, var7.field_F) + 5);
+            this.field_j = this.field_j + (var7.textHeight(this.field_K, -40 + this.field_t, var7.field_F) + 5);
           }
           var8 = hh.field_J;
           var9 = MouseWheelInput.a((byte) 120, ia.g(116));
@@ -415,7 +415,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ka 
 
     final void a(int param0, int param1, int param2, int param3) {
         if (null != this.field_K) {
-          ua.field_G.a(this.field_K, this.field_m + (param2 + 20), 15 + (this.field_j + param0), -40 + this.field_t, this.field_x, 16777215, -1, 1, 0, ua.field_G.field_F);
+          ua.field_G.drawParagraph(this.field_K, this.field_m + (param2 + 20), 15 + (this.field_j + param0), -40 + this.field_t, this.field_x, 16777215, -1, 1, 0, ua.field_G.field_F);
         }
         if (null != this.field_M) {
           SoftwareRasterizer.drawHorizontalLine(10 + param2, param0 + 134, this.field_t - 20, 4210752);
@@ -432,8 +432,8 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ka 
           if (param0 != 25) {
             this.field_L = (EditableTextField) null;
           }
-          var3.a(param0 ^ -110, false, var4);
-          this.field_L.l(param0 ^ -125);
+          var3.setText(param0 ^ -110, false, var4);
+          this.field_L.clearText(param0 ^ -125);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "bb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -487,8 +487,8 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ka 
     }
 
     final void i(int param0) {
-        this.field_O.l(-115);
-        this.field_L.l(-87);
+        this.field_O.clearText(-115);
+        this.field_L.clearText(-87);
         if (param0 < 5) {
           this.j(-11);
         }

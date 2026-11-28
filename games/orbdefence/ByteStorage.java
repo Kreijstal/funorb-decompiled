@@ -13,7 +13,7 @@ abstract class ByteStorage {
 
     abstract void setBytes(int param0, byte[] param1);
 
-    final static void a(ed param0, int param1, String param2, kc param3, int param4) {
+    final static void a(ed param0, int param1, String param2, BitmapFont param3, int param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -28,20 +28,20 @@ abstract class ByteStorage {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        kc var10 = null;
+        BitmapFont var10 = null;
         var9 = OrbDefence.field_D ? 1 : 0;
         try {
           var5_int = 0;
           var6 = -1;
           var7 = 1;
           if (param4 != 404465128) {
-            var10 = (kc) null;
-            ByteStorage.a((ed) null, 108, (String) null, (kc) null, 30);
+            var10 = (BitmapFont) null;
+            ByteStorage.a((ed) null, 108, (String) null, (BitmapFont) null, 30);
           }
           while (param2.length() > var7) {
             var8 = param2.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) + (param0.field_g[0] + param3.a(param2.substring(0, var7)));
+              var6 = (var5_int >> 8) + (param0.field_g[0] + param3.stringWidth(param2.substring(0, var7)));
             }
             if (var6 != -1) {
               param0.field_g[var7] = var6;
@@ -49,7 +49,7 @@ abstract class ByteStorage {
               if (var8 == 32) {
                 var5_int = var5_int + param1;
               }
-              param0.field_g[var7] = param0.field_g[0] + ((var5_int >> 8) + param3.a(param2.substring(0, 1 + var7)) - param3.a((char) var8));
+              param0.field_g[var7] = param0.field_g[0] + ((var5_int >> 8) + param3.stringWidth(param2.substring(0, 1 + var7)) - param3.charWidth((char) var8));
             }
             if (var8 == 62) {
               var6 = -1;

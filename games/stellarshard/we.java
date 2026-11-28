@@ -280,11 +280,11 @@ final class we {
         }
     }
 
-    final static ub a(byte[] param0, int param1) {
-        ub var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, int param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        ub stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -292,9 +292,9 @@ final class we {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (ub) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new ub(param0, ak.field_c, RasterBuffer.field_c, vc.field_b, ih.field_d, ih.field_b);
+          var2 = new BinaryBitmapFont(param0, ak.field_c, RasterBuffer.field_c, vc.field_b, ih.field_d, ih.field_b);
           tb.f((byte) -128);
           if (param1 != 1) {
             we.a((byte) 22);

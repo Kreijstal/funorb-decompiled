@@ -6,7 +6,7 @@ class a implements ml, ui {
     private boolean field_i;
     int field_b;
     static String field_c;
-    ta field_p;
+    BitmapFont field_p;
     static String field_j;
     private int field_m;
     int field_l;
@@ -341,7 +341,7 @@ class a implements ml, ui {
         }
     }
 
-    a(ta param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    a(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -437,7 +437,7 @@ class a implements ml, ui {
           var9_int = this.b(param4, true);
           var10 = this.a(param4, param5 ^ 1);
           if (this.field_i) {
-            this.field_p.a(this.c(param4, param5 - 774), this.a((byte) 71, param3, param4, param2), this.a(param1, param4, param7, false), var9_int, var10, param6, param0, this.field_l, this.field_o, this.field_a);
+            this.field_p.drawParagraph(this.c(param4, param5 - 774), this.a((byte) 71, param3, param4, param2), this.a(param1, param4, param7, false), var9_int, var10, param6, param0, this.field_l, this.field_o, this.field_a);
           } else {
             var12 = this.field_o;
             if (var12 != 0) {
@@ -456,16 +456,16 @@ class a implements ml, ui {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_p.a(this.c(param4, -775), (var9_int >> 1) + this.a((byte) 72, param3, param4, param2), this.a(param1, param4, param7, false) + var11, param6, param0);
+                this.field_p.drawCentred(this.c(param4, -775), (var9_int >> 1) + this.a((byte) 72, param3, param4, param2), this.a(param1, param4, param7, false) + var11, param6, param0);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_p.c(this.c(param4, param5 - 774), var9_int + this.a((byte) 59, param3, param4, param2), var11 + this.a(param1, param4, param7, false), param6, param0);
+                  this.field_p.drawRightAligned(this.c(param4, param5 - 774), var9_int + this.a((byte) 59, param3, param4, param2), var11 + this.a(param1, param4, param7, false), param6, param0);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_p.b(this.c(param4, param5 - 774), this.a((byte) 84, param3, param4, param2), var11 + this.a(param1, param4, param7, false), param6, param0);
+              this.field_p.drawString(this.c(param4, param5 - 774), this.a((byte) 84, param3, param4, param2), var11 + this.a(param1, param4, param7, false), param6, param0);
             }
           }
           tj.b(653);
@@ -549,7 +549,7 @@ class a implements ml, ui {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 54) {
-            this.field_p = (ta) null;
+            this.field_p = (BitmapFont) null;
           }
           stackIn_3_0 = param3 + param1 + (param2.field_r + (this.field_h + param2.field_k));
           return stackIn_3_0;
@@ -698,7 +698,7 @@ class a implements ml, ui {
     protected a() {
     }
 
-    a(ta param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    a(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_n = param3;
           this.field_h = param1;

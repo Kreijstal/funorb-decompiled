@@ -15,7 +15,7 @@ final class vk {
             var3 = (PcmSample) null;
             vk.a((byte) -63, (PcmSample) null);
           }
-          stackIn_3_0 = ic.a(PcmSampleStream.a(param1, 100, 96), 4);
+          stackIn_3_0 = ic.a(PcmSampleStream.createForPlaybackRate(param1, 100, 96), 4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

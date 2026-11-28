@@ -24,7 +24,7 @@ final class AccountRegistrationPanel extends kn implements be, sh, f {
           int var4 = -26 % ((param1 - 22) / 62);
           var3 = this.field_I;
           var5 = param0;
-          ((EditableTextField) ((Object) var3)).a(false, false, var5);
+          ((EditableTextField) ((Object) var3)).setText(false, false, var5);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "ik.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -376,12 +376,12 @@ final class AccountRegistrationPanel extends kn implements be, sh, f {
         this.field_O.field_n = sl.field_v;
         this.field_Q.field_n = uf.field_t;
         this.field_V.field_n = ig.field_a;
-        this.field_I.a(new AccountNameAvailabilityValidator(this.field_I), 1048576);
-        this.field_P.a(new EmailFormatValidator(this.field_P), 1048576);
-        this.field_M.a(new ConfirmedEmailAvailabilityValidator(this.field_M, this.field_P), 1048576);
-        this.field_J.a(new PasswordValidator(this.field_J, this.field_I, this.field_P), 1048576);
-        this.field_O.a(new MatchingFieldValidator(this.field_O, this.field_J), 1048576);
-        this.field_Q.a(new AgeValidator(this.field_Q), 1048576);
+        this.field_I.setFieldValidator(new AccountNameAvailabilityValidator(this.field_I), 1048576);
+        this.field_P.setFieldValidator(new EmailFormatValidator(this.field_P), 1048576);
+        this.field_M.setFieldValidator(new ConfirmedEmailAvailabilityValidator(this.field_M, this.field_P), 1048576);
+        this.field_J.setFieldValidator(new PasswordValidator(this.field_J, this.field_I, this.field_P), 1048576);
+        this.field_O.setFieldValidator(new MatchingFieldValidator(this.field_O, this.field_J), 1048576);
+        this.field_Q.setFieldValidator(new AgeValidator(this.field_Q), 1048576);
         this.field_K.field_E = false;
         this.field_K.field_A = (ad) ((Object) new wi());
         this.field_R.field_A = (ad) ((Object) new nc());
@@ -557,10 +557,10 @@ final class AccountRegistrationPanel extends kn implements be, sh, f {
               var1_int = var1_int + sn.field_d;
             }
             if (var4 >= 0) {
-              IntrusiveDeque.field_b.a(var6, var8Lifetime1, DiskCacheWorker.field_e + var1_int, var5, -1);
+              IntrusiveDeque.field_b.drawString(var6, var8Lifetime1, DiskCacheWorker.field_e + var1_int, var5, -1);
               var1_int = var1_int + (SpriteState.field_z + (sn.field_d + nk.field_u));
             } else {
-              gh.field_b.a(var6, var8Lifetime1, var1_int + he.field_a, var5, -1);
+              gh.field_b.drawString(var6, var8Lifetime1, var1_int + he.field_a, var5, -1);
               var1_int = var1_int + CrossfadingMidiPcmStream.field_z;
             }
           }

@@ -129,7 +129,7 @@ final class nb extends vd implements qk {
     final void a(int param0, int param1, byte param2, int param3) {
         int var5 = param1 + this.field_v;
         int var6 = param0 + this.field_m;
-        jd.field_s.a(jn.field_K, var5 + 20, 20 + var6, this.field_s - 40, -50 + this.field_x, 16777215, -1, 1, 0, jd.field_s.field_y);
+        jd.field_s.drawParagraph(jn.field_K, var5 + 20, 20 + var6, this.field_s - 40, -50 + this.field_x, 16777215, -1, 1, 0, jd.field_s.field_y);
         super.a(param0, param1, (byte) 106, param3);
         if (param2 >= 42) {
           return;

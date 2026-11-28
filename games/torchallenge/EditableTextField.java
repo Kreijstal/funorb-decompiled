@@ -18,7 +18,7 @@ class EditableTextField extends ng {
     static int field_Q;
     static boolean field_Z;
 
-    private final void d(byte param0) {
+    private final void scrollCaretIntoView(byte param0) {
         lg var3;
         int var4;
         int var5;
@@ -74,7 +74,7 @@ class EditableTextField extends ng {
         try {
           this.field_q = kl.field_e.field_m;
           this.field_bb = param2;
-          this.a(param0, true, (byte) -21);
+          this.setText(param0, true, (byte) -21);
           this.field_ab = true;
           this.field_X = ol.correctedCurrentTimeMillis(256);
         } catch (RuntimeException runtimeException) {
@@ -82,7 +82,7 @@ class EditableTextField extends ng {
         }
     }
 
-    private final int h(int param0) {
+    private final int findPreviousWordBoundary(int param0) {
         int var2;
         int var3;
         var3 = TorChallenge.field_F ? 1 : 0;
@@ -114,7 +114,7 @@ class EditableTextField extends ng {
             EditableTextField.createMouseWheelInput((byte) -78);
           }
           super.a(param0, param1, (byte) -99, param3);
-          this.d((byte) 5);
+          this.scrollCaretIntoView((byte) 5);
           if (this.field_z == 1) {
             if (this.field_q instanceof gd) {
               var7 = (gd) ((Object) this.field_q);
@@ -179,7 +179,7 @@ class EditableTextField extends ng {
         }
     }
 
-    final void i(int param0) {
+    final void clearText(int param0) {
         this.field_v = "";
         if (param0 != -22617) {
           this.field_S = 38;
@@ -189,7 +189,7 @@ class EditableTextField extends ng {
         this.notifyTextChanged(-105);
     }
 
-    private final void a(int param0, int param1) {
+    private final void moveCaret(int param0, int param1) {
         if (param1 != -1) {
           this.field_ab = true;
         }
@@ -277,7 +277,7 @@ class EditableTextField extends ng {
         gj.field_c = 0;
     }
 
-    final void a(String param0, boolean param1, byte param2) {
+    final void setText(String param0, boolean param1, byte param2) {
         int dupTemp$2 = 0;
         int var4_int = 0;
         RuntimeException stackIn_14_0 = null;
@@ -332,7 +332,7 @@ class EditableTextField extends ng {
         try {
           this.field_X = ol.correctedCurrentTimeMillis(256);
           if (param2 < 9) {
-            discarded$0 = this.h(110);
+            discarded$0 = this.findPreviousWordBoundary(110);
           }
           if (param1 == 60) {
             return false;
@@ -364,17 +364,17 @@ class EditableTextField extends ng {
           if (param0 != 85) {
             if (101 != param0) {
               if (param0 == 13) {
-                this.i(-22617);
+                this.clearText(-22617);
                 return true;
               }
               if (param0 != 96) {
                 if (97 != param0) {
                   if (param0 == 102) {
-                    this.a(0, -1);
+                    this.moveCaret(0, -1);
                     return true;
                   }
                   if (param0 == 103) {
-                    this.a(this.field_v.length(), -1);
+                    this.moveCaret(this.field_v.length(), -1);
                     return true;
                   }
                   if (param0 == 84) {
@@ -399,22 +399,22 @@ class EditableTextField extends ng {
                 } else {
                   if (this.field_R < this.field_v.length()) {
                     if (nj.field_c[82]) {
-                      stackIn_52_1 = this.e(true);
+                      stackIn_52_1 = this.findNextWordBoundary(true);
                     } else {
                       stackIn_52_1 = 1 + this.field_R;
                     }
-                    this.a(stackIn_52_1, -1);
+                    this.moveCaret(stackIn_52_1, -1);
                     return true;
                   }
                 }
               } else {
                 if (this.field_R > 0) {
                   if (nj.field_c[82]) {
-                    stackIn_45_1 = this.h(121);
+                    stackIn_45_1 = this.findPreviousWordBoundary(121);
                   } else {
                     stackIn_45_1 = this.field_R - 1;
                   }
-                  this.a(stackIn_45_1, -1);
+                  this.moveCaret(stackIn_45_1, -1);
                   return true;
                 }
               }
@@ -494,7 +494,7 @@ class EditableTextField extends ng {
         }
     }
 
-    private final int e(boolean param0) {
+    private final int findNextWordBoundary(boolean param0) {
         int var2;
         int var3;
         int var4;
@@ -570,13 +570,13 @@ class EditableTextField extends ng {
             } else {
               stackIn_5_1 = 0;
             }
-            this.a(stackIn_5_1, param2 ^ 80);
+            this.moveCaret(stackIn_5_1, param2 ^ 80);
             var8_long = ol.correctedCurrentTimeMillis(param2 + 337);
             stackIn_8_1 = !(var8_long - this.field_T >= 250L);
             this.field_Y = stackIn_8_1;
             if (this.field_Y) {
-              this.field_U = this.h(param2 ^ -41);
-              this.field_R = this.e(true);
+              this.field_U = this.findPreviousWordBoundary(param2 ^ -41);
+              this.field_R = this.findNextWordBoundary(true);
               if (0 < this.field_R &&
                 this.field_v.charAt(this.field_R - 1) == 32) {
                 this.field_R = this.field_R - 1;

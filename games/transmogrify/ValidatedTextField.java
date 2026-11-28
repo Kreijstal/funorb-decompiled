@@ -19,7 +19,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         field_N = null;
     }
 
-    final void a(int param0, FieldValidator param1) {
+    final void setFieldValidator(int param0, FieldValidator param1) {
         try {
           int var3_int = 32 / ((-1 - param0) / 56);
           this.field_Q = param1;

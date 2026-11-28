@@ -17,8 +17,8 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, n {
     private String field_I;
 
     final void g(byte param0) {
-        this.field_N.k(-1);
-        this.field_R.k(-1);
+        this.field_N.clearText(-1);
+        this.field_R.clearText(-1);
         if (param0 >= -78) {
           field_L = (String[]) null;
         }
@@ -165,7 +165,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, n {
           this.y = 15;
           var7 = qk.field_e;
           if (null != this.field_I) {
-            this.y = this.y + (var7.a(this.field_I, this.width - 40, var7.field_s) + 5);
+            this.y = this.y + (var7.textHeight(this.field_I, this.width - 40, var7.field_s) + 5);
           }
           var8 = WidgetContainer.field_D;
           var9 = vk.a(false, dg.a(false));
@@ -341,8 +341,8 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, n {
         try {
           var3 = this.field_N;
           var4 = param0;
-          var3.a(false, (byte) -128, var4);
-          this.field_R.k(param1);
+          var3.setText(false, (byte) -128, var4);
+          this.field_R.clearText(param1);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "uh.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -350,7 +350,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, n {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (null != this.field_I) {
-          qk.field_e.a(this.field_I, this.x + param0 + 20, this.y + (param3 + 15), -40 + this.width, this.height, 16777215, -1, 1, 0, qk.field_e.field_s);
+          qk.field_e.drawParagraph(this.field_I, this.x + param0 + 20, this.y + (param3 + 15), -40 + this.width, this.height, 16777215, -1, 1, 0, qk.field_e.field_s);
         }
         if (this.field_K != null) {
           SoftwareRasterizer.drawHorizontalLine(param0 + 10, param3 + 134, this.width - 20, 4210752);

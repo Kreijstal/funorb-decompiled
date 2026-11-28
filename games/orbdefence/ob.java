@@ -6,7 +6,7 @@ final class ob extends ta implements ff, ai {
     static String field_E;
     static int field_K;
     static boolean field_F;
-    static sc field_I;
+    static BinaryBitmapFont field_I;
     static String field_L;
     static String field_D;
     static int field_H;

@@ -107,7 +107,7 @@ final class LoginPanel extends aj implements TextFieldListener, df {
 
     final void a(int param0, int param1, int param2, byte param3) {
         if (null != this.field_B) {
-          vd.field_h.a(this.field_B, 20 + (this.field_p + param0), 15 + (this.field_n + param1), -40 + this.field_l, this.field_h, 16777215, -1, 1, 0, vd.field_h.field_y);
+          vd.field_h.drawParagraph(this.field_B, 20 + (this.field_p + param0), 15 + (this.field_n + param1), -40 + this.field_l, this.field_h, 16777215, -1, 1, 0, vd.field_h.field_y);
         }
         int var5 = -124 / ((param3 - 77) / 34);
         if (this.field_J != null) {
@@ -136,7 +136,7 @@ final class LoginPanel extends aj implements TextFieldListener, df {
         RuntimeException decompiledCaughtException = null;
         qa var6 = null;
         RuntimeException var6_ref = null;
-        kg var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         kh var9 = null;
         oc var12 = null;
@@ -204,7 +204,7 @@ final class LoginPanel extends aj implements TextFieldListener, df {
           this.field_n = 15;
           var7 = vd.field_h;
           if (this.field_B != null) {
-            this.field_n = this.field_n + (var7.a(this.field_B, this.field_l - 40, var7.field_y) + 5);
+            this.field_n = this.field_n + (var7.textHeight(this.field_B, this.field_l - 40, var7.field_y) + 5);
           }
           var8 = e.field_q;
           var9 = ga.a(125, ha.b(81));
@@ -300,8 +300,8 @@ final class LoginPanel extends aj implements TextFieldListener, df {
           }
           var3 = this.field_L;
           var4 = param0;
-          var3.a(var4, false, param1 - 29);
-          this.field_G.i(81);
+          var3.setText(var4, false, param1 - 29);
+          this.field_G.clearText(81);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ff.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -374,8 +374,8 @@ final class LoginPanel extends aj implements TextFieldListener, df {
     }
 
     final void l(int param0) {
-        this.field_L.i(81);
-        this.field_G.i(param0 ^ -31940);
+        this.field_L.clearText(81);
+        this.field_G.clearText(param0 ^ -31940);
         if (param0 != -31891) {
           field_z = (Sprite) null;
         }

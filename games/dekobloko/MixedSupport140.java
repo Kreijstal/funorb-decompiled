@@ -23,12 +23,12 @@ abstract class MixedSupport140 extends DualNode {
         this.integerState0858 = integerArgument1;
     }
 
-    final static RenderingSupport011 computeRenderingSupport0111727(ResourceArchive resourceArchiveArgument1, ResourceArchive resourceArchiveArgument2, String stringArgument3, byte byteArgument4, String stringArgument5) {
+    final static CoverageBitmapFont computeRenderingSupport0111727(ResourceArchive resourceArchiveArgument1, ResourceArchive resourceArchiveArgument2, String stringArgument3, byte byteArgument4, String stringArgument5) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
         int integerLocal4 = 0;
-        RenderingSupport011 stackRenderingSupport011Local5 = null;
+        CoverageBitmapFont stackRenderingSupport011Local5 = null;
         RuntimeException stackRuntimeExceptionLocal6 = null;
         StringBuilder stackStringBuilderLocal7 = null;
         String stackStringLocal8 = null;

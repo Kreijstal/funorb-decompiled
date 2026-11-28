@@ -146,7 +146,7 @@ final class MidiPcmStream extends PcmStream {
               var3.field_p == param0) {
               if (null != var3.field_v) {
                 var3.field_v.fadeOutAndUnlink(AudioOutput.field_t / 100);
-                if (var3.field_v.e()) {
+                if (var3.field_v.hasRemainingRampFrames()) {
                   this.field_R.field_o.b(var3.field_v);
                 }
                 stackIn_14_0 = var3;
@@ -316,16 +316,16 @@ final class MidiPcmStream extends PcmStream {
         var8.field_k = 0;
         var8.field_l = 0;
         if (0 != this.field_o[param3]) {
-          var8.field_v = PcmSampleStream.a(var7, this.a((byte) 46, var8), 0, this.a(var8, false));
+          var8.field_v = PcmSampleStream.createForSampleStep(var7, this.a((byte) 46, var8), 0, this.a(var8, false));
           stackIn_18_1 = var8;
           stackIn_18_2 = 4917;
           stackIn_19_3 = !(var11.field_r[param2] >= 0);
           this.a(stackIn_18_1, stackIn_18_2, stackIn_19_3);
           if (var10 != 0) {
-            var8.field_v = PcmSampleStream.a(var7, this.a((byte) 78, var8), this.b(var8, 0), this.a(var8, false));
+            var8.field_v = PcmSampleStream.createForSampleStep(var7, this.a((byte) 78, var8), this.b(var8, 0), this.a(var8, false));
           }
         } else {
-          var8.field_v = PcmSampleStream.a(var7, this.a((byte) 78, var8), this.b(var8, 0), this.a(var8, false));
+          var8.field_v = PcmSampleStream.createForSampleStep(var7, this.a((byte) 78, var8), this.b(var8, 0), this.a(var8, false));
         }
         if (var11.field_r[param2] < 0) {
           var8.field_v.e(-1);
@@ -880,7 +880,7 @@ final class MidiPcmStream extends PcmStream {
             }
             param3.field_w = var6_int;
           }
-          param3.field_v.g(this.a((byte) 119, param3));
+          param3.field_v.setSampleStepMagnitude(this.a((byte) 119, param3));
           var7 = param3.field_A;
           param3.field_E = param3.field_E + var7.field_i;
           var8 = 0;
@@ -971,7 +971,7 @@ final class MidiPcmStream extends PcmStream {
           }
           var11 = -89 % ((param0 + 80) / 44);
           if (var8 == 0) {
-            param3.field_v.a(param3.field_H, this.b(param3, 0), this.a(param3, false));
+            param3.field_v.rampVolumeAndPan(param3.field_H, this.b(param3, 0), this.a(param3, false));
             return false;
           }
           param3.field_v.fadeOutAndUnlink(param3.field_H);
@@ -983,7 +983,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             param3.field_v.skipFrames(param2);
           }
-          if (param3.field_v.e()) {
+          if (param3.field_v.hasRemainingRampFrames()) {
             this.field_R.field_o.b(param3.field_v);
           }
           param3.b(true);
@@ -1538,7 +1538,7 @@ final class MidiPcmStream extends PcmStream {
             var5 = (int)((long)var6 * (long)this.field_o[param0.field_p] >> 6);
             var4_int = var4_int << 8;
             if (var5 >= var4_int) {
-              param0.field_v.b(true);
+              param0.field_v.setReversePlayback(true);
               var5 = var4_int + var4_int - 1 - var5;
             }
             decompiledSharedTail0 = (DungeonAssault.field_K != 0);

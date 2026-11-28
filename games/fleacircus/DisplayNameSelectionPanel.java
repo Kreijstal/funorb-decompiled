@@ -102,7 +102,7 @@ final class DisplayNameSelectionPanel extends gj implements pe, da {
           }
           var3 = this.field_I;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(false, (byte) -69, var4);
+          ((EditableTextField) ((Object) var3)).setText(false, (byte) -69, var4);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "nf.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -116,7 +116,7 @@ final class DisplayNameSelectionPanel extends gj implements pe, da {
         this.field_J = new bb(e.field_g, (kd) null);
         this.field_L = new bb(gd.field_d, (kd) null);
         this.field_I.field_m = df.field_c;
-        this.field_I.a(true, new AccountNameAvailabilityValidator(this.field_I));
+        this.field_I.setFieldValidator(true, new AccountNameAvailabilityValidator(this.field_I));
         this.field_J.field_D = false;
         this.field_J.field_p = (ComponentLayout) ((Object) new ri());
         this.field_L.field_p = (ComponentLayout) ((Object) new me());

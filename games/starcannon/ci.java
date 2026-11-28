@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ci implements de {
-    private qe field_h;
+    private BitmapFont field_h;
     static lb[] field_g;
     private int field_e;
     private int field_c;
@@ -59,7 +59,7 @@ final class ci implements de {
           if (null == this.field_h) {
             return;
           }
-          this.field_h.b(var13.field_k, var8 / 2 + var9, this.field_h.field_x + var10 + var13.field_A, this.field_j, this.field_e);
+          this.field_h.drawCentred(var13.field_k, var8 / 2 + var9, this.field_h.field_x + var10 + var13.field_A, this.field_j, this.field_e);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -180,7 +180,7 @@ final class ci implements de {
         field_g = null;
     }
 
-    ci(qe param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    ci(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_i = param5;
           this.field_h = param0;

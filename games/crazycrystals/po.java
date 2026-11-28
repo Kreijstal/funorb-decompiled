@@ -8,10 +8,10 @@ final class po extends tb {
     private int field_o;
     private boolean field_m;
     private int field_l;
-    private vc field_p;
+    private BitmapFont field_p;
     private int field_k;
 
-    final void a(byte param0, String param1, vc param2, int param3, int param4, int param5, int param6, int param7) {
+    final void a(byte param0, String param1, BitmapFont param2, int param3, int param4, int param5, int param6, int param7) {
         bh stackIn_36_0;
         bh stackIn_36_1;
         int stackIn_36_2;
@@ -68,9 +68,9 @@ final class po extends tb {
           }
           this.field_m = false;
           this.field_l = param7;
-          var16 = new String[param2.a(param1, param5) + 1];
+          var16 = new String[param2.lineCount(param1, param5) + 1];
           var17 = var16;
-          var10 = Math.max(1, param2.a(param1, new int[]{param5}, var17));
+          var10 = Math.max(1, param2.wrapText(param1, new int[]{param5}, var17));
           if (this.field_j == 3 &&
             var10 == 1) {
             this.field_j = 1;
@@ -112,10 +112,10 @@ final class po extends tb {
             var14 = new bh(stackIn_36_2, stackIn_36_3, stackIn_37_4);
             var14.field_e[0] = 0;
             if (var13 != null) {
-              var14.field_e[var13.length()] = param2.a(var13);
+              var14.field_e[var13.length()] = param2.stringWidth(var13);
               stackIn_41_0 = var14;
               if (param6 == 3) {
-                stackIn_42_1 = this.a((byte) 79, param5, var13, param2.a(var13));
+                stackIn_42_1 = this.a((byte) 79, param5, var13, param2.stringWidth(var13));
               } else {
                 stackIn_42_1 = 0;
               }
@@ -145,7 +145,7 @@ final class po extends tb {
         }
     }
 
-    final void a(String param0, vc param1, int param2, int param3, boolean param4) {
+    final void a(String param0, BitmapFont param1, int param2, int param3, boolean param4) {
         bh var8 = null;
         int var7 = 0;
         if (param0 == null) {
@@ -161,7 +161,7 @@ final class po extends tb {
           this.field_m = true;
           this.field_p = param1;
           var8 = this.a(param1, param0, param3, (byte) 13);
-          var7 = param1.a(param0);
+          var7 = param1.stringWidth(param0);
           if (param4) {
             this.field_m = true;
           }
@@ -173,7 +173,7 @@ final class po extends tb {
         }
     }
 
-    final void a(byte param0, String param1, int param2, int param3, vc param4) {
+    final void a(byte param0, String param1, int param2, int param3, BitmapFont param4) {
         bh var9 = null;
         bh var10 = null;
         if (param1 == null) {
@@ -188,14 +188,14 @@ final class po extends tb {
           this.field_n = param1;
           this.field_k = 2;
           if (param0 < 95) {
-            vc var7 = (vc) null;
-            this.a(-121, (String) null, 97, 102, (vc) null);
+            BitmapFont var7 = (BitmapFont) null;
+            this.a(-121, (String) null, 97, 102, (BitmapFont) null);
           }
           this.field_m = true;
           this.field_p = param4;
           var9 = this.a(param4, param1, param3, (byte) 13);
           var10 = var9;
-          var10.field_e[0] = -param4.a(param1) + param2;
+          var10.field_e[0] = -param4.stringWidth(param1) + param2;
           var10.field_e[param1.length()] = param2;
           ResultScene.layoutJustifiedTextOffsets(var10, 0, param1, (byte) -95, param4);
         } catch (RuntimeException runtimeException) {
@@ -203,10 +203,10 @@ final class po extends tb {
         }
     }
 
-    private final bh a(vc param0, String param1, int param2, byte param3) {
+    private final bh a(BitmapFont param0, String param1, int param2, byte param3) {
         bh var5 = null;
         RuntimeException var5_ref = null;
-        vc var6 = null;
+        BitmapFont var6 = null;
         bh var7 = null;
         bh stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -220,8 +220,8 @@ final class po extends tb {
           var5 = var7;
           this.field_h = new bh[]{var7};
           if (param3 != 13) {
-            var6 = (vc) null;
-            this.a((byte) 12, (String) null, -102, 101, (vc) null);
+            var6 = (BitmapFont) null;
+            this.a((byte) 12, (String) null, -102, 101, (BitmapFont) null);
           }
           stackIn_3_0 = var5;
           return stackIn_3_0;
@@ -245,7 +245,7 @@ final class po extends tb {
         }
     }
 
-    final void a(int param0, String param1, int param2, int param3, vc param4) {
+    final void a(int param0, String param1, int param2, int param3, BitmapFont param4) {
         bh var7 = null;
         bh var8 = null;
         if (param1 == null) {
@@ -267,7 +267,7 @@ final class po extends tb {
           var7 = this.a(param4, param1, param0, (byte) 13);
           var8 = var7;
           var7.field_e[0] = param3;
-          var8.field_e[param1.length()] = param4.a(param1) + param3;
+          var8.field_e[param1.length()] = param4.stringWidth(param1) + param3;
           ResultScene.layoutJustifiedTextOffsets(var8, 0, param1, (byte) -95, param4);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "po.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

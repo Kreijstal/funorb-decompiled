@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rn implements WidgetRenderer {
-    private uc field_c;
+    private BitmapFont field_c;
     static byte field_e;
     private int field_k;
     private int field_h;
@@ -61,7 +61,7 @@ final class rn implements WidgetRenderer {
           if (this.field_c == null) {
             return;
           }
-          this.field_c.c(var12.text, var7 / 2 + var8, var12.field_C + var9 + this.field_c.field_q, this.field_l, this.field_d);
+          this.field_c.drawCentred(var12.text, var7 / 2 + var8, var12.field_C + var9 + this.field_c.field_q, this.field_l, this.field_d);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -98,7 +98,7 @@ final class rn implements WidgetRenderer {
         return var4Lifetime1 * var5Lifetime1 + (var3 * param2 + (var4Lifetime1 * var6Lifetime1 >> 16));
     }
 
-    rn(uc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    rn(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_g = param3;
           this.field_l = param1;

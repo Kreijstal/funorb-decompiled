@@ -95,10 +95,10 @@ final class rb extends ck {
             rb.$cfr$intArgs$a$62abead39cee(-6, true, (String) null);
           }
           if (param1) {
-            stackIn_6_0 = mp.field_a.b(param2);
+            stackIn_6_0 = mp.field_a.stringWidth(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = hc.field_e.b(param2);
+          stackIn_4_0 = hc.field_e.stringWidth(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -162,10 +162,10 @@ final class rb extends ck {
             rb.$cfr$intArgs$a$62abead39cee(-6, true, (String) null);
           }
           if (param1) {
-            stackIn_6_0 = mp.field_a.b(param2);
+            stackIn_6_0 = mp.field_a.stringWidth(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = hc.field_e.b(param2);
+          stackIn_4_0 = hc.field_e.stringWidth(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

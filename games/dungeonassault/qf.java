@@ -140,7 +140,7 @@ final class qf extends en {
         String[] var8 = var12;
         for (var9 = 0; var8.length > var9; var9++) {
           var10 = var8[var9];
-          db.field_v.c(var10, 100, var5, 16777215, -1);
+          db.field_v.drawCentred(var10, 100, var5, 16777215, -1);
           var5 = var5 + db.field_v.field_H;
         }
         jh.b();
@@ -176,13 +176,13 @@ final class qf extends en {
         }
         var7.e();
         if (null != this.field_e) {
-          db.field_v.c(ck.field_H.a(this.field_e, (byte) -48), param1 >> 1, var6, 16777215, -1);
+          db.field_v.drawCentred(ck.field_H.a(this.field_e, (byte) -48), param1 >> 1, var6, 16777215, -1);
           var6 = var6 + la.field_b.field_H * 2;
         }
         String[] var8 = var12;
         for (var9 = 0; var8.length > var9; var9++) {
           var10 = var8[var9];
-          la.field_b.c(var10, param1 >> 1, var6, 16777215, -1);
+          la.field_b.drawCentred(var10, param1 >> 1, var6, 16777215, -1);
           var6 = var6 + la.field_b.field_H;
         }
         jh.b();

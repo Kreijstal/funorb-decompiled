@@ -28,10 +28,10 @@ final class hg extends sf {
             hg.a((String) null, (byte) 106);
           }
           if (!param0) {
-            stackIn_6_0 = jd.field_a.a(param1);
+            stackIn_6_0 = jd.field_a.stringWidth(param1);
             return stackIn_6_0;
           }
-          stackIn_4_0 = ck.field_g.a(param1);
+          stackIn_4_0 = ck.field_g.stringWidth(param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

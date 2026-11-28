@@ -74,11 +74,11 @@ final class dl {
         }
     }
 
-    final static vm a(ResourceArchive param0, int param1, int param2, byte param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, int param1, int param2, byte param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        vm stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -88,7 +88,7 @@ final class dl {
         try {
           if (!Bzip2State.a(param1, 258, param2, param4)) {
             stackIn_2_0 = null;
-            return (vm) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           var5_int = 1 / ((37 - param3) / 62);
           stackIn_4_0 = bh.a((byte) 104, param0.getFile(false, param2, param1));

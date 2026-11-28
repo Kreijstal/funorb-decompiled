@@ -3,7 +3,7 @@
  */
 final class bm extends nf {
     private int field_s;
-    private we field_m;
+    private BitmapFont field_m;
     private int field_p;
     private int field_j;
     private String field_n;
@@ -25,7 +25,7 @@ final class bm extends nf {
         return (java.applet.Applet) ((Object) PcmOutputWorker.field_h);
     }
 
-    final void a(int param0, int param1, we param2, String param3, int param4, byte param5, int param6, int param7) {
+    final void a(int param0, int param1, BitmapFont param2, String param3, int param4, byte param5, int param6, int param7) {
         mg stackIn_37_0;
         mg stackIn_37_1;
         int stackIn_37_2;
@@ -33,7 +33,7 @@ final class bm extends nf {
         mg stackIn_38_0 = null;
         mg stackIn_38_1 = null;
         int stackIn_38_4 = 0;
-        we stackIn_41_0 = null;
+        BitmapFont stackIn_41_0 = null;
         String stackIn_41_1 = null;
         int stackIn_42_2 = 0;
         RuntimeException stackIn_47_0 = null;
@@ -83,9 +83,9 @@ final class bm extends nf {
           }
           this.field_j = param0;
           this.field_m = param2;
-          var16 = new String[param2.a(param3, param4) + 1];
+          var16 = new String[param2.lineCount(param3, param4) + 1];
           var17 = var16;
-          var10 = Math.max(1, param2.a(param3, new int[]{param4}, var17));
+          var10 = Math.max(1, param2.wrapText(param3, new int[]{param4}, var17));
           if (this.field_j == 3 &&
             var10 == 1) {
             this.field_j = 1;
@@ -127,11 +127,11 @@ final class bm extends nf {
             var14 = new mg(stackIn_37_2, stackIn_37_3, stackIn_38_4);
             var14.field_d[0] = 0;
             if (var13 != null) {
-              var14.field_d[var13.length()] = param2.a(var13);
-              stackIn_41_0 = (we) (param2);
+              var14.field_d[var13.length()] = param2.stringWidth(var13);
+              stackIn_41_0 = (BitmapFont) (param2);
               stackIn_41_1 = var13;
               if (param7 == 3) {
-                stackIn_42_2 = this.a(101, var13, param2.a(var13), param4);
+                stackIn_42_2 = this.a(101, var13, param2.stringWidth(var13), param4);
               } else {
                 stackIn_42_2 = 0;
               }
@@ -161,7 +161,7 @@ final class bm extends nf {
         }
     }
 
-    private final mg a(int param0, String param1, byte param2, we param3) {
+    private final mg a(int param0, String param1, byte param2, BitmapFont param3) {
         mg var5 = null;
         RuntimeException var5_ref = null;
         mg var6 = null;
@@ -203,7 +203,7 @@ final class bm extends nf {
         }
     }
 
-    final void a(int param0, int param1, String param2, we param3, int param4) {
+    final void a(int param0, int param1, String param2, BitmapFont param3, int param4) {
         mg var8 = null;
         mg var9 = null;
         if (param2 == null) {
@@ -221,7 +221,7 @@ final class bm extends nf {
           this.field_m = param3;
           var8 = this.a(param4, param2, (byte) 51, param3);
           var9 = var8;
-          var9.field_d[0] = param1 - param3.a(param2);
+          var9.field_d[0] = param1 - param3.stringWidth(param2);
           var9.field_d[param2.length()] = param1;
           pf.a(param3, param2, param0, -19453, var9);
         } catch (RuntimeException runtimeException) {
@@ -239,7 +239,7 @@ final class bm extends nf {
         field_o = null;
     }
 
-    final void a(int param0, we param1, String param2, int param3, int param4) {
+    final void a(int param0, BitmapFont param1, String param2, int param3, int param4) {
         mg var7 = null;
         mg var8 = null;
         if (param2 == null) {
@@ -261,7 +261,7 @@ final class bm extends nf {
             this.field_n = (String) null;
           }
           var7.field_d[0] = param0;
-          var8.field_d[param2.length()] = param1.a(param2) + param0;
+          var8.field_d[param2.length()] = param1.stringWidth(param2) + param0;
           pf.a(param1, param2, 0, -19453, var8);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "bm.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -271,7 +271,7 @@ final class bm extends nf {
     public bm() {
     }
 
-    final void a(String param0, int param1, int param2, we param3, int param4) {
+    final void a(String param0, int param1, int param2, BitmapFont param3, int param4) {
         mg var8 = null;
         int var7 = 0;
         if (param0 == null) {
@@ -290,7 +290,7 @@ final class bm extends nf {
           this.field_m = param3;
           this.field_l = 1;
           var8 = this.a(param2, param0, (byte) 87, param3);
-          var7 = param3.a(param0);
+          var7 = param3.stringWidth(param0);
           var8.field_d[0] = param4 - (var7 >> 1);
           if (param1 != 27994) {
             this.field_l = 113;

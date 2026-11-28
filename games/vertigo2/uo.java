@@ -365,7 +365,7 @@ final class uo {
               } else {
                 var12.field_nc.a(77, 68, Archive.field_f, var31, 0);
               }
-              var12.field_Vb.field_S = BitmapFont.a(var12.field_Vb.field_z, var32, 78);
+              var12.field_Vb.field_S = BitmapFont.truncateWithEllipsis(var12.field_Vb.field_z, var32, 78);
               var12.field_Vb.a(77, 78, Archive.field_f, var31, 70);
               if (var12.field_Vb.field_pb &&
                 !var12.field_Vb.field_S.equals(var32)) {
@@ -378,7 +378,7 @@ final class uo {
               } else {
                 var12.field_ac.field_S = "/" + var12.field_uc;
                 var12.field_cc.field_O = 2;
-                var33_int = (-var12.field_ac.field_z.c("/") + 348) / 2;
+                var33_int = (-var12.field_ac.field_z.stringWidth("/") + 348) / 2;
                 var12.field_cc.a(param6 ^ 99, var33_int - 150, Archive.field_f, var31, 150);
                 var12.field_ac.a(118, 198 - var33_int, Archive.field_f, var31, var33_int);
               }
@@ -482,7 +482,7 @@ final class uo {
                 }
                 var38 = var37.toString();
                 var12.field_Jb.field_S = var38;
-                var39Lifetime1 = var12.field_Jb.field_z.b(var38, var12.field_Fb - var12.field_Jb.field_R * 2);
+                var39Lifetime1 = var12.field_Jb.field_z.lineCount(var38, var12.field_Fb - var12.field_Jb.field_R * 2);
                 var12.field_Jb.a(param6 + 73, var12.field_Fb, Archive.field_f * var39Lifetime1, var31, 0);
                 var31 = var31 + Archive.field_f * var39Lifetime1;
               }
@@ -499,7 +499,7 @@ final class uo {
             }
             var33 = ArchiveRequest.a((byte) -27, var32, var12.field_Lb);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Rb.field_z.b(var33, -NetworkArchiveRequest.field_G + var12.field_Fb - NetworkArchiveRequest.field_G);
+              var34_intLifetime1 = var12.field_Rb.field_z.lineCount(var33, -NetworkArchiveRequest.field_G + var12.field_Fb - NetworkArchiveRequest.field_G);
               var12.field_Rb.field_U = 256 * var12.field_ic / lp.field_D;
               var12.field_Rb.field_S = var33;
               var12.field_Rb.a(param6 + 100, var12.field_Fb - NetworkArchiveRequest.field_G * 2, var34_intLifetime1 * Archive.field_f, var31, NetworkArchiveRequest.field_G);

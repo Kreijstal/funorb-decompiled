@@ -3328,7 +3328,7 @@ final class sf extends td implements ButtonListener {
         try {
           var5_int = param1 + this.field_p;
           var6 = this.field_m + param2;
-          gk.field_c.a(we.field_a, var5_int + 20, 20 + var6, this.field_x - 40, -50 + this.field_u, 16777215, -1, 1, 0, gk.field_c.field_G);
+          gk.field_c.drawParagraph(we.field_a, var5_int + 20, 20 + var6, this.field_x - 40, -50 + this.field_u, 16777215, -1, 1, 0, gk.field_c.field_G);
           super.a(param0, param1, param2, param3 + 0);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "sf.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');

@@ -22,7 +22,7 @@ class fh extends DualLinkNode {
           ce.field_c = true;
           var2_int = ro.field_g.field_i;
           var3 = ro.field_g.field_d;
-          var4 = rh.field_I.field_z.a(param0, 272, rh.field_I.field_qb);
+          var4 = rh.field_I.field_z.textHeight(param0, 272, rh.field_I.field_qb);
           if (param1 != -19615) {
             fh.discardDeclaredStaticReferences(-30);
           }

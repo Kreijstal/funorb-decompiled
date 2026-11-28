@@ -185,7 +185,7 @@ final class PasswordValidator extends TextFieldValidator {
         int integerLocal24;
         integerLocal23 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal15 = bitmapFontArgument5.computeInteger1066(stringArgument1);
+          integerLocal15 = bitmapFontArgument5.stringWidth(stringArgument1);
           if (integerLocal15 <= integerArgument3 &&
             stringArgument1.indexOf("<br>") == -1) {
             stringArrayArgument4[0] = stringArgument1;
@@ -202,7 +202,7 @@ final class PasswordValidator extends TextFieldValidator {
             if (32 == integerLocal20 ||
               45 == integerLocal20) {
               stringLocal21 = stringArgument1.substring(integerLocal18, integerLocal1 + 1).trim();
-              integerLocal22 = bitmapFontArgument5.computeInteger1066(stringLocal21);
+              integerLocal22 = bitmapFontArgument5.stringWidth(stringLocal21);
               if (integerArgument3 <= integerLocal22) {
                 integerLocal18 = integerLocal1 + 1;
                 previousIntegerLocal2 = integerLocal24;

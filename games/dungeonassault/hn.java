@@ -106,7 +106,7 @@ final class hn extends kl {
         super.b(117);
         int var2 = (this.field_a >> 1) + this.field_k;
         int var3 = 10 + this.field_j;
-        IntrusiveNode.field_c.c(this.field_p, var2, var3 + IntrusiveNode.field_c.field_H, 16777215, -1);
+        IntrusiveNode.field_c.drawCentred(this.field_p, var2, var3 + IntrusiveNode.field_c.field_H, 16777215, -1);
         var3 = var3 + (10 + IntrusiveNode.field_c.field_H);
         int var4 = 50 + this.field_j;
         DungeonAssaultScreen.b(this.field_k + 32, var4, -64 + this.field_a, 4, 0, 128, 128);
@@ -144,9 +144,9 @@ final class hn extends kl {
           }
         }
         DungeonAssaultScreen.field_i[0].h(-50 + var2, var4 + 20);
-        IntrusiveNode.field_c.b(Integer.toString(this.field_o), -30 + var2, var4 + 36, 16711680, -1);
+        IntrusiveNode.field_c.drawString(Integer.toString(this.field_o), -30 + var2, var4 + 36, 16711680, -1);
         DungeonAssaultScreen.field_i[1].h(var2, var4 + 20);
-        IntrusiveNode.field_c.b(Integer.toString(this.field_n - this.field_o), 20 + var2, 36 + var4, 65280, -1);
+        IntrusiveNode.field_c.drawString(Integer.toString(this.field_n - this.field_o), 20 + var2, 36 + var4, 65280, -1);
         ue.field_i[1].h(this.field_k + 20, 24 + this.field_j);
         ue.field_i[0].h(-36 + (this.field_a + this.field_k), this.field_j + 24);
     }

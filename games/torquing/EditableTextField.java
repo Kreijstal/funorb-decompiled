@@ -27,14 +27,14 @@ class EditableTextField extends lg {
 
     private final void submitText(int param0) {
         if (param0 < 59) {
-          this.i((byte) 122);
+          this.clearText((byte) 122);
         }
         if (this.listener instanceof TextFieldListener) {
           ((TextFieldListener) (this.listener)).onTextSubmitted(this, (byte) -124);
         }
     }
 
-    private final void a(boolean param0) {
+    private final void scrollCaretIntoView(boolean param0) {
         uj var3;
         int var4;
         int var5;
@@ -274,7 +274,7 @@ class EditableTextField extends lg {
         }
     }
 
-    final void a(boolean param0, String param1, boolean param2) {
+    final void setText(boolean param0, String param1, boolean param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException stackIn_14_0 = null;
@@ -362,7 +362,7 @@ class EditableTextField extends lg {
         try {
           this.renderer = ah.field_c.field_g;
           this.field_I = param2;
-          this.a(true, param0, true);
+          this.setText(true, param0, true);
           this.field_J = true;
           this.field_H = km.correctedCurrentTimeMillis(-1);
         } catch (RuntimeException runtimeException) {
@@ -381,7 +381,7 @@ class EditableTextField extends lg {
         return (String) null;
     }
 
-    private final int a(byte param0) {
+    private final int findNextWordBoundary(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -407,7 +407,7 @@ class EditableTextField extends lg {
         int var6 = 0;
         try {
           super.a(124, param1, param2, param3);
-          this.a(true);
+          this.scrollCaretIntoView(true);
           if (this.field_l == 1) {
             if (this.renderer instanceof fe) {
               var7 = (fe) ((Object) this.renderer);
@@ -483,7 +483,7 @@ class EditableTextField extends lg {
               }
             } else {
               if (param0 == 13) {
-                this.i((byte) 88);
+                this.clearText((byte) 88);
                 return true;
               }
               if (param0 == 96) {
@@ -492,19 +492,19 @@ class EditableTextField extends lg {
                   if (!i.field_P[82]) {
                     stackIn_50_2 = this.field_G - 1;
                   } else {
-                    stackIn_50_2 = this.g((byte) -127);
+                    stackIn_50_2 = this.findPreviousWordBoundary((byte) -127);
                   }
-                  this.a((byte) stackIn_49_1, stackIn_50_2);
+                  this.moveCaret((byte) stackIn_49_1, stackIn_50_2);
                   return true;
                 }
               } else {
                 if (param0 != 97) {
                   if (param0 == 102) {
-                    this.a((byte) -62, 0);
+                    this.moveCaret((byte) -62, 0);
                     return true;
                   }
                   if (param0 == 103) {
-                    this.a((byte) -78, this.text.length());
+                    this.moveCaret((byte) -78, this.text.length());
                     return true;
                   }
                   if (84 == param0) {
@@ -532,9 +532,9 @@ class EditableTextField extends lg {
                     if (!i.field_P[82]) {
                       stackIn_23_2 = this.field_G + 1;
                     } else {
-                      stackIn_23_2 = this.a((byte) 74);
+                      stackIn_23_2 = this.findNextWordBoundary((byte) 74);
                     }
-                    this.a((byte) stackIn_22_1, stackIn_23_2);
+                    this.moveCaret((byte) stackIn_22_1, stackIn_23_2);
                     return true;
                   }
                 }
@@ -607,7 +607,7 @@ class EditableTextField extends lg {
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void moveCaret(byte param0, int param1) {
         if (param0 > -25) {
           return;
         }
@@ -638,13 +638,13 @@ class EditableTextField extends lg {
             } else {
               stackIn_6_2 = 0;
             }
-            this.a((byte) stackIn_5_1, stackIn_6_2);
+            this.moveCaret((byte) stackIn_5_1, stackIn_6_2);
             var8_long = km.correctedCurrentTimeMillis(-1);
             stackIn_9_1 = !(-this.field_E + var8_long >= 250L);
             this.field_F = stackIn_9_1;
             if (this.field_F) {
-              this.field_C = this.g((byte) -122);
-              this.field_G = this.a((byte) 88);
+              this.field_C = this.findPreviousWordBoundary((byte) -122);
+              this.field_G = this.findNextWordBoundary((byte) 88);
               if (this.field_G > 0 &&
                 this.text.charAt(-1 + this.field_G) == 32) {
                 this.field_G = this.field_G - 1;
@@ -673,7 +673,7 @@ class EditableTextField extends lg {
         }
     }
 
-    final void i(byte param0) {
+    final void clearText(byte param0) {
         if (param0 <= 45) {
           this.field_I = -75;
         }
@@ -761,7 +761,7 @@ class EditableTextField extends lg {
         }
     }
 
-    private final int g(byte param0) {
+    private final int findPreviousWordBoundary(byte param0) {
         int var2;
         int var3;
         var3 = Torquing.field_u;

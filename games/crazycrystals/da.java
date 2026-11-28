@@ -292,8 +292,8 @@ final class da extends ue {
           if (this.field_e > this.field_i) {
             var6 = AgeValidator.a(new String[]{((an) (this.field_d[this.field_e])).field_p}, io.field_J, 3);
             var7 = cj.field_E;
-            var8 = 20 * go.field_l.a(var6, 304);
-            var9 = go.field_l.a(var7, 304) * 20;
+            var8 = 20 * go.field_l.lineCount(var6, 304);
+            var9 = go.field_l.lineCount(var7, 304) * 20;
             SoftwareRasterizer.fillRectangleAlpha(31, 130, 320, var8, 0, 192);
             SoftwareRasterizer.drawHorizontalLineAlpha(31, var8 + 130, 320, 0, 160);
             SoftwareRasterizer.drawHorizontalLineAlpha(31, 130 + (var8 + 1), 320, 0, 128);
@@ -306,8 +306,8 @@ final class da extends ue {
             SoftwareRasterizer.drawHorizontalLineAlpha(31, 448 - var9, 320, 0, 128);
             SoftwareRasterizer.drawHorizontalLineAlpha(31, -1 + (450 - var9), 320, 0, 160);
             SoftwareRasterizer.fillRectangleAlpha(31, -var9 + 450, 320, var9, 0, 192);
-            go.field_l.a(var6, 39, 132, 304, 316, 16777215, -1, 1, 0, 20);
-            go.field_l.a(var7, 39, 132, 304, 316, 16777215, -1, 1, 2, 20);
+            go.field_l.drawParagraph(var6, 39, 132, 304, 316, 16777215, -1, 1, 0, 20);
+            go.field_l.drawParagraph(var7, 39, 132, 304, 316, 16777215, -1, 1, 2, 20);
           }
         } else {
           SoftwareRasterizer.fillRectangleAlpha(31, 130, 320, 320, 0, 192);
@@ -334,12 +334,12 @@ final class da extends ue {
             if (rc.a(-106)) {
               var3_ref = var3_ref + "<br><br>" + var4_ref_String;
             }
-            go.field_l.a(var3_ref, 39, 130, 304, 320, var5, -1, 1, 1, 20);
+            go.field_l.drawParagraph(var3_ref, 39, 130, 304, 320, var5, -1, 1, 1, 20);
           }
         }
         SoftwareRasterizer.resetClip();
         if (co.field_x == 20) {
-          go.field_l.b(b.field_b, 611, 54, 16777215, -1);
+          go.field_l.drawRightAligned(b.field_b, 611, 54, 16777215, -1);
           SoftwareRasterizer.fillRectangle(383, 60, 228, 2, 12640511);
           this.b(this.field_m, 22370, this.field_d.length);
         }
@@ -1236,7 +1236,7 @@ final class da extends ue {
               var7Lifetime5 = CipherPacketBuffer.field_t[3];
             }
           }
-          this.field_d[var3] = (ik) ((Object) new an(-go.field_l.a(var12) + 410, this.b(var3, -15), var6 + var4, 0, (String) (var7Lifetime5)));
+          this.field_d[var3] = (ik) ((Object) new an(-go.field_l.stringWidth(var12) + 410, this.b(var3, -15), var6 + var4, 0, (String) (var7Lifetime5)));
         }
         if (rc.a(-98)) {
           this.field_d[this.field_m] = (ik) ((Object) new mh(380, 398, 240, mh.field_m, 2));

@@ -8,7 +8,7 @@ final class pe extends IntrusiveNode {
     static int field_q;
     static int field_m;
 
-    final static void a(ok param0, sd param1, String param2, int param3, int param4) {
+    final static void a(BitmapFont param0, sd param1, String param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -33,13 +33,13 @@ final class pe extends IntrusiveNode {
           for (var7 = 1; param2.length() > var7; var7++) {
             var8 = param2.charAt(var7);
             if (var8 == 60) {
-              var6 = param1.field_e[0] + ((var5_int >> 8) + param0.c(param2.substring(0, var7)));
+              var6 = param1.field_e[0] + ((var5_int >> 8) + param0.stringWidth(param2.substring(0, var7)));
             }
             if (var6 == -1) {
               if (var8 == 32) {
                 var5_int = var5_int + param3;
               }
-              param1.field_e[var7] = param1.field_e[0] + (var5_int >> 8) + (param0.c(param2.substring(0, var7 + 1)) - param0.a((char) var8));
+              param1.field_e[var7] = param1.field_e[0] + (var5_int >> 8) + (param0.stringWidth(param2.substring(0, var7 + 1)) - param0.charWidth((char) var8));
             } else {
               param1.field_e[var7] = var6;
             }

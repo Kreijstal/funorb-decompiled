@@ -258,7 +258,7 @@ final class ke extends si {
           return;
         }
         int var7 = this.field_L ? this.field_t + (-this.field_R - 2 * this.field_P) : 0;
-        this.field_M.a(this.field_Q, this.field_P + (var5 + var7), this.field_P + var6, this.field_R - this.field_P, this.field_x - 2 * this.field_P, this.field_S, -1, this.field_L ? 0 : 2, 1, this.field_M.field_F);
+        this.field_M.drawParagraph(this.field_Q, this.field_P + (var5 + var7), this.field_P + var6, this.field_R - this.field_P, this.field_x - 2 * this.field_P, this.field_S, -1, this.field_L ? 0 : 2, 1, this.field_M.field_F);
     }
 
     final static int b(int param0, int param1, int param2) {
@@ -295,7 +295,7 @@ final class ke extends si {
           this.field_L = stackIn_4_1;
           this.field_P = param7;
           var12_int = this.field_R - this.field_P;
-          var13 = this.field_M.b(param10, var12_int, this.field_M.field_F) + 2 * this.field_P;
+          var13 = this.field_M.textHeight(param10, var12_int, this.field_M.field_F) + 2 * this.field_P;
           if (param3 >= var13) {
             var13 = param3;
           } else {

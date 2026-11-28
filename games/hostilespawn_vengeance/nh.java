@@ -10,7 +10,7 @@ final class nh extends fc {
     private String field_B;
     static uj field_L;
     static int field_H;
-    private vm field_N;
+    private BitmapFont field_N;
     private int field_I;
     private int field_F;
     static we field_P;
@@ -69,7 +69,7 @@ final class nh extends fc {
         }
         if (param2 > 42) {
           var7 = !this.field_K ? 0 : -(this.field_I * 2) + (this.field_s - this.field_J);
-          this.field_N.a(this.field_B, this.field_I + var5 + var7, this.field_I + var6, -this.field_I + this.field_J, -(this.field_I * 2) + this.field_x, this.field_F, -1, !this.field_K ? 2 : 0, 1, this.field_N.field_y);
+          this.field_N.drawParagraph(this.field_B, this.field_I + var5 + var7, this.field_I + var6, -this.field_I + this.field_J, -(this.field_I * 2) + this.field_x, this.field_F, -1, !this.field_K ? 2 : 0, 1, this.field_N.field_y);
           return;
         }
     }
@@ -204,7 +204,7 @@ final class nh extends fc {
         }
     }
 
-    nh(int param0, int param1, int param2, int param3, ag param4, boolean param5, int param6, int param7, vm param8, int param9, String param10) {
+    nh(int param0, int param1, int param2, int param3, ag param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (nn) null, (mh) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -230,7 +230,7 @@ final class nh extends fc {
           this.field_N = param8;
           this.field_I = param7;
           var12_int = this.field_J - this.field_I;
-          var13 = this.field_N.b(param10, var12_int, this.field_N.field_y) + 2 * this.field_I;
+          var13 = this.field_N.textHeight(param10, var12_int, this.field_N.field_y) + 2 * this.field_I;
           if (param3 < var13) {
             this.a(param2, param1, 0, param0, var13);
           } else {

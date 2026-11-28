@@ -187,7 +187,7 @@ final class uma extends sh {
           return;
         }
         try {
-          oc.field_l.a(param2, param4 + param1.x + (param1.width >> 1), -5 + param1.y + param3, 16777215, -1);
+          oc.field_l.drawCentred(param2, param4 + param1.x + (param1.width >> 1), -5 + param1.y + param3, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "uma.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

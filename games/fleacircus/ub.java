@@ -42,12 +42,12 @@ final class ub {
         }
     }
 
-    final static jh a(String param0, ResourceArchive param1, String param2, ResourceArchive param3, int param4) {
+    final static BinaryBitmapFont a(String param0, ResourceArchive param1, String param2, ResourceArchive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        jh stackIn_2_0 = null;
-        jh stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_2_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -60,7 +60,7 @@ final class ub {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 32) {
-            stackIn_2_0 = (jh) null;
+            stackIn_2_0 = (BinaryBitmapFont) null;
             return stackIn_2_0;
           }
           var5_int = param1.getGroupIdByName(param0, (byte) -100);

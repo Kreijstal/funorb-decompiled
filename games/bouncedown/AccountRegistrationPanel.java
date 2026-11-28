@@ -241,12 +241,12 @@ final class AccountRegistrationPanel extends lc implements ki, rc, rf {
         this.field_E.field_q = fd.field_o;
         this.field_J.field_q = FullscreenFocusCanvas.field_b;
         this.field_G.field_q = pb.field_g;
-        this.field_F.a(new AccountNameAvailabilityValidator(this.field_F), true);
-        this.field_B.a(new EmailFormatValidator(this.field_B), true);
-        this.field_C.a(new ConfirmedEmailAvailabilityValidator(this.field_C, this.field_B), true);
-        this.field_A.a(new PasswordValidator(this.field_A, this.field_F, this.field_B), true);
-        this.field_E.a(new MatchingFieldValidator(this.field_E, this.field_A), true);
-        this.field_J.a(new AgeValidator(this.field_J), true);
+        this.field_F.setFieldValidator(new AccountNameAvailabilityValidator(this.field_F), true);
+        this.field_B.setFieldValidator(new EmailFormatValidator(this.field_B), true);
+        this.field_C.setFieldValidator(new ConfirmedEmailAvailabilityValidator(this.field_C, this.field_B), true);
+        this.field_A.setFieldValidator(new PasswordValidator(this.field_A, this.field_F, this.field_B), true);
+        this.field_E.setFieldValidator(new MatchingFieldValidator(this.field_E, this.field_A), true);
+        this.field_J.setFieldValidator(new AgeValidator(this.field_J), true);
         this.field_D.field_y = false;
         this.field_D.field_j = (fc) ((Object) new jh());
         this.field_K.field_j = (fc) ((Object) new r());
@@ -363,7 +363,7 @@ final class AccountRegistrationPanel extends lc implements ki, rc, rf {
         try {
           var3 = this.field_F;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(false, var4, true);
+          ((EditableTextField) ((Object) var3)).setText(false, var4, true);
           if (param1 == 43) {
             return;
           }

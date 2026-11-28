@@ -248,7 +248,7 @@ class ai extends em {
         }
     }
 
-    final static void a(ok param0, ji param1, int param2, int param3, int param4, int param5, int param6, int param7, ji param8, int param9, int param10, int param11, int param12, ji param13, int param14, int param15, int param16, ok param17, int param18, int param19, int param20) {
+    final static void a(BitmapFont param0, ji param1, int param2, int param3, int param4, int param5, int param6, int param7, ji param8, int param9, int param10, int param11, int param12, ji param13, int param14, int param15, int param16, BitmapFont param17, int param18, int param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -312,8 +312,8 @@ class ai extends em {
 
     public static void a(int param0) {
         if (param0 != -12875) {
-          ok var2 = (ok) null;
-          ai.a((ok) null, (ji) null, -92, 60, -114, 84, 108, 23, (ji) null, 15, -93, 33, 98, (ji) null, 19, 105, -6, (ok) null, -59, -38, -101);
+          BitmapFont var2 = (BitmapFont) null;
+          ai.a((BitmapFont) null, (ji) null, -92, 60, -114, 84, 108, 23, (ji) null, 15, -93, 33, 98, (ji) null, 19, 105, -6, (BitmapFont) null, -59, -38, -101);
         }
         field_g = null;
     }

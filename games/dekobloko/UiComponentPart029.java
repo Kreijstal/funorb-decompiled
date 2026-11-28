@@ -5,7 +5,7 @@ import java.util.*;
 
 final class UiComponentPart029 extends ComponentDecorator {
     private int integerState0742;
-    static RenderingSupport009 renderingSupport009State0005;
+    static BinaryBitmapFont renderingSupport009State0005;
     static String stringState0496;
     static String stringState0497;
     private int integerState0743;
@@ -262,7 +262,7 @@ final class UiComponentPart029 extends ComponentDecorator {
           super.performAction0213(integerArgument1, integerArgument2 ^ 0, integerArgument3, uiComponentArgument4, integerArgument5, integerArgument6);
           this.integerState0109 = 0;
           if (integerArgument2 != 64) {
-            renderingSupport009State0005 = (RenderingSupport009) null;
+            renderingSupport009State0005 = (BinaryBitmapFont) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "se.IB(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + (uiComponentArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ',' + integerArgument6 + ')');

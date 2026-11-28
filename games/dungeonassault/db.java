@@ -7,7 +7,7 @@ final class db extends DungeonAssaultScreen {
     private ae field_w;
     private tf[] field_s;
     private rh field_t;
-    static gp field_v;
+    static BinaryBitmapFont field_v;
 
     private final void b(int param0) {
         int var2;
@@ -28,7 +28,7 @@ final class db extends DungeonAssaultScreen {
           this.b((byte) 115);
         }
         var2 = 241;
-        field_v.c(fd.field_a, 213, var2, 16777215, -1);
+        field_v.drawCentred(fd.field_a, 213, var2, 16777215, -1);
         var3 = gm.field_d.field_w;
         if (null != fo.field_d.field_l) {
           var3 = ((Integer) (fo.field_d.field_l.field_u)).intValue();
@@ -37,7 +37,7 @@ final class db extends DungeonAssaultScreen {
           var11 = (int[]) null;
           if (o.a(FrameTimer.field_c, (int[]) null, var3, gm.field_d, true)) {
             var12 = jk.a(new String[]{CombatState.formatPlayerNameWithTitle((byte) 66, gm.field_d.field_w, CrossfadingMidiPcmStream.field_u)}, DungeonAssault.field_G, 30496);
-            la.field_b.a(var12, 70, 338, 270, 180, 16760960, -1, 1, 0, la.field_b.field_H + la.field_b.field_E);
+            la.field_b.drawParagraph(var12, 70, 338, 270, 180, 16760960, -1, 1, 0, la.field_b.field_H + la.field_b.field_E);
             if (var10 == 0) {
               break regionExit1;
             }
@@ -132,9 +132,9 @@ final class db extends DungeonAssaultScreen {
                 }
               }
             }
-            la.field_b.a(var5, 75, 338, 260, 180, 8421504, -1, 1, 0, la.field_b.field_E + la.field_b.field_H);
+            la.field_b.drawParagraph(var5, 75, 338, 260, 180, 8421504, -1, 1, 0, la.field_b.field_E + la.field_b.field_H);
           } else {
-            la.field_b.a(var5, 75, 338, 260, 180, 8421504, -1, 1, 0, la.field_b.field_E + la.field_b.field_H);
+            la.field_b.drawParagraph(var5, 75, 338, 260, 180, 8421504, -1, 1, 0, la.field_b.field_E + la.field_b.field_H);
           }
         }
     }
@@ -142,11 +142,11 @@ final class db extends DungeonAssaultScreen {
     private final void a(int param0, byte param1) {
         int var3 = tg.field_f[3][param0];
         String var4 = this.a(var3, 0);
-        int var5 = IntrusiveNode.field_c.b(var4);
+        int var5 = IntrusiveNode.field_c.stringWidth(var4);
         int var6 = IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_H;
         RgbSprite var7 = new RgbSprite(var5, var6);
         jh.a(var7);
-        IntrusiveNode.field_c.b(var4, 0, IntrusiveNode.field_c.field_H, 16760960, -1);
+        IntrusiveNode.field_c.drawString(var4, 0, IntrusiveNode.field_c.field_H, 16760960, -1);
         jh.b();
         if (param1 != -121) {
           db.clearStaticReferences((byte) 98);
@@ -172,7 +172,7 @@ final class db extends DungeonAssaultScreen {
         }
         var4 = tg.field_f[3][param1];
         var5 = this.a(var4, 0);
-        var6 = IntrusiveNode.field_c.b(var5);
+        var6 = IntrusiveNode.field_c.stringWidth(var5);
         var7 = bh.b(param1, 3, false);
         var8 = qd.a(param1, 380, 3);
         var9 = o.a(3, (byte) 101, param1);
@@ -693,17 +693,17 @@ final class db extends DungeonAssaultScreen {
         var5 = kk.field_l.field_E + kk.field_l.field_H;
         var6 = 40;
         SoftwareRasterizer.fillRectangleAlpha(var3 - 3, var4 - 16, 186, 70, 16777215, var6);
-        field_v.b(jk.a(new String[]{gh.a(var19.field_N, (byte) -118)}, kk.field_s, 30496), var3, var4, 0, -1);
+        field_v.drawString(jk.a(new String[]{gh.a(var19.field_N, (byte) -118)}, kk.field_s, 30496), var3, var4, 0, -1);
         var4 += 16;
-        field_v.b(jk.a(new String[]{gh.a(var19.field_m, (byte) -101)}, mm.field_j, 30496), var3, var4, 0, -1);
+        field_v.drawString(jk.a(new String[]{gh.a(var19.field_m, (byte) -101)}, mm.field_j, 30496), var3, var4, 0, -1);
         var4 += 16;
-        field_v.b(jk.a(new String[]{Integer.toString(var19.field_s / 10)}, bp.field_h, 30496), var3, var4, 0, -1);
+        field_v.drawString(jk.a(new String[]{Integer.toString(var19.field_s / 10)}, bp.field_h, 30496), var3, var4, 0, -1);
         var4 += 16;
         var7 = 60 * (int)(0.5 + Math.pow(2.0, (double)(-var20.field_N) / 10000.0) * 250.0) / 60;
         var7 = var7 + 10 * gm.field_d.field_J[2];
-        kk.field_l.b(jk.a(new String[]{gh.a(var7, (byte) -112)}, la.field_j, 30496), var3, var4, 0, -1);
+        kk.field_l.drawString(jk.a(new String[]{gh.a(var7, (byte) -112)}, la.field_j, 30496), var3, var4, 0, -1);
         if (param0 != 197376) {
-          field_v = (gp) null;
+          field_v = (BinaryBitmapFont) null;
         }
         var8 = 9;
         var4 = var4 + (var8 + 16);
@@ -730,15 +730,15 @@ final class db extends DungeonAssaultScreen {
         boolean decompiledFrameCompleted1 = true;
         boolean decompiledFrameCompleted0 = true;
         var11 = -55 + bl.field_s.field_y;
-        var12 = 2 + kk.field_l.c(var9, var11) + kk.field_l.c(var10Lifetime1, var11);
+        var12 = 2 + kk.field_l.lineCount(var9, var11) + kk.field_l.lineCount(var10Lifetime1, var11);
         SoftwareRasterizer.fillRectangleAlpha(-3 + var3, -16 + var4, 186, 6 + var12 * 16, 16777215, var6);
-        field_v.b(DungeonBuilderScreen.field_r, var3, var4, 0, -1);
+        field_v.drawString(DungeonBuilderScreen.field_r, var3, var4, 0, -1);
         var4 += 16;
-        var12Lifetime1 = kk.field_l.a(var9, 10 + var3, -var5 + var4, var11, 100, 0, -1, 0, 0, var5);
+        var12Lifetime1 = kk.field_l.drawParagraph(var9, 10 + var3, -var5 + var4, var11, 100, 0, -1, 0, 0, var5);
         var4 = var4 + 16 * var12Lifetime1;
-        field_v.b(rb.field_M, var3, var4, 0, -1);
+        field_v.drawString(rb.field_M, var3, var4, 0, -1);
         var4 += 16;
-        var12Lifetime2 = kk.field_l.a(var10Lifetime1, var3 + 10, -var5 + var4, var11, 100, 0, -1, 0, 0, var5);
+        var12Lifetime2 = kk.field_l.drawParagraph(var10Lifetime1, var3 + 10, -var5 + var4, var11, 100, 0, -1, 0, 0, var5);
         var4 = var4 + (16 * var12Lifetime2 + var8);
         if (var19.field_t[0] != -1L) {
           var12Lifetime3 = 0;
@@ -763,7 +763,7 @@ final class db extends DungeonAssaultScreen {
             }
             var4 = var13;
             SoftwareRasterizer.fillRectangleAlpha(var3 - 3, var4 - 16, 186, 20 + kk.field_l.field_H * 6, 16777215, var6);
-            field_v.b(oh.field_o, var3, var4, 0, -1);
+            field_v.drawString(oh.field_o, var3, var4, 0, -1);
             var4 += 16;
             stackIn_21_0 = 0;
             break;
@@ -782,7 +782,7 @@ final class db extends DungeonAssaultScreen {
               break;
             }
             var17 = uj.a(var15Lifetime1, param0 - 197377);
-            kk.field_l.b(var17, var3 + 10, var4, 14352640, -1);
+            kk.field_l.drawString(var17, var3 + 10, var4, 14352640, -1);
             var4 = var4 + kk.field_l.field_H;
             if (var4 > 350 &&
               var18 == 0) {
@@ -870,14 +870,14 @@ final class db extends DungeonAssaultScreen {
         stackIn_9_0 = (!param3) ? 65793 : 12690143;
         var7 = stackIn_9_0;
         var8 = u.a(field_v, (byte) 68, CrossfadingMidiPcmStream.field_u, param1, var5, eh.field_o.field_q - 25);
-        var9 = field_v.b(var8);
+        var9 = field_v.stringWidth(var8);
         var10 = field_v.field_H + la.field_b.field_E;
         var11 = new RgbSprite(var9, var10);
         var12 = new RgbSprite(var9, var10);
         var13 = new RgbSprite(var9, var10);
         jh.c();
         var11.e();
-        field_v.b(var8, 0, la.field_b.field_H, var6, -1);
+        field_v.drawString(var8, 0, la.field_b.field_H, var6, -1);
         var12.e();
         SoftwareRasterizer.clearRaster();
         var11.e(0, 0, 16744448);
@@ -1027,7 +1027,7 @@ final class db extends DungeonAssaultScreen {
           SoftwareRasterizer.fillRectangleAlpha(370, 110, 182, 124, 0, 208);
           var4_int = ((lk) (mk.field_j.field_l)).field_O;
           SpriteAnimationPlayer.field_l[var4_int].a(var3, var2, true, 100);
-          field_v.c(li.field_b[var4_int], var2, var3 + 90, 0, -1);
+          field_v.drawCentred(li.field_b[var4_int], var2, var3 + 90, 0, -1);
           var5 = gm.field_d.field_J[var4_int] + gm.field_d.field_F[var4_int];
           if (ve.a(false)) {
             if (AchievementIconEntry.field_m[var4_int]) {
@@ -1043,13 +1043,13 @@ final class db extends DungeonAssaultScreen {
             var7 = (10 + 1 * var5) * fj.field_g[var4_int] / 10;
             stackIn_15_0 = (var7 <= gm.field_d.field_s) ? 0 : 16711680;
             var8 = stackIn_15_0;
-            field_v.c(jk.a(new String[]{Integer.toString(var7 / 10)}, NodeHashTableIterator.field_c, 30496), var2, 105 + var3, var8, -1);
-            la.field_b.a(ByteStorage.field_a[var4_int], -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
+            field_v.drawCentred(jk.a(new String[]{Integer.toString(var7 / 10)}, NodeHashTableIterator.field_c, 30496), var2, 105 + var3, var8, -1);
+            la.field_b.drawParagraph(ByteStorage.field_a[var4_int], -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
             if (var9 != 0) {
-              la.field_b.a(bl.field_b, -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
+              la.field_b.drawParagraph(bl.field_b, -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
             }
           } else {
-            la.field_b.a(bl.field_b, -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
+            la.field_b.drawParagraph(bl.field_b, -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
           }
         }
         var4 = ng.field_L;
@@ -1065,9 +1065,9 @@ final class db extends DungeonAssaultScreen {
           }
           var5Lifetime1 = 16711680;
           var6 = jk.a(new String[]{jk.a(120, gm.field_d.field_A)}, fl.field_n, 30496);
-          la.field_b.a(var6, 80, 338, 250, 180, var5Lifetime1, -1, 1, 0, field_v.field_H);
+          la.field_b.drawParagraph(var6, 80, 338, 250, 180, var5Lifetime1, -1, 1, 0, field_v.field_H);
         }
-        la.field_b.a(var4, 80, -la.field_b.field_H + 211, 250, 45, var5Lifetime1, -1, 1, 2, field_v.field_H);
+        la.field_b.drawParagraph(var4, 80, -la.field_b.field_H + 211, 250, 45, var5Lifetime1, -1, 1, 2, field_v.field_H);
     }
 
     private final void a(int param0, int param1, boolean param2) {

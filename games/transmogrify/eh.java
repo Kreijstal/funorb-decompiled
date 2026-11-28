@@ -10,7 +10,7 @@ final class eh {
     static int totalScore;
     static IndexedSprite[] field_b;
 
-    final static void a(ol param0, byte param1, String param2, kg param3, int param4) {
+    final static void a(ol param0, byte param1, String param2, BitmapFont param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -32,7 +32,7 @@ final class eh {
           for (var7 = 1; var7 < param2.length(); var7++) {
             var8 = param2.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) + param0.field_g[0] + param3.a(param2.substring(0, var7));
+              var6 = (var5_int >> 8) + param0.field_g[0] + param3.stringWidth(param2.substring(0, var7));
             }
             if (-1 != var6) {
               param0.field_g[var7] = var6;
@@ -40,7 +40,7 @@ final class eh {
               if (32 == var8) {
                 var5_int = var5_int + param4;
               }
-              param0.field_g[var7] = param0.field_g[0] + ((var5_int >> 8) - (-param3.a(param2.substring(0, var7 + 1)) + param3.a((char) var8)));
+              param0.field_g[var7] = param0.field_g[0] + ((var5_int >> 8) - (-param3.stringWidth(param2.substring(0, var7 + 1)) + param3.charWidth((char) var8)));
             }
             if (var8 == 62) {
               var6 = -1;
@@ -187,8 +187,8 @@ final class eh {
             }
           }
           if (param0 < 97) {
-            kg var4 = (kg) null;
-            eh.$cfr$intArgs$a$d8024809bc20((ol) null, 4, (String) null, (kg) null, -68);
+            BitmapFont var4 = (BitmapFont) null;
+            eh.$cfr$intArgs$a$d8024809bc20((ol) null, 4, (String) null, (BitmapFont) null, -68);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -197,12 +197,12 @@ final class eh {
         }
     }
 
-    final static sa a(IndexedSprite[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static PalettedBitmapFont a(IndexedSprite[] param0, int param1, byte[] param2, int param3, int param4) {
         int var11_int = 0;
         byte[] array$0 = null;
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
-        sa stackIn_26_0 = null;
+        PalettedBitmapFont stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -216,7 +216,7 @@ final class eh {
         int[] var8 = null;
         int[] var9 = null;
         byte[][] var10 = null;
-        sa var11 = null;
+        PalettedBitmapFont var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         int var14 = 0;
@@ -299,7 +299,7 @@ final class eh {
               var19Lifetime1 = var19Lifetime1 + var17;
             }
           }
-          var11 = new sa(param2, var5, var6, var7, var8, var9, var10);
+          var11 = new PalettedBitmapFont(param2, var5, var6, var7, var8, var9, var10);
           var11.field_D = var11.field_D - 1;
           var11.field_t = var11.field_t - 1;
           var11.field_y = var11.field_y - 1;
@@ -345,7 +345,7 @@ final class eh {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$d8024809bc20(ol param0, int param1, String param2, kg param3, int param4) {
+    final static void $cfr$intArgs$a$d8024809bc20(ol param0, int param1, String param2, BitmapFont param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -367,7 +367,7 @@ final class eh {
           for (var7 = 1; var7 < param2.length(); var7++) {
             var8 = param2.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) + param0.field_g[0] + param3.a(param2.substring(0, var7));
+              var6 = (var5_int >> 8) + param0.field_g[0] + param3.stringWidth(param2.substring(0, var7));
             }
             if (-1 != var6) {
               param0.field_g[var7] = var6;
@@ -375,7 +375,7 @@ final class eh {
               if (32 == var8) {
                 var5_int = var5_int + param4;
               }
-              param0.field_g[var7] = param0.field_g[0] + ((var5_int >> 8) - (-param3.a(param2.substring(0, var7 + 1)) + param3.a((char) var8)));
+              param0.field_g[var7] = param0.field_g[0] + ((var5_int >> 8) - (-param3.stringWidth(param2.substring(0, var7 + 1)) + param3.charWidth((char) var8)));
             }
             if (var8 == 62) {
               var6 = -1;

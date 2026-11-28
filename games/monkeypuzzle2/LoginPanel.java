@@ -23,8 +23,8 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ql 
           return;
         }
         try {
-          var3.a(false, param1 ^ 5937, var4);
-          this.field_H.f((byte) -64);
+          var3.setText(false, param1 ^ 5937, var4);
+          this.field_H.clearText((byte) -64);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "qi.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -151,13 +151,13 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ql 
 
     final void k(int param0) {
         int var2 = -33 / ((param0 + 52) / 50);
-        this.field_L.f((byte) -20);
-        this.field_H.f((byte) -51);
+        this.field_L.clearText((byte) -20);
+        this.field_H.clearText((byte) -51);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         if (null != this.field_B) {
-          ButtonWidget.field_z.a(this.field_B, 20 + (this.field_r + param3), 15 + this.field_e + param2, this.field_l - 40, this.field_p, 16777215, -1, 1, 0, ButtonWidget.field_z.field_C);
+          ButtonWidget.field_z.drawParagraph(this.field_B, 20 + (this.field_r + param3), 15 + this.field_e + param2, this.field_l - 40, this.field_p, 16777215, -1, 1, 0, ButtonWidget.field_z.field_C);
         }
         if (this.field_D != null) {
           SoftwareRasterizer.drawHorizontalLine(10 + param3, param2 + 134, this.field_l - 20, 4210752);
@@ -203,7 +203,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ql 
         RuntimeException decompiledCaughtException = null;
         hd var6 = null;
         RuntimeException var6_ref = null;
-        ta var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         cd var9 = null;
         mh var12 = null;
@@ -271,7 +271,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ql 
           this.field_e = 15;
           var7 = ButtonWidget.field_z;
           if (this.field_B != null) {
-            this.field_e = this.field_e + (var7.a(this.field_B, this.field_l - 40, var7.field_C) + 5);
+            this.field_e = this.field_e + (var7.textHeight(this.field_B, this.field_l - 40, var7.field_C) + 5);
           }
           var8 = wf.field_i;
           var9 = ei.a(ii.a(false), (byte) 125);

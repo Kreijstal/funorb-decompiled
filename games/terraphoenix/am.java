@@ -246,7 +246,7 @@ final class am extends WidgetContainer implements n {
         }
         BitmapFont var5 = qk.field_e;
         if (null != this.field_I) {
-          var5.a(tb.field_l, this.x + param0, this.y + param3, this.width, 20, 16777215, -1, 0, 0, var5.field_p + var5.field_s);
+          var5.drawParagraph(tb.field_l, this.x + param0, this.y + param3, this.width, 20, 16777215, -1, 0, 0, var5.field_p + var5.field_s);
         }
     }
 

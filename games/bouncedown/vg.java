@@ -3,7 +3,7 @@
  */
 final class vg implements fc {
     private int field_b;
-    private tj field_d;
+    private BitmapFont field_d;
     static String field_f;
     static String[] field_a;
     private int field_i;
@@ -155,7 +155,7 @@ final class vg implements fc {
           if (this.field_d == null) {
             return;
           }
-          this.field_d.a(var13.field_h, var8 + var7 / 2, this.field_d.field_p + (var9 + var13.field_G), this.field_k, this.field_e);
+          this.field_d.drawCentred(var13.field_h, var8 + var7 / 2, this.field_d.field_p + (var9 + var13.field_G), this.field_k, this.field_e);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -185,7 +185,7 @@ final class vg implements fc {
         field_a = null;
     }
 
-    vg(tj param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    vg(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_e = param2;
           this.field_b = param4;

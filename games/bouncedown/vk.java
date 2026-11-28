@@ -14,11 +14,11 @@ final class vk {
         field_c = null;
         if (param0 != 3) {
           RgbSprite[] var2 = (RgbSprite[]) null;
-          vk.a(-114, (RgbSprite[]) null, -39, 70, 118, -53, -38, 23, -5, (tj) null, (tj) null, (RgbSprite[]) null, 94, -108);
+          vk.a(-114, (RgbSprite[]) null, -39, 70, 118, -53, -38, 23, -5, (BitmapFont) null, (BitmapFont) null, (RgbSprite[]) null, 94, -108);
         }
     }
 
-    final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, tj param9, tj param10, RgbSprite[] param11, int param12, int param13) {
+    final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, BitmapFont param9, BitmapFont param10, RgbSprite[] param11, int param12, int param13) {
         try {
           if (param7 != 3) {
             field_a = true;

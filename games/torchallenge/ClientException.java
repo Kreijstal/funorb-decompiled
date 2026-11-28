@@ -98,9 +98,9 @@ final class ClientException extends RuntimeException {
                 var9Lifetime1 >= RandomAccessCacheFile.field_e) {
                 var7 = lc.a(var10, 1);
                 if (0 > var7) {
-                  tf.field_x.a(AccountRegistrationPanel.field_bb[ValidatedTextField.field_ib][var10], 0, 420, 640, 60, 0, -1, 1, 1, 0);
+                  tf.field_x.drawParagraph(AccountRegistrationPanel.field_bb[ValidatedTextField.field_ib][var10], 0, 420, 640, 60, 0, -1, 1, 1, 0);
                 } else {
-                  tf.field_x.a(AccountRegistrationPanel.field_bb[ValidatedTextField.field_ib][var10], 0, 420, 640, 60, 0, -1, var7, 1, 1, 0);
+                  tf.field_x.drawParagraphAlpha(AccountRegistrationPanel.field_bb[ValidatedTextField.field_ib][var10], 0, 420, 640, 60, 0, -1, var7, 1, 1, 0);
                 }
                 return;
               }

@@ -89,9 +89,9 @@ final class ei extends kn implements sh {
         if (param3 != 0) {
           return;
         }
-        we var5 = bn.field_d;
+        BitmapFont var5 = bn.field_d;
         if (null != this.field_O) {
-          var5.a(AgeValidator.field_i, param1 + this.field_u, this.field_t + param2, this.field_v, 20, 16777215, -1, 0, 0, var5.field_E + var5.field_I);
+          var5.drawParagraph(AgeValidator.field_i, param1 + this.field_u, this.field_t + param2, this.field_v, 20, 16777215, -1, 0, 0, var5.field_E + var5.field_I);
         }
     }
 

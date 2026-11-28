@@ -165,12 +165,12 @@ final class WingPod extends MovingTunnelEntity {
         }
     }
 
-    final static l a(boolean param0, byte[] param1) {
-        l var2 = null;
+    final static CoverageBitmapFont a(boolean param0, byte[] param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
         Object stackIn_2_0 = null;
-        l stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -178,9 +178,9 @@ final class WingPod extends MovingTunnelEntity {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (l) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new l(param1, DualLinkNode.field_p, ij.field_r, rg.field_I, sd.field_f, an.field_p, rj.field_f);
+          var2 = new CoverageBitmapFont(param1, DualLinkNode.field_p, ij.field_r, rg.field_I, sd.field_f, an.field_p, rj.field_f);
           StageDirector.clearIndexedSpriteDecodeBuffers(param0);
           if (param0) {
             var3 = (byte[]) null;

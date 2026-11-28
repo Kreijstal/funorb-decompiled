@@ -55,19 +55,19 @@ final class LoginPanel extends kn implements TextFieldListener, sh {
         if (param0 != -6) {
           this.n(68);
         }
-        this.field_P.f((byte) 112);
-        this.field_L.f((byte) 112);
+        this.field_P.clearText((byte) 112);
+        this.field_L.clearText((byte) 112);
     }
 
     final void a(String param0, int param1) {
         EditableTextField var3 = this.field_P;
         String var4 = param0;
-        var3.a(false, false, var4);
+        var3.setText(false, false, var4);
         if (param1 < 50) {
           return;
         }
         try {
-          this.field_L.f((byte) 112);
+          this.field_L.clearText((byte) 112);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "cl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -129,7 +129,7 @@ final class LoginPanel extends kn implements TextFieldListener, sh {
         RuntimeException decompiledCaughtException = null;
         wi var6 = null;
         RuntimeException var6_ref = null;
-        we var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         sj var9 = null;
         am var12 = null;
@@ -197,7 +197,7 @@ final class LoginPanel extends kn implements TextFieldListener, sh {
           this.field_t = 15;
           var7 = bn.field_d;
           if (null != this.field_R) {
-            this.field_t = this.field_t + (5 + var7.b(this.field_R, this.field_v - 40, var7.field_I));
+            this.field_t = this.field_t + (5 + var7.textHeight(this.field_R, this.field_v - 40, var7.field_I));
           }
           var8 = MouseWheelInput.field_c;
           var9 = hm.a(28, bm.c(-83));
@@ -458,7 +458,7 @@ final class LoginPanel extends kn implements TextFieldListener, sh {
 
     final void a(byte param0, int param1, int param2, int param3) {
         if (this.field_R != null) {
-          bn.field_d.a(this.field_R, 20 + param1 + this.field_u, 15 + this.field_t + param2, this.field_v - 40, this.field_q, 16777215, -1, 1, 0, bn.field_d.field_I);
+          bn.field_d.drawParagraph(this.field_R, 20 + param1 + this.field_u, 15 + this.field_t + param2, this.field_v - 40, this.field_q, 16777215, -1, 1, 0, bn.field_d.field_I);
         }
         if (null != this.field_J) {
           SoftwareRasterizer.drawHorizontalLine(10 + param1, 134 + param2, -20 + this.field_v, 4210752);

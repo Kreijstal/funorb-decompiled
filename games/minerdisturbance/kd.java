@@ -47,7 +47,7 @@ final class kd {
         this.field_c.b((byte) -34);
         if (param0 != 1) {
           String var3 = (String) null;
-          this.a((byte) -68, -0.07744473218917847f, (Sprite) null, (int[]) null, (we) null, -71, 72, (String) null, -74, -38);
+          this.a((byte) -68, -0.07744473218917847f, (Sprite) null, (int[]) null, (BitmapFont) null, -71, 72, (String) null, -74, -38);
         }
         if (this.field_c.b(true)) {
           if (this.field_c.field_e == 0) {
@@ -125,7 +125,7 @@ final class kd {
           if (null == ql.field_m) {
             return;
           }
-          ql.field_m.a(BufferedSocket.field_e, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+          ql.field_m.drawParagraph(BufferedSocket.field_e, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           return;
         }
         var6 = this.field_l[this.field_s];
@@ -137,7 +137,7 @@ final class kd {
           var6.a(9, 58);
         } else {
           if (null != ql.field_m) {
-            ql.field_m.a(BufferedSocket.field_e, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            ql.field_m.drawParagraph(BufferedSocket.field_e, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
         }
         if (tg.field_g > this.field_n) {
@@ -325,11 +325,11 @@ final class kd {
           }
         }
         this.field_a.f(16, 302);
-        ql.field_m.a(this.field_j[this.field_s], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+        ql.field_m.drawParagraph(this.field_j[this.field_s], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
         pk.field_c.f(30, 330);
-        ql.field_m.a(af.field_o[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        ql.field_m.a(af.field_o[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        ql.field_m.a(af.field_o[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        ql.field_m.drawParagraph(af.field_o[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        ql.field_m.drawParagraph(af.field_o[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        ql.field_m.drawParagraph(af.field_o[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
         ClientException.field_f.f(508 + (127 - ClientException.field_f.field_x) / 2, 315);
         if (0 == this.field_c.field_e) {
           PcmResampler.field_g[0].f(508, 299);
@@ -361,7 +361,7 @@ final class kd {
         return -1;
     }
 
-    private final void a(int param0, String param1, we param2, byte param3, int[] param4, int param5, int param6, int param7) {
+    private final void a(int param0, String param1, BitmapFont param2, byte param3, int[] param4, int param5, int param6, int param7) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -383,7 +383,7 @@ final class kd {
             SoftwareRasterizer.setClip(param7, var9_int, param0, 1 + var9_int);
             var10 = param4.length * var9_int / param6;
             var11 = param4[-1 + param4.length - var10];
-            param2.a(param1, param7, param5, param0, param6, var11, -1, 1, 1, 0);
+            param2.drawParagraph(param1, param7, param5, param0, param6, var11, -1, 1, 1, 0);
           }
           tk.b(true);
           if (param3 <= 113) {
@@ -424,7 +424,7 @@ final class kd {
         }
     }
 
-    private final void a(byte param0, float param1, Sprite param2, int[] param3, we param4, int param5, int param6, String param7, int param8, int param9) {
+    private final void a(byte param0, float param1, Sprite param2, int[] param3, BitmapFont param4, int param5, int param6, String param7, int param8, int param9) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

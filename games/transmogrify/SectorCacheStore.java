@@ -377,12 +377,12 @@ final class SectorCacheStore {
         }
     }
 
-    final static hh a(byte[] param0, int param1) {
-        hh var2 = null;
+    final static CoverageBitmapFont a(byte[] param0, int param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
         Object stackIn_2_0 = null;
-        hh stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -390,13 +390,13 @@ final class SectorCacheStore {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (hh) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (param1 != 21725) {
             var3 = (byte[]) null;
             SectorCacheStore.a((byte[]) null, 124);
           }
-          var2 = new hh(param0, BufferedSocket.field_j, Bzip2State.field_a, ql.field_b, wk.field_b, EditableTextField.field_D, Bzip2State.field_K);
+          var2 = new CoverageBitmapFont(param0, BufferedSocket.field_j, Bzip2State.field_a, ql.field_b, wk.field_b, EditableTextField.field_D, Bzip2State.field_K);
           wd.d(120);
           stackIn_6_0 = var2;
           return stackIn_6_0;

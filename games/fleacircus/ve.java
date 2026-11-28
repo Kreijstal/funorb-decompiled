@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ve {
-    static fa field_d;
+    static BitmapFont field_d;
     private boolean field_c;
     private String field_b;
     private boolean field_a;

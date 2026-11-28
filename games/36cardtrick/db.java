@@ -3,7 +3,7 @@
  */
 final class db implements ci {
     static AccountRegistrationPanel field_a;
-    private ee field_n;
+    private BitmapFont field_n;
     private int field_k;
     static byte field_p;
     private int field_g;
@@ -63,7 +63,7 @@ final class db implements ci {
           }
           if (null != this.field_n) {
             var10 = this.field_d + (this.field_q + this.field_j);
-            this.field_n.a(param1.field_r, var10 + param0 + param1.field_o, param1.field_i + (param3 + this.field_e), -this.field_j + (-var10 + param1.field_h), param1.field_q - (this.field_j << 1), this.field_r, this.field_h, this.field_k, this.field_s, 0);
+            this.field_n.drawParagraph(param1.field_r, var10 + param0 + param1.field_o, param1.field_i + (param3 + this.field_e), -this.field_j + (-var10 + param1.field_h), param1.field_q - (this.field_j << 1), this.field_r, this.field_h, this.field_k, this.field_s, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -260,7 +260,7 @@ final class db implements ci {
         field_l = null;
     }
 
-    db(ee param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    db(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_k = 1;
         this.field_s = 1;
         try {

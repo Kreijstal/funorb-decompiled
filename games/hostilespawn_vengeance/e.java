@@ -177,7 +177,7 @@ final class e {
         field_r = null;
     }
 
-    private final void a(int param0, int[] param1, int param2, String param3, int param4, int param5, vm param6, int param7) {
+    private final void a(int param0, int[] param1, int param2, String param3, int param4, int param5, BitmapFont param6, int param7) {
         int discarded$0 = 0;
         int var9_int = 0;
         int var10 = 0;
@@ -192,7 +192,7 @@ final class e {
             SoftwareRasterizer.setClip(param0, var9_int, param7, var9_int + 1);
             var10 = var9_int * param1.length / param5;
             var11 = param1[-1 + (param1.length - var10)];
-            param6.a(param3, param0, param2, param7, param5, var11, -1, 1, 1, 0);
+            param6.drawParagraph(param3, param0, param2, param7, param5, var11, -1, 1, 1, 0);
           }
           eh.b(false);
         } catch (RuntimeException runtimeException) {
@@ -258,7 +258,7 @@ final class e {
         var5 = HostileSpawn.field_I ? 1 : 0;
         if (this.field_p == null) {
           if (mn.field_e != null) {
-            mn.field_e.a(l.field_e, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            mn.field_e.drawParagraph(l.field_e, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
           return;
         }
@@ -268,7 +268,7 @@ final class e {
           var6.drawOpaque(9, 58);
         } else {
           if (mn.field_e != null) {
-            mn.field_e.a(l.field_e, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            mn.field_e.drawParagraph(l.field_e, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
         }
         if (param0 != 9) {
@@ -310,7 +310,7 @@ final class e {
         return -1;
     }
 
-    private final void a(int param0, int param1, int[] param2, vm param3, int param4, String param5, float param6, int param7, RgbSprite param8, int param9) {
+    private final void a(int param0, int param1, int[] param2, BitmapFont param3, int param4, String param5, float param6, int param7, RgbSprite param8, int param9) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -372,8 +372,8 @@ final class e {
     private final void b(byte param0) {
         try {
           if (param0 != -36) {
-            vm var3 = (vm) null;
-            this.a(-82, (int[]) null, -17, (String) null, -50, 44, (vm) null, 100);
+            BitmapFont var3 = (BitmapFont) null;
+            this.a(-82, (int[]) null, -17, (String) null, -50, 44, (BitmapFont) null, 100);
           }
           HostileSpawn.openSubscriptionPage(BufferedRandomAccessFile.c(param0 ^ 35), -53);
         } catch (Exception exception) {
@@ -585,11 +585,11 @@ final class e {
           }
         }
         this.field_e.e(16, 302);
-        mn.field_e.a(this.field_a[this.field_b], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+        mn.field_e.drawParagraph(this.field_a[this.field_b], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
         FullscreenFocusCanvas.field_j.e(30, 330);
-        mn.field_e.a(mm.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        mn.field_e.a(mm.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        mn.field_e.a(mm.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        mn.field_e.drawParagraph(mm.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        mn.field_e.drawParagraph(mm.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        mn.field_e.drawParagraph(mm.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
         od.field_D.e((127 - od.field_D.field_u) / 2 + 508, 315);
         if (this.field_u.field_f != 0) {
           if (this.field_u.field_f == 1) {

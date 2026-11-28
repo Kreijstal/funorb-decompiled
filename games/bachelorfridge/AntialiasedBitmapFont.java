@@ -33,7 +33,7 @@ final class AntialiasedBitmapFont extends BitmapFont {
         }
     }
 
-    private final static byte[][] a(int[] param0, byte[][] param1) {
+    private final static byte[][] convertPaletteToCoverage(int[] param0, byte[][] param1) {
         int var2_int = 0;
         int var5 = 0;
         byte[][] var2;
@@ -188,6 +188,6 @@ final class AntialiasedBitmapFont extends BitmapFont {
     AntialiasedBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
         super(param0, param1, param2, param3, param4);
         this.field_L = new byte[256][];
-        this.field_L = AntialiasedBitmapFont.a(param5, param6);
+        this.field_L = AntialiasedBitmapFont.convertPaletteToCoverage(param5, param6);
     }
 }

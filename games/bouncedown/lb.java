@@ -10,7 +10,7 @@ final class lb {
     int field_a;
     static PacketBuffer field_g;
 
-    final static void a(tj param0, int param1, int param2, tj param3) {
+    final static void a(BitmapFont param0, int param1, int param2, BitmapFont param3) {
         try {
           ResourceArchive.field_a = param1;
           jc.field_h = param0;

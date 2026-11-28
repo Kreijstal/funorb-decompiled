@@ -44,7 +44,7 @@ final class mg extends WidgetWrapper {
           stackIn_4_1 = (param5);
           this.field_H = stackIn_4_1;
           var12_int = this.field_I - this.field_Q;
-          var13 = this.field_K.a(param10, var12_int, this.field_K.field_z) + this.field_Q * 2;
+          var13 = this.field_K.textHeight(param10, var12_int, this.field_K.field_z) + this.field_Q * 2;
           if (param3 < var13) {
             this.setBounds(false, param0, param1, var13, param2);
           } else {
@@ -92,7 +92,7 @@ final class mg extends WidgetWrapper {
           return;
         }
         int var7 = this.field_H ? -(2 * this.field_Q) - this.field_I + this.width : 0;
-        this.field_K.a(this.field_U, this.field_Q + var7 + var5, var6 + this.field_Q, -this.field_Q + this.field_I, -(2 * this.field_Q) + this.height, this.field_P, -1, !this.field_H ? 2 : 0, 1, this.field_K.field_z);
+        this.field_K.drawParagraph(this.field_U, this.field_Q + var7 + var5, var6 + this.field_Q, -this.field_Q + this.field_I, -(2 * this.field_Q) + this.height, this.field_P, -1, !this.field_H ? 2 : 0, 1, this.field_K.field_z);
     }
 
     final static void a(int param0, boolean param1, float param2, String param3) {

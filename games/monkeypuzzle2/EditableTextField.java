@@ -69,7 +69,7 @@ class EditableTextField extends ButtonWidget {
             if (param2 != 85) {
               if (param2 != 101) {
                 if (param2 == 13) {
-                  this.f((byte) -108);
+                  this.clearText((byte) -108);
                   return true;
                 }
                 if (param2 == 96) {
@@ -77,19 +77,19 @@ class EditableTextField extends ButtonWidget {
                     if (!dl.field_c[82]) {
                       stackIn_68_1 = -1 + this.field_E;
                     } else {
-                      stackIn_68_1 = this.l(-1);
+                      stackIn_68_1 = this.findPreviousWordBoundary(-1);
                     }
-                    this.a(stackIn_68_1, -102);
+                    this.moveCaret(stackIn_68_1, -102);
                     return true;
                   }
                 } else {
                   if (param2 != 97) {
                     if (param2 == 102) {
-                      this.a(0, -126);
+                      this.moveCaret(0, -126);
                       return true;
                     }
                     if (103 == param2) {
-                      this.a(this.field_s.length(), -105);
+                      this.moveCaret(this.field_s.length(), -105);
                       return true;
                     }
                     if (84 == param2) {
@@ -114,11 +114,11 @@ class EditableTextField extends ButtonWidget {
                   } else {
                     if (this.field_E < this.field_s.length()) {
                       if (dl.field_c[82]) {
-                        stackIn_39_1 = this.n(-1033);
+                        stackIn_39_1 = this.findNextWordBoundary(-1033);
                       } else {
                         stackIn_39_1 = 1 + this.field_E;
                       }
-                      this.a(stackIn_39_1, -109);
+                      this.moveCaret(stackIn_39_1, -109);
                       return true;
                     }
                   }
@@ -162,7 +162,7 @@ class EditableTextField extends ButtonWidget {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void moveCaret(int param0, int param1) {
         this.field_E = param0;
         if (!dl.field_c[81]) {
           this.field_D = this.field_E;
@@ -181,7 +181,7 @@ class EditableTextField extends ButtonWidget {
         try {
           this.field_I = param2;
           this.field_h = GzipDecompressor.field_b.field_o;
-          this.a(true, -5905, param0);
+          this.setText(true, -5905, param0);
           this.field_G = true;
           this.field_K = pf.correctedCurrentTimeMillis(0);
         } catch (RuntimeException runtimeException) {
@@ -230,13 +230,13 @@ class EditableTextField extends ButtonWidget {
             return;
           }
           var8 = (String) null;
-          this.a(false, 120, (String) null);
+          this.setText(false, 120, (String) null);
           return;
         }
         if (0 != param1) {
           if (param0 != 30) {
             var8Lifetime1 = (String) null;
-            this.a(false, 120, (String) null);
+            this.setText(false, 120, (String) null);
             return;
           }
           return;
@@ -247,7 +247,7 @@ class EditableTextField extends ButtonWidget {
             return;
           }
           var8Lifetime2 = (String) null;
-          this.a(false, 120, (String) null);
+          this.setText(false, 120, (String) null);
           return;
         }
         ui var9 = (ui) ((Object) this.field_h);
@@ -260,14 +260,14 @@ class EditableTextField extends ButtonWidget {
               return;
             }
             var8Lifetime3 = (String) null;
-            this.a(false, 120, (String) null);
+            this.setText(false, 120, (String) null);
             return;
           }
           if (param0 == 30) {
             return;
           }
           var8Lifetime3Lifetime1 = (String) null;
-          this.a(false, 120, (String) null);
+          this.setText(false, 120, (String) null);
           return;
         }
         var6Lifetime1 = pf.correctedCurrentTimeMillis(param0 - 30);
@@ -277,14 +277,14 @@ class EditableTextField extends ButtonWidget {
             return;
           }
           var8Lifetime4 = (String) null;
-          this.a(false, 120, (String) null);
+          this.setText(false, 120, (String) null);
           return;
         }
         if (param0 == 30) {
           return;
         }
         var8Lifetime5 = (String) null;
-        this.a(false, 120, (String) null);
+        this.setText(false, 120, (String) null);
     }
 
     void a(UiWidget param0, int param1, int param2, byte param3) {
@@ -295,7 +295,7 @@ class EditableTextField extends ButtonWidget {
             EditableTextField.clearDeclaredStaticReferences(59);
           }
           super.a(param0, param1, param2, (byte) -98);
-          this.k(95);
+          this.scrollCaretIntoView(95);
           if (this.field_t == 1) {
             if (this.field_h instanceof ui) {
               var7 = (ui) ((Object) this.field_h);
@@ -352,7 +352,7 @@ class EditableTextField extends ButtonWidget {
         }
     }
 
-    private final int n(int param0) {
+    private final int findNextWordBoundary(int param0) {
         int var2;
         int var3;
         int var4;
@@ -424,7 +424,7 @@ class EditableTextField extends ButtonWidget {
         return this.field_s.substring(var2Lifetime1, var3Lifetime1);
     }
 
-    final void f(byte param0) {
+    final void clearText(byte param0) {
         this.field_s = "";
         this.field_E = 0;
         this.field_D = 0;
@@ -434,7 +434,7 @@ class EditableTextField extends ButtonWidget {
         }
     }
 
-    final void a(boolean param0, int param1, String param2) {
+    final void setText(boolean param0, int param1, String param2) {
         String discarded$2 = null;
         int dupTemp$3 = 0;
         int var4_int = 0;
@@ -527,7 +527,7 @@ class EditableTextField extends ButtonWidget {
           if (!param0) {
             return;
           }
-          this.f((byte) -115);
+          this.clearText((byte) -115);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -543,7 +543,7 @@ class EditableTextField extends ButtonWidget {
         }
     }
 
-    private final int l(int param0) {
+    private final int findPreviousWordBoundary(int param0) {
         int var2;
         int var3;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -583,13 +583,13 @@ class EditableTextField extends ButtonWidget {
             } else {
               stackIn_7_1 = var8_int;
             }
-            this.a(stackIn_7_1, -120);
+            this.moveCaret(stackIn_7_1, -120);
             var8_long = pf.correctedCurrentTimeMillis(0);
             stackIn_10_1 = !(250L <= var8_long - this.field_F);
             this.field_C = stackIn_10_1;
             if (this.field_C) {
-              this.field_D = this.l(-1);
-              this.field_E = this.n(param3 ^ 592);
+              this.field_D = this.findPreviousWordBoundary(-1);
+              this.field_E = this.findNextWordBoundary(param3 ^ 592);
               if (this.field_E > 0 &&
                 this.field_s.charAt(this.field_E - 1) == 32) {
                 this.field_E = this.field_E - 1;
@@ -633,7 +633,7 @@ class EditableTextField extends ButtonWidget {
         this.field_J = -3;
     }
 
-    private final void k(int param0) {
+    private final void scrollCaretIntoView(int param0) {
         aa var3;
         int var4;
         int var5;
@@ -688,7 +688,7 @@ class EditableTextField extends ButtonWidget {
           ((TextFieldListener) (this.field_o)).onTextChanged(16926, this);
           if (param0 != 0) {
             var3 = (String) null;
-            this.a(false, -10, (String) null);
+            this.setText(false, -10, (String) null);
             return;
           }
           return;
@@ -697,7 +697,7 @@ class EditableTextField extends ButtonWidget {
           return;
         }
         var3Lifetime1 = (String) null;
-        this.a(false, -10, (String) null);
+        this.setText(false, -10, (String) null);
     }
 
     static {

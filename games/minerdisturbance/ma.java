@@ -37,7 +37,7 @@ final class ma extends jc {
           var2 = (sa) (hj.field_b.beginForward(61));
           while (var2 != null) {
             if (var2.field_p.isLinked(123)) {
-              var2.field_n.f(oc.field_f * var2.field_q + 128 >> 8);
+              var2.field_n.setVolume(oc.field_f * var2.field_q + 128 >> 8);
             } else {
               var2.unlink(34);
             }
@@ -52,7 +52,7 @@ final class ma extends jc {
             if (!stackIn_15_0) {
               var2Lifetime1.unlink(34);
             } else {
-              var2Lifetime1.field_n.f(128 + oc.field_f * var2Lifetime1.field_q >> 8);
+              var2Lifetime1.field_n.setVolume(128 + oc.field_f * var2Lifetime1.field_q >> 8);
             }
             var2Lifetime1 = (sa) (GameAppletShell.field_c.nextForward((byte) 56));
           }

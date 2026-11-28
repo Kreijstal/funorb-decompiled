@@ -10,7 +10,7 @@ final class ij implements WidgetRenderer {
     static int field_a;
     private int field_j;
     static Sprite field_h;
-    private kg field_i;
+    private BitmapFont field_i;
     private int field_f;
 
     public final void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
@@ -47,7 +47,7 @@ final class ij implements WidgetRenderer {
           }
           var11 = -49 % ((51 - param3) / 47);
           if (this.field_i != null) {
-            this.field_i.c(var13.field_k, var8 + var7 / 2, var9 - (-this.field_i.field_C - var13.field_G), this.field_g, this.field_b);
+            this.field_i.drawCentred(var13.field_k, var8 + var7 / 2, var9 - (-this.field_i.field_C - var13.field_G), this.field_g, this.field_b);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,7 +177,7 @@ final class ij implements WidgetRenderer {
         }
     }
 
-    ij(kg param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    ij(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_c = param4;
           this.field_i = param0;

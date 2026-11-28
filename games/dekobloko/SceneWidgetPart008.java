@@ -255,8 +255,8 @@ final class SceneWidgetPart008 extends SceneWidget {
             charSequenceLocal21 = (CharSequence) ((Object) MixedSupport029.stringState0149);
             stringLocal19 = NodeHashTableIterator.substituteIndexedPlaceholders(94, NetworkSupport009.stringState0388, new String[]{MixedSupport125.computeString1621(charSequenceLocal21, true)});
             stringLocal7 = NodeHashTableIterator.substituteIndexedPlaceholders(108, CacheWorkQueue.stringState0266, new String[]{stringLocal15});
-            integerLocal8 = MixedSupport038.bitmapFontState0013.computeInteger1066(stringLocal19);
-            integerLocal9 = MixedSupport038.bitmapFontState0013.computeInteger1066(stringLocal7);
+            integerLocal8 = MixedSupport038.bitmapFontState0013.stringWidth(stringLocal19);
+            integerLocal9 = MixedSupport038.bitmapFontState0013.stringWidth(stringLocal7);
             if (integerLocal8 <= integerLocal9) {
               integerLocal22 = integerLocal22 - integerLocal9;
             } else {
@@ -279,9 +279,9 @@ final class SceneWidgetPart008 extends SceneWidget {
               }
             }
             stringLocal18 = stringLocal30 + stringLocal17 + ": ";
-            integerLocal22 = integerLocal22 - MixedSupport038.bitmapFontState0013.computeInteger1066(stringLocal18);
+            integerLocal22 = integerLocal22 - MixedSupport038.bitmapFontState0013.stringWidth(stringLocal18);
           }
-          if (MixedSupport038.bitmapFontState0013.computeInteger1066(UiComponentPart008.stringBuilderState0001.toString()) > integerLocal22) {
+          if (MixedSupport038.bitmapFontState0013.stringWidth(UiComponentPart008.stringBuilderState0001.toString()) > integerLocal22) {
             MixedSupport137.computeStringBuilder1715(UiComponentPart008.stringBuilderState0001, -23510, UiComponentPart008.stringBuilderState0001.length() - 1, ' ');
           }
         }

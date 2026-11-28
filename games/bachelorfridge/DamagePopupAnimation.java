@@ -12,8 +12,8 @@ final class DamagePopupAnimation extends AnimationNode {
     final static void d(byte param0) {
         int var2 = 0;
         int var2Lifetime1;
-        mv.field_n = kca.field_c.a(lr.field_k[20]);
-        int var1 = kca.field_c.a(lr.field_k[21]);
+        mv.field_n = kca.field_c.stringWidth(lr.field_k[20]);
+        int var1 = kca.field_c.stringWidth(lr.field_k[21]);
         if (mv.field_n >= var1) {
           mv.field_n = mv.field_n + 8;
           var2 = -65 % ((param0 - 41) / 42);

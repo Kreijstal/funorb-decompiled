@@ -115,13 +115,13 @@ final class oi extends fe {
         return var3;
     }
 
-    final static void a(we param0, we param1, int param2, int param3) {
+    final static void a(BitmapFont param0, BitmapFont param1, int param2, int param3) {
         try {
           w.field_S = param3;
           IntrusiveDeque.field_b = param0;
           if (param2 < 86) {
-            we var5 = (we) null;
-            oi.a((we) null, (we) null, -28, -53);
+            BitmapFont var5 = (BitmapFont) null;
+            oi.a((BitmapFont) null, (BitmapFont) null, -28, -53);
           }
           gh.field_b = param1;
           ti.a((byte) 88, SoftwareRasterizer.field_c / 2, SoftwareRasterizer.field_g / 2);
@@ -220,8 +220,8 @@ final class oi extends fe {
           return;
         }
         if (param0 != 4) {
-          we var7 = (we) null;
-          oi.a((we) null, (we) null, -20, 96);
+          BitmapFont var7 = (BitmapFont) null;
+          oi.a((BitmapFont) null, (BitmapFont) null, -20, 96);
         }
         int var5 = param1 + this.field_u;
         int var6 = this.field_t + param2;

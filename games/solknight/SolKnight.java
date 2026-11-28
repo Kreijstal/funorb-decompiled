@@ -11,7 +11,7 @@ public final class SolKnight extends ab {
     static int[] field_E;
     public static boolean field_L;
 
-    final void f(int param0) {
+    final void disposeClient(int param0) {
         int discarded$0 = 0;
         try {
           s.n(0);
@@ -51,7 +51,7 @@ public final class SolKnight extends ab {
         }
     }
 
-    final void e(int param0) {
+    final void updateClient(int param0) {
         int discarded$0 = 0;
         int stackIn_7_1 = 0;
         boolean stackIn_8_2 = false;
@@ -194,7 +194,7 @@ public final class SolKnight extends ab {
         }
     }
 
-    final void c(byte param0) {
+    final void clearClientResources(byte param0) {
         try {
           SolKnight.n(2325);
           hc.clearStaticReferences(25850);
@@ -498,7 +498,7 @@ public final class SolKnight extends ab {
                         if (field_I.ensureIndexLoaded((byte) -121) &&
                           field_I.tryLoadAllGroups(true)) {
                           TextFieldValidator.a((byte) 102, SocketConnector.field_e, 65.0f);
-                          this.a(-11633);
+                          this.renderClientFrame(-11633);
                           if (!param1) {
                             stackIn_44_0 = pb.field_c;
                             return stackIn_44_0;
@@ -576,7 +576,7 @@ public final class SolKnight extends ab {
           }
           if (ValidatedTextField.field_cb != null) {
             TextFieldValidator.a((byte) 102, AccountRegistrationPanel.field_E, 75.0f);
-            this.a(param0 - 11633);
+            this.renderClientFrame(param0 - 11633);
             c.field_M[0] = rl.a(ValidatedTextField.field_cb, "", "sol knight title");
             c.field_M[1] = rl.a(ValidatedTextField.field_cb, "", "sol_ingame_1");
             c.field_M[2] = rl.a(ValidatedTextField.field_cb, "", "sol_ingame_2");
@@ -603,7 +603,7 @@ public final class SolKnight extends ab {
           }
           if (pl.field_d != null) {
             TextFieldValidator.a((byte) 102, kj.field_N, 90.0f);
-            this.a(-11633);
+            this.renderClientFrame(-11633);
             jc.field_b = Asteroid.a("unachieved", "basic", pl.field_d, (byte) -127);
             nb.field_a = Asteroid.a("locked", "basic", pl.field_d, (byte) -117);
             u.field_c = Asteroid.a("orbcoin", "basic", pl.field_d, (byte) -115);
@@ -718,7 +718,7 @@ public final class SolKnight extends ab {
         }
     }
 
-    final void d(int param0) {
+    final void initializeClient(int param0) {
         this.a(0, false, 6, 9, true, 16, 10, 8);
         MidiPcmStream var2 = new MidiPcmStream();
         var2.d(-4474, 128, 9);
@@ -879,7 +879,7 @@ public final class SolKnight extends ab {
         }
     }
 
-    final void a(int param0) {
+    final void renderClientFrame(int param0) {
         Object stackIn_5_0 = null;
         Object stackIn_9_0 = null;
         int stackIn_9_1 = 0;
@@ -998,10 +998,10 @@ public final class SolKnight extends ab {
             } else {
               var5Lifetime1 = 480 - var6Lifetime1;
             }
-            var7Lifetime1 = SocketConnector.field_g.b(BufferedCacheFile.field_m[var4.field_h]);
+            var7Lifetime1 = SocketConnector.field_g.stringWidth(BufferedCacheFile.field_m[var4.field_h]);
             uj.a(60 + var7Lifetime1, 70, -60 - var7Lifetime1 + 640 >> 1, gf.field_fb, var5Lifetime1, 2);
             IterableNodeHashTable.field_f[var4.field_h].drawQuarterSize(304, 10 + SocketConnector.field_g.field_s + (SocketConnector.field_g.field_F + var5Lifetime1));
-            SocketConnector.field_g.a(BufferedCacheFile.field_m[var4.field_h], 320, var5Lifetime1 + SocketConnector.field_g.field_F + 8, 16776960, 1);
+            SocketConnector.field_g.drawCentred(BufferedCacheFile.field_m[var4.field_h], 320, var5Lifetime1 + SocketConnector.field_g.field_F + 8, 16776960, 1);
           }
           if (RandomAccessCacheFile.b((byte) -115)) {
             SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);

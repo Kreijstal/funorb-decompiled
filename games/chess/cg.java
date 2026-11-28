@@ -43,14 +43,14 @@ final class cg {
         }
     }
 
-    final static void a(int param0, int param1, lh param2, lh param3) {
+    final static void a(int param0, int param1, BitmapFont param2, BitmapFont param3) {
         try {
           mk.field_a = param1;
           ce.field_a = param3;
           AwtRasterBuffer.field_d = param2;
           if (param0 != 0) {
-            lh var5 = (lh) null;
-            cg.a(-72, -128, (lh) null, (lh) null);
+            BitmapFont var5 = (BitmapFont) null;
+            cg.a(-72, -128, (BitmapFont) null, (BitmapFont) null);
           }
           di.a(SoftwareRasterizer.field_h / 2, -104, SoftwareRasterizer.field_c / 2);
           DelegatingCanvas.a((byte) -116, param3.field_H, param2.field_t + param2.field_H, param3.field_t + param3.field_H, param2.field_H);

@@ -5,7 +5,7 @@ final class dd {
     static int field_d;
     static String field_b;
     static Sprite field_i;
-    static vn field_c;
+    static BinaryBitmapFont field_c;
     int field_f;
     static String[] field_e;
     int field_h;

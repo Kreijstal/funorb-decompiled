@@ -299,7 +299,7 @@ final class pn implements uj {
           var1_int = 16;
           var2 = 60;
           var3 = 60;
-          wi.field_A.a("Press 'H' to close this screen", var3, var2, 16777215, -1);
+          wi.field_A.drawString("Press 'H' to close this screen", var3, var2, 16777215, -1);
           var2 = var2 + var1_int;
           var4 = var2;
           var5 = (tc) (ii.field_b.beginForward(80));
@@ -323,8 +323,8 @@ final class pn implements uj {
               }
             }
             SoftwareRasterizer.fillRectangleAlpha(-10 + var3, -10 + var2, 50, 20 + var1_int, 65330, 120);
-            wi.field_A.a((String) (var6), -10 + var3, var2 - 10, 50, var1_int + 20, 16777215, 5592405, 1, 1, 0);
-            wi.field_A.a(var5.field_n, var3 - 10 + 60, var2 - 10, 140, var1_int + 20, 16777215, -1, 0, 1, 0);
+            wi.field_A.drawParagraph((String) (var6), -10 + var3, var2 - 10, 50, var1_int + 20, 16777215, 5592405, 1, 1, 0);
+            wi.field_A.drawParagraph(var5.field_n, var3 - 10 + 60, var2 - 10, 140, var1_int + 20, 16777215, -1, 0, 1, 0);
             var2 = var2 + (var1_int + 24);
             if (var2 > 420) {
               var3 += 220;

@@ -13,7 +13,7 @@ final class eb {
     private java.math.BigInteger field_g;
     static int[] field_i;
     static int field_d;
-    static ef field_c;
+    static PalettedBitmapFont field_c;
 
     final boolean a(int param0) {
         int var7 = 0;

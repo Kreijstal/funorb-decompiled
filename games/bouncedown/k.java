@@ -114,7 +114,7 @@ final class k extends lc implements rc {
         int var5 = param3 + this.field_r;
         int var6 = param1 + this.field_i;
         if (param2 >= 33) {
-          FrameTimer.field_a.a(r.field_d, 20 + var5, var6 + 20, this.field_k - 40, this.field_m - 50, 16777215, -1, 1, 0, FrameTimer.field_a.field_s);
+          FrameTimer.field_a.drawParagraph(r.field_d, 20 + var5, var6 + 20, this.field_k - 40, this.field_m - 50, 16777215, -1, 1, 0, FrameTimer.field_a.field_s);
           super.a(param0, param1, 50, param3);
           return;
         }

@@ -50,12 +50,12 @@ final class IntroSequenceScreen extends DungeonAssaultScreen {
 
     IntroSequenceScreen() {
         String var1 = ii.field_E.toUpperCase();
-        gp var2 = IntrusiveNode.field_c;
+        BinaryBitmapFont var2 = IntrusiveNode.field_c;
         rf.field_O = new ob(0L, (ok) null, (ok) null, (ok) null, jm.field_i, "");
         rf.field_O.field_D = 10;
         rf.field_O.field_gb = 630 - rf.field_O.field_Tb.field_L.field_y;
         rf.field_O.field_ic.field_fb = 16777215;
-        rf.field_O.field_ic.field_y = (se) ((Object) var2);
+        rf.field_O.field_ic.field_y = (BitmapFont) ((Object) var2);
         rf.field_O.field_ic.field_lb = 1;
         rf.field_O.field_ic.field_B = rf.field_O.field_Tb.field_L.field_v;
         rf.field_O.field_Tb.field_B = rf.field_O.field_Tb.field_L.field_v;

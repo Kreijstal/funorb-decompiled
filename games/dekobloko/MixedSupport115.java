@@ -68,7 +68,7 @@ abstract class MixedSupport115 extends DualNode {
             if (integerLocal10 == 2) {
               stringLocal8 = NodeHashTableIterator.substituteIndexedPlaceholders(81, NetworkSupport009.stringState0388, new String[]{MixedSupport029.stringState0149});
               stringLocal12 = NodeHashTableIterator.substituteIndexedPlaceholders(125, CacheWorkQueue.stringState0266, new String[]{stringLocal6});
-              integerLocal11 = -485 + DiagnosticSupport002.sceneWidgetState0057.integerState0896 + UiComponentPart033.sceneWidgetState0150.integerState0896 - (-MixedSupport038.bitmapFontState0013.computeInteger1066(stringLocal12) + MixedSupport038.bitmapFontState0013.computeInteger1066(stringLocal8));
+              integerLocal11 = -485 + DiagnosticSupport002.sceneWidgetState0057.integerState0896 + UiComponentPart033.sceneWidgetState0150.integerState0896 - (-MixedSupport038.bitmapFontState0013.stringWidth(stringLocal12) + MixedSupport038.bitmapFontState0013.stringWidth(stringLocal8));
               if (0 > integerLocal11) {
                 integerLocal11 = 0;
               }
@@ -113,7 +113,7 @@ abstract class MixedSupport115 extends DualNode {
                 stringLocal9 = "";
                 stringLocal8 = "<col=999999>" + stringLocal8 + MixedSupport138.stringState0591 + "</col>";
               }
-              integerLocal13 = MixedSupport038.bitmapFontState0013.computeInteger1066(stringLocal8);
+              integerLocal13 = MixedSupport038.bitmapFontState0013.stringWidth(stringLocal8);
               if (!PcmPlayerService.computeBoolean1409(false)) {
                 if (UiComponentPart033.sceneWidgetState0150.booleanState0218 &&
                   (HashNode.integerState0069 - UiComponentPart033.sceneWidgetState0150.integerState0892) < integerLocal13) {
@@ -130,7 +130,7 @@ abstract class MixedSupport115 extends DualNode {
                 }
               }
             }
-            MixedSupport020.performAction0298(stringLocal9, integerLocal11, ConfirmedEmailAvailabilityValidator.integerArrayState0207[integerLocal10], stringLocal8 + BitmapFont.computeString1084(UiComponentPart008.stringBuilderState0001.toString()), -24503);
+            MixedSupport020.performAction0298(stringLocal9, integerLocal11, ConfirmedEmailAvailabilityValidator.integerArrayState0207[integerLocal10], stringLocal8 + BitmapFont.escapeMarkup(UiComponentPart008.stringBuilderState0001.toString()), -24503);
             if (!LoginCredentials.booleanState0085) {
               DiagnosticSupport002.sceneWidgetState0057.booleanState0218 = false;
             }

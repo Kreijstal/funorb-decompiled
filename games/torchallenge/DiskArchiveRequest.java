@@ -65,11 +65,11 @@ final class DiskArchiveRequest extends ArchiveRequest {
         return var1;
     }
 
-    final static nf a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        nf stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -79,7 +79,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         try {
           if (!SpriteLoader.a(160, param0, param2, param1)) {
             stackIn_2_0 = null;
-            return (nf) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           var5_int = 69 / ((param4 + 78) / 40);
           stackIn_4_0 = SocketConnector.a(param3.getFile(param2, param1, 0), (byte) 110);

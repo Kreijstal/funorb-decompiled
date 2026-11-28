@@ -7,7 +7,7 @@ final class gi {
     static IntrusiveDeque field_a;
     static int field_e;
     static String[] field_f;
-    static qe field_b;
+    static BitmapFont field_b;
     static boolean field_g;
 
     final static Sprite[] a(int param0, int param1) {

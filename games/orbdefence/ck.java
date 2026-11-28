@@ -7,7 +7,7 @@ final class ck implements td {
     static String[] field_h;
     static qg[] field_n;
     private int field_l;
-    static kc field_g;
+    static BitmapFont field_g;
     static String field_k;
     static int field_f;
     static long field_e;
@@ -16,7 +16,7 @@ final class ck implements td {
     static AccountRegistrationPanel field_j;
     private int field_d;
     static RgbSprite[] field_c;
-    private kc field_m;
+    private BitmapFont field_m;
 
     public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
         int var10 = 0;
@@ -55,7 +55,7 @@ final class ck implements td {
           if (null == this.field_m) {
             return;
           }
-          this.field_m.c(var12.field_l, var7 / 2 + var8, var12.field_L + this.field_m.field_z + var9, this.field_l, this.field_i);
+          this.field_m.drawCentred(var12.field_l, var7 / 2 + var8, var12.field_L + this.field_m.field_z + var9, this.field_l, this.field_i);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ final class ck implements td {
         field_c = null;
     }
 
-    ck(kc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    ck(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_i = param2;
           this.field_o = param4;

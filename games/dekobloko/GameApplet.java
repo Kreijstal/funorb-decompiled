@@ -6,7 +6,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     static MixedSupport061 mixedSupport061State0003;
     static SecondaryNodeHashTable secondaryNodeHashTableState0002;
     static int integerState0292;
-    static RenderingSupport009 renderingSupport009State0002;
+    static BinaryBitmapFont renderingSupport009State0002;
     public static boolean booleanState0072;
     public static boolean booleanState0073;
     public static int integerState0293;
@@ -264,7 +264,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             MixedSupport073.longState0025 = MixedSupport062.correctedCurrentTimeMillis(4);
             MixedSupport125.sleepMillis(5000L, -128);
             MixedSupport088.platformServiceState0004 = null;
-            this.performAction0678(false, -124);
+            this.shutdownApplet(false, -124);
             return;
           }
           return;
@@ -275,7 +275,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    private final void performAction0677(boolean booleanArgument1) {
+    private final void renderAppletFrame(boolean booleanArgument1) {
         int integerLocal1 = 0;
         long longLocal2 = 0L;
         long longLocal3 = 0L;
@@ -390,7 +390,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    private final void performAction0678(boolean booleanArgument1, int integerArgument2) {
+    private final void shutdownApplet(boolean booleanArgument1, int integerArgument2) {
         Exception exception = null;
         Throwable throwable = null;
         RuntimeException runtimeException = null;
@@ -540,7 +540,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    private final void performAction0682(int integerArgument1) {
+    private final void processClientTick(int integerArgument1) {
         RuntimeException runtimeException = null;
         long longLocal2 = 0L;
         long longLocal3 = 0L;
@@ -706,11 +706,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   integerLocal11 = stackIntegerLocal4;
                   do {
                     if (!(integerLocal11 < ReturnedShapeUpdate.integerState0883)) {
-                      this.performAction0677(false);
+                      this.renderAppletFrame(false);
                       ProxyAuthenticationRequiredException.performAction0331(-61, GameDomainSupport004.canvasState0001, GzipDecompressor.platformServiceState0003);
                       break;
                     }
-                    this.performAction0682(121);
+                    this.processClientTick(121);
                     integerLocal11++;
                   } while (integerLocal14 == 0);
                 } while (integerLocal14 == 0);
@@ -721,7 +721,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               NetworkArchiveRequestManager.performAction1289((Throwable) (objectLocal6), 16408, (String) null);
               this.performAction0679(true, "crash");
             }
-            this.performAction0678(true, -128);
+            this.shutdownApplet(true, -128);
             return;
           } catch (java.lang.RuntimeException caughtParameterLocal22) {
             caughtExceptionLocal5 = caughtParameterLocal22;

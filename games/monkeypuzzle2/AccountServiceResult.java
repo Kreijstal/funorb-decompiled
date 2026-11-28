@@ -32,7 +32,7 @@ final class AccountServiceResult {
 
     final static void a(byte param0, PcmSample param1) {
         try {
-          na.a((byte) 46, PcmSampleStream.a(param1, 100, 96));
+          na.a((byte) 46, PcmSampleStream.createForPlaybackRate(param1, 100, 96));
           int var2_int = -91 % ((param0 - 43) / 57);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "cj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

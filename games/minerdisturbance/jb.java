@@ -87,7 +87,7 @@ final class jb extends IntrusiveNode {
           ArchiveIndex.a(80, 262 + 32 * var9Lifetime1, param3 + (640 - var7) / 2, var7, (byte) 16, hd.field_d);
           if (param0 &&
             !mh.a(var30, -1)) {
-            pk.field_b.a(Bzip2State.field_K, 110 + param3 + 60, 166, 16610816, -1);
+            pk.field_b.drawString(Bzip2State.field_K, 110 + param3 + 60, 166, 16610816, -1);
             return false;
           }
           stackIn_33_0 = (cm.field_o != 1) ? 0 : 1;
@@ -159,27 +159,27 @@ final class jb extends IntrusiveNode {
           }
           var19 = 105 + param3;
           if (var15 != -1) {
-            ce.field_d.b(CipherPacketBuffer.field_A[var15], param3 + 320, var18Lifetime1, 0, -1);
+            ce.field_d.drawCentred(CipherPacketBuffer.field_A[var15], param3 + 320, var18Lifetime1, 0, -1);
             var20 = ce.field_d.field_G + 3;
             var21 = 30 + (278 - var11);
             var22 = DiskCacheWorker.a(var15, var33, -827843803) ? 1 : 0;
             if (var22 == 0) {
               ha.field_c.f(30 + var19, var21 + 7);
               var21 += 30;
-              mm.field_a.a(mc.field_e, 150 + var19, var21, 33023, -1);
+              mm.field_a.drawString(mc.field_e, 150 + var19, var21, 33023, -1);
             } else {
               nj.field_c[var15].f(var19 + 30, 7 + var21);
               var21 += 30;
-              mm.field_a.a(dl.field_f, 50 + (var19 + 150), var21, 33023, -1);
+              mm.field_a.drawString(dl.field_f, 50 + (var19 + 150), var21, 33023, -1);
             }
             var21 += 23;
             var23 = 440 - var11;
             var24 = 30 - var11 + 380;
             if (IntrusiveNode.field_j[var15] &&
               var22 == 0) {
-              ce.field_d.a(ge.field_b, 290 + param3, var21 - var20, 215, 480, 1, -1, 0, 0, var20);
+              ce.field_d.drawParagraph(ge.field_b, 290 + param3, var21 - var20, 215, 480, 1, -1, 0, 0, var20);
             } else {
-              var21 = var21 + ce.field_d.field_N * ce.field_d.a(fb.field_g[var15], 290 + param3, var21 - var20, 215, 480, 1, -1, 0, 0, var20);
+              var21 = var21 + ce.field_d.field_N * ce.field_d.drawParagraph(fb.field_g[var15], 290 + param3, var21 - var20, 215, 480, 1, -1, 0, 0, var20);
               if (param4 &&
                 en.field_a[var15] != null) {
                 var21 += 10;
@@ -258,17 +258,17 @@ final class jb extends IntrusiveNode {
                   var25_ref = oa.a((byte) -121, en.field_a[var15], new String[]{ri.a((byte) 115)});
                 }
                 if (var25_ref != null) {
-                  ce.field_d.a((String) (var25_ref), 290 + param3, -var20 + var24, 215, 480, 8947848, -1, 0, 0, var20);
+                  ce.field_d.drawParagraph((String) (var25_ref), 290 + param3, -var20 + var24, 215, 480, 8947848, -1, 0, 0, var20);
                 }
               }
             }
             for (var25 = 0; IntrusiveNode.field_m[var15] > var25; var25++) {
               TextFieldValidator.field_e.drawQuarterSize(var25 * 10 + 165 + var19, var24);
             }
-            ce.field_d.c(fn.field_q, -130 + (var19 + 505), var23 + (-ce.field_d.field_I - ce.field_d.field_E), 1, -1);
-            ce.field_d.b(Integer.toString(IntrusiveNode.field_i[var15]), -31 + (-130 + var19) + 505, var23, 1, -1);
+            ce.field_d.drawRightAligned(fn.field_q, -130 + (var19 + 505), var23 + (-ce.field_d.field_I - ce.field_d.field_E), 1, -1);
+            ce.field_d.drawCentred(Integer.toString(IntrusiveNode.field_i[var15]), -31 + (-130 + var19) + 505, var23, 1, -1);
           } else {
-            ce.field_d.b(i.field_d, param3 + 320, var18Lifetime1, 0, -1);
+            ce.field_d.drawCentred(i.field_d, param3 + 320, var18Lifetime1, 0, -1);
           }
           return !(0 > var15);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -374,7 +374,7 @@ final class jb extends IntrusiveNode {
           ArchiveIndex.a(80, 262 + 32 * var9Lifetime1, param3 + (640 - var7) / 2, var7, (byte) 16, hd.field_d);
           if (param0 &&
             !mh.a(var30, -1)) {
-            pk.field_b.a(Bzip2State.field_K, 110 + param3 + 60, 166, 16610816, -1);
+            pk.field_b.drawString(Bzip2State.field_K, 110 + param3 + 60, 166, 16610816, -1);
             return false;
           }
           stackIn_33_0 = (cm.field_o != 1) ? 0 : 1;
@@ -446,27 +446,27 @@ final class jb extends IntrusiveNode {
           }
           var19 = 105 + param3;
           if (var15 != -1) {
-            ce.field_d.b(CipherPacketBuffer.field_A[var15], param3 + 320, var18Lifetime1, 0, -1);
+            ce.field_d.drawCentred(CipherPacketBuffer.field_A[var15], param3 + 320, var18Lifetime1, 0, -1);
             var20 = ce.field_d.field_G + 3;
             var21 = 30 + (278 - var11);
             var22 = DiskCacheWorker.a(var15, var33, -827843803) ? 1 : 0;
             if (var22 == 0) {
               ha.field_c.f(30 + var19, var21 + 7);
               var21 += 30;
-              mm.field_a.a(mc.field_e, 150 + var19, var21, 33023, -1);
+              mm.field_a.drawString(mc.field_e, 150 + var19, var21, 33023, -1);
             } else {
               nj.field_c[var15].f(var19 + 30, 7 + var21);
               var21 += 30;
-              mm.field_a.a(dl.field_f, 50 + (var19 + 150), var21, 33023, -1);
+              mm.field_a.drawString(dl.field_f, 50 + (var19 + 150), var21, 33023, -1);
             }
             var21 += 23;
             var23 = 440 - var11;
             var24 = 30 - var11 + 380;
             if (IntrusiveNode.field_j[var15] &&
               var22 == 0) {
-              ce.field_d.a(ge.field_b, 290 + param3, var21 - var20, 215, 480, 1, -1, 0, 0, var20);
+              ce.field_d.drawParagraph(ge.field_b, 290 + param3, var21 - var20, 215, 480, 1, -1, 0, 0, var20);
             } else {
-              var21 = var21 + ce.field_d.field_N * ce.field_d.a(fb.field_g[var15], 290 + param3, var21 - var20, 215, 480, 1, -1, 0, 0, var20);
+              var21 = var21 + ce.field_d.field_N * ce.field_d.drawParagraph(fb.field_g[var15], 290 + param3, var21 - var20, 215, 480, 1, -1, 0, 0, var20);
               if (param4 &&
                 en.field_a[var15] != null) {
                 var21 += 10;
@@ -545,17 +545,17 @@ final class jb extends IntrusiveNode {
                   var25_ref = oa.a((byte) -121, en.field_a[var15], new String[]{ri.a((byte) 115)});
                 }
                 if (var25_ref != null) {
-                  ce.field_d.a((String) (var25_ref), 290 + param3, -var20 + var24, 215, 480, 8947848, -1, 0, 0, var20);
+                  ce.field_d.drawParagraph((String) (var25_ref), 290 + param3, -var20 + var24, 215, 480, 8947848, -1, 0, 0, var20);
                 }
               }
             }
             for (var25 = 0; IntrusiveNode.field_m[var15] > var25; var25++) {
               TextFieldValidator.field_e.drawQuarterSize(var25 * 10 + 165 + var19, var24);
             }
-            ce.field_d.c(fn.field_q, -130 + (var19 + 505), var23 + (-ce.field_d.field_I - ce.field_d.field_E), 1, -1);
-            ce.field_d.b(Integer.toString(IntrusiveNode.field_i[var15]), -31 + (-130 + var19) + 505, var23, 1, -1);
+            ce.field_d.drawRightAligned(fn.field_q, -130 + (var19 + 505), var23 + (-ce.field_d.field_I - ce.field_d.field_E), 1, -1);
+            ce.field_d.drawCentred(Integer.toString(IntrusiveNode.field_i[var15]), -31 + (-130 + var19) + 505, var23, 1, -1);
           } else {
-            ce.field_d.b(i.field_d, param3 + 320, var18Lifetime1, 0, -1);
+            ce.field_d.drawCentred(i.field_d, param3 + 320, var18Lifetime1, 0, -1);
           }
           return !(0 > var15);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

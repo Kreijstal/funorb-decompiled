@@ -272,21 +272,21 @@ final class pfa {
         ula.field_h.draw(120, 120);
         this.field_f.field_f.a(this.field_f.field_f.field_x, param0, 2048, 2048, 0, -119, 256, 130, 104);
         MassPoisonSpecial.field_s.draw(280, 180);
-        jha.field_g.a(hl.field_G[2], 334, 194, 15204352, -1);
-        WidgetWrapper.field_z.a(hl.field_G[2], 334, 194, 65793, -1);
-        jha.field_g.a(hl.field_G[3], 330, 224, 818659, -1);
-        WidgetWrapper.field_z.a(hl.field_G[3], 330, 224, 65793, -1);
-        jha.field_g.a(hl.field_G[0], 334, 252, 16769792, -1);
-        WidgetWrapper.field_z.a(hl.field_G[0], 334, 252, 65793, -1);
-        jha.field_g.a(hl.field_G[1], 328, 280, 51233, -1);
-        WidgetWrapper.field_z.a(hl.field_G[1], 328, 280, 65793, -1);
+        jha.field_g.drawCentred(hl.field_G[2], 334, 194, 15204352, -1);
+        WidgetWrapper.field_z.drawCentred(hl.field_G[2], 334, 194, 65793, -1);
+        jha.field_g.drawCentred(hl.field_G[3], 330, 224, 818659, -1);
+        WidgetWrapper.field_z.drawCentred(hl.field_G[3], 330, 224, 65793, -1);
+        jha.field_g.drawCentred(hl.field_G[0], 334, 252, 16769792, -1);
+        WidgetWrapper.field_z.drawCentred(hl.field_G[0], 334, 252, 65793, -1);
+        jha.field_g.drawCentred(hl.field_G[1], 328, 280, 51233, -1);
+        WidgetWrapper.field_z.drawCentred(hl.field_G[1], 328, 280, 65793, -1);
         this.a(dt.field_a, var10.field_k[2], -128, 400, 174, 2);
         this.a(DualLinkDeque.field_b, var10.field_k[3], -128, 400, 204, 3);
         this.a(HomingMissileEvent.field_s, var10.field_k[0], -128, 400, 236, 0);
         this.a(GzipDecompressor.field_b, var10.field_k[1], -128, 400, 263, 1);
         ce.a(true, 16776960, 155, var13.field_n, 320, true);
-        jha.field_g.a(DelegatingCanvas.field_a, 390, 368, 16776960, -1);
-        WidgetWrapper.field_z.a(DelegatingCanvas.field_a, 390, 368, 65793, -1);
+        jha.field_g.drawCentred(DelegatingCanvas.field_a, 390, 368, 16776960, -1);
+        WidgetWrapper.field_z.drawCentred(DelegatingCanvas.field_a, 390, 368, 65793, -1);
         for (var3_int = 0; var3_int < this.field_e.length; var3_int++) {
           if (this.field_e[var3_int] != null &&
             this.field_e[var3_int].field_zb != -1) {
@@ -364,7 +364,7 @@ final class pfa {
           this.field_f.field_s.statusId != 0) {
           var3 = pna.field_zb[this.field_f.field_s.statusId].name;
           var16 = pna.field_zb[this.field_f.field_s.statusId].description;
-          var5Lifetime1 = CreatureActor.field_h.c(var16, 200) + 10;
+          var5Lifetime1 = CreatureActor.field_h.maxLineWidth(var16, 200) + 10;
           var6Lifetime1 = CreatureActor.field_h.measureWrappedHeight(var16, 200, 0) + (CreatureActor.field_h.field_F << 1);
           SoftwareRasterizer.fillRoundedRectangleAlpha(mk.field_p + 17, 4 + gd.field_m, var5Lifetime1 + 6, var6Lifetime1, 10, 65793, 128);
           CreatureActor.field_h.drawText(var3, 20 + (mk.field_p + 4), 20 + gd.field_m, 0, -1);

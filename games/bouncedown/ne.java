@@ -5,7 +5,7 @@ final class ne extends DualLinkNode {
     private String[] field_p;
     private int[] field_t;
     static int field_w;
-    static tj field_v;
+    static BitmapFont field_v;
     static IntrusiveDeque field_r;
     private int[][] field_o;
     int[] field_s;
@@ -179,7 +179,7 @@ final class ne extends DualLinkNode {
             if (var4 != null &&
               var4.length() >= 1) {
               if (param2 != -33) {
-                field_v = (tj) null;
+                field_v = (BitmapFont) null;
               }
               if (!f.a(var4.charAt(0), false) &&
                 !f.a(var4.charAt(-1 + var4.length()), false)) {

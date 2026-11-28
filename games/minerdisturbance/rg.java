@@ -3,7 +3,7 @@
  */
 class rg extends jk implements sh {
     static boolean[] field_ub;
-    private we field_vb;
+    private BitmapFont field_vb;
     private boolean field_ob;
     static Sprite[] field_tb;
     private boolean field_rb;
@@ -74,7 +74,7 @@ class rg extends jk implements sh {
         }
     }
 
-    rg(hm param0, we param1, String param2, boolean param3, boolean param4) {
+    rg(hm param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new fm((rg) null, param1, param2), 77, 10, 10);
         try {
           this.field_qb = false;

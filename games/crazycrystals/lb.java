@@ -8,7 +8,7 @@ class lb implements wo, fi {
     int field_n;
     int field_o;
     int field_e;
-    vc field_p;
+    BitmapFont field_p;
     int field_h;
     int field_m;
     int field_i;
@@ -170,7 +170,7 @@ class lb implements wo, fi {
           var9_int = this.a(param6 ^ -78, param1);
           var10 = this.b(115, param1);
           if (this.field_f) {
-            this.field_p.a(this.d(param1, param6 ^ -3), this.a(param0, param4, param6 ^ 106, param1), this.a(param5, (byte) 126, param7, param1), var9_int, var10, param3, param2, this.field_i, this.field_a, this.field_j);
+            this.field_p.drawParagraph(this.d(param1, param6 ^ -3), this.a(param0, param4, param6 ^ 106, param1), this.a(param5, (byte) 126, param7, param1), var9_int, var10, param3, param2, this.field_i, this.field_a, this.field_j);
           } else {
             var12 = this.field_a;
             if (0 != var12) {
@@ -189,16 +189,16 @@ class lb implements wo, fi {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_p.c(this.d(param1, param6 ^ -3), (var9_int >> 1) + this.a(param0, param4, 115, param1), this.a(param5, (byte) 123, param7, param1) + var11, param3, param2);
+                this.field_p.drawCentred(this.d(param1, param6 ^ -3), (var9_int >> 1) + this.a(param0, param4, 115, param1), this.a(param5, (byte) 123, param7, param1) + var11, param3, param2);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_p.b(this.d(param1, -1), var9_int + this.a(param0, param4, 115, param1), var11 + this.a(param5, (byte) 124, param7, param1), param3, param2);
+                  this.field_p.drawRightAligned(this.d(param1, -1), var9_int + this.a(param0, param4, 115, param1), var11 + this.a(param5, (byte) 124, param7, param1), param3, param2);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_p.a(this.d(param1, -1), this.a(param0, param4, 127, param1), this.a(param5, (byte) 123, param7, param1) + var11, param3, param2);
+              this.field_p.drawString(this.d(param1, -1), this.a(param0, param4, 127, param1), this.a(param5, (byte) 123, param7, param1) + var11, param3, param2);
             }
           }
           lg.a(1);
@@ -298,12 +298,12 @@ class lb implements wo, fi {
 
     final static void a(String param0, int param1, int param2, int param3, int param4) {
         try {
-          an.field_q.b(param0, param3 - 1, param1, 0, -1);
-          an.field_q.b(param0, param3 + 1, param1, 0, -1);
-          an.field_q.b(param0, param3, -1 + param1, 0, -1);
-          an.field_q.b(param0, param3, 1 + param1, 0, -1);
+          an.field_q.drawRightAligned(param0, param3 - 1, param1, 0, -1);
+          an.field_q.drawRightAligned(param0, param3 + 1, param1, 0, -1);
+          an.field_q.drawRightAligned(param0, param3, -1 + param1, 0, -1);
+          an.field_q.drawRightAligned(param0, param3, 1 + param1, 0, -1);
           int var5_int = -89 / ((param4 - 86) / 37);
-          an.field_q.b(param0, param3, param1, param2, -1);
+          an.field_q.drawRightAligned(param0, param3, param1, param2, -1);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "lb.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -674,7 +674,7 @@ class lb implements wo, fi {
     protected lb() {
     }
 
-    lb(vc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    lb(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_i = param7;
           this.field_n = param3;
@@ -694,7 +694,7 @@ class lb implements wo, fi {
         }
     }
 
-    lb(vc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    lb(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 

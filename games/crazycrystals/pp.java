@@ -45,12 +45,12 @@ final class pp extends IntrusiveNode {
         }
     }
 
-    final static uj a(int[] param0, byte param1, int param2, byte[] param3, wj[] param4) {
+    final static PalettedBitmapFont a(int[] param0, byte param1, int param2, byte[] param3, wj[] param4) {
         int var12_int = 0;
         byte[] array$0 = null;
         int var24_int = 0;
         int incrementValue$2 = 0;
-        uj stackIn_41_0 = null;
+        PalettedBitmapFont stackIn_41_0 = null;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
@@ -67,7 +67,7 @@ final class pp extends IntrusiveNode {
         int[] var9 = null;
         int var10 = 0;
         byte[][] var11 = null;
-        uj var12 = null;
+        PalettedBitmapFont var12 = null;
         byte[] var13 = null;
         byte[] var14 = null;
         int var15 = 0;
@@ -193,7 +193,7 @@ final class pp extends IntrusiveNode {
           if (param1 <= 66) {
             pp.clearStaticReferences((byte) -35);
           }
-          var12 = new uj(param3, var40, var41, var39, var38, var37, var42);
+          var12 = new PalettedBitmapFont(param3, var40, var41, var39, var38, var37, var42);
           var12.field_o = var12.field_o - 1;
           if (param0.length != 0) {
             var12.field_u = var12.field_u - param0.length;

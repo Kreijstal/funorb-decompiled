@@ -10,7 +10,7 @@ class vn extends bj implements mj {
     static RgbSprite field_rb;
     static RgbSprite field_xb;
     static int[] field_Ab;
-    private lh field_Fb;
+    private BitmapFont field_Fb;
     private boolean field_Cb;
     private rm field_wb;
     static RgbSprite field_Bb;
@@ -45,7 +45,7 @@ class vn extends bj implements mj {
         MusicPatchPcmStream.field_t[13] = ProxyAuthenticationRequiredException.field_c;
     }
 
-    vn(fm param0, lh param1, String param2, boolean param3, boolean param4) {
+    vn(fm param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new e((vn) null, param1, param2), 77, 10, 10);
         try {
           this.field_yb = false;

@@ -217,7 +217,7 @@ final class bg extends DungeonAssaultScreen {
           var8 = var7_int == 0 ? 0 : 10 + var7_int * 5;
           param4 = param4 - var8;
           var9 = ta.a(la.field_b, param3.field_j, param4, param3.field_g, 115);
-          var10 = la.field_b.b(var9);
+          var10 = la.field_b.stringWidth(var9);
           param1 = param1 - ((var10 >> 1) + 5);
           for (var11 = 0; var11 < var7_int; var11++) {
             fb.field_f.a(param1, -10 + param5);
@@ -228,7 +228,7 @@ final class bg extends DungeonAssaultScreen {
             this.a(-30, -105, (di) null, 82);
           }
           param1 += 15;
-          la.field_b.b(var9, param1, param5, param0, -1);
+          la.field_b.drawString(var9, param1, param5, param0, -1);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "bg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
@@ -280,7 +280,7 @@ final class bg extends DungeonAssaultScreen {
         for (var5 = 0; var5 < rb.field_J.length; var5++) {
           var6 = rb.field_J[var5].toUpperCase();
           var7 = s.field_b[var5 + 1] + s.field_b[var5] >> 1;
-          var8 = db.field_v.b(var6);
+          var8 = db.field_v.stringWidth(var6);
           if (var5 == 1 ||
             3 == var5) {
             var8 -= 18;
@@ -289,7 +289,7 @@ final class bg extends DungeonAssaultScreen {
           if (2 == var5) {
             var9 -= 2;
           }
-          db.field_v.b(var6, var9, var4, 16629550, -1);
+          db.field_v.drawString(var6, var9, var4, 16629550, -1);
           if (var5 == 1) {
             ue.field_i[0].h(-18 + var9, -12 + var4);
           }
@@ -312,14 +312,14 @@ final class bg extends DungeonAssaultScreen {
         }
         try {
           var10 = u.a(la.field_b, (byte) 44, param5.field_g, param5.field_j, param2, param1);
-          var11 = la.field_b.b(var10);
+          var11 = la.field_b.stringWidth(var10);
           param0 = param0 - ((var11 >> 1) + 5);
           for (var12 = 0; var12 < var8_int; var12++) {
             fb.field_f.a(param0, -10 + param4);
             param0 += 5;
           }
           param0 += 15;
-          la.field_b.b(var10, param0, param4, param6, -1);
+          la.field_b.drawString(var10, param0, param4, param6, -1);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "bg.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
@@ -366,7 +366,7 @@ final class bg extends DungeonAssaultScreen {
             }
           }
         } else {
-          la.field_b.c(ac.field_D, 320, 240, 16777215, -1);
+          la.field_b.drawCentred(ac.field_D, 320, 240, 16777215, -1);
         }
         if (param1 < 44) {
           return;
@@ -413,11 +413,11 @@ final class bg extends DungeonAssaultScreen {
           param0 -= 2;
           param0 = param0 + (la.field_b.field_H + 24 >> 1);
           if (param2 != null) {
-            la.field_b.c(Integer.toString(param2.field_b + 1), s.field_b[0] + s.field_b[1] >> 1, param0, 16777215, -1);
+            la.field_b.drawCentred(Integer.toString(param2.field_b + 1), s.field_b[0] + s.field_b[1] >> 1, param0, 16777215, -1);
             var7Lifetime2 = -s.field_b[1] + (s.field_b[2] - 5);
             var8Lifetime1 = s.field_b[1] + s.field_b[2] >> 1;
             this.a(var8Lifetime1, var7Lifetime2, 16777215, (byte) 126, param0, param2, var5_int);
-            la.field_b.c(gh.a(param2.field_a, (byte) -121), s.field_b[2] + s.field_b[3] >> 1, param0, 16777215, -1);
+            la.field_b.drawCentred(gh.a(param2.field_a, (byte) -121), s.field_b[2] + s.field_b[3] >> 1, param0, 16777215, -1);
             if (!param2.field_c.equals("")) {
               var9 = u.a(la.field_b, (byte) -111, param2.field_c, FullscreenFocusCanvas.field_c, 16777215, -s.field_b[3] + (s.field_b[4] - 25));
               var10 = s.field_b[3] + 10;
@@ -431,12 +431,12 @@ final class bg extends DungeonAssaultScreen {
                 }
               }
               var11.h(var10, param0 - la.field_b.field_H);
-              la.field_b.b(var9, var10 + 20, param0, var5_int, -1);
+              la.field_b.drawString(var9, var10 + 20, param0, var5_int, -1);
             } else {
-              la.field_b.c("-", s.field_b[3] + s.field_b[4] >> 1, param0, 16777215, -1);
+              la.field_b.drawCentred("-", s.field_b[3] + s.field_b[4] >> 1, param0, 16777215, -1);
             }
           } else {
-            la.field_b.c(MouseWheelInput.field_c, s.field_b[1] + s.field_b[2] >> 1, param0, 16777215, -1);
+            la.field_b.drawCentred(MouseWheelInput.field_c, s.field_b[1] + s.field_b[2] >> 1, param0, 16777215, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -580,7 +580,7 @@ final class bg extends DungeonAssaultScreen {
         } else {
           var5 = DungeonTileState.field_e;
         }
-        db.field_v.a(var5, 215, var3Lifetime1, 210, 45, var6, -1, param0, 1, db.field_v.field_H);
+        db.field_v.drawParagraph(var5, 215, var3Lifetime1, 210, 45, var6, -1, param0, 1, db.field_v.field_H);
     }
 
     private final void a(di param0, int param1) {
@@ -588,7 +588,7 @@ final class bg extends DungeonAssaultScreen {
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gp var3 = null;
+        BinaryBitmapFont var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
@@ -597,7 +597,7 @@ final class bg extends DungeonAssaultScreen {
         int var8 = 0;
         RgbSprite var9 = null;
         int var10 = 0;
-        gp var11 = null;
+        BinaryBitmapFont var11 = null;
         var10 = DungeonAssault.field_K;
         try {
           if (param0 == null) {
@@ -610,12 +610,12 @@ final class bg extends DungeonAssaultScreen {
           var11 = la.field_b;
           var3 = var11;
           var4 = -s.field_b[0] + s.field_b[4];
-          var5 = ((se) ((Object) var3)).field_E + ((se) ((Object) var3)).field_H;
+          var5 = ((BitmapFont) ((Object) var3)).field_E + ((BitmapFont) ((Object) var3)).field_H;
           var6 = new RgbSprite(var4, var5);
           jh.a(var6);
-          ((se) ((Object) var3)).c(Integer.toString(param0.field_b + 1), -s.field_b[0] + (s.field_b[1] + s.field_b[0] >> 1), la.field_b.field_H, 12690143, -1);
+          ((BitmapFont) ((Object) var3)).drawCentred(Integer.toString(param0.field_b + 1), -s.field_b[0] + (s.field_b[1] + s.field_b[0] >> 1), la.field_b.field_H, 12690143, -1);
           this.a(12690143, -s.field_b[0] + (s.field_b[2] + s.field_b[1] >> 1), 120, param0, -5 + s.field_b[2] - s.field_b[1], la.field_b.field_H);
-          ((se) ((Object) var3)).c(gh.a(param0.field_a, (byte) -117), -s.field_b[0] + (s.field_b[2] + s.field_b[3] >> 1), la.field_b.field_H, 12690143, -1);
+          ((BitmapFont) ((Object) var3)).drawCentred(gh.a(param0.field_a, (byte) -117), -s.field_b[0] + (s.field_b[2] + s.field_b[3] >> 1), la.field_b.field_H, 12690143, -1);
           if (!param0.field_c.equals("")) {
             var7 = u.a(var3, (byte) 124, param0.field_c, FullscreenFocusCanvas.field_c, 12690143, -s.field_b[3] + s.field_b[4] - 25);
             var8 = 10 - s.field_b[0] + s.field_b[3];
@@ -629,9 +629,9 @@ final class bg extends DungeonAssaultScreen {
               }
             }
             var9.h(var8, 0);
-            ((se) ((Object) var3)).b(var7, var8 + 20, ((se) ((Object) var3)).field_H, 12690143, -1);
+            ((BitmapFont) ((Object) var3)).drawString(var7, var8 + 20, ((BitmapFont) ((Object) var3)).field_H, 12690143, -1);
           } else {
-            ((se) ((Object) var11)).c("-", (s.field_b[4] + s.field_b[3] >> 1) - s.field_b[0], la.field_b.field_H, 12690143, -1);
+            ((BitmapFont) ((Object) var11)).drawCentred("-", (s.field_b[4] + s.field_b[3] >> 1) - s.field_b[0], la.field_b.field_H, 12690143, -1);
           }
           if (param1 <= 117) {
             return;
@@ -737,17 +737,17 @@ final class bg extends DungeonAssaultScreen {
             this.a((byte) 111);
           }
           if (param2 == null) {
-            la.field_b.c(Integer.toString(1 + param0), s.field_b[0] + s.field_b[1] >> 1, param3, var5_int, -1);
-            la.field_b.c(MouseWheelInput.field_c, s.field_b[2] + s.field_b[1] >> 1, param3, var5_int, -1);
+            la.field_b.drawCentred(Integer.toString(1 + param0), s.field_b[0] + s.field_b[1] >> 1, param3, var5_int, -1);
+            la.field_b.drawCentred(MouseWheelInput.field_c, s.field_b[2] + s.field_b[1] >> 1, param3, var5_int, -1);
           } else {
-            la.field_b.c(Integer.toString(1 + param2.field_b), s.field_b[0] + s.field_b[1] >> 1, param3, var5_int, -1);
+            la.field_b.drawCentred(Integer.toString(1 + param2.field_b), s.field_b[0] + s.field_b[1] >> 1, param3, var5_int, -1);
             var7 = -5 + (-s.field_b[1] + s.field_b[2]);
             var8 = s.field_b[1] + s.field_b[2] >> 1;
             this.a(var8, var7, var5_int, (byte) 125, param3, param2, var6);
-            la.field_b.c(gh.a(param2.field_a, (byte) -110), s.field_b[3] + s.field_b[2] >> 1, param3, var5_int, -1);
+            la.field_b.drawCentred(gh.a(param2.field_a, (byte) -110), s.field_b[3] + s.field_b[2] >> 1, param3, var5_int, -1);
             if (0 < param2.field_c.length()) {
               var9 = u.a(la.field_b, (byte) -76, param2.field_c, FullscreenFocusCanvas.field_c, var5_int, -s.field_b[3] + (s.field_b[4] - 25));
-              la.field_b.b(var9);
+              la.field_b.stringWidth(var9);
               var10 = s.field_b[3] + 10;
               if (param2.field_f > 0) {
                 var11 = ue.field_i[0];
@@ -759,9 +759,9 @@ final class bg extends DungeonAssaultScreen {
                 }
               }
               var11.h(var10, param3 - la.field_b.field_H);
-              la.field_b.b(var9, 20 + var10, param3, var6, -1);
+              la.field_b.drawString(var9, 20 + var10, param3, var6, -1);
             } else {
-              la.field_b.c("-", s.field_b[4] + s.field_b[3] >> 1, param3, var5_int, -1);
+              la.field_b.drawCentred("-", s.field_b[4] + s.field_b[3] >> 1, param3, var5_int, -1);
             }
           }
           return;

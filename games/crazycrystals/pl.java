@@ -112,10 +112,10 @@ final class pl extends IntrusiveNode {
         field_h = null;
     }
 
-    final static ef a(int param0, int param1, int param2, ResourceArchive param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(int param0, int param1, int param2, ResourceArchive param3, ResourceArchive param4) {
         RuntimeException var5 = null;
-        ef stackIn_5_0 = null;
-        ef stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_5_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -130,7 +130,7 @@ final class pl extends IntrusiveNode {
             stackIn_7_0 = tn.a(param4.getFile(param1, 0, param0), 0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (ef) null;
+          stackIn_5_0 = (BinaryBitmapFont) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

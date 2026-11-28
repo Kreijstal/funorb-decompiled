@@ -263,7 +263,7 @@ final class km extends sd {
         }
     }
 
-    private km(vm param0, int param1) {
+    private km(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

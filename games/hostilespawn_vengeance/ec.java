@@ -42,7 +42,7 @@ final class ec {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, vm param3, int param4, int param5, String param6) {
+    final static void a(int param0, int param1, boolean param2, BitmapFont param3, int param4, int param5, String param6) {
         int var7_int = 0;
         int var8 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -60,7 +60,7 @@ final class ec {
           }
           while (var7_int >= 0) {
             param4 = param4 - param0;
-            param3.a(param6.charAt(var7_int), param4, param1, param5);
+            param3.drawCharacter(param6.charAt(var7_int), param4, param1, param5);
             var7_int--;
           }
           return;

@@ -90,7 +90,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         field_db = (IntrusiveDeque) null;
     }
 
-    final void a(int param0, FieldValidator param1) {
+    final void setFieldValidator(int param0, FieldValidator param1) {
         try {
           this.field_fb = param1;
           if (param0 != -27997) {

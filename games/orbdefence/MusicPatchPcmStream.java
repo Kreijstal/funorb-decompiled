@@ -38,13 +38,13 @@ final class MusicPatchPcmStream extends PcmStream {
             param1.field_i = 1048575 & param0 * var4_int + param1.field_i;
             if (var5 <= param0) {
               if (this.field_j.field_D[param1.field_F] != 0) {
-                param1.field_l = RawPcmStream.a(param1.field_D, param1.field_l.g(), 0, param1.field_l.l());
+                param1.field_l = RawPcmStream.createForSampleStep(param1.field_D, param1.field_l.getSampleStepMagnitude(), 0, param1.field_l.getPan());
                 stackIn_9_0 = this.field_j;
                 stackIn_9_1 = (he) (param1);
                 stackIn_10_2 = !(param1.field_g.field_m[param1.field_h] >= 0);
                 ((MidiPcmStream) (Object) stackIn_9_0).applyVoiceSampleOffset(stackIn_9_1, stackIn_10_2, param2 + 33816);
               } else {
-                param1.field_l = RawPcmStream.a(param1.field_D, param1.field_l.g(), param1.field_l.j(), param1.field_l.l());
+                param1.field_l = RawPcmStream.createForSampleStep(param1.field_D, param1.field_l.getSampleStepMagnitude(), param1.field_l.getTargetVolume(), param1.field_l.getPan());
               }
               if (param1.field_g.field_m[param1.field_h] < 0) {
                 param1.field_l.d(-1);
@@ -126,21 +126,21 @@ final class MusicPatchPcmStream extends PcmStream {
               }
               var11 = param4.field_l;
               if (0 == this.field_j.field_D[param4.field_F]) {
-                param4.field_l = RawPcmStream.a(param4.field_D, var11.g(), var11.j(), var11.l());
+                param4.field_l = RawPcmStream.createForSampleStep(param4.field_D, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.getPan());
               } else {
-                param4.field_l = RawPcmStream.a(param4.field_D, var11.g(), 0, var11.l());
+                param4.field_l = RawPcmStream.createForSampleStep(param4.field_D, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_13_0 = this.field_j;
                 stackIn_13_1 = (he) (param4);
                 stackIn_14_2 = !(param4.field_g.field_m[param4.field_h] >= 0);
                 ((MidiPcmStream) (Object) stackIn_13_0).applyVoiceSampleOffset(stackIn_13_1, stackIn_14_2, 9929);
-                param4.field_l.d(var9, var11.j());
+                param4.field_l.rampVolume(var9, var11.getTargetVolume());
               }
               if (param4.field_g.field_m[param4.field_h] < 0) {
                 param4.field_l.d(-1);
               }
               var11.f(var9);
               var11.mixInto(param0, param2, param1 - param2);
-              if (!var11.e()) {
+              if (!var11.hasRemainingRampFrames()) {
                 continue;
               }
               this.field_m.a(var11);

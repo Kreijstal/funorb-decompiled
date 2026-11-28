@@ -51,7 +51,7 @@ final class rl extends r {
         }
     }
 
-    private rl(ee param0, int param1) {
+    private rl(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

@@ -269,7 +269,7 @@ final class mc {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        vm var13 = null;
+        BinaryBitmapFont var13 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -280,24 +280,24 @@ final class mc {
           var13 = mm.field_a;
           var10 = this.field_v + param7;
           if (!param5) {
-            var13.a(param2, var10 - 2, param3 + var13.field_I, 2829610, -1);
-            var13.a(param2, var10 + 2, param3 + var13.field_I, 2829610, -1);
-            var13.a(param2, var10, param3 + var13.field_I - 2, 2829610, -1);
-            var13.a(param2, var10, var13.field_I + (param3 + 2), 2829610, -1);
-            var13.a(param2, var10 - 1, var13.field_I + param3 - 1, 2829610, -1);
-            var13.a(param2, 1 + var10, var13.field_I + param3 - 1, 2829610, -1);
-            var13.a(param2, -1 + var10, var13.field_I + param3 + 1, 2829610, -1);
-            var13.a(param2, 1 + var10, param3 - (-var13.field_I - 1), 2829610, -1);
+            var13.drawString(param2, var10 - 2, param3 + var13.field_I, 2829610, -1);
+            var13.drawString(param2, var10 + 2, param3 + var13.field_I, 2829610, -1);
+            var13.drawString(param2, var10, param3 + var13.field_I - 2, 2829610, -1);
+            var13.drawString(param2, var10, var13.field_I + (param3 + 2), 2829610, -1);
+            var13.drawString(param2, var10 - 1, var13.field_I + param3 - 1, 2829610, -1);
+            var13.drawString(param2, 1 + var10, var13.field_I + param3 - 1, 2829610, -1);
+            var13.drawString(param2, -1 + var10, var13.field_I + param3 + 1, 2829610, -1);
+            var13.drawString(param2, 1 + var10, param3 - (-var13.field_I - 1), 2829610, -1);
           } else {
             var11 = 3355443;
-            var13.a(param2, var10 - 2, var13.field_I + param3, var11, -1);
-            var13.a(param2, var10 + 2, param3 + var13.field_I, var11, -1);
-            var13.a(param2, var10, -2 + (var13.field_I + param3), var11, -1);
-            var13.a(param2, var10, 2 + var13.field_I + param3, var11, -1);
-            var13.a(param2, var10 - 1, var13.field_I + (param3 - 1), var11, -1);
-            var13.a(param2, var10 + 1, param3 + (var13.field_I - 1), var11, -1);
-            var13.a(param2, var10 - 1, 1 + (param3 + var13.field_I), var11, -1);
-            var13.a(param2, 1 + var10, param3 - (-var13.field_I - 1), var11, -1);
+            var13.drawString(param2, var10 - 2, var13.field_I + param3, var11, -1);
+            var13.drawString(param2, var10 + 2, param3 + var13.field_I, var11, -1);
+            var13.drawString(param2, var10, -2 + (var13.field_I + param3), var11, -1);
+            var13.drawString(param2, var10, 2 + var13.field_I + param3, var11, -1);
+            var13.drawString(param2, var10 - 1, var13.field_I + (param3 - 1), var11, -1);
+            var13.drawString(param2, var10 + 1, param3 + (var13.field_I - 1), var11, -1);
+            var13.drawString(param2, var10 - 1, 1 + (param3 + var13.field_I), var11, -1);
+            var13.drawString(param2, 1 + var10, param3 - (-var13.field_I - 1), var11, -1);
           }
           if (param1 >= -97) {
             this.field_p = (int[]) null;
@@ -305,19 +305,19 @@ final class mc {
           if (!param4 &&
             !param0) {
             if (!param5) {
-              var13.a(param2, var10, var13.field_I + param3, 16437248, -1);
+              var13.drawString(param2, var10, var13.field_I + param3, 16437248, -1);
               return;
             }
-            var13.a(param2, var10, var13.field_I + param3, 6776679, -1);
+            var13.drawString(param2, var10, var13.field_I + param3, 6776679, -1);
             return;
           }
           if (!param5) {
-            var13.a(param2, var10, var13.field_I + param3, 15884837, -1);
+            var13.drawString(param2, var10, var13.field_I + param3, 15884837, -1);
           } else {
             if (param6) {
-              var13.a(param2, var10, var13.field_I + param3, 13963537, -1);
+              var13.drawString(param2, var10, var13.field_I + param3, 13963537, -1);
             } else {
-              var13.a(param2, var10, param3 + var13.field_I, 14013909, -1);
+              var13.drawString(param2, var10, param3 + var13.field_I, 14013909, -1);
             }
           }
           return;
@@ -765,7 +765,7 @@ final class mc {
     final void b(int param0) {
         int stackIn_10_0 = 0;
         int stackIn_56_0 = 0;
-        vm stackIn_70_0;
+        BinaryBitmapFont stackIn_70_0;
         String stackIn_70_1;
         int stackIn_70_2;
         int stackIn_70_3;
@@ -787,7 +787,7 @@ final class mc {
         String stackIn_93_4 = null;
         int stackIn_95_1 = 0;
         boolean stackIn_96_2 = false;
-        vm stackIn_155_0;
+        BinaryBitmapFont stackIn_155_0;
         String stackIn_155_1;
         int stackIn_155_2;
         int stackIn_155_3;
@@ -802,14 +802,14 @@ final class mc {
         int var8_int;
         String var8;
         int var9_int;
-        vm var9;
+        BinaryBitmapFont var9;
         int var10;
         int var11;
         int var12;
         int var13_int;
         Object var13;
         String var13_ref;
-        vm var14;
+        BinaryBitmapFont var14;
         Sprite var15;
         int var16;
         int var17;
@@ -969,7 +969,7 @@ final class mc {
               } else {
                 stackIn_71_4 = 5710861;
               }
-              ((vm) (Object) stackIn_70_0).a(stackIn_70_1, stackIn_70_2, stackIn_70_3, stackIn_71_4, -1);
+              ((BinaryBitmapFont) (Object) stackIn_70_0).drawString(stackIn_70_1, stackIn_70_2, stackIn_70_3, stackIn_71_4, -1);
               stackIn_73_0 = this.field_h;
               if (var19 != 0) {
                 stackIn_74_1 = 6776679;
@@ -1022,18 +1022,18 @@ final class mc {
         this.field_r.g();
         kd.field_r.g(0, 0);
         var10Lifetime2 = 3 + (var9.field_E + var9.field_I);
-        var9.a(var8, -2, 0, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
-        var9.a(var8, 2, 0, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
-        var9.a(var8, 0, -2, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
-        var9.a(var8, 0, 2, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
-        var9.a(var8, -1, -1, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
-        var9.a(var8, 1, -1, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
-        var9.a(var8, -1, 1, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
-        var9.a(var8, 1, 1, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
+        var9.drawParagraph(var8, -2, 0, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
+        var9.drawParagraph(var8, 2, 0, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
+        var9.drawParagraph(var8, 0, -2, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
+        var9.drawParagraph(var8, 0, 2, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
+        var9.drawParagraph(var8, -1, -1, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
+        var9.drawParagraph(var8, 1, -1, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
+        var9.drawParagraph(var8, -1, 1, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
+        var9.drawParagraph(var8, 1, 1, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
         if (this.field_a == -2) {
-          var9.a(var8, 0, 0, kd.field_r.field_x, kd.field_r.field_A, 15884837, -1, 1, 1, var10Lifetime2);
+          var9.drawParagraph(var8, 0, 0, kd.field_r.field_x, kd.field_r.field_A, 15884837, -1, 1, 1, var10Lifetime2);
         } else {
-          var9.a(var8, 0, 0, kd.field_r.field_x, kd.field_r.field_A, 16437248, -1, 1, 1, var10Lifetime2);
+          var9.drawParagraph(var8, 0, 0, kd.field_r.field_x, kd.field_r.field_A, 16437248, -1, 1, 1, var10Lifetime2);
         }
         var11Lifetime2 = -101 / ((-70 - param0) / 32);
         ResourceArchive.field_e.setAsRasterTarget((byte) -45);
@@ -1164,18 +1164,18 @@ final class mc {
             } else {
               stackIn_156_5 = tn.field_K[13].field_x + 20;
             }
-            ((vm) (Object) stackIn_155_0).a(stackIn_155_1, stackIn_155_2, stackIn_155_3, stackIn_155_4 - stackIn_156_5, 90, 3550242, -1, 3, 0, 0);
+            ((BinaryBitmapFont) (Object) stackIn_155_0).drawParagraph(stackIn_155_1, stackIn_155_2, stackIn_155_3, stackIn_155_4 - stackIn_156_5, 90, 3550242, -1, 3, 0, 0);
           }
           var14 = mm.field_a;
           if (var12 >= 0) {
-            var14.c(oa.a((byte) -77, af.field_r, new String[]{Integer.toString(this.field_g[var12] * 100)}), 462, 418, 1, -1);
+            var14.drawRightAligned(oa.a((byte) -77, af.field_r, new String[]{Integer.toString(this.field_g[var12] * 100)}), 462, 418, 1, -1);
           }
           if (this.field_y > 0 &&
             this.field_y % 10 < 5) {
-            var14.a(oa.a((byte) -73, ne.field_M, new String[]{Integer.toString(100 * this.field_f)}), 52 + var7Lifetime2, 418, 16711680, -1);
+            var14.drawString(oa.a((byte) -73, ne.field_M, new String[]{Integer.toString(100 * this.field_f)}), 52 + var7Lifetime2, 418, 16711680, -1);
             return;
           }
-          var14.a(oa.a((byte) -126, ne.field_M, new String[]{Integer.toString(this.field_f * 100)}), 52 + var7Lifetime2, 418, 1, -1);
+          var14.drawString(oa.a((byte) -126, ne.field_M, new String[]{Integer.toString(this.field_f * 100)}), 52 + var7Lifetime2, 418, 1, -1);
         }
         return;
     }

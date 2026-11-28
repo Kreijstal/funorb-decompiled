@@ -1239,7 +1239,7 @@ final class BucketBoard {
               if (rawPcmStreamLocal23 != null &&
                 rawPcmStreamLocal29.isLinked((byte) 93) &&
                 rawPcmStreamLocal29.abstractAudioSampleState0001 == rawSoundLocal20) {
-                rawPcmStreamLocal23.performAction0437(PcmPlayer.integerState0209 / 50, integerLocal43 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
+                rawPcmStreamLocal23.rampVolumeAndPan(PcmPlayer.integerState0209 / 50, integerLocal43 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
               } else {
                 if (rawPcmStreamLocal23 != null) {
                   rawPcmStreamLocal29.performAction0461(PcmPlayer.integerState0209 / 50);
@@ -1439,7 +1439,7 @@ final class BucketBoard {
                 SecondaryNodeDequeIterator.pcmStreamMixerState0001.addSubStream(rawPcmStreamLocal31);
                 rawPcmStreamArrayLocal25[this.integerState0453] = rawPcmStreamLocal31;
               } else {
-                rawPcmStreamLocal27.performAction0437(PcmPlayer.integerState0209 / 50, integerLocal41 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
+                rawPcmStreamLocal27.rampVolumeAndPan(PcmPlayer.integerState0209 / 50, integerLocal41 * GameDomainSupport005.integerState0578, this.integerState0458 << 6);
               }
             }
             if (0 < integerLocal46) {
@@ -1460,7 +1460,7 @@ final class BucketBoard {
                 SecondaryNodeDequeIterator.pcmStreamMixerState0001.addSubStream(rawPcmStreamLocal32);
                 rawPcmStreamArrayLocal33[this.integerState0453] = rawPcmStreamLocal32;
               } else {
-                rawPcmStreamLocal34.performAction0437(PcmPlayer.integerState0209 / 50, GameDomainSupport005.integerState0578 * integerLocal42, this.integerState0458 << 6);
+                rawPcmStreamLocal34.rampVolumeAndPan(PcmPlayer.integerState0209 / 50, GameDomainSupport005.integerState0578 * integerLocal42, this.integerState0458 << 6);
               }
             }
             if (integerLocal14 != 0 &&
@@ -2724,7 +2724,7 @@ final class BucketBoard {
             SecondaryNodeDequeIterator.pcmStreamMixerState0001.addSubStream(rawPcmStreamLocal17);
             MixedSupport062.rawPcmStreamArrayState0002[this.integerState0453] = rawPcmStreamLocal17;
           } else {
-            rawPcmStreamLocal11.performAction0437(PcmPlayer.integerState0209 / 50, GameDomainSupport005.integerState0578 * this.integerState0474, this.integerState0462 << 6);
+            rawPcmStreamLocal11.rampVolumeAndPan(PcmPlayer.integerState0209 / 50, GameDomainSupport005.integerState0578 * this.integerState0474, this.integerState0462 << 6);
           }
         }
     }

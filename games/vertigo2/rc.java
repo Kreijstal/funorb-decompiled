@@ -39,11 +39,11 @@ final class rc {
         if (0 == jq.field_b) {
           va.field_s.a(16777215, (byte) 60, -1, 40, TextureOperator.field_w, var5);
           va.field_s.a(16777215, (byte) 84, -1, 410, ao.field_R, var5);
-          var13.a(sd.field_K, 40, var4 * 1 + (var3 + 130), 350, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
+          var13.drawParagraph(sd.field_K, 40, var4 * 1 + (var3 + 130), 350, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
           mp.field_a.e(60, 290);
           SoftwareRasterizer.drawVerticalLineAlpha(390, var3 + 130 + 4, 324 - (-var3 + 80), 16777215, 100);
-          var13.a(pp.field_w, 410, 130 + (var3 + 1 * var4), 190, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
-          var13.a(op.field_b, 410, var4 * 1 + var3 + 130, 190, 225, 16777215, -1, 2, 0, var13.field_z + var13.field_M);
+          var13.drawParagraph(pp.field_w, 410, 130 + (var3 + 1 * var4), 190, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
+          var13.drawParagraph(op.field_b, 410, var4 * 1 + var3 + 130, 190, 225, 16777215, -1, 2, 0, var13.field_z + var13.field_M);
           va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
           return;
         }
@@ -91,11 +91,11 @@ final class rc {
             return;
           }
           va.field_s.a(16777215, (byte) 98, -1, 40, en.field_b, var5);
-          var13.a(ue.field_K, 40, var4 * 1 + (130 + var3), 540, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
+          var13.drawParagraph(ue.field_K, 40, var4 * 1 + (130 + var3), 540, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
           va.field_s.a(15637810, (byte) 109, -1, 40, bq.field_H, var5 + 76);
-          var13.a(th.field_k, 40, var4 / 2 + var5 + 76, 540, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
+          var13.drawParagraph(th.field_k, 40, var4 / 2 + var5 + 76, 540, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
           va.field_s.a(15637810, (byte) 67, -1, 40, AccountNameAvailabilityValidator.field_r, var5 + 156);
-          var13.a(nh.field_i, 40, var4 / 2 + var5 + 156, 540, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
+          var13.drawParagraph(nh.field_i, 40, var4 / 2 + var5 + 156, 540, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
           if (var12 == 0) {
             va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
             return;
@@ -120,11 +120,11 @@ final class rc {
         }
         va.field_s.a(16777215, (byte) 60, -1, 40, TextureOperator.field_w, var5);
         va.field_s.a(16777215, (byte) 84, -1, 410, ao.field_R, var5);
-        var13.a(sd.field_K, 40, var4 * 1 + (var3 + 130), 350, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
+        var13.drawParagraph(sd.field_K, 40, var4 * 1 + (var3 + 130), 350, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
         mp.field_a.e(60, 290);
         SoftwareRasterizer.drawVerticalLineAlpha(390, var3 + 130 + 4, 324 - (-var3 + 80), 16777215, 100);
-        var13.a(pp.field_w, 410, 130 + (var3 + 1 * var4), 190, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
-        var13.a(op.field_b, 410, var4 * 1 + var3 + 130, 190, 225, 16777215, -1, 2, 0, var13.field_z + var13.field_M);
+        var13.drawParagraph(pp.field_w, 410, 130 + (var3 + 1 * var4), 190, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
+        var13.drawParagraph(op.field_b, 410, var4 * 1 + var3 + 130, 190, 225, 16777215, -1, 2, 0, var13.field_z + var13.field_M);
         va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
     }
 

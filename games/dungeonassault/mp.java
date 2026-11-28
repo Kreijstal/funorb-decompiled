@@ -6,7 +6,7 @@ import java.util.*;
 final class mp {
     static String field_e;
     static String field_b;
-    static se field_a;
+    static BitmapFont field_a;
     static String field_c;
     static String field_f;
     static String field_g;

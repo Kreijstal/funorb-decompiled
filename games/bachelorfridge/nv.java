@@ -234,7 +234,7 @@ final class nv extends UiComponent {
             }
             this.field_vb[var13] = new gna(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
             this.a(-1, this.field_vb[var13]);
-            var15 = var17.a(param6[var13]);
+            var15 = var17.stringWidth(param6[var13]);
             if (var15 > this.field_Gb) {
               this.field_Gb = var15;
             }

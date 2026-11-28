@@ -771,7 +771,7 @@ final class LevelSession {
         int var10_int = 0;
         String var10 = null;
         int var11_int = 0;
-        jb var11 = null;
+        BinaryBitmapFont var11 = null;
         int var12_int = 0;
         RgbSprite var12 = null;
         int var13_int = 0;
@@ -866,18 +866,18 @@ final class LevelSession {
         SoftwareRasterizer.restoreClip(this.field_t);
         var10 = "x" + this.field_A;
         var11 = cb.field_b;
-        var12 = new RgbSprite(var11.b(var10), var11.field_x + var11.field_S);
+        var12 = new RgbSprite(var11.stringWidth(var10), var11.field_x + var11.field_S);
         var12.c();
         if (param0 != -2639) {
           this.field_T = -118;
         }
-        var11.c(var10, 0, var11.field_x, 16777215, -1);
+        var11.drawString(var10, 0, var11.field_x, 16777215, -1);
         ArchiveRequest.field_C.setAsRasterTarget(116);
         var12.b(-(var12.field_y / 2) + 503, var12.field_w / 2 + 443);
         if (this.field_Z > 0) {
           stackIn_40_0 = (this.field_Z % 20 < 10) ? 16711680 : 0;
           var13_int = stackIn_40_0;
-          cb.field_b.a(AwtRasterBuffer.field_b, 620, cb.field_b.field_x + 10, var13_int, 0);
+          cb.field_b.drawRightAligned(AwtRasterBuffer.field_b, 620, cb.field_b.field_x + 10, var13_int, 0);
         }
         var4Lifetime1 = 551;
         var5Lifetime1 = 464;
@@ -904,11 +904,11 @@ final class LevelSession {
           break;
         }
         if (stackIn_52_0 != 0) {
-          ji.field_d.b("lvl: " + Integer.toString(this.levelNumber) + "; fps: " + pc.field_a, 112, 32, 65280, 65280);
-          ji.field_d.a("Bonus: " + this.field_R, 630, 32, 16777215, 16777215);
+          ji.field_d.drawCentred("lvl: " + Integer.toString(this.levelNumber) + "; fps: " + pc.field_a, 112, 32, 65280, 65280);
+          ji.field_d.drawRightAligned("Bonus: " + this.field_R, 630, 32, 16777215, 16777215);
           var15 = Runtime.getRuntime();
           var16Lifetime1 = (int)(var15.totalMemory() - var15.freeMemory()) >> 20;
-          ji.field_d.b(Integer.toString(var16Lifetime1), 330, 35, 16711680, 16711680);
+          ji.field_d.drawCentred(Integer.toString(var16Lifetime1), 330, 35, 16711680, 16711680);
         }
         return;
     }
@@ -1583,7 +1583,7 @@ final class LevelSession {
         do {
           if (var5_int > 3) {
             SoftwareRasterizer.resetClip();
-            cb.field_b.b(a.field_f, 320, 45 + var4, 16777215, 0);
+            cb.field_b.drawCentred(a.field_f, 320, 45 + var4, 16777215, 0);
             break;
           }
           pi.field_S[var5_int].e(var3 + 94, -var2 + (48 + (var4 + 53 - pi.field_S[0].field_c * -var5_int)));
@@ -1593,7 +1593,7 @@ final class LevelSession {
           return;
         }
         var5 = uf.field_d + (this.levelNumber / 3 + 1) + "-" + (this.levelNumber % 3 + 1);
-        cb.field_b.b(var5, 320, cb.field_b.field_E + (var4 + 45), 16777215, 0);
+        cb.field_b.drawCentred(var5, 320, cb.field_b.field_E + (var4 + 45), 16777215, 0);
         return;
     }
 
@@ -1751,7 +1751,7 @@ final class LevelSession {
           if (this.field_u == 0) {
             PacketBuffer.a(-1630758008, this.field_M);
           }
-          this.field_M.h(this.field_u + 196);
+          this.field_M.setSampleStepMagnitude(this.field_u + 196);
           this.field_M.j((int)((25.0 + (double)this.field_u / 2.0) * (double)SecondaryNodeDeque.field_e / 80.0));
           this.field_u = this.field_u + 1;
           if (this.field_u > 200) {
@@ -2593,15 +2593,15 @@ final class LevelSession {
             if (var3 > 255) {
               var3 = 255;
             }
-            cb.field_b.b(vh.field_d, 320, 200, 16777215, -1, var2Lifetime1);
+            cb.field_b.drawCentredAlpha(vh.field_d, 320, 200, 16777215, -1, var2Lifetime1);
             if (0 > var3) {
               var3 = 0;
             }
             var4 = sa.field_g + this.field_H;
-            cb.field_b.b(var4, 320, 250, 16777215, -1, var2Lifetime1);
+            cb.field_b.drawCentredAlpha(var4, 320, 250, 16777215, -1, var2Lifetime1);
             if (0 < this.field_R) {
               var5 = kh.field_o + this.field_T + af.field_c + this.field_X + l.field_h + this.field_R;
-              cb.field_b.b(var5, 320, 255 + cb.field_b.field_x, 16777215, -1, var2Lifetime1);
+              cb.field_b.drawCentredAlpha(var5, 320, 255 + cb.field_b.field_x, 16777215, -1, var2Lifetime1);
               if (var2Lifetime1 > 200) {
                 if (this.field_R <= 29) {
                   this.d((byte) -100, this.field_R);
@@ -2616,7 +2616,7 @@ final class LevelSession {
                 }
               }
             }
-            cb.field_b.b(bj.field_b, 320, 320, 16711680, -1, var3);
+            cb.field_b.drawCentredAlpha(bj.field_b, 320, 320, 16711680, -1, var3);
             if (var6 != 0) {
               be.a(0, 0, 640, 430, 22070844, gm.field_J * 5);
             }
@@ -2694,7 +2694,7 @@ final class LevelSession {
             var4 = var5 / 2 - 32;
           }
           di.field_b[var7.field_h].b(8, var4);
-          a.field_g.c(sc.field_b[var7.field_h], 48, a.field_g.field_x + var4, 16777215, -1);
+          a.field_g.drawString(sc.field_b[var7.field_h], 48, a.field_g.field_x + var4, 16777215, -1);
         }
     }
 
@@ -3469,7 +3469,7 @@ final class LevelSession {
           this.i(-74);
         }
         if (this.field_W) {
-          cb.field_b.b("Cheating!", 270, 465, 16777215, -1, (int)(ji.a(65535, (double)this.field_J / 50.0) * 128.0 + 128.0));
+          cb.field_b.drawCentredAlpha("Cheating!", 270, 465, 16777215, -1, (int)(ji.a(65535, (double)this.field_J / 50.0) * 128.0 + 128.0));
         }
     }
 
@@ -4119,17 +4119,17 @@ final class LevelSession {
           if ((3 == this.levelNumber) &&
             (!(gm.field_J > 0)) &&
             (!(ol.field_i.length <= el.field_tb))) {
-            cb.field_b.a(ol.field_i[el.field_tb], 0, 334, 544, 96, 16777215, 0, 2, 1, cb.field_b.field_x);
+            cb.field_b.drawParagraph(ol.field_i[el.field_tb], 0, 334, 544, 96, 16777215, 0, 2, 1, cb.field_b.field_x);
             al.field_a[1].a(-al.field_a[1].field_h + var2 + 640, 430 - al.field_a[1].field_c);
             if ((DrPhlogistonSavesTheEarth.field_D) &&
               ((-1 + ol.field_i.length) > el.field_tb)) {
-              cb.field_b.a(ol.field_i[el.field_tb], 0, 334, 544, 96, 16777215, 0, 2, 1, cb.field_b.field_x);
+              cb.field_b.drawParagraph(ol.field_i[el.field_tb], 0, 334, 544, 96, 16777215, 0, 2, 1, cb.field_b.field_x);
               al.field_a[0].a(var2 + 640 - al.field_a[0].field_h, -al.field_a[0].field_c + 430);
             }
           }
         } else {
           if ((-1 + ol.field_i.length) > el.field_tb) {
-            cb.field_b.a(ol.field_i[el.field_tb], 0, 334, 544, 96, 16777215, 0, 2, 1, cb.field_b.field_x);
+            cb.field_b.drawParagraph(ol.field_i[el.field_tb], 0, 334, 544, 96, 16777215, 0, 2, 1, cb.field_b.field_x);
             al.field_a[0].a(var2 + 640 - al.field_a[0].field_h, -al.field_a[0].field_c + 430);
           }
         }

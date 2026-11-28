@@ -246,7 +246,7 @@ final class e {
             } else {
               stackIn_25_8 = 256;
             }
-            ((BitmapFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param4.field_m, param4.field_d, param4.field_n);
+            ((BitmapFont) (Object) stackIn_18_0).drawParagraphAlpha(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param4.field_m, param4.field_d, param4.field_n);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -299,7 +299,7 @@ final class e {
           if (param1) {
             e.a(true, (byte) 4);
           }
-          stackIn_3_0 = sp.a(SamplePlaybackStream.a(param0, 100, 96), -93);
+          stackIn_3_0 = sp.a(SamplePlaybackStream.createForPlaybackRate(param0, 100, 96), -93);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

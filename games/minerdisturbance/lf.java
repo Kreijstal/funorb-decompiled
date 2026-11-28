@@ -186,7 +186,7 @@ final class lf implements Runnable {
         }
     }
 
-    final static void a(int param0, we param1) {
+    final static void a(int param0, BitmapFont param1) {
         try {
           if (param0 != -673) {
             field_b = (hb) null;

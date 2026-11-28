@@ -13,7 +13,7 @@ final class ql extends IntrusiveNode {
     int field_i;
     static java.util.zip.CRC32 field_j;
     static int field_o;
-    static fa field_k;
+    static BitmapFont field_k;
 
     public static void clearStaticReferences(byte param0) {
         field_l = null;

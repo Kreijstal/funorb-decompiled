@@ -9,12 +9,12 @@ final class tl extends pc {
     static long field_o;
     static int field_m;
 
-    final static p a(String param0, ResourceArchive param1, int param2, String param3, ResourceArchive param4) {
+    final static PalettedBitmapFont a(String param0, ResourceArchive param1, int param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        p stackIn_2_0 = null;
-        p stackIn_4_0 = null;
+        PalettedBitmapFont stackIn_2_0 = null;
+        PalettedBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -27,7 +27,7 @@ final class tl extends pc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 2) {
-            stackIn_2_0 = (p) null;
+            stackIn_2_0 = (PalettedBitmapFont) null;
             return stackIn_2_0;
           }
           var5_int = param1.getGroupIdByName(-39, param3);

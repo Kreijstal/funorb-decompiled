@@ -149,10 +149,10 @@ final class sh extends IntrusiveNode {
               var1_int = var1_int + dc.field_b;
             }
             if (0 > var4) {
-              da.field_h.b(var6, var8Lifetime1, DebouncedFieldValidator.field_a + var1_int, var5, -1);
+              da.field_h.drawString(var6, var8Lifetime1, DebouncedFieldValidator.field_a + var1_int, var5, -1);
               var1_int = var1_int + DelegatingCanvas.field_b;
             } else {
-              qk.field_a.b(var6, var8Lifetime1, var1_int + fh.field_a, var5, -1);
+              qk.field_a.drawString(var6, var8Lifetime1, var1_int + fh.field_a, var5, -1);
               var1_int = var1_int + (hi.field_ab + dc.field_b + lm.field_d);
             }
           }

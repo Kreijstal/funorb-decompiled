@@ -3,7 +3,7 @@
  */
 class w extends to {
     private int field_u;
-    private uc field_x;
+    private BitmapFont field_x;
     private boolean field_z;
     private boolean field_Q;
     private boolean field_U;

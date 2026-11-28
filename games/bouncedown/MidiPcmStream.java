@@ -399,7 +399,7 @@ final class MidiPcmStream extends PcmStream {
           param3.field_j = AudioOutput.field_r / 100;
           var6_int = 83 % ((param4 - 37) / 52);
           if (0 <= param3.field_C && (param3.field_i == null ||
-            param3.field_i.e())) {
+            param3.field_i.isSamplePositionOutOfRange())) {
             param3.d(0);
             param3.unlink(2);
             if (param3.field_z > 0) {
@@ -418,7 +418,7 @@ final class MidiPcmStream extends PcmStream {
             }
             param3.field_x = var7;
           }
-          param3.field_i.e(this.a(param3, true));
+          param3.field_i.setSampleStepMagnitude(this.a(param3, true));
           var8 = param3.field_o;
           param3.field_v = param3.field_v + var8.field_c;
           var9 = 0;
@@ -508,7 +508,7 @@ final class MidiPcmStream extends PcmStream {
             }
           }
           if (var9 == 0) {
-            param3.field_i.a(param3.field_j, this.b(param3, (byte) 68), this.a(param3, (byte) 53));
+            param3.field_i.rampVolumeAndPan(param3.field_j, this.b(param3, (byte) 68), this.a(param3, (byte) 53));
             return false;
           }
           param3.field_i.i(param3.field_j);
@@ -520,7 +520,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             param3.field_i.skipFrames(param1);
           }
-          if (param3.field_i.k()) {
+          if (param3.field_i.hasRemainingRampFrames()) {
             this.field_o.field_l.a(param3.field_i);
           }
           param3.d(0);
@@ -651,7 +651,7 @@ final class MidiPcmStream extends PcmStream {
               param0 == var3.field_E) {
               if (null != var3.field_i) {
                 var3.field_i.i(AudioOutput.field_r / 100);
-                if (var3.field_i.k()) {
+                if (var3.field_i.hasRemainingRampFrames()) {
                   this.field_o.field_l.a(var3.field_i);
                 }
                 var3.d(0);
@@ -856,9 +856,9 @@ final class MidiPcmStream extends PcmStream {
           MidiPcmStream.clearStaticReferences(-32);
         }
         if (this.field_s[param3] == 0) {
-          var7.field_i = RawPcmStream.a(var6, this.a(var7, true), this.b(var7, (byte) 68), this.a(var7, (byte) 53));
+          var7.field_i = RawPcmStream.createForSampleStep(var6, this.a(var7, true), this.b(var7, (byte) 68), this.a(var7, (byte) 53));
           if (var9 != 0) {
-            var7.field_i = RawPcmStream.a(var6, this.a(var7, true), 0, this.a(var7, (byte) 53));
+            var7.field_i = RawPcmStream.createForSampleStep(var6, this.a(var7, true), 0, this.a(var7, (byte) 53));
             stackIn_22_1 = var7;
             stackIn_22_2 = -117;
             if (var10.field_n[param2] >= 0) {
@@ -871,7 +871,7 @@ final class MidiPcmStream extends PcmStream {
             this.a(stackIn_22_1, (byte) stackIn_22_2, stackIn_23_3);
           }
         } else {
-          var7.field_i = RawPcmStream.a(var6, this.a(var7, true), 0, this.a(var7, (byte) 53));
+          var7.field_i = RawPcmStream.createForSampleStep(var6, this.a(var7, true), 0, this.a(var7, (byte) 53));
           stackIn_22_1 = var7;
           stackIn_22_2 = -117;
           if (var10.field_n[param2] >= 0) {
@@ -1269,7 +1269,7 @@ final class MidiPcmStream extends PcmStream {
             var5 = (int)((long)this.field_s[param0.field_E] * (long)var6 >> 6);
             var4_int = var4_int << 8;
             if (var4_int <= var5) {
-              param0.field_i.a(true);
+              param0.field_i.setReversePlayback(true);
               var5 = -1 + var4_int + (var4_int - var5);
             }
             decompiledSharedTail0 = (Bounce.field_N != 0);
@@ -1277,7 +1277,7 @@ final class MidiPcmStream extends PcmStream {
           if (decompiledSharedTail0) {
             var5 = (int)((long)this.field_s[param0.field_E] * (long)var4_int >> 6);
           }
-          param0.field_i.g(var5);
+          param0.field_i.setSamplePositionFixed(var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

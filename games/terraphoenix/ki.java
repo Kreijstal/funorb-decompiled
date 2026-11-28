@@ -96,18 +96,18 @@ final class ki extends vj {
             var12 = new Sprite(195, 221);
             var6 = var12.field_r / 2;
             var12.a();
-            Archive.field_i.c(MessageKeys.a(new String[]{df.field_L}, param0 - 28419, d.field_J), var6, 40, 16777215, -1);
-            ja.field_m.c(MessageKeys.a(new String[]{df.field_L}, -1, ga.field_a), var6, 60, 16777215, -1);
-            Archive.field_i.c(MessageKeys.a(new String[]{EmailFormatValidator.field_o}, -1, uj.field_b), var6, 110, 16777215, -1);
-            ja.field_m.c(MessageKeys.a(new String[]{EmailFormatValidator.field_o}, param0 - 28419, bd.field_j), var6, 130, 16777215, -1);
-            Archive.field_i.c(sl.field_c, var6, 180, 16777215, -1);
-            ja.field_m.c(DirectByteStorage.field_k, var6, 200, 16777215, -1);
+            Archive.field_i.drawCentred(MessageKeys.a(new String[]{df.field_L}, param0 - 28419, d.field_J), var6, 40, 16777215, -1);
+            ja.field_m.drawCentred(MessageKeys.a(new String[]{df.field_L}, -1, ga.field_a), var6, 60, 16777215, -1);
+            Archive.field_i.drawCentred(MessageKeys.a(new String[]{EmailFormatValidator.field_o}, -1, uj.field_b), var6, 110, 16777215, -1);
+            ja.field_m.drawCentred(MessageKeys.a(new String[]{EmailFormatValidator.field_o}, param0 - 28419, bd.field_j), var6, 130, 16777215, -1);
+            Archive.field_i.drawCentred(sl.field_c, var6, 180, 16777215, -1);
+            ja.field_m.drawCentred(DirectByteStorage.field_k, var6, 200, 16777215, -1);
             wa.a(var12, 0, var12.field_t, param0 - 28307, 1, 0, 3, var12.field_r);
             hb.field_m.a();
             var12.b(18 - hb.field_m.field_p, 241 - hb.field_m.field_v);
             for (var7 = 0; var7 < vi.field_j.length; var7++) {
               wg.field_l[var7].a();
-              ja.field_m.a(vi.field_j[var7], 3, 3, -6 + wg.field_l[var7].field_r, wg.field_l[var7].field_t - 6, me.field_k, -1, 1, 1, ja.field_m.field_s + ja.field_m.field_p);
+              ja.field_m.drawParagraph(vi.field_j[var7], 3, 3, -6 + wg.field_l[var7].field_r, wg.field_l[var7].field_t - 6, me.field_k, -1, 1, 1, ja.field_m.field_s + ja.field_m.field_p);
               wa.a(wg.field_l[var7], 0, wg.field_l[var7].field_t, 69, 1, 0, 3, wg.field_l[var7].field_r);
             }
             vi.field_j = null;
@@ -132,8 +132,8 @@ final class ki extends vj {
             var3Lifetime1 = SoftwareRasterizer.field_j;
             SoftwareRasterizer.saveClip(rb.field_a);
             var14 = MessageKeys.a(new String[]{oe.field_b[EditableTextField.field_S]}, -1, bj.field_b);
-            var5 = Archive.field_i.a(var14, nl.field_a);
-            var6Lifetime1 = Archive.field_i.a(var14, nl.field_a, Archive.field_i.field_s + Archive.field_i.field_p);
+            var5 = Archive.field_i.maxLineWidth(var14, nl.field_a);
+            var6Lifetime1 = Archive.field_i.textHeight(var14, nl.field_a, Archive.field_i.field_s + Archive.field_i.field_p);
             var7Lifetime1 = lm.field_b + (nl.field_a - var5) / 2;
             var8 = (fg.field_a - var6Lifetime1) / 2 + ee.field_h;
             var7Lifetime1 -= 3;
@@ -179,7 +179,7 @@ final class ki extends vj {
             p.field_e.f();
             var9 = new Sprite(p.field_e.field_q, p.field_e.field_u);
             var9.a();
-            Archive.field_i.a(var14, lm.field_b, ee.field_h, nl.field_a, fg.field_a, 16777215, -1, 1, 1, Archive.field_i.field_p + Archive.field_i.field_s);
+            Archive.field_i.drawParagraph(var14, lm.field_b, ee.field_h, nl.field_a, fg.field_a, 16777215, -1, 1, 1, Archive.field_i.field_p + Archive.field_i.field_s);
             wa.a(var9, 0, var9.field_u, -86, 1, 0, 3, var9.field_q);
             p.field_e.a();
             var9.b(0, 0);
@@ -201,7 +201,7 @@ final class ki extends vj {
             var5_ref_String = MessageKeys.a(new String[]{jh.field_p}, param0 - 28419, AccountNameAvailabilityValidator.field_p);
             jh.field_p = null;
             var16.a();
-            ja.field_m.a(var5_ref_String, 3, 3, -6 + var16.field_r, -6 + var16.field_t, 16777215, -1, 0, 1, ja.field_m.field_s + ja.field_m.field_p);
+            ja.field_m.drawParagraph(var5_ref_String, 3, 3, -6 + var16.field_r, -6 + var16.field_t, 16777215, -1, 0, 1, ja.field_m.field_s + ja.field_m.field_p);
             wa.a(var16, 0, var16.field_t, -101, 1, 0, 3, var16.field_r);
             Archive.field_d.a();
             var16.b(199 - Archive.field_d.field_p, 83 - Archive.field_d.field_v);
@@ -214,12 +214,12 @@ final class ki extends vj {
             var2Lifetime3 = SoftwareRasterizer.field_k;
             var3Lifetime3 = SoftwareRasterizer.field_j;
             SoftwareRasterizer.saveClip(rb.field_a);
-            var4 = ja.field_m.a(sb.field_l, 640) + 6;
+            var4 = ja.field_m.maxLineWidth(sb.field_l, 640) + 6;
             var5Lifetime1 = 20 + (vi.field_h.field_q + var4);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = var6Lifetime2 - (-vi.field_h.field_q - 20);
             Archive.field_d.a();
-            ja.field_m.b(sb.field_l, var7Lifetime2 - Archive.field_d.field_p, ja.field_m.field_p + 155 - (Archive.field_d.field_v - ja.field_m.field_s), 16777215, -1);
+            ja.field_m.drawString(sb.field_l, var7Lifetime2 - Archive.field_d.field_p, ja.field_m.field_p + 155 - (Archive.field_d.field_v - ja.field_m.field_s), 16777215, -1);
             wa.a(Archive.field_d, -4 + var7Lifetime2 - Archive.field_d.field_p, 50, 58, 1, 155 - Archive.field_d.field_v, 3, var4);
             var8Lifetime1 = -Archive.field_d.field_v + (155 - (-ja.field_m.field_p + (-ja.field_m.field_s - 3 + vi.field_h.field_u)) / 2);
             vi.field_h.b(var6Lifetime2 - Archive.field_d.field_p, var8Lifetime1);

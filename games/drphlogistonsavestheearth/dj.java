@@ -9,9 +9,9 @@ final class dj extends pj implements ke {
     private String field_L;
     static int field_K;
     private ma field_P;
-    private rf field_O;
+    private BitmapFont field_O;
 
-    dj(ma param0, rf param1, String param2) {
+    dj(ma param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (cg) null);
         int var4_int = 0;
         this.field_J = 0;
@@ -19,7 +19,7 @@ final class dj extends pj implements ke {
           this.field_P = param0;
           this.field_O = param1;
           this.field_L = param2;
-          var4_int = null == this.field_L ? 0 : this.field_O.a(this.field_L, 260, this.field_O.field_x);
+          var4_int = null == this.field_L ? 0 : this.field_O.textHeight(this.field_L, 260, this.field_O.field_x);
           this.a(0, var4_int + 22, 0, 16535, 288);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -49,7 +49,7 @@ final class dj extends pj implements ke {
 
     final void a(int param0, int param1, byte param2, int param3) {
         super.a(param0, param1, param2, param3);
-        this.field_O.a(this.field_L, param0 - (-this.field_o - 14), this.field_m + (param3 + 10), this.field_w - 28, this.field_k, 16777215, -1, 0, 0, this.field_O.field_x);
+        this.field_O.drawParagraph(this.field_L, param0 - (-this.field_o - 14), this.field_m + (param3 + 10), this.field_w - 28, this.field_k, 16777215, -1, 0, 0, this.field_O.field_x);
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4) {

@@ -136,8 +136,8 @@ final class FishRainSpecial extends SpecialOrder {
               bn.field_h.a(48 + IntrusiveNode.field_a.field_kb, IntrusiveNode.field_a.field_rb + 4);
             }
           } else {
-            WidgetWrapper.field_z.a(GasCloudSpecial.field_r, IntrusiveNode.field_a.field_kb + (IntrusiveNode.field_a.field_sb >> 1), 4 + IntrusiveNode.field_a.field_rb + (IntrusiveNode.field_a.field_p >> 1), 16204, -1);
-            jha.field_g.a(GasCloudSpecial.field_r, IntrusiveNode.field_a.field_kb + (IntrusiveNode.field_a.field_sb >> 1), 4 + ((IntrusiveNode.field_a.field_p >> 1) + IntrusiveNode.field_a.field_rb), 16777215, -1);
+            WidgetWrapper.field_z.drawCentred(GasCloudSpecial.field_r, IntrusiveNode.field_a.field_kb + (IntrusiveNode.field_a.field_sb >> 1), 4 + IntrusiveNode.field_a.field_rb + (IntrusiveNode.field_a.field_p >> 1), 16204, -1);
+            jha.field_g.drawCentred(GasCloudSpecial.field_r, IntrusiveNode.field_a.field_kb + (IntrusiveNode.field_a.field_sb >> 1), 4 + ((IntrusiveNode.field_a.field_p >> 1) + IntrusiveNode.field_a.field_rb), 16777215, -1);
           }
           stackIn_15_0 = jha.field_g;
           stackIn_15_1 = ow.field_n;
@@ -148,8 +148,8 @@ final class FishRainSpecial extends SpecialOrder {
           } else {
             stackIn_16_4 = 16699649;
           }
-          ((BinaryBitmapFont) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_16_4, -1);
-          WidgetWrapper.field_z.a(ow.field_n, 530, 446, 16204, -1);
+          ((BinaryBitmapFont) (Object) stackIn_15_0).drawCentred(stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_16_4, -1);
+          WidgetWrapper.field_z.drawCentred(ow.field_n, 530, 446, 16204, -1);
           ug.field_q.a(true, param1 + 7766);
           if (null != qg.field_b.children) {
             SoftwareRasterizer.setClip(ug.field_q.field_kb, ug.field_q.field_rb, ug.field_q.field_sb + ug.field_q.field_kb, ug.field_q.field_p + ug.field_q.field_rb);
@@ -163,15 +163,15 @@ final class FishRainSpecial extends SpecialOrder {
           }
           jha.field_g.drawText(AgeValidator.field_g, 452, 306, 65793, -1);
           var4 = lga.a(true, new String[]{ti.a((byte) -118, 2, (long)dea.field_n, kt.field_k, true)}, vla.field_u);
-          jha.field_g.b(var4, 600, 306, 16699649, -1);
-          WidgetWrapper.field_z.b(var4, 600, 306, 65793, -1);
+          jha.field_g.drawRightAligned(var4, 600, 306, 16699649, -1);
+          WidgetWrapper.field_z.drawRightAligned(var4, 600, 306, 65793, -1);
           jha.field_g.drawText(jla.field_c, 452, 400, 65793, -1);
           if (param1 != 36) {
             field_q = (String) null;
           }
           var5 = lga.a(true, new String[]{ti.a((byte) -120, 2, (long)mg.field_m.field_a, kt.field_k, true)}, vla.field_u);
-          jha.field_g.b(var5, 600, 400, 16699649, -1);
-          WidgetWrapper.field_z.b(var5, 600, 400, 65793, -1);
+          jha.field_g.drawRightAligned(var5, 600, 400, 16699649, -1);
+          WidgetWrapper.field_z.drawRightAligned(var5, 600, 400, 65793, -1);
           ClamsAnimation.field_y.a(412, 161);
           DefaultWidgetRenderer.field_b.a(412, 441);
           ClamsAnimation.field_y.a(598, 166);

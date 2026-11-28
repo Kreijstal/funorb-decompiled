@@ -150,9 +150,9 @@ final class gi extends IntrusiveNode {
     gi(RawPcmStream param0, IntrusiveNode param1) {
         try {
           this.field_h = param0;
-          this.field_j = param0.g();
+          this.field_j = param0.getTargetVolume();
           this.field_i = param1;
-          this.field_h.f(this.field_j * mf.field_i / 80);
+          this.field_h.setVolume(this.field_j * mf.field_i / 80);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

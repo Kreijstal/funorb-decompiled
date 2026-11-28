@@ -27,11 +27,11 @@ final class jg extends bh implements mj {
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, -115, param3);
         if (param2 <= -80) {
-          rc.field_a.a(gi.field_b, this.field_u + (param3 + 4), rc.field_a.field_C + (this.field_r + (param0 + 4)), 16777215, -1);
+          rc.field_a.drawString(gi.field_b, this.field_u + (param3 + 4), rc.field_a.field_C + (this.field_r + (param0 + 4)), 16777215, -1);
           return;
         }
         this.a(-61, -119, -11, -21);
-        rc.field_a.a(gi.field_b, this.field_u + (param3 + 4), rc.field_a.field_C + (this.field_r + (param0 + 4)), 16777215, -1);
+        rc.field_a.drawString(gi.field_b, this.field_u + (param3 + 4), rc.field_a.field_C + (this.field_r + (param0 + 4)), 16777215, -1);
     }
 
     final static void n(int param0) {

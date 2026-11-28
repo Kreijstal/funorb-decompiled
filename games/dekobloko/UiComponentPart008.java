@@ -24,7 +24,7 @@ final class UiComponentPart008 extends ComponentContainer implements CallbackCon
           this.bitmapFontState0010 = bitmapFontArgument2;
           this.stringState0120 = stringArgument3;
           this.uiComponentPart012State0002 = uiComponentPart012Argument1;
-          integerLocal1 = null == this.stringState0120 ? 0 : this.bitmapFontState0010.computeInteger1081(this.stringState0120, 260, this.bitmapFontState0010.integerState0518);
+          integerLocal1 = null == this.stringState0120 ? 0 : this.bitmapFontState0010.textHeight(this.stringState0120, 260, this.bitmapFontState0010.integerState0518);
           this.performAction0222(integerLocal1 + 22, 288, 0, 0, -16555);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "dj.<init>(" + (uiComponentPart012Argument1 != null ? "{...}" : "null") + ',' + (bitmapFontArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ')');
@@ -52,7 +52,7 @@ final class UiComponentPart008 extends ComponentContainer implements CallbackCon
 
     final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         super.performAction0162(integerArgument1, -104, integerArgument3, integerArgument4);
-        this.bitmapFontState0010.computeInteger1071(this.stringState0120, integerArgument1 - (-this.integerState0110 - 14), this.integerState0104 + (integerArgument4 + 10), this.integerState0107 - 28, this.integerState0108, 16777215, -1, 0, 0, this.bitmapFontState0010.integerState0518);
+        this.bitmapFontState0010.drawParagraph(this.stringState0120, integerArgument1 - (-this.integerState0110 - 14), this.integerState0104 + (integerArgument4 + 10), this.integerState0107 - 28, this.integerState0108, 16777215, -1, 0, 0, this.bitmapFontState0010.integerState0518);
         if (integerArgument2 > -103) {
           this.performAction0162(67, 1, 70, -22);
         }

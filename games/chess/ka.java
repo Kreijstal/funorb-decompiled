@@ -7,7 +7,7 @@ final class ka implements jm {
     private int field_m;
     private int field_n;
     static hg field_j;
-    private lh field_p;
+    private BitmapFont field_p;
     private int field_k;
     private int field_i;
     private int field_f;
@@ -45,7 +45,7 @@ final class ka implements jm {
           var14 = (od) (stackIn_3_0);
           SoftwareRasterizer.fillRectangle(param1 + param4.field_u, param2 + param4.field_r, param4.field_y, param4.field_C, this.field_l);
           if (param0 < 58) {
-            this.field_p = (lh) null;
+            this.field_p = (BitmapFont) null;
           }
           if (var14 != null) {
           }
@@ -67,7 +67,7 @@ final class ka implements jm {
             return;
           }
           var13 = this.field_f + (var14.field_T + var14.field_Q);
-          this.field_p.a(param4.field_v, param4.field_u + (param1 + var13), this.field_m + param2 + param4.field_r, param4.field_y + (-this.field_f - var13), -(this.field_f << 1) + param4.field_C, this.field_d, this.field_i, 1, 1, 0);
+          this.field_p.drawParagraph(param4.field_v, param4.field_u + (param1 + var13), this.field_m + param2 + param4.field_r, param4.field_y + (-this.field_f - var13), -(this.field_f << 1) + param4.field_C, this.field_d, this.field_i, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,7 +129,7 @@ final class ka implements jm {
         field_e = null;
     }
 
-    ka(lh param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    ka(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_i = param4;
           this.field_d = param3;

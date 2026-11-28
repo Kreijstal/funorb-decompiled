@@ -23,7 +23,7 @@ final class eb extends pk {
     private int field_p;
     private int[] field_n;
     int field_B;
-    lh field_J;
+    BitmapFont field_J;
     private int field_s;
     private int field_F;
     private int field_o;
@@ -39,7 +39,7 @@ final class eb extends pk {
         SoftwareRasterizer.saveClip(this.field_n);
         if (param6 == 12054) {
           SoftwareRasterizer.setClip(this.field_i, this.field_k, this.field_i + this.field_l, this.field_k + this.field_c);
-          this.field_J.a(this.field_q, param0 + this.field_i, this.field_k + param1, this.field_l, this.field_c, param9, param7, param2, this.field_m, this.field_L, this.field_x);
+          this.field_J.drawParagraphAlpha(this.field_q, param0 + this.field_i, this.field_k + param1, this.field_l, this.field_c, param9, param7, param2, this.field_m, this.field_L, this.field_x);
           SoftwareRasterizer.restoreClip(this.field_n);
           return;
         }

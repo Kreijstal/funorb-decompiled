@@ -6,7 +6,7 @@ final class oj {
     static boolean field_b;
     static String field_c;
 
-    final static int a(String param0, int param1, int[] param2, se param3) {
+    final static int a(String param0, int param1, int[] param2, BitmapFont param3) {
         ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -29,7 +29,7 @@ final class oj {
           }
           while (true) {
             try {
-              var4_int = param3.a(param0, param2, wk.field_a);
+              var4_int = param3.wrapText(param0, param2, wk.field_a);
               stackIn_11_0 = var4_int;
               return stackIn_11_0;
             } catch (java.lang.ArrayIndexOutOfBoundsException decompiledCaughtParameter0) {

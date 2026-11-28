@@ -304,7 +304,7 @@ public final class stellarshard extends rb implements cf {
         }
     }
 
-    final void a(int param0) {
+    final void updateClient(int param0) {
         int stackIn_6_1 = 0;
         boolean stackIn_7_2 = false;
         int stackIn_81_1 = 0;
@@ -502,7 +502,7 @@ public final class stellarshard extends rb implements cf {
         }
     }
 
-    final void a(boolean param0) {
+    final void initializeClient(boolean param0) {
         int stackIn_33_0 = 0;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;
@@ -692,7 +692,7 @@ public final class stellarshard extends rb implements cf {
             e.field_e = 0;
           }
           if (param0 != 127) {
-            this.a(false);
+            this.initializeClient(false);
           }
           vh.field_e = 0;
           ta.field_p = 0;
@@ -906,8 +906,8 @@ public final class stellarshard extends rb implements cf {
           }
           fieldTemp$1 = bf.field_c;
           bf.field_c = bf.field_c + 1;
-          if (fieldTemp$1 > qj.field_a.b(sj.field_C)) {
-            bf.field_c = bf.field_c - qj.field_a.b(sj.field_C) * 2;
+          if (fieldTemp$1 > qj.field_a.stringWidth(sj.field_C)) {
+            bf.field_c = bf.field_c - qj.field_a.stringWidth(sj.field_C) * 2;
           }
           if (0 < this.field_R) {
             this.field_R = this.field_R / 2;
@@ -2810,7 +2810,7 @@ public final class stellarshard extends rb implements cf {
         }
     }
 
-    final void f(byte param0) {
+    final void disposeClient(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -2838,7 +2838,7 @@ public final class stellarshard extends rb implements cf {
         }
     }
 
-    final void c(byte param0) {
+    final void clearClientResources(byte param0) {
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -3154,7 +3154,7 @@ public final class stellarshard extends rb implements cf {
                             return;
                           }
                           DelegatingCanvas.b((byte) 109);
-                          this.d(-20880);
+                          this.renderClientFrame(-20880);
                           var3 = new PcmResampler(22050, AudioMixer.field_m);
                           if (!pk.a(-12663, 0)) {
                             sb.field_e = new PcmSample[41];
@@ -3265,7 +3265,7 @@ public final class stellarshard extends rb implements cf {
           }
           if (bh.field_a == null) {
             rd.a((byte) -60, 100.0f, ve.field_b);
-            this.d(-20880);
+            this.renderClientFrame(-20880);
             kl.field_k = 16777215;
             ul.field_G = 10742263;
             if (param1 >= -60) {
@@ -3294,7 +3294,7 @@ public final class stellarshard extends rb implements cf {
           }
           if (null == cm.field_d[0]) {
             rd.a((byte) -127, 75.0f, MatchingFieldValidator.field_k);
-            this.d(-20880);
+            this.renderClientFrame(-20880);
             qd.a(bh.field_a, "space", "", (byte) 42);
             qd.a(bh.field_a, "nebula", "", (byte) 73);
             wh.field_e = AccountServiceResult.a("", (byte) 83, bh.field_a, "achievements_lrg");
@@ -3331,7 +3331,7 @@ public final class stellarshard extends rb implements cf {
           }
           if (cg.field_c < 16) {
             rd.a((byte) -47, (float)(80 + cg.field_c), MatchingFieldValidator.field_k);
-            this.d(-20880);
+            this.renderClientFrame(-20880);
             var3 = null;
             var4_int = 0;
             if (0 == cg.field_c) {
@@ -3481,7 +3481,7 @@ public final class stellarshard extends rb implements cf {
           }
           if (null == l.field_f) {
             rd.a((byte) -53, 98.0f, ua.field_g);
-            this.d(-20880);
+            this.renderClientFrame(-20880);
             BufferedSocket.field_k = AccountServiceResult.a("", (byte) 98, bh.field_a, "slider");
             fg.field_P = AccountServiceResult.a("", (byte) 124, bh.field_a, "frame");
             fg.field_P[4] = null;
@@ -3576,13 +3576,13 @@ public final class stellarshard extends rb implements cf {
             var4_array[4] = DiskArchiveRequest.a("keyboard_left", bh.field_a, (byte) -82, "");
             var4_array[5] = DiskArchiveRequest.a("keyboard_right", bh.field_a, (byte) -116, "");
             var4_array[6] = DiskArchiveRequest.a("keyboard_down", bh.field_a, (byte) 126, "");
-            qj.field_a.a(var4_array, var5_ref_int__);
+            qj.field_a.setInlineSprites(var4_array, var5_ref_int__);
             l.field_f = EditableTextField.a("", "b122", bh.field_a, -117, MouseHandler.field_d);
             rg.g(-33);
             return;
           }
           rd.a((byte) -65, 99.0f, ua.field_g);
-          this.d(-20880);
+          this.renderClientFrame(-20880);
           var3 = AccountServiceResult.a("", (byte) 80, bh.field_a, "screenshots");
           ScorePopup.a(qd.a(bh.field_a, "mbfg", "", (byte) 104), (byte) 60, "Stellar Shard");
           NodeHashTableIterator.a(-8039, qd.a(bh.field_a, "smalllogo", "", (byte) 124));
@@ -3971,7 +3971,7 @@ public final class stellarshard extends rb implements cf {
         }
     }
 
-    final void d(int param0) {
+    final void renderClientFrame(int param0) {
         int incrementValue$0 = 0;
         Object stackIn_5_0 = null;
         Object stackIn_11_0 = null;
@@ -4303,7 +4303,7 @@ public final class stellarshard extends rb implements cf {
                   }
                   if (ag.field_a > 0 &&
                     ag.field_a < 128) {
-                    qj.field_a.a(nd.field_F, 20, 335, 16711680, -1);
+                    qj.field_a.drawString(nd.field_F, 20, 335, 16711680, -1);
                   }
                   var5_int = gf.field_c;
                   var6_intLifetime1 = 100;
@@ -4352,7 +4352,7 @@ public final class stellarshard extends rb implements cf {
                 var6 = te.field_a;
               }
               boolean decompiledFrameCompleted3 = true;
-              var7Lifetime2 = qj.field_a.b(var6) + 10;
+              var7Lifetime2 = qj.field_a.stringWidth(var6) + 10;
               SoftwareRasterizer.drawRoundedRectangleOutline(0, 350, var5_int + 2, 130, 4, 0);
               SoftwareRasterizer.fillRoundedRectangle(-(var7Lifetime2 / 2) + var5_int / 2 - 3, 341, 6 + var7Lifetime2, 21, 10, 0);
               SoftwareRasterizer.drawRoundedRectangleOutline(1, 351, var5_int, 128, 3, 8421504);
@@ -4398,11 +4398,11 @@ public final class stellarshard extends rb implements cf {
                 stackIn_258_1 = 344;
               }
               SoftwareRasterizer.fillRoundedRectangle(stackIn_258_0, stackIn_258_1, var7Lifetime2, 15, 7, 0);
-              qj.field_a.c(var6, 1 + (var5_int / 2 - 1), 355, 0, -1);
-              qj.field_a.c(var6, -1 + (1 + var5_int / 2), 357, 0, -1);
-              qj.field_a.c(var6, -1 + var5_int / 2, 356, 0, -1);
-              qj.field_a.c(var6, -1 + (var5_int / 2 + 2), 356, 0, -1);
-              qj.field_a.c(var6, 1 + (var5_int / 2 - 1), 356, 16777215, -1);
+              qj.field_a.drawCentred(var6, 1 + (var5_int / 2 - 1), 355, 0, -1);
+              qj.field_a.drawCentred(var6, -1 + (1 + var5_int / 2), 357, 0, -1);
+              qj.field_a.drawCentred(var6, -1 + var5_int / 2, 356, 0, -1);
+              qj.field_a.drawCentred(var6, -1 + (var5_int / 2 + 2), 356, 0, -1);
+              qj.field_a.drawCentred(var6, 1 + (var5_int / 2 - 1), 356, 16777215, -1);
             }
             if (!DualLinkDequeIterator.field_i && (IsaacRandom.field_j == null ||
               ProxyAuthenticationRequiredException.field_c != 8 &&
@@ -4489,7 +4489,7 @@ public final class stellarshard extends rb implements cf {
               }
               if (var7_ref != null) {
                 var7_ref = ((String) (var7_ref)).toUpperCase();
-                var9Lifetime3 = qj.field_a.b((String) (var7_ref)) + 40;
+                var9Lifetime3 = qj.field_a.stringWidth((String) (var7_ref)) + 40;
                 var10_intLifetime1 = 307;
                 SoftwareRasterizer.fillRoundedRectangle(-20 + var10_intLifetime1, 427, 42, 42, 20, 0);
                 SoftwareRasterizer.fillRoundedRectangle(-2 + var10_intLifetime1 - var9Lifetime3, 435, var9Lifetime3 + 4 + 19, 26, 12, 0);
@@ -4500,7 +4500,7 @@ public final class stellarshard extends rb implements cf {
                 SoftwareRasterizer.addRadialGlow(-var9Lifetime3 + var10_intLifetime1 + 40 << 4, 7152, 200, 150, eh.field_e);
                 SoftwareRasterizer.addRadialGlow(var10_intLifetime1 + 10 << 4, 7152, 200, 200, eh.field_e);
                 SoftwareRasterizer.fillRoundedRectangle(-var9Lifetime3 + 2 + var10_intLifetime1, 439, 21 - (-var9Lifetime3 - 96) - 140, 18, 8, 0);
-                qj.field_a.b((String) (var7_ref), -63 + var10_intLifetime1 + 33, 453, 16777215, -1);
+                qj.field_a.drawRightAligned((String) (var7_ref), -63 + var10_intLifetime1 + 33, 453, 16777215, -1);
                 SoftwareRasterizer.fillRoundedRectangleAlpha(var10_intLifetime1 - 15, 432, 32, 32, 14, 0, 192);
                 e.field_g[var8Lifetime3].e(var10_intLifetime1 + 33 - 80, 400);
               }
@@ -4525,7 +4525,7 @@ public final class stellarshard extends rb implements cf {
               }
               if (null != var10) {
                 var10 = ((String) (var10)).toUpperCase();
-                var12 = 40 + qj.field_a.b((String) (var10));
+                var12 = 40 + qj.field_a.stringWidth((String) (var10));
                 var13 = 100;
                 var9Lifetime3Lifetime1 += 250;
                 SoftwareRasterizer.fillRoundedRectangle(var9Lifetime3Lifetime1 - 20 - 1, 427, 42, 42, 20, 0);
@@ -4673,7 +4673,7 @@ public final class stellarshard extends rb implements cf {
                 }
                 SoftwareRasterizer.fillRoundedRectangleAlpha(stackIn_447_0, stackIn_447_1, 32, 32, 14, 0, 192);
                 e.field_g[var11].e(var9Lifetime3Lifetime1, 400);
-                qj.field_a.b((String) (var10), 18 + var9Lifetime3Lifetime1, 453, 16777215, -1);
+                qj.field_a.drawRightAligned((String) (var10), 18 + var9Lifetime3Lifetime1, 453, 16777215, -1);
               }
               nj.field_f[0] = var6_intLifetime3;
               if (this.field_J > 0) {
@@ -4696,17 +4696,17 @@ public final class stellarshard extends rb implements cf {
               DualLinkDequeIterator.field_i &&
               mk.field_k <= 0) {
               var6Lifetime1 = dd.field_i + nc.field_A / 50 + ConfirmedEmailAvailabilityValidator.field_o;
-              l.field_f.a(var6Lifetime1, 32, -l.field_f.field_N + 68, 575, 480, 0, 0, 1, 0, l.field_f.field_N);
-              l.field_f.a(var6Lifetime1, 32, 68 - l.field_f.field_N, 576, 479, 0, 0, 1, 0, l.field_f.field_N);
-              l.field_f.a(var6Lifetime1, 32, -l.field_f.field_N + 68, 576, 480, 16777215, -1, 1, 0, l.field_f.field_N);
+              l.field_f.drawParagraph(var6Lifetime1, 32, -l.field_f.field_N + 68, 575, 480, 0, 0, 1, 0, l.field_f.field_N);
+              l.field_f.drawParagraph(var6Lifetime1, 32, 68 - l.field_f.field_N, 576, 479, 0, 0, 1, 0, l.field_f.field_N);
+              l.field_f.drawParagraph(var6Lifetime1, 32, -l.field_f.field_N + 68, 576, 480, 16777215, -1, 1, 0, l.field_f.field_N);
             }
             if (nc.field_A > 0 &&
               DualLinkDequeIterator.field_i &&
               qi.level >= 50) {
               var6Lifetime2 = TextFieldValidator.field_g + hf.field_g + nc.field_A / 50 + ConfirmedEmailAvailabilityValidator.field_o;
-              l.field_f.a(var6Lifetime2, 32, 68 - l.field_f.field_N, 575, 480, 0, 0, 1, 0, l.field_f.field_N);
-              l.field_f.a(var6Lifetime2, 32, -l.field_f.field_N + 68, 576, 479, 0, 0, 1, 0, l.field_f.field_N);
-              l.field_f.a(var6Lifetime2, 32, -l.field_f.field_N + 68, 576, 480, 16777215, -1, 1, 0, l.field_f.field_N);
+              l.field_f.drawParagraph(var6Lifetime2, 32, 68 - l.field_f.field_N, 575, 480, 0, 0, 1, 0, l.field_f.field_N);
+              l.field_f.drawParagraph(var6Lifetime2, 32, -l.field_f.field_N + 68, 576, 479, 0, 0, 1, 0, l.field_f.field_N);
+              l.field_f.drawParagraph(var6Lifetime2, 32, -l.field_f.field_N + 68, 576, 480, 16777215, -1, 1, 0, l.field_f.field_N);
             }
             var6_ref = (jf) (hf.field_i.beginForward(-119));
             if (null != var6_ref) {
@@ -4738,14 +4738,14 @@ public final class stellarshard extends rb implements cf {
               SoftwareRasterizer.fillRectangleAlpha(4, 353, -6 + var9Lifetime4, 123, 0, var8Lifetime4);
               if (var8Lifetime4 == 255) {
                 wh.field_e[var6_ref.field_o].a(-24 + var9Lifetime4 / 2, 369, 48, 48);
-                qj.field_a.a(NanoFrameTimer.field_e[var6_ref.field_o], 8, 425, var9Lifetime4 - 16, 56, 65535, -1, 1, 1, qj.field_a.field_N);
+                qj.field_a.drawParagraph(NanoFrameTimer.field_e[var6_ref.field_o], 8, 425, var9Lifetime4 - 16, 56, 65535, -1, 1, 1, qj.field_a.field_N);
               }
               var5Lifetime1 = te.field_a;
-              qj.field_a.c(var5Lifetime1, var9Lifetime4 / 2 + 1, 355, 0, -1);
-              qj.field_a.c(var5Lifetime1, 1 + var9Lifetime4 / 2, 357, 0, -1);
-              qj.field_a.c(var5Lifetime1, var9Lifetime4 / 2, 356, 0, -1);
-              qj.field_a.c(var5Lifetime1, var9Lifetime4 / 2 + 2, 356, 0, -1);
-              qj.field_a.c(var5Lifetime1, var9Lifetime4 / 2 + 1, 356, 16777215, -1);
+              qj.field_a.drawCentred(var5Lifetime1, var9Lifetime4 / 2 + 1, 355, 0, -1);
+              qj.field_a.drawCentred(var5Lifetime1, 1 + var9Lifetime4 / 2, 357, 0, -1);
+              qj.field_a.drawCentred(var5Lifetime1, var9Lifetime4 / 2, 356, 0, -1);
+              qj.field_a.drawCentred(var5Lifetime1, var9Lifetime4 / 2 + 2, 356, 0, -1);
+              qj.field_a.drawCentred(var5Lifetime1, var9Lifetime4 / 2 + 1, 356, 16777215, -1);
             }
             if (fd.d((byte) -21)) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
@@ -4786,7 +4786,7 @@ public final class stellarshard extends rb implements cf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -77) {
-            this.c((byte) -68);
+            this.clearClientResources((byte) -68);
           }
           stackIn_4_0 = 0;
           return stackIn_4_0;

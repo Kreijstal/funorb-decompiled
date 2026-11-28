@@ -66,7 +66,7 @@ final class rf extends pc {
           stackIn_18_0 = (!param3) ? 7105644 : 16777215;
           var8 = stackIn_18_0;
           wp.a(param1 + (param4.y + (-this.field_s[0].field_u + param4.height >> 1)), var7, param4.width, false, param4.x + param2, this.field_s);
-          this.field_m.a(param4.text, param2 + param4.x, -2 + (param1 + param4.y), param4.width, param4.height, var8, -1, 1, 1, this.field_m.field_x);
+          this.field_m.drawParagraph(param4.text, param2 + param4.x, -2 + (param1 + param4.y), param4.width, param4.height, var8, -1, 1, 1, this.field_m.field_x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -93,7 +93,7 @@ final class rf extends pc {
         field_u = null;
     }
 
-    final static int a(String[] args, uc param1, int param2, int param3, String param4) {
+    final static int a(String[] args, BitmapFont param1, int param2, int param3, String param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -120,7 +120,7 @@ final class rf extends pc {
         int var6Lifetime1;
         var13 = Torquing.field_u;
         try {
-          var5_int = param1.a(param4);
+          var5_int = param1.stringWidth(param4);
           if (param2 >= var5_int &&
             -1 == param4.indexOf("<br>")) {
             args[0] = param4;
@@ -140,7 +140,7 @@ final class rf extends pc {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param4.substring(var7, var9 + 1).trim();
-              var12 = param1.a(var11);
+              var12 = param1.stringWidth(var11);
               if (param2 <= var12) {
                 incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;

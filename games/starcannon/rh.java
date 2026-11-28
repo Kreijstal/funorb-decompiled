@@ -8,7 +8,7 @@ final class rh extends IntrusiveNode {
     int field_k;
     static String field_g;
     static char[] field_j;
-    static qe field_h;
+    static BitmapFont field_h;
     static Sprite[] field_f;
     static int field_i;
 

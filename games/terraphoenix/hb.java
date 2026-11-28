@@ -65,7 +65,7 @@ class hb extends nb {
           for (var7 = 1; var7 < param3.length(); var7++) {
             var8 = param3.charAt(var7);
             if (var8 == 60) {
-              var6 = param4.field_d[0] + (var5_int >> 8) + param0.b(param3.substring(0, var7));
+              var6 = param4.field_d[0] + (var5_int >> 8) + param0.stringWidth(param3.substring(0, var7));
             }
             if (var6 != -1) {
               param4.field_d[var7] = var6;
@@ -73,7 +73,7 @@ class hb extends nb {
               if (var8 == 32) {
                 var5_int = var5_int + param1;
               }
-              param4.field_d[var7] = (var5_int >> 8) + param4.field_d[0] + param0.b(param3.substring(0, var7 + 1)) - param0.a((char) var8);
+              param4.field_d[var7] = (var5_int >> 8) + param4.field_d[0] + param0.stringWidth(param3.substring(0, var7 + 1)) - param0.charWidth((char) var8);
             }
             if (62 == var8) {
               var6 = -1;

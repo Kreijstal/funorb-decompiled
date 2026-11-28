@@ -9,7 +9,7 @@ class mg extends a {
     static gg field_u;
     static String field_v;
 
-    mg(ta param0, int param1) {
+    mg(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_C, -1, 2147483647, false);
     }
 

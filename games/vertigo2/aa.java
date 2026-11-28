@@ -107,7 +107,7 @@ final class aa extends UiPanel {
             }
             this.field_Lb[var13] = new nk(0L, param2, (UiPanel) null, param3, (Sprite) (var14), param6[var13]);
             this.b(this.field_Lb[var13], 118);
-            var15 = var17.c(param6[var13]);
+            var15 = var17.stringWidth(param6[var13]);
             if (var15 > this.field_Nb) {
               this.field_Nb = var15;
             }

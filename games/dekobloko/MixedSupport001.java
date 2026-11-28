@@ -9,7 +9,7 @@ class MixedSupport001 implements CallbackContract004, CallbackContract012 {
     int integerState0003;
     int integerState0004;
     static String stringState0001;
-    static RenderingSupport009 renderingSupport009State0001;
+    static BinaryBitmapFont renderingSupport009State0001;
     static int[] integerArrayState0002;
     private int integerState0005;
     int integerState0006;
@@ -634,7 +634,7 @@ class MixedSupport001 implements CallbackContract004, CallbackContract012 {
           integerLocal5 = this.computeInteger0018(false, uiComponentArgument5);
           integerLocal7 = this.computeInteger0023(uiComponentArgument5, (byte) -125);
           if (this.booleanState0001) {
-            this.bitmapFontState0001.computeInteger1071(this.computeString0020(uiComponentArgument5, (byte) -36), this.computeInteger0022(uiComponentArgument5, integerArgument1, 74, integerArgument4), this.computeInteger0013(uiComponentArgument5, 20881, integerArgument7, integerArgument8), integerLocal5, integerLocal7, integerArgument2, integerArgument3, this.integerState0009, this.integerState0004, this.integerState0006);
+            this.bitmapFontState0001.drawParagraph(this.computeString0020(uiComponentArgument5, (byte) -36), this.computeInteger0022(uiComponentArgument5, integerArgument1, 74, integerArgument4), this.computeInteger0013(uiComponentArgument5, 20881, integerArgument7, integerArgument8), integerLocal5, integerLocal7, integerArgument2, integerArgument3, this.integerState0009, this.integerState0004, this.integerState0006);
           } else {
             integerLocal9 = this.integerState0004;
             if (integerLocal9 == 0) {
@@ -653,16 +653,16 @@ class MixedSupport001 implements CallbackContract004, CallbackContract012 {
             if (0 != integerLocal11 &&
               integerLocal11 != 3) {
               if (integerLocal11 == 1) {
-                this.bitmapFontState0001.performAction1082(this.computeString0020(uiComponentArgument5, (byte) -67), this.computeInteger0022(uiComponentArgument5, integerArgument1, 122, integerArgument4) + (integerLocal5 >> 1), integerLocal8 + this.computeInteger0013(uiComponentArgument5, 20881, integerArgument7, integerArgument8), integerArgument2, integerArgument3);
+                this.bitmapFontState0001.drawCentred(this.computeString0020(uiComponentArgument5, (byte) -67), this.computeInteger0022(uiComponentArgument5, integerArgument1, 122, integerArgument4) + (integerLocal5 >> 1), integerLocal8 + this.computeInteger0013(uiComponentArgument5, 20881, integerArgument7, integerArgument8), integerArgument2, integerArgument3);
               } else {
                 if ((integerLocal11 == 2)) {
-                  this.bitmapFontState0001.performAction1086(this.computeString0020(uiComponentArgument5, (byte) 123), integerLocal5 + this.computeInteger0022(uiComponentArgument5, integerArgument1, 78, integerArgument4), this.computeInteger0013(uiComponentArgument5, 20881, integerArgument7, integerArgument8) + integerLocal8, integerArgument2, integerArgument3);
+                  this.bitmapFontState0001.drawRightAligned(this.computeString0020(uiComponentArgument5, (byte) 123), integerLocal5 + this.computeInteger0022(uiComponentArgument5, integerArgument1, 78, integerArgument4), this.computeInteger0013(uiComponentArgument5, 20881, integerArgument7, integerArgument8) + integerLocal8, integerArgument2, integerArgument3);
                 }
               }
               frameRemainderLocal12 = false;
             }
             else {
-              this.bitmapFontState0001.performAction1069(this.computeString0020(uiComponentArgument5, (byte) -50), this.computeInteger0022(uiComponentArgument5, integerArgument1, 81, integerArgument4), integerLocal8 + this.computeInteger0013(uiComponentArgument5, 20881, integerArgument7, integerArgument8), integerArgument2, integerArgument3);
+              this.bitmapFontState0001.drawString(this.computeString0020(uiComponentArgument5, (byte) -50), this.computeInteger0022(uiComponentArgument5, integerArgument1, 81, integerArgument4), integerLocal8 + this.computeInteger0013(uiComponentArgument5, 20881, integerArgument7, integerArgument8), integerArgument2, integerArgument3);
             }
           }
           ByteStorage.performAction1060((byte) -5);

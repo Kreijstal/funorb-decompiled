@@ -80,10 +80,10 @@ final class wi extends sj {
 
     final void a(int param0, int param1, boolean param2) {
         super.a(param0, param1, param2);
-        hc.field_f.c(this.field_jb, param1 + (this.field_x >> 1), param0 + 103, 16777215, -1);
+        hc.field_f.drawCentred(this.field_jb, param1 + (this.field_x >> 1), param0 + 103, 16777215, -1);
         if (null != this.field_ib) {
           SoftwareRasterizer.drawHorizontalLine(20 + param1, 120 + (param0 - 7), 260, 8421504);
-          hc.field_f.a(this.field_ib, param1 + 20, param0 + 128, 260, 100, 16777215, -1, 1, 0, hc.field_f.field_H);
+          hc.field_f.drawParagraph(this.field_ib, param1 + 20, param0 + 128, 260, 100, 16777215, -1, 1, 0, hc.field_f.field_H);
         }
     }
 
@@ -104,7 +104,7 @@ final class wi extends sj {
         try {
           this.field_ib = param1;
           if (this.field_ib != null) {
-            var3_int = hc.field_f.a(this.field_ib, 260, hc.field_f.field_H);
+            var3_int = hc.field_f.textHeight(this.field_ib, 260, hc.field_f.field_H);
             this.b(120, 150 + var3_int, 300);
           }
           this.field_ub = new uc(13, 50, 274, 30, 15, 2113632, 4210752);

@@ -4,12 +4,12 @@
 import java.util.*;
 
 final class qc implements td {
-    private kc field_d;
+    private BitmapFont field_d;
     private int field_e;
     private int field_a;
     static Calendar field_c;
     static RgbSprite[] field_f;
-    static kc field_b;
+    static BitmapFont field_b;
     static AccountRequestState field_g;
 
     public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
@@ -34,9 +34,9 @@ final class qc implements td {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
-          this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_l + "</u>", param2.field_s + param1, param2.field_n + param0, param2.field_m, param2.field_r, var6_int, -1, this.field_a, this.field_e, this.field_d.field_H + this.field_d.field_B);
+          this.field_d.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_l + "</u>", param2.field_s + param1, param2.field_n + param0, param2.field_m, param2.field_r, var6_int, -1, this.field_a, this.field_e, this.field_d.field_H + this.field_d.field_B);
           if (param2.d(-81)) {
-            var7 = this.field_d.a(param2.field_l);
+            var7 = this.field_d.stringWidth(param2.field_l);
             var8 = this.field_d.field_H + this.field_d.field_B;
             var9 = param2.field_s + param1;
             if (2 == this.field_a) {
@@ -135,7 +135,7 @@ final class qc implements td {
         field_f = null;
     }
 
-    qc(kc param0, int param1, int param2) {
+    qc(BitmapFont param0, int param1, int param2) {
         try {
           this.field_d = param0;
           this.field_a = param1;

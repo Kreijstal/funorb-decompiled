@@ -9,7 +9,7 @@ class PacketBuffer extends IntrusiveNode {
     static String[][] field_s;
     static String field_q;
     static ResourceArchive field_r;
-    static p field_n;
+    static PalettedBitmapFont field_n;
     byte[] payload;
     static int field_p;
 
@@ -30,7 +30,7 @@ class PacketBuffer extends IntrusiveNode {
             this.payload[fieldTemp$0] = param3[var5_int];
           }
           if (!param2) {
-            field_n = (p) null;
+            field_n = (PalettedBitmapFont) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -402,7 +402,7 @@ class PacketBuffer extends IntrusiveNode {
           dm.field_f = fn.a(0, 6);
         }
         if (param0 != 6) {
-          field_n = (p) null;
+          field_n = (PalettedBitmapFont) null;
         }
         if (!si.field_a &&
           null != dm.field_f && dm.field_f.field_q) {
@@ -704,7 +704,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final int readUnsignedSmart(boolean param0) {
         if (!param0) {
-          field_n = (p) null;
+          field_n = (PalettedBitmapFont) null;
         }
         int var2 = 255 & this.payload[this.position];
         if (var2 >= 128) {
@@ -740,7 +740,7 @@ class PacketBuffer extends IntrusiveNode {
           var2 = this.payload[fieldTemp$1];
         }
         if (param0 != 8) {
-          field_n = (p) null;
+          field_n = (PalettedBitmapFont) null;
         }
         return var2 | var3;
     }

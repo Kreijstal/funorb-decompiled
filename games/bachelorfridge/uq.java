@@ -28,7 +28,7 @@ final class uq extends UiComponent {
         this.a(19842, param0);
         if (this.field_yb != null) {
           this.field_yb.field_Z = this.field_Cb.toString();
-          this.field_yb.field_kb = (this.field_sb - this.field_yb.field_jb.a(this.field_yb.field_Z)) / 2;
+          this.field_yb.field_kb = (this.field_sb - this.field_yb.field_jb.stringWidth(this.field_yb.field_Z)) / 2;
           this.field_yb.field_sb = this.field_sb - this.field_yb.field_kb;
           if (this.field_Db != null &&
             this.field_Db.field_R != 0) {
@@ -349,15 +349,15 @@ final class uq extends UiComponent {
               discarded$0 = this.field_Cb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_jb.a(oe.field_a);
+            var17 = param6.field_jb.stringWidth(oe.field_a);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_jb.a(RageAnimation.field_y);
+            var17Lifetime2 = param6.field_jb.stringWidth(RageAnimation.field_y);
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_jb.a(WhirlpoolDigest.field_p);
+            var17Lifetime3 = param6.field_jb.stringWidth(WhirlpoolDigest.field_p);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -447,7 +447,7 @@ final class uq extends UiComponent {
           this.field_Ab.a(-1, this.field_wb);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_wb.field_jb.b(this.field_wb.field_Z, var15_int);
+          var17Lifetime1 = this.field_wb.field_jb.lineCount(this.field_wb.field_Z, var15_int);
           this.field_wb.a(var17Lifetime1 * rg.field_h, 31407, var15_int, 13, var16Lifetime1);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * rg.field_h;
           this.field_Ab.a(var16Lifetime1 + 10, 31407, 26 + var15_int, 0, 24);

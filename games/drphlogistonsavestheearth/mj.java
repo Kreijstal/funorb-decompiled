@@ -37,7 +37,7 @@ class mj extends l {
         }
     }
 
-    mj(rf param0, int param1) {
+    mj(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_x, -1, 2147483647, false);
     }
 

@@ -8,7 +8,7 @@ final class ni implements de {
     private int field_l;
     private int field_i;
     private int field_d;
-    private qe field_m;
+    private BitmapFont field_m;
     private int field_j;
     private int field_b;
     private int field_a;
@@ -56,7 +56,7 @@ final class ni implements de {
           }
           if (this.field_m != null) {
             var11 = this.field_b + this.field_l + this.field_i;
-            this.field_m.a(param4.field_k, param4.field_s + (param0 + var11), this.field_a + (param4.field_j + param3), param4.field_i + (-this.field_i - var11), -(this.field_i << 1) + param4.field_f, this.field_j, this.field_e, this.field_n, this.field_h, 0);
+            this.field_m.drawParagraph(param4.field_k, param4.field_s + (param0 + var11), this.field_a + (param4.field_j + param3), param4.field_i + (-this.field_i - var11), -(this.field_i << 1) + param4.field_f, this.field_j, this.field_e, this.field_n, this.field_h, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -160,7 +160,7 @@ final class ni implements de {
         }
     }
 
-    ni(qe param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    ni(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_n = 1;
         this.field_h = 1;
         try {

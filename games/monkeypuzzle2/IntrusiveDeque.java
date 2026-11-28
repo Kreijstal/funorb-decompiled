@@ -5,7 +5,7 @@ final class IntrusiveDeque {
     static PlatformTaskDispatcher field_g;
     static vd field_a;
     static kc field_b;
-    static ta field_c;
+    static BitmapFont field_c;
     IntrusiveNode sentinel;
     static float field_h;
     static String field_d;
@@ -247,7 +247,7 @@ final class IntrusiveDeque {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 4011) {
-          field_c = (ta) null;
+          field_c = (BitmapFont) null;
           var2 = this.sentinel.previous;
           if (var2 != this.sentinel) {
             var2.unlink(param0 - 23833);
@@ -263,12 +263,12 @@ final class IntrusiveDeque {
         return null;
     }
 
-    final static vk a(byte param0, byte[] param1) {
-        vk var2 = null;
+    final static BinaryBitmapFont a(byte param0, byte[] param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        vk stackIn_5_0 = null;
-        vk stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_5_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -276,13 +276,13 @@ final class IntrusiveDeque {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (vk) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param0 <= 9) {
-            stackIn_5_0 = (vk) null;
+            stackIn_5_0 = (BinaryBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new vk(param1, ValidatedTextField.field_P, mb.field_b, da.field_c, ra.field_ab, cb.field_b);
+          var2 = new BinaryBitmapFont(param1, ValidatedTextField.field_P, mb.field_b, da.field_c, ra.field_ab, cb.field_b);
           gb.a(-63);
           stackIn_7_0 = var2;
           return stackIn_7_0;

@@ -56,7 +56,7 @@ class ta extends pj implements c {
         this.i(0);
     }
 
-    final static void a(int param0, kc param1, kc param2, int param3) {
+    final static void a(int param0, BitmapFont param1, BitmapFont param2, int param3) {
         EditableTextField.field_I = param3;
         jd.field_a = param1;
         ck.field_g = param2;
@@ -671,7 +671,7 @@ class ta extends pj implements c {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        kc var8 = null;
+        BitmapFont var8 = null;
         pj var9 = null;
         km var10 = null;
         boolean stackIn_15_0 = false;
@@ -704,8 +704,8 @@ class ta extends pj implements c {
             return stackIn_15_0;
           }
           if (param3 != 0) {
-            var8 = (kc) null;
-            ta.a(5, (kc) null, (kc) null, -95);
+            var8 = (BitmapFont) null;
+            ta.a(5, (BitmapFont) null, (BitmapFont) null, -95);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

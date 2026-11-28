@@ -108,7 +108,7 @@ final class ce extends AttackEvent {
           if (MouseWheelInput.field_a != null &&
             lo.field_b != null) {
             param2 = param2 - (lo.field_b.field_u - lo.field_b.field_B);
-            var9 = lo.field_b.a(param3);
+            var9 = lo.field_b.stringWidth(param3);
             var9 += 10;
             MouseWheelInput.field_a.b();
             if ((1 & var9) == 1) {

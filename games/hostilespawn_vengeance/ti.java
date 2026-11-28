@@ -6,7 +6,7 @@ final class ti implements nn {
     static GridPoint field_f;
     static String field_d;
     private int field_e;
-    private vm field_h;
+    private BitmapFont field_h;
     static RgbSprite field_c;
     static String[] field_a;
     static String field_i;
@@ -97,9 +97,9 @@ final class ti implements nn {
           if (param2 != 15430) {
             return;
           }
-          this.field_h.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_n + "</u>", param1 + param3.field_v, param0 + param3.field_m, param3.field_s, param3.field_x, var6_int, -1, this.field_e, this.field_g, this.field_h.field_y + this.field_h.field_F);
+          this.field_h.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_n + "</u>", param1 + param3.field_v, param0 + param3.field_m, param3.field_s, param3.field_x, var6_int, -1, this.field_e, this.field_g, this.field_h.field_y + this.field_h.field_F);
           if (param3.g(param2 - 24445)) {
-            var7 = this.field_h.a(param3.field_n);
+            var7 = this.field_h.stringWidth(param3.field_n);
             var8 = this.field_h.field_y + this.field_h.field_F;
             var9 = param1 + param3.field_v;
             var10 = param3.field_m + param0;
@@ -134,7 +134,7 @@ final class ti implements nn {
         }
     }
 
-    ti(vm param0, int param1, int param2) {
+    ti(BitmapFont param0, int param1, int param2) {
         try {
           this.field_h = param0;
           this.field_e = param1;

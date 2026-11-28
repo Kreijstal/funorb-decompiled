@@ -124,9 +124,9 @@ final class MusicPatchPcmStream extends PcmStream {
             param1.field_x = param1.field_x + param0 * var4_int & 1048575;
             if (var5 <= param0) {
               if (this.field_p.field_n[param1.field_o] == 0) {
-                param1.field_k = RawPcmStream.a(param1.field_z, param1.field_k.f(), param1.field_k.g(), param1.field_k.k());
+                param1.field_k = RawPcmStream.createForSampleStep(param1.field_z, param1.field_k.getSampleStepMagnitude(), param1.field_k.getTargetVolume(), param1.field_k.getPan());
               } else {
-                param1.field_k = RawPcmStream.a(param1.field_z, param1.field_k.f(), 0, param1.field_k.k());
+                param1.field_k = RawPcmStream.createForSampleStep(param1.field_z, param1.field_k.getSampleStepMagnitude(), 0, param1.field_k.getPan());
                 stackIn_8_0 = this.field_p;
                 stackIn_8_1 = -32730;
                 stackIn_8_2 = (tk) (param1);
@@ -202,22 +202,22 @@ final class MusicPatchPcmStream extends PcmStream {
               }
               var11 = param0.field_k;
               if (this.field_p.field_n[param0.field_o] != 0) {
-                param0.field_k = RawPcmStream.a(param0.field_z, var11.f(), 0, var11.k());
+                param0.field_k = RawPcmStream.createForSampleStep(param0.field_z, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_14_0 = this.field_p;
                 stackIn_14_1 = -32730;
                 stackIn_14_2 = (tk) (param0);
                 stackIn_15_3 = !(param0.field_D.field_l[param0.field_F] >= 0);
                 ((MidiPcmStream) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_15_3);
-                param0.field_k.d(var9, var11.g());
+                param0.field_k.rampVolume(var9, var11.getTargetVolume());
               } else {
-                param0.field_k = RawPcmStream.a(param0.field_z, var11.f(), var11.g(), var11.k());
+                param0.field_k = RawPcmStream.createForSampleStep(param0.field_z, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.getPan());
               }
               if (param0.field_D.field_l[param0.field_F] < 0) {
                 param0.field_k.g(-1);
               }
               var11.f(var9);
               var11.mixInto(param2, param4, -param4 + param5);
-              if (!var11.i()) {
+              if (!var11.hasRemainingRampFrames()) {
                 continue;
               }
               this.field_o.a(var11);

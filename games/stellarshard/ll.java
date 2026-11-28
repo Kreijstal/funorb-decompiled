@@ -55,11 +55,11 @@ final class ll implements uk {
             stackIn_8_0 = 3249872;
           }
           var6_int = stackIn_8_0;
-          this.field_a.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_m + "</u>", param3.field_w + param1, param3.field_k + param2, param3.field_p, param3.field_t, var6_int, -1, this.field_e, this.field_f, this.field_a.field_N + this.field_a.field_r);
+          this.field_a.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_m + "</u>", param3.field_w + param1, param3.field_k + param2, param3.field_p, param3.field_t, var6_int, -1, this.field_e, this.field_f, this.field_a.field_N + this.field_a.field_r);
           if (!param3.e(0)) {
             return;
           }
-          var7 = this.field_a.b(param3.field_m);
+          var7 = this.field_a.stringWidth(param3.field_m);
           var8 = this.field_a.field_N + this.field_a.field_r;
           var9 = param3.field_w + param1;
           var10 = param3.field_k + param2;

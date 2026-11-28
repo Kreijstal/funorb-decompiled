@@ -23,7 +23,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements md, oi, 
         try {
           var3 = this.field_N;
           var4 = param1;
-          ((EditableTextField) ((Object) var3)).a((byte) 20, var4, false);
+          ((EditableTextField) ((Object) var3)).setText((byte) 20, var4, false);
           int var5 = -111 / ((61 - param0) / 62);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "mj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -413,12 +413,12 @@ final class AccountRegistrationPanel extends WidgetContainer implements md, oi, 
         this.field_B.field_x = bi.field_t;
         this.field_C.field_x = si.field_B;
         this.field_D.field_x = FrameTimer.field_c;
-        this.field_N.a((byte) -2, new AccountNameAvailabilityValidator(this.field_N));
-        this.field_H.a((byte) -2, new EmailFormatValidator(this.field_H));
-        this.field_K.a((byte) -2, new ConfirmedEmailAvailabilityValidator(this.field_K, this.field_H));
-        this.field_G.a((byte) -2, new PasswordValidator(this.field_G, this.field_N, this.field_H));
-        this.field_B.a((byte) -2, new MatchingFieldValidator(this.field_B, this.field_G));
-        this.field_C.a((byte) -2, new AgeValidator(this.field_C));
+        this.field_N.setFieldValidator((byte) -2, new AccountNameAvailabilityValidator(this.field_N));
+        this.field_H.setFieldValidator((byte) -2, new EmailFormatValidator(this.field_H));
+        this.field_K.setFieldValidator((byte) -2, new ConfirmedEmailAvailabilityValidator(this.field_K, this.field_H));
+        this.field_G.setFieldValidator((byte) -2, new PasswordValidator(this.field_G, this.field_N, this.field_H));
+        this.field_B.setFieldValidator((byte) -2, new MatchingFieldValidator(this.field_B, this.field_G));
+        this.field_C.setFieldValidator((byte) -2, new AgeValidator(this.field_C));
         this.field_I.field_E = false;
         this.field_I.field_u = (uk) ((Object) new b());
         this.field_J.field_u = (uk) ((Object) new ll());

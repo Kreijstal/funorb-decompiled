@@ -9,12 +9,12 @@ final class fe extends l {
     private int field_m;
     private int field_p;
     private int field_h;
-    private se field_i;
+    private BitmapFont field_i;
     static int[] field_g;
     static String[] field_n;
     private int field_o;
 
-    final void a(int param0, byte param1, String param2, se param3, int param4) {
+    final void a(int param0, byte param1, String param2, BitmapFont param3, int param4) {
         tg var7 = null;
         if (param2 == null) {
           this.field_e = null;
@@ -31,7 +31,7 @@ final class fe extends l {
           this.field_i = param3;
           this.field_h = 2;
           var7 = this.a(param2, param4, param3, 0);
-          var7.field_k[0] = param0 - param3.b(param2);
+          var7.field_k[0] = param0 - param3.stringWidth(param2);
           var7.field_k[param2.length()] = param0;
           bf.a(param2, var7, 0, param3, 15553);
         } catch (RuntimeException runtimeException) {
@@ -39,7 +39,7 @@ final class fe extends l {
         }
     }
 
-    final void a(String param0, int param1, se param2, int param3, int param4) {
+    final void a(String param0, int param1, BitmapFont param2, int param3, int param4) {
         tg var7 = null;
         tg var8 = null;
         if (param0 == null) {
@@ -61,7 +61,7 @@ final class fe extends l {
           var7 = this.a(param0, param4, param2, 0);
           var8 = var7;
           var7.field_k[0] = param3;
-          var8.field_k[param0.length()] = param3 + param2.b(param0);
+          var8.field_k[param0.length()] = param3 + param2.stringWidth(param0);
           bf.a(param0, var8, 0, param2, 15553);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "fe.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -77,7 +77,7 @@ final class fe extends l {
         field_k = null;
     }
 
-    private final tg a(String param0, int param1, se param2, int param3) {
+    private final tg a(String param0, int param1, BitmapFont param2, int param3) {
         tg var5 = null;
         RuntimeException var5_ref = null;
         tg var6 = null;
@@ -119,7 +119,7 @@ final class fe extends l {
         }
     }
 
-    final void a(int param0, String param1, se param2, byte param3, int param4) {
+    final void a(int param0, String param1, BitmapFont param2, byte param3, int param4) {
         tg var9 = null;
         int var7 = 0;
         if (param1 == null) {
@@ -139,7 +139,7 @@ final class fe extends l {
           this.field_i = param2;
           int var8 = -121 % ((34 - param3) / 47);
           var9 = this.a(param1, param0, param2, 0);
-          var7 = param2.b(param1);
+          var7 = param2.stringWidth(param1);
           var9.field_k[0] = param4 - (var7 >> 1);
           var9.field_k[param1.length()] = param4 + (var7 >> 1);
           bf.a(param1, var9, 0, param2, 15553);
@@ -148,7 +148,7 @@ final class fe extends l {
         }
     }
 
-    final void a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, se param7) {
+    final void a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7) {
         tg stackIn_35_0;
         tg stackIn_35_1;
         int stackIn_35_2;
@@ -203,9 +203,9 @@ final class fe extends l {
           this.field_o = param6;
           this.field_l = param0;
           this.field_i = param7;
-          var16 = new String[param7.c(param0, param5) + 1];
+          var16 = new String[param7.lineCount(param0, param5) + 1];
           var17 = var16;
-          var10 = Math.max(1, param7.a(param0, new int[]{param5}, var17));
+          var10 = Math.max(1, param7.wrapText(param0, new int[]{param5}, var17));
           if (this.field_p == 3 &&
             var10 == 1) {
             this.field_p = 1;
@@ -247,13 +247,13 @@ final class fe extends l {
             var14 = new tg(stackIn_35_2, stackIn_35_3, stackIn_36_4);
             var14.field_k[0] = 0;
             if (var13 != null) {
-              var14.field_k[var13.length()] = param7.b(var13);
+              var14.field_k[var13.length()] = param7.stringWidth(var13);
               stackIn_40_0 = var13;
               stackIn_40_1 = var14;
               if (3 != param4) {
                 stackIn_41_2 = 0;
               } else {
-                stackIn_41_2 = this.a(var13, param1 + 0, param7.b(var13), param5);
+                stackIn_41_2 = this.a(var13, param1 + 0, param7.stringWidth(var13), param5);
               }
               bf.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, param7, 15553);
             }

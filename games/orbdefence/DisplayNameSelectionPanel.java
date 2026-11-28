@@ -175,7 +175,7 @@ final class DisplayNameSelectionPanel extends ta implements bf, ai {
         this.field_J = new s(qk.field_b, (ag) null);
         this.field_H = new s(ob.field_D, (ag) null);
         this.field_C.field_i = bg.field_b;
-        this.field_C.a(new AccountNameAvailabilityValidator(this.field_C), 22);
+        this.field_C.setFieldValidator(new AccountNameAvailabilityValidator(this.field_C), 22);
         this.field_J.field_F = false;
         this.field_J.field_j = (td) ((Object) new vk());
         this.field_H.field_j = (td) ((Object) new qc());
@@ -252,7 +252,7 @@ final class DisplayNameSelectionPanel extends ta implements bf, ai {
         try {
           var3 = this.field_C;
           var4 = param1;
-          ((EditableTextField) ((Object) var3)).a(0, false, var4);
+          ((EditableTextField) ((Object) var3)).setText(0, false, var4);
           if (param0 > 104) {
             return;
           }

@@ -5,7 +5,7 @@ final class ra {
     private int[] field_b;
     static fc field_d;
     static String field_a;
-    static vc field_c;
+    static BitmapFont field_c;
 
     public static void clearStaticReferences(boolean param0) {
         field_c = null;

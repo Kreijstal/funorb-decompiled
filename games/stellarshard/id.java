@@ -337,19 +337,19 @@ class id implements uk, pj {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (1 == var12Lifetime1) {
-                this.field_a.c(this.b(param6, 0), this.a(param6, param4, param3, false) + (var9_int >> 1), var11 + this.a(param5, param6, (byte) -127, param2), param7, param1);
+                this.field_a.drawCentred(this.b(param6, 0), this.a(param6, param4, param3, false) + (var9_int >> 1), var11 + this.a(param5, param6, (byte) -127, param2), param7, param1);
               } else {
                 if ((2 == var12Lifetime1)) {
-                  this.field_a.b(this.b(param6, 0), this.a(param6, param4, param3, false) + var9_int, var11 + this.a(param5, param6, (byte) -127, param2), param7, param1);
+                  this.field_a.drawRightAligned(this.b(param6, 0), this.a(param6, param4, param3, false) + var9_int, var11 + this.a(param5, param6, (byte) -127, param2), param7, param1);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_a.a(this.b(param6, param0 ^ 0), this.a(param6, param4, param3, false), this.a(param5, param6, (byte) -128, param2) + var11, param7, param1);
+              this.field_a.drawString(this.b(param6, param0 ^ 0), this.a(param6, param4, param3, false), this.a(param5, param6, (byte) -128, param2) + var11, param7, param1);
             }
           } else {
-            this.field_a.a(this.b(param6, 0), this.a(param6, param4, param3, false), this.a(param5, param6, (byte) -126, param2), var9_int, var10, param7, param1, this.field_h, this.field_d, this.field_j);
+            this.field_a.drawParagraph(this.b(param6, 0), this.a(param6, param4, param3, false), this.a(param5, param6, (byte) -126, param2), var9_int, var10, param7, param1, this.field_h, this.field_d, this.field_j);
           }
           id.b((byte) -58);
           if (param0 == 0) {

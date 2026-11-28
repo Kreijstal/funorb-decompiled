@@ -7,7 +7,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     static int field_a;
     static int field_b;
 
-    final static mi a(byte[] param0, int param1, IndexedSprite[] param2) {
+    final static BinaryBitmapFont a(byte[] param0, int param1, IndexedSprite[] param2) {
         int var9 = 0;
         int[] var3 = null;
         RuntimeException var3_ref = null;
@@ -28,7 +28,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         int[] var19 = null;
         int[] var20 = null;
         byte[][] var21 = null;
-        mi stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -64,7 +64,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             var7[var9] = param2[var9].field_g;
             var8[var9] = param2[var9].field_i;
           }
-          stackIn_7_0 = new mi(param0, var17, var18, var19, var20, var21);
+          stackIn_7_0 = new BinaryBitmapFont(param0, var17, var18, var19, var20, var21);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,7 +94,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         super(param0);
     }
 
-    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4, int param5, kg param6, int param7, int param8, Sprite[] param9, boolean param10) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4, int param5, BitmapFont param6, int param7, int param8, Sprite[] param9, boolean param10) {
         try {
           je.a(-11);
           if (param10) {

@@ -28,7 +28,7 @@ class sf extends ie {
     private int field_p;
     private RgbSprite field_C;
     private int field_z;
-    private kc field_A;
+    private BitmapFont field_A;
     private int field_Q;
     private int field_I;
     private boolean field_o;
@@ -48,12 +48,12 @@ class sf extends ie {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final static wa a(String param0, ResourceArchive param1, int param2, String param3, ResourceArchive param4) {
+    final static PalettedBitmapFont a(String param0, ResourceArchive param1, int param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        wa stackIn_2_0 = null;
-        wa stackIn_4_0 = null;
+        PalettedBitmapFont stackIn_2_0 = null;
+        PalettedBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -71,7 +71,7 @@ class sf extends ie {
             stackIn_4_0 = pf.a(var5_int, -6, param1, param4, var6);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (wa) null;
+          stackIn_2_0 = (PalettedBitmapFont) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

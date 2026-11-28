@@ -6,7 +6,7 @@ final class vg extends wi {
     int field_D;
     private boolean field_q;
     int field_C;
-    private fa field_G;
+    private BitmapFont field_G;
     int field_w;
     static DiskCacheWorker field_r;
     static sg[] field_H;
@@ -173,11 +173,11 @@ final class vg extends wi {
           }
         }
         SoftwareRasterizer.saveClip(ia.field_q);
-        this.field_G.a(this.field_t, (this.field_n >> 1) + this.field_l + this.field_y, this.field_a + (this.field_C + (this.field_d >> 1)) + (this.field_G.field_y >> 1), this.field_F, this.field_x);
+        this.field_G.drawCentred(this.field_t, (this.field_n >> 1) + this.field_l + this.field_y, this.field_a + (this.field_C + (this.field_d >> 1)) + (this.field_G.field_y >> 1), this.field_F, this.field_x);
         SoftwareRasterizer.restoreClip(ia.field_q);
     }
 
-    vg(String param0, int param1, int param2, fa param3) {
+    vg(String param0, int param1, int param2, BitmapFont param3) {
         this.field_C = 0;
         this.field_w = 12369084;
         this.field_D = 1;

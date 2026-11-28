@@ -8,7 +8,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     private int field_T;
     static String field_U;
 
-    final void a(FieldValidator param0, int param1) {
+    final void setFieldValidator(FieldValidator param0, int param1) {
         if (param1 <= 21) {
           return;
         }

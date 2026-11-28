@@ -8,7 +8,7 @@ final class ee implements ComponentLayout {
     private int field_b;
     static int field_h;
     private int field_a;
-    private fa field_d;
+    private BitmapFont field_d;
     static boolean field_i;
     private int field_f;
     private int field_j;
@@ -62,7 +62,7 @@ final class ee implements ComponentLayout {
             return;
           }
           var13 = this.field_a + var14.field_U + var14.field_O;
-          this.field_d.a(param3.field_i, var13 + param3.field_y + param1, this.field_f + param4 + param3.field_z, param3.field_u - var13 - this.field_a, param3.field_j - (this.field_a << 1), this.field_b, this.field_e, 1, 1, 0);
+          this.field_d.drawParagraph(param3.field_i, var13 + param3.field_y + param1, this.field_f + param4 + param3.field_z, param3.field_u - var13 - this.field_a, param3.field_j - (this.field_a << 1), this.field_b, this.field_e, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ final class ee implements ComponentLayout {
         field_k = null;
     }
 
-    ee(fa param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    ee(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_b = param3;
           this.field_d = param0;

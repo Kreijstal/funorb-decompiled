@@ -63,12 +63,12 @@ final class AccountRegistrationPanel extends td implements jg, ButtonListener, a
         this.field_E.field_n = hb.field_d;
         this.field_L.field_n = ti.field_p;
         this.field_O.field_n = pl.field_d;
-        this.field_F.a(1, new AccountNameAvailabilityValidator(this.field_F));
-        this.field_M.a(1, new EmailFormatValidator(this.field_M));
-        this.field_I.a(1, new ConfirmedEmailAvailabilityValidator(this.field_I, this.field_M));
-        this.field_J.a(1, new PasswordValidator(this.field_J, this.field_F, this.field_M));
-        this.field_E.a(1, new MatchingFieldValidator(this.field_E, this.field_J));
-        this.field_L.a(1, new AgeValidator(this.field_L));
+        this.field_F.setFieldValidator(1, new AccountNameAvailabilityValidator(this.field_F));
+        this.field_M.setFieldValidator(1, new EmailFormatValidator(this.field_M));
+        this.field_I.setFieldValidator(1, new ConfirmedEmailAvailabilityValidator(this.field_I, this.field_M));
+        this.field_J.setFieldValidator(1, new PasswordValidator(this.field_J, this.field_F, this.field_M));
+        this.field_E.setFieldValidator(1, new MatchingFieldValidator(this.field_E, this.field_J));
+        this.field_L.setFieldValidator(1, new AgeValidator(this.field_L));
         this.field_C.field_B = false;
         this.field_C.field_y = (t) ((Object) new dc());
         this.field_H.field_y = (t) ((Object) new ne());
@@ -117,7 +117,7 @@ final class AccountRegistrationPanel extends td implements jg, ButtonListener, a
 
     final static void b(int param0, int param1, int param2) {
         if (uh.field_b[param1] == null) {
-          uh.field_b[param1] = PcmSampleStream.a(va.field_d[param1], 100, nd.field_G[param1]);
+          uh.field_b[param1] = PcmSampleStream.createForPlaybackRate(va.field_d[param1], 100, nd.field_G[param1]);
         }
         if (!uh.field_b[param1].isLinked(10000536)) {
           uh.field_b[param1].e(0);
@@ -587,7 +587,7 @@ final class AccountRegistrationPanel extends td implements jg, ButtonListener, a
         try {
           var3 = this.field_F;
           var4 = param1;
-          ((EditableTextField) ((Object) var3)).a(false, var4, 126);
+          ((EditableTextField) ((Object) var3)).setText(false, var4, 126);
           if (!param0) {
             var5 = (UiWidget) null;
             discarded$1 = this.a(33, (String) null, 34, -109, (UiWidget) null);

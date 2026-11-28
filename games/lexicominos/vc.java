@@ -14,7 +14,7 @@ final class vc extends nb implements jk {
 
     final void a(byte param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        this.field_E.a(this.field_L, this.field_t + param2 + 14, 10 + param1 + this.field_o, this.field_j - 28, this.field_v, 16777215, -1, 0, 0, this.field_E.field_E);
+        this.field_E.drawParagraph(this.field_L, this.field_t + param2 + 14, 10 + param1 + this.field_o, this.field_j - 28, this.field_v, 16777215, -1, 0, 0, this.field_E.field_E);
     }
 
     vc(uc param0, BitmapFont param1, String param2) {
@@ -25,7 +25,7 @@ final class vc extends nb implements jk {
           this.field_E = param1;
           this.field_L = param2;
           this.field_F = param0;
-          var4_int = null == this.field_L ? 0 : this.field_E.a(this.field_L, 260, this.field_E.field_E);
+          var4_int = null == this.field_L ? 0 : this.field_E.textHeight(this.field_L, 260, this.field_E.field_E);
           this.a(var4_int + 22, 288, true, 0, 0);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

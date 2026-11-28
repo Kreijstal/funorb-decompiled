@@ -7,7 +7,7 @@ final class jc extends IntrusiveNode {
     static volatile long field_k;
     static String field_m;
     static CipherPacketBuffer field_g;
-    static tj field_h;
+    static BitmapFont field_h;
     int field_j;
     int field_l;
 

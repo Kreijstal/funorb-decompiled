@@ -191,17 +191,17 @@ final class ScorePopup {
           if (-16 == this.value) {
             var4 = Integer.toString(AccountServiceResult.field_h);
           }
-          qj.field_a.c(var4, var2 - 1, var3, 0, -1);
-          qj.field_a.c(var4, 1 + var2, var3, 0, -1);
-          qj.field_a.c(var4, var2, var3 - 1, 0, -1);
-          qj.field_a.c(var4, var2, 1 + var3, 0, -1);
-          qj.field_a.c(var4, var2, var3, this.field_c, -1);
+          qj.field_a.drawCentred(var4, var2 - 1, var3, 0, -1);
+          qj.field_a.drawCentred(var4, 1 + var2, var3, 0, -1);
+          qj.field_a.drawCentred(var4, var2, var3 - 1, 0, -1);
+          qj.field_a.drawCentred(var4, var2, 1 + var3, 0, -1);
+          qj.field_a.drawCentred(var4, var2, var3, this.field_c, -1);
         } else {
-          qj.field_a.c("" + this.value, -1 + var2, var3, 0, -1);
-          qj.field_a.c("" + this.value, var2 + 1, var3, 0, -1);
-          qj.field_a.c("" + this.value, var2, var3 - 1, 0, -1);
-          qj.field_a.c("" + this.value, var2, var3 + 1, 0, -1);
-          qj.field_a.c("" + this.value, var2, var3, this.field_c, -1);
+          qj.field_a.drawCentred("" + this.value, -1 + var2, var3, 0, -1);
+          qj.field_a.drawCentred("" + this.value, var2 + 1, var3, 0, -1);
+          qj.field_a.drawCentred("" + this.value, var2, var3 - 1, 0, -1);
+          qj.field_a.drawCentred("" + this.value, var2, var3 + 1, 0, -1);
+          qj.field_a.drawCentred("" + this.value, var2, var3, this.field_c, -1);
         }
         if (!param0) {
           this.y = -0.5996134405584707;

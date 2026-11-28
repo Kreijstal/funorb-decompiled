@@ -57,7 +57,7 @@ final class df implements uk {
             SoftwareRasterizer.fillCircle(var7 * var12.b((byte) 95, var10) / var12.g(92) + var8, var9, this.field_h, this.field_g);
           }
           if (null != this.field_f) {
-            this.field_f.c(var12.field_m, var7 / 2 + var8, var9 + this.field_f.field_v + var12.field_I, this.field_i, this.field_b);
+            this.field_f.drawCentred(var12.field_m, var7 / 2 + var8, var9 + this.field_f.field_v + var12.field_I, this.field_i, this.field_b);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

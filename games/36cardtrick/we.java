@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class we {
-    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int param5, int param6, int param7, int param8, ee param9, RgbSprite[] param10, int param11, boolean param12, boolean param13, ee param14) {
+    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int param5, int param6, int param7, int param8, BitmapFont param9, RgbSprite[] param10, int param11, boolean param12, boolean param13, BitmapFont param14) {
         try {
           RgbSprite[] var16 = (RgbSprite[]) null;
           af.a(param14, param5, param2, 0, (byte) -120, af.field_jb, param3, param6, 0, param0, 480, (RgbSprite[]) null, param1, param10, param8, param11, param9, wg.field_a, param7, ca.field_b, param4);

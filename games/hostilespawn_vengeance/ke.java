@@ -55,7 +55,7 @@ final class ke extends cn {
             field_x = (String) null;
           }
           km.a(param0 + param3.field_m + (-this.field_u[0].field_r + param3.field_x >> 1), param3.field_v + param1, param3.field_s, this.field_u, var7, param2 ^ 15415);
-          this.field_g.a(param3.field_n, param1 + param3.field_v, -2 + (param0 + param3.field_m), param3.field_s, param3.field_x, var8, -1, 1, 1, this.field_g.field_y);
+          this.field_g.drawParagraph(param3.field_n, param1 + param3.field_v, -2 + (param0 + param3.field_m), param3.field_s, param3.field_x, var8, -1, 1, 1, this.field_g.field_y);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

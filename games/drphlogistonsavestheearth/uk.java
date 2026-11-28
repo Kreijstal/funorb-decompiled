@@ -5,7 +5,7 @@ final class uk implements cg {
     static int field_g;
     static RgbSprite field_f;
     static he[] field_b;
-    private rf field_c;
+    private BitmapFont field_c;
     private int field_a;
     static int field_e;
     private int field_d;
@@ -119,9 +119,9 @@ final class uk implements cg {
             stackIn_8_0 = 3249872;
           }
           var6_int = stackIn_8_0;
-          this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_p + "</u>", param4 + param2.field_o, param2.field_m + param3, param2.field_w, param2.field_k, var6_int, -1, this.field_d, this.field_a, this.field_c.field_S + this.field_c.field_x);
+          this.field_c.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_p + "</u>", param4 + param2.field_o, param2.field_m + param3, param2.field_w, param2.field_k, var6_int, -1, this.field_d, this.field_a, this.field_c.field_S + this.field_c.field_x);
           if (param2.a(true)) {
-            var7 = this.field_c.b(param2.field_p);
+            var7 = this.field_c.stringWidth(param2.field_p);
             var8 = this.field_c.field_S + this.field_c.field_x;
             var9 = param4 + param2.field_o;
             if (2 == this.field_d) {
@@ -162,7 +162,7 @@ final class uk implements cg {
         this.field_c = DualLinkNode.field_i;
     }
 
-    uk(rf param0, int param1, int param2) {
+    uk(BitmapFont param0, int param1, int param2) {
         try {
           this.field_a = param2;
           this.field_d = param1;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gh {
-    static we field_b;
+    static BitmapFont field_b;
     static Sprite field_a;
 
     public final String toString() {

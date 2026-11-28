@@ -74,8 +74,8 @@ final class eb {
             SpriteState.field_z = vk.a("benefits", 71, "menu_text", g.field_a);
             KeyboardInput.field_c = vk.a("benefits", 32, "button_frame", g.field_a);
             ge.field_b = vk.a("benefits", 123, "arrow", g.field_a);
-            gi.field_b = (qe) ((Object) od.a("benefits", g.field_a, "large_font", -1, AccountRequestState.field_a));
-            ah.field_d = (qe) ((Object) od.a("benefits", g.field_a, "small_font", -1, AccountRequestState.field_a));
+            gi.field_b = (BitmapFont) ((Object) od.a("benefits", g.field_a, "large_font", -1, AccountRequestState.field_a));
+            ah.field_d = (BitmapFont) ((Object) od.a("benefits", g.field_a, "small_font", -1, AccountRequestState.field_a));
             var28 = SoftwareRasterizer.field_a;
             var2 = SoftwareRasterizer.field_j;
             var3 = SoftwareRasterizer.field_f;
@@ -89,18 +89,18 @@ final class eb {
             var12 = new Sprite(195, 221);
             var6 = var12.field_u / 2;
             var12.e();
-            gi.field_b.b(fb.a(NetworkArchiveRequest.field_x, -103, new String[]{t.field_q}), var6, 40, 16777215, -1);
-            ah.field_d.b(fb.a(ic.field_c, 118, new String[]{t.field_q}), var6, 60, 16777215, -1);
-            gi.field_b.b(fb.a(vk.field_t, 118, new String[]{ClientException.field_c}), var6, 110, 16777215, -1);
-            ah.field_d.b(fb.a(vg.field_a, -15, new String[]{ClientException.field_c}), var6, 130, 16777215, -1);
-            gi.field_b.b(be.field_a, var6, 180, 16777215, -1);
-            ah.field_d.b(lj.field_a, var6, 200, 16777215, -1);
+            gi.field_b.drawCentred(fb.a(NetworkArchiveRequest.field_x, -103, new String[]{t.field_q}), var6, 40, 16777215, -1);
+            ah.field_d.drawCentred(fb.a(ic.field_c, 118, new String[]{t.field_q}), var6, 60, 16777215, -1);
+            gi.field_b.drawCentred(fb.a(vk.field_t, 118, new String[]{ClientException.field_c}), var6, 110, 16777215, -1);
+            ah.field_d.drawCentred(fb.a(vg.field_a, -15, new String[]{ClientException.field_c}), var6, 130, 16777215, -1);
+            gi.field_b.drawCentred(be.field_a, var6, 180, 16777215, -1);
+            ah.field_d.drawCentred(lj.field_a, var6, 200, 16777215, -1);
             hh.a(0, 0, 3, var12.field_v, false, 1, var12, var12.field_u);
             ConfirmedEmailAvailabilityValidator.field_q.e();
             var12.e(18 - ConfirmedEmailAvailabilityValidator.field_q.field_w, -ConfirmedEmailAvailabilityValidator.field_q.field_y + 241);
             for (var7 = 0; var7 < va.field_t.length; var7++) {
               pa.field_I[var7].e();
-              ah.field_d.a(va.field_t[var7], 3, 3, pa.field_I[var7].field_u - 6, pa.field_I[var7].field_v - 6, mc.field_c, -1, 1, 1, ah.field_d.field_p + ah.field_d.field_q);
+              ah.field_d.drawParagraph(va.field_t[var7], 3, 3, pa.field_I[var7].field_u - 6, pa.field_I[var7].field_v - 6, mc.field_c, -1, 1, 1, ah.field_d.field_p + ah.field_d.field_q);
               hh.a(0, 0, 3, pa.field_I[var7].field_v, false, 1, pa.field_I[var7], pa.field_I[var7].field_u);
             }
             va.field_t = null;
@@ -125,8 +125,8 @@ final class eb {
             var3Lifetime1 = SoftwareRasterizer.field_f;
             SoftwareRasterizer.saveClip(wc.field_b);
             var14 = fb.a(u.field_a, 114, new String[]{kc.field_N[fc.field_c]});
-            var5 = gi.field_b.c(var14, AccountNameAvailabilityValidator.field_k);
-            var6Lifetime1 = gi.field_b.a(var14, AccountNameAvailabilityValidator.field_k, gi.field_b.field_p + gi.field_b.field_q);
+            var5 = gi.field_b.maxLineWidth(var14, AccountNameAvailabilityValidator.field_k);
+            var6Lifetime1 = gi.field_b.textHeight(var14, AccountNameAvailabilityValidator.field_k, gi.field_b.field_p + gi.field_b.field_q);
             var7Lifetime1 = BoundedRandomAccessFile.field_f + (AccountNameAvailabilityValidator.field_k - var5) / 2;
             var5 += 6;
             var7Lifetime1 -= 3;
@@ -172,7 +172,7 @@ final class eb {
             re.field_l.f();
             var9 = new Sprite(re.field_l.field_x, re.field_l.field_q);
             var9.e();
-            gi.field_b.a(var14, BoundedRandomAccessFile.field_f, ResourceArchive.field_e, AccountNameAvailabilityValidator.field_k, BufferedRandomAccessFile.field_p, 16777215, -1, 1, 1, gi.field_b.field_q + gi.field_b.field_p);
+            gi.field_b.drawParagraph(var14, BoundedRandomAccessFile.field_f, ResourceArchive.field_e, AccountNameAvailabilityValidator.field_k, BufferedRandomAccessFile.field_p, 16777215, -1, 1, 1, gi.field_b.field_q + gi.field_b.field_p);
             hh.a(0, 0, 3, var9.field_q, false, 1, var9, var9.field_x);
             re.field_l.e();
             var9.e(0, 0);
@@ -194,7 +194,7 @@ final class eb {
             var17 = fb.a(jh.field_f, -115, new String[]{ArchiveRequest.field_q});
             ArchiveRequest.field_q = null;
             var16.e();
-            ah.field_d.a(var17, 3, 3, var16.field_u - 6, var16.field_v - 6, 16777215, -1, 0, 1, ah.field_d.field_q + ah.field_d.field_p);
+            ah.field_d.drawParagraph(var17, 3, 3, var16.field_u - 6, var16.field_v - 6, 16777215, -1, 0, 1, ah.field_d.field_q + ah.field_d.field_p);
             hh.a(0, 0, 3, var16.field_v, false, 1, var16, var16.field_u);
             ba.field_c.e();
             var16.e(-ba.field_c.field_w + 199, 83 - ba.field_c.field_y);
@@ -207,12 +207,12 @@ final class eb {
             var2Lifetime3 = SoftwareRasterizer.field_j;
             var3Lifetime3 = SoftwareRasterizer.field_f;
             SoftwareRasterizer.saveClip(wc.field_b);
-            var4 = ah.field_d.c(se.field_t, 640) + 6;
+            var4 = ah.field_d.maxLineWidth(se.field_t, 640) + 6;
             var5Lifetime1 = 20 + (ja.field_e.field_x + var4);
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
             var7Lifetime2 = 20 + (var6Lifetime2 + ja.field_e.field_x);
             ba.field_c.e();
-            ah.field_d.a(se.field_t, -ba.field_c.field_w + var7Lifetime2, ah.field_d.field_q + ah.field_d.field_p + (155 - ba.field_c.field_y), 16777215, -1);
+            ah.field_d.drawString(se.field_t, -ba.field_c.field_w + var7Lifetime2, ah.field_d.field_q + ah.field_d.field_p + (155 - ba.field_c.field_y), 16777215, -1);
             hh.a(-4 + (var7Lifetime2 - ba.field_c.field_w), 155 - ba.field_c.field_y, 3, 50, false, 1, ba.field_c, var4);
             var8Lifetime1 = 155 - (ba.field_c.field_y + (-ah.field_d.field_q + (ja.field_e.field_q + (-3 - ah.field_d.field_p))) / 2);
             ja.field_e.e(var6Lifetime2 - ba.field_c.field_w, var8Lifetime1);

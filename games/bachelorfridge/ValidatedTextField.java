@@ -88,7 +88,7 @@ final class ValidatedTextField extends TextInputWidget implements FieldValidator
         }
     }
 
-    final void a(int param0, FieldValidator param1) {
+    final void setFieldValidator(int param0, FieldValidator param1) {
         try {
           if (param0 != 7) {
             this.getFieldValidator(-10);

@@ -110,7 +110,7 @@ final class db extends vk implements ga {
     final void a(int param0, int param1, byte param2, int param3) {
         int var5 = param1 + this.field_s;
         int var6 = this.field_j + param3;
-        nb.field_c.a(ec.field_c, 20 + var5, var6 + 20, -40 + this.field_i, this.field_f - 50, 16777215, -1, 1, 0, nb.field_c.field_p);
+        nb.field_c.drawParagraph(ec.field_c, 20 + var5, var6 + 20, -40 + this.field_i, this.field_f - 50, 16777215, -1, 1, 0, nb.field_c.field_p);
         super.a(param0, param1, param2, param3);
     }
 

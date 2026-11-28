@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class v {
-    vm field_i;
+    BitmapFont field_i;
     private int field_b;
     static int field_g;
     int field_l;
@@ -92,7 +92,7 @@ final class v {
         if (param0 != 16) {
           return;
         }
-        int var2 = this.field_i.b(this.field_k, this.field_m, this.field_b);
+        int var2 = this.field_i.textHeight(this.field_k, this.field_m, this.field_b);
         this.field_h = var2;
     }
 
@@ -215,7 +215,7 @@ final class v {
           var6 = 0;
           if (var6 != 0) {
             ni.a(-87, 16 + var4, 256, -8 + var3, var5 + 16, -8 + var2);
-            this.field_i.a(this.field_k, var2, -6 + var3, var4, var5, this.field_c, -1, 0, 1, this.field_b);
+            this.field_i.drawParagraph(this.field_k, var2, -6 + var3, var4, var5, this.field_c, -1, 0, 1, this.field_b);
           }
           if (!this.field_e) {
             return var6 != 0;
@@ -227,7 +227,7 @@ final class v {
           var6 = 0;
           if (var6 != 0) {
             ni.a(-87, 16 + var4, 256, -8 + var3, var5 + 16, -8 + var2);
-            this.field_i.a(this.field_k, var2, -6 + var3, var4, var5, this.field_c, -1, 0, 1, this.field_b);
+            this.field_i.drawParagraph(this.field_k, var2, -6 + var3, var4, var5, this.field_c, -1, 0, 1, this.field_b);
           }
           if (!this.field_e) {
             return var6 != 0;
@@ -239,7 +239,7 @@ final class v {
           var6 = 0;
           if (var6 != 0) {
             ni.a(-87, 16 + var4, 256, -8 + var3, var5 + 16, -8 + var2);
-            this.field_i.a(this.field_k, var2, -6 + var3, var4, var5, this.field_c, -1, 0, 1, this.field_b);
+            this.field_i.drawParagraph(this.field_k, var2, -6 + var3, var4, var5, this.field_c, -1, 0, 1, this.field_b);
           }
           if (!this.field_e) {
             return var6 != 0;
@@ -251,7 +251,7 @@ final class v {
           var6 = 0;
           if (var6 != 0) {
             ni.a(-87, 16 + var4, 256, -8 + var3, var5 + 16, -8 + var2);
-            this.field_i.a(this.field_k, var2, -6 + var3, var4, var5, this.field_c, -1, 0, 1, this.field_b);
+            this.field_i.drawParagraph(this.field_k, var2, -6 + var3, var4, var5, this.field_c, -1, 0, 1, this.field_b);
           }
           if (!this.field_e) {
             return var6 != 0;
@@ -261,7 +261,7 @@ final class v {
         }
         if (var6 != 0) {
           ni.a(-87, 16 + var4, 256, -8 + var3, var5 + 16, -8 + var2);
-          this.field_i.a(this.field_k, var2, -6 + var3, var4, var5, this.field_c, -1, 0, 1, this.field_b);
+          this.field_i.drawParagraph(this.field_k, var2, -6 + var3, var4, var5, this.field_c, -1, 0, 1, this.field_b);
         }
         if (!this.field_e) {
           return var6 != 0;
@@ -279,7 +279,7 @@ final class v {
         this.field_e = false;
         this.field_c = 16776960;
         this.field_b = 15;
-        this.field_i = (vm) ((Object) al.field_Z);
+        this.field_i = (BitmapFont) ((Object) al.field_Z);
         this.field_a = 0;
         try {
           this.field_m = param3;

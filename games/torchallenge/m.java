@@ -146,10 +146,10 @@ final class m {
               var1_int = var1_int + ai.field_a;
             }
             if (var4 >= 0) {
-              ec.field_c.c(var6, var8Lifetime1, re.field_A + var1_int, var5, -1);
+              ec.field_c.drawString(var6, var8Lifetime1, re.field_A + var1_int, var5, -1);
               var1_int = var1_int + (IntrusiveDeque.field_f + (ai.field_a + uc.field_Y));
             } else {
-              pf.field_c.c(var6, var8Lifetime1, var1_int + hb.field_d, var5, -1);
+              pf.field_c.drawString(var6, var8Lifetime1, var1_int + hb.field_d, var5, -1);
               var1_int = var1_int + ok.field_e;
             }
           }
@@ -197,11 +197,11 @@ final class m {
             }
             IntrusiveNode.a(var1[1], var1[2], var1[8] + var1[6], param0 ^ -26, var1[3], var3, var9);
           }
-          UiComponent.field_s = tf.field_x.a(we.field_c[12][0]);
+          UiComponent.field_s = tf.field_x.stringWidth(we.field_c[12][0]);
           if (param0 != -98) {
             field_j = (DisplayNameSelectionPanel) null;
           }
-          var3Lifetime1 = tf.field_x.a(we.field_c[13][0]);
+          var3Lifetime1 = tf.field_x.stringWidth(we.field_c[13][0]);
           if (UiComponent.field_s < var3Lifetime1) {
             UiComponent.field_s = var3Lifetime1;
           }

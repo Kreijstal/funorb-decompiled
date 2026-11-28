@@ -6,7 +6,7 @@ class h implements WidgetRenderer, m {
     int field_a;
     private int field_m;
     int field_g;
-    kg field_i;
+    BitmapFont field_i;
     int field_b;
     int field_e;
     int field_k;
@@ -26,7 +26,7 @@ class h implements WidgetRenderer, m {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            this.field_i = (kg) null;
+            this.field_i = (BitmapFont) null;
           }
           this.a(param1, -2);
           stackIn_3_0 = param1.field_i.b((byte) 113) - (-this.field_h - this.field_k);
@@ -57,7 +57,7 @@ class h implements WidgetRenderer, m {
         }
     }
 
-    h(kg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    h(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -599,19 +599,19 @@ class h implements WidgetRenderer, m {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_i.c(this.c(param2, param3 ^ -108), this.a(239, param2, param1, param6) + (var9_int >> 1), var11 + this.a(param2, (byte) 123, param5, param0), param4, param7);
+                this.field_i.drawCentred(this.c(param2, param3 ^ -108), this.a(239, param2, param1, param6) + (var9_int >> 1), var11 + this.a(param2, (byte) 123, param5, param0), param4, param7);
               } else {
                 if ((2 == var12Lifetime1)) {
-                  this.field_i.a(this.c(param2, 60), this.a(239, param2, param1, param6) + var9_int, var11 + this.a(param2, (byte) 122, param5, param0), param4, param7);
+                  this.field_i.drawRightAligned(this.c(param2, 60), this.a(239, param2, param1, param6) + var9_int, var11 + this.a(param2, (byte) 122, param5, param0), param4, param7);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_i.b(this.c(param2, 92), this.a(239, param2, param1, param6), var11 + this.a(param2, (byte) 121, param5, param0), param4, param7);
+              this.field_i.drawString(this.c(param2, 92), this.a(239, param2, param1, param6), var11 + this.a(param2, (byte) 121, param5, param0), param4, param7);
             }
           } else {
-            this.field_i.a(this.c(param2, 108), this.a(239, param2, param1, param6), this.a(param2, (byte) 123, param5, param0), var9_int, var10, param4, param7, this.field_b, this.field_a, this.field_e);
+            this.field_i.drawParagraph(this.c(param2, 108), this.a(239, param2, param1, param6), this.a(param2, (byte) 123, param5, param0), var9_int, var10, param4, param7, this.field_b, this.field_a, this.field_e);
           }
           fi.c(true);
           return;
@@ -697,7 +697,7 @@ class h implements WidgetRenderer, m {
     protected h() {
     }
 
-    h(kg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    h(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_j = param12 ? true : false;
           this.field_i = param0;

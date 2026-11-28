@@ -29,11 +29,11 @@ abstract class SocketConnector {
         return new java.net.Socket(this.host, this.port);
     }
 
-    final static li a(int param0, int param1, int param2, ResourceArchive param3, ResourceArchive param4) {
+    final static CoverageBitmapFont a(int param0, int param1, int param2, ResourceArchive param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         ResourceArchive var6 = null;
         Object stackIn_4_0 = null;
-        li stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -50,7 +50,7 @@ abstract class SocketConnector {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (li) (stackIn_4_0);
+          return (CoverageBitmapFont) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

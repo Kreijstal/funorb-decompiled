@@ -271,10 +271,10 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final static ud a(Archive param0, int param1, Archive param2, int param3, int param4) {
+    final static BinaryBitmapFont a(Archive param0, int param1, Archive param2, int param3, int param4) {
         RuntimeException var5 = null;
         String var6 = null;
-        ud stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -487,7 +487,7 @@ final class MidiPcmStream extends PcmStream {
             param1 == var3.field_v) {
             if (null != var3.field_k) {
               var3.field_k.c(PcmPlayerService.field_u / 100);
-              if (var3.field_k.k()) {
+              if (var3.field_k.hasRemainingRampFrames()) {
                 this.field_t.field_m.a(var3.field_k);
               }
               var3.c((byte) -111);
@@ -562,9 +562,9 @@ final class MidiPcmStream extends PcmStream {
         var8.field_G = 0;
         var8.field_h = -1;
         if (this.field_S[param2] == 0) {
-          var8.field_k = PcmSampleStream.a(var7, this.a((byte) 92, var8), this.a(var8, (byte) -49), this.a(true, var8));
+          var8.field_k = PcmSampleStream.createForSampleStep(var7, this.a((byte) 92, var8), this.a(var8, (byte) -49), this.a(true, var8));
         } else {
-          var8.field_k = PcmSampleStream.a(var7, this.a((byte) 78, var8), 0, this.a(true, var8));
+          var8.field_k = PcmSampleStream.createForSampleStep(var7, this.a((byte) 78, var8), 0, this.a(true, var8));
           stackIn_17_1 = !(var11.field_p[param1] >= 0);
           this.a(stackIn_17_1, var8, 120);
         }
@@ -790,7 +790,7 @@ final class MidiPcmStream extends PcmStream {
         try {
           param3.field_y = PcmPlayerService.field_u / 100;
           if (0 <= param3.field_h && (null == param3.field_k ||
-            param3.field_k.i())) {
+            param3.field_k.isSamplePositionOutOfRange())) {
             param3.c((byte) -120);
             param3.unlink((byte) 12);
             if (param3.field_C > 0) {
@@ -812,7 +812,7 @@ final class MidiPcmStream extends PcmStream {
             }
             param3.field_u = var6_int;
           }
-          param3.field_k.f(this.a((byte) 72, param3));
+          param3.field_k.setSampleStepMagnitude(this.a((byte) 72, param3));
           var7 = param3.field_m;
           var8 = 0;
           param3.field_l = param3.field_l + 1;
@@ -867,7 +867,7 @@ final class MidiPcmStream extends PcmStream {
             }
           }
           if (var8 == 0) {
-            param3.field_k.a(param3.field_y, this.a(param3, (byte) -49), this.a(true, param3));
+            param3.field_k.rampVolumeAndPan(param3.field_y, this.a(param3, (byte) -49), this.a(true, param3));
             return false;
           }
           param3.field_k.c(param3.field_y);
@@ -876,7 +876,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             param3.field_k.mixInto(param1, param4, param2);
           }
-          if (param3.field_k.k()) {
+          if (param3.field_k.hasRemainingRampFrames()) {
             this.field_t.field_m.a(param3.field_k);
           }
           param3.c((byte) -120);
@@ -941,13 +941,13 @@ final class MidiPcmStream extends PcmStream {
             var4_int = var4_int << 8;
             var5 = (int)((long)this.field_S[param1.field_v] * (long)var6 >> 6);
             if (var5 >= var4_int) {
-              param1.field_k.a(true);
+              param1.field_k.setReversePlayback(true);
               var5 = -var5 + (-1 + (var4_int + var4_int));
             }
           } else {
             var5 = (int)((long)var4_int * (long)this.field_S[param1.field_v] >> 6);
           }
-          param1.field_k.d(var5);
+          param1.field_k.setSamplePositionFixed(var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

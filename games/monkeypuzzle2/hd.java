@@ -104,7 +104,7 @@ final class hd extends a {
           if (param4 <= 19) {
             return;
           }
-          this.field_p.a(param1.field_s, param1.field_r + param3, param2 + (param1.field_e - 2), param1.field_l, param1.field_p, var8, -1, 1, 1, this.field_p.field_C);
+          this.field_p.drawParagraph(param1.field_s, param1.field_r + param3, param2 + (param1.field_e - 2), param1.field_l, param1.field_p, var8, -1, 1, 1, this.field_p.field_C);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -60,7 +60,7 @@ final class ri {
         dc.d(115);
     }
 
-    final static int a(String[] args, int param1, String param2, ok param3, int param4) {
+    final static int a(String[] args, int param1, String param2, BitmapFont param3, int param4) {
         int var10 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -88,7 +88,7 @@ final class ri {
         int var6Lifetime1;
         var14 = Confined.field_J ? 1 : 0;
         try {
-          var5_int = param3.c(param2);
+          var5_int = param3.stringWidth(param2);
           if (param4 >= var5_int &&
             param2.indexOf("<br>") == -1) {
             args[0] = param2;
@@ -106,7 +106,7 @@ final class ri {
             if (var11 == 32 ||
               45 == var11) {
               var12 = param2.substring(var8, var10 + 1).trim();
-              var13 = param3.c(var12);
+              var13 = param3.stringWidth(var12);
               if (param4 <= var13) {
                 var8 = var10 + 1;
                 incrementValue$1 = var6Lifetime1;

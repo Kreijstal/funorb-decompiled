@@ -4,7 +4,7 @@
 final class ek implements WidgetRenderer {
     static int field_g;
     static int[] field_c;
-    private kg field_f;
+    private BitmapFont field_f;
     private int field_b;
     static rc field_a;
     static int field_e;
@@ -84,8 +84,8 @@ final class ek implements WidgetRenderer {
     }
 
     final static void a(int param0) {
-        DisplayNameSelectionPanel.field_z = IntrusiveNode.field_d.a(de.field_c[12]);
-        int var1 = IntrusiveNode.field_d.a(de.field_c[13]);
+        DisplayNameSelectionPanel.field_z = IntrusiveNode.field_d.stringWidth(de.field_c[12]);
+        int var1 = IntrusiveNode.field_d.stringWidth(de.field_c[13]);
         if (DisplayNameSelectionPanel.field_z < var1) {
           DisplayNameSelectionPanel.field_z = var1;
         }
@@ -199,9 +199,9 @@ final class ek implements WidgetRenderer {
           }
           var6_int = stackIn_5_0;
           var7 = -107 / ((51 - param3) / 47);
-          this.field_f.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_k + "</u>", param0 + param4.field_p, param4.field_n + param1, param4.field_l, param4.field_h, var6_int, -1, this.field_b, this.field_d, this.field_f.field_y + this.field_f.field_t);
+          this.field_f.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_k + "</u>", param0 + param4.field_p, param4.field_n + param1, param4.field_l, param4.field_h, var6_int, -1, this.field_b, this.field_d, this.field_f.field_y + this.field_f.field_t);
           if (param4.b((byte) 50)) {
-            var8 = this.field_f.a(param4.field_k);
+            var8 = this.field_f.stringWidth(param4.field_k);
             var9 = this.field_f.field_t + this.field_f.field_y;
             var10 = param0 + param4.field_p;
             var11 = param1 + param4.field_n;
@@ -242,7 +242,7 @@ final class ek implements WidgetRenderer {
         this.field_f = vd.field_h;
     }
 
-    ek(kg param0, int param1, int param2) {
+    ek(BitmapFont param0, int param1, int param2) {
         try {
           this.field_d = param2;
           this.field_b = param1;

@@ -11,7 +11,7 @@ public final class Confined extends i {
     static boolean field_L;
     public static boolean field_J;
 
-    final void c(int param0) {
+    final void clearClientResources(int param0) {
         RuntimeException runtimeException = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -95,7 +95,7 @@ public final class Confined extends i {
           un.d(param0 - 191);
           StageDirector.clearStaticReferences(14293);
           wd.b(param0 - 17957);
-          ok.clearStaticReferences();
+          BitmapFont.clearStaticReferences();
           ld.clearStaticReferences(0);
           nl.a(false);
           PcmOutputWorker.clearStaticReferences(param0 - 135);
@@ -313,7 +313,7 @@ public final class Confined extends i {
         }
     }
 
-    final void f(int param0) {
+    final void initializeClient(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -339,7 +339,7 @@ public final class Confined extends i {
         }
     }
 
-    final void e(int param0) {
+    final void updateClient(int param0) {
         int stackIn_11_1 = 0;
         boolean stackIn_12_2 = false;
         RuntimeException decompiledCaughtException = null;
@@ -418,7 +418,7 @@ public final class Confined extends i {
             }
           }
           if (param0 != -1) {
-            this.h(-18);
+            this.renderClientFrame(-18);
           }
           if (!wg.field_b &&
             qn.field_v != null) {
@@ -435,10 +435,10 @@ public final class Confined extends i {
     public Confined() {
     }
 
-    final void h(int param0) {
+    final void renderClientFrame(int param0) {
         Object stackIn_5_0 = null;
         int stackIn_9_0 = 0;
-        ce stackIn_55_0 = null;
+        BinaryBitmapFont stackIn_55_0 = null;
         String[] stackIn_55_1 = null;
         String stackIn_56_2 = null;
         int stackIn_67_0 = 0;
@@ -528,7 +528,7 @@ public final class Confined extends i {
                 (null == qn.field_v.field_Q) &&
                 (!of.field_a) &&
                 ((id.field_rb & 32) == 0)) {
-                TunnelCamera.field_I.b(ng.field_a, 320, 40, 7381104, -1);
+                TunnelCamera.field_I.drawCentred(ng.field_a, 320, 40, 7381104, -1);
                 if (var23 != 0) {
                   var4 = (int)(-qn.field_v.field_B.field_D + qn.field_v.field_x.field_r[qn.field_v.field_x.field_t]) + 1;
                   stackIn_55_0 = TunnelCamera.field_I;
@@ -538,7 +538,7 @@ public final class Confined extends i {
                   } else {
                     stackIn_56_2 = AccountRequestState.field_d;
                   }
-                  ((ce) (Object) stackIn_55_0).b(b.a(stackIn_55_1, stackIn_56_2, param0 - 50023), 320, 40, 16777215, -1);
+                  ((BinaryBitmapFont) (Object) stackIn_55_0).drawCentred(b.a(stackIn_55_1, stackIn_56_2, param0 - 50023), 320, 40, 16777215, -1);
                 }
               }
             } else {
@@ -550,7 +550,7 @@ public final class Confined extends i {
               } else {
                 stackIn_56_2 = AccountRequestState.field_d;
               }
-              ((ce) (Object) stackIn_55_0).b(b.a(stackIn_55_1, stackIn_56_2, param0 - 50023), 320, 40, 16777215, -1);
+              ((BinaryBitmapFont) (Object) stackIn_55_0).drawCentred(b.a(stackIn_55_1, stackIn_56_2, param0 - 50023), 320, 40, 16777215, -1);
             }
           }
           if (ef.field_tb >= 0) {
@@ -636,16 +636,16 @@ public final class Confined extends i {
           }
           if (hc.field_u != null &&
             (KeyboardInput.field_f & 32) == 0) {
-            pn.field_a.a(hc.field_u, 632, 364, 16777215, -1);
+            pn.field_a.drawRightAligned(hc.field_u, 632, 364, 16777215, -1);
           }
           if (of.field_a &&
             0 == (32 & we.field_a)) {
-            TunnelCamera.field_I.b(qk.field_b, 320, 196, 16777215, -1);
+            TunnelCamera.field_I.drawCentred(qk.field_b, 320, 196, 16777215, -1);
           }
           if (pa.field_b >= 0 &&
             0 == (32 & pa.field_b)) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 376, 16711680, 32);
-            TunnelCamera.field_I.b(fg.field_nb, 320, 76, 16744576, -1);
+            TunnelCamera.field_I.drawCentred(fg.field_nb, 320, 76, 16744576, -1);
           }
           boolean decompiledFrameRemainder1 = true;
           SoftwareRasterizer.field_l = 480;
@@ -724,11 +724,11 @@ public final class Confined extends i {
                 ol.a(592, param0 - 20587, qn.field_v.field_B.field_yb, 9, 384);
                 var4 = -gd.field_t[1].field_t + 544;
                 gd.field_t[1].d(var4, 386);
-                var4 = -2 + var4 - pn.field_a.c(ca.field_q);
-                pn.field_a.c(ca.field_q, var4, 398, 16777215, -1);
+                var4 = -2 + var4 - pn.field_a.stringWidth(ca.field_q);
+                pn.field_a.drawString(ca.field_q, var4, 398, 16777215, -1);
                 var4 = -3 + (var4 - gd.field_t[0].field_t);
                 gd.field_t[0].d(var4, 386);
-                pn.field_a.a(ll.field_c, 521, 422, 16777215, -1);
+                pn.field_a.drawRightAligned(ll.field_c, 521, 422, 16777215, -1);
                 var4 = qn.field_v.field_J.field_o;
                 decompiledFrameRemainder0 = !(qn.field_v.field_x.field_t <= 0);
                 if (decompiledFrameRemainder0) {
@@ -740,16 +740,16 @@ public final class Confined extends i {
                 var4--;
               }
               if (var4 > 0) {
-                pn.field_a.a(Integer.toString(var4), 543, 422, 16777215, -1);
+                pn.field_a.drawRightAligned(Integer.toString(var4), 543, 422, 16777215, -1);
               }
-              pn.field_a.a(jn.field_O, 521, 446, 16777215, -1);
+              pn.field_a.drawRightAligned(jn.field_O, 521, 446, 16777215, -1);
               var4 = (int)(qn.field_v.field_l + qn.field_v.field_B.field_D);
               if (var4 < 0) {
                 var4 = 0;
               }
-              pn.field_a.a(Integer.toString(var4), 631, 446, 16777215, -1);
-              pn.field_a.a(CipherPacketBuffer.field_s, 521, 470, 16777215, -1);
-              pn.field_a.a(Integer.toString(qn.field_v.field_h), 631, 470, 16777215, -1);
+              pn.field_a.drawRightAligned(Integer.toString(var4), 631, 446, 16777215, -1);
+              pn.field_a.drawRightAligned(CipherPacketBuffer.field_s, 521, 470, 16777215, -1);
+              pn.field_a.drawRightAligned(Integer.toString(qn.field_v.field_h), 631, 470, 16777215, -1);
               DirectByteStorage.a(0, 176, (byte) 118, qn.field_v.field_B.field_Bb.field_d);
               DirectByteStorage.a(1, 208, (byte) -56, qn.field_v.field_B.field_Hb);
               if (null == qn.field_v.field_Q) {
@@ -844,7 +844,7 @@ public final class Confined extends i {
             ca.a(ExpandingPulseProjectile.field_cb, -1856653215);
             Bzip2State.a((byte) -102);
             jc.a(ij.field_o, param0 ^ -10312, 50.0f);
-            this.h(param0 ^ -51295);
+            this.renderClientFrame(param0 ^ -51295);
             IsaacRandom.field_d = od.a(ka.field_N, "", "player/ship");
             var2_double = 0.3 / (double)IsaacRandom.field_d.b(153);
             jb.a((byte) -100, var2_double, me.field_J);
@@ -871,7 +871,7 @@ public final class Confined extends i {
           }
           if (null == e.field_a) {
             jc.a(ij.field_o, 10265, 53.0f);
-            this.h(51200);
+            this.renderClientFrame(51200);
             e.field_a = od.a(ka.field_N, "", "missiles/concussion");
             e.field_a.b(204);
             WingPod.field_Y = od.a(ka.field_N, "", "missiles/homing");
@@ -962,7 +962,7 @@ public final class Confined extends i {
           }
           if (li.field_m == null) {
             jc.a(ch.field_b, 10265, 56.0f);
-            this.h(51200);
+            this.renderClientFrame(51200);
             ng.a(PasswordValidator.field_j, -15518, GameCanvas.field_a);
             li.field_m = new sg(0);
             return;
@@ -972,7 +972,7 @@ public final class Confined extends i {
           }
           if (null != GameCanvas.field_a) {
             jc.a(ch.field_b, 10265, 56.0f);
-            this.h(51200);
+            this.renderClientFrame(51200);
             var2_int = 0;
             scanLoop1: while (true) {
               if (var2_int < 4) {
@@ -1013,7 +1013,7 @@ public final class Confined extends i {
           }
           if (pn.field_a == null) {
             jc.a(wl.field_a, 10265, 60.0f);
-            this.h(51200);
+            this.renderClientFrame(51200);
             db.field_w = nm.a(ih.field_d, "achievements", param0 + 96, "");
             kn.field_g = dh.a(false, "unachieved", "basic", pb.field_e);
             var2_ref = dh.a(false, "orbcoin", "basic", pb.field_e);
@@ -1029,20 +1029,20 @@ public final class Confined extends i {
             uc.field_U = nm.a(ih.field_d, "shields_enemy_small", 1, "");
             DiskCacheWorker.field_e = nm.a(ih.field_d, "shields_enemy_large", param0 + 96, "");
             jc.a(wl.field_a, 10265, 63.0f);
-            this.h(51200);
+            this.renderClientFrame(51200);
             pn.field_l = nm.a(ih.field_d, "shields_invincible_state", 1, "");
             dl.field_d = f.a(8364, pn.field_l, 96);
             jc.a(wl.field_a, 10265, 66.0f);
-            this.h(51200);
+            this.renderClientFrame(51200);
             s.field_M = nm.a(ih.field_d, "shields_invincible_flash_small", 1, "");
             ue.field_u = f.a(8364, s.field_M, 96);
             qd.field_c = nm.a(ih.field_d, "shields_invincible_flash_large", 1, "");
             jc.a(wl.field_a, 10265, 70.0f);
-            this.h(51200);
+            this.renderClientFrame(51200);
             TunnelEntity.field_w = nm.a(ih.field_d, "powerup_sphere", 1, "");
             m.field_i = nm.a(ih.field_d, "powerup_icons", 1, "");
             jc.a(wl.field_a, 10265, 73.0f);
-            this.h(51200);
+            this.renderClientFrame(51200);
             uc.field_db = new RgbSprite[14];
             var3 = 0;
             do {
@@ -1051,7 +1051,7 @@ public final class Confined extends i {
                 rm.field_K = dh.a(false, "power_shot", "", ih.field_d);
                 qe.field_O = nm.a(ih.field_d, "enemy_shot", 1, "");
                 jc.a(wl.field_a, 10265, 76.0f);
-                this.h(51200);
+                this.renderClientFrame(51200);
                 ImageProducerRasterBuffer.field_o = nm.a(ih.field_d, "charge_cannon_blast", 1, "");
                 wb.field_a = dh.a(false, "missile_flame", "", ih.field_d);
                 IntrusiveDeque.field_c = dh.a(false, "interface", "", ih.field_d);
@@ -1066,7 +1066,7 @@ public final class Confined extends i {
                 MatchingFieldValidator.field_j = dh.a(false, "arrow_keys", "", ih.field_d);
                 fa.field_U = dh.a(false, "mouse", "", ih.field_d);
                 jc.a(wl.field_a, 10265, 80.0f);
-                this.h(51200);
+                this.renderClientFrame(51200);
                 break;
               }
               uc.field_db[var3] = dh.a(false, "explosion_" + var3, "", ih.field_d);
@@ -1090,7 +1090,7 @@ public final class Confined extends i {
           }
           if (di.field_a == null) {
             jc.a(jb.field_r, param0 + 10360, 83.0f);
-            this.h(param0 ^ -51295);
+            this.renderClientFrame(param0 ^ -51295);
             tk.field_c[0] = fk.a(jd.field_b, "", "saucer-ambient").a();
             tk.field_c[1] = fk.a(jd.field_b, "", "saucer-ambient-2").a();
             tk.field_c[2] = fk.a(jd.field_b, "", "saucer-ambient-3").a();
@@ -1137,7 +1137,7 @@ public final class Confined extends i {
           }
           if (null == rd.field_Hb) {
             jc.a(jb.field_r, 10265, 86.0f);
-            this.h(51200);
+            this.renderClientFrame(51200);
             rd.field_Hb = fk.a(jd.field_b, "", "normal-mine-dropped").a();
             gi.field_eb = fk.a(jd.field_b, "", "cluster-mine-dropped").a();
             da.field_g = fk.a(jd.field_b, "", "normal-mine-explode").a();
@@ -1179,7 +1179,7 @@ public final class Confined extends i {
           }
           if (ol.field_c == null) {
             jc.a(jb.field_r, 10265, 90.0f);
-            this.h(51200);
+            this.renderClientFrame(51200);
             ResourceArchive.field_b[0] = fk.a(jd.field_b, "", "boss-sphere-ambient").a();
             ResourceArchive.field_b[1] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-cube-ambient").b();
             ResourceArchive.field_b[2] = fk.a(jd.field_b, "", "boss-bird-ambient").a();
@@ -1193,7 +1193,7 @@ public final class Confined extends i {
             lk.field_e[2] = fk.a(jd.field_b, "", "boss-bird-explode").a();
             lk.field_e[3] = fk.a(jd.field_b, "", "boss-humanoid-explode").a();
             jc.a(jb.field_r, 10265, 93.0f);
-            this.h(51200);
+            this.renderClientFrame(51200);
             EmailFormatValidator.field_j[1] = fk.a(jd.field_b, "", "boss-cube-arm").a();
             EmailFormatValidator.field_j[2] = fk.a(jd.field_b, "", "boss-bird-arm").a();
             EmailFormatValidator.field_j[3] = fk.a(jd.field_b, "", "boss-humanoid-arm").a();
@@ -1205,7 +1205,7 @@ public final class Confined extends i {
           }
           if (GameAppletShell.field_c == null) {
             jc.a(qh.field_u, 10265, 96.0f);
-            this.h(51200);
+            this.renderClientFrame(51200);
             var2 = new m(jd.field_b, AccountCreationResultPanel.field_Bb);
             AccountCreationResultPanel.field_Bb = null;
             jd.field_b = null;
@@ -1224,13 +1224,13 @@ public final class Confined extends i {
           DampedProjectile.a((byte) -35, 50);
           ti.a(0, 0, 640, 376);
           ti.b(ua.a(true));
-          ni.field_a = RawPcmStream.b(rj.field_b, 100, 0);
+          ni.field_a = RawPcmStream.createForPlaybackRate(rj.field_b, 100, 0);
           ni.field_a.c(-1);
           cb.field_a.a(ni.field_a);
-          SectorCacheStore.field_f = RawPcmStream.b(rj.field_b, 47, 0);
+          SectorCacheStore.field_f = RawPcmStream.createForPlaybackRate(rj.field_b, 47, 0);
           SectorCacheStore.field_f.c(-1);
           cb.field_a.a(SectorCacheStore.field_f);
-          da.field_j = RawPcmStream.b(rj.field_b, 29, 0);
+          da.field_j = RawPcmStream.createForPlaybackRate(rj.field_b, 29, 0);
           da.field_j.c(-1);
           cb.field_a.a(da.field_j);
           qn.field_v = new GameSession();
@@ -1295,7 +1295,7 @@ public final class Confined extends i {
         }
     }
 
-    final void d(int param0) {
+    final void disposeClient(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {

@@ -9,7 +9,7 @@ final class bo {
     private CachedArchiveSource[] field_f;
     private java.math.BigInteger field_j;
     static int field_d;
-    static uc field_e;
+    static BitmapFont field_e;
     static IntrusiveDeque field_l;
     private PacketBuffer field_h;
     static String field_i;

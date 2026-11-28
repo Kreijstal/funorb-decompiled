@@ -6,7 +6,7 @@ final class c extends sc {
     private int field_m;
     private int field_n;
     private boolean field_q;
-    private ok field_l;
+    private BitmapFont field_l;
     private int field_p;
     static rf field_s;
     static int field_t;
@@ -14,7 +14,7 @@ final class c extends sc {
     private String field_u;
     private int field_o;
 
-    final void a(int param0, int param1, int param2, String param3, ok param4) {
+    final void a(int param0, int param1, int param2, String param3, BitmapFont param4) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -41,7 +41,7 @@ final class c extends sc {
           this.field_n = 1;
           this.field_q = true;
           var6 = this.a(param2, (byte) -123, param4, param3);
-          var7 = param4.c(param3);
+          var7 = param4.stringWidth(param3);
           var6.field_e[0] = param0 - (var7 >> 1);
           var6.field_e[param3.length()] = (var7 >> 1) + param0;
           var8 = -98 % ((param1 - 34) / 43);
@@ -67,7 +67,7 @@ final class c extends sc {
         }
     }
 
-    final void a(int param0, int param1, byte param2, ok param3, String param4) {
+    final void a(int param0, int param1, byte param2, BitmapFont param3, String param4) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -97,7 +97,7 @@ final class c extends sc {
             this.field_o = -118;
           }
           var6.field_e[0] = param1;
-          var6.field_e[param4.length()] = param1 + param3.c(param4);
+          var6.field_e[param4.length()] = param1 + param3.stringWidth(param4);
           pe.a(param3, var6, param4, 0, 3694);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -129,7 +129,7 @@ final class c extends sc {
         }
     }
 
-    private final sd a(int param0, byte param1, ok param2, String param3) {
+    private final sd a(int param0, byte param1, BitmapFont param2, String param3) {
         sd var5 = null;
         RuntimeException var5_ref = null;
         sd stackIn_4_0 = null;
@@ -167,7 +167,7 @@ final class c extends sc {
         }
     }
 
-    final void a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, ok param7) {
+    final void a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7) {
         sd discarded$0 = null;
         sd stackIn_66_0;
         sd stackIn_66_1;
@@ -176,7 +176,7 @@ final class c extends sc {
         sd stackIn_67_0 = null;
         sd stackIn_67_1 = null;
         int stackIn_67_4 = 0;
-        ok stackIn_73_0 = null;
+        BitmapFont stackIn_73_0 = null;
         sd stackIn_73_1 = null;
         String stackIn_73_2 = null;
         int stackIn_74_3;
@@ -201,7 +201,7 @@ final class c extends sc {
             param5 = param7.field_v;
           }
           if (param3 != 3) {
-            discarded$0 = this.a(114, (byte) 78, (ok) null, (String) null);
+            discarded$0 = this.a(114, (byte) 78, (BitmapFont) null, (String) null);
           }
           if (param0 == null) {
             this.field_c = null;
@@ -226,8 +226,8 @@ final class c extends sc {
           this.field_q = false;
           this.field_u = param0;
           this.field_o = param1;
-          var9 = new String[param7.b(param0, param1) + 1];
-          var10 = Math.max(1, param7.a(param0, new int[]{param1}, var9));
+          var9 = new String[param7.lineCount(param0, param1) + 1];
+          var10 = Math.max(1, param7.wrapText(param0, new int[]{param1}, var9));
           if (this.field_p == 3 &&
             var10 == 1) {
             this.field_p = 1;
@@ -283,12 +283,12 @@ final class c extends sc {
             var14 = new sd(stackIn_66_2, stackIn_66_3, stackIn_67_4);
             var14.field_e[0] = 0;
             if (var13 != null) {
-              var14.field_e[var13.length()] = param7.c(var13);
-              stackIn_73_0 = (ok) (param7);
+              var14.field_e[var13.length()] = param7.stringWidth(var13);
+              stackIn_73_0 = (BitmapFont) (param7);
               stackIn_73_1 = var14;
               stackIn_73_2 = var13;
               if (3 == param2) {
-                stackIn_74_3 = this.a(param7.c(var13), param1, param3 ^ 28437, var13);
+                stackIn_74_3 = this.a(param7.stringWidth(var13), param1, param3 ^ 28437, var13);
               } else {
                 stackIn_74_3 = 0;
               }
@@ -361,7 +361,7 @@ final class c extends sc {
         }
     }
 
-    final void a(ok param0, String param1, int param2, int param3, int param4) {
+    final void a(BitmapFont param0, String param1, int param2, int param3, int param4) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -387,7 +387,7 @@ final class c extends sc {
           this.field_q = true;
           this.field_l = param0;
           var6 = this.a(param2, (byte) -93, param0, param1);
-          var6.field_e[0] = -param0.c(param1) + param3;
+          var6.field_e[0] = -param0.stringWidth(param1) + param3;
           if (param4 > -85) {
             this.field_q = true;
           }

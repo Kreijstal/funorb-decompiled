@@ -4,7 +4,7 @@
 final class ce {
     static String field_c;
     static ci field_d;
-    static lh field_a;
+    static BitmapFont field_a;
     static int field_e;
     static pg field_b;
 

@@ -7,7 +7,7 @@ final class GzipDecompressor {
     private java.util.zip.Inflater field_b;
     static long[] field_a;
     static nf field_c;
-    static tj field_d;
+    static BitmapFont field_d;
 
     public GzipDecompressor() {
         this(-1, 1000000, 1000000);

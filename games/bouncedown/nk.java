@@ -21,14 +21,14 @@ final class nk {
           if (param4 != 21641) {
             field_e = (String) null;
           }
-          od.field_f.a(param2, param3 - 2, param0, 0, 0);
-          od.field_f.a(param2, -1 + param3, param0, 0, 0);
-          od.field_f.a(param2, param3, -1 + param0, 0, 0);
-          od.field_f.a(param2, param3 - 1, param0, 0, -1);
-          od.field_f.a(param2, param3, -2 + param0, 0, 0);
-          od.field_f.a(param2, param3 + 2, param0, 0, -1);
-          od.field_f.a(param2, param3, 2 + param0, 0, -1);
-          od.field_f.a(param2, param3, param0, param1, 0);
+          od.field_f.drawCentred(param2, param3 - 2, param0, 0, 0);
+          od.field_f.drawCentred(param2, -1 + param3, param0, 0, 0);
+          od.field_f.drawCentred(param2, param3, -1 + param0, 0, 0);
+          od.field_f.drawCentred(param2, param3 - 1, param0, 0, -1);
+          od.field_f.drawCentred(param2, param3, -2 + param0, 0, 0);
+          od.field_f.drawCentred(param2, param3 + 2, param0, 0, -1);
+          od.field_f.drawCentred(param2, param3, 2 + param0, 0, -1);
+          od.field_f.drawCentred(param2, param3, param0, param1, 0);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "nk.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -42,16 +42,16 @@ final class nk {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          od.field_f.a(param4, -2 + param0, param5, param7, param2, 0, 0, param3, param6, param9);
-          od.field_f.a(param4, param0, param5 - 2, param7, param2, 0, 0, param3, param6, param9);
-          od.field_f.a(param4, -1 + param0, -1 + param5, param7, param2, 0, 0, param3, param6, param9);
-          od.field_f.a(param4, param0, param5, param7, param2, 0, 0, param3, param6, param9);
-          od.field_f.a(param4, 1 + param0, param5 - 1, param7, param2, 0, 0, param3, param6, param9);
+          od.field_f.drawParagraph(param4, -2 + param0, param5, param7, param2, 0, 0, param3, param6, param9);
+          od.field_f.drawParagraph(param4, param0, param5 - 2, param7, param2, 0, 0, param3, param6, param9);
+          od.field_f.drawParagraph(param4, -1 + param0, -1 + param5, param7, param2, 0, 0, param3, param6, param9);
+          od.field_f.drawParagraph(param4, param0, param5, param7, param2, 0, 0, param3, param6, param9);
+          od.field_f.drawParagraph(param4, 1 + param0, param5 - 1, param7, param2, 0, 0, param3, param6, param9);
           if (param8 != 20066) {
             this.field_f = (String) null;
           }
-          od.field_f.a(param4, param0 - 1, param5 + 1, param7, param2, 0, 0, param3, param6, param9);
-          stackIn_3_0 = od.field_f.a(param4, param0, param5, param7, param2, param1, -1, param3, param6, param9);
+          od.field_f.drawParagraph(param4, param0 - 1, param5 + 1, param7, param2, 0, 0, param3, param6, param9);
+          stackIn_3_0 = od.field_f.drawParagraph(param4, param0, param5, param7, param2, param1, -1, param3, param6, param9);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -333,7 +333,7 @@ final class nk {
             }
             jk.field_q = -1;
             for (var5_int = 0; 3 > var5_int; var5_int++) {
-              he.field_n[var5_int].a(true);
+              he.field_n[var5_int].resetSlime(true);
             }
             if (var4 == 2) {
               dupTemp$0 = he.field_n[0];
@@ -368,7 +368,7 @@ final class nk {
               if (var5_int == 5) {
                 var6 = 256;
               }
-              ua.field_c[var5_int].a(33, 0, (double)var6);
+              ua.field_c[var5_int].respawnPlatform(33, 0, (double)var6);
               ua.field_c[var5_int].field_h = (double)(320 + var5_int * 64);
               if (var5_int == 0) {
                 ua.field_c[var5_int].field_b = var4;
@@ -392,9 +392,9 @@ final class nk {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ResourceArchive.field_e.a(param6, param8 + param2, param9, param1, param0, 0, 0, param7, param3, param4);
-          ResourceArchive.field_e.a(param6, param8, -1 + param9, param1, param0, 0, 0, param7, param3, param4);
-          stackIn_1_0 = ResourceArchive.field_e.a(param6, param8, param9, param1, param0, param5, -1, param7, param3, param4);
+          ResourceArchive.field_e.drawParagraph(param6, param8 + param2, param9, param1, param0, 0, 0, param7, param3, param4);
+          ResourceArchive.field_e.drawParagraph(param6, param8, -1 + param9, param1, param0, 0, 0, param7, param3, param4);
+          stackIn_1_0 = ResourceArchive.field_e.drawParagraph(param6, param8, param9, param1, param0, param5, -1, param7, param3, param4);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -538,7 +538,7 @@ final class nk {
           var10 = 120 + (320 - kc.field_c.field_t / 2);
           this.field_l = this.field_l + 8;
           kc.field_c.a(var10, var9 + this.field_l);
-          this.field_l = this.field_l + this.a(60 + (var4 - ResourceArchive.field_e.b(Bounce.field_A[4]) / 2), 16741888, 480, 1, Bounce.field_A[4], this.field_l, 0, var5, param1 - 16721822, 20) * 20;
+          this.field_l = this.field_l + this.a(60 + (var4 - ResourceArchive.field_e.stringWidth(Bounce.field_A[4]) / 2), 16741888, 480, 1, Bounce.field_A[4], this.field_l, 0, var5, param1 - 16721822, 20) * 20;
           if (Slime.field_a == 3) {
             this.field_l = this.field_l - 6;
           }
@@ -549,7 +549,7 @@ final class nk {
           } else {
             re.field_a.a(var10, var9 + this.field_l);
           }
-          this.field_l = this.field_l + this.a(-(ResourceArchive.field_e.b(Bounce.field_A[5]) / 2) + var4 + 60, 16741888, 480, 1, Bounce.field_A[5], this.field_l, 0, var5, 20066, 20) * 20;
+          this.field_l = this.field_l + this.a(-(ResourceArchive.field_e.stringWidth(Bounce.field_A[5]) / 2) + var4 + 60, 16741888, 480, 1, Bounce.field_A[5], this.field_l, 0, var5, 20066, 20) * 20;
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + 12 * this.a(480, 480, -1, 0, 12, 16777215, Bounce.field_A[6], 1, 80, this.field_l);
           if (Slime.field_a == 3) {
@@ -557,7 +557,7 @@ final class nk {
           }
           this.field_l = this.field_l + 22;
           DisplayNameSelectionPanel.field_F.d(var10, var9 + this.field_l, (int)(128.0 + 128.0 * Math.sin((double)(ae.field_f / 4))));
-          this.field_l = this.field_l + 20 * this.a(var4 + 60 - ResourceArchive.field_e.b(Bounce.field_A[7]) / 2, 16741888, 480, 1, Bounce.field_A[7], this.field_l, 0, var5, 20066, 20);
+          this.field_l = this.field_l + 20 * this.a(var4 + 60 - ResourceArchive.field_e.stringWidth(Bounce.field_A[7]) / 2, 16741888, 480, 1, Bounce.field_A[7], this.field_l, 0, var5, 20066, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, -1, 0, 12, 16777215, Bounce.field_A[8], 1, 80, this.field_l) * 12;
           if (Slime.field_a == 3) {
@@ -565,7 +565,7 @@ final class nk {
           }
           this.field_l = this.field_l + 22;
           fd.field_n[ae.field_f / 8 % 6].a(var10, var9 + this.field_l);
-          this.field_l = this.field_l + 20 * this.a(57 + (var4 - ResourceArchive.field_e.b(Bounce.field_A[9]) / 2), 16741888, 480, 1, Bounce.field_A[9], this.field_l, 0, var5, param1 - 16721822, 20);
+          this.field_l = this.field_l + 20 * this.a(57 + (var4 - ResourceArchive.field_e.stringWidth(Bounce.field_A[9]) / 2), 16741888, 480, 1, Bounce.field_A[9], this.field_l, 0, var5, param1 - 16721822, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, -1, 0, 12, 16777215, Bounce.field_A[10], 1, 80, this.field_l) * 12;
           if (Slime.field_a == 3) {
@@ -573,18 +573,18 @@ final class nk {
           }
           this.field_l = this.field_l + 26;
           MatchingFieldValidator.field_j[ae.field_f / 8 % 3].a(var10, this.field_l + var9);
-          this.field_l = this.field_l + 20 * this.a(-(ResourceArchive.field_e.b(Bounce.field_A[11]) / 2) + (60 + var4), 16741888, 480, 1, Bounce.field_A[11], this.field_l, 0, var5, 20066, 20);
+          this.field_l = this.field_l + 20 * this.a(-(ResourceArchive.field_e.stringWidth(Bounce.field_A[11]) / 2) + (60 + var4), 16741888, 480, 1, Bounce.field_A[11], this.field_l, 0, var5, 20066, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, param1 - 16741889, 0, 12, 16777215, Bounce.field_A[12], 1, 80, this.field_l) * 12;
           this.field_l = this.field_l + 22;
           wb.field_e[ae.field_f / 8 % 3].a(var10, this.field_l + var9);
-          this.field_l = this.field_l + 20 * this.a(-(ResourceArchive.field_e.b(Bounce.field_A[13]) / 2) + 60 + var4, 16741888, 480, 1, Bounce.field_A[13], this.field_l, 0, var5, 20066, 20);
+          this.field_l = this.field_l + 20 * this.a(-(ResourceArchive.field_e.stringWidth(Bounce.field_A[13]) / 2) + 60 + var4, 16741888, 480, 1, Bounce.field_A[13], this.field_l, 0, var5, 20066, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + 12 * this.a(480, 480, param1 - 16741889, 0, 12, 16777215, Bounce.field_A[14], 1, 80, this.field_l);
           this.field_l = this.field_l + 22;
           field_h[ae.field_f / 8 % 4].a(var10, var9 + this.field_l);
           nl.field_d[0].a(var10, this.field_l + var9 - nl.field_d[0].field_q);
-          this.field_l = this.field_l + 20 * this.a(-(ResourceArchive.field_e.b(Bounce.field_A[15]) / 2) + (var4 + 60), 16741888, 480, 1, Bounce.field_A[15], this.field_l, 0, var5, param1 ^ 16726114, 20);
+          this.field_l = this.field_l + 20 * this.a(-(ResourceArchive.field_e.stringWidth(Bounce.field_A[15]) / 2) + (var4 + 60), 16741888, 480, 1, Bounce.field_A[15], this.field_l, 0, var5, param1 ^ 16726114, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, param1 ^ -16741889, 0, 12, 16777215, Bounce.field_A[16], 1, 80, this.field_l) * 12;
           this.field_l = this.field_l + 12 * this.a(480, 480, param1 - 16741889, 0, 12, 16777215, Bounce.field_A[17], 1, 80, this.field_l);
@@ -643,9 +643,9 @@ final class nk {
           var19Lifetime1 = jc.field_m;
           var6Lifetime1 = var19Lifetime1;
           var6Lifetime1 = var19Lifetime1;
-          ResourceArchive.field_e.a(var19Lifetime1, -1 + var4Lifetime1, -70 + this.field_g, 0, 0);
-          ResourceArchive.field_e.a(var19Lifetime1, var4Lifetime1, this.field_g - 1 - 70, 0, 0);
-          ResourceArchive.field_e.a(var19Lifetime1, var4Lifetime1, -70 + this.field_g, 16777215, -1);
+          ResourceArchive.field_e.drawCentred(var19Lifetime1, -1 + var4Lifetime1, -70 + this.field_g, 0, 0);
+          ResourceArchive.field_e.drawCentred(var19Lifetime1, var4Lifetime1, this.field_g - 1 - 70, 0, 0);
+          ResourceArchive.field_e.drawCentred(var19Lifetime1, var4Lifetime1, -70 + this.field_g, 16777215, -1);
         }
         if (7 == this.field_i) {
           if (null != sj.field_f) {
@@ -657,7 +657,7 @@ final class nk {
         if (this.field_i == 13) {
           var20 = od.field_c;
           var7_ref_String = var20;
-          var8Lifetime2 = od.field_f.b(var20);
+          var8Lifetime2 = od.field_f.stringWidth(var20);
           var9Lifetime1 = var4Lifetime1;
           if (0 == qa.field_j) {
             var7_ref_String = FrameTimer.field_b;
@@ -693,7 +693,7 @@ final class nk {
                 var6Lifetime1 != bk.field_d) && this.field_i != 14) {
                 if (this.field_i == 11 &&
                   !jh.b(767564065)) {
-                  var7Lifetime2 = od.field_f.b(of.field_d[1]);
+                  var7Lifetime2 = od.field_f.stringWidth(of.field_d[1]);
                   for (var8Lifetime3 = 0; var8Lifetime3 < 3; var8Lifetime3++) {
                     var4Lifetime1 = 320 + (48 + var7Lifetime2) * (var8Lifetime3 - 1);
                     var26 = of.field_d[var8Lifetime3];
@@ -752,23 +752,23 @@ final class nk {
                         var5Lifetime1 = 7785983;
                       }
                       if (var17[0].length() <= 4) {
-                        od.field_f.c(var25[0], var4Lifetime1 - 136, -4 + this.field_g, 0, 0);
-                        od.field_f.c(var25[0], var4Lifetime1 - 135, this.field_g - 1 - 4, 0, 0);
-                        od.field_f.c(var25[0], -135 + var4Lifetime1, this.field_g - 4, var5Lifetime1, -1);
-                        od.field_f.b(var25[1], -1 + (var4Lifetime1 - 125), -4 + this.field_g, 0, 0);
-                        od.field_f.b(var25[1], -125 + var4Lifetime1, -4 + (-1 + this.field_g), 0, 0);
-                        od.field_f.b(var25[1], var4Lifetime1 - 125, this.field_g - 4, var5Lifetime1, -1);
+                        od.field_f.drawRightAligned(var25[0], var4Lifetime1 - 136, -4 + this.field_g, 0, 0);
+                        od.field_f.drawRightAligned(var25[0], var4Lifetime1 - 135, this.field_g - 1 - 4, 0, 0);
+                        od.field_f.drawRightAligned(var25[0], -135 + var4Lifetime1, this.field_g - 4, var5Lifetime1, -1);
+                        od.field_f.drawString(var25[1], -1 + (var4Lifetime1 - 125), -4 + this.field_g, 0, 0);
+                        od.field_f.drawString(var25[1], -125 + var4Lifetime1, -4 + (-1 + this.field_g), 0, 0);
+                        od.field_f.drawString(var25[1], var4Lifetime1 - 125, this.field_g - 4, var5Lifetime1, -1);
                       } else {
-                        od.field_f.c(var17[0], -135 + (var4Lifetime1 - 1), -4 + this.field_g, 0, 0);
-                        od.field_f.c(var17[0], var4Lifetime1 - 135, this.field_g - 1 - 4, 0, 0);
-                        od.field_f.c(var17[0], var4Lifetime1 - 135, this.field_g - 4, var5Lifetime1, -1);
-                        od.field_f.b(var17[1], var4Lifetime1 - 125 - 1, -4 + this.field_g, 0, 0);
-                        od.field_f.b(var17[1], -125 + var4Lifetime1, this.field_g - 5, 0, 0);
-                        od.field_f.b(var17[1], -125 + var4Lifetime1, this.field_g - 4, var5Lifetime1, -1);
+                        od.field_f.drawRightAligned(var17[0], -135 + (var4Lifetime1 - 1), -4 + this.field_g, 0, 0);
+                        od.field_f.drawRightAligned(var17[0], var4Lifetime1 - 135, this.field_g - 1 - 4, 0, 0);
+                        od.field_f.drawRightAligned(var17[0], var4Lifetime1 - 135, this.field_g - 4, var5Lifetime1, -1);
+                        od.field_f.drawString(var17[1], var4Lifetime1 - 125 - 1, -4 + this.field_g, 0, 0);
+                        od.field_f.drawString(var17[1], -125 + var4Lifetime1, this.field_g - 5, 0, 0);
+                        od.field_f.drawString(var17[1], -125 + var4Lifetime1, this.field_g - 4, var5Lifetime1, -1);
                       }
-                      od.field_f.b(var25[2], 75 + var4Lifetime1 - 1, -4 + this.field_g, 0, 0);
-                      od.field_f.b(var25[2], 75 + var4Lifetime1, -4 + (-1 + this.field_g), 0, 0);
-                      od.field_f.b(var25[2], var4Lifetime1 + 75, this.field_g - 4, var5Lifetime1, -1);
+                      od.field_f.drawString(var25[2], 75 + var4Lifetime1 - 1, -4 + this.field_g, 0, 0);
+                      od.field_f.drawString(var25[2], 75 + var4Lifetime1, -4 + (-1 + this.field_g), 0, 0);
+                      od.field_f.drawString(var25[2], var4Lifetime1 + 75, this.field_g - 4, var5Lifetime1, -1);
                     }
                     if ((this.field_i == -10)) {
                       SoftwareRasterizer.resetClip();
@@ -777,7 +777,7 @@ final class nk {
                 }
                 break regionExit1;
               }
-              var7Lifetime2 = od.field_f.b(var6Lifetime1);
+              var7Lifetime2 = od.field_f.stringWidth(var6Lifetime1);
               var8Lifetime3Lifetime1 = -(var7Lifetime2 / 2) + var4Lifetime1;
               var9Lifetime2Lifetime1 = -od.field_f.field_s + this.field_g - 10;
               var10Lifetime2Lifetime1 = var7Lifetime2;
@@ -799,28 +799,28 @@ final class nk {
                 param0 == var5Lifetime1) {
                 var5Lifetime1 = 8930338;
               }
-              this.a(this.field_g, var5Lifetime1, var6Lifetime1, var4Lifetime1 - od.field_f.b(var6Lifetime1) / 2 - 35, 21641);
+              this.a(this.field_g, var5Lifetime1, var6Lifetime1, var4Lifetime1 - od.field_f.stringWidth(var6Lifetime1) / 2 - 35, 21641);
               var23 = "----------------";
               var6Lifetime1 = var23;
-              this.a(2 + this.field_g, var5Lifetime1, var6Lifetime1, -35 + (od.field_f.b(var23) / 2 + var4Lifetime1), 21641);
+              this.a(2 + this.field_g, var5Lifetime1, var6Lifetime1, -35 + (od.field_f.stringWidth(var23) / 2 + var4Lifetime1), 21641);
               var24 = "l";
               var6Lifetime1 = var24;
               var7Lifetime2 = jd.field_a / 2 + var4Lifetime1;
-              this.a(this.field_g, var5Lifetime1, var6Lifetime1, var7Lifetime2 + od.field_f.b(var24) / 2 - 35, param1 - 16720247);
+              this.a(this.field_g, var5Lifetime1, var6Lifetime1, var7Lifetime2 + od.field_f.stringWidth(var24) / 2 - 35, param1 - 16720247);
             }
           } else {
             if (!wd.field_x &&
               param0 == var5Lifetime1) {
               var5Lifetime1 = 8930338;
             }
-            this.a(this.field_g, var5Lifetime1, var6Lifetime1, -35 + (var4Lifetime1 - od.field_f.b(var6Lifetime1) / 2), 21641);
+            this.a(this.field_g, var5Lifetime1, var6Lifetime1, -35 + (var4Lifetime1 - od.field_f.stringWidth(var6Lifetime1) / 2), 21641);
             var21 = "----------------";
             var6Lifetime1 = var21;
-            this.a(this.field_g + 2, var5Lifetime1, var6Lifetime1, od.field_f.b(var21) / 2 + (var4Lifetime1 - 35), 21641);
+            this.a(this.field_g + 2, var5Lifetime1, var6Lifetime1, od.field_f.stringWidth(var21) / 2 + (var4Lifetime1 - 35), 21641);
             var22 = "l";
             var6Lifetime1 = var22;
             var7Lifetime2 = DiskArchiveRequest.field_w / 2 + var4Lifetime1;
-            this.a(this.field_g, var5Lifetime1, var6Lifetime1, -35 + var7Lifetime2 + od.field_f.b(var22) / 2, param1 - 16720247);
+            this.a(this.field_g, var5Lifetime1, var6Lifetime1, -35 + var7Lifetime2 + od.field_f.stringWidth(var22) / 2, param1 - 16720247);
           }
         }
         if (12 == this.field_i) {
@@ -927,7 +927,7 @@ final class nk {
             if (Slime.field_a == 0) {
               this.a(var11, 16741888, pd.field_b, 320, param1 ^ 16720521);
             } else {
-              od.field_f.a(pd.field_b, 128, var11, 384, 256, 16741888, -1, 1, 0, 20);
+              od.field_f.drawParagraph(pd.field_b, 128, var11, 384, 256, 16741888, -1, 1, 0, 20);
             }
             if (jh.b(767564065)) {
               var11 += 40;
@@ -954,7 +954,7 @@ final class nk {
         int var7;
         int var8;
         int var9;
-        var3 = od.field_f.b(this.field_f) + 32;
+        var3 = od.field_f.stringWidth(this.field_f) + 32;
         if (this.field_i == 11) {
           var3 = 512;
         }
@@ -1011,7 +1011,7 @@ final class nk {
         if (12 == this.field_i ||
           this.field_i == 10 ||
           this.field_i == 13) {
-          var5 = od.field_f.b(this.field_f);
+          var5 = od.field_f.stringWidth(this.field_f);
           var6 = 320 - var5 / 2;
           var7 = this.field_g - od.field_f.field_s;
           var8 = var5;

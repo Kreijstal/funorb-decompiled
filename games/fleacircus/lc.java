@@ -104,11 +104,11 @@ class lc extends DualLinkNode {
         field_v = null;
     }
 
-    final static jh a(byte[] param0, boolean param1) {
-        jh var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, boolean param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        jh stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -116,9 +116,9 @@ class lc extends DualLinkNode {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (jh) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new jh(param0, vg.field_I, b.field_b, ij.field_H, ob.field_a, of.field_d);
+          var2 = new BinaryBitmapFont(param0, vg.field_I, b.field_b, ij.field_H, ob.field_a, of.field_d);
           EditableTextField.o(-28210);
           if (param1) {
             lc.f(105);

@@ -37,7 +37,7 @@ final class fa {
         }
     }
 
-    final static int a(String[] args, int param1, int param2, vm param3, String param4) {
+    final static int a(String[] args, int param1, int param2, BitmapFont param3, String param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -67,7 +67,7 @@ final class fa {
           if (param2 <= 48) {
             field_e = (RgbSprite) null;
           }
-          var5_int = param3.a(param4);
+          var5_int = param3.stringWidth(param4);
           if (param1 >= var5_int &&
             -1 == param4.indexOf("<br>")) {
             args[0] = param4;
@@ -84,7 +84,7 @@ final class fa {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param4.substring(var7, var9 + 1).trim();
-              var12 = param3.a(var11);
+              var12 = param3.stringWidth(var11);
               if (var12 >= param1) {
                 var7 = var9 + 1;
                 incrementValue$1 = var6Lifetime1;

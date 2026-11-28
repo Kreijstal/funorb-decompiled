@@ -29,7 +29,7 @@ final class qb {
             if (!var2.field_h.isLinked(-3548)) {
               var2.unlink(param0 - 20078);
             } else {
-              var2.field_g.g(re.field_e * var2.field_j / 256);
+              var2.field_g.setVolume(re.field_e * var2.field_j / 256);
             }
             var2 = (hk) (bd.field_c.nextBackward((byte) 63));
           }

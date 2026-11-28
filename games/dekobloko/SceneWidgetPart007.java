@@ -27,7 +27,7 @@ final class SceneWidgetPart007 extends SceneWidget {
         sceneWidgetPart005State0002 = null;
     }
 
-    final static RgbSprite computeRgbSprite1049(int integerArgument1, int integerArgument2, String stringArgument3, RenderingSupport009 renderingSupport009Argument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
+    final static RgbSprite computeRgbSprite1049(int integerArgument1, int integerArgument2, String stringArgument3, BinaryBitmapFont renderingSupport009Argument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RgbSprite stackRgbSpriteLocal3 = null;
@@ -63,7 +63,7 @@ final class SceneWidgetPart007 extends SceneWidget {
         int integerLocal33;
         integerLocal28 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal10 = renderingSupport009Argument4.computeInteger1066(stringArgument3) - 1;
+          integerLocal10 = renderingSupport009Argument4.stringWidth(stringArgument3) - 1;
           while (integerArgument5 * (2 + integerLocal10) >= 620) {
             integerArgument5--;
           }
@@ -75,7 +75,7 @@ final class SceneWidgetPart007 extends SceneWidget {
           integerLocal16 = SoftwareRaster.integerState0284;
           rgbSpriteLocal17 = new RgbSprite(integerLocal10, integerLocal12);
           rgbSpriteLocal17.performAction0256();
-          renderingSupport009Argument4.performAction1069(stringArgument3, 0, renderingSupport009Argument4.integerState0518, 16777215, -1);
+          renderingSupport009Argument4.drawString(stringArgument3, 0, renderingSupport009Argument4.integerState0518, 16777215, -1);
           if (0 == integerArgument6) {
             integerArgument6 = 65793;
           }
@@ -257,7 +257,7 @@ final class SceneWidgetPart007 extends SceneWidget {
           if (!booleanArgument1) {
             integerArrayArrayState0017 = (int[][]) null;
           }
-          integerLocal1 = sceneWidgetArgument2.bitmapFontState0020.computeInteger1081(sceneWidgetArgument2.stringState0598, integerArgument5 - sceneWidgetArgument2.integerState0893 * 2, sceneWidgetArgument2.integerState0908);
+          integerLocal1 = sceneWidgetArgument2.bitmapFontState0020.textHeight(sceneWidgetArgument2.stringState0598, integerArgument5 - sceneWidgetArgument2.integerState0893 * 2, sceneWidgetArgument2.integerState0908);
           sceneWidgetArgument2.performAction1764(integerArgument5, 0, integerArgument4, integerLocal1, 0);
           sceneWidgetArgument3.performAction1768(sceneWidgetArgument2, -16834);
           integerArgument4 = integerArgument4 + (integerLocal1 - 0);
@@ -297,7 +297,7 @@ final class SceneWidgetPart007 extends SceneWidget {
         }
         if (null != this.sceneWidgetState0085) {
           this.sceneWidgetState0085.stringState0598 = this.stringBuilderState0003.toString();
-          this.sceneWidgetState0085.integerState0890 = (this.integerState0896 - this.sceneWidgetState0085.bitmapFontState0020.computeInteger1066(this.sceneWidgetState0085.stringState0598)) / 2;
+          this.sceneWidgetState0085.integerState0890 = (this.integerState0896 - this.sceneWidgetState0085.bitmapFontState0020.stringWidth(this.sceneWidgetState0085.stringState0598)) / 2;
           this.sceneWidgetState0085.integerState0896 = this.integerState0896 - this.sceneWidgetState0085.integerState0890;
           if (null != this.sceneWidgetPart003State0002 &&
             0 != this.sceneWidgetPart003State0002.integerState0891) {
@@ -501,15 +501,15 @@ final class SceneWidgetPart007 extends SceneWidget {
               discarded$1 = this.stringBuilderState0003.append(stringArgument12);
             }
             integerLocal56 = 0;
-            integerLocal5 = sceneWidgetArgument7.bitmapFontState0020.computeInteger1066(TextLayout.stringState0085);
+            integerLocal5 = sceneWidgetArgument7.bitmapFontState0020.stringWidth(TextLayout.stringState0085);
             if (integerLocal5 > integerLocal56) {
               integerLocal56 = integerLocal5;
             }
-            integerLocal57 = sceneWidgetArgument7.bitmapFontState0020.computeInteger1066(MixedSupport131.stringState0568);
+            integerLocal57 = sceneWidgetArgument7.bitmapFontState0020.stringWidth(MixedSupport131.stringState0568);
             if (integerLocal56 < integerLocal57) {
               integerLocal56 = integerLocal57;
             }
-            integerLocal58 = sceneWidgetArgument7.bitmapFontState0020.computeInteger1066(MixedSupport066.stringState0293);
+            integerLocal58 = sceneWidgetArgument7.bitmapFontState0020.stringWidth(MixedSupport066.stringState0293);
             if (integerLocal58 > integerLocal56) {
               integerLocal56 = integerLocal58;
             }
@@ -599,7 +599,7 @@ final class SceneWidgetPart007 extends SceneWidget {
           this.sceneWidgetState0084.performAction1768(this.sceneWidgetState0081, -16834);
           integerLocal2 = 226;
           integerLocal50 = 10;
-          integerLocal51 = this.sceneWidgetState0081.bitmapFontState0020.computeInteger1067(this.sceneWidgetState0081.stringState0598, integerLocal2);
+          integerLocal51 = this.sceneWidgetState0081.bitmapFontState0020.lineCount(this.sceneWidgetState0081.stringState0598, integerLocal2);
           this.sceneWidgetState0081.performAction1764(integerLocal2, 0, integerLocal50, ComponentContainer.integerState0377 * integerLocal51, 13);
           integerLocal50 = integerLocal50 + ComponentContainer.integerState0377 * integerLocal51;
           this.sceneWidgetState0084.performAction1764(integerLocal2 + 13 + 13, 0, 24, 10 + integerLocal50, 0);

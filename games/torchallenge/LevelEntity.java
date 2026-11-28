@@ -7218,12 +7218,12 @@ final class LevelEntity {
                   var16 = var4_int + (((Sprite) (var11)).fullWidth >> 1);
                   var17 = 24;
                   var18 = var6 + (((Sprite) (var11)).fullHeight >> 1) - ((var17 >> 1) - 6);
-                  tf.field_x.a(var14_ref_String, var16, var18, 0, -1);
+                  tf.field_x.drawCentred(var14_ref_String, var16, var18, 0, -1);
                 }
               }
               if (this.type == 19 &&
                 ol.field_a) {
-                tf.field_x.c("X:" + this.x + " Y:" + this.y, var4_int, var6, 0, -1);
+                tf.field_x.drawString("X:" + this.x + " Y:" + this.y, var4_int, var6, 0, -1);
               }
               SoftwareRasterizer.restoreClip(bf.field_l);
               if (this.type != 13) {

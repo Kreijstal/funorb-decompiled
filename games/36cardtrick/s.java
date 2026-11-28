@@ -7,7 +7,7 @@ final class s {
     static int field_c;
     static j field_d;
 
-    final static void a(ee param0, byte param1, int param2, di param3, String param4) {
+    final static void a(BitmapFont param0, byte param1, int param2, di param3, String param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -29,7 +29,7 @@ final class s {
           for (var7 = 1; var7 < param4.length(); var7++) {
             var8 = param4.charAt(var7);
             if (var8 == 60) {
-              var6 = param3.field_a[0] + (var5_int >> 8) + param0.a(param4.substring(0, var7));
+              var6 = param3.field_a[0] + (var5_int >> 8) + param0.stringWidth(param4.substring(0, var7));
             }
             if (-1 != var6) {
               param3.field_a[var7] = var6;
@@ -37,7 +37,7 @@ final class s {
               if (var8 == 32) {
                 var5_int = var5_int + param2;
               }
-              param3.field_a[var7] = param3.field_a[0] + ((var5_int >> 8) + param0.a(param4.substring(0, var7 + 1)) - param0.a((char) var8));
+              param3.field_a[var7] = param3.field_a[0] + ((var5_int >> 8) + param0.stringWidth(param4.substring(0, var7 + 1)) - param0.charWidth((char) var8));
             }
             if (62 == var8) {
               var6 = -1;
@@ -88,7 +88,7 @@ final class s {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$05bb3be3c57b(ee param0, int param1, int param2, di param3, String param4) {
+    final static void $cfr$intArgs$a$05bb3be3c57b(BitmapFont param0, int param1, int param2, di param3, String param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -110,7 +110,7 @@ final class s {
           for (var7 = 1; var7 < param4.length(); var7++) {
             var8 = param4.charAt(var7);
             if (var8 == 60) {
-              var6 = param3.field_a[0] + (var5_int >> 8) + param0.a(param4.substring(0, var7));
+              var6 = param3.field_a[0] + (var5_int >> 8) + param0.stringWidth(param4.substring(0, var7));
             }
             if (-1 != var6) {
               param3.field_a[var7] = var6;
@@ -118,7 +118,7 @@ final class s {
               if (var8 == 32) {
                 var5_int = var5_int + param2;
               }
-              param3.field_a[var7] = param3.field_a[0] + ((var5_int >> 8) + param0.a(param4.substring(0, var7 + 1)) - param0.a((char) var8));
+              param3.field_a[var7] = param3.field_a[0] + ((var5_int >> 8) + param0.stringWidth(param4.substring(0, var7 + 1)) - param0.charWidth((char) var8));
             }
             if (62 == var8) {
               var6 = -1;

@@ -102,11 +102,11 @@ final class LevelView extends LevelGrid {
         }
     }
 
-    final static hg a(int param0, byte[] param1) {
-        hg var2 = null;
+    final static BinaryBitmapFont a(int param0, byte[] param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        hg stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -114,9 +114,9 @@ final class LevelView extends LevelGrid {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (hg) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new hg(param1, ka.field_f, vb.field_a, cf.field_p, j.field_f, qk.field_M);
+          var2 = new BinaryBitmapFont(param1, ka.field_f, vb.field_a, cf.field_p, j.field_f, qk.field_M);
           if (param0 != -502) {
             field_v = 93;
           }

@@ -4,7 +4,7 @@
 final class qj {
     static cg field_c;
     static String field_b;
-    static ub field_a;
+    static BinaryBitmapFont field_a;
 
     final static String[] a(char param0, String param1, int param2) {
         int var7 = 0;

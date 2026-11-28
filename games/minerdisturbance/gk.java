@@ -44,7 +44,7 @@ class gk extends eg {
         this(bn.field_d, param0);
     }
 
-    gk(we param0, int param1) {
+    gk(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_I, -1, 2147483647, false);
     }
 

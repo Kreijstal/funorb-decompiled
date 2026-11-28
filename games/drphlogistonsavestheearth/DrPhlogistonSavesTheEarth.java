@@ -205,7 +205,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         }
     }
 
-    final void c(byte param0) {
+    final void updateClient(byte param0) {
         boolean discarded$0 = false;
         boolean stackIn_21_1 = false;
         int stackIn_82_1 = 0;
@@ -460,11 +460,11 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           md.field_f = new RgbSprite(64, 64);
           md.field_f.c();
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 64, 64, 2897296, 0);
-          cb.field_b.b("?", 32, 32, 16777215, 1);
+          cb.field_b.drawCentred("?", 32, 32, 16777215, 1);
           wi.field_a = new RgbSprite(64, 64);
           wi.field_a.c();
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 64, 64, 2897296, 0);
-          cb.field_b.b("?", 32, 32, 16777215, 1);
+          cb.field_b.drawCentred("?", 32, 32, 16777215, 1);
           BufferedRandomAccessFile.field_d.b(32, 32);
           ArchiveRequest.field_C.setAsRasterTarget(103);
           return;
@@ -475,7 +475,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         }
     }
 
-    final void a(boolean param0) {
+    final void clearClientResources(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -548,7 +548,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           of.clearDeclaredStaticReferences(1024);
           gk.a(false);
           d.clearStaticReferences((byte) 39);
-          rf.clearStaticReferences();
+          BitmapFont.clearStaticReferences();
           ui.clearStaticReferences(-19662);
           rg.clearStaticReferences((byte) -20);
           di.clearStaticReferences((byte) 27);
@@ -817,7 +817,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         try {
           var3 = new he[param0.length];
           if (param1 != 65793) {
-            this.h(-112);
+            this.renderClientFrame(-112);
           }
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -888,7 +888,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         }
     }
 
-    final void h(int param0) {
+    final void renderClientFrame(int param0) {
         Object stackIn_5_0 = null;
         boolean stackIn_12_0 = false;
         int stackIn_86_0 = 0;
@@ -1012,7 +1012,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             dh.$cfr$intArgs$a$7ffe4b125357(stackIn_86_0, stackIn_87_1);
           }
           if (nj.field_j >= 2) {
-            a.field_g.c(qj.field_c + " lps", 15, 15, 16777215, 65793);
+            a.field_g.drawString(qj.field_c + " lps", 15, 15, 16777215, 65793);
           }
           DrPhlogistonSavesTheEarth.a(param0, -74, (java.awt.Canvas) (var2), 0);
           return;
@@ -1332,7 +1332,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         kb var2Lifetime51;
         try {
           we.a(GameClientShell.field_s, -79, 50.0f);
-          this.h(0);
+          this.renderClientFrame(0);
           nl.field_r[0] = kb.a(aa.field_b, "", "menu_select").a().resample(ProxyAuthenticationRequiredException.field_g);
           var2 = kb.a(aa.field_b, "", "DrP_1_gatling_gun_fire");
           if (null != var2) {
@@ -1668,7 +1668,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         }
     }
 
-    final void a(byte param0) {
+    final void disposeClient(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -1689,7 +1689,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         }
     }
 
-    final void a(int param0) {
+    final void initializeClient(int param0) {
         MidiPcmStream var2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
@@ -2099,7 +2099,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           }
           if (null != df.field_a) {
             we.a(ai.field_x, -83, 55.0f);
-            this.h(0);
+            this.renderClientFrame(0);
             PasswordValidator.field_q = ok.a(df.field_a, "", "Dr_Phlogiston_Title");
             s.field_a.a(0, ui.field_a, 0, PasswordValidator.field_q, cf.field_c);
             ki.field_c = ok.a(df.field_a, "", "Dr_Phlogiston_Earth");

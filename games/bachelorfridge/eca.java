@@ -81,11 +81,11 @@ final class eca extends bi {
           var10 = this.a(param1, (byte) -74) + (this.a(param2 - 119, param1) >> 1);
           if (var5 == 0) {
             var12.drawTransparentWithIntensity(var9 - (var12.field_n >> 1), var10 - 22, 128);
-            ((BitmapFont) ((Object) var7)).a(var13, var9, var10 + 6, var8, -1);
+            ((BitmapFont) ((Object) var7)).drawCentred(var13, var9, var10 + 6, var8, -1);
             return;
           }
           var12.draw(-(var12.field_n >> 1) + var9, var10 - 22);
-          ((BitmapFont) ((Object) var7)).a(var13, var9, var10 + 6, var8, -1);
+          ((BitmapFont) ((Object) var7)).drawCentred(var13, var9, var10 + 6, var8, -1);
           return;
         }
         Sprite var14 = this.b(param1, (byte) 81);
@@ -97,11 +97,11 @@ final class eca extends bi {
         var10Lifetime1 = this.a(param1, (byte) -74) + (this.a(param2 - 119, param1) >> 1);
         if (var5Lifetime1 == 0) {
           var14.drawTransparentWithIntensity(var9Lifetime1 - (var14.field_n >> 1), var10Lifetime1 - 22, 128);
-          ((BitmapFont) ((Object) var7Lifetime1)).a(var15, var9Lifetime1, var10Lifetime1 + 6, var8Lifetime1, -1);
+          ((BitmapFont) ((Object) var7Lifetime1)).drawCentred(var15, var9Lifetime1, var10Lifetime1 + 6, var8Lifetime1, -1);
           return;
         }
         var14.draw(-(var14.field_n >> 1) + var9Lifetime1, var10Lifetime1 - 22);
-        ((BitmapFont) ((Object) var7Lifetime1)).a(var15, var9Lifetime1, var10Lifetime1 + 6, var8Lifetime1, -1);
+        ((BitmapFont) ((Object) var7Lifetime1)).drawCentred(var15, var9Lifetime1, var10Lifetime1 + 6, var8Lifetime1, -1);
     }
 
     private final void a(int param0, int param1, int param2, String param3, byte param4) {
@@ -111,7 +111,7 @@ final class eca extends bi {
             this.q(-87);
           }
           var6_int = oja.field_a[param2] + oja.field_a[1 + param2] >> 1;
-          this.field_k.a(param3, var6_int, param0, param1, -1);
+          this.field_k.drawCentred(param3, var6_int, param0, param1, -1);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "eca.UA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -260,35 +260,35 @@ final class eca extends bi {
           if (!ri.field_b.field_p) {
             var5 = fo.field_b;
             var3 = 95 + this.field_k.field_u + 253;
-            this.field_k.a(var5, 320, var3, 3518976, -1);
+            this.field_k.drawCentred(var5, 320, var3, 3518976, -1);
             return;
           }
           if (null != ri.field_b.field_k) {
             var6 = this.e((byte) 9);
             var3Lifetime4 = 95 + this.field_k.field_u + 253;
-            this.field_k.a(var6, 320, var3Lifetime4, 3518976, -1);
+            this.field_k.drawCentred(var6, 320, var3Lifetime4, 3518976, -1);
             return;
           }
           var7 = qe.field_d;
           var3Lifetime5 = 95 + this.field_k.field_u + 253;
-          this.field_k.a(var7, 320, var3Lifetime5, 3518976, -1);
+          this.field_k.drawCentred(var7, 320, var3Lifetime5, 3518976, -1);
           return;
         }
         if (!ri.field_b.field_p) {
           var8 = fo.field_b;
           var3Lifetime1 = 95 + this.field_k.field_u + 253;
-          this.field_k.a(var8, 320, var3Lifetime1, 3518976, -1);
+          this.field_k.drawCentred(var8, 320, var3Lifetime1, 3518976, -1);
           return;
         }
         if (null != ri.field_b.field_k) {
           var9 = this.e((byte) 9);
           var3Lifetime2 = 95 + this.field_k.field_u + 253;
-          this.field_k.a(var9, 320, var3Lifetime2, 3518976, -1);
+          this.field_k.drawCentred(var9, 320, var3Lifetime2, 3518976, -1);
           return;
         }
         String var10 = qe.field_d;
         var3Lifetime3 = 95 + this.field_k.field_u + 253;
-        this.field_k.a(var10, 320, var3Lifetime3, 3518976, -1);
+        this.field_k.drawCentred(var10, 320, var3Lifetime3, 3518976, -1);
     }
 
     final void l(int param0) {
@@ -345,7 +345,7 @@ final class eca extends bi {
             this.field_k = (BitmapFont) null;
           }
           if (param8 != -1) {
-            this.field_k.b(param8 + 1 + ". ", 70, param1, param7, -1);
+            this.field_k.drawRightAligned(param8 + 1 + ". ", 70, param1, param7, -1);
           }
           if (0 != var10_int) {
             param6 = (param6 * 200 + var10_int) / (2 * var10_int);
@@ -388,7 +388,7 @@ final class eca extends bi {
           }
           var4_int = oja.field_a[1 + param0] + oja.field_a[param0] >> 1;
           var5 = fn.field_n;
-          ((BitmapFont) ((Object) var5)).a(param1, var4_int, 100, 10, -1);
+          ((BitmapFont) ((Object) var5)).drawCentred(param1, var4_int, 100, 10, -1);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "eca.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -417,7 +417,7 @@ final class eca extends bi {
     }
 
     private final void p(int param0) {
-        this.field_k.a(d.field_E, 320, this.field_k.field_u + 353 + 11, 3518976, -1);
+        this.field_k.drawCentred(d.field_E, 320, this.field_k.field_u + 353 + 11, 3518976, -1);
         if (param0 >= -113) {
           this.a((String) null, -62, 37, -6, 83, 78, 31, -18, -51);
         }

@@ -69,14 +69,14 @@ final class nj {
         }
         var13.a((byte) -85);
         if (this.field_i) {
-          var5 = go.field_l.a(this.field_b);
+          var5 = go.field_l.stringWidth(this.field_b);
           var6 = this.field_b.lastIndexOf(' ');
           if (0 <= var6 &&
             96 < var5) {
             var21 = this.field_b.substring(0, var6);
             var22 = this.field_b.substring(var6 + 1);
-            var9 = go.field_l.a(var21);
-            var10 = go.field_l.a(var22);
+            var9 = go.field_l.stringWidth(var21);
+            var10 = go.field_l.stringWidth(var22);
             GzipDecompressor.a((byte) -20, var9, var21, param1 + 4 + 31);
             GzipDecompressor.a((byte) -20, var10, var22, 36 + param1 + 4 + 15);
           } else {
@@ -88,14 +88,14 @@ final class nj {
           var12 = 0;
           var7 = var12;
           while (this.field_o.length > var12) {
-            an.field_q.a(this.field_o[var12], 486, 4 + (4 + param1 + 72) + (12 + var12 * 12), 8438015, -1);
+            an.field_q.drawString(this.field_o[var12], 486, 4 + (4 + param1 + 72) + (12 + var12 * 12), 8438015, -1);
             var12++;
           }
         } else {
-          var5 = go.field_l.a(this.field_b);
+          var5 = go.field_l.stringWidth(this.field_b);
           var6 = this.field_b.lastIndexOf(' ');
           if (var6 >= 0 &&
-            go.field_l.a(this.field_b) > 96) {
+            go.field_l.stringWidth(this.field_b) > 96) {
             var16 = this.field_b.substring(0, var6);
             var8 = var16;
             var7_ref_String = var8;
@@ -104,7 +104,7 @@ final class nj {
             var8 = var17;
             var7_ref_String = var8;
             var8 = var17;
-            var9 = go.field_l.a(var16);
+            var9 = go.field_l.stringWidth(var16);
             if (var6 >= this.field_h) {
               var19 = var16.substring(0, this.field_h);
               var7_ref_String = var19;
@@ -116,7 +116,7 @@ final class nj {
               }
               GzipDecompressor.a((byte) -20, var9, var7_ref_String, -1 + (param1 + 36));
             } else {
-              var10 = go.field_l.a(var17);
+              var10 = go.field_l.stringWidth(var17);
               var18 = var17.substring(0, -var6 + (this.field_h - 1));
               var8 = var18;
               var7_ref_String = var8;
@@ -154,7 +154,7 @@ final class nj {
             param1 -= 12;
           }
           for (var7 = 0; var7 < this.field_d; var7++) {
-            an.field_q.a(this.field_o[var7], 486, var7 * 12 + (72 + param1 + 4) + 4 + 12, 8438015, -1);
+            an.field_q.drawString(this.field_o[var7], 486, var7 * 12 + (72 + param1 + 4) + 4 + 12, 8438015, -1);
           }
           var20 = this.field_o[this.field_d].substring(0, this.field_j);
           var7_ref_StringLifetime1 = var20;
@@ -163,7 +163,7 @@ final class nj {
             (8 & this.field_m) == 0) {
             var7_ref_StringLifetime1 = var20 + '_';
           }
-          an.field_q.a(var7_ref_StringLifetime1, 486, 12 * this.field_d + (param1 + 92), 8438015, -1);
+          an.field_q.drawString(var7_ref_StringLifetime1, 486, 12 * this.field_d + (param1 + 92), 8438015, -1);
         }
         if (this.field_n != null && (this.field_i ||
           0 == this.field_g)) {

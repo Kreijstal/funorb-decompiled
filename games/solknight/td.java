@@ -175,7 +175,7 @@ final class td implements j {
           }
           if (null != this.field_g) {
             var10 = this.field_k + this.field_c + this.field_p;
-            this.field_g.a(param4.field_i, param4.field_m + (param3 + var10), param1 + param4.field_j + this.field_m, param4.field_t - this.field_p - var10, param4.field_x - (this.field_p << 1), this.field_q, this.field_a, this.field_b, this.field_d, 0);
+            this.field_g.drawParagraph(param4.field_i, param4.field_m + (param3 + var10), param1 + param4.field_j + this.field_m, param4.field_t - this.field_p - var10, param4.field_x - (this.field_p << 1), this.field_q, this.field_a, this.field_b, this.field_d, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

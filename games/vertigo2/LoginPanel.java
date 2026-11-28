@@ -105,8 +105,8 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ij 
           }
           var3 = this.field_H;
           var4 = param1;
-          var3.a(var4, -110, false);
-          this.field_O.j(param0 ^ -79);
+          var3.setText(var4, -110, false);
+          this.field_O.clearText(param0 ^ -79);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ob.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -126,7 +126,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ij 
           this.a('g', -59, 99, (UiWidget) null);
         }
         if (null != this.field_P) {
-          qc.field_x.a(this.field_P, this.x + param2 + 20, 15 + this.y + param3, this.width - 40, this.height, 16777215, -1, 1, 0, qc.field_x.field_z);
+          qc.field_x.drawParagraph(this.field_P, this.x + param2 + 20, 15 + this.y + param3, this.width - 40, this.height, 16777215, -1, 1, 0, qc.field_x.field_z);
         }
         if (null != this.field_K) {
           SoftwareRasterizer.drawHorizontalLine(10 + param2, 134 + param3, this.width - 20, 4210752);
@@ -241,7 +241,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ij 
           this.y = 15;
           var7 = qc.field_x;
           if (this.field_P != null) {
-            this.y = this.y + (5 + var7.a(this.field_P, this.width - 40, var7.field_z));
+            this.y = this.y + (5 + var7.textHeight(this.field_P, this.width - 40, var7.field_z));
           }
           var8 = ll.field_a;
           var9 = kf.a((byte) -100, LoginPanel.e((byte) -52));
@@ -373,8 +373,8 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ij 
     }
 
     final void i(int param0) {
-        this.field_H.j(param0 ^ param0);
-        this.field_O.j(0);
+        this.field_H.clearText(param0 ^ param0);
+        this.field_O.clearText(0);
     }
 
     static {

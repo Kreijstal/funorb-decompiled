@@ -32,7 +32,7 @@ final class ua {
           for (var7 = 1; var7 < param3.length(); var7++) {
             var8 = param3.charAt(var7);
             if (60 == var8) {
-              var6 = param4.field_g[0] + (var5_int >> 8) + param2.a(param3.substring(0, var7));
+              var6 = param4.field_g[0] + (var5_int >> 8) + param2.stringWidth(param3.substring(0, var7));
             }
             if (var6 != -1) {
               param4.field_g[var7] = var6;
@@ -40,7 +40,7 @@ final class ua {
               if (var8 == 32) {
                 var5_int = var5_int + param0;
               }
-              param4.field_g[var7] = (var5_int >> 8) + param4.field_g[0] + param2.a(param3.substring(0, 1 + var7)) - param2.a((char) var8);
+              param4.field_g[var7] = (var5_int >> 8) + param4.field_g[0] + param2.stringWidth(param3.substring(0, 1 + var7)) - param2.charWidth((char) var8);
             }
             if (var8 == 62) {
               var6 = -1;

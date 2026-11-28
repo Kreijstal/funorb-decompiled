@@ -20,7 +20,7 @@ class l implements cg, va {
     static String[] field_e;
     int field_p;
     static String field_s;
-    rf field_g;
+    BitmapFont field_g;
 
     private final int a(int param0, int param1, vg param2, int param3) {
         RuntimeException var5 = null;
@@ -57,7 +57,7 @@ class l implements cg, va {
         }
     }
 
-    l(rf param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    l(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -471,19 +471,19 @@ class l implements cg, va {
             if (0 != var12Lifetime1 &&
               3 != var12Lifetime1) {
               if (var12Lifetime1 == 1) {
-                this.field_g.b(this.b(param4 + 5, param7), (var9_int >> 1) + this.a(param3, param6, param7, 75), var11 + this.a(param2, param7, param1, (byte) 121), param0, param5);
+                this.field_g.drawCentred(this.b(param4 + 5, param7), (var9_int >> 1) + this.a(param3, param6, param7, 75), var11 + this.a(param2, param7, param1, (byte) 121), param0, param5);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_g.a(this.b(-115, param7), this.a(param3, param6, param7, 84) + var9_int, this.a(param2, param7, param1, (byte) -118) + var11, param0, param5);
+                  this.field_g.drawRightAligned(this.b(-115, param7), this.a(param3, param6, param7, 84) + var9_int, this.a(param2, param7, param1, (byte) -118) + var11, param0, param5);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_g.c(this.b(param4 ^ 22, param7), this.a(param3, param6, param7, 87), this.a(param2, param7, param1, (byte) 125) + var11, param0, param5);
+              this.field_g.drawString(this.b(param4 ^ 22, param7), this.a(param3, param6, param7, 87), this.a(param2, param7, param1, (byte) 125) + var11, param0, param5);
             }
           } else {
-            this.field_g.a(this.b(-114, param7), this.a(param3, param6, param7, 99), this.a(param2, param7, param1, (byte) -81), var9_int, var10, param0, param5, this.field_p, this.field_c, this.field_a);
+            this.field_g.drawParagraph(this.b(-114, param7), this.a(param3, param6, param7, 99), this.a(param2, param7, param1, (byte) -81), var9_int, var10, param0, param5, this.field_p, this.field_c, this.field_a);
           }
           cl.d((byte) -80);
           return;
@@ -618,7 +618,7 @@ class l implements cg, va {
         }
     }
 
-    l(rf param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    l(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_d = param3;
           this.field_j = param1;

@@ -184,10 +184,10 @@ final class IterableNodeCollection implements Iterable {
               integerLocal9 = integerLocal9 + MixedSupport076.integerState0433;
             }
             if (integerLocal10 >= 0) {
-              NetworkSupport001.bitmapFontState0003.performAction1069(stringLocal12, integerLocal14, AccountFieldStatusIndicator.integerState0576 + integerLocal9, integerLocal11, -1);
+              NetworkSupport001.bitmapFontState0003.drawString(stringLocal12, integerLocal14, AccountFieldStatusIndicator.integerState0576 + integerLocal9, integerLocal11, -1);
               integerLocal9 = integerLocal9 + (MixedSupport076.integerState0433 + PcmResampler.integerState0344 + BirthDateInput.integerState0835);
             } else {
-              SoftwareFramebuffer.bitmapFontState0021.performAction1069(stringLocal12, integerLocal14, PlayerNamePrompt.integerState0267 + integerLocal9, integerLocal11, -1);
+              SoftwareFramebuffer.bitmapFontState0021.drawString(stringLocal12, integerLocal14, PlayerNamePrompt.integerState0267 + integerLocal9, integerLocal11, -1);
               integerLocal9 = integerLocal9 + ComponentDecorator.integerState0497;
             }
           }

@@ -11,7 +11,7 @@ final class rf implements nn {
     private int field_j;
     private int field_k;
     private int field_r;
-    private vm field_n;
+    private BitmapFont field_n;
     static String field_e;
     private int field_d;
     private int field_l;
@@ -116,7 +116,7 @@ final class rf implements nn {
             return;
           }
           var10 = this.field_j + (this.field_r + this.field_a);
-          this.field_n.a(param3.field_n, param3.field_v + param1 + var10, this.field_l + (param0 + param3.field_m), param3.field_s - this.field_j - var10, param3.field_x - (this.field_j << 1), this.field_g, this.field_m, this.field_b, this.field_p, 0);
+          this.field_n.drawParagraph(param3.field_n, param3.field_v + param1 + var10, this.field_l + (param0 + param3.field_m), param3.field_s - this.field_j - var10, param3.field_x - (this.field_j << 1), this.field_g, this.field_m, this.field_b, this.field_p, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -207,7 +207,7 @@ final class rf implements nn {
         return true;
     }
 
-    rf(vm param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    rf(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_p = 1;
         this.field_b = 1;
         try {

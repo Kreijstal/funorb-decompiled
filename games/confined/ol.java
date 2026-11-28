@@ -47,7 +47,7 @@ final class ol {
           field_b = (String) null;
         }
         nn.field_t[param3].d(param0, param4);
-        pn.field_a.a(Integer.toString(param2), param0 + 39, 38 + param4, 16777215, -1);
+        pn.field_a.drawRightAligned(Integer.toString(param2), param0 + 39, 38 + param4, 16777215, -1);
     }
 
     final static void a(byte param0) {

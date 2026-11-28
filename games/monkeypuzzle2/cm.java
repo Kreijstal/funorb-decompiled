@@ -153,9 +153,9 @@ final class cm extends WidgetContainer implements ql {
         if (param1 != 0) {
           return;
         }
-        ta var5 = ButtonWidget.field_z;
+        BitmapFont var5 = ButtonWidget.field_z;
         if (this.field_C != null) {
-          var5.a(dh.field_a, this.field_r + param3, param2 + this.field_e, this.field_l, 20, 16777215, -1, 0, 0, var5.field_C + var5.field_D);
+          var5.drawParagraph(dh.field_a, this.field_r + param3, param2 + this.field_e, this.field_l, 20, 16777215, -1, 0, 0, var5.field_C + var5.field_D);
         }
     }
 

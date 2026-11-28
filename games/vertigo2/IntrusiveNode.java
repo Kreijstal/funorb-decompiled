@@ -8,7 +8,7 @@ class IntrusiveNode {
     IntrusiveNode previous;
     static ej field_j;
     static int field_f;
-    static co field_e;
+    static BinaryBitmapFont field_e;
     static String field_h;
     static String field_b;
     static ArgbSprite[] field_i;

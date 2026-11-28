@@ -16,7 +16,7 @@ class EditableTextField extends eb {
     static jh field_M;
     static int field_S;
 
-    private final void a(byte param0, int param1) {
+    private final void moveCaret(byte param0, int param1) {
         if (param0 == 19) {
           this.field_K = param1;
           if (!bh.field_e[81]) {
@@ -161,7 +161,7 @@ class EditableTextField extends eb {
         }
     }
 
-    private final void j(byte param0) {
+    private final void scrollCaretIntoView(byte param0) {
         ld var3;
         int var4;
         int var5;
@@ -210,7 +210,7 @@ class EditableTextField extends eb {
           return;
         }
         var9 = (String) null;
-        this.a(false, (byte) -128, (String) null);
+        this.setText(false, (byte) -128, (String) null);
         var7Lifetime1 = this.field_y + var3.a(this.field_K, 0);
         if (var5 - var6 < var7Lifetime1) {
           this.field_y = this.field_y - (var7Lifetime1 + (-var5 + var6));
@@ -258,7 +258,7 @@ class EditableTextField extends eb {
         return this.text.substring(var2, var3Lifetime1);
     }
 
-    private final int o(int param0) {
+    private final int findNextWordBoundary(int param0) {
         int var2;
         int var3;
         int var4;
@@ -275,7 +275,7 @@ class EditableTextField extends eb {
         return var3;
     }
 
-    final void a(boolean param0, byte param1, String param2) {
+    final void setText(boolean param0, byte param1, String param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -338,7 +338,7 @@ class EditableTextField extends eb {
             EditableTextField.m(-23);
           }
           super.a(param0, param1, param2, 86);
-          this.j((byte) 105);
+          this.scrollCaretIntoView((byte) 105);
           if (this.field_j != 1) {
             return;
           }
@@ -440,7 +440,7 @@ class EditableTextField extends eb {
         try {
           this.listener = FrameTimer.field_c.field_i;
           this.field_U = param2;
-          this.a(true, (byte) -120, param0);
+          this.setText(true, (byte) -120, param0);
           this.field_W = true;
           this.field_P = ll.correctedCurrentTimeMillis(1000);
         } catch (RuntimeException runtimeException) {
@@ -448,7 +448,7 @@ class EditableTextField extends eb {
         }
     }
 
-    final void k(int param0) {
+    final void clearText(int param0) {
         this.text = "";
         this.field_K = 0;
         this.field_T = 0;
@@ -497,13 +497,13 @@ class EditableTextField extends eb {
             } else {
               stackIn_6_2 = 0;
             }
-            this.a((byte) stackIn_5_1, stackIn_6_2);
+            this.moveCaret((byte) stackIn_5_1, stackIn_6_2);
             var8_long = ll.correctedCurrentTimeMillis(1000);
             stackIn_9_1 = !(250L <= -this.field_Q + var8_long);
             this.field_O = stackIn_9_1;
             if (this.field_O) {
-              this.field_T = this.l(-1);
-              this.field_K = this.o(1);
+              this.field_T = this.findPreviousWordBoundary(-1);
+              this.field_K = this.findNextWordBoundary(1);
               if (this.field_K > 0 &&
                 32 == this.text.charAt(this.field_K - 1)) {
                 this.field_K = this.field_K - 1;
@@ -531,7 +531,7 @@ class EditableTextField extends eb {
         }
     }
 
-    private final int l(int param0) {
+    private final int findPreviousWordBoundary(int param0) {
         int var2;
         int var3;
         var3 = Terraphoenix.field_V;
@@ -610,7 +610,7 @@ class EditableTextField extends eb {
           } else {
             if (param3 != 101) {
               if (param3 == 13) {
-                this.k(-1);
+                this.clearText(-1);
                 return true;
               }
               if (param3 != 96) {
@@ -618,20 +618,20 @@ class EditableTextField extends eb {
                   if (this.field_K < this.text.length()) {
                     stackIn_66_1 = 19;
                     if (bh.field_e[82]) {
-                      stackIn_67_2 = this.o(1);
+                      stackIn_67_2 = this.findNextWordBoundary(1);
                     } else {
                       stackIn_67_2 = 1 + this.field_K;
                     }
-                    this.a((byte) stackIn_66_1, stackIn_67_2);
+                    this.moveCaret((byte) stackIn_66_1, stackIn_67_2);
                     return true;
                   }
                 } else {
                   if (param3 == 102) {
-                    this.a((byte) 19, 0);
+                    this.moveCaret((byte) 19, 0);
                     return true;
                   }
                   if (param3 == 103) {
-                    this.a((byte) 19, this.text.length());
+                    this.moveCaret((byte) 19, this.text.length());
                     return true;
                   }
                   if (param3 == 84) {
@@ -660,9 +660,9 @@ class EditableTextField extends eb {
                   if (!bh.field_e[82]) {
                     stackIn_38_2 = -1 + this.field_K;
                   } else {
-                    stackIn_38_2 = this.l(-1);
+                    stackIn_38_2 = this.findPreviousWordBoundary(-1);
                   }
-                  this.a((byte) stackIn_37_1, stackIn_38_2);
+                  this.moveCaret((byte) stackIn_37_1, stackIn_38_2);
                   return true;
                 }
               }

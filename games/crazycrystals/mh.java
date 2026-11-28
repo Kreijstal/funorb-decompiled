@@ -21,7 +21,7 @@ final class mh extends ik {
         if (param2 != 1) {
           return;
         }
-        gj.field_m.a(this.field_i, this.field_k + this.field_a, 17 + this.field_d, var4, -1);
+        gj.field_m.drawString(this.field_i, this.field_k + this.field_a, 17 + this.field_d, var4, -1);
     }
 
     final static void a(byte param0, String param1, String param2) {
@@ -117,7 +117,7 @@ final class mh extends ik {
           this.field_i = param2;
           this.field_a = param0 - 9;
           this.field_d = param1 - 4;
-          this.field_b = go.field_l.a(param2) + 20;
+          this.field_b = go.field_l.stringWidth(param2) + 20;
           this.field_c = 26;
           if (param3 != 1) {
             if (param3 == 2) {
@@ -156,10 +156,10 @@ final class mh extends ik {
           this.field_b = param2 + 20;
           if (param4 != 1) {
             if (param4 == 2) {
-              this.field_k = this.field_k + (-go.field_l.a(param3) + param2) / 2;
+              this.field_k = this.field_k + (-go.field_l.stringWidth(param3) + param2) / 2;
             }
           } else {
-            this.field_k = this.field_k + (param2 - go.field_l.a(param3));
+            this.field_k = this.field_k + (param2 - go.field_l.stringWidth(param3));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -45,11 +45,11 @@ final class wh {
         }
     }
 
-    final static gp a(byte[] param0, byte param1) {
-        gp var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, byte param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_4_0 = null;
-        gp stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -60,9 +60,9 @@ final class wh {
           }
           if (param0 == null) {
             stackIn_4_0 = null;
-            return (gp) (stackIn_4_0);
+            return (BinaryBitmapFont) (stackIn_4_0);
           }
-          var2 = new gp(param0, MusicPatchPcmStream.field_t, fe.field_g, jc.field_f, jn.field_k, ub.field_q);
+          var2 = new BinaryBitmapFont(param0, MusicPatchPcmStream.field_t, fe.field_g, jc.field_f, jn.field_k, ub.field_q);
           sb.a(500);
           stackIn_6_0 = var2;
           return stackIn_6_0;

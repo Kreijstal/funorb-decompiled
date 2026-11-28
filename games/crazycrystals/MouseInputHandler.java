@@ -159,7 +159,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, vc param5, int param6, int param7, vc param8, int param9, int param10, int param11, hj param12, hj param13, int param14, hj param15, int param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, BitmapFont param5, int param6, int param7, BitmapFont param8, int param9, int param10, int param11, hj param12, hj param13, int param14, hj param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -231,7 +231,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         field_c = null;
         if (!param0) {
           hj var2 = (hj) null;
-          MouseInputHandler.a(74, 5, -18, 74, -59, (vc) null, -54, -86, (vc) null, -31, 85, -40, (hj) null, (hj) null, 11, (hj) null, -17, -43, 64, -124, 62);
+          MouseInputHandler.a(74, 5, -18, 74, -59, (BitmapFont) null, -54, -86, (BitmapFont) null, -31, 85, -40, (hj) null, (hj) null, 11, (hj) null, -17, -43, 64, -124, 62);
         }
     }
 

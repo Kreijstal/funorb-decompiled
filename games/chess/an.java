@@ -31,7 +31,7 @@ final class an {
             if (!var2.field_n.isLinked(20478)) {
               var2.unlink(-2193);
             } else {
-              var2.field_k.h(lf.field_S * var2.field_o / 80);
+              var2.field_k.setVolume(lf.field_S * var2.field_o / 80);
             }
             var2 = (tn) (AchievementNotification.field_n.nextBackward((byte) -119));
           }

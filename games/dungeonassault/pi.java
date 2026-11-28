@@ -15,7 +15,7 @@ final class pi {
     private int field_f;
 
     final void a(int param0, lm param1, int param2, int param3, an param4) {
-        se stackIn_18_0;
+        BitmapFont stackIn_18_0;
         String stackIn_18_1;
         int stackIn_18_2;
         int stackIn_18_3;
@@ -87,7 +87,7 @@ final class pi {
             } else {
               stackIn_25_8 = this.field_c;
             }
-            ((se) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param4.field_f, param4.field_d, param4.field_a);
+            ((BitmapFont) (Object) stackIn_18_0).drawParagraphAlpha(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param4.field_f, param4.field_d, param4.field_a);
           }
           if (param0 != 0) {
             var8 = (pi) null;
@@ -212,7 +212,7 @@ final class pi {
         }
     }
 
-    final static void a(int param0, String param1, int[] param2, int param3, se param4, int param5) {
+    final static void a(int param0, String param1, int[] param2, int param3, BitmapFont param4, int param5) {
         tf var6 = new tf(param4, param1, param2);
         if (param0 != 0) {
           return;

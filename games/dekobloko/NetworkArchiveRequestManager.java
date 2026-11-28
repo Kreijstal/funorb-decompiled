@@ -633,10 +633,10 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             return stackIntegerLocal2;
           }
           if (booleanArgument3) {
-            stackIntegerLocal4 = NetworkSupport001.bitmapFontState0003.computeInteger1066(stringArgument2);
+            stackIntegerLocal4 = NetworkSupport001.bitmapFontState0003.stringWidth(stringArgument2);
             return stackIntegerLocal4;
           }
-          stackIntegerLocal3 = SoftwareFramebuffer.bitmapFontState0021.computeInteger1066(stringArgument2);
+          stackIntegerLocal3 = SoftwareFramebuffer.bitmapFontState0021.stringWidth(stringArgument2);
           return stackIntegerLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;

@@ -274,7 +274,7 @@ final class BirthDateTextFields extends BirthDateInput {
           if (integerArgument5 != 0) {
             this.uiComponentPart028State0005 = (EditableTextField) null;
           }
-          MixedSupport011.bitmapFontState0006.performAction1082(stringArgument2, (uiComponentArgument4.integerState0107 >> 1) + uiComponentArgument4.integerState0110 + integerArgument1, integerArgument3 + (uiComponentArgument4.integerState0104 - 5), 16777215, -1);
+          MixedSupport011.bitmapFontState0006.drawCentred(stringArgument2, (uiComponentArgument4.integerState0107 >> 1) + uiComponentArgument4.integerState0110 + integerArgument1, integerArgument3 + (uiComponentArgument4.integerState0104 - 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "pn.S(" + integerArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ',' + (uiComponentArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ')');
         }

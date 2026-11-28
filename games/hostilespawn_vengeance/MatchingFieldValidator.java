@@ -68,24 +68,24 @@ final class MatchingFieldValidator extends TextFieldValidator {
         }
     }
 
-    final static nc a(byte[] param0, int param1) {
-        nc var2 = null;
+    final static CoverageBitmapFont a(byte[] param0, int param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        nc stackIn_2_0 = null;
-        nc stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 5116) {
-            stackIn_2_0 = (nc) null;
+            stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
           if (param0 == null) {
             return null;
           }
-          var2 = new nc(param0, th.field_Jb, nh.field_O, TextInputField.field_X, ConfirmedEmailAvailabilityValidator.field_r, bf.field_d, ja.field_e);
+          var2 = new CoverageBitmapFont(param0, th.field_Jb, nh.field_O, TextInputField.field_X, ConfirmedEmailAvailabilityValidator.field_r, bf.field_d, ja.field_e);
           uj.d(-126);
           stackIn_7_0 = var2;
           return stackIn_7_0;

@@ -13,7 +13,7 @@ final class tg {
     int field_m;
     static int[] field_b;
     int[] field_k;
-    static se field_l;
+    static BitmapFont field_l;
     static int[] field_h;
     static String field_n;
 

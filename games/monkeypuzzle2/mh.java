@@ -3,7 +3,7 @@
  */
 final class mh extends jk {
     private int field_L;
-    private ta field_M;
+    private BitmapFont field_M;
     static String field_H;
     static String field_F;
     static int field_D;
@@ -20,7 +20,7 @@ final class mh extends jk {
         return var3;
     }
 
-    mh(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, ta param8, int param9, String param10) {
+    mh(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (ml) null, (of) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -46,7 +46,7 @@ final class mh extends jk {
           this.field_L = param6;
           this.field_G = param9;
           var12_int = this.field_L - this.field_I;
-          var13 = this.field_M.a(param10, var12_int, this.field_M.field_C) + 2 * this.field_I;
+          var13 = this.field_M.textHeight(param10, var12_int, this.field_M.field_C) + 2 * this.field_I;
           if (var13 > param3) {
             this.a(var13, 13361, param0, param2, param1);
           } else {
@@ -105,7 +105,7 @@ final class mh extends jk {
         super.a(param0, param1, param2, param3);
         if (param1 == 0) {
           var7 = !this.field_E ? 0 : -(this.field_I * 2) + this.field_l - this.field_L;
-          this.field_M.a(this.field_J, this.field_I + var5 + var7, var6 + this.field_I, -this.field_I + this.field_L, this.field_p - this.field_I * 2, this.field_G, -1, this.field_E ? 0 : 2, 1, this.field_M.field_C);
+          this.field_M.drawParagraph(this.field_J, this.field_I + var5 + var7, var6 + this.field_I, -this.field_I + this.field_L, this.field_p - this.field_I * 2, this.field_G, -1, this.field_E ? 0 : 2, 1, this.field_M.field_C);
           return;
         }
     }

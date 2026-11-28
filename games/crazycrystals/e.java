@@ -22,16 +22,16 @@ final class e {
     }
 
     final static void b(byte param0) {
-        vl.field_f = new am(RawPcmStream.a(hk.field_e, 100, 0));
-        SecondaryNodeDeque.field_d = new am(RawPcmStream.a(rh.field_g, 100, 0));
+        vl.field_f = new am(RawPcmStream.createForPlaybackRate(hk.field_e, 100, 0));
+        SecondaryNodeDeque.field_d = new am(RawPcmStream.createForPlaybackRate(rh.field_g, 100, 0));
         if (param0 >= -95) {
           field_a = (String) null;
         }
-        tl.field_a = new am(RawPcmStream.a(mo.field_i, 100, 0));
-        CrystalTile.field_p = new am(RawPcmStream.a(pl.field_h, 100, 0));
-        AccountCreationResultPanel.field_mb = new am(RawPcmStream.a(sj.field_d, 100, 0));
-        io.field_M = new am(RawPcmStream.a(PasswordValidator.field_m, 100, 0));
-        ec.field_k = new am(RawPcmStream.a(RockTile.field_x, 100, 0));
+        tl.field_a = new am(RawPcmStream.createForPlaybackRate(mo.field_i, 100, 0));
+        CrystalTile.field_p = new am(RawPcmStream.createForPlaybackRate(pl.field_h, 100, 0));
+        AccountCreationResultPanel.field_mb = new am(RawPcmStream.createForPlaybackRate(sj.field_d, 100, 0));
+        io.field_M = new am(RawPcmStream.createForPlaybackRate(PasswordValidator.field_m, 100, 0));
+        ec.field_k = new am(RawPcmStream.createForPlaybackRate(RockTile.field_x, 100, 0));
     }
 
     public static void a(boolean param0) {
@@ -91,9 +91,9 @@ final class e {
           PauseMenu.field_f = ArchiveRequest.a("jagex_logo_grey", param2, 10, "commonui");
           sb.field_B = bf.a(-1, "button", "commonui", param2);
           ao.field_b = LevelProgressUpdate.loadNamedSpriteSet("validation", "commonui", param2, false);
-          ba.field_i = (vc) ((Object) lj.a(param2, "commonui", param3, "arezzo12", 17153));
-          ai.field_h = (vc) ((Object) lj.a(param2, "commonui", param3, "arezzo14", 17153));
-          mo.field_m = (vc) ((Object) lj.a(param2, "commonui", param3, "arezzo14bold", 17153));
+          ba.field_i = (BitmapFont) ((Object) lj.a(param2, "commonui", param3, "arezzo12", 17153));
+          ai.field_h = (BitmapFont) ((Object) lj.a(param2, "commonui", param3, "arezzo14", 17153));
+          mo.field_m = (BitmapFont) ((Object) lj.a(param2, "commonui", param3, "arezzo14bold", 17153));
           var17 = new RgbSprite(param1.getFileByName(7693, "", "button.gif"), (java.awt.Component) ((Object) jd.field_D));
           ee.a(param2, "commonui", (byte) -92, "dropdown");
           var5 = ep.a(param2, "screen_options", "commonui", false);

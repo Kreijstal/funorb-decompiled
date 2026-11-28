@@ -685,7 +685,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               if (null != ec.field_b) {
                 ec.field_b.g(uh.field_i * jh.field_db / 400);
               } else {
-                ec.field_b = RawPcmStream.a(NetworkArchiveRequest.field_A[5], 100, uh.field_i * jh.field_db / 400);
+                ec.field_b = RawPcmStream.createForPlaybackRate(NetworkArchiveRequest.field_A[5], 100, uh.field_i * jh.field_db / 400);
                 ec.field_b.d(-1);
                 eh.field_c.b(ec.field_b);
               }
@@ -697,7 +697,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             }
             if (mg.field_c > 0) {
               if (null == q.field_i) {
-                q.field_i = RawPcmStream.a(fg.field_b[25], 100, uh.field_i * mg.field_c / 400);
+                q.field_i = RawPcmStream.createForPlaybackRate(fg.field_b[25], 100, uh.field_i * mg.field_c / 400);
                 q.field_i.d(-1);
                 eh.field_c.b(q.field_i);
               } else {
@@ -711,7 +711,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             }
             if (tb.field_N > 0) {
               if (e.field_l == null) {
-                e.field_l = RawPcmStream.a(fg.field_b[26], 100, 10);
+                e.field_l = RawPcmStream.createForPlaybackRate(fg.field_b[26], 100, 10);
                 e.field_l.d(-1);
                 eh.field_c.b(e.field_l);
               } else {

@@ -17,10 +17,10 @@ final class ne {
     final static void a(int param0) {
         int var1_int = 0;
         int var3 = 0;
-        ce stackIn_10_0 = null;
+        BinaryBitmapFont stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        ce var2 = null;
+        BinaryBitmapFont var2 = null;
         var3 = Confined.field_J ? 1 : 0;
         try {
           var1_int = 0;
@@ -35,7 +35,7 @@ final class ne {
                 stackIn_10_0 = TunnelCamera.field_I;
               }
               var2 = stackIn_10_0;
-              var2.c(fb.field_d[var1_int], sc.field_d[var1_int], uh.field_g[var1_int] >> 4, 16777215, -1);
+              var2.drawString(fb.field_d[var1_int], sc.field_d[var1_int], uh.field_g[var1_int] >> 4, 16777215, -1);
             }
             var1_int++;
           }

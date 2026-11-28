@@ -68,7 +68,7 @@ final class gh implements t {
           SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (null != this.field_d) {
             var13 = var14.field_I + (var14.field_S + this.field_b);
-            this.field_d.a(param1.field_s, var13 + (param4 + param1.field_p), this.field_f + (param1.field_m + param2), -this.field_b - var13 + param1.field_x, -(this.field_b << 1) + param1.field_u, this.field_j, this.field_g, 1, 1, 0);
+            this.field_d.drawParagraph(param1.field_s, var13 + (param4 + param1.field_p), this.field_f + (param1.field_m + param2), -this.field_b - var13 + param1.field_x, -(this.field_b << 1) + param1.field_u, this.field_j, this.field_g, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "gh.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

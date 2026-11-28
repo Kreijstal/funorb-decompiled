@@ -36,12 +36,12 @@ final class qg extends am {
         }
     }
 
-    final static vn a(ResourceArchive param0, ResourceArchive param1, String param2, String param3, int param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, ResourceArchive param1, String param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        vn stackIn_2_0 = null;
-        vn stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_2_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -59,7 +59,7 @@ final class qg extends am {
             stackIn_4_0 = AccountRequestState.a(param1, var5_int, param0, var6, param4 ^ 237);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (vn) null;
+          stackIn_2_0 = (BinaryBitmapFont) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,7 +136,7 @@ final class qg extends am {
                 } else {
                   stackIn_17_2 = 26;
                 }
-                ip.a(stackIn_16_0, PcmSampleStream.a(stackIn_16_1[stackIn_17_2], var8, var7_int));
+                ip.a(stackIn_16_0, PcmSampleStream.createForPlaybackRate(stackIn_16_1[stackIn_17_2], var8, var7_int));
               }
               if (0.0 == param0 &&
                 var8 > 150) {

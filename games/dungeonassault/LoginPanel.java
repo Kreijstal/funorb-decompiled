@@ -18,8 +18,8 @@ final class LoginPanel extends ii implements TextFieldListener, vg {
     private EditableTextField field_R;
 
     final void i(int param0) {
-        this.field_O.p(72);
-        this.field_R.p(50);
+        this.field_O.clearText(72);
+        this.field_R.clearText(50);
         if (param0 != 22377) {
           LoginPanel.b(true);
         }
@@ -34,8 +34,8 @@ final class LoginPanel extends ii implements TextFieldListener, vg {
         try {
           var3 = this.field_O;
           var4 = param1;
-          var3.a(var4, false, (byte) 64);
-          this.field_R.p(param0 + 12457);
+          var3.setText(var4, false, (byte) 64);
+          this.field_R.clearText(param0 + 12457);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "dn.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -247,7 +247,7 @@ final class LoginPanel extends ii implements TextFieldListener, vg {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (this.field_S != null) {
-          lp.field_C.a(this.field_S, 20 + this.field_q + param1, param3 + this.field_v + 15, -40 + this.field_x, this.field_s, 16777215, -1, 1, 0, lp.field_C.field_H);
+          lp.field_C.drawParagraph(this.field_S, 20 + this.field_q + param1, param3 + this.field_v + 15, -40 + this.field_x, this.field_s, 16777215, -1, 1, 0, lp.field_C.field_H);
         }
         if (null != this.field_V) {
           SoftwareRasterizer.drawHorizontalLine(10 + param1, param3 + 134, this.field_x - 20, 4210752);
@@ -275,7 +275,7 @@ final class LoginPanel extends ii implements TextFieldListener, vg {
         RuntimeException decompiledCaughtException = null;
         na var6 = null;
         RuntimeException var6_ref = null;
-        se var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         ba var9 = null;
         dg var12 = null;
@@ -343,7 +343,7 @@ final class LoginPanel extends ii implements TextFieldListener, vg {
           this.field_v = 15;
           var7 = lp.field_C;
           if (this.field_S != null) {
-            this.field_v = this.field_v + (5 + var7.a(this.field_S, -40 + this.field_x, var7.field_H));
+            this.field_v = this.field_v + (5 + var7.textHeight(this.field_S, -40 + this.field_x, var7.field_H));
           }
           var8 = cp.field_T;
           var9 = gb.a(DebouncedFieldValidator.c(true), -119);

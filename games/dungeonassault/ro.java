@@ -551,7 +551,7 @@ final class ro extends kl {
     }
 
     private final void a(String param0, int param1, int param2) {
-        int var4_int = IntrusiveNode.field_c.b(param0);
+        int var4_int = IntrusiveNode.field_c.stringWidth(param0);
         int var5 = IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_H;
         if (param2 > -75) {
           return;
@@ -559,7 +559,7 @@ final class ro extends kl {
         try {
           this.field_v = new RgbSprite(var4_int, var5);
           jh.a(this.field_v);
-          IntrusiveNode.field_c.b(param0, 0, IntrusiveNode.field_c.field_H, param1, -1);
+          IntrusiveNode.field_c.drawString(param0, 0, IntrusiveNode.field_c.field_H, param1, -1);
           this.field_q = rb.a(16, this.field_v, param1, (byte) 86);
           this.field_v.d(65793);
           jh.b();
@@ -823,34 +823,34 @@ final class ro extends kl {
         var14 = DungeonAssault.field_K;
         var6 = this.field_D;
         if (this.field_t == 5) {
-          db.field_v.a(jk.a(new String[]{gh.a(this.field_p.field_Y.field_l, (byte) -120)}, PackedBitSet.field_e, 30496), 30 + param0, param1 - 20, param2 - 60, 40, 16777215, -1, 1, 1, la.field_b.field_H);
+          db.field_v.drawParagraph(jk.a(new String[]{gh.a(this.field_p.field_Y.field_l, (byte) -120)}, PackedBitSet.field_e, 30496), 30 + param0, param1 - 20, param2 - 60, 40, 16777215, -1, 1, 1, la.field_b.field_H);
         } else {
           if (this.field_t != 0) {
             if (this.field_t != 4) {
               var7 = (param2 * 5 >> 3) + param0;
               var8 = param1 + 10;
-              db.field_v.a(eh.field_a, var7, var8, 16777215, -1);
-              db.field_v.b(Integer.toString(this.e(param3 - 60)), var7, var8, 16777215, -1);
+              db.field_v.drawRightAligned(eh.field_a, var7, var8, 16777215, -1);
+              db.field_v.drawString(Integer.toString(this.e(param3 - 60)), var7, var8, 16777215, -1);
             }
           } else {
             var7 = (3 * param2 >> 2) + param0;
             var8 = param1;
-            db.field_v.a(ab.field_b, var7, var8, this.field_r, -1);
-            db.field_v.b(Integer.toString(this.field_D), var7, var8, this.field_r, -1);
+            db.field_v.drawRightAligned(ab.field_b, var7, var8, this.field_r, -1);
+            db.field_v.drawString(Integer.toString(this.field_D), var7, var8, this.field_r, -1);
             var8 = var8 + (2 + db.field_v.field_H);
-            db.field_v.a(li.field_e, var7, var8, this.field_r, -1);
-            db.field_v.b((int)(0.5 + 100.0 * this.field_p.field_Y.calculateDragonWakeRisk(gm.field_d.field_N, this.field_D, 82)) + "%", var7, var8, this.field_r, -1);
+            db.field_v.drawRightAligned(li.field_e, var7, var8, this.field_r, -1);
+            db.field_v.drawString((int)(0.5 + 100.0 * this.field_p.field_Y.calculateDragonWakeRisk(gm.field_d.field_N, this.field_D, 82)) + "%", var7, var8, this.field_r, -1);
             var8 = var8 + (2 + db.field_v.field_H);
             if (var6 > this.field_p.field_Y.getMaximumHoardGoldToSteal(-82)) {
-              db.field_v.a(oo.field_b, 30 + param0, -db.field_v.field_H + var8, param2 - 60, 30, this.field_r, -1, 1, 1, db.field_v.field_H);
+              db.field_v.drawParagraph(oo.field_b, 30 + param0, -db.field_v.field_H + var8, param2 - 60, 30, this.field_r, -1, 1, 1, db.field_v.field_H);
             } else {
               if (var6 < 0) {
-                db.field_v.a(jc.field_a, var7, var8, this.field_r, -1);
-                db.field_v.b(gh.a(-var6, (byte) -123), var7, var8, this.field_r, -1);
+                db.field_v.drawRightAligned(jc.field_a, var7, var8, this.field_r, -1);
+                db.field_v.drawString(gh.a(-var6, (byte) -123), var7, var8, this.field_r, -1);
                 var8 = var8 + (2 + db.field_v.field_H);
               } else {
-                db.field_v.a(kl.field_e, var7, var8, this.field_r, -1);
-                db.field_v.b(gh.a(var6, (byte) -122), var7, var8, this.field_r, -1);
+                db.field_v.drawRightAligned(kl.field_e, var7, var8, this.field_r, -1);
+                db.field_v.drawString(gh.a(var6, (byte) -122), var7, var8, this.field_r, -1);
                 var8 = var8 + (2 + db.field_v.field_H);
                 var9 = (double)gm.field_d.field_b / (double)gm.field_d.field_l;
                 var11 = Math.sqrt(var9);
@@ -859,8 +859,8 @@ final class ro extends kl {
                   var13 = gm.field_d.field_b;
                 }
                 var6 = var6 - var13;
-                db.field_v.a(nm.field_jb, var7, var8, this.field_r, -1);
-                db.field_v.b(gh.a(var6, (byte) -106), var7, var8, this.field_r, -1);
+                db.field_v.drawRightAligned(nm.field_jb, var7, var8, this.field_r, -1);
+                db.field_v.drawString(gh.a(var6, (byte) -106), var7, var8, this.field_r, -1);
                 var8 = var8 + (db.field_v.field_H + 2);
               }
             }

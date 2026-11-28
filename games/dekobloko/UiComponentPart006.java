@@ -43,7 +43,7 @@ final class UiComponentPart006 extends ComponentDecorator {
           this.stringState0110 = stringArgument11;
           this.integerState0136 = integerArgument7;
           integerLocal11 = -this.integerState0134 + this.integerState0136;
-          integerLocal13 = this.bitmapFontState0009.computeInteger1081(stringArgument11, integerLocal11, this.bitmapFontState0009.integerState0518) + this.integerState0134 * 2;
+          integerLocal13 = this.bitmapFontState0009.textHeight(stringArgument11, integerLocal11, this.bitmapFontState0009.integerState0518) + this.integerState0134 * 2;
           if (integerLocal13 > integerArgument4) {
             this.performAction0222(integerLocal13, integerArgument3, integerArgument1, integerArgument2, -16555);
           } else {
@@ -229,7 +229,7 @@ final class UiComponentPart006 extends ComponentDecorator {
           return;
         }
         int integerLocal3 = this.booleanState0026 ? this.integerState0107 + (-this.integerState0136 - 2 * this.integerState0134) : 0;
-        this.bitmapFontState0009.computeInteger1071(this.stringState0110, integerLocal3 + integerLocal1 + this.integerState0134, integerLocal2 + this.integerState0134, -this.integerState0134 + this.integerState0136, this.integerState0108 - 2 * this.integerState0134, this.integerState0135, -1, this.booleanState0026 ? 0 : 2, 1, this.bitmapFontState0009.integerState0518);
+        this.bitmapFontState0009.drawParagraph(this.stringState0110, integerLocal3 + integerLocal1 + this.integerState0134, integerLocal2 + this.integerState0134, -this.integerState0134 + this.integerState0136, this.integerState0108 - 2 * this.integerState0134, this.integerState0135, -1, this.booleanState0026 ? 0 : 2, 1, this.bitmapFontState0009.integerState0518);
     }
 
     final static RgbSprite[] computeRgbSpriteArray0356(boolean booleanArgument1) {

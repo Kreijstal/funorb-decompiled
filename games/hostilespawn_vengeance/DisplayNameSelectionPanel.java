@@ -203,7 +203,7 @@ final class DisplayNameSelectionPanel extends vd implements kn, qk {
           return;
         }
         try {
-          ((EditableTextField) ((Object) var3)).a((byte) 91, false, var4);
+          ((EditableTextField) ((Object) var3)).setText((byte) 91, false, var4);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ij.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

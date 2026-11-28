@@ -24,7 +24,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             nf.field_n = hn.correctedCurrentTimeMillis((byte) 80);
             vj.sleepMillis(5000L, (byte) -49);
             lj.field_t = null;
-            this.a(0, false);
+            this.shutdownApplet(0, false);
             return;
           }
           return;
@@ -148,7 +148,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    private final void f(int param0) {
+    private final void renderAppletFrame(int param0) {
         int fieldTemp$1 = 0;
         long var2_long = 0L;
         long var4 = 0L;
@@ -389,7 +389,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void shutdownApplet(int param0, boolean param1) {
         Exception exception = null;
         RuntimeException runtimeException = null;
         Object var3 = null;
@@ -514,7 +514,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    final static void a(vm param0, int param1, vm param2, vh param3, int param4, int param5, vh param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, vh param16, int param17, int param18, int param19, int param20) {
+    final static void a(BitmapFont param0, int param1, BitmapFont param2, vh param3, int param4, int param5, vh param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, vh param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -604,7 +604,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    private final void a(boolean param0) {
+    private final void processClientTick(boolean param0) {
         RuntimeException runtimeException = null;
         long var2_long = 0L;
         long var4 = 0L;
@@ -800,11 +800,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   var3 = stackIn_102_0;
                   do {
                     if (!(var3 < ve.field_a)) {
-                      this.f(-114);
+                      this.renderAppletFrame(-114);
                       eb.a(gf.field_b, 1001, field_h);
                       break;
                     }
-                    this.a(true);
+                    this.processClientTick(true);
                     var3++;
                   } while (var5 == 0);
                 } while (var5 == 0);
@@ -815,7 +815,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               ic.a((byte) -125, (String) null, (Throwable) (var1));
               this.a(3904, "crash");
             }
-            this.a(0, true);
+            this.shutdownApplet(0, true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;

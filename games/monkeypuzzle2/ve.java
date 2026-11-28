@@ -17,7 +17,7 @@ final class ve extends mg {
         field_x = (int[][]) null;
     }
 
-    private ve(ta param0, int param1) {
+    private ve(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

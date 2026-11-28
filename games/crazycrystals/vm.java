@@ -84,10 +84,10 @@ final class vm {
         try {
           var3_int = 125 % ((param0 - 22) / 36);
           if (param1) {
-            stackIn_4_0 = gh.field_F.a(param2);
+            stackIn_4_0 = gh.field_F.stringWidth(param2);
             return stackIn_4_0;
           }
-          stackIn_2_0 = ec.field_m.a(param2);
+          stackIn_2_0 = ec.field_m.stringWidth(param2);
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -165,10 +165,10 @@ final class vm {
         try {
           var3_int = 125 % ((param0 - 22) / 36);
           if (param1) {
-            stackIn_4_0 = gh.field_F.a(param2);
+            stackIn_4_0 = gh.field_F.stringWidth(param2);
             return stackIn_4_0;
           }
-          stackIn_2_0 = ec.field_m.a(param2);
+          stackIn_2_0 = ec.field_m.stringWidth(param2);
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

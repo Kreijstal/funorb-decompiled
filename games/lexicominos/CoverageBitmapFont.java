@@ -4,7 +4,7 @@
 final class CoverageBitmapFont extends BitmapFont {
     private byte[][] field_N;
 
-    private final static byte[][] a(int[] param0, byte[][] param1) {
+    private final static byte[][] convertPaletteToCoverage(int[] param0, byte[][] param1) {
         int var2_int = 0;
         int var5 = 0;
         byte[][] var2;
@@ -71,15 +71,15 @@ final class CoverageBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            CoverageBitmapFont.a(SoftwareRasterizer.field_b, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            CoverageBitmapFont.blitGlyphAlphaRows(SoftwareRasterizer.field_b, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
-            BinaryBitmapFont.a(SoftwareRasterizer.field_b, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            BinaryBitmapFont.blitGlyphAlphaRows(SoftwareRasterizer.field_b, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitGlyphRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$11 = 0;
@@ -108,7 +108,7 @@ final class CoverageBitmapFont extends BitmapFont {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitGlyphAlphaRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$11 = 0;
@@ -140,7 +140,7 @@ final class CoverageBitmapFont extends BitmapFont {
     CoverageBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
         super(param0, param1, param2, param3, param4);
         this.field_N = new byte[256][];
-        this.field_N = CoverageBitmapFont.a(param5, param6);
+        this.field_N = CoverageBitmapFont.convertPaletteToCoverage(param5, param6);
     }
 
     final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
@@ -183,9 +183,9 @@ final class CoverageBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            CoverageBitmapFont.a(SoftwareRasterizer.field_b, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
+            CoverageBitmapFont.blitGlyphRows(SoftwareRasterizer.field_b, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            BinaryBitmapFont.a(SoftwareRasterizer.field_b, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
+            BinaryBitmapFont.blitGlyphRows(SoftwareRasterizer.field_b, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }

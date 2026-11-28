@@ -10,12 +10,12 @@ abstract class eg extends DualLinkNode {
 
     abstract Object e(int param0);
 
-    final static o a(ResourceArchive param0, String param1, int param2, ResourceArchive param3, String param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, String param1, int param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        o stackIn_1_0 = null;
+        CoverageBitmapFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

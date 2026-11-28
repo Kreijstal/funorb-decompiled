@@ -247,8 +247,8 @@ final class NodeHashTableIterator implements Iterator {
           var7 = "";
           if (ui.field_g != 0) {
             var28 = var7 + var19 + ": ";
-            var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var28);
-            if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) > var5Lifetime1) {
+            var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.stringWidth(var28);
+            if (GameKeyHandler.field_f.stringWidth(SpriteState.field_D.toString()) > var5Lifetime1) {
               w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
             }
             return true;
@@ -257,8 +257,8 @@ final class NodeHashTableIterator implements Iterator {
             if (!fq.field_i) {
               if (gd.field_j == null) {
                 var33 = var7 + var19 + ": ";
-                var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var33);
-                if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) > var5Lifetime1) {
+                var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.stringWidth(var33);
+                if (GameKeyHandler.field_f.stringWidth(SpriteState.field_D.toString()) > var5Lifetime1) {
                   w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
                 }
                 return true;
@@ -266,8 +266,8 @@ final class NodeHashTableIterator implements Iterator {
               if (!ar.field_t) {
                 var31 = "[" + Vertigo2.a(new String[]{gd.field_j.field_Nb}, ie.field_Rb, -112) + "] ";
                 var32 = var31 + var19 + ": ";
-                var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var32);
-                if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) > var5Lifetime1) {
+                var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.stringWidth(var32);
+                if (GameKeyHandler.field_f.stringWidth(SpriteState.field_D.toString()) > var5Lifetime1) {
                   w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
                 }
                 return true;
@@ -275,16 +275,16 @@ final class NodeHashTableIterator implements Iterator {
               if (null == v.field_a) {
                 var29 = "[" + Vertigo2.a(new String[]{gd.field_j.field_Nb}, ie.field_Rb, -112) + "] ";
                 var30 = var29 + var19 + ": ";
-                var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var30);
-                if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) > var5Lifetime1) {
+                var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.stringWidth(var30);
+                if (GameKeyHandler.field_f.stringWidth(SpriteState.field_D.toString()) > var5Lifetime1) {
                   w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
                 }
                 return true;
               }
               var7 = "[" + v.field_a + "] ";
               var33Lifetime1 = var7 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var33Lifetime1);
-              if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) > var5Lifetime1) {
+              var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.stringWidth(var33Lifetime1);
+              if (GameKeyHandler.field_f.stringWidth(SpriteState.field_D.toString()) > var5Lifetime1) {
                 w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
               }
               return true;
@@ -295,8 +295,8 @@ final class NodeHashTableIterator implements Iterator {
             if (!ar.field_t) {
               var36 = "[" + Vertigo2.a(new String[]{gd.field_j.field_Nb}, ie.field_Rb, -112) + "] ";
               var37 = var36 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var37);
-              if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) > var5Lifetime1) {
+              var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.stringWidth(var37);
+              if (GameKeyHandler.field_f.stringWidth(SpriteState.field_D.toString()) > var5Lifetime1) {
                 w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
               }
               return true;
@@ -304,8 +304,8 @@ final class NodeHashTableIterator implements Iterator {
             if (null == v.field_a) {
               var34 = "[" + Vertigo2.a(new String[]{gd.field_j.field_Nb}, ie.field_Rb, -112) + "] ";
               var35 = var34 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var35);
-              if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) > var5Lifetime1) {
+              var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.stringWidth(var35);
+              if (GameKeyHandler.field_f.stringWidth(SpriteState.field_D.toString()) > var5Lifetime1) {
                 w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);
               }
               return true;
@@ -313,20 +313,20 @@ final class NodeHashTableIterator implements Iterator {
             var7 = "[" + v.field_a + "] ";
           }
           var38 = var7 + var19 + ": ";
-          var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var38);
+          var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.stringWidth(var38);
         } else {
           var40 = (CharSequence) ((Object) ea.field_b);
           var18 = Vertigo2.a(new String[]{vj.a(var40, (byte) 8)}, di.field_B, -117);
           var8 = Vertigo2.a(new String[]{var16}, af.field_L, 15);
-          var9 = GameKeyHandler.field_f.c(var18);
-          var10 = GameKeyHandler.field_f.c(var8);
+          var9 = GameKeyHandler.field_f.stringWidth(var18);
+          var10 = GameKeyHandler.field_f.stringWidth(var8);
           if (var10 >= var9) {
             var5Lifetime1 = var5Lifetime1 - var10;
           } else {
             var5Lifetime1 = var5Lifetime1 - var9;
           }
         }
-        if (GameKeyHandler.field_f.c(SpriteState.field_D.toString()) <= var5Lifetime1) {
+        if (GameKeyHandler.field_f.stringWidth(SpriteState.field_D.toString()) <= var5Lifetime1) {
           return true;
         }
         w.a(true, ' ', -1 + SpriteState.field_D.length(), SpriteState.field_D);

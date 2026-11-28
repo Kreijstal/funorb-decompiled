@@ -66,7 +66,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
 
     abstract String evaluateValidationMessage(byte param0);
 
-    final static void a(boolean param0, int param1, String param2, rf param3, mi param4) {
+    final static void a(boolean param0, int param1, String param2, BitmapFont param3, mi param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -88,18 +88,18 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           var6 = -1;
           if (param0) {
             var10 = (mi) null;
-            DebouncedFieldValidator.a(false, 13, (String) null, (rf) null, (mi) null);
+            DebouncedFieldValidator.a(false, 13, (String) null, (BitmapFont) null, (mi) null);
           }
           for (var7 = 1; param2.length() > var7; var7++) {
             var8 = param2.charAt(var7);
             if (var8 == 60) {
-              var6 = param4.field_a[0] + ((var5_int >> 8) + param3.b(param2.substring(0, var7)));
+              var6 = param4.field_a[0] + ((var5_int >> 8) + param3.stringWidth(param2.substring(0, var7)));
             }
             if (var6 == -1) {
               if (var8 == 32) {
                 var5_int = var5_int + param1;
               }
-              param4.field_a[var7] = param4.field_a[0] + (var5_int >> 8) - (-param3.b(param2.substring(0, 1 + var7)) + param3.a((char) var8));
+              param4.field_a[var7] = param4.field_a[0] + (var5_int >> 8) - (-param3.stringWidth(param2.substring(0, 1 + var7)) + param3.charWidth((char) var8));
             } else {
               param4.field_a[var7] = var6;
             }
@@ -141,7 +141,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
         field_a = null;
         if (param0 <= 5) {
           mi var2 = (mi) null;
-          DebouncedFieldValidator.a(false, 91, (String) null, (rf) null, (mi) null);
+          DebouncedFieldValidator.a(false, 91, (String) null, (BitmapFont) null, (mi) null);
         }
     }
 
@@ -149,7 +149,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
         this.field_d = la.correctedCurrentTimeMillis(false);
         if (param0 != 87) {
           mi var3 = (mi) null;
-          DebouncedFieldValidator.a(true, 28, (String) null, (rf) null, (mi) null);
+          DebouncedFieldValidator.a(true, 28, (String) null, (BitmapFont) null, (mi) null);
         }
     }
 

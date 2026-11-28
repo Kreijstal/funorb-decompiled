@@ -39,7 +39,7 @@ final class pf {
         this(param0, false);
     }
 
-    final static void a(we param0, String param1, int param2, int param3, mg param4) {
+    final static void a(BitmapFont param0, String param1, int param2, int param3, mg param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -65,7 +65,7 @@ final class pf {
           while (var7 < param1.length()) {
             var8 = param1.charAt(var7);
             if (var8 == 60) {
-              var6 = param4.field_d[0] + (var5_int >> 8) + param0.a(param1.substring(0, var7));
+              var6 = param4.field_d[0] + (var5_int >> 8) + param0.stringWidth(param1.substring(0, var7));
             }
             if (var6 != -1) {
               param4.field_d[var7] = var6;
@@ -73,7 +73,7 @@ final class pf {
               if (32 == var8) {
                 var5_int = var5_int + param2;
               }
-              param4.field_d[var7] = (var5_int >> 8) + param4.field_d[0] - (-param0.a(param1.substring(0, 1 + var7)) + param0.a((char) var8));
+              param4.field_d[var7] = (var5_int >> 8) + param4.field_d[0] - (-param0.stringWidth(param1.substring(0, 1 + var7)) + param0.charWidth((char) var8));
             }
             if (var8 == 62) {
               var6 = -1;

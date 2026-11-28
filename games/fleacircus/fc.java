@@ -64,7 +64,7 @@ final class fc {
     final static void c(int param0) {
         int stackIn_85_0 = 0;
         RgbSprite[] stackIn_86_1 = null;
-        fa stackIn_88_0;
+        BitmapFont stackIn_88_0;
         String stackIn_88_1;
         int stackIn_88_2;
         int stackIn_88_3;
@@ -73,7 +73,7 @@ final class fc {
         int stackIn_92_4 = 0;
         int stackIn_94_0 = 0;
         RgbSprite[] stackIn_95_1 = null;
-        fa stackIn_97_0;
+        BitmapFont stackIn_97_0;
         String stackIn_97_1;
         int stackIn_97_2;
         int stackIn_97_3;
@@ -82,7 +82,7 @@ final class fc {
         int stackIn_101_4 = 0;
         int stackIn_103_0 = 0;
         RgbSprite[] stackIn_104_1 = null;
-        fa stackIn_106_0;
+        BitmapFont stackIn_106_0;
         String stackIn_106_1;
         int stackIn_106_2;
         int stackIn_106_3;
@@ -110,7 +110,7 @@ final class fc {
         boolean stackIn_147_2 = false;
         int stackIn_150_1 = 0;
         int stackIn_161_0 = 0;
-        fa stackIn_165_0;
+        BitmapFont stackIn_165_0;
         String stackIn_165_1;
         int stackIn_165_2;
         int stackIn_165_3;
@@ -135,7 +135,7 @@ final class fc {
         String var13 = null;
         String var14 = null;
         String var15 = null;
-        fa var16 = null;
+        BitmapFont var16 = null;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
@@ -311,7 +311,7 @@ final class fc {
           } else {
             stackIn_92_4 = 1;
           }
-          ((fa) (Object) stackIn_88_0).c(stackIn_88_1, stackIn_88_2, stackIn_88_3, stackIn_92_4, -1);
+          ((BitmapFont) (Object) stackIn_88_0).drawString(stackIn_88_1, stackIn_88_2, stackIn_88_3, stackIn_92_4, -1);
           stackIn_94_0 = wd.field_a.field_a;
           if (mh.field_u != 2) {
             stackIn_95_1 = a.field_b;
@@ -331,7 +331,7 @@ final class fc {
           } else {
             stackIn_101_4 = 0;
           }
-          ((fa) (Object) stackIn_97_0).c(stackIn_97_1, stackIn_97_2, stackIn_97_3, stackIn_101_4, -1);
+          ((BitmapFont) (Object) stackIn_97_0).drawString(stackIn_97_1, stackIn_97_2, stackIn_97_3, stackIn_101_4, -1);
           stackIn_103_0 = de.field_b.field_a;
           if (mh.field_u == 3) {
             stackIn_104_1 = gj.field_E;
@@ -351,7 +351,7 @@ final class fc {
           } else {
             stackIn_110_4 = 1;
           }
-          ((fa) (Object) stackIn_106_0).c(stackIn_106_1, stackIn_106_2, stackIn_106_3, stackIn_110_4, -1);
+          ((BitmapFont) (Object) stackIn_106_0).drawString(stackIn_106_1, stackIn_106_2, stackIn_106_3, stackIn_110_4, -1);
           var11Lifetime2 = 100 % ((param0 - 66) / 60);
           var10 = db.a(pk.field_G, new String[]{FrameTimer.field_c[fleas.field_E][var1_int]}, true);
           var12 = db.a(fb.field_f, new String[]{Integer.toString(DiskArchiveRequest.field_z), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_f)}, true);
@@ -362,14 +362,14 @@ final class fc {
           var17 = 3 + (int)(1.5 * (double)var16.field_H);
           var18 = 0;
           var19 = -1;
-          var16.c(var10, 35, var16.field_H + (425 - var17), var18, var19);
-          var16.c(var12, 35, var16.field_H + 425, var18, var19);
-          var16.c(var13, 35, var17 + 425 + var16.field_H, var18, var19);
-          var16.c(var14, 120, 425 + var16.field_H, var18, var19);
-          var16.c(var15, ol.field_f.field_l, 425 + var16.field_H, var18, var19);
+          var16.drawString(var10, 35, var16.field_H + (425 - var17), var18, var19);
+          var16.drawString(var12, 35, var16.field_H + 425, var18, var19);
+          var16.drawString(var13, 35, var17 + 425 + var16.field_H, var18, var19);
+          var16.drawString(var14, 120, 425 + var16.field_H, var18, var19);
+          var16.drawString(var15, ol.field_f.field_l, 425 + var16.field_H, var18, var19);
           var20 = wa.a(false);
           var21 = db.a(lf.field_b, new String[]{var20}, true);
-          var16.c(db.a(var21, new String[]{"C8BA91"}, true), 120, var16.field_H + 425 + var17, var18, var19);
+          var16.drawString(db.a(var21, new String[]{"C8BA91"}, true), 120, var16.field_H + 425 + var17, var18, var19);
           ol.field_f.field_l = 250;
           ol.field_f.field_x = ve.field_d;
           ol.field_f.field_a = 425 + var17 - 4;
@@ -409,9 +409,9 @@ final class fc {
                 var26 = var25 - 120;
                 var25 = var25 - 2 * var26;
               }
-              MatchingFieldValidator.field_p.b(fi.field_l, 320, var25, 0, 0, PacketBuffer.field_j / 3);
+              MatchingFieldValidator.field_p.drawWaveText(fi.field_l, 320, var25, 0, 0, PacketBuffer.field_j / 3);
               var26_ref_String = var14 + "   " + db.a(fleas.field_I, new String[]{var20}, true);
-              MatchingFieldValidator.field_p.a(db.a(var26_ref_String, new String[]{"2"}, true), 320, var25 + MatchingFieldValidator.field_p.field_N, 0, 0);
+              MatchingFieldValidator.field_p.drawCentred(db.a(var26_ref_String, new String[]{"2"}, true), 320, var25 + MatchingFieldValidator.field_p.field_N, 0, 0);
               SoftwareRasterizer.restoreClip(si.field_R);
             }
           }
@@ -469,7 +469,7 @@ final class fc {
             } else {
               stackIn_166_4 = GzipDecompressor.field_d;
             }
-            ((fa) (Object) stackIn_165_0).a(stackIn_165_1, stackIn_165_2, stackIn_165_3 + stackIn_166_4, 200, 150, 0, -1, var22Lifetime3, 1, 1, MatchingFieldValidator.field_p.field_H);
+            ((BitmapFont) (Object) stackIn_165_0).drawParagraphAlpha(stackIn_165_1, stackIn_165_2, stackIn_165_3 + stackIn_166_4, 200, 150, 0, -1, var22Lifetime3, 1, 1, MatchingFieldValidator.field_p.field_H);
           }
           if (qg.field_c > 0 &&
             0 == nb.field_b) {

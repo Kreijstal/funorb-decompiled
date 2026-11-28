@@ -7,8 +7,8 @@ final class i extends im implements ng {
     static boolean[] field_P;
     static boolean field_R;
     private lg field_O;
-    static vn field_N;
-    static pk field_Q;
+    static BinaryBitmapFont field_N;
+    static PalettedBitmapFont field_Q;
 
     public static void clearDeclaredStaticReferences(int param0) {
         field_Q = null;
@@ -152,7 +152,7 @@ final class i extends im implements ng {
           return;
         }
         if (!param0) {
-          field_N = (vn) null;
+          field_N = (BinaryBitmapFont) null;
         }
         this.field_D = false;
     }

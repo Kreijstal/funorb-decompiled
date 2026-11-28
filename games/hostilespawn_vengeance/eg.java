@@ -12,7 +12,7 @@ final class eg {
     private String field_c;
     static String field_j;
     private int field_i;
-    private vm field_a;
+    private BitmapFont field_a;
     private String[] field_d;
     private int field_b;
     static String field_l;
@@ -222,7 +222,7 @@ final class eg {
           var3_int = 75 % ((43 - param1) / 48);
           while (true) {
             try {
-              this.field_s = this.field_a.a(param0.toUpperCase(), new int[]{500}, this.field_d);
+              this.field_s = this.field_a.wrapText(param0.toUpperCase(), new int[]{500}, this.field_d);
             } catch (java.lang.ArrayIndexOutOfBoundsException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               arrayIndexOutOfBoundsException = (ArrayIndexOutOfBoundsException) (Object) decompiledCaughtException;
@@ -270,7 +270,7 @@ final class eg {
         var4 = HostileSpawn.field_I ? 1 : 0;
         var2 = this.field_q - (this.field_b + this.field_n * this.field_m);
         for (var3 = 0; this.field_n > var3; var3++) {
-          this.field_a.c(this.field_d[var3], this.field_e, var2, this.field_x, this.field_k);
+          this.field_a.drawString(this.field_d[var3], this.field_e, var2, this.field_x, this.field_k);
           var2 = var2 + this.field_m;
         }
         if (this.field_n >= this.field_s) {
@@ -283,9 +283,9 @@ final class eg {
               return;
             }
             if (var3Lifetime1 != 0) {
-              this.field_a.b(this.field_o, 320, this.field_q + this.field_m * 2, 16776960, -1);
+              this.field_a.drawCentred(this.field_o, 320, this.field_q + this.field_m * 2, 16776960, -1);
             } else {
-              this.field_a.a(this.field_c, 320, 2 * this.field_m + this.field_q, 8421504, -1, this.field_u);
+              this.field_a.drawCentredAlpha(this.field_c, 320, 2 * this.field_m + this.field_q, 8421504, -1, this.field_u);
             }
             return;
           }
@@ -298,7 +298,7 @@ final class eg {
           }
         } else {
           if (this.field_i > 0) {
-            this.field_a.c(this.field_d[this.field_n].substring(0, this.field_i), this.field_e, var2, this.field_x, this.field_k);
+            this.field_a.drawString(this.field_d[this.field_n].substring(0, this.field_i), this.field_e, var2, this.field_x, this.field_k);
             if (param0 != -7068) {
               return;
             }
@@ -322,9 +322,9 @@ final class eg {
                 return;
               }
               if (var3Lifetime1 != 0) {
-                this.field_a.b(this.field_o, 320, this.field_q + this.field_m * 2, 16776960, -1);
+                this.field_a.drawCentred(this.field_o, 320, this.field_q + this.field_m * 2, 16776960, -1);
               } else {
-                this.field_a.a(this.field_c, 320, 2 * this.field_m + this.field_q, 8421504, -1, this.field_u);
+                this.field_a.drawCentredAlpha(this.field_c, 320, 2 * this.field_m + this.field_q, 8421504, -1, this.field_u);
               }
               return;
             }
@@ -339,9 +339,9 @@ final class eg {
         }
         if (this.field_z < 0) {
           if (var3Lifetime1 != 0) {
-            this.field_a.b(this.field_o, 320, this.field_q + this.field_m * 2, 16776960, -1);
+            this.field_a.drawCentred(this.field_o, 320, this.field_q + this.field_m * 2, 16776960, -1);
           } else {
-            this.field_a.a(this.field_c, 320, 2 * this.field_m + this.field_q, 8421504, -1, this.field_u);
+            this.field_a.drawCentredAlpha(this.field_c, 320, 2 * this.field_m + this.field_q, 8421504, -1, this.field_u);
           }
         }
     }
@@ -354,7 +354,7 @@ final class eg {
         this.field_t = 4;
         this.field_c = jd.field_x;
         this.field_d = new String[32];
-        this.field_a = (vm) ((Object) al.field_Z);
+        this.field_a = (BitmapFont) ((Object) al.field_Z);
         this.field_x = 13684944;
         this.field_b = -1;
         this.field_z = -1;

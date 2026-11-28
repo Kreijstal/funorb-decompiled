@@ -4,7 +4,7 @@
 final class j extends ne {
     private int field_m;
     static String field_l;
-    private fa field_k;
+    private BitmapFont field_k;
     static String field_h;
     private String field_j;
     static volatile boolean field_e;
@@ -73,7 +73,7 @@ final class j extends ne {
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3, fa param4) {
+    final void a(int param0, int param1, int param2, String param3, BitmapFont param4) {
         pi var7 = null;
         pi var8 = null;
         if (param3 == null) {
@@ -94,7 +94,7 @@ final class j extends ne {
           this.field_j = param3;
           var7 = this.a(param3, (byte) -74, param1, param4);
           var8 = var7;
-          var8.field_d[param2] = param0 - param4.b(param3);
+          var8.field_d[param2] = param0 - param4.stringWidth(param3);
           var7.field_d[param3.length()] = param0;
           GameAppletShell.a(param3, param4, var8, param2 + 30988, 0);
         } catch (RuntimeException runtimeException) {
@@ -129,9 +129,9 @@ final class j extends ne {
           ha.field_i = kl.a(252, param0, "commonui", "jagex_logo_grey");
           ng.field_h = of.a("button", "commonui", param0, 61);
           t.field_h = bg.a("validation", param0, (byte) 7, "commonui");
-          nb.field_c = (fa) ((Object) fi.a(param0, param1, "commonui", "arezzo12", (byte) 82));
-          ug.field_e = (fa) ((Object) fi.a(param0, param1, "commonui", "arezzo14", (byte) 82));
-          rg.field_o = (fa) ((Object) fi.a(param0, param1, "commonui", "arezzo14bold", (byte) 82));
+          nb.field_c = (BitmapFont) ((Object) fi.a(param0, param1, "commonui", "arezzo12", (byte) 82));
+          ug.field_e = (BitmapFont) ((Object) fi.a(param0, param1, "commonui", "arezzo14", (byte) 82));
+          rg.field_o = (BitmapFont) ((Object) fi.a(param0, param1, "commonui", "arezzo14bold", (byte) 82));
           var17 = new RgbSprite(param3.getFileByName(0, "", "button.gif"), (java.awt.Component) ((Object) ol.field_e));
           hm.a("dropdown", param0, (byte) -42, "commonui");
           var5 = fb.a(param0, (byte) 45, "commonui", "screen_options");
@@ -178,7 +178,7 @@ final class j extends ne {
         }
     }
 
-    final void a(fa param0, int param1, String param2, int param3, int param4) {
+    final void a(BitmapFont param0, int param1, String param2, int param3, int param4) {
         int var7 = 0;
         pi var8 = null;
         RuntimeException stackIn_15_0 = null;
@@ -204,7 +204,7 @@ final class j extends ne {
           this.field_p = true;
           this.field_n = 1;
           var8 = this.a(param2, (byte) -74, param4, param0);
-          var7 = param0.b(param2);
+          var7 = param0.stringWidth(param2);
           var8.field_d[0] = param3 - (var7 >> 1);
           var8.field_d[param2.length()] = param3 + (var7 >> 1);
           GameAppletShell.a(param2, param0, var8, 30988, 0);
@@ -232,7 +232,7 @@ final class j extends ne {
         }
     }
 
-    private final pi a(String param0, byte param1, int param2, fa param3) {
+    private final pi a(String param0, byte param1, int param2, BitmapFont param3) {
         pi var5 = null;
         RuntimeException var5_ref = null;
         ResourceArchive var6 = null;
@@ -274,7 +274,7 @@ final class j extends ne {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, fa param3, String param4, int param5, int param6, int param7) {
+    final void a(boolean param0, int param1, int param2, BitmapFont param3, String param4, int param5, int param6, int param7) {
         pi stackIn_38_0;
         pi stackIn_38_1;
         int stackIn_38_2;
@@ -283,7 +283,7 @@ final class j extends ne {
         pi stackIn_39_1 = null;
         int stackIn_39_4 = 0;
         String stackIn_43_0;
-        fa stackIn_43_1;
+        BitmapFont stackIn_43_1;
         pi stackIn_43_2;
         int stackIn_43_3;
         int stackIn_44_4;
@@ -334,9 +334,9 @@ final class j extends ne {
           if (!param0) {
             return;
           }
-          var16 = new String[1 + param3.a(param4, param5)];
+          var16 = new String[1 + param3.lineCount(param4, param5)];
           var17 = var16;
-          var10 = Math.max(1, param3.a(param4, new int[]{param5}, var17));
+          var10 = Math.max(1, param3.wrapText(param4, new int[]{param5}, var17));
           if (this.field_i == 3 &&
             var10 == 1) {
             this.field_i = 1;
@@ -378,15 +378,15 @@ final class j extends ne {
             var14 = new pi(stackIn_38_2, stackIn_38_3, stackIn_39_4);
             var14.field_d[0] = 0;
             if (var13 != null) {
-              var14.field_d[var13.length()] = param3.b(var13);
+              var14.field_d[var13.length()] = param3.stringWidth(var13);
               stackIn_43_0 = var13;
-              stackIn_43_1 = (fa) (param3);
+              stackIn_43_1 = (BitmapFont) (param3);
               stackIn_43_2 = var14;
               stackIn_43_3 = 30988;
               if (param2 != 3) {
                 stackIn_44_4 = 0;
               } else {
-                stackIn_44_4 = this.a(param3.b(var13), var13, 0, param5);
+                stackIn_44_4 = this.a(param3.stringWidth(var13), var13, 0, param5);
               }
               GameAppletShell.a(stackIn_43_0, stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_44_4);
             }
@@ -414,7 +414,7 @@ final class j extends ne {
         }
     }
 
-    final void a(String param0, int param1, fa param2, boolean param3, int param4) {
+    final void a(String param0, int param1, BitmapFont param2, boolean param3, int param4) {
         pi var7 = null;
         pi var8 = null;
         if (param0 == null) {
@@ -436,7 +436,7 @@ final class j extends ne {
           var7 = this.a(param0, (byte) -74, param4, param2);
           var8 = var7;
           var7.field_d[0] = param1;
-          var8.field_d[param0.length()] = param2.b(param0) + param1;
+          var8.field_d[param0.length()] = param2.stringWidth(param0) + param1;
           GameAppletShell.a(param0, param2, var8, 30988, 0);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "j.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

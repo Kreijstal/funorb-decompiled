@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
-    static ta field_o;
+    static BitmapFont field_o;
     static int[] field_k;
     static String field_n;
     static int field_j;

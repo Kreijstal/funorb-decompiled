@@ -80,9 +80,9 @@ class PacketBuffer extends IntrusiveNode {
         return true;
     }
 
-    final static dj a(int param0, int param1, ResourceArchive param2, ResourceArchive param3, int param4) {
+    final static PalettedBitmapFont a(int param0, int param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
-        dj stackIn_6_0 = null;
+        PalettedBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

@@ -65,10 +65,10 @@ final class ge {
         field_h = null;
     }
 
-    final static ih a(byte[] param0, int param1) {
-        ih var2 = null;
+    final static CoverageBitmapFont a(byte[] param0, int param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        ih stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -80,7 +80,7 @@ final class ge {
           if (param1 != -569) {
             field_d = (String) null;
           }
-          var2 = new ih(param0, bg.field_d, oc.field_e, qk.field_b, ng.field_e, af.field_p, ClientException.field_b);
+          var2 = new CoverageBitmapFont(param0, bg.field_d, oc.field_e, qk.field_b, ng.field_e, af.field_p, ClientException.field_b);
           ec.a((byte) -111);
           stackIn_6_0 = var2;
           return stackIn_6_0;

@@ -3,7 +3,7 @@
  */
 final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static int field_c;
-    static kg field_b;
+    static BitmapFont field_b;
     static int[] field_a;
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {

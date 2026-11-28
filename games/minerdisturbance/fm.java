@@ -6,7 +6,7 @@ final class fm extends kn implements sh {
     static int[] field_N;
     private int field_R;
     private hc[] field_M;
-    private we field_Q;
+    private BitmapFont field_Q;
     static String field_K;
     static String field_O;
     static fg[] field_S;
@@ -88,7 +88,7 @@ final class fm extends kn implements sh {
 
     final void a(byte param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        this.field_Q.a(this.field_L, this.field_u + param1 + 14, param2 + this.field_t + 10, this.field_v - 28, this.field_q, 16777215, -1, 0, 0, this.field_Q.field_I);
+        this.field_Q.drawParagraph(this.field_L, this.field_u + param1 + 14, param2 + this.field_t + 10, this.field_v - 28, this.field_q, 16777215, -1, 0, 0, this.field_Q.field_I);
     }
 
     final static void f(byte param0) {
@@ -101,7 +101,7 @@ final class fm extends kn implements sh {
         tk.field_a = false;
     }
 
-    fm(rg param0, we param1, String param2) {
+    fm(rg param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (ad) null);
         int var4_int = 0;
         this.field_R = 0;
@@ -109,7 +109,7 @@ final class fm extends kn implements sh {
           this.field_L = param2;
           this.field_Q = param1;
           this.field_J = param0;
-          var4_int = this.field_L == null ? 0 : this.field_Q.b(this.field_L, 260, this.field_Q.field_I);
+          var4_int = this.field_L == null ? 0 : this.field_Q.textHeight(this.field_L, 260, this.field_Q.field_I);
           this.a(var4_int + 22, -93, 0, 288, 0);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "fm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

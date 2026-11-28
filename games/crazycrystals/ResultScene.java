@@ -85,7 +85,7 @@ abstract class ResultScene {
         }
     }
 
-    final static void layoutJustifiedTextOffsets(bh param0, int param1, String param2, byte param3, vc param4) {
+    final static void layoutJustifiedTextOffsets(bh param0, int param1, String param2, byte param3, BitmapFont param4) {
         String stackIn_30_2 = null;
         String stackIn_34_2 = null;
         String stackIn_38_2 = null;
@@ -103,7 +103,7 @@ abstract class ResultScene {
               return;
             }
             if (var8 == 60) {
-              var6 = (var5_int >> 8) - (-param0.field_e[0] - param4.a(param2.substring(0, var7)));
+              var6 = (var5_int >> 8) - (-param0.field_e[0] - param4.stringWidth(param2.substring(0, var7)));
             }
             if (-1 != var6) {
               param0.field_e[var7] = var6;
@@ -111,7 +111,7 @@ abstract class ResultScene {
               if (var8 == 32) {
                 var5_int = var5_int + param1;
               }
-              param0.field_e[var7] = (var5_int >> 8) - (-param0.field_e[0] - param4.a(param2.substring(0, var7 + 1))) - param4.a((char) var8);
+              param0.field_e[var7] = (var5_int >> 8) - (-param0.field_e[0] - param4.stringWidth(param2.substring(0, var7 + 1))) - param4.charWidth((char) var8);
             }
             if (var8 == 62) {
               var6 = -1;

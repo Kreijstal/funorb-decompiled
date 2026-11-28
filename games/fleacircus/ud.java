@@ -195,15 +195,15 @@ final class ud {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        fa var7 = null;
-        fa var8 = null;
+        BitmapFont var7 = null;
+        BitmapFont var8 = null;
         int var3Lifetime1;
         var5 = fleas.field_A ? 1 : 0;
         try {
           var7 = MatchingFieldValidator.field_p;
           var8 = var7;
-          sd.field_f = var8.b(DualLinkNode.field_i[12]);
-          var2 = var8.b(DualLinkNode.field_i[13]);
+          sd.field_f = var8.stringWidth(DualLinkNode.field_i[12]);
+          var2 = var8.stringWidth(DualLinkNode.field_i[13]);
           if (var2 > sd.field_f) {
             sd.field_f = var2;
           }

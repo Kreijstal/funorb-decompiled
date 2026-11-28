@@ -122,7 +122,7 @@ final class le {
             if (var6 == 2) {
               var4 = MatchingFieldValidator.a(vf.field_d, new String[]{ij.field_c}, (byte) -97);
               var8 = MatchingFieldValidator.a(sa.field_d, new String[]{var3}, (byte) -110);
-              var7 = BoundedRandomAccessFile.field_f.field_M - (-uc.field_c.field_M + 485) - (-sc.field_a.b(var8) + sc.field_a.b(var4));
+              var7 = BoundedRandomAccessFile.field_f.field_M - (-uc.field_c.field_M + 485) - (-sc.field_a.stringWidth(var8) + sc.field_a.stringWidth(var4));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -167,7 +167,7 @@ final class le {
                 var4 = "<col=999999>" + var4 + FullscreenFocusCanvas.field_e + "</col>";
                 var5 = "";
               }
-              var9 = sc.field_a.b(var4);
+              var9 = sc.field_a.stringWidth(var4);
               if (!wk.a((byte) 118)) {
                 if (BoundedRandomAccessFile.field_f.field_F &&
                   var9 > (-BoundedRandomAccessFile.field_f.field_U + BufferedSocket.field_k)) {
@@ -184,7 +184,7 @@ final class le {
                 }
               }
             }
-            fj.a(var4 + lh.a(sg.field_c.toString()), var7, -1, var5, TextFieldValidator.field_i[var6]);
+            fj.a(var4 + BitmapFont.escapeMarkup(sg.field_c.toString()), var7, -1, var5, TextFieldValidator.field_i[var6]);
             if (!kn.field_L) {
               uc.field_c.field_F = false;
             }
@@ -301,10 +301,10 @@ final class le {
                 var2 = var2 + fh.field_e;
               }
               if (var4 >= 0) {
-                MidiPcmStream.field_M.a(var6, var8, var2 + th.field_a, var5, -1);
+                MidiPcmStream.field_M.drawString(var6, var8, var2 + th.field_a, var5, -1);
                 var2 = var2 + (ug.field_a + (mf.field_z + fh.field_e));
               } else {
-                sj.field_d.a(var6, var8, var2 + DebouncedFieldValidator.field_f, var5, -1);
+                sj.field_d.drawString(var6, var8, var2 + DebouncedFieldValidator.field_f, var5, -1);
                 var2 = var2 + qd.field_r;
               }
               var3++;

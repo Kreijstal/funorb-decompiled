@@ -5,7 +5,7 @@ final class ip implements wo {
     static String field_b;
     private int field_c;
     private int field_a;
-    private vc field_f;
+    private BitmapFont field_f;
     private int field_h;
     private int field_e;
     private int field_g;
@@ -57,7 +57,7 @@ final class ip implements wo {
           if (this.field_f == null) {
             return;
           }
-          this.field_f.c(var12.field_o, var8 + var7 / 2, this.field_f.field_y + var9 + var12.field_J, this.field_h, this.field_e);
+          this.field_f.drawCentred(var12.field_o, var8 + var7 / 2, this.field_f.field_y + var9 + var12.field_J, this.field_h, this.field_e);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,7 +90,7 @@ final class ip implements wo {
         }
     }
 
-    ip(vc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    ip(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_a = param3;
           this.field_g = param4;

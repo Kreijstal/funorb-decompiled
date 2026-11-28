@@ -47,9 +47,9 @@ final class MusicPatchPcmStream extends PcmStream {
             param0.field_j = var4_int * param1 + param0.field_j & 1048575;
             if (var5 <= param1) {
               if (this.field_o.field_v[param0.field_i] == 0) {
-                param0.field_v = RawPcmStream.b(param0.field_t, param0.field_v.f(), param0.field_v.j(), param0.field_v.k());
+                param0.field_v = RawPcmStream.createForSampleStep(param0.field_t, param0.field_v.getSampleStepMagnitude(), param0.field_v.getTargetVolume(), param0.field_v.getPan());
               } else {
-                param0.field_v = RawPcmStream.b(param0.field_t, param0.field_v.f(), 0, param0.field_v.k());
+                param0.field_v = RawPcmStream.createForSampleStep(param0.field_t, param0.field_v.getSampleStepMagnitude(), 0, param0.field_v.getPan());
                 stackIn_8_0 = this.field_o;
                 stackIn_8_1 = 2;
                 stackIn_8_2 = (pl) (param0);
@@ -192,22 +192,22 @@ final class MusicPatchPcmStream extends PcmStream {
               }
               var11 = param1.field_v;
               if (this.field_o.field_v[param1.field_i] != 0) {
-                param1.field_v = RawPcmStream.b(param1.field_t, var11.f(), 0, var11.k());
+                param1.field_v = RawPcmStream.createForSampleStep(param1.field_t, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_14_0 = this.field_o;
                 stackIn_14_1 = 2;
                 stackIn_14_2 = (pl) (param1);
                 stackIn_15_3 = !(param1.field_A.field_n[param1.field_y] >= 0);
                 ((MidiPcmStream) (Object) stackIn_14_0).a((byte) stackIn_14_1, stackIn_14_2, stackIn_15_3);
-                param1.field_v.b(var9, var11.j());
+                param1.field_v.rampVolume(var9, var11.getTargetVolume());
               } else {
-                param1.field_v = RawPcmStream.b(param1.field_t, var11.f(), var11.j(), var11.k());
+                param1.field_v = RawPcmStream.createForSampleStep(param1.field_t, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.getPan());
               }
               if (param1.field_A.field_n[param1.field_y] < 0) {
                 param1.field_v.f(-1);
               }
-              var11.d(var9);
+              var11.fadeOutAndUnlink(var9);
               var11.mixInto(param0, param2, param5 - param2);
-              if (!var11.e()) {
+              if (!var11.hasRemainingRampFrames()) {
                 continue;
               }
               this.field_l.b(var11);

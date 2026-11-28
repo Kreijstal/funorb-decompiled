@@ -112,7 +112,7 @@ final class cl extends bc {
           }
           stackIn_19_0 = (!param4) ? 7105644 : 16777215;
           var8 = stackIn_19_0;
-          this.field_g.a(param0.field_v, param2 + param0.field_m, param1 + (param0.field_i - 2), param0.field_p, param0.field_l, var8, -1, 1, 1, this.field_g.field_x);
+          this.field_g.drawParagraph(param0.field_v, param2 + param0.field_m, param1 + (param0.field_i - 2), param0.field_p, param0.field_l, var8, -1, 1, 1, this.field_g.field_x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

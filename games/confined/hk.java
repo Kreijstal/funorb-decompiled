@@ -4,7 +4,7 @@
 final class hk implements fe {
     private int field_c;
     static java.math.BigInteger field_a;
-    private ok field_e;
+    private BitmapFont field_e;
     static String field_b;
     static String field_f;
     private int field_g;
@@ -32,9 +32,9 @@ final class hk implements fe {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
-          this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_B + "</u>", param1 + param3.field_q, param4 + param3.field_m, param3.field_F, param3.field_z, var6_int, -1, this.field_g, this.field_c, this.field_e.field_C + this.field_e.field_D);
+          this.field_e.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_B + "</u>", param1 + param3.field_q, param4 + param3.field_m, param3.field_F, param3.field_z, var6_int, -1, this.field_g, this.field_c, this.field_e.field_C + this.field_e.field_D);
           if (param3.e((byte) -125)) {
-            var7 = this.field_e.c(param3.field_B);
+            var7 = this.field_e.stringWidth(param3.field_B);
             var8 = this.field_e.field_D + this.field_e.field_C;
             var9 = param1 + param3.field_q;
             if (this.field_g == 2) {
@@ -167,7 +167,7 @@ final class hk implements fe {
         this.field_g = 1;
     }
 
-    hk(ok param0, int param1, int param2) {
+    hk(BitmapFont param0, int param1, int param2) {
         try {
           this.field_c = param2;
           this.field_e = param0;

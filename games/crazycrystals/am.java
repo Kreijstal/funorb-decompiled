@@ -115,7 +115,7 @@ final class am {
               var5 = 16384;
             }
           }
-          this.field_d.c(var4 * gi.field_m >> 6, var5);
+          this.field_d.setVolumeAndPan(var4 * gi.field_m >> 6, var5);
           if (!this.field_h) {
             this.field_h = true;
             tb.field_d.b(this.field_d);

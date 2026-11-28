@@ -832,37 +832,37 @@ final class GameEntity {
     final void e(int param0) {
         int stackIn_66_0 = 0;
         int stackIn_69_0 = 0;
-        ub stackIn_176_0;
+        BinaryBitmapFont stackIn_176_0;
         String stackIn_176_1;
         int stackIn_176_2;
         int stackIn_176_3;
         int stackIn_177_4;
-        ub stackIn_184_0;
+        BinaryBitmapFont stackIn_184_0;
         String stackIn_184_1;
         int stackIn_184_2;
         int stackIn_184_3;
         int stackIn_185_4;
-        ub stackIn_197_0;
+        BinaryBitmapFont stackIn_197_0;
         String stackIn_197_1;
         int stackIn_197_2;
         int stackIn_197_3;
         int stackIn_198_4;
-        ub stackIn_206_0;
+        BinaryBitmapFont stackIn_206_0;
         String stackIn_206_1;
         int stackIn_206_2;
         int stackIn_206_3;
         int stackIn_207_4;
-        ub stackIn_215_0;
+        BinaryBitmapFont stackIn_215_0;
         String stackIn_215_1;
         int stackIn_215_2;
         int stackIn_215_3;
         int stackIn_216_4;
-        ub stackIn_223_0;
+        BinaryBitmapFont stackIn_223_0;
         String stackIn_223_1;
         int stackIn_223_2;
         int stackIn_223_3;
         int stackIn_224_4;
-        ub stackIn_230_0;
+        BinaryBitmapFont stackIn_230_0;
         String stackIn_230_1;
         int stackIn_230_2;
         int stackIn_230_3;
@@ -1174,7 +1174,7 @@ final class GameEntity {
             stackIn_176_2 = 48 + var2;
             stackIn_176_3 = 24 + var3;
             stackIn_177_4 = (ArchiveRequest.field_s >= 5) ? 65535 : 16777215;
-            ((ub) (Object) stackIn_176_0).c(stackIn_176_1, stackIn_176_2, stackIn_176_3, stackIn_177_4, 0);
+            ((BinaryBitmapFont) (Object) stackIn_176_0).drawCentred(stackIn_176_1, stackIn_176_2, stackIn_176_3, stackIn_177_4, 0);
           }
           if (this.kind == 13 &&
             4 == qi.level &&
@@ -1185,7 +1185,7 @@ final class GameEntity {
             stackIn_184_2 = 48 + var2;
             stackIn_184_3 = 24 + var3;
             stackIn_185_4 = (ArchiveRequest.field_s >= 5) ? 16711680 : 16777215;
-            ((ub) (Object) stackIn_184_0).c(stackIn_184_1, stackIn_184_2, stackIn_184_3, stackIn_185_4, 0);
+            ((BinaryBitmapFont) (Object) stackIn_184_0).drawCentred(stackIn_184_1, stackIn_184_2, stackIn_184_3, stackIn_185_4, 0);
           }
           if (this.kind == 12 &&
             null == IsaacRandom.field_j) {
@@ -1202,7 +1202,7 @@ final class GameEntity {
               stackIn_197_2 = var2 + 48;
               stackIn_197_3 = var3 + 24;
               stackIn_198_4 = (5 > ArchiveRequest.field_s) ? 16777215 : 16711680;
-              ((ub) (Object) stackIn_197_0).c(stackIn_197_1, stackIn_197_2, stackIn_197_3, stackIn_198_4, 0);
+              ((BinaryBitmapFont) (Object) stackIn_197_0).drawCentred(stackIn_197_1, stackIn_197_2, stackIn_197_3, stackIn_198_4, 0);
             }
           }
           if (this.kind == 15 &&
@@ -1214,7 +1214,7 @@ final class GameEntity {
             stackIn_206_2 = 48 + var2;
             stackIn_206_3 = var3 + 24;
             stackIn_207_4 = (ArchiveRequest.field_s < 5) ? 16777215 : 16711680;
-            ((ub) (Object) stackIn_206_0).c(stackIn_206_1, stackIn_206_2, stackIn_206_3, stackIn_207_4, 0);
+            ((BinaryBitmapFont) (Object) stackIn_206_0).drawCentred(stackIn_206_1, stackIn_206_2, stackIn_206_3, stackIn_207_4, 0);
           }
           if (this.kind == 7 &&
             qi.level == 8 &&
@@ -1225,7 +1225,7 @@ final class GameEntity {
             stackIn_215_2 = var2 + 48;
             stackIn_215_3 = var3;
             stackIn_216_4 = (5 <= ArchiveRequest.field_s) ? 16711680 : 16777215;
-            ((ub) (Object) stackIn_215_0).c(stackIn_215_1, stackIn_215_2, stackIn_215_3, stackIn_216_4, 0);
+            ((BinaryBitmapFont) (Object) stackIn_215_0).drawCentred(stackIn_215_1, stackIn_215_2, stackIn_215_3, stackIn_216_4, 0);
           }
           if (this.kind == 6 &&
             qi.level == 9 &&
@@ -1236,7 +1236,7 @@ final class GameEntity {
             stackIn_223_2 = var2 + 48;
             stackIn_223_3 = var3;
             stackIn_224_4 = (ArchiveRequest.field_s < 5) ? 16777215 : 16711680;
-            ((ub) (Object) stackIn_223_0).c(stackIn_223_1, stackIn_223_2, stackIn_223_3, stackIn_224_4, 0);
+            ((BinaryBitmapFont) (Object) stackIn_223_0).drawCentred(stackIn_223_1, stackIn_223_2, stackIn_223_3, stackIn_224_4, 0);
           }
           if (this.kind == 14 &&
             qi.level == 10 &&
@@ -1247,7 +1247,7 @@ final class GameEntity {
             stackIn_230_2 = 48 + var2;
             stackIn_230_3 = var3;
             stackIn_231_4 = (ArchiveRequest.field_s < 5) ? 16777215 : 16711680;
-            ((ub) (Object) stackIn_230_0).c(stackIn_230_1, stackIn_230_2, stackIn_230_3, stackIn_231_4, 0);
+            ((BinaryBitmapFont) (Object) stackIn_230_0).drawCentred(stackIn_230_1, stackIn_230_2, stackIn_230_3, stackIn_231_4, 0);
           }
         } else {
           if (aj.field_c == null) {
@@ -1398,14 +1398,14 @@ final class GameEntity {
         if (NetworkArchiveRequest.field_D >= 2 &&
           this.kind != -1 &&
           !this.a((byte) -59)) {
-          qj.field_a.c("" + this.field_g, var2 + 30, 34 + var3, 16711680, -1);
+          qj.field_a.drawCentred("" + this.field_g, var2 + 30, 34 + var3, 16711680, -1);
         }
         if (param0 <= 96) {
           return;
         }
         if (NetworkArchiveRequest.field_D >= 2 &&
           this.kind == 14) {
-          qj.field_a.c("" + this.field_i, var2 + 30, 50 + var3, 255, -1);
+          qj.field_a.drawCentred("" + this.field_i, var2 + 30, 50 + var3, 255, -1);
         }
     }
 
@@ -2115,10 +2115,10 @@ final class GameEntity {
             return stackIn_2_0;
           }
           if (!param2) {
-            stackIn_7_0 = pe.field_c.b(param1);
+            stackIn_7_0 = pe.field_c.stringWidth(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = AccountRegistrationPanel.field_E.b(param1);
+          stackIn_5_0 = AccountRegistrationPanel.field_E.stringWidth(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2381,10 +2381,10 @@ final class GameEntity {
             return stackIn_2_0;
           }
           if (!param2) {
-            stackIn_7_0 = pe.field_c.b(param1);
+            stackIn_7_0 = pe.field_c.stringWidth(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = AccountRegistrationPanel.field_E.b(param1);
+          stackIn_5_0 = AccountRegistrationPanel.field_E.stringWidth(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

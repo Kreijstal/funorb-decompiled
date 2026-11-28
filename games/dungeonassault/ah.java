@@ -153,12 +153,12 @@ final class ah {
         }
     }
 
-    final static gp a(ResourceArchive param0, int param1, String param2, String param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, int param1, String param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         ResourceArchive var7 = null;
-        gp stackIn_3_0 = null;
+        BinaryBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -222,7 +222,7 @@ final class ah {
     final static void a(boolean param0, int param1) {
         ri.field_g = PacketBuffer.field_j[param1].a();
         String var5 = ce.field_o[param1];
-        int var3 = 40 + IntrusiveNode.field_c.b(var5);
+        int var3 = 40 + IntrusiveNode.field_c.stringWidth(var5);
         RgbSprite var4 = new RgbSprite(var3, 32);
         jh.c();
         if (!param0) {
@@ -230,11 +230,11 @@ final class ah {
         }
         var4.e();
         ri.field_g.c(0, 0, 32, 32);
-        IntrusiveNode.field_c.b(var5, 40, IntrusiveNode.field_c.field_H + 32 >> 1, 16777215, -1);
+        IntrusiveNode.field_c.drawString(var5, 40, IntrusiveNode.field_c.field_H + 32 >> 1, 16777215, -1);
         var4.d(16777215);
         var4.e();
         ri.field_g.b(0, 0, 32, 32, 0);
-        IntrusiveNode.field_c.b(var5, 40, 32 + IntrusiveNode.field_c.field_H >> 1, 0, -1);
+        IntrusiveNode.field_c.drawString(var5, 40, 32 + IntrusiveNode.field_c.field_H >> 1, 0, -1);
         jh.b();
         ke.field_e = 0;
         pa.field_a = var4;

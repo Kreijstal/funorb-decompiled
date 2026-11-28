@@ -48,7 +48,7 @@ final class wk {
         return true;
     }
 
-    final static void a(int param0, String param1, se param2, int param3, int[] param4, int param5) {
+    final static void a(int param0, String param1, BitmapFont param2, int param3, int[] param4, int param5) {
         tf var6 = null;
         if (param5 != 31139) {
           return;
@@ -74,7 +74,7 @@ final class wk {
           this.field_j = (float)this.field_c * var4_float / (float)(this.field_e + 1);
           if (param0 != 12) {
             var5 = (int[]) null;
-            wk.a(-109, (String) null, (se) null, 89, (int[]) null, -3);
+            wk.a(-109, (String) null, (BitmapFont) null, 89, (int[]) null, -3);
           }
           if (param1 != 0) {
             this.field_b = param2.field_f + " - " + param1 + "%";
@@ -210,7 +210,7 @@ final class wk {
         try {
           if (param3) {
             int[] var8 = (int[]) null;
-            wk.a(13, (String) null, (se) null, -71, (int[]) null, -117);
+            wk.a(13, (String) null, (BitmapFont) null, -71, (int[]) null, -117);
           }
           if (this.field_i.length <= this.field_e) {
             var10 = new bl[this.field_e * 2];

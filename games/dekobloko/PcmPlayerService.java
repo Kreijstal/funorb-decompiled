@@ -149,19 +149,19 @@ final class PcmPlayerService implements Runnable {
         if (integerLocal7 < integerLocal8) {
           integerLocal7 = integerLocal8;
         }
-        integerLocal11 = SceneWidget.renderingSupport009State0007.computeInteger1066(NodeHashTable.stringState0509);
+        integerLocal11 = SceneWidget.renderingSupport009State0007.stringWidth(NodeHashTable.stringState0509);
         if (integerLocal11 > integerLocal7) {
           integerLocal7 = integerLocal11;
         }
-        integerLocal12 = SceneWidget.renderingSupport009State0007.computeInteger1066(MixedSupport047.computeString0577(-127, booleanArgument2, booleanArgument3, booleanArgument1));
+        integerLocal12 = SceneWidget.renderingSupport009State0007.stringWidth(MixedSupport047.computeString0577(-127, booleanArgument2, booleanArgument3, booleanArgument1));
         if (integerLocal7 < integerLocal12) {
           integerLocal7 = integerLocal12;
         }
-        integerLocal13 = SceneWidget.renderingSupport009State0007.computeInteger1066(DisplayModeController.computeString1440(0, booleanArgument2, booleanArgument3, booleanArgument1));
+        integerLocal13 = SceneWidget.renderingSupport009State0007.stringWidth(DisplayModeController.computeString1440(0, booleanArgument2, booleanArgument3, booleanArgument1));
         if (integerLocal13 > integerLocal7) {
           integerLocal7 = integerLocal13;
         }
-        integerLocal14 = SceneWidget.renderingSupport009State0007.computeInteger1066(MixedSupport070.computeString0913(booleanArgument3, booleanArgument2, booleanArgument1, true));
+        integerLocal14 = SceneWidget.renderingSupport009State0007.stringWidth(MixedSupport070.computeString0913(booleanArgument3, booleanArgument2, booleanArgument1, true));
         if (integerLocal7 < integerLocal14) {
           integerLocal7 = integerLocal14;
         }

@@ -53,7 +53,7 @@ final class nc extends ni {
         field_r = null;
     }
 
-    private nc(kg param0, int param1) {
+    private nc(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

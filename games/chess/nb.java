@@ -123,9 +123,9 @@ final class nb extends ci {
           var8 = kl.field_l;
           SoftwareRasterizer.fillRoundedRectangleAlpha(21, param1 - 3, 198, 96, 6, 1, 170);
           var6 = 32 + (10 - (-param1 - v.field_j.field_C / 2));
-          v.field_j.b(var8, 120, var6, 16777215, -1);
+          v.field_j.drawCentred(var8, 120, var6, 16777215, -1);
           if (var3 != null) {
-            jj.field_b.b((String) (var3), 120, var6 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
+            jj.field_b.drawCentred((String) (var3), 120, var6 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
           }
           if (param0 != 0) {
             field_Fb = (wg) null;
@@ -136,9 +136,9 @@ final class nb extends ci {
           var9 = he.field_Eb;
           SoftwareRasterizer.fillRoundedRectangleAlpha(21, param1 - 3, 198, 96, 6, 1, 170);
           var6 = 32 + (10 - (-param1 - v.field_j.field_C / 2));
-          v.field_j.b(var9, 120, var6, 16777215, -1);
+          v.field_j.drawCentred(var9, 120, var6, 16777215, -1);
           if (var3 != null) {
-            jj.field_b.b((String) (var3), 120, var6 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
+            jj.field_b.drawCentred((String) (var3), 120, var6 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
           }
           if (param0 == 0) {
             return;
@@ -150,9 +150,9 @@ final class nb extends ci {
           var10 = pe.field_d;
           SoftwareRasterizer.fillRoundedRectangleAlpha(21, param1 - 3, 198, 96, 6, 1, 170);
           var6 = 32 + (10 - (-param1 - v.field_j.field_C / 2));
-          v.field_j.b(var10, 120, var6, 16777215, -1);
+          v.field_j.drawCentred(var10, 120, var6, 16777215, -1);
           if (var3 != null) {
-            jj.field_b.b((String) (var3), 120, var6 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
+            jj.field_b.drawCentred((String) (var3), 120, var6 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
           }
           if (param0 == 0) {
             return;
@@ -164,9 +164,9 @@ final class nb extends ci {
           var12 = pe.field_d;
           SoftwareRasterizer.fillRoundedRectangleAlpha(21, param1 - 3, 198, 96, 6, 1, 170);
           var6 = 32 + (10 - (-param1 - v.field_j.field_C / 2));
-          v.field_j.b(var12, 120, var6, 16777215, -1);
+          v.field_j.drawCentred(var12, 120, var6, 16777215, -1);
           if (var3 != null) {
-            jj.field_b.b((String) (var3), 120, var6 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
+            jj.field_b.drawCentred((String) (var3), 120, var6 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
           }
           if (param0 == 0) {
             return;
@@ -177,9 +177,9 @@ final class nb extends ci {
         var11 = ok.field_Nb;
         SoftwareRasterizer.fillRoundedRectangleAlpha(21, param1 - 3, 198, 96, 6, 1, 170);
         var6Lifetime1 = 32 + (10 - (-param1 - v.field_j.field_C / 2));
-        v.field_j.b(var11, 120, var6Lifetime1, 16777215, -1);
+        v.field_j.drawCentred(var11, 120, var6Lifetime1, 16777215, -1);
         if (var3 != null) {
-          jj.field_b.b((String) (var3), 120, var6Lifetime1 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
+          jj.field_b.drawCentred((String) (var3), 120, var6Lifetime1 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
         }
         if (param0 == 0) {
           return;

@@ -926,7 +926,7 @@ final class PlayerShip extends MovingTunnelEntity {
               if (null != this.field_wb) {
                 var12_ref_Object = cb.field_a;
                 synchronized (var12_ref_Object) {
-                  this.field_wb.field_n.b(true);
+                  this.field_wb.field_n.setReversePlayback(true);
                   this.field_wb.field_n.c(0);
                 }
                 this.field_wb = null;
@@ -1008,7 +1008,7 @@ final class PlayerShip extends MovingTunnelEntity {
               if (null != this.field_Y) {
                 var12_ref_Object = cb.field_a;
                 synchronized (var12_ref_Object) {
-                  this.field_Y.field_n.b(true);
+                  this.field_Y.field_n.setReversePlayback(true);
                   this.field_Y.field_n.c(0);
                 }
                 this.field_Y = null;

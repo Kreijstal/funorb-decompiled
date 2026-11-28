@@ -386,7 +386,7 @@ final class DisplayNameSelectionPanel extends ma implements wl, mj {
             if (param1 == ib.field_c) {
               var21 += 42;
             }
-            var33 = lh.a(var12.field_Ob.field_xb, var32, var21);
+            var33 = BitmapFont.truncateWithEllipsis(var12.field_Ob.field_xb, var32, var21);
             var20 = var33;
             var20 = var33;
             var20 = var33;
@@ -492,7 +492,7 @@ final class DisplayNameSelectionPanel extends ma implements wl, mj {
             }
             var23 = of.a(var12.field_Mb, -26564, var20);
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_Xb.field_xb.b(var23, var12.field_M - BirthDateValidator.field_g - BirthDateValidator.field_g);
+              var24_intLifetime1 = var12.field_Xb.field_xb.lineCount(var23, var12.field_M - BirthDateValidator.field_g - BirthDateValidator.field_g);
               var12.field_Xb.field_eb = var12.field_Sb * 256 / ig.field_g;
               var12.field_Xb.field_db = var23;
               var12.field_Xb.a(BirthDateValidator.field_g, -(BirthDateValidator.field_g * 2) + var12.field_M, param0 + 2147462161, fe.field_g * var24_intLifetime1, var19);
@@ -737,7 +737,7 @@ final class DisplayNameSelectionPanel extends ma implements wl, mj {
         this.field_N = new fb(hg.field_a, (rg) null);
         this.field_P = new fb(ue.field_b, (rg) null);
         this.field_L.field_j = vc.field_a;
-        this.field_L.a(-107, new AccountNameAvailabilityValidator(this.field_L));
+        this.field_L.setFieldValidator(-107, new AccountNameAvailabilityValidator(this.field_L));
         this.field_N.field_H = false;
         this.field_N.field_n = (jm) ((Object) new sf());
         this.field_P.field_n = (jm) ((Object) new wj());
@@ -773,7 +773,7 @@ final class DisplayNameSelectionPanel extends ma implements wl, mj {
         try {
           var3 = this.field_L;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(0, false, var4);
+          ((EditableTextField) ((Object) var3)).setText(0, false, var4);
           if (param1 > -119) {
             var5 = (String) null;
             this.a((String) null, (byte) 121);

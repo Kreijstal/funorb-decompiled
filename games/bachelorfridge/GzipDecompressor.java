@@ -207,7 +207,7 @@ final class GzipDecompressor {
               var7Lifetime1Lifetime6 = var26Lifetime6Lifetime3;
               var26Lifetime6Lifetime3 = var23Lifetime3Lifetime2;
               var7Lifetime1Lifetime6 = var26Lifetime6Lifetime3;
-              var5Lifetime1 = var5Lifetime1 - dc.field_r.a(var23Lifetime3Lifetime2);
+              var5Lifetime1 = var5Lifetime1 - dc.field_r.stringWidth(var23Lifetime3Lifetime2);
               if (var11 != 0) {
                 var49 = (CharSequence) ((Object) bd.field_k);
                 var24 = lga.a(true, new String[]{PacketBuffer.a(var49, 7995)}, iia.field_q);
@@ -222,8 +222,8 @@ final class GzipDecompressor {
                 var7Lifetime1Lifetime6 = var26Lifetime6Lifetime3;
                 var26Lifetime6Lifetime3 = var7Lifetime1Lifetime6;
                 var7Lifetime1Lifetime6 = var26Lifetime6Lifetime3;
-                var9 = dc.field_r.a(var24);
-                var10 = dc.field_r.a(var25);
+                var9 = dc.field_r.stringWidth(var24);
+                var10 = dc.field_r.stringWidth(var25);
                 if (var10 >= var9) {
                   var5Lifetime1 = var5Lifetime1 - var10;
                 }
@@ -237,7 +237,7 @@ final class GzipDecompressor {
                   var30 = var7Lifetime1Lifetime6 + var17 + ": ";
                   var7Lifetime1Lifetime6 = var30;
                   var7Lifetime1Lifetime6 = var30;
-                  var5Lifetime1 = var5Lifetime1 - dc.field_r.a(var30);
+                  var5Lifetime1 = var5Lifetime1 - dc.field_r.stringWidth(var30);
                   if (var11 != 0) {
                     var50 = (CharSequence) ((Object) bd.field_k);
                     var31 = lga.a(true, new String[]{PacketBuffer.a(var50, 7995)}, iia.field_q);
@@ -246,14 +246,14 @@ final class GzipDecompressor {
                     var32 = lga.a(true, new String[]{var15}, wla.field_n);
                     var7Lifetime1Lifetime6 = var32;
                     var7Lifetime1Lifetime6 = var32;
-                    var9 = dc.field_r.a(var31);
-                    var10 = dc.field_r.a(var32);
+                    var9 = dc.field_r.stringWidth(var31);
+                    var10 = dc.field_r.stringWidth(var32);
                     if (var10 >= var9) {
                       var5Lifetime1 = var5Lifetime1 - var10;
                     }
                     var5Lifetime1 = var5Lifetime1 - var9;
                   }
-                  if (var5Lifetime1 < dc.field_r.a(BoardChange.field_g.toString())) {
+                  if (var5Lifetime1 < dc.field_r.stringWidth(BoardChange.field_g.toString())) {
                     SleepSpecial.a(BoardChange.field_g, 4, -1 + BoardChange.field_g.length(), ' ');
                   }
                   return true;
@@ -268,13 +268,13 @@ final class GzipDecompressor {
                   var7Lifetime1Lifetime6 = "[" + lga.a(true, new String[]{SnowAnimation.field_w.field_Jb}, HomingMissileSpecial.field_r) + "] ";
                 }
                 var33 = var7Lifetime1Lifetime6 + var17 + ": ";
-                var5Lifetime1 = var5Lifetime1 - dc.field_r.a(var33);
+                var5Lifetime1 = var5Lifetime1 - dc.field_r.stringWidth(var33);
                 if (var11 != 0) {
                   var51 = (CharSequence) ((Object) bd.field_k);
                   var34 = lga.a(true, new String[]{PacketBuffer.a(var51, 7995)}, iia.field_q);
                   var35 = lga.a(true, new String[]{var15}, wla.field_n);
-                  var9 = dc.field_r.a(var34);
-                  var10 = dc.field_r.a(var35);
+                  var9 = dc.field_r.stringWidth(var34);
+                  var10 = dc.field_r.stringWidth(var35);
                   if (var10 >= var9) {
                     var5Lifetime1 = var5Lifetime1 - var10;
                   }
@@ -288,7 +288,7 @@ final class GzipDecompressor {
               var36 = var7Lifetime1Lifetime6 + var17 + ": ";
               var7Lifetime1Lifetime6 = var36;
               var7Lifetime1Lifetime6 = var36;
-              var5Lifetime1 = var5Lifetime1 - dc.field_r.a(var36);
+              var5Lifetime1 = var5Lifetime1 - dc.field_r.stringWidth(var36);
               if (var11 != 0) {
                 var52 = (CharSequence) ((Object) bd.field_k);
                 var37 = lga.a(true, new String[]{PacketBuffer.a(var52, 7995)}, iia.field_q);
@@ -297,8 +297,8 @@ final class GzipDecompressor {
                 var38 = lga.a(true, new String[]{var15}, wla.field_n);
                 var7Lifetime1Lifetime6 = var38;
                 var7Lifetime1Lifetime6 = var38;
-                var9 = dc.field_r.a(var37);
-                var10 = dc.field_r.a(var38);
+                var9 = dc.field_r.stringWidth(var37);
+                var10 = dc.field_r.stringWidth(var38);
                 if (var10 >= var9) {
                   var5Lifetime1 = var5Lifetime1 - var10;
                 }
@@ -316,13 +316,13 @@ final class GzipDecompressor {
               var7Lifetime1Lifetime6 = "[" + lga.a(true, new String[]{SnowAnimation.field_w.field_Jb}, HomingMissileSpecial.field_r) + "] ";
             }
             var39 = var7Lifetime1Lifetime6 + var17 + ": ";
-            var5Lifetime1 = var5Lifetime1 - dc.field_r.a(var39);
+            var5Lifetime1 = var5Lifetime1 - dc.field_r.stringWidth(var39);
             if (var11 != 0) {
               var53 = (CharSequence) ((Object) bd.field_k);
               var40 = lga.a(true, new String[]{PacketBuffer.a(var53, 7995)}, iia.field_q);
               var41 = lga.a(true, new String[]{var15}, wla.field_n);
-              var9 = dc.field_r.a(var40);
-              var10 = dc.field_r.a(var41);
+              var9 = dc.field_r.stringWidth(var40);
+              var10 = dc.field_r.stringWidth(var41);
               if (var10 >= var9) {
                 var5Lifetime1 = var5Lifetime1 - var10;
                 var5Lifetime1 = var5Lifetime1 - var9;
@@ -334,8 +334,8 @@ final class GzipDecompressor {
             var53 = (CharSequence) ((Object) bd.field_k);
             var40 = lga.a(true, new String[]{PacketBuffer.a(var53, 7995)}, iia.field_q);
             var41 = lga.a(true, new String[]{var15}, wla.field_n);
-            var9 = dc.field_r.a(var40);
-            var10 = dc.field_r.a(var41);
+            var9 = dc.field_r.stringWidth(var40);
+            var10 = dc.field_r.stringWidth(var41);
             if (var10 >= var9) {
               var5Lifetime1 = var5Lifetime1 - var10;
               if (var11 != 0) {
@@ -346,7 +346,7 @@ final class GzipDecompressor {
             }
           }
         }
-        if (var5Lifetime1 >= dc.field_r.a(BoardChange.field_g.toString())) {
+        if (var5Lifetime1 >= dc.field_r.stringWidth(BoardChange.field_g.toString())) {
           return true;
         }
         SleepSpecial.a(BoardChange.field_g, 4, -1 + BoardChange.field_g.length(), ' ');

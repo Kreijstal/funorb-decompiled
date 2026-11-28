@@ -112,7 +112,7 @@ final class pk extends kl {
         super.b(-81);
         int var2 = 78 / ((41 - param0) / 63);
         int var3 = 60 + this.field_j;
-        la.field_b.a(this.field_m, 40 + this.field_k, var3, -80 + this.field_a, -16 + this.field_i + (this.field_j - var3 - (jm.field_i.field_v >> 1)), 16777215, -1, 1, 1, la.field_b.field_H);
+        la.field_b.drawParagraph(this.field_m, 40 + this.field_k, var3, -80 + this.field_a, -16 + this.field_i + (this.field_j - var3 - (jm.field_i.field_v >> 1)), 16777215, -1, 1, 1, la.field_b.field_H);
     }
 
     final void b(byte param0) {

@@ -144,7 +144,7 @@ final class SplitSpecial extends SpecialOrder {
                 }
                 stackIn_35_0 = var7.field_Db;
                 if (var14 > 0) {
-                  stackIn_36_1 = BitmapFont.a(var7.field_Db.field_jb, var7.field_xb, var14);
+                  stackIn_36_1 = BitmapFont.truncateWithEllipsis(var7.field_Db.field_jb, var7.field_xb, var14);
                 } else {
                   stackIn_36_1 = var7.field_xb;
                 }

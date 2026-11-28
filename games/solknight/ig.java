@@ -11,7 +11,7 @@ final class ig extends WidgetContainer implements ka {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = param2 + this.field_m;
         int var6 = this.field_j + param0;
-        ua.field_G.a(CrossfadingMidiPcmStream.field_z, 20 + var5, 20 + var6, -40 + this.field_t, -50 + this.field_x, 16777215, -1, 1, param3, ua.field_G.field_F);
+        ua.field_G.drawParagraph(CrossfadingMidiPcmStream.field_z, 20 + var5, 20 + var6, -40 + this.field_t, -50 + this.field_x, 16777215, -1, 1, param3, ua.field_G.field_F);
         super.a(param0, param1, param2, 0);
     }
 

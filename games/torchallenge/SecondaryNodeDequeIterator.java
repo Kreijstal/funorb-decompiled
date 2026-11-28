@@ -8,7 +8,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     private DualLinkNode field_a;
     static int field_d;
     static String field_c;
-    static nf field_e;
+    static BinaryBitmapFont field_e;
     private SecondaryNodeDeque field_b;
 
     public static void b(int param0) {

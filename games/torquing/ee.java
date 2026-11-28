@@ -774,10 +774,10 @@ final class ee extends am {
         return var3;
     }
 
-    final static li a(byte[] param0, int param1) {
-        li var2 = null;
+    final static CoverageBitmapFont a(byte[] param0, int param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        li stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -786,7 +786,7 @@ final class ee extends am {
           if (param0 == null) {
             return null;
           }
-          var2 = new li(param0, PacketBuffer.field_o, na.field_G, vo.field_b, PasswordValidator.field_o, cq.field_y, pn.field_b);
+          var2 = new CoverageBitmapFont(param0, PacketBuffer.field_o, na.field_G, vo.field_b, PasswordValidator.field_o, cq.field_y, pn.field_b);
           if (param1 != 7028) {
             ee.a(false);
           }

@@ -112,7 +112,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final void addSampleStream(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
-        this.addSubStream(RawPcmStream.computeRawPcmStream0431(rawSoundArgument1, integerArgument2, integerArgument3, integerArgument4));
+        this.addSubStream(RawPcmStream.createForSampleStep(rawSoundArgument1, integerArgument2, integerArgument3, integerArgument4));
     }
 
     final synchronized void addSubStream(PcmStream pcmStreamArgument1) {

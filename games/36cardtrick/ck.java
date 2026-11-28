@@ -7,7 +7,7 @@ final class ck extends qg {
     static String field_G;
     static String field_I;
     private int field_A;
-    private ee field_E;
+    private BitmapFont field_E;
     private int field_C;
     private int field_B;
     private String field_D;
@@ -20,7 +20,7 @@ final class ck extends qg {
           return;
         }
         int var7 = this.field_H ? -(2 * this.field_A) - this.field_C + this.field_h : 0;
-        this.field_E.a(this.field_D, var7 + var5 + this.field_A, var6 + this.field_A, -this.field_A + this.field_C, -(2 * this.field_A) + this.field_q, this.field_B, param2, !this.field_H ? 2 : 0, 1, this.field_E.field_s);
+        this.field_E.drawParagraph(this.field_D, var7 + var5 + this.field_A, var6 + this.field_A, -this.field_A + this.field_C, -(2 * this.field_A) + this.field_q, this.field_B, param2, !this.field_H ? 2 : 0, 1, this.field_E.field_s);
     }
 
     final String b(byte param0) {
@@ -42,7 +42,7 @@ final class ck extends qg {
         field_G = null;
     }
 
-    ck(int param0, int param1, int param2, int param3, lk param4, boolean param5, int param6, int param7, ee param8, int param9, String param10) {
+    ck(int param0, int param1, int param2, int param3, lk param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (ci) null, (pl) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -68,7 +68,7 @@ final class ck extends qg {
           this.field_y = param4;
           this.field_C = param6;
           var12_int = this.field_C - this.field_A;
-          var13 = this.field_E.b(param10, var12_int, this.field_E.field_s) + 2 * this.field_A;
+          var13 = this.field_E.textHeight(param10, var12_int, this.field_E.field_s) + 2 * this.field_A;
           if (var13 <= param3) {
             var13 = param3;
           } else {

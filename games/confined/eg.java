@@ -144,7 +144,7 @@ final class eg {
                                       if (param1 == 100) {
                                         var15 = IntrusiveNode.field_b;
                                         this.a(0, (String) null, 0, (String) null, (String) null, 0, -90);
-                                        this.a(0, var15, -TunnelCamera.field_I.c(var15) + 640 >> 1, (String) null, (String) null, 1, -112);
+                                        this.a(0, var15, -TunnelCamera.field_I.stringWidth(var15) + 640 >> 1, (String) null, (String) null, 1, -112);
                                         this.a(0, 1000, (RgbSprite) null, 0, 0);
                                         decompiledFrameRemainder0 = (var5 != 0);
                                       }
@@ -159,7 +159,7 @@ final class eg {
                                           if ((decompiledFrameRemainder0) &&
                                             (decompiledFrameRemainder0 = (param1 == 103))) {
                                             var17 = li.field_f;
-                                            var4 = -TunnelCamera.field_I.c(var17) + 640 >> 1;
+                                            var4 = -TunnelCamera.field_I.stringWidth(var17) + 640 >> 1;
                                             this.a(0, (String) null, 0, (String) null, (String) null, 0, -115);
                                             this.a(0, var17, var4, (String) null, (String) null, 1, -123);
                                             this.a(0, 1500, (RgbSprite) null, 0, 0);
@@ -177,7 +177,7 @@ final class eg {
                                   }
                                   if (decompiledFrameRemainder0) {
                                     var19 = ij.a(0, '#', cg.field_b);
-                                    this.a(var19[0].length() * 3 / 2, var19[1], 8 + TunnelCamera.field_I.c(var19[1]), (String) null, (String) null, 0, -79);
+                                    this.a(var19[0].length() * 3 / 2, var19[1], 8 + TunnelCamera.field_I.stringWidth(var19[1]), (String) null, (String) null, 0, -79);
                                     this.a(0, (String) null, 8, var19[2], var19[0], 1, -94);
                                     this.a(0, 700, (RgbSprite) null, 0, 0);
                                     decompiledFrameRemainder0 = (var5 != 0);
@@ -214,7 +214,7 @@ final class eg {
               this.a(0, 400, (RgbSprite) null, 0, 0);
               if (var5 != 0) {
                 var23 = ij.a(0, '#', ImageProducerRasterBuffer.field_k);
-                this.a(var23[0].length() * 3 / 2, var23[1], 8 + TunnelCamera.field_I.c(var23[1]), (String) null, (String) null, 0, -87);
+                this.a(var23[0].length() * 3 / 2, var23[1], 8 + TunnelCamera.field_I.stringWidth(var23[1]), (String) null, (String) null, 0, -87);
                 this.a(0, (String) null, 8, var23[2], var23[0], 1, -126);
                 this.a(376, 400, new RgbSprite(220, 104), 0, 420);
                 var24 = ij.a(0, '#', PcmOutputWorker.field_e);
@@ -225,7 +225,7 @@ final class eg {
             }
           } else {
             var23 = ij.a(0, '#', ImageProducerRasterBuffer.field_k);
-            this.a(var23[0].length() * 3 / 2, var23[1], 8 + TunnelCamera.field_I.c(var23[1]), (String) null, (String) null, 0, -87);
+            this.a(var23[0].length() * 3 / 2, var23[1], 8 + TunnelCamera.field_I.stringWidth(var23[1]), (String) null, (String) null, 0, -87);
             this.a(0, (String) null, 8, var23[2], var23[0], 1, -126);
             this.a(376, 400, new RgbSprite(220, 104), 0, 420);
             if (var5 != 0) {
@@ -351,7 +351,7 @@ final class eg {
               var8 = param4;
               param4 = param5;
               param5 = param0;
-              var9 = TunnelCamera.field_I.c(var8);
+              var9 = TunnelCamera.field_I.stringWidth(var8);
               var10 = 0;
               var11 = 0;
               if (var15 != 0) {
@@ -363,18 +363,18 @@ final class eg {
                 stackIn_3_1 = -1;
                 if (stackIn_3_0 <= stackIn_3_1) {
                   var12--;
-                  var10 = var10 - TunnelCamera.field_I.a(var8.charAt(var12));
+                  var10 = var10 - TunnelCamera.field_I.charWidth(var8.charAt(var12));
                   continue;
                 }
-                var10 = var10 + TunnelCamera.field_I.a(var8.charAt(var11));
+                var10 = var10 + TunnelCamera.field_I.charWidth(var8.charAt(var11));
                 var11++;
               }
               var13 = var8.substring(0, var11);
               var14 = var8.substring(var12);
               this.field_n[0][var7_int] = var13;
               this.field_n[1][var7_int] = var14;
-              this.field_k[0][var7_int] = TunnelCamera.field_I.c(var13) + param2 - var9 / 2;
-              this.field_k[1][var7_int] = -TunnelCamera.field_I.c(var14) + (-(var9 / 2) + param2) + var9;
+              this.field_k[0][var7_int] = TunnelCamera.field_I.stringWidth(var13) + param2 - var9 / 2;
+              this.field_k[1][var7_int] = -TunnelCamera.field_I.stringWidth(var14) + (-(var9 / 2) + param2) + var9;
               dupTemp$0 = this.field_b[1];
               arrayValue$1 = this.field_b[0];
               dupTemp$0[var7_int] = param1;
@@ -506,8 +506,8 @@ final class eg {
                   var9 = var18.length();
                 }
                 var19 = var18.substring(var18.length() - var9);
-                var8 = var8 - TunnelCamera.field_I.c(var19);
-                TunnelCamera.field_I.c(var19, var8, var7, 16777215, -1);
+                var8 = var8 - TunnelCamera.field_I.stringWidth(var19);
+                TunnelCamera.field_I.drawString(var19, var8, var7, 16777215, -1);
                 var6 = var6 - 3 * var9;
                 var11 = var9;
                 while (true) {
@@ -526,7 +526,7 @@ final class eg {
                   }
                   var12 = 40 * (-var6 + 19);
                   var13 = var18.charAt(-var11 - 1 + var18.length());
-                  var8 = var8 - TunnelCamera.field_I.a((char) var13);
+                  var8 = var8 - TunnelCamera.field_I.charWidth((char) var13);
                   var6 -= 3;
                   var14 = 0;
                   while (var14 < 64) {
@@ -537,7 +537,7 @@ final class eg {
                     if (stackIn_13_0Lifetime1 == stackIn_13_1Lifetime1) {
                       var16 = 128;
                     }
-                    TunnelCamera.field_I.a((char) var13, -var15 - var12 + var8, var7, 16777215, var16);
+                    TunnelCamera.field_I.drawCharacterAlpha((char) var13, -var15 - var12 + var8, var7, 16777215, var16);
                     var14++;
                   }
                   var11++;
@@ -574,8 +574,8 @@ final class eg {
                   var9Lifetime1 = var20Lifetime1.length();
                 }
                 var21 = var20Lifetime1.substring(0, var9Lifetime1);
-                TunnelCamera.field_I.c(var21, var8Lifetime1, var7Lifetime1, 16777215, -1);
-                var8Lifetime1 = var8Lifetime1 + TunnelCamera.field_I.c(var21);
+                TunnelCamera.field_I.drawString(var21, var8Lifetime1, var7Lifetime1, 16777215, -1);
+                var8Lifetime1 = var8Lifetime1 + TunnelCamera.field_I.stringWidth(var21);
                 var6Lifetime1 = var6Lifetime1 - 3 * var9Lifetime1;
                 var11Lifetime1 = var9Lifetime1;
                 while (!(var11Lifetime1 >= var20Lifetime1.length())) {
@@ -594,12 +594,12 @@ final class eg {
                     if (stackIn_48_0 == stackIn_48_1) {
                       var16Lifetime1 = 128;
                     }
-                    TunnelCamera.field_I.a((char) var13Lifetime1, var8Lifetime1 + var12Lifetime1 + var15Lifetime1, var7Lifetime1, 16777215, var16Lifetime1);
+                    TunnelCamera.field_I.drawCharacterAlpha((char) var13Lifetime1, var8Lifetime1 + var12Lifetime1 + var15Lifetime1, var7Lifetime1, 16777215, var16Lifetime1);
                     var14Lifetime1++;
                   }
                   var6Lifetime1 -= 3;
                   stackIn_48_0Lifetime1 = var8Lifetime1;
-                  stackIn_48_1Lifetime1 = TunnelCamera.field_I.a((char) var13Lifetime1);
+                  stackIn_48_1Lifetime1 = TunnelCamera.field_I.charWidth((char) var13Lifetime1);
                   var8Lifetime1 = stackIn_48_0Lifetime1 + stackIn_48_1Lifetime1;
                   var11Lifetime1++;
                 }
@@ -1151,8 +1151,8 @@ final class eg {
             param10 = param4;
             param1 = param8;
             param4 = param2;
-            var19 = TunnelCamera.field_I.c(var17);
-            var20 = TunnelCamera.field_I.c(var18);
+            var19 = TunnelCamera.field_I.stringWidth(var17);
+            var20 = TunnelCamera.field_I.stringWidth(var18);
             stackOut_3_0 = param9;
             stackIn_18_0 = stackOut_3_0 ? 1 : 0;
             stackIn_4_0 = stackOut_3_0;
@@ -1388,9 +1388,9 @@ final class eg {
                       32 != var4.charAt(var6)) {
                       var7 = this.field_k[var2][var3];
                       if (0 != var2) {
-                        var7 = var7 + TunnelCamera.field_I.c(var4.substring(0, var6));
+                        var7 = var7 + TunnelCamera.field_I.stringWidth(var4.substring(0, var6));
                       } else {
-                        var7 = var7 - TunnelCamera.field_I.c(var4.substring(var6));
+                        var7 = var7 - TunnelCamera.field_I.stringWidth(var4.substring(var6));
                       }
                       var8 = 256 * var7 / 640;
                       if (var8 < 0) {
@@ -1442,9 +1442,9 @@ final class eg {
           }
           this.field_n[param5][1] = param4;
           this.field_n[param5][2] = param2;
-          this.field_k[param5][0] = param1 - TunnelCamera.field_I.c(param6) / 2;
-          this.field_k[param5][1] = param1 - TunnelCamera.field_I.c(param4) / 2;
-          this.field_k[param5][2] = param1 - TunnelCamera.field_I.c(param2) / 2;
+          this.field_k[param5][0] = param1 - TunnelCamera.field_I.stringWidth(param6) / 2;
+          this.field_k[param5][1] = param1 - TunnelCamera.field_I.stringWidth(param4) / 2;
+          this.field_k[param5][2] = param1 - TunnelCamera.field_I.stringWidth(param2) / 2;
           this.field_b[param5][0] = param0;
           if (param6 != null) {
             param0 = param0 + (3 * param6.length() + 3);

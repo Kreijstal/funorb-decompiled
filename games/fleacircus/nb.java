@@ -3,7 +3,7 @@
  */
 final class nb {
     static f field_a;
-    static fa field_c;
+    static BitmapFont field_c;
     static PcmSample field_f;
     static int field_g;
     static int[] field_d;
@@ -80,7 +80,7 @@ final class nb {
         return tg.field_c[65535 & (int)(32768.0 * param0 / 3.141592653589793)];
     }
 
-    final static int a(String param0, int param1, fa param2, String[] param3, int param4) {
+    final static int a(String param0, int param1, BitmapFont param2, String[] param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -107,7 +107,7 @@ final class nb {
         int var6Lifetime1;
         var13 = fleas.field_A ? 1 : 0;
         try {
-          var5_int = param2.b(param0);
+          var5_int = param2.stringWidth(param0);
           if (var5_int <= param1 &&
             param0.indexOf("<br>") == -1) {
             param3[0] = param0;
@@ -124,7 +124,7 @@ final class nb {
             if (var10 == 32 ||
               45 == var10) {
               var11 = param0.substring(var7, 1 + var9).trim();
-              var12 = param2.b(var11);
+              var12 = param2.stringWidth(var11);
               if (param1 <= var12) {
                 incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;

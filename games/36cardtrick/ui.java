@@ -8,7 +8,7 @@ final class ui extends g implements qh {
     private int[] field_G;
     private af field_E;
     private hl[] field_I;
-    private ee field_J;
+    private BitmapFont field_J;
     static byte[][][] field_H;
     private String field_L;
     static String field_F;
@@ -16,7 +16,7 @@ final class ui extends g implements qh {
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        this.field_J.a(this.field_L, this.field_o + param0 + 14, 10 + param1 + this.field_i, this.field_h - 28, this.field_q, 16777215, -1, 0, 0, this.field_J.field_s);
+        this.field_J.drawParagraph(this.field_L, this.field_o + param0 + 14, 10 + param1 + this.field_i, this.field_h - 28, this.field_q, 16777215, -1, 0, 0, this.field_J.field_s);
     }
 
     final hl a(pl param0, boolean param1, String param2) {
@@ -111,7 +111,7 @@ final class ui extends g implements qh {
         }
     }
 
-    ui(af param0, ee param1, String param2) {
+    ui(af param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (ci) null);
         int var4_int = 0;
         this.field_D = 0;
@@ -119,7 +119,7 @@ final class ui extends g implements qh {
           this.field_L = param2;
           this.field_E = param0;
           this.field_J = param1;
-          var4_int = this.field_L != null ? this.field_J.b(this.field_L, 260, this.field_J.field_s) : 0;
+          var4_int = this.field_L != null ? this.field_J.textHeight(this.field_L, 260, this.field_J.field_s) : 0;
           this.a(22 + var4_int, 0, 288, 0, true);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ui.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

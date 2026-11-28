@@ -1974,11 +1974,11 @@ final class lg {
         decompiledBody.run();
     }
 
-    final static p a(byte[] param0, int param1) {
-        p var2 = null;
+    final static PalettedBitmapFont a(byte[] param0, int param1) {
+        PalettedBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_5_0 = null;
-        p stackIn_7_0 = null;
+        PalettedBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -1989,9 +1989,9 @@ final class lg {
           }
           if (param0 == null) {
             stackIn_5_0 = null;
-            return (p) (stackIn_5_0);
+            return (PalettedBitmapFont) (stackIn_5_0);
           }
-          var2 = new p(param0, bg.field_d, oc.field_e, qk.field_b, ng.field_e, af.field_p, ClientException.field_b);
+          var2 = new PalettedBitmapFont(param0, bg.field_d, oc.field_e, qk.field_b, ng.field_e, af.field_p, ClientException.field_b);
           ec.a((byte) 70);
           stackIn_7_0 = var2;
           return stackIn_7_0;

@@ -5,7 +5,7 @@ final class ab implements td {
     private int field_m;
     private int field_d;
     private int field_b;
-    private kc field_k;
+    private BitmapFont field_k;
     private int field_c;
     private int field_a;
     private int field_i;
@@ -52,7 +52,7 @@ final class ab implements td {
           SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_k) {
             var13 = this.field_m + (var15.field_H + var15.field_G);
-            this.field_k.a(param2.field_l, param2.field_s + (param1 + var13), param0 + param2.field_n + this.field_b, param2.field_m - (var13 + this.field_m), param2.field_r - (this.field_m << 1), this.field_e, this.field_c, 1, 1, 0);
+            this.field_k.drawParagraph(param2.field_l, param2.field_s + (param1 + var13), param0 + param2.field_n + this.field_b, param2.field_m - (var13 + this.field_m), param2.field_r - (this.field_m << 1), this.field_e, this.field_c, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ab.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -111,7 +111,7 @@ final class ab implements td {
         }
     }
 
-    ab(kc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    ab(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_d = param5;
           this.field_c = param4;

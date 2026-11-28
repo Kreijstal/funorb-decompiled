@@ -48,7 +48,7 @@ final class sj implements j {
           if (this.field_e == null) {
             return;
           }
-          this.field_e.a(var12.field_i, var7 / 2 + var8, var9 + this.field_e.field_x + var12.field_L, this.field_h, this.field_a);
+          this.field_e.drawCentred(var12.field_i, var7 / 2 + var8, var9 + this.field_e.field_x + var12.field_L, this.field_h, this.field_a);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

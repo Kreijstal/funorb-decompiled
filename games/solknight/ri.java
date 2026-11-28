@@ -46,12 +46,12 @@ final class ri implements j {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
-          this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_i + "</u>", param3 + param4.field_m, param1 + param4.field_j, param4.field_t, param4.field_x, var6_int, -1, this.field_b, this.field_c, this.field_e.field_s + this.field_e.field_F);
+          this.field_e.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_i + "</u>", param3 + param4.field_m, param1 + param4.field_j, param4.field_t, param4.field_x, var6_int, -1, this.field_b, this.field_c, this.field_e.field_s + this.field_e.field_F);
           if (param0 < 113) {
             return;
           }
           if (param4.b(true)) {
-            var7 = this.field_e.b(param4.field_i);
+            var7 = this.field_e.stringWidth(param4.field_i);
             var8 = this.field_e.field_s + this.field_e.field_F;
             var9 = param3 + param4.field_m;
             if (this.field_b != 2) {

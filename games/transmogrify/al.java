@@ -7,7 +7,7 @@ final class al {
     private int field_h;
     boolean field_f;
     private int field_g;
-    static kg field_i;
+    static BitmapFont field_i;
     private int field_c;
     private int field_e;
     private int field_b;

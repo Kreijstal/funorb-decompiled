@@ -15,7 +15,7 @@ final class jd extends og implements vd {
     static boolean field_z;
     static int[] field_K;
     static String field_G;
-    private vc field_C;
+    private BitmapFont field_C;
 
     public static void e(byte param0) {
         if (param0 >= 20) {
@@ -98,7 +98,7 @@ final class jd extends og implements vd {
         }
     }
 
-    jd(na param0, vc param1, String param2) {
+    jd(na param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (wo) null);
         int var4_int = 0;
         this.field_F = 0;
@@ -106,7 +106,7 @@ final class jd extends og implements vd {
           this.field_B = param0;
           this.field_C = param1;
           this.field_M = param2;
-          var4_int = null == this.field_M ? 0 : this.field_C.b(this.field_M, 260, this.field_C.field_o);
+          var4_int = null == this.field_M ? 0 : this.field_C.textHeight(this.field_M, 260, this.field_C.field_o);
           this.a(22 + var4_int, 0, 0, 288, (byte) -52);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -160,7 +160,7 @@ final class jd extends og implements vd {
 
     final void a(int param0, byte param1, int param2, int param3) {
         super.a(param0, (byte) -92, param2, param3);
-        this.field_C.a(this.field_M, 14 + (this.field_r + param2), 10 + (param0 + this.field_j), -28 + this.field_g, this.field_f, 16777215, -1, 0, 0, this.field_C.field_o);
+        this.field_C.drawParagraph(this.field_M, 14 + (this.field_r + param2), 10 + (param0 + this.field_j), -28 + this.field_g, this.field_f, 16777215, -1, 0, 0, this.field_C.field_o);
         if (param1 > -12) {
           String var6 = (String) null;
           this.a((String) null, (byte) 125, 44);

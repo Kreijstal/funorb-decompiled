@@ -126,12 +126,12 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
           var7 = db.field_v.field_H + db.field_v.field_E;
           var8 = new RgbSprite(var6_int, var7);
           var8.e();
-          db.field_v.b(param4, 0, db.field_v.field_H, 12632256, -1);
-          db.field_v.a(param3, var6_int, db.field_v.field_H, 12632256, -1);
+          db.field_v.drawString(param4, 0, db.field_v.field_H, 12632256, -1);
+          db.field_v.drawRightAligned(param3, var6_int, db.field_v.field_H, 12632256, -1);
           var9 = new RgbSprite(var6_int, var7);
           var9.e();
-          db.field_v.b(param4, 0, db.field_v.field_H, 12690143, -1);
-          db.field_v.a(param3, var6_int, db.field_v.field_H, 12690143, -1);
+          db.field_v.drawString(param4, 0, db.field_v.field_H, 12690143, -1);
+          db.field_v.drawRightAligned(param3, var6_int, db.field_v.field_H, 12690143, -1);
           if (!param0.field_B) {
             stackIn_5_0 = (String) (param3);
           } else {
@@ -140,8 +140,8 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
           var10 = stackIn_5_0;
           var11 = new RgbSprite(var6_int, var7);
           var11.e();
-          db.field_v.b(param4, 0, db.field_v.field_H, 16744448, -1);
-          db.field_v.a(var10, var6_int, db.field_v.field_H, 16744448, -1);
+          db.field_v.drawString(param4, 0, db.field_v.field_H, 16744448, -1);
+          db.field_v.drawRightAligned(var10, var6_int, db.field_v.field_H, 16744448, -1);
           jh.b();
           var12 = rb.a(8, var9, 255, (byte) -13);
           var13 = rb.a(8, var11, 16711680, (byte) 78);
@@ -203,16 +203,16 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
           var8 = db.field_v.field_E + db.field_v.field_H;
           var9 = new RgbSprite(var7_int, var8);
           var9.e();
-          db.field_v.b(param1, 0, db.field_v.field_H, 12632256, -1);
-          db.field_v.a(param0, var7_int, db.field_v.field_H, 12632256, param3);
+          db.field_v.drawString(param1, 0, db.field_v.field_H, 12632256, -1);
+          db.field_v.drawRightAligned(param0, var7_int, db.field_v.field_H, 12632256, param3);
           var10 = new RgbSprite(var7_int, var8);
           var10.e();
-          db.field_v.b(param1, 0, db.field_v.field_H, 12690143, -1);
-          db.field_v.a(param0, var7_int, db.field_v.field_H, 12690143, -1);
+          db.field_v.drawString(param1, 0, db.field_v.field_H, 12690143, -1);
+          db.field_v.drawRightAligned(param0, var7_int, db.field_v.field_H, 12690143, -1);
           var11 = new RgbSprite(var7_int, var8);
           var11.e();
-          db.field_v.b(param1, 0, db.field_v.field_H, 16744448, -1);
-          db.field_v.a(param5, var7_int, db.field_v.field_H, 16744448, -1);
+          db.field_v.drawString(param1, 0, db.field_v.field_H, 16744448, -1);
+          db.field_v.drawRightAligned(param5, var7_int, db.field_v.field_H, 16744448, -1);
           jh.b();
           var12 = rb.a(8, var10, 255, (byte) 92);
           var13 = rb.a(8, var11, 16711680, (byte) -8);
@@ -475,11 +475,11 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
                 boolean decompiledFrameCompleted1 = true;
                 if (t.field_a != var5Lifetime1) {
                   var17 = "+" + var5Lifetime1 / 10;
-                  var11 = db.field_v.b(var17);
+                  var11 = db.field_v.stringWidth(var17);
                   var12 = db.field_v.field_E + db.field_v.field_H;
                   jn.field_a = new RgbSprite(var11, var12);
                   jh.a(jn.field_a);
-                  db.field_v.b(var17, 0, db.field_v.field_H, 16744512, -1);
+                  db.field_v.drawString(var17, 0, db.field_v.field_H, 16744512, -1);
                   jh.b();
                   dm.field_f = dd.a((byte) -112, 12, jn.field_a);
                   var19 = dm.field_f.field_B;
@@ -574,9 +574,9 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
           bl.field_e = oh.a(param3, "commonui", 11091, "jagex_logo_grey");
           na.field_C = kn.a(param3, "commonui", "button", -94);
           sl.field_c = da.a("commonui", "validation", 0, param3);
-          ta.field_e = (se) ((Object) kk.a(param2, param3, "arezzo12", 0, "commonui"));
-          lp.field_C = (se) ((Object) kk.a(param2, param3, "arezzo14", 0, "commonui"));
-          hc.field_f = (se) ((Object) kk.a(param2, param3, "arezzo14bold", 0, "commonui"));
+          ta.field_e = (BitmapFont) ((Object) kk.a(param2, param3, "arezzo12", 0, "commonui"));
+          lp.field_C = (BitmapFont) ((Object) kk.a(param2, param3, "arezzo14", 0, "commonui"));
+          hc.field_f = (BitmapFont) ((Object) kk.a(param2, param3, "arezzo14bold", 0, "commonui"));
           var17 = new RgbSprite(param0.getFileByName("button.gif", "", (byte) -116), (java.awt.Component) ((Object) AwtRasterBuffer.field_h));
           pa.a((byte) -94, param3, "commonui", "dropdown");
           var5 = qa.a(15322, "screen_options", "commonui", param3);
@@ -700,14 +700,14 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
     private final void a(boolean param0, int param1, int param2) {
         int var6 = 0;
         int var4 = param2 + (8 + la.field_b.field_H);
-        db.field_v.b(pb.field_I, 7 + param1, var4, 16777215, -1);
-        db.field_v.a(Integer.toString(gm.field_d.field_s / 10), 133 + param1, var4, 16777215, -1);
+        db.field_v.drawString(pb.field_I, 7 + param1, var4, 16777215, -1);
+        db.field_v.drawRightAligned(Integer.toString(gm.field_d.field_s / 10), 133 + param1, var4, 16777215, -1);
         int var5 = jj.field_c <= 0 ? 0 : jj.field_c / 10;
         var4 += 37;
         if (!param0) {
           var6 = gm.field_d.field_s < jj.field_c ? 16711680 : 16777215;
-          db.field_v.b(ef.field_f, 7 + param1, var4, var6, -1);
-          db.field_v.a(Integer.toString(var5), param1 + 133, var4, var6, -1);
+          db.field_v.drawString(ef.field_f, 7 + param1, var4, var6, -1);
+          db.field_v.drawRightAligned(Integer.toString(var5), param1 + 133, var4, var6, -1);
           return;
         }
     }

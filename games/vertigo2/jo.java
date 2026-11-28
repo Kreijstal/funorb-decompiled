@@ -75,7 +75,7 @@ final class jo implements WidgetListener {
           if (null == this.field_i) {
             return;
           }
-          this.field_i.c(var12.text, var7 / 2 + var8, var12.field_L + this.field_i.field_D + var9, this.field_f, this.field_c);
+          this.field_i.drawCentred(var12.text, var7 / 2 + var8, var12.field_L + this.field_i.field_D + var9, this.field_f, this.field_c);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

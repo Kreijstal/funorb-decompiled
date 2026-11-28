@@ -328,7 +328,7 @@ final class db {
             } else {
               stackIn_26_8 = this.field_f;
             }
-            ((BitmapFont) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param1.field_h, param1.field_d, param1.field_j);
+            ((BitmapFont) (Object) stackIn_19_0).drawParagraphAlpha(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param1.field_h, param1.field_d, param1.field_j);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

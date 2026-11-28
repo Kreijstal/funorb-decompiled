@@ -11,7 +11,7 @@ final class bg extends IntrusiveNode {
     int field_k;
     int field_q;
 
-    final static void a(int param0, int param1, fn param2, int param3, int param4, int param5, int param6, int param7, uc param8, uc param9, int param10, byte param11, fn param12, fn param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, fn param2, int param3, int param4, int param5, int param6, int param7, BitmapFont param8, BitmapFont param9, int param10, byte param11, fn param12, fn param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -32,7 +32,7 @@ final class bg extends IntrusiveNode {
           cl.a(-101, param20, param15);
           if (param11 < 100) {
             var22 = (fn) null;
-            bg.a(-119, 8, (fn) null, 71, -79, -3, -11, -80, (uc) null, (uc) null, -94, (byte) -56, (fn) null, (fn) null, 94, 13, 54, -116, 49, -64, 124);
+            bg.a(-119, 8, (fn) null, 71, -79, -3, -11, -80, (BitmapFont) null, (BitmapFont) null, -94, (byte) -56, (fn) null, (fn) null, 94, 13, 54, -116, 49, -64, 124);
           }
           eg.a(param17, param3, param13, param10, param2, true);
           on.a(param16, param4, param12, (byte) -58);
@@ -82,7 +82,7 @@ final class bg extends IntrusiveNode {
           this.field_p = param0;
           if (param7 != 17830) {
             fn var10 = (fn) null;
-            bg.a(-82, -51, (fn) null, 103, -101, 74, 95, -51, (uc) null, (uc) null, -48, (byte) 91, (fn) null, (fn) null, -87, 116, -113, -76, 126, 23, -13);
+            bg.a(-82, -51, (fn) null, 103, -101, 74, 95, -51, (BitmapFont) null, (BitmapFont) null, -48, (byte) 91, (fn) null, (fn) null, -87, 116, -113, -76, 126, 23, -13);
           }
           this.field_l = param4;
           this.field_k = param6;

@@ -59,11 +59,11 @@ final class jc implements WidgetListener {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
-          this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.text + "</u>", param3.x + param1, param4 + param3.y, param3.width, param3.height, var6_int, -1, this.field_a, this.field_d, this.field_e.field_M + this.field_e.field_z);
+          this.field_e.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.text + "</u>", param3.x + param1, param4 + param3.y, param3.width, param3.height, var6_int, -1, this.field_a, this.field_d, this.field_e.field_M + this.field_e.field_z);
           if (!param3.f(101)) {
             return;
           }
-          var7 = this.field_e.c(param3.text);
+          var7 = this.field_e.stringWidth(param3.text);
           var8 = this.field_e.field_M + this.field_e.field_z;
           var9 = param3.x + param1;
           var10 = param4 + param3.y;

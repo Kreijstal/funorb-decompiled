@@ -6,11 +6,11 @@ final class fo extends WidgetContainer implements ng {
     static String field_E;
     private int[] field_H;
     private mn field_C;
-    private uc field_G;
+    private BitmapFont field_G;
     private lg[] field_I;
     private String field_B;
 
-    fo(mn param0, uc param1, String param2) {
+    fo(mn param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_J = 0;
@@ -18,7 +18,7 @@ final class fo extends WidgetContainer implements ng {
           this.field_B = param2;
           this.field_G = param1;
           this.field_C = param0;
-          var4_int = null != this.field_B ? this.field_G.a(this.field_B, 260, this.field_G.field_x) : 0;
+          var4_int = null != this.field_B ? this.field_G.textHeight(this.field_B, 260, this.field_G.field_x) : 0;
           this.a((byte) -10, 0, 0, 22 + var4_int, 288);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "fo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -112,7 +112,7 @@ final class fo extends WidgetContainer implements ng {
 
     final void a(int param0, byte param1, int param2, int param3) {
         super.a(param0, (byte) -29, param2, param3);
-        this.field_G.a(this.field_B, this.x + (param3 + 14), this.y + (param2 + 10), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_G.field_x);
+        this.field_G.drawParagraph(this.field_B, this.x + (param3 + 14), this.y + (param2 + 10), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_G.field_x);
         if (param1 >= -7) {
           ca var6 = (ca) null;
           this.a(92, (String) null, (ca) null);

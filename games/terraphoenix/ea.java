@@ -60,7 +60,7 @@ final class ea implements WidgetActionListener {
           }
           if (this.field_h != null) {
             var10 = this.field_i + this.field_g + this.field_a;
-            this.field_h.a(param1.text, param1.x + param2 + var10, this.field_b + (param0 + param1.y), param1.width - this.field_a - var10, param1.height - (this.field_a << 1), this.field_p, this.field_f, this.field_c, this.field_d, 0);
+            this.field_h.drawParagraph(param1.text, param1.x + param2 + var10, this.field_b + (param0 + param1.y), param1.width - this.field_a - var10, param1.height - (this.field_a << 1), this.field_p, this.field_f, this.field_c, this.field_d, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -9,12 +9,12 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
     private MatchingFieldValidator field_o;
     static String field_p;
 
-    final static sc a(String param0, String param1, int param2, ResourceArchive param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(String param0, String param1, int param2, ResourceArchive param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        sc stackIn_1_0 = null;
+        BinaryBitmapFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

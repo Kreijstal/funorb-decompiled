@@ -508,7 +508,7 @@ final class rd {
             qa.a(var11Lifetime1, 18, var12Lifetime1, var13Lifetime1, var14Lifetime1, var1_int, var2);
             DelayedPacket.d(-114);
             if (null != pf.field_I) {
-              id.field_A.b(pf.field_I, lh.field_a, -8 + SpriteBase.field_d, 16772608, 0);
+              id.field_A.drawCentred(pf.field_I, lh.field_a, -8 + SpriteBase.field_d, 16772608, 0);
             }
             dd.g(-125);
             decompiledFrameRemainder0 = (null == q.field_g ||

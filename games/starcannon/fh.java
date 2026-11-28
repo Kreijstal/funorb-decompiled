@@ -5,7 +5,7 @@ class fh extends hd {
     static Sprite[] field_r;
     static Sprite field_q;
 
-    fh(qe param0, int param1) {
+    fh(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_p, -1, 2147483647, false);
     }
 

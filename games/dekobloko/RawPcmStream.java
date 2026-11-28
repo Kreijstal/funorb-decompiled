@@ -18,11 +18,11 @@ final class RawPcmStream extends PcmStream {
     private int integerState0205;
     private int integerState0206;
 
-    private final synchronized int computeInteger0462() {
+    private final synchronized int getPan() {
         return this.integerState0205 < 0 ? -1 : this.integerState0205;
     }
 
-    private final synchronized void performAction0436(int integerArgument1, int integerArgument2) {
+    private final synchronized void setVolumeAndPan(int integerArgument1, int integerArgument2) {
         this.integerState0197 = integerArgument1;
         this.integerState0205 = integerArgument2;
         this.integerState0200 = 0;
@@ -39,7 +39,7 @@ final class RawPcmStream extends PcmStream {
         return null;
     }
 
-    private final static int computeInteger0428(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11, int integerArgument12, int integerArgument13) {
+    private final static int mixReverseMonoInterpolated(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11, int integerArgument12, int integerArgument13) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         if (integerArgument12 != 0) {
@@ -76,7 +76,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument6;
     }
 
-    private final static int computeInteger0440(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11, int integerArgument12, int integerArgument13) {
+    private final static int mixForwardMonoInterpolated(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11, int integerArgument12, int integerArgument13) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         if (integerArgument12 != 0) {
@@ -113,7 +113,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument6;
     }
 
-    private final static int computeInteger0449(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
+    private final static int mixForwardMonoInterpolatedRamp(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         rawPcmStreamArgument12.integerState0206 = rawPcmStreamArgument12.integerState0206 - rawPcmStreamArgument12.integerState0202 * integerArgument6;
@@ -353,14 +353,14 @@ final class RawPcmStream extends PcmStream {
             if (this.integerState0199 == -256 &&
               (this.integerState0203 & 255) == 0) {
               if (PcmPlayer.booleanState0038) {
-                return RawPcmStream.computeInteger0430(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this);
+                return RawPcmStream.mixReverseStereoAligned(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this);
               }
-              return RawPcmStream.computeInteger0445(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this);
+              return RawPcmStream.mixReverseMonoAligned(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this);
             }
             if (PcmPlayer.booleanState0038) {
-              return RawPcmStream.computeInteger0453(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
+              return RawPcmStream.mixReverseStereoInterpolated(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
             }
-            return RawPcmStream.computeInteger0428(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
+            return RawPcmStream.mixReverseMonoInterpolated(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
           }
           integerLocal1 = integerArgument2 + this.integerState0200;
           if (integerLocal1 > integerArgument4) {
@@ -370,15 +370,15 @@ final class RawPcmStream extends PcmStream {
           if (this.integerState0199 == -256 &&
             (this.integerState0203 & 255) == 0) {
             if (!PcmPlayer.booleanState0038) {
-              integerArgument2 = RawPcmStream.computeInteger0433(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this);
+              integerArgument2 = RawPcmStream.mixReverseMonoAlignedRamp(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this);
             } else {
-              integerArgument2 = RawPcmStream.computeInteger0441(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this);
+              integerArgument2 = RawPcmStream.mixReverseStereoAlignedRamp(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this);
             }
           } else {
             if (!PcmPlayer.booleanState0038) {
-              integerArgument2 = RawPcmStream.computeInteger0439(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
+              integerArgument2 = RawPcmStream.mixReverseMonoInterpolatedRamp(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
             } else {
-              integerArgument2 = RawPcmStream.computeInteger0438(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
+              integerArgument2 = RawPcmStream.mixReverseStereoInterpolatedRamp(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
             }
           }
           this.integerState0200 = this.integerState0200 - integerArgument2;
@@ -389,7 +389,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument4;
     }
 
-    final static RawPcmStream computeRawPcmStream0431(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static RawPcmStream createForSampleStep(RawSound rawSoundArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (rawSoundArgument1.byteArrayState0028 == null) {
           return null;
         }
@@ -399,7 +399,7 @@ final class RawPcmStream extends PcmStream {
         return null;
     }
 
-    private final static int computeInteger0441(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, RawPcmStream rawPcmStreamArgument13) {
+    private final static int mixReverseStereoAlignedRamp(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, RawPcmStream rawPcmStreamArgument13) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -486,8 +486,8 @@ final class RawPcmStream extends PcmStream {
         int integerLocal3;
         integerLocal1 = this.integerState0197;
         if (integerLocal1 != -2147483648) {
-          integerLocal2 = RawPcmStream.computeInteger0452(integerLocal1, this.integerState0205);
-          integerLocal3 = RawPcmStream.computeInteger0448(integerLocal1, this.integerState0205);
+          integerLocal2 = RawPcmStream.computeLeftVolume(integerLocal1, this.integerState0205);
+          integerLocal3 = RawPcmStream.computeRightVolume(integerLocal1, this.integerState0205);
         } else {
           integerLocal3 = 0;
           integerLocal2 = 0;
@@ -561,7 +561,7 @@ final class RawPcmStream extends PcmStream {
         this.integerState0194 = integerArgument2;
     }
 
-    private final static int computeInteger0433(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, RawPcmStream rawPcmStreamArgument10) {
+    private final static int mixReverseMonoAlignedRamp(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, RawPcmStream rawPcmStreamArgument10) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -623,7 +623,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument4;
     }
 
-    private final static int computeInteger0427(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
+    private final static int mixForwardStereoInterpolated(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -673,7 +673,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument6 >> 1;
     }
 
-    private final static int computeInteger0444(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, RawPcmStream rawPcmStreamArgument10) {
+    private final static int mixForwardMonoAlignedRamp(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, RawPcmStream rawPcmStreamArgument10) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -736,10 +736,10 @@ final class RawPcmStream extends PcmStream {
     }
 
     final synchronized void performAction0425(int integerArgument1, int integerArgument2, int integerArgument3) {
-        this.performAction0437(integerArgument1, integerArgument2 << 6, integerArgument3 << 6);
+        this.rampVolumeAndPan(integerArgument1, integerArgument2 << 6, integerArgument3 << 6);
     }
 
-    private final static int computeInteger0448(int integerArgument1, int integerArgument2) {
+    private final static int computeRightVolume(int integerArgument1, int integerArgument2) {
         return integerArgument2 < 0 ? -integerArgument1 : (int)((double)integerArgument1 * Math.sqrt((double)integerArgument2 * 0.0001220703125) + 0.5);
     }
 
@@ -753,7 +753,7 @@ final class RawPcmStream extends PcmStream {
         return null;
     }
 
-    private final static int computeInteger0434(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, RawPcmStream rawPcmStreamArgument9) {
+    private final static int mixForwardMonoAligned(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, RawPcmStream rawPcmStreamArgument9) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -808,11 +808,11 @@ final class RawPcmStream extends PcmStream {
 
     private final void recomputeGains() {
         this.integerState0195 = this.integerState0197;
-        this.integerState0206 = RawPcmStream.computeInteger0452(this.integerState0197, this.integerState0205);
-        this.integerState0204 = RawPcmStream.computeInteger0448(this.integerState0197, this.integerState0205);
+        this.integerState0206 = RawPcmStream.computeLeftVolume(this.integerState0197, this.integerState0205);
+        this.integerState0204 = RawPcmStream.computeRightVolume(this.integerState0197, this.integerState0205);
     }
 
-    private final static int computeInteger0430(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11) {
+    private final static int mixReverseStereoAligned(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -878,7 +878,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument5 >> 1;
     }
 
-    private final static int computeInteger0426(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, RawPcmStream rawPcmStreamArgument14, int integerArgument15, int integerArgument16) {
+    private final static int mixForwardStereoInterpolatedRamp(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, RawPcmStream rawPcmStreamArgument14, int integerArgument15, int integerArgument16) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -937,7 +937,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument6;
     }
 
-    final synchronized void performAction0451(int integerArgument1) {
+    final synchronized void setSampleStepMagnitude(int integerArgument1) {
         if (this.integerState0199 < 0) {
           this.integerState0199 = -integerArgument1;
         } else {
@@ -945,19 +945,19 @@ final class RawPcmStream extends PcmStream {
         }
     }
 
-    private final synchronized void performAction0447(int integerArgument1) {
-        this.performAction0436(integerArgument1, this.computeInteger0462());
+    private final synchronized void setVolume(int integerArgument1) {
+        this.setVolumeAndPan(integerArgument1, this.getPan());
     }
 
-    final synchronized void performAction0437(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final synchronized void rampVolumeAndPan(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         if (integerArgument1 == 0) {
-          this.performAction0436(integerArgument2, integerArgument3);
+          this.setVolumeAndPan(integerArgument2, integerArgument3);
           return;
         }
-        int integerLocal3 = RawPcmStream.computeInteger0452(integerArgument2, integerArgument3);
-        int integerLocal4 = RawPcmStream.computeInteger0448(integerArgument2, integerArgument3);
+        int integerLocal3 = RawPcmStream.computeLeftVolume(integerArgument2, integerArgument3);
+        int integerLocal4 = RawPcmStream.computeRightVolume(integerArgument2, integerArgument3);
         if (this.integerState0206 != integerLocal3) {
           integerLocal1 = integerArgument2 - this.integerState0195;
           if (this.integerState0195 - integerArgument2 > integerLocal1) {
@@ -1017,7 +1017,7 @@ final class RawPcmStream extends PcmStream {
         this.integerState0200 = 0;
     }
 
-    private final static int computeInteger0439(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
+    private final static int mixReverseMonoInterpolatedRamp(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         rawPcmStreamArgument12.integerState0206 = rawPcmStreamArgument12.integerState0206 - rawPcmStreamArgument12.integerState0202 * integerArgument6;
@@ -1061,8 +1061,8 @@ final class RawPcmStream extends PcmStream {
         return integerArgument6;
     }
 
-    final synchronized void performAction0456(int integerArgument1, int integerArgument2) {
-        this.performAction0437(integerArgument1, integerArgument2, this.computeInteger0462());
+    final synchronized void rampVolume(int integerArgument1, int integerArgument2) {
+        this.rampVolumeAndPan(integerArgument1, integerArgument2, this.getPan());
     }
 
     final int getStreamCost() {
@@ -1073,7 +1073,7 @@ final class RawPcmStream extends PcmStream {
         return 1;
     }
 
-    private final static int computeInteger0453(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
+    private final static int mixReverseStereoInterpolated(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, RawPcmStream rawPcmStreamArgument12, int integerArgument13, int integerArgument14) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1122,7 +1122,7 @@ final class RawPcmStream extends PcmStream {
         return integerArgument6 >> 1;
     }
 
-    private final static int computeInteger0452(int integerArgument1, int integerArgument2) {
+    private final static int computeLeftVolume(int integerArgument1, int integerArgument2) {
         return integerArgument2 < 0 ? integerArgument1 : (int)((double)integerArgument1 * Math.sqrt((double)(16384 - integerArgument2) * 0.0001220703125) + 0.5);
     }
 
@@ -1146,14 +1146,14 @@ final class RawPcmStream extends PcmStream {
             if (this.integerState0199 == 256 &&
               (this.integerState0203 & 255) == 0) {
               if (PcmPlayer.booleanState0038) {
-                return RawPcmStream.computeInteger0442(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this);
+                return RawPcmStream.mixForwardStereoAligned(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this);
               }
-              return RawPcmStream.computeInteger0434(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this);
+              return RawPcmStream.mixForwardMonoAligned(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this);
             }
             if (PcmPlayer.booleanState0038) {
-              return RawPcmStream.computeInteger0427(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
+              return RawPcmStream.mixForwardStereoInterpolated(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
             }
-            return RawPcmStream.computeInteger0440(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
+            return RawPcmStream.mixForwardMonoInterpolated(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, 0, integerArgument4, integerArgument3, this, this.integerState0199, integerArgument5);
           }
           integerLocal1 = integerArgument2 + this.integerState0200;
           if (integerLocal1 > integerArgument4) {
@@ -1163,15 +1163,15 @@ final class RawPcmStream extends PcmStream {
           if (this.integerState0199 == 256 &&
             (this.integerState0203 & 255) == 0) {
             if (!PcmPlayer.booleanState0038) {
-              integerArgument2 = RawPcmStream.computeInteger0444(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this);
+              integerArgument2 = RawPcmStream.mixForwardMonoAlignedRamp(((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this);
             } else {
-              integerArgument2 = RawPcmStream.computeInteger0429(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this);
+              integerArgument2 = RawPcmStream.mixForwardStereoAlignedRamp(0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this);
             }
           } else {
             if (!PcmPlayer.booleanState0038) {
-              integerArgument2 = RawPcmStream.computeInteger0449(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
+              integerArgument2 = RawPcmStream.mixForwardMonoInterpolatedRamp(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0195, this.integerState0198, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
             } else {
-              integerArgument2 = RawPcmStream.computeInteger0426(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
+              integerArgument2 = RawPcmStream.mixForwardStereoInterpolatedRamp(0, 0, ((RawSound) (this.abstractAudioSampleState0001)).byteArrayState0028, integerArrayArgument1, this.integerState0203, integerArgument2, this.integerState0206, this.integerState0204, this.integerState0202, this.integerState0196, 0, integerLocal1, integerArgument3, this, this.integerState0199, integerArgument5);
             }
           }
           this.integerState0200 = this.integerState0200 - integerArgument2;
@@ -1186,7 +1186,7 @@ final class RawPcmStream extends PcmStream {
         int integerLocal1 = 0;
         int integerLocal2;
         if (integerArgument1 == 0) {
-          this.performAction0447(0);
+          this.setVolume(0);
           this.unlink((byte) 102);
           return;
         }
@@ -1250,7 +1250,7 @@ final class RawPcmStream extends PcmStream {
         this.unlink((byte) 127);
     }
 
-    private final static int computeInteger0442(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11) {
+    private final static int mixForwardStereoAligned(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, RawPcmStream rawPcmStreamArgument11) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1324,7 +1324,7 @@ final class RawPcmStream extends PcmStream {
         this.integerState0201 = integerArgument1;
     }
 
-    private final static int computeInteger0438(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, RawPcmStream rawPcmStreamArgument14, int integerArgument15, int integerArgument16) {
+    private final static int mixReverseStereoInterpolatedRamp(int integerArgument1, int integerArgument2, byte[] byteArrayArgument3, int[] integerArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, RawPcmStream rawPcmStreamArgument14, int integerArgument15, int integerArgument16) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1405,7 +1405,7 @@ final class RawPcmStream extends PcmStream {
         }
     }
 
-    private final static int computeInteger0445(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, RawPcmStream rawPcmStreamArgument9) {
+    private final static int mixReverseMonoAligned(byte[] byteArrayArgument1, int[] integerArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, RawPcmStream rawPcmStreamArgument9) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -1631,7 +1631,7 @@ final class RawPcmStream extends PcmStream {
         this.unlink((byte) 105);
     }
 
-    private final static int computeInteger0429(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, RawPcmStream rawPcmStreamArgument13) {
+    private final static int mixForwardStereoAlignedRamp(int integerArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10, int integerArgument11, int integerArgument12, RawPcmStream rawPcmStreamArgument13) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ce {
-    static vm field_d;
+    static BinaryBitmapFont field_d;
     static int field_b;
     static IntrusiveDeque field_a;
     static String[] field_c;

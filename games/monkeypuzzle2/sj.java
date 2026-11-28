@@ -279,7 +279,7 @@ final class sj {
           for (var11 = 0; var11 < var20.length; var11++) {
             var10[var11] = -3 + var18[var11].field_l;
           }
-          BoundedRandomAccessFile.field_e.a(var9, var20);
+          BoundedRandomAccessFile.field_e.setInlineSprites(var9, var20);
           ac.field_a.setAsRasterTarget((byte) 110);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "sj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

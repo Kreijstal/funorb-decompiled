@@ -155,8 +155,8 @@ final class mg {
           DisplayNameSelectionPanel.field_G = new int[][]{new int[]{0, 5, 1, 3, 4, 8, 6, 9, 12}, new int[]{7, 3, 4, 5, 10}, new int[]{11}, new int[]{17}, new int[]{16, 17}, new int[]{16, 17}, new int[]{15}, new int[]{15}, new int[]{15}, new int[]{13, 14}, new int[]{21, 17}};
           kb.field_b = new int[]{36, 36, 64, 64, 36, 36, 36, 36, 36, 36, 36};
           ia.field_c = new RgbSprite[22];
-          var1_int = qa.field_b.a(IntrusiveDeque.field_c[3]);
-          var2 = qa.field_b.a(IntrusiveDeque.field_c[4]);
+          var1_int = qa.field_b.stringWidth(IntrusiveDeque.field_c[3]);
+          var2 = qa.field_b.stringWidth(IntrusiveDeque.field_c[4]);
           if (var1_int < var2) {
             var1_int = var2;
           }
@@ -168,7 +168,7 @@ final class mg {
             SoftwareRasterizer.setClip(4, 4, 203, 30);
             field_j[4].b(0, 0);
             var6 = IntrusiveDeque.field_c[var1_intLifetime1];
-            var3 = qa.field_b.a(var6);
+            var3 = qa.field_b.stringWidth(var6);
             var4 = -var3 + 207 >> 1;
             if (var1_intLifetime1 == 3 ||
               4 == var1_intLifetime1) {
@@ -186,7 +186,7 @@ final class mg {
             SoftwareRasterizer.setClip(2, 2, 118, 29);
             field_j[4].b(0, 0);
             var7 = IntrusiveDeque.field_c[var1_intLifetime2];
-            var3Lifetime1 = qa.field_b.a(var7);
+            var3Lifetime1 = qa.field_b.stringWidth(var7);
             var4Lifetime1 = 120 - var3Lifetime1 >> 1;
             a.a(16777214, var7, param0 ^ -97, var4Lifetime1, 16777215, 23);
           }

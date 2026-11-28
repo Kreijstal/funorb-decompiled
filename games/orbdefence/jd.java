@@ -3,8 +3,8 @@
  */
 final class jd {
     static String[] field_e;
-    static sc field_c;
-    static kc field_a;
+    static BinaryBitmapFont field_c;
+    static BitmapFont field_a;
     static ba field_d;
     static String field_f;
     static boolean field_b;

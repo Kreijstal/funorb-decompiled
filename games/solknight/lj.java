@@ -84,7 +84,7 @@ final class lj extends WidgetContainer implements ka {
     final void a(int param0, int param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3 ^ param3);
-          this.field_J.a(this.field_I, param2 + this.field_m + 14, this.field_j + param0 + 10, -28 + this.field_t, this.field_x, 16777215, -1, 0, 0, this.field_J.field_F);
+          this.field_J.drawParagraph(this.field_I, param2 + this.field_m + 14, this.field_j + param0 + 10, -28 + this.field_t, this.field_x, 16777215, -1, 0, 0, this.field_J.field_F);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "lj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -109,7 +109,7 @@ final class lj extends WidgetContainer implements ka {
           this.field_H = param0;
           this.field_I = param2;
           if (this.field_I != null) {
-            stackIn_4_0 = this.field_J.b(this.field_I, 260, this.field_J.field_F);
+            stackIn_4_0 = this.field_J.textHeight(this.field_I, 260, this.field_J.field_F);
           } else {
             stackIn_4_0 = 0;
           }

@@ -6,7 +6,7 @@ class e implements ComponentLayout, eg {
     static String field_g;
     int field_d;
     int field_i;
-    fa field_j;
+    BitmapFont field_j;
     int field_n;
     private int field_a;
     int field_h;
@@ -79,7 +79,7 @@ class e implements ComponentLayout, eg {
           var9_int = this.b(param3, (byte) -50);
           var11 = this.a(param3, 122);
           if (this.field_l) {
-            this.field_j.a(this.c(66, param3), this.a(param3, param4, true, param1), this.a(param3, param5, param0, -3), var9_int, var11, param7, param6, this.field_i, this.field_h, this.field_d);
+            this.field_j.drawParagraph(this.c(66, param3), this.a(param3, param4, true, param1), this.a(param3, param5, param0, -3), var9_int, var11, param7, param6, this.field_i, this.field_h, this.field_d);
           } else {
             var13 = this.field_h;
             if (var13 != 0) {
@@ -98,16 +98,16 @@ class e implements ComponentLayout, eg {
             if (var13Lifetime1 != 0 &&
               var13Lifetime1 != 3) {
               if (var13Lifetime1 == 1) {
-                this.field_j.a(this.c(45, param3), (var9_int >> 1) + this.a(param3, param4, true, param1), this.a(param3, param5, param0, -3) + var12, param7, param6);
+                this.field_j.drawCentred(this.c(45, param3), (var9_int >> 1) + this.a(param3, param4, true, param1), this.a(param3, param5, param0, -3) + var12, param7, param6);
               } else {
                 if ((var13Lifetime1 == 2)) {
-                  this.field_j.b(this.c(90, param3), this.a(param3, param4, true, param1) + var9_int, var12 + this.a(param3, param5, param0, -3), param7, param6);
+                  this.field_j.drawRightAligned(this.c(90, param3), this.a(param3, param4, true, param1) + var9_int, var12 + this.a(param3, param5, param0, -3), param7, param6);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_j.c(this.c(31, param3), this.a(param3, param4, true, param1), var12 + this.a(param3, param5, param0, -3), param7, param6);
+              this.field_j.drawString(this.c(31, param3), this.a(param3, param4, true, param1), var12 + this.a(param3, param5, param0, -3), param7, param6);
             }
           }
           ia.a(-99);
@@ -529,7 +529,7 @@ class e implements ComponentLayout, eg {
         }
     }
 
-    e(fa param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    e(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -639,7 +639,7 @@ class e implements ComponentLayout, eg {
     protected e() {
     }
 
-    e(fa param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    e(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_d = param9;
           this.field_n = param1;

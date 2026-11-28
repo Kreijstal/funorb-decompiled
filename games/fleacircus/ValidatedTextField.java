@@ -126,7 +126,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final void a(boolean param0, FieldValidator param1) {
+    final void setFieldValidator(boolean param0, FieldValidator param1) {
         try {
           this.field_W = param1;
           if (!param0) {

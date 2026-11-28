@@ -127,7 +127,7 @@ final class g implements j {
           SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (this.field_a != null) {
             var13 = var14.field_V + var14.field_S + this.field_g;
-            this.field_a.a(param0.field_v, var13 + (param0.field_m + param2), this.field_f + (param1 + param0.field_i), -this.field_g + (-var13 + param0.field_p), -(this.field_g << 1) + param0.field_l, this.field_e, this.field_b, 1, 1, 0);
+            this.field_a.drawParagraph(param0.field_v, var13 + (param0.field_m + param2), this.field_f + (param1 + param0.field_i), -this.field_g + (-var13 + param0.field_p), -(this.field_g << 1) + param0.field_l, this.field_e, this.field_b, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "g.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

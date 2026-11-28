@@ -26,10 +26,10 @@ final class wn implements wo {
             return;
           }
           if (var8 >= 256) {
-            go.field_l.a(param3, param2, 15 + param4, param1, -1);
+            go.field_l.drawString(param3, param2, 15 + param4, param1, -1);
             return;
           }
-          go.field_l.a(param3, param2, 15 + param4, param1, -1, var8);
+          go.field_l.drawStringAlpha(param3, param2, 15 + param4, param1, -1, var8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

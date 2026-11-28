@@ -228,7 +228,7 @@ final class ga extends bc {
         int var6Lifetime1;
         var13 = TorChallenge.field_F ? 1 : 0;
         try {
-          var5_int = param1.a(param4);
+          var5_int = param1.stringWidth(param4);
           if (param3 >= var5_int &&
             param4.indexOf("<br>") == -1) {
             param2[0] = param4;
@@ -245,7 +245,7 @@ final class ga extends bc {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param4.substring(var7, var9 + 1).trim();
-              var12 = param1.a(var11);
+              var12 = param1.stringWidth(var11);
               if (var12 >= param3) {
                 incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;

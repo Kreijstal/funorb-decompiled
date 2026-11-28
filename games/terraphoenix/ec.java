@@ -16,12 +16,12 @@ final class ec {
         return this.field_e;
     }
 
-    final static qj a(String param0, int param1, Archive param2, Archive param3, String param4) {
+    final static CoverageBitmapFont a(String param0, int param1, Archive param2, Archive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        qj stackIn_2_0 = null;
-        qj stackIn_4_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -34,7 +34,7 @@ final class ec {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 8192) {
-            stackIn_2_0 = (qj) null;
+            stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
           var5_int = param3.getGroupIdByName(param1 ^ -8193, param0);

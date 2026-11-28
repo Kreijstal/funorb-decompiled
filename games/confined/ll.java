@@ -111,7 +111,7 @@ final class ll {
         if ((param1 << param0 & i.field_o) != 0) {
           return false;
         }
-        pn.field_a.b(hl.field_b, 320, 100, 9805732, -1);
+        pn.field_a.drawCentred(hl.field_b, 320, 100, 9805732, -1);
         tf.a((byte) 59, param0, 105, i.field_o);
         return true;
     }

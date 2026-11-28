@@ -510,7 +510,7 @@ class g extends wa {
             this.field_K != null) {
             var23Lifetime2 = var26 + this.field_K;
           }
-          if (this.field_S.b(var23Lifetime2) <= -(this.field_v * 2) + this.field_x &&
+          if (this.field_S.stringWidth(var23Lifetime2) <= -(this.field_v * 2) + this.field_x &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (1 == this.field_H) {
               var22 = var22 + (-this.field_S.field_p + this.field_lb - this.field_S.field_s) / 2;
@@ -520,22 +520,22 @@ class g extends wa {
               }
             }
             if (0 == this.field_ub) {
-              this.field_S.a(var23Lifetime2, this.field_v + (this.field_vb + var21), var22 + this.field_Bb + this.field_S.field_s, var18, -1, this.field_E);
+              this.field_S.drawStringAlpha(var23Lifetime2, this.field_v + (this.field_vb + var21), var22 + this.field_Bb + this.field_S.field_s, var18, -1, this.field_E);
             } else {
               if (this.field_ub == 1) {
-                this.field_S.b(var23Lifetime2, this.field_v + this.field_vb + var21 + (-(this.field_v * 2) + this.field_x) / 2, this.field_S.field_s + var22 + this.field_Bb, var18, -1, this.field_E);
+                this.field_S.drawCentredAlpha(var23Lifetime2, this.field_v + this.field_vb + var21 + (-(this.field_v * 2) + this.field_x) / 2, this.field_S.field_s + var22 + this.field_Bb, var18, -1, this.field_E);
               } else {
                 if (this.field_ub != 2) {
-                  this.field_S.a(var23Lifetime2, var21 + this.field_vb + this.field_v, var22 + this.field_Bb, this.field_x - this.field_v * 2, this.field_lb, var18, -1, this.field_E, this.field_ub, this.field_H, this.field_A);
+                  this.field_S.drawParagraphAlpha(var23Lifetime2, var21 + this.field_vb + this.field_v, var22 + this.field_Bb, this.field_x - this.field_v * 2, this.field_lb, var18, -1, this.field_E, this.field_ub, this.field_H, this.field_A);
                 } else {
-                  this.field_S.c(var23Lifetime2, this.field_x - (2 * this.field_v - this.field_vb - this.field_v - var21), this.field_S.field_s + (this.field_Bb + var22), var18, -1, this.field_E);
+                  this.field_S.drawRightAlignedAlpha(var23Lifetime2, this.field_x - (2 * this.field_v - this.field_vb - this.field_v - var21), this.field_S.field_s + (this.field_Bb + var22), var18, -1, this.field_E);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_S.a(var23Lifetime2, this.field_v + (this.field_vb + var21), var22 + this.field_Bb, this.field_x - this.field_v * 2, this.field_lb, var18, -1, this.field_E, this.field_ub, this.field_H, this.field_A);
+            this.field_S.drawParagraphAlpha(var23Lifetime2, this.field_v + (this.field_vb + var21), var22 + this.field_Bb, this.field_x - this.field_v * 2, this.field_lb, var18, -1, this.field_E, this.field_ub, this.field_H, this.field_A);
           }
         }
         if (null != this.field_L) {

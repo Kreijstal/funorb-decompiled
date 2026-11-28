@@ -11,17 +11,17 @@ abstract class kc {
 
     final static void b(boolean param0) {
         if (null == ha.field_Z) {
-          ha.field_Z = PcmSampleStream.a(ke.field_h[4], 100, 96);
+          ha.field_Z = PcmSampleStream.createForPlaybackRate(ke.field_h[4], 100, 96);
           na.a((byte) 60, ha.field_Z);
           if (!param0) {
             field_b = (Boolean) null;
           }
           return;
         }
-        if (!ha.field_Z.h()) {
+        if (!ha.field_Z.isSamplePositionOutOfRange()) {
           return;
         }
-        ha.field_Z = PcmSampleStream.a(ke.field_h[4], 100, 96);
+        ha.field_Z = PcmSampleStream.createForPlaybackRate(ke.field_h[4], 100, 96);
         na.a((byte) 60, ha.field_Z);
         if (!param0) {
           field_b = (Boolean) null;

@@ -64,7 +64,7 @@ class tc extends jd {
         field_r = null;
     }
 
-    tc(tj param0, int param1) {
+    tc(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_s, -1, 2147483647, false);
     }
 

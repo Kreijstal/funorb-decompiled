@@ -3,7 +3,7 @@
  */
 final class hb extends ak {
     static String field_C;
-    private tj field_E;
+    private BitmapFont field_E;
     private int field_A;
     static long field_H;
     private String field_J;
@@ -26,7 +26,7 @@ final class hb extends ak {
 
     final void a(int param0, int param1, int param2, int param3) {
         int stackIn_7_0 = 0;
-        tj stackIn_9_0;
+        BitmapFont stackIn_9_0;
         String stackIn_9_1;
         int stackIn_9_2;
         int stackIn_9_3;
@@ -36,7 +36,7 @@ final class hb extends ak {
         int stackIn_9_7;
         int stackIn_10_8 = 0;
         int stackIn_17_0 = 0;
-        tj stackIn_19_0;
+        BitmapFont stackIn_19_0;
         String stackIn_19_1;
         int stackIn_19_2;
         int stackIn_19_3;
@@ -73,7 +73,7 @@ final class hb extends ak {
           stackIn_19_6 = this.field_A;
           stackIn_19_7 = -1;
           stackIn_20_8 = (!this.field_I) ? 2 : 0;
-          ((tj) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_19_2, stackIn_19_3, stackIn_19_4, stackIn_19_5, stackIn_19_6, stackIn_19_7, stackIn_20_8, 1, this.field_E.field_s);
+          ((BitmapFont) (Object) stackIn_19_0).drawParagraph(stackIn_19_1, stackIn_19_2, stackIn_19_3, stackIn_19_4, stackIn_19_5, stackIn_19_6, stackIn_19_7, stackIn_20_8, 1, this.field_E.field_s);
           return;
         }
         this.field_K = 125;
@@ -98,10 +98,10 @@ final class hb extends ak {
         stackIn_9_6 = this.field_A;
         stackIn_9_7 = -1;
         stackIn_10_8 = (!this.field_I) ? 2 : 0;
-        ((tj) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_9_4, stackIn_9_5, stackIn_9_6, stackIn_9_7, stackIn_10_8, 1, this.field_E.field_s);
+        ((BitmapFont) (Object) stackIn_9_0).drawParagraph(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_9_4, stackIn_9_5, stackIn_9_6, stackIn_9_7, stackIn_10_8, 1, this.field_E.field_s);
     }
 
-    hb(int param0, int param1, int param2, int param3, lk param4, boolean param5, int param6, int param7, tj param8, int param9, String param10) {
+    hb(int param0, int param1, int param2, int param3, lk param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (fc) null, (sk) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -127,7 +127,7 @@ final class hb extends ak {
           this.field_A = param9;
           this.field_J = param10;
           var12_int = this.field_G - this.field_K;
-          var13 = this.field_E.b(param10, var12_int, this.field_E.field_s) + 2 * this.field_K;
+          var13 = this.field_E.textHeight(param10, var12_int, this.field_E.field_s) + 2 * this.field_K;
           if (var13 <= param3) {
             var13 = param3;
           } else {
@@ -202,7 +202,7 @@ final class hb extends ak {
             var5 = var12;
             var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte((byte) -77);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(Slime.a(param0, -1789));
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(Slime.xorIntegers(param0, -1789));
             }
             var15 = (ld) (ne.field_r.beginForward((byte) -86));
             if (var15 == null) {

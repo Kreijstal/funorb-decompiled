@@ -212,7 +212,7 @@ final class ca {
                   }
                   stackIn_46_0 = var7.field_Mb;
                   if (var14 > 0) {
-                    stackIn_47_1 = lh.a(var7.field_Mb.field_xb, var7.field_Fb, var14);
+                    stackIn_47_1 = BitmapFont.truncateWithEllipsis(var7.field_Mb.field_xb, var7.field_Fb, var14);
                   } else {
                     stackIn_47_1 = var7.field_Fb;
                   }
@@ -290,7 +290,7 @@ final class ca {
         }
     }
 
-    final static void a(int param0, int param1, int param2, RgbSprite[] param3, byte param4, int param5, int param6, RgbSprite[] param7, String param8, int param9, int param10, lh param11, boolean param12, int param13, boolean param14) {
+    final static void a(int param0, int param1, int param2, RgbSprite[] param3, byte param4, int param5, int param6, RgbSprite[] param7, String param8, int param9, int param10, BitmapFont param11, boolean param12, int param13, boolean param14) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

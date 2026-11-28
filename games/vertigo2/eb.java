@@ -117,10 +117,10 @@ final class eb {
               var1_int = var1_int + qc.field_z;
             }
             if (0 <= var4) {
-              gb.field_b.b(var6, var8Lifetime1, var1_int + re.field_g, var5, -1);
+              gb.field_b.drawString(var6, var8Lifetime1, var1_int + re.field_g, var5, -1);
               var1_int = var1_int + (GameShell.field_z + al.field_z + qc.field_z);
             } else {
-              mf.field_c.b(var6, var8Lifetime1, gj.field_y + var1_int, var5, -1);
+              mf.field_c.drawString(var6, var8Lifetime1, gj.field_y + var1_int, var5, -1);
               var1_int = var1_int + gd.field_k;
             }
           }

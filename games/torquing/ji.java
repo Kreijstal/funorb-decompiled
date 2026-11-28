@@ -4,7 +4,7 @@
 final class ji {
     static int[] field_a;
 
-    final static void a(boolean param0, uc param1, int param2, String param3, int param4, int param5) {
+    final static void a(boolean param0, BitmapFont param1, int param2, String param3, int param4, int param5) {
         int var11 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -25,7 +25,7 @@ final class ji {
         int var9Lifetime1;
         var13 = Torquing.field_u;
         try {
-          var6_int = param1.a(param3);
+          var6_int = param1.stringWidth(param3);
           var7 = param1.field_t + param1.field_x;
           if (param0) {
             var14 = (MeshGeometry) null;
@@ -38,11 +38,11 @@ final class ji {
               TooltipPanel.field_q = new String[16];
             }
             var10 = param4 + (var6_int % param4 + var9 - 1) / var9 * 2;
-            var8Lifetime1 = param1.a(param3, new int[]{var10}, TooltipPanel.field_q);
+            var8Lifetime1 = param1.wrapText(param3, new int[]{var10}, TooltipPanel.field_q);
             var7 = var7 * var8Lifetime1;
             var6_int = 0;
             for (var11 = 0; var11 < var8Lifetime1; var11++) {
-              var12 = param1.a(TooltipPanel.field_q[var11]);
+              var12 = param1.stringWidth(TooltipPanel.field_q[var11]);
               if (var12 > var6_int) {
                 var6_int = var12;
               }
@@ -58,7 +58,7 @@ final class ji {
           }
           SoftwareRasterizer.drawRectangleOutline(var9Lifetime1, var10, 6 + var6_int, 6 + var7, param2);
           SoftwareRasterizer.fillRectangle(var9Lifetime1 + 1, 1 + var10, var6_int + 4, var7 + 4, param5);
-          param1.a(param3, 3 + var9Lifetime1, 3 + var10, var6_int, var7, param2, -1, 0, 0, param1.field_x + param1.field_t);
+          param1.drawParagraph(param3, 3 + var9Lifetime1, 3 + var10, var6_int, var7, param2, -1, 0, 0, param1.field_x + param1.field_t);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -41,7 +41,7 @@ final class fa extends lg {
           this.field_s = true;
           var8 = this.a(param3 ^ -1063303658, param1, param4, param0);
           var9 = var8;
-          var9.field_g[0] = param2 - param0.a(param1);
+          var9.field_g[0] = param2 - param0.stringWidth(param1);
           var9.field_g[param1.length()] = param2;
           ua.a(0, (byte) -113, param0, param1, var9);
         } catch (RuntimeException runtimeException) {
@@ -145,9 +145,9 @@ final class fa extends lg {
           this.field_n = param2;
           this.field_p = param4;
           this.field_l = param7;
-          var16 = new String[param4.a(param3, param0) + 1];
+          var16 = new String[param4.lineCount(param3, param0) + 1];
           var17 = var16;
-          var10 = Math.max(1, param4.a(param3, new int[]{param0}, var17));
+          var10 = Math.max(1, param4.wrapText(param3, new int[]{param0}, var17));
           if (this.field_l == 3 &&
             var10 == 1) {
             this.field_l = 1;
@@ -189,11 +189,11 @@ final class fa extends lg {
             var14 = new qi(stackIn_35_2, stackIn_35_3, stackIn_36_4);
             var14.field_g[0] = 0;
             if (var13 != null) {
-              var14.field_g[var13.length()] = param4.a(var13);
+              var14.field_g[var13.length()] = param4.stringWidth(var13);
               if (3 != param2) {
                 stackIn_41_0 = 0;
               } else {
-                stackIn_41_0 = this.a(var13, param0, (byte) 19, param4.a(var13));
+                stackIn_41_0 = this.a(var13, param0, (byte) 19, param4.stringWidth(var13));
               }
               ua.a(stackIn_41_0, (byte) -113, param4, var13, var14);
             }
@@ -252,7 +252,7 @@ final class fa extends lg {
           var8 = this.a(1063303649, param1, param2, param0);
           var9 = var8;
           var8.field_g[0] = param4;
-          var9.field_g[param1.length()] = param0.a(param1) + param4;
+          var9.field_g[param1.length()] = param0.stringWidth(param1) + param4;
           ua.a(0, (byte) -113, param0, param1, var9);
           if (param3 > -62) {
             var7 = (BitmapFont) null;
@@ -310,7 +310,7 @@ final class fa extends lg {
           this.field_n = 1;
           this.field_s = true;
           var8 = this.a(1063303649, param1, param4, param0);
-          var7 = param0.a(param1);
+          var7 = param0.stringWidth(param1);
           var8.field_g[0] = param2 - (var7 >> 1);
           var8.field_g[param1.length()] = param2 + (var7 >> 1);
           ua.a(0, (byte) -113, param0, param1, var8);

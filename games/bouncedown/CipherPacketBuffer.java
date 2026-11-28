@@ -21,13 +21,13 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final static void a(int param0, String param1, int param2, int param3, int param4) {
-        od.field_f.a(param1, param0 - 1, param2, 0, 0);
+        od.field_f.drawCentred(param1, param0 - 1, param2, 0, 0);
         if (param4 != 8) {
           return;
         }
         try {
-          od.field_f.a(param1, param0, -1 + param2, 0, 0);
-          od.field_f.a(param1, param0, param2, param3, -1);
+          od.field_f.drawCentred(param1, param0, -1 + param2, 0, 0);
+          od.field_f.drawCentred(param1, param0, param2, param3, -1);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ii.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

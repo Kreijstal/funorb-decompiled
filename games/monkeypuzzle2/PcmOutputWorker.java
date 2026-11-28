@@ -10,7 +10,7 @@ final class PcmOutputWorker implements Runnable {
     volatile boolean field_d;
     volatile boolean field_f;
 
-    final static void a(ta param0, Sprite[] param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, int param8, boolean param9, int param10, int param11, int param12, int param13, int param14, ta param15) {
+    final static void a(BitmapFont param0, Sprite[] param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, int param8, boolean param9, int param10, int param11, int param12, int param13, int param14, BitmapFont param15) {
         try {
           gj.a(param12, wg.field_h, lc.field_e, param2, qj.field_D, rb.field_cb, param10, ki.field_s, param7, param15, param4, param13, param0, param14, AccountNameAvailabilityValidator.field_u, param2 ^ -386, param3, param11, param6, new gg(param1), new gg(param5));
           jk.a(-97, param9, param8);
@@ -57,7 +57,7 @@ final class PcmOutputWorker implements Runnable {
         float var7 = 0.0f;
         float var8 = 0.0f;
         int var9 = 0;
-        ta var10 = null;
+        BitmapFont var10 = null;
         var9 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           kb.field_c = kb.field_c + 1;
@@ -74,8 +74,8 @@ final class PcmOutputWorker implements Runnable {
           stackIn_7_0 = ((kb.field_c & 7) != 0) ? 0 : 1;
           var2_int = stackIn_7_0;
           if (param1 != -6961) {
-            var10 = (ta) null;
-            PcmOutputWorker.a((ta) null, (Sprite[]) null, 32, 126, -22, (Sprite[]) null, 21, -43, -22, true, -125, -11, 113, 78, 111, (ta) null);
+            var10 = (BitmapFont) null;
+            PcmOutputWorker.a((BitmapFont) null, (Sprite[]) null, 32, 126, -22, (Sprite[]) null, 21, -43, -22, true, -125, -11, 113, 78, 111, (BitmapFont) null);
           }
           for (var3 = 0; var3 < FrameTimer.field_a; var3++) {
             if (var2_int != 0) {
@@ -196,7 +196,7 @@ final class PcmOutputWorker implements Runnable {
         }
     }
 
-    final static void a(boolean param0, ta param1, ta param2, int param3) {
+    final static void a(boolean param0, BitmapFont param1, BitmapFont param2, int param3) {
         if (param0) {
           return;
         }

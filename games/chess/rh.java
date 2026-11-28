@@ -144,7 +144,7 @@ final class rh {
         RuntimeException var2 = null;
         RgbSprite var3 = null;
         int var4 = 0;
-        lh var5 = null;
+        BitmapFont var5 = null;
         RgbSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -160,8 +160,8 @@ final class rh {
             param0[var2_int].field_u = param0[var2_int].field_t;
           }
           if (param1 != -9568) {
-            var5 = (lh) null;
-            rh.a(-18, 113, (lh) null, -30, 5, -1, -31, -128, (le) null, 37, (le) null, (le) null, 40, 88, 107, (lh) null, -119, (byte) -45, 84, -5);
+            var5 = (BitmapFont) null;
+            rh.a(-18, 113, (BitmapFont) null, -30, 5, -1, -31, -128, (le) null, 37, (le) null, (le) null, 40, 88, 107, (BitmapFont) null, -119, (byte) -45, 84, -5);
           }
           stackIn_7_0 = (RgbSprite[]) (param0);
           return stackIn_7_0;
@@ -184,8 +184,8 @@ final class rh {
         field_c = null;
         field_e = null;
         if (param0 <= 95) {
-          lh var2 = (lh) null;
-          rh.a(32, 87, (lh) null, 23, -22, -34, -8, 31, (le) null, 115, (le) null, (le) null, 85, -66, 50, (lh) null, 94, (byte) 105, 6, 74);
+          BitmapFont var2 = (BitmapFont) null;
+          rh.a(32, 87, (BitmapFont) null, 23, -22, -34, -8, 31, (le) null, 115, (le) null, (le) null, 85, -66, 50, (BitmapFont) null, 94, (byte) 105, 6, 74);
         }
     }
 
@@ -193,7 +193,7 @@ final class rh {
         throw new Error();
     }
 
-    final static void a(int param0, int param1, lh param2, int param3, int param4, int param5, int param6, int param7, le param8, int param9, le param10, le param11, int param12, int param13, int param14, lh param15, int param16, byte param17, int param18, int param19) {
+    final static void a(int param0, int param1, BitmapFont param2, int param3, int param4, int param5, int param6, int param7, le param8, int param9, le param10, le param11, int param12, int param13, int param14, BitmapFont param15, int param16, byte param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

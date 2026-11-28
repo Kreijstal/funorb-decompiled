@@ -64,12 +64,12 @@ final class qi {
         }
     }
 
-    final static qj a(ResourceArchive param0, String param1, ResourceArchive param2, String param3, int param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, String param1, ResourceArchive param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         String var7 = null;
-        qj stackIn_3_0 = null;
+        CoverageBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

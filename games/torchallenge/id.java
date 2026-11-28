@@ -36,9 +36,9 @@ final class id {
         }
     }
 
-    final static nf a(byte[] param0, ge[] param1, int param2) {
+    final static BinaryBitmapFont a(byte[] param0, ge[] param1, int param2) {
         int var8 = 0;
-        nf stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -91,7 +91,7 @@ final class id {
             var6[var8] = param1[var8].field_a;
             var7[var8] = param1[var8].field_k;
           }
-          stackIn_7_0 = new nf(param0, var16, var17, var18, var19, var20);
+          stackIn_7_0 = new BinaryBitmapFont(param0, var16, var17, var18, var19, var20);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

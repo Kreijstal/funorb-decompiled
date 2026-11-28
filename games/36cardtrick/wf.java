@@ -47,7 +47,7 @@ final class wf {
           }
           while (var2 != null) {
             if (var2.field_i.isLinked(-115)) {
-              var2.field_h.f(mf.field_i * var2.field_j / 80);
+              var2.field_h.setVolume(mf.field_i * var2.field_j / 80);
             } else {
               var2.unlink(103);
             }

@@ -61,7 +61,7 @@ final class dk {
             var7 = this.field_t.field_K + this.field_t.field_x;
           }
           var8 = SoftwareRasterizer.width >> 2;
-          var9 = this.field_t.a(param0);
+          var9 = this.field_t.stringWidth(param0);
           var10 = this.field_t.field_K + this.field_t.field_x;
           var11 = param3;
           if (var8 < var9 ||
@@ -75,11 +75,11 @@ final class dk {
             if (PasswordValidator.field_m == null) {
               PasswordValidator.field_m = new String[16];
             }
-            var11Lifetime1 = this.field_t.a(param0, new int[]{var12}, PasswordValidator.field_m);
+            var11Lifetime1 = this.field_t.wrapText(param0, new int[]{var12}, PasswordValidator.field_m);
             var10 = var10 + (var11Lifetime1 - 1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_t.a(PasswordValidator.field_m[var13Lifetime2]);
+              var14 = this.field_t.stringWidth(PasswordValidator.field_m[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
@@ -95,7 +95,7 @@ final class dk {
           }
           SoftwareRasterizer.drawRectangleOutline(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_e);
           SoftwareRasterizer.fillRectangle(var12 + 1, var13Lifetime1 + 1, -2 + var9 + var5_int, var6 + var10 - 2, this.field_p);
-          this.field_t.a(param0, this.field_k + var12, this.field_h + var13Lifetime1, var9, var10, this.field_b, -1, 0, 0, var7);
+          this.field_t.drawParagraph(param0, this.field_k + var12, this.field_h + var13Lifetime1, var9, var10, this.field_b, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -317,7 +317,7 @@ final class dk {
         int var9 = 0;
         try {
           int var6 = -40 / ((-33 - param3) / 42);
-          var5_int = this.field_t.a(param1);
+          var5_int = this.field_t.stringWidth(param1);
           var7 = this.field_t.field_t + this.field_t.field_K;
           var8 = param0;
           if (6 + var8 + var5_int > SoftwareRasterizer.width) {
@@ -329,7 +329,7 @@ final class dk {
           }
           SoftwareRasterizer.drawRectangleOutline(var8, var9, var5_int + 6, var7 + 6, this.field_b);
           SoftwareRasterizer.fillRectangle(1 + var8, 1 + var9, var5_int + 4, 4 + var7, this.field_p);
-          this.field_t.c(param1, var8 + 3, 3 + (var9 + this.field_t.field_t), this.field_b, -1);
+          this.field_t.drawString(param1, var8 + 3, 3 + (var9 + this.field_t.field_t), this.field_b, -1);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "dk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

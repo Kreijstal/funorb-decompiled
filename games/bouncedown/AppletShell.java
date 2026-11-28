@@ -45,7 +45,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         }
     }
 
-    private final void c(int param0) {
+    private final void processClientTick(int param0) {
         RuntimeException runtimeException = null;
         long var2_long = 0L;
         long var4 = 0L;
@@ -60,13 +60,13 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           }
           sh.field_hb = 31 & sh.field_hb + 1;
           if (param0 >= -33) {
-            this.b((byte) 102);
+            this.disposeClient((byte) 102);
           }
           var6 = this;
           synchronized (var6) {
             ResourceArchive.field_f = k.field_H;
           }
-          this.a((byte) 37);
+          this.updateClient((byte) 37);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -162,7 +162,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
     public final void windowClosed(java.awt.event.WindowEvent param0) {
     }
 
-    abstract void d(byte param0);
+    abstract void clearClientResources(byte param0);
 
     public final void start() {
         if (this != og.field_c ||
@@ -235,7 +235,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         }
     }
 
-    abstract void c(byte param0);
+    abstract void initializeClient(byte param0);
 
     public abstract void init();
 
@@ -438,7 +438,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
     public final void windowDeiconified(java.awt.event.WindowEvent param0) {
     }
 
-    abstract void a(byte param0);
+    abstract void updateClient(byte param0);
 
     public final void windowIconified(java.awt.event.WindowEvent param0) {
     }
@@ -477,7 +477,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         }
     }
 
-    abstract void e(int param0);
+    abstract void renderClientFrame(int param0);
 
     final static void a(boolean param0, String param1, int param2) {
         RuntimeException runtimeException = null;
@@ -537,7 +537,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               }
               NanoFrameTimer.field_e = 0;
               if (param3 < 2) {
-                this.c((byte) -74);
+                this.initializeClient((byte) -74);
               }
               jc.field_i = param5;
               ej.field_d = param5;
@@ -704,7 +704,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                 oh.a(-117);
                 this.d(12955);
                 ca.field_d = w.a(kj.field_i, (java.awt.Component) ((Object) ch.field_h), jc.field_i, (byte) 41);
-                this.c((byte) -6);
+                this.initializeClient((byte) -6);
                 ff.field_D = jj.a(10000);
                 do {
                   boolean decompiledFrameRemainder0 = true;
@@ -723,11 +723,11 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                   var3 = stackIn_103_0;
                   do {
                     if (!(var3 < nl.field_c)) {
-                      this.b(1);
+                      this.renderAppletFrame(1);
                       pg.a((byte) -109, ch.field_h, DebouncedFieldValidator.field_e);
                       break;
                     }
-                    this.c(-111);
+                    this.processClientTick(-111);
                     var3++;
                   } while (var5 == 0);
                 } while (var5 == 0);
@@ -738,7 +738,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               ValidatedTextField.a((Throwable) (var1), (byte) 100, (String) null);
               this.a((byte) -85, "crash");
             }
-            this.a(true, (byte) -83);
+            this.shutdownApplet(true, (byte) -83);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -752,7 +752,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         }
     }
 
-    private final void a(boolean param0, byte param1) {
+    private final void shutdownApplet(boolean param0, byte param1) {
         RuntimeException runtimeException = null;
         Object var3 = null;
         Throwable decompiledCaughtException = null;
@@ -773,7 +773,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             if (param1 >= -10) {
               this.d(40);
             }
-            this.b((byte) -111);
+            this.disposeClient((byte) -111);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3_ref = (Exception) (Object) decompiledCaughtException;
@@ -795,7 +795,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               var3_ref = (Exception) (Object) decompiledCaughtException;
             }
           }
-          this.d((byte) -124);
+          this.clearClientResources((byte) -124);
           if (i.field_h != null) {
             try {
               System.exit(0);
@@ -825,7 +825,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         }
     }
 
-    private final void b(int param0) {
+    private final void renderAppletFrame(int param0) {
         int fieldTemp$1 = 0;
         RuntimeException runtimeException = null;
         long var2_long = 0L;
@@ -858,7 +858,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               ch.field_h.setLocation(var6.left + NanoFrameTimer.field_e, ob.field_d + var6.top);
             }
           }
-          this.e(4);
+          this.renderClientFrame(4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -933,7 +933,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         this.field_e = false;
     }
 
-    abstract void b(byte param0);
+    abstract void disposeClient(byte param0);
 
     public final void destroy() {
         RuntimeException runtimeException = null;
@@ -944,7 +944,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             ua.field_d = fa.correctedCurrentTimeMillis(112);
             SecondaryNodeDeque.sleepMillis(5000L, 19406);
             jj.field_a = null;
-            this.a(false, (byte) -57);
+            this.shutdownApplet(false, (byte) -57);
             return;
           }
           return;

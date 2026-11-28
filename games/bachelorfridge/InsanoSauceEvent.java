@@ -125,7 +125,7 @@ final class InsanoSauceEvent extends SpecialEvent {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param4 = param4 - (lo.field_b.a(param0) >> 1);
+          param4 = param4 - (lo.field_b.stringWidth(param0) >> 1);
           ce.a(!param5, param2, param1, param0, param4, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

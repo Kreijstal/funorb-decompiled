@@ -135,7 +135,7 @@ final class LevelCompleteScene extends AnimatedResultScene {
         return stackIn_11_0;
     }
 
-    final static void requestReconnect(vc param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void requestReconnect(BitmapFont param0, int param1, int param2, int param3, int param4, int param5) {
         try {
           tn.e((byte) -128);
           if (param5 != -17213) {
@@ -149,7 +149,7 @@ final class LevelCompleteScene extends AnimatedResultScene {
     final void drawResultScene(int param0) {
         int var5 = 0;
         RgbSprite stackIn_7_0 = null;
-        ef stackIn_20_0 = null;
+        BinaryBitmapFont stackIn_20_0 = null;
         String stackIn_21_1 = null;
         int var2;
         RgbSprite var3;
@@ -173,22 +173,22 @@ final class LevelCompleteScene extends AnimatedResultScene {
             var4 = LevelCompleteEntrancePhase.field_f[ma.field_n[var2]];
             var8.c(-37 + 15 * m.field_l[var2], -37 + (240 + jj.field_b) + 0 - 24, var4);
             if (q.field_a[ma.field_n[var2]].field_i != 0) {
-              go.field_l.b(Integer.toString(q.field_a[ma.field_n[var2]].field_i), 15 * (m.field_l[var2] + 9) - 37, 460 + (0 + jj.field_b - 255), var4, -1);
+              go.field_l.drawRightAligned(Integer.toString(q.field_a[ma.field_n[var2]].field_i), 15 * (m.field_l[var2] + 9) - 37, 460 + (0 + jj.field_b - 255), var4, -1);
             }
             if (0 != pd.field_g[var2]) {
-              go.field_l.b(Integer.toString(pd.field_g[var2]), -37 + (m.field_l[var2] + 9) * 15, -255 + (0 + jj.field_b) + 480, 16760896, -1);
+              go.field_l.drawRightAligned(Integer.toString(pd.field_g[var2]), -37 + (m.field_l[var2] + 9) * 15, -255 + (0 + jj.field_b) + 480, 16760896, -1);
             }
             if (!vh.field_a) {
               for (var5 = ib.field_l[var2]; LevelLostScene.field_i[var2] > var5; var5++) {
                 var6 = (ScoreModifier) (vm.field_j[var2].elementAt(var5));
-                an.field_q.a(var6.field_a, -37 + m.field_l[var2] * 15, 252 + (jj.field_b - 255) + 15 * (var5 + fo.field_m[var2]), var4, -1);
+                an.field_q.drawString(var6.field_a, -37 + m.field_l[var2] * 15, 252 + (jj.field_b - 255) + 15 * (var5 + fo.field_m[var2]), var4, -1);
                 stackIn_20_0 = an.field_q;
                 if (var6.field_e == 0) {
                   stackIn_21_1 = "<times>2";
                 } else {
                   stackIn_21_1 = Integer.toString(var6.field_e);
                 }
-                ((ef) (Object) stackIn_20_0).b(stackIn_21_1, 135 + (15 * m.field_l[var2] - 37), -15 + (jj.field_b + (fo.field_m[var2] + var5) * 15 + 12), 16760896, -1);
+                ((BinaryBitmapFont) (Object) stackIn_20_0).drawRightAligned(stackIn_21_1, 135 + (15 * m.field_l[var2] - 37), -15 + (jj.field_b + (fo.field_m[var2] + var5) * 15 + 12), 16760896, -1);
               }
             }
           }

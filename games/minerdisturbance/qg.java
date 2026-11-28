@@ -12,7 +12,7 @@ final class qg implements ad {
     private int field_h;
     static String field_e;
     static String field_g;
-    private we field_c;
+    private BitmapFont field_c;
     static RawPcmStream field_b;
     private int field_a;
     private int field_m;
@@ -30,7 +30,7 @@ final class qg implements ad {
         field_d = null;
     }
 
-    qg(we param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    qg(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_j = param3;
           this.field_c = param0;
@@ -80,7 +80,7 @@ final class qg implements ad {
           SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_c) {
             var13 = var14.field_M + var14.field_J + this.field_i;
-            this.field_c.a(param2.field_s, param2.field_u + param1 + var13, this.field_h + param3 + param2.field_t, param2.field_v - this.field_i - var13, param2.field_q - (this.field_i << 1), this.field_j, this.field_k, 1, 1, 0);
+            this.field_c.drawParagraph(param2.field_s, param2.field_u + param1 + var13, this.field_h + param3 + param2.field_t, param2.field_v - this.field_i - var13, param2.field_q - (this.field_i << 1), this.field_j, this.field_k, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "qg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

@@ -4,7 +4,7 @@
 class ph extends qj implements ga {
     static String[] field_nb;
     private fa field_kb;
-    private qe field_fb;
+    private BitmapFont field_fb;
     static String field_gb;
     private boolean field_ib;
     static String field_mb;
@@ -210,7 +210,7 @@ class ph extends qj implements ga {
         }
     }
 
-    ph(tc param0, qe param1, String param2, boolean param3, boolean param4) {
+    ph(tc param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new kj((ph) null, param1, param2), 77, 10, 10);
         try {
           this.field_hb = false;

@@ -4,7 +4,7 @@
 final class pa implements WidgetRenderer {
     private int field_i;
     private int field_j;
-    private kg field_g;
+    private BitmapFont field_g;
     private int field_b;
     private int field_f;
     private int field_d;
@@ -60,7 +60,7 @@ final class pa implements WidgetRenderer {
             return;
           }
           var14 = var15.field_A + var15.field_H + this.field_e;
-          this.field_g.a(param4.field_k, var14 + param4.field_p + param0, this.field_f + (param4.field_n + param1), -this.field_e - (var14 - param4.field_l), -(this.field_e << 1) + param4.field_h, this.field_i, this.field_b, 1, 1, 0);
+          this.field_g.drawParagraph(param4.field_k, var14 + param4.field_p + param0, this.field_f + (param4.field_n + param1), -this.field_e - (var14 - param4.field_l), -(this.field_e << 1) + param4.field_h, this.field_i, this.field_b, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,7 +143,7 @@ final class pa implements WidgetRenderer {
         }
     }
 
-    pa(kg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    pa(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_e = param1;
           this.field_i = param3;

@@ -1120,10 +1120,10 @@ final class hj {
                       bl.a(50, kb.field_d);
                       this.field_R.e();
                       lb.a(0, 340, (byte) 24, NodeHashTableIterator.field_e, 0, 40);
-                      sb.field_r.a(gg.a(new String[]{Integer.toString(10000)}, sc.field_d, true), 170, sb.field_r.field_C, 1, -1);
+                      sb.field_r.drawCentred(gg.a(new String[]{Integer.toString(10000)}, sc.field_d, true), 170, sb.field_r.field_C, 1, -1);
                       this.field_f.e();
                       lb.a(0, 340, (byte) -14, NodeHashTableIterator.field_e, 0, 40);
-                      sb.field_r.a(gg.a(new String[]{Integer.toString(this.field_I)}, PcmOutputWorker.field_a, true), 170, sb.field_r.field_C, 1, -1);
+                      sb.field_r.drawCentred(gg.a(new String[]{Integer.toString(this.field_I)}, PcmOutputWorker.field_a, true), 170, sb.field_r.field_C, 1, -1);
                       ac.field_a.setAsRasterTarget((byte) 119);
                       if (IterableNodeHashTable.field_c == 19) {
                         e.a(254, (byte) 40, 1);
@@ -1752,10 +1752,10 @@ final class hj {
           ci.field_d.a(0, ci.field_d.field_n << 3, this.field_M << 4, this.field_k - 48 << 4, var10Lifetime3, 4096);
           DequeCursor.field_a[0].c(20 + this.field_M, this.field_k - 13 - wl.field_f[0].field_n);
           fa.f(1);
-          BoundedRandomAccessFile.field_e.a(this.field_j.toString(), 40, 124, 16777215, -1);
-          BoundedRandomAccessFile.field_e.a(Integer.toString(1 + IterableNodeHashTable.field_c % 5), 40, 208, 16777215, -1);
+          BoundedRandomAccessFile.field_e.drawCentred(this.field_j.toString(), 40, 124, 16777215, -1);
+          BoundedRandomAccessFile.field_e.drawCentred(Integer.toString(1 + IterableNodeHashTable.field_c % 5), 40, 208, 16777215, -1);
           var11Lifetime4 = -48 / ((param0 - 56) / 43);
-          BoundedRandomAccessFile.field_e.a(Integer.toString(1 + aa.field_a), 40, 288, 16777215, -1);
+          BoundedRandomAccessFile.field_e.drawCentred(Integer.toString(1 + aa.field_a), 40, 288, 16777215, -1);
           if (13 != this.field_jb) {
             if (this.field_jb == 1) {
               var12 = this.field_d * 40 / 50;
@@ -1784,19 +1784,19 @@ final class hj {
                         }
                         var12 = stackIn_291_0;
                         kl.a(0, 0, 640, 480, 12163403, var12);
-                        sb.field_r.a(TextFieldValidator.field_h, 321, 170, 6776679, -1);
-                        sb.field_r.a(TextFieldValidator.field_h, 319, 170, 6776679, -1);
-                        sb.field_r.a(TextFieldValidator.field_h, 320, 171, 6776679, -1);
-                        sb.field_r.a(TextFieldValidator.field_h, 320, 169, 6776679, -1);
-                        sb.field_r.a(TextFieldValidator.field_h, 320, 170, 16724736, -1);
-                        sb.field_r.a(TextFieldValidator.field_h, 330, 180, 6776679, -1, 50);
+                        sb.field_r.drawCentred(TextFieldValidator.field_h, 321, 170, 6776679, -1);
+                        sb.field_r.drawCentred(TextFieldValidator.field_h, 319, 170, 6776679, -1);
+                        sb.field_r.drawCentred(TextFieldValidator.field_h, 320, 171, 6776679, -1);
+                        sb.field_r.drawCentred(TextFieldValidator.field_h, 320, 169, 6776679, -1);
+                        sb.field_r.drawCentred(TextFieldValidator.field_h, 320, 170, 16724736, -1);
+                        sb.field_r.drawCentredAlpha(TextFieldValidator.field_h, 330, 180, 6776679, -1, 50);
                         var13 = gg.a(new String[]{this.field_j.toString()}, cl.field_b, true);
-                        sb.field_r.a(var13, 321, 320, 6776679, -1);
-                        sb.field_r.a(var13, 319, 320, 6776679, -1);
-                        sb.field_r.a(var13, 320, 321, 6776679, -1);
-                        sb.field_r.a(var13, 320, 319, 6776679, -1);
-                        sb.field_r.a(var13, 320, 320, 16724736, -1);
-                        sb.field_r.a(var13, 330, 330, 6776679, -1, 50);
+                        sb.field_r.drawCentred(var13, 321, 320, 6776679, -1);
+                        sb.field_r.drawCentred(var13, 319, 320, 6776679, -1);
+                        sb.field_r.drawCentred(var13, 320, 321, 6776679, -1);
+                        sb.field_r.drawCentred(var13, 320, 319, 6776679, -1);
+                        sb.field_r.drawCentred(var13, 320, 320, 16724736, -1);
+                        sb.field_r.drawCentredAlpha(var13, 330, 330, 6776679, -1, 50);
                         AwtRasterBuffer.field_a[this.field_u][this.field_Y].c(-(AwtRasterBuffer.field_a[this.field_u][this.field_Y].field_k / 2) + 320, 240 - AwtRasterBuffer.field_a[this.field_u][this.field_Y].field_j / 2);
                         var21 = 0;
                         var14 = var21;

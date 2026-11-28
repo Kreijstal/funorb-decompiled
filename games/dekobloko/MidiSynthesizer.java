@@ -1072,7 +1072,7 @@ final class MidiSynthesizer extends PcmMixerListener {
 
     private final void performAction0690(int integerArgument1, int integerArgument2) {
         if (this.rawPcmStreamArrayState0001[integerArgument1] != null) {
-          this.rawPcmStreamArrayState0001[integerArgument1].performAction0451(integerArgument2 * 256 / PcmPlayer.integerState0209);
+          this.rawPcmStreamArrayState0001[integerArgument1].setSampleStepMagnitude(integerArgument2 * 256 / PcmPlayer.integerState0209);
         }
     }
 

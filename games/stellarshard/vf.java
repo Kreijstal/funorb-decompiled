@@ -66,7 +66,7 @@ final class vf extends WidgetContainer implements oi {
 
     final void a(int param0, byte param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        this.field_G.a(this.field_C, 14 + (param3 + this.field_w), 10 + param2 + this.field_k, this.field_p - 28, this.field_t, 16777215, -1, 0, 0, this.field_G.field_N);
+        this.field_G.drawParagraph(this.field_C, 14 + (param3 + this.field_w), 10 + param2 + this.field_k, this.field_p - 28, this.field_t, 16777215, -1, 0, 0, this.field_G.field_N);
     }
 
     final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5, BitmapFont param6, int param7, Sprite[] param8, int param9, int param10, int param11, int param12, boolean param13, int param14, BitmapFont param15) {
@@ -243,7 +243,7 @@ final class vf extends WidgetContainer implements oi {
           this.field_C = param2;
           this.field_G = param1;
           this.field_I = param0;
-          var4_int = null != this.field_C ? this.field_G.b(this.field_C, 260, this.field_G.field_N) : 0;
+          var4_int = null != this.field_C ? this.field_G.textHeight(this.field_C, 260, this.field_G.field_N) : 0;
           this.b(288, 0, 0, var4_int + 22, 23987);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

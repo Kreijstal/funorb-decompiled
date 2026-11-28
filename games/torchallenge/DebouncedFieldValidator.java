@@ -140,7 +140,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
               }
             }
           }
-          SecondaryNodeDequeIterator.field_e.a(qf.field_e, wc.field_d);
+          SecondaryNodeDequeIterator.field_e.setInlineSprites(qf.field_e, wc.field_d);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

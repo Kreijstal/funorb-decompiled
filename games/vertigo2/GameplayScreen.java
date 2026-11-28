@@ -778,7 +778,7 @@ final class GameplayScreen {
                 }
               }
             }
-            var5 = tk.field_c.c(j.field_p);
+            var5 = tk.field_c.stringWidth(j.field_p);
             np.field_Nb = np.field_Nb + ((float)var5 - np.field_Nb) * 0.05000000074505806f;
           }
           if (!this.field_o ||
@@ -833,12 +833,12 @@ final class GameplayScreen {
             if (this.field_w) {
               var3 = qe.field_U[var2_int];
               var4 = 320;
-              var5 = tk.field_c.a(var3, var4, 0);
+              var5 = tk.field_c.textHeight(var3, var4, 0);
               var6 = 20;
               var7 = 20;
               var8 = 170;
               MusicPatchPcmStream.a(30 + var5 + 2 * var7, var4 + var6 * 2, var8 - var7, -(var4 / 2) + 320 - var6, -62, 150);
-              tk.field_c.a(var3, 320 - var4 / 2, var8, var4, var5, 16777215, -1, 1, 1, 0);
+              tk.field_c.drawParagraph(var3, 320 - var4 / 2, var8, var4, var5, 16777215, -1, 1, 1, 0);
               var8 = var8 + (var7 / 2 + var5);
               SoftwareRasterizer.drawHorizontalLine(320 - (var4 - 30) / 2, var8, var4 - 30, 5921370);
               if (this.field_D.field_r.field_n >= 100 &&
@@ -1936,74 +1936,74 @@ final class GameplayScreen {
               var9Lifetime1 = 16;
               var10Lifetime1 = 440;
               if (mf.a((byte) 126, 1)) {
-                tk.field_c.a("Position:", var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned("Position:", var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a(Integer.toString(var7.field_E), var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned(Integer.toString(var7.field_E), var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a(Integer.toString(var7.field_y), var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned(Integer.toString(var7.field_y), var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a(Integer.toString(var7.field_k), var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned(Integer.toString(var7.field_k), var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
               }
               if (mf.a((byte) 126, 2)) {
-                tk.field_c.a("Current Cell:", var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned("Current Cell:", var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a(Integer.toString(var7.field_E / 128), var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned(Integer.toString(var7.field_E / 128), var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a(Integer.toString(var7.field_y / 128), var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned(Integer.toString(var7.field_y / 128), var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a(Integer.toString(var7.field_k / 240), var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned(Integer.toString(var7.field_k / 240), var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
               }
               if (mf.a((byte) 126, 4)) {
-                tk.field_c.a("FPS:", var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned("FPS:", var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a(Integer.toString(IntrusiveNode.field_d), var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned(Integer.toString(IntrusiveNode.field_d), var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
               }
               if (mf.a((byte) 126, 8)) {
-                tk.field_c.a("Memory:", var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned("Memory:", var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
                 var11 = Runtime.getRuntime();
-                tk.field_c.a("Total: " + var11.totalMemory() / 1000L, var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned("Total: " + var11.totalMemory() / 1000L, var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a("Used: " + var11.freeMemory() / 1000L, var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned("Used: " + var11.freeMemory() / 1000L, var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
               }
               if (mf.a((byte) 126, 16)) {
-                tk.field_c.a("Predictions:", var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned("Predictions:", var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a("Predicitons per frame: " + (this.field_u - this.field_M), var10Lifetime1, var8Lifetime2, 65280, -1);
+                tk.field_c.drawRightAligned("Predicitons per frame: " + (this.field_u - this.field_M), var10Lifetime1, var8Lifetime2, 65280, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a("Keys Out Packets: " + this.field_a.a(16777215), var10Lifetime1, var8Lifetime2, 65280, -1);
+                tk.field_c.drawRightAligned("Keys Out Packets: " + this.field_a.a(16777215), var10Lifetime1, var8Lifetime2, 65280, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
                 if (this.field_J > 0) {
-                  tk.field_c.a("Auth Updates/Sec: " + this.field_y / this.field_J, var10Lifetime1, var8Lifetime2, 65280, -1);
+                  tk.field_c.drawRightAligned("Auth Updates/Sec: " + this.field_y / this.field_J, var10Lifetime1, var8Lifetime2, 65280, -1);
                 }
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
                 if (0 < this.field_z.size(true)) {
-                  tk.field_c.a("Auth Packets delayed: " + this.field_z.size(true), var10Lifetime1, var8Lifetime2, 65280, -1);
+                  tk.field_c.drawRightAligned("Auth Packets delayed: " + this.field_z.size(true), var10Lifetime1, var8Lifetime2, 65280, -1);
                 }
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a("Gameupdates per tic: " + (int)(0.5f + this.field_E), var10Lifetime1, var8Lifetime2, 65280, -1);
+                tk.field_c.drawRightAligned("Gameupdates per tic: " + (int)(0.5f + this.field_E), var10Lifetime1, var8Lifetime2, 65280, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
                 if (this.field_H > 0) {
-                  tk.field_c.a("Avg Dont updates: " + this.field_x / this.field_H, var10Lifetime1, var8Lifetime2, 65280, -1);
+                  tk.field_c.drawRightAligned("Avg Dont updates: " + this.field_x / this.field_H, var10Lifetime1, var8Lifetime2, 65280, -1);
                 }
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
               }
               if (mf.a((byte) 126, 256)) {
-                tk.field_c.a("Player Details:", var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.drawRightAligned("Player Details:", var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a("Fall: " + var7.getVerticalVelocity((byte) -128), var10Lifetime1, var8Lifetime2, 65280, -1);
+                tk.field_c.drawRightAligned("Fall: " + var7.getVerticalVelocity((byte) -128), var10Lifetime1, var8Lifetime2, 65280, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a("vx: " + var7.field_c, var10Lifetime1, var8Lifetime2, 65280, -1);
+                tk.field_c.drawRightAligned("vx: " + var7.field_c, var10Lifetime1, var8Lifetime2, 65280, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a("vx: " + var7.field_O, var10Lifetime1, var8Lifetime2, 65280, -1);
+                tk.field_c.drawRightAligned("vx: " + var7.field_O, var10Lifetime1, var8Lifetime2, 65280, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a("On Block: " + var7.field_z, var10Lifetime1, var8Lifetime2, 65280, -1);
+                tk.field_c.drawRightAligned("On Block: " + var7.field_z, var10Lifetime1, var8Lifetime2, 65280, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a("Stuck: " + var7.field_N, var10Lifetime1, var8Lifetime2, 65280, -1);
+                tk.field_c.drawRightAligned("Stuck: " + var7.field_N, var10Lifetime1, var8Lifetime2, 65280, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
               }
               var8Lifetime2Lifetime1 = 480;

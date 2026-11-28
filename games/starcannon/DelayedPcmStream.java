@@ -34,7 +34,7 @@ final class DelayedPcmStream extends PcmStream {
         return (String) null;
     }
 
-    final static void a(int param0, int param1, int param2, qe param3, int param4, int param5, int param6, int param7, int param8, int param9, Sprite param10) {
+    final static void a(int param0, int param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, Sprite param10) {
         try {
           int var11_int = -45 / ((param5 - 9) / 47);
           ResourceArchive.field_e = param0;

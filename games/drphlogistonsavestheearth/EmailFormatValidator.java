@@ -6,7 +6,7 @@ final class EmailFormatValidator extends TextFieldValidator {
     static int field_x;
     static String field_u;
     static String[] field_r;
-    static jb field_q;
+    static BinaryBitmapFont field_q;
     static int field_t;
     static boolean field_w;
     static int field_p;
@@ -30,7 +30,7 @@ final class EmailFormatValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (param0 < 47) {
-            field_q = (jb) null;
+            field_q = (BinaryBitmapFont) null;
           }
           stackIn_6_0 = fl.field_e;
           return stackIn_6_0;

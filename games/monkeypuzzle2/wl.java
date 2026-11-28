@@ -106,9 +106,9 @@ abstract class wl {
         }
     }
 
-    final static tb a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
-        tb stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

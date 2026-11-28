@@ -9,8 +9,8 @@ final class pc {
     final static void a(int param0) {
         int var2 = 0;
         int var2Lifetime1;
-        ak.field_e = a.field_b.a(mj.field_c[12]);
-        int var1 = a.field_b.a(mj.field_c[13]);
+        ak.field_e = a.field_b.stringWidth(mj.field_c[12]);
+        int var1 = a.field_b.stringWidth(mj.field_c[13]);
         if (var1 > ak.field_e) {
           ak.field_e = var1;
           ad.a(0, new int[]{0, 3, 19, 12, 13, 4, 20, 2, 14, 11}, true);

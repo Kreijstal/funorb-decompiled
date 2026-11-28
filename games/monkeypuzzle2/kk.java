@@ -100,16 +100,16 @@ final class kk {
     final void b(byte param0) {
         int discarded$0 = 0;
         int stackIn_23_0 = 0;
-        vk stackIn_60_0 = null;
+        BinaryBitmapFont stackIn_60_0 = null;
         boolean stackIn_61_1 = false;
         boolean stackIn_63_2;
         int stackIn_63_3;
         boolean stackIn_64_4 = false;
-        vk stackIn_66_0 = null;
+        BinaryBitmapFont stackIn_66_0 = null;
         int stackIn_66_1 = 0;
         boolean stackIn_67_2 = false;
         boolean stackIn_70_3 = false;
-        vk stackIn_72_0 = null;
+        BinaryBitmapFont stackIn_72_0 = null;
         boolean stackIn_73_1 = false;
         int stackIn_75_2 = 0;
         boolean stackIn_76_3 = false;
@@ -119,7 +119,7 @@ final class kk {
         int var2_int = 0;
         Sprite var2 = null;
         int var3 = 0;
-        vk var3_ref_vk = null;
+        BinaryBitmapFont var3_ref_vk = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -224,23 +224,23 @@ final class kk {
                     var3_ref_vk = BoundedRandomAccessFile.field_e;
                     var4Lifetime1 = var3_ref_vk.field_C + 200;
                     var5Lifetime1 = 4 + (var3_ref_vk.field_j + var3_ref_vk.field_D);
-                    var3_ref_vk.a(f.field_f, 320, var4Lifetime1, 1, -1);
+                    var3_ref_vk.drawCentred(f.field_f, 320, var4Lifetime1, 1, -1);
                     stackIn_60_0 = var3_ref_vk;
                     stackIn_61_1 = (FrameTimer.field_b != 0);
                     stackIn_63_2 = false;
                     stackIn_63_3 = 22890;
                     stackIn_64_4 = (DebouncedFieldValidator.field_f.field_A != 0);
-                    ((vk) (Object) stackIn_60_0).a(wa.a(stackIn_61_1, stackIn_63_2, stackIn_63_3, stackIn_64_4), 320, var4Lifetime1 + var5Lifetime1, 1, -1);
+                    ((BinaryBitmapFont) (Object) stackIn_60_0).drawCentred(wa.a(stackIn_61_1, stackIn_63_2, stackIn_63_3, stackIn_64_4), 320, var4Lifetime1 + var5Lifetime1, 1, -1);
                     stackIn_66_0 = var3_ref_vk;
                     stackIn_66_1 = -88;
                     stackIn_67_2 = (0 != FrameTimer.field_b);
                     stackIn_70_3 = (DebouncedFieldValidator.field_f.field_A != 0);
-                    ((vk) (Object) stackIn_66_0).a(AccountRequestState.a(stackIn_66_1, stackIn_67_2, stackIn_70_3, false), 320, 20 + (var4Lifetime1 + var5Lifetime1 * 3), 1, -1);
+                    ((BinaryBitmapFont) (Object) stackIn_66_0).drawCentred(AccountRequestState.a(stackIn_66_1, stackIn_67_2, stackIn_70_3, false), 320, 20 + (var4Lifetime1 + var5Lifetime1 * 3), 1, -1);
                     stackIn_72_0 = var3_ref_vk;
                     stackIn_73_1 = (DebouncedFieldValidator.field_f.field_A != 0);
                     stackIn_75_2 = 122;
                     stackIn_76_3 = (FrameTimer.field_b != 0);
-                    ((vk) (Object) stackIn_72_0).a(ma.$cfr$intArgs$a$feb7e63b59d8(stackIn_73_1, stackIn_75_2, stackIn_76_3, false), 320, 20 + (var5Lifetime1 * 4 + var4Lifetime1 + 40), 1, -1);
+                    ((BinaryBitmapFont) (Object) stackIn_72_0).drawCentred(ma.$cfr$intArgs$a$feb7e63b59d8(stackIn_73_1, stackIn_75_2, stackIn_76_3, false), 320, 20 + (var5Lifetime1 * 4 + var4Lifetime1 + 40), 1, -1);
                     decompiledFrameRemainder0 = (var6 != 0);
                   }
                   if (decompiledFrameRemainder0) {
@@ -319,7 +319,7 @@ final class kk {
         int stackIn_15_1 = 0;
         int var3;
         int var4;
-        vk var5;
+        BinaryBitmapFont var5;
         int var6;
         int var7_int;
         String var7;
@@ -340,7 +340,7 @@ final class kk {
         while (true) {
           if (var6 >= 8) {
             if (param1) {
-              var5.a(mk.field_j, 15, 53, -30 + var3, var4, 1, -1, 0, 0, 14);
+              var5.drawParagraph(mk.field_j, 15, 53, -30 + var3, var4, 1, -1, 0, 0, 14);
             } else {
               var6 = hb.a(false);
               if (qb.field_b) {
@@ -349,7 +349,7 @@ final class kk {
                 stackIn_12_0 = lg.field_I;
               }
               var7 = stackIn_12_0;
-              var5.a(gg.a(new String[]{var7}, WeightedObjectCache.field_a, true), 14, 53, var3 - 30, var4, 1, -1, 0, 0, 14);
+              var5.drawParagraph(gg.a(new String[]{var7}, WeightedObjectCache.field_a, true), 14, 53, var3 - 30, var4, 1, -1, 0, 0, 14);
             }
             ac.field_a.setAsRasterTarget((byte) 118);
             var6 = this.field_i * var4 / 20;
@@ -419,7 +419,7 @@ final class kk {
         int stackIn_23_1 = 0;
         int var2;
         int var3;
-        vk var4;
+        BinaryBitmapFont var4;
         de var5;
         String var6;
         String[] var7_ref_String__;
@@ -447,7 +447,7 @@ final class kk {
           var3 = 275;
           SoftwareRasterizer.fillRectangle(3, 3, var2 - 6, var3 - 6, 16249775);
           lb.a(0, var2, (byte) -12, NodeHashTableIterator.field_e, 0, var3);
-          sb.field_r.a(AccountRegistrationPanel.field_B[ef.field_b], var2 >> 1, 30, 9330743, -1);
+          sb.field_r.drawCentred(AccountRegistrationPanel.field_B[ef.field_b], var2 >> 1, 30, 9330743, -1);
           var4 = BoundedRandomAccessFile.field_e;
           var5 = s.field_S;
           if (var5.field_l) {
@@ -479,9 +479,9 @@ final class kk {
                     if (~var9 == ~var11) {
                       var12 = 5683782;
                     }
-                    var4.c(var11 + 1 + ". ", 30, var10, var12, -1);
-                    var4.b(var7_ref_String__[var11], 30, var10, var12, -1);
-                    var4.c(Integer.toString(var13), 360, var10, var12, -1);
+                    var4.drawRightAligned(var11 + 1 + ". ", 30, var10, var12, -1);
+                    var4.drawString(var7_ref_String__[var11], 30, var10, var12, -1);
+                    var4.drawRightAligned(Integer.toString(var13), 360, var10, var12, -1);
                     var6 = "";
                   }
                   var10 += 18;
@@ -497,8 +497,8 @@ final class kk {
               }
               if (stackIn_23_0 == stackIn_23_1 &&
                 0 != DebouncedFieldValidator.field_f.field_A) {
-                var4.b(cl.field_e, 30, var10, 5683782, -1);
-                var4.c(Integer.toString(DebouncedFieldValidator.field_f.field_A), 360, var10, 5683782, -1);
+                var4.drawString(cl.field_e, 30, var10, 5683782, -1);
+                var4.drawRightAligned(Integer.toString(DebouncedFieldValidator.field_f.field_A), 360, var10, 5683782, -1);
               }
               break;
             }
@@ -509,9 +509,9 @@ final class kk {
             var6 = eg.field_h;
           }
         }
-        BoundedRandomAccessFile.field_e.a(nc.field_c, 30, var3 - 37, -60 + var2, 40, 1, -1, 1, 0, 12);
+        BoundedRandomAccessFile.field_e.drawParagraph(nc.field_c, 30, var3 - 37, -60 + var2, 40, 1, -1, 1, 0, 12);
         var7 = 137;
-        sb.field_r.a(var6, var2 / 2, var7, 9330743, -1);
+        sb.field_r.drawCentred(var6, var2 / 2, var7, 9330743, -1);
         ac.field_a.setAsRasterTarget((byte) 116);
         var8 = var3 * this.field_i / 20;
         if (var8 > var3) {
@@ -760,7 +760,7 @@ final class kk {
         String var7;
         int var8;
         int var9;
-        vk var10;
+        BinaryBitmapFont var10;
         int var11;
         int var12;
         int var13;
@@ -812,7 +812,7 @@ final class kk {
           var11 = lh.field_b + 137;
           var12 = -var11 + var8 >> 1;
           var12 = var12 + (lh.field_b + 13);
-          var10.c(var7, var12, var10.field_C, var9, -1);
+          var10.drawRightAligned(var7, var12, var10.field_C, var9, -1);
           sd.field_f.c(var12, -6 + mc.field_b[this.field_g] / 2);
           if (var6 == 11) {
             stackIn_25_0 = re.field_e;
@@ -822,10 +822,10 @@ final class kk {
           var13 = stackIn_25_0;
           de.field_f.c(146 * var13 / 256 - 2 + var12, 14);
           if (var14 != 0) {
-            var10.a(var7, var8 >> 1, var10.field_C, var9, -1);
+            var10.drawCentred(var7, var8 >> 1, var10.field_C, var9, -1);
           }
         } else {
-          var10.a(var7, var8 >> 1, var10.field_C, var9, -1);
+          var10.drawCentred(var7, var8 >> 1, var10.field_C, var9, -1);
         }
         ac.field_a.setAsRasterTarget((byte) 114);
         var11Lifetime1 = 40 * this.field_i / 20;
@@ -852,7 +852,7 @@ final class kk {
         lb.a(0, var2, (byte) 64, NodeHashTableIterator.field_e, 0, var3);
         int var5 = 86 % ((53 - param0) / 61);
         int var4 = 90;
-        sb.field_r.a(el.field_c, 20, var4, -40 + var2, 200, 9330743, -1, 1, 0, 0);
+        sb.field_r.drawParagraph(el.field_c, 20, var4, -40 + var2, 200, 9330743, -1, 1, 0, 0);
         ac.field_a.setAsRasterTarget((byte) 127);
         int var6 = this.field_i * var3 / 20;
         if (var3 < var6) {

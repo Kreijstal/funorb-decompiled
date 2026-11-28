@@ -454,7 +454,7 @@ public final class Main extends c {
         }
     }
 
-    final void f(int param0) {
+    final void disposeClient(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -573,7 +573,7 @@ public final class Main extends c {
         }
     }
 
-    final void a(boolean param0) {
+    final void updateClient(boolean param0) {
         int discarded$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_15_1 = 0;
@@ -783,7 +783,7 @@ public final class Main extends c {
         RuntimeException var5 = null;
         try {
           if (param3 > -49) {
-            this.b((byte) 32);
+            this.renderClientFrame((byte) 32);
           }
           this.a(11246, ((255 & param2) << 8) + (param0 & 255), 9, param1);
           return;
@@ -920,7 +920,7 @@ public final class Main extends c {
         RuntimeException var2 = null;
         try {
           if (param0 != 0) {
-            this.f(25);
+            this.disposeClient(25);
           }
           if (this.field_db < 0) {
             if (this.field_U == 1) {
@@ -1006,7 +1006,7 @@ public final class Main extends c {
         }
     }
 
-    final void c(int param0) {
+    final void initializeClient(int param0) {
         try {
           this.a(false, param0 ^ 4405030, false, true, false);
           this.a(6, 0, 7, 9, 7, (byte) 115, false, 8);
@@ -1243,7 +1243,7 @@ public final class Main extends c {
     }
 
     final void b(int param0, int param1) {
-        oh stackIn_4_0;
+        BinaryBitmapFont stackIn_4_0;
         String stackIn_4_1;
         int stackIn_4_2;
         int stackIn_4_3;
@@ -1284,7 +1284,7 @@ public final class Main extends c {
         var14 = field_T;
         try {
           bd.field_H.b(0, 0);
-          qa.field_b.c(Integer.toString(dg.field_J), 85, 80, 16777215, -1);
+          qa.field_b.drawRightAligned(Integer.toString(dg.field_J), 85, 80, 16777215, -1);
           stackIn_4_0 = qa.field_b;
           stackIn_4_1 = Integer.toString(-af.field_ob + rj.field_p + ByteArrayStore.field_b >> 8);
           stackIn_4_2 = 130;
@@ -1294,7 +1294,7 @@ public final class Main extends c {
           } else {
             stackIn_5_4 = 16777215;
           }
-          ((oh) (Object) stackIn_4_0).c(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, -1);
+          ((BinaryBitmapFont) (Object) stackIn_4_0).drawRightAligned(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, -1);
           if (param1 != 2) {
             return;
           }
@@ -1310,7 +1310,7 @@ public final class Main extends c {
               var3 = "0";
             }
           }
-          qa.field_b.c(var3, 148, 134, 16777215, -1);
+          qa.field_b.drawRightAligned(var3, 148, 134, 16777215, -1);
           var4 = (hh) (this.field_X.beginForward((byte) 74));
           if (null != var4) {
             var6 = this.field_B;
@@ -1331,7 +1331,7 @@ public final class Main extends c {
               var5 = -32 + var6 / 2;
             }
             ResourceArchive.field_a[var4.field_h].a(8, var5);
-            qa.field_b.b(GzipInflater.field_b[var4.field_h], 45, var5 + qa.field_b.field_s, 0, -1);
+            qa.field_b.drawString(GzipInflater.field_b[var4.field_h], 45, var5 + qa.field_b.field_s, 0, -1);
           }
           boolean decompiledSharedTail0 = (this.field_U != 4);
           if (!decompiledSharedTail0) {
@@ -1344,7 +1344,7 @@ public final class Main extends c {
           }
           if (this.field_db > 0 ||
             (param0 & 16) < 8) {
-            qa.field_b.c(this.field_Z, 118, 286, 16777215, -1);
+            qa.field_b.drawRightAligned(this.field_Z, 118, 286, 16777215, -1);
           }
           boolean decompiledFrameRemainder0 = true;
           var5Lifetime1 = -1;
@@ -1585,7 +1585,7 @@ public final class Main extends c {
                         }
                         ok.b(69);
                         ug.a(80.0f, 122, AccountRequestState.field_c);
-                        this.b((byte) 59);
+                        this.renderClientFrame((byte) 59);
                         BufferedSocket.field_c[0] = uj.a(sh.field_g, "", "turnover_card").a();
                         BufferedSocket.field_c[1] = uj.a(sh.field_g, "", "revolver_cocking").a();
                         BufferedSocket.field_c[2] = uj.a(sh.field_g, "", "revolver_decocking").a();
@@ -1606,11 +1606,11 @@ public final class Main extends c {
                         BufferedSocket.field_c[15] = uj.a(sh.field_g, "", "menu_click").a();
                         var3 = uj.a(sh.field_g, "", "score-count").a();
                         var3.field_k = var3.field_h.length;
-                        ve.field_c = RawPcmStream.a(var3, 100, 30);
+                        ve.field_c = RawPcmStream.createForPlaybackRate(var3, 100, 30);
                         ve.field_c.e(-1);
                         var4_ref_ib = new PcmSample(BufferedSocket.field_c[15].field_l, BufferedSocket.field_c[15].field_h.length + 1000);
                         og.a(BufferedSocket.field_c[15].field_h, 0, var4_ref_ib.field_h, 0, BufferedSocket.field_c[15].field_h.length);
-                        lh.field_d = RawPcmStream.a(var4_ref_ib, 100, 96);
+                        lh.field_d = RawPcmStream.createForPlaybackRate(var4_ref_ib, 100, 96);
                         lh.field_d.c(0, var4_ref_ib.field_h.length);
                         lh.field_d.e(0);
                         var5 = 0;
@@ -1662,7 +1662,7 @@ public final class Main extends c {
           }
           if (null != ll.field_e) {
             ug.a(85.0f, 105, j.field_A);
-            this.b((byte) 59);
+            this.renderClientFrame((byte) 59);
             var3_ref3 = new da(sh.field_g, fb.field_a);
             sh.field_g = null;
             fb.field_a = null;
@@ -1713,7 +1713,7 @@ public final class Main extends c {
             return stackIn_115_0;
           }
           ug.a(95.0f, 77, lb.field_f);
-          this.b((byte) 59);
+          this.renderClientFrame((byte) 59);
           var3_array = id.field_a.getFileByName((byte) 7, "font", "");
           var4_ref_wb__ = lk.a("font", "", (byte) 49, mh.field_c);
           qa.field_b = PcmOutputWorker.a(121, var4_ref_wb__, var3_array);
@@ -2055,7 +2055,7 @@ public final class Main extends c {
         }
     }
 
-    final void a(int param0) {
+    final void clearClientResources(int param0) {
         RuntimeException runtimeException = null;
         int var3 = 0;
         boolean stackIn_11_0 = false;
@@ -2078,7 +2078,7 @@ public final class Main extends c {
           MouseInputHandler.a((byte) 98);
           MouseWheelInput.a(87);
           SoftwareRasterizer.clearStaticReferences();
-          ee.clearStaticReferences();
+          BitmapFont.clearStaticReferences();
           wh.clearStaticReferences(120);
           ii.resetStaticState(4308);
           PacketBuffer.resetStaticState((byte) 111);
@@ -2297,7 +2297,7 @@ public final class Main extends c {
         }
     }
 
-    final void b(byte param0) {
+    final void renderClientFrame(byte param0) {
         Object stackIn_7_0 = null;
         Object stackIn_13_0 = null;
         boolean stackIn_13_1 = false;

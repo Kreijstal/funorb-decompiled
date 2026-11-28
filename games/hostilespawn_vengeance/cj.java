@@ -57,9 +57,9 @@ class cj extends ph {
         return this.field_H[this.field_J.field_r];
     }
 
-    final static nc a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
-        nc stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

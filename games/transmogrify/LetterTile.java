@@ -56,8 +56,8 @@ final class LetterTile extends IntrusiveNode {
         AccountRegistrationPanel.field_K.b(param3 + this.x, param1 + this.y, LoginPanel.field_H[this.carryoverFlag]);
         if (!this.doublesWordScore) {
           var14 = Integer.toString(this.baseValue + (this.carryoverFlag << 1));
-          var6 = this.field_n.field_c.a(this.letter);
-          var7 = hk.field_a.a(var14);
+          var6 = this.field_n.field_c.charWidth(this.letter);
+          var7 = hk.field_a.stringWidth(var14);
           var8 = -var7 + 31;
           var9 = var8 - var6;
           var10 = 29 - var6 >> 1;
@@ -68,8 +68,8 @@ final class LetterTile extends IntrusiveNode {
           if (var9 < 1) {
             var9 = 1;
           }
-          this.field_n.field_c.a(this.letter, var9 + (this.x + param3), param1 + this.field_n.field_c.field_D + this.y + 8, param2);
-          hk.field_a.b(var14, param3 + this.x + var8, param1 + 28 + this.y, 1, -1);
+          this.field_n.field_c.drawCharacter(this.letter, var9 + (this.x + param3), param1 + this.field_n.field_c.field_D + this.y + 8, param2);
+          hk.field_a.drawString(var14, param3 + this.x + var8, param1 + 28 + this.y, 1, -1);
           return;
         }
         param0 = param0 >> 3;
@@ -78,8 +78,8 @@ final class LetterTile extends IntrusiveNode {
         } else {
           MouseWheelInput.field_a[param0 % MouseWheelInput.field_a.length].c(this.x + param3, param1 + this.y);
           var12 = Integer.toString(this.baseValue + (this.carryoverFlag << 1));
-          var6Lifetime1 = this.field_n.field_c.a(this.letter);
-          var7Lifetime1 = hk.field_a.a(var12);
+          var6Lifetime1 = this.field_n.field_c.charWidth(this.letter);
+          var7Lifetime1 = hk.field_a.stringWidth(var12);
           var8Lifetime1 = -var7Lifetime1 + 31;
           var9Lifetime1 = var8Lifetime1 - var6Lifetime1;
           var10Lifetime1 = 29 - var6Lifetime1 >> 1;
@@ -90,14 +90,14 @@ final class LetterTile extends IntrusiveNode {
           if (var9Lifetime1 < 1) {
             var9Lifetime1 = 1;
           }
-          this.field_n.field_c.a(this.letter, var9Lifetime1 + (this.x + param3), param1 + this.field_n.field_c.field_D + this.y + 8, param2);
-          hk.field_a.b(var12, param3 + this.x + var8Lifetime1, param1 + 28 + this.y, 1, -1);
+          this.field_n.field_c.drawCharacter(this.letter, var9Lifetime1 + (this.x + param3), param1 + this.field_n.field_c.field_D + this.y + 8, param2);
+          hk.field_a.drawString(var12, param3 + this.x + var8Lifetime1, param1 + 28 + this.y, 1, -1);
           return;
         }
         MouseWheelInput.field_a[param0 % MouseWheelInput.field_a.length].c(this.x + param3, param1 + this.y);
         String var13 = Integer.toString(this.baseValue + (this.carryoverFlag << 1));
-        var6Lifetime2 = this.field_n.field_c.a(this.letter);
-        var7Lifetime2 = hk.field_a.a(var13);
+        var6Lifetime2 = this.field_n.field_c.charWidth(this.letter);
+        var7Lifetime2 = hk.field_a.stringWidth(var13);
         var8Lifetime2 = -var7Lifetime2 + 31;
         var9Lifetime2 = var8Lifetime2 - var6Lifetime2;
         var10Lifetime2 = 29 - var6Lifetime2 >> 1;
@@ -108,8 +108,8 @@ final class LetterTile extends IntrusiveNode {
         if (var9Lifetime2 < 1) {
           var9Lifetime2 = 1;
         }
-        this.field_n.field_c.a(this.letter, var9Lifetime2 + (this.x + param3), param1 + this.field_n.field_c.field_D + this.y + 8, param2);
-        hk.field_a.b(var13, param3 + this.x + var8Lifetime2, param1 + 28 + this.y, 1, -1);
+        this.field_n.field_c.drawCharacter(this.letter, var9Lifetime2 + (this.x + param3), param1 + this.field_n.field_c.field_D + this.y + 8, param2);
+        hk.field_a.drawString(var13, param3 + this.x + var8Lifetime2, param1 + 28 + this.y, 1, -1);
     }
 
     final void moveToRack(int param0, int param1, TileRack param2) {

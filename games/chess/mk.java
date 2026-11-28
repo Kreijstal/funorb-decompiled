@@ -347,7 +347,7 @@ final class mk {
               } else {
                 var12.field_Qb.a(0, 68, -2147483648, fe.field_g, var31);
               }
-              var12.field_uc.field_db = lh.a(var12.field_uc.field_xb, var32, 78);
+              var12.field_uc.field_db = BitmapFont.truncateWithEllipsis(var12.field_uc.field_xb, var32, 78);
               var12.field_uc.a(70, 78, -2147483648, fe.field_g, var31);
               if (var12.field_uc.field_F &&
                 !var12.field_uc.field_db.equals(var32)) {
@@ -360,7 +360,7 @@ final class mk {
               } else {
                 var12.field_Zb.field_fb = 2;
                 var12.field_nc.field_db = "/" + var12.field_hc;
-                var33_int = (-var12.field_nc.field_xb.b("/") + 348) / 2;
+                var33_int = (-var12.field_nc.field_xb.stringWidth("/") + 348) / 2;
                 var12.field_Zb.a(150, var33_int - 150, -2147483648, fe.field_g, var31);
                 var12.field_nc.a(var33_int, -var33_int + 198, -2147483648, fe.field_g, var31);
               }
@@ -464,7 +464,7 @@ final class mk {
                 }
                 var38 = var37.toString();
                 var12.field_Nb.field_db = var38;
-                var39Lifetime1 = var12.field_Nb.field_xb.b(var38, var12.field_M - 2 * var12.field_Nb.field_z);
+                var39Lifetime1 = var12.field_Nb.field_xb.lineCount(var38, var12.field_M - 2 * var12.field_Nb.field_z);
                 var12.field_Nb.a(0, var12.field_M, -2147483648, var39Lifetime1 * fe.field_g, var31);
                 var31 = var31 + fe.field_g * var39Lifetime1;
               }
@@ -481,7 +481,7 @@ final class mk {
             }
             var33 = FullscreenFocusCanvas.a(var12.field_jc, var32, -3);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Sb.field_xb.b(var33, var12.field_M - BirthDateValidator.field_g - BirthDateValidator.field_g);
+              var34_intLifetime1 = var12.field_Sb.field_xb.lineCount(var33, var12.field_M - BirthDateValidator.field_g - BirthDateValidator.field_g);
               var12.field_Sb.field_db = var33;
               var12.field_Sb.field_eb = var12.field_Hb * 256 / ig.field_g;
               var12.field_Sb.a(BirthDateValidator.field_g, -(BirthDateValidator.field_g * 2) + var12.field_M, -2147483648, var34_intLifetime1 * fe.field_g, var31);

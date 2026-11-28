@@ -276,10 +276,10 @@ final class MoveInfoPanel {
               var9 = 12;
               if (var25.field_s.statusId != 31 &&
                 !var25.field_s.isCarryingFlag((byte) 85)) {
-                CreatureActor.field_h.a(lga.a(true, new String[]{"" + var25.field_s.statusTurns}, vla.field_p), var8_int + this.field_d.field_kb, var9 + this.field_d.field_rb, 2, -1);
+                CreatureActor.field_h.drawCentred(lga.a(true, new String[]{"" + var25.field_s.statusTurns}, vla.field_p), var8_int + this.field_d.field_kb, var9 + this.field_d.field_rb, 2, -1);
                 var9 -= 15;
               }
-              CreatureActor.field_h.a(c.field_k[var25.field_s.statusId], this.field_d.field_kb + var8_int, var9 + this.field_d.field_rb, 2, -1);
+              CreatureActor.field_h.drawCentred(c.field_k[var25.field_s.statusId], this.field_d.field_kb + var8_int, var9 + this.field_d.field_rb, 2, -1);
             }
             var8 = (jj) (this.field_d.children.beginForward((byte) 90));
             var9 = 0;
@@ -535,7 +535,7 @@ final class MoveInfoPanel {
                 var29 = pna.field_zb[var25.field_s.statusId].description;
                 var13 = mk.field_p + 4;
                 var14_int = gd.field_m + 4;
-                var15_int = CreatureActor.field_h.c(var29, 200) + 10;
+                var15_int = CreatureActor.field_h.maxLineWidth(var29, 200) + 10;
                 if (var15_int + var13 > 620) {
                   var13 = var13 + (-20 - var15_int - (var13 - 640));
                 }
@@ -557,7 +557,7 @@ final class MoveInfoPanel {
                 var15 = var31.description;
                 stackIn_199_0 = (var31.kind != 1) ? 0 : 1;
                 var16 = stackIn_199_0;
-                var17 = 10 + CreatureActor.field_h.c(var15, 200);
+                var17 = 10 + CreatureActor.field_h.maxLineWidth(var15, 200);
                 if (var17 + var12 > 620) {
                   var12 = var12 + (-var17 - var12 + 620);
                 }
@@ -589,7 +589,7 @@ final class MoveInfoPanel {
                   }
                   CreatureActor.field_h.drawText("Damage " + var20, 20 + var12, var19 + 48 + var13, 0, -1);
                   if (var21 != 0) {
-                    CreatureActor.field_h.b("Status effect " + kna.field_g[var21], var12 + (var17 + 10), 44 + (var13 + var19), 0, -1);
+                    CreatureActor.field_h.drawRightAligned("Status effect " + kna.field_g[var21], var12 + (var17 + 10), 44 + (var13 + var19), 0, -1);
                   }
                 }
               }

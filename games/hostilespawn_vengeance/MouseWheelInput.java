@@ -31,7 +31,7 @@ abstract class MouseWheelInput {
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, String param4, vm param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, String param4, BitmapFont param5, int param6) {
         int var7_int = 0;
         int var8 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -44,7 +44,7 @@ abstract class MouseWheelInput {
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
           for (var7_int = param3; param4.length() > var7_int; var7_int++) {
-            param5.a(param4.charAt(var7_int), param6, param1, param2);
+            param5.drawCharacter(param4.charAt(var7_int), param6, param1, param2);
             param6 = param6 + param0;
           }
           return;

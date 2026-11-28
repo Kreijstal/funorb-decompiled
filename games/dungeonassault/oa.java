@@ -4,7 +4,7 @@
 final class oa implements ca {
     private int field_f;
     static String[] field_g;
-    private se field_b;
+    private BitmapFont field_b;
     static String field_i;
     private int field_a;
     static String[] field_d;
@@ -37,9 +37,9 @@ final class oa implements ca {
           if (param0 != 34) {
             oa.clearStaticReferences((byte) -52);
           }
-          this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_w + "</u>", param1.field_q + param2, param1.field_v + param3, param1.field_x, param1.field_s, var6_int, -1, this.field_a, this.field_f, this.field_b.field_H + this.field_b.field_E);
+          this.field_b.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_w + "</u>", param1.field_q + param2, param1.field_v + param3, param1.field_x, param1.field_s, var6_int, -1, this.field_a, this.field_f, this.field_b.field_H + this.field_b.field_E);
           if (param1.a((byte) 20)) {
-            var7 = this.field_b.b(param1.field_w);
+            var7 = this.field_b.stringWidth(param1.field_w);
             var8 = this.field_b.field_E + this.field_b.field_H;
             var9 = param2 + param1.field_q;
             var10 = param1.field_v + param3;
@@ -90,7 +90,7 @@ final class oa implements ca {
         this.field_f = 1;
     }
 
-    oa(se param0, int param1, int param2) {
+    oa(BitmapFont param0, int param1, int param2) {
         try {
           this.field_b = param0;
           this.field_f = param2;

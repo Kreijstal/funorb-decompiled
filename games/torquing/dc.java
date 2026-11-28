@@ -6,11 +6,11 @@ final class dc {
     static long field_c;
     static ln field_a;
 
-    final static li a(String param0, ResourceArchive param1, ResourceArchive param2, boolean param3, String param4) {
+    final static CoverageBitmapFont a(String param0, ResourceArchive param1, ResourceArchive param2, boolean param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        li stackIn_3_0 = null;
+        CoverageBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

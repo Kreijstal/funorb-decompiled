@@ -69,8 +69,8 @@ final class DreamsAnimation extends EventAnimation {
         try {
           var2_int = mk.field_p;
           var3 = gd.field_m;
-          var4 = qs.field_m.field_jb.b(param1, 500);
-          var5 = 6 + qs.field_m.field_jb.c(param1, 500);
+          var4 = qs.field_m.field_jb.lineCount(param1, 500);
+          var5 = 6 + qs.field_m.field_jb.maxLineWidth(param1, 500);
           var6 = 2 + rg.field_h * var4;
           var7 = ResetAnimation.a(12, var5, var2_int, -21264);
           if (param0 != -25942) {

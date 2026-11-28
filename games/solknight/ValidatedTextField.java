@@ -11,7 +11,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     static String[] field_W;
     static String field_bb;
 
-    final void a(FieldValidator param0, boolean param1) {
+    final void setFieldValidator(FieldValidator param0, boolean param1) {
         try {
           if (param1) {
             this.notifyTextChanged(68);

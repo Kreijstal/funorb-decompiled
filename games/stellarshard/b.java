@@ -240,7 +240,7 @@ final class b extends id {
           stackIn_18_0 = (!param0) ? 7105644 : 16777215;
           var8 = stackIn_18_0;
           af.a(-57, var7, param3.field_p, param3.field_k + param2 + (param3.field_t - this.field_s[0].field_x >> 1), this.field_s, param3.field_w + param1);
-          this.field_a.a(param3.field_m, param3.field_w + param1, param3.field_k + (param2 - 2), param3.field_p, param3.field_t, var8, -1, 1, 1, this.field_a.field_N);
+          this.field_a.drawParagraph(param3.field_m, param3.field_w + param1, param3.field_k + (param2 - 2), param3.field_p, param3.field_t, var8, -1, 1, 1, this.field_a.field_N);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

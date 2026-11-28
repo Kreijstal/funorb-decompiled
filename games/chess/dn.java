@@ -132,9 +132,9 @@ final class dn {
         field_a = null;
     }
 
-    final static pm a(int param0, int param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
+    final static CoverageBitmapFont a(int param0, int param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
         RuntimeException var5 = null;
-        pm stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

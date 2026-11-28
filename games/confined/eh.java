@@ -42,7 +42,7 @@ class eh extends ue {
     private int field_H;
     private String field_bb;
     private int field_D;
-    private ok field_I;
+    private BitmapFont field_I;
 
     final static int e(int param0) {
         if (param0 != 0) {

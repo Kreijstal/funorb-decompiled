@@ -20,15 +20,15 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           if (param0 != -19) {
             NetworkArchiveRequest.clearDeclaredStaticReferences(119);
           }
-          tj.field_d = PcmSampleStream.a(ke.field_h[7], 100, 96);
+          tj.field_d = PcmSampleStream.createForPlaybackRate(ke.field_h[7], 100, 96);
           na.a((byte) 85, tj.field_d);
           return;
         }
-        if (tj.field_d.h()) {
+        if (tj.field_d.isSamplePositionOutOfRange()) {
           if (param0 != -19) {
             NetworkArchiveRequest.clearDeclaredStaticReferences(119);
           }
-          tj.field_d = PcmSampleStream.a(ke.field_h[7], 100, 96);
+          tj.field_d = PcmSampleStream.createForPlaybackRate(ke.field_h[7], 100, 96);
           na.a((byte) 85, tj.field_d);
           return;
         }

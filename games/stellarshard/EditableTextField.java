@@ -12,11 +12,11 @@ class EditableTextField extends ig {
     private int field_F;
     private int field_I;
 
-    final static ub a(String param0, String param1, ResourceArchive param2, int param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(String param0, String param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ub stackIn_3_0 = null;
+        BinaryBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -88,7 +88,7 @@ class EditableTextField extends ig {
             this.field_m = this.field_m.substring(0, this.field_H) + param0 + this.field_m.substring(this.field_H, this.field_m.length());
           }
           if (param1 != 97) {
-            this.a(12, -91);
+            this.moveCaret(12, -91);
           }
           this.field_H = this.field_H + param0.length();
           this.field_I = this.field_H;
@@ -108,7 +108,7 @@ class EditableTextField extends ig {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void moveCaret(int param0, int param1) {
         this.field_H = param1;
         if (!si.field_jb[param0]) {
           this.field_I = this.field_H;
@@ -136,13 +136,13 @@ class EditableTextField extends ig {
             } else {
               stackIn_5_2 = var8_int;
             }
-            this.a(stackIn_4_1, stackIn_5_2);
+            this.moveCaret(stackIn_4_1, stackIn_5_2);
             var8_long = ih.correctedCurrentTimeMillis((byte) -98);
             stackIn_8_1 = !(250L <= -this.field_K + var8_long);
             this.field_L = stackIn_8_1;
             if (this.field_L) {
-              this.field_I = this.n(-1);
-              this.field_H = this.j(-4238);
+              this.field_I = this.findPreviousWordBoundary(-1);
+              this.field_H = this.findNextWordBoundary(-4238);
               if (0 < this.field_H &&
                 this.field_m.charAt(this.field_H - 1) == 32) {
                 this.field_H = this.field_H - 1;
@@ -200,7 +200,7 @@ class EditableTextField extends ig {
         this.copySelection(0);
         this.deleteSelection(0);
         if (param0 != -20) {
-          discarded$0 = this.n(120);
+          discarded$0 = this.findPreviousWordBoundary(120);
         }
     }
 
@@ -213,7 +213,7 @@ class EditableTextField extends ig {
         }
     }
 
-    final void d(boolean param0) {
+    final void clearText(boolean param0) {
         this.field_H = 0;
         if (!param0) {
           this.deleteSelection(68);
@@ -223,7 +223,7 @@ class EditableTextField extends ig {
         this.notifyTextChanged(0);
     }
 
-    private final void o(int param0) {
+    private final void scrollCaretIntoView(int param0) {
         int var8 = stellarshard.field_B;
         if (!this.field_G) {
           this.field_l = 0;
@@ -268,7 +268,7 @@ class EditableTextField extends ig {
         int var6 = 0;
         try {
           super.a(param0, param1, param2, param3);
-          this.o(-9104);
+          this.scrollCaretIntoView(-9104);
           if (this.field_o == 1) {
             if (this.field_u instanceof pj) {
               var5 = (pj) ((Object) this.field_u);
@@ -362,7 +362,7 @@ class EditableTextField extends ig {
         try {
           this.field_M = param2;
           this.field_u = n.field_i.field_d;
-          this.a((byte) 20, param0, true);
+          this.setText((byte) 20, param0, true);
           this.field_G = true;
           this.field_J = ih.correctedCurrentTimeMillis((byte) -98);
         } catch (RuntimeException runtimeException) {
@@ -415,7 +415,7 @@ class EditableTextField extends ig {
         }
     }
 
-    final void a(byte param0, String param1, boolean param2) {
+    final void setText(byte param0, String param1, boolean param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException stackIn_14_0 = null;
@@ -471,7 +471,7 @@ class EditableTextField extends ig {
         RuntimeException var5 = null;
         try {
           if (param0 != 29657) {
-            discarded$0 = this.n(-114);
+            discarded$0 = this.findPreviousWordBoundary(-114);
           }
           this.field_J = ih.correctedCurrentTimeMillis((byte) -98);
           if (param2 != 60 &&
@@ -511,7 +511,7 @@ class EditableTextField extends ig {
                 return true;
               }
               if (param1 == 13) {
-                this.d(true);
+                this.clearText(true);
                 return true;
               }
               if (param1 == 96) {
@@ -520,19 +520,19 @@ class EditableTextField extends ig {
                   if (!si.field_jb[82]) {
                     stackIn_62_2 = -1 + this.field_H;
                   } else {
-                    stackIn_62_2 = this.n(-1);
+                    stackIn_62_2 = this.findPreviousWordBoundary(-1);
                   }
-                  this.a(stackIn_61_1, stackIn_62_2);
+                  this.moveCaret(stackIn_61_1, stackIn_62_2);
                   return true;
                 }
               } else {
                 if (param1 != 97) {
                   if (102 == param1) {
-                    this.a(81, 0);
+                    this.moveCaret(81, 0);
                     return true;
                   }
                   if (param1 == 103) {
-                    this.a(81, this.field_m.length());
+                    this.moveCaret(81, this.field_m.length());
                     return true;
                   }
                   if (param1 == 84) {
@@ -558,11 +558,11 @@ class EditableTextField extends ig {
                   if (this.field_H < this.field_m.length()) {
                     stackIn_31_1 = param0 - 29576;
                     if (si.field_jb[82]) {
-                      stackIn_32_2 = this.j(param0 - 33895);
+                      stackIn_32_2 = this.findNextWordBoundary(param0 - 33895);
                     } else {
                       stackIn_32_2 = this.field_H + 1;
                     }
-                    this.a(stackIn_31_1, stackIn_32_2);
+                    this.moveCaret(stackIn_31_1, stackIn_32_2);
                     return true;
                   }
                 }
@@ -595,7 +595,7 @@ class EditableTextField extends ig {
         }
     }
 
-    private final int j(int param0) {
+    private final int findNextWordBoundary(int param0) {
         int var2;
         int var3;
         int var4;
@@ -603,7 +603,7 @@ class EditableTextField extends ig {
         var4 = stellarshard.field_B;
         if (param0 != -4238) {
           var5 = (String) null;
-          this.a((byte) 68, (String) null, true);
+          this.setText((byte) 68, (String) null, true);
         }
         var2 = this.field_m.length();
         if (this.field_H == var2) {
@@ -618,7 +618,7 @@ class EditableTextField extends ig {
         return var3;
     }
 
-    private final int n(int param0) {
+    private final int findPreviousWordBoundary(int param0) {
         int var2;
         int var3;
         var3 = stellarshard.field_B;

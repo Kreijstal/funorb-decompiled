@@ -179,9 +179,9 @@ final class MusicPatchPcmStream extends PcmStream {
             param2.field_o = 1048575 & var4_int * param1 + param2.field_o;
             if (param1 >= var5) {
               if (0 == this.field_s.field_H[param2.field_q]) {
-                param2.field_J = SamplePlaybackStream.a(param2.field_z, param2.field_J.g(), param2.field_J.h(), param2.field_J.e());
+                param2.field_J = SamplePlaybackStream.createForSampleStep(param2.field_z, param2.field_J.getSampleStepMagnitude(), param2.field_J.getTargetVolume(), param2.field_J.getPan());
               } else {
-                param2.field_J = SamplePlaybackStream.a(param2.field_z, param2.field_J.g(), 0, param2.field_J.e());
+                param2.field_J = SamplePlaybackStream.createForSampleStep(param2.field_z, param2.field_J.getSampleStepMagnitude(), 0, param2.field_J.getPan());
                 stackIn_6_0 = this.field_s;
                 stackIn_6_1 = (pe) (param2);
                 stackIn_6_2 = 92;
@@ -262,22 +262,22 @@ final class MusicPatchPcmStream extends PcmStream {
               }
               var11 = param4.field_J;
               if (this.field_s.field_H[param4.field_q] != 0) {
-                param4.field_J = SamplePlaybackStream.a(param4.field_z, var11.g(), 0, var11.e());
+                param4.field_J = SamplePlaybackStream.createForSampleStep(param4.field_z, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_12_0 = this.field_s;
                 stackIn_12_1 = (pe) (param4);
                 stackIn_12_2 = 87;
                 stackIn_13_3 = !(param4.field_K.field_n[param4.field_B] >= 0);
                 ((MidiPcmStream) (Object) stackIn_12_0).a(stackIn_12_1, (byte) stackIn_12_2, stackIn_13_3);
-                param4.field_J.b(var9, var11.h());
+                param4.field_J.rampVolume(var9, var11.getTargetVolume());
               } else {
-                param4.field_J = SamplePlaybackStream.a(param4.field_z, var11.g(), var11.h(), var11.e());
+                param4.field_J = SamplePlaybackStream.createForSampleStep(param4.field_z, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.getPan());
               }
               if (0 > param4.field_K.field_n[param4.field_B]) {
                 param4.field_J.i(-1);
               }
               var11.h(var9);
               var11.mixInto(param1, param0, -param0 + param5);
-              if (!var11.l()) {
+              if (!var11.hasRemainingRampFrames()) {
                 continue;
               }
               this.field_z.a(var11);

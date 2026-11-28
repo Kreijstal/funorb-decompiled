@@ -7,7 +7,7 @@ final class bm extends gj implements da {
     private String field_H;
     static int field_K;
     static String field_N;
-    private fa field_G;
+    private BitmapFont field_G;
     static int field_M;
     private int[] field_I;
     private int field_J;
@@ -93,7 +93,7 @@ final class bm extends gj implements da {
           var4 = new bb(param2, param0);
           var4.field_p = (ComponentLayout) ((Object) new ri());
           if (!param1) {
-            this.field_G = (fa) null;
+            this.field_G = (BitmapFont) null;
           }
           var5 = this.field_j - 2;
           this.a(0, this.field_u, 0, this.field_j + 34, 80);
@@ -210,7 +210,7 @@ final class bm extends gj implements da {
         }
     }
 
-    bm(bd param0, fa param1, String param2) {
+    bm(bd param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (ComponentLayout) null);
         int var4_int = 0;
         this.field_J = 0;
@@ -218,7 +218,7 @@ final class bm extends gj implements da {
           this.field_G = param1;
           this.field_H = param2;
           this.field_L = param0;
-          var4_int = null == this.field_H ? 0 : this.field_G.b(this.field_H, 260, this.field_G.field_H);
+          var4_int = null == this.field_H ? 0 : this.field_G.textHeight(this.field_H, 260, this.field_G.field_H);
           this.a(0, 288, 0, var4_int + 22, 80);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -227,7 +227,7 @@ final class bm extends gj implements da {
 
     final void b(int param0, int param1, boolean param2, int param3) {
         super.b(param0, param1, param2, param3);
-        this.field_G.a(this.field_H, 14 + param1 + this.field_y, param0 + (this.field_z + 10), -28 + this.field_u, this.field_j, 16777215, -1, 0, 0, this.field_G.field_H);
+        this.field_G.drawParagraph(this.field_H, 14 + param1 + this.field_y, param0 + (this.field_z + 10), -28 + this.field_u, this.field_j, 16777215, -1, 0, 0, this.field_G.field_H);
     }
 
     static {

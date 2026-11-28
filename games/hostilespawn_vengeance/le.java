@@ -26,7 +26,7 @@ class le extends cf {
     int field_Q;
     RgbSprite field_pb;
     private int field_hb;
-    vm field_ab;
+    BitmapFont field_ab;
     private RgbSprite[] field_Ab;
     static int field_eb;
     static int field_bb;
@@ -355,7 +355,7 @@ class le extends cf {
             this.field_F != null) {
             var24Lifetime2 = var27 + this.field_F;
           }
-          if (this.field_ab.a(var24Lifetime2) <= -(2 * this.field_L) + this.field_qb &&
+          if (this.field_ab.stringWidth(var24Lifetime2) <= -(2 * this.field_L) + this.field_qb &&
             0 > var24Lifetime2.indexOf("<br>")) {
             if (this.field_G == 1) {
               var23 = var23 + (-this.field_ab.field_y + (this.field_sb - this.field_ab.field_F)) / 2;
@@ -365,22 +365,22 @@ class le extends cf {
               }
             }
             if (0 == this.field_U) {
-              this.field_ab.b(var24Lifetime2, var22 + this.field_K + this.field_L, this.field_ab.field_y + this.field_mb + var23, var19, -1, this.field_rb);
+              this.field_ab.drawStringAlpha(var24Lifetime2, var22 + this.field_K + this.field_L, this.field_ab.field_y + this.field_mb + var23, var19, -1, this.field_rb);
             } else {
               if (this.field_U == 1) {
-                this.field_ab.a(var24Lifetime2, (this.field_qb - this.field_L * 2) / 2 + var22 + (this.field_K + this.field_L), var23 + this.field_mb + this.field_ab.field_y, var19, -1, this.field_rb);
+                this.field_ab.drawCentredAlpha(var24Lifetime2, (this.field_qb - this.field_L * 2) / 2 + var22 + (this.field_K + this.field_L), var23 + this.field_mb + this.field_ab.field_y, var19, -1, this.field_rb);
               } else {
                 if (this.field_U == 2) {
-                  this.field_ab.c(var24Lifetime2, this.field_K - (-this.field_L - var22 + this.field_L * 2) + this.field_qb, this.field_mb + (var23 + this.field_ab.field_y), var19, -1, this.field_rb);
+                  this.field_ab.drawRightAlignedAlpha(var24Lifetime2, this.field_K - (-this.field_L - var22 + this.field_L * 2) + this.field_qb, this.field_mb + (var23 + this.field_ab.field_y), var19, -1, this.field_rb);
                 } else {
-                  this.field_ab.a(var24Lifetime2, var22 + (this.field_L + this.field_K), var23 + this.field_mb, this.field_qb - this.field_L * 2, this.field_sb, var19, -1, this.field_rb, this.field_U, this.field_G, this.field_R);
+                  this.field_ab.drawParagraphAlpha(var24Lifetime2, var22 + (this.field_L + this.field_K), var23 + this.field_mb, this.field_qb - this.field_L * 2, this.field_sb, var19, -1, this.field_rb, this.field_U, this.field_G, this.field_R);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_ab.a(var24Lifetime2, this.field_K + this.field_L + var22, this.field_mb + var23, this.field_qb - 2 * this.field_L, this.field_sb, var19, -1, this.field_rb, this.field_U, this.field_G, this.field_R);
+            this.field_ab.drawParagraphAlpha(var24Lifetime2, this.field_K + this.field_L + var22, this.field_mb + var23, this.field_qb - 2 * this.field_L, this.field_sb, var19, -1, this.field_rb, this.field_U, this.field_G, this.field_R);
           }
         }
         if (this.field_I != null) {

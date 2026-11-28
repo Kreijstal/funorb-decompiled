@@ -4,7 +4,7 @@
 final class ba extends ScoreModifier {
     static RgbSprite field_j;
     static String field_l;
-    static vc field_i;
+    static BitmapFont field_i;
     static RgbSprite[] field_g;
     static ResourceArchive field_k;
     static java.awt.Image field_h;

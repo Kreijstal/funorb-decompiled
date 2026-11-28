@@ -6,11 +6,11 @@ final class nl {
     static int field_a;
     static int field_b;
 
-    final static qj a(Archive param0, Archive param1, byte param2, int param3, int param4) {
+    final static CoverageBitmapFont a(Archive param0, Archive param1, byte param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        qj stackIn_5_0 = null;
-        qj stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_5_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -20,13 +20,13 @@ final class nl {
         try {
           if (!DualLinkNode.a(param4, param3, param1, true)) {
             stackIn_2_0 = null;
-            return (qj) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (param2 > 12) {
             stackIn_7_0 = sb.a(false, param0.getFile(param4, -95, param3));
             return stackIn_7_0;
           }
-          stackIn_5_0 = (qj) null;
+          stackIn_5_0 = (CoverageBitmapFont) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

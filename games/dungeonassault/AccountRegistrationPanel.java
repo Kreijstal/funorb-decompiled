@@ -372,7 +372,7 @@ final class AccountRegistrationPanel extends ii implements pf, vg, mg {
           }
           var3 = this.field_R;
           var4 = param1;
-          ((EditableTextField) ((Object) var3)).a(var4, false, (byte) 91);
+          ((EditableTextField) ((Object) var3)).setText(var4, false, (byte) 91);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "rg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -449,12 +449,12 @@ final class AccountRegistrationPanel extends ii implements pf, vg, mg {
         this.field_L.field_i = lm.field_p;
         this.field_S.field_i = AccountServiceResult.field_h;
         this.field_T.field_i = sa.field_h;
-        this.field_R.a(new AccountNameAvailabilityValidator(this.field_R), 10508);
-        this.field_O.a(new EmailFormatValidator(this.field_O), 10508);
-        this.field_U.a(new ConfirmedEmailAvailabilityValidator(this.field_U, this.field_O), 10508);
-        this.field_K.a(new PasswordValidator(this.field_K, this.field_R, this.field_O), 10508);
-        this.field_L.a(new MatchingFieldValidator(this.field_L, this.field_K), 10508);
-        this.field_S.a(new AgeValidator(this.field_S), 10508);
+        this.field_R.setFieldValidator(new AccountNameAvailabilityValidator(this.field_R), 10508);
+        this.field_O.setFieldValidator(new EmailFormatValidator(this.field_O), 10508);
+        this.field_U.setFieldValidator(new ConfirmedEmailAvailabilityValidator(this.field_U, this.field_O), 10508);
+        this.field_K.setFieldValidator(new PasswordValidator(this.field_K, this.field_R, this.field_O), 10508);
+        this.field_L.setFieldValidator(new MatchingFieldValidator(this.field_L, this.field_K), 10508);
+        this.field_S.setFieldValidator(new AgeValidator(this.field_S), 10508);
         this.field_N.field_B = false;
         this.field_N.field_o = (ca) ((Object) new na());
         this.field_V.field_o = (ca) ((Object) new oa());

@@ -9,7 +9,7 @@ abstract class u {
     static he[] field_a;
     static he[] field_c;
     static vh field_b;
-    static rf field_d;
+    static BitmapFont field_d;
 
     final static int a(int param0, byte param1) {
         if (param1 != 74) {
@@ -96,7 +96,7 @@ abstract class u {
             return null;
           }
           if (param1 != 0) {
-            field_d = (rf) null;
+            field_d = (BitmapFont) null;
           }
           stackIn_6_0 = new ig(var4);
           return stackIn_6_0;
@@ -127,10 +127,10 @@ abstract class u {
             u.a(-18, (byte) 118);
           }
           if (!param1) {
-            stackIn_6_0 = uj.field_i.b(param0);
+            stackIn_6_0 = uj.field_i.stringWidth(param0);
             return stackIn_6_0;
           }
-          stackIn_4_0 = cj.field_a.b(param0);
+          stackIn_4_0 = cj.field_a.stringWidth(param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

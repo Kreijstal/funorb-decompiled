@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class sh extends mh implements rc {
-    private tj field_bb;
+    private BitmapFont field_bb;
     static int[] field_gb;
     static int field_hb;
     private boolean field_eb;
@@ -83,7 +83,7 @@ class sh extends mh implements rc {
         }
     }
 
-    sh(pf param0, tj param1, String param2, boolean param3, boolean param4) {
+    sh(pf param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new uc((sh) null, param1, param2), 77, 10, 10);
         try {
           this.field_ib = false;

@@ -6,7 +6,7 @@ final class aq extends wc {
     static volatile int field_s;
     static PcmSample field_t;
 
-    private aq(vc param0, int param1) {
+    private aq(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

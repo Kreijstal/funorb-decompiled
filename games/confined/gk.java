@@ -104,13 +104,13 @@ class gk extends IntrusiveNode {
           var24_ref_ee = (MovingTunnelEntity) (this.field_t);
           var22 = -(var24_ref_ee.field_L * var7) - (var5 * var24_ref_ee.field_G + var24_ref_ee.field_K * var3) + 2.0;
           if (var22 < 0.01) {
-            this.field_n.d(0);
+            this.field_n.setSampleStepMagnitude(0);
             return;
           }
         }
         var24 = -(var7 * var34.field_L) - (var34.field_G * var5 + var3 * var34.field_K) + 2.0;
         if (var24 < 0.01) {
-          this.field_n.d(0);
+          this.field_n.setSampleStepMagnitude(0);
           return;
         }
         var26 = (double)(256 * this.field_s.field_n) / (double)AudioOutput.field_k;
@@ -124,9 +124,9 @@ class gk extends IntrusiveNode {
           } else {
             stackIn_27_1 = 1600;
           }
-          ((RawPcmStream) (Object) stackIn_26_0).d(stackIn_27_1);
+          ((RawPcmStream) (Object) stackIn_26_0).setSampleStepMagnitude(stackIn_27_1);
           if (this.field_p) {
-            this.field_n.b(true);
+            this.field_n.setReversePlayback(true);
             this.field_p = false;
           }
         }
@@ -220,9 +220,9 @@ class gk extends IntrusiveNode {
         var23 = (double)(param0 * this.field_s.field_n) / (double)AudioOutput.field_k;
         var25 = this.field_n;
         synchronized (var25) {
-          this.field_n.d((int)(0.5 + var23));
+          this.field_n.setSampleStepMagnitude((int)(0.5 + var23));
           if (this.field_p) {
-            this.field_n.b(true);
+            this.field_n.setReversePlayback(true);
             this.field_p = false;
           }
         }
@@ -350,7 +350,7 @@ class gk extends IntrusiveNode {
             if (this.field_n.i()) {
               this.field_p = true;
             }
-            this.field_n.d(0);
+            this.field_n.setSampleStepMagnitude(0);
             this.field_n.h(0);
           }
         }

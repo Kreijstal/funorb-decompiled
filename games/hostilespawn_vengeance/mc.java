@@ -20,9 +20,9 @@ final class mc extends vd implements qk {
           String[] var6 = (String[]) null;
           this.a((String[]) null, (byte) -47);
         }
-        vm var5 = jd.field_s;
+        BitmapFont var5 = jd.field_s;
         if (null != this.field_H) {
-          var5.a(AccountRequestState.field_b, param1 + this.field_v, this.field_m + param0, this.field_s, 20, 16777215, -1, 0, 0, var5.field_F + var5.field_y);
+          var5.drawParagraph(AccountRequestState.field_b, param1 + this.field_v, this.field_m + param0, this.field_s, 20, 16777215, -1, 0, 0, var5.field_F + var5.field_y);
         }
     }
 

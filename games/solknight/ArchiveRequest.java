@@ -9,10 +9,10 @@ abstract class ArchiveRequest extends DualLinkNode {
     volatile boolean field_m;
     static fg field_p;
 
-    final static hd a(byte param0, Archive param1, int param2, int param3, Archive param4) {
+    final static BinaryBitmapFont a(byte param0, Archive param1, int param2, int param3, Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
-        hd stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

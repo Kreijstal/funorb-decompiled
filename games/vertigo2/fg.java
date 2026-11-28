@@ -33,10 +33,10 @@ final class fg extends sp {
     final void a(byte param0, int param1, int param2) {
         if (param0 <= -92) {
           super.a((byte) -108, param1, param2);
-          sg.field_a.c(this.field_bb, (this.width >> 1) + param1, 103 + param2, 16777215, -1);
+          sg.field_a.drawCentred(this.field_bb, (this.width >> 1) + param1, 103 + param2, 16777215, -1);
           if (null != this.field_fb) {
             SoftwareRasterizer.drawHorizontalLine(param1 + 20, param2 + 120 - 7, 260, 8421504);
-            sg.field_a.a(this.field_fb, 20 + param1, 8 + (120 + param2), 260, 100, 16777215, -1, 1, 0, sg.field_a.field_z);
+            sg.field_a.drawParagraph(this.field_fb, 20 + param1, 8 + (120 + param2), 260, 100, 16777215, -1, 1, 0, sg.field_a.field_z);
           }
           return;
         }
@@ -98,7 +98,7 @@ final class fg extends sp {
         try {
           this.field_fb = param1;
           if (null != this.field_fb) {
-            var3_int = sg.field_a.a(this.field_fb, 260, sg.field_a.field_z);
+            var3_int = sg.field_a.textHeight(this.field_fb, 260, sg.field_a.field_z);
             this.b(-1535749535, 300, var3_int + 150);
           }
           this.field_W = new we(13, 50, 274, 30, 15, 2113632, 4210752);

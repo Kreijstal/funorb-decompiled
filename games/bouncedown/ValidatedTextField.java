@@ -43,7 +43,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final void a(FieldValidator param0, boolean param1) {
+    final void setFieldValidator(FieldValidator param0, boolean param1) {
         try {
           if (!param1) {
             String var4 = (String) null;
@@ -241,10 +241,10 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
               var1_int = var1_int + ConfirmedEmailAvailabilityValidator.field_m;
             }
             if (var4 < 0) {
-              EditableTextField.field_E.b(var6, var8Lifetime1, qd.field_b + var1_int, var5, -1);
+              EditableTextField.field_E.drawString(var6, var8Lifetime1, qd.field_b + var1_int, var5, -1);
               var1_int = var1_int + k.field_D;
             } else {
-              jc.field_h.b(var6, var8Lifetime1, ed.field_d + var1_int, var5, -1);
+              jc.field_h.drawString(var6, var8Lifetime1, ed.field_d + var1_int, var5, -1);
               var1_int = var1_int + (ConfirmedEmailAvailabilityValidator.field_m + hj.field_a + pb.field_j);
             }
           }

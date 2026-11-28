@@ -306,7 +306,7 @@ final class bg extends ic {
           this.field_M = param6;
           this.field_F = param8;
           var12_int = this.field_M - this.field_H;
-          var13 = this.field_F.b(param10, var12_int, this.field_F.field_x) + this.field_H * 2;
+          var13 = this.field_F.textHeight(param10, var12_int, this.field_F.field_x) + this.field_H * 2;
           if (param3 >= var13) {
             var13 = param3;
           } else {
@@ -365,7 +365,7 @@ final class bg extends ic {
           return;
         }
         int var7 = !this.field_J ? 0 : -(this.field_H * 2) + this.field_p - this.field_M;
-        this.field_F.a(this.field_L, var7 + var5 + this.field_H, var6 + this.field_H, this.field_M - this.field_H, -(2 * this.field_H) + this.field_l, this.field_N, -1, this.field_J ? 0 : 2, 1, this.field_F.field_x);
+        this.field_F.drawParagraph(this.field_L, var7 + var5 + this.field_H, var6 + this.field_H, this.field_M - this.field_H, -(2 * this.field_H) + this.field_l, this.field_N, -1, this.field_J ? 0 : 2, 1, this.field_F.field_x);
     }
 
     static {

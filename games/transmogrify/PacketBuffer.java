@@ -138,10 +138,10 @@ class PacketBuffer extends IntrusiveNode {
         throw new IllegalArgumentException();
     }
 
-    final static mi a(int param0, ResourceArchive param1, ResourceArchive param2, int param3, int param4) {
+    final static BinaryBitmapFont a(int param0, ResourceArchive param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
-        mi stackIn_2_0 = null;
-        mi stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_2_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -150,7 +150,7 @@ class PacketBuffer extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -123) {
-            stackIn_2_0 = (mi) null;
+            stackIn_2_0 = (BinaryBitmapFont) null;
             return stackIn_2_0;
           }
           if (!rl.a(param4, 0, param3, param2)) {

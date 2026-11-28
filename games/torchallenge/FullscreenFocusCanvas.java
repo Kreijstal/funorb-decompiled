@@ -23,12 +23,12 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static nf a(ResourceArchive param0, ResourceArchive param1, String param2, String param3, boolean param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, ResourceArchive param1, String param2, String param3, boolean param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         String var7 = null;
-        nf stackIn_3_0 = null;
+        BinaryBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

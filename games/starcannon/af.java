@@ -4,7 +4,7 @@
 final class af extends kf {
     static id[] field_w;
     static long field_x;
-    static lk field_y;
+    static BinaryBitmapFont field_y;
 
     final void a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5) {
         RuntimeException runtimeException = null;

@@ -140,7 +140,7 @@ final class il {
     }
 
     final void a(int param0, int param1, int param2, w param3, UiWidget param4) {
-        qe stackIn_18_0 = null;
+        BitmapFont stackIn_18_0 = null;
         String stackIn_18_1 = null;
         int stackIn_19_2 = 0;
         int stackIn_21_2 = 0;
@@ -210,7 +210,7 @@ final class il {
             } else {
               stackIn_25_8 = this.field_b;
             }
-            ((qe) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param3.field_h, param3.field_a, param3.field_k);
+            ((BitmapFont) (Object) stackIn_18_0).drawParagraphAlpha(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param3.field_h, param3.field_a, param3.field_k);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

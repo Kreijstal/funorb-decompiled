@@ -181,7 +181,7 @@ final class DisplayNameSelectionPanel extends aj implements tc, df {
         this.field_x = new lj(Transmogrify.field_E, (ma) null);
         this.field_w = new lj(fk.field_D, (ma) null);
         this.field_D.field_j = mf.field_a;
-        this.field_D.a(-65, new AccountNameAvailabilityValidator(this.field_D));
+        this.field_D.setFieldValidator(-65, new AccountNameAvailabilityValidator(this.field_D));
         this.field_x.field_t = false;
         this.field_x.field_q = (WidgetRenderer) ((Object) new qa());
         this.field_w.field_q = (WidgetRenderer) ((Object) new ek());
@@ -241,7 +241,7 @@ final class DisplayNameSelectionPanel extends aj implements tc, df {
         try {
           var3 = this.field_D;
           var4 = param1;
-          ((EditableTextField) ((Object) var3)).a(var4, param0, 1);
+          ((EditableTextField) ((Object) var3)).setText(var4, param0, 1);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ck.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

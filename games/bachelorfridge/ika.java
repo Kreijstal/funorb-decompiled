@@ -94,9 +94,9 @@ final class ika {
         var12 = var8 % 10;
         if ((2 & param1) != 0) {
           ce.a(true, param3, param5, "" + var11, param2, true);
-          param2 = param2 + (jha.field_g.a("" + var11) + (param0 + 2));
+          param2 = param2 + (jha.field_g.stringWidth("" + var11) + (param0 + 2));
           ce.a(true, param3, param5, "" + var12, param2, true);
-          param2 = param2 + (2 + (jha.field_g.a("" + var11) + param0));
+          param2 = param2 + (2 + (jha.field_g.stringWidth("" + var11) + param0));
           if ((param1 & 32) == 0) {
             ce.a(true, param3, param5, ":", param2, true);
           } else {
@@ -104,13 +104,13 @@ final class ika {
               ce.a(true, param3, param5, ":", param2, true);
             }
           }
-          param2 = param2 + (jha.field_g.a(":") + param0);
+          param2 = param2 + (jha.field_g.stringWidth(":") + param0);
         }
         if ((1 & param1) != 0) {
           ce.a(true, param3, param5, "" + var9, param2, true);
-          param2 = param2 + (param0 + jha.field_g.a("" + var9) + 2);
+          param2 = param2 + (param0 + jha.field_g.stringWidth("" + var9) + 2);
           ce.a(true, param3, param5, "" + var10, param2, true);
-          param2 = param2 + (jha.field_g.a("" + var10) + param0 + 2);
+          param2 = param2 + (jha.field_g.stringWidth("" + var10) + param0 + 2);
         }
     }
 

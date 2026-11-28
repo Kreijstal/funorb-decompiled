@@ -15,12 +15,12 @@ final class oi extends WidgetContainer implements n {
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, -126, param2, param3);
         if (param1 < -106) {
-          this.field_I.a(this.field_N, param0 - (-this.x - 14), 10 + (param3 + this.y), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_I.field_s);
+          this.field_I.drawParagraph(this.field_N, param0 - (-this.x - 14), 10 + (param3 + this.y), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_I.field_s);
           return;
         }
         String var6 = (String) null;
         this.a((byte) 29, (sc) null, (String) null);
-        this.field_I.a(this.field_N, param0 - (-this.x - 14), 10 + (param3 + this.y), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_I.field_s);
+        this.field_I.drawParagraph(this.field_N, param0 - (-this.x - 14), 10 + (param3 + this.y), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_I.field_s);
     }
 
     private final void b(int param0, int param1) {
@@ -52,7 +52,7 @@ final class oi extends WidgetContainer implements n {
           this.field_N = param2;
           this.field_G = param0;
           this.field_I = param1;
-          var4_int = null == this.field_N ? 0 : this.field_I.a(this.field_N, 260, this.field_I.field_s);
+          var4_int = null == this.field_N ? 0 : this.field_I.textHeight(this.field_N, 260, this.field_I.field_s);
           this.a(0, (byte) 126, 288, 0, var4_int + 22);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "oi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

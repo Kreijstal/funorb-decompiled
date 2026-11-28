@@ -757,10 +757,10 @@ final class ChessBoardRenderer extends ChessBoardState {
         int stackIn_38_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_52_0 = 0;
-        c stackIn_75_0 = null;
+        BinaryBitmapFont stackIn_75_0 = null;
         String[] stackIn_75_1 = null;
         int stackIn_76_2 = 0;
-        c stackIn_78_0 = null;
+        BinaryBitmapFont stackIn_78_0 = null;
         int stackIn_79_1 = 0;
         int var7;
         int var8;
@@ -904,7 +904,7 @@ final class ChessBoardRenderer extends ChessBoardState {
           } else {
             stackIn_76_2 = var14Lifetime1;
           }
-          ((c) (Object) stackIn_75_0).b(stackIn_75_1[stackIn_76_2], 22 + var11Lifetime2, var12Lifetime2 + 14, 15794175, 1);
+          ((BinaryBitmapFont) (Object) stackIn_75_0).drawCentred(stackIn_75_1[stackIn_76_2], 22 + var11Lifetime2, var12Lifetime2 + 14, 15794175, 1);
           var12Lifetime2Lifetime1 = var10 - 45 * var14Lifetime1;
           var11Lifetime2Lifetime1 = 140;
           stackIn_78_0 = jj.field_b;
@@ -913,7 +913,7 @@ final class ChessBoardRenderer extends ChessBoardState {
           } else {
             stackIn_79_1 = -var14Lifetime1 + 8;
           }
-          ((c) (Object) stackIn_78_0).c(Integer.toString(stackIn_79_1), var11Lifetime2Lifetime1 - 5, 22 + var12Lifetime2Lifetime1, 15794175, 1);
+          ((BinaryBitmapFont) (Object) stackIn_78_0).drawRightAligned(Integer.toString(stackIn_79_1), var11Lifetime2Lifetime1 - 5, 22 + var12Lifetime2Lifetime1, 15794175, 1);
         }
         var14Lifetime2 = var8 / 8;
         var15Lifetime1 = var8 % 8;

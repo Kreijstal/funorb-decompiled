@@ -11,7 +11,7 @@ final class gh extends ea implements Cloneable {
     static String field_A;
     private boolean field_v;
     private transient boolean field_D;
-    static vc field_F;
+    static BitmapFont field_F;
     int field_x;
     static int field_w;
     int field_G;
@@ -89,7 +89,7 @@ final class gh extends ea implements Cloneable {
 
     final static rh h(int param0) {
         if (param0 != 26500) {
-          field_F = (vc) null;
+          field_F = (BitmapFont) null;
         }
         return new rh(ac.c(61), SecondaryIntrusiveDeque.a((byte) -102));
     }
@@ -587,7 +587,7 @@ final class gh extends ea implements Cloneable {
         field_F = null;
         field_t = null;
         if (param0 != 0) {
-          field_F = (vc) null;
+          field_F = (BitmapFont) null;
         }
         field_A = null;
     }
@@ -602,7 +602,7 @@ final class gh extends ea implements Cloneable {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -122 % ((param1 + 54) / 35);
-          stackIn_1_0 = an.field_q.a(param0, 148);
+          stackIn_1_0 = an.field_q.lineCount(param0, 148);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -657,7 +657,7 @@ final class gh extends ea implements Cloneable {
         int var6_int = 0;
         try {
           if (param3 >= -69) {
-            field_F = (vc) null;
+            field_F = (BitmapFont) null;
           }
           var6_int = param1.readUnsignedByte();
           this.field_G = mo.field_h[var6_int];
@@ -893,7 +893,7 @@ final class gh extends ea implements Cloneable {
         oh.field_d = new DisplayNameSelectionPanel();
         MouseWheelInput.field_d.a((qm) (oh.field_d), (byte) -50);
         if (param0 != -10) {
-          field_F = (vc) null;
+          field_F = (BitmapFont) null;
         }
     }
 

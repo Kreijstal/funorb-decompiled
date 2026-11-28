@@ -33,7 +33,7 @@ final class lh {
     int[] field_z;
     private int field_d;
     int[] field_y;
-    static uc field_O;
+    static BitmapFont field_O;
     private int field_r;
     int[] field_j;
     static ne field_u;

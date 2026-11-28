@@ -25,10 +25,10 @@ final class ig {
         }
     }
 
-    final static c a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
-        c stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

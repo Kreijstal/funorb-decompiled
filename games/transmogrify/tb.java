@@ -3,7 +3,7 @@
  */
 final class tb {
     static int field_a;
-    static kg field_c;
+    static BitmapFont field_c;
     static Sprite field_e;
     static int[] field_d;
     static Sprite[] field_b;

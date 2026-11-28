@@ -142,7 +142,7 @@ final class PalettedBitmapFont extends BitmapFont {
           if (!param7) {
             PalettedBitmapFont.blitPaletteGlyphAlpha(0, SoftwareRasterizer.field_b, this.field_N[param0], this.field_O[param5], var12, var9, param3, param4, var10, var11, param6);
           } else {
-            BinaryBitmapFont.a(SoftwareRasterizer.field_b, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            BinaryBitmapFont.blitGlyphAlphaRows(SoftwareRasterizer.field_b, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }
@@ -221,7 +221,7 @@ final class PalettedBitmapFont extends BitmapFont {
           if (!param6) {
             PalettedBitmapFont.blitPaletteGlyph(0, SoftwareRasterizer.field_b, this.field_N[param0], this.field_O[param5], var11, var8, param3, param4, var9, var10);
           } else {
-            BinaryBitmapFont.a(SoftwareRasterizer.field_b, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
+            BinaryBitmapFont.blitGlyphRows(SoftwareRasterizer.field_b, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }

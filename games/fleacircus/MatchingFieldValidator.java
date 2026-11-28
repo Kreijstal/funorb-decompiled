@@ -4,7 +4,7 @@
 final class MatchingFieldValidator extends TextFieldValidator {
     private EditableTextField field_n;
     static int field_o;
-    static fa field_p;
+    static BitmapFont field_p;
 
     public static void clearStaticReferences(byte param0) {
         if (param0 <= 50) {

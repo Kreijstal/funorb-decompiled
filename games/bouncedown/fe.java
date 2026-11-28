@@ -18,7 +18,7 @@ final class fe {
     int field_q;
     int field_n;
     int field_f;
-    tj field_d;
+    BitmapFont field_d;
 
     private final void a(String param0, int param1, int param2, boolean param3) {
         RuntimeException stackIn_31_0 = null;
@@ -50,7 +50,7 @@ final class fe {
             var7 = this.field_d.field_s + this.field_d.field_x;
           }
           var8 = SoftwareRasterizer.field_e >> 2;
-          var9 = this.field_d.b(param0);
+          var9 = this.field_d.stringWidth(param0);
           var10 = this.field_d.field_x + this.field_d.field_s;
           var11 = 1;
           if (var8 < var9 ||
@@ -64,11 +64,11 @@ final class fe {
               var13 = var9 / var8;
               var12 = 2 * ((-1 + var13 + var9 % var8) / var13) + var8;
             }
-            var11Lifetime1 = this.field_d.a(param0, new int[]{var12}, IntrusiveNode.field_a);
+            var11Lifetime1 = this.field_d.wrapText(param0, new int[]{var12}, IntrusiveNode.field_a);
             var10 = var10 + var7 * (var11Lifetime1 - 1);
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_d.b(IntrusiveNode.field_a[var13Lifetime2]);
+              var14 = this.field_d.stringWidth(IntrusiveNode.field_a[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
@@ -88,7 +88,7 @@ final class fe {
           }
           SoftwareRasterizer.drawRectangleOutline(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_q);
           SoftwareRasterizer.fillRectangle(var12 + 1, 1 + var13Lifetime1, -2 + var5_int + var9, -2 + (var10 + var6), this.field_m);
-          this.field_d.a(param0, this.field_k + var12, this.field_o + var13Lifetime1, var9, var10, this.field_p, -1, 0, 0, var7);
+          this.field_d.drawParagraph(param0, this.field_k + var12, this.field_o + var13Lifetime1, var9, var10, this.field_p, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,7 +113,7 @@ final class fe {
 
     final void a(int param0, String param1, int param2, boolean param3) {
         RuntimeException var5 = null;
-        tj var6 = null;
+        BitmapFont var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -127,8 +127,8 @@ final class fe {
           if (param3) {
             return;
           }
-          var6 = (tj) null;
-          this.a(87, (tj) null);
+          var6 = (BitmapFont) null;
+          this.a(87, (BitmapFont) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -156,7 +156,7 @@ final class fe {
         int var8 = 0;
         int var9 = 0;
         try {
-          var5_int = this.field_d.b(param1);
+          var5_int = this.field_d.stringWidth(param1);
           var6 = this.field_d.field_F + this.field_d.field_x;
           var7 = param2;
           if (SoftwareRasterizer.field_e < var5_int + var7 + 6) {
@@ -169,7 +169,7 @@ final class fe {
           }
           SoftwareRasterizer.drawRectangleOutline(var7, var8, var5_int + 6, 6 + var6, this.field_p);
           SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, this.field_m);
-          this.field_d.b(param1, 3 + var7, this.field_d.field_F + (3 + var8), this.field_p, -1);
+          this.field_d.drawString(param1, 3 + var7, this.field_d.field_F + (3 + var8), this.field_p, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -185,7 +185,7 @@ final class fe {
         }
     }
 
-    final void a(int param0, tj param1) {
+    final void a(int param0, BitmapFont param1) {
         jd var17 = null;
         qi var4 = null;
         RgbSprite[] var5 = null;

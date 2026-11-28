@@ -20,11 +20,11 @@ final class gb {
         }
     }
 
-    final static qj a(int param0, byte[] param1) {
-        qj var2 = null;
+    final static CoverageBitmapFont a(int param0, byte[] param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        qj stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -32,12 +32,12 @@ final class gb {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (qj) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (param0 != -28993) {
             gb.clearStaticReferences(16);
           }
-          var2 = new qj(param1, GameApplet.field_e, ImageProducerRasterBuffer.field_t, MusicPatchPcmStream.field_r, lg.field_e, td.field_m, h.field_a);
+          var2 = new CoverageBitmapFont(param1, GameApplet.field_e, ImageProducerRasterBuffer.field_t, MusicPatchPcmStream.field_r, lg.field_e, td.field_m, h.field_a);
           p.a(0);
           stackIn_6_0 = var2;
           return stackIn_6_0;

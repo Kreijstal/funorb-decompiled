@@ -236,7 +236,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
             if (var10 <= 0) {
               stackIn_23_1 = var6.field_Fb;
             } else {
-              stackIn_23_1 = lh.a(var6.field_Mb.field_xb, var6.field_Fb, var10);
+              stackIn_23_1 = BitmapFont.truncateWithEllipsis(var6.field_Mb.field_xb, var6.field_Fb, var10);
             }
             stackIn_22_0.field_db = stackIn_23_1;
             stackIn_26_0 = (var6.field_Mb.field_db.equals(var6.field_Fb)) ? 0 : 1;

@@ -79,7 +79,7 @@ final class ol extends pu {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            stackIn_4_0 = tw.a(PcmSampleStream.b(param0, 100, 96), (byte) -36);
+            stackIn_4_0 = tw.a(PcmSampleStream.createForPlaybackRate(param0, 100, 96), (byte) -36);
             return stackIn_4_0;
           }
           stackIn_2_0 = (cq) null;

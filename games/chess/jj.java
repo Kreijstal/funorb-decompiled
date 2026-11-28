@@ -4,8 +4,8 @@
 final class jj {
     static ci field_f;
     static dd[] field_c;
-    static c field_d;
-    static c field_b;
+    static BinaryBitmapFont field_d;
+    static BinaryBitmapFont field_b;
     static ResourceArchive field_e;
     static BufferedSocket field_a;
 

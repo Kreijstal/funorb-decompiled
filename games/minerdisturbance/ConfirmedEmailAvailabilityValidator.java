@@ -149,7 +149,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (param1 != 35) {
             if (36 == param1) {
               if (wi.field_v != null &&
-                !wi.field_v.k()) {
+                !wi.field_v.isSamplePositionOutOfRange()) {
                 return;
               }
               wi.field_v = RawPcmStream.b(re.field_a[param1], 100, param2, param0);
@@ -161,7 +161,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                   boolean decompiledNaturalLoopExit1 = false;
                   while (!(decompiledNaturalLoopExit1 = (var4_int < 0))) {
                     if (mh.field_b[var4_int] != null &&
-                      !mh.field_b[var4_int].k()) {
+                      !mh.field_b[var4_int].isSamplePositionOutOfRange()) {
                       var4_int--;
                       continue;
                     }
@@ -184,7 +184,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                     boolean decompiledNaturalLoopExit0 = false;
                     while (!(decompiledNaturalLoopExit0 = (var6 < 0))) {
                       if (null != si.field_b[var6] &&
-                        !si.field_b[var6].k()) {
+                        !si.field_b[var6].isSamplePositionOutOfRange()) {
                         var6--;
                         continue;
                       }
@@ -206,7 +206,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                 }
               } else {
                 if (df.field_a != null &&
-                  !df.field_a.k()) {
+                  !df.field_a.isSamplePositionOutOfRange()) {
                   return;
                 }
                 df.field_a = RawPcmStream.b(re.field_a[param1], 100, param2, param0);
@@ -215,7 +215,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             }
           } else {
             if (null != qg.field_b &&
-              !qg.field_b.k()) {
+              !qg.field_b.isSamplePositionOutOfRange()) {
               return;
             }
             qg.field_b = RawPcmStream.b(re.field_a[param1], 100, param2, param0);

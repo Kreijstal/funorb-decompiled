@@ -55,7 +55,7 @@ final class lf extends kc {
         try {
           this.field_X = param1;
           if (null != this.field_X) {
-            var3_int = AwtRasterBuffer.field_a.a(this.field_X, 260, AwtRasterBuffer.field_a.field_p);
+            var3_int = AwtRasterBuffer.field_a.textHeight(this.field_X, 260, AwtRasterBuffer.field_a.field_p);
             this.b(300, (byte) 57, var3_int + 150);
           }
           this.field_W = new fa(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -71,12 +71,12 @@ final class lf extends kc {
     final void c(int param0, byte param1, int param2) {
         int var4 = -66 % ((param1 + 57) / 53);
         super.c(param0, (byte) -127, param2);
-        AwtRasterBuffer.field_a.b(this.field_db, param0 + (this.field_i >> 1), param2 + 103, 16777215, -1);
+        AwtRasterBuffer.field_a.drawCentred(this.field_db, param0 + (this.field_i >> 1), param2 + 103, 16777215, -1);
         if (null == this.field_X) {
           return;
         }
         SoftwareRasterizer.drawHorizontalLine(param0 + 20, 120 + param2 - 7, 260, 8421504);
-        AwtRasterBuffer.field_a.a(this.field_X, param0 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, AwtRasterBuffer.field_a.field_p);
+        AwtRasterBuffer.field_a.drawParagraph(this.field_X, param0 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, AwtRasterBuffer.field_a.field_p);
     }
 
     public static void clearStaticReferences(boolean param0) {

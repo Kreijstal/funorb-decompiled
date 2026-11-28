@@ -15,9 +15,9 @@ final class cq extends IntrusiveNode {
     cq(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_i = param0;
-          this.field_f = param0.g();
+          this.field_f = param0.getTargetVolume();
           this.field_h = param1;
-          this.field_i.f(128 + b.field_u * this.field_f >> 8);
+          this.field_i.setVolume(128 + b.field_u * this.field_f >> 8);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "cq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

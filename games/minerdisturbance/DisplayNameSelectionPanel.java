@@ -77,7 +77,7 @@ final class DisplayNameSelectionPanel extends kn implements f, sh {
         try {
           var3 = this.field_N;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(false, false, var4);
+          ((EditableTextField) ((Object) var3)).setText(false, false, var4);
           int var5 = 105 % ((param1 - 22) / 62);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "lm.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -218,7 +218,7 @@ final class DisplayNameSelectionPanel extends kn implements f, sh {
         this.field_P = new hc(he.field_c, (rm) null);
         this.field_J = new hc(u.field_b, (rm) null);
         this.field_N.field_n = ImageProducerRasterBuffer.field_l;
-        this.field_N.a(new AccountNameAvailabilityValidator(this.field_N), 1048576);
+        this.field_N.setFieldValidator(new AccountNameAvailabilityValidator(this.field_N), 1048576);
         this.field_P.field_E = false;
         this.field_P.field_A = (ad) ((Object) new wi());
         this.field_J.field_A = (ad) ((Object) new nc());

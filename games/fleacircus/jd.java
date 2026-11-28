@@ -12,7 +12,7 @@ final class jd {
     static long field_n;
     ComponentLayout field_h;
     private int field_m;
-    fa field_a;
+    BitmapFont field_a;
     int field_e;
     private boolean field_s;
     int field_j;
@@ -49,7 +49,7 @@ final class jd {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_a.b(param2);
+          var5_int = this.field_a.stringWidth(param2);
           var6 = this.field_a.field_y + this.field_a.field_K;
           if (param0 <= 116) {
             jd.a(true, 96);
@@ -64,7 +64,7 @@ final class jd {
           }
           SoftwareRasterizer.drawRectangleOutline(var7, var8, var5_int + 6, var6 + 6, this.field_m);
           SoftwareRasterizer.fillRectangle(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_f);
-          this.field_a.c(param2, 3 + var7, this.field_a.field_y + (3 + var8), this.field_m, -1);
+          this.field_a.drawString(param2, 3 + var7, this.field_a.field_y + (3 + var8), this.field_m, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -139,7 +139,7 @@ final class jd {
             var7 = this.field_a.field_H + this.field_a.field_K;
           }
           var8 = SoftwareRasterizer.field_d >> 2;
-          var9 = this.field_a.b(param2);
+          var9 = this.field_a.stringWidth(param2);
           var10 = this.field_a.field_K + this.field_a.field_H;
           var11 = 1;
           if (var8 < var9 ||
@@ -153,11 +153,11 @@ final class jd {
             if (null == IsaacRandom.field_f) {
               IsaacRandom.field_f = new String[16];
             }
-            var11Lifetime1 = this.field_a.a(param2, new int[]{var12}, IsaacRandom.field_f);
+            var11Lifetime1 = this.field_a.wrapText(param2, new int[]{var12}, IsaacRandom.field_f);
             var9 = 0;
             var10 = var10 + (var11Lifetime1 - 1) * var7;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_a.b(IsaacRandom.field_f[var13Lifetime2]);
+              var14 = this.field_a.stringWidth(IsaacRandom.field_f[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -173,7 +173,7 @@ final class jd {
           }
           SoftwareRasterizer.drawRectangleOutline(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_b);
           SoftwareRasterizer.fillRectangle(1 + var12, var13Lifetime1 + 1, -2 + var9 + var5_int, var10 + var6 - 2, this.field_f);
-          this.field_a.a(param2, var12 + this.field_c, this.field_e + var13Lifetime1, var9, var10, this.field_m, -1, 0, 0, var7);
+          this.field_a.drawParagraph(param2, var12 + this.field_c, this.field_e + var13Lifetime1, var9, var10, this.field_m, -1, 0, 0, var7);
           if (!param0) {
             this.field_i = (ComponentLayout) null;
           }
@@ -201,7 +201,7 @@ final class jd {
         }
     }
 
-    final void a(fa param0, boolean param1) {
+    final void a(BitmapFont param0, boolean param1) {
         e var17 = null;
         hb var4 = null;
         RgbSprite[] var5 = null;

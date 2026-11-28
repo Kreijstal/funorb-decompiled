@@ -4,7 +4,7 @@
 class ma extends jf implements ke {
     static ql field_tb;
     private boolean field_xb;
-    private rf field_zb;
+    private BitmapFont field_zb;
     static byte[] field_yb;
     private boolean field_rb;
     private boolean field_ub;
@@ -171,7 +171,7 @@ class ma extends jf implements ke {
         this.a(33, var2);
     }
 
-    ma(k param0, rf param1, String param2, boolean param3, boolean param4) {
+    ma(k param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new dj((ma) null, param1, param2), 77, 10, 10);
         try {
           this.field_ub = param4 ? true : false;

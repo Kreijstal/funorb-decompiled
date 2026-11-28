@@ -16,10 +16,10 @@ final class db extends wk {
     final void b(int param0, int param1, int param2) {
         super.b(param0, -57, param2);
         if (param1 < -6) {
-          ne.field_v.a(this.field_W, param2 + (this.field_k >> 1), 103 + param0, 16777215, -1);
+          ne.field_v.drawCentred(this.field_W, param2 + (this.field_k >> 1), 103 + param0, 16777215, -1);
           if (null != this.field_P) {
             SoftwareRasterizer.drawHorizontalLine(20 + param2, -7 + param0 + 120, 260, 8421504);
-            ne.field_v.a(this.field_P, 20 + param2, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, ne.field_v.field_s);
+            ne.field_v.drawParagraph(this.field_P, 20 + param2, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, ne.field_v.field_s);
           }
           return;
         }
@@ -62,7 +62,7 @@ final class db extends wk {
         try {
           this.field_P = param1;
           if (null != this.field_P) {
-            var3_int = ne.field_v.b(this.field_P, 260, ne.field_v.field_s);
+            var3_int = ne.field_v.textHeight(this.field_P, 260, ne.field_v.field_s);
             this.c(-463076575, 300, var3_int + 150);
           }
           this.field_N = new ll(13, 50, 274, 30, 15, 2113632, 4210752);

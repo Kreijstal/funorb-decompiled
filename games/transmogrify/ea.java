@@ -362,12 +362,12 @@ final class ea {
         }
     }
 
-    final static mi a(byte[] param0, int param1) {
-        mi var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, int param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        mi stackIn_5_0 = null;
-        mi stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_5_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -375,13 +375,13 @@ final class ea {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (mi) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param1 != 0) {
-            stackIn_5_0 = (mi) null;
+            stackIn_5_0 = (BinaryBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new mi(param0, BufferedSocket.field_j, Bzip2State.field_a, ql.field_b, wk.field_b, Bzip2State.field_K);
+          var2 = new BinaryBitmapFont(param0, BufferedSocket.field_j, Bzip2State.field_a, ql.field_b, wk.field_b, Bzip2State.field_K);
           wd.d(-109);
           stackIn_7_0 = var2;
           return stackIn_7_0;

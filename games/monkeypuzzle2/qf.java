@@ -1018,7 +1018,7 @@ final class qf extends og {
 
     private final void a(int param0, int param1) {
         if (this.field_R[param0] != null) {
-          this.field_R[param0].i(param1 * 256 / AudioOutput.field_i);
+          this.field_R[param0].setSampleStepMagnitude(param1 * 256 / AudioOutput.field_i);
         }
     }
 

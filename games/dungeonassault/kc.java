@@ -3,7 +3,7 @@
  */
 final class kc extends ii implements vg {
     private int[] field_N;
-    private se field_K;
+    private BitmapFont field_K;
     private int field_O;
     static String field_P;
     private nk field_L;
@@ -31,10 +31,10 @@ final class kc extends ii implements vg {
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2 ^ 0, param3);
-        this.field_K.a(this.field_R, 14 + param1 + this.field_q, this.field_v + (param3 + 10), this.field_x - 28, this.field_s, 16777215, -1, param2, 0, this.field_K.field_H);
+        this.field_K.drawParagraph(this.field_R, 14 + param1 + this.field_q, this.field_v + (param3 + 10), this.field_x - 28, this.field_s, 16777215, -1, param2, 0, this.field_K.field_H);
     }
 
-    kc(nk param0, se param1, String param2) {
+    kc(nk param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (ca) null);
         int var4_int = 0;
         this.field_O = 0;
@@ -42,7 +42,7 @@ final class kc extends ii implements vg {
           this.field_K = param1;
           this.field_R = param2;
           this.field_L = param0;
-          var4_int = null != this.field_R ? this.field_K.a(this.field_R, 260, this.field_K.field_H) : 0;
+          var4_int = null != this.field_R ? this.field_K.textHeight(this.field_R, 260, this.field_K.field_H) : 0;
           this.b(0, 288, 0, 0, var4_int + 22);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "kc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

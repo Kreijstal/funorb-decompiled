@@ -108,7 +108,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements sh, ql 
             DisplayNameSelectionPanel.m(-107);
           }
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(false, -5905, var4);
+          ((EditableTextField) ((Object) var3)).setText(false, -5905, var4);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "eb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -229,7 +229,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements sh, ql 
         this.field_D = new ButtonWidget(wi.field_a, (of) null);
         this.field_z = new ButtonWidget(af.field_b, (of) null);
         this.field_G.field_m = oa.field_E;
-        this.field_G.a(new AccountNameAvailabilityValidator(this.field_G), true);
+        this.field_G.setFieldValidator(new AccountNameAvailabilityValidator(this.field_G), true);
         this.field_D.field_w = false;
         this.field_D.field_h = (ml) ((Object) new hd());
         this.field_z.field_h = (ml) ((Object) new lc());

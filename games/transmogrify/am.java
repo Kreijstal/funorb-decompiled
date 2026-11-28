@@ -64,12 +64,12 @@ final class am extends IntrusiveNode {
         }
     }
 
-    final static mi a(String param0, ResourceArchive param1, byte param2, ResourceArchive param3, String param4) {
+    final static BinaryBitmapFont a(String param0, ResourceArchive param1, byte param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        mi stackIn_2_0 = null;
-        mi stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_2_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -82,7 +82,7 @@ final class am extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 72) {
-            stackIn_2_0 = (mi) null;
+            stackIn_2_0 = (BinaryBitmapFont) null;
             return stackIn_2_0;
           }
           var5_int = param1.getGroupIdByName(114, param4);

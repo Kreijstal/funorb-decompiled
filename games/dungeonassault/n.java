@@ -5,7 +5,7 @@ final class n {
     static q field_e;
     static RgbSprite field_b;
     static int[] field_f;
-    static se field_c;
+    static BitmapFont field_c;
     static int field_d;
     static String field_a;
     static int[] field_g;

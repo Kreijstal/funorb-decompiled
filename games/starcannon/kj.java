@@ -4,7 +4,7 @@
 final class kj extends vk implements ga {
     private int field_B;
     static Sprite[] field_y;
-    private qe field_F;
+    private BitmapFont field_F;
     private String field_D;
     private ph field_C;
     private dk[] field_A;
@@ -64,7 +64,7 @@ final class kj extends vk implements ga {
         field_y = null;
     }
 
-    kj(ph param0, qe param1, String param2) {
+    kj(ph param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (de) null);
         int var4_int = 0;
         this.field_B = 0;
@@ -72,7 +72,7 @@ final class kj extends vk implements ga {
           this.field_D = param2;
           this.field_C = param0;
           this.field_F = param1;
-          var4_int = null == this.field_D ? 0 : this.field_F.a(this.field_D, 260, this.field_F.field_p);
+          var4_int = null == this.field_D ? 0 : this.field_F.textHeight(this.field_D, 260, this.field_F.field_p);
           this.a(0, 288, (byte) 126, 22 + var4_int, 0);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -103,7 +103,7 @@ final class kj extends vk implements ga {
             break;
           }
           if (param2) {
-            this.field_F = (qe) null;
+            this.field_F = (BitmapFont) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -138,7 +138,7 @@ final class kj extends vk implements ga {
 
     final void a(int param0, int param1, byte param2, int param3) {
         super.a(param0, param1, param2, param3);
-        this.field_F.a(this.field_D, param1 + this.field_s + 14, this.field_j + (param3 + 10), -28 + this.field_i, this.field_f, 16777215, -1, 0, 0, this.field_F.field_p);
+        this.field_F.drawParagraph(this.field_D, param1 + this.field_s + 14, this.field_j + (param3 + 10), -28 + this.field_i, this.field_f, 16777215, -1, 0, 0, this.field_F.field_p);
     }
 
     private final void a(int param0, int param1) {

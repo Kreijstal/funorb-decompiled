@@ -10,10 +10,10 @@ final class nd extends jj {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, param1, param2);
-        rg.field_o.a(this.field_eb, param1 + (this.field_u >> 1), 103 + param0, 16777215, -1);
+        rg.field_o.drawCentred(this.field_eb, param1 + (this.field_u >> 1), 103 + param0, 16777215, -1);
         if (this.field_bb != null) {
           SoftwareRasterizer.drawHorizontalLine(20 + param1, 120 + param0 - 7, 260, 8421504);
-          rg.field_o.a(this.field_bb, param1 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, rg.field_o.field_H);
+          rg.field_o.drawParagraph(this.field_bb, param1 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, rg.field_o.field_H);
         }
     }
 
@@ -142,7 +142,7 @@ final class nd extends jj {
         try {
           this.field_bb = param1;
           if (null != this.field_bb) {
-            var3_int = rg.field_o.b(this.field_bb, 260, rg.field_o.field_H);
+            var3_int = rg.field_o.textHeight(this.field_bb, 260, rg.field_o.field_H);
             this.a(150 + var3_int, (byte) -128, 300);
           }
           this.field_ab = new lk(13, 50, 274, 30, 15, 2113632, 4210752);

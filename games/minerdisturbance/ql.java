@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ql {
-    static vm field_m;
+    static BinaryBitmapFont field_m;
     boolean field_h;
     int field_l;
     boolean field_i;
@@ -34,7 +34,7 @@ final class ql {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 100) {
-            field_m = (vm) null;
+            field_m = (BinaryBitmapFont) null;
           }
           stackIn_5_0 = (param0.c((byte) -119, 1) == 1);
           return stackIn_5_0;
@@ -79,7 +79,7 @@ final class ql {
         var5 = MinerDisturbance.field_ab;
         try {
           if (!param0) {
-            field_m = (vm) null;
+            field_m = (BinaryBitmapFont) null;
           }
           var2_int = param1.length();
           var3 = 0;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class IntrusiveNode {
-    static fa field_b;
+    static BitmapFont field_b;
     IntrusiveNode field_a;
     static String field_d;
     static sk field_g;
@@ -64,7 +64,7 @@ class IntrusiveNode {
         field_g = null;
         field_d = null;
         if (param0 != 1) {
-          field_b = (fa) null;
+          field_b = (BitmapFont) null;
         }
     }
 

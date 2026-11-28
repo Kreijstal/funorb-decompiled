@@ -11,14 +11,14 @@ final class vd {
     int field_g;
     WidgetRenderer field_o;
     WidgetRenderer field_f;
-    kg field_m;
+    BitmapFont field_m;
     WidgetRenderer field_b;
     static volatile int field_a;
     int field_i;
     int field_j;
     int field_n;
     private boolean field_p;
-    static kg field_h;
+    static BitmapFont field_h;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, e param6, int param7) {
         int stackIn_16_0 = 0;
@@ -219,7 +219,7 @@ final class vd {
         }
     }
 
-    final static int a(String[] args, int param1, String param2, kg param3, byte param4) {
+    final static int a(String[] args, int param1, String param2, BitmapFont param3, byte param4) {
         int var10 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -247,7 +247,7 @@ final class vd {
         int var6Lifetime1;
         var14 = Transmogrify.field_A ? 1 : 0;
         try {
-          var5_int = param3.a(param2);
+          var5_int = param3.stringWidth(param2);
           if (param1 >= var5_int &&
             -1 == param2.indexOf("<br>")) {
             args[0] = param2;
@@ -265,7 +265,7 @@ final class vd {
             if (var11 == 32 ||
               var11 == 45) {
               var12 = param2.substring(var7, 1 + var10).trim();
-              var13 = param3.a(var12);
+              var13 = param3.stringWidth(var12);
               if (param1 <= var13) {
                 incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;
@@ -350,7 +350,7 @@ final class vd {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        kg var27 = null;
+        BitmapFont var27 = null;
         BitPacketBuffer var28 = null;
         int var25Lifetime1;
         int var25Lifetime2;
@@ -476,8 +476,8 @@ final class vd {
             pc.a(1);
           }
           if (param0 != 16) {
-            var27 = (kg) null;
-            vd.a((String[]) null, 74, (String) null, (kg) null, (byte) 117);
+            var27 = (BitmapFont) null;
+            vd.a((String[]) null, 74, (String) null, (BitmapFont) null, (byte) 117);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -489,12 +489,12 @@ final class vd {
 
     public static void clearStaticReferences(byte param0) {
         if (param0 >= -111) {
-          field_h = (kg) null;
+          field_h = (BitmapFont) null;
         }
         field_h = null;
     }
 
-    final void a(int param0, kg param1) {
+    final void a(int param0, BitmapFont param1) {
         ArgbSprite var16 = null;
         ArgbSprite var18 = null;
         int var7_int = 0;
@@ -652,7 +652,7 @@ final class vd {
             vd.a(-109);
           }
           var8 = SoftwareRasterizer.field_c >> 2;
-          var9 = this.field_m.a(param3);
+          var9 = this.field_m.stringWidth(param3);
           var10 = this.field_m.field_t + this.field_m.field_y;
           var11 = 1;
           if (var9 > var8 ||
@@ -666,11 +666,11 @@ final class vd {
               var13 = var9 / var8;
               var12 = 2 * ((var9 % var8 + var13 - 1) / var13) + var8;
             }
-            var11Lifetime1 = this.field_m.a(param3, new int[]{var12}, oi.field_l);
+            var11Lifetime1 = this.field_m.wrapText(param3, new int[]{var12}, oi.field_l);
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_m.a(oi.field_l[var13Lifetime2]);
+              var14 = this.field_m.stringWidth(oi.field_l[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -686,7 +686,7 @@ final class vd {
           }
           SoftwareRasterizer.drawRectangleOutline(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_g);
           SoftwareRasterizer.fillRectangle(1 + var12, var13Lifetime1 + 1, var9 - (-var5_int + 2), var10 + var6 - 2, this.field_n);
-          this.field_m.a(param3, var12 + this.field_c, this.field_l + var13Lifetime1, var9, var10, this.field_k, -1, 0, 0, var7);
+          this.field_m.drawParagraph(param3, var12 + this.field_c, this.field_l + var13Lifetime1, var9, var10, this.field_k, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -713,7 +713,7 @@ final class vd {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_m.a(param2);
+          var5_int = this.field_m.stringWidth(param2);
           var6 = this.field_m.field_D + this.field_m.field_t;
           var7 = param1;
           if (var5_int + (var7 + 6) > SoftwareRasterizer.field_c) {
@@ -728,7 +728,7 @@ final class vd {
           if (param0 != 89) {
             vd.clearStaticReferences((byte) -12);
           }
-          this.field_m.b(param2, var7 + 3, this.field_m.field_D + 3 + var8, this.field_k, -1);
+          this.field_m.drawString(param2, var7 + 3, this.field_m.field_D + 3 + var8, this.field_k, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

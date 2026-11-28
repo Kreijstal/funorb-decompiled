@@ -3,7 +3,7 @@
  */
 final class kk extends IntrusiveNode {
     of[] field_n;
-    static gp field_l;
+    static BinaryBitmapFont field_l;
     static String field_s;
     byte[] field_p;
     private int[] field_q;
@@ -17,7 +17,7 @@ final class kk extends IntrusiveNode {
 
     final static boolean d(int param0) {
         if (param0 != 0) {
-          field_l = (gp) null;
+          field_l = (BinaryBitmapFont) null;
         }
         return sl.b(15000);
     }
@@ -203,11 +203,11 @@ final class kk extends IntrusiveNode {
         }
     }
 
-    final static tj a(ResourceArchive param0, ResourceArchive param1, String param2, int param3, String param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, ResourceArchive param1, String param2, int param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        tj stackIn_1_0 = null;
+        CoverageBitmapFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

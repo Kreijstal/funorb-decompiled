@@ -15,7 +15,7 @@ abstract class c extends GameApplet {
     private long field_x;
     private int field_l;
     static de field_k;
-    static ee field_u;
+    static BitmapFont field_u;
 
     final void k(byte param0) {
         int discarded$2 = 0;
@@ -3335,7 +3335,7 @@ abstract class c extends GameApplet {
             }
             wd.a(31668);
             if (param0) {
-              field_u = (ee) null;
+              field_u = (BitmapFont) null;
             }
             AccountServiceResult.a(var2_int, -9, e.field_a);
             ve.field_a = true;
@@ -3865,7 +3865,7 @@ abstract class c extends GameApplet {
           var9.pack();
           var9.dispose();
           if (param5 <= 109) {
-            field_u = (ee) null;
+            field_u = (BitmapFont) null;
           }
           this.setBackground(java.awt.Color.black);
           EditableTextField.field_I = this.field_m;

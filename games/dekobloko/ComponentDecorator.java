@@ -393,7 +393,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
                   if (0 >= integerLocal28) {
                     stackStringLocal8 = sceneWidgetPart014Local21.stringState0606;
                   } else {
-                    stackStringLocal8 = BitmapFont.computeString1074(sceneWidgetPart014Local21.sceneWidgetState0147.bitmapFontState0020, sceneWidgetPart014Local21.stringState0606, integerLocal28);
+                    stackStringLocal8 = BitmapFont.truncateWithEllipsis(sceneWidgetPart014Local21.sceneWidgetState0147.bitmapFontState0020, sceneWidgetPart014Local21.stringState0606, integerLocal28);
                   }
                   stackSceneWidgetLocal7.stringState0598 = stackStringLocal8;
                   sceneWidgetPart014Local21.sceneWidgetState0147.performAction1764(integerLocal28, 0, integerLocal23, ComponentContainer.integerState0377, integerLocal27);

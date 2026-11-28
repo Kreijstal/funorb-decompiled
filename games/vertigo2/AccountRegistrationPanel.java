@@ -325,12 +325,12 @@ final class AccountRegistrationPanel extends WidgetContainer implements cm, ij, 
         this.field_Q.field_q = jk.field_c;
         this.field_T.field_q = PacketBuffer.field_s;
         this.field_R.field_q = pq.field_b;
-        this.field_H.a(true, new AccountNameAvailabilityValidator(this.field_H));
-        this.field_F.a(true, new EmailFormatValidator(this.field_F));
-        this.field_L.a(true, new ConfirmedEmailAvailabilityValidator(this.field_L, this.field_F));
-        this.field_U.a(true, new PasswordValidator(this.field_U, this.field_H, this.field_F));
-        this.field_Q.a(true, new MatchingFieldValidator(this.field_Q, this.field_U));
-        this.field_T.a(true, new AgeValidator(this.field_T));
+        this.field_H.setFieldValidator(true, new AccountNameAvailabilityValidator(this.field_H));
+        this.field_F.setFieldValidator(true, new EmailFormatValidator(this.field_F));
+        this.field_L.setFieldValidator(true, new ConfirmedEmailAvailabilityValidator(this.field_L, this.field_F));
+        this.field_U.setFieldValidator(true, new PasswordValidator(this.field_U, this.field_H, this.field_F));
+        this.field_Q.setFieldValidator(true, new MatchingFieldValidator(this.field_Q, this.field_U));
+        this.field_T.setFieldValidator(true, new AgeValidator(this.field_T));
         this.field_I.field_F = false;
         this.field_I.listener = (WidgetListener) ((Object) new vo());
         this.field_O.listener = (WidgetListener) ((Object) new jc());
@@ -516,7 +516,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements cm, ij, 
           return;
         }
         try {
-          ((EditableTextField) ((Object) var3)).a(var4, -74, false);
+          ((EditableTextField) ((Object) var3)).setText(var4, -74, false);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "mk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

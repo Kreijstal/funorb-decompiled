@@ -184,7 +184,7 @@ final class vg {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = tn.field_j.field_xb.b(var16) + 3 * tn.field_j.field_xb.a('.');
+              var10Lifetime1 = tn.field_j.field_xb.stringWidth(var16) + 3 * tn.field_j.field_xb.charWidth('.');
               if (16 == (DelegatingCanvas.field_c & 48)) {
                 var9 = var16 + ".";
               }

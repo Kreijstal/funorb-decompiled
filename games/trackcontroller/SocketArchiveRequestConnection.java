@@ -21,7 +21,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
           if (param2 > -108) {
             SocketArchiveRequestConnection.a(79, (byte) -19);
           }
-          stackIn_3_0 = bd.a(-31085, PcmSampleStream.a(param0, 100, param1));
+          stackIn_3_0 = bd.a(-31085, PcmSampleStream.createForPlaybackRate(param0, 100, param1));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -356,7 +356,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
           }
           while (var2 != null) {
             if (var2.field_k.isLinked(10000536)) {
-              var2.field_j.g(128 + var2.field_m * qd.field_d >> 8);
+              var2.field_j.setVolume(128 + var2.field_m * qd.field_d >> 8);
             } else {
               var2.unlink(-76);
             }
@@ -369,7 +369,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               if (!stackIn_13_0) {
                 var2Lifetime1.unlink(-33);
               } else {
-                var2Lifetime1.field_j.g(128 + qd.field_d * var2Lifetime1.field_m >> 8);
+                var2Lifetime1.field_j.setVolume(128 + qd.field_d * var2Lifetime1.field_m >> 8);
               }
               var2Lifetime1 = (li) (jk.field_c.next(10));
             }

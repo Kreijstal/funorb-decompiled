@@ -15,12 +15,12 @@ final class bj extends IntrusiveNode {
     static int field_q;
     static boolean field_m;
 
-    final static ce a(String param0, ResourceArchive param1, ResourceArchive param2, String param3, byte param4) {
+    final static BinaryBitmapFont a(String param0, ResourceArchive param1, ResourceArchive param2, String param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ce stackIn_2_0 = null;
-        ce stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_2_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -33,7 +33,7 @@ final class bj extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 38) {
-            stackIn_2_0 = (ce) null;
+            stackIn_2_0 = (BinaryBitmapFont) null;
             return stackIn_2_0;
           }
           var5_int = param1.getGroupIdByName(-92, param0);

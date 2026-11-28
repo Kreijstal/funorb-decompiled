@@ -301,19 +301,19 @@ final class mk {
         wq.field_k.draw(0, 0);
         InsanoSauceEvent.a(this.field_v, 34, 16762880, true, 444, false);
         wt.field_k.drawParagraph(BananarangEvent.field_s.field_g.field_o.field_a, 350, 40, 240, 100, 16777215, -1, 0, 1, 14);
-        jha.field_g.a(hl.field_G[2], 414, 178, 15204352, -1);
-        WidgetWrapper.field_z.a(hl.field_G[2], 414, 178, 65793, -1);
-        jha.field_g.a(hl.field_G[3], 412, 206, 818659, -1);
-        WidgetWrapper.field_z.a(hl.field_G[3], 412, 206, 65793, -1);
-        jha.field_g.a(hl.field_G[0], 414, 232, 16769792, -1);
-        WidgetWrapper.field_z.a(hl.field_G[0], 414, 232, 65793, -1);
+        jha.field_g.drawCentred(hl.field_G[2], 414, 178, 15204352, -1);
+        WidgetWrapper.field_z.drawCentred(hl.field_G[2], 414, 178, 65793, -1);
+        jha.field_g.drawCentred(hl.field_G[3], 412, 206, 818659, -1);
+        WidgetWrapper.field_z.drawCentred(hl.field_G[3], 412, 206, 65793, -1);
+        jha.field_g.drawCentred(hl.field_G[0], 414, 232, 16769792, -1);
+        WidgetWrapper.field_z.drawCentred(hl.field_G[0], 414, 232, 65793, -1);
         var3 = 11 / ((65 - param1) / 50);
-        jha.field_g.a(hl.field_G[1], 408, 259, 51233, -1);
-        WidgetWrapper.field_z.a(hl.field_G[1], 408, 259, 65793, -1);
-        jha.field_g.a(DelegatingCanvas.field_a, 180, 428, 16776960, -1);
-        WidgetWrapper.field_z.a(DelegatingCanvas.field_a, 180, 428, 65793, -1);
-        jha.field_g.a(MovementAnimation.field_o, 180, 32, 16776960, -1);
-        WidgetWrapper.field_z.a(MovementAnimation.field_o, 180, 32, 65793, -1);
+        jha.field_g.drawCentred(hl.field_G[1], 408, 259, 51233, -1);
+        WidgetWrapper.field_z.drawCentred(hl.field_G[1], 408, 259, 65793, -1);
+        jha.field_g.drawCentred(DelegatingCanvas.field_a, 180, 428, 16776960, -1);
+        WidgetWrapper.field_z.drawCentred(DelegatingCanvas.field_a, 180, 428, 65793, -1);
+        jha.field_g.drawCentred(MovementAnimation.field_o, 180, 32, 16776960, -1);
+        WidgetWrapper.field_z.drawCentred(MovementAnimation.field_o, 180, 32, 65793, -1);
         if (!this.field_s.field_A) {
           this.field_s.a(8);
         }
@@ -333,8 +333,8 @@ final class mk {
         stackIn_7_2 = 522;
         stackIn_7_3 = 342;
         stackIn_8_4 = (!this.field_u.field_T) ? 16777215 : 16776960;
-        ((BinaryBitmapFont) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, -1);
-        WidgetWrapper.field_z.a(di.field_l, 522, 342, 65793, -1);
+        ((BinaryBitmapFont) (Object) stackIn_7_0).drawCentred(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, -1);
+        WidgetWrapper.field_z.drawCentred(di.field_l, 522, 342, 65793, -1);
         for (var5 = 0; var5 < BananarangEvent.field_s.field_g.field_m.length; var5++) {
           if (BananarangEvent.field_s.field_g.field_m[var5] != -1) {
             regionExit1: {
@@ -724,7 +724,7 @@ final class mk {
           BananarangEvent.field_v.field_A = RageSpecial.field_p;
           BananarangEvent.field_v.field_db = BattleState.field_I;
           BananarangEvent.field_v.field_N = 1;
-          this.field_u = new UiComponent("confirm", BananarangEvent.field_v, 470, 320, jha.field_g.a(di.field_l) + 40, 40, di.field_l);
+          this.field_u = new UiComponent("confirm", BananarangEvent.field_v, 470, 320, jha.field_g.stringWidth(di.field_l) + 40, 40, di.field_l);
           SleepAnimation.field_w = new hw[5];
           bf.field_g = new hw[15];
           uma.n(1);

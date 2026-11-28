@@ -74,7 +74,7 @@ class EditableTextField extends bb {
         }
     }
 
-    final void r(int param0) {
+    final void clearText(int param0) {
         this.field_M = 0;
         this.field_K = 0;
         this.field_i = "";
@@ -141,13 +141,13 @@ class EditableTextField extends bb {
             } else {
               stackIn_5_1 = var8_int;
             }
-            this.a(stackIn_5_1, -57);
+            this.moveCaret(stackIn_5_1, -57);
             var8_long = lj.correctedCurrentTimeMillis((byte) -93);
             stackIn_8_1 = !(var8_long - this.field_L >= 250L);
             this.field_R = stackIn_8_1;
             if (this.field_R) {
-              this.field_K = this.j(127);
-              this.field_M = this.l(32);
+              this.field_K = this.findPreviousWordBoundary(127);
+              this.field_M = this.findNextWordBoundary(32);
               if (this.field_M > 0 &&
                 32 == this.field_i.charAt(-1 + this.field_M)) {
                 this.field_M = this.field_M - 1;
@@ -203,7 +203,7 @@ class EditableTextField extends bb {
         try {
           this.field_p = DisplayNameSelectionPanel.field_M.field_l;
           this.field_O = param2;
-          this.a(true, (byte) -78, param0);
+          this.setText(true, (byte) -78, param0);
           this.field_T = true;
           this.field_Q = lj.correctedCurrentTimeMillis((byte) -19);
         } catch (RuntimeException runtimeException) {
@@ -211,7 +211,7 @@ class EditableTextField extends bb {
         }
     }
 
-    private final void m(int param0) {
+    private final void scrollCaretIntoView(int param0) {
         ne var3;
         int var4;
         int var5;
@@ -269,7 +269,7 @@ class EditableTextField extends bb {
         this.deleteSelection(false);
     }
 
-    private final int j(int param0) {
+    private final int findPreviousWordBoundary(int param0) {
         int var2;
         int var3;
         var3 = fleas.field_A ? 1 : 0;
@@ -278,7 +278,7 @@ class EditableTextField extends bb {
         }
         var2 = -1 + this.field_M;
         if (param0 <= 79) {
-          this.r(-57);
+          this.clearText(-57);
         }
         while (var2 > 0) {
           if (this.field_i.charAt(var2 - 1) != 32) {
@@ -290,7 +290,7 @@ class EditableTextField extends bb {
         return var2;
     }
 
-    final void a(boolean param0, byte param1, String param2) {
+    final void setText(boolean param0, byte param1, String param2) {
         int dupTemp$2 = 0;
         int var4_int = 0;
         RuntimeException stackIn_14_0 = null;
@@ -332,10 +332,10 @@ class EditableTextField extends bb {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void moveCaret(int param0, int param1) {
         int discarded$0 = 0;
         if (param1 > -27) {
-          discarded$0 = this.j(-45);
+          discarded$0 = this.findPreviousWordBoundary(-45);
         }
         this.field_M = param0;
         if (!MidiPcmStream.field_H[81]) {
@@ -370,7 +370,7 @@ class EditableTextField extends bb {
         return this.field_i.substring(var2, var3);
     }
 
-    final static void a(int param0, byte param1, int param2, RgbSprite[] param3, int param4, int param5, fa param6, RgbSprite[] param7, int param8, int param9, boolean param10, int param11) {
+    final static void a(int param0, byte param1, int param2, RgbSprite[] param3, int param4, int param5, BitmapFont param6, RgbSprite[] param7, int param8, int param9, boolean param10, int param11) {
         try {
           ib.a(param0, param9, param6, param3, param7, param2, 0, param8, param4, param2, param9, param5, param11, param10, param6);
           if (param1 <= 66) {
@@ -394,7 +394,7 @@ class EditableTextField extends bb {
           if (param3 >= -85) {
             this.field_N = 68;
           }
-          this.m(127);
+          this.scrollCaretIntoView(127);
           if (this.field_v == 1) {
             if (this.field_p instanceof eg) {
               var7 = (eg) ((Object) this.field_p);
@@ -486,17 +486,17 @@ class EditableTextField extends bb {
                 }
               } else {
                 if (param1 == 13) {
-                  this.r(32);
+                  this.clearText(32);
                   return true;
                 }
                 if (param1 != 96) {
                   if (param1 != 97) {
                     if (102 == param1) {
-                      this.a(0, -47);
+                      this.moveCaret(0, -47);
                       return true;
                     }
                     if (103 == param1) {
-                      this.a(this.field_i.length(), -92);
+                      this.moveCaret(this.field_i.length(), -92);
                       return true;
                     }
                     if (param1 == 84) {
@@ -523,20 +523,20 @@ class EditableTextField extends bb {
                       if (!MidiPcmStream.field_H[82]) {
                         stackIn_40_1 = this.field_M + 1;
                       } else {
-                        stackIn_40_1 = this.l(32);
+                        stackIn_40_1 = this.findNextWordBoundary(32);
                       }
-                      this.a(stackIn_40_1, -72);
+                      this.moveCaret(stackIn_40_1, -72);
                       return true;
                     }
                   }
                 } else {
                   if (this.field_M > 0) {
                     if (MidiPcmStream.field_H[82]) {
-                      stackIn_32_1 = this.j(param0 ^ -100);
+                      stackIn_32_1 = this.findPreviousWordBoundary(param0 ^ -100);
                     } else {
                       stackIn_32_1 = this.field_M - 1;
                     }
-                    this.a(stackIn_32_1, -127);
+                    this.moveCaret(stackIn_32_1, -127);
                     return true;
                   }
                 }
@@ -559,7 +559,7 @@ class EditableTextField extends bb {
         }
     }
 
-    private final int l(int param0) {
+    private final int findNextWordBoundary(int param0) {
         int var2;
         int var3;
         int var4;

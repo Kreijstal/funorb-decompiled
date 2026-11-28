@@ -225,7 +225,7 @@ final class MixedSupport138 {
               objectLocal24 = stringLocal32;
               objectLocal24 = stringLocal32;
               objectLocal24 = stringLocal32;
-              integerLocal36 = MixedSupport121.sceneWidgetState0117.bitmapFontState0020.computeInteger1066(stringLocal32) + 3 * MixedSupport121.sceneWidgetState0117.bitmapFontState0020.computeInteger1064('.');
+              integerLocal36 = MixedSupport121.sceneWidgetState0117.bitmapFontState0020.stringWidth(stringLocal32) + 3 * MixedSupport121.sceneWidgetState0117.bitmapFontState0020.charWidth('.');
               MixedSupport121.sceneWidgetState0117.integerState0916 = 0;
               MixedSupport121.sceneWidgetState0117.integerState0893 = (-integerLocal36 + MixedSupport121.sceneWidgetState0117.integerState0896) / 2;
               if ((48 & UiComponentPart020.integerState0552) == 16) {

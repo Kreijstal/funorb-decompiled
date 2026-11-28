@@ -38,8 +38,8 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
     }
 
     final void b(boolean param0) {
-        this.field_Q.j((byte) -108);
-        this.field_H.j((byte) -69);
+        this.field_Q.clearText((byte) -108);
+        this.field_H.clearText((byte) -69);
         if (param0) {
           field_E = -85;
         }
@@ -360,8 +360,8 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         try {
           var3 = this.field_Q;
           var4 = param1;
-          var3.a((byte) 123, var4, false);
-          this.field_H.j((byte) 101);
+          var3.setText((byte) 123, var4, false);
+          this.field_H.clearText((byte) 101);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ph.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

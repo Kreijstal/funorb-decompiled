@@ -81,7 +81,7 @@ final class np extends UiPanel {
           for (var12 = 0; sd.field_M.length > var12; var12++) {
             var13 = new UiPanel(0L, param3, qr.field_k[var12]);
             var14 = new UiPanel(0L, param3, sd.field_M[var12]);
-            var15 = param3.field_z.c(sd.field_M[var12]);
+            var15 = param3.field_z.stringWidth(sd.field_M[var12]);
             var13.a(115, 65, 15, var10, 20);
             if (var11 < var15) {
               var11 = var15;

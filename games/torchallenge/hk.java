@@ -51,7 +51,7 @@ final class hk {
                   decompiledFrameRemainder0 = !(var4 < 0);
                   if (decompiledFrameRemainder0) {
                     var3 = cj.field_h[var4];
-                    SpriteState.field_r[var5] = RawPcmStream.a(var3, 100, var1_int);
+                    SpriteState.field_r[var5] = RawPcmStream.createForPlaybackRate(var3, 100, var1_int);
                     SpriteState.field_r[var5].e(-1);
                     SpriteState.field_r[var5].e(0, var3.field_k.length);
                     IntrusiveNode.field_g[var5] = we.a(SpriteState.field_r[var5], 6222);

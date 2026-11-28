@@ -183,9 +183,9 @@ final class bd extends g implements qh {
         if (param3 != 0) {
           return;
         }
-        ee var5 = j.field_C;
+        BitmapFont var5 = j.field_C;
         if (this.field_E != null) {
-          var5.a(cb.field_h, param0 + this.field_o, param1 + this.field_i, this.field_h, 20, 16777215, -1, 0, 0, var5.field_s + var5.field_x);
+          var5.drawParagraph(cb.field_h, param0 + this.field_o, param1 + this.field_i, this.field_h, 20, 16777215, -1, 0, 0, var5.field_s + var5.field_x);
           if (param2 != -1) {
             var6 = (lk) null;
             this.a('\034', (byte) 54, 78, (lk) null);

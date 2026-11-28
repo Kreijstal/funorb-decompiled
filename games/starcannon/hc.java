@@ -203,7 +203,7 @@ final class hc {
         }
     }
 
-    final static void a(int param0, qe param1, int param2, qe param3, int param4, gi param5, int param6, int param7, int param8, int param9, gi param10, int param11, gi param12, byte param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, BitmapFont param1, int param2, BitmapFont param3, int param4, gi param5, int param6, int param7, int param8, int param9, gi param10, int param11, gi param12, byte param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

@@ -88,12 +88,12 @@ final class gi {
         return true;
     }
 
-    final static o a(byte[] param0, int param1) {
+    final static CoverageBitmapFont a(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        o var3 = null;
+        CoverageBitmapFont var3 = null;
         Object stackIn_2_0 = null;
-        o stackIn_4_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -101,10 +101,10 @@ final class gi {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (o) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
           var2_int = -90 % ((param1 + 48) / 34);
-          var3 = new o(param0, ConfirmedEmailAvailabilityValidator.field_n, ae.field_c, ih.field_V, qh.field_i, he.field_k, ph.field_c);
+          var3 = new CoverageBitmapFont(param0, ConfirmedEmailAvailabilityValidator.field_n, ae.field_c, ih.field_V, qh.field_i, he.field_k, ph.field_c);
           vb.a((byte) 122);
           stackIn_4_0 = var3;
           return stackIn_4_0;

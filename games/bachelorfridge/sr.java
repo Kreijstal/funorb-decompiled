@@ -190,7 +190,7 @@ final class sr {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = cw.field_yb.field_jb.a(var16) + cw.field_yb.field_jb.a('.') * 3;
+              var10Lifetime1 = cw.field_yb.field_jb.stringWidth(var16) + cw.field_yb.field_jb.charWidth('.') * 3;
               cw.field_yb.field_N = 0;
               if ((MoveEventAnimation.field_v & 48) == 16) {
                 var9 = var16 + ".";

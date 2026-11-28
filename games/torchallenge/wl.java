@@ -74,13 +74,13 @@ final class wl {
             }
             if (fa.field_g >= 2) {
               var8 = "FPS:" + oh.field_e;
-              tf.field_x.b(var8, 636, 80, 0, -1);
+              tf.field_x.drawRightAligned(var8, 636, 80, 0, -1);
               var3 = Runtime.getRuntime().totalMemory();
               var5 = Runtime.getRuntime().freeMemory();
               var9 = (-var5 + var3) / 1024L + " kB / " + var3 / 1024L + " kB";
-              tf.field_x.b(var9, 636, 100, 0, -1);
+              tf.field_x.drawRightAligned(var9, 636, 100, 0, -1);
               if (g.a(84, 0)) {
-                tf.field_x.b("" + qh.field_J, 636, 120, 0, -1);
+                tf.field_x.drawRightAligned("" + qh.field_J, 636, 120, 0, -1);
               }
             }
             stackIn_34_0 = 140;
@@ -515,7 +515,7 @@ final class wl {
         if (var2 != null) {
           var18 = fk.field_t;
           var7 = 220;
-          var5 = tf.field_x.a(BufferedSocket.field_n[var20_ref.field_i]);
+          var5 = tf.field_x.stringWidth(BufferedSocket.field_n[var20_ref.field_i]);
           if (80 > var18) {
             var17 = -32 + var18 / 2;
           } else {
@@ -539,7 +539,7 @@ final class wl {
           var8Lifetime1 = var15 + 40;
           var3 = BufferedSocket.field_n[var20_ref.field_i];
           var10Lifetime1 = -(var6 >> 1) + (1 + (var16 + (var13 >> 1) + 18));
-          tf.field_x.c(var3, var8Lifetime1 + var7, var10Lifetime1 + var9, 0, -1);
+          tf.field_x.drawString(var3, var8Lifetime1 + var7, var10Lifetime1 + var9, 0, -1);
           return;
         }
     }

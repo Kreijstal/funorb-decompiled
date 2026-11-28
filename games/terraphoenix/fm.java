@@ -5,11 +5,11 @@ final class fm {
     static bh field_b;
     static String field_a;
 
-    final static ud a(byte[] param0, int param1) {
-        ud var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, int param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        ud stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -17,12 +17,12 @@ final class fm {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (ud) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param1 <= 25) {
             fm.clearStaticReferences(-84);
           }
-          var2 = new ud(param0, ConfirmedEmailAvailabilityValidator.field_s, hj.field_K, sb.field_m, ArchiveRequest.field_p, qc.field_b);
+          var2 = new BinaryBitmapFont(param0, ConfirmedEmailAvailabilityValidator.field_s, hj.field_K, sb.field_m, ArchiveRequest.field_p, qc.field_b);
           SocketConnector.a((byte) 101);
           stackIn_6_0 = var2;
           return stackIn_6_0;

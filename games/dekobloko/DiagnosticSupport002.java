@@ -67,7 +67,7 @@ final class DiagnosticSupport002 extends RuntimeException {
           integerLocal1 = MixedSupport076.framebufferState0001.integerState0190;
           int integerLocal5 = 66 / ((byteArgument1 - 29) / 46);
           integerLocal2 = MixedSupport076.framebufferState0001.integerState0191;
-          integerLocal3 = MixedSupport033.sceneWidgetState0024.bitmapFontState0020.computeInteger1081(stringArgument2, 272, MixedSupport033.sceneWidgetState0024.integerState0908);
+          integerLocal3 = MixedSupport033.sceneWidgetState0024.bitmapFontState0020.textHeight(stringArgument2, 272, MixedSupport033.sceneWidgetState0024.integerState0908);
           integerLocal4 = 7 + integerLocal2 / 2 + (-110 - integerLocal3 / 2);
           SceneWidgetPart011.sceneWidgetState0115.performAction1764(320, 0, integerLocal4, -(integerLocal4 * 2) - 120 + integerLocal2, (integerLocal1 - 320) / 2);
           SceneWidgetPart011.sceneWidgetState0115.rgbSpriteArrayState0033 = RichTextLayout.computeRgbSpriteArray0390(2105376, -20982, 3, SceneWidgetPart011.sceneWidgetState0115.integerState0915, 8421504, 11579568);

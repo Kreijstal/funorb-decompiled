@@ -1114,7 +1114,7 @@ final class MapTile {
               this.field_a = true;
               if (this.field_b < 0) {
                 if (null != this.map.editor) {
-                  FrameTimer.field_f.c("N", param0 - 12, var8Lifetime1, 16711680, -1);
+                  FrameTimer.field_f.drawCentred("N", param0 - 12, var8Lifetime1, 16711680, -1);
                 }
                 if (var9Lifetime1 != null) {
                   ((Sprite) (var9Lifetime1)).a();

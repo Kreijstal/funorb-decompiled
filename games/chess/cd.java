@@ -6,7 +6,7 @@ final class cd extends pk {
     private int field_v;
     private String field_m;
     static w field_x;
-    private lh field_t;
+    private BitmapFont field_t;
     private int field_o;
     static int field_p;
     boolean field_u;
@@ -36,7 +36,7 @@ final class cd extends pk {
           return;
         }
         if (null != this.field_t) {
-          this.field_t.b(this.field_m, this.field_q.field_j / 2 + this.field_i, this.field_t.field_G / 2 + (this.field_q.field_i / 2 + this.field_k), this.field_o, this.field_n);
+          this.field_t.drawCentred(this.field_m, this.field_q.field_j / 2 + this.field_i, this.field_t.field_G / 2 + (this.field_q.field_i / 2 + this.field_k), this.field_o, this.field_n);
         }
     }
 
@@ -88,7 +88,7 @@ final class cd extends pk {
         if (param0 == -9) {
           return this.field_q.b(this.field_i, this.field_k, BufferedSocket.field_k, rf.field_b);
         }
-        this.field_t = (lh) null;
+        this.field_t = (BitmapFont) null;
         return this.field_q.b(this.field_i, this.field_k, BufferedSocket.field_k, rf.field_b);
     }
 

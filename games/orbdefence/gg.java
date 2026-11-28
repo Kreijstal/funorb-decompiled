@@ -7,7 +7,7 @@ final class gg extends ej implements ai {
     static int[] field_O;
     static int field_N;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, kc param7, kc param8, int param9, int param10, int param11, pf param12, int param13, int param14, pf param15, int param16, pf param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, BitmapFont param8, int param9, int param10, int param11, pf param12, int param13, int param14, pf param15, int param16, pf param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

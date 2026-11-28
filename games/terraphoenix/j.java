@@ -95,7 +95,7 @@ final class j extends jc {
           this.field_Q = param6;
           this.field_O = param7;
           var12_int = -this.field_O + this.field_Q;
-          var13 = this.field_A.a(param10, var12_int, this.field_A.field_s) + this.field_O * 2;
+          var13 = this.field_A.textHeight(param10, var12_int, this.field_A.field_s) + this.field_O * 2;
           if (var13 > param3) {
             this.a(param1, (byte) 49, param2, param0, var13);
           } else {
@@ -147,7 +147,7 @@ final class j extends jc {
           super.a(param0, -113, param2, param3);
           if (param2 == 0) {
             var7 = this.field_M ? -(this.field_O * 2) + this.width - this.field_Q : 0;
-            this.field_A.a(this.field_L, this.field_O + var7 + var5, var6 + this.field_O, -this.field_O + this.field_Q, this.height - this.field_O * 2, this.field_S, -1, this.field_M ? 0 : 2, 1, this.field_A.field_s);
+            this.field_A.drawParagraph(this.field_L, this.field_O + var7 + var5, var6 + this.field_O, -this.field_O + this.field_Q, this.height - this.field_O * 2, this.field_S, -1, this.field_M ? 0 : 2, 1, this.field_A.field_s);
             return;
           }
           return;
@@ -156,7 +156,7 @@ final class j extends jc {
         super.a(param0, -113, param2, param3);
         if (param2 == 0) {
           var7Lifetime1 = this.field_M ? -(this.field_O * 2) + this.width - this.field_Q : 0;
-          this.field_A.a(this.field_L, this.field_O + var7Lifetime1 + var5, var6Lifetime1 + this.field_O, -this.field_O + this.field_Q, this.height - this.field_O * 2, this.field_S, -1, this.field_M ? 0 : 2, 1, this.field_A.field_s);
+          this.field_A.drawParagraph(this.field_L, this.field_O + var7Lifetime1 + var5, var6Lifetime1 + this.field_O, -this.field_O + this.field_Q, this.height - this.field_O * 2, this.field_S, -1, this.field_M ? 0 : 2, 1, this.field_A.field_s);
           return;
         }
     }

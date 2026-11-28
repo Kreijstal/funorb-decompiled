@@ -218,9 +218,9 @@ final class ina extends bi {
         var8 = this.a(872364388, var6);
         var8.a((210 - var8.field_n >> 1) + 390, -(var8.field_o >> 1) + 235, 160);
         if (this.b(var2, true)) {
-          fn.field_n.a(DualLinkNode.field_g, 495, 265, 10, -1);
+          fn.field_n.drawCentred(DualLinkNode.field_g, 495, 265, 10, -1);
         } else {
-          fn.field_n.a(ed.field_e, 495, 265, 10, -1);
+          fn.field_n.drawCentred(ed.field_e, 495, 265, 10, -1);
         }
         var9 = wt.field_k;
         ((BitmapFont) ((Object) var9)).drawParagraph(var7, 400, 275, 190, 100, 16777215, -1, 3, 0, ((BitmapFont) ((Object) var9)).field_u);
@@ -364,7 +364,7 @@ final class ina extends bi {
           }
           if (!param1.equals(this.field_m)) {
             var3 = jha.field_g;
-            var4 = ((BitmapFont) ((Object) var3)).a(param1);
+            var4 = ((BitmapFont) ((Object) var3)).stringWidth(param1);
             var5 = 30 + var4;
             var6 = ((BitmapFont) ((Object) var3)).field_u << 1;
             var7 = new Sprite(var5, var6);
@@ -379,7 +379,7 @@ final class ina extends bi {
             this.field_l.b();
             var8Lifetime1 = DiveBomberAnimation.a(768, m.field_a, -2147483648) - 384;
             MassPoisonEvent.a(false, var6 << 3, var5 << 4, 4096, 4096, var6 << 4, var5 << 3, var8Lifetime1, var7);
-            ((BitmapFont) ((Object) var3)).a(param1, var5, (9 * var6 >> 3) - 2, -16711423, -1);
+            ((BitmapFont) ((Object) var3)).drawCentred(param1, var5, (9 * var6 >> 3) - 2, -16711423, -1);
             db.b(104);
             this.field_l.trimTransparentBorders();
             this.field_m = param1;

@@ -54,7 +54,7 @@ final class ri extends e {
           ml.a(param1 + param3.field_y, 1, this.field_t, param4 + param3.field_z + (-this.field_t[0].field_r + param3.field_j >> 1), param3.field_u, var7);
           stackIn_19_0 = (param2) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
-          this.field_j.a(param3.field_i, param3.field_y + param1, -2 + (param4 + param3.field_z), param3.field_u, param3.field_j, var8, -1, 1, 1, this.field_j.field_H);
+          this.field_j.drawParagraph(param3.field_i, param3.field_y + param1, -2 + (param4 + param3.field_z), param3.field_u, param3.field_j, var8, -1, 1, 1, this.field_j.field_H);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ final class ri extends e {
         this.field_y = param0;
     }
 
-    final static void a(RgbSprite[] param0, int param1, fa param2, int param3, int param4, boolean param5, int param6, int param7, fa param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, RgbSprite[] param16, RgbSprite[] param17, int param18, int param19, int param20) {
+    final static void a(RgbSprite[] param0, int param1, BitmapFont param2, int param3, int param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, RgbSprite[] param16, RgbSprite[] param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

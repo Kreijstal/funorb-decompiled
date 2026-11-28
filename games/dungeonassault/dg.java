@@ -12,9 +12,9 @@ final class dg extends da {
     private String field_K;
     private boolean field_N;
     static String field_P;
-    private se field_M;
+    private BitmapFont field_M;
 
-    dg(int param0, int param1, int param2, int param3, lm param4, boolean param5, int param6, int param7, se param8, int param9, String param10) {
+    dg(int param0, int param1, int param2, int param3, lm param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (ca) null, (pg) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -40,7 +40,7 @@ final class dg extends da {
           this.field_K = param10;
           this.field_F = param7;
           var12_int = this.field_J - this.field_F;
-          var13 = this.field_M.a(param10, var12_int, this.field_M.field_H) + this.field_F * 2;
+          var13 = this.field_M.textHeight(param10, var12_int, this.field_M.field_H) + this.field_F * 2;
           if (var13 > param3) {
             this.b(0, param2, param1, param0, var13);
           } else {
@@ -87,7 +87,7 @@ final class dg extends da {
         super.a(param0, param1, 0, param3);
         if (param0 == param2) {
           var7 = this.field_N ? -(2 * this.field_F) + (-this.field_J + this.field_x) : 0;
-          this.field_M.a(this.field_K, this.field_F + (var7 + var5), var6 + this.field_F, -this.field_F + this.field_J, this.field_s - this.field_F * 2, this.field_I, -1, this.field_N ? 0 : 2, 1, this.field_M.field_H);
+          this.field_M.drawParagraph(this.field_K, this.field_F + (var7 + var5), var6 + this.field_F, -this.field_F + this.field_J, this.field_s - this.field_F * 2, this.field_I, -1, this.field_N ? 0 : 2, 1, this.field_M.field_H);
           return;
         }
     }

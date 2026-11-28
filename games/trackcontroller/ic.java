@@ -535,19 +535,19 @@ class ic implements t, dl {
             if (var12Lifetime1 != 0 &&
               3 != var12Lifetime1) {
               if (var12Lifetime1 == 1) {
-                this.field_k.b(this.c((byte) 100, param0), this.a(param3, param4, param0, (byte) -66) + (var9_int >> 1), this.a(param5, param2, param0, 78) + var11, param7, param1);
+                this.field_k.drawCentred(this.c((byte) 100, param0), this.a(param3, param4, param0, (byte) -66) + (var9_int >> 1), this.a(param5, param2, param0, 78) + var11, param7, param1);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_k.a(this.c((byte) 118, param0), var9_int + this.a(param3, param4, param0, (byte) -125), this.a(param5, param2, param0, 124) + var11, param7, param1);
+                  this.field_k.drawRightAligned(this.c((byte) 118, param0), var9_int + this.a(param3, param4, param0, (byte) -125), this.a(param5, param2, param0, 124) + var11, param7, param1);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_k.c(this.c((byte) 95, param0), this.a(param3, param4, param0, (byte) -112), var11 + this.a(param5, param2, param0, 123), param7, param1);
+              this.field_k.drawString(this.c((byte) 95, param0), this.a(param3, param4, param0, (byte) -112), var11 + this.a(param5, param2, param0, 123), param7, param1);
             }
           } else {
-            this.field_k.a(this.c((byte) 86, param0), this.a(param3, param4, param0, (byte) -45), this.a(param5, param2, param0, 37), var9_int, var10, param7, param1, this.field_f, this.field_l, this.field_n);
+            this.field_k.drawParagraph(this.c((byte) 86, param0), this.a(param3, param4, param0, (byte) -45), this.a(param5, param2, param0, 37), var9_int, var10, param7, param1, this.field_f, this.field_l, this.field_n);
           }
           if (param6 != -114) {
             return;

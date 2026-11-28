@@ -318,7 +318,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
                 MixedSupport010.integerState0067 = MixedSupport010.integerState0067 + 1;
               }
               stringLocal11 = NetworkSupport006.computeString1023(106, mixedSupport056Local7);
-              stringLocal12 = stringLocal11 + BitmapFont.computeString1084(mixedSupport056Local7.stringState0241);
+              stringLocal12 = stringLocal11 + BitmapFont.escapeMarkup(mixedSupport056Local7.stringState0241);
               integerLocal13 = SceneWidgetPart011.computeInteger1572(byteArgument1 ^ 4651, mixedSupport056Local7);
               mixedSupport056Local7.sceneWidgetState0049 = new SceneWidget(0L, MixedSupport040.sceneWidgetState0032, stringLocal12);
               integerLocal4 = integerLocal4 + integerArgument2;

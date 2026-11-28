@@ -6,7 +6,7 @@ final class od {
     private int field_a;
     static String field_c;
     private int field_d;
-    static ie field_f;
+    static BinaryBitmapFont field_f;
     private SecondaryNodeDeque field_e;
 
     private final void a(Object param0, long param1, boolean param2, int param3) {
@@ -143,7 +143,7 @@ final class od {
         field_f = null;
         field_c = null;
         if (param0 != 0) {
-          field_f = (ie) null;
+          field_f = (BinaryBitmapFont) null;
         }
     }
 

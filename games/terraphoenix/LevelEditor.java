@@ -379,18 +379,18 @@ final class LevelEditor {
     }
 
     private final void a(boolean param0, String param1, int param2, int param3, int param4) {
-        AccountRequestState.field_f.a(param1, param4 + 3, param2 + 3, 8421504, -1);
-        AccountRequestState.field_f.a(param1, param4 + 2, param2 + 2, 8421504, -1);
+        AccountRequestState.field_f.drawRightAligned(param1, param4 + 3, param2 + 3, 8421504, -1);
+        AccountRequestState.field_f.drawRightAligned(param1, param4 + 2, param2 + 2, 8421504, -1);
         if (param0) {
           return;
         }
         try {
-          AccountRequestState.field_f.a(param1, 1 + param4, param2 + 1, 8421504, -1);
-          AccountRequestState.field_f.a(param1, param4 + 1, param2, 0, -1);
-          AccountRequestState.field_f.a(param1, param4 - 1, param2, 0, -1);
-          AccountRequestState.field_f.a(param1, param4, -1 + param2, 0, -1);
-          AccountRequestState.field_f.a(param1, param4, param2 + 1, 0, -1);
-          AccountRequestState.field_f.a(param1, param4, param2, param3, -1);
+          AccountRequestState.field_f.drawRightAligned(param1, 1 + param4, param2 + 1, 8421504, -1);
+          AccountRequestState.field_f.drawRightAligned(param1, param4 + 1, param2, 0, -1);
+          AccountRequestState.field_f.drawRightAligned(param1, param4 - 1, param2, 0, -1);
+          AccountRequestState.field_f.drawRightAligned(param1, param4, -1 + param2, 0, -1);
+          AccountRequestState.field_f.drawRightAligned(param1, param4, param2 + 1, 0, -1);
+          AccountRequestState.field_f.drawRightAligned(param1, param4, param2, param3, -1);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "mk.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -489,16 +489,16 @@ final class LevelEditor {
         int var3Lifetime1;
         int var3Lifetime2;
         var7 = Terraphoenix.field_V;
-        FrameTimer.field_f.b(PasswordValidator.field_n[this.field_c], 24, 24, 0, -1);
+        FrameTimer.field_f.drawString(PasswordValidator.field_n[this.field_c], 24, 24, 0, -1);
         if (this.map != null) {
-          FrameTimer.field_f.b("MAP: " + this.map.field_b + " x " + this.map.field_e, 24, 48, 16711935, -1);
-          FrameTimer.field_f.b("Level:" + tg.field_l, 24, 72, 16711935, -1);
+          FrameTimer.field_f.drawString("MAP: " + this.map.field_b + " x " + this.map.field_e, 24, 48, 16711935, -1);
+          FrameTimer.field_f.drawString("Level:" + tg.field_l, 24, 72, 16711935, -1);
           this.map.d(-125);
           if (var7 != 0) {
-            FrameTimer.field_f.b("MAP IS NULL", 24, 48, 16711680, -1);
+            FrameTimer.field_f.drawString("MAP IS NULL", 24, 48, 16711680, -1);
           }
         } else {
-          FrameTimer.field_f.b("MAP IS NULL", 24, 48, 16711680, -1);
+          FrameTimer.field_f.drawString("MAP IS NULL", 24, 48, 16711680, -1);
         }
         if (this.field_a < 0) {
           this.field_a = 0;
@@ -620,7 +620,7 @@ final class LevelEditor {
         this.a(false, "WISH TO KEEP", var3Lifetime2, 16711680, var2Lifetime2);
         var3Lifetime2 += 14;
         if (null != fg.field_c) {
-          FrameTimer.field_f.b(fg.field_c, 24, 456, j.field_R, -1);
+          FrameTimer.field_f.drawString(fg.field_c, 24, 456, j.field_R, -1);
         }
     }
 

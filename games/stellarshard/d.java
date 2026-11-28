@@ -62,7 +62,7 @@ final class d extends p {
 
     private final void a(int param0, int param1) {
         if (this.field_B[param0] != null) {
-          this.field_B[param0].f(param1 * 256 / AudioMixer.field_m);
+          this.field_B[param0].setSampleStepMagnitude(param1 * 256 / AudioMixer.field_m);
         }
     }
 

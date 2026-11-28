@@ -177,7 +177,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
         int var6Lifetime1;
         var13 = Terraphoenix.field_V;
         try {
-          var5_int = param1.b(param0);
+          var5_int = param1.stringWidth(param0);
           if (param4 >= var5_int &&
             param0.indexOf("<br>") == -1) {
             param3[0] = param0;
@@ -198,7 +198,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param0.substring(var7, 1 + var9).trim();
-              var12 = param1.b(var11);
+              var12 = param1.stringWidth(var11);
               if (var12 >= param4) {
                 incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;

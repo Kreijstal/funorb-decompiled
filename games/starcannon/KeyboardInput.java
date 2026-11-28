@@ -264,10 +264,10 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               var1_int = var1_int + kc.field_S;
             }
             if (var4 >= 0) {
-              ai.field_h.a(var6, var8Lifetime1, var1_int + LoginPanel.field_D, var5, -1);
+              ai.field_h.drawString(var6, var8Lifetime1, var1_int + LoginPanel.field_D, var5, -1);
               var1_int = var1_int + (pk.field_c + (kc.field_S + mc.field_h));
             } else {
-              rh.field_h.a(var6, var8Lifetime1, kf.field_v + var1_int, var5, -1);
+              rh.field_h.drawString(var6, var8Lifetime1, kf.field_v + var1_int, var5, -1);
               var1_int = var1_int + sg.field_e;
             }
           }

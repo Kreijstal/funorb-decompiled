@@ -11,14 +11,14 @@ final class sb extends aa {
     private int field_p;
     private int field_i;
     static int field_f;
-    static vk field_r;
+    static BinaryBitmapFont field_r;
     static long field_e;
     static int[] field_l;
     static String field_q;
-    private ta field_d;
+    private BitmapFont field_d;
     static char[] field_n;
 
-    private final be a(ta param0, int param1, int param2, String param3) {
+    private final be a(BitmapFont param0, int param1, int param2, String param3) {
         be var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -98,7 +98,7 @@ final class sb extends aa {
         return stackIn_5_0;
     }
 
-    final void a(byte param0, ta param1, String param2, int param3, int param4) {
+    final void a(byte param0, BitmapFont param1, String param2, int param3, int param4) {
         be var8 = null;
         be var9 = null;
         if (param2 == null) {
@@ -122,7 +122,7 @@ final class sb extends aa {
           this.field_d = param1;
           var8 = this.a(param1, param3, 106, param2);
           var9 = var8;
-          var9.field_c[0] = -param1.a(param2) + param4;
+          var9.field_c[0] = -param1.stringWidth(param2) + param4;
           var9.field_c[param2.length()] = param4;
           dk.a(param2, 0, -25006, var9, param1);
         } catch (RuntimeException runtimeException) {
@@ -146,7 +146,7 @@ final class sb extends aa {
         }
     }
 
-    final void a(int param0, int param1, String param2, int param3, ta param4, int param5, int param6, int param7) {
+    final void a(int param0, int param1, String param2, int param3, BitmapFont param4, int param5, int param6, int param7) {
         be stackIn_38_0;
         be stackIn_38_1;
         int stackIn_38_2;
@@ -169,7 +169,7 @@ final class sb extends aa {
         String var13 = null;
         be var14 = null;
         int var15 = 0;
-        ta var16 = null;
+        BitmapFont var16 = null;
         String[] var17 = null;
         String[] var18 = null;
         int var12Lifetime1;
@@ -201,13 +201,13 @@ final class sb extends aa {
           this.field_p = param3;
           this.field_j = param1;
           this.field_h = false;
-          var17 = new String[param4.a(param2, param0) + 1];
+          var17 = new String[param4.lineCount(param2, param0) + 1];
           var18 = var17;
           if (param6 != 4476) {
-            var16 = (ta) null;
-            this.a((String) null, 49, 18, (ta) null, 83);
+            var16 = (BitmapFont) null;
+            this.a((String) null, 49, 18, (BitmapFont) null, 83);
           }
-          var10 = Math.max(1, param4.a(param2, new int[]{param0}, var18));
+          var10 = Math.max(1, param4.wrapText(param2, new int[]{param0}, var18));
           if (this.field_p == 3 &&
             var10 == 1) {
             this.field_p = 1;
@@ -249,12 +249,12 @@ final class sb extends aa {
             var14 = new be(stackIn_38_2, stackIn_38_3, stackIn_39_4);
             var14.field_c[0] = 0;
             if (var13 != null) {
-              var14.field_c[var13.length()] = param4.a(var13);
+              var14.field_c[var13.length()] = param4.stringWidth(var13);
               stackIn_42_0 = var13;
               if (3 != param7) {
                 stackIn_43_1 = 0;
               } else {
-                stackIn_43_1 = this.a(param0, var13, param4.a(var13), (byte) -79);
+                stackIn_43_1 = this.a(param0, var13, param4.stringWidth(var13), (byte) -79);
               }
               dk.a(stackIn_42_0, stackIn_43_1, -25006, var14, param4);
             }
@@ -282,7 +282,7 @@ final class sb extends aa {
         }
     }
 
-    final void a(String param0, int param1, int param2, ta param3, int param4) {
+    final void a(String param0, int param1, int param2, BitmapFont param3, int param4) {
         be discarded$0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -310,11 +310,11 @@ final class sb extends aa {
           this.field_h = true;
           if (param2 != -2713) {
             var8 = (String) null;
-            discarded$0 = this.a((ta) null, 24, -22, (String) null);
+            discarded$0 = this.a((BitmapFont) null, 24, -22, (String) null);
           }
           this.field_d = param3;
           var9 = this.a(param3, param4, 124, param0);
-          var7 = param3.a(param0);
+          var7 = param3.stringWidth(param0);
           var9.field_c[0] = -(var7 >> 1) + param1;
           var9.field_c[param0.length()] = param1 + (var7 >> 1);
           dk.a(param0, 0, -25006, var9, param3);
@@ -339,7 +339,7 @@ final class sb extends aa {
         }
     }
 
-    final void a(String param0, int param1, int param2, ta param3, byte param4) {
+    final void a(String param0, int param1, int param2, BitmapFont param3, byte param4) {
         be var7 = null;
         be var8 = null;
         if (param0 == null) {
@@ -361,7 +361,7 @@ final class sb extends aa {
           var7 = this.a(param3, param1, -45, param0);
           var8 = var7;
           var7.field_c[0] = param2;
-          var8.field_c[param0.length()] = param3.a(param0) + param2;
+          var8.field_c[param0.length()] = param3.stringWidth(param0) + param2;
           if (param4 <= 66) {
             this.field_h = false;
           }

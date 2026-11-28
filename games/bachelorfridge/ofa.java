@@ -69,7 +69,7 @@ final class ofa extends UiComponent {
           for (var12 = 0; jd.field_d.length > var12; var12++) {
             var13 = new UiComponent(0L, param3, ij.field_l[var12]);
             var14 = new UiComponent(0L, param3, jd.field_d[var12]);
-            var15 = param3.field_jb.a(jd.field_d[var12]);
+            var15 = param3.field_jb.stringWidth(jd.field_d[var12]);
             if (var15 > var11) {
               var11 = var15;
             }

@@ -8,10 +8,10 @@ final class ve extends lb {
     private int field_q;
     private RgbSprite[] field_u;
 
-    final static dh a(int param0, ResourceArchive param1, int param2, ResourceArchive param3, int param4) {
+    final static CoverageBitmapFont a(int param0, ResourceArchive param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
-        dh stackIn_5_0 = null;
-        dh stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_5_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -26,7 +26,7 @@ final class ve extends lb {
             stackIn_7_0 = dq.a(-18289, param3.getFile(param2, 0, param4));
             return stackIn_7_0;
           }
-          stackIn_5_0 = (dh) null;
+          stackIn_5_0 = (CoverageBitmapFont) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,7 +83,7 @@ final class ve extends lb {
           tm.a(param3.field_r + param2, var7, param3.field_j + (param0 + (param3.field_f - this.field_u[0].field_o >> 1)), this.field_u, param3.field_g, (byte) 89);
           stackIn_17_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_17_0;
-          this.field_p.a(param3.field_o, param3.field_r + param2, param0 + (param3.field_j - 2), param3.field_g, param3.field_f, var8, -1, 1, 1, this.field_p.field_o);
+          this.field_p.drawParagraph(param3.field_o, param3.field_r + param2, param0 + (param3.field_j - 2), param3.field_g, param3.field_f, var8, -1, 1, 1, this.field_p.field_o);
           if (!param1) {
             return;
           }

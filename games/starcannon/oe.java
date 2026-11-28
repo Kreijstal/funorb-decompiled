@@ -162,12 +162,12 @@ abstract class oe {
         return new java.net.Socket(this.field_c, this.field_d);
     }
 
-    final static i a(int param0, byte[] param1) {
-        i var2 = null;
+    final static CoverageBitmapFont a(int param0, byte[] param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        i stackIn_5_0 = null;
-        i stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_5_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -175,11 +175,11 @@ abstract class oe {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (i) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new i(param1, fc.field_d, qd.field_H, gg.field_d, gh.field_C, of.field_g, og.field_c);
+          var2 = new CoverageBitmapFont(param1, fc.field_d, qd.field_H, gg.field_d, gh.field_C, of.field_g, og.field_c);
           if (param0 != 5) {
-            stackIn_5_0 = (i) null;
+            stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;
           }
           rc.b((byte) 105);

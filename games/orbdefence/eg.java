@@ -71,7 +71,7 @@ final class eg extends fg {
         field_w = null;
     }
 
-    private eg(kc param0, int param1) {
+    private eg(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

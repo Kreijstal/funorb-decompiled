@@ -139,14 +139,14 @@ final class tg extends ga implements el {
         if (param2 >= 36) {
           var5 = this.field_q + param3;
           var6 = this.field_m + param0;
-          gm.field_cb.a(gb.field_c, 20 + var5, var6 + 20, -40 + this.field_F, -50 + this.field_z, 16777215, -1, 1, 0, gm.field_cb.field_C);
+          gm.field_cb.drawParagraph(gb.field_c, 20 + var5, var6 + 20, -40 + this.field_F, -50 + this.field_z, 16777215, -1, 1, 0, gm.field_cb.field_C);
           super.a(param0, param1, (byte) 86, param3);
           return;
         }
         field_R = (double[]) null;
         var5Lifetime1 = this.field_q + param3;
         var6Lifetime1 = this.field_m + param0;
-        gm.field_cb.a(gb.field_c, 20 + var5Lifetime1, var6Lifetime1 + 20, -40 + this.field_F, -50 + this.field_z, 16777215, -1, 1, 0, gm.field_cb.field_C);
+        gm.field_cb.drawParagraph(gb.field_c, 20 + var5Lifetime1, var6Lifetime1 + 20, -40 + this.field_F, -50 + this.field_z, 16777215, -1, 1, 0, gm.field_cb.field_C);
         super.a(param0, param1, (byte) 86, param3);
     }
 

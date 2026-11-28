@@ -18,7 +18,7 @@ final class ik extends wi {
     int field_u;
     private int field_v;
     int field_w;
-    fa field_D;
+    BitmapFont field_D;
     private int field_P;
     private boolean field_A;
     int field_H;
@@ -42,7 +42,7 @@ final class ik extends wi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -84) {
-            stackIn_4_0 = sg.a((byte) 20, RawPcmStream.a(param0, 100, 96));
+            stackIn_4_0 = sg.a((byte) 20, RawPcmStream.createForPlaybackRate(param0, 100, 96));
             return stackIn_4_0;
           }
           stackIn_2_0 = (pd) null;
@@ -197,7 +197,7 @@ final class ik extends wi {
               stackIn_19_0 = this.field_H;
             }
             var6Lifetime1 = stackIn_19_0;
-            this.field_D.a(var5_ref_String, this.field_l + 5, -this.field_D.field_K + (this.field_D.field_N + var2) - this.field_S, BufferedRandomAccessFile.field_a & var6Lifetime1, -1, var6Lifetime1 >>> ii.field_b);
+            this.field_D.drawStringAlpha(var5_ref_String, this.field_l + 5, -this.field_D.field_K + (this.field_D.field_N + var2) - this.field_S, BufferedRandomAccessFile.field_a & var6Lifetime1, -1, var6Lifetime1 >>> ii.field_b);
           }
           var3++;
           var2 = var2 + this.field_D.field_N;
@@ -420,7 +420,7 @@ final class ik extends wi {
         }
     }
 
-    ik(int param0, int param1, int param2, int param3, fa param4, RgbSprite param5, RgbSprite param6, RgbSprite param7, RgbSprite param8) {
+    ik(int param0, int param1, int param2, int param3, BitmapFont param4, RgbSprite param5, RgbSprite param6, RgbSprite param7, RgbSprite param8) {
         int stackIn_4_1 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

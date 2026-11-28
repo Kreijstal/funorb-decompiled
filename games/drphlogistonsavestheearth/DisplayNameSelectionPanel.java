@@ -18,7 +18,7 @@ final class DisplayNameSelectionPanel extends pj implements fh, ke {
         this.field_P = new hf(DebouncedFieldValidator.field_b, (fd) null);
         this.field_N = new hf(vi.field_f, (fd) null);
         this.field_M.field_v = bj.field_c;
-        this.field_M.a(new AccountNameAvailabilityValidator(this.field_M), (byte) -57);
+        this.field_M.setFieldValidator(new AccountNameAvailabilityValidator(this.field_M), (byte) -57);
         this.field_P.field_E = false;
         this.field_P.field_l = (cg) ((Object) new ie());
         this.field_N.field_l = (cg) ((Object) new uk());
@@ -224,7 +224,7 @@ final class DisplayNameSelectionPanel extends pj implements fh, ke {
         try {
           var3 = this.field_M;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(false, var4, -19116);
+          ((EditableTextField) ((Object) var3)).setText(false, var4, -19116);
           if (param1 != 0) {
             var5 = (String) null;
             discarded$1 = this.a(83, 123, (String) null, 44, (vg) null, (String) null);

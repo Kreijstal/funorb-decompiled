@@ -6,7 +6,7 @@ abstract class GameClientShell extends GameAppletShell {
     String field_z;
     static String field_s;
     private int field_n;
-    static rf field_o;
+    static BitmapFont field_o;
     private int field_u;
     private boolean field_r;
     private int field_v;
@@ -273,7 +273,7 @@ abstract class GameClientShell extends GameAppletShell {
 
     private final void i(int param0) {
         if (param0 >= -106) {
-          field_o = (rf) null;
+          field_o = (BitmapFont) null;
         }
         String var2 = ca.b(false);
         hg.a(nb.a(-102), -1, var2);
@@ -339,12 +339,12 @@ abstract class GameClientShell extends GameAppletShell {
         field_s = null;
     }
 
-    final static jb a(byte param0, byte[] param1) {
-        jb var2 = null;
+    final static BinaryBitmapFont a(byte param0, byte[] param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         Object stackIn_2_0 = null;
-        jb stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -352,10 +352,10 @@ abstract class GameClientShell extends GameAppletShell {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (jb) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           var3 = 42 % ((18 - param0) / 48);
-          var2 = new jb(param1, kh.field_i, vi.field_b, gf.field_o, qa.field_J, a.field_e);
+          var2 = new BinaryBitmapFont(param1, kh.field_i, vi.field_b, gf.field_o, qa.field_J, a.field_e);
           Bzip2State.a((byte) -21);
           stackIn_4_0 = var2;
           return stackIn_4_0;

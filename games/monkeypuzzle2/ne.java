@@ -173,10 +173,10 @@ final class ne {
               var1_int = var1_int + vf.field_b;
             }
             if (var4 >= 0) {
-              ImageProducerRasterBuffer.field_o.b(var6, var8Lifetime1, da.field_a + var1_int, var5, -1);
+              ImageProducerRasterBuffer.field_o.drawString(var6, var8Lifetime1, da.field_a + var1_int, var5, -1);
               var1_int = var1_int + (hb.field_n + vf.field_b + ud.field_a);
             } else {
-              fe.field_a.b(var6, var8Lifetime1, nf.field_M + var1_int, var5, -1);
+              fe.field_a.drawString(var6, var8Lifetime1, nf.field_M + var1_int, var5, -1);
               var1_int = var1_int + gi.field_a;
             }
           }

@@ -11,7 +11,7 @@ class nk extends hf implements vg {
     private boolean field_Gb;
     static int field_Kb;
     static boolean field_Hb;
-    private se field_Cb;
+    private BitmapFont field_Cb;
     static int[] field_Fb;
     private boolean field_Eb;
 
@@ -162,7 +162,7 @@ class nk extends hf implements vg {
         }
     }
 
-    nk(ji param0, se param1, String param2, boolean param3, boolean param4) {
+    nk(ji param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new kc((nk) null, param1, param2), 77, 10, 10);
         try {
           this.field_Mb = param3 ? true : false;

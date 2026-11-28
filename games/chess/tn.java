@@ -46,9 +46,9 @@ final class tn extends IntrusiveNode {
     tn(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_k = param0;
-          this.field_o = param0.j();
+          this.field_o = param0.getTargetVolume();
           this.field_n = param1;
-          this.field_k.h(this.field_o * lf.field_S / 80);
+          this.field_k.setVolume(this.field_o * lf.field_S / 80);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "tn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

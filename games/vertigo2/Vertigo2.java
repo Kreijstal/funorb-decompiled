@@ -46,7 +46,7 @@ public final class Vertigo2 extends GameShell {
         }
     }
 
-    final void f(int param0) {
+    final void updateClient(int param0) {
         boolean discarded$0 = false;
         int var12_int = 0;
         boolean stackIn_8_1 = false;
@@ -466,19 +466,19 @@ public final class Vertigo2 extends GameShell {
           var5.c(var8.field_y, var8.field_t);
           ro.field_g.a(-128);
           nn.field_y = null;
-          this.d(-17);
+          this.renderClientFrame(-17);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "Vertigo2.L(" + param0 + ')');
         }
     }
 
-    final void b(byte param0) {
+    final void disposeClient(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           nm.k(8);
           if (param0 >= -113) {
-            this.b((byte) 27);
+            this.disposeClient((byte) 27);
           }
           if (null != dc.field_L) {
             cp.a((byte) 124);
@@ -543,11 +543,11 @@ public final class Vertigo2 extends GameShell {
           on.field_b[27][2] = vh.a(mj.field_b, "", "v_near_edge_3").b();
           on.field_b[28][0] = hp.a(DualLinkNode.field_s, "", "v_last_block").a();
           on.field_b[29][0] = hp.a(DualLinkNode.field_s, "", "v_level_select").a();
-          rr.field_B[0] = SamplePlaybackStream.a(on.field_b[23][0], 100, 96);
-          rr.field_B[1] = SamplePlaybackStream.a(on.field_b[22][0], 100, 96);
+          rr.field_B[0] = SamplePlaybackStream.createForPlaybackRate(on.field_b[23][0], 100, 96);
+          rr.field_B[1] = SamplePlaybackStream.createForPlaybackRate(on.field_b[22][0], 100, 96);
           rr.field_B[0].i(-1);
           rr.field_B[1].i(-1);
-          rr.field_B[2] = SamplePlaybackStream.a(on.field_b[10][3], 100, 96);
+          rr.field_B[2] = SamplePlaybackStream.createForPlaybackRate(on.field_b[10][3], 100, 96);
           rr.field_B[2].i(-1);
           op.field_d = si.a(le.field_f, "", "vertigo2_theme");
           up.field_B[0] = si.a(le.field_f, "", "vertigo2_level_1");
@@ -564,7 +564,7 @@ public final class Vertigo2 extends GameShell {
           }
           mj.field_b = null;
           DualLinkNode.field_s = null;
-          this.d(-17);
+          this.renderClientFrame(-17);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -604,7 +604,7 @@ public final class Vertigo2 extends GameShell {
         }
     }
 
-    final void b(int param0) {
+    final void initializeClient(int param0) {
         MidiPcmStream var3 = null;
         try {
           this.a(4, 0, 19, 1, false, -16, 2, 64);
@@ -679,7 +679,7 @@ public final class Vertigo2 extends GameShell {
           var11[16] = vl.a(0, "", MovingLevelTile.field_u, "keys_lt");
           var2[17] = vl.a(param0 - 31, "", MovingLevelTile.field_u, "keys_gt");
           var2[18] = vl.a(tk.a((int) param0, 31), "", MovingLevelTile.field_u, "keys_f12");
-          tk.field_c.a(var2, (int[]) null);
+          tk.field_c.setInlineSprites(var2, (int[]) null);
           fa.field_s = lm.a("", param0 + 23078, "button_purple_frame", MovingLevelTile.field_u);
           uk.field_r = lm.a("", 23109, "button_blue_frame", MovingLevelTile.field_u);
           mn.field_o = new Sprite[3];
@@ -776,7 +776,7 @@ public final class Vertigo2 extends GameShell {
           ua.a(12, uk.field_r, 320, var7, 480, 240, 10, fa.field_s, 12, va.field_s.field_f, 0, var5, 16777215, 16777215, 16777215, var6, (Sprite[]) null, 0, var8, (byte) 92, tk.field_c);
           di.b((byte) -90);
           MovingLevelTile.field_u = null;
-          this.d(param0 - 48);
+          this.renderClientFrame(param0 - 48);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -793,7 +793,7 @@ public final class Vertigo2 extends GameShell {
         }
     }
 
-    final void d(byte param0) {
+    final void clearClientResources(byte param0) {
         try {
           Vertigo2.m((byte) 25);
           GameKeyHandler.clearStaticReferences((byte) 92);
@@ -1175,7 +1175,7 @@ public final class Vertigo2 extends GameShell {
     public Vertigo2() {
     }
 
-    final void d(int param0) {
+    final void renderClientFrame(int param0) {
         int stackIn_53_0 = 0;
         boolean stackIn_82_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -1420,7 +1420,7 @@ public final class Vertigo2 extends GameShell {
           int var2_int = -22 / ((48 - param0) / 60);
           ei.a(pp.field_s, (byte) -81);
           pp.field_s = null;
-          this.d(-17);
+          this.renderClientFrame(-17);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "Vertigo2.P(" + param0 + ')');
         }
@@ -1470,24 +1470,24 @@ public final class Vertigo2 extends GameShell {
             mn.a(false);
             if (null != MovingLevelTile.field_u) {
               ProxySocketConnector.a(false, 86.0f, nh.field_p);
-              this.d(-17);
+              this.renderClientFrame(-17);
               oo.a(new nr(BlastDebrisModel.field_o, ii.field_C, MovingLevelTile.field_u, 13, false));
               ii.field_C = null;
               this.loadFonts((byte) 31);
             }
             if (null != pp.field_s) {
               ProxySocketConnector.a(false, 90.0f, cp.field_a);
-              this.d(param0 ^ -16777200);
+              this.renderClientFrame(param0 ^ -16777200);
               this.k((byte) 109);
             }
             if (nn.field_y != null) {
               ProxySocketConnector.a(false, 92.0f, RasterBuffer.field_g);
-              this.d(-17);
+              this.renderClientFrame(-17);
               this.loadBackgroundImages((byte) -121);
             }
             if (null != tl.field_c) {
               ProxySocketConnector.a(false, 95.0f, ByteStorage.field_f);
-              this.d(param0 - 16777232);
+              this.renderClientFrame(param0 - 16777232);
               w.a(ml.field_u, np.field_Kb, tl.field_c, (byte) 59);
               tl.field_c = null;
               ml.field_u = null;
@@ -1495,7 +1495,7 @@ public final class Vertigo2 extends GameShell {
             }
             if (null != gi.field_p) {
               ProxySocketConnector.a(false, 98.0f, fa.field_v);
-              this.d(-17);
+              this.renderClientFrame(-17);
               AccountServiceResult.a(new HuffmanCodec(gi.field_p.getFileByName("", "huffman", 0)), (byte) 98);
               gi.field_p = null;
               di.b((byte) 126);
@@ -1580,7 +1580,7 @@ public final class Vertigo2 extends GameShell {
                                                       return false;
                                                     }
                                                     le.a(468713154);
-                                                    this.d(-17);
+                                                    this.renderClientFrame(-17);
                                                     jk.field_b = new id(DualLinkNode.field_s, mj.field_b);
                                                     this.loadSoundEffects(19804);
                                                     DualLinkNode.field_s = null;

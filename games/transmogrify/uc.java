@@ -46,10 +46,10 @@ final class uc {
             return stackIn_2_0;
           }
           if (param2) {
-            stackIn_7_0 = tb.field_c.a(param0);
+            stackIn_7_0 = tb.field_c.stringWidth(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = GameKeyHandler.field_b.a(param0);
+          stackIn_5_0 = GameKeyHandler.field_b.stringWidth(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

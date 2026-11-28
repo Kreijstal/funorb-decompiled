@@ -3,7 +3,7 @@
  */
 final class rb {
     static String field_a;
-    static lh field_b;
+    static BitmapFont field_b;
     static ci field_c;
     static String field_d;
 
@@ -44,7 +44,7 @@ final class rb {
           var5 = param2.readBits(111, 3);
           var6 = (byte)param2.readBits(-5, 8);
           if (param1 > -51) {
-            field_b = (lh) null;
+            field_b = (BitmapFont) null;
           }
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
@@ -124,7 +124,7 @@ final class rb {
 
     final static int a(byte param0) {
         if (param0 != 46) {
-          field_b = (lh) null;
+          field_b = (BitmapFont) null;
         }
         return aa.field_i;
     }

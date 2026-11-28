@@ -16,9 +16,9 @@ abstract class RenderingSupport004 extends DualNode {
     static String stringState0202;
     static SceneWidget sceneWidgetState0040;
 
-    final static RenderingSupport009 computeRenderingSupport0090580(IndexedSprite[] indexedSpriteArrayArgument1, int integerArgument2, byte[] byteArrayArgument3) {
+    final static BinaryBitmapFont computeRenderingSupport0090580(IndexedSprite[] indexedSpriteArrayArgument1, int integerArgument2, byte[] byteArrayArgument3) {
         int integerLocal1 = 0;
-        RenderingSupport009 stackRenderingSupport009Local2 = null;
+        BinaryBitmapFont stackRenderingSupport009Local2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
         StringBuilder stackStringBuilderLocal4 = null;
         String stackStringLocal5 = null;
@@ -74,7 +74,7 @@ abstract class RenderingSupport004 extends DualNode {
             integerArrayLocal13[integerLocal1] = indexedSpriteArrayArgument1[integerLocal1].integerState0426;
             byteArrayArrayLocal14[integerLocal1] = indexedSpriteArrayArgument1[integerLocal1].byteArrayState0021;
           }
-          stackRenderingSupport009Local2 = new RenderingSupport009(byteArrayArgument3, integerArrayLocal22, integerArrayLocal23, integerArrayLocal24, integerArrayLocal25, byteArrayArrayLocal26);
+          stackRenderingSupport009Local2 = new BinaryBitmapFont(byteArrayArgument3, integerArrayLocal22, integerArrayLocal23, integerArrayLocal24, integerArrayLocal25, byteArrayArrayLocal26);
           return stackRenderingSupport009Local2;
         } catch (java.lang.RuntimeException caughtParameterLocal27) {
           caughtExceptionLocal8 = caughtParameterLocal27;

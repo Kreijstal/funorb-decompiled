@@ -9,7 +9,7 @@ final class i extends IntrusiveNode {
     static int[] field_u;
     int field_q;
     int[] field_j;
-    static se field_x;
+    static BitmapFont field_x;
     int field_p;
     int field_z;
     int field_k;

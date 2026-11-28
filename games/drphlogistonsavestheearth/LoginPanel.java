@@ -70,8 +70,8 @@ final class LoginPanel extends pj implements TextFieldListener, ke {
         if (param0 != 134) {
           this.field_P = (hf) null;
         }
-        this.field_L.h((byte) 88);
-        this.field_M.h((byte) 88);
+        this.field_L.clearText((byte) 88);
+        this.field_M.clearText((byte) 88);
     }
 
     public final void onTextChanged(boolean param0, EditableTextField param1) {
@@ -147,7 +147,7 @@ final class LoginPanel extends pj implements TextFieldListener, ke {
 
     final void a(int param0, int param1, byte param2, int param3) {
         if (null != this.field_J) {
-          DualLinkNode.field_i.a(this.field_J, 20 + (param0 + this.field_o), this.field_m + (param3 + 15), this.field_w - 40, this.field_k, 16777215, -1, 1, 0, DualLinkNode.field_i.field_x);
+          DualLinkNode.field_i.drawParagraph(this.field_J, 20 + (param0 + this.field_o), this.field_m + (param3 + 15), this.field_w - 40, this.field_k, 16777215, -1, 1, 0, DualLinkNode.field_i.field_x);
         }
         if (null != this.field_K) {
           SoftwareRasterizer.drawHorizontalLine(10 + param0, param3 + 134, -20 + this.field_w, 4210752);
@@ -175,7 +175,7 @@ final class LoginPanel extends pj implements TextFieldListener, ke {
         RuntimeException decompiledCaughtException = null;
         ie var6 = null;
         RuntimeException var6_ref = null;
-        rf var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         sd var9 = null;
         dh var12 = null;
@@ -243,7 +243,7 @@ final class LoginPanel extends pj implements TextFieldListener, ke {
           this.field_m = 15;
           var7 = DualLinkNode.field_i;
           if (this.field_J != null) {
-            this.field_m = this.field_m + (var7.a(this.field_J, -40 + this.field_w, var7.field_x) + 5);
+            this.field_m = this.field_m + (var7.textHeight(this.field_J, -40 + this.field_w, var7.field_x) + 5);
           }
           var8 = ij.field_b;
           var9 = SecondaryNodeDeque.a(nb.a(-117), (byte) -87);
@@ -558,8 +558,8 @@ final class LoginPanel extends pj implements TextFieldListener, ke {
           }
           var3 = this.field_L;
           var4 = param1;
-          var3.a(false, var4, -19116);
-          this.field_M.h((byte) 88);
+          var3.setText(false, var4, -19116);
+          this.field_M.clearText((byte) 88);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "wa.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

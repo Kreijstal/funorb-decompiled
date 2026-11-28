@@ -7,7 +7,7 @@ final class ji {
     static RgbSprite field_b;
     static int field_f;
     static int[] field_a;
-    static jb field_d;
+    static BinaryBitmapFont field_d;
 
     public static void clearStaticReferences(boolean param0) {
         field_e = null;

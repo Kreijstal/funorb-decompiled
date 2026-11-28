@@ -3,7 +3,7 @@
  */
 abstract class lj extends DualLinkNode {
     static String field_r;
-    static vm field_u;
+    static BitmapFont field_u;
     int field_s;
     static int field_q;
     static PlatformTaskDispatcher field_t;

@@ -209,9 +209,9 @@ final class ij extends gj implements da {
         if (param3 != 0) {
           return;
         }
-        fa var5 = ug.field_e;
+        BitmapFont var5 = ug.field_e;
         if (this.field_K != null) {
-          var5.a(lc.field_s, param1 + this.field_y, this.field_z + param0, this.field_u, 20, 16777215, -1, 0, 0, var5.field_H + var5.field_K);
+          var5.drawParagraph(lc.field_s, param1 + this.field_y, this.field_z + param0, this.field_u, 20, 16777215, -1, 0, 0, var5.field_H + var5.field_K);
         }
     }
 

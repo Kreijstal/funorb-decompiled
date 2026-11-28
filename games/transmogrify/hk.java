@@ -3,7 +3,7 @@
  */
 final class hk {
     static java.awt.Image field_c;
-    static mi field_a;
+    static BinaryBitmapFont field_a;
     static String field_b;
 
     public static void clearStaticReferences(byte param0) {
@@ -17,7 +17,7 @@ final class hk {
         field_b = null;
     }
 
-    final static void a(kg param0, int param1, int param2, kg param3) {
+    final static void a(BitmapFont param0, int param1, int param2, BitmapFont param3) {
         try {
           AchievementNotice.field_m = param2;
           tb.field_c = param3;

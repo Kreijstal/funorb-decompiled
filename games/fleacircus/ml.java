@@ -3,7 +3,7 @@
  */
 final class ml extends dk {
     private int field_G;
-    private fa field_H;
+    private BitmapFont field_H;
     static ak field_I;
     private String field_M;
     private int field_L;
@@ -15,7 +15,7 @@ final class ml extends dk {
     static String[] field_N;
     static wh field_F;
 
-    ml(int param0, int param1, int param2, int param3, UiComponent param4, boolean param5, int param6, int param7, fa param8, int param9, String param10) {
+    ml(int param0, int param1, int param2, int param3, UiComponent param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (ComponentLayout) null, (kd) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -41,7 +41,7 @@ final class ml extends dk {
           this.field_H = param8;
           this.field_G = param9;
           var12_int = -this.field_J + this.field_L;
-          var13 = this.field_H.b(param10, var12_int, this.field_H.field_H) + this.field_J * 2;
+          var13 = this.field_H.textHeight(param10, var12_int, this.field_H.field_H) + this.field_J * 2;
           if (param3 < var13) {
             this.a(param0, param2, param1, var13, 80);
           } else {
@@ -170,7 +170,7 @@ final class ml extends dk {
           return;
         }
         int var7 = !this.field_E ? 0 : -(2 * this.field_J) + (this.field_u - this.field_L);
-        this.field_H.a(this.field_M, this.field_J + var5 + var7, var6 + this.field_J, -this.field_J + this.field_L, -(2 * this.field_J) + this.field_j, this.field_G, -1, !this.field_E ? 2 : 0, 1, this.field_H.field_H);
+        this.field_H.drawParagraph(this.field_M, this.field_J + var5 + var7, var6 + this.field_J, -this.field_J + this.field_L, -(2 * this.field_J) + this.field_j, this.field_G, -1, !this.field_E ? 2 : 0, 1, this.field_H.field_H);
     }
 
     final static void a(int param0, int param1, RgbSprite[] param2, int param3, int param4, int param5) {

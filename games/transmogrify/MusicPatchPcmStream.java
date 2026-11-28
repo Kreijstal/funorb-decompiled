@@ -198,11 +198,11 @@ final class MusicPatchPcmStream extends PcmStream {
             if (var5 <= param2) {
               boolean decompiledSharedTail0 = (0 != this.field_o.field_P[param1.field_u]);
               if (!decompiledSharedTail0) {
-                param1.field_y = PcmSampleStream.a(param1.field_t, param1.field_y.i(), param1.field_y.h(), param1.field_y.f());
+                param1.field_y = PcmSampleStream.createForSampleStep(param1.field_t, param1.field_y.getSampleStepMagnitude(), param1.field_y.getTargetVolume(), param1.field_y.getPan());
                 decompiledSharedTail0 = (Transmogrify.field_A);
               }
               if (decompiledSharedTail0) {
-                param1.field_y = PcmSampleStream.a(param1.field_t, param1.field_y.i(), 0, param1.field_y.f());
+                param1.field_y = PcmSampleStream.createForSampleStep(param1.field_t, param1.field_y.getSampleStepMagnitude(), 0, param1.field_y.getPan());
                 stackIn_18_0 = this.field_o;
                 stackIn_18_1 = false;
                 stackIn_19_2 = !(0 <= param1.field_h.field_k[param1.field_i]);
@@ -272,23 +272,23 @@ final class MusicPatchPcmStream extends PcmStream {
               var11 = param3.field_y;
               boolean decompiledSharedTail0 = (this.field_o.field_P[param3.field_u] != 0);
               if (!decompiledSharedTail0) {
-                param3.field_y = PcmSampleStream.a(param3.field_t, var11.i(), var11.h(), var11.f());
+                param3.field_y = PcmSampleStream.createForSampleStep(param3.field_t, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.getPan());
                 decompiledSharedTail0 = (var12 != 0);
               }
               if (decompiledSharedTail0) {
-                param3.field_y = PcmSampleStream.a(param3.field_t, var11.i(), 0, var11.f());
+                param3.field_y = PcmSampleStream.createForSampleStep(param3.field_t, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_23_0 = this.field_o;
                 stackIn_23_1 = false;
                 stackIn_24_2 = !(param3.field_h.field_k[param3.field_i] >= 0);
                 ((MidiPcmStream) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_24_2, param3);
-                param3.field_y.a(var9, var11.h());
+                param3.field_y.rampVolume(var9, var11.getTargetVolume());
               }
               if (0 > param3.field_h.field_k[param3.field_i]) {
                 param3.field_y.h(-1);
               }
               var11.f(var9);
               var11.mixInto(param1, param4, -param4 + param0);
-              if (var11.e()) {
+              if (var11.hasRemainingRampFrames()) {
                 this.field_m.a(var11);
               }
               if (var12 == 0) {

@@ -15,7 +15,7 @@ class jd implements fc, sf {
     int field_f;
     int field_n;
     int field_o;
-    tj field_b;
+    BitmapFont field_b;
     int field_k;
     int field_d;
 
@@ -98,7 +98,7 @@ class jd implements fc, sf {
         }
     }
 
-    jd(tj param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    jd(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -311,7 +311,7 @@ class jd implements fc, sf {
           IntrusiveNode.a(param3.field_k + (param3.field_r + param4), param3.field_m + (param3.field_i + param6), param3.field_i + param6, param3.field_r + param4, -19852);
           var9_int = this.a(param3, (byte) -55);
           if (param2 != 41) {
-            this.field_b = (tj) null;
+            this.field_b = (BitmapFont) null;
           }
           boolean decompiledFrameRemainder0 = true;
           var10 = this.a((byte) 97, param3);
@@ -333,19 +333,19 @@ class jd implements fc, sf {
             if (0 != var12Lifetime1 &&
               3 != var12Lifetime1) {
               if (var12Lifetime1 == 1) {
-                this.field_b.a(this.a(true, param3), this.a(0, param4, param7, param3) + (var9_int >> 1), var11 + this.a((byte) 127, param3, param6, param0), param1, param5);
+                this.field_b.drawCentred(this.a(true, param3), this.a(0, param4, param7, param3) + (var9_int >> 1), var11 + this.a((byte) 127, param3, param6, param0), param1, param5);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_b.c(this.a(true, param3), this.a(0, param4, param7, param3) + var9_int, var11 + this.a((byte) 127, param3, param6, param0), param1, param5);
+                  this.field_b.drawRightAligned(this.a(true, param3), this.a(0, param4, param7, param3) + var9_int, var11 + this.a((byte) 127, param3, param6, param0), param1, param5);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_b.b(this.a(true, param3), this.a(0, param4, param7, param3), var11 + this.a((byte) 127, param3, param6, param0), param1, param5);
+              this.field_b.drawString(this.a(true, param3), this.a(0, param4, param7, param3), var11 + this.a((byte) 127, param3, param6, param0), param1, param5);
             }
           } else {
-            this.field_b.a(this.a(true, param3), this.a(param2 ^ 41, param4, param7, param3), this.a((byte) 127, param3, param6, param0), var9_int, var10, param1, param5, this.field_d, this.field_p, this.field_f);
+            this.field_b.drawParagraph(this.a(true, param3), this.a(param2 ^ 41, param4, param7, param3), this.a((byte) 127, param3, param6, param0), var9_int, var10, param1, param5, this.field_d, this.field_p, this.field_f);
           }
           ve.a(-127);
           return;
@@ -872,7 +872,7 @@ class jd implements fc, sf {
     protected jd() {
     }
 
-    jd(tj param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    jd(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_d = param7;
           this.field_k = param2;

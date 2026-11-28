@@ -30,7 +30,7 @@ class hl extends lc {
     private RgbSprite field_P;
     private int field_X;
     static int[] field_C;
-    private fa field_W;
+    private BitmapFont field_W;
     private RgbSprite[] field_z;
     private int field_bb;
     private RgbSprite[] field_D;

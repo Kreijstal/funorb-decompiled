@@ -6,7 +6,7 @@ public final class OrbDefence extends NetworkGameClient {
     static String field_E;
     public static boolean field_D;
 
-    final void a(byte param0) {
+    final void updateClient(byte param0) {
         boolean discarded$0 = false;
         int stackIn_5_1 = 0;
         boolean stackIn_6_2 = false;
@@ -357,7 +357,7 @@ public final class OrbDefence extends NetworkGameClient {
     public OrbDefence() {
     }
 
-    final void d(int param0) {
+    final void disposeClient(int param0) {
         am.a(-4062);
         if (param0 != 176400) {
           field_E = (String) null;
@@ -368,7 +368,7 @@ public final class OrbDefence extends NetworkGameClient {
         uj.c((byte) 63);
     }
 
-    final void a(boolean param0) {
+    final void clearClientResources(boolean param0) {
         OrbDefence.clearStaticReferences((byte) -119);
         kg.resetStaticState(96);
         IntrusiveDeque.a(9);
@@ -385,7 +385,7 @@ public final class OrbDefence extends NetworkGameClient {
         MouseWheelInput.clearStaticReferences(121);
         SoftwareRasterizer.clearStaticReferences();
         ResourceArchive.clearStaticReferences(false);
-        kc.clearStaticReferences();
+        BitmapFont.clearStaticReferences();
         tc.a(true);
         n.c((byte) -87);
         PacketBuffer.clearDeclaredStaticReferences(10);
@@ -618,7 +618,7 @@ public final class OrbDefence extends NetworkGameClient {
         this.field_n = null;
     }
 
-    final void d(byte param0) {
+    final void renderClientFrame(byte param0) {
         int stackIn_39_0 = 0;
         boolean stackIn_40_1 = false;
         int var3_int;
@@ -699,7 +699,7 @@ public final class OrbDefence extends NetworkGameClient {
           fg.$cfr$intArgs$a$7ffe4b125357(stackIn_39_0, stackIn_40_1);
         }
         if (2 <= AccountRequestState.field_d) {
-          ob.field_I.b(Integer.toString(ud.field_f), 20, 20, 16777215, 1);
+          ob.field_I.drawString(Integer.toString(ud.field_f), 20, 20, 16777215, 1);
         }
         if (param0 >= -72) {
           field_C = (String) null;
@@ -721,15 +721,15 @@ public final class OrbDefence extends NetworkGameClient {
           SoftwareRasterizer.fillCircleAlpha(var4, 417, 55, 16777215, 192);
           SoftwareRasterizer.fillCircleAlpha(var4, 417, 54, 0, 255);
           bd.field_o[var3.field_k].d(var4 - 32, 370);
-          ob.field_I.c(gj.field_j[var3.field_k], var4 - 1, 440 + ob.field_I.field_H, 0, 0);
-          ob.field_I.c(gj.field_j[var3.field_k], var4, ob.field_I.field_H + 439, 0, 0);
-          ob.field_I.c(gj.field_j[var3.field_k], var4, 440 + ob.field_I.field_H, 15610879, -1);
+          ob.field_I.drawCentred(gj.field_j[var3.field_k], var4 - 1, 440 + ob.field_I.field_H, 0, 0);
+          ob.field_I.drawCentred(gj.field_j[var3.field_k], var4, ob.field_I.field_H + 439, 0, 0);
+          ob.field_I.drawCentred(gj.field_j[var3.field_k], var4, 440 + ob.field_I.field_H, 15610879, -1);
         }
         kg.a(0, (byte) -83, 0, var7);
         return;
     }
 
-    final void c(byte param0) {
+    final void initializeClient(byte param0) {
         this.a(false, (byte) 88, 10, 3, 1, 0, 2, 60);
         int var3 = 112 / ((param0 + 4) / 39);
         MidiPcmStream var2 = new MidiPcmStream();
@@ -791,7 +791,7 @@ public final class OrbDefence extends NetworkGameClient {
                           if (pd.field_r.ensureIndexLoaded(param1 ^ -98) &&
                             pd.field_r.tryLoadAllGroups(param1 + 7618)) {
                             j.a(65.0f, me.field_i, (byte) 122);
-                            this.d((byte) -80);
+                            this.renderClientFrame((byte) -80);
                             if (!param0) {
                               return false;
                             }
@@ -874,7 +874,7 @@ public final class OrbDefence extends NetworkGameClient {
         }
         if (null != AccountCreationResultPanel.field_hb) {
           j.a(70.0f, me.field_i, (byte) 120);
-          this.d((byte) -82);
+          this.renderClientFrame((byte) -82);
           mh.field_a[31] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_normo_boss_arrive").a();
           mh.field_a[32] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_swarmo_boss_arrive").a();
           mh.field_a[33] = nj.a(AccountCreationResultPanel.field_hb, "", "orb_defence_zoomo_boss_arrive").a();
@@ -895,7 +895,7 @@ public final class OrbDefence extends NetworkGameClient {
         if (lg.field_c != null) {
           ee.field_b = new fj[15];
           j.a(75.0f, m.field_e, (byte) 125);
-          this.d((byte) -116);
+          this.renderClientFrame((byte) -116);
           ee.field_b[0] = fj.a(lg.field_c, "", "Orb_defence_level_1_construction");
           ee.field_b[1] = fj.a(lg.field_c, "", "Orb_defence_level_1_waves");
           ee.field_b[2] = fj.a(lg.field_c, "", "Orb_defence_level_1_boss");
@@ -930,7 +930,7 @@ public final class OrbDefence extends NetworkGameClient {
         }
         if (null != j.field_b) {
           j.a(90.0f, IterableNodeHashTable.field_c, (byte) 119);
-          this.d((byte) -113);
+          this.renderClientFrame((byte) -113);
           DelegatingCanvas.field_d = fk.a(j.field_b, "unachieved", 45, "basic");
           me.field_n = fk.a(j.field_b, "locked", -90, "basic");
           jm.field_b = fk.a(j.field_b, "orbcoin", 105, "basic");
@@ -980,8 +980,8 @@ public final class OrbDefence extends NetworkGameClient {
           var4[var6].field_c = 2 + var4[var6].field_h;
           var4[var6].field_b = 1;
         }
-        ob.field_I.a(var4, var5);
-        jd.field_c.a(var4, var5);
+        ob.field_I.setInlineSprites(var4, var5);
+        jd.field_c.setInlineSprites(var4, var5);
         pj.field_u = p.a(13863, "", bh.field_d, "menu_overlays");
         am.field_d = new RgbSprite[6];
         am.field_d[0] = fk.a(bh.field_d, "baseimage", -83, "");

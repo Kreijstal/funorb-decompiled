@@ -101,7 +101,7 @@ final class qa extends h {
           te.a(this.field_q, var8, (param4.field_h - this.field_q[0].field_s >> 1) + (param1 + param4.field_n), param4.field_l, (byte) 15, param4.field_p + param0);
           stackIn_16_0 = (!param2) ? 7105644 : 16777215;
           var9 = stackIn_16_0;
-          this.field_i.a(param4.field_k, param0 + param4.field_p, param4.field_n + (param1 - 2), param4.field_l, param4.field_h, var9, -1, 1, 1, this.field_i.field_y);
+          this.field_i.drawParagraph(param4.field_k, param0 + param4.field_p, param4.field_n + (param1 - 2), param4.field_l, param4.field_h, var9, -1, 1, 1, this.field_i.field_y);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

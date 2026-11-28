@@ -6,7 +6,7 @@ class DualLinkNode extends IntrusiveNode {
     DualLinkNode secondaryNext;
     static RgbSprite field_r;
     private static int[] field_o;
-    static rf field_i;
+    static BitmapFont field_i;
     static int[] field_j;
     static int[] field_s;
     private static int[] field_k;

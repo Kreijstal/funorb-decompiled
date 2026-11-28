@@ -114,7 +114,7 @@ public final class Torquing extends NetworkGameClient {
           MouseWheelInput.clearStaticReferences(0);
           SoftwareRasterizer.clearStaticReferences();
           ResourceArchive.clearStaticReferences(param0 + 99);
-          uc.clearStaticReferences();
+          BitmapFont.clearStaticReferences();
           l.clearStaticReferences((byte) 88);
           qi.clearStaticReferences(104);
           PacketBuffer.clearBufferStatics((byte) 59);
@@ -499,7 +499,7 @@ public final class Torquing extends NetworkGameClient {
             this.field_t.justifyPanelContents(0);
           }
           this.field_t.drawPanel(34, -120, 159);
-          qh.field_c.a(VolumeScaledPcmStream.field_q, 139, 461, 502, 1000, 0, -1, 0, 0, 3 * (1 + dd.field_c.field_x) / 2);
+          qh.field_c.drawParagraph(VolumeScaledPcmStream.field_q, 139, 461, 502, 1000, 0, -1, 0, 0, 3 * (1 + dd.field_c.field_x) / 2);
           if (param0 < 30) {
             this.prepareGameShutdown(61);
           }
@@ -1715,8 +1715,8 @@ public final class Torquing extends NetworkGameClient {
                   var4 = var5 / 2 - 32;
                 }
                 tj.field_n[var3_ref_tj.field_k].drawQuarterSize(8, var4);
-                MatchingFieldValidator.field_m.b(k.field_b[var3_ref_tj.field_k], 48, var4 + MatchingFieldValidator.field_m.field_x, 0, -1);
-                i.field_N.b(k.field_b[var3_ref_tj.field_k], 48, var4 + MatchingFieldValidator.field_m.field_x, 16777215, -1);
+                MatchingFieldValidator.field_m.drawString(k.field_b[var3_ref_tj.field_k], 48, var4 + MatchingFieldValidator.field_m.field_x, 0, -1);
+                i.field_N.drawString(k.field_b[var3_ref_tj.field_k], 48, var4 + MatchingFieldValidator.field_m.field_x, 16777215, -1);
               }
             }
             if (param0 != 73) {
@@ -1785,7 +1785,7 @@ public final class Torquing extends NetworkGameClient {
           }
           var4.field_e.drawPanel(34, -127, 159);
           wj.field_k.drawOpaque(-(wj.field_k.field_c / 2) + 219, 414);
-          qh.field_c.a(VolumeScaledPcmStream.field_q, 139, 461, 502, 1000, 0, -1, 0, 0, (dd.field_c.field_x * 3 + 3) / 2);
+          qh.field_c.drawParagraph(VolumeScaledPcmStream.field_q, 139, 461, 502, 1000, 0, -1, 0, 0, (dd.field_c.field_x * 3 + 3) / 2);
           SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.DB(" + param0 + ',' + param1 + ')');

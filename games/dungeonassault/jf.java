@@ -27,7 +27,7 @@ final class jf extends en {
           this.field_d = (StatusEffectIndicator) null;
         } else {
           jh.c();
-          var2 = 4 + this.field_d.field_c.field_y + la.field_b.b(this.field_d.field_b);
+          var2 = 4 + this.field_d.field_c.field_y + la.field_b.stringWidth(this.field_d.field_b);
           var3 = la.field_b.field_H + la.field_b.field_E;
           if (this.field_d.field_c.field_v > var3) {
             var3 = this.field_d.field_c.field_v;
@@ -35,12 +35,12 @@ final class jf extends en {
           var5 = new RgbSprite(var2, var3);
           var5.e();
           this.field_d.field_c.c(0, la.field_b.field_H - this.field_d.field_c.field_v >> 1, this.field_d.field_a);
-          la.field_b.b(ck.field_H.a(this.field_d.field_b, (byte) -48), 4 + this.field_d.field_c.field_y, la.field_b.field_H, this.field_d.field_a, -1);
+          la.field_b.drawString(ck.field_H.a(this.field_d.field_b, (byte) -48), 4 + this.field_d.field_c.field_y, la.field_b.field_H, this.field_d.field_a, -1);
           jh.b();
           return var5;
         }
         jh.c();
-        var2Lifetime1 = 4 + this.field_d.field_c.field_y + la.field_b.b(this.field_d.field_b);
+        var2Lifetime1 = 4 + this.field_d.field_c.field_y + la.field_b.stringWidth(this.field_d.field_b);
         var3Lifetime1 = la.field_b.field_H + la.field_b.field_E;
         if (this.field_d.field_c.field_v > var3Lifetime1) {
           var3Lifetime1 = this.field_d.field_c.field_v;
@@ -48,7 +48,7 @@ final class jf extends en {
         RgbSprite var6 = new RgbSprite(var2Lifetime1, var3Lifetime1);
         var6.e();
         this.field_d.field_c.c(0, la.field_b.field_H - this.field_d.field_c.field_v >> 1, this.field_d.field_a);
-        la.field_b.b(ck.field_H.a(this.field_d.field_b, (byte) -48), 4 + this.field_d.field_c.field_y, la.field_b.field_H, this.field_d.field_a, -1);
+        la.field_b.drawString(ck.field_H.a(this.field_d.field_b, (byte) -48), 4 + this.field_d.field_c.field_y, la.field_b.field_H, this.field_d.field_a, -1);
         jh.b();
         return var6;
     }

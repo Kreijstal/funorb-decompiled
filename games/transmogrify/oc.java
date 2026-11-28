@@ -5,7 +5,7 @@ final class oc extends fi {
     private String field_z;
     static int field_y;
     static String field_E;
-    private kg field_D;
+    private BitmapFont field_D;
     private boolean field_B;
     static IntrusiveDeque field_G;
     private int field_A;
@@ -13,7 +13,7 @@ final class oc extends fi {
     private int field_F;
     static String field_H;
 
-    oc(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, kg param8, int param9, String param10) {
+    oc(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (WidgetRenderer) null, (ma) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -39,7 +39,7 @@ final class oc extends fi {
           this.field_z = param10;
           this.field_F = param7;
           var12_int = this.field_A - this.field_F;
-          var13 = this.field_D.a(param10, var12_int, this.field_D.field_y) + this.field_F * 2;
+          var13 = this.field_D.textHeight(param10, var12_int, this.field_D.field_y) + this.field_F * 2;
           if (param3 < var13) {
             this.a(-124, param1, param0, param2, var13);
           } else {
@@ -94,7 +94,7 @@ final class oc extends fi {
         super.a(param0, param1, param2, (byte) -125);
         if (0 == param2) {
           var7 = this.field_B ? this.field_l - this.field_A - 2 * this.field_F : 0;
-          this.field_D.a(this.field_z, var7 + var5 + this.field_F, this.field_F + var6, -this.field_F + this.field_A, -(this.field_F * 2) + this.field_h, this.field_C, -1, this.field_B ? 0 : 2, 1, this.field_D.field_y);
+          this.field_D.drawParagraph(this.field_z, var7 + var5 + this.field_F, this.field_F + var6, -this.field_F + this.field_A, -(this.field_F * 2) + this.field_h, this.field_C, -1, this.field_B ? 0 : 2, 1, this.field_D.field_y);
           int var8 = -104 / ((param3 - 77) / 34);
           return;
         }

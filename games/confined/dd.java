@@ -1063,7 +1063,7 @@ final class dd extends bl {
 
     private final void a(int param0, int param1) {
         if (this.field_t[param0] != null) {
-          this.field_t[param0].d(param1 * 256 / AudioOutput.field_k);
+          this.field_t[param0].setSampleStepMagnitude(param1 * 256 / AudioOutput.field_k);
         }
     }
 

@@ -231,7 +231,7 @@ final class re {
         if (!stackIn_35_0) {
           if (this.field_x == -1 &&
             this.field_J == -1) {
-            id.field_A.b(jd.field_i.toUpperCase(), 320, 177, 8421376, -1);
+            id.field_A.drawCentred(jd.field_i.toUpperCase(), 320, 177, 8421376, -1);
             decompiledFrameRemainder0 = (var9 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -245,7 +245,7 @@ final class re {
             stackIn_44_1 = ArchiveProvider.field_c;
             stackIn_45_2 = !(param1);
             var5 = hb.a(stackIn_44_0, stackIn_44_1, stackIn_45_2) ? 1 : 0;
-            wh.field_d.c(il.field_b[var4Lifetime1].toUpperCase(), 260, 121, 16776960, -1);
+            wh.field_d.drawString(il.field_b[var4Lifetime1].toUpperCase(), 260, 121, 16776960, -1);
             if (var5 == 0) {
               if (var3 == 0 &&
                 !qa.a(e.field_w, var4Lifetime1, param1)) {
@@ -265,7 +265,7 @@ final class re {
             }
             var6Lifetime1 = 0;
             if (var5 == 0) {
-              al.field_Z.c(GameCanvas.field_j.toUpperCase(), 260, 140, 16776960, -1);
+              al.field_Z.drawString(GameCanvas.field_j.toUpperCase(), 260, 140, 16776960, -1);
               stackIn_56_0 = var4Lifetime1;
               stackIn_56_1 = e.field_g;
               stackIn_57_2 = !(param1);
@@ -274,17 +274,17 @@ final class re {
             }
             if (var5 != 0 ||
               var9 != 0) {
-              al.field_Z.c(g.field_N.toUpperCase(), 260, 140, 16776960, -1);
+              al.field_Z.drawString(g.field_N.toUpperCase(), 260, 140, 16776960, -1);
             }
             var7 = bh.field_g[var4Lifetime1];
             if (var6Lifetime1 != 0) {
               var7 = SpriteGeometry.field_t;
             }
             boolean decompiledFrameCompleted0 = true;
-            al.field_Z.a(var7.toUpperCase(), 260, 150, 320, 64, 16776960, -1, 0, 0, 16);
+            al.field_Z.drawParagraph(var7.toUpperCase(), 260, 150, 320, 64, 16776960, -1, 0, 0, 16);
             if (var6Lifetime1 == 0) {
-              al.field_Z.c(ml.field_b.toUpperCase() + j.field_d[var4Lifetime1] * 100, 260, 233, 16776960, -1);
-              al.field_Z.c(MatchingFieldValidator.field_v.toUpperCase(), 420, 233, 16776960, -1);
+              al.field_Z.drawString(ml.field_b.toUpperCase() + j.field_d[var4Lifetime1] * 100, 260, 233, 16776960, -1);
+              al.field_Z.drawString(MatchingFieldValidator.field_v.toUpperCase(), 420, 233, 16776960, -1);
               if (10 != j.field_d[var4Lifetime1]) {
                 var8 = 0;
                 while (j.field_d[var4Lifetime1] > var8) {
@@ -304,11 +304,11 @@ final class re {
               }
             }
             if (var9 != 0) {
-              id.field_A.b(u.field_a.toUpperCase(), 320, 199, 8421376, -1);
+              id.field_A.drawCentred(u.field_a.toUpperCase(), 320, 199, 8421376, -1);
             }
           }
         } else {
-          id.field_A.b(u.field_a.toUpperCase(), 320, 199, 8421376, -1);
+          id.field_A.drawCentred(u.field_a.toUpperCase(), 320, 199, 8421376, -1);
         }
 
     }
@@ -486,7 +486,7 @@ final class re {
         int stackIn_11_0;
         int stackIn_11_1;
         boolean stackIn_11_2;
-        nc stackIn_11_3;
+        CoverageBitmapFont stackIn_11_3;
         int stackIn_11_4;
         int stackIn_11_5;
         String stackIn_12_6;
@@ -538,9 +538,9 @@ final class re {
             }
             ec.a(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_11_5, stackIn_12_6);
           }
-          al.field_Z.c(param3, ce.field_b[0], param1, 16776960, -1);
-          al.field_Z.c(AchievementNotification.field_k[var7_int].toUpperCase(), ce.field_b[1], param1, 16776960, -1);
-          al.field_Z.c(var12, ce.field_b[2], param1, 16776960, -1);
+          al.field_Z.drawString(param3, ce.field_b[0], param1, 16776960, -1);
+          al.field_Z.drawString(AchievementNotification.field_k[var7_int].toUpperCase(), ce.field_b[1], param1, 16776960, -1);
+          al.field_Z.drawString(var12, ce.field_b[2], param1, 16776960, -1);
           ec.a(9, param1, false, al.field_Z, ce.field_b[3], 16776960, Integer.toString(var9));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -761,8 +761,8 @@ final class re {
                 fj.field_Kb[var5].b(var4, param1);
               } else {
                 fj.field_Kb[var5].a(-6 + var4, param1 - 6, 44, 44);
-                al.field_Z.b(il.field_b[var5].toUpperCase(), var4 + 16, -8 + param1, 16776960, -1);
-                al.field_Z.b(bh.field_g[var5].toUpperCase(), 320, param1 + 50, 16777215, -1);
+                al.field_Z.drawCentred(il.field_b[var5].toUpperCase(), var4 + 16, -8 + param1, 16776960, -1);
+                al.field_Z.drawCentred(bh.field_g[var5].toUpperCase(), 320, param1 + 50, 16777215, -1);
               }
               var4 += 32;
             }
@@ -820,7 +820,7 @@ final class re {
         }
         if (ul.field_O) {
           this.a(70, (byte) -55, 74, 324, 235);
-          al.field_Z.a(la.field_i.toUpperCase(), 334, 80, 215, 200, 16776960, -1, 0, 0, 16);
+          al.field_Z.drawParagraph(la.field_i.toUpperCase(), 334, 80, 215, 200, 16776960, -1, 0, 0, 16);
         }
         this.field_E.a(124, false);
     }
@@ -1190,10 +1190,10 @@ final class re {
         if (param0 != 84) {
           this.j((byte) 35);
         }
-        wh.field_d.c(var4.toString(), 67, 110, 16776960, -1);
+        wh.field_d.drawString(var4.toString(), 67, 110, 16776960, -1);
         if (var2_ref != null) {
           var5 = var2_ref.toUpperCase();
-          al.field_Z.a(var5, 67, 120, 270, 210, 16776960, -1, 0, 0, 14);
+          al.field_Z.drawParagraph(var5, 67, 120, 270, 210, 16776960, -1, 0, 0, 14);
         }
         this.a(138, (byte) -55, 86, 353, 235);
         ByteStorage.field_d[bm.field_c][rl.field_c].drawTransparent(356, 89);
@@ -1239,8 +1239,8 @@ final class re {
         var4Lifetime1 = var3;
         this.a((byte) -36, var3.toUpperCase());
         if (ta.p(3)) {
-          wh.field_d.a(VolumeRampingMidiPcmStream.field_X.toUpperCase(), 64, 200, 512, 100, 16776960, -1, 1, 0, wh.field_d.field_y + wh.field_d.field_F);
-          al.field_Z.a(u.field_a.toUpperCase(), 64, 345, 512, 1000, 16776960, -1, 1, 0, wh.field_d.field_F + wh.field_d.field_y);
+          wh.field_d.drawParagraph(VolumeRampingMidiPcmStream.field_X.toUpperCase(), 64, 200, 512, 100, 16776960, -1, 1, 0, wh.field_d.field_y + wh.field_d.field_F);
+          al.field_Z.drawParagraph(u.field_a.toUpperCase(), 64, 345, 512, 1000, 16776960, -1, 1, 0, wh.field_d.field_F + wh.field_d.field_y);
           hm.a(576, ul.field_J, false, 30, 353, 32);
           return;
         }
@@ -1273,10 +1273,10 @@ final class re {
                 var10 = 90;
                 this.a(244, (byte) -55, 90, 56, 528);
                 var10 += 16;
-                al.field_Z.c(ii.field_f[0].toUpperCase(), ce.field_b[0], var10, 16776960, -1);
-                al.field_Z.c(ii.field_f[1].toUpperCase(), ce.field_b[1], var10, 16776960, -1);
-                al.field_Z.c(ii.field_f[2].toUpperCase(), ce.field_b[2], var10, 16776960, -1);
-                al.field_Z.a(ii.field_f[3].toUpperCase(), ce.field_b[3], var10, 16776960, -1);
+                al.field_Z.drawString(ii.field_f[0].toUpperCase(), ce.field_b[0], var10, 16776960, -1);
+                al.field_Z.drawString(ii.field_f[1].toUpperCase(), ce.field_b[1], var10, 16776960, -1);
+                al.field_Z.drawString(ii.field_f[2].toUpperCase(), ce.field_b[2], var10, 16776960, -1);
+                al.field_Z.drawRightAligned(ii.field_f[3].toUpperCase(), ce.field_b[3], var10, 16776960, -1);
                 var10 += 6;
                 var10 += 18;
                 var11 = 0;
@@ -1317,10 +1317,10 @@ final class re {
           if (var4Lifetime2 != null &&
             var4Lifetime2.length() > 0) {
             this.a(26, (byte) -55, 174, 56, 528);
-            al.field_Z.b(var4Lifetime2.toUpperCase(), 320, 193, 16776960, -1);
+            al.field_Z.drawCentred(var4Lifetime2.toUpperCase(), 320, 193, 16776960, -1);
           }
           this.a(30, (byte) -55, 360, 56, 528);
-          wh.field_d.b(pl.field_a.toUpperCase(), 320, 383, 16776960, -1);
+          wh.field_d.drawCentred(pl.field_a.toUpperCase(), 320, 383, 16776960, -1);
           if (ta.p(3)) {
             return;
           }
@@ -2154,27 +2154,27 @@ final class re {
               var9 = 13;
               if (param0 != null) {
                 param5.e(-param5.field_w + 112 - param5.field_z / 2, -param5.field_y + param2 - (-64 + param5.field_A / 2));
-                al.field_Z.a(param1, 161 + var8, param2, 143 - var8 * 2, 128, 16776960, -1, 1, 1, var9);
+                al.field_Z.drawParagraph(param1, 161 + var8, param2, 143 - var8 * 2, 128, 16776960, -1, 1, 1, var9);
                 param0.e(-param0.field_w - param0.field_z / 2 + 367, -param0.field_y + (param2 + (64 - param0.field_A / 2)));
-                al.field_Z.a(param3, var8 + 431, param2, 114 - var8 * 2, 128, 16776960, -1, 1, 1, var9);
+                al.field_Z.drawParagraph(param3, var8 + 431, param2, 114 - var8 * 2, 128, 16776960, -1, 1, 1, var9);
                 if (var10 != 0) {
                   if (param5 != null) {
                     param5.e(112 - param5.field_z / 2 - param5.field_w, -param5.field_y + (param2 + 64 - param5.field_A / 2));
-                    al.field_Z.a(param1, var8 + 161, param2, -(var8 * 2) + 384, 128, 16776960, -1, 0, 1, var9);
-                    al.field_Z.a(param1, var8 + 64, param2, -(2 * var8) + 481, 128, 16776960, -1, 1, 1, var9);
+                    al.field_Z.drawParagraph(param1, var8 + 161, param2, -(var8 * 2) + 384, 128, 16776960, -1, 0, 1, var9);
+                    al.field_Z.drawParagraph(param1, var8 + 64, param2, -(2 * var8) + 481, 128, 16776960, -1, 1, 1, var9);
                   } else {
-                    al.field_Z.a(param1, var8 + 64, param2, -(2 * var8) + 481, 128, 16776960, -1, 1, 1, var9);
+                    al.field_Z.drawParagraph(param1, var8 + 64, param2, -(2 * var8) + 481, 128, 16776960, -1, 1, 1, var9);
                   }
                 }
               } else {
                 boolean decompiledSharedTail0 = (param5 == null);
                 if (!decompiledSharedTail0) {
                   param5.e(112 - param5.field_z / 2 - param5.field_w, -param5.field_y + (param2 + 64 - param5.field_A / 2));
-                  al.field_Z.a(param1, var8 + 161, param2, -(var8 * 2) + 384, 128, 16776960, -1, 0, 1, var9);
+                  al.field_Z.drawParagraph(param1, var8 + 161, param2, -(var8 * 2) + 384, 128, 16776960, -1, 0, 1, var9);
                   decompiledSharedTail0 = (var10 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  al.field_Z.a(param1, var8 + 64, param2, -(2 * var8) + 481, 128, 16776960, -1, 1, 1, var9);
+                  al.field_Z.drawParagraph(param1, var8 + 64, param2, -(2 * var8) + 481, 128, 16776960, -1, 1, 1, var9);
                 }
               }
             }
@@ -2462,7 +2462,7 @@ final class re {
         boolean[] var17 = null;
         boolean[] var18 = null;
         var14 = HostileSpawn.field_I ? 1 : 0;
-        wh.field_d.c(mb.field_k.toUpperCase(), 10 + param3, 22 + param1, 16776960, -1);
+        wh.field_d.drawString(mb.field_k.toUpperCase(), 10 + param3, 22 + param1, 16776960, -1);
         var6 = 8 + param3;
         var7 = param1 + 30;
         var18 = new boolean[VolumeRampingMidiPcmStream.field_ib.length];
@@ -2483,16 +2483,16 @@ final class re {
                 if (1 == var9) {
                   var10 = var10 / 50;
                 }
-                al.field_Z.b(Integer.toString(var10), var6 + 16, 38 + var7, 16776960, -1);
+                al.field_Z.drawCentred(Integer.toString(var10), var6 + 16, 38 + var7, 16776960, -1);
                 if (EmailFormatValidator.a(var7, 0, 40, 40, var6)) {
                   var11 = NanoFrameTimer.field_n[var9].toUpperCase();
-                  var12 = al.field_Z.a(var11);
+                  var12 = al.field_Z.stringWidth(var11);
                   var13 = 16 + var6;
                   if (var12 / 2 + var13 >= 640) {
                     var13 = 639 - var12;
                   }
                   var13 = var13 - var12 / 2;
-                  al.field_Z.c(var11.toUpperCase(), var13, var7 + 6, 16777215, -1);
+                  al.field_Z.drawString(var11.toUpperCase(), var13, var7 + 6, 16777215, -1);
                 }
                 var6 += 58;
                 if (550 <= var6) {
@@ -2546,9 +2546,9 @@ final class re {
                 if (var10 < 0) {
                   var10 = 0;
                 }
-                al.field_Z.b(Integer.toString(var10), var6 + 16, var7 + 38, 16776960, -1);
+                al.field_Z.drawCentred(Integer.toString(var10), var6 + 16, var7 + 38, 16776960, -1);
               } else {
-                ClientLookupTables.field_e.a(pc.field_b.charAt(0), var6 + 10, var7 + 27, 16776960);
+                ClientLookupTables.field_e.drawCharacter(pc.field_b.charAt(0), var6 + 10, var7 + 27, 16776960);
               }
               if (EmailFormatValidator.a(var7, 0, 40, 40, var6)) {
                 if (0 == var9) {
@@ -2559,14 +2559,14 @@ final class re {
                 var15 = stackIn_35_0;
                 var10_ref_String = var15;
                 var16 = var15.toUpperCase();
-                var11_int = al.field_Z.a(var16);
+                var11_int = al.field_Z.stringWidth(var16);
                 var12 = var6 + 16;
                 if (var12 + var11_int / 2 < 640) {
                   var12 = var12 - var11_int / 2;
                 } else {
                   var12 = -var11_int + 639;
                 }
-                al.field_Z.c(var16.toUpperCase(), var12, 6 + var7, 16777215, -1);
+                al.field_Z.drawString(var16.toUpperCase(), var12, 6 + var7, 16777215, -1);
               }
               var6 += 58;
               if (var6 >= 550) {
@@ -2605,17 +2605,17 @@ final class re {
                 var10 = var10 / 50;
               }
             }
-            al.field_Z.b(Integer.toString(var10), var6 + 16, 38 + var7, 16776960, -1);
+            al.field_Z.drawCentred(Integer.toString(var10), var6 + 16, 38 + var7, 16776960, -1);
             if (EmailFormatValidator.a(var7, 0, 40, 40, var6)) {
               var11 = NanoFrameTimer.field_n[var9].toUpperCase();
-              var12 = al.field_Z.a(var11);
+              var12 = al.field_Z.stringWidth(var11);
               var13 = 16 + var6;
               if (var12 / 2 + var13 >= 640) {
                 var13 = 639 - var12;
               } else {
                 var13 = var13 - var12 / 2;
               }
-              al.field_Z.c(var11.toUpperCase(), var13, var7 + 6, 16777215, -1);
+              al.field_Z.drawString(var11.toUpperCase(), var13, var7 + 6, 16777215, -1);
             }
             var6 += 58;
             if (550 <= var6) {
@@ -2668,7 +2668,7 @@ final class re {
         String var12Lifetime1;
         String var12Lifetime2;
         u.field_f[26] = jf.field_e;
-        AccountRegistrationPanel.field_L.b(tc.field_d, 320, 95, 16777215, -1);
+        AccountRegistrationPanel.field_L.drawCentred(tc.field_d, 320, 95, 16777215, -1);
         var3 = 0;
         var4 = wl.b(25685);
         var11 = vg.a(new String[]{Integer.toString(var4)}, 88, bi.field_f);
@@ -2731,7 +2731,7 @@ final class re {
         var9 = 130;
         var10 = 180;
         this.a(var10 + 16, (byte) -55, -8 + var9, -8 + var8, 16 + var7);
-        wh.field_d.a(var5Lifetime3.toUpperCase(), var8, var9, var7, var10, 16776960, -1, 1, 1, var6);
+        wh.field_d.drawParagraph(var5Lifetime3.toUpperCase(), var8, var9, var7, var10, 16776960, -1, 1, 1, var6);
         this.e(16777215, 340);
     }
 
@@ -2827,7 +2827,7 @@ final class re {
             var12_ref_le.field_L = 22;
             var12_ref_le.field_R = 20;
             var12_ref_le.field_G = 2;
-            var12_ref_le.field_ab = (vm) ((Object) wh.field_d);
+            var12_ref_le.field_ab = (BitmapFont) ((Object) wh.field_d);
             stackIn_26_0 = var12_ref_le;
             if (var10 == 0) {
               stackIn_27_1 = c.field_b;
@@ -2851,7 +2851,7 @@ final class re {
               var13.field_J = 4;
               var13.field_R = 20;
               var13.field_L = 18;
-              var13.field_ab = (vm) ((Object) wh.field_d);
+              var13.field_ab = (BitmapFont) ((Object) wh.field_d);
               stackIn_19_0 = ~var12;
               stackIn_19_1 = -11;
               if (stackIn_19_0 > stackIn_19_1) {
@@ -3044,7 +3044,7 @@ final class re {
         String var11_ref_String = null;
         int var11 = 0;
         int var12_int = 0;
-        nc var12 = null;
+        CoverageBitmapFont var12 = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -3054,7 +3054,7 @@ final class re {
         int var19 = 0;
         var19 = HostileSpawn.field_I ? 1 : 0;
         if (0 == MatchingFieldValidator.field_p) {
-          MatchingFieldValidator.field_p = Math.max(wh.field_d.a(na.field_q.toUpperCase()), AccountRegistrationPanel.field_L.a(ArchiveIndex.field_s.toUpperCase()));
+          MatchingFieldValidator.field_p = Math.max(wh.field_d.stringWidth(na.field_q.toUpperCase()), AccountRegistrationPanel.field_L.stringWidth(ArchiveIndex.field_s.toUpperCase()));
         }
         boolean decompiledFrameRemainder12 = true;
         if (param0 == this.field_d) {
@@ -3232,7 +3232,7 @@ final class re {
           }
         }
         if (this.field_C == null) {
-          wh.field_d.b("ERROR! 0", 320, 240, 2158368, -1);
+          wh.field_d.drawCentred("ERROR! 0", 320, 240, 2158368, -1);
           return;
         }
         if (this.field_d == 0 &&
@@ -3292,7 +3292,7 @@ final class re {
               this.field_j == 0) {
               SoftwareRasterizer.fillRectangle(e.field_c[var8], sj.field_h[var8], pk.field_e[var8], 30, 16776960);
             }
-            wh.field_d.a(var11_ref_String.toUpperCase(), e.field_c[var8], sj.field_h[var8], pk.field_e[var8], 30, var10, -1, this.field_e, 1, 1, wh.field_d.field_u);
+            wh.field_d.drawParagraphAlpha(var11_ref_String.toUpperCase(), e.field_c[var8], sj.field_h[var8], pk.field_e[var8], 30, var10, -1, this.field_e, 1, 1, wh.field_d.field_u);
             var8++;
           }
         }
@@ -3548,7 +3548,7 @@ final class re {
                   SoftwareRasterizer.fillRectangle(42, -5 + (-wh.field_d.field_y + var5), 555, 24, 16776960);
                 }
                 if (var14 != 24) {
-                  ((vm) ((Object) var12)).b(var16.toUpperCase(), var9, var5 - 5, var15, -1, this.field_e);
+                  ((BitmapFont) ((Object) var12)).drawStringAlpha(var16.toUpperCase(), var9, var5 - 5, var15, -1, this.field_e);
                   SoftwareRasterizer.fillRectangleAlpha(-16 + var9, var5 - 17, 8, 8, var15, this.field_e);
                 } else {
                   if (param0 != 8 &&
@@ -3563,8 +3563,8 @@ final class re {
                     if ((ca.field_c & 128) == 0) {
                       var15 = 16777215;
                     }
-                    var18 = -8 + (320 - AccountRegistrationPanel.field_L.a(var16.toUpperCase()) / 2);
-                    AccountRegistrationPanel.field_L.a(var16.toUpperCase(), 328, var5 - 5, var15, -1, this.field_e);
+                    var18 = -8 + (320 - AccountRegistrationPanel.field_L.stringWidth(var16.toUpperCase()) / 2);
+                    AccountRegistrationPanel.field_L.drawCentredAlpha(var16.toUpperCase(), 328, var5 - 5, var15, -1, this.field_e);
                     SoftwareRasterizer.fillRectangle(var18, var5 - 17, 8, 8, var15);
                   }
                 }
@@ -3663,7 +3663,7 @@ final class re {
         String var5Lifetime1;
         String var5Lifetime2;
         u.field_f[26] = jh.field_bb;
-        AccountRegistrationPanel.field_L.b(i.field_e.toUpperCase(), 320, 95, 16724736, -1);
+        AccountRegistrationPanel.field_L.drawCentred(i.field_e.toUpperCase(), 320, 95, 16724736, -1);
         var4 = wl.b(25685);
         var12 = vg.a(new String[]{Integer.toString(var4)}, 74, bi.field_f);
         var5 = var12;
@@ -3707,7 +3707,7 @@ final class re {
             stackIn_28_3 = (0 == MidiPcmStream.field_r) ? false : true;
             stackIn_31_4 = (DelayedPacket.field_q.isEmpty(-20049)) ? false : true;
             var14 = vg.a(stackIn_21_0, stackIn_21_1, ((StringBuilder) (Object) stackIn_27_2).append(cj.a(wb.a(stackIn_28_3, stackIn_31_4, false, rg.a((byte) 122)), -119, '#')[1]).toString());
-            al.field_Z.a(var14.toUpperCase(), 70, 165, 500, -8 + (-164 + param2), 16711680, -1, 1, 2, 12);
+            al.field_Z.drawParagraph(var14.toUpperCase(), 70, 165, 500, -8 + (-164 + param2), 16711680, -1, 1, 2, 12);
           }
         }
         if (param0 > -29) {
@@ -3719,7 +3719,7 @@ final class re {
         var9 = (-var7 + 640) / 2;
         var10 = 180;
         this.a(var8 + 16, (byte) -55, -8 + var10, var9 - 8, 16 + var7);
-        wh.field_d.a(var5Lifetime2.toUpperCase(), var9, var10, var7, var8, 16776960, -1, 1, 1, var6);
+        wh.field_d.drawParagraph(var5Lifetime2.toUpperCase(), var9, var10, var7, var8, 16776960, -1, 1, 1, var6);
         if (!ta.p(3)) {
           this.e(16777215, 340);
         }
@@ -3989,10 +3989,10 @@ final class re {
         var5Lifetime3 = dupTemp$0;
         var6 = var10 + "  <col=ffffff>" + VolumeRampingMidiPcmStream.field_fb[bm.field_c][rl.field_c].toUpperCase() + "</col>";
         var7 = 62;
-        var7 = var7 + 16 * wh.field_d.a(var6, 60, var7, 288, 146, 16776960, -1, 0, 0, 16);
+        var7 = var7 + 16 * wh.field_d.drawParagraph(var6, 60, var7, 288, 146, 16776960, -1, 0, 0, 16);
         var7 += 8;
         var12 = var4.toUpperCase();
-        al.field_Z.a(var12, 60, var7, 288, 150, 16776960, -1, 0, 0, 12);
+        al.field_Z.drawParagraph(var12, 60, var7, 288, 150, 16776960, -1, 0, 0, 12);
         var8 = ng.field_u / 50;
         var9 = 60;
         var7Lifetime1 = 212;
@@ -4000,13 +4000,13 @@ final class re {
           return;
         }
         var13 = c.field_e.toUpperCase() + jh.a((byte) -66, var8);
-        wh.field_d.c(var13, var9, var7Lifetime1, 16776960, -1);
+        wh.field_d.drawString(var13, var9, var7Lifetime1, 16776960, -1);
         if (rl.field_c >= 0 &&
           rl.field_c < ub.field_a[bm.field_c].length) {
           var8Lifetime1 = ub.field_a[bm.field_c][rl.field_c];
           var14 = ki.field_d.toUpperCase() + jh.a((byte) -105, var8Lifetime1);
           var9Lifetime1 = 348;
-          wh.field_d.a(var14, var9Lifetime1, var7Lifetime1, 16776960, -1);
+          wh.field_d.drawRightAligned(var14, var9Lifetime1, var7Lifetime1, 16776960, -1);
         }
         this.a(220, 228, (byte) 56, 364, 176);
         return;
@@ -4025,7 +4025,7 @@ final class re {
           var4_int = 20;
           if (SoftwareRasterizer.field_j <= (var4_int + param2) &&
             param2 <= SoftwareRasterizer.field_a) {
-            wh.field_d.c(param0.toUpperCase(), 96, 35 + param2, 16776960, -1);
+            wh.field_d.drawString(param0.toUpperCase(), 96, 35 + param2, 16776960, -1);
           }
           param2 = param2 + var4_int;
           if (param1 <= 56) {
@@ -4059,7 +4059,7 @@ final class re {
         int var9 = 0;
         int var10 = 0;
         String var11 = null;
-        nc var12 = null;
+        CoverageBitmapFont var12 = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -4097,20 +4097,20 @@ final class re {
           SoftwareRasterizer.fillRectangleAlpha(var5, var7, var6, var8, 0, 160 * var4 / 480);
           SoftwareRasterizer.setClip(0, 0, 640, var4);
           this.a(1 + var7 + var8, var7 - 2, var5 - 2, -18, 1 + var5 + var6);
-          AccountRegistrationPanel.field_L.b(MusicPatchPcmStream.field_p, var9, var10, 16777215, -1);
+          AccountRegistrationPanel.field_L.drawCentred(MusicPatchPcmStream.field_p, var9, var10, 16777215, -1);
           var10 += 38;
           var12 = wh.field_d;
           var13 = 16776960;
           var17 = vg.a(new String[]{Integer.toString(wl.b(25685))}, 30, bi.field_f).toUpperCase();
-          ((vm) ((Object) var12)).b(var17, var9, var10, var13, -1);
+          ((BitmapFont) ((Object) var12)).drawCentred(var17, var9, var10, var13, -1);
           var18 = vg.a(new String[]{Integer.toString(10 - hh.field_d)}, 28, GameCanvas.field_f).toUpperCase();
           var10 += 26;
-          ((vm) ((Object) var12)).b(var18, var9, var10, var13, -1);
+          ((BitmapFont) ((Object) var12)).drawCentred(var18, var9, var10, var13, -1);
           var19 = DirectByteStorage.field_m + jh.a((byte) -67, sg.field_i / 50);
           var10 += 26;
           var20 = var19.toUpperCase();
           var11 = var20;
-          ((vm) ((Object) var12)).b(var20, var9, var10, var13, -1);
+          ((BitmapFont) ((Object) var12)).drawCentred(var20, var9, var10, var13, -1);
           var10 += 26;
           var14 = 0;
           var15 = hh.field_d;
@@ -4124,22 +4124,22 @@ final class re {
             } else {
               var21 = ki.field_d + jh.a((byte) -78, var14);
               var22 = var21.toUpperCase();
-              ((vm) ((Object) var12)).b(var22, var9, var10, var13, -1);
+              ((BitmapFont) ((Object) var12)).drawCentred(var22, var9, var10, var13, -1);
               var23 = vg.a(new String[]{"<col=ffffff>" + MidiPcmStream.field_r + "</col>"}, 67, o.field_j.toUpperCase());
               var10 += 36;
-              AccountRegistrationPanel.field_L.b(var23, var9, var10, var13, -1);
+              AccountRegistrationPanel.field_L.drawCentred(var23, var9, var10, var13, -1);
               var11 = sg.d(24);
               var10 += 36;
             }
             if (var11 != null) {
               var24 = vg.a(new String[]{var11}, 65, ag.field_j).toUpperCase();
-              if ((-4 + var6) < AccountRegistrationPanel.field_L.a(var24)) {
-                wh.field_d.a(var24, var5 + 4, var10 - 35, var6 - 8, 100, var13, -1, 1, 0, 18);
+              if ((-4 + var6) < AccountRegistrationPanel.field_L.stringWidth(var24)) {
+                wh.field_d.drawParagraph(var24, var5 + 4, var10 - 35, var6 - 8, 100, var13, -1, 1, 0, 18);
                 if (var16 != 0) {
-                  AccountRegistrationPanel.field_L.b(var24, var9, var10 + 8, var13, -1);
+                  AccountRegistrationPanel.field_L.drawCentred(var24, var9, var10 + 8, var13, -1);
                 }
               } else {
-                AccountRegistrationPanel.field_L.b(var24, var9, var10 + 8, var13, -1);
+                AccountRegistrationPanel.field_L.drawCentred(var24, var9, var10 + 8, var13, -1);
               }
               var10 += 36;
             }
@@ -4149,7 +4149,7 @@ final class re {
                 break;
               }
               var25 = IntrusiveNode.field_a.toUpperCase();
-              ((vm) ((Object) var12)).a(var25, -130 + var9, 340, 260, 80, var13, -1, 1, 0, 24);
+              ((BitmapFont) ((Object) var12)).drawParagraph(var25, -130 + var9, 340, 260, 80, var13, -1, 1, 0, 24);
             }
             break;
           }
@@ -4498,9 +4498,9 @@ final class re {
         var2_ref.field_T = 16776960;
         var2_ref.field_R = 15;
         var2_ref.field_qb = 220;
-        var2_ref.field_ab = (vm) ((Object) al.field_Z);
+        var2_ref.field_ab = (BitmapFont) ((Object) al.field_Z);
         var2_ref.field_L = 4;
-        var2_ref.field_sb = Math.max(141, var2_ref.field_ab.b(var2_ref.field_fb, var2_ref.field_qb - 2 * var2_ref.field_L, var2_ref.field_R));
+        var2_ref.field_sb = Math.max(141, var2_ref.field_ab.textHeight(var2_ref.field_fb, var2_ref.field_qb - 2 * var2_ref.field_L, var2_ref.field_R));
         this.a(false);
         le var3 = new le(-1L, (le) null);
         var3.field_qb = 41 + var2_ref.field_qb;
@@ -5023,7 +5023,7 @@ final class re {
             this.field_d == 17) {
             var3 = 256;
           }
-          id.field_A.c(eg.field_j.toUpperCase(), 600, 55, 8421376, -1, var3);
+          id.field_A.drawRightAlignedAlpha(eg.field_j.toUpperCase(), 600, 55, 8421376, -1, var3);
         }
     }
 
@@ -5079,7 +5079,7 @@ final class re {
                   if (0.5 > Math.random()) {
                     var9 = -var9;
                   }
-                  AccountRegistrationPanel.field_L.c(param1, 54 + var9, 60, 16776960, -1);
+                  AccountRegistrationPanel.field_L.drawString(param1, 54 + var9, 60, 16776960, -1);
                   var8++;
                   continue;
                 }
@@ -5092,7 +5092,7 @@ final class re {
               return;
             }
           }
-          AccountRegistrationPanel.field_L.c(param1, 54, 60, 16776960, -1);
+          AccountRegistrationPanel.field_L.drawString(param1, 54, 60, 16776960, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

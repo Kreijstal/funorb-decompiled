@@ -123,7 +123,7 @@ final class MixedSupport105 implements CallbackContract004 {
           if (null == this.bitmapFontState0018) {
             return;
           }
-          this.bitmapFontState0018.performAction1082(uiComponentPart002Local12.stringState0078, integerLocal9 + integerLocal8 / 2, uiComponentPart002Local12.integerState0048 + this.bitmapFontState0018.integerState0516 + integerLocal10, this.integerState0657, this.integerState0656);
+          this.bitmapFontState0018.drawCentred(uiComponentPart002Local12.stringState0078, integerLocal9 + integerLocal8 / 2, uiComponentPart002Local12.integerState0048 + this.bitmapFontState0018.integerState0516 + integerLocal10, this.integerState0657, this.integerState0656);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
           caughtExceptionLocal6 = caughtParameterLocal13;

@@ -68,7 +68,7 @@ final class sl extends pn {
         return stackIn_6_0;
     }
 
-    final static void a(vc param0, vc param1, int param2, int param3) {
+    final static void a(BitmapFont param0, BitmapFont param1, int param2, int param3) {
         try {
           LoginPanel.field_L = param3;
           ec.field_m = param0;
@@ -454,13 +454,13 @@ final class sl extends pn {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
-        vc var9 = null;
+        BitmapFont var9 = null;
         PuzzleTile var10 = null;
         try {
           this.field_l = this.field_l.a(param0, param1, param2, param3, (byte) -126, param5, param6);
           if (param4 > -87) {
-            var9 = (vc) null;
-            sl.a((vc) null, (vc) null, -42, -91);
+            var9 = (BitmapFont) null;
+            sl.a((BitmapFont) null, (BitmapFont) null, -42, -91);
           }
           if (param1 == this.field_o) {
             return (PuzzleTile) (this);
@@ -588,8 +588,8 @@ final class sl extends pn {
         field_u = null;
         field_r = null;
         if (!param0) {
-          vc var2 = (vc) null;
-          sl.a((vc) null, (vc) null, 111, 59);
+          BitmapFont var2 = (BitmapFont) null;
+          sl.a((BitmapFont) null, (BitmapFont) null, 111, 59);
         }
     }
 

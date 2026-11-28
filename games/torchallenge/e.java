@@ -82,9 +82,9 @@ final class e extends IntrusiveNode {
     e(RawPcmStream param0, IntrusiveNode param1) {
         try {
           this.field_n = param0;
-          this.field_l = param0.f();
+          this.field_l = param0.getTargetVolume();
           this.field_k = param1;
-          this.field_n.f(128 + this.field_l * ArchiveRequest.field_r >> 8);
+          this.field_n.setVolume(128 + this.field_l * ArchiveRequest.field_r >> 8);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "e.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

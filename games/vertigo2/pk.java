@@ -108,7 +108,7 @@ final class pk extends IntrusiveNode {
             if (!var3.field_q.isLinked(99)) {
               var3.unlink(2);
             } else {
-              var3.field_r.g(128 + var3.field_p * DelegatingCanvas.field_e >> 8);
+              var3.field_r.setVolume(128 + var3.field_p * DelegatingCanvas.field_e >> 8);
             }
             var3 = (gg) (fm.field_b.nextBackward(117));
           }
@@ -119,7 +119,7 @@ final class pk extends IntrusiveNode {
               if (!stackIn_12_0) {
                 var3Lifetime1.unlink(2);
               } else {
-                var3Lifetime1.field_r.g(128 + DelegatingCanvas.field_e * var3Lifetime1.field_p >> 8);
+                var3Lifetime1.field_r.setVolume(128 + DelegatingCanvas.field_e * var3Lifetime1.field_p >> 8);
               }
               var3Lifetime1 = (gg) (ro.field_b.nextBackward(41));
             }

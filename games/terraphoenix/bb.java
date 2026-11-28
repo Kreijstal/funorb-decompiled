@@ -26,10 +26,10 @@ final class bb {
             return stackIn_2_0;
           }
           if (param1) {
-            stackIn_7_0 = qk.field_a.b(param2);
+            stackIn_7_0 = qk.field_a.stringWidth(param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = da.field_h.b(param2);
+          stackIn_5_0 = da.field_h.stringWidth(param2);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -195,10 +195,10 @@ final class bb {
             return stackIn_2_0;
           }
           if (param1) {
-            stackIn_7_0 = qk.field_a.b(param2);
+            stackIn_7_0 = qk.field_a.stringWidth(param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = da.field_h.b(param2);
+          stackIn_5_0 = da.field_h.stringWidth(param2);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

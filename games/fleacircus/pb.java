@@ -5,7 +5,7 @@ final class pb {
     static IntrusiveDeque field_f;
     static String field_b;
     static String field_h;
-    static fa field_e;
+    static BitmapFont field_e;
     static ResourceArchive field_a;
     static int field_i;
     static int field_d;

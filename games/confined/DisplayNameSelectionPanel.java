@@ -28,7 +28,7 @@ final class DisplayNameSelectionPanel extends ga implements pg, el {
           if (param0 != 11579568) {
             this.submitDisplayName(29);
           }
-          ((EditableTextField) ((Object) var3)).a(false, false, var4);
+          ((EditableTextField) ((Object) var3)).setText(false, false, var4);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "bf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -139,7 +139,7 @@ final class DisplayNameSelectionPanel extends ga implements pg, el {
         this.field_Q = new rg(ta.field_a, (uk) null);
         this.field_P = new rg(AwtRasterBuffer.field_d, (uk) null);
         this.field_O.field_C = DebouncedFieldValidator.field_b;
-        this.field_O.a(-18312, new AccountNameAvailabilityValidator(this.field_O));
+        this.field_O.setFieldValidator(-18312, new AccountNameAvailabilityValidator(this.field_O));
         this.field_Q.field_L = false;
         this.field_Q.field_n = (fe) ((Object) new je());
         this.field_P.field_n = (fe) ((Object) new hk());

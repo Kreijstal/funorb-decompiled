@@ -5,7 +5,7 @@ final class me {
     static String[] field_a;
     static vk[] field_b;
     static String[] field_d;
-    static ee field_c;
+    static BitmapFont field_c;
 
     final static void a(boolean param0, boolean param1, int[] param2, boolean param3, mg param4, int[] param5, boolean param6) {
         int stackIn_67_0 = 0;
@@ -233,7 +233,7 @@ final class me {
         }
     }
 
-    final static void a(ee param0, int param1, ee param2, int param3, int param4, int param5, int param6, vg param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, vg param16, int param17, int param18, int param19, vg param20) {
+    final static void a(BitmapFont param0, int param1, BitmapFont param2, int param3, int param4, int param5, int param6, vg param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, vg param16, int param17, int param18, int param19, vg param20) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

@@ -53,7 +53,7 @@ final class an {
         try {
           var19 = la.field_a;
           var3 = 64 + (var19.field_z + var19.field_M);
-          var4 = 64 + var19.c(param1);
+          var4 = 64 + var19.stringWidth(param1);
           var5 = var4;
           var6 = var3;
           var7 = new Sprite(var5, var6);
@@ -77,7 +77,7 @@ final class an {
           }
           var13 = new Sprite(var4, var3);
           var13.d();
-          var19.b(param1, 32, var19.field_D + 32, 16711680, -1);
+          var19.drawString(param1, 32, var19.field_D + 32, 16711680, -1);
           var14 = -35 % ((param0 - 29) / 61);
           var13.d();
           var15 = new Sprite(var5, var6);
@@ -317,7 +317,7 @@ final class an {
               }
               var16 = stackIn_25_0;
               var9 = var16;
-              var10Lifetime1 = kk.field_f.field_z.c(var16) + kk.field_f.field_z.a('.') * 3;
+              var10Lifetime1 = kk.field_f.field_z.stringWidth(var16) + kk.field_f.field_z.charWidth('.') * 3;
               kk.field_f.field_O = 0;
               if ((48 & lo.field_d) == 16) {
                 var9 = var16 + ".";

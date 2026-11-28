@@ -110,7 +110,7 @@ public final class Lexicominos extends nk {
                               if (ci.field_a.ensureIndexLoaded(118) &&
                                 ci.field_a.tryLoadAllGroups((byte) 15)) {
                                 al.a(param0 + 102, qk.field_b, 90.0f);
-                                this.d(18380);
+                                this.renderClientFrame(18380);
                                 if (!param1) {
                                   return false;
                                 }
@@ -124,11 +124,11 @@ public final class Lexicominos extends nk {
                                 var3_ref = VorbisSample.a(gl.field_a, "", "score_increase_loop").c();
                                 var4_ref_ke = VorbisSample.a(gl.field_a, "", "score_increase_stop").c();
                                 kc.field_m[2] = aj.a((byte) -42, var4_ref_ke, var3_ref);
-                                BitPacketBuffer.field_o[2] = PcmSampleStream.a(kc.field_m[2], 100, 128);
+                                BitPacketBuffer.field_o[2] = PcmSampleStream.createForPlaybackRate(kc.field_m[2], 100, 128);
                                 kc.field_m[8] = SoundEffect.a(hc.field_gb, "", "lexi_block_stop").a();
                                 vb.field_r = new ja(hc.field_gb, gl.field_a);
                                 kc.field_m[9] = vb.field_r.a((byte) -80, "drum_075_claves");
-                                BitPacketBuffer.field_o[9] = PcmSampleStream.a(kc.field_m[9], 100, 128);
+                                BitPacketBuffer.field_o[9] = PcmSampleStream.createForPlaybackRate(kc.field_m[9], 100, 128);
                                 SectorCacheStore.b(5);
                                 return false;
                               }
@@ -164,7 +164,7 @@ public final class Lexicominos extends nk {
           }
           if (SecondaryNodeDequeIterator.field_b != null) {
             al.a(16, pl.field_b, 91.0f);
-            this.d(param0 + 18466);
+            this.renderClientFrame(param0 + 18466);
             hc.field_gb = null;
             gl.field_a = null;
             ImageProducerRasterBuffer.field_i[0] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game");
@@ -212,7 +212,7 @@ public final class Lexicominos extends nk {
             }
             if (hh.field_L != null) {
               al.a(16, qa.field_b, 93.0f);
-              this.d(param0 + 18466);
+              this.renderClientFrame(param0 + 18466);
               ib.field_a = ig.a(hh.field_L.getFileByName((byte) 127, "introanim.acp", ""), -66);
               hh.field_L = null;
             }
@@ -245,7 +245,7 @@ public final class Lexicominos extends nk {
             }
             boolean decompiledFrameCompleted0 = true;
             al.a(16, we.field_j, 99.0f);
-            this.d(param0 ^ -18330);
+            this.renderClientFrame(param0 ^ -18330);
             if (id.field_w == null) {
               var3 = SpriteGeometry.a(ci.field_a, true);
               var4 = 0;
@@ -313,7 +313,7 @@ public final class Lexicominos extends nk {
             return stackIn_261_0;
           }
           al.a(param0 ^ -70, gf.field_q, 92.0f);
-          this.d(18380);
+          this.renderClientFrame(18380);
           cb.field_n = df.a("", "bookbg", SectorCacheStore.field_d, (byte) -69);
           pa.field_a = df.a("", "leftpage", SectorCacheStore.field_d, (byte) -83);
           PasswordValidator.field_m = df.a("", "rightpage", SectorCacheStore.field_d, (byte) -64);
@@ -909,7 +909,7 @@ public final class Lexicominos extends nk {
         }
     }
 
-    final void b(byte param0) {
+    final void clearClientResources(byte param0) {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -1165,7 +1165,7 @@ public final class Lexicominos extends nk {
             al.a(16, ef.field_c, 100.0f);
           }
           if (param0 != -83) {
-            this.b(true);
+            this.initializeClient(true);
           }
           fi.a(false);
           return;
@@ -1176,7 +1176,7 @@ public final class Lexicominos extends nk {
         }
     }
 
-    final void b(boolean param0) {
+    final void initializeClient(boolean param0) {
         try {
           this.a(12, 13, false, 10, 5000, 0, 11, 2);
           AudioOutput.configureAudio(22050, true, 10);
@@ -1290,7 +1290,7 @@ public final class Lexicominos extends nk {
         }
     }
 
-    final void a(byte param0) {
+    final void disposeClient(byte param0) {
         boolean discarded$1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -1320,7 +1320,7 @@ public final class Lexicominos extends nk {
         }
     }
 
-    final void d(int param0) {
+    final void renderClientFrame(int param0) {
         Object stackIn_5_0 = null;
         int stackIn_11_0 = 0;
         boolean stackIn_12_1 = false;
@@ -1438,7 +1438,7 @@ public final class Lexicominos extends nk {
             ib.field_a[var3].a(0, 0);
           }
           if (2 <= vb.field_i) {
-            bi.field_a.c(Integer.toString(TextFieldValidator.field_i), 630, 25, 16711680, -1);
+            bi.field_a.drawRightAligned(Integer.toString(TextFieldValidator.field_i), 630, 25, 16711680, -1);
           }
           if (FullscreenFocusCanvas.a(-17977)) {
             SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a);
@@ -1506,7 +1506,7 @@ public final class Lexicominos extends nk {
         }
     }
 
-    final void a(boolean param0) {
+    final void updateClient(boolean param0) {
         boolean discarded$0 = false;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -2244,14 +2244,14 @@ public final class Lexicominos extends nk {
               (BitPacketBuffer.field_r == 6)) {
               var6Lifetime1 = 50;
               var7 = 4 + bi.field_a.field_t + bi.field_a.field_G;
-              var6Lifetime1 = var6Lifetime1 + bi.field_a.a(me.field_u, 254) * var7;
+              var6Lifetime1 = var6Lifetime1 + bi.field_a.lineCount(me.field_u, 254) * var7;
               stackIn_42_0 = var6Lifetime1;
               stackIn_42_1 = bi.field_a;
               stackIn_43_2 = (0 != MouseWheelInput.field_a);
               stackIn_46_3 = false;
               stackIn_46_4 = 52;
               stackIn_47_5 = (el.field_c.field_J != 0);
-              var6Lifetime1Lifetime1 = stackIn_42_0 + ((BinaryBitmapFont) (Object) stackIn_42_1).a(ii.a(stackIn_43_2, stackIn_46_3, stackIn_46_4, stackIn_47_5), 254) * var7;
+              var6Lifetime1Lifetime1 = stackIn_42_0 + ((BinaryBitmapFont) (Object) stackIn_42_1).lineCount(ii.a(stackIn_43_2, stackIn_46_3, stackIn_46_4, stackIn_47_5), 254) * var7;
               qc.field_c[6] = var6Lifetime1Lifetime1;
               stackIn_50_0 = uk.field_U;
               stackIn_50_1 = 6;
@@ -2262,7 +2262,7 @@ public final class Lexicominos extends nk {
               stackIn_50_6 = -95;
               stackIn_51_7 = (MouseWheelInput.field_a != 0);
               stackIn_55_8 = (0 != el.field_c.field_J);
-              stackIn_50_0[stackIn_50_1] = stackIn_50_2 + (stackIn_50_3 + ((BinaryBitmapFont) (Object) stackIn_50_4).a(ac.a(stackIn_50_5, stackIn_50_6, stackIn_51_7, stackIn_55_8), 254) * var7);
+              stackIn_50_0[stackIn_50_1] = stackIn_50_2 + (stackIn_50_3 + ((BinaryBitmapFont) (Object) stackIn_50_4).lineCount(ac.a(stackIn_50_5, stackIn_50_6, stackIn_51_7, stackIn_55_8), 254) * var7);
             }
           }
           if (decompiledFrameCompleted0) {

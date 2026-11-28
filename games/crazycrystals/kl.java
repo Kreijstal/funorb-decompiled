@@ -18,7 +18,7 @@ final class kl extends en {
         try {
           this.field_Q = param1;
           if (this.field_Q != null) {
-            var3_int = mo.field_m.b(this.field_Q, 260, mo.field_m.field_o);
+            var3_int = mo.field_m.textHeight(this.field_Q, 260, mo.field_m.field_o);
             this.a(var3_int + 150, (byte) 119, 300);
           }
           this.field_X = new co(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -52,18 +52,18 @@ final class kl extends en {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0 + 0, param1, param2);
-        mo.field_m.c(this.field_Y, (this.field_g >> 1) + param1, param2 + 103, 16777215, -1);
+        mo.field_m.drawCentred(this.field_Y, (this.field_g >> 1) + param1, param2 + 103, 16777215, -1);
         if (param0 == 30) {
           if (null != this.field_Q) {
             SoftwareRasterizer.drawHorizontalLine(param1 + 20, -7 + (120 + param2), 260, 8421504);
-            mo.field_m.a(this.field_Q, param1 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, mo.field_m.field_o);
+            mo.field_m.drawParagraph(this.field_Q, param1 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, mo.field_m.field_o);
           }
           return;
         }
         this.field_Y = (String) null;
         if (null != this.field_Q) {
           SoftwareRasterizer.drawHorizontalLine(param1 + 20, -7 + (120 + param2), 260, 8421504);
-          mo.field_m.a(this.field_Q, param1 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, mo.field_m.field_o);
+          mo.field_m.drawParagraph(this.field_Q, param1 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, mo.field_m.field_o);
         }
     }
 

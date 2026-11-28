@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class na extends jh {
-    private uc field_L;
+    private BitmapFont field_L;
     private boolean field_J;
     private int field_M;
     private int field_F;
@@ -12,7 +12,7 @@ final class na extends jh {
     private String field_D;
     static String[] field_I;
 
-    na(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, uc param8, int param9, String param10) {
+    na(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (WidgetRenderer) null, (ca) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -38,7 +38,7 @@ final class na extends jh {
           this.field_F = param9;
           this.field_L = param8;
           var12_int = this.field_H - this.field_M;
-          var13 = this.field_L.a(param10, var12_int, this.field_L.field_x) + this.field_M * 2;
+          var13 = this.field_L.textHeight(param10, var12_int, this.field_L.field_x) + this.field_M * 2;
           if (param3 >= var13) {
             var13 = param3;
           } else {
@@ -306,7 +306,7 @@ final class na extends jh {
           return;
         }
         int var7 = !this.field_J ? 0 : -this.field_H + (this.width - 2 * this.field_M);
-        this.field_L.a(this.field_D, var5 - (-var7 - this.field_M), var6 + this.field_M, -this.field_M + this.field_H, this.height - 2 * this.field_M, this.field_F, -1, !this.field_J ? 2 : 0, 1, this.field_L.field_x);
+        this.field_L.drawParagraph(this.field_D, var5 - (-var7 - this.field_M), var6 + this.field_M, -this.field_M + this.field_H, this.height - 2 * this.field_M, this.field_F, -1, !this.field_J ? 2 : 0, 1, this.field_L.field_x);
     }
 
     final String b(int param0) {

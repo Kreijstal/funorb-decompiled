@@ -232,18 +232,18 @@ final class we implements j {
             var12 = new Sprite(195, 221);
             var6 = var12.field_p / 2;
             var12.a();
-            GzipDecompressor.field_a.a(LoginPanel.a(og.field_e, new String[]{NodeHashTableIterator.field_c}, -63), var6, 40, 16777215, -1);
-            ArchiveRequest.field_n.a(LoginPanel.a(b.field_a, new String[]{NodeHashTableIterator.field_c}, -63), var6, 60, 16777215, -1);
-            GzipDecompressor.field_a.a(LoginPanel.a(l.field_d, new String[]{sf.field_b}, -63), var6, 110, 16777215, -1);
-            ArchiveRequest.field_n.a(LoginPanel.a(BufferedCacheFile.field_l, new String[]{sf.field_b}, -63), var6, 130, 16777215, -1);
-            GzipDecompressor.field_a.a(le.field_b, var6, 180, 16777215, -1);
-            ArchiveRequest.field_n.a(WidgetContainer.field_A, var6, 200, 16777215, -1);
+            GzipDecompressor.field_a.drawCentred(LoginPanel.a(og.field_e, new String[]{NodeHashTableIterator.field_c}, -63), var6, 40, 16777215, -1);
+            ArchiveRequest.field_n.drawCentred(LoginPanel.a(b.field_a, new String[]{NodeHashTableIterator.field_c}, -63), var6, 60, 16777215, -1);
+            GzipDecompressor.field_a.drawCentred(LoginPanel.a(l.field_d, new String[]{sf.field_b}, -63), var6, 110, 16777215, -1);
+            ArchiveRequest.field_n.drawCentred(LoginPanel.a(BufferedCacheFile.field_l, new String[]{sf.field_b}, -63), var6, 130, 16777215, -1);
+            GzipDecompressor.field_a.drawCentred(le.field_b, var6, 180, 16777215, -1);
+            ArchiveRequest.field_n.drawCentred(WidgetContainer.field_A, var6, 200, 16777215, -1);
             UiWidget.a(var12.field_p, 0, var12.field_t, 3, var12, 0, 1, (byte) 21);
             pf.field_b.a();
             var12.d(18 - pf.field_b.field_s, 241 - pf.field_b.field_n);
             for (var7 = 0; ba.field_s.length > var7; var7++) {
               qd.field_e[var7].a();
-              ArchiveRequest.field_n.a(ba.field_s[var7], 3, 3, qd.field_e[var7].field_p - 6, -6 + qd.field_e[var7].field_t, ea.field_o, -1, 1, 1, ArchiveRequest.field_n.field_F + ArchiveRequest.field_n.field_s);
+              ArchiveRequest.field_n.drawParagraph(ba.field_s[var7], 3, 3, qd.field_e[var7].field_p - 6, -6 + qd.field_e[var7].field_t, ea.field_o, -1, 1, 1, ArchiveRequest.field_n.field_F + ArchiveRequest.field_n.field_s);
               UiWidget.a(qd.field_e[var7].field_p, 0, qd.field_e[var7].field_t, 3, qd.field_e[var7], 0, 1, (byte) 21);
             }
             ba.field_s = null;
@@ -271,8 +271,8 @@ final class we implements j {
             var3Lifetime1 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(lj.field_D);
             var14 = LoginPanel.a(tk.field_q, new String[]{eb.field_d[uf.field_q]}, -63);
-            var5 = GzipDecompressor.field_a.c(var14, jj.field_db);
-            var6Lifetime1 = GzipDecompressor.field_a.b(var14, jj.field_db, GzipDecompressor.field_a.field_F + GzipDecompressor.field_a.field_s);
+            var5 = GzipDecompressor.field_a.maxLineWidth(var14, jj.field_db);
+            var6Lifetime1 = GzipDecompressor.field_a.textHeight(var14, jj.field_db, GzipDecompressor.field_a.field_F + GzipDecompressor.field_a.field_s);
             var7Lifetime1 = ji.field_a + (-var5 + jj.field_db) / 2;
             var8 = AgeValidator.field_o + (IterableNodeHashTable.field_h - var6Lifetime1) / 2;
             var5 += 6;
@@ -318,7 +318,7 @@ final class we implements j {
             ja.field_a.d();
             var9 = new Sprite(ja.field_a.field_q, ja.field_a.field_r);
             var9.a();
-            GzipDecompressor.field_a.a(var14, ji.field_a, AgeValidator.field_o, jj.field_db, IterableNodeHashTable.field_h, 16777215, -1, 1, 1, GzipDecompressor.field_a.field_F + GzipDecompressor.field_a.field_s);
+            GzipDecompressor.field_a.drawParagraph(var14, ji.field_a, AgeValidator.field_o, jj.field_db, IterableNodeHashTable.field_h, 16777215, -1, 1, 1, GzipDecompressor.field_a.field_F + GzipDecompressor.field_a.field_s);
             UiWidget.a(var9.field_q, 0, var9.field_r, 3, var9, 0, 1, (byte) 21);
             ja.field_a.a();
             var9.d(0, 0);
@@ -340,7 +340,7 @@ final class we implements j {
             var17 = LoginPanel.a(wb.field_d, new String[]{ProxySocketConnector.field_n}, -63);
             ProxySocketConnector.field_n = null;
             var16.a();
-            ArchiveRequest.field_n.a(var17, 3, 3, var16.field_p - 6, -6 + var16.field_t, 16777215, -1, 0, 1, ArchiveRequest.field_n.field_F + ArchiveRequest.field_n.field_s);
+            ArchiveRequest.field_n.drawParagraph(var17, 3, 3, var16.field_p - 6, -6 + var16.field_t, 16777215, -1, 0, 1, ArchiveRequest.field_n.field_F + ArchiveRequest.field_n.field_s);
             UiWidget.a(var16.field_p, 0, var16.field_t, 3, var16, 0, 1, (byte) 21);
             va.field_g.a();
             var16.d(199 - va.field_g.field_s, -va.field_g.field_n + 83);
@@ -353,12 +353,12 @@ final class we implements j {
             var2Lifetime3 = SoftwareRasterizer.field_a;
             var3Lifetime3 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(lj.field_D);
-            var4 = ArchiveRequest.field_n.c(EmailFormatValidator.field_p, 640) + 6;
+            var4 = ArchiveRequest.field_n.maxLineWidth(EmailFormatValidator.field_p, 640) + 6;
             var5Lifetime1 = EmailFormatValidator.field_j.field_q + var4 + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (EmailFormatValidator.field_j.field_q + var6Lifetime2);
             va.field_g.a();
-            ArchiveRequest.field_n.c(EmailFormatValidator.field_p, -va.field_g.field_s + var7Lifetime2, ArchiveRequest.field_n.field_s + (ArchiveRequest.field_n.field_F + (-va.field_g.field_n + 155)), 16777215, -1);
+            ArchiveRequest.field_n.drawString(EmailFormatValidator.field_p, -va.field_g.field_s + var7Lifetime2, ArchiveRequest.field_n.field_s + (ArchiveRequest.field_n.field_F + (-va.field_g.field_n + 155)), 16777215, -1);
             UiWidget.a(var4, var7Lifetime2 - va.field_g.field_s - 4, 50, 3, va.field_g, 155 - va.field_g.field_n, 1, (byte) 21);
             var8Lifetime1 = -va.field_g.field_n + 155 - (-ArchiveRequest.field_n.field_F - 3 + EmailFormatValidator.field_j.field_r - ArchiveRequest.field_n.field_s) / 2;
             EmailFormatValidator.field_j.d(var6Lifetime2 - va.field_g.field_s, var8Lifetime1);
@@ -552,7 +552,7 @@ final class we implements j {
           SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
           if (this.field_k != null) {
             var13 = var14.field_O + var14.field_N + this.field_j;
-            this.field_k.a(param4.field_i, var13 + (param4.field_m + param3), this.field_d + (param4.field_j + param1), -var13 - (this.field_j - param4.field_t), -(this.field_j << 1) + param4.field_x, this.field_i, this.field_b, 1, 1, 0);
+            this.field_k.drawParagraph(param4.field_i, var13 + (param4.field_m + param3), this.field_d + (param4.field_j + param1), -var13 - (this.field_j - param4.field_t), -(this.field_j << 1) + param4.field_x, this.field_i, this.field_b, 1, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

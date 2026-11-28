@@ -69,11 +69,11 @@ final class PcmOutputWorker implements Runnable {
         return -96;
     }
 
-    final static hd a(byte[] param0, int param1) {
-        hd var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, int param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        hd stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -81,12 +81,12 @@ final class PcmOutputWorker implements Runnable {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (hd) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param1 != 32223) {
             field_d = 21;
           }
-          var2 = new hd(param0, ph.field_h, qf.field_d, sa.field_l, uj.field_b, jc.field_c);
+          var2 = new BinaryBitmapFont(param0, ph.field_h, qf.field_d, sa.field_l, uj.field_b, jc.field_c);
           og.a((byte) -97);
           stackIn_6_0 = var2;
           return stackIn_6_0;

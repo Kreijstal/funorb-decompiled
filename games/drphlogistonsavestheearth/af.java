@@ -10,11 +10,11 @@ final class af {
     static String field_a;
     static int field_b;
 
-    final static bm a(int param0, byte[] param1) {
+    final static CoverageBitmapFont a(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        bm var3 = null;
-        bm stackIn_4_0 = null;
+        CoverageBitmapFont var3 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -24,7 +24,7 @@ final class af {
           if (param1 == null) {
             return null;
           }
-          var3 = new bm(param1, kh.field_i, vi.field_b, gf.field_o, qa.field_J, MouseInput.field_a, a.field_e);
+          var3 = new CoverageBitmapFont(param1, kh.field_i, vi.field_b, gf.field_o, qa.field_J, MouseInput.field_a, a.field_e);
           Bzip2State.a((byte) -21);
           stackIn_4_0 = var3;
           return stackIn_4_0;

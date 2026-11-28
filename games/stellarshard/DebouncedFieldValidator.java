@@ -47,9 +47,9 @@ abstract class DebouncedFieldValidator implements FieldValidator {
         String var8 = null;
         int var9 = stellarshard.field_B;
         param6 += 24;
-        int var7_int = 48 + l.field_f.b(gf.field_b) + nj.field_f[param1];
-        if (!(l.field_f.b(param0) <= -nj.field_f[param1] + (var7_int - 48))) {
-          var7_int = 48 + (l.field_f.b(param0) + nj.field_f[param1]);
+        int var7_int = 48 + l.field_f.stringWidth(gf.field_b) + nj.field_f[param1];
+        if (!(l.field_f.stringWidth(param0) <= -nj.field_f[param1] + (var7_int - 48))) {
+          var7_int = 48 + (l.field_f.stringWidth(param0) + nj.field_f[param1]);
         }
         jf.field_n[0].e(param4 - var7_int / 2, -(jf.field_n[0].field_x / 2) + (2 + param6) + (-(l.field_f.field_N / 2) + 2));
         SoftwareRasterizer.setClip(-(var7_int / 2) + (param4 + jf.field_n[0].field_w), 0, -jf.field_n[2].field_w + param4 + var7_int / 2, 480);
@@ -69,11 +69,11 @@ abstract class DebouncedFieldValidator implements FieldValidator {
         }
         try {
           var8 = IterableNodeHashTable.a(param0, "<col", "<", -101);
-          l.field_f.c(var8, -1 + param4, param6, 0, -1);
-          l.field_f.c(var8, 1 + param4, param6, 0, -1);
-          l.field_f.c(var8, param4 + 1, -1 + param6, 0, -1);
-          l.field_f.c(var8, 1 + param4, param6 + 1, 0, -1);
-          l.field_f.c(param0, param4, param6, param5, param2);
+          l.field_f.drawCentred(var8, -1 + param4, param6, 0, -1);
+          l.field_f.drawCentred(var8, 1 + param4, param6, 0, -1);
+          l.field_f.drawCentred(var8, param4 + 1, -1 + param6, 0, -1);
+          l.field_f.drawCentred(var8, 1 + param4, param6 + 1, 0, -1);
+          l.field_f.drawCentred(param0, param4, param6, param5, param2);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ic.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }

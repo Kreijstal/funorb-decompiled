@@ -28,7 +28,7 @@ class wc extends lb {
         }
     }
 
-    wc(vc param0, int param1) {
+    wc(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_o, -1, 2147483647, false);
     }
 

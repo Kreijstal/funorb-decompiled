@@ -7,7 +7,7 @@ final class fm implements cg {
     private int field_f;
     private int field_d;
     static String field_c;
-    private rf field_k;
+    private BitmapFont field_k;
     private int field_h;
     static int[] field_e;
     static boolean field_l;
@@ -51,7 +51,7 @@ final class fm implements cg {
             SoftwareRasterizer.fillCircle(var7 * var12.a(var10, (byte) 4) / var12.i(-110) + var8, var9, this.field_h, this.field_d);
           }
           if (this.field_k != null) {
-            this.field_k.b(var12.field_p, var8 + var7 / 2, var12.field_K + this.field_k.field_E + var9, this.field_a, this.field_g);
+            this.field_k.drawCentred(var12.field_p, var8 + var7 / 2, var12.field_K + this.field_k.field_E + var9, this.field_a, this.field_g);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -180,7 +180,7 @@ final class fm implements cg {
         field_b = null;
     }
 
-    fm(rf param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    fm(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_k = param0;
           this.field_m = param4;

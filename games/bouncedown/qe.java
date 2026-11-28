@@ -138,11 +138,11 @@ final class qe extends ng {
         }
     }
 
-    final static ie a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        ie stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -152,7 +152,7 @@ final class qe extends ng {
         try {
           if (!c.a(param1, false, param2, param3)) {
             stackIn_2_0 = null;
-            return (ie) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           var5_int = 9 / ((param0 + 58) / 59);
           stackIn_4_0 = ea.a(param4.getFile(-122, param3, param2), (byte) 71);

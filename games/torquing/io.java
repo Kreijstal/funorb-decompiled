@@ -75,7 +75,7 @@ final class io extends ig {
         }
     }
 
-    private io(uc param0, int param1) {
+    private io(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -83,11 +83,11 @@ final class io extends ig {
         this(TranslucentSpriteLayer.field_e, param0);
     }
 
-    final static vn a(IndexedSprite[] param0, int param1, byte[] param2) {
+    final static BinaryBitmapFont a(IndexedSprite[] param0, int param1, byte[] param2) {
         int var8_int = 0;
         byte[] array$0 = null;
         int incrementValue$2 = 0;
-        vn stackIn_28_0 = null;
+        BinaryBitmapFont stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -100,7 +100,7 @@ final class io extends ig {
         int[] var5 = null;
         int[] var6 = null;
         byte[][] var7 = null;
-        vn var8 = null;
+        BinaryBitmapFont var8 = null;
         byte[] var9 = null;
         byte[] var10 = null;
         int var11 = 0;
@@ -203,7 +203,7 @@ final class io extends ig {
               var16Lifetime1 = var16Lifetime1 + var14;
             }
           }
-          var8 = new vn(param2, var33, var34, var31, var32, var35);
+          var8 = new BinaryBitmapFont(param2, var33, var34, var31, var32, var35);
           var8.field_x = var8.field_x - 1;
           var8.field_s = var8.field_s - 1;
           var8.field_t = var8.field_t - 1;

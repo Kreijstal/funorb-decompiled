@@ -262,9 +262,9 @@ final class nh extends og implements vd {
         if (param3 != 0) {
           return;
         }
-        vc var5 = ai.field_h;
+        BitmapFont var5 = ai.field_h;
         if (null != this.field_B) {
-          var5.a(IntrusiveDeque.field_b, this.field_r + param2, this.field_j + param0, this.field_g, 20, 16777215, -1, 0, 0, var5.field_u + var5.field_o);
+          var5.drawParagraph(IntrusiveDeque.field_b, this.field_r + param2, this.field_j + param0, this.field_g, 20, 16777215, -1, 0, 0, var5.field_u + var5.field_o);
         }
     }
 

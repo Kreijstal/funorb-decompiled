@@ -100,12 +100,12 @@ final class pe {
     final static void a(int param0) {
         int var1 = 69 / ((param0 + 50) / 44);
         if (ok.field_e) {
-          BoundedRandomAccessFile.field_e.c("Clearances With Monkeys: " + IterableNodeHashTable.field_e, 635, 30, 16711680, 1);
-          BoundedRandomAccessFile.field_e.c("Clearances WithOut Monkeys: " + ek.field_b, 635, 50, 16711680, 1);
-          BoundedRandomAccessFile.field_e.c("Nuts Fired: " + sc.field_c, 635, 70, 16711680, 1);
-          BoundedRandomAccessFile.field_e.c("Size of last detatched clump " + ke.field_c, 635, 90, 16711680, 1);
-          BoundedRandomAccessFile.field_e.c("FPS: " + s.field_T, 635, 110, 16711680, 1);
-          BoundedRandomAccessFile.field_e.c("LPS: " + jf.field_g, 635, 130, 16711680, 1);
+          BoundedRandomAccessFile.field_e.drawRightAligned("Clearances With Monkeys: " + IterableNodeHashTable.field_e, 635, 30, 16711680, 1);
+          BoundedRandomAccessFile.field_e.drawRightAligned("Clearances WithOut Monkeys: " + ek.field_b, 635, 50, 16711680, 1);
+          BoundedRandomAccessFile.field_e.drawRightAligned("Nuts Fired: " + sc.field_c, 635, 70, 16711680, 1);
+          BoundedRandomAccessFile.field_e.drawRightAligned("Size of last detatched clump " + ke.field_c, 635, 90, 16711680, 1);
+          BoundedRandomAccessFile.field_e.drawRightAligned("FPS: " + s.field_T, 635, 110, 16711680, 1);
+          BoundedRandomAccessFile.field_e.drawRightAligned("LPS: " + jf.field_g, 635, 130, 16711680, 1);
         }
     }
 

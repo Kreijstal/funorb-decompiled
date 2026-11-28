@@ -1021,7 +1021,7 @@ final class wl extends sl {
 
     private final void a(int param0, int param1) {
         if (this.field_V[param0] != null) {
-          this.field_V[param0].b(param1 * 256 / AudioOutput.field_c);
+          this.field_V[param0].setSampleStepMagnitude(param1 * 256 / AudioOutput.field_c);
         }
     }
 

@@ -7,7 +7,7 @@ final class wh {
     static p[] field_b;
     static boolean field_f;
     static fa field_c;
-    static nc field_d;
+    static CoverageBitmapFont field_d;
 
     public static void clearStaticReferences(int param0) {
         field_e = null;

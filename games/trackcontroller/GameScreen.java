@@ -238,9 +238,9 @@ final class GameScreen {
         var3 = 74;
         if (rd.field_b == 0) {
           var3 += 20;
-          var3 = var3 + var11.a(tf.field_b, 34, -var11.field_q + var3, 572, 1000, 0, -1, 3, 0, 26) * 26;
+          var3 = var3 + var11.drawParagraph(tf.field_b, 34, -var11.field_q + var3, 572, 1000, 0, -1, 3, 0, 26) * 26;
           var3 += 26;
-          var11.a(gh.field_e, 34, -var11.field_q + var3, 572, 1000, 0, -1, 3, 0, 26);
+          var11.drawParagraph(gh.field_e, 34, -var11.field_q + var3, 572, 1000, 0, -1, 3, 0, 26);
         } else {
           if (1 == rd.field_b) {
             for (var4 = 0; IntrusiveDeque.field_a.length > var4; var4++) {
@@ -253,12 +253,12 @@ final class GameScreen {
               var6 = ii.tileSprites[var5];
               var6.drawOpaque(47, var3);
               var7 = 86;
-              var8 = var10.a(MovingBlock.field_p[var4], var7, -6 + (var3 + 26) - var11.field_G, 606 - var7, 1000, 0, -1, 0, 0, 26);
+              var8 = var10.drawParagraph(MovingBlock.field_p[var4], var7, -6 + (var3 + 26) - var11.field_G, 606 - var7, 1000, 0, -1, 0, 0, 26);
               var3 = var3 + (var8 * 26 + 26);
             }
           }
         }
-        var11.a(PacketBuffer.a((byte) 22, 2, 1 + rd.field_b), 606, 406, 0, -1);
+        var11.drawRightAligned(PacketBuffer.a((byte) 22, 2, 1 + rd.field_b), 606, 406, 0, -1);
     }
 
     private final void d(int param0) {
@@ -317,7 +317,7 @@ final class GameScreen {
         SoftwareRasterizer.drawRectangleOutline(386, 75, 102, 284, 3352864);
         if (jj.s(23)) {
           var2 = nd.field_I;
-          DisplayNameSelectionPanel.font.b(SecondaryNodeDequeIterator.field_b, 320, 406, 0, -1);
+          DisplayNameSelectionPanel.font.drawCentred(SecondaryNodeDequeIterator.field_b, 320, 406, 0, -1);
         } else {
           if (null == SpriteState.field_w) {
             SpriteState.field_w = PcmOutputWorker.a(3, 10, 1, 10, (byte) -102);
@@ -367,10 +367,10 @@ final class GameScreen {
                       var11 = 1;
                     }
                     if (var7 < 10) {
-                      DisplayNameSelectionPanel.font.a(var7 + 1 + ". ", 181, var6, var11, -1);
+                      DisplayNameSelectionPanel.font.drawRightAligned(var7 + 1 + ". ", 181, var6, var11, -1);
                     }
-                    DisplayNameSelectionPanel.font.c((String) (var10), 181, var6, var11, -1);
-                    DisplayNameSelectionPanel.font.a(Integer.toString(var8), 487, var6, var11, -1);
+                    DisplayNameSelectionPanel.font.drawString((String) (var10), 181, var6, var11, -1);
+                    DisplayNameSelectionPanel.font.drawRightAligned(Integer.toString(var8), 487, var6, var11, -1);
                     if (var4 == var7 &&
                       he.field_f[this.field_c] != null) {
                       var12 = he.field_f[this.field_c];
@@ -387,7 +387,7 @@ final class GameScreen {
           } else {
             var2 = f.field_d;
           }
-          DisplayNameSelectionPanel.font.b(ad.field_s, 320, 406, 0, -1);
+          DisplayNameSelectionPanel.font.drawCentred(ad.field_s, 320, 406, 0, -1);
         }
         stackIn_54_0Lifetime1 = param0;
         stackIn_54_1Lifetime1 = -4;
@@ -395,7 +395,7 @@ final class GameScreen {
           this.a(52, false, false);
         }
         var3 = 224;
-        DisplayNameSelectionPanel.font.b(var2, 255, var3, 0, -1);
+        DisplayNameSelectionPanel.font.drawCentred(var2, 255, var3, 0, -1);
     }
 
     private final void a(boolean param0, int param1, int param2, int param3, int param4) {
@@ -470,13 +470,13 @@ final class GameScreen {
             var10 = stackIn_52_0[stackIn_53_1];
             var11 = DisplayNameSelectionPanel.font.stringWidth(var7) - (-DisplayNameSelectionPanel.font.charWidth(' ') - var10.field_s);
             var12 = param1 + (156 - var11 >> 1);
-            DisplayNameSelectionPanel.font.c(var7, var12, -2 + (DisplayNameSelectionPanel.font.field_G + param2), var9Lifetime1, -1);
+            DisplayNameSelectionPanel.font.drawString(var7, var12, -2 + (DisplayNameSelectionPanel.font.field_G + param2), var9Lifetime1, -1);
             var10.drawTransparent(var12 - (-var11 + var10.field_s), (1 - var10.field_v + 26 >> 1) + param2);
           } else {
-            DisplayNameSelectionPanel.font.b(var7, 78 + param1, param2 - (-DisplayNameSelectionPanel.font.field_G + 2), var9Lifetime1, -1);
+            DisplayNameSelectionPanel.font.drawCentred(var7, 78 + param1, param2 - (-DisplayNameSelectionPanel.font.field_G + 2), var9Lifetime1, -1);
           }
         } else {
-          DisplayNameSelectionPanel.font.c(var7, param1 + 13, DisplayNameSelectionPanel.font.field_G + param2 - 2, var9Lifetime1, -1);
+          DisplayNameSelectionPanel.font.drawString(var7, param1 + 13, DisplayNameSelectionPanel.font.field_G + param2 - 2, var9Lifetime1, -1);
           if (!this.a((byte) 60, var6)) {
             stackIn_42_0 = (!param0) ? 4473924 : 12303291;
           } else {
@@ -907,23 +907,23 @@ final class GameScreen {
           var7 = this.field_d;
         }
         if (var7 != -1) {
-          DisplayNameSelectionPanel.font.b(wa.field_k[var7], 320, 224, 0, -1);
+          DisplayNameSelectionPanel.font.drawCentred(wa.field_k[var7], 320, 224, 0, -1);
           if ((1 << var7 & var5) != 0) {
-            DisplayNameSelectionPanel.font.b(mb.field_a, 320, 250, 0, -1);
+            DisplayNameSelectionPanel.font.drawCentred(mb.field_a, 320, 250, 0, -1);
           } else {
-            DisplayNameSelectionPanel.font.b(kb.field_c, 320, 250, 7, -1);
+            DisplayNameSelectionPanel.font.drawCentred(kb.field_c, 320, 250, 7, -1);
           }
           if ((var5 & 1 << var7) != 0) {
             bb.field_b[var7].drawTransparent(256, 282);
           } else {
             vj.field_a.drawTransparent(256, 282);
           }
-          DisplayNameSelectionPanel.font.a(gj.field_b[var7], 50, 302 - DisplayNameSelectionPanel.font.field_G, 201, 1000, 0, -1, 0, 0, 26);
+          DisplayNameSelectionPanel.font.drawParagraph(gj.field_b[var7], 50, 302 - DisplayNameSelectionPanel.font.field_G, 201, 1000, 0, -1, 0, 0, 26);
           var8Lifetime1 = 302;
-          DisplayNameSelectionPanel.font.c(kc.field_a + 100 * rd.field_f[var7], 410, var8Lifetime1, 0, -1);
+          DisplayNameSelectionPanel.font.drawString(kc.field_a + 100 * rd.field_f[var7], 410, var8Lifetime1, 0, -1);
           var3Lifetime1 = 410;
           var8Lifetime1 += 26;
-          DisplayNameSelectionPanel.font.c(TextFieldValidator.field_l, var3Lifetime1, var8Lifetime1, 0, -1);
+          DisplayNameSelectionPanel.font.drawString(TextFieldValidator.field_l, var3Lifetime1, var8Lifetime1, 0, -1);
           var3Lifetime1 = var3Lifetime1 + DisplayNameSelectionPanel.font.stringWidth(TextFieldValidator.field_l);
           for (var9Lifetime1 = 0; rd.field_f[var7] > var9Lifetime1; var9Lifetime1++) {
             mc.field_E.drawTransparent(var3Lifetime1, -DisplayNameSelectionPanel.font.field_G + var8Lifetime1);
@@ -931,9 +931,9 @@ final class GameScreen {
           }
           return;
         }
-        DisplayNameSelectionPanel.font.b(NodeHashTable.field_a, 320, 302, 0, -1);
+        DisplayNameSelectionPanel.font.drawCentred(NodeHashTable.field_a, 320, 302, 0, -1);
         if (jj.s(39)) {
-          DisplayNameSelectionPanel.font.b(SecondaryNodeDequeIterator.field_b, 320, 354, 0, -1);
+          DisplayNameSelectionPanel.font.drawCentred(SecondaryNodeDequeIterator.field_b, 320, 354, 0, -1);
         }
         return;
     }
@@ -1165,7 +1165,7 @@ final class GameScreen {
                           break scanLoop1;
                         }
                         var4 = 154 - (-DisplayNameSelectionPanel.font.field_G + 2);
-                        DisplayNameSelectionPanel.font.b(PasswordValidator.field_n, 320, var4, 5, -1);
+                        DisplayNameSelectionPanel.font.drawCentred(PasswordValidator.field_n, 320, var4, 5, -1);
                         break scanLoop1;
                       }
                       UiWidget.field_z[3].drawTransparent(-UiWidget.field_z[3].field_t + 640 >> 1, 1);
@@ -1178,7 +1178,7 @@ final class GameScreen {
                         } else {
                           var4_ref_String = GameKeyHandler.field_f;
                         }
-                        DisplayNameSelectionPanel.font.a(var4_ref_String, 100, 67, 156, 234, 0, -1, 1, 1, 26);
+                        DisplayNameSelectionPanel.font.drawParagraph(var4_ref_String, 100, 67, 156, 234, 0, -1, 1, 1, 26);
                       } else {
                         qh.field_b.a(100, (byte) -127, 67);
                         IndexedSpriteState.field_d.drawTransparent(-367, -162);
@@ -1217,8 +1217,8 @@ final class GameScreen {
                           var5 == var11) {
                           var13 = 1;
                         }
-                        DisplayNameSelectionPanel.font.c(var12Lifetime1, 390, var6, var13, -1);
-                        DisplayNameSelectionPanel.font.a(var11.levelIndex + ". ", 390, var6, var13, -1);
+                        DisplayNameSelectionPanel.font.drawString(var12Lifetime1, 390, var6, var13, -1);
+                        DisplayNameSelectionPanel.font.drawRightAligned(var11.levelIndex + ". ", 390, var6, var13, -1);
                         var6 += 26;
                       }
                       SoftwareRasterizer.resetClip();
@@ -1228,23 +1228,23 @@ final class GameScreen {
                     break scanLoop1;
                   }
                   UiWidget.field_z[0].drawTransparent(-UiWidget.field_z[0].field_t + 640 >> 1, 1);
-                  DisplayNameSelectionPanel.font.b(qg.field_b, 320, DisplayNameSelectionPanel.font.field_G + 154, 5, -1);
+                  DisplayNameSelectionPanel.font.drawCentred(qg.field_b, 320, DisplayNameSelectionPanel.font.field_G + 154, 5, -1);
                   stackIn_99_0 = DisplayNameSelectionPanel.font;
                   stackIn_100_1 = (0 != oe.field_e);
                   stackIn_103_2 = (0 != ua.field_L.score);
                   stackIn_106_3 = (0 != ua.field_L.score);
-                  ((BitmapFont) (Object) stackIn_99_0).b(vj.a(stackIn_100_1, stackIn_103_2, stackIn_106_3, 118), 320, 180 + DisplayNameSelectionPanel.font.field_G, 5, -1);
+                  ((BitmapFont) (Object) stackIn_99_0).drawCentred(vj.a(stackIn_100_1, stackIn_103_2, stackIn_106_3, 118), 320, 180 + DisplayNameSelectionPanel.font.field_G, 5, -1);
                   stackIn_108_0 = DisplayNameSelectionPanel.font;
                   stackIn_109_1 = (0 != ua.field_L.score);
                   stackIn_112_2 = (oe.field_e != 0);
                   stackIn_115_3 = (ua.field_L.score != 0);
-                  ((BitmapFont) (Object) stackIn_108_0).b(IntrusiveNode.a(stackIn_109_1, stackIn_112_2, stackIn_115_3, 12105912), 320, DisplayNameSelectionPanel.font.field_G + 258, 5, -1);
+                  ((BitmapFont) (Object) stackIn_108_0).drawCentred(IntrusiveNode.a(stackIn_109_1, stackIn_112_2, stackIn_115_3, 12105912), 320, DisplayNameSelectionPanel.font.field_G + 258, 5, -1);
                   stackIn_117_0 = DisplayNameSelectionPanel.font;
                   stackIn_118_1 = (ua.field_L.score != 0);
                   stackIn_120_2 = -98;
                   stackIn_121_3 = (oe.field_e != 0);
                   stackIn_124_4 = (ua.field_L.score != 0);
-                  ((BitmapFont) (Object) stackIn_117_0).b(ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(stackIn_118_1, stackIn_120_2, stackIn_121_3, stackIn_124_4), 320, DisplayNameSelectionPanel.font.field_G + 310, 5, -1);
+                  ((BitmapFont) (Object) stackIn_117_0).drawCentred(ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(stackIn_118_1, stackIn_120_2, stackIn_121_3, stackIn_124_4), 320, DisplayNameSelectionPanel.font.field_G + 310, 5, -1);
                   break scanLoop1;
                 }
                 UiWidget.field_z[1].drawTransparent(-UiWidget.field_z[1].field_t + 640 >> 1, 1);

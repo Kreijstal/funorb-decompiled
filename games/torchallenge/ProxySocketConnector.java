@@ -8,7 +8,7 @@ final class ProxySocketConnector extends SocketConnector {
     static cf field_q;
     static int field_o;
     private java.net.ProxySelector field_n;
-    static nf field_p;
+    static BinaryBitmapFont field_p;
     static Sprite field_m;
 
     final static long e(int param0) {

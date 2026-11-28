@@ -8,7 +8,7 @@ final class WordLanguage {
     String field_d;
     String field_h;
     static String field_q;
-    mi field_c;
+    BinaryBitmapFont field_c;
     boolean field_g;
     int[] field_p;
     static java.awt.Frame field_e;
@@ -145,7 +145,7 @@ final class WordLanguage {
         int var18 = 0;
         int stackIn_39_0 = 0;
         boolean stackIn_47_1 = false;
-        mi stackIn_54_1 = null;
+        BinaryBitmapFont stackIn_54_1 = null;
         RuntimeException stackIn_61_0 = null;
         StringBuilder stackIn_61_1 = null;
         String stackIn_62_2 = null;

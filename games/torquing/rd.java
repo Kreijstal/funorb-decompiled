@@ -24,7 +24,7 @@ final class rd extends am {
         this.field_w = 2000;
     }
 
-    final static void a(uc param0, int param1, int param2, String param3, kp param4) {
+    final static void a(BitmapFont param0, int param1, int param2, String param3, kp param4) {
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -49,13 +49,13 @@ final class rd extends am {
           for (var7 = 1; var7 < param3.length(); var7++) {
             var8 = param3.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) + param4.field_b[0] + param0.a(param3.substring(0, var7));
+              var6 = (var5_int >> 8) + param4.field_b[0] + param0.stringWidth(param3.substring(0, var7));
             }
             if (-1 == var6) {
               if (var8 == 32) {
                 var5_int = var5_int + param2;
               }
-              param4.field_b[var7] = param4.field_b[0] + (var5_int >> 8) + param0.a(param3.substring(0, 1 + var7)) - param0.a((char) var8);
+              param4.field_b[var7] = param4.field_b[0] + (var5_int >> 8) + param0.stringWidth(param3.substring(0, 1 + var7)) - param0.charWidth((char) var8);
             } else {
               param4.field_b[var7] = var6;
             }
@@ -295,7 +295,7 @@ final class rd extends am {
     final void a(byte param0) {
         if (param0 < 123) {
           kp var3 = (kp) null;
-          rd.a((uc) null, -27, 36, (String) null, (kp) null);
+          rd.a((BitmapFont) null, -27, 36, (String) null, (kp) null);
         }
         ie.a(14837);
     }

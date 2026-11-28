@@ -396,7 +396,7 @@ final class DiskCacheWorker implements Runnable {
         String stackIn_76_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        co var7 = null;
+        BinaryBitmapFont var7 = null;
         UiPanel var8 = null;
         UiPanel var9 = null;
         UiPanel var10 = null;
@@ -453,9 +453,9 @@ final class DiskCacheWorker implements Runnable {
           var7 = w.a(param2, param3, "largefont", "lobby", 121);
           IntrusiveNode.field_e = w.a(param2, param3, "generalfont", "lobby", 104);
           kb.field_c = w.a(param2, param3, "chatfont", "lobby", 121);
-          var7.a(var5, var24);
-          IntrusiveNode.field_e.a(var5, var24);
-          kb.field_c.a(var5, var24);
+          var7.setInlineSprites(var5, var24);
+          IntrusiveNode.field_e.setInlineSprites(var5, var24);
+          kb.field_c.setInlineSprites(var5, var24);
           var8 = new UiPanel(0L, (UiPanel) null);
           var8.field_z = (BitmapFont) ((Object) var7);
           var8.field_qb = Archive.field_f;

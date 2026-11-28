@@ -8,7 +8,7 @@ final class pc extends hl {
     static int field_X;
     static boolean field_Z;
     static boolean field_db;
-    static kc field_bb;
+    static BitmapFont field_bb;
     static String field_ab;
 
     final void a(boolean param0, pj param1) {
@@ -339,7 +339,7 @@ final class pc extends hl {
         try {
           MatchingFieldValidator.field_r = param0;
           if (!param1) {
-            field_bb = (kc) null;
+            field_bb = (BitmapFont) null;
           }
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "pc.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -150,12 +150,12 @@ abstract class rj extends IntrusiveNode {
         }
     }
 
-    final static tj a(byte[] param0, int param1) {
-        tj var2 = null;
+    final static CoverageBitmapFont a(byte[] param0, int param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        tj stackIn_5_0 = null;
-        tj stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_5_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -163,11 +163,11 @@ abstract class rj extends IntrusiveNode {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (tj) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new tj(param0, MusicPatchPcmStream.field_t, fe.field_g, jc.field_f, jn.field_k, uo.field_b, ub.field_q);
+          var2 = new CoverageBitmapFont(param0, MusicPatchPcmStream.field_t, fe.field_g, jc.field_f, jn.field_k, uo.field_b, ub.field_q);
           if (param1 != 18118) {
-            stackIn_5_0 = (tj) null;
+            stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;
           }
           sb.a(500);

@@ -40,7 +40,7 @@ final class pk extends ql {
     final void e(int param0) {
         this.field_f = new GridPoint(ln.field_a.field_v[2], ln.field_a.field_v[3]);
         this.field_h = new v(ke.field_w, 0, param0);
-        this.field_h.field_m = Math.min(this.field_h.field_m, this.field_h.field_i.a(this.field_h.field_k));
+        this.field_h.field_m = Math.min(this.field_h.field_m, this.field_h.field_i.stringWidth(this.field_h.field_k));
         this.field_h.field_l = -24 + 24 * this.field_f.field_e;
         this.field_h.field_a = 1;
         this.field_h.field_d = 24 * this.field_f.field_g - 120;

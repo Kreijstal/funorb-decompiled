@@ -55,7 +55,7 @@ final class bf {
         return;
     }
 
-    final static void a(String param0, tg param1, int param2, se param3, int param4) {
+    final static void a(String param0, tg param1, int param2, BitmapFont param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -80,7 +80,7 @@ final class bf {
           for (var7 = 1; param0.length() > var7; var7++) {
             var8 = param0.charAt(var7);
             if (var8 == 60) {
-              var6 = param1.field_k[0] + ((var5_int >> 8) + param3.b(param0.substring(0, var7)));
+              var6 = param1.field_k[0] + ((var5_int >> 8) + param3.stringWidth(param0.substring(0, var7)));
             }
             if (var6 != -1) {
               param1.field_k[var7] = var6;
@@ -88,7 +88,7 @@ final class bf {
               if (var8 == 32) {
                 var5_int = var5_int + param2;
               }
-              param1.field_k[var7] = param1.field_k[0] + ((var5_int >> 8) + param3.b(param0.substring(0, 1 + var7))) - param3.a((char) var8);
+              param1.field_k[var7] = param1.field_k[0] + ((var5_int >> 8) + param3.stringWidth(param0.substring(0, 1 + var7))) - param3.charWidth((char) var8);
             }
             if (62 == var8) {
               var6 = -1;

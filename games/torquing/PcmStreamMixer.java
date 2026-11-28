@@ -122,7 +122,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final void a(PcmSample param0, int param1, int param2, int param3) {
-        this.a(PcmSampleStream.a(param0, param1, param2), param3);
+        this.a(PcmSampleStream.createForPlaybackRate(param0, param1, param2), param3);
     }
 
     private final void removeListener(sl param0) {
@@ -142,7 +142,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final void a(PcmSample param0, int param1, int param2) {
-        this.b(PcmSampleStream.a(param0, param1, param2));
+        this.b(PcmSampleStream.createForPlaybackRate(param0, param1, param2));
     }
 
     private final void mixChildStreams(int[] param0, int param1, int param2) {

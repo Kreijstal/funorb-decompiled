@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wa implements de {
-    private qe field_b;
+    private BitmapFont field_b;
     private int field_d;
     static long field_a;
     private int field_c;
@@ -31,9 +31,9 @@ final class wa implements de {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
-          this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_k + "</u>", param0 + param4.field_s, param4.field_j + param3, param4.field_i, param4.field_f, var6_int, -1, this.field_d, this.field_c, this.field_b.field_p + this.field_b.field_q);
+          this.field_b.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_k + "</u>", param0 + param4.field_s, param4.field_j + param3, param4.field_i, param4.field_f, var6_int, -1, this.field_d, this.field_c, this.field_b.field_p + this.field_b.field_q);
           if (param4.d(true)) {
-            var8 = this.field_b.a(param4.field_k);
+            var8 = this.field_b.stringWidth(param4.field_k);
             var9 = this.field_b.field_q + this.field_b.field_p;
             var10 = param0 + param4.field_s;
             var11 = param3 + param4.field_j;
@@ -224,7 +224,7 @@ final class wa implements de {
         this.field_b = nb.field_c;
     }
 
-    wa(qe param0, int param1, int param2) {
+    wa(BitmapFont param0, int param1, int param2) {
         try {
           this.field_b = param0;
           this.field_d = param1;

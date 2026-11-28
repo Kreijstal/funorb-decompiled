@@ -787,9 +787,9 @@ final class ResourceArchive {
         return param0 < 2048 ? bd.field_c[-param0 + 2048] : -bd.field_c[-2048 + param0];
     }
 
-    final static i loadBitmapFont(ResourceArchive param0, byte param1, int param2, int param3, ResourceArchive param4) {
+    final static CoverageBitmapFont loadBitmapFont(ResourceArchive param0, byte param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
-        i stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

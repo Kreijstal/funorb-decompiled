@@ -115,7 +115,7 @@ final class ic extends mc {
         }
     }
 
-    private ic(se param0, int param1) {
+    private ic(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

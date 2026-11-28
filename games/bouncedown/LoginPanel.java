@@ -24,8 +24,8 @@ final class LoginPanel extends lc implements TextFieldListener, rc {
           }
           var3 = this.field_I;
           var4 = param1;
-          var3.a(false, var4, true);
-          this.field_z.h(117);
+          var3.setText(false, var4, true);
+          this.field_z.clearText(117);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ci.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -33,7 +33,7 @@ final class LoginPanel extends lc implements TextFieldListener, rc {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (null != this.field_E) {
-          FrameTimer.field_a.a(this.field_E, this.field_r + (param3 + 20), 15 + (param1 + this.field_i), -40 + this.field_k, this.field_m, 16777215, -1, 1, 0, FrameTimer.field_a.field_s);
+          FrameTimer.field_a.drawParagraph(this.field_E, this.field_r + (param3 + 20), 15 + (param1 + this.field_i), -40 + this.field_k, this.field_m, 16777215, -1, 1, 0, FrameTimer.field_a.field_s);
         }
         if (this.field_H != null) {
           SoftwareRasterizer.drawHorizontalLine(10 + param3, 134 + param1, this.field_k - 20, 4210752);
@@ -186,7 +186,7 @@ final class LoginPanel extends lc implements TextFieldListener, rc {
         RuntimeException decompiledCaughtException = null;
         jh var6 = null;
         RuntimeException var6_ref = null;
-        tj var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         ph var9 = null;
         hb var12 = null;
@@ -254,7 +254,7 @@ final class LoginPanel extends lc implements TextFieldListener, rc {
           this.field_i = 15;
           var7 = FrameTimer.field_a;
           if (this.field_E != null) {
-            this.field_i = this.field_i + (5 + var7.b(this.field_E, this.field_k - 40, var7.field_s));
+            this.field_i = this.field_i + (5 + var7.textHeight(this.field_E, this.field_k - 40, var7.field_s));
           }
           var8 = wj.field_b;
           var9 = ImageProducerRasterBuffer.a(DiskCacheWorker.b(0), (byte) -90);
@@ -334,8 +334,8 @@ final class LoginPanel extends lc implements TextFieldListener, rc {
         if (param0 != -100) {
           return;
         }
-        this.field_I.h(123);
-        this.field_z.h(param0 + 225);
+        this.field_I.clearText(123);
+        this.field_z.clearText(param0 + 225);
     }
 
     public final void onTextSubmitted(byte param0, EditableTextField param1) {

@@ -872,7 +872,7 @@ final class uf extends sf {
 
     private final void a(int param0, int param1) {
         if (this.field_O[param0] != null) {
-          this.field_O[param0].i(param1 * 256 / AudioOutput.field_m);
+          this.field_O[param0].setSampleStepMagnitude(param1 * 256 / AudioOutput.field_m);
         }
     }
 

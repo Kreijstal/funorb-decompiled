@@ -8,7 +8,7 @@ final class h extends kj {
     static int field_E;
     static int field_H;
     private int field_K;
-    private kc field_C;
+    private BitmapFont field_C;
     private int field_D;
     private int field_B;
     static int field_A;
@@ -29,7 +29,7 @@ final class h extends kj {
         GzipDecompressor.field_a.addLast(-115, var1);
     }
 
-    h(int param0, int param1, int param2, int param3, pj param4, boolean param5, int param6, int param7, kc param8, int param9, String param10) {
+    h(int param0, int param1, int param2, int param3, pj param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (td) null, (ag) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -55,7 +55,7 @@ final class h extends kj {
           this.field_D = param7;
           this.field_B = param6;
           var12_int = -this.field_D + this.field_B;
-          var13 = this.field_C.a(param10, var12_int, this.field_C.field_H) + 2 * this.field_D;
+          var13 = this.field_C.textHeight(param10, var12_int, this.field_C.field_H) + 2 * this.field_D;
           if (param3 < var13) {
             this.a(param0, param1, var13, (byte) -90, param2);
           } else {
@@ -163,7 +163,7 @@ final class h extends kj {
         super.a(param0, param1, param2, param3);
         if (0 == param1) {
           var7 = !this.field_F ? 0 : -(this.field_D * 2) + (-this.field_B + this.field_m);
-          this.field_C.a(this.field_I, var7 + var5 + this.field_D, var6 + this.field_D, this.field_B - this.field_D, -(this.field_D * 2) + this.field_r, this.field_K, -1, !this.field_F ? 2 : 0, 1, this.field_C.field_H);
+          this.field_C.drawParagraph(this.field_I, var7 + var5 + this.field_D, var6 + this.field_D, this.field_B - this.field_D, -(this.field_D * 2) + this.field_r, this.field_K, -1, !this.field_F ? 2 : 0, 1, this.field_C.field_H);
           return;
         }
     }

@@ -6,7 +6,7 @@ final class md {
     static RgbSprite field_f;
     static IntrusiveDeque field_e;
     static int[] field_c;
-    static rf field_a;
+    static BitmapFont field_a;
     static String field_b;
     private static String field_z;
 

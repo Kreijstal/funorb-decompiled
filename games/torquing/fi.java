@@ -344,12 +344,12 @@ final class fi {
         }
     }
 
-    final static vn a(byte param0, byte[] param1) {
-        vn var2 = null;
+    final static BinaryBitmapFont a(byte param0, byte[] param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
         Object stackIn_2_0 = null;
-        vn stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -357,9 +357,9 @@ final class fi {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (vn) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new vn(param1, PacketBuffer.field_o, na.field_G, vo.field_b, PasswordValidator.field_o, pn.field_b);
+          var2 = new BinaryBitmapFont(param1, PacketBuffer.field_o, na.field_G, vo.field_b, PasswordValidator.field_o, pn.field_b);
           if (param0 != -9) {
             var3 = (byte[]) null;
             fi.a((byte) 17, (byte[]) null);

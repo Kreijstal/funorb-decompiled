@@ -273,7 +273,7 @@ final class PlayerDungeonProfile {
         field_v = null;
     }
 
-    final static void a(se param0, se param1, int param2, int param3) {
+    final static void a(BitmapFont param0, BitmapFont param1, int param2, int param3) {
         try {
           wa.field_l = param2;
           i.field_x = param0;

@@ -5,7 +5,7 @@ final class sj implements fc {
     static FullscreenFocusCanvas field_f;
     private int field_e;
     static int[] field_j;
-    private tj field_i;
+    private BitmapFont field_i;
     static int field_d;
     private int field_k;
     private int field_b;
@@ -62,7 +62,7 @@ final class sj implements fc {
             return;
           }
           var14 = var15.field_I + (var15.field_H + this.field_h);
-          this.field_i.a(param1.field_h, param1.field_r + param4 + var14, param0 + param1.field_i + this.field_e, -this.field_h + (-var14 + param1.field_k), -(this.field_h << 1) + param1.field_m, this.field_b, this.field_g, 1, 1, 0);
+          this.field_i.drawParagraph(param1.field_h, param1.field_r + param4 + var14, param0 + param1.field_i + this.field_e, -this.field_h + (-var14 + param1.field_k), -(this.field_h << 1) + param1.field_m, this.field_b, this.field_g, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ final class sj implements fc {
         field_c = null;
     }
 
-    sj(tj param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    sj(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_i = param0;
           this.field_k = param5;

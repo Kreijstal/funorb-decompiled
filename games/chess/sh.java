@@ -56,11 +56,11 @@ final class sh {
         of.d(-103);
     }
 
-    final static c a(int param0, byte[] param1) {
-        c var2 = null;
+    final static BinaryBitmapFont a(int param0, byte[] param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_4_0 = null;
-        c stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -71,9 +71,9 @@ final class sh {
           }
           if (param1 == null) {
             stackIn_4_0 = null;
-            return (c) (stackIn_4_0);
+            return (BinaryBitmapFont) (stackIn_4_0);
           }
-          var2 = new c(param1, be.field_a, FullscreenFocusCanvas.field_c, wm.field_b, b.field_c, vk.field_d);
+          var2 = new BinaryBitmapFont(param1, be.field_a, FullscreenFocusCanvas.field_c, wm.field_b, b.field_c, vk.field_d);
           ch.k(4210752);
           stackIn_6_0 = var2;
           return stackIn_6_0;

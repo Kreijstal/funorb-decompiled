@@ -36,25 +36,25 @@ final class MixedSupport072 extends HashNode {
           if (UiComponentPart029.renderingSupport009State0005 == bitmapFontArgument1) {
             integerLocal1 = 1;
           }
-          bitmapFontArgument1.performAction1086(stringArgument4, -integerLocal1 + integerArgument6, -integerLocal1 + integerArgument3, 0, -1);
-          bitmapFontArgument1.performAction1086(stringArgument4, -integerLocal1 + integerArgument6, integerArgument3, 0, -1);
-          bitmapFontArgument1.performAction1086(stringArgument4, -integerLocal1 + integerArgument6, integerArgument3 + integerLocal1, 0, -1);
-          bitmapFontArgument1.performAction1086(stringArgument4, integerArgument6, -integerLocal1 + integerArgument3, 0, -1);
-          bitmapFontArgument1.performAction1086(stringArgument4, integerArgument6, integerArgument3 + integerLocal1, 0, -1);
-          bitmapFontArgument1.performAction1086(stringArgument4, integerArgument6 + integerLocal1, -integerLocal1 + integerArgument3, 0, -1);
-          bitmapFontArgument1.performAction1086(stringArgument4, integerLocal1 + integerArgument6, integerArgument3, 0, -1);
-          bitmapFontArgument1.performAction1086(stringArgument4, integerLocal1 + integerArgument6, integerLocal1 + integerArgument3, 0, -1);
+          bitmapFontArgument1.drawRightAligned(stringArgument4, -integerLocal1 + integerArgument6, -integerLocal1 + integerArgument3, 0, -1);
+          bitmapFontArgument1.drawRightAligned(stringArgument4, -integerLocal1 + integerArgument6, integerArgument3, 0, -1);
+          bitmapFontArgument1.drawRightAligned(stringArgument4, -integerLocal1 + integerArgument6, integerArgument3 + integerLocal1, 0, -1);
+          bitmapFontArgument1.drawRightAligned(stringArgument4, integerArgument6, -integerLocal1 + integerArgument3, 0, -1);
+          bitmapFontArgument1.drawRightAligned(stringArgument4, integerArgument6, integerArgument3 + integerLocal1, 0, -1);
+          bitmapFontArgument1.drawRightAligned(stringArgument4, integerArgument6 + integerLocal1, -integerLocal1 + integerArgument3, 0, -1);
+          bitmapFontArgument1.drawRightAligned(stringArgument4, integerLocal1 + integerArgument6, integerArgument3, 0, -1);
+          bitmapFontArgument1.drawRightAligned(stringArgument4, integerLocal1 + integerArgument6, integerLocal1 + integerArgument3, 0, -1);
           if (SceneWidget.renderingSupport009State0007 == bitmapFontArgument1) {
-            bitmapFontArgument1.performAction1086(stringArgument4, 1 + integerArgument6, integerArgument3 - integerLocal1, 0, -1);
-            bitmapFontArgument1.performAction1086(stringArgument4, -1 + integerArgument6, integerArgument3 - integerLocal1, 0, -1);
-            bitmapFontArgument1.performAction1086(stringArgument4, integerLocal1 + integerArgument6, -1 + integerArgument3, 0, -1);
-            bitmapFontArgument1.performAction1086(stringArgument4, -integerLocal1 + integerArgument6, -1 + integerArgument3, 0, -1);
-            bitmapFontArgument1.performAction1086(stringArgument4, integerLocal1 + integerArgument6, integerArgument3 + 1, 0, -1);
-            bitmapFontArgument1.performAction1086(stringArgument4, -integerLocal1 + integerArgument6, 1 + integerArgument3, 0, -1);
-            bitmapFontArgument1.performAction1086(stringArgument4, integerArgument6 + 1, integerLocal1 + integerArgument3, 0, -1);
-            bitmapFontArgument1.performAction1086(stringArgument4, -1 + integerArgument6, integerArgument3 + integerLocal1, 0, -1);
+            bitmapFontArgument1.drawRightAligned(stringArgument4, 1 + integerArgument6, integerArgument3 - integerLocal1, 0, -1);
+            bitmapFontArgument1.drawRightAligned(stringArgument4, -1 + integerArgument6, integerArgument3 - integerLocal1, 0, -1);
+            bitmapFontArgument1.drawRightAligned(stringArgument4, integerLocal1 + integerArgument6, -1 + integerArgument3, 0, -1);
+            bitmapFontArgument1.drawRightAligned(stringArgument4, -integerLocal1 + integerArgument6, -1 + integerArgument3, 0, -1);
+            bitmapFontArgument1.drawRightAligned(stringArgument4, integerLocal1 + integerArgument6, integerArgument3 + 1, 0, -1);
+            bitmapFontArgument1.drawRightAligned(stringArgument4, -integerLocal1 + integerArgument6, 1 + integerArgument3, 0, -1);
+            bitmapFontArgument1.drawRightAligned(stringArgument4, integerArgument6 + 1, integerLocal1 + integerArgument3, 0, -1);
+            bitmapFontArgument1.drawRightAligned(stringArgument4, -1 + integerArgument6, integerArgument3 + integerLocal1, 0, -1);
           }
-          bitmapFontArgument1.performAction1086(stringArgument4, integerArgument6, integerArgument3, integerArgument5, -1);
+          bitmapFontArgument1.drawRightAligned(stringArgument4, integerArgument6, integerArgument3, integerArgument5, -1);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "kn.B(" + (bitmapFontArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ',' + integerArgument3 + ',' + (stringArgument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ',' + integerArgument6 + ')');
         }

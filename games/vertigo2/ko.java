@@ -264,7 +264,7 @@ final class ko extends af {
           if (param1 != -626) {
             this.setBounds(true, -28, 21, -75, 109);
           }
-          bl.field_N.c(param4, (param3.width >> 1) + param2 + param3.x, -5 + (param3.y + param0), 16777215, -1);
+          bl.field_N.drawCentred(param4, (param3.width >> 1) + param2 + param3.x, -5 + (param3.y + param0), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ko.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

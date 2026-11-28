@@ -3,7 +3,7 @@
  */
 final class mn {
     static int field_c;
-    static fn field_e;
+    static BinaryBitmapFont field_e;
     static RgbSprite field_b;
     static int[] field_a;
     int[] field_d;

@@ -13,7 +13,7 @@ final class ib implements ComponentLayout {
     private int field_i;
     private int field_m;
     static int field_k;
-    private fa field_c;
+    private BitmapFont field_c;
     static int[][] field_a;
 
     public final void a(int param0, int param1, boolean param2, UiComponent param3, int param4) {
@@ -56,7 +56,7 @@ final class ib implements ComponentLayout {
             }
           }
           if (null != this.field_c) {
-            this.field_c.a(var6.field_i, var8 + var7 / 2, var6.field_P + (this.field_c.field_N + var9), this.field_i, this.field_m);
+            this.field_c.drawCentred(var6.field_i, var8 + var7 / 2, var6.field_P + (this.field_c.field_N + var9), this.field_i, this.field_m);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -73,7 +73,7 @@ final class ib implements ComponentLayout {
         }
     }
 
-    final static void a(int param0, int param1, fa param2, RgbSprite[] param3, RgbSprite[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, boolean param13, fa param14) {
+    final static void a(int param0, int param1, BitmapFont param2, RgbSprite[] param3, RgbSprite[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, boolean param13, BitmapFont param14) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -334,7 +334,7 @@ final class ib implements ComponentLayout {
         }
     }
 
-    ib(fa param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    ib(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

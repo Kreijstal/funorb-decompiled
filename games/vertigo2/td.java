@@ -61,7 +61,7 @@ final class td implements WidgetListener {
           }
           if (null != this.field_d) {
             var13 = this.field_f + (var14.field_J + var14.field_L);
-            this.field_d.a(param3.text, var13 + (param1 + param3.x), param3.y + param4 + this.field_b, -var13 - this.field_f + param3.width, -(this.field_f << 1) + param3.height, this.field_k, this.field_j, 1, 1, 0);
+            this.field_d.drawParagraph(param3.text, var13 + (param1 + param3.x), param3.y + param4 + this.field_b, -var13 - this.field_f + param3.width, -(this.field_f << 1) + param3.height, this.field_k, this.field_j, 1, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

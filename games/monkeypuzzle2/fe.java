@@ -3,7 +3,7 @@
  */
 final class fe {
     static String field_c;
-    static ta field_a;
+    static BitmapFont field_a;
     static int field_d;
     static String field_b;
     static int field_g;

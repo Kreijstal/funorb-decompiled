@@ -25,7 +25,7 @@ final class sa extends ok {
           return;
         }
         int var7 = this.field_L ? -(2 * this.field_S) - this.field_E + this.field_x : 0;
-        this.field_H.a(this.field_O, this.field_S + var7 + var5, this.field_S + var6, this.field_E - this.field_S, -(this.field_S * 2) + this.field_u, this.field_N, -1, !this.field_L ? 2 : 0, 1, this.field_H.field_G);
+        this.field_H.drawParagraph(this.field_O, this.field_S + var7 + var5, this.field_S + var6, this.field_E - this.field_S, -(this.field_S * 2) + this.field_u, this.field_N, -1, !this.field_L ? 2 : 0, 1, this.field_H.field_G);
     }
 
     final String e(int param0) {
@@ -106,7 +106,7 @@ final class sa extends ok {
           this.field_E = param6;
           this.field_H = param8;
           var12_int = -this.field_S + this.field_E;
-          var13 = this.field_H.a(param10, var12_int, this.field_H.field_G) + 2 * this.field_S;
+          var13 = this.field_H.textHeight(param10, var12_int, this.field_H.field_G) + 2 * this.field_S;
           if (param3 >= var13) {
             var13 = param3;
           } else {

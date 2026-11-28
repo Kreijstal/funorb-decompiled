@@ -7,7 +7,7 @@ final class ok implements wo {
     static String field_i;
     private int field_f;
     static oj field_e;
-    private vc field_h;
+    private BitmapFont field_h;
     static MouseWheelInput field_g;
     static ResourceArchive field_c;
     static IntrusiveDeque field_a;
@@ -202,7 +202,7 @@ final class ok implements wo {
         }
     }
 
-    ok(vc param0, int param1, int param2) {
+    ok(BitmapFont param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -252,9 +252,9 @@ final class ok implements wo {
             stackIn_10_0 = 3249872;
           }
           var6_int = stackIn_10_0;
-          this.field_h.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_o + "</u>", param2 + param3.field_r, param0 + param3.field_j, param3.field_g, param3.field_f, var6_int, -1, this.field_f, this.field_d, this.field_h.field_u + this.field_h.field_o);
+          this.field_h.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_o + "</u>", param2 + param3.field_r, param0 + param3.field_j, param3.field_g, param3.field_f, var6_int, -1, this.field_f, this.field_d, this.field_h.field_u + this.field_h.field_o);
           if (param3.e(-125)) {
-            var7 = this.field_h.a(param3.field_o);
+            var7 = this.field_h.stringWidth(param3.field_o);
             var8 = this.field_h.field_o + this.field_h.field_u;
             var9 = param2 + param3.field_r;
             var10 = param3.field_j + param0;

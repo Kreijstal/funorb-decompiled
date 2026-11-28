@@ -63,7 +63,7 @@ final class fd extends IntrusiveNode {
 
     final static void a(int param0, PcmSample param1, boolean param2) {
         try {
-          gh.a(RawPcmStream.a(param1, 100, param0), (byte) -109);
+          gh.a(RawPcmStream.createForPlaybackRate(param1, 100, param0), (byte) -109);
           if (param2) {
             field_h = 107;
           }

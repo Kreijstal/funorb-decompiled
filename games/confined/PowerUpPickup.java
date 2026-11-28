@@ -271,10 +271,10 @@ final class PowerUpPickup extends MovingTunnelEntity {
             return stackIn_2_0;
           }
           if (!param2) {
-            stackIn_7_0 = rn.field_e.c(param1);
+            stackIn_7_0 = rn.field_e.stringWidth(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = dn.field_f.c(param1);
+          stackIn_5_0 = dn.field_f.stringWidth(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

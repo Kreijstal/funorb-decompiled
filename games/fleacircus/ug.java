@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ug {
-    static fa field_e;
+    static BitmapFont field_e;
     static java.awt.Frame field_b;
     static long field_d;
     static long field_a;

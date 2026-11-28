@@ -331,21 +331,21 @@ abstract class wc extends DualLinkNode {
                 p.field_a[var4_intLifetime1].field_d != param0.field_q) {
                 var9Lifetime3 = 9013641;
               }
-              AccountRequestState.field_f.c(p.field_a[var4_intLifetime1].field_d.field_Z.b(1), p.field_a[var4_intLifetime1].field_f + 16, -1 + (6 + (16 + p.field_a[var4_intLifetime1].field_e)), 0, -1);
-              AccountRequestState.field_f.c(p.field_a[var4_intLifetime1].field_d.field_Z.b(param3 + 11670), 16 + p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 16 + 6 + 1, 0, -1);
-              AccountRequestState.field_f.c(p.field_a[var4_intLifetime1].field_d.field_Z.b(1), -1 + (p.field_a[var4_intLifetime1].field_f + 16), 6 + (16 + p.field_a[var4_intLifetime1].field_e), 0, -1);
-              AccountRequestState.field_f.c(p.field_a[var4_intLifetime1].field_d.field_Z.b(param3 + 11670), 16 + (p.field_a[var4_intLifetime1].field_f + 1), 16 + p.field_a[var4_intLifetime1].field_e + 6, 0, -1);
-              AccountRequestState.field_f.c(p.field_a[var4_intLifetime1].field_d.field_Z.b(param3 + 11670), 16 + p.field_a[var4_intLifetime1].field_f, 22 + p.field_a[var4_intLifetime1].field_e, var9Lifetime3, -1);
+              AccountRequestState.field_f.drawCentred(p.field_a[var4_intLifetime1].field_d.field_Z.b(1), p.field_a[var4_intLifetime1].field_f + 16, -1 + (6 + (16 + p.field_a[var4_intLifetime1].field_e)), 0, -1);
+              AccountRequestState.field_f.drawCentred(p.field_a[var4_intLifetime1].field_d.field_Z.b(param3 + 11670), 16 + p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 16 + 6 + 1, 0, -1);
+              AccountRequestState.field_f.drawCentred(p.field_a[var4_intLifetime1].field_d.field_Z.b(1), -1 + (p.field_a[var4_intLifetime1].field_f + 16), 6 + (16 + p.field_a[var4_intLifetime1].field_e), 0, -1);
+              AccountRequestState.field_f.drawCentred(p.field_a[var4_intLifetime1].field_d.field_Z.b(param3 + 11670), 16 + (p.field_a[var4_intLifetime1].field_f + 1), 16 + p.field_a[var4_intLifetime1].field_e + 6, 0, -1);
+              AccountRequestState.field_f.drawCentred(p.field_a[var4_intLifetime1].field_d.field_Z.b(param3 + 11670), 16 + p.field_a[var4_intLifetime1].field_f, 22 + p.field_a[var4_intLifetime1].field_e, var9Lifetime3, -1);
             }
             if (6 == p.field_a[var4_intLifetime1].field_b &&
               p.field_a[var4_intLifetime1].field_d != null &&
               IterableNodeHashTable.field_e) {
               var9Lifetime4 = 255;
-              AccountRequestState.field_f.c(ig.field_c, 16 + p.field_a[var4_intLifetime1].field_f, 16 + (p.field_a[var4_intLifetime1].field_e + 6 - 1), 0, -1);
-              AccountRequestState.field_f.c(ig.field_c, p.field_a[var4_intLifetime1].field_f + 16, 6 + p.field_a[var4_intLifetime1].field_e + 17, 0, -1);
-              AccountRequestState.field_f.c(ig.field_c, -1 + (p.field_a[var4_intLifetime1].field_f + 16), 6 + (16 + p.field_a[var4_intLifetime1].field_e), 0, -1);
-              AccountRequestState.field_f.c(ig.field_c, 1 + (16 + p.field_a[var4_intLifetime1].field_f), 22 + p.field_a[var4_intLifetime1].field_e, 0, -1);
-              AccountRequestState.field_f.c(ig.field_c, p.field_a[var4_intLifetime1].field_f + 16, 16 + (p.field_a[var4_intLifetime1].field_e + 6), var9Lifetime4, -1);
+              AccountRequestState.field_f.drawCentred(ig.field_c, 16 + p.field_a[var4_intLifetime1].field_f, 16 + (p.field_a[var4_intLifetime1].field_e + 6 - 1), 0, -1);
+              AccountRequestState.field_f.drawCentred(ig.field_c, p.field_a[var4_intLifetime1].field_f + 16, 6 + p.field_a[var4_intLifetime1].field_e + 17, 0, -1);
+              AccountRequestState.field_f.drawCentred(ig.field_c, -1 + (p.field_a[var4_intLifetime1].field_f + 16), 6 + (16 + p.field_a[var4_intLifetime1].field_e), 0, -1);
+              AccountRequestState.field_f.drawCentred(ig.field_c, 1 + (16 + p.field_a[var4_intLifetime1].field_f), 22 + p.field_a[var4_intLifetime1].field_e, 0, -1);
+              AccountRequestState.field_f.drawCentred(ig.field_c, p.field_a[var4_intLifetime1].field_f + 16, 16 + (p.field_a[var4_intLifetime1].field_e + 6), var9Lifetime4, -1);
             }
             if (var5Lifetime1 != 0) {
               p.field_a[var4_intLifetime1].field_d = null;

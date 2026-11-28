@@ -114,7 +114,7 @@ final class MixedSupport118 {
             } else {
               stackIntegerLocal11 = 256;
             }
-            ((BitmapFont) (Object) stackBitmapFontLocal1).computeInteger1072(stackStringLocal2, stackIntegerLocal4, stackIntegerLocal6, stackIntegerLocal7, stackIntegerLocal8, stackIntegerLocal9, stackIntegerLocal10, stackIntegerLocal11, mixedSupport009Argument4.integerState0009, mixedSupport009Argument4.integerState0004, mixedSupport009Argument4.integerState0006);
+            ((BitmapFont) (Object) stackBitmapFontLocal1).drawParagraphAlpha(stackStringLocal2, stackIntegerLocal4, stackIntegerLocal6, stackIntegerLocal7, stackIntegerLocal8, stackIntegerLocal9, stackIntegerLocal10, stackIntegerLocal11, mixedSupport009Argument4.integerState0009, mixedSupport009Argument4.integerState0004, mixedSupport009Argument4.integerState0006);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal23) {

@@ -177,7 +177,7 @@ final class ij implements t {
           }
           if (this.field_i != null) {
             var10 = this.field_b + (this.field_l + this.field_c);
-            this.field_i.a(param1.field_s, var10 + (param1.field_p + param4), this.field_f + (param2 + param1.field_m), param1.field_x + (-this.field_b - var10), param1.field_u - (this.field_b << 1), this.field_n, this.field_k, this.field_h, this.field_g, 0);
+            this.field_i.drawParagraph(param1.field_s, var10 + (param1.field_p + param4), this.field_f + (param2 + param1.field_m), param1.field_x + (-this.field_b - var10), param1.field_u - (this.field_b << 1), this.field_n, this.field_k, this.field_h, this.field_g, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

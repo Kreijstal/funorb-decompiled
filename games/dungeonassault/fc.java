@@ -123,12 +123,12 @@ final class fc extends en {
         }
         var26 = new RgbSprite(param1, var9);
         var26.e();
-        db.field_v.c(this.field_k.field_F.toUpperCase(), param1 >> 1, var10, param0, -1);
+        db.field_v.drawCentred(this.field_k.field_F.toUpperCase(), param1 >> 1, var10, param0, -1);
         var10 = var10 + la.field_b.field_H * 2;
         var27 = var21;
         for (var16 = 0; var27.length > var16; var16++) {
           var28 = var27[var16];
-          la.field_b.c(var28, param1 >> 1, var10, 16777215, -1);
+          la.field_b.drawCentred(var28, param1 >> 1, var10, 16777215, -1);
           var10 = var10 + la.field_b.field_H;
         }
         if (var13 != null) {
@@ -136,15 +136,15 @@ final class fc extends en {
           var29 = var13;
           for (var16Lifetime1 = 0; var29.length > var16Lifetime1; var16Lifetime1++) {
             var30 = var29[var16Lifetime1];
-            var18 = db.field_v.b(var30.field_b) + 24;
+            var18 = db.field_v.stringWidth(var30.field_b) + 24;
             var30.field_c.c(param1 - var18 >> 1, -(-var30.field_c.field_v + 3 * la.field_b.field_H >> 1) + var10, var30.field_a);
-            db.field_v.b(var30.field_b, (-var18 + param1 >> 1) + 24, var10, var30.field_a, -1);
+            db.field_v.drawString(var30.field_b, (-var18 + param1 >> 1) + 24, var10, var30.field_a, -1);
             var10 = var10 + la.field_b.field_H;
           }
         }
         if (var12 != 0) {
           var10 = var10 + db.field_v.field_H;
-          db.field_v.c(od.field_a, param1 >> 1, var10, 16744448, -1);
+          db.field_v.drawCentred(od.field_a, param1 >> 1, var10, 16744448, -1);
           var10 = var10 + db.field_v.field_H;
         }
         if (this.field_k.field_s != -1) {
@@ -152,17 +152,17 @@ final class fc extends en {
           for (var16Lifetime2 = 0; var16Lifetime2 < var31.length; var16Lifetime2++) {
             var32 = var31[var16Lifetime2];
             var10 = var10 + la.field_b.field_H;
-            db.field_v.c((String) (var32), param1 >> 1, var10, 1543051, -1);
+            db.field_v.drawCentred((String) (var32), param1 >> 1, var10, 1543051, -1);
           }
           if (var11 != 0) {
             var10 = var10 + db.field_v.field_H;
-            db.field_v.c(g.field_Jb, param1 >> 1, var10, 1543051, -1);
+            db.field_v.drawCentred(g.field_Jb, param1 >> 1, var10, 1543051, -1);
           }
           var10 = var10 + 2 * db.field_v.field_H;
           var33 = (Object[]) var5;
           for (var16Lifetime2Lifetime1 = 0; var33.length > var16Lifetime2Lifetime1; var16Lifetime2Lifetime1++) {
             var34 = var33[var16Lifetime2Lifetime1];
-            la.field_b.c((String) (var34), param1 >> 1, var10, 16777215, -1);
+            la.field_b.drawCentred((String) (var34), param1 >> 1, var10, 16777215, -1);
             var10 = var10 + la.field_b.field_H;
           }
         }
@@ -171,7 +171,7 @@ final class fc extends en {
           for (var17 = 0; var35.length > var17; var17++) {
             var36 = var35[var17];
             var10 = var10 + db.field_v.field_H;
-            db.field_v.c(var36, param1 >> 1, var10, 16744448, -1);
+            db.field_v.drawCentred(var36, param1 >> 1, var10, 16744448, -1);
           }
           var10 = var10 + 2 * db.field_v.field_H;
           var37 = var7[var15];
@@ -179,7 +179,7 @@ final class fc extends en {
           var17Lifetime1 = var20;
           while (var20 < var37.length) {
             var38 = var37[var20];
-            la.field_b.c(var38, param1 >> 1, var10, 16777215, -1);
+            la.field_b.drawCentred(var38, param1 >> 1, var10, 16777215, -1);
             var10 = var10 + la.field_b.field_H;
             var20++;
           }
@@ -249,14 +249,14 @@ final class fc extends en {
         RgbSprite var20 = new RgbSprite(200, var4);
         var20.e();
         int var7 = -80 % ((param0 + 58) / 35);
-        db.field_v.c(this.field_k.field_F, 100, var5, 16777215, -1);
+        db.field_v.drawCentred(this.field_k.field_F, 100, var5, 16777215, -1);
         if (-1 != this.field_k.field_s) {
           var5 = var5 + db.field_v.field_H;
           var21 = (Object[]) var2;
           for (var9 = 0; var9 < var21.length; var9++) {
             var22 = var21[var9];
             var5 = var5 + la.field_b.field_H;
-            db.field_v.c((String) (var22), 100, var5, 16777215, -1);
+            db.field_v.drawCentred((String) (var22), 100, var5, 16777215, -1);
           }
         }
         for (var8 = 0; this.field_k.field_A.length > var8; var8++) {
@@ -265,7 +265,7 @@ final class fc extends en {
           for (var10 = 0; var10 < var23.length; var10++) {
             var11 = var23[var10];
             var5 = var5 + db.field_v.field_H;
-            db.field_v.c(var11, 100, var5, 16777215, -1);
+            db.field_v.drawCentred(var11, 100, var5, 16777215, -1);
           }
         }
         jh.b();
@@ -283,7 +283,7 @@ final class fc extends en {
         field_j = null;
     }
 
-    final static void a(qk param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, qk param11, int param12, int param13, int param14, int param15, se param16, qk param17, int param18, se param19, int param20) {
+    final static void a(qk param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, qk param11, int param12, int param13, int param14, int param15, BitmapFont param16, qk param17, int param18, BitmapFont param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

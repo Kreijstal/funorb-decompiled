@@ -130,7 +130,7 @@ final class laa extends pv {
 
     final static void a(int param0, byte param1, int param2, int param3, String param4, int param5) {
         try {
-          param2 = param2 - (WidgetWrapper.field_z.a(param4) >> 1);
+          param2 = param2 - (WidgetWrapper.field_z.stringWidth(param4) >> 1);
           if (param1 > -44) {
             laa.a(123, -54, -39, true, -63, -89, -61);
           }

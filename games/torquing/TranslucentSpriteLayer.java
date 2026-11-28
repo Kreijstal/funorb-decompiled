@@ -10,7 +10,7 @@ final class TranslucentSpriteLayer extends MenuLayer {
     static FullscreenFocusCanvas field_i;
     static String field_j;
     private int field_l;
-    static uc field_e;
+    static BitmapFont field_e;
     private IndexedSprite field_k;
     static double[][] field_f;
 

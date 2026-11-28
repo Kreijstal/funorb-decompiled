@@ -3,9 +3,9 @@
  */
 final class nb {
     static java.awt.Color field_d;
-    static qe field_c;
+    static BitmapFont field_c;
     static float field_a;
-    static qe field_b;
+    static BitmapFont field_b;
     static AudioOutput field_f;
     static int field_g;
     static PlatformTaskDispatcher field_e;

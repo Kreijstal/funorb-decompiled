@@ -9,7 +9,7 @@ abstract class FrameTimer {
     static IntrusiveDeque field_g;
     static String field_b;
     static fh field_c;
-    static ud field_f;
+    static BinaryBitmapFont field_f;
     static ec field_a;
 
     abstract void resetTiming(int param0);

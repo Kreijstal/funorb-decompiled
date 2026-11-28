@@ -295,7 +295,7 @@ final class d extends bb {
         return this.field_K.b(0);
     }
 
-    final static void a(int param0, int param1, qc param2, qc param3, int param4, int param5, int param6, fa param7, fa param8, qc param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, qc param2, qc param3, int param4, int param5, int param6, BitmapFont param7, BitmapFont param8, qc param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

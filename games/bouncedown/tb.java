@@ -288,7 +288,7 @@ final class tb extends v {
                 this.field_q.readFully(this.field_b.field_p.payload, true, var6, this.field_b.field_p.position);
                 if (0 != this.field_j) {
                   for (var7 = 0; var7 < var6; var7++) {
-                    this.field_b.field_p.payload[var7 + this.field_b.field_p.position] = (byte)Slime.a((int) this.field_b.field_p.payload[var7 + this.field_b.field_p.position], (int) this.field_j);
+                    this.field_b.field_p.payload[var7 + this.field_b.field_p.position] = (byte)Slime.xorIntegers((int) this.field_b.field_p.payload[var7 + this.field_b.field_p.position], (int) this.field_j);
                   }
                 }
                 this.field_b.field_p.position = this.field_b.field_p.position + var6;
@@ -310,7 +310,7 @@ final class tb extends v {
                 this.field_q.readFully(this.field_c.payload, true, var5, this.field_c.position);
                 if (this.field_j != 0) {
                   for (var6 = 0; var5 > var6; var6++) {
-                    this.field_c.payload[this.field_c.position + var6] = (byte)Slime.a((int) this.field_c.payload[this.field_c.position + var6], (int) this.field_j);
+                    this.field_c.payload[this.field_c.position + var6] = (byte)Slime.xorIntegers((int) this.field_c.payload[this.field_c.position + var6], (int) this.field_j);
                   }
                 }
                 this.field_c.position = this.field_c.position + var5;

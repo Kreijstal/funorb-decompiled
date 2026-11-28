@@ -10,7 +10,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     static int[] field_P;
     static String field_O;
 
-    final void a(FieldValidator param0, boolean param1) {
+    final void setFieldValidator(FieldValidator param0, boolean param1) {
         try {
           if (!param1) {
             UiWidget var4 = (UiWidget) null;
@@ -69,7 +69,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           super.a(param0, param1, param2, (byte) -24);
           if (param3 > -13) {
             FieldValidator var6 = (FieldValidator) null;
-            this.a((FieldValidator) null, false);
+            this.setFieldValidator((FieldValidator) null, false);
           }
           this.field_Q = -param2 + (ei.field_a - this.field_r);
         } catch (RuntimeException runtimeException) {

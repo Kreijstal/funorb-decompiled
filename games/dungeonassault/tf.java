@@ -8,7 +8,7 @@ final class tf {
     private RgbSprite field_b;
     int field_i;
     private int field_d;
-    private se field_a;
+    private BitmapFont field_a;
     static boolean[] field_e;
     static int[] field_k;
     static String field_g;
@@ -104,7 +104,7 @@ final class tf {
         this.b(param1 - (this.field_d >> 1), param2 ^ 1667, param0 - (this.field_i >> 1));
     }
 
-    tf(se param0, String param1, int[] param2) {
+    tf(BitmapFont param0, String param1, int[] param2) {
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -122,12 +122,12 @@ final class tf {
           this.field_a = param0;
           this.field_h = param2;
           jh.c();
-          this.field_i = this.field_a.b(this.field_f);
+          this.field_i = this.field_a.stringWidth(this.field_f);
           this.field_d = this.field_a.field_H + this.field_a.field_E;
           var7 = new RgbSprite(this.field_i, this.field_d);
           var8 = var7;
           var8.e();
-          this.field_a.b(this.field_f, 0, this.field_a.field_H, 16777215, -1);
+          this.field_a.drawString(this.field_f, 0, this.field_a.field_H, 16777215, -1);
           this.field_b = te.a(this.field_i, this.field_d, this.field_h, 32, 32, 0.125);
           for (var5 = 0; var5 < this.field_b.field_B.length; var5++) {
             if (var7.field_B[var5] != 0) {

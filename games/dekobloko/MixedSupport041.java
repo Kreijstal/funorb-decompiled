@@ -63,7 +63,7 @@ final class MixedSupport041 extends MixedSupport001 {
           stackIntegerLocal3 = (booleanArgument1) ? 16777215 : 7105644;
           integerLocal11 = stackIntegerLocal3;
           MixedSupport110.performAction1459(integerArgument3 - (-uiComponentArgument5.integerState0104 - (uiComponentArgument5.integerState0108 - this.rgbSpriteArrayState0012[0].integerState0260 >> 1)), this.rgbSpriteArrayState0012, uiComponentArgument5.integerState0110 + integerArgument2, uiComponentArgument5.integerState0107, integerLocal10, -121);
-          this.bitmapFontState0001.computeInteger1071(uiComponentArgument5.stringState0078, uiComponentArgument5.integerState0110 + integerArgument2, -2 + (uiComponentArgument5.integerState0104 + integerArgument3), uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, integerLocal11, -1, 1, 1, this.bitmapFontState0001.integerState0518);
+          this.bitmapFontState0001.drawParagraph(uiComponentArgument5.stringState0078, uiComponentArgument5.integerState0110 + integerArgument2, -2 + (uiComponentArgument5.integerState0104 + integerArgument3), uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, integerLocal11, -1, 1, 1, this.bitmapFontState0001.integerState0518);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
           caughtExceptionLocal7 = caughtParameterLocal12;

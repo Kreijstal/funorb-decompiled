@@ -177,7 +177,7 @@ final class vt extends tia {
             if (param0 == qba.field_m) {
               var21 += 42;
             }
-            var33 = BitmapFont.a(var12.field_Ib.field_jb, var32, var21);
+            var33 = BitmapFont.truncateWithEllipsis(var12.field_Ib.field_jb, var32, var21);
             var20 = var33;
             stackIn_57_0 = (var33.equals(var12.field_Nb)) ? 0 : 1;
             var22 = stackIn_57_0;
@@ -283,7 +283,7 @@ final class vt extends tia {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_vb.field_jb.b(var23, -gba.field_Bb - gba.field_Bb + var12.field_sb);
+              var24_intLifetime1 = var12.field_vb.field_jb.lineCount(var23, -gba.field_Bb - gba.field_Bb + var12.field_sb);
               var12.field_vb.field_Z = var23;
               var12.field_vb.field_cb = 256 * var12.field_Mb / DiveBomberAnimation.field_x;
               var12.field_vb.a(rg.field_h * var24_intLifetime1, 31407, -(gba.field_Bb * 2) + var12.field_sb, gba.field_Bb, var19);

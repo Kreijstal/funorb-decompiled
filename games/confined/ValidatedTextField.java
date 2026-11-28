@@ -9,7 +9,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     static String field_ab;
     static java.awt.Frame field_cb;
 
-    final void a(int param0, FieldValidator param1) {
+    final void setFieldValidator(int param0, FieldValidator param1) {
         try {
           if (param0 != -18312) {
             this.field_bb = 119;

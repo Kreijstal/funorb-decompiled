@@ -74,7 +74,7 @@ final class gh extends af {
             return;
           }
           fg.a(param1 + (param4.field_j + (-this.field_t[0].field_r + param4.field_x >> 1)), param4.field_m + param3, param4.field_t, var7, this.field_t, (byte) 104);
-          this.field_l.a(param4.field_i, param3 + param4.field_m, param4.field_j + param1 - 2, param4.field_t, param4.field_x, var8, -1, 1, 1, this.field_l.field_F);
+          this.field_l.drawParagraph(param4.field_i, param3 + param4.field_m, param4.field_j + param1 - 2, param4.field_t, param4.field_x, var8, -1, 1, 1, this.field_l.field_F);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -25,7 +25,7 @@ final class tf extends pd {
         }
     }
 
-    final static void a(ee param0, byte param1, ee param2, int param3) {
+    final static void a(BitmapFont param0, byte param1, BitmapFont param2, int param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -40,7 +40,7 @@ final class tf extends pd {
           ue.a(SoftwareRasterizer.field_g / 2, -2694, SoftwareRasterizer.field_l / 2);
           kj.a(param2.field_q, param0.field_x + param0.field_q, param2.field_x + param2.field_q, -88, param0.field_q);
           if (param1 != -114) {
-            tf.a((ee) null, (byte) -45, (ee) null, -84);
+            tf.a((BitmapFont) null, (byte) -45, (BitmapFont) null, -84);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

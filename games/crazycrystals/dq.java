@@ -133,11 +133,11 @@ final class dq extends pc {
         return this.field_B.a(true);
     }
 
-    final static dh a(int param0, byte[] param1) {
-        dh var2 = null;
+    final static CoverageBitmapFont a(int param0, byte[] param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        dh stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -145,9 +145,9 @@ final class dq extends pc {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (dh) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new dh(param1, uo.field_k, MouseWheelInput.field_a, uo.field_l, je.field_c, gh.field_z, ui.field_c);
+          var2 = new CoverageBitmapFont(param1, uo.field_k, MouseWheelInput.field_a, uo.field_l, je.field_c, gh.field_z, ui.field_c);
           ok.a(2188450);
           if (param0 != -18289) {
             dq.clearStaticReferences((byte) -96);

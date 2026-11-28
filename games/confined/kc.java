@@ -18,7 +18,7 @@ final class kc {
     static String field_f;
     static int field_t;
     int field_p;
-    ok field_i;
+    BitmapFont field_i;
     static String field_r;
     static java.applet.Applet field_d;
     int field_s;
@@ -112,7 +112,7 @@ final class kc {
         }
     }
 
-    final void a(boolean param0, ok param1) {
+    final void a(boolean param0, BitmapFont param1) {
         vf var17 = null;
         qh var4 = null;
         RgbSprite[] var5 = null;
@@ -275,7 +275,7 @@ final class kc {
             var7 = this.field_i.field_C + this.field_i.field_D;
           }
           var8 = SoftwareRasterizer.field_g >> 2;
-          var9 = this.field_i.c(param1);
+          var9 = this.field_i.stringWidth(param1);
           if (param3 != -9645) {
             return;
           }
@@ -292,11 +292,11 @@ final class kc {
               var13 = var9 / var8;
               var12 = (-1 + var9 % var8 + var13) / var13 * 2 + var8;
             }
-            var11Lifetime1 = this.field_i.a(param1, new int[]{var12}, TunnelMesh.field_l);
+            var11Lifetime1 = this.field_i.wrapText(param1, new int[]{var12}, TunnelMesh.field_l);
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_i.c(TunnelMesh.field_l[var13Lifetime2]);
+              var14 = this.field_i.stringWidth(TunnelMesh.field_l[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
@@ -312,7 +312,7 @@ final class kc {
           }
           SoftwareRasterizer.drawRectangleOutline(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_g);
           SoftwareRasterizer.fillRectangle(var12 + 1, 1 + var13Lifetime1, -2 + var5_int + var9, -2 + var10 + var6, this.field_p);
-          this.field_i.a(param1, var12 + this.field_v, var13Lifetime1 + this.field_e, var9, var10, this.field_a, -1, 0, 0, var7);
+          this.field_i.drawParagraph(param1, var12 + this.field_v, var13Lifetime1 + this.field_e, var9, var10, this.field_a, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -380,7 +380,7 @@ final class kc {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_i.c(param1);
+          var5_int = this.field_i.stringWidth(param1);
           var6 = this.field_i.field_y + this.field_i.field_D;
           var7 = param3;
           if (!(SoftwareRasterizer.field_g >= 6 + var7 + var5_int)) {
@@ -392,7 +392,7 @@ final class kc {
           }
           SoftwareRasterizer.drawRectangleOutline(var7, var8, var5_int - param2, var6 + 6, this.field_a);
           SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, 4 + var5_int, 4 + var6, this.field_p);
-          this.field_i.c(param1, 3 + var7, var8 + (3 + this.field_i.field_y), this.field_a, -1);
+          this.field_i.drawString(param1, 3 + var7, var8 + (3 + this.field_i.field_y), this.field_a, -1);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "kc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -423,7 +423,7 @@ final class kc {
     }
 
     final static void a(String param0, TunnelEntity param1, int param2, boolean param3) {
-        ce stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         RuntimeException stackIn_31_0 = null;
@@ -432,7 +432,7 @@ final class kc {
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ce var4 = null;
+        BinaryBitmapFont var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
@@ -448,7 +448,7 @@ final class kc {
         int var22 = 0;
         int var23 = 0;
         TunnelEntity var24 = null;
-        ce var25 = null;
+        BinaryBitmapFont var25 = null;
         var23 = Confined.field_J ? 1 : 0;
         try {
           fb.field_d[um.field_a] = param0;
@@ -468,7 +468,7 @@ final class kc {
           var5 = stackIn_10_0;
           stackIn_13_0 = (!param3) ? 12 : 24;
           var6 = stackIn_13_0;
-          var7 = var25.c(param0) >> 1;
+          var7 = var25.stringWidth(param0) >> 1;
           var8 = qn.field_v.field_m;
           var8.updateEffectiveViewOrigin(10959);
           var9 = -var8.field_T + param1.field_E;

@@ -56,11 +56,11 @@ final class qh implements WidgetActionListener {
             stackIn_8_0 = 3249872;
           }
           var6_int = stackIn_8_0;
-          this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.text + "</u>", param2 + param1.x, param1.y + param0, param1.width, param1.height, var6_int, -1, this.field_a, this.field_f, this.field_e.field_p + this.field_e.field_s);
+          this.field_e.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.text + "</u>", param2 + param1.x, param1.y + param0, param1.width, param1.height, var6_int, -1, this.field_a, this.field_f, this.field_e.field_p + this.field_e.field_s);
           if (!param1.d(param3 ^ 24395)) {
             return;
           }
-          var7 = this.field_e.b(param1.text);
+          var7 = this.field_e.stringWidth(param1.text);
           var8 = this.field_e.field_p + this.field_e.field_s;
           var9 = param2 + param1.x;
           if (2 == this.field_a) {

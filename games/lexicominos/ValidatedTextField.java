@@ -328,7 +328,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         return this.field_V;
     }
 
-    final void a(FieldValidator param0, byte param1) {
+    final void setFieldValidator(FieldValidator param0, byte param1) {
         try {
           if (param1 != 23) {
             ValidatedTextField.clearDeclaredStaticReferences(-17);

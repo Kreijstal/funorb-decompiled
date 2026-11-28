@@ -51,7 +51,7 @@ final class nj {
         int var6Lifetime1;
         var13 = stellarshard.field_B;
         try {
-          var5_int = param1.b(param4);
+          var5_int = param1.stringWidth(param4);
           if (param0 >= var5_int &&
             -1 == param4.indexOf("<br>")) {
             param2[0] = param4;
@@ -71,7 +71,7 @@ final class nj {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param4.substring(var7, 1 + var9).trim();
-              var12 = param1.b(var11);
+              var12 = param1.stringWidth(var11);
               if (param0 <= var12) {
                 var7 = var9 + 1;
                 incrementValue$1 = var6Lifetime1;

@@ -6,7 +6,7 @@ final class db implements ml {
     private int field_d;
     private int field_j;
     private int field_h;
-    private ta field_a;
+    private BitmapFont field_a;
     static String field_b;
     static String field_e;
     private int field_g;
@@ -130,7 +130,7 @@ final class db implements ml {
             return;
           }
           var13 = this.field_d + var14.field_I + var14.field_G;
-          this.field_a.a(param1.field_s, param1.field_r + (param3 + var13), this.field_g + param2 + param1.field_e, -this.field_d - (var13 - param1.field_l), -(this.field_d << 1) + param1.field_p, this.field_f, this.field_h, 1, 1, 0);
+          this.field_a.drawParagraph(param1.field_s, param1.field_r + (param3 + var13), this.field_g + param2 + param1.field_e, -this.field_d - (var13 - param1.field_l), -(this.field_d << 1) + param1.field_p, this.field_f, this.field_h, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -176,8 +176,8 @@ final class db implements ml {
           ci.a(param0 + 30300, 166, 474, 40 + var1, 8, new int[]{14, 5}, 370);
           ci.a(30380, 166, 474, var1 + 40, 9, new int[]{14, 5}, 380);
           ci.a(param0 + 30300, 180, 460, 40 + var1, 10, new int[]{5}, 370);
-          lh.field_b = BoundedRandomAccessFile.field_e.a(ma.field_a[11]);
-          var2 = BoundedRandomAccessFile.field_e.a(ma.field_a[12]);
+          lh.field_b = BoundedRandomAccessFile.field_e.stringWidth(ma.field_a[11]);
+          var2 = BoundedRandomAccessFile.field_e.stringWidth(ma.field_a[12]);
           if (!(var2 <= lh.field_b)) {
             lh.field_b = var2;
           }
@@ -195,8 +195,8 @@ final class db implements ml {
         ci.a(param0 + 30300, 166, 474, 40 + var1, 8, new int[]{14, 5}, 370);
         ci.a(30380, 166, 474, var1 + 40, 9, new int[]{14, 5}, 380);
         ci.a(param0 + 30300, 180, 460, 40 + var1, 10, new int[]{5}, 370);
-        lh.field_b = BoundedRandomAccessFile.field_e.a(ma.field_a[11]);
-        var2Lifetime1 = BoundedRandomAccessFile.field_e.a(ma.field_a[12]);
+        lh.field_b = BoundedRandomAccessFile.field_e.stringWidth(ma.field_a[11]);
+        var2Lifetime1 = BoundedRandomAccessFile.field_e.stringWidth(ma.field_a[12]);
         if (!(var2Lifetime1 <= lh.field_b)) {
           lh.field_b = var2Lifetime1;
         }
@@ -205,7 +205,7 @@ final class db implements ml {
         mc.field_b[7] = 40 + var3Lifetime1;
     }
 
-    db(ta param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    db(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_a = param0;
           this.field_f = param3;

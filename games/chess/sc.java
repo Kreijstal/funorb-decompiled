@@ -10,7 +10,7 @@ final class sc {
     static String field_g;
     static String field_b;
     static int field_e;
-    static lh field_a;
+    static BitmapFont field_a;
 
     final static String a(String param0, ResourceArchive param1, int param2, String param3, byte param4) {
         RuntimeException var5 = null;

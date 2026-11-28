@@ -25,10 +25,10 @@ final class be {
 
     final static void b(int param0) {
         if (gj.field_a != null &&
-          !gj.field_a.h()) {
+          !gj.field_a.isSamplePositionOutOfRange()) {
           return;
         }
-        gj.field_a = PcmSampleStream.a(ke.field_h[5], 100, 96);
+        gj.field_a = PcmSampleStream.createForPlaybackRate(ke.field_h[5], 100, 96);
         int var1 = 39 / ((param0 + 87) / 39);
         na.a((byte) 125, gj.field_a);
     }

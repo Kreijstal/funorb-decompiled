@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mm implements uj {
-    static vm field_a;
+    static BinaryBitmapFont field_a;
     static PlatformTaskDispatcher field_b;
 
     final static boolean b(byte param0) {
@@ -38,7 +38,7 @@ final class mm implements uj {
     public final void a(boolean param0) {
         je.l();
         if (param0) {
-          field_a = (vm) null;
+          field_a = (BinaryBitmapFont) null;
         }
     }
 

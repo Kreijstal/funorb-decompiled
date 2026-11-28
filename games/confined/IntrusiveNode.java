@@ -54,10 +54,10 @@ class IntrusiveNode {
           rh.field_Z = dh.a(false, "jagex_logo_grey", "commonui", param3);
           em.field_d = nm.a(param3, "button", 1, "commonui");
           gg.field_q = ua.a("commonui", -563, param3, "validation");
-          fa.field_Q = (ok) ((Object) ej.a("arezzo12", param3, param2, "commonui", 0));
-          gm.field_cb = (ok) ((Object) ej.a("arezzo14", param3, param2, "commonui", 0));
+          fa.field_Q = (BitmapFont) ((Object) ej.a("arezzo12", param3, param2, "commonui", 0));
+          gm.field_cb = (BitmapFont) ((Object) ej.a("arezzo14", param3, param2, "commonui", 0));
           int var4_int = -4 % ((68 - param1) / 50);
-          fd.field_k = (ok) ((Object) ej.a("arezzo14bold", param3, param2, "commonui", 0));
+          fd.field_k = (BitmapFont) ((Object) ej.a("arezzo14bold", param3, param2, "commonui", 0));
           var5 = new RgbSprite(param0.getFileByName(110, "button.gif", ""), (java.awt.Component) ((Object) fb.field_b));
           TunnelEntity.a(param3, "commonui", "dropdown", (byte) 112);
           var6 = StageDirector.loadIndexedSpriteGroup("commonui", (byte) 90, "screen_options", param3);

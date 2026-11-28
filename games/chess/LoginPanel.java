@@ -69,7 +69,7 @@ final class LoginPanel extends ma implements TextFieldListener, mj {
         RuntimeException decompiledCaughtException = null;
         sf var6 = null;
         RuntimeException var6_ref = null;
-        lh var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         jd var9 = null;
         kg var12 = null;
@@ -137,7 +137,7 @@ final class LoginPanel extends ma implements TextFieldListener, mj {
           this.field_r = 15;
           var7 = rb.field_b;
           if (this.field_V != null) {
-            this.field_r = this.field_r + (5 + var7.b(this.field_V, this.field_y - 40, var7.field_C));
+            this.field_r = this.field_r + (5 + var7.textHeight(this.field_V, this.field_y - 40, var7.field_C));
           }
           var8 = rc.field_e;
           var9 = DirectByteStorage.a((byte) 127, bh.i(81));
@@ -218,7 +218,7 @@ final class LoginPanel extends ma implements TextFieldListener, mj {
           LoginPanel.clearDeclaredStaticReferences(-118);
         }
         if (this.field_V != null) {
-          rb.field_b.a(this.field_V, 20 + (this.field_u + param3), this.field_r + param0 + 15, -40 + this.field_y, this.field_C, 16777215, -1, 1, 0, rb.field_b.field_C);
+          rb.field_b.drawParagraph(this.field_V, 20 + (this.field_u + param3), this.field_r + param0 + 15, -40 + this.field_y, this.field_C, 16777215, -1, 1, 0, rb.field_b.field_C);
         }
         if (null != this.field_L) {
           SoftwareRasterizer.drawHorizontalLine(param3 + 10, 134 + param0, -20 + this.field_y, 4210752);
@@ -243,7 +243,7 @@ final class LoginPanel extends ma implements TextFieldListener, mj {
           return;
         }
         try {
-          bj.a(PcmSampleStream.a(param0, 100, 96), true);
+          bj.a(PcmSampleStream.createForPlaybackRate(param0, 100, 96), true);
           int var2_int = -101 % ((param1 + 24) / 39);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "wf.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -367,8 +367,8 @@ final class LoginPanel extends ma implements TextFieldListener, mj {
 
     final void g(byte param0) {
         int var2 = -102 % ((param0 - 40) / 38);
-        this.field_N.i(-12881);
-        this.field_U.i(-12881);
+        this.field_N.clearText(-12881);
+        this.field_U.clearText(-12881);
     }
 
     final void a(String param0, int param1) {
@@ -380,8 +380,8 @@ final class LoginPanel extends ma implements TextFieldListener, mj {
         try {
           var3 = this.field_N;
           var4 = param0;
-          var3.a(0, false, var4);
-          this.field_U.i(param1 ^ -12869);
+          var3.setText(0, false, var4);
+          this.field_U.clearText(param1 ^ -12869);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "wf.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

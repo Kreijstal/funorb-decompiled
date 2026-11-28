@@ -524,7 +524,7 @@ class UiComponent extends UiNode {
             this.name != null) {
             var23Lifetime2 = var26 + this.name;
           }
-          if (this.field_jb.a(var23Lifetime2) <= -(2 * this.field_L) + this.field_sb &&
+          if (this.field_jb.stringWidth(var23Lifetime2) <= -(2 * this.field_L) + this.field_sb &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (1 == this.field_Y) {
               var22 = var22 + (-this.field_jb.field_B + this.field_p - this.field_jb.field_u) / 2;
@@ -537,19 +537,19 @@ class UiComponent extends UiNode {
               this.field_jb.drawLeftAlpha(var23Lifetime2, var21 + this.field_D + this.field_L, var22 + this.field_M + this.field_jb.field_u, var18, -1, this.field_cb);
             } else {
               if (this.field_N == 1) {
-                this.field_jb.a(var23Lifetime2, var21 + this.field_D + this.field_L + (this.field_sb - this.field_L * 2) / 2, this.field_jb.field_u + (this.field_M + var22), var18, -1, this.field_cb);
+                this.field_jb.drawCentredAlpha(var23Lifetime2, var21 + this.field_D + this.field_L + (this.field_sb - this.field_L * 2) / 2, this.field_jb.field_u + (this.field_M + var22), var18, -1, this.field_cb);
               } else {
                 if (this.field_N != 2) {
-                  this.field_jb.a(var23Lifetime2, this.field_D + this.field_L + var21, this.field_M + var22, -(2 * this.field_L) + this.field_sb, this.field_p, var18, -1, this.field_cb, this.field_N, this.field_Y, this.field_B);
+                  this.field_jb.drawParagraphAlpha(var23Lifetime2, this.field_D + this.field_L + var21, this.field_M + var22, -(2 * this.field_L) + this.field_sb, this.field_p, var18, -1, this.field_cb, this.field_N, this.field_Y, this.field_B);
                 } else {
-                  this.field_jb.c(var23Lifetime2, this.field_D - (-this.field_L - var21 + (-this.field_sb + this.field_L * 2)), this.field_jb.field_u + (this.field_M + var22), var18, -1, this.field_cb);
+                  this.field_jb.drawRightAlignedAlpha(var23Lifetime2, this.field_D - (-this.field_L - var21 + (-this.field_sb + this.field_L * 2)), this.field_jb.field_u + (this.field_M + var22), var18, -1, this.field_cb);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_jb.a(var23Lifetime2, var21 + (this.field_L + this.field_D), var22 + this.field_M, this.field_sb - 2 * this.field_L, this.field_p, var18, -1, this.field_cb, this.field_N, this.field_Y, this.field_B);
+            this.field_jb.drawParagraphAlpha(var23Lifetime2, var21 + (this.field_L + this.field_D), var22 + this.field_M, this.field_sb - 2 * this.field_L, this.field_p, var18, -1, this.field_cb, this.field_N, this.field_Y, this.field_B);
           }
         }
         if (null != this.children) {
@@ -572,7 +572,7 @@ class UiComponent extends UiNode {
         int var5_intLifetime1;
         if (this.field_Z != null &&
           this.field_jb != null) {
-          var5_int = this.field_jb.c(this.field_Z, param0);
+          var5_int = this.field_jb.maxLineWidth(this.field_Z, param0);
           if (var5_int > var3) {
             var3 = var5_int;
           }

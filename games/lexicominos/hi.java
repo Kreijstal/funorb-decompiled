@@ -171,10 +171,10 @@ final class hi {
               var1_int = var1_int + oh.field_b;
             }
             if (var4 < 0) {
-              pb.field_i.b(var6, var8Lifetime1, var1_int + sb.field_f, var5, -1);
+              pb.field_i.drawString(var6, var8Lifetime1, var1_int + sb.field_f, var5, -1);
               var1_int = var1_int + hc.field_fb;
             } else {
-              fb.field_m.b(var6, var8Lifetime1, var1_int + kk.field_o, var5, -1);
+              fb.field_m.drawString(var6, var8Lifetime1, var1_int + kk.field_o, var5, -1);
               var1_int = var1_int + (oh.field_b + we.field_l + fb.field_g);
             }
           }

@@ -32,9 +32,9 @@ final class lh {
           af.field_e = ma.a(param1, "jagex_logo_grey", 16711680, "commonui");
           qj.field_C = lb.a(false, "commonui", param1, "button");
           hk.field_i = MatchingFieldValidator.a("validation", param1, 0, "commonui");
-          pf.field_c = (ta) ((Object) cb.a("commonui", param0, -103, param1, "arezzo12"));
-          ButtonWidget.field_z = (ta) ((Object) cb.a("commonui", param0, -99, param1, "arezzo14"));
-          IntrusiveDeque.field_c = (ta) ((Object) cb.a("commonui", param0, -75, param1, "arezzo14bold"));
+          pf.field_c = (BitmapFont) ((Object) cb.a("commonui", param0, -103, param1, "arezzo12"));
+          ButtonWidget.field_z = (BitmapFont) ((Object) cb.a("commonui", param0, -99, param1, "arezzo14"));
+          IntrusiveDeque.field_c = (BitmapFont) ((Object) cb.a("commonui", param0, -75, param1, "arezzo14bold"));
           var18 = new Sprite(param2.getFileByName("", "button.gif", -128), (java.awt.Component) ((Object) ie.field_e));
           PasswordValidator.a("commonui", param1, (byte) 118, "dropdown");
           var5 = DiskCacheWorker.a("commonui", "screen_options", param1, false);

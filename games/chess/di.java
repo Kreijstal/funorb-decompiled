@@ -139,10 +139,10 @@ final class di extends ci {
               var1_int = var1_int + kl.field_i;
             }
             if (var4 >= 0) {
-              ce.field_a.a(var6, var8Lifetime1, var1_int + rm.field_S, var5, -1);
+              ce.field_a.drawString(var6, var8Lifetime1, var1_int + rm.field_S, var5, -1);
               var1_int = var1_int + (vh.field_c + kl.field_i + MouseWheelInput.field_b);
             } else {
-              AwtRasterBuffer.field_d.a(var6, var8Lifetime1, var1_int + b.field_d, var5, -1);
+              AwtRasterBuffer.field_d.drawString(var6, var8Lifetime1, var1_int + b.field_d, var5, -1);
               var1_int = var1_int + fd.field_n;
             }
           }
@@ -359,8 +359,8 @@ final class di extends ci {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        lh var17 = null;
-        lh var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_Jb = -1;
         try {
           this.field_Gb = param5;
@@ -386,7 +386,7 @@ final class di extends ci {
             }
             this.field_Nb[var13] = new tl(0L, param2, (ci) null, param3, (RgbSprite) (var14), param6[var13]);
             this.a((byte) 127, this.field_Nb[var13]);
-            var15 = var17.b(param6[var13]);
+            var15 = var17.stringWidth(param6[var13]);
             if (this.field_Ob < var15) {
               this.field_Ob = var15;
             }

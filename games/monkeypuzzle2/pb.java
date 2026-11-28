@@ -12,7 +12,7 @@ final class pb implements ml {
     private int field_c;
     private int field_e;
     static String field_i;
-    private ta field_l;
+    private BitmapFont field_l;
     private int field_h;
     static Random field_n;
     private int field_g;
@@ -81,7 +81,7 @@ final class pb implements ml {
             return;
           }
           var10 = this.field_k + (this.field_o + this.field_a);
-          this.field_l.a(param1.field_s, var10 + param1.field_r + param3, param1.field_e + (param2 + this.field_h), param1.field_l - this.field_a - var10, param1.field_p - (this.field_a << 1), this.field_j, this.field_f, this.field_c, this.field_e, 0);
+          this.field_l.drawParagraph(param1.field_s, var10 + param1.field_r + param3, param1.field_e + (param2 + this.field_h), param1.field_l - this.field_a - var10, param1.field_p - (this.field_a << 1), this.field_j, this.field_f, this.field_c, this.field_e, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,7 +97,7 @@ final class pb implements ml {
         }
     }
 
-    pb(ta param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    pb(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_c = 1;
         this.field_e = 1;
         try {

@@ -37,7 +37,7 @@ final class rd extends ld {
           return;
         }
         try {
-          var8.field_d[0] = -param2.b(param4) + param3;
+          var8.field_d[0] = -param2.stringWidth(param4) + param3;
           var7.field_d[param4.length()] = param3;
           hb.a(param2, 0, 114, param4, var8);
         } catch (RuntimeException runtimeException) {
@@ -119,7 +119,7 @@ final class rd extends ld {
           this.field_n = param1;
           this.field_p = true;
           var8 = this.a(param1, 122, param2, param3);
-          var7 = param1.b(param2);
+          var7 = param1.stringWidth(param2);
           var8.field_d[0] = param0 - (var7 >> 1);
           var8.field_d[param2.length()] = param0 + (var7 >> 1);
           hb.a(param1, 0, 49, param2, var8);
@@ -202,9 +202,9 @@ final class rd extends ld {
           this.field_r = param6;
           this.field_j = param5;
           this.field_q = param7;
-          var17 = new String[param3.c(param5, param6) + 1];
+          var17 = new String[param3.lineCount(param5, param6) + 1];
           var18 = var17;
-          var10 = Math.max(1, param3.a(param5, new int[]{param6}, var18));
+          var10 = Math.max(1, param3.wrapText(param5, new int[]{param6}, var18));
           if (this.field_i == 3 &&
             1 == var10) {
             this.field_i = 1;
@@ -247,10 +247,10 @@ final class rd extends ld {
             var15 = new em(stackIn_35_2, stackIn_35_3, stackIn_36_4);
             var15.field_d[0] = 0;
             if (var14 != null) {
-              var15.field_d[var14.length()] = param3.b(var14);
+              var15.field_d[var14.length()] = param3.stringWidth(var14);
               stackIn_39_0 = (BitmapFont) (param3);
               if (3 == param0) {
-                stackIn_40_1 = this.a(var14, true, param6, param3.b(var14));
+                stackIn_40_1 = this.a(var14, true, param6, param3.stringWidth(var14));
               } else {
                 stackIn_40_1 = 0;
               }
@@ -302,7 +302,7 @@ final class rd extends ld {
           var7 = this.a(param1, 123, param3, param2);
           var8 = var7;
           var7.field_d[0] = param0;
-          var8.field_d[param3.length()] = param1.b(param3) + param0;
+          var8.field_d[param3.length()] = param1.stringWidth(param3) + param0;
           hb.a(param1, 0, 59, param3, var8);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "rd.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

@@ -37,7 +37,7 @@ class dj extends bd {
     private int field_V;
     private String field_v;
     private int field_D;
-    private vc field_r;
+    private BitmapFont field_r;
     private int field_L;
     private boolean field_o;
     private int field_Q;

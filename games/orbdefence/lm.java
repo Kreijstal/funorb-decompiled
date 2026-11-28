@@ -5,7 +5,7 @@ final class lm {
     static tl field_e;
     static int field_a;
     static String field_b;
-    static kc field_f;
+    static BitmapFont field_f;
     static int field_d;
     static long field_c;
 
@@ -17,7 +17,7 @@ final class lm {
         try {
           param0 = param0 & 8191;
           if (param1 >= -117) {
-            field_f = (kc) null;
+            field_f = (BitmapFont) null;
           }
           if (4096 <= param0) {
             if (6144 <= param0) {
@@ -3104,7 +3104,7 @@ final class lm {
           var1 = new RgbSprite[ec.field_K];
           var2 = 0;
           if (param0 >= -97) {
-            field_f = (kc) null;
+            field_f = (BitmapFont) null;
           }
           scanLoop1: while (true) {
             if (ec.field_K > var2) {

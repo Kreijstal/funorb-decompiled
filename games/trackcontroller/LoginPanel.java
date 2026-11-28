@@ -70,8 +70,8 @@ final class LoginPanel extends td implements TextFieldListener, ButtonListener {
           }
           var3 = this.field_H;
           var4 = param1;
-          var3.a(false, var4, 122);
-          this.field_F.l(-68);
+          var3.setText(false, var4, 122);
+          this.field_F.clearText(-68);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "rl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -79,7 +79,7 @@ final class LoginPanel extends td implements TextFieldListener, ButtonListener {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (null != this.field_M) {
-          gk.field_c.a(this.field_M, param1 + this.field_p + 20, this.field_m + param2 + 15, this.field_x - 40, this.field_u, 16777215, -1, 1, 0, gk.field_c.field_G);
+          gk.field_c.drawParagraph(this.field_M, param1 + this.field_p + 20, this.field_m + param2 + 15, this.field_x - 40, this.field_u, 16777215, -1, 1, 0, gk.field_c.field_G);
         }
         if (this.field_O != null) {
           SoftwareRasterizer.drawHorizontalLine(param1 + 10, 134 + param2, this.field_x - 20, 4210752);
@@ -91,8 +91,8 @@ final class LoginPanel extends td implements TextFieldListener, ButtonListener {
         if (param0 < 117) {
           return;
         }
-        this.field_H.l(-73);
-        this.field_F.l(-72);
+        this.field_H.clearText(-73);
+        this.field_F.clearText(-72);
     }
 
     public static void clearStaticReferences(boolean param0) {
@@ -201,7 +201,7 @@ final class LoginPanel extends td implements TextFieldListener, ButtonListener {
           this.field_m = 15;
           var7 = gk.field_c;
           if (this.field_M != null) {
-            this.field_m = this.field_m + (var7.a(this.field_M, -40 + this.field_x, var7.field_G) + 5);
+            this.field_m = this.field_m + (var7.textHeight(this.field_M, -40 + this.field_x, var7.field_G) + 5);
           }
           var8 = ai.field_i;
           var9 = gj.a(100, CachedArchiveSource.b((byte) 77));

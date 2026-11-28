@@ -610,9 +610,9 @@ final class t extends ma implements mj {
           mf var6 = (mf) null;
           this.a('￩', -83, 68, (mf) null);
         }
-        lh var5 = rb.field_b;
+        BitmapFont var5 = rb.field_b;
         if (null != this.field_O) {
-          var5.a(ic.field_f, this.field_u + param3, param0 + this.field_r, this.field_y, 20, 16777215, -1, 0, 0, var5.field_t + var5.field_C);
+          var5.drawParagraph(ic.field_f, this.field_u + param3, param0 + this.field_r, this.field_y, 20, 16777215, -1, 0, 0, var5.field_t + var5.field_C);
         }
     }
 

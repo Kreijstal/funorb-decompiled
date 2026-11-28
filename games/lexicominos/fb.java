@@ -73,7 +73,7 @@ final class fb implements rd {
           }
           if (null != this.field_b) {
             var10 = this.field_k + (this.field_q + this.field_r);
-            this.field_b.a(param3.field_u, param3.field_t + param1 + var10, param0 + (param3.field_o + this.field_e), -var10 - this.field_k + param3.field_j, param3.field_v - (this.field_k << 1), this.field_c, this.field_i, this.field_d, this.field_s, 0);
+            this.field_b.drawParagraph(param3.field_u, param3.field_t + param1 + var10, param0 + (param3.field_o + this.field_e), -var10 - this.field_k + param3.field_j, param3.field_v - (this.field_k << 1), this.field_c, this.field_i, this.field_d, this.field_s, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -40,7 +40,7 @@ class bj extends kb {
     private boolean field_V;
     private Sprite[] field_bb;
     private boolean field_F;
-    private kg field_Y;
+    private BitmapFont field_Y;
 
     public static void clearStaticReferences(byte param0) {
         field_X = null;

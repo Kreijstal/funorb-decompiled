@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pk {
-    static vm field_b;
+    static BinaryBitmapFont field_b;
     static Sprite field_d;
     static java.awt.Image field_a;
     static int field_i;
@@ -31,7 +31,7 @@ final class pk {
             var6_int = param1[0].field_x;
             var7 = param1[2].field_x;
             if (param3) {
-              field_b = (vm) null;
+              field_b = (BinaryBitmapFont) null;
             }
             var8 = param1[1].field_x;
             param1[0].b(param0, param4, param2);
@@ -74,10 +74,10 @@ final class pk {
         }
     }
 
-    final static ih a(int param0, ResourceArchive param1, byte param2, int param3, ResourceArchive param4) {
+    final static CoverageBitmapFont a(int param0, ResourceArchive param1, byte param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        ih stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -87,7 +87,7 @@ final class pk {
         try {
           if (!Bzip2State.a(param0, 258, param3, param1)) {
             stackIn_2_0 = null;
-            return (ih) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (param2 < 30) {
             field_g = (ResourceArchive) null;

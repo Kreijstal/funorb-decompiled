@@ -305,11 +305,11 @@ final class ArchiveIndex {
         }
     }
 
-    final static fn a(String param0, ResourceArchive param1, int param2, ResourceArchive param3, String param4) {
+    final static BinaryBitmapFont a(String param0, ResourceArchive param1, int param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        fn stackIn_3_0 = null;
+        BinaryBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

@@ -107,13 +107,13 @@ final class BufferedRandomAccessFile {
           DualLinkDeque.field_c = fk.a(param2, "jagex_logo_grey", 91, "commonui");
           FullscreenFocusCanvas.field_b = p.a(13863, "commonui", param2, "button");
           wd.field_C = CrossfadingMidiPcmStream.a("commonui", param2, "validation", -69);
-          pc.field_bb = (kc) ((Object) wl.a("arezzo12", (byte) -124, "commonui", param2, param3));
-          lm.field_f = (kc) ((Object) wl.a("arezzo14", (byte) -111, "commonui", param2, param3));
+          pc.field_bb = (BitmapFont) ((Object) wl.a("arezzo12", (byte) -124, "commonui", param2, param3));
+          lm.field_f = (BitmapFont) ((Object) wl.a("arezzo14", (byte) -111, "commonui", param2, param3));
           if (param1 <= 91) {
             ResourceArchive var14 = (ResourceArchive) null;
             BufferedRandomAccessFile.a((ResourceArchive) null, (byte) 9, (ResourceArchive) null, (ResourceArchive) null);
           }
-          qc.field_b = (kc) ((Object) wl.a("arezzo14bold", (byte) -120, "commonui", param2, param3));
+          qc.field_b = (BitmapFont) ((Object) wl.a("arezzo14bold", (byte) -120, "commonui", param2, param3));
           var18 = new RgbSprite(param0.getFileByName("", 1, "button.gif"), (java.awt.Component) ((Object) GameAppletShell.field_f));
           DiskArchiveRequest.a(false, "commonui", param2, "dropdown");
           var5 = fl.a(-9945, param2, "commonui", "screen_options");

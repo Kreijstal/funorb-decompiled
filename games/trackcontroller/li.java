@@ -27,9 +27,9 @@ final class li extends IntrusiveNode {
     li(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_j = param0;
-          this.field_m = param0.e();
+          this.field_m = param0.getTargetVolume();
           this.field_k = param1;
-          this.field_j.g(qd.field_d * this.field_m + 128 >> 8);
+          this.field_j.setVolume(qd.field_d * this.field_m + 128 >> 8);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

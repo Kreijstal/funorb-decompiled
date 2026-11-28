@@ -18,7 +18,7 @@ final class LoginPanel extends vd implements TextFieldListener, qk {
 
     final void a(int param0, int param1, byte param2, int param3) {
         if (null != this.field_I) {
-          jd.field_s.a(this.field_I, 20 + param1 + this.field_v, 15 + (this.field_m + param0), -40 + this.field_s, this.field_x, 16777215, -1, 1, 0, jd.field_s.field_y);
+          jd.field_s.drawParagraph(this.field_I, 20 + param1 + this.field_v, 15 + (this.field_m + param0), -40 + this.field_s, this.field_x, 16777215, -1, 1, 0, jd.field_s.field_y);
         }
         if (param2 <= 42) {
           LoginPanel.j(21);
@@ -33,8 +33,8 @@ final class LoginPanel extends vd implements TextFieldListener, qk {
         if (param0) {
           this.field_J = false;
         }
-        this.field_O.o(-128);
-        this.field_L.o(-124);
+        this.field_O.clearText(-128);
+        this.field_L.clearText(-124);
     }
 
     private final void submitLogin(byte param0) {
@@ -174,7 +174,7 @@ final class LoginPanel extends vd implements TextFieldListener, qk {
         }
     }
 
-    final static void a(int param0, int param1, int param2, vm param3, int param4, int param5, int param6, int param7, int param8, int param9, RgbSprite[] param10, RgbSprite[] param11, RgbSprite[] param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, vm param20) {
+    final static void a(int param0, int param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, RgbSprite[] param10, RgbSprite[] param11, RgbSprite[] param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, BitmapFont param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -239,8 +239,8 @@ final class LoginPanel extends vd implements TextFieldListener, qk {
           return;
         }
         try {
-          var3.a((byte) 118, false, var4);
-          this.field_L.o(param1 ^ -10000616);
+          var3.setText((byte) 118, false, var4);
+          this.field_L.clearText(param1 ^ -10000616);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "lk.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -311,7 +311,7 @@ final class LoginPanel extends vd implements TextFieldListener, qk {
         RuntimeException decompiledCaughtException = null;
         ke var6 = null;
         RuntimeException var6_ref = null;
-        vm var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         fa var9 = null;
         nh var12 = null;
@@ -379,7 +379,7 @@ final class LoginPanel extends vd implements TextFieldListener, qk {
           this.field_m = 15;
           var7 = jd.field_s;
           if (this.field_I != null) {
-            this.field_m = this.field_m + (var7.b(this.field_I, -40 + this.field_s, var7.field_y) + 5);
+            this.field_m = this.field_m + (var7.textHeight(this.field_I, -40 + this.field_s, var7.field_y) + 5);
           }
           var8 = KeyboardInput.field_b;
           var9 = qj.a(BufferedRandomAccessFile.c(-1), (byte) -116);

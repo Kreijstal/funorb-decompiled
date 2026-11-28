@@ -170,7 +170,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements rg, n {
         this.field_K = new eb(BattleUnit.field_lb, (sc) null);
         this.field_O = new eb(lf.field_d, (sc) null);
         this.field_J.field_x = p.field_g;
-        this.field_J.a(new AccountNameAvailabilityValidator(this.field_J), 5859);
+        this.field_J.setFieldValidator(new AccountNameAvailabilityValidator(this.field_J), 5859);
         this.field_K.field_A = false;
         this.field_K.listener = (WidgetActionListener) ((Object) new ic());
         this.field_O.listener = (WidgetActionListener) ((Object) new qh());
@@ -263,7 +263,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements rg, n {
           var3 = this.field_J;
           var4 = param0;
           int var5 = 127 % ((2 - param1) / 51);
-          ((EditableTextField) ((Object) var3)).a(false, (byte) -120, var4);
+          ((EditableTextField) ((Object) var3)).setText(false, (byte) -120, var4);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ae.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

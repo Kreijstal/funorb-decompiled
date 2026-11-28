@@ -4,7 +4,7 @@
 final class j extends qg {
     private IntrusiveDeque field_D;
     static String field_A;
-    static ee field_C;
+    static BitmapFont field_C;
     static String field_F;
     static int[] field_E;
 

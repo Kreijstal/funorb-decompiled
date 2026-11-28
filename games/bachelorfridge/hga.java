@@ -203,7 +203,7 @@ final class hga extends am {
     final void a(int param0, byte param1, int param2) {
         int var4 = 26 % ((param1 + 16) / 56);
         super.a(param0, (byte) -79, param2);
-        qia.field_a.a(this.field_S, param2 + (this.width >> 1), param0 + 103, 16777215, -1);
+        qia.field_a.drawCentred(this.field_S, param2 + (this.width >> 1), param0 + 103, 16777215, -1);
         if (null != this.field_V) {
           SoftwareRasterizer.drawHorizontalLine(param2 + 20, param0 + 120 - 7, 260, 8421504);
           qia.field_a.drawParagraph(this.field_V, param2 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, qia.field_a.field_u);

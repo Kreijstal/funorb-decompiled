@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kb implements WidgetListener {
-    static co field_c;
+    static BinaryBitmapFont field_c;
     static Sprite[] field_d;
     static GameKeyHandler field_a;
     static tk field_e;

@@ -11,7 +11,7 @@ final class rk extends wi {
     boolean field_t;
     static int field_s;
     static int[] field_u;
-    fa field_x;
+    BitmapFont field_x;
 
     final static int e(int param0) {
         if (param0 != 24089) {
@@ -57,7 +57,7 @@ final class rk extends wi {
           rk.a((String) null, -66);
         }
         if (null != this.field_x) {
-          this.field_x.c(this.field_q, this.field_l + var2.field_c + 5, this.field_x.field_N / 2 + (this.field_a + var2.field_a / 2), this.field_y, this.field_z);
+          this.field_x.drawString(this.field_q, this.field_l + var2.field_c + 5, this.field_x.field_N / 2 + (this.field_a + var2.field_a / 2), this.field_y, this.field_z);
         }
         SoftwareRasterizer.restoreClip(ia.field_q);
     }
@@ -99,7 +99,7 @@ final class rk extends wi {
         }
     }
 
-    rk(int param0, int param1, bi param2, bi param3, String param4, fa param5) {
+    rk(int param0, int param1, bi param2, bi param3, String param4, BitmapFont param5) {
         this.field_t = false;
         try {
           this.field_q = param4;
@@ -108,7 +108,7 @@ final class rk extends wi {
           this.field_l = param0;
           this.field_v = param2;
           this.field_a = param1;
-          this.field_n = this.field_r.field_c + 5 + this.field_x.b(this.field_q);
+          this.field_n = this.field_r.field_c + 5 + this.field_x.stringWidth(this.field_q);
           this.field_d = this.field_r.field_a;
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "rk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');

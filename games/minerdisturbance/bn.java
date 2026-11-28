@@ -3,7 +3,7 @@
  */
 final class bn implements uj {
     static boolean[] field_b;
-    static we field_d;
+    static BitmapFont field_d;
     static int field_c;
     static String field_a;
 

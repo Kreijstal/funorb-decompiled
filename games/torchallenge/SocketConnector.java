@@ -74,11 +74,11 @@ abstract class SocketConnector {
 
     abstract java.net.Socket a(byte param0) throws IOException;
 
-    final static nf a(byte[] param0, byte param1) {
-        nf var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, byte param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
-        nf stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -87,7 +87,7 @@ abstract class SocketConnector {
           if (param0 == null) {
             return null;
           }
-          var2 = new nf(param0, GameApplet.field_e, ImageProducerRasterBuffer.field_t, MusicPatchPcmStream.field_r, lg.field_e, h.field_a);
+          var2 = new BinaryBitmapFont(param0, GameApplet.field_e, ImageProducerRasterBuffer.field_t, MusicPatchPcmStream.field_r, lg.field_e, h.field_a);
           p.a(0);
           if (param1 <= 107) {
             var3 = (byte[]) null;

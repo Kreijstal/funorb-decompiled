@@ -72,17 +72,17 @@ final class LoginPanel extends ga implements TextFieldListener, el {
     }
 
     final void g(byte param0) {
-        this.field_T.l((byte) 115);
+        this.field_T.clearText((byte) 115);
         if (param0 != -104) {
           String var3 = (String) null;
           this.a(-119, (String) null);
         }
-        this.field_X.l((byte) 90);
+        this.field_X.clearText((byte) 90);
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
         if (this.field_H != null) {
-          gm.field_cb.a(this.field_H, 20 + (param3 + this.field_q), this.field_m + param0 + 15, -40 + this.field_F, this.field_z, 16777215, -1, 1, 0, gm.field_cb.field_C);
+          gm.field_cb.drawParagraph(this.field_H, 20 + (param3 + this.field_q), this.field_m + param0 + 15, -40 + this.field_F, this.field_z, 16777215, -1, 1, 0, gm.field_cb.field_C);
         }
         if (param2 < 36) {
           LoginPanel.releaseDeclaredStaticReferences(-83);
@@ -181,8 +181,8 @@ final class LoginPanel extends ga implements TextFieldListener, el {
         try {
           var3 = this.field_T;
           var4 = param1;
-          var3.a(false, false, var4);
-          this.field_X.l((byte) 110);
+          var3.setText(false, false, var4);
+          this.field_X.clearText((byte) 110);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "w.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -226,7 +226,7 @@ final class LoginPanel extends ga implements TextFieldListener, el {
         RuntimeException decompiledCaughtException = null;
         je var6 = null;
         RuntimeException var6_ref = null;
-        ok var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         al var9 = null;
         la var12 = null;
@@ -294,7 +294,7 @@ final class LoginPanel extends ga implements TextFieldListener, el {
           this.field_m = 15;
           var7 = gm.field_cb;
           if (this.field_H != null) {
-            this.field_m = this.field_m + (5 + var7.b(this.field_H, this.field_F - 40, var7.field_C));
+            this.field_m = this.field_m + (5 + var7.textHeight(this.field_H, this.field_F - 40, var7.field_C));
           }
           var8 = hd.field_a;
           var9 = SecondaryNodeDequeIterator.a(ii.b(false), -118);

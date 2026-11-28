@@ -10,7 +10,7 @@ final class rn extends rd {
     static PcmSample field_p;
     static bf field_r;
     static String field_q;
-    static vc field_k;
+    static BitmapFont field_k;
 
     final PuzzleTile a(boolean param0, int param1, int param2, int param3, ta param4) {
         RuntimeException var6 = null;
@@ -57,9 +57,9 @@ final class rn extends rd {
         RuntimeException var2 = null;
         var6 = CrazyCrystals.field_B;
         try {
-          var2_int = an.field_q.a(param0, 148);
+          var2_int = an.field_q.lineCount(param0, 148);
           var3 = new String[var2_int];
-          an.field_q.a(param0, new int[]{148}, var3);
+          an.field_q.wrapText(param0, new int[]{148}, var3);
           var4 = 0;
           while (true) {
             if (var4 >= var3.length) {

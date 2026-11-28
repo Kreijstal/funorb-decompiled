@@ -215,7 +215,7 @@ final class ClamsEvent extends SpecialEvent {
             SoftwareRasterizer.drawVerticalLine(var3 + var6, var4, var2, var7 << 16 | var8 << 8);
           }
           if (PizzaPartyAnimation.field_v != null) {
-            jha.field_g.a(PizzaPartyAnimation.field_v, 320, var4 - 20, 3826700, -1);
+            jha.field_g.drawCentred(PizzaPartyAnimation.field_v, 320, var4 - 20, 3826700, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

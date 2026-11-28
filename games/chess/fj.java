@@ -138,7 +138,7 @@ final class fj {
                 DisplayNameSelectionPanel.field_O = DisplayNameSelectionPanel.field_O + 1;
               }
               var10 = mn.a((byte) -30, var8_ref_ld);
-              var11 = var10 + lh.a(var8_ref_ld.field_n);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_ld.field_n);
               var12 = wh.a(param3 ^ -9, var8_ref_ld);
               var8_ref_ld.field_f = new ci(0L, eh.field_M, var11);
               var8_ref_ld.field_f.field_ib = var12;

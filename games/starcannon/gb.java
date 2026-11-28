@@ -60,7 +60,7 @@ final class gb extends hd {
           mc.a(100, this.field_u, param4.field_i, param0 + param4.field_s, var7, param4.field_j + (param3 + (-this.field_u[0].field_q + param4.field_f >> 1)));
           stackIn_17_0 = (param1) ? 16777215 : 7105644;
           var8 = stackIn_17_0;
-          this.field_f.a(param4.field_k, param4.field_s + param0, param4.field_j + (param3 - 2), param4.field_i, param4.field_f, var8, -1, 1, 1, this.field_f.field_p);
+          this.field_f.drawParagraph(param4.field_k, param4.field_s + param0, param4.field_j + (param3 - 2), param4.field_i, param4.field_f, var8, -1, 1, 1, this.field_f.field_p);
           var9 = -4 / ((2 - param2) / 54);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

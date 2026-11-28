@@ -10,7 +10,7 @@ class dh extends sj implements el {
     private boolean field_yb;
     private boolean field_ub;
     private ib field_wb;
-    private ok field_xb;
+    private BitmapFont field_xb;
 
     final static RgbSprite a(boolean param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
@@ -118,7 +118,7 @@ class dh extends sj implements el {
         }
     }
 
-    dh(sh param0, ok param1, String param2, boolean param3, boolean param4) {
+    dh(sh param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new jn((dh) null, param1, param2), 77, 10, 10);
         try {
           this.field_xb = param1;

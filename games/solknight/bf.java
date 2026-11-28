@@ -258,7 +258,7 @@ final class bf {
             } else {
               stackIn_25_8 = 256;
             }
-            ((BitmapFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param3.field_g, param3.field_b, param3.field_f);
+            ((BitmapFont) (Object) stackIn_18_0).drawParagraphAlpha(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param3.field_g, param3.field_b, param3.field_f);
           }
           if (param0 > 45) {
             return;

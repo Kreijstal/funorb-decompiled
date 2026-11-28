@@ -6,7 +6,7 @@ class dg extends me implements qk {
     private boolean field_jb;
     static String field_sb;
     static String field_qb;
-    private vm field_lb;
+    private BitmapFont field_lb;
     static String field_rb;
     private boolean field_kb;
     private boolean field_mb;
@@ -71,7 +71,7 @@ class dg extends me implements qk {
         }
     }
 
-    dg(gg param0, vm param1, String param2, boolean param3, boolean param4) {
+    dg(gg param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new qi((dg) null, param1, param2), 77, 10, 10);
         try {
           this.field_mb = false;

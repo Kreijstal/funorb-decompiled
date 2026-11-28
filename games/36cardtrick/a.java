@@ -567,11 +567,11 @@ final class a extends ch {
             for (var7 = -3; var7 <= 3; var7++) {
               var8 = (var6_int >= 0 ? var6_int : -var6_int) + (var7 >= 0 ? var7 : -var7);
               if (4 >= var8) {
-                qa.field_b.a(param1, var6_int + param3, var7 + param5, param0, -1, 256 - var8 * 48);
+                qa.field_b.drawStringAlpha(param1, var6_int + param3, var7 + param5, param0, -1, 256 - var8 * 48);
               }
             }
           }
-          qa.field_b.b(param1, param3, param5, param4, param2);
+          qa.field_b.drawString(param1, param3, param5, param4, param2);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "a.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

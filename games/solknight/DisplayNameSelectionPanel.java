@@ -85,7 +85,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ge, ka 
         this.field_J = new pj(MidiPcmStream.field_x, (dg) null);
         this.field_I = new pj(nf.field_X, (dg) null);
         this.field_K.field_z = ql.field_u;
-        this.field_K.a(new AccountNameAvailabilityValidator(this.field_K), false);
+        this.field_K.setFieldValidator(new AccountNameAvailabilityValidator(this.field_K), false);
         this.field_J.field_B = false;
         this.field_J.field_w = (j) ((Object) new gh());
         this.field_I.field_w = (j) ((Object) new ri());
@@ -118,7 +118,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ge, ka 
         try {
           var3 = this.field_K;
           var4 = param1;
-          ((EditableTextField) ((Object) var3)).a(74, false, var4);
+          ((EditableTextField) ((Object) var3)).setText(74, false, var4);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ga.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -10,12 +10,12 @@ final class w extends TextureOperator {
     static int field_z;
     static UiPanel[] field_C;
 
-    final static ge a(byte[] param0, boolean param1) {
-        ge var2 = null;
+    final static CoverageBitmapFont a(byte[] param0, boolean param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        ge stackIn_5_0 = null;
-        ge stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_5_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -23,11 +23,11 @@ final class w extends TextureOperator {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (ge) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new ge(param0, ca.field_a, pc.field_a, mh.field_c, vi.field_w, in.field_c, se.field_y);
+          var2 = new CoverageBitmapFont(param0, ca.field_a, pc.field_a, mh.field_c, vi.field_w, in.field_c, se.field_y);
           if (!param1) {
-            stackIn_5_0 = (ge) null;
+            stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;
           }
           la.a((byte) 123);
@@ -71,12 +71,12 @@ final class w extends TextureOperator {
         return var4Lifetime1;
     }
 
-    final static co a(Archive param0, Archive param1, String param2, String param3, int param4) {
+    final static BinaryBitmapFont a(Archive param0, Archive param1, String param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         String var7 = null;
-        co stackIn_3_0 = null;
+        BinaryBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

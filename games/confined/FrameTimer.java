@@ -15,12 +15,12 @@ abstract class FrameTimer {
 
     abstract void resetTiming(byte param0);
 
-    final static ce a(int param0, byte[] param1) {
-        ce var2 = null;
+    final static BinaryBitmapFont a(int param0, byte[] param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        ce stackIn_5_0 = null;
-        ce stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_5_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -28,13 +28,13 @@ abstract class FrameTimer {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (ce) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param0 != 2563) {
-            stackIn_5_0 = (ce) null;
+            stackIn_5_0 = (BinaryBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new ce(param1, DualLinkNode.field_p, ij.field_r, rg.field_I, sd.field_f, rj.field_f);
+          var2 = new BinaryBitmapFont(param1, DualLinkNode.field_p, ij.field_r, rg.field_I, sd.field_f, rj.field_f);
           StageDirector.clearIndexedSpriteDecodeBuffers(false);
           stackIn_7_0 = var2;
           return stackIn_7_0;

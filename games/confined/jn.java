@@ -8,7 +8,7 @@ final class jn extends ga implements el {
     static String field_R;
     static String field_O;
     private int field_P;
-    private ok field_T;
+    private BitmapFont field_T;
     static PcmSample field_U;
     private dh field_S;
 
@@ -66,7 +66,7 @@ final class jn extends ga implements el {
         field_R = null;
     }
 
-    jn(dh param0, ok param1, String param2) {
+    jn(dh param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (fe) null);
         int var4_int = 0;
         this.field_P = 0;
@@ -74,7 +74,7 @@ final class jn extends ga implements el {
           this.field_Q = param2;
           this.field_S = param0;
           this.field_T = param1;
-          var4_int = null != this.field_Q ? this.field_T.b(this.field_Q, 260, this.field_T.field_C) : 0;
+          var4_int = null != this.field_Q ? this.field_T.textHeight(this.field_Q, 260, this.field_T.field_C) : 0;
           this.a(-125, 288, 0, var4_int + 22, 0);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -109,7 +109,7 @@ final class jn extends ga implements el {
           this.a(111, (String) null, -98);
         }
         super.a(param0, param1, (byte) 125, param3);
-        this.field_T.a(this.field_Q, param3 + this.field_q + 14, 10 + (this.field_m + param0), this.field_F - 28, this.field_z, 16777215, -1, 0, 0, this.field_T.field_C);
+        this.field_T.drawParagraph(this.field_Q, param3 + this.field_q + 14, 10 + (this.field_m + param0), this.field_F - 28, this.field_z, 16777215, -1, 0, 0, this.field_T.field_C);
     }
 
     final void a(int param0, String param1, int param2) {

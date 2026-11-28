@@ -50,7 +50,7 @@ final class sj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 20) {
-            stackIn_4_0 = AccountRequestState.field_f.a(param6, param5, param2 - 20, param3 - param5, 480, param0, param7, 0, 0, param4);
+            stackIn_4_0 = AccountRequestState.field_f.drawParagraph(param6, param5, param2 - 20, param3 - param5, 480, param0, param7, 0, 0, param4);
             return stackIn_4_0;
           }
           stackIn_2_0 = 29;

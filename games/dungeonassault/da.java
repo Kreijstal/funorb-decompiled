@@ -268,7 +268,7 @@ abstract class da extends lm implements aa {
         return this.g(1) != null ? true : false;
     }
 
-    final static void a(String param0, int[] param1, int param2, int param3, int param4, se param5) {
+    final static void a(String param0, int[] param1, int param2, int param3, int param4, BitmapFont param5) {
         tf var6 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

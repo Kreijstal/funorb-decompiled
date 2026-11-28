@@ -28,7 +28,7 @@ final class jj extends ug {
         try {
           this.field_ib = param1;
           if (this.field_ib != null) {
-            var3_int = fd.field_k.b(this.field_ib, 260, fd.field_k.field_C);
+            var3_int = fd.field_k.textHeight(this.field_ib, 260, fd.field_k.field_C);
             this.a(-68, var3_int + 150, 300);
           }
           this.field_kb = new ib(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -152,18 +152,18 @@ final class jj extends ug {
 
     final void b(int param0, byte param1, int param2) {
         super.b(param0, (byte) -112, param2);
-        fd.field_k.b(this.field_mb, param0 + (this.field_F >> 1), param2 + 103, 16777215, -1);
+        fd.field_k.drawCentred(this.field_mb, param0 + (this.field_F >> 1), param2 + 103, 16777215, -1);
         if (param1 < -58) {
           if (this.field_ib != null) {
             SoftwareRasterizer.drawHorizontalLine(20 + param0, param2 + 120 - 7, 260, 8421504);
-            fd.field_k.a(this.field_ib, param0 + 20, param2 + 128, 260, 100, 16777215, -1, 1, 0, fd.field_k.field_C);
+            fd.field_k.drawParagraph(this.field_ib, param0 + 20, param2 + 128, 260, 100, 16777215, -1, 1, 0, fd.field_k.field_C);
           }
           return;
         }
         this.field_ib = (String) null;
         if (this.field_ib != null) {
           SoftwareRasterizer.drawHorizontalLine(20 + param0, param2 + 120 - 7, 260, 8421504);
-          fd.field_k.a(this.field_ib, param0 + 20, param2 + 128, 260, 100, 16777215, -1, 1, 0, fd.field_k.field_C);
+          fd.field_k.drawParagraph(this.field_ib, param0 + 20, param2 + 128, 260, 100, 16777215, -1, 1, 0, fd.field_k.field_C);
         }
     }
 

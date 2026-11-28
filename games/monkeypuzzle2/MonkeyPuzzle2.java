@@ -8,7 +8,7 @@ public final class MonkeyPuzzle2 extends bi {
     static String field_E;
     public static boolean field_F;
 
-    final void a(int param0) {
+    final void initializeClient(int param0) {
         try {
           this.a(24, 10, 0, 9, -25172, false, 11, 8);
           v.a(22050, true, 512, rc.field_k, (java.awt.Component) ((Object) ie.field_e));
@@ -35,7 +35,7 @@ public final class MonkeyPuzzle2 extends bi {
     public MonkeyPuzzle2() {
     }
 
-    final void b(boolean param0) {
+    final void disposeClient(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -56,7 +56,7 @@ public final class MonkeyPuzzle2 extends bi {
         }
     }
 
-    final void c(byte param0) {
+    final void clearClientResources(byte param0) {
         try {
           MonkeyPuzzle2.g((byte) -127);
           GameApplet.c(false);
@@ -115,7 +115,7 @@ public final class MonkeyPuzzle2 extends bi {
           vb.clearDeclaredStaticReferences(-76);
           gg.clearStaticReferences(38);
           ub.a(false);
-          ta.clearStaticReferences();
+          BitmapFont.clearStaticReferences();
           nl.clearStaticReferences((byte) -118);
           dh.clearStaticReferences(-14955);
           wd.clearStaticReferences(0);
@@ -304,7 +304,7 @@ public final class MonkeyPuzzle2 extends bi {
         }
     }
 
-    final void d(int param0) {
+    final void renderClientFrame(int param0) {
         Object stackIn_5_0 = null;
         Object stackIn_14_0 = null;
         int stackIn_14_1 = 0;
@@ -409,7 +409,7 @@ public final class MonkeyPuzzle2 extends bi {
         }
     }
 
-    final void c(int param0) {
+    final void updateClient(int param0) {
         boolean discarded$0 = false;
         int stackIn_9_1 = 0;
         boolean stackIn_10_2 = false;
@@ -658,7 +658,7 @@ public final class MonkeyPuzzle2 extends bi {
         RuntimeException var2 = null;
         try {
           if (param0 != 0) {
-            this.c((byte) -92);
+            this.clearClientResources((byte) -92);
           }
           stackIn_8_0 = (k.field_i) || (ok.a(false));
           return stackIn_8_0;
@@ -752,7 +752,7 @@ public final class MonkeyPuzzle2 extends bi {
             null != wi.field_d) {
             he.f(param0 - 36);
             ResourceArchive.setLoadingStatus(bd.field_a, -24119, 65.0f);
-            this.d(-25976);
+            this.renderClientFrame(-25976);
             ri.a(fi.field_b, 0, cl.field_a, wi.field_d);
             fi.field_b = null;
             wi.field_d = null;
@@ -763,7 +763,7 @@ public final class MonkeyPuzzle2 extends bi {
           if (null != hk.field_k &&
             ha.field_fb != null) {
             ResourceArchive.setLoadingStatus(gd.field_a, -24119, 75.0f);
-            this.d(param0 ^ -25940);
+            this.renderClientFrame(param0 ^ -25940);
             sj.a(ha.field_fb, TextFieldValidator.field_j, ri.field_a, hk.field_k, 0);
             ha.field_fb = null;
             hk.field_k = null;
@@ -772,7 +772,7 @@ public final class MonkeyPuzzle2 extends bi {
           }
           if (PasswordValidator.field_p != null) {
             ResourceArchive.setLoadingStatus(q.field_b, param0 - 24155, 90.0f);
-            this.d(-25976);
+            this.renderClientFrame(-25976);
             v.a((byte) -121, PasswordValidator.field_p);
             PasswordValidator.field_p = null;
             oe.a((byte) 109);

@@ -13,7 +13,7 @@ final class cc extends IntrusiveNode {
     int field_g;
     int field_s;
     static cf field_k;
-    static wa field_t;
+    static PalettedBitmapFont field_t;
     static od field_f;
     static int[] field_j;
     static String field_i;

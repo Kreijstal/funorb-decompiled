@@ -108,7 +108,7 @@ final class df {
           param0.field_w = 2;
           param0.field_H = -2147483647;
           param0.field_c = 24;
-          param0.field_J = (lh) ((Object) jj.field_b);
+          param0.field_J = (BitmapFont) ((Object) jj.field_b);
           param0.field_B = -1;
           param0.field_K = 2;
           param0.field_r = 1;

@@ -124,11 +124,11 @@ final class SecondaryNodeHashTable {
         return var29;
     }
 
-    final static co a(int param0, Archive param1, Archive param2, int param3, byte param4) {
+    final static BinaryBitmapFont a(int param0, Archive param1, Archive param2, int param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        co stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -142,7 +142,7 @@ final class SecondaryNodeHashTable {
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (co) (stackIn_2_0);
+          return (BinaryBitmapFont) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

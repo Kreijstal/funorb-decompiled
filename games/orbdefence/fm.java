@@ -72,8 +72,8 @@ final class fm {
             hd.field_e = fk.a(me.field_g, "menu_text", -109, "benefits");
             bl.field_n = fk.a(me.field_g, "button_frame", -76, "benefits");
             field_b = fk.a(me.field_g, "arrow", param0 - 201, "benefits");
-            MidiPcmStream.field_m = (kc) ((Object) ConfirmedEmailAvailabilityValidator.a("large_font", "benefits", -121, sf.field_q, me.field_g));
-            rc.field_a = (kc) ((Object) ConfirmedEmailAvailabilityValidator.a("small_font", "benefits", -114, sf.field_q, me.field_g));
+            MidiPcmStream.field_m = (BitmapFont) ((Object) ConfirmedEmailAvailabilityValidator.a("large_font", "benefits", -121, sf.field_q, me.field_g));
+            rc.field_a = (BitmapFont) ((Object) ConfirmedEmailAvailabilityValidator.a("small_font", "benefits", -114, sf.field_q, me.field_g));
             var28 = SoftwareRasterizer.field_b;
             var2 = SoftwareRasterizer.field_f;
             var3 = SoftwareRasterizer.field_l;
@@ -87,18 +87,18 @@ final class fm {
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_o / 2;
             var12.d();
-            MidiPcmStream.field_m.c(CrossfadingMidiPcmStream.a(-415993727, new String[]{lf.field_c}, AccountServiceResult.field_a), var6, 40, 16777215, -1);
-            rc.field_a.c(CrossfadingMidiPcmStream.a(param0 ^ -415993744, new String[]{lf.field_c}, ud.field_p), var6, 60, 16777215, -1);
-            MidiPcmStream.field_m.c(CrossfadingMidiPcmStream.a(-415993727, new String[]{NodeHashTableIterator.field_a}, FullscreenFocusCanvas.field_g), var6, 110, 16777215, -1);
-            rc.field_a.c(CrossfadingMidiPcmStream.a(-415993727, new String[]{NodeHashTableIterator.field_a}, qb.field_b), var6, 130, 16777215, -1);
-            MidiPcmStream.field_m.c(tg.field_d, var6, 180, 16777215, -1);
-            rc.field_a.c(mm.field_E, var6, 200, 16777215, -1);
+            MidiPcmStream.field_m.drawCentred(CrossfadingMidiPcmStream.a(-415993727, new String[]{lf.field_c}, AccountServiceResult.field_a), var6, 40, 16777215, -1);
+            rc.field_a.drawCentred(CrossfadingMidiPcmStream.a(param0 ^ -415993744, new String[]{lf.field_c}, ud.field_p), var6, 60, 16777215, -1);
+            MidiPcmStream.field_m.drawCentred(CrossfadingMidiPcmStream.a(-415993727, new String[]{NodeHashTableIterator.field_a}, FullscreenFocusCanvas.field_g), var6, 110, 16777215, -1);
+            rc.field_a.drawCentred(CrossfadingMidiPcmStream.a(-415993727, new String[]{NodeHashTableIterator.field_a}, qb.field_b), var6, 130, 16777215, -1);
+            MidiPcmStream.field_m.drawCentred(tg.field_d, var6, 180, 16777215, -1);
+            rc.field_a.drawCentred(mm.field_E, var6, 200, 16777215, -1);
             ve.a(3, var12.field_k, var12, var12.field_o, 1, 0, (byte) 98, 0);
             nl.field_e.d();
             var12.c(18 - nl.field_e.field_p, -nl.field_e.field_u + 241);
             for (var7 = 0; tb.field_c.length > var7; var7++) {
               il.field_e[var7].d();
-              rc.field_a.a(tb.field_c[var7], 3, 3, il.field_e[var7].field_o - 6, il.field_e[var7].field_k - 6, NodeHashTableIterator.field_d, -1, 1, 1, rc.field_a.field_B + rc.field_a.field_H);
+              rc.field_a.drawParagraph(tb.field_c[var7], 3, 3, il.field_e[var7].field_o - 6, il.field_e[var7].field_k - 6, NodeHashTableIterator.field_d, -1, 1, 1, rc.field_a.field_B + rc.field_a.field_H);
               ve.a(3, il.field_e[var7].field_k, il.field_e[var7], il.field_e[var7].field_o, 1, 0, (byte) 61, 0);
             }
             tb.field_c = null;
@@ -123,8 +123,8 @@ final class fm {
             var3Lifetime1 = SoftwareRasterizer.field_l;
             SoftwareRasterizer.saveClip(rh.field_e);
             var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{li.field_b[ml.field_j]}, BitPacketBuffer.field_n);
-            var5 = MidiPcmStream.field_m.c(var14, vg.field_l);
-            var6Lifetime1 = MidiPcmStream.field_m.a(var14, vg.field_l, MidiPcmStream.field_m.field_H + MidiPcmStream.field_m.field_B);
+            var5 = MidiPcmStream.field_m.maxLineWidth(var14, vg.field_l);
+            var6Lifetime1 = MidiPcmStream.field_m.textHeight(var14, vg.field_l, MidiPcmStream.field_m.field_H + MidiPcmStream.field_m.field_B);
             var7Lifetime1 = (vg.field_l - var5) / 2 + ok.field_f;
             var5 += 6;
             var7Lifetime1 -= 3;
@@ -170,7 +170,7 @@ final class fm {
             pf.field_b.e();
             var9 = new RgbSprite(pf.field_b.field_s, pf.field_b.field_t);
             var9.d();
-            MidiPcmStream.field_m.a(var14, ok.field_f, pa.field_d, vg.field_l, qf.field_m, 16777215, -1, 1, 1, MidiPcmStream.field_m.field_H + MidiPcmStream.field_m.field_B);
+            MidiPcmStream.field_m.drawParagraph(var14, ok.field_f, pa.field_d, vg.field_l, qf.field_m, 16777215, -1, 1, 1, MidiPcmStream.field_m.field_H + MidiPcmStream.field_m.field_B);
             ve.a(3, var9.field_t, var9, var9.field_s, 1, 0, (byte) 88, 0);
             pf.field_b.d();
             var9.c(0, 0);
@@ -192,7 +192,7 @@ final class fm {
             var17 = CrossfadingMidiPcmStream.a(-415993727, new String[]{pj.field_k}, ValidatedTextField.field_U);
             pj.field_k = null;
             var16.d();
-            rc.field_a.a(var17, 3, 3, var16.field_o - 6, -6 + var16.field_k, 16777215, -1, 0, 1, rc.field_a.field_B + rc.field_a.field_H);
+            rc.field_a.drawParagraph(var17, 3, 3, var16.field_o - 6, -6 + var16.field_k, 16777215, -1, 0, 1, rc.field_a.field_B + rc.field_a.field_H);
             ve.a(3, var16.field_k, var16, var16.field_o, 1, 0, (byte) 55, 0);
             hc.field_l.d();
             var16.c(199 - hc.field_l.field_p, 83 - hc.field_l.field_u);
@@ -205,12 +205,12 @@ final class fm {
             var2Lifetime3 = SoftwareRasterizer.field_f;
             var3Lifetime3 = SoftwareRasterizer.field_l;
             SoftwareRasterizer.saveClip(rh.field_e);
-            var4 = rc.field_a.c(FrameTimer.field_b, 640) + 6;
+            var4 = rc.field_a.maxLineWidth(FrameTimer.field_b, 640) + 6;
             var5Lifetime1 = 20 + (var4 + lc.field_w.field_s);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = lc.field_w.field_s + (var6Lifetime2 + 20);
             hc.field_l.d();
-            rc.field_a.b(FrameTimer.field_b, var7Lifetime2 - hc.field_l.field_p, rc.field_a.field_B + 155 - (hc.field_l.field_u - rc.field_a.field_H), 16777215, -1);
+            rc.field_a.drawString(FrameTimer.field_b, var7Lifetime2 - hc.field_l.field_p, rc.field_a.field_B + 155 - (hc.field_l.field_u - rc.field_a.field_H), 16777215, -1);
             ve.a(3, 50, hc.field_l, var4, 1, -hc.field_l.field_p + (var7Lifetime2 - 4), (byte) 64, 155 - hc.field_l.field_u);
             var8Lifetime1 = -hc.field_l.field_u + (155 - (-rc.field_a.field_B - rc.field_a.field_H - 3 + lc.field_w.field_t) / 2);
             lc.field_w.c(-hc.field_l.field_p + var6Lifetime2, var8Lifetime1);

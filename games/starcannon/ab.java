@@ -73,7 +73,7 @@ class ab extends dk {
           var1_int = 34 % ((38 - param0) / 32);
           if (og.field_d == null) {
             if (ah.field_d != null) {
-              ah.field_d.a(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              ah.field_d.drawParagraph(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -82,7 +82,7 @@ class ab extends dk {
           var8Lifetime1 = var7;
           if (var7 == null) {
             if (ah.field_d != null) {
-              ah.field_d.a(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              ah.field_d.drawParagraph(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var7.e(245, 199);
@@ -118,7 +118,7 @@ class ab extends dk {
             if (var3 == null) {
               return;
             }
-            ah.field_d.a("Screenshot(s) " + (String) (var3) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            ah.field_d.drawParagraph("Screenshot(s) " + (String) (var3) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

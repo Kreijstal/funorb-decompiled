@@ -222,7 +222,7 @@ final class g {
                   } else {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
-                  this.field_p[var11Lifetime1][var14Lifetime1] = var17.readInt(Slime.a(param0, 10990));
+                  this.field_p[var11Lifetime1][var14Lifetime1] = var17.readInt(Slime.xorIntegers(param0, 10990));
                 }
                 this.field_k[var11Lifetime1] = new da(this.field_p[var11Lifetime1]);
               }

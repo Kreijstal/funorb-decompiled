@@ -41,7 +41,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    private final void g(int param0) {
+    private final void renderAppletFrame(int param0) {
         int fieldTemp$1 = 0;
         RuntimeException runtimeException = null;
         long var2_long = 0L;
@@ -80,7 +80,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               DiskCacheWorker.field_g.setLocation(tg.field_b, hg.field_pb);
             }
           }
-          this.h(0);
+          this.renderClientFrame(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -207,7 +207,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 b.e(-117);
                 this.f(118);
                 ArchiveRequest.field_C = al.a((byte) -73, fg.field_h, (java.awt.Component) ((Object) DiskCacheWorker.field_g), ByteStorage.field_a);
-                this.a(32);
+                this.initializeClient(32);
                 BufferedSocket.field_e = ProxyAuthenticationRequiredException.a(65280);
                 do {
                   boolean decompiledFrameRemainder0 = true;
@@ -226,11 +226,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   var3 = stackIn_100_0;
                   do {
                     if (!(var3 < jj.field_b)) {
-                      this.g(31180);
+                      this.renderAppletFrame(31180);
                       oh.a(sb.field_d, 1, DiskCacheWorker.field_g);
                       break;
                     }
-                    this.d((byte) -17);
+                    this.processClientTick((byte) -17);
                     var3++;
                   } while (var5 == 0);
                 } while (var5 == 0);
@@ -241,7 +241,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               gb.a((Throwable) (var1), (String) null, 10);
               this.a(-51, "crash");
             }
-            this.a(0, true);
+            this.shutdownApplet(0, true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -291,7 +291,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    abstract void h(int param0);
+    abstract void renderClientFrame(int param0);
 
     public final java.net.URL getDocumentBase() {
         RuntimeException var1 = null;
@@ -498,7 +498,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void windowDeiconified(java.awt.event.WindowEvent param0) {
     }
 
-    abstract void a(boolean param0);
+    abstract void clearClientResources(boolean param0);
 
     final static void b(byte param0) {
         RuntimeException runtimeException = null;
@@ -597,7 +597,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void shutdownApplet(int param0, boolean param1) {
         Exception exception = null;
         RuntimeException runtimeException = null;
         Object var3 = null;
@@ -619,7 +619,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.a(-127, -17, -46, -55, -40, (String) null, 12);
           }
           try {
-            this.a((byte) -126);
+            this.disposeClient((byte) -126);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
@@ -641,7 +641,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          this.a(false);
+          this.clearClientResources(false);
           if (null != bb.field_a) {
             try {
               System.exit(0);
@@ -729,9 +729,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void windowIconified(java.awt.event.WindowEvent param0) {
     }
 
-    abstract void c(byte param0);
+    abstract void updateClient(byte param0);
 
-    abstract void a(byte param0);
+    abstract void disposeClient(byte param0);
 
     final boolean e(int param0) {
         return true;
@@ -823,7 +823,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    private final void d(byte param0) {
+    private final void processClientTick(byte param0) {
         RuntimeException runtimeException = null;
         long var2_long = 0L;
         long var4 = 0L;
@@ -847,7 +847,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               field_i = (RgbSprite) null;
             }
           }
-          this.c((byte) 35);
+          this.updateClient((byte) 35);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -865,7 +865,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           sf.field_j = la.correctedCurrentTimeMillis(false);
           kk.sleepMillis(5000L, true);
           DiskCacheWorker.field_h = null;
-          this.a(0, false);
+          this.shutdownApplet(0, false);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "li.destroy()");
         }
@@ -986,7 +986,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         return super.getCodeBase();
     }
 
-    abstract void a(int param0);
+    abstract void initializeClient(int param0);
 
     public abstract void init();
 

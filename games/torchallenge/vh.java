@@ -140,12 +140,12 @@ final class vh {
         }
     }
 
-    final static rh a(ge[] param0, int param1, int param2, byte[] param3, int param4, int param5) {
+    final static PalettedBitmapFont a(ge[] param0, int param1, int param2, byte[] param3, int param4, int param5) {
         int var16_int = 0;
         byte[] array$0 = null;
         int var26 = 0;
         int incrementValue$2 = 0;
-        rh stackIn_30_0 = null;
+        PalettedBitmapFont stackIn_30_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -161,7 +161,7 @@ final class vh {
         byte[][] var11 = null;
         int var13 = 0;
         int var14 = 0;
-        rh var16 = null;
+        PalettedBitmapFont var16 = null;
         byte[] var17 = null;
         byte[] var18 = null;
         int var19 = 0;
@@ -254,7 +254,7 @@ final class vh {
               var24Lifetime2 = var24Lifetime2 + var22;
             }
           }
-          var16 = new rh(param3, var38, var39, var36, var37, var10, var40);
+          var16 = new PalettedBitmapFont(param3, var38, var39, var36, var37, var10, var40);
           var16.field_t = var16.field_t - param1;
           var16.field_K = var16.field_K - param1;
           var16.field_x = var16.field_x - param1;

@@ -17,8 +17,8 @@ final class jh {
         int var3 = 0;
         int var4 = SolKnight.field_L ? 1 : 0;
         try {
-          wb.field_a = BufferedSocket.field_b.b(te.field_I[12]);
-          var1_int = BufferedSocket.field_b.b(te.field_I[13]);
+          wb.field_a = BufferedSocket.field_b.stringWidth(te.field_I[12]);
+          var1_int = BufferedSocket.field_b.stringWidth(te.field_I[13]);
           if (!(var1_int <= wb.field_a)) {
             wb.field_a = var1_int;
           }

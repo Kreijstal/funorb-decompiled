@@ -4,7 +4,7 @@
 final class mb extends ed {
     private boolean field_l;
     static qc field_n;
-    private tj field_i;
+    private BitmapFont field_i;
     static long field_s;
     static int[] field_o;
     private int field_g;
@@ -18,7 +18,7 @@ final class mb extends ed {
     static int field_j;
     private int field_h;
 
-    final void a(int param0, tj param1, String param2, boolean param3, int param4, int param5, int param6, int param7) {
+    final void a(int param0, BitmapFont param1, String param2, boolean param3, int param4, int param5, int param6, int param7) {
         bh stackIn_37_0;
         bh stackIn_37_1;
         int stackIn_37_2;
@@ -26,7 +26,7 @@ final class mb extends ed {
         bh stackIn_38_0 = null;
         bh stackIn_38_1 = null;
         int stackIn_38_4 = 0;
-        tj stackIn_42_0 = null;
+        BitmapFont stackIn_42_0 = null;
         String stackIn_42_1 = null;
         int stackIn_43_2 = 0;
         RuntimeException stackIn_48_0 = null;
@@ -42,7 +42,7 @@ final class mb extends ed {
         String var13 = null;
         bh var14 = null;
         int var15 = 0;
-        tj var16 = null;
+        BitmapFont var16 = null;
         String[] var17 = null;
         String[] var18 = null;
         int var12Lifetime1;
@@ -74,13 +74,13 @@ final class mb extends ed {
           this.field_l = false;
           this.field_f = param5;
           if (!param3) {
-            var16 = (tj) null;
-            this.a((String) null, -57, (byte) -100, -16, (tj) null);
+            var16 = (BitmapFont) null;
+            this.a((String) null, -57, (byte) -100, -16, (BitmapFont) null);
           }
           this.field_m = param2;
-          var17 = new String[1 + param1.a(param2, param0)];
+          var17 = new String[1 + param1.lineCount(param2, param0)];
           var18 = var17;
-          var10 = Math.max(1, param1.a(param2, new int[]{param0}, var18));
+          var10 = Math.max(1, param1.wrapText(param2, new int[]{param0}, var18));
           if (this.field_f == 3 &&
             var10 == 1) {
             this.field_f = 1;
@@ -122,13 +122,13 @@ final class mb extends ed {
             var14 = new bh(stackIn_37_2, stackIn_37_3, stackIn_38_4);
             var14.field_a[0] = 0;
             if (var13 != null) {
-              var14.field_a[var13.length()] = param1.b(var13);
-              stackIn_42_0 = (tj) (param1);
+              var14.field_a[var13.length()] = param1.stringWidth(var13);
+              stackIn_42_0 = (BitmapFont) (param1);
               stackIn_42_1 = var13;
               if (param6 != 3) {
                 stackIn_43_2 = 0;
               } else {
-                stackIn_43_2 = this.a(param1.b(var13), param0, -127, var13);
+                stackIn_43_2 = this.a(param1.stringWidth(var13), param0, -127, var13);
               }
               PacketBuffer.a(stackIn_42_0, stackIn_42_1, stackIn_43_2, false, var14);
             }
@@ -156,7 +156,7 @@ final class mb extends ed {
         }
     }
 
-    private final bh a(int param0, byte param1, String param2, tj param3) {
+    private final bh a(int param0, byte param1, String param2, BitmapFont param3) {
         bh var5 = null;
         RuntimeException var5_ref = null;
         bh var6 = null;
@@ -198,7 +198,7 @@ final class mb extends ed {
         }
     }
 
-    final void a(String param0, tj param1, int param2, int param3, int param4) {
+    final void a(String param0, BitmapFont param1, int param2, int param3, int param4) {
         bh var9 = null;
         bh var10 = null;
         if (param0 == null) {
@@ -219,7 +219,7 @@ final class mb extends ed {
           this.field_m = param0;
           var9 = this.a(param2, (byte) 102, param0, param1);
           var10 = var9;
-          var10.field_a[0] = -param1.b(param0) + param4;
+          var10.field_a[0] = -param1.stringWidth(param0) + param4;
           int var7 = 117 / ((1 - param3) / 57);
           var10.field_a[param0.length()] = param4;
           PacketBuffer.a(param1, param0, 0, false, var10);
@@ -238,7 +238,7 @@ final class mb extends ed {
         field_k = null;
     }
 
-    final void a(int param0, String param1, tj param2, int param3, boolean param4) {
+    final void a(int param0, String param1, BitmapFont param2, int param3, boolean param4) {
         bh var8 = null;
         int var7 = 0;
         if (param1 == null) {
@@ -254,7 +254,7 @@ final class mb extends ed {
           this.field_i = param2;
           this.field_p = 1;
           var8 = this.a(param0, (byte) 107, param1, param2);
-          var7 = param2.b(param1);
+          var7 = param2.stringWidth(param1);
           var8.field_a[0] = param3 - (var7 >> 1);
           var8.field_a[param1.length()] = param3 + (var7 >> 1);
           PacketBuffer.a(param2, param1, 0, param4, var8);
@@ -263,7 +263,7 @@ final class mb extends ed {
         }
     }
 
-    final void a(String param0, int param1, byte param2, int param3, tj param4) {
+    final void a(String param0, int param1, byte param2, int param3, BitmapFont param4) {
         bh var7 = null;
         if (param0 == null) {
           this.field_a = null;
@@ -284,7 +284,7 @@ final class mb extends ed {
           this.field_i = param4;
           var7 = this.a(param1, (byte) 100, param0, param4);
           var7.field_a[0] = param3;
-          var7.field_a[param0.length()] = param4.b(param0) + param3;
+          var7.field_a[param0.length()] = param4.stringWidth(param0) + param3;
           PacketBuffer.a(param4, param0, 0, false, var7);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "mb.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

@@ -198,7 +198,7 @@ final class eh {
               var39 = -385941249 & var30 * var35 >>> 8 | (16711929 & var30 * var36) >>> 8;
               var38 = var38 + var32 * 65793;
               var39 = var39 + var33 * 65793;
-              Slime.a(var22, 255 & var37 >> 8, (var39 & 65522) >> 8, 255 & var38, var38 >> 16, 255 & var37, var37 >> 16, 100000, var39 >> 16, var25, var27, 255 & var38 >> 8, 255 & var39, var23, var24, var26);
+              Slime.rasterizeGouraudTriangle(var22, 255 & var37 >> 8, (var39 & 65522) >> 8, 255 & var38, var38 >> 16, 255 & var37, var37 >> 16, 100000, var39 >> 16, var25, var27, 255 & var38 >> 8, 255 & var39, var23, var24, var26);
             }
             var45++;
           }

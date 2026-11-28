@@ -4,7 +4,7 @@
 final class qh {
     static String[] field_b;
     static String field_e;
-    static pk field_c;
+    static PalettedBitmapFont field_c;
     static String field_a;
     static String field_d;
 

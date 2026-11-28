@@ -81,7 +81,7 @@ final class DisplayNameSelectionPanel extends td implements a, ButtonListener {
           }
           var3 = this.field_K;
           var4 = param1;
-          ((EditableTextField) ((Object) var3)).a(false, var4, -124);
+          ((EditableTextField) ((Object) var3)).setText(false, var4, -124);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "bk.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -136,7 +136,7 @@ final class DisplayNameSelectionPanel extends td implements a, ButtonListener {
         this.field_F = new ButtonWidget(hb.field_a, (tg) null);
         this.field_H = new ButtonWidget(ta.field_a, (tg) null);
         this.field_K.field_n = ak.field_c;
-        this.field_K.a(1, new AccountNameAvailabilityValidator(this.field_K));
+        this.field_K.setFieldValidator(1, new AccountNameAvailabilityValidator(this.field_K));
         this.field_F.field_B = false;
         this.field_F.field_y = (t) ((Object) new dc());
         this.field_H.field_y = (t) ((Object) new ne());

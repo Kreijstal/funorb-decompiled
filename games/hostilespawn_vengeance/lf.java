@@ -132,7 +132,7 @@ class lf {
             null != PcmOutputWorker.field_c &&
             -1 + PcmOutputWorker.field_c.length > this.field_c &&
             null != PcmOutputWorker.field_c[-1 + this.field_c]) {
-            this.field_e = RawPcmStream.a(PcmOutputWorker.field_c[-1 + this.field_c], 100, this.field_d);
+            this.field_e = RawPcmStream.createForPlaybackRate(PcmOutputWorker.field_c[-1 + this.field_c], 100, this.field_d);
             this.field_e.d(-1);
             eh.field_c.b(this.field_e);
           }
@@ -146,7 +146,7 @@ class lf {
           lf.a((byte) -50);
         }
         if (this.field_e != null) {
-          this.field_e.f(this.field_d * uh.field_i / 64);
+          this.field_e.setVolume(this.field_d * uh.field_i / 64);
         }
     }
 

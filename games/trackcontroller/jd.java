@@ -49,7 +49,7 @@ final class jd implements t {
             return;
           }
           if (null != this.field_c) {
-            this.field_c.b(var12.field_s, var8 + var7 / 2, var9 + this.field_c.field_q + var12.field_P, this.field_j, this.field_e);
+            this.field_c.drawCentred(var12.field_s, var8 + var7 / 2, var9 + this.field_c.field_q + var12.field_P, this.field_j, this.field_e);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

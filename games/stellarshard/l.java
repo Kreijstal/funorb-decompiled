@@ -5,7 +5,7 @@ final class l {
     static int field_b;
     static String field_d;
     static String field_g;
-    static ub field_f;
+    static BinaryBitmapFont field_f;
     static int field_e;
     int field_i;
     static int field_h;

@@ -55,8 +55,8 @@ final class LoginPanel extends g implements TextFieldListener, qh {
     }
 
     final void l(int param0) {
-        this.field_J.n(param0 + 31843);
-        this.field_K.n(-124);
+        this.field_J.clearText(param0 + 31843);
+        this.field_K.clearText(-124);
         if (param0 != -31940) {
           this.submitLogin((byte) 23);
         }
@@ -93,7 +93,7 @@ final class LoginPanel extends g implements TextFieldListener, qh {
         RuntimeException decompiledCaughtException = null;
         ki var6 = null;
         RuntimeException var6_ref = null;
-        ee var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         qa var9 = null;
         ck var12 = null;
@@ -161,7 +161,7 @@ final class LoginPanel extends g implements TextFieldListener, qh {
           this.field_i = 15;
           var7 = j.field_C;
           if (this.field_F != null) {
-            this.field_i = this.field_i + (5 + var7.b(this.field_F, this.field_h - 40, var7.field_s));
+            this.field_i = this.field_i + (5 + var7.textHeight(this.field_F, this.field_h - 40, var7.field_s));
           }
           var8 = ck.field_F;
           var9 = ma.a(PasswordValidator.g(-122), -3825);
@@ -324,7 +324,7 @@ final class LoginPanel extends g implements TextFieldListener, qh {
     final void a(int param0, int param1, int param2, int param3) {
         if (param2 == -1) {
           if (null != this.field_F) {
-            j.field_C.a(this.field_F, 20 + (this.field_o + param0), this.field_i + param1 + 15, this.field_h - 40, this.field_q, 16777215, -1, 1, 0, j.field_C.field_s);
+            j.field_C.drawParagraph(this.field_F, 20 + (this.field_o + param0), this.field_i + param1 + 15, this.field_h - 40, this.field_q, 16777215, -1, 1, 0, j.field_C.field_s);
           }
           if (this.field_M != null) {
             SoftwareRasterizer.drawHorizontalLine(10 + param0, param1 + 134, this.field_h - 20, 4210752);
@@ -353,8 +353,8 @@ final class LoginPanel extends g implements TextFieldListener, qh {
             lk var5 = (lk) null;
             this.a(',', (byte) -38, -43, (lk) null);
           }
-          var3.a(var4, -18845, false);
-          this.field_K.n(101);
+          var3.setText(var4, -18845, false);
+          this.field_K.clearText(101);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ak.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -214,7 +214,7 @@ final class DisplayNameSelectionPanel extends vk implements qk, ga {
         try {
           var3 = this.field_A;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a((byte) -91, false, var4);
+          ((EditableTextField) ((Object) var3)).setText((byte) -91, false, var4);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "hg.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -242,7 +242,7 @@ final class DisplayNameSelectionPanel extends vk implements qk, ga {
         this.field_E = new dk(rc.field_b, (qg) null);
         this.field_C = new dk(ta.field_d, (qg) null);
         this.field_A.field_p = ld.field_jb;
-        this.field_A.a(new AccountNameAvailabilityValidator(this.field_A), 0);
+        this.field_A.setFieldValidator(new AccountNameAvailabilityValidator(this.field_A), 0);
         this.field_E.field_u = false;
         this.field_E.field_o = (de) ((Object) new gb());
         this.field_C.field_o = (de) ((Object) new wa());

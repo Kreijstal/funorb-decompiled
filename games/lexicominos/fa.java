@@ -37,7 +37,7 @@ final class fa {
           for (var7 = 1; param3.length() > var7; var7++) {
             var8 = param3.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) + param0.field_a[0] + param1.b(param3.substring(0, var7));
+              var6 = (var5_int >> 8) + param0.field_a[0] + param1.stringWidth(param3.substring(0, var7));
             }
             if (var6 != -1) {
               param0.field_a[var7] = var6;
@@ -45,7 +45,7 @@ final class fa {
               if (var8 == 32) {
                 var5_int = var5_int + param2;
               }
-              param0.field_a[var7] = param0.field_a[0] + ((var5_int >> 8) + param1.b(param3.substring(0, 1 + var7)) - param1.a((char) var8));
+              param0.field_a[var7] = param0.field_a[0] + ((var5_int >> 8) + param1.stringWidth(param3.substring(0, 1 + var7)) - param1.charWidth((char) var8));
             }
             if (var8 == 62) {
               var6 = -1;

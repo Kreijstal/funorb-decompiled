@@ -10,7 +10,7 @@ final class vd extends DualLinkNode {
     private int[] field_t;
     private String[] field_o;
     int[] field_m;
-    static ee field_p;
+    static BitmapFont field_p;
     static byte[][] field_r;
     static volatile boolean field_w;
     static String field_l;

@@ -228,7 +228,7 @@ final class mm extends AcceleratingProjectile {
         }
     }
 
-    final static void a(int param0, int param1, RgbSprite[] param2, RgbSprite[] param3, RgbSprite[] param4, int param5, byte param6, int param7, int param8, int param9, int param10, int param11, ok param12, int param13, ok param14, int param15, int param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, RgbSprite[] param2, RgbSprite[] param3, RgbSprite[] param4, int param5, byte param6, int param7, int param8, int param9, int param10, int param11, BitmapFont param12, int param13, BitmapFont param14, int param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

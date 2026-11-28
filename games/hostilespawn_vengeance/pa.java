@@ -631,10 +631,10 @@ final class pa extends ql {
         int var2Lifetime1;
         var4 = HostileSpawn.field_I ? 1 : 0;
         if (uf.field_h) {
-          var2 = id.field_A.a(bm.field_e[11]) + 10;
+          var2 = id.field_A.stringWidth(bm.field_e[11]) + 10;
           SoftwareRasterizer.fillRectangleAlpha(100, 40, var2, 20, 0, 128);
           SoftwareRasterizer.drawRectangleOutline(100, 40, var2, 20, 16776960);
-          id.field_A.c(bm.field_e[11], 105, 55, 16776960, -1);
+          id.field_A.drawString(bm.field_e[11], 105, 55, 16776960, -1);
         }
         if (this.field_j.field_l > 0 &&
           !this.field_j.a((byte) -75)) {

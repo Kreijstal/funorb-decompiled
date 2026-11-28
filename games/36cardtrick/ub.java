@@ -7,12 +7,12 @@ final class ub extends mj {
     static String field_k;
     private String field_j;
     private boolean field_m;
-    private ee field_h;
+    private BitmapFont field_h;
     private int field_f;
     private int field_i;
     private int field_n;
 
-    final void a(String param0, int param1, ee param2, int param3, int param4) {
+    final void a(String param0, int param1, BitmapFont param2, int param3, int param4) {
         di var7 = null;
         di var8 = null;
         if (param0 == null) {
@@ -37,14 +37,14 @@ final class ub extends mj {
           var7 = this.a(param3, (byte) -88, param2, param0);
           var8 = var7;
           var7.field_a[0] = param4;
-          var8.field_a[param0.length()] = param4 + param2.a(param0);
+          var8.field_a[param0.length()] = param4 + param2.stringWidth(param0);
           s.$cfr$intArgs$a$05bb3be3c57b(param2, 61, 0, var8, param0);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ub.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void a(String param0, byte param1, int param2, ee param3, int param4) {
+    final void a(String param0, byte param1, int param2, BitmapFont param3, int param4) {
         di var8 = null;
         di var9 = null;
         if (param0 == null) {
@@ -68,7 +68,7 @@ final class ub extends mj {
           this.field_i = 2;
           var8 = this.a(param2, (byte) -103, param3, param0);
           var9 = var8;
-          var9.field_a[0] = -param3.a(param0) + param4;
+          var9.field_a[0] = -param3.stringWidth(param0) + param4;
           var9.field_a[param0.length()] = param4;
           s.$cfr$intArgs$a$05bb3be3c57b(param3, 61, 0, var9, param0);
         } catch (RuntimeException runtimeException) {
@@ -76,7 +76,7 @@ final class ub extends mj {
         }
     }
 
-    private final di a(int param0, byte param1, ee param2, String param3) {
+    private final di a(int param0, byte param1, BitmapFont param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         di var6 = null;
@@ -127,7 +127,7 @@ final class ub extends mj {
         field_k = null;
     }
 
-    final void a(ee param0, int param1, String param2, int param3, int param4) {
+    final void a(BitmapFont param0, int param1, String param2, int param3, int param4) {
         di var7 = null;
         int var8 = 0;
         if (param2 == null) {
@@ -147,7 +147,7 @@ final class ub extends mj {
           this.field_i = 1;
           int var6_int = 99 % ((35 - param3) / 59);
           var7 = this.a(param1, (byte) 41, param0, param2);
-          var8 = param0.a(param2);
+          var8 = param0.stringWidth(param2);
           var7.field_a[0] = param4 - (var8 >> 1);
           var7.field_a[param2.length()] = param4 + (var8 >> 1);
           s.$cfr$intArgs$a$05bb3be3c57b(param0, 61, 0, var7, param2);
@@ -156,7 +156,7 @@ final class ub extends mj {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, ee param4, int param5, String param6, int param7) {
+    final void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, String param6, int param7) {
         di stackIn_37_0;
         di stackIn_37_1;
         int stackIn_37_2;
@@ -164,7 +164,7 @@ final class ub extends mj {
         di stackIn_38_0 = null;
         di stackIn_38_1 = null;
         int stackIn_38_4 = 0;
-        ee stackIn_41_0 = null;
+        BitmapFont stackIn_41_0 = null;
         int stackIn_41_1 = 0;
         int stackIn_42_2 = 0;
         RuntimeException stackIn_47_0 = null;
@@ -214,9 +214,9 @@ final class ub extends mj {
           this.field_g = param7;
           this.field_j = param6;
           this.field_m = false;
-          var16 = new String[1 + param4.b(param6, param3)];
+          var16 = new String[1 + param4.lineCount(param6, param3)];
           var17 = var16;
-          var10 = Math.max(1, param4.a(param6, new int[]{param3}, var17));
+          var10 = Math.max(1, param4.wrapText(param6, new int[]{param3}, var17));
           if (this.field_n == 3 &&
             var10 == 1) {
             this.field_n = 1;
@@ -258,13 +258,13 @@ final class ub extends mj {
             var14 = new di(stackIn_37_2, stackIn_37_3, stackIn_38_4);
             var14.field_a[0] = 0;
             if (var13 != null) {
-              var14.field_a[var13.length()] = param4.a(var13);
-              stackIn_41_0 = (ee) (param4);
+              var14.field_a[var13.length()] = param4.stringWidth(var13);
+              stackIn_41_0 = (BitmapFont) (param4);
               stackIn_41_1 = 61;
               if (param5 != 3) {
                 stackIn_42_2 = 0;
               } else {
-                stackIn_42_2 = this.a(param3, param4.a(var13), var13, -53);
+                stackIn_42_2 = this.a(param3, param4.stringWidth(var13), var13, -53);
               }
               s.$cfr$intArgs$a$05bb3be3c57b(stackIn_41_0, stackIn_41_1, stackIn_42_2, var14, var13);
             }

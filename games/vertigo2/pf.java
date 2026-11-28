@@ -14,7 +14,7 @@ final class pf {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 65 / ((-27 - param0) / 52);
-          stackIn_1_0 = sp.a(SamplePlaybackStream.a(param1, 100, param2), -124);
+          stackIn_1_0 = sp.a(SamplePlaybackStream.createForPlaybackRate(param1, 100, param2), -124);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,7 +143,7 @@ final class pf {
               if (var14 <= 0) {
                 stackIn_38_1 = var7.field_Mb;
               } else {
-                stackIn_38_1 = BitmapFont.a(var7.field_Jb.field_z, var7.field_Mb, var14);
+                stackIn_38_1 = BitmapFont.truncateWithEllipsis(var7.field_Jb.field_z, var7.field_Mb, var14);
               }
               stackIn_37_0.field_S = stackIn_38_1;
               var7.field_Jb.a(81, var14, Archive.field_f, var9, var13);

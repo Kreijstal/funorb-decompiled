@@ -29,8 +29,8 @@ final class LoginPanel extends kj implements TextFieldListener, sg {
           EditableTextField var3 = (EditableTextField) null;
           this.onTextSubmitted((EditableTextField) null, 64);
         }
-        this.field_T.i(param0 - 22617);
-        this.field_Q.i(param0 ^ -22617);
+        this.field_T.clearText(param0 - 22617);
+        this.field_Q.clearText(param0 ^ -22617);
     }
 
     final static void a(int param0, boolean param1) {
@@ -76,8 +76,8 @@ final class LoginPanel extends kj implements TextFieldListener, sg {
           return;
         }
         try {
-          var3.a(var4, false, (byte) -21);
-          this.field_Q.i(-22617);
+          var3.setText(var4, false, (byte) -21);
+          this.field_Q.clearText(-22617);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "fg.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -171,7 +171,7 @@ final class LoginPanel extends kj implements TextFieldListener, sg {
           this.field_i = 15;
           var7 = RasterBuffer.field_g;
           if (this.field_U != null) {
-            this.field_i = this.field_i + (5 + var7.b(this.field_U, -40 + this.field_p, var7.field_x));
+            this.field_i = this.field_i + (5 + var7.textHeight(this.field_U, -40 + this.field_p, var7.field_x));
           }
           var8 = ea.field_b;
           var9 = lg.a(gi.b(12476), 126);
@@ -259,7 +259,7 @@ final class LoginPanel extends kj implements TextFieldListener, sg {
 
     final void a(int param0, int param1, boolean param2, int param3) {
         if (null != this.field_U) {
-          RasterBuffer.field_g.a(this.field_U, 20 + (param1 + this.field_m), 15 + this.field_i + param0, -40 + this.field_p, this.field_l, 16777215, -1, 1, 0, RasterBuffer.field_g.field_x);
+          RasterBuffer.field_g.drawParagraph(this.field_U, 20 + (param1 + this.field_m), 15 + this.field_i + param0, -40 + this.field_p, this.field_l, 16777215, -1, 1, 0, RasterBuffer.field_g.field_x);
         }
         if (this.field_O != null) {
           SoftwareRasterizer.drawHorizontalLine(10 + param1, 134 + param0, this.field_p - 20, 4210752);

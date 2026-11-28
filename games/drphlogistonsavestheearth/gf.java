@@ -277,7 +277,7 @@ final class gf {
         th.field_a[12] = new ld(12);
         ul.field_b[10] = ul.field_b[4];
         ul.field_j[10] = new int[]{5, 26, 27, 28, 29, 30, 31, 32, 33, 34};
-        ul.field_i[10] = ul.field_b[10] + cb.field_b.b(hg.field_ob[10]);
+        ul.field_i[10] = ul.field_b[10] + cb.field_b.stringWidth(hg.field_ob[10]);
         th.field_a[10] = new ld(10);
         if (0 < hb.field_g &&
           ea.a(sb.field_d, 0)) {
@@ -402,7 +402,7 @@ final class gf {
           }
         }
         if (sd.field_a.field_F) {
-          a.field_g.b(Integer.toString(this.field_t), (int)this.field_i, (int)this.field_m, 16777215, 16777215, 128);
+          a.field_g.drawCentredAlpha(Integer.toString(this.field_t), (int)this.field_i, (int)this.field_m, 16777215, 16777215, 128);
         }
     }
 

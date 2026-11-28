@@ -33,7 +33,7 @@ final class AccountRegistrationPanel extends nb implements ue, jk, ag {
         }
         try {
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(var4, -1, false);
+          ((EditableTextField) ((Object) var3)).setText(var4, -1, false);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "pj.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -103,12 +103,12 @@ final class AccountRegistrationPanel extends nb implements ue, jk, ag {
         this.field_D.field_q = DisplayNameSelectionPanel.field_C;
         this.field_M.field_q = ProxyAuthenticationRequiredException.field_b;
         this.field_J.field_q = wb.field_c;
-        this.field_E.a(new AccountNameAvailabilityValidator(this.field_E), (byte) 23);
-        this.field_G.a(new EmailFormatValidator(this.field_G), (byte) 23);
-        this.field_K.a(new ConfirmedEmailAvailabilityValidator(this.field_K, this.field_G), (byte) 23);
-        this.field_O.a(new PasswordValidator(this.field_O, this.field_E, this.field_G), (byte) 23);
-        this.field_D.a(new MatchingFieldValidator(this.field_D, this.field_O), (byte) 23);
-        this.field_M.a(new AgeValidator(this.field_M), (byte) 23);
+        this.field_E.setFieldValidator(new AccountNameAvailabilityValidator(this.field_E), (byte) 23);
+        this.field_G.setFieldValidator(new EmailFormatValidator(this.field_G), (byte) 23);
+        this.field_K.setFieldValidator(new ConfirmedEmailAvailabilityValidator(this.field_K, this.field_G), (byte) 23);
+        this.field_O.setFieldValidator(new PasswordValidator(this.field_O, this.field_E, this.field_G), (byte) 23);
+        this.field_D.setFieldValidator(new MatchingFieldValidator(this.field_D, this.field_O), (byte) 23);
+        this.field_M.setFieldValidator(new AgeValidator(this.field_M), (byte) 23);
         this.field_I.field_D = false;
         this.field_I.field_i = (rd) ((Object) new v());
         this.field_P.field_i = (rd) ((Object) new uj());

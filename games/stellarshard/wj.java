@@ -739,18 +739,18 @@ final class wj extends fb {
             var12 = new Sprite(195, 221);
             var6 = var12.field_v / 2;
             var12.e();
-            o.field_h.c(h.a(NetworkArchiveRequest.field_E, 0, new String[]{vd.field_d}), var6, 40, 16777215, -1);
-            fj.field_f.c(h.a(ch.field_c, 0, new String[]{vd.field_d}), var6, 60, 16777215, -1);
-            o.field_h.c(h.a(vd.field_a, 0, new String[]{vg.field_r}), var6, 110, 16777215, -1);
-            fj.field_f.c(h.a(rb.field_t, 0, new String[]{vg.field_r}), var6, 130, 16777215, -1);
-            o.field_h.c(cm.field_b, var6, 180, 16777215, -1);
-            fj.field_f.c(SocketConnector.field_d, var6, 200, 16777215, -1);
+            o.field_h.drawCentred(h.a(NetworkArchiveRequest.field_E, 0, new String[]{vd.field_d}), var6, 40, 16777215, -1);
+            fj.field_f.drawCentred(h.a(ch.field_c, 0, new String[]{vd.field_d}), var6, 60, 16777215, -1);
+            o.field_h.drawCentred(h.a(vd.field_a, 0, new String[]{vg.field_r}), var6, 110, 16777215, -1);
+            fj.field_f.drawCentred(h.a(rb.field_t, 0, new String[]{vg.field_r}), var6, 130, 16777215, -1);
+            o.field_h.drawCentred(cm.field_b, var6, 180, 16777215, -1);
+            fj.field_f.drawCentred(SocketConnector.field_d, var6, 200, 16777215, -1);
             IntrusiveDeque.a(var12, 1, 0, var12.field_y, 3, 0, var12.field_v, true);
             ValidatedTextField.field_T.e();
             var12.e(-ValidatedTextField.field_T.field_t + 18, 241 - ValidatedTextField.field_T.field_s);
             for (var7 = 0; pk.field_d.length > var7; var7++) {
               dl.field_C[var7].e();
-              fj.field_f.a(pk.field_d[var7], 3, 3, -6 + dl.field_C[var7].field_v, dl.field_C[var7].field_y - 6, ArchiveRequest.field_x, -1, 1, 1, fj.field_f.field_N + fj.field_f.field_r);
+              fj.field_f.drawParagraph(pk.field_d[var7], 3, 3, -6 + dl.field_C[var7].field_v, dl.field_C[var7].field_y - 6, ArchiveRequest.field_x, -1, 1, 1, fj.field_f.field_N + fj.field_f.field_r);
               IntrusiveDeque.a(dl.field_C[var7], 1, 0, dl.field_C[var7].field_y, 3, 0, dl.field_C[var7].field_v, true);
             }
             pk.field_d = null;
@@ -775,8 +775,8 @@ final class wj extends fb {
             var3Lifetime1 = SoftwareRasterizer.field_b;
             SoftwareRasterizer.saveClip(pk.field_i);
             var14 = h.a(hj.field_b, 0, new String[]{IterableNodeHashTable.field_a[DebouncedFieldValidator.field_a]});
-            var5 = o.field_h.b(var14, vh.field_i);
-            var6Lifetime1 = o.field_h.b(var14, vh.field_i, o.field_h.field_N + o.field_h.field_r);
+            var5 = o.field_h.maxLineWidth(var14, vh.field_i);
+            var6Lifetime1 = o.field_h.textHeight(var14, vh.field_i, o.field_h.field_N + o.field_h.field_r);
             var7Lifetime1 = (vh.field_i - var5) / 2 + AgeValidator.field_o;
             var8 = (ByteStorage.field_a - var6Lifetime1) / 2 + RasterBuffer.field_d;
             var7Lifetime1 -= 3;
@@ -822,7 +822,7 @@ final class wj extends fb {
             IntrusiveDequeCursor.field_f.b();
             var9 = new Sprite(IntrusiveDequeCursor.field_f.field_w, IntrusiveDequeCursor.field_f.field_x);
             var9.e();
-            o.field_h.a(var14, AgeValidator.field_o, RasterBuffer.field_d, vh.field_i, ByteStorage.field_a, 16777215, -1, 1, 1, o.field_h.field_N + o.field_h.field_r);
+            o.field_h.drawParagraph(var14, AgeValidator.field_o, RasterBuffer.field_d, vh.field_i, ByteStorage.field_a, 16777215, -1, 1, 1, o.field_h.field_N + o.field_h.field_r);
             IntrusiveDeque.a(var9, 1, 0, var9.field_x, 3, 0, var9.field_w, true);
             IntrusiveDequeCursor.field_f.e();
             var9.e(0, 0);
@@ -844,7 +844,7 @@ final class wj extends fb {
             var5_ref_String = h.a(ClientException.field_b, 0, new String[]{MouseHandler.field_f});
             MouseHandler.field_f = null;
             var16.e();
-            fj.field_f.a(var5_ref_String, 3, 3, -6 + var16.field_v, var16.field_y - 6, 16777215, -1, 0, 1, fj.field_f.field_r + fj.field_f.field_N);
+            fj.field_f.drawParagraph(var5_ref_String, 3, 3, -6 + var16.field_v, var16.field_y - 6, 16777215, -1, 0, 1, fj.field_f.field_r + fj.field_f.field_N);
             IntrusiveDeque.a(var16, 1, 0, var16.field_y, 3, 0, var16.field_v, true);
             ve.field_a.e();
             var16.e(199 - ve.field_a.field_t, 83 - ve.field_a.field_s);
@@ -857,12 +857,12 @@ final class wj extends fb {
             var2Lifetime3 = SoftwareRasterizer.field_i;
             var3Lifetime3 = SoftwareRasterizer.field_b;
             SoftwareRasterizer.saveClip(pk.field_i);
-            var4 = 6 + fj.field_f.b(li.field_a, 640);
+            var4 = 6 + fj.field_f.maxLineWidth(li.field_a, 640);
             var5Lifetime1 = 20 + eh.field_f.field_w + var4;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
             var7Lifetime2 = 20 + (var6Lifetime2 + eh.field_f.field_w);
             ve.field_a.e();
-            fj.field_f.a(li.field_a, var7Lifetime2 - ve.field_a.field_t, fj.field_f.field_r - ve.field_a.field_s + (155 + fj.field_f.field_N), 16777215, -1);
+            fj.field_f.drawString(li.field_a, var7Lifetime2 - ve.field_a.field_t, fj.field_f.field_r - ve.field_a.field_s + (155 + fj.field_f.field_N), 16777215, -1);
             IntrusiveDeque.a(ve.field_a, 1, -4 + (var7Lifetime2 - ve.field_a.field_t), 50, 3, 155 - ve.field_a.field_s, var4, true);
             var8Lifetime1 = -ve.field_a.field_s + (155 - (-fj.field_f.field_r - fj.field_f.field_N + (-3 + eh.field_f.field_x)) / 2);
             eh.field_f.e(-ve.field_a.field_t + var6Lifetime2, var8Lifetime1);

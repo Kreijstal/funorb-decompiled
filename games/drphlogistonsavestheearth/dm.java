@@ -86,7 +86,7 @@ final class dm extends mj {
         field_B = null;
     }
 
-    private dm(rf param0, int param1) {
+    private dm(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

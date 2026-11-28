@@ -7,11 +7,11 @@ final class ta {
     static ab field_d;
     static String field_h;
     static String field_g;
-    static se field_e;
+    static BitmapFont field_e;
     static jk field_a;
     static IntrusiveDeque field_f;
 
-    final static String a(se param0, int param1, int param2, String param3, int param4) {
+    final static String a(BitmapFont param0, int param1, int param2, String param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -67,7 +67,7 @@ final class ta {
         try {
           if (param0 != 11) {
             String var4 = (String) null;
-            ta.a((se) null, -96, -112, (String) null, -121);
+            ta.a((BitmapFont) null, -96, -112, (String) null, -121);
           }
           var3 = ac.field_B;
           var3.d((byte) -81, param1);

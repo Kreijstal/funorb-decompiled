@@ -3,7 +3,7 @@
  */
 abstract class FrameTimer {
     static String field_b;
-    static tj field_a;
+    static BitmapFont field_a;
     static String field_c;
 
     public static void clearStaticReferences(byte param0) {

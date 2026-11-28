@@ -54,7 +54,7 @@ final class Bzip2State {
           if (param0 <= 40) {
             field_s = (Sprite) null;
           }
-          stackIn_3_0 = FrameTimer.field_f.a(param3, param4, param5 - 24, param2 - param4, 480, param6, -1, 0, 0, param1);
+          stackIn_3_0 = FrameTimer.field_f.drawParagraph(param3, param4, param5 - 24, param2 - param4, 480, param6, -1, 0, 0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

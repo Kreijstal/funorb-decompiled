@@ -86,10 +86,10 @@ final class lk extends gd {
           }
           if (!ve.a(false)) {
             var10 = li.field_b[this.field_O];
-            var6 = db.field_v.b(var10);
+            var6 = db.field_v.stringWidth(var10);
             var7 = db.field_v.field_H + la.field_b.field_E;
             if (var4 != null) {
-              var8 = db.field_v.b((String) (var4));
+              var8 = db.field_v.stringWidth((String) (var4));
               if (var8 > var6) {
                 var6 = var8;
               }
@@ -100,7 +100,7 @@ final class lk extends gd {
             this.field_z = new RgbSprite(var6, var7);
             jh.c();
             this.field_K.e();
-            db.field_v.b(var10, 0, la.field_b.field_H, 12632256, -1);
+            db.field_v.drawString(var10, 0, la.field_b.field_H, 12632256, -1);
             if (var4 == null) {
               this.field_H.e();
               SoftwareRasterizer.clearRaster();
@@ -119,7 +119,7 @@ final class lk extends gd {
               this.field_N = rb.a(16, this.field_H, 16711680, (byte) -18);
               return;
             }
-            db.field_v.b((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
+            db.field_v.drawString((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
             this.field_H.e();
             SoftwareRasterizer.clearRaster();
             this.field_K.e(0, 0, 16744448);
@@ -139,10 +139,10 @@ final class lk extends gd {
           }
           if (!AchievementIconEntry.field_m[this.field_O]) {
             var11 = li.field_b[this.field_O];
-            var6Lifetime2 = db.field_v.b(var11);
+            var6Lifetime2 = db.field_v.stringWidth(var11);
             var7Lifetime2 = db.field_v.field_H + la.field_b.field_E;
             if (var4 != null) {
-              var8Lifetime2 = db.field_v.b((String) (var4));
+              var8Lifetime2 = db.field_v.stringWidth((String) (var4));
               if (var8Lifetime2 > var6Lifetime2) {
                 var6Lifetime2 = var8Lifetime2;
               }
@@ -153,7 +153,7 @@ final class lk extends gd {
             this.field_z = new RgbSprite(var6Lifetime2, var7Lifetime2);
             jh.c();
             this.field_K.e();
-            db.field_v.b(var11, 0, la.field_b.field_H, 12632256, -1);
+            db.field_v.drawString(var11, 0, la.field_b.field_H, 12632256, -1);
             if (var4 == null) {
               this.field_H.e();
               SoftwareRasterizer.clearRaster();
@@ -172,7 +172,7 @@ final class lk extends gd {
               this.field_N = rb.a(16, this.field_H, 16711680, (byte) -18);
               return;
             }
-            db.field_v.b((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
+            db.field_v.drawString((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
             this.field_H.e();
             SoftwareRasterizer.clearRaster();
             this.field_K.e(0, 0, 16744448);
@@ -192,10 +192,10 @@ final class lk extends gd {
           }
           if (var2 < 5) {
             var12 = li.field_b[this.field_O];
-            var6Lifetime3 = db.field_v.b(var12);
+            var6Lifetime3 = db.field_v.stringWidth(var12);
             var7Lifetime3 = db.field_v.field_H + la.field_b.field_E;
             if (var4 != null) {
-              var8Lifetime3 = db.field_v.b((String) (var4));
+              var8Lifetime3 = db.field_v.stringWidth((String) (var4));
               if (var8Lifetime3 > var6Lifetime3) {
                 var6Lifetime3 = var8Lifetime3;
               }
@@ -206,7 +206,7 @@ final class lk extends gd {
             this.field_z = new RgbSprite(var6Lifetime3, var7Lifetime3);
             jh.c();
             this.field_K.e();
-            db.field_v.b(var12, 0, la.field_b.field_H, 12632256, -1);
+            db.field_v.drawString(var12, 0, la.field_b.field_H, 12632256, -1);
             if (var4 == null) {
               this.field_H.e();
               SoftwareRasterizer.clearRaster();
@@ -225,7 +225,7 @@ final class lk extends gd {
               this.field_N = rb.a(16, this.field_H, 16711680, (byte) -18);
               return;
             }
-            db.field_v.b((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
+            db.field_v.drawString((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
             this.field_H.e();
             SoftwareRasterizer.clearRaster();
             this.field_K.e(0, 0, 16744448);
@@ -245,10 +245,10 @@ final class lk extends gd {
           }
           var14 = (String) (var4) + ", " + qh.field_j;
           var13 = li.field_b[this.field_O];
-          var6Lifetime4 = db.field_v.b(var13);
+          var6Lifetime4 = db.field_v.stringWidth(var13);
           var7Lifetime4 = db.field_v.field_H + la.field_b.field_E;
           if (var14 != null) {
-            var8Lifetime4 = db.field_v.b(var14);
+            var8Lifetime4 = db.field_v.stringWidth(var14);
             if (var8Lifetime4 > var6Lifetime4) {
               var6Lifetime4 = var8Lifetime4;
             }
@@ -259,7 +259,7 @@ final class lk extends gd {
           this.field_z = new RgbSprite(var6Lifetime4, var7Lifetime4);
           jh.c();
           this.field_K.e();
-          db.field_v.b(var13, 0, la.field_b.field_H, 12632256, -1);
+          db.field_v.drawString(var13, 0, la.field_b.field_H, 12632256, -1);
           if (var14 == null) {
             this.field_H.e();
             SoftwareRasterizer.clearRaster();
@@ -278,7 +278,7 @@ final class lk extends gd {
             this.field_N = rb.a(16, this.field_H, 16711680, (byte) -18);
             return;
           }
-          db.field_v.b(var14, 0, la.field_b.field_H * 2, 8421504, -1);
+          db.field_v.drawString(var14, 0, la.field_b.field_H * 2, 8421504, -1);
           this.field_H.e();
           SoftwareRasterizer.clearRaster();
           this.field_K.e(0, 0, 16744448);
@@ -300,10 +300,10 @@ final class lk extends gd {
           var4 = jk.a(new String[]{Integer.toString(var3)}, to.field_a, 30496);
         }
         String var15 = li.field_b[this.field_O];
-        var6Lifetime1 = db.field_v.b(var15);
+        var6Lifetime1 = db.field_v.stringWidth(var15);
         var7Lifetime1 = db.field_v.field_H + la.field_b.field_E;
         if (var4 != null) {
-          var8Lifetime1 = db.field_v.b((String) (var4));
+          var8Lifetime1 = db.field_v.stringWidth((String) (var4));
           if (var8Lifetime1 > var6Lifetime1) {
             var6Lifetime1 = var8Lifetime1;
           }
@@ -314,7 +314,7 @@ final class lk extends gd {
         this.field_z = new RgbSprite(var6Lifetime1, var7Lifetime1);
         jh.c();
         this.field_K.e();
-        db.field_v.b(var15, 0, la.field_b.field_H, 12632256, -1);
+        db.field_v.drawString(var15, 0, la.field_b.field_H, 12632256, -1);
         if (var4 == null) {
           this.field_H.e();
           SoftwareRasterizer.clearRaster();
@@ -333,7 +333,7 @@ final class lk extends gd {
           this.field_N = rb.a(16, this.field_H, 16711680, (byte) -18);
           return;
         }
-        db.field_v.b((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
+        db.field_v.drawString((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
         this.field_H.e();
         SoftwareRasterizer.clearRaster();
         this.field_K.e(0, 0, 16744448);

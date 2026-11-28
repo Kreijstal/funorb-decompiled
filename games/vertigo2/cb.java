@@ -82,7 +82,7 @@ final class cb extends UiPanel {
         RuntimeException decompiledCaughtException = null;
         try {
           param3 += 8;
-          var6_int = param2.field_z.a(param2.field_S, param0 - 2 * param2.field_R, param2.field_qb);
+          var6_int = param2.field_z.textHeight(param2.field_S, param0 - 2 * param2.field_R, param2.field_qb);
           param2.a(114, param0, var6_int, param3, 0);
           if (param1 < 103) {
             stackIn_2_0 = -25;
@@ -123,7 +123,7 @@ final class cb extends UiPanel {
         this.a(0, param1);
         if (null != this.field_Sb) {
           this.field_Sb.field_S = this.field_Mb.toString();
-          this.field_Sb.field_wb = (this.field_Fb - this.field_Sb.field_z.c(this.field_Sb.field_S)) / 2;
+          this.field_Sb.field_wb = (this.field_Fb - this.field_Sb.field_z.stringWidth(this.field_Sb.field_S)) / 2;
           this.field_Sb.field_Fb = this.field_Fb - this.field_Sb.field_wb;
           if (this.field_Ob != null &&
             0 != this.field_Ob.field_tb) {
@@ -319,15 +319,15 @@ final class cb extends UiPanel {
               discarded$0 = this.field_Mb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_z.c(sk.field_c);
+            var17 = param6.field_z.stringWidth(sk.field_c);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_z.c(lh.field_e);
+            var17Lifetime2 = param6.field_z.stringWidth(lh.field_e);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_z.c(hl.field_o);
+            var17Lifetime3 = param6.field_z.stringWidth(hl.field_o);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -417,7 +417,7 @@ final class cb extends UiPanel {
           this.field_Nb.b(this.field_Lb, 123);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Lb.field_z.b(this.field_Lb.field_S, var15_int);
+          var17Lifetime1 = this.field_Lb.field_z.lineCount(this.field_Lb.field_S, var15_int);
           this.field_Lb.a(115, var15_int, var17Lifetime1 * Archive.field_f, var16Lifetime1, 13);
           var16Lifetime1 = var16Lifetime1 + Archive.field_f * var17Lifetime1;
           this.field_Nb.a(109, 13 + (var15_int + 13), var16Lifetime1 + 10, 24, 0);

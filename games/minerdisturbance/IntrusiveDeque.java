@@ -7,7 +7,7 @@ final class IntrusiveDeque {
     static int[] field_d;
     IntrusiveNode sentinel;
     static String field_f;
-    static we field_b;
+    static BitmapFont field_b;
     static String field_a;
     static int[] field_g;
     private IntrusiveNode iterationCursor;

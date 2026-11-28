@@ -126,7 +126,7 @@ final class ut extends tia {
         int var7Lifetime1;
         var14 = BachelorFridge.field_y;
         try {
-          var5_int = param3.a(param2);
+          var5_int = param3.stringWidth(param2);
           var6 = -36 / ((param4 - 69) / 55);
           if (param1 >= var5_int &&
             param2.indexOf("<br>") == -1) {
@@ -144,7 +144,7 @@ final class ut extends tia {
             if (var11 == 32 ||
               var11 == 45) {
               var12 = param2.substring(var8, var10 + 1).trim();
-              var13 = param3.a(var12);
+              var13 = param3.stringWidth(var12);
               if (param1 <= var13) {
                 incrementValue$1 = var7Lifetime1;
                 var7Lifetime1++;

@@ -23,9 +23,9 @@ final class PcmOutputWorker implements Runnable {
         }
     }
 
-    final static oh a(int param0, wb[] param1, byte[] param2) {
+    final static BinaryBitmapFont a(int param0, wb[] param1, byte[] param2) {
         int var9 = 0;
-        oh stackIn_8_0 = null;
+        BinaryBitmapFont stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -78,7 +78,7 @@ final class PcmOutputWorker implements Runnable {
             var7[var9] = param1[var9].field_b;
             var8[var9] = param1[var9].field_i;
           }
-          stackIn_8_0 = new oh(param2, var16, var17, var18, var19, var20);
+          stackIn_8_0 = new BinaryBitmapFont(param2, var16, var17, var18, var19, var20);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1242,8 +1242,8 @@ final class LevelRenderer {
               if (param4.field_w == 0 &&
                 param7 == 0) {
                 MusicPatchPcmStream.a(190, 210, 282, 20, 64, 150);
-                tk.field_c.a(tq.field_c, 40, 292, 200, 160, 16777215, -1, 0, 0, va.field_s.field_c + va.field_s.field_j);
-                tk.field_c.a(vl.field_g, 50, 294, 160, 160, 16777215, -1, 2, 0, va.field_s.field_c + va.field_s.field_j);
+                tk.field_c.drawParagraph(tq.field_c, 40, 292, 200, 160, 16777215, -1, 0, 0, va.field_s.field_c + va.field_s.field_j);
+                tk.field_c.drawParagraph(vl.field_g, 50, 294, 160, 160, 16777215, -1, 2, 0, va.field_s.field_c + va.field_s.field_j);
               }
               if (param4.field_w != 2 &&
                 1 != param4.field_w) {

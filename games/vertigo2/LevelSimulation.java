@@ -2593,7 +2593,7 @@ final class LevelSimulation {
         try {
           var13_int = 0;
           for (var14 = param0; var14 < param4; var14++) {
-            var13_int = var13_int + (param5.a(param3[var14], 210, param2) + param5.field_z + param5.field_M + 6);
+            var13_int = var13_int + (param5.textHeight(param3[var14], 210, param2) + param5.field_z + param5.field_M + 6);
           }
           var14Lifetime1 = (param6 - var13_int) / (param4 - param0 - 1);
           var15 = param9;
@@ -2604,8 +2604,8 @@ final class LevelSimulation {
           for (var16 = param0; var16 < param4; var16++) {
             param11[var16].e(param7, var15 - param12 / 2);
             va.field_s.a(16777215, (byte) 115, -1, param1 + param7 + 10, param8[var16], var15);
-            param5.a(param3[var16], param7 + param1 + 10, 6 + var15, 210, 200, 16777215, -1, 0, 0, param2);
-            var15 = var15 + (var14Lifetime1 + 6 + param5.a(param3[var16], 210, param2) - (-param5.field_z - param5.field_M));
+            param5.drawParagraph(param3[var16], param7 + param1 + 10, 6 + var15, 210, 200, 16777215, -1, 0, 0, param2);
+            var15 = var15 + (var14Lifetime1 + 6 + param5.textHeight(param3[var16], 210, param2) - (-param5.field_z - param5.field_M));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

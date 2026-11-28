@@ -14,7 +14,7 @@ final class ai implements Runnable {
     static RgbSprite field_b;
     private int field_d;
     private PlatformTaskDispatcher field_a;
-    static vc field_h;
+    static BitmapFont field_h;
     static String field_n;
     static String field_l;
     private java.net.URL field_i;

@@ -1641,7 +1641,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         String[] var8 = var3;
         for (var9 = 0; var8.length > var9; var9++) {
           var10 = var8[var9];
-          la.field_b.c(var10, var2 >> 1, var6, 16777215, -1);
+          la.field_b.drawCentred(var10, var2 >> 1, var6, 16777215, -1);
           var6 = var6 + la.field_b.field_H;
         }
         jh.b();
@@ -1933,7 +1933,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           var3 = var14;
           for (var4 = 0; var4 < var14.length; var4++) {
             var5_ref_String = var14[var4];
-            la.field_b.b(var5_ref_String, 140, var2, 16777215, -1);
+            la.field_b.drawString(var5_ref_String, 140, var2, 16777215, -1);
             var2 = var2 + la.field_b.field_H;
           }
         } else {
@@ -1981,7 +1981,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           var6_ref_String__ = ig.field_b;
           for (var7 = 0; var6_ref_String__.length > var7; var7++) {
             var8_ref_String = var6_ref_String__[var7];
-            la.field_b.a(var8_ref_String, 500, var5, 16777215, -1);
+            la.field_b.drawRightAligned(var8_ref_String, 500, var5, 16777215, -1);
             var5 = var5 + la.field_b.field_H;
           }
         } else {
@@ -2082,7 +2082,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         }
         if (DualLinkNode.field_k &&
           0 < this.field_H) {
-          IntrusiveNode.field_c.a(Integer.toString(this.field_H), 630, IntrusiveNode.field_c.field_H + 10, 16777215, -1);
+          IntrusiveNode.field_c.drawRightAligned(Integer.toString(this.field_H), 630, IntrusiveNode.field_c.field_H + 10, 16777215, -1);
         }
         return;
     }

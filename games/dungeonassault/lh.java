@@ -18,7 +18,7 @@ final class lh {
     static String field_b;
     int field_e;
     static String field_r;
-    se field_f;
+    BitmapFont field_f;
     int field_g;
     static String[] field_n;
     int field_i;
@@ -52,7 +52,7 @@ final class lh {
             var7 = this.field_f.field_E + this.field_f.field_H;
           }
           var8 = SoftwareRasterizer.field_i >> 2;
-          var9 = this.field_f.b(param2);
+          var9 = this.field_f.stringWidth(param2);
           var10 = this.field_f.field_E + this.field_f.field_H;
           var11 = 1;
           if (var9 > var8 ||
@@ -66,11 +66,11 @@ final class lh {
             if (null == pe.field_m) {
               pe.field_m = new String[16];
             }
-            var11Lifetime1 = this.field_f.a(param2, new int[]{var12}, pe.field_m);
+            var11Lifetime1 = this.field_f.wrapText(param2, new int[]{var12}, pe.field_m);
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_f.b(pe.field_m[var13Lifetime2]);
+              var14 = this.field_f.stringWidth(pe.field_m[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
@@ -89,7 +89,7 @@ final class lh {
             return;
           }
           SoftwareRasterizer.fillRectangle(var12 + 1, 1 + var13Lifetime1, var5_int + var9 - 2, -2 + (var6 + var10), this.field_j);
-          this.field_f.a(param2, this.field_e + var12, var13Lifetime1 + this.field_l, var9, var10, this.field_a, -1, 0, 0, var7);
+          this.field_f.drawParagraph(param2, this.field_e + var12, var13Lifetime1 + this.field_l, var9, var10, this.field_a, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -105,7 +105,7 @@ final class lh {
         }
     }
 
-    final void a(int param0, se param1) {
+    final void a(int param0, BitmapFont param1) {
         hh var18 = null;
         an var4 = null;
         RgbSprite[] var5 = null;
@@ -237,7 +237,7 @@ final class lh {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_f.b(param3);
+          var5_int = this.field_f.stringWidth(param3);
           var6 = this.field_f.field_N + this.field_f.field_E;
           var7 = param1;
           if (param2 != 28964) {
@@ -252,7 +252,7 @@ final class lh {
           }
           SoftwareRasterizer.drawRectangleOutline(var7, var8, 6 + var5_int, 6 + var6, this.field_a);
           SoftwareRasterizer.fillRectangle(var7 + 1, var8 + 1, var5_int + 4, var6 + 4, this.field_j);
-          this.field_f.b(param3, var7 + 3, this.field_f.field_N + var8 + 3, this.field_a, -1);
+          this.field_f.drawString(param3, var7 + 3, this.field_f.field_N + var8 + 3, this.field_a, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

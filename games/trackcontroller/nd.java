@@ -68,7 +68,7 @@ final class nd extends td implements ButtonListener {
         }
         BitmapFont var5 = gk.field_c;
         if (null != this.field_D) {
-          var5.a(el.field_K, this.field_p + param1, this.field_m + param2, this.field_x, 20, 16777215, -1, 0, 0, var5.field_u + var5.field_G);
+          var5.drawParagraph(el.field_K, this.field_p + param1, this.field_m + param2, this.field_x, 20, 16777215, -1, 0, 0, var5.field_u + var5.field_G);
         }
     }
 

@@ -5,7 +5,7 @@ final class oj implements WidgetRenderer {
     private int field_b;
     private int field_e;
     private int field_n;
-    private uc field_c;
+    private BitmapFont field_c;
     private int field_h;
     private int field_i;
     private int field_d;
@@ -57,7 +57,7 @@ final class oj implements WidgetRenderer {
           }
           if (null != this.field_c) {
             var10 = this.field_i + this.field_k + this.field_b;
-            this.field_c.a(param4.text, var10 + (param2 + param4.x), param4.y + (param1 + this.field_g), param4.width - var10 - this.field_b, -(this.field_b << 1) + param4.height, this.field_f, this.field_n, this.field_m, this.field_h, 0);
+            this.field_c.drawParagraph(param4.text, var10 + (param2 + param4.x), param4.y + (param1 + this.field_g), param4.width - var10 - this.field_b, -(this.field_b << 1) + param4.height, this.field_f, this.field_n, this.field_m, this.field_h, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -237,7 +237,7 @@ final class oj implements WidgetRenderer {
         field_l = null;
     }
 
-    oj(uc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    oj(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_m = 1;
         this.field_h = 1;
         try {

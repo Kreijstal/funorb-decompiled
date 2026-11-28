@@ -435,7 +435,7 @@ public final class fleas extends NetworkGameClient {
         }
     }
 
-    final void b(byte param0) {
+    final void disposeClient(byte param0) {
         hl.g(0);
         if (null != ResourceArchive.field_p) {
           IntrusiveNode.a(false);
@@ -492,9 +492,9 @@ public final class fleas extends NetworkGameClient {
           aj.field_t = of.a("blocks", "", hm.field_g, 89);
           el.field_s = of.a("fleas", "", hm.field_g, 67);
           var3 = -24 % ((-43 - param0) / 62);
-          IntrusiveNode.field_b = (fa) ((Object) tc.a(de.field_h, "squarish16", hm.field_g, (byte) 120, ""));
+          IntrusiveNode.field_b = (BitmapFont) ((Object) tc.a(de.field_h, "squarish16", hm.field_g, (byte) 120, ""));
           var2 = new int[2][];
-          var2[0] = ((dj) (IntrusiveNode.field_b)).field_P[0];
+          var2[0] = ((PalettedBitmapFont) (IntrusiveNode.field_b)).field_P[0];
           array$0 = new int[var2[0].length];
           var2[1] = array$0;
           var4_int = 1;
@@ -519,10 +519,10 @@ public final class fleas extends NetworkGameClient {
                 continue;
               }
             } else {
-              ((dj) (IntrusiveNode.field_b)).field_P = var2;
-              MatchingFieldValidator.field_p = (fa) ((Object) tc.a(de.field_h, "fleafont_filled", hm.field_g, (byte) 115, ""));
+              ((PalettedBitmapFont) (IntrusiveNode.field_b)).field_P = var2;
+              MatchingFieldValidator.field_p = (BitmapFont) ((Object) tc.a(de.field_h, "fleafont_filled", hm.field_g, (byte) 115, ""));
               var2 = new int[4][];
-              var2[0] = ((dj) (MatchingFieldValidator.field_p)).field_P[0];
+              var2[0] = ((PalettedBitmapFont) (MatchingFieldValidator.field_p)).field_P[0];
               array$1 = new int[var2[0].length];
               var2[1] = array$1;
               array$2 = new int[var2[0].length];
@@ -559,7 +559,7 @@ public final class fleas extends NetworkGameClient {
                 }
               } else {
                 se.field_a = new RgbSprite[3];
-                ((dj) (MatchingFieldValidator.field_p)).field_P = var2;
+                ((PalettedBitmapFont) (MatchingFieldValidator.field_p)).field_P = var2;
                 se.field_a[0] = kl.a(252, hm.field_g, "", "texture_1");
                 se.field_a[1] = kl.a(252, hm.field_g, "", "texture_3");
                 se.field_a[2] = kl.a(252, hm.field_g, "", "texture_5");
@@ -813,7 +813,7 @@ public final class fleas extends NetworkGameClient {
         }
     }
 
-    final void d(boolean param0) {
+    final void renderClientFrame(boolean param0) {
         Object stackIn_5_0 = null;
         Object stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
@@ -935,7 +935,7 @@ public final class fleas extends NetworkGameClient {
             }
           }
           if (DirectByteStorage.field_k >= 2) {
-            ve.field_d.b("FPS: " + ak.field_c, 640, 480, 255, 16776960);
+            ve.field_d.drawRightAligned("FPS: " + ak.field_c, 640, 480, 255, 16776960);
           }
           LoginPanel.c(param0);
           be.a(0, (java.awt.Canvas) (var2), (byte) -127, 0);
@@ -947,7 +947,7 @@ public final class fleas extends NetworkGameClient {
         }
     }
 
-    final void a(int param0) {
+    final void clearClientResources(int param0) {
         try {
           fleas.m(param0 + 0);
           nb.clearStaticReferences((byte) 69);
@@ -966,7 +966,7 @@ public final class fleas extends NetworkGameClient {
           MouseWheelInput.clearStaticReferences(param0 ^ 107);
           SoftwareRasterizer.clearStaticReferences();
           ResourceArchive.clearStaticReferences((byte) -110);
-          fa.clearStaticReferences();
+          BitmapFont.clearStaticReferences();
           qg.clearStaticReferences(false);
           tb.clearStaticReferences((byte) -72);
           lj.clearStaticReferences(param0 + 1);
@@ -1292,7 +1292,7 @@ public final class fleas extends NetworkGameClient {
                                 return false;
                               }
                               wh.a(-128);
-                              this.d(true);
+                              this.renderClientFrame(true);
                               field_K = new ng(pb.field_a, ib.field_f);
                               FrameTimer.field_b[0] = qf.a(pb.field_a, "", "menu_select").b();
                               FrameTimer.field_b[1] = ia.a(882, 2500, 1);
@@ -1330,7 +1330,7 @@ public final class fleas extends NetworkGameClient {
           }
           if (null != ib.field_f) {
             jj.a(60.0f, ri.field_s, true);
-            this.d(true);
+            this.renderClientFrame(true);
             wi.b(-14277);
             ib.field_f = null;
             fleas.h((byte) 76);
@@ -1338,7 +1338,7 @@ public final class fleas extends NetworkGameClient {
           }
           if (jc.field_e != null) {
             jj.a(65.0f, cb.field_q, true);
-            this.d(true);
+            this.renderClientFrame(true);
             BufferedSocket.field_j = wk.a(jc.field_e, "", "Flea Circus Titlescreen");
             DebouncedFieldValidator.field_h.a(field_K, ob.field_d, 11498, 0, BufferedSocket.field_j);
             hf.field_e[0] = wk.a(jc.field_e, "", "Flea Circus 1");
@@ -1360,20 +1360,20 @@ public final class fleas extends NetworkGameClient {
           }
           if (null != a.field_a) {
             jj.a(70.0f, f.field_H, true);
-            this.d(true);
+            this.renderClientFrame(true);
             cb.field_u = kl.a(252, a.field_a, "basic", "unachieved");
             BufferedSocket.field_m = kl.a(252, a.field_a, "basic", "orbcoin");
             ProxyAuthenticationRequiredException.a(BufferedSocket.field_m, (byte) -85);
             mf.field_g = kl.a(252, a.field_a, "basic", "locked");
-            ve.field_d = (fa) ((Object) ub.a("roman12", a.field_a, "", pf.field_b, 32));
-            lk.field_Q = (fa) ((Object) ub.a("roman20", a.field_a, "", pf.field_b, 32));
+            ve.field_d = (BitmapFont) ((Object) ub.a("roman12", a.field_a, "", pf.field_b, 32));
+            lk.field_Q = (BitmapFont) ((Object) ub.a("roman20", a.field_a, "", pf.field_b, 32));
             a.field_a = null;
             fleas.h((byte) 33);
             return false;
           }
           if (hm.field_g != null) {
             jj.a(72.0f, f.field_H, true);
-            this.d(true);
+            this.renderClientFrame(true);
             this.g((byte) -111);
             de.field_h = null;
             hm.field_g = null;
@@ -1412,7 +1412,7 @@ public final class fleas extends NetworkGameClient {
             return true;
           }
           jj.a(98.0f, vi.field_c, true);
-          this.d(true);
+          this.renderClientFrame(true);
           var5 = pl.field_l[0];
           array$0 = new kh[var5];
           ia.field_m[0] = array$0;
@@ -1492,7 +1492,7 @@ public final class fleas extends NetworkGameClient {
         }
     }
 
-    final void d(int param0) {
+    final void updateClient(int param0) {
         boolean discarded$0 = false;
         boolean stackIn_11_1 = false;
         int stackIn_165_1 = 0;
@@ -1916,14 +1916,14 @@ public final class fleas extends NetworkGameClient {
           hf.field_g = qf.a(pb.field_a, "", "FLEA_bridgecollapse").b().resample(var2);
           kc.field_e = qf.a(pb.field_a, "", "FLEA_death").b().resample(var2);
           pb.field_a = null;
-          oj.field_i = RawPcmStream.a(ResourceArchive.field_n, 100, 0);
+          oj.field_i = RawPcmStream.createForPlaybackRate(ResourceArchive.field_n, 100, 0);
           oj.field_i.g(-1);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "fleas.L(" + param0 + ')');
         }
     }
 
-    final void a(byte param0) {
+    final void initializeClient(byte param0) {
         this.a(9, 11, 22, false, 0, 8, 8, 10);
         MidiPcmStream var2 = new MidiPcmStream();
         var2.b(9, 128, 238);

@@ -50,7 +50,7 @@ final class kk extends ve {
           var8 = this.a(param3, param2, (byte) 121, param4);
           var9 = var8;
           var8.field_a[0] = param1;
-          var9.field_a[param2.length()] = param3.b(param2) + param1;
+          var9.field_a[param2.length()] = param3.stringWidth(param2) + param1;
           fa.a(var9, param3, 0, param2, (byte) 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -139,12 +139,12 @@ final class kk extends ve {
           this.field_p = false;
           this.field_k = param0;
           this.field_m = param5;
-          var16 = new String[param0.a(param7, param4) + 1];
+          var16 = new String[param0.lineCount(param7, param4) + 1];
           var17 = var16;
           if (param6 >= -113) {
             this.field_k = (BitmapFont) null;
           }
-          var10 = Math.max(1, param0.a(param7, new int[]{param4}, var17));
+          var10 = Math.max(1, param0.wrapText(param7, new int[]{param4}, var17));
           if (this.field_h == 3 &&
             1 == var10) {
             this.field_h = 1;
@@ -186,13 +186,13 @@ final class kk extends ve {
             var14 = new rj(stackIn_36_2, stackIn_36_3, stackIn_37_4);
             var14.field_a[0] = 0;
             if (var13 != null) {
-              var14.field_a[var13.length()] = param0.b(var13);
+              var14.field_a[var13.length()] = param0.stringWidth(var13);
               stackIn_40_0 = var14;
               stackIn_40_1 = (BitmapFont) (param0);
               if (param1 != 3) {
                 stackIn_41_2 = 0;
               } else {
-                stackIn_41_2 = this.a(param4, false, param0.b(var13), var13);
+                stackIn_41_2 = this.a(param4, false, param0.stringWidth(var13), var13);
               }
               fa.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, var13, (byte) 124);
             }
@@ -303,7 +303,7 @@ final class kk extends ve {
           }
           this.field_f = 1;
           var9 = this.a(param1, param2, (byte) 93, param0);
-          var7 = param1.b(param2);
+          var7 = param1.stringWidth(param2);
           var9.field_a[0] = -(var7 >> 1) + param3;
           var9.field_a[param2.length()] = param3 + (var7 >> 1);
           fa.a(var9, param1, 0, param2, (byte) 107);
@@ -361,7 +361,7 @@ final class kk extends ve {
           this.field_f = 2;
           var9 = this.a(param0, param1, (byte) -36, param4);
           var10 = var9;
-          var10.field_a[0] = -param0.b(param1) + param3;
+          var10.field_a[0] = -param0.stringWidth(param1) + param3;
           var10.field_a[param1.length()] = param3;
           fa.a(var10, param0, 0, param1, (byte) 120);
           return;

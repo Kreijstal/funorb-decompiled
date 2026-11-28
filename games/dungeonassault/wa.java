@@ -20,7 +20,7 @@ final class wa {
     final static void a(int param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
         try {
           param3.h(param4, param5);
-          db.field_v.b(Integer.toString(param0), 20 + param4, (param3.field_v + la.field_b.field_H >> 1) + param5, param2, param1);
+          db.field_v.drawString(Integer.toString(param0), 20 + param4, (param3.field_v + la.field_b.field_H >> 1) + param5, param2, param1);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "wa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
