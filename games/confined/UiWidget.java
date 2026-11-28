@@ -582,7 +582,7 @@ class UiWidget extends IntrusiveNode {
             }
           }
           if (Confined.field_I == 0 &&
-            i.field_w != 0) {
+            NetworkGameClient.field_w != 0) {
             this.pointerReleased(-102, param2, ld.field_l, this, jh.field_R, param3);
             var6 = IntrusiveNode.field_k;
             if (var6 != null) {
@@ -603,7 +603,7 @@ class UiWidget extends IntrusiveNode {
             this.blur(84);
           }
         }
-        i.field_w = Confined.field_I;
+        NetworkGameClient.field_w = Confined.field_I;
         CipherPacketBuffer.a((byte) 122, this.getTooltipText((byte) -108));
         if (!param0) {
           this.field_B = (String) null;

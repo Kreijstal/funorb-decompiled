@@ -197,7 +197,7 @@ class fg extends DefaultTextWidgetRenderer {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawModalOverlay(byte param0, boolean param1) {
         CrossfadingMidiPcmStream.a(param1, true, true);
         if (param0 < 58) {
           field_u = -67;
@@ -243,7 +243,7 @@ class fg extends DefaultTextWidgetRenderer {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
+    final static void drawModalOverlayWithIntGuard(int param0, boolean param1) {
         CrossfadingMidiPcmStream.a(param1, true, true);
         if (param0 < 58) {
           field_u = -67;

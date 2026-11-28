@@ -40,12 +40,12 @@ final class fl extends vb {
             }
             ((PacketBuffer) (Object) stackIn_7_0).writeByte(stackIn_8_1, (byte) 122);
             this.field_d.writeFiveByteValue(0L, -1709073240);
-            this.field_u.a(this.field_d.payload.length, 0, (byte) 98, this.field_d.payload);
+            this.field_u.enqueueWrite(this.field_d.payload.length, 0, (byte) 98, this.field_d.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_u.a((byte) -35);
+              this.field_u.close((byte) -35);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;
@@ -63,7 +63,7 @@ final class fl extends vb {
 
     final void a(int param0) {
         if (null != this.field_u) {
-          this.field_u.a((byte) 111);
+          this.field_u.close((byte) 111);
         }
         if (param0 != -19315) {
           this.field_u = (BufferedSocket) null;
@@ -88,7 +88,7 @@ final class fl extends vb {
           try {
             if (null != this.field_u) {
               try {
-                this.field_u.a((byte) 107);
+                this.field_u.close((byte) 107);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -126,12 +126,12 @@ final class fl extends vb {
                 this.field_d.writeByte(4, (byte) 122);
                 this.field_d.writeByte((int) this.field_f, (byte) 122);
                 this.field_d.writeInt(0, false);
-                this.field_u.a(this.field_d.payload.length, 0, (byte) 112, this.field_d.payload);
+                this.field_u.enqueueWrite(this.field_d.payload.length, 0, (byte) 112, this.field_d.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_u.a((byte) 127);
+                  this.field_u.close((byte) 127);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
@@ -183,7 +183,7 @@ final class fl extends vb {
         Exception exception = null;
         Throwable decompiledCaughtException = null;
         try {
-          this.field_u.a((byte) 115);
+          this.field_u.close((byte) 115);
           if (param0 != -30317) {
             this.c(86);
           }
@@ -213,12 +213,12 @@ final class fl extends vb {
             this.field_d.writeByte(6, (byte) 122);
             this.field_d.writeMedium((byte) -124, 3);
             this.field_d.writeShort(0, (byte) 106);
-            this.field_u.a(this.field_d.payload.length, 0, (byte) 121, this.field_d.payload);
+            this.field_u.enqueueWrite(this.field_d.payload.length, 0, (byte) 121, this.field_d.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_u.a((byte) 100);
+              this.field_u.close((byte) 100);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -298,7 +298,7 @@ final class fl extends vb {
             this.field_g = this.field_g + var4;
             if (this.field_g > 30000) {
               try {
-                this.field_u.a((byte) -55);
+                this.field_u.close((byte) -55);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -314,13 +314,13 @@ final class fl extends vb {
             return false;
           }
           try {
-            this.field_u.b(127);
+            this.field_u.checkWriteError(127);
             var2 = (NetworkArchiveRequest) (this.field_c.a(25777));
             while (var2 != null) {
               this.field_d.position = 0;
               this.field_d.writeByte(1, (byte) 122);
               this.field_d.writeFiveByteValue(var2.field_l, -1709073240);
-              this.field_u.a(this.field_d.payload.length, 0, (byte) 101, this.field_d.payload);
+              this.field_u.enqueueWrite(this.field_d.payload.length, 0, (byte) 101, this.field_d.payload);
               this.field_l.a(var2, 3329);
               var2 = (NetworkArchiveRequest) (this.field_c.d(49));
             }
@@ -332,12 +332,12 @@ final class fl extends vb {
               this.field_d.position = 0;
               this.field_d.writeByte(0, (byte) 122);
               this.field_d.writeFiveByteValue(var2Lifetime1.field_l, -1709073240);
-              this.field_u.a(this.field_d.payload.length, 0, (byte) 76, this.field_d.payload);
+              this.field_u.enqueueWrite(this.field_d.payload.length, 0, (byte) 76, this.field_d.payload);
               this.field_i.a(var2Lifetime1, 3329);
               var2Lifetime1 = (NetworkArchiveRequest) (this.field_k.d(118));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
-              var3_int = this.field_u.a(0);
+              var3_int = this.field_u.availableBytes(0);
               if (var3_int < 0) {
                 throw new IOException();
               }
@@ -358,7 +358,7 @@ final class fl extends vb {
                 if (var5 > var3_int) {
                   var5 = var3_int;
                 }
-                this.field_u.a(-1, this.field_o.position, var5, this.field_o.payload);
+                this.field_u.readFully(-1, this.field_o.position, var5, this.field_o.payload);
                 if (0 != this.field_f) {
                   for (var6 = 0; var6 < var5; var6++) {
                     this.field_o.payload[var6 + this.field_o.position] = (byte)TorChallenge.a((int) this.field_o.payload[var6 + this.field_o.position], (int) this.field_f);
@@ -432,7 +432,7 @@ final class fl extends vb {
                 if (var6 > var3_int) {
                   var6 = var3_int;
                 }
-                this.field_u.a(-1, this.field_p.field_A.position, var6, this.field_p.field_A.payload);
+                this.field_u.readFully(-1, this.field_p.field_A.position, var6, this.field_p.field_A.payload);
                 if (this.field_f != 0) {
                   for (var7 = 0; var6 > var7; var7++) {
                     this.field_p.field_A.payload[var7 + this.field_p.field_A.position] = (byte)TorChallenge.a((int) this.field_p.field_A.payload[var7 + this.field_p.field_A.position], (int) this.field_f);
@@ -456,7 +456,7 @@ final class fl extends vb {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_u.a((byte) 118);
+              this.field_u.close((byte) 118);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;

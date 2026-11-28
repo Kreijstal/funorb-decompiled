@@ -115,14 +115,14 @@ final class vc {
               bk.a(fd.field_nb, false, sk.field_b, var3, ld.field_C);
               var3.writeByte(false, 15);
               var3.writeInt(0, n.field_d);
-              k.field_b.a(var3.payload, 0, 120, 13);
+              k.field_b.enqueueWrite(var3.payload, 0, 120, 13);
               kc.field_b = kc.field_b + 1;
               fj.field_j = ih.correctedCurrentTimeMillis((byte) -98) + 30000L;
             }
             var1_int = 23 / ((param0 + 55) / 60);
             if (kc.field_b == 3) {
-              if (k.field_b.b(-95) > 0) {
-                var2 = k.field_b.a(0);
+              if (k.field_b.availableBytes(-95) > 0) {
+                var2 = k.field_b.readByteOrEof(0);
                 if (var2 != 0) {
                   stackIn_28_0 = tc.a(var2, (byte) 125);
                   return stackIn_28_0;

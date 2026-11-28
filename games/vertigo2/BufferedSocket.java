@@ -18,7 +18,7 @@ final class BufferedSocket implements Runnable {
     private InputStream field_m;
     private PlatformTaskDispatcher field_k;
 
-    final int a(int param0) throws IOException {
+    final int availableBytes(int param0) throws IOException {
         if (param0 != 15166) {
           this.field_h = -24;
         }
@@ -29,7 +29,7 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.b(0);
+        this.close(0);
     }
 
     public final void run() {
@@ -127,7 +127,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void b(int param0) {
+    final void close(int param0) {
         try {
           int var4 = 0;
           var4 = Vertigo2.field_L ? 1 : 0;
@@ -160,7 +160,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(byte[] param0, boolean param1, int param2, int param3) throws IOException {
+    final void readFully(byte[] param0, boolean param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -199,7 +199,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void c(int param0) throws IOException {
+    final void checkWriteError(int param0) throws IOException {
         if (param0 != -26206) {
           this.run();
         }
@@ -223,7 +223,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final int a(byte param0) throws IOException {
+    final int readByteOrEof(byte param0) throws IOException {
         int var2 = 29 / ((42 - param0) / 42);
         if (this.field_c) {
           return 0;
@@ -231,7 +231,7 @@ final class BufferedSocket implements Runnable {
         return this.field_m.read();
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void enqueueWrite(int param0, int param1, int param2, byte[] param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;

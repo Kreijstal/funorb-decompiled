@@ -796,7 +796,7 @@ final class ml {
           if (var5 != 8 &&
             var5 != 3) {
             if (var5 == 5) {
-              jb.$cfr$intArgs$a$3cff09437531(true, -59, false, param2, false);
+              jb.drawAchievementGridWithIntGuard(true, -59, false, param2, false);
             } else {
               if (var5 == 7) {
                 this.a(80, param2);
@@ -858,7 +858,7 @@ final class ml {
             stackIn_37_2 = false;
             stackIn_37_3 = param2;
             stackIn_38_4 = (mc.field_w == 0);
-            if (!jb.$cfr$intArgs$a$3cff09437531(stackIn_37_0, stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_38_4) &&
+            if (!jb.drawAchievementGridWithIntGuard(stackIn_37_0, stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_38_4) &&
               kj.a(false)) {
               if (this.field_n != 8) {
                 ce.field_d.drawParagraph(kc.field_c, 170 - param2, 230, 300, 60, 1, -1, 1, 0, 0);

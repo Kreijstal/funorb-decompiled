@@ -110,7 +110,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         return super.getCodeBase();
     }
 
-    final void a(byte param0, String param1) {
+    final void showErrorPage(byte param0, String param1) {
         try {
           RuntimeException stackIn_14_0 = null;
           StringBuilder stackIn_14_1 = null;
@@ -508,11 +508,11 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         }
     }
 
-    final boolean a(int param0) {
+    final boolean allowAppletStartup(int param0) {
         return true;
     }
 
-    final void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6) {
+    final void startApplet(int param0, String param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_26_0 = null;
@@ -529,7 +529,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               if (og.field_c != null) {
                 MusicPatchNode.field_g = MusicPatchNode.field_g + 1;
                 if (MusicPatchNode.field_g >= 3) {
-                  this.a((byte) 110, "alreadyloaded");
+                  this.showErrorPage((byte) 110, "alreadyloaded");
                   return;
                 }
                 this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
@@ -564,7 +564,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
               ValidatedTextField.a(var8_ref, (byte) 100, (String) null);
-              this.a((byte) -124, "crash");
+              this.showErrorPage((byte) -124, "crash");
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -624,7 +624,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                     var2.equals("1.5") ||
                     var2.startsWith("1.5.") ||
                     var2.equals("1.6.0")) {
-                    this.a((byte) -84, "wrongjava");
+                    this.showErrorPage((byte) -84, "wrongjava");
                     decompiledFrameRemainder3 = (var5 != 0);
                   }
                   if ((decompiledFrameRemainder3) &&
@@ -646,7 +646,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                       var4 = var2.substring(6, var3);
                       if (qi.a((CharSequence) ((Object) var4), 10) &&
                         !(gf.a(10, (CharSequence) ((Object) var4)) >= 10)) {
-                        this.a((byte) 96, "wrongjava");
+                        this.showErrorPage((byte) 96, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
                     }
@@ -736,7 +736,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
               ValidatedTextField.a((Throwable) (var1), (byte) 100, (String) null);
-              this.a((byte) -85, "crash");
+              this.showErrorPage((byte) -85, "crash");
             }
             this.shutdownApplet(true, (byte) -83);
             return;

@@ -38,7 +38,7 @@ final class RichTextLayout extends TextLayout {
           var8 = var7;
           var7.field_a[0] = param4;
           var8.field_a[param0.length()] = param4 + param2.stringWidth(param0);
-          s.$cfr$intArgs$a$05bb3be3c57b(param2, 61, 0, var8, param0);
+          s.computeJustifiedCharacterOffsetsWithIntGuard(param2, 61, 0, var8, param0);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ub.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -70,7 +70,7 @@ final class RichTextLayout extends TextLayout {
           var9 = var8;
           var9.field_a[0] = -param3.stringWidth(param0) + param4;
           var9.field_a[param0.length()] = param4;
-          s.$cfr$intArgs$a$05bb3be3c57b(param3, 61, 0, var9, param0);
+          s.computeJustifiedCharacterOffsetsWithIntGuard(param3, 61, 0, var9, param0);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ub.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -150,7 +150,7 @@ final class RichTextLayout extends TextLayout {
           var8 = param0.stringWidth(param2);
           var7.field_a[0] = param4 - (var8 >> 1);
           var7.field_a[param2.length()] = param4 + (var8 >> 1);
-          s.$cfr$intArgs$a$05bb3be3c57b(param0, 61, 0, var7, param2);
+          s.computeJustifiedCharacterOffsetsWithIntGuard(param0, 61, 0, var7, param2);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ub.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -266,7 +266,7 @@ final class RichTextLayout extends TextLayout {
               } else {
                 stackIn_42_2 = this.computeJustificationStep(param3, param4.stringWidth(var13), var13, -53);
               }
-              s.$cfr$intArgs$a$05bb3be3c57b(stackIn_41_0, stackIn_41_1, stackIn_42_2, var14, var13);
+              s.computeJustifiedCharacterOffsetsWithIntGuard(stackIn_41_0, stackIn_41_1, stackIn_42_2, var14, var13);
             }
             this.field_d[var12Lifetime1] = var14;
             var11 = var11 + param7;

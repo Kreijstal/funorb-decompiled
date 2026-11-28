@@ -34,7 +34,7 @@ final class SoundCache {
             if (0 > var5) {
               var4 = var4 + sg.field_e;
             } else {
-              var6 = fb.$cfr$intArgs$a$1694234bddb3(DualLinkNode.field_h[var3_int], 26, true);
+              var6 = fb.measureSelectedFontTextWidthWithIntGuard(DualLinkNode.field_h[var3_int], 26, true);
               var4 = var4 + ByteArrayPoolSupport.field_h;
               var7 = ee.field_b - (var6 >> 1);
               if (rh.a(pk.field_c + (ResizableModalDialog.field_S << 1), param1, (rh.field_i << 1) + var6, -rh.field_i + var7, var4, param0, -89)) {

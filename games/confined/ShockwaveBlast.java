@@ -25,7 +25,7 @@ final class ShockwaveBlast extends ka {
           DiskCacheWorker.field_a = dupTemp$0;
           SoundCache.field_b = dupTemp$0;
           if (mg.field_a.status != 1) {
-            lk.field_d = i.field_q;
+            lk.field_d = NetworkGameClient.field_q;
           } else {
             try {
               kl.field_G = new BufferedSocket((java.net.Socket) (mg.field_a.result), ld.field_k);
@@ -40,7 +40,7 @@ final class ShockwaveBlast extends ka {
               StageDirector.writeConnectionHandshakeHeader(ProxyAuthenticationRequiredException.field_b, vh.field_a, InteractiveWidget.field_M, (byte) 40, qa.field_c);
               tb.a(-1, 116);
             } catch (IOException iOException) {
-              lk.field_d = i.field_q;
+              lk.field_d = NetworkGameClient.field_q;
             }
           }
           mg.field_a = null;
@@ -107,7 +107,7 @@ final class ShockwaveBlast extends ka {
             if (kc.field_f == null) {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
-              stackIn_15_6 = "" + i.field_p;
+              stackIn_15_6 = "" + NetworkGameClient.field_p;
             } else {
               stackIn_15_2 = null;
               stackIn_15_3 = null;

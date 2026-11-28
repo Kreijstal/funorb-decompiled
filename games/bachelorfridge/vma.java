@@ -186,7 +186,7 @@ final class vma extends pv {
         return 50;
     }
 
-    final static void a(byte param0, boolean param1, boolean param2, String param3) {
+    final static void showLoginDialog(byte param0, boolean param1, boolean param2, String param3) {
         try {
           if (param0 != -6) {
             field_j = (Sprite[]) null;
@@ -213,7 +213,7 @@ final class vma extends pv {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$842e35442ba4(int param0, boolean param1, boolean param2, String param3) {
+    final static void showLoginDialogWithIntGuard(int param0, boolean param1, boolean param2, String param3) {
         try {
           if (param0 != -6) {
             field_j = (Sprite[]) null;

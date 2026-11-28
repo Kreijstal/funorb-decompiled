@@ -102,7 +102,7 @@ abstract class SingleChildWidgetContainer extends UiComponent implements WidgetC
             if (decompiledFrameRemainder0) {
               if (ud.field_b.position > 0) {
                 try {
-                  sg.field_h.a((byte) -97, ud.field_b.position, 0, ud.field_b.payload);
+                  sg.field_h.enqueueWrite((byte) -97, ud.field_b.position, 0, ud.field_b.payload);
                   jd.field_n = lj.correctedCurrentTimeMillis((byte) -82);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

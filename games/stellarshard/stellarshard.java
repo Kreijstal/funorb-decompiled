@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class stellarshard extends rb implements TextureProvider {
+public final class stellarshard extends NetworkGameClient implements TextureProvider {
     private int field_M;
     private int field_O;
     private Quaternion field_H;
@@ -323,7 +323,7 @@ public final class stellarshard extends rb implements TextureProvider {
           PacketBuffer.field_m.serviceOutput();
           stackIn_6_1 = 119;
           stackIn_7_2 = (DualLinkDequeIterator.field_e != null);
-          this.b(stackIn_6_1, stackIn_7_2);
+          this.serviceFramework(stackIn_6_1, stackIn_7_2);
           if (qd.field_h) {
             this.o(122);
             qd.field_h = false;
@@ -393,7 +393,7 @@ public final class stellarshard extends rb implements TextureProvider {
                   if (wk.a(113)) {
                     stackIn_81_1 = 0;
                     stackIn_82_2 = (null != DualLinkDequeIterator.field_e);
-                    var2_int = AlphaWidgetContainer.a((rb) (this), stackIn_81_1, stackIn_82_2);
+                    var2_int = AlphaWidgetContainer.a((NetworkGameClient) (this), stackIn_81_1, stackIn_82_2);
                     switch (var2_int) {
                       case 1:
                         if (null == DualLinkDequeIterator.field_e) {
@@ -457,12 +457,12 @@ public final class stellarshard extends rb implements TextureProvider {
               ue.a((byte) 85, 0);
               break;
             }
-            this.h(6476);
+            this.dispatchCommonPacket(6476);
           } while (var3 == 0);
           if (!il.e(32525)) {
             return;
           }
-          var2_int = this.f(-16028);
+          var2_int = this.reconnectAndResendRequests(-16028);
           if (2 != var2_int) {
             return;
           }
@@ -528,7 +528,7 @@ public final class stellarshard extends rb implements TextureProvider {
         int var8Lifetime1;
         var12 = field_B;
         try {
-          this.a(8, 0, 10, 6, false, 10, (byte) -7, 9);
+          this.initializeFramework(8, 0, 10, 6, false, 10, (byte) -7, 9);
           TriangleRasterizer.rebuildPaletteWithGamma(0.800000011920929f);
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.field_f = false;
@@ -669,7 +669,7 @@ public final class stellarshard extends rb implements TextureProvider {
             tc.field_r = 0;
             qi.level = 0;
             TriangleRasterizer.setTextureProvider((TextureProvider) (this));
-            this.a(true, -113, false, false, true);
+            this.configureOptionalPacketHandlers(true, -113, false, false, true);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2850,7 +2850,7 @@ public final class stellarshard extends rb implements TextureProvider {
           KeyHandler.clearStaticReferences(-1);
           ob.resetStaticState(30063);
           rl.resetStaticState((byte) -84);
-          rb.clearStaticReferences(-12);
+          NetworkGameClient.clearStaticReferences(-12);
           ClientException.clearStaticReferences((byte) -107);
           GameApplet.b(-53);
           MouseHandler.clearStaticReferences((byte) -20);
@@ -4799,7 +4799,7 @@ public final class stellarshard extends rb implements TextureProvider {
 
     public final void init() {
         try {
-          this.a(11, true, "stellarshard");
+          this.startWithDefaultSize(11, true, "stellarshard");
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "stellarshard.init()");
         }

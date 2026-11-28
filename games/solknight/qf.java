@@ -42,7 +42,7 @@ final class qf {
             }
             if (id.field_c.position > 0) {
               try {
-                MouseWheelInput.field_d.a(-28748, 0, id.field_c.position, id.field_c.payload);
+                MouseWheelInput.field_d.enqueueWrite(-28748, 0, id.field_c.position, id.field_c.payload);
                 ContentTransitionDialog.field_Y = je.correctedCurrentTimeMillis(1);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

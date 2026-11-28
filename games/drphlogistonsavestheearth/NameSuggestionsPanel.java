@@ -14,8 +14,8 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
     static int field_N;
     static int[] field_L;
 
-    final static void a(int param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(int param0, ResourceArchive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2593_0;
             StringBuilder stackIn_2593_1;
             String stackIn_2594_2;
@@ -27,7 +27,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
             int param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2593_0 = null;
@@ -39,7 +39,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 this.var3 = 0;
                 this.var4 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 TextHotspotBounds.field_h = param1;
                 var2 = wg.a("loginm3", param0 - 7);
                 if (var2 != null) {
@@ -1023,7 +1023,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("invaliduserorpass", 0);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   FrameTimer.field_c = mj.a((byte) -123, var2);
                 }
@@ -1961,7 +1961,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("pausemenu", 0);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   mj.a((byte) -119, var2);
                 }
@@ -2923,7 +2923,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("mustlogin4,5", 0);
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadLoginPromptsAndSubscriptionText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   kk.field_d[5] = mj.a((byte) -118, var2);
                 }
@@ -3028,13 +3028,13 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
             void run() {
                 var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadLoginPromptsAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3055,7 +3055,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 

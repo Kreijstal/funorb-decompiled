@@ -62,7 +62,7 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     final static void a(int param0, boolean param1, boolean param2) {
         String var4 = (String) null;
-        GuestPlayConfirmationForm.$cfr$intArgs$a$e5d4dced95c1((String) null, 33, param2, param1);
+        GuestPlayConfirmationForm.showLoginDialogWithIntGuard((String) null, 33, param2, param1);
         if (param0 > -65) {
           field_k = (ml) null;
         }

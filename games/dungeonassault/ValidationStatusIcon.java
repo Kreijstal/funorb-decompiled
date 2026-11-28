@@ -77,8 +77,8 @@ final class ValidationStatusIcon extends InteractiveWidget {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(int param0, ResourceArchive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2626_0;
             StringBuilder stackIn_2626_1;
             String stackIn_2627_2;
@@ -89,7 +89,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
             int param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2626_0 = null;
@@ -100,7 +100,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 bb.field_b = param1;
                 var2 = rp.a("loginm3", param0 ^ -27018);
                 if (var2 != null) {
@@ -1118,7 +1118,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                   df.field_a = dj.a(var2, false);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 var2 = rp.a("returntohomepage", 125);
                 if (var2 != null) {
                   dj.a(var2, false);
@@ -2093,7 +2093,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = rp.a("on", 86);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   Bzip2State.field_k = dj.a(var2, false);
                 }
@@ -3063,7 +3063,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
                 var2 = rp.a("subscription_cost_monthly,8", 121);
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadSubscriptionText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   kl.field_c[8] = dj.a(var2, false);
                 }
@@ -3092,13 +3092,13 @@ final class ValidationStatusIcon extends InteractiveWidget {
             void run() {
                 var3 = DungeonAssault.field_K;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3118,7 +3118,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 

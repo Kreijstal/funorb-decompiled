@@ -32,7 +32,7 @@ final class StatusEffectInfo {
           if (OhNoEvent.field_s == kaa.field_m) {
             return;
           }
-          if (GameClock.a(OhNoEvent.field_s, 124)) {
+          if (GameClock.isNonnegativeScreenId(OhNoEvent.field_s, 124)) {
             LevitateSpecial.field_p[OhNoEvent.field_s].j(-5);
           }
           ip.a((byte) 22, kaa.field_m);

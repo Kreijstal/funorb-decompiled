@@ -43,7 +43,7 @@ final class RichTextLayout extends TextLayout {
           var7 = param1.stringWidth(param2);
           var8.field_c[0] = param4 - (var7 >> 1);
           var8.field_c[param2.length()] = param4 + (var7 >> 1);
-          tn.$cfr$intArgs$a$95d5eaff65e7(var8, param2, param1, 28, 0);
+          tn.computeJustifiedCharacterOffsetsWithIntGuard(var8, param2, param1, 28, 0);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "sl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -80,7 +80,7 @@ final class RichTextLayout extends TextLayout {
           var8 = var7;
           var7.field_c[0] = param4;
           var8.field_c[param2.length()] = param1.stringWidth(param2) + param4;
-          tn.$cfr$intArgs$a$95d5eaff65e7(var8, param2, param1, 17, 0);
+          tn.computeJustifiedCharacterOffsetsWithIntGuard(var8, param2, param1, 17, 0);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "sl.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -208,7 +208,7 @@ final class RichTextLayout extends TextLayout {
               } else {
                 stackIn_39_4 = 0;
               }
-              tn.$cfr$intArgs$a$95d5eaff65e7(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_39_4);
+              tn.computeJustifiedCharacterOffsetsWithIntGuard(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_39_4);
             }
             var11 = var11 + param7;
             this.field_c[var12Lifetime1] = var14;
@@ -257,7 +257,7 @@ final class RichTextLayout extends TextLayout {
           var9 = var8;
           var9.field_c[0] = -param2.stringWidth(param4) + param0;
           var9.field_c[param4.length()] = param0;
-          tn.$cfr$intArgs$a$95d5eaff65e7(var9, param4, param2, 119, 0);
+          tn.computeJustifiedCharacterOffsetsWithIntGuard(var9, param4, param2, 119, 0);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "sl.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

@@ -163,7 +163,7 @@ final class oj {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 15 % ((param1 + 69) / 48);
-          stackIn_1_0 = param0.a(-1, param2);
+          stackIn_1_0 = param0.pollAccountUiActions(-1, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

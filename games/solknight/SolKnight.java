@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-public final class SolKnight extends ab {
+public final class SolKnight extends NetworkGameClient {
     static fg field_D;
     private static Archive field_I;
     static volatile int field_G;
@@ -74,13 +74,13 @@ public final class SolKnight extends ab {
           }
           stackIn_7_1 = -3;
           stackIn_8_2 = (null != dj.field_k);
-          this.a(stackIn_7_1, stackIn_8_2);
+          this.serviceFramework(stackIn_7_1, stackIn_8_2);
           if (RasterBuffer.field_c) {
             this.m(1);
             RasterBuffer.field_c = false;
           }
           if (bl.a((byte) -81)) {
-            this.c(true);
+            this.updateLoginFlow(true);
             if (bl.a((byte) -81)) {
               if (LoginPanel.h(119)) {
                 discarded$0 = this.b(0, false);
@@ -109,7 +109,7 @@ public final class SolKnight extends ab {
               if (!RandomAccessCacheFile.b((byte) -104)) {
                 if (IntrusiveNode.b((byte) 89)) {
                   stackIn_55_0 = (dj.field_k != null);
-                  var2_int = ByteStorage.a(stackIn_55_0, (byte) 20, (ab) (this));
+                  var2_int = ByteStorage.a(stackIn_55_0, (byte) 20, (NetworkGameClient) (this));
                   if (var2_int != 2364824) {
                     if (1 == var2_int ||
                       2 == var2_int) {
@@ -172,12 +172,12 @@ public final class SolKnight extends ab {
             }
           }
           while (MouseWheelInput.a(AccountRequestState.field_b, 122)) {
-            this.d(true);
+            this.dispatchCommonPacket(true);
           }
           qf.a(0, 0);
           var2_intLifetime1 = 0;
           if (qc.a(34)) {
-            var3 = this.g(0);
+            var3 = this.reconnectAndResendRequests(0);
             if (var3 == 2) {
               var2_intLifetime1 = 1;
             }
@@ -203,7 +203,7 @@ public final class SolKnight extends ab {
           pl.clearStaticReferences(-5045);
           eb.a((byte) 113);
           rg.clearStaticReferences((byte) -40);
-          ab.clearStaticReferences((byte) -99);
+          NetworkGameClient.clearStaticReferences((byte) -99);
           ClientException.resetStaticState((byte) 125);
           GameApplet.d((byte) -41);
           na.a(-13357);
@@ -432,7 +432,7 @@ public final class SolKnight extends ab {
 
     public final void init() {
         try {
-          this.a("solknight", 11, 8);
+          this.startWithDefaultSize("solknight", 11, 8);
         } catch (RuntimeException runtimeException) {
           throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "SolKnight.init()");
         }
@@ -546,15 +546,15 @@ public final class SolKnight extends ab {
                           stackIn_46_0 = MusicPatch.field_o;
                           return stackIn_46_0;
                         }
-                        TextFieldValidator.a((byte) 102, ab.a(field_I, ValidatedTextField.field_bb, ri.field_d, "", false), 60.0f);
+                        TextFieldValidator.a((byte) 102, NetworkGameClient.a(field_I, ValidatedTextField.field_bb, ri.field_d, "", false), 60.0f);
                         stackIn_39_0 = pb.field_c;
                         return stackIn_39_0;
                       }
-                      TextFieldValidator.a((byte) 102, ab.a(fh.field_c, vb.field_i, IsaacRandom.field_e, "", false), 50.0f);
+                      TextFieldValidator.a((byte) 102, NetworkGameClient.a(fh.field_c, vb.field_i, IsaacRandom.field_e, "", false), 50.0f);
                       stackIn_34_0 = pb.field_c;
                       return stackIn_34_0;
                     }
-                    TextFieldValidator.a((byte) 102, ab.a(ValidatedTextField.field_cb, DropTargetWidgetContainer.field_L, je.field_b, "", false), 40.0f);
+                    TextFieldValidator.a((byte) 102, NetworkGameClient.a(ValidatedTextField.field_cb, DropTargetWidgetContainer.field_L, je.field_b, "", false), 40.0f);
                     stackIn_29_0 = pb.field_c;
                     return stackIn_29_0;
                   }
@@ -562,15 +562,15 @@ public final class SolKnight extends ab {
                   stackIn_24_0 = pb.field_c;
                   return stackIn_24_0;
                 }
-                TextFieldValidator.a((byte) 102, ab.a(ProxySocketConnector.field_h, l.field_b, rd.field_a, "", false), 20.0f);
+                TextFieldValidator.a((byte) 102, NetworkGameClient.a(ProxySocketConnector.field_h, l.field_b, rd.field_a, "", false), 20.0f);
                 stackIn_19_0 = pb.field_c;
                 return stackIn_19_0;
               }
-              TextFieldValidator.a((byte) 102, ab.a(AccountServiceResult.field_g, l.field_b, rd.field_a, "", false), 10.0f);
+              TextFieldValidator.a((byte) 102, NetworkGameClient.a(AccountServiceResult.field_g, l.field_b, rd.field_a, "", false), 10.0f);
               stackIn_13_0 = pb.field_c;
               return stackIn_13_0;
             }
-            TextFieldValidator.a((byte) 102, ab.a(pl.field_d, vb.field_i, IsaacRandom.field_e, "basic", false), 3.0f);
+            TextFieldValidator.a((byte) 102, NetworkGameClient.a(pl.field_d, vb.field_i, IsaacRandom.field_e, "basic", false), 3.0f);
             stackIn_8_0 = pb.field_c;
             return stackIn_8_0;
           }
@@ -719,7 +719,7 @@ public final class SolKnight extends ab {
     }
 
     final void initializeClient(int param0) {
-        this.a(0, false, 6, 9, true, 16, 10, 8);
+        this.initializeFramework(0, false, 6, 9, true, 16, 10, 8);
         MidiPcmStream var2 = new MidiPcmStream();
         var2.setChannelProgram(-4474, 128, 9);
         GameApplet.a(var2, (java.awt.Component) ((Object) EmailFormatValidator.field_q), true, (byte) -40, 22050, wh.field_c);

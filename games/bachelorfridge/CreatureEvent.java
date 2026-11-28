@@ -65,7 +65,7 @@ abstract class CreatureEvent extends BattleUpdate {
             return false;
           }
           try {
-            var2_int = dma.field_b.b(-42);
+            var2_int = dma.field_b.availableBytes(-42);
             if (var2_int <= param1) {
               if (var2_int < 0) {
                 vc.a((byte) -106);
@@ -80,7 +80,7 @@ abstract class CreatureEvent extends BattleUpdate {
             if (-ig.field_m.position + param0 < var2_int) {
               var2_int = -ig.field_m.position + param0;
             }
-            dma.field_b.a(ig.field_m.position, (byte) 75, ig.field_m.payload, var2_int);
+            dma.field_b.readFully(ig.field_m.position, (byte) 75, ig.field_m.payload, var2_int);
             DebouncedFieldValidator.field_c = f.correctedCurrentTimeMillis((byte) 73);
             ig.field_m.position = ig.field_m.position + var2_int;
             if (param0 > ig.field_m.position) {

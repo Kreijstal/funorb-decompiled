@@ -20,7 +20,7 @@ final class BufferedSocket implements Runnable {
     static int[] field_j;
     static volatile int field_l;
 
-    final void a(byte param0, byte[] param1, int param2, int param3) throws IOException {
+    final void enqueueWrite(byte param0, byte[] param1, int param2, int param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -86,7 +86,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final void a(boolean param0) {
+    final void close(boolean param0) {
         try {
           int var4 = 0;
           var4 = Transmogrify.field_A ? 1 : 0;
@@ -200,7 +200,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void readFully(int param0, int param1, byte[] param2, int param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -324,7 +324,7 @@ final class BufferedSocket implements Runnable {
         hk.field_c = null;
     }
 
-    final void d(int param0) throws IOException {
+    final void checkWriteError(int param0) throws IOException {
         int var2 = -36 / ((param0 - 16) / 54);
         if (this.field_e) {
           return;
@@ -430,7 +430,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int c(int param0) throws IOException {
+    final int readByteOrEof(int param0) throws IOException {
         if (this.field_e) {
           return 0;
         }
@@ -540,10 +540,10 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.a(true);
+        this.close(true);
     }
 
-    final int a(byte param0) throws IOException {
+    final int availableBytes(byte param0) throws IOException {
         if (this.field_e) {
           return 0;
         }

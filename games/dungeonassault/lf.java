@@ -255,7 +255,7 @@ final class lf extends kl {
             stackIn_67_0 = 55;
             break;
           }
-          so.$cfr$intArgs$a$d4f67f19bfc6(stackIn_67_0, var7_ref, var6_ref);
+          so.insertAdjacentNodeWithIntGuard(stackIn_67_0, var7_ref, var6_ref);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

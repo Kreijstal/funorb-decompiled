@@ -4,9 +4,9 @@
 final class ae {
     static UiComponent field_a;
 
-    final static UiComponent a(boolean param0) {
+    final static UiComponent getLobbyGameListContent(boolean param0) {
         if (!param0) {
-          ae.a(false);
+          ae.getLobbyGameListContent(false);
           return qba.field_m.field_vb;
         }
         return qba.field_m.field_vb;

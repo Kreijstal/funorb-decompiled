@@ -37,12 +37,12 @@ final class wj extends fb {
             }
             ((PacketBuffer) (Object) stackIn_7_0).writeByte(stackIn_7_1, stackIn_8_2);
             this.field_c.writeLong40(param0 - 24175, 0L);
-            this.field_s.a(this.field_c.payload, 0, 121, this.field_c.payload.length);
+            this.field_s.enqueueWrite(this.field_c.payload, 0, 121, this.field_c.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_s.a(true);
+              this.field_s.close(true);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;
@@ -326,7 +326,7 @@ final class wj extends fb {
             this.field_m = this.field_m + var4;
             if (this.field_m > 30000) {
               try {
-                this.field_s.a(true);
+                this.field_s.close(true);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -344,13 +344,13 @@ final class wj extends fb {
             return false;
           }
           try {
-            this.field_s.c(param0 + 32614);
+            this.field_s.checkWriteError(param0 + 32614);
             var2 = (NetworkArchiveRequest) (this.field_o.a(false));
             while (var2 != null) {
               this.field_c.position = 0;
               this.field_c.writeByte(false, 1);
               this.field_c.writeLong40(116, var2.field_o);
-              this.field_s.a(this.field_c.payload, 0, 107, this.field_c.payload.length);
+              this.field_s.enqueueWrite(this.field_c.payload, 0, 107, this.field_c.payload.length);
               this.field_q.a((byte) 125, var2);
               var2 = (NetworkArchiveRequest) (this.field_o.a(-116));
             }
@@ -362,12 +362,12 @@ final class wj extends fb {
               this.field_c.position = 0;
               this.field_c.writeByte(false, 0);
               this.field_c.writeLong40(param0 - 26250, var2Lifetime1.field_o);
-              this.field_s.a(this.field_c.payload, 0, 114, this.field_c.payload.length);
+              this.field_s.enqueueWrite(this.field_c.payload, 0, 114, this.field_c.payload.length);
               this.field_k.a((byte) 126, var2Lifetime1);
               var2Lifetime1 = (NetworkArchiveRequest) (this.field_j.a(-121));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
-              var3_int = this.field_s.b(-93);
+              var3_int = this.field_s.availableBytes(-93);
               if (var3_int < 0) {
                 throw new IOException();
               }
@@ -386,7 +386,7 @@ final class wj extends fb {
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.field_s.a(this.field_a.position, (byte) -64, this.field_a.payload, var5);
+                  this.field_s.readFully(this.field_a.position, (byte) -64, this.field_a.payload, var5);
                   if (0 != this.field_p) {
                     for (var6 = 0; var5 > var6; var6++) {
                       this.field_a.payload[var6 + this.field_a.position] = (byte)ih.bitwiseXor((int) this.field_a.payload[var6 + this.field_a.position], (int) this.field_p);
@@ -460,7 +460,7 @@ final class wj extends fb {
                   if (var6 > var3_int) {
                     var6 = var3_int;
                   }
-                  this.field_s.a(this.field_r.field_G.position, (byte) -64, this.field_r.field_G.payload, var6);
+                  this.field_s.readFully(this.field_r.field_G.position, (byte) -64, this.field_r.field_G.payload, var6);
                   if (this.field_p != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
                       this.field_r.field_G.payload[this.field_r.field_G.position + var7] = (byte)ih.bitwiseXor((int) this.field_r.field_G.payload[this.field_r.field_G.position + var7], (int) this.field_p);
@@ -487,7 +487,7 @@ final class wj extends fb {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_s.a(true);
+              this.field_s.close(true);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -524,12 +524,12 @@ final class wj extends fb {
             this.field_c.writeByte(false, 6);
             this.field_c.writeMedium(3, (byte) 119);
             this.field_c.writeShort(0, -121);
-            this.field_s.a(this.field_c.payload, 0, 110, this.field_c.payload.length);
+            this.field_s.enqueueWrite(this.field_c.payload, 0, 110, this.field_c.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_s.a(true);
+              this.field_s.close(true);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -575,7 +575,7 @@ final class wj extends fb {
           try {
             if (this.field_s != null) {
               try {
-                this.field_s.a(true);
+                this.field_s.close(true);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -610,12 +610,12 @@ final class wj extends fb {
                 this.field_c.writeByte(false, 4);
                 this.field_c.writeByte(false, (int) this.field_p);
                 this.field_c.writeInt(0, 0);
-                this.field_s.a(this.field_c.payload, 0, 111, this.field_c.payload.length);
+                this.field_s.enqueueWrite(this.field_c.payload, 0, 111, this.field_c.payload.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var5 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_s.a(true);
+                  this.field_s.close(true);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var6 = (Exception) (Object) decompiledCaughtException;
@@ -649,7 +649,7 @@ final class wj extends fb {
 
     final void b(int param0) {
         try {
-          this.field_s.a(true);
+          this.field_s.close(true);
         } catch (Exception exception) {
         }
         this.field_g = -1;
@@ -742,7 +742,7 @@ final class wj extends fb {
             o.field_h.drawCentred(h.a(NetworkArchiveRequest.field_E, 0, new String[]{vd.field_d}), var6, 40, 16777215, -1);
             fj.field_f.drawCentred(h.a(ch.field_c, 0, new String[]{vd.field_d}), var6, 60, 16777215, -1);
             o.field_h.drawCentred(h.a(vd.field_a, 0, new String[]{vg.field_r}), var6, 110, 16777215, -1);
-            fj.field_f.drawCentred(h.a(rb.field_t, 0, new String[]{vg.field_r}), var6, 130, 16777215, -1);
+            fj.field_f.drawCentred(h.a(NetworkGameClient.field_t, 0, new String[]{vg.field_r}), var6, 130, 16777215, -1);
             o.field_h.drawCentred(cm.field_b, var6, 180, 16777215, -1);
             fj.field_f.drawCentred(SocketConnector.field_d, var6, 200, 16777215, -1);
             IntrusiveDeque.a(var12, 1, 0, var12.field_y, 3, 0, var12.field_v, true);
@@ -977,7 +977,7 @@ final class wj extends fb {
           wj.clearStaticReferences((byte) -54);
         }
         if (this.field_s != null) {
-          this.field_s.a(true);
+          this.field_s.close(true);
         }
     }
 

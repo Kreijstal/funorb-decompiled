@@ -34,7 +34,7 @@ final class NodeHashTable {
         return null;
     }
 
-    final static void a(byte param0, int param1, BitmapFont param2, String param3, TextLineMetrics param4) {
+    final static void computeJustifiedCharacterOffsets(byte param0, int param1, BitmapFont param2, String param3, TextLineMetrics param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -187,7 +187,7 @@ final class NodeHashTable {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$1fdf1ca47e3f(int param0, int param1, BitmapFont param2, String param3, TextLineMetrics param4) {
+    final static void computeJustifiedCharacterOffsetsWithIntGuard(int param0, int param1, BitmapFont param2, String param3, TextLineMetrics param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;

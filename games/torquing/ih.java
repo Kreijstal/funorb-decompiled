@@ -75,7 +75,7 @@ class ih extends qf {
 
     final static void b(boolean param0) {
         if (null != vk.field_E) {
-          vk.field_E.a(param0);
+          vk.field_E.close(param0);
           vk.field_E = null;
         }
         if (!param0) {

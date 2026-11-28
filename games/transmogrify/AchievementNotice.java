@@ -57,7 +57,7 @@ final class AchievementNotice extends IntrusiveNode {
         }
     }
 
-    final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
+    final static String getAlternativeButtonPromptPrefix(byte param0, boolean param1, boolean param2, boolean param3) {
         int var4;
         int var4Lifetime1;
         if (param0 < -80) {
@@ -73,7 +73,7 @@ final class AchievementNotice extends IntrusiveNode {
           }
           return ba.field_l[var4];
         }
-        AchievementNotice.$cfr$intArgs$a$c7de0d339b2a(-80, false, false, false);
+        AchievementNotice.getAlternativeButtonPromptPrefixWithIntGuard(-80, false, false, false);
         var4Lifetime1 = 0;
         if (param3) {
           var4Lifetime1 += 4;
@@ -102,7 +102,7 @@ final class AchievementNotice extends IntrusiveNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static String $cfr$intArgs$a$c7de0d339b2a(int param0, boolean param1, boolean param2, boolean param3) {
+    final static String getAlternativeButtonPromptPrefixWithIntGuard(int param0, boolean param1, boolean param2, boolean param3) {
         int var4;
         int var4Lifetime1;
         if (param0 < -80) {
@@ -118,7 +118,7 @@ final class AchievementNotice extends IntrusiveNode {
           }
           return ba.field_l[var4];
         }
-        AchievementNotice.$cfr$intArgs$a$c7de0d339b2a(-80, false, false, false);
+        AchievementNotice.getAlternativeButtonPromptPrefixWithIntGuard(-80, false, false, false);
         var4Lifetime1 = 0;
         if (param3) {
           var4Lifetime1 += 4;

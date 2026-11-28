@@ -59,7 +59,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void enqueueWrite(int param0, int param1, int param2, byte[] param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -112,7 +112,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(boolean param0) throws IOException {
+    final void checkWriteError(boolean param0) throws IOException {
         if (!param0) {
           this.run();
           if (this.field_n) {
@@ -134,7 +134,7 @@ final class BufferedSocket implements Runnable {
         throw new IOException();
     }
 
-    final int b(int param0) throws IOException {
+    final int availableBytes(int param0) throws IOException {
         if (param0 != -30119) {
           String var3 = (String) null;
           BufferedSocket.a((byte) -118, (String) null);
@@ -311,7 +311,7 @@ final class BufferedSocket implements Runnable {
         return -1;
     }
 
-    final int a(int param0) throws IOException {
+    final int readByteOrEof(int param0) throws IOException {
         if (this.field_n) {
           return 0;
         }
@@ -323,10 +323,10 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.d(2);
+        this.close(2);
     }
 
-    final void a(byte param0, int param1, int param2, byte[] param3) throws IOException {
+    final void readFully(byte param0, int param1, int param2, byte[] param3) throws IOException {
         int var5_int = 0;
         int var6 = SolKnight.field_L ? 1 : 0;
         if (this.field_n) {
@@ -423,7 +423,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (ab.field_q.indexOf(var5Lifetime1) == -1) {
+              if (NetworkGameClient.field_q.indexOf(var5Lifetime1) == -1) {
                 stackIn_42_0 = SingleChildWidgetContainer.field_C;
                 return stackIn_42_0;
               }
@@ -511,7 +511,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void d(int param0) {
+    final void close(int param0) {
         try {
           InterruptedException var2 = null;
           int var4 = 0;

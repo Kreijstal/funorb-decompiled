@@ -40,7 +40,7 @@ final class pe {
         field_a = null;
     }
 
-    final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
+    final static String getAlternativeButtonPromptPrefix(boolean param0, boolean param1, byte param2, boolean param3) {
         int var5 = 0;
         int var4 = 0;
         int var5Lifetime1;
@@ -77,7 +77,7 @@ final class pe {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static String $cfr$intArgs$a$3214d41809e1(boolean param0, boolean param1, int param2, boolean param3) {
+    final static String getAlternativeButtonPromptPrefixWithIntGuard(boolean param0, boolean param1, int param2, boolean param3) {
         int var5 = 0;
         int var4 = 0;
         int var5Lifetime1;

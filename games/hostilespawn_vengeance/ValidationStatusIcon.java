@@ -586,7 +586,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
             if (pj.field_e == 80) {
               stackIn_201_0 = -123;
               stackIn_202_1 = !(hk.field_q);
-              ec.$cfr$intArgs$a$7ffe4b125357(stackIn_201_0, stackIn_202_1);
+              ec.setAlternateMovementKeysWithIntGuard(stackIn_201_0, stackIn_202_1);
             }
           }
           stackIn_205_0Lifetime1 = ~FullscreenNoticeType.field_c;

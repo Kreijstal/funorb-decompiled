@@ -239,7 +239,7 @@ final class ca {
                     !var7.field_Eb.field_F) {
                     if (var7.field_L != 0) {
                       var16 = var7.field_Fb;
-                      DirectByteStorage.$cfr$intArgs$a$c398e174f2fe(0L, (String) null, 68, ValidationStatusWidget.field_bb.field_Kb, -1, var7, (int[]) null, -1, var16);
+                      DirectByteStorage.createPlayerActionContextWithIntGuard(0L, (String) null, 68, ValidationStatusWidget.field_bb.field_Kb, -1, var7, (int[]) null, -1, var16);
                       if (var7.field_Lb != null &&
                         !am.a(false, pi.field_d.field_i) &&
                         !qf.field_b) {

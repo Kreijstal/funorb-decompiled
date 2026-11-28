@@ -8,7 +8,7 @@ public final class CrazyCrystals extends NetworkGameClient {
 
     public final void init() {
         try {
-          this.a(-1, "crazycrystals", 14);
+          this.startWithDefaultSize(-1, "crazycrystals", 14);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "CrazyCrystals.init()");
         }
@@ -1705,7 +1705,7 @@ public final class CrazyCrystals extends NetworkGameClient {
     }
 
     final void initializeClient(byte param0) {
-        this.a(13, 10, (byte) 111, false, 12, 6, 11, 15);
+        this.initializeFramework(13, 10, (byte) 111, false, 12, 6, 11, 15);
         fe.field_g = this;
         if (param0 != -82) {
           return;
@@ -1755,7 +1755,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           hb.field_h.serviceOutput();
           gf.field_c.serviceOutput();
           stackIn_19_1 = (RegistrationAgreementPane.field_E != null);
-          this.a(stackIn_19_1, 15000);
+          this.serviceFramework(stackIn_19_1, 15000);
           if (hb.field_g) {
             this.d(true);
             hb.field_g = false;
@@ -1915,7 +1915,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             }
             while (true) {
               if (ee.a(ai.field_c, 64)) {
-                this.l(-124);
+                this.dispatchCommonPacket(-124);
                 if (var5 == 0) {
                   continue;
                 }
@@ -1927,7 +1927,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             if (!BoundedRandomAccessFile.c(-11)) {
               return;
             }
-            var2_intLifetime1 = this.i(-1);
+            var2_intLifetime1 = this.attemptReconnect(-1);
             if (var2_intLifetime1 == 0 ||
               var2_intLifetime1 == 1) {
               ue.a(2, -109);
@@ -1952,7 +1952,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             dg.a(false, 50);
             ti.field_o = false;
           }
-          this.k(6579);
+          this.updateLoginFlow(6579);
           if (kf.b(45)) {
             this.a(false, (byte) 103);
           }

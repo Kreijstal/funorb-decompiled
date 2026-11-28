@@ -44,11 +44,11 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
           return DelegatingCanvas.a(param1, 5200, param3, param4, param2, false);
         }
         String var6 = (String) null;
-        GuestPlayConfirmationForm.$cfr$intArgs$a$e5d4dced95c1((String) null, 56, false, true);
+        GuestPlayConfirmationForm.showLoginDialogWithIntGuard((String) null, 56, false, true);
         return DelegatingCanvas.a(param1, 5200, param3, param4, param2, false);
     }
 
-    final static void a(String param0, byte param1, boolean param2, boolean param3) {
+    final static void showLoginDialog(String param0, byte param1, boolean param2, boolean param3) {
         try {
           bg.a(false);
           bm.field_d.closeAllDialogs(7920);
@@ -66,7 +66,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
     final static boolean a(int param0, char param1) {
         if (param0 != -20625) {
           String var3 = (String) null;
-          GuestPlayConfirmationForm.$cfr$intArgs$a$e5d4dced95c1((String) null, -28, true, true);
+          GuestPlayConfirmationForm.showLoginDialogWithIntGuard((String) null, -28, true, true);
           if (48 > param1) {
             return false;
           }
@@ -121,7 +121,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
 
     final static void a(int[] param0, int param1, int param2, int param3) {
         try {
-          StandardContentDialog.$cfr$intArgs$a$c64d0b17f51c(53, 0, 160, 0, param2, 120, SoftwareRasterizer.field_b, 0, 0, param3, 1920, param0);
+          StandardContentDialog.blurAndCompositeRasterRowsWithIntGuard(53, 0, 160, 0, param2, 120, SoftwareRasterizer.field_b, 0, 0, param3, 1920, param0);
           jl.a(0, 160, param1, 0, -1, 120, 0, 0, SoftwareRasterizer.field_b, 0);
         } catch (RuntimeException runtimeException) {
           throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "hm.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -169,7 +169,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$e5d4dced95c1(String param0, int param1, boolean param2, boolean param3) {
+    final static void showLoginDialogWithIntGuard(String param0, int param1, boolean param2, boolean param3) {
         try {
           bg.a(false);
           bm.field_d.closeAllDialogs(7920);

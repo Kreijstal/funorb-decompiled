@@ -16,8 +16,8 @@ final class ll {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(int param0, ResourceArchive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2609_0;
             StringBuilder stackIn_2609_1;
             String stackIn_2610_2;
@@ -29,7 +29,7 @@ final class ll {
             int param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2609_0 = null;
@@ -41,7 +41,7 @@ final class ll {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 ve.field_z = param1;
                 var2 = te.a("loginm3", -107);
                 if (null != var2) {
@@ -1011,7 +1011,7 @@ final class ll {
                   TextLineMetrics.a(var2, (byte) -40);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 var2 = te.a("cancel", -120);
                 if (var2 != null) {
                   af.field_b = TextLineMetrics.a(var2, (byte) -116);
@@ -1930,7 +1930,7 @@ final class ll {
                 }
                 var2 = te.a("achievementsthissession", -82);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   TextLineMetrics.a(var2, (byte) 106);
                 }
@@ -2880,7 +2880,7 @@ final class ll {
                 }
                 var2 = te.a("mustlogin3,1", -78);
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadLoginPromptsAndSubscriptionText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   lh.field_d[1] = TextLineMetrics.a(var2, (byte) 123);
                 }
@@ -3033,13 +3033,13 @@ final class ll {
             void run() {
                 var3 = MonkeyPuzzle2.field_F ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadLoginPromptsAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3059,7 +3059,7 @@ final class ll {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 
@@ -3068,7 +3068,7 @@ final class ll {
           return;
         }
         try {
-          bd.$cfr$intArgs$a$b1efba5c64a3(param2, 98, param1, (String) null);
+          bd.showLoginDialogWithIntGuard(param2, 98, param1, (String) null);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ll.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }

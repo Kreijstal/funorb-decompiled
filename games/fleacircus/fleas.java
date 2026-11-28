@@ -79,7 +79,7 @@ public final class fleas extends NetworkGameClient {
         try {
           boolean decompiledFrameCompleted4 = true;
           if (10 == fl.field_c[param3][param0]) {
-            fh.$cfr$intArgs$a$cb0bc10e6b69(105, ab.field_a, 100, 63);
+            fh.startPcmSamplePlaybackWithIntGuard(105, ab.field_a, 100, 63);
             lj.field_c[uf.field_h] = param3;
             fb.field_e[uf.field_h] = param0;
             nc.field_a[uf.field_h] = PacketBuffer.field_j;
@@ -132,7 +132,7 @@ public final class fleas extends NetworkGameClient {
           }
           boolean decompiledFrameCompleted3 = true;
           if (stackIn_27_0 == 5) {
-            fh.$cfr$intArgs$a$cb0bc10e6b69(102, ih.field_l, 100, 63);
+            fh.startPcmSamplePlaybackWithIntGuard(102, ih.field_l, 100, 63);
             fl.field_c[param3][param0] = '\0';
             this.a((byte) -117, param0, param3);
             jd.field_o[param2] = 1;
@@ -159,7 +159,7 @@ public final class fleas extends NetworkGameClient {
             fl.field_c[param3][param0] = '!';
             field_G[param3][param0] = 2;
             jd.field_o[param2] = 2;
-            fh.$cfr$intArgs$a$cb0bc10e6b69(-70, me.field_k, 100, 384 / ee.field_h);
+            fh.startPcmSamplePlaybackWithIntGuard(-70, me.field_k, 100, 384 / ee.field_h);
             ee.field_h = ee.field_h + 12;
             if (ee.field_h > 32) {
               ee.field_h = 32;
@@ -189,7 +189,7 @@ public final class fleas extends NetworkGameClient {
               if (stackIn_74_0 == stackIn_74_1 ||
                 uf.field_b[var7Lifetime1] != 4) {
                 uf.field_b[var7Lifetime1] = 4;
-                fh.$cfr$intArgs$a$cb0bc10e6b69(-91, hi.field_p, 100, 63);
+                fh.startPcmSamplePlaybackWithIntGuard(-91, hi.field_p, 100, 63);
               }
               if (~pl.field_g != ~var7Lifetime1) {
                 break;
@@ -208,7 +208,7 @@ public final class fleas extends NetworkGameClient {
             3 != param4) {
             cl.field_d[param2] = 1;
             EditableTextField.field_U = true;
-            fh.$cfr$intArgs$a$cb0bc10e6b69(-59, SectorCacheStore.field_a, 100, 63);
+            fh.startPcmSamplePlaybackWithIntGuard(-59, SectorCacheStore.field_a, 100, 63);
           }
           if (16 == fl.field_c[param3][param0] ||
             fl.field_c[param3][param0] == 29) {
@@ -230,13 +230,13 @@ public final class fleas extends NetworkGameClient {
                 0 >= IntrusiveNode.field_e[4 + var10 * 4][4 * var11]) {
                 qg.field_a[param2] = 16 + 16 * var10;
                 dh.field_b[param2] = var11 * 16;
-                fh.$cfr$intArgs$a$cb0bc10e6b69(89, uh.field_s, 100, 63);
+                fh.startPcmSamplePlaybackWithIntGuard(89, uh.field_s, 100, 63);
               }
               if (0 > ge.field_a[param2] &&
                 IntrusiveNode.field_e[var10 * 4 - 1][4 * var11] <= 0) {
                 qg.field_a[param2] = var10 * 16 - 4;
                 dh.field_b[param2] = 16 * var11;
-                fh.$cfr$intArgs$a$cb0bc10e6b69(116, uh.field_s, 100, 63);
+                fh.startPcmSamplePlaybackWithIntGuard(116, uh.field_s, 100, 63);
               }
             }
           }
@@ -245,7 +245,7 @@ public final class fleas extends NetworkGameClient {
             cl.field_d[param2] = 1;
             pl.field_f = pl.field_f + 1;
             wi.field_p.a(-121, 100);
-            fh.$cfr$intArgs$a$cb0bc10e6b69(102, nb.field_f, 100, 63);
+            fh.startPcmSamplePlaybackWithIntGuard(102, nb.field_f, 100, 63);
           }
           if (!param1) {
             field_K = (SoundCache) null;
@@ -258,7 +258,7 @@ public final class fleas extends NetworkGameClient {
             } else {
               stackIn_144_1 = hg.field_k;
             }
-            fh.$cfr$intArgs$a$cb0bc10e6b69(stackIn_143_0, stackIn_144_1, 100, 63);
+            fh.startPcmSamplePlaybackWithIntGuard(stackIn_143_0, stackIn_144_1, 100, 63);
             ue.field_d = -ue.field_d;
             md.field_L = -md.field_L;
             we.field_c = 3;
@@ -270,7 +270,7 @@ public final class fleas extends NetworkGameClient {
           boolean decompiledFrameCompleted2 = true;
           if (fl.field_c[param3][param0] == 21 &&
             param4 < 2) {
-            fh.$cfr$intArgs$a$cb0bc10e6b69(-102, fg.field_l, 100, 63);
+            fh.startPcmSamplePlaybackWithIntGuard(-102, fg.field_l, 100, 63);
             fl.field_c[param3][param0] = '\0';
             this.a((byte) -115, param0, param3);
             ge.field_a[param2] = -ge.field_a[param2];
@@ -302,7 +302,7 @@ public final class fleas extends NetworkGameClient {
           }
           boolean decompiledFrameCompleted1 = true;
           if (fl.field_c[param3][param0] == 23) {
-            fh.$cfr$intArgs$a$cb0bc10e6b69(-120, ByteArrayPoolSupport.field_g, 100, 63);
+            fh.startPcmSamplePlaybackWithIntGuard(-120, ByteArrayPoolSupport.field_g, 100, 63);
             if (15 == tj.field_a &&
               field_E == 0) {
               hg.a(-25389, 4, 251, tj.field_a);
@@ -355,7 +355,7 @@ public final class fleas extends NetworkGameClient {
           }
           boolean decompiledFrameCompleted0 = true;
           if (stackIn_208_0 == 24) {
-            fh.$cfr$intArgs$a$cb0bc10e6b69(117, ByteArrayPoolSupport.field_g, 100, 63);
+            fh.startPcmSamplePlaybackWithIntGuard(117, ByteArrayPoolSupport.field_g, 100, 63);
             var6_intLifetime3 = 0;
             while (true) {
               stackIn_213_0 = 40;
@@ -425,7 +425,7 @@ public final class fleas extends NetworkGameClient {
               }
             }
             cl.field_d[param2] = 1;
-            fh.$cfr$intArgs$a$cb0bc10e6b69(87, kc.field_e, 100, 63);
+            fh.startPcmSamplePlaybackWithIntGuard(87, kc.field_e, 100, 63);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -857,7 +857,7 @@ public final class fleas extends NetworkGameClient {
             if (DiskCacheWorker.field_g >= 16) {
               if (DiskCacheWorker.field_g == 16 &&
                 ValidatedTextField.field_V == 10) {
-                fh.$cfr$intArgs$a$cb0bc10e6b69(114, jd.field_q, 100, 63);
+                fh.startPcmSamplePlaybackWithIntGuard(114, jd.field_q, 100, 63);
               }
               if (3 != ab.field_b) {
               }
@@ -1512,7 +1512,7 @@ public final class fleas extends NetworkGameClient {
             cm.a((byte) -28);
           }
           stackIn_11_1 = (ResourceArchive.field_p != null);
-          this.b(stackIn_11_1, (byte) 63);
+          this.serviceFramework(stackIn_11_1, (byte) 63);
           if (d.field_Q) {
             this.f(true);
             d.field_Q = false;
@@ -1586,7 +1586,7 @@ public final class fleas extends NetworkGameClient {
             }
           }
           if (mc.b((byte) 80)) {
-            this.f((byte) -124);
+            this.updateLoginFlow((byte) -124);
             if (mc.b((byte) -112)) {
               if (nl.a(52)) {
                 discarded$0 = this.b(false, 47);
@@ -1651,7 +1651,7 @@ public final class fleas extends NetworkGameClient {
                 if (uk.b(param0 - 6434)) {
                   stackIn_165_1 = -81;
                   stackIn_166_2 = (ResourceArchive.field_p != null);
-                  var2_int = this.a((byte) stackIn_165_1, stackIn_166_2);
+                  var2_int = this.pollAccountUiActions((byte) stackIn_165_1, stackIn_166_2);
                   if (1 == var2_int ||
                     2 == var2_int) {
                     if (null != ResourceArchive.field_p) {
@@ -1702,10 +1702,10 @@ public final class fleas extends NetworkGameClient {
               SingleChildWidgetContainer.b((byte) 41, 0);
               break;
             }
-            this.g(-12);
+            this.dispatchCommonPacket(-12);
           } while (var3 == 0);
           if (StripedProgressWidget.i(param0 ^ 21424)) {
-            var2_int = this.e(false);
+            var2_int = this.reconnectAndResendRequests(false);
             if (var2_int == 2) {
               GrowableIntArray.a(false);
             }
@@ -1924,14 +1924,14 @@ public final class fleas extends NetworkGameClient {
     }
 
     final void initializeClient(byte param0) {
-        this.a(9, 11, 22, false, 0, 8, 8, 10);
+        this.initializeFramework(9, 11, 22, false, 0, 8, 8, 10);
         MidiPcmStream var2 = new MidiPcmStream();
         var2.setChannelProgram(9, 128, 238);
         ByteStorage.a(220, var2, 22050, 11, 22050, fg.field_q, (java.awt.Component) ((Object) ol.field_e), true);
         fb.field_c = 0;
         rg.field_n = 1;
         cm.field_j = 0;
-        this.a(false, true, true, true, param0 ^ 100);
+        this.configureOptionalPacketHandlers(false, true, true, true, param0 ^ 100);
         field_F = new Random();
         if (param0 != -14) {
           return;
@@ -1945,7 +1945,7 @@ public final class fleas extends NetworkGameClient {
 
     public final void init() {
         try {
-          this.a(12, 8, "fleacircus");
+          this.startWithDefaultSize(12, 8, "fleacircus");
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "fleas.init()");
         }
@@ -1997,7 +1997,7 @@ public final class fleas extends NetworkGameClient {
                       stackIn_28_1 = IntrusiveNode.field_e[param2][param1];
                       if (stackIn_28_0 != stackIn_28_1) {
                         if (ik.field_R) {
-                          fh.$cfr$intArgs$a$cb0bc10e6b69(107, gi.field_d, 100, 96);
+                          fh.startPcmSamplePlaybackWithIntGuard(107, gi.field_d, 100, 96);
                           ik.field_R = false;
                         }
                         return;
@@ -2015,7 +2015,7 @@ public final class fleas extends NetworkGameClient {
                 } else {
                   stackIn_48_1 = BoundedRandomAccessFile.field_g;
                 }
-                fh.$cfr$intArgs$a$cb0bc10e6b69(stackIn_44_0, stackIn_48_1, 100, 63);
+                fh.startPcmSamplePlaybackWithIntGuard(stackIn_44_0, stackIn_48_1, 100, 63);
                 ik.field_R = false;
                 fl.field_c[var4_int][var5] = (char)(1 + mh.field_u);
                 this.a((byte) -91, var5, var4_int);
@@ -2520,7 +2520,7 @@ public final class fleas extends NetworkGameClient {
                       fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = '\b';
                     } else {
                       if (fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] == 8) {
-                        fh.$cfr$intArgs$a$cb0bc10e6b69(-91, bf.field_d, 100, 63);
+                        fh.startPcmSamplePlaybackWithIntGuard(-91, bf.field_d, 100, 63);
                       }
                       fl.field_c[GrowableIntArray.field_h[var3Lifetime2]][uf.field_e[var3Lifetime2]] = '\t';
                     }
@@ -2550,7 +2550,7 @@ public final class fleas extends NetworkGameClient {
             if (!(1 <= qg.field_c)) {
               nb.field_b = nb.field_b + 1;
               qg.field_c = 6;
-              fh.$cfr$intArgs$a$cb0bc10e6b69(105, FullscreenStatusDialog.field_ab, 100, 63);
+              fh.startPcmSamplePlaybackWithIntGuard(105, FullscreenStatusDialog.field_ab, 100, 63);
               if (var24 != 0) {
                 qg.field_c = -1;
               }
@@ -2572,7 +2572,7 @@ public final class fleas extends NetworkGameClient {
                 jd.field_o[var3Lifetime3] != 1 &&
                 fl.field_c[qg.field_a[var3Lifetime3] / 16][dh.field_b[var3Lifetime3] / 16] == 2) {
                 cl.field_d[var3Lifetime3] = 1;
-                fh.$cfr$intArgs$a$cb0bc10e6b69(-77, fi.field_n, 100, 63);
+                fh.startPcmSamplePlaybackWithIntGuard(-77, fi.field_n, 100, 63);
               }
               if (cl.field_d[var3Lifetime3] == 0) {
                 var7Lifetime1 = qg.field_a[var3Lifetime3];
@@ -2682,13 +2682,13 @@ public final class fleas extends NetworkGameClient {
                         jd.field_o[var3Lifetime3] = 0;
                         var9 = -4;
                         ge.field_a[var3Lifetime3] = -4;
-                        fh.$cfr$intArgs$a$cb0bc10e6b69(89, hg.field_n, 100, 63);
+                        fh.startPcmSamplePlaybackWithIntGuard(89, hg.field_n, 100, 63);
                       }
                       decompiledFrameRemainder2 = false;
                     }
                     else {
                       cl.field_d[var3Lifetime3] = 1;
-                      fh.$cfr$intArgs$a$cb0bc10e6b69(86, fi.field_n, 100, 63);
+                      fh.startPcmSamplePlaybackWithIntGuard(86, fi.field_n, 100, 63);
                     }
                   }
                   if (2 == jd.field_o[var3Lifetime3]) {
@@ -2746,7 +2746,7 @@ public final class fleas extends NetworkGameClient {
                   jd.field_o[var4Lifetime2] != 0 ||
                   qg.field_a[var4Lifetime2] / 16 != var5Lifetime1 ||
                   var6Lifetime1 * 4 - 1 != dh.field_b[var4Lifetime2] / 4) {
-                  fh.$cfr$intArgs$a$cb0bc10e6b69(101, hf.field_g, 100, 63);
+                  fh.startPcmSamplePlaybackWithIntGuard(101, hf.field_g, 100, 63);
                   fl.field_c[var5Lifetime1][var6Lifetime1] = '\0';
                   this.a((byte) -79, var6Lifetime1, var5Lifetime1);
                   var20Lifetime1 = 0;
@@ -2796,7 +2796,7 @@ public final class fleas extends NetworkGameClient {
                     (var8Lifetime2Lifetime1 + 20) > dh.field_b[var4Lifetime2Lifetime1]) {
                     if (0 == cl.field_d[var4Lifetime2Lifetime1]) {
                       cl.field_d[var4Lifetime2Lifetime1] = 1;
-                      fh.$cfr$intArgs$a$cb0bc10e6b69(93, fi.field_n, 100, 63);
+                      fh.startPcmSamplePlaybackWithIntGuard(93, fi.field_n, 100, 63);
                     }
                     IntrusiveNode.field_e[qg.field_a[var4Lifetime2Lifetime1] / 4][dh.field_b[var4Lifetime2Lifetime1] / 4] = 0;
                   }

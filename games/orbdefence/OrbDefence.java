@@ -25,7 +25,7 @@ public final class OrbDefence extends NetworkGameClient {
         }
         stackIn_5_1 = 123;
         stackIn_6_2 = (PacketBuffer.field_k != null);
-        this.b(stackIn_5_1, stackIn_6_2);
+        this.serviceFramework(stackIn_5_1, stackIn_6_2);
         if (gi.field_b) {
           this.g((byte) -123);
           gi.field_b = false;
@@ -64,7 +64,7 @@ public final class OrbDefence extends NetworkGameClient {
             if (!rl.a((byte) 106)) {
               if (DialogMessagePane.k(783)) {
                 stackIn_31_1 = (null != PacketBuffer.field_k);
-                var2 = this.a(stackIn_31_1, false);
+                var2 = this.pollAccountUiActions(stackIn_31_1, false);
                 if (var2 == 1 ||
                   var2 == 2) {
                   if (null != PacketBuffer.field_k) {
@@ -111,11 +111,11 @@ public final class OrbDefence extends NetworkGameClient {
           }
         }
         while (uj.a(tg.field_b, -16)) {
-          this.e((byte) -115);
+          this.dispatchCommonPacket((byte) -115);
         }
         bh.a(0, -1);
         if (ModalDialog.c(true)) {
-          var3 = this.j(7);
+          var3 = this.reconnectAndResendRequests(7);
           if (2 == var3) {
             md.b((byte) -121);
           }
@@ -696,7 +696,7 @@ public final class OrbDefence extends NetworkGameClient {
           } else {
             stackIn_40_1 = true;
           }
-          fg.$cfr$intArgs$a$7ffe4b125357(stackIn_39_0, stackIn_40_1);
+          fg.drawModalOverlayWithIntGuard(stackIn_39_0, stackIn_40_1);
         }
         if (2 <= AccountRequestState.field_d) {
           RegistrationAgreementPane.field_I.drawString(Integer.toString(ud.field_f), 20, 20, 16777215, 1);
@@ -730,7 +730,7 @@ public final class OrbDefence extends NetworkGameClient {
     }
 
     final void initializeClient(byte param0) {
-        this.a(false, (byte) 88, 10, 3, 1, 0, 2, 60);
+        this.initializeFramework(false, (byte) 88, 10, 3, 1, 0, 2, 60);
         int var3 = 112 / ((param0 + 4) / 39);
         MidiPcmStream var2 = new MidiPcmStream();
         var2.setChannelProgram(128, 9, (byte) 125);
@@ -1071,7 +1071,7 @@ public final class OrbDefence extends NetworkGameClient {
     }
 
     public final void init() {
-        this.a(11, "orbdefence", (byte) 20);
+        this.startWithDefaultSize(11, "orbdefence", (byte) 20);
     }
 
     private final void e(boolean param0) {

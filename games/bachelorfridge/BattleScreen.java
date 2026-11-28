@@ -961,7 +961,7 @@ final class BattleScreen extends dfa {
         if (param0 != -1) {
           this.field_x = (Sprite) null;
         }
-        IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(this.field_Y, 94, var7);
+        IncomingSpecial.sortObjectsByIntKeyWithIntGuard(this.field_Y, 94, var7);
         this.field_f = 5;
     }
 
@@ -1694,7 +1694,7 @@ final class BattleScreen extends dfa {
           }
           if (var2 != null) {
             stackIn_8_0 = -106;
-            RageAnimation.$cfr$intArgs$a$94cfdbf41ae0(stackIn_8_0, var2, param1);
+            RageAnimation.insertAdjacentNodeWithIntGuard(stackIn_8_0, var2, param1);
           } else {
             aa.field_l.addLast(param1, true);
           }

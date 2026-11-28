@@ -27,7 +27,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         vk.field_w[17] = true;
     }
 
-    private final void i(int param0) {
+    private final void readSessionCookieUpdate(int param0) {
         String var2 = fb.c(-128);
         lh.a(uj.b((byte) -120), var2, false);
         int var3 = -120 / ((54 - param0) / 43);
@@ -40,14 +40,14 @@ abstract class NetworkGameClient extends GameAppletShell {
         vk.field_w[2] = true;
     }
 
-    final void a(boolean param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void initializeFramework(boolean param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         java.awt.Frame var11 = new java.awt.Frame("Jagex");
         var11.pack();
         var11.dispose();
         this.setBackground(java.awt.Color.black);
         if (param1 <= 41) {
           String var10 = (String) null;
-          this.a(114, (String) null, (byte) 126);
+          this.startWithDefaultSize(114, (String) null, (byte) 126);
         }
         ArchiveRequest.field_m = this.field_A;
         EmailFormatValidator.a(ArchiveRequest.field_m, (byte) -108);
@@ -61,7 +61,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         ProgressDialog.field_Q = param6;
         ValidatedTextField.field_V = param4;
         nl.field_b = param2;
-        this.f((byte) 56);
+        this.initializePacketLengths((byte) 56);
         tl.b(103);
     }
 
@@ -69,7 +69,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var2 = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         if (param0 >= -108) {
-          this.i(-72);
+          this.readSessionCookieUpdate(-72);
         }
         int var4 = GameAppletShell.field_c - 1;
         byte[] var5 = new byte[var4];
@@ -77,16 +77,16 @@ abstract class NetworkGameClient extends GameAppletShell {
         ke.a(ProxyAuthenticationRequiredException.a(var5, -12465), var3 != 0, (byte) -94, uj.b((byte) -120));
     }
 
-    final void a(int param0, String param1, byte param2) {
+    final void startWithDefaultSize(int param0, String param1, byte param2) {
         try {
           int var4_int = 68 % ((-44 - param2) / 62);
-          this.a(480, 73, 640, param1, param0);
+          this.readAppletParameters(480, 73, 640, param1, param0);
         } catch (RuntimeException runtimeException) {
           throw DraggableWidgetContainer.wrapClientException((Throwable) ((Object) runtimeException), "ph.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    private final int a(boolean param0, int param1, boolean param2) {
+    private final int processAccountUiActions(boolean param0, int param1, boolean param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;
@@ -251,7 +251,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    final void e(byte param0) {
+    final void dispatchCommonPacket(byte param0) {
         int discarded$0 = 0;
         boolean stackIn_34_0 = false;
         int var2;
@@ -262,7 +262,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (var2 < 64 &&
           vk.field_w[var2]) {
           if (param0 > -108) {
-            discarded$0 = this.a(false, 60, true);
+            discarded$0 = this.processAccountUiActions(false, 60, true);
           }
           if (var2 == 0) {
             return;
@@ -310,7 +310,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                           fb.a(NetworkArchiveRequest.field_t, GameAppletShell.field_c, -31, wc.field_c);
                         }
                       } else {
-                        this.i(-22);
+                        this.readSessionCookieUpdate(-22);
                       }
                     }
                   } else {
@@ -330,7 +330,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         th.a(102);
     }
 
-    private final void a(int param0, int param1, int param2, String param3, int param4) {
+    private final void readAppletParameters(int param0, int param1, int param2, String param3, int param4) {
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -346,7 +346,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         String var11 = null;
         try {
           try {
-            if (!this.c(1)) {
+            if (!this.allowAppletStartup(1)) {
               return;
             }
             this.field_n = this.getCodeBase().getHost();
@@ -375,13 +375,13 @@ abstract class NetworkGameClient extends GameAppletShell {
               this.field_o = Integer.parseInt(var10);
             }
             field_v = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(-10291, this.field_s, param4, param2, param0, param3, 32);
+            this.startApplet(-10291, this.field_s, param4, param2, param0, param3, 32);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var11 = (String) null;
             MouseWheelInput.a((byte) -13, (Throwable) ((Object) var6_ref), (String) null);
-            this.a(110, "crash");
+            this.showErrorPage(110, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -398,12 +398,12 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    final int j(int param0) {
+    final int reconnectAndResendRequests(int param0) {
         int var2;
         if (param0 != 7) {
           return -15;
         }
-        var2 = this.h(-10125);
+        var2 = this.attemptReconnect(-10125);
         if (var2 == 0 ||
           var2 == 1) {
           if (vk.field_w[1]) {
@@ -431,7 +431,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         return var2;
     }
 
-    final void b(int param0, boolean param1) {
+    final void serviceFramework(int param0, boolean param1) {
         int stackIn_23_0 = 0;
         String stackIn_103_0 = null;
         int stackIn_103_1 = 0;
@@ -522,18 +522,18 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (DualLinkNode.field_j != 4) {
                 if (DualLinkNode.field_j != 2) {
                   if (5 != DualLinkNode.field_j) {
-                    this.a(119, "js5connect");
+                    this.showErrorPage(119, "js5connect");
                   } else {
-                    this.a(99, "outofdate");
+                    this.showErrorPage(99, "outofdate");
                   }
                 } else {
-                  this.a(124, "js5connect_full");
+                  this.showErrorPage(124, "js5connect_full");
                 }
               } else {
-                this.a(125, "js5io");
+                this.showErrorPage(125, "js5io");
               }
             } else {
-              this.a(101, "js5crc");
+              this.showErrorPage(101, "js5crc");
             }
           }
         }
@@ -574,7 +574,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               lf.field_a = null;
             } else {
               if (lf.field_a.tryLoadGroupByName((byte) -61, "")) {
-                lm.a((byte) 116, lf.field_a);
+                lm.loadSharedInterfaceText((byte) 116, lf.field_a);
                 lf.field_a = null;
                 SoundCache.resetFrameTiming(42);
               }
@@ -598,7 +598,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             stackIn_103_1 = 33;
             stackIn_104_2 = !(gj.field_k);
             stackIn_107_3 = !(gj.field_k);
-            GuestPlayConfirmationForm.$cfr$intArgs$a$e5d4dced95c1(stackIn_103_0, stackIn_103_1, stackIn_104_2, stackIn_107_3);
+            GuestPlayConfirmationForm.showLoginDialogWithIntGuard(stackIn_103_0, stackIn_103_1, stackIn_104_2, stackIn_107_3);
           }
           if (field_v) {
             SingleChildWidgetContainer.j(4);
@@ -663,7 +663,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     private final void f(int param0) {
         int discarded$0 = 0;
         if (param0 != -2) {
-          discarded$0 = this.h(122);
+          discarded$0 = this.attemptReconnect(122);
         }
         vk.field_w[5] = true;
     }
@@ -684,7 +684,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    private final void f(byte param0) {
+    private final void initializePacketLengths(byte param0) {
         tg.field_b[13] = -1;
         tg.field_b[10] = -1;
         tg.field_b[8] = -2;
@@ -706,11 +706,11 @@ abstract class NetworkGameClient extends GameAppletShell {
         tg.field_b[4] = -1;
     }
 
-    final int a(boolean param0, boolean param1) {
+    final int pollAccountUiActions(boolean param0, boolean param1) {
         if (param1) {
           return -18;
         }
-        return this.a(true, -1, param0);
+        return this.processAccountUiActions(true, -1, param0);
     }
 
     final void c(boolean param0) {
@@ -735,14 +735,14 @@ abstract class NetworkGameClient extends GameAppletShell {
             stackIn_12_0 = this;
             stackIn_12_3 = true;
           }
-          discarded$4 = this.a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
+          discarded$4 = this.processAccountUiActions(stackIn_11_1, stackIn_11_2, stackIn_12_3);
         } else {
           if (10 <= vh.field_n) {
             if (AccountRegistrationPanel.l(-108)) {
               if (TextFieldValidator.field_k != 0) {
                 EditableTextField.a(false, of.field_K);
               } else {
-                discarded$5 = this.a(false, -1, false);
+                discarded$5 = this.processAccountUiActions(false, -1, false);
               }
             } else {
               id.b(false);
@@ -751,7 +751,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    private final int h(int param0) {
+    private final int attemptReconnect(int param0) {
         int var2;
         if (this.field_h) {
           return -1;
@@ -779,7 +779,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           } else {
             if (!StandardContentDialog.field_Y) {
-              this.a(111, "reconnect");
+              this.showErrorPage(111, "reconnect");
             }
             md.b((byte) -111);
             BitPacketBuffer.showLobbyDialog(ValidationStatusWidget.field_Y, (byte) -81, var2);

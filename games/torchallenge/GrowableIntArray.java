@@ -130,7 +130,7 @@ final class GrowableIntArray {
             }
             stackIn_38_0 = -18;
             stackIn_39_1 = !(var4 < 0);
-            var7Lifetime1 = ki.$cfr$intArgs$a$62abead39cee(stackIn_38_0, stackIn_39_1, var6);
+            var7Lifetime1 = ki.measureSelectedFontTextWidthWithIntGuard(stackIn_38_0, stackIn_39_1, var6);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + AccountRegistrationPanel.field_ab;
             if (var4 >= 0) {
               var1_int = var1_int + uc.field_Y;

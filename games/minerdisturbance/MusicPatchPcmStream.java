@@ -317,7 +317,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final static int a(boolean param0, int param1, ob param2) {
+    final static int a(boolean param0, int param1, NetworkGameClient param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -327,7 +327,7 @@ final class MusicPatchPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 104 % ((-3 - param1) / 48);
-          stackIn_1_0 = param2.c(param0, true);
+          stackIn_1_0 = param2.pollAccountUiActions(param0, true);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

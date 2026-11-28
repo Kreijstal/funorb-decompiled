@@ -177,7 +177,7 @@ final class qc {
 
     final static void a(boolean param0, boolean param1, int param2) {
         String var4 = (String) null;
-        sj.$cfr$intArgs$a$b1efba5c64a3(param1, 68, param0, (String) null);
+        sj.showLoginDialogWithIntGuard(param1, 68, param0, (String) null);
         if (param2 <= 104) {
           qc.a(false, true, 19);
         }

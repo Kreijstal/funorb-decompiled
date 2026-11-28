@@ -1023,7 +1023,7 @@ final class re {
           var2 = 200;
           var3 = qa.field_b.field_x + qa.field_b.field_q;
           var2 = var2 + (var3 * qa.field_b.lineCount(d.field_e, 389) + 6);
-          var2 = var2 + (qa.field_b.lineCount(dh.$cfr$intArgs$a$feb7e63b59d8(0 != nb.field_e ? true : false, -94, false, AgeValidator.field_m != 0 ? true : false), 389) * var3 + 6);
+          var2 = var2 + (qa.field_b.lineCount(dh.getSaveResultsLoginPromptWithIntGuard(0 != nb.field_e ? true : false, -94, false, AgeValidator.field_m != 0 ? true : false), 389) * var3 + 6);
           cj.field_l[this.field_i] = var2 - 33;
           kb.field_b[this.field_i] = this.b(0, (byte) 17) + 12 + qa.field_b.lineCount(PasswordValidator.a(110, AgeValidator.field_m != 0 ? true : false, 0 != nb.field_e ? true : false, false), 389) * var3;
         }
@@ -1238,7 +1238,7 @@ final class re {
                   stackIn_75_5 = -122;
                   stackIn_75_6 = false;
                   stackIn_76_7 = (AgeValidator.field_m != 0);
-                  var4Lifetime1Lifetime1 = stackIn_72_0 + (stackIn_72_1 + stackIn_72_2 * ((BinaryBitmapFont) (Object) stackIn_72_3).drawParagraph(dh.$cfr$intArgs$a$feb7e63b59d8(stackIn_73_4, stackIn_75_5, stackIn_75_6, stackIn_76_7), 211, var4Lifetime1Lifetime1, 389, 1000, 0, -1, 1, 0, var5Lifetime1));
+                  var4Lifetime1Lifetime1 = stackIn_72_0 + (stackIn_72_1 + stackIn_72_2 * ((BinaryBitmapFont) (Object) stackIn_72_3).drawParagraph(dh.getSaveResultsLoginPromptWithIntGuard(stackIn_73_4, stackIn_75_5, stackIn_75_6, stackIn_76_7), 211, var4Lifetime1Lifetime1, 389, 1000, 0, -1, 1, 0, var5Lifetime1));
                   var4Lifetime1Lifetime1 = var4Lifetime1Lifetime1 + (this.b(0, (byte) 17) + 6);
                   stackIn_78_0 = var4Lifetime1Lifetime1;
                   stackIn_78_1 = var5Lifetime1;

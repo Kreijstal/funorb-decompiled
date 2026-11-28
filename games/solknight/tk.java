@@ -10,7 +10,7 @@ final class tk extends pe {
     final static void a(byte param0, String param1) {
         try {
           ei.a(param1, param0 ^ -35);
-          FullscreenStatusDialog.a(false, ab.field_p, -104);
+          FullscreenStatusDialog.a(false, NetworkGameClient.field_p, -104);
           if (param0 != -15) {
             tk.c(false);
           }

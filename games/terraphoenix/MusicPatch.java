@@ -39,7 +39,7 @@ final class MusicPatch extends IntrusiveNode {
           var5.writeInt(param2.field_r, 8959);
           var5.writeInt(param2.field_k, param1 ^ -15940);
           if (param1 != -7357) {
-            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(-69, -70);
+            MusicPatch.playIndexedSoundEffectWithIntGuard(-69, -70);
           }
           var5.appendCrc32(var4, 8600);
           var5.backpatchByteLength(var5.position - var4, -119);
@@ -56,7 +56,7 @@ final class MusicPatch extends IntrusiveNode {
         field_j = null;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void playIndexedSoundEffect(byte param0, int param1) {
         if (param0 <= 15) {
           return;
         }
@@ -725,7 +725,7 @@ final class MusicPatch extends IntrusiveNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$e9dea5688aa5(int param0, int param1) {
+    final static void playIndexedSoundEffectWithIntGuard(int param0, int param1) {
         if (param0 <= 15) {
           return;
         }

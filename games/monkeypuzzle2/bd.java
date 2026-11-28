@@ -12,7 +12,7 @@ final class bd {
         field_c = null;
         if (param0 >= -4) {
           String var2 = (String) null;
-          bd.$cfr$intArgs$a$b1efba5c64a3(true, 37, false, (String) null);
+          bd.showLoginDialogWithIntGuard(true, 37, false, (String) null);
         }
     }
 
@@ -20,7 +20,7 @@ final class bd {
         return param0 | param1;
     }
 
-    final static void a(boolean param0, byte param1, boolean param2, String param3) {
+    final static void showLoginDialog(boolean param0, byte param1, boolean param2, String param3) {
         try {
           if (param1 != 98) {
             bd.a((byte) 46);
@@ -55,7 +55,7 @@ final class bd {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$b1efba5c64a3(boolean param0, int param1, boolean param2, String param3) {
+    final static void showLoginDialogWithIntGuard(boolean param0, int param1, boolean param2, String param3) {
         try {
           if (param1 != 98) {
             bd.a((byte) 46);

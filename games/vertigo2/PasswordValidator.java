@@ -218,8 +218,8 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, Archive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(int param0, Archive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2643_0;
             StringBuilder stackIn_2643_1;
             String stackIn_2644_2;
@@ -231,7 +231,7 @@ final class PasswordValidator extends TextFieldValidator {
             int param0;
             Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, Archive initialParam1) {
+            ClientTextLoader(int initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2643_0 = null;
@@ -243,7 +243,7 @@ final class PasswordValidator extends TextFieldValidator {
                 this.var3 = 0;
                 this.var4 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 GrowableIntArray.field_a = param1;
                 var2 = tk.a("loginm3", false);
                 if (null != var2) {
@@ -1166,7 +1166,7 @@ final class PasswordValidator extends TextFieldValidator {
                   ok.field_a = in.a(0, var2);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 var2 = tk.a("rule_pillar_1", false);
                 if (null != var2) {
                   lh.field_e = in.a(0, var2);
@@ -2136,7 +2136,7 @@ final class PasswordValidator extends TextFieldValidator {
                   in.a(0, var2);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 var2 = tk.a("quit", false);
                 if (null != var2) {
                   ld.field_a = in.a(0, var2);
@@ -2590,7 +2590,7 @@ final class PasswordValidator extends TextFieldValidator {
                   RegistrationAgreementPane.field_H = in.a(param0 ^ 0, var2);
                 }
                 if (param0 != 0) {
-                  PasswordValidator.a(6, (Archive) null);
+                  PasswordValidator.loadSharedInterfaceText(6, (Archive) null);
                 }
                 var2 = tk.a("mp_youofferdraw", false);
                 if (null != var2) {
@@ -3125,7 +3125,7 @@ final class PasswordValidator extends TextFieldValidator {
                   qn.field_t[3] = in.a(0, var2);
                 }
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadLoginPromptsAndSubscriptionText() throws java.lang.RuntimeException {
                 var2 = tk.a("mustlogin4,4", false);
                 if (null != var2) {
                   qn.field_t[4] = in.a(0, var2);
@@ -3235,13 +3235,13 @@ final class PasswordValidator extends TextFieldValidator {
             void run() {
                 var3 = Vertigo2.field_L ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadLoginPromptsAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3262,7 +3262,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 

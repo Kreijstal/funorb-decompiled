@@ -93,12 +93,12 @@ final class DiskArchiveStore {
             if (param1) {
               DiskArchiveStore.a(99);
             }
-            var2_int = r.field_i.b(0);
+            var2_int = r.field_i.availableBytes(0);
             if (var2_int > 0) {
               if (var2_int > param0 - ne.field_a.position) {
                 var2_int = -ne.field_a.position + param0;
               }
-              r.field_i.a(ne.field_a.payload, 0, var2_int, ne.field_a.position);
+              r.field_i.readFully(ne.field_a.payload, 0, var2_int, ne.field_a.position);
               he.field_a = qg.correctedCurrentTimeMillis(false);
               ne.field_a.position = ne.field_a.position + var2_int;
               if (ne.field_a.position < param0) {

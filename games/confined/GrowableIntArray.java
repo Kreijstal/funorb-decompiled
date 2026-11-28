@@ -292,7 +292,7 @@ final class GrowableIntArray {
 
     final static void a(int param0, boolean param1, boolean param2) {
         String var4 = (String) null;
-        gk.$cfr$intArgs$a$c13c9cd76cbe(param1, (String) null, -116, param2);
+        gk.showLoginDialogWithIntGuard(param1, (String) null, -116, param2);
         if (param0 > -14) {
           field_f = (FullscreenNoticeType) null;
         }

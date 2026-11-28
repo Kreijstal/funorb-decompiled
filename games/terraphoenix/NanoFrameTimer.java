@@ -159,7 +159,7 @@ final class NanoFrameTimer extends FrameTimer {
         return var6Lifetime1 / (long)this.field_m;
     }
 
-    final static void a(int param0, byte param1, boolean param2, int param3) {
+    final static void drawBenefitsButtonFrame(int param0, byte param1, boolean param2, int param3) {
         int var4;
         int var4Lifetime1;
         if (param1 < -21) {
@@ -344,7 +344,7 @@ final class NanoFrameTimer extends FrameTimer {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c79a3df4369d(int param0, int param1, boolean param2, int param3) {
+    final static void drawBenefitsButtonFrameWithIntGuard(int param0, int param1, boolean param2, int param3) {
         int var4;
         int var4Lifetime1;
         if (param1 < -21) {

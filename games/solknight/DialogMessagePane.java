@@ -142,8 +142,8 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
         }
     }
 
-    final static void a(int param0, Archive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(int param0, Archive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2614_0;
             StringBuilder stackIn_2614_1;
             String stackIn_2615_2;
@@ -155,7 +155,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
             int param0;
             Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, Archive initialParam1) {
+            ClientTextLoader(int initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2614_0 = null;
@@ -167,7 +167,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 SoundCache.field_e = param1;
                 var2 = vd.a("loginm3", param0 ^ 26704);
                 if (null != var2) {
@@ -1210,7 +1210,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
                   Archive.decodeCp1252(true, var2);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 var2 = vd.a("connectingtoserver", param0 - 26704);
                 if (null != var2) {
                   Archive.decodeCp1252(true, var2);
@@ -1221,7 +1221,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
                 }
                 var2 = vd.a("logging_in", 4);
                 if (var2 != null) {
-                  ab.field_p = Archive.decodeCp1252(true, var2);
+                  NetworkGameClient.field_p = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("reconnect", 4);
                 if (null != var2) {
@@ -2207,7 +2207,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
                   Archive.decodeCp1252(true, var2);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 var2 = vd.a("canceldraw", param0 - 26704);
                 if (var2 != null) {
                   Archive.decodeCp1252(true, var2);
@@ -3157,11 +3157,11 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
             void run() {
                 var3 = SolKnight.field_L ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3181,7 +3181,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 

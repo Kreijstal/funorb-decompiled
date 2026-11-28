@@ -129,7 +129,7 @@ final class hc extends ui {
               if (var9Lifetime1 == 248) {
                 sa.a((byte) 108, RichTextLayout.c(-14047));
                 MusicPatch.field_p = el.field_d;
-                ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-88);
+                ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-88);
                 fb.field_p = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
@@ -155,7 +155,7 @@ final class hc extends ui {
                 for (var12 = 0; var12 < var11; var12++) {
                   fc.field_S[var12] = ig.field_a.readPrefixedString(0);
                 }
-                ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-36);
+                ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-36);
                 fb.field_p = false;
                 stackIn_47_0 = 100 + var11;
                 return stackIn_47_0;
@@ -172,7 +172,7 @@ final class hc extends ui {
             } else {
               MusicPatch.field_p = ig.field_a.readString(false);
             }
-            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-85);
+            ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-85);
             fb.field_p = false;
             stackIn_57_0 = pg.field_d;
             return stackIn_57_0;
@@ -182,7 +182,7 @@ final class hc extends ui {
               if (vl.b(-116) <= 30000L) {
                 MusicPatch.field_p = sa.field_h;
               } else {
-                MusicPatch.field_p = nk.field_t;
+                MusicPatch.field_p = NetworkGameClient.field_t;
               }
               fb.field_p = false;
               stackIn_65_0 = 249;

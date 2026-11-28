@@ -80,7 +80,7 @@ final class ai {
         }
     }
 
-    final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
+    final static String getSaveResultsLoginPrompt(byte param0, boolean param1, boolean param2, boolean param3) {
         int var4;
         var4 = 0;
         if (param3) {
@@ -90,7 +90,7 @@ final class ai {
           var4 += 2;
         }
         if (param0 != 71) {
-          ai.$cfr$intArgs$a$c7de0d339b2a(-23, true, false, true);
+          ai.getSaveResultsLoginPromptWithIntGuard(-23, true, false, true);
         }
         if (param2) {
           var4++;
@@ -130,7 +130,7 @@ final class ai {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static String $cfr$intArgs$a$c7de0d339b2a(int param0, boolean param1, boolean param2, boolean param3) {
+    final static String getSaveResultsLoginPromptWithIntGuard(int param0, boolean param1, boolean param2, boolean param3) {
         int var4;
         var4 = 0;
         if (param3) {
@@ -140,7 +140,7 @@ final class ai {
           var4 += 2;
         }
         if (param0 != 71) {
-          ai.$cfr$intArgs$a$c7de0d339b2a(-23, true, false, true);
+          ai.getSaveResultsLoginPromptWithIntGuard(-23, true, false, true);
         }
         if (param2) {
           var4++;

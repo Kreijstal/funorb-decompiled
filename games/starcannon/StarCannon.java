@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class StarCannon extends ag {
+public final class StarCannon extends NetworkGameClient {
     private int field_D;
     static int[] field_y;
     static String field_C;
@@ -1166,7 +1166,7 @@ public final class StarCannon extends ag {
     }
 
     public final void init() {
-        this.a(-15028, 10, "starcannon");
+        this.startWithDefaultSize(-15028, 10, "starcannon");
     }
 
     private final void p(int param0) {
@@ -1541,7 +1541,7 @@ public final class StarCannon extends ag {
           ProxyAuthenticationRequiredException.b(-36);
         }
         stackIn_6_1 = (n.field_a != null);
-        this.b(stackIn_6_1, -1);
+        this.serviceFramework(stackIn_6_1, -1);
         if (param0 != 320) {
           this.disposeClient(-100);
         }
@@ -1550,7 +1550,7 @@ public final class StarCannon extends ag {
           StripedProgressWidget.field_E = false;
         }
         if (ProxyAuthenticationRequiredException.c(4)) {
-          this.f((byte) -90);
+          this.updateLoginFlow((byte) -90);
           if (ProxyAuthenticationRequiredException.c(4)) {
             if (!ai.a((byte) -78)) {
               return;
@@ -1579,7 +1579,7 @@ public final class StarCannon extends ag {
             if (!gh.f(-23093)) {
               if (BoundedRandomAccessFile.a(false)) {
                 stackIn_39_1 = (null != n.field_a);
-                var2 = u.a((ag) (this), stackIn_39_1, (byte) 112);
+                var2 = u.a((NetworkGameClient) (this), stackIn_39_1, (byte) 112);
                 if (var2 == 1) {
                   re.a(0);
                 }
@@ -1627,11 +1627,11 @@ public final class StarCannon extends ag {
         }
         nf.a(0, (byte) 95);
         while (ll.a(s.field_k, (byte) -99)) {
-          this.a(true);
+          this.dispatchCommonPacket(true);
         }
         var2Lifetime1 = 0;
         if (RichTextLayout.b((byte) -91)) {
-          var3 = this.h((byte) 58);
+          var3 = this.reconnectAndResendRequests((byte) 58);
           if (var3 == 2) {
             var2Lifetime1 = 1;
           }
@@ -3191,7 +3191,7 @@ public final class StarCannon extends ag {
         KeyboardInput.clearStaticReferences(-115);
         lj.clearStaticReferences(87);
         pc.clearStaticReferences(-76);
-        ag.clearStaticReferences((byte) 39);
+        NetworkGameClient.clearStaticReferences((byte) 39);
         ClientException.b((byte) 70);
         GameApplet.c(1719);
         gg.clearStaticReferences((byte) 121);
@@ -3589,7 +3589,7 @@ public final class StarCannon extends ag {
         int var3;
         int var2Lifetime1;
         var3 = field_A;
-        this.a(9, 9, 0, 8, true, 6, false, 7);
+        this.initializeFramework(9, 9, 0, 8, true, 6, false, 7);
         hh.field_b = new Sprite[9];
         for (var2 = 0; var2 < 9; var2++) {
           hh.field_b[var2] = new Sprite(1, 1);

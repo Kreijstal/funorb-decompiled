@@ -62,7 +62,7 @@ final class j {
           var3 = 0;
           if (var1_int != 0 &&
             sj.field_f.field_a >= 0) {
-            var3 = bi.field_B[sj.field_f.field_a];
+            var3 = NetworkGameClient.field_B[sj.field_f.field_a];
             if (var3 == 2) {
               tj.a((byte) -123);
             } else if (var3 == 5) {

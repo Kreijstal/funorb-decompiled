@@ -73,7 +73,7 @@ final class FlySpecial extends SpecialOrder {
 
     final static void a(boolean param0, boolean param1, byte param2) {
         String var4 = (String) null;
-        vma.$cfr$intArgs$a$842e35442ba4(-6, param0, param1, (String) null);
+        vma.showLoginDialogWithIntGuard(-6, param0, param1, (String) null);
         int var3 = -72 / ((-21 - param2) / 58);
     }
 

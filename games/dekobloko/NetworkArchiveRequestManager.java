@@ -17,7 +17,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           this.performAction0354((byte) 12);
         }
         if (null != this.bufferedSocketState0001) {
-          this.bufferedSocketState0001.performAction1372(0);
+          this.bufferedSocketState0001.close(0);
         }
     }
 
@@ -39,7 +39,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           try {
             if (null != this.bufferedSocketState0001) {
               try {
-                this.bufferedSocketState0001.performAction1372(0);
+                this.bufferedSocketState0001.close(0);
               } catch (java.lang.Exception caughtParameterLocal13) {
                 caughtExceptionLocal4 = caughtParameterLocal13;
                 exceptionLocal5 = (Exception) (Object) caughtExceptionLocal4;
@@ -74,12 +74,12 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
                 this.packetBufferState0002.writeByte(true, 4);
                 this.packetBufferState0002.writeByte(true, (int) this.byteState0001);
                 this.packetBufferState0002.writeInt(0, false);
-                this.bufferedSocketState0001.performAction1374(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
+                this.bufferedSocketState0001.enqueueWrite(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
               } catch (java.io.IOException caughtParameterLocal14) {
                 caughtExceptionLocal4 = caughtParameterLocal14;
                 iOExceptionLocal9 = (IOException) (Object) caughtExceptionLocal4;
                 try {
-                  this.bufferedSocketState0001.performAction1372(0);
+                  this.bufferedSocketState0001.close(0);
                 } catch (java.lang.Exception caughtParameterLocal15) {
                   caughtExceptionLocal4 = caughtParameterLocal15;
                   exceptionLocal10 = (Exception) (Object) caughtExceptionLocal4;
@@ -136,12 +136,12 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               return;
             }
             this.packetBufferState0002.writeLong40(-93, 0L);
-            this.bufferedSocketState0001.performAction1374(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
+            this.bufferedSocketState0001.enqueueWrite(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
           } catch (java.io.IOException caughtParameterLocal7) {
             caughtExceptionLocal5 = caughtParameterLocal7;
             iOException = (IOException) (Object) caughtExceptionLocal5;
             try {
-              this.bufferedSocketState0001.performAction1372(0);
+              this.bufferedSocketState0001.close(0);
             } catch (java.lang.Exception caughtParameterLocal8) {
               caughtExceptionLocal5 = caughtParameterLocal8;
               exceptionLocal6 = (Exception) (Object) caughtExceptionLocal5;
@@ -412,7 +412,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             this.integerState0130 = this.integerState0130 + integerLocal10;
             if (this.integerState0130 > 30000) {
               try {
-                this.bufferedSocketState0001.performAction1372(0);
+                this.bufferedSocketState0001.close(0);
               } catch (java.lang.Exception caughtParameterLocal25) {
                 caughtExceptionLocal4 = caughtParameterLocal25;
                 exceptionLocal11 = (Exception) (Object) caughtExceptionLocal4;
@@ -428,13 +428,13 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             return false;
           }
           try {
-            this.bufferedSocketState0001.performAction1376((byte) -124);
+            this.bufferedSocketState0001.checkWriteError((byte) -124);
             resourceSupport004Local6 = (ResourceSupport004) (this.dualNodeDequeState0001.beginForward(-2198));
             while (resourceSupport004Local6 != null) {
               this.packetBufferState0002.position = 0;
               this.packetBufferState0002.writeByte(true, 1);
               this.packetBufferState0002.writeLong40(-71, resourceSupport004Local6.longState0003);
-              this.bufferedSocketState0001.performAction1374(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
+              this.bufferedSocketState0001.enqueueWrite(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
               this.dualNodeDequeState0002.addLast(resourceSupport004Local6, -7267);
               resourceSupport004Local6 = (ResourceSupport004) (this.dualNodeDequeState0001.nextForward((byte) 20));
             }
@@ -446,12 +446,12 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               this.packetBufferState0002.position = 0;
               this.packetBufferState0002.writeByte(true, 0);
               this.packetBufferState0002.writeLong40(-98, resourceSupport004Local24.longState0003);
-              this.bufferedSocketState0001.performAction1374(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
+              this.bufferedSocketState0001.enqueueWrite(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
               this.dualNodeDequeState0004.addLast(resourceSupport004Local24, -7267);
               resourceSupport004Local24 = (ResourceSupport004) (this.dualNodeDequeState0003.nextForward((byte) 20));
             }
             for (integerLocal1 = 0; integerLocal1 < 100; integerLocal1++) {
-              integerLocal8 = this.bufferedSocketState0001.computeInteger1377(0);
+              integerLocal8 = this.bufferedSocketState0001.availableBytes(0);
               if (integerLocal8 < 0) {
                 throw new IOException();
               }
@@ -476,7 +476,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
                 if (integerLocal13 > integerLocal8) {
                   integerLocal13 = integerLocal8;
                 }
-                this.bufferedSocketState0001.performAction1373(integerLocal13, this.resourceSupport004State0001.packetBufferState0007.position, (byte) 17, this.resourceSupport004State0001.packetBufferState0007.payload);
+                this.bufferedSocketState0001.readFully(integerLocal13, this.resourceSupport004State0001.packetBufferState0007.position, (byte) 17, this.resourceSupport004State0001.packetBufferState0007.payload);
                 if (0 != this.byteState0001) {
                   for (integerLocal14 = 0; integerLocal14 < integerLocal13; integerLocal14++) {
                     this.resourceSupport004State0001.packetBufferState0007.payload[integerLocal14 + this.resourceSupport004State0001.packetBufferState0007.position] = (byte)MixedSupport106.bitwiseXor((int) this.resourceSupport004State0001.packetBufferState0007.payload[integerLocal14 + this.resourceSupport004State0001.packetBufferState0007.position], (int) this.byteState0001);
@@ -498,7 +498,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
                 if (integerLocal12 > integerLocal8) {
                   integerLocal12 = integerLocal8;
                 }
-                this.bufferedSocketState0001.performAction1373(integerLocal12, this.packetBufferState0003.position, (byte) 17, this.packetBufferState0003.payload);
+                this.bufferedSocketState0001.readFully(integerLocal12, this.packetBufferState0003.position, (byte) 17, this.packetBufferState0003.payload);
                 if (this.byteState0001 != 0) {
                   for (integerLocal13 = 0; integerLocal12 > integerLocal13; integerLocal13++) {
                     this.packetBufferState0003.payload[this.packetBufferState0003.position + integerLocal13] = (byte)MixedSupport106.bitwiseXor((int) this.packetBufferState0003.payload[this.packetBufferState0003.position + integerLocal13], (int) this.byteState0001);
@@ -570,7 +570,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             caughtExceptionLocal4 = caughtParameterLocal28;
             iOExceptionLocal7 = (IOException) (Object) caughtExceptionLocal4;
             try {
-              this.bufferedSocketState0001.performAction1372(0);
+              this.bufferedSocketState0001.close(0);
             } catch (java.lang.Exception caughtParameterLocal29) {
               caughtExceptionLocal4 = caughtParameterLocal29;
               exceptionLocal9 = (Exception) (Object) caughtExceptionLocal4;
@@ -595,7 +595,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
         Exception exception = null;
         Throwable caughtExceptionLocal2 = null;
         try {
-          this.bufferedSocketState0001.performAction1372(0);
+          this.bufferedSocketState0001.close(0);
           if (integerArgument1 != 8192) {
             this.computeBoolean0342((byte) -2);
           }
@@ -751,12 +751,12 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             this.packetBufferState0002.writeByte(true, 6);
             this.packetBufferState0002.writeMedium((byte) 46, 3);
             this.packetBufferState0002.writeShort(-1, 0);
-            this.bufferedSocketState0001.performAction1374(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
+            this.bufferedSocketState0001.enqueueWrite(0, this.packetBufferState0002.payload.length, 1, this.packetBufferState0002.payload);
           } catch (java.io.IOException caughtParameterLocal4) {
             caughtExceptionLocal2 = caughtParameterLocal4;
             iOException = (IOException) (Object) caughtExceptionLocal2;
             try {
-              this.bufferedSocketState0001.performAction1372(byteArgument1 + 15);
+              this.bufferedSocketState0001.close(byteArgument1 + 15);
             } catch (java.lang.Exception caughtParameterLocal5) {
               caughtExceptionLocal2 = caughtParameterLocal5;
               exceptionLocal3 = (Exception) (Object) caughtExceptionLocal2;

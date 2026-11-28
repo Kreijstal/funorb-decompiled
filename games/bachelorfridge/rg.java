@@ -8,7 +8,7 @@ final class rg extends IntrusiveNode {
     static Sprite field_j;
     static IntrusiveDeque field_f;
 
-    final static void a(int param0, int param1, byte param2, boolean param3) {
+    final static void drawBenefitsButtonFrame(int param0, int param1, byte param2, boolean param3) {
         int var4;
         int var5;
         ug.field_o.draw(param0, param1);
@@ -33,7 +33,7 @@ final class rg extends IntrusiveNode {
     public static void a(int param0) {
         field_f = null;
         if (param0 != 0) {
-          rg.$cfr$intArgs$a$c6021a39f7cf(-107, 55, -71, true);
+          rg.drawBenefitsButtonFrameWithIntGuard(-107, 55, -71, true);
           field_j = null;
           return;
         }
@@ -99,7 +99,7 @@ final class rg extends IntrusiveNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c6021a39f7cf(int param0, int param1, int param2, boolean param3) {
+    final static void drawBenefitsButtonFrameWithIntGuard(int param0, int param1, int param2, boolean param3) {
         int var4;
         int var5;
         ug.field_o.draw(param0, param1);

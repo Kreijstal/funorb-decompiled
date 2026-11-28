@@ -308,7 +308,7 @@ final class IntrusiveDeque {
             } else {
               stackIn_53_3 = 4;
             }
-            var2Lifetime4 = (stackIn_52_0 * ga.$cfr$intArgs$a$f0c91481eb80(stackIn_52_1, stackIn_52_2 << stackIn_53_3) >> 16) + 40;
+            var2Lifetime4 = (stackIn_52_0 * ga.lookupFixedPointSineWithIntGuard(stackIn_52_1, stackIn_52_2 << stackIn_53_3) >> 16) + 40;
             if (var2Lifetime4 > 0) {
               NodeHashTableIterator.field_b.drawAdditiveWithIntensity(230, 389, var2Lifetime4);
               NodeHashTableIterator.field_b.drawAdditiveWithIntensity(232, 389, var2Lifetime4);
@@ -338,7 +338,7 @@ final class IntrusiveDeque {
             ValidationStatusWidget.field_ab.drawTransparent(586, var1_int);
             if (var1_int < ph.field_d &&
               ph.field_d < le.field_e.storedHeight + var1_int) {
-              var2Lifetime5 = (ga.$cfr$intArgs$a$f0c91481eb80(5, ub.field_h << 4) * 40 >> 16) + 40;
+              var2Lifetime5 = (ga.lookupFixedPointSineWithIntGuard(5, ub.field_h << 4) * 40 >> 16) + 40;
               if (var2Lifetime5 > 0) {
                 if (-le.field_e.storedWidth + 269 < ConfirmedEmailAvailabilityValidator.field_u &&
                   ConfirmedEmailAvailabilityValidator.field_u < 269) {

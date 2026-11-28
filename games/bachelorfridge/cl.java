@@ -45,7 +45,7 @@ final class cl extends vm {
             this.field_j = this.field_j + var4;
             if (30000 < this.field_j) {
               try {
-                this.field_q.a((byte) 109);
+                this.field_q.close((byte) 109);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -63,13 +63,13 @@ final class cl extends vm {
             return false;
           }
           try {
-            this.field_q.c((byte) 34);
+            this.field_q.checkWriteError((byte) 34);
             var2 = (qfa) (this.field_f.a(-102));
             while (var2 != null) {
               this.field_n.position = 0;
               this.field_n.writeByte(1, 0);
               this.field_n.writeLong40(4096, var2.secondaryKey);
-              this.field_q.a(0, this.field_n.payload, false, this.field_n.payload.length);
+              this.field_q.enqueueWrite(0, this.field_n.payload, false, this.field_n.payload.length);
               this.field_a.a(var2, (byte) -64);
               var2 = (qfa) (this.field_f.a((byte) 108));
             }
@@ -81,12 +81,12 @@ final class cl extends vm {
               this.field_n.position = 0;
               this.field_n.writeByte(0, 0);
               this.field_n.writeLong40(param0 + 4027, var2Lifetime1.secondaryKey);
-              this.field_q.a(0, this.field_n.payload, false, this.field_n.payload.length);
+              this.field_q.enqueueWrite(0, this.field_n.payload, false, this.field_n.payload.length);
               this.field_l.a(var2Lifetime1, (byte) 90);
               var2Lifetime1 = (qfa) (this.field_c.a((byte) 94));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
-              var3_int = this.field_q.b(-90);
+              var3_int = this.field_q.availableBytes(-90);
               if (var3_int < 0) {
                 throw new IOException();
               }
@@ -105,7 +105,7 @@ final class cl extends vm {
                   if (var5 > var3_int) {
                     var5 = var3_int;
                   }
-                  this.field_q.a(this.field_d.position, (byte) 108, this.field_d.payload, var5);
+                  this.field_q.readFully(this.field_d.position, (byte) 108, this.field_d.payload, var5);
                   if (0 != this.field_m) {
                     for (var6 = 0; var6 < var5; var6++) {
                       this.field_d.payload[var6 + this.field_d.position] = (byte)lt.bitwiseXor((int) this.field_d.payload[var6 + this.field_d.position], (int) this.field_m);
@@ -179,7 +179,7 @@ final class cl extends vm {
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.field_q.a(this.field_h.field_v.position, (byte) 106, this.field_h.field_v.payload, var6);
+                  this.field_q.readFully(this.field_h.field_v.position, (byte) 106, this.field_h.field_v.payload, var6);
                   if (this.field_m != 0) {
                     for (var7 = 0; var6 > var7; var7++) {
                       this.field_h.field_v.payload[var7 + this.field_h.field_v.position] = (byte)lt.bitwiseXor((int) this.field_h.field_v.payload[var7 + this.field_h.field_v.position], (int) this.field_m);
@@ -206,7 +206,7 @@ final class cl extends vm {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_q.a((byte) 56);
+              this.field_q.close((byte) 56);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -229,7 +229,7 @@ final class cl extends vm {
 
     final void c(int param0) {
         if (null != this.field_q) {
-          this.field_q.a((byte) 122);
+          this.field_q.close((byte) 122);
         }
         if (param0 != 20) {
           cl.a(80, (byte) 57, -71);
@@ -253,7 +253,7 @@ final class cl extends vm {
           try {
             if (this.field_q != null) {
               try {
-                this.field_q.a((byte) 110);
+                this.field_q.close((byte) 110);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -290,12 +290,12 @@ final class cl extends vm {
                 this.field_n.writeByte(4, 0);
                 this.field_n.writeByte((int) this.field_m, 0);
                 this.field_n.writeInt(0, param2 ^ -1615476692);
-                this.field_q.a(0, this.field_n.payload, false, this.field_n.payload.length);
+                this.field_q.enqueueWrite(0, this.field_n.payload, false, this.field_n.payload.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_q.a((byte) 52);
+                  this.field_q.close((byte) 52);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
@@ -340,12 +340,12 @@ final class cl extends vm {
             this.field_n.writeByte(6, 0);
             this.field_n.writeMedium(-1607631824, 3);
             this.field_n.writeShort(0, -124);
-            this.field_q.a(0, this.field_n.payload, false, this.field_n.payload.length);
+            this.field_q.enqueueWrite(0, this.field_n.payload, false, this.field_n.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_q.a((byte) 83);
+              this.field_q.close((byte) 83);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -367,7 +367,7 @@ final class cl extends vm {
     final void b(byte param0) {
         int var2 = -102 / ((param0 + 18) / 48);
         try {
-          this.field_q.a((byte) 76);
+          this.field_q.close((byte) 76);
         } catch (Exception exception) {
         }
         this.field_e = this.field_e + 1;
@@ -421,12 +421,12 @@ final class cl extends vm {
             }
             ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_6_1, 0);
             this.field_n.writeLong40(4096, 0L);
-            this.field_q.a(0, this.field_n.payload, false, this.field_n.payload.length);
+            this.field_q.enqueueWrite(0, this.field_n.payload, false, this.field_n.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_q.a((byte) 123);
+              this.field_q.close((byte) 123);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;

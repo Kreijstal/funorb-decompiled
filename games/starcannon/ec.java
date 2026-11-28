@@ -76,7 +76,7 @@ final class ec {
 
     final static void a(byte param0) {
         if (null != m.field_b) {
-          m.field_b.b((byte) -52);
+          m.field_b.close((byte) -52);
           m.field_b = null;
           if (param0 != 27) {
             ec.clearStaticReferences(72);

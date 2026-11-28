@@ -278,7 +278,7 @@ final class ProxySocketConnector extends SocketConnector {
         return this.b(0);
     }
 
-    final static String a(boolean param0, byte param1, boolean param2, boolean param3) {
+    final static String getDiscardResultsPromptSuffix(boolean param0, byte param1, boolean param2, boolean param3) {
         int var4 = 0;
         if (param2) {
           var4 += 4;
@@ -290,7 +290,7 @@ final class ProxySocketConnector extends SocketConnector {
           var4++;
         }
         if (param1 >= -59) {
-          ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(true, -37, false, false);
+          ProxySocketConnector.getDiscardResultsPromptSuffixWithIntGuard(true, -37, false, false);
         }
         return UiWidget.field_i[var4];
     }
@@ -391,7 +391,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static String $cfr$intArgs$a$feb7e63b59d8(boolean param0, int param1, boolean param2, boolean param3) {
+    final static String getDiscardResultsPromptSuffixWithIntGuard(boolean param0, int param1, boolean param2, boolean param3) {
         int var4 = 0;
         if (param2) {
           var4 += 4;
@@ -403,7 +403,7 @@ final class ProxySocketConnector extends SocketConnector {
           var4++;
         }
         if (param1 >= -59) {
-          ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(true, -37, false, false);
+          ProxySocketConnector.getDiscardResultsPromptSuffixWithIntGuard(true, -37, false, false);
         }
         return UiWidget.field_i[var4];
     }

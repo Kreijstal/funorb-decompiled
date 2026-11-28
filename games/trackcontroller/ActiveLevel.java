@@ -204,7 +204,7 @@ final class ActiveLevel extends LevelGrid {
         var7 = this.phase;
         if (var7 == 2) {
           fe.a(false, Model.field_P[2], param0 ^ 503);
-          si.$cfr$intArgs$a$e9dea5688aa5(-68, 3);
+          si.playIndexedSoundEffectWithIntGuard(-68, 3);
           var4 = this.field_X >> 1;
           var5 = this.level.field_v + var4;
           this.field_R = this.field_R + var5;
@@ -726,7 +726,7 @@ final class ActiveLevel extends LevelGrid {
             26 + ba.field_b.field_G > var4_int &&
             var3 < 156 &&
             var4_int >= 0) {
-            si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+            si.playIndexedSoundEffectWithIntGuard(-68, 5);
             stackIn_20_0 = (!ProgressMessageDialog.s(29)) ? 12 : 13;
             sc.field_g = stackIn_20_0;
             return;
@@ -736,14 +736,14 @@ final class ActiveLevel extends LevelGrid {
             26 + ba.field_b.field_G > var4_intLifetime1 &&
             156 > var3 &&
             var4_intLifetime1 >= 0) {
-            si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+            si.playIndexedSoundEffectWithIntGuard(-68, 5);
             sc.field_g = -2;
             return;
           }
         }
         if (1 == SpriteState.field_p &&
           1 == this.phase) {
-          si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+          si.playIndexedSoundEffectWithIntGuard(-68, 5);
           sc.field_g = -2;
           return;
         }
@@ -927,7 +927,7 @@ final class ActiveLevel extends LevelGrid {
             var12 = this.tileFlags[var10Lifetime4][var11] & 32640;
             if (this.tileFlags[var10Lifetime4][var11] != 0 &&
               var12 == 0) {
-              si.$cfr$intArgs$a$e9dea5688aa5(-68, 6);
+              si.playIndexedSoundEffectWithIntGuard(-68, 6);
               if (this.a(this.tileFlags, var11, 21278, var10Lifetime4 - 1) == 0 &&
                 0 == this.a(this.tileFlags, var11, 21278, var10Lifetime4 + 1) &&
                 this.a(this.tileFlags, var11 - 1, 21278, var10Lifetime4) == 0 &&
@@ -1000,7 +1000,7 @@ final class ActiveLevel extends LevelGrid {
             this.field_z = true;
             stackIn_206_0Lifetime1 = -68;
             stackIn_206_1Lifetime1 = 8;
-            si.$cfr$intArgs$a$e9dea5688aa5(stackIn_206_0Lifetime1, stackIn_206_1Lifetime1);
+            si.playIndexedSoundEffectWithIntGuard(stackIn_206_0Lifetime1, stackIn_206_1Lifetime1);
           } else {
             if (SecondaryNodeDeque.mouseButton == 0) {
               this.field_x = -1;
@@ -1014,7 +1014,7 @@ final class ActiveLevel extends LevelGrid {
           if (stackIn_235_0) {
             this.movingBlocks.addLast((byte) -125, var7);
             this.a((byte) -91, var7);
-            si.$cfr$intArgs$a$e9dea5688aa5(-68, 9);
+            si.playIndexedSoundEffectWithIntGuard(-68, 9);
           } else {
             var5.addLast((byte) -113, var7);
           }

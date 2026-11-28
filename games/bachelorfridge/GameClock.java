@@ -30,11 +30,11 @@ abstract class GameClock {
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isNonnegativeScreenId(int param0, int param1) {
         if (param1 > 116) {
           return param0 >= 0 ? true : false;
         }
-        GameClock.a(-33, 0);
+        GameClock.isNonnegativeScreenId(-33, 0);
         return param0 >= 0 ? true : false;
     }
 

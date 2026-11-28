@@ -38,7 +38,7 @@ final class RichTextLayout extends TextLayout {
           var10 = var9;
           var10.field_g[0] = param1 - param0.stringWidth(param3);
           var10.field_g[param3.length()] = param1;
-          eh.$cfr$intArgs$a$d8024809bc20(var10, 79, param3, param0, 0);
+          eh.computeJustifiedCharacterOffsetsWithIntGuard(var10, 79, param3, param0, 0);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "jh.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -83,7 +83,7 @@ final class RichTextLayout extends TextLayout {
           }
           var8.field_g[0] = param0 - (var7 >> 1);
           var8.field_g[param4.length()] = (var7 >> 1) + param0;
-          eh.$cfr$intArgs$a$d8024809bc20(var8, 79, param4, param3, 0);
+          eh.computeJustifiedCharacterOffsetsWithIntGuard(var8, 79, param4, param3, 0);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "jh.O(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -202,7 +202,7 @@ final class RichTextLayout extends TextLayout {
               } else {
                 stackIn_40_4 = this.computeJustificationStep(param3, var14, param5.stringWidth(var14), 12);
               }
-              eh.$cfr$intArgs$a$d8024809bc20(stackIn_39_0, stackIn_39_1, stackIn_39_2, stackIn_39_3, stackIn_40_4);
+              eh.computeJustifiedCharacterOffsetsWithIntGuard(stackIn_39_0, stackIn_39_1, stackIn_39_2, stackIn_39_3, stackIn_40_4);
             }
             this.field_b[var13Lifetime1] = var15;
             var12 = var12 + param2;
@@ -250,7 +250,7 @@ final class RichTextLayout extends TextLayout {
           var7 = this.initializeSingleLineMetrics((byte) 52, param3, param2, param0);
           var7.field_g[0] = param4;
           var7.field_g[param0.length()] = param2.stringWidth(param0) + param4;
-          eh.$cfr$intArgs$a$d8024809bc20(var7, 79, param0, param2, 0);
+          eh.computeJustifiedCharacterOffsetsWithIntGuard(var7, 79, param0, param2, 0);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "jh.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

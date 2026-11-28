@@ -514,7 +514,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6) {
+    final void startApplet(int param0, String param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_21_0 = null;
@@ -647,7 +647,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean allowAppletStartup(byte param0) {
         return true;
     }
 

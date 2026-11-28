@@ -151,14 +151,14 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     final static void a(byte param0) {
         if (param0 >= 111) {
           if (r.field_i != null) {
-            r.field_i.d(16777215);
+            r.field_i.close(16777215);
             r.field_i = null;
           }
           return;
         }
         GameKeyHandler.clearStaticReferences(-39);
         if (r.field_i != null) {
-          r.field_i.d(16777215);
+          r.field_i.close(16777215);
           r.field_i = null;
         }
     }

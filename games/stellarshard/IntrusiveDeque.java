@@ -24,7 +24,7 @@ final class IntrusiveDeque {
           IntrusiveDeque.clearStaticReferences(false);
         }
         if (ob.field_b != null) {
-          ob.field_b.a(true);
+          ob.field_b.close(true);
           ob.field_b = null;
         }
     }

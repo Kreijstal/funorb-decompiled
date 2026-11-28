@@ -900,7 +900,7 @@ final class BoardView {
             }
           }
         }
-        IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(this.field_e, 101, var15);
+        IncomingSpecial.sortObjectsByIntKeyWithIntGuard(this.field_e, 101, var15);
     }
 
     private final void a(boolean param0, aj param1, int param2) {

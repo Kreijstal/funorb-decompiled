@@ -267,7 +267,7 @@ final class vc {
             stackIn_59_2 = var8_ref;
             break;
           }
-          vk.$cfr$intArgs$a$0b89e0d19fbb(stackIn_59_0, stackIn_59_1, stackIn_59_2);
+          vk.insertAdjacentNodeWithIntGuard(stackIn_59_0, stackIn_59_1, stackIn_59_2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

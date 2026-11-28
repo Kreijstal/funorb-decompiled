@@ -30,12 +30,12 @@ final class fa extends wl {
             }
             ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_6_1, -49152);
             this.field_l.writeLong40(0L, -1268490168);
-            this.field_o.a(this.field_l.payload, 0, (byte) 46, this.field_l.payload.length);
+            this.field_o.enqueueWrite(this.field_l.payload, 0, (byte) 46, this.field_l.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_o.a((byte) 73);
+              this.field_o.close((byte) 73);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;
@@ -59,7 +59,7 @@ final class fa extends wl {
         Exception exception = null;
         Throwable decompiledCaughtException = null;
         try {
-          this.field_o.a((byte) 73);
+          this.field_o.close((byte) 73);
           if (param0 != 20) {
             this.field_o = (BufferedSocket) null;
           }
@@ -110,7 +110,7 @@ final class fa extends wl {
             this.field_h = this.field_h + var4;
             if (this.field_h > 30000) {
               try {
-                this.field_o.a((byte) 73);
+                this.field_o.close((byte) 73);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -126,13 +126,13 @@ final class fa extends wl {
             return false;
           }
           try {
-            this.field_o.b((byte) 86);
+            this.field_o.checkWriteError((byte) 86);
             var2 = (NetworkArchiveRequest) (this.field_n.a(true));
             while (var2 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(1, -49152);
               this.field_l.writeLong40(var2.field_f, -1268490168);
-              this.field_o.a(this.field_l.payload, 0, (byte) 80, this.field_l.payload.length);
+              this.field_o.enqueueWrite(this.field_l.payload, 0, (byte) 80, this.field_l.payload.length);
               this.field_j.a(var2, (byte) 95);
               var2 = (NetworkArchiveRequest) (this.field_n.c((byte) -75));
             }
@@ -141,7 +141,7 @@ final class fa extends wl {
               this.field_l.position = 0;
               this.field_l.writeByte(0, -49152);
               this.field_l.writeLong40(var2Lifetime1.field_f, -1268490168);
-              this.field_o.a(this.field_l.payload, 0, (byte) 83, this.field_l.payload.length);
+              this.field_o.enqueueWrite(this.field_l.payload, 0, (byte) 83, this.field_l.payload.length);
               this.field_c.a(var2Lifetime1, (byte) 127);
               var2Lifetime1 = (NetworkArchiveRequest) (this.field_i.c((byte) -75));
             }
@@ -149,7 +149,7 @@ final class fa extends wl {
               this.b((byte) -60);
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
-              var3_int = this.field_o.c(126);
+              var3_int = this.field_o.availableBytes(126);
               if (var3_int < 0) {
                 throw new IOException();
               }
@@ -170,7 +170,7 @@ final class fa extends wl {
                 if (var3_int < var5) {
                   var5 = var3_int;
                 }
-                this.field_o.a(var5, true, this.field_g.payload, this.field_g.position);
+                this.field_o.readFully(var5, true, this.field_g.payload, this.field_g.position);
                 if (this.field_m != 0) {
                   for (var6 = 0; var5 > var6; var6++) {
                     this.field_g.payload[this.field_g.position + var6] = (byte)gi.bitwiseXor((int) this.field_g.payload[this.field_g.position + var6], (int) this.field_m);
@@ -244,7 +244,7 @@ final class fa extends wl {
                 if (var6 > var3_int) {
                   var6 = var3_int;
                 }
-                this.field_o.a(var6, true, this.field_k.field_o.payload, this.field_k.field_o.position);
+                this.field_o.readFully(var6, true, this.field_k.field_o.payload, this.field_k.field_o.position);
                 if (this.field_m != 0) {
                   for (var7 = 0; var7 < var6; var7++) {
                     this.field_k.field_o.payload[this.field_k.field_o.position + var7] = (byte)gi.bitwiseXor((int) this.field_k.field_o.payload[this.field_k.field_o.position + var7], (int) this.field_m);
@@ -268,7 +268,7 @@ final class fa extends wl {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_o.a((byte) 73);
+              this.field_o.close((byte) 73);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -306,7 +306,7 @@ final class fa extends wl {
           try {
             if (this.field_o != null) {
               try {
-                this.field_o.a((byte) 73);
+                this.field_o.close((byte) 73);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -340,12 +340,12 @@ final class fa extends wl {
                 this.field_l.writeByte(4, -49152);
                 this.field_l.writeByte((int) this.field_m, -49152);
                 this.field_l.writeInt(-803539344, 0);
-                this.field_o.a(this.field_l.payload, 0, (byte) 57, this.field_l.payload.length);
+                this.field_o.enqueueWrite(this.field_l.payload, 0, (byte) 57, this.field_l.payload.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_o.a((byte) 73);
+                  this.field_o.close((byte) 73);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
@@ -382,7 +382,7 @@ final class fa extends wl {
 
     final void b(byte param0) {
         if (this.field_o != null) {
-          this.field_o.a((byte) 73);
+          this.field_o.close((byte) 73);
         }
         if (param0 != 7) {
           this.a(false, (byte) -93);
@@ -408,12 +408,12 @@ final class fa extends wl {
             this.field_l.writeByte(6, -49152);
             this.field_l.writeMedium(param0 + 122, 3);
             this.field_l.writeShort(0, 113);
-            this.field_o.a(this.field_l.payload, 0, (byte) 23, this.field_l.payload.length);
+            this.field_o.enqueueWrite(this.field_l.payload, 0, (byte) 23, this.field_l.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_o.a((byte) 73);
+              this.field_o.close((byte) 73);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;

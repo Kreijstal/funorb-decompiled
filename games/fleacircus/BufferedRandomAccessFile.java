@@ -306,7 +306,7 @@ final class BufferedRandomAccessFile {
           return;
         }
         if (sg.field_h != null) {
-          sg.field_h.h(param0 ^ -28354);
+          sg.field_h.close(param0 ^ -28354);
           sg.field_h = null;
         }
     }

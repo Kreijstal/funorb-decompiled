@@ -83,9 +83,9 @@ abstract class MouseWheelInput {
           b.field_t = var2_intLifetime1 << 15 & 2064384;
           b.field_t = b.field_t + (param0.readUnsignedByte(param1 - 12722) << 7);
           var2_intLifetime2 = param0.readUnsignedByte(4);
-          rb.field_w = 65536 & var2_intLifetime2 << 16;
+          NetworkGameClient.field_w = 65536 & var2_intLifetime2 << 16;
           b.field_t = b.field_t + (var2_intLifetime2 >> 1);
-          rb.field_w = rb.field_w + param0.readUnsignedShort((byte) 25);
+          NetworkGameClient.field_w = NetworkGameClient.field_w + param0.readUnsignedShort((byte) 25);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "fe.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

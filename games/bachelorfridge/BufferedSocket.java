@@ -23,7 +23,7 @@ final class BufferedSocket implements Runnable {
     static kf field_n;
     static String field_a;
 
-    final int b(int param0) throws IOException {
+    final int availableBytes(int param0) throws IOException {
         if (this.field_g) {
           return 0;
         }
@@ -32,10 +32,10 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.a((byte) 55);
+        this.close((byte) 55);
     }
 
-    final void c(byte param0) throws IOException {
+    final void checkWriteError(byte param0) throws IOException {
         if (param0 != 34) {
           BufferedSocket.a(100, 22, -76, 55, -23, -24, -104);
         }
@@ -52,7 +52,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final void a(byte param0) {
+    final void close(byte param0) {
         try {
           int var4 = 0;
           ResourceArchive var5 = null;
@@ -141,7 +141,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(int param0, byte[] param1, boolean param2, int param3) throws IOException {
+    final void enqueueWrite(int param0, byte[] param1, boolean param2, int param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -194,7 +194,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(int param0, byte param1, byte[] param2, int param3) throws IOException {
+    final void readFully(int param0, byte param1, byte[] param2, int param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -530,7 +530,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int b(byte param0) throws IOException {
+    final int readByteOrEof(byte param0) throws IOException {
         if (this.field_g) {
           return 0;
         }

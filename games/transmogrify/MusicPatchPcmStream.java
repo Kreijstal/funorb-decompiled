@@ -465,7 +465,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final static void a(int param0, byte param1, e param2, boolean param3, int param4) {
+    final static void bucketVisibleFacesByDepth(int param0, byte param1, e param2, boolean param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_13_0 = false;
         int stackIn_36_0 = 0;
@@ -712,7 +712,7 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$ff69b800fca9(int param0, int param1, e param2, boolean param3, int param4) {
+    final static void bucketVisibleFacesByDepthWithIntGuard(int param0, int param1, e param2, boolean param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_13_0 = false;
         int stackIn_36_0 = 0;

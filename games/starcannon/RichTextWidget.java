@@ -77,7 +77,7 @@ class RichTextWidget extends InteractiveWidget {
             }
             return;
           }
-          var7 = og.field_d[ag.field_o];
+          var7 = og.field_d[NetworkGameClient.field_o];
           var8 = var7;
           var8Lifetime1 = var7;
           if (var7 == null) {

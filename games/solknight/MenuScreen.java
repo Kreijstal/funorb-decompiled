@@ -24,7 +24,7 @@ final class MenuScreen {
         int var5;
         int var6;
         var6 = SolKnight.field_L ? 1 : 0;
-        for (var4 = 0; ab.field_s[this.field_d].length > var4; var4++) {
+        for (var4 = 0; NetworkGameClient.field_s[this.field_d].length > var4; var4++) {
           var5 = this.b(param1 - 225, var4);
           if (this.b((byte) -4, var4) &&
             this.a(var4, -3) <= param0 &&
@@ -54,7 +54,7 @@ final class MenuScreen {
           this.field_b = -116;
         }
         regionExit1: {
-          var4 = ab.field_s[this.field_d][param2];
+          var4 = NetworkGameClient.field_s[this.field_d][param2];
           var5 = var4;
           if (var5 != 0) {
             if (var5 != 1) {
@@ -446,7 +446,7 @@ final class MenuScreen {
           return 180 + this.a(param0, param1 ^ -54);
         }
         if (!IntrusiveNode.field_f[this.field_d]) {
-          var3 = ab.field_s[this.field_d][param0];
+          var3 = NetworkGameClient.field_s[this.field_d][param0];
           var4 = AlphaWidgetContainer.field_I[var3];
           if (var4 == null) {
             return jb.field_a[this.field_d];
@@ -487,7 +487,7 @@ final class MenuScreen {
         int var16;
         var4 = this.b(123, param2);
         var5 = this.a(param2, -3);
-        var6 = ab.field_s[this.field_d][param2];
+        var6 = NetworkGameClient.field_s[this.field_d][param2];
         var7 = AlphaWidgetContainer.field_I[var6];
         if (param0) {
           return;
@@ -634,7 +634,7 @@ final class MenuScreen {
           return 200 + jb.field_a[this.field_d];
         }
         if (!IntrusiveNode.field_f[this.field_d]) {
-          var3 = ab.field_s[this.field_d][param0];
+          var3 = NetworkGameClient.field_s[this.field_d][param0];
           var4 = AlphaWidgetContainer.field_I[var3];
           if (var4 == null) {
             return jb.field_a[this.field_d];
@@ -682,7 +682,7 @@ final class MenuScreen {
           stackIn_6_4 = (lk.field_e == 0) ? false : true;
           stackIn_8_5 = false;
           stackIn_9_6 = (SecondaryNodeDequeIterator.field_d == 0) ? false : true;
-          var4Lifetime1 = stackIn_5_0 + stackIn_5_1 * ((BinaryBitmapFont) (Object) stackIn_5_2).lineCount(ai.$cfr$intArgs$a$c7de0d339b2a(stackIn_5_3, stackIn_6_4, stackIn_8_5, stackIn_9_6), 600);
+          var4Lifetime1 = stackIn_5_0 + stackIn_5_1 * ((BinaryBitmapFont) (Object) stackIn_5_2).lineCount(ai.getSaveResultsLoginPromptWithIntGuard(stackIn_5_3, stackIn_6_4, stackIn_8_5, stackIn_9_6), 600);
           ah.field_i[this.field_d] = var4Lifetime1 + 2;
           var4Lifetime1 = var4Lifetime1 + (var3 + 41);
           stackIn_11_0 = var4Lifetime1;
@@ -932,7 +932,7 @@ final class MenuScreen {
                   stackIn_60_3 = (lk.field_e != 0);
                   stackIn_62_4 = false;
                   stackIn_63_5 = (SecondaryNodeDequeIterator.field_d != 0);
-                  var8 = stackIn_59_0 + ((BinaryBitmapFont) (Object) stackIn_59_1).drawParagraph(ai.$cfr$intArgs$a$c7de0d339b2a(stackIn_59_2, stackIn_60_3, stackIn_62_4, stackIn_63_5), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1) * var9Lifetime1Lifetime1;
+                  var8 = stackIn_59_0 + ((BinaryBitmapFont) (Object) stackIn_59_1).drawParagraph(ai.getSaveResultsLoginPromptWithIntGuard(stackIn_59_2, stackIn_60_3, stackIn_62_4, stackIn_63_5), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1) * var9Lifetime1Lifetime1;
                   var8 = var8 + (41 + var9Lifetime1Lifetime1);
                   stackIn_65_0 = var8;
                   stackIn_65_1 = var9Lifetime1Lifetime1;
@@ -1216,7 +1216,7 @@ final class MenuScreen {
         this.field_e = -1;
         this.field_a = -1;
         this.field_d = param0;
-        this.field_f = new sf(ab.field_s[param0].length);
+        this.field_f = new sf(NetworkGameClient.field_s[param0].length);
     }
 
     final static void b(int param0) {

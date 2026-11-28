@@ -30,7 +30,7 @@ final class BufferedSocket implements Runnable {
         return lg.field_d;
     }
 
-    final void c(int param0) throws IOException {
+    final void checkWriteError(int param0) throws IOException {
         if (param0 != 0) {
           this.finalize();
         }
@@ -210,7 +210,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void h(int param0) {
+    final void close(int param0) {
         try {
           int var4 = 0;
           var4 = fleas.field_A ? 1 : 0;
@@ -255,7 +255,7 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.h(0);
+        this.close(0);
     }
 
     final static void a(byte param0, PacketBuffer param1) {
@@ -303,7 +303,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final void a(byte param0, int param1, int param2, byte[] param3) throws IOException {
+    final void enqueueWrite(byte param0, int param1, int param2, byte[] param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -356,7 +356,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int f(int param0) throws IOException {
+    final int readByteOrEof(int param0) throws IOException {
         if (this.field_l) {
           return 0;
         }
@@ -366,7 +366,7 @@ final class BufferedSocket implements Runnable {
         return this.field_n.read();
     }
 
-    final void a(int param0, byte[] param1, int param2, boolean param3) throws IOException {
+    final void readFully(int param0, byte[] param1, int param2, boolean param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -434,7 +434,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int e(int param0) throws IOException {
+    final int availableBytes(int param0) throws IOException {
         if (this.field_l) {
           return 0;
         }

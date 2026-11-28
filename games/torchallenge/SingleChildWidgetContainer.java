@@ -269,7 +269,7 @@ abstract class SingleChildWidgetContainer extends UiComponent implements WidgetC
         return this.field_A == null ? 0 : this.field_A.getMaximumRenderLayer(-15000);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, String param4, String param5, byte param6, boolean param7) {
+    final static void drawTooltipTransition(int param0, int param1, int param2, int param3, String param4, String param5, byte param6, boolean param7) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -611,7 +611,7 @@ abstract class SingleChildWidgetContainer extends UiComponent implements WidgetC
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$ceabca3815d0(int param0, int param1, int param2, int param3, String param4, String param5, int param6, boolean param7) {
+    final static void drawTooltipTransitionWithIntGuard(int param0, int param1, int param2, int param3, String param4, String param5, int param6, boolean param7) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;

@@ -267,7 +267,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             break;
           }
           if (stackIn_19_0 < 30) {
-            WidgetContainer.a((ResourceArchive) null, 14);
+            WidgetContainer.loadSharedInterfaceText((ResourceArchive) null, 14);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -537,8 +537,8 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(ResourceArchive param0, int param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2617_0;
             StringBuilder stackIn_2617_1;
             String stackIn_2618_2;
@@ -548,7 +548,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
+            ClientTextLoader(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2617_0 = null;
@@ -558,7 +558,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 this.var2 = null;
                 this.var2_ref = null;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 StripedProgressWidget.field_y = param0;
                 var2 = ca.a(param1 ^ 99, "loginm3");
                 if (null != var2) {
@@ -1597,7 +1597,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
                 var2 = ca.a(86, "otheroptions");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   GuestPlayConfirmationForm.a(0, var2);
                 }
@@ -2598,7 +2598,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                   GuestPlayConfirmationForm.a(0, var2);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 var2 = ca.a(param1 ^ 93, "canceldraw");
                 if (var2 != null) {
                   GuestPlayConfirmationForm.a(0, var2);
@@ -3257,7 +3257,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
                 var2 = ca.a(90, "mb_achievement_count_2");
                 if (var2 != null) {
-                  rb.field_t = GuestPlayConfirmationForm.a(param1 - 1, var2);
+                  NetworkGameClient.field_t = GuestPlayConfirmationForm.a(param1 - 1, var2);
                 }
                 var2 = ca.a(90, "mb_exclusive_1");
                 if (var2 != null) {
@@ -3548,11 +3548,11 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             }
             void run() {
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3568,7 +3568,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 

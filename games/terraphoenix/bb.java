@@ -11,7 +11,7 @@ final class bb {
     String field_g;
     static int field_d;
 
-    final static int a(byte param0, boolean param1, String param2) {
+    final static int measureSelectedFontTextWidth(byte param0, boolean param1, String param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -65,7 +65,7 @@ final class bb {
             if (var5 < 0) {
               var4 = var4 + DelegatingCanvas.field_b;
             } else {
-              var6 = bb.$cfr$intArgs$a$62abead39cee(87, true, rb.field_d[var3_int]);
+              var6 = bb.measureSelectedFontTextWidthWithIntGuard(87, true, rb.field_d[var3_int]);
               var7 = -(var6 >> 1) + nd.field_r;
               var4 = var4 + FullscreenStatusDialog.field_ab;
               if (WidgetContainer.a(var7 - se.field_j, var4, param2, (byte) 76, param1, var6 + (se.field_j << 1), (dc.field_b << 1) + lm.field_d)) {
@@ -180,7 +180,7 @@ final class bb {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$62abead39cee(int param0, boolean param1, String param2) {
+    final static int measureSelectedFontTextWidthWithIntGuard(int param0, boolean param1, String param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;

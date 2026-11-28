@@ -39,7 +39,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListenerByDeadline(IntrusiveNode param0, PcmScheduledEvent param1) {
         while (true) {
           if (param0 == this.field_n.sentinel) {
-            na.$cfr$intArgs$a$83744e1822f8(52, param0, param1);
+            na.insertAdjacentNodeWithIntGuard(52, param0, param1);
             this.field_m = ((PcmScheduledEvent) (this.field_n.sentinel.next)).time;
             return;
           }
@@ -49,7 +49,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        na.$cfr$intArgs$a$83744e1822f8(52, param0, param1);
+        na.insertAdjacentNodeWithIntGuard(52, param0, param1);
         this.field_m = ((PcmScheduledEvent) (this.field_n.sentinel.next)).time;
         return;
     }

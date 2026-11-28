@@ -12,7 +12,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         super(param0);
     }
 
-    final static String a(boolean param0, byte param1, boolean param2, boolean param3) {
+    final static String getSaveResultsLoginPrompt(boolean param0, byte param1, boolean param2, boolean param3) {
         int var4;
         int var4Lifetime1;
         if (param1 == 100) {
@@ -88,7 +88,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static String $cfr$intArgs$a$feb7e63b59d8(boolean param0, int param1, boolean param2, boolean param3) {
+    final static String getSaveResultsLoginPromptWithIntGuard(boolean param0, int param1, boolean param2, boolean param3) {
         int var4;
         int var4Lifetime1;
         if (param1 == 100) {

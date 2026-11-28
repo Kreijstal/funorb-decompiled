@@ -44,7 +44,7 @@ final class h {
     }
 
     final static void a(byte param0) {
-        ab.field_s[3] = new int[]{5};
+        NetworkGameClient.field_s[3] = new int[]{5};
         vd.screens[3] = new MenuScreen(3);
         fj.a(37, new int[]{8, 9, 10, 5}, 468, (byte) 15, 0, 2, 30);
         vd.screens[2] = new MenuScreen(2);

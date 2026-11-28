@@ -81,7 +81,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         this.nameAvailable = false;
     }
 
-    final static int a(byte param0, String param1, boolean param2) {
+    final static int measureSelectedFontTextWidth(byte param0, String param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -165,7 +165,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           }
           if (param0 != 1) {
             var5 = (String) null;
-            AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(87, (String) null, false);
+            AccountNameAvailabilityValidator.measureSelectedFontTextWidthWithIntGuard(87, (String) null, false);
           }
           if (this.nameAvailable) {
             stackIn_17_0 = ub.field_c;
@@ -277,7 +277,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$590e95718a07(int param0, String param1, boolean param2) {
+    final static int measureSelectedFontTextWidthWithIntGuard(int param0, String param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;

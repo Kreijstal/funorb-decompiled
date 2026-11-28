@@ -338,7 +338,7 @@ class InteractiveWidget extends UiWidget {
 
     final static Archive a(int param0, byte param1, int param2, boolean param3, boolean param4) {
         int var5 = 10 / ((-74 - param1) / 37);
-        return ab.a(2097152, param0, param2, false, param4, param3);
+        return NetworkGameClient.a(2097152, param0, param2, false, param4, param3);
     }
 
     final static void a(int param0, Archive param1) {

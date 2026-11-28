@@ -1179,7 +1179,7 @@ final class je {
             }
           } else {
             if (ch.field_h == 5) {
-              var7 = ob.field_w[tb.field_c];
+              var7 = NetworkGameClient.field_w[tb.field_c];
               var12 = var7;
               var7 = var12;
             } else {

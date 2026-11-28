@@ -215,7 +215,7 @@ final class mb {
                   var24Lifetime1Lifetime1 = param0.field_i[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_O[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_I[var23Lifetime2];
-                  ab.field_A[var23Lifetime2] = var9 + (var26Lifetime1Lifetime1 * var18 + (var15 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var12) >> 16);
+                  NetworkGameClient.field_A[var23Lifetime2] = var9 + (var26Lifetime1Lifetime1 * var18 + (var15 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var12) >> 16);
                   aj.field_o[var23Lifetime2] = (var13 * var24Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var16 + var26Lifetime1Lifetime1 * var19) >> 16) + var10;
                   pl.field_c[var23Lifetime2] = var11 + (var24Lifetime1Lifetime1 * var14 - (-(var25Lifetime1Lifetime1 * var17) - var26Lifetime1Lifetime1 * var20) >> 16);
                   var24Lifetime1Lifetime1 = param0.field_L[var23Lifetime2];

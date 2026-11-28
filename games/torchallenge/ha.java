@@ -32,7 +32,7 @@ final class ha {
             if (var5 < 0) {
               var4 = var4 + ok.field_e;
             } else {
-              var6 = ki.$cfr$intArgs$a$62abead39cee(-18, true, MatchingFieldValidator.field_s[var3_int]);
+              var6 = ki.measureSelectedFontTextWidthWithIntGuard(-18, true, MatchingFieldValidator.field_s[var3_int]);
               var7 = -(var6 >> 1) + AccountRegistrationPanel.field_ab;
               var4 = var4 + uc.field_Y;
               if (kg.a((byte) -121, var4, var6 + (ni.field_i << 1), var7 - ni.field_i, param1, param0, (ai.field_a << 1) + IntrusiveDeque.field_f)) {

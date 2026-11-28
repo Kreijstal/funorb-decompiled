@@ -127,7 +127,7 @@ class RichTextWidget extends InteractiveWidget {
               hl.a(var2, 12, vk.field_j, MouseInputHandler.field_d, vb.field_r);
               var2.writeByte(15, (byte) 122);
               var2.writeInt(mg.field_e, false);
-              bl.field_V.a(13, 0, (byte) 120, var2.payload);
+              bl.field_V.enqueueWrite(13, 0, (byte) 120, var2.payload);
               FullscreenStatusDialog.field_jb = FullscreenStatusDialog.field_jb + 1;
               EmailFormatValidator.field_m = 30000L + ol.correctedCurrentTimeMillis(256);
             }
@@ -136,8 +136,8 @@ class RichTextWidget extends InteractiveWidget {
               return stackIn_22_0;
             }
             if (FullscreenStatusDialog.field_jb == 3) {
-              if (bl.field_V.a(0) > 0) {
-                var1_int = bl.field_V.c(0);
+              if (bl.field_V.availableBytes(0) > 0) {
+                var1_int = bl.field_V.readByteOrEof(0);
                 if (var1_int != 0) {
                   stackIn_31_0 = je.a(var1_int, true);
                   return stackIn_31_0;

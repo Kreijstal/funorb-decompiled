@@ -234,12 +234,12 @@ abstract class TextLayout {
             return false;
           }
           try {
-            var2_int = nk.field_b.a((byte) -125);
+            var2_int = nk.field_b.availableBytes((byte) -125);
             if (var2_int > 0) {
               if (param0 - WordLanguage.field_l.position < var2_int) {
                 var2_int = -WordLanguage.field_l.position + param0;
               }
-              nk.field_b.a(WordLanguage.field_l.position, var2_int, WordLanguage.field_l.payload, 5768);
+              nk.field_b.readFully(WordLanguage.field_l.position, var2_int, WordLanguage.field_l.payload, 5768);
               wi.field_q = lk.correctedCurrentTimeMillis(param1 ^ 0);
               WordLanguage.field_l.position = WordLanguage.field_l.position + var2_int;
               if (param0 > WordLanguage.field_l.position) {

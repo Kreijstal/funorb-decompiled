@@ -26,7 +26,7 @@ class IntrusiveNode {
         }
         TunnelMesh.field_J = null;
         DebouncedFieldValidator.field_c = new PrimaryNodeDeque();
-        i.field_o = 0;
+        NetworkGameClient.field_o = 0;
         oj.field_B = 0;
     }
 

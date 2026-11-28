@@ -882,7 +882,7 @@ public final class Bounce extends GameClient {
           f.field_a.serviceOutput();
           jl.field_d.serviceOutput();
           stackIn_5_1 = (sj.field_f != null);
-          this.a(stackIn_5_1, -73);
+          this.serviceFramework(stackIn_5_1, -73);
           if (ModalDialog.field_z) {
             this.openGameArchives(-16);
             ModalDialog.field_z = false;
@@ -1000,12 +1000,12 @@ public final class Bounce extends GameClient {
               ByteArrayPoolSupport.a(0, true);
               break;
             }
-            this.j(-4);
+            this.dispatchCommonPacket(-4);
           } while (var3 == 0);
           if (!tb.e(-11)) {
             return;
           }
-          var2_intLifetime1 = this.h(param0 ^ 36);
+          var2_intLifetime1 = this.attemptReconnect(param0 ^ 36);
           if (var2_intLifetime1 == 0 ||
             var2_intLifetime1 == 1) {
             rk.a(3, (byte) -29);
@@ -1137,7 +1137,7 @@ public final class Bounce extends GameClient {
 
     public final void init() {
         try {
-          this.a(11, (byte) 122, "bouncedown");
+          this.startWithDefaultSize(11, (byte) 122, "bouncedown");
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "Bounce.init()");
         }
@@ -1403,7 +1403,7 @@ public final class Bounce extends GameClient {
     }
 
     final void initializeClient(byte param0) {
-        this.a(9, 0, 10, 3, 7, 8764, false, 8);
+        this.initializeFramework(9, 0, 10, 3, 7, 8764, false, 8);
         AudioOutput.configureAudio(22050, true, 10);
         f.field_a = AudioOutput.createOutput(DebouncedFieldValidator.field_e, (java.awt.Component) ((Object) MusicPatchEnvelope.field_h), 0, 512);
         jl.field_d = AudioOutput.createOutput(DebouncedFieldValidator.field_e, (java.awt.Component) ((Object) MusicPatchEnvelope.field_h), 1, 22050);
@@ -1879,7 +1879,7 @@ public final class Bounce extends GameClient {
               stackIn_332_2 = false;
               stackIn_333_3 = (kb.field_a != 0);
               stackIn_337_4 = (0 != fa.field_c);
-              ((BinaryBitmapFont) (Object) stackIn_332_0).drawCentred(ld.$cfr$intArgs$a$c7de0d339b2a(stackIn_332_1, stackIn_332_2, stackIn_333_3, stackIn_337_4), 320, 32 + (var7Lifetime2 + 3 * var8), 16777088, -1);
+              ((BinaryBitmapFont) (Object) stackIn_332_0).drawCentred(ld.getAlternativeButtonPromptPrefixWithIntGuard(stackIn_332_1, stackIn_332_2, stackIn_333_3, stackIn_337_4), 320, 32 + (var7Lifetime2 + 3 * var8), 16777088, -1);
               stackIn_340_0 = this;
               stackIn_340_1 = ProgressDialog.field_T;
               stackIn_340_2 = this.field_L;

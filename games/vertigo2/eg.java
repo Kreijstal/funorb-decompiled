@@ -51,7 +51,7 @@ final class eg extends tk {
             this.field_o = this.field_o + var4;
             if (this.field_o > 30000) {
               try {
-                this.field_u.b(0);
+                this.field_u.close(0);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -69,13 +69,13 @@ final class eg extends tk {
             return false;
           }
           try {
-            this.field_u.c(-26206);
+            this.field_u.checkWriteError(-26206);
             var2 = (NetworkArchiveRequest) (this.field_b.b((byte) -50));
             while (var2 != null) {
               this.field_f.position = 0;
               this.field_f.writeByte(1, param0 ^ -3703);
               this.field_f.b((byte) 90, var2.secondaryKey);
-              this.field_u.a(0, this.field_f.payload.length, param0 ^ -3646, this.field_f.payload);
+              this.field_u.enqueueWrite(0, this.field_f.payload.length, param0 ^ -3646, this.field_f.payload);
               this.field_a.a(false, var2);
               var2 = (NetworkArchiveRequest) (this.field_b.a(true));
             }
@@ -84,12 +84,12 @@ final class eg extends tk {
               this.field_f.position = 0;
               this.field_f.writeByte(0, 93);
               this.field_f.b((byte) 125, var2Lifetime1.secondaryKey);
-              this.field_u.a(0, this.field_f.payload.length, -93, this.field_f.payload);
+              this.field_u.enqueueWrite(0, this.field_f.payload.length, -93, this.field_f.payload);
               this.field_g.a(false, var2Lifetime1);
               var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.a(true));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
-              var3_int = this.field_u.a(15166);
+              var3_int = this.field_u.availableBytes(15166);
               if (var3_int < 0) {
                 throw new IOException();
               }
@@ -112,7 +112,7 @@ final class eg extends tk {
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.field_u.a(this.field_h.field_J.payload, false, var6, this.field_h.field_J.position);
+                  this.field_u.readFully(this.field_h.field_J.payload, false, var6, this.field_h.field_J.position);
                   if (this.field_l != 0) {
                     var17 = 0;
                     var7 = var17;
@@ -137,7 +137,7 @@ final class eg extends tk {
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.field_u.a(this.field_i.payload, false, var5, this.field_i.position);
+                  this.field_u.readFully(this.field_i.payload, false, var5, this.field_i.position);
                   if (this.field_l != 0) {
                     for (var6 = 0; var6 < var5; var6++) {
                       this.field_i.payload[var6 + this.field_i.position] = (byte)tk.bitwiseXor((int) this.field_i.payload[var6 + this.field_i.position], (int) this.field_l);
@@ -212,7 +212,7 @@ final class eg extends tk {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_u.b(param0 ^ -3599);
+              this.field_u.close(param0 ^ -3599);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -251,7 +251,7 @@ final class eg extends tk {
           try {
             if (this.field_u != null) {
               try {
-                this.field_u.b(0);
+                this.field_u.close(0);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -285,12 +285,12 @@ final class eg extends tk {
                 this.field_f.writeByte(4, -84);
                 this.field_f.writeByte((int) this.field_l, 115);
                 this.field_f.writeInt(0, 0);
-                this.field_u.a(0, this.field_f.payload.length, -87, this.field_f.payload);
+                this.field_u.enqueueWrite(0, this.field_f.payload.length, -87, this.field_f.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_u.b(0);
+                  this.field_u.close(0);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
@@ -389,12 +389,12 @@ final class eg extends tk {
             this.field_f.writeByte(6, 118);
             this.field_f.writeMedium(param0 ^ -1725083856, 3);
             this.field_f.writeShort(0, param0 ^ -1783);
-            this.field_u.a(param0, this.field_f.payload.length, 34, this.field_f.payload);
+            this.field_u.enqueueWrite(param0, this.field_f.payload.length, 34, this.field_f.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_u.b(param0 + 0);
+              this.field_u.close(param0 + 0);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -412,7 +412,7 @@ final class eg extends tk {
 
     final void e(int param0) {
         try {
-          this.field_u.b(param0);
+          this.field_u.close(param0);
         } catch (Exception exception) {
         }
         this.field_u = null;
@@ -437,7 +437,7 @@ final class eg extends tk {
 
     final void b(byte param0) {
         if (null != this.field_u) {
-          this.field_u.b(0);
+          this.field_u.close(0);
         }
         if (param0 != 9) {
           field_q = (String) null;
@@ -467,12 +467,12 @@ final class eg extends tk {
             }
             ((PacketBuffer) (Object) stackIn_7_0).writeByte(stackIn_8_1, 100);
             this.field_f.b((byte) 50, 0L);
-            this.field_u.a(0, this.field_f.payload.length, 26, this.field_f.payload);
+            this.field_u.enqueueWrite(0, this.field_f.payload.length, 26, this.field_f.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_u.b(0);
+              this.field_u.close(0);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;

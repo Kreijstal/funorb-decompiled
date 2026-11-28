@@ -20,10 +20,10 @@ final class BufferedSocket implements Runnable {
     private int field_k;
 
     protected final void finalize() {
-        this.a((byte) 73);
+        this.close((byte) 73);
     }
 
-    final int a(int param0) throws IOException {
+    final int readByteOrEof(int param0) throws IOException {
         if (param0 != -16840) {
           return 43;
         }
@@ -33,7 +33,7 @@ final class BufferedSocket implements Runnable {
         return this.field_g.read();
     }
 
-    final void a(byte param0) {
+    final void close(byte param0) {
         try {
           int var4 = 0;
           var4 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -66,7 +66,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void b(byte param0) throws IOException {
+    final void checkWriteError(byte param0) throws IOException {
         if (this.field_n) {
           return;
         }
@@ -192,7 +192,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final void a(byte[] param0, int param1, byte param2, int param3) throws IOException {
+    final void enqueueWrite(byte[] param0, int param1, byte param2, int param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -226,7 +226,7 @@ final class BufferedSocket implements Runnable {
               this.field_d = this.field_f.requestThreadStart((Runnable) (this), 3, 0);
             }
             if (param2 < 12) {
-              this.a((byte) 110);
+              this.close((byte) 110);
             }
             this.notifyAll();
           }
@@ -252,7 +252,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(int param0, boolean param1, byte[] param2, int param3) throws IOException {
+    final void readFully(int param0, boolean param1, byte[] param2, int param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -274,7 +274,7 @@ final class BufferedSocket implements Runnable {
             param3 = param3 + var5_int;
           }
           if (!param1) {
-            this.a((byte) 64);
+            this.close((byte) 64);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -386,7 +386,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int c(int param0) throws IOException {
+    final int availableBytes(int param0) throws IOException {
         int var2 = -80 % ((param0 + 42) / 38);
         if (this.field_n) {
           return 0;

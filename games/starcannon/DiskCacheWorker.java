@@ -282,7 +282,7 @@ final class DiskCacheWorker implements Runnable {
               var3_int = -20 / ((param2 - 8) / 58);
               var4 = new java.net.URL(param1.getCodeBase(), param0);
               var4 = NodeHashTableIterator.a(127, var4, param1);
-              ag.a(true, var4.toString(), 64, param1);
+              NetworkGameClient.a(true, var4.toString(), 64, param1);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

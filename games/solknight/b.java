@@ -42,7 +42,7 @@ final class b {
         }
     }
 
-    final static String[] a(String param0, char param1, boolean param2) {
+    final static String[] splitByDelimiter(String param0, char param1, boolean param2) {
         int var7 = 0;
         int incrementValue$1 = 0;
         int var3_int = 0;
@@ -98,7 +98,7 @@ final class b {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static String[] $cfr$intArgs$a$25ae83805f84(String param0, int param1, boolean param2) {
+    final static String[] splitByDelimiterWithIntDelimiter(String param0, int param1, boolean param2) {
         int var7 = 0;
         int incrementValue$1 = 0;
         int var3_int = 0;

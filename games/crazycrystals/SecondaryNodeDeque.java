@@ -40,7 +40,7 @@ final class SecondaryNodeDeque implements Iterable {
           while (je.field_i.length > var3_int) {
             var5 = ub.field_b[var3_int];
             if (var5 >= 0) {
-              var6 = vm.$cfr$intArgs$a$62abead39cee(96, true, je.field_i[var3_int]);
+              var6 = vm.measureSelectedFontTextWidthWithIntGuard(96, true, je.field_i[var3_int]);
               var4 = var4 + MouseInputHandler.field_a;
               var7 = -(var6 >> 1) + oa.field_b;
               if (wn.a(var6 + (to.field_d << 1), param1, param2, var7 - to.field_d, (byte) -30, gh.field_w + (SoundCache.field_c << 1), var4)) {

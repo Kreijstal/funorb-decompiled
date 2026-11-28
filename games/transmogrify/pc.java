@@ -15,7 +15,7 @@ final class pc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 120) {
-            stackIn_4_0 = param1.a(param0, 115);
+            stackIn_4_0 = param1.pollAccountUiActions(param0, 115);
             return stackIn_4_0;
           }
           stackIn_2_0 = 120;
@@ -36,7 +36,7 @@ final class pc {
 
     final static void a(int param0) {
         if (null != nk.field_b) {
-          nk.field_b.a(true);
+          nk.field_b.close(true);
           nk.field_b = null;
         }
         if (param0 == 1) {

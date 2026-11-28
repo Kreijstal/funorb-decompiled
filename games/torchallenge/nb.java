@@ -201,7 +201,7 @@ final class nb {
             }
             if (0 < dk.field_s.position) {
               try {
-                qf.field_a.a(dk.field_s.position, 0, (byte) 113, dk.field_s.payload);
+                qf.field_a.enqueueWrite(dk.field_s.position, 0, (byte) 113, dk.field_s.payload);
                 AccountNameAvailabilityValidator.field_q = ol.correctedCurrentTimeMillis(256);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

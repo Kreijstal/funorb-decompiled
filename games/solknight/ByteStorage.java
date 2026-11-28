@@ -6,7 +6,7 @@ abstract class ByteStorage {
     static int field_c;
     static String field_b;
 
-    final static int a(boolean param0, byte param1, ab param2) {
+    final static int a(boolean param0, byte param1, NetworkGameClient param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -17,7 +17,7 @@ abstract class ByteStorage {
           if (param1 != 20) {
             ByteStorage.clearStaticReferences((byte) -79);
           }
-          stackIn_3_0 = param2.b(false, param0);
+          stackIn_3_0 = param2.pollAccountUiActions(false, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

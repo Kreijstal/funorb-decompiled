@@ -50,7 +50,7 @@ final class ue {
             var2 = 97 % ((-22 - param0) / 57);
             if (0 < StandardContentDialog.field_fb.position) {
               try {
-                ob.field_b.a(StandardContentDialog.field_fb.payload, 0, 113, StandardContentDialog.field_fb.position);
+                ob.field_b.enqueueWrite(StandardContentDialog.field_fb.payload, 0, 113, StandardContentDialog.field_fb.position);
                 t.field_d = ih.correctedCurrentTimeMillis((byte) -98);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

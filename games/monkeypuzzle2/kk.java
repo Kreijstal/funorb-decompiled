@@ -240,7 +240,7 @@ final class kk {
                     stackIn_73_1 = (DebouncedFieldValidator.field_f.field_A != 0);
                     stackIn_75_2 = 122;
                     stackIn_76_3 = (FrameTimer.field_b != 0);
-                    ((BinaryBitmapFont) (Object) stackIn_72_0).drawCentred(ma.$cfr$intArgs$a$feb7e63b59d8(stackIn_73_1, stackIn_75_2, stackIn_76_3, false), 320, 20 + (var5Lifetime1 * 4 + var4Lifetime1 + 40), 1, -1);
+                    ((BinaryBitmapFont) (Object) stackIn_72_0).drawCentred(ma.getDiscardResultsPromptSuffixWithIntGuard(stackIn_73_1, stackIn_75_2, stackIn_76_3, false), 320, 20 + (var5Lifetime1 * 4 + var4Lifetime1 + 40), 1, -1);
                     decompiledFrameRemainder0 = (var6 != 0);
                   }
                   if (decompiledFrameRemainder0) {

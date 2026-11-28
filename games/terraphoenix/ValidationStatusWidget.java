@@ -270,7 +270,7 @@ final class ValidationStatusWidget extends RichTextWidget {
             stackIn_56_0 = sl.field_d;
             stackIn_56_1 = -106;
             stackIn_57_2 = (ProgressMessageDialog.field_ob.field_h == 0);
-            NanoFrameTimer.$cfr$intArgs$a$c79a3df4369d(stackIn_56_0, stackIn_56_1, stackIn_57_2, qk.field_i);
+            NanoFrameTimer.drawBenefitsButtonFrameWithIntGuard(stackIn_56_0, stackIn_56_1, stackIn_57_2, qk.field_i);
           }
           if (null != lm.field_e &&
             null != IntrusiveNode.field_f) {
@@ -282,7 +282,7 @@ final class ValidationStatusWidget extends RichTextWidget {
             stackIn_65_0 = GameShell.field_C;
             stackIn_65_1 = -80;
             stackIn_66_2 = (ProgressMessageDialog.field_ob.field_h == 1);
-            NanoFrameTimer.$cfr$intArgs$a$c79a3df4369d(stackIn_65_0, stackIn_65_1, stackIn_66_2, DirectByteStorage.field_j);
+            NanoFrameTimer.drawBenefitsButtonFrameWithIntGuard(stackIn_65_0, stackIn_65_1, stackIn_66_2, DirectByteStorage.field_j);
           }
           if (null != ig.field_a) {
             var1_int = 357 - ig.field_a.field_u / 2;

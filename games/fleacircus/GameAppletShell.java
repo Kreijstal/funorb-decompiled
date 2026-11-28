@@ -314,7 +314,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void windowIconified(java.awt.event.WindowEvent param0) {
     }
 
-    final void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6) {
+    final void startApplet(int param0, int param1, int param2, int param3, String param4, int param5, int param6) {
         try {
           PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_26_0 = null;
@@ -331,7 +331,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               if (null != pf.field_c) {
                 qk.field_a = qk.field_a + 1;
                 if (qk.field_a >= 3) {
-                  this.a(param6 ^ -6472, "alreadyloaded");
+                  this.showErrorPage(param6 ^ -6472, "alreadyloaded");
                   return;
                 }
                 this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
@@ -339,7 +339,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
               SecondaryNodeDequeIterator.field_a = param3;
               if (param6 != 3) {
-                this.a(-29, 46, -49, 56, (String) null, -7, 122);
+                this.startApplet(-29, 46, -49, 56, (String) null, -7, 122);
               }
               gm.field_nb = param2;
               di.field_c = param2;
@@ -366,7 +366,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
               ud.a((String) null, var8_ref, param6 ^ 3);
-              this.a(param6 - 6472, "crash");
+              this.showErrorPage(param6 - 6472, "crash");
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -425,7 +425,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public abstract void init();
 
-    final void a(int param0, String param1) {
+    final void showErrorPage(int param0, String param1) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -598,7 +598,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     var2.equals("1.5") ||
                     var2.startsWith("1.5.") ||
                     var2.equals("1.6.0")) {
-                    this.a(-6469, "wrongjava");
+                    this.showErrorPage(-6469, "wrongjava");
                     decompiledFrameRemainder3 = (var5 != 0);
                   }
                   if ((decompiledFrameRemainder3) &&
@@ -620,7 +620,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                       var4 = var2.substring(6, var3);
                       if (ii.a(12969, (CharSequence) ((Object) var4)) &&
                         !(pl.a((CharSequence) ((Object) var4), -9816) >= 10)) {
-                        this.a(-6469, "wrongjava");
+                        this.showErrorPage(-6469, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
                     }
@@ -710,7 +710,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
               ud.a((String) null, (Throwable) (var1), 0);
-              this.a(-6469, "crash");
+              this.showErrorPage(-6469, "crash");
             }
             this.shutdownApplet(true, (byte) 95);
             return;
@@ -906,7 +906,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean allowAppletStartup(boolean param0) {
         return true;
     }
 

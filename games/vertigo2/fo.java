@@ -1855,7 +1855,7 @@ final class fo {
                       stackIn_35_0 = DefaultTextWidgetRenderer.field_s;
                       stackIn_35_1 = 116;
                       stackIn_36_2 = (0 != jq.field_e);
-                      ((wn) (Object) stackIn_35_0).a(vi.$cfr$intArgs$a$c7de0d339b2a(stackIn_35_1, stackIn_36_2, true, true), 16777215, -1, 320, var2, 2);
+                      ((wn) (Object) stackIn_35_0).a(vi.getAlternativeButtonPromptPrefixWithIntGuard(stackIn_35_1, stackIn_36_2, true, true), 16777215, -1, 320, var2, 2);
                       var2 += 80;
                       stackIn_38_0 = DefaultTextWidgetRenderer.field_s;
                       stackIn_39_1 = (jq.field_e != 0);

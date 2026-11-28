@@ -108,7 +108,7 @@ final class ca {
             }
             stackIn_87_0 = 100;
             stackIn_88_1 = (param0) && (m.h(-121));
-            uc.$cfr$intArgs$a$7ffe4b125357(stackIn_87_0, stackIn_88_1);
+            uc.updateClientPanelStackWithIntGuard(stackIn_87_0, stackIn_88_1);
           }
           return;
         }
@@ -127,7 +127,7 @@ final class ca {
             if (var2Lifetime1 != 0) {
               stackIn_17_0 = 100;
               stackIn_18_1 = (param0) && (m.h(-121));
-              uc.$cfr$intArgs$a$7ffe4b125357(stackIn_17_0, stackIn_18_1);
+              uc.updateClientPanelStackWithIntGuard(stackIn_17_0, stackIn_18_1);
             }
             return;
           }
@@ -136,7 +136,7 @@ final class ca {
             if (var2Lifetime1 != 0) {
               stackIn_27_0 = 100;
               stackIn_28_1 = (param0) && (m.h(-121));
-              uc.$cfr$intArgs$a$7ffe4b125357(stackIn_27_0, stackIn_28_1);
+              uc.updateClientPanelStackWithIntGuard(stackIn_27_0, stackIn_28_1);
             }
             return;
           }
@@ -144,7 +144,7 @@ final class ca {
           if (var2Lifetime1 != 0) {
             stackIn_39_0 = 100;
             stackIn_40_1 = (param0) && (m.h(-121));
-            uc.$cfr$intArgs$a$7ffe4b125357(stackIn_39_0, stackIn_40_1);
+            uc.updateClientPanelStackWithIntGuard(stackIn_39_0, stackIn_40_1);
           }
           return;
         }
@@ -155,7 +155,7 @@ final class ca {
           if (var2Lifetime2 != 0) {
             stackIn_53_0 = 100;
             stackIn_54_1 = (param0) && (m.h(-121));
-            uc.$cfr$intArgs$a$7ffe4b125357(stackIn_53_0, stackIn_54_1);
+            uc.updateClientPanelStackWithIntGuard(stackIn_53_0, stackIn_54_1);
           }
           return;
         }
@@ -167,7 +167,7 @@ final class ca {
         }
         stackIn_66_0 = 100;
         stackIn_67_1 = (param0) && (m.h(-121));
-        uc.$cfr$intArgs$a$7ffe4b125357(stackIn_66_0, stackIn_67_1);
+        uc.updateClientPanelStackWithIntGuard(stackIn_66_0, stackIn_67_1);
     }
 
     public static void clearStaticReferences(byte param0) {

@@ -41,7 +41,7 @@ final class ki {
         }
     }
 
-    final static int a(byte param0, boolean param1, String param2) {
+    final static int measureSelectedFontTextWidth(byte param0, boolean param1, String param2) {
         RuntimeException var3 = null;
         eh var4 = null;
         int stackIn_4_0 = 0;
@@ -84,7 +84,7 @@ final class ki {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$62abead39cee(int param0, boolean param1, String param2) {
+    final static int measureSelectedFontTextWidthWithIntGuard(int param0, boolean param1, String param2) {
         RuntimeException var3 = null;
         eh var4 = null;
         int stackIn_4_0 = 0;

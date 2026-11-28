@@ -64,8 +64,8 @@ final class ib {
         }
     }
 
-    final static void a(ResourceArchive param0, byte param1) {
-        class $CfrPartitionedBody {
+    final static void loadGameInterfaceText(ResourceArchive param0, byte param1) {
+        class GameTextLoader {
             RuntimeException stackIn_1324_0;
             StringBuilder stackIn_1324_1;
             String stackIn_1325_2;
@@ -76,7 +76,7 @@ final class ib {
             ResourceArchive param0;
             byte param1;
             boolean finished;
-            $CfrPartitionedBody(ResourceArchive initialParam0, byte initialParam1) {
+            GameTextLoader(ResourceArchive initialParam0, byte initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1324_0 = null;
@@ -87,7 +87,7 @@ final class ib {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadExpansionAchievementsAndItemNames() throws java.lang.RuntimeException {
                 ll.field_e = param0;
                 var2 = AccountRegistrationPanel.b("vengeance_expansion", (byte) -121);
                 if (var2 != null) {
@@ -966,7 +966,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("powerup_name,9", (byte) -120);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadPowerupsSettingsAndMissionBriefings() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   bm.field_e[9] = PcmResampler.a(122, var2);
                 }
@@ -1615,9 +1615,9 @@ final class ib {
             void run() {
                 var3 = HostileSpawn.field_I ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadExpansionAchievementsAndItemNames();
                   if (finished) return;
-                  runChunk1();
+                  loadPowerupsSettingsAndMissionBriefings();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -1636,7 +1636,7 @@ final class ib {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        GameTextLoader decompiledBody = new GameTextLoader(param0, param1);
         decompiledBody.run();
     }
 

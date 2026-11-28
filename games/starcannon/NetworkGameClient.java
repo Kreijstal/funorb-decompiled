@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class ag extends GameApplet {
+abstract class NetworkGameClient extends GameApplet {
     String field_u;
     private int field_v;
     private int field_w;
@@ -19,9 +19,9 @@ abstract class ag extends GameApplet {
     static o field_m;
     static int field_o;
 
-    final int h(byte param0) {
+    final int reconnectAndResendRequests(byte param0) {
         int var2;
-        var2 = this.m(125);
+        var2 = this.attemptReconnect(125);
         if (param0 != 58) {
           return -33;
         }
@@ -64,7 +64,7 @@ abstract class ag extends GameApplet {
             return false;
           }
           try {
-            var2_int = m.field_b.c(118);
+            var2_int = m.field_b.availableBytes(118);
             if (param0 <= 122) {
               field_o = 68;
             }
@@ -72,7 +72,7 @@ abstract class ag extends GameApplet {
               if (var2_int > -RichTextLayout.field_p.position + param1) {
                 var2_int = -RichTextLayout.field_p.position + param1;
               }
-              m.field_b.a(RichTextLayout.field_p.position, 32498, var2_int, RichTextLayout.field_p.payload);
+              m.field_b.readFully(RichTextLayout.field_p.position, 32498, var2_int, RichTextLayout.field_p.payload);
               ArchiveRequest.field_p = dd.correctedCurrentTimeMillis(115);
               RichTextLayout.field_p.position = RichTextLayout.field_p.position + var2_int;
               if (param1 > RichTextLayout.field_p.position) {
@@ -107,7 +107,7 @@ abstract class ag extends GameApplet {
         field_m = null;
     }
 
-    private final void g(int param0) {
+    private final void initializePacketLengths(int param0) {
         s.field_k[5] = -1;
         s.field_k[10] = -1;
         s.field_k[1] = 16;
@@ -147,7 +147,7 @@ abstract class ag extends GameApplet {
             try {
               param3.getAppletContext().showDocument(new java.net.URL(param1), "_blank");
               if (param2 != 64) {
-                ag.h(-67);
+                NetworkGameClient.h(-67);
               }
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -180,7 +180,7 @@ abstract class ag extends GameApplet {
         }
     }
 
-    private final void g(byte param0) {
+    private final void readSessionCookieUpdate(byte param0) {
         int var2 = 24 / ((param0 - 58) / 42);
         String var3 = IntrusiveNode.c(1);
         DelegatingCanvas.a(0, var3, ll.b(110));
@@ -193,7 +193,7 @@ abstract class ag extends GameApplet {
         return bl.field_b.a(-6);
     }
 
-    final void a(boolean param0) {
+    final void dispatchCommonPacket(boolean param0) {
         int stackIn_30_0 = 0;
         boolean stackIn_31_1 = false;
         int var2;
@@ -257,7 +257,7 @@ abstract class ag extends GameApplet {
                           MouseInput.a(il.field_g, RichTextLayout.field_p, nb.field_e, false);
                         }
                       } else {
-                        this.g((byte) -47);
+                        this.readSessionCookieUpdate((byte) -47);
                       }
                     }
                   }
@@ -273,7 +273,7 @@ abstract class ag extends GameApplet {
         ec.a((byte) 27);
     }
 
-    final void b(boolean param0, int param1) {
+    final void serviceFramework(boolean param0, int param1) {
         int stackIn_23_0 = 0;
         String stackIn_104_0 = null;
         boolean stackIn_105_1 = false;
@@ -340,19 +340,19 @@ abstract class ag extends GameApplet {
             if (qb.field_j != 3) {
               if (qb.field_j != 4) {
                 if (qb.field_j == 2) {
-                  this.a("js5connect_full", false);
+                  this.showErrorPage("js5connect_full", false);
                 } else {
                   if (qb.field_j != 5) {
-                    this.a("js5connect", false);
+                    this.showErrorPage("js5connect", false);
                   } else {
-                    this.a("outofdate", false);
+                    this.showErrorPage("outofdate", false);
                   }
                 }
               } else {
-                this.a("js5io", false);
+                this.showErrorPage("js5io", false);
               }
             } else {
-              this.a("js5crc", false);
+              this.showErrorPage("js5crc", false);
             }
           } else {
             if (bl.field_a >= 10) {
@@ -394,7 +394,7 @@ abstract class ag extends GameApplet {
           kb.field_a = false;
         }
         if (IntrusiveDeque.field_d == 0 &&
-          ag.h(-28050)) {
+          NetworkGameClient.h(-28050)) {
           IntrusiveDeque.field_d = 1;
         }
         if (IntrusiveDeque.field_d == 1) {
@@ -413,7 +413,7 @@ abstract class ag extends GameApplet {
             kl.field_b.ensureIndexLoaded((byte) 95)) {
             if (kl.field_b.hasGroupName(-20955, "")) {
               if (kl.field_b.tryLoadGroupByName("", param1 ^ 9882)) {
-                eh.a((byte) 63, kl.field_b);
+                eh.loadSharedInterfaceText((byte) 63, kl.field_b);
                 kl.field_b = null;
                 ModalDialogHost.j(32);
               }
@@ -500,21 +500,21 @@ abstract class ag extends GameApplet {
         }
     }
 
-    final int b(int param0, boolean param1) {
+    final int pollAccountUiActions(int param0, boolean param1) {
         if (param0 != 17) {
           this.field_p = 0;
         }
-        return this.a(param0 ^ 26, true, param1);
+        return this.processAccountUiActions(param0 ^ 26, true, param1);
     }
 
     private final void e(byte param0) {
         el.field_D[1] = true;
         if (param0 != -6) {
-          this.f((byte) 11);
+          this.updateLoginFlow((byte) 11);
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, int param7) {
+    final void initializeFramework(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, int param7) {
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         var10.dispose();
@@ -531,7 +531,7 @@ abstract class ag extends GameApplet {
         a.field_d = param3;
         r.field_a = param2;
         SecondaryNodeDequeIterator.field_j = param5;
-        this.g(-102);
+        this.initializePacketLengths(-102);
         ValidatedTextField.k(126);
     }
 
@@ -539,11 +539,11 @@ abstract class ag extends GameApplet {
         int discarded$0 = 0;
         el.field_D[2] = true;
         if (param0 != -1) {
-          discarded$0 = this.m(-8);
+          discarded$0 = this.attemptReconnect(-8);
         }
     }
 
-    private final int a(int param0, boolean param1, boolean param2) {
+    private final int processAccountUiActions(int param0, boolean param1, boolean param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;
@@ -679,7 +679,7 @@ abstract class ag extends GameApplet {
     final static void k(int param0) {
         kg.a((String) null, "", (byte) 92);
         if (param0 != -1108) {
-          ag.k(-89);
+          NetworkGameClient.k(-89);
         }
     }
 
@@ -688,7 +688,7 @@ abstract class ag extends GameApplet {
         el.field_D[4] = true;
     }
 
-    final void f(byte param0) {
+    final void updateLoginFlow(byte param0) {
         int discarded$33 = 0;
         int discarded$34 = 0;
         int var3;
@@ -707,7 +707,7 @@ abstract class ag extends GameApplet {
             stackIn_10_0 = this;
             stackIn_10_3 = true;
           }
-          discarded$33 = this.a(stackIn_9_1, stackIn_9_2, stackIn_10_3);
+          discarded$33 = this.processAccountUiActions(stackIn_9_1, stackIn_9_2, stackIn_10_3);
         } else {
           if (IntrusiveDeque.field_d >= 10) {
             if (!m.a(-35)) {
@@ -716,13 +716,13 @@ abstract class ag extends GameApplet {
               if (bl.field_a != 0) {
                 ne.b(lh.field_I, 150);
               } else {
-                discarded$34 = this.a(11, false, false);
+                discarded$34 = this.processAccountUiActions(11, false, false);
               }
             }
           }
         }
         if (param0 > -20) {
-          this.g(66);
+          this.initializePacketLengths(66);
         }
     }
 
@@ -755,18 +755,18 @@ abstract class ag extends GameApplet {
         }
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void startWithDefaultSize(int param0, int param1, String param2) {
         if (param0 != -15028) {
           return;
         }
         try {
-          this.a(param1, param2, 480, 640, (byte) -25);
+          this.readAppletParameters(param1, param2, 480, 640, (byte) -25);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "ag.IA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int m(int param0) {
+    private final int attemptReconnect(int param0) {
         int var2;
         int var3;
         if (this.field_b) {
@@ -785,7 +785,7 @@ abstract class ag extends GameApplet {
         if (0 != var2 &&
           1 != var2) {
           if (!DefaultTextWidgetRenderer.field_p) {
-            this.a("reconnect", false);
+            this.showErrorPage("reconnect", false);
           }
           SecondaryNodeDequeIterator.a(-88);
           var3 = 77 / ((param0 - 63) / 62);
@@ -810,10 +810,10 @@ abstract class ag extends GameApplet {
         int var4 = il.field_g - 1;
         byte[] var5 = new byte[var4];
         RichTextLayout.field_p.readCipheredBytes(var4, (byte) -54, var5, 0);
-        ag.a(var3 != 0, DualLinkNode.a(127, var5), 64, ll.b(126));
+        NetworkGameClient.a(var3 != 0, DualLinkNode.a(127, var5), 64, ll.b(126));
     }
 
-    private final void a(int param0, String param1, int param2, int param3, byte param4) {
+    private final void readAppletParameters(int param0, String param1, int param2, int param3, byte param4) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -828,7 +828,7 @@ abstract class ag extends GameApplet {
         String var10 = null;
         try {
           try {
-            if (!this.d(57)) {
+            if (!this.allowAppletStartup(57)) {
               return;
             }
             this.field_u = this.getCodeBase().getHost();
@@ -859,13 +859,13 @@ abstract class ag extends GameApplet {
               this.field_x = Integer.parseInt(var9);
             }
             PasswordValidator.field_l = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a((byte) 126, param1, this.field_w, 32, param2, param3, param0);
+            this.startApplet((byte) 126, param1, this.field_w, 32, param2, param3, param0);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             hc.a((Throwable) ((Object) var6_ref), (String) null, (byte) 100);
-            this.a("crash", false);
+            this.showErrorPage("crash", false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -882,7 +882,7 @@ abstract class ag extends GameApplet {
         }
     }
 
-    protected ag() {
+    protected NetworkGameClient() {
     }
 
     private final void l(int param0) {

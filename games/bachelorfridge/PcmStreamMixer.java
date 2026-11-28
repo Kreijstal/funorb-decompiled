@@ -145,7 +145,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListenerByDeadline(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.field_m.sentinel) {
-            RageAnimation.$cfr$intArgs$a$94cfdbf41ae0(115, param0, param1);
+            RageAnimation.insertAdjacentNodeWithIntGuard(115, param0, param1);
             this.field_j = ((PcmMixerListener) (this.field_m.sentinel.next)).field_f;
             return;
           }
@@ -155,7 +155,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        RageAnimation.$cfr$intArgs$a$94cfdbf41ae0(115, param0, param1);
+        RageAnimation.insertAdjacentNodeWithIntGuard(115, param0, param1);
         this.field_j = ((PcmMixerListener) (this.field_m.sentinel.next)).field_f;
         return;
     }

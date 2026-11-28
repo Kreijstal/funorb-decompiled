@@ -501,7 +501,7 @@ class UiWidget extends IntrusiveNode {
             sj.a(0, this.getTooltipText(param3 - 2));
             return param1;
           }
-          if (nk.field_z == 0) {
+          if (NetworkGameClient.field_z == 0) {
             pg.field_f = ul.field_o;
             sj.a(0, this.getTooltipText(param3 - 2));
             return param1;
@@ -515,7 +515,7 @@ class UiWidget extends IntrusiveNode {
         }
         if (0 != gd.field_l) {
           if (var5 == 0) {
-            if (0 == nk.field_z) {
+            if (0 == NetworkGameClient.field_z) {
               if (0 == ul.field_o &&
                 0 != pg.field_f) {
                 this.pointerReleased(this, bk.field_b, param2, 0, param0, ResourceArchive.field_e);
@@ -532,7 +532,7 @@ class UiWidget extends IntrusiveNode {
               sj.a(0, this.getTooltipText(param3 - 2));
               return param1;
             }
-            if (this.pointerPressed(-4808, nk.field_z, this, ProxyAuthenticationRequiredException.field_a, param2, param0, ef.field_a)) {
+            if (this.pointerPressed(-4808, NetworkGameClient.field_z, this, ProxyAuthenticationRequiredException.field_a, param2, param0, ef.field_a)) {
               param1 = false;
             } else {
             }
@@ -561,7 +561,7 @@ class UiWidget extends IntrusiveNode {
           }
           this.handleWheel(bk.field_b, param0, ResourceArchive.field_e, param2, this, -29771, gd.field_l);
         }
-        if (0 == nk.field_z) {
+        if (0 == NetworkGameClient.field_z) {
           if (0 != ul.field_o) {
             pg.field_f = ul.field_o;
             sj.a(0, this.getTooltipText(param3 - 2));
@@ -585,7 +585,7 @@ class UiWidget extends IntrusiveNode {
           sj.a(0, this.getTooltipText(param3 - 2));
           return param1;
         }
-        if (this.pointerPressed(-4808, nk.field_z, this, ProxyAuthenticationRequiredException.field_a, param2, param0, ef.field_a)) {
+        if (this.pointerPressed(-4808, NetworkGameClient.field_z, this, ProxyAuthenticationRequiredException.field_a, param2, param0, ef.field_a)) {
           param1 = false;
         } else {
           if (var5 != 0) {

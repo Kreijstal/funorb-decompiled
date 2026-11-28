@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-public final class Main extends c {
+public final class Main extends NetworkGameClient {
     uh field_cb;
     static int field_G;
     static String field_y;
@@ -595,7 +595,7 @@ public final class Main extends c {
           }
           stackIn_15_1 = -71;
           stackIn_16_2 = (DiskCacheWorker.field_a != null);
-          this.a((byte) stackIn_15_1, stackIn_16_2);
+          this.serviceFramework((byte) stackIn_15_1, stackIn_16_2);
           if (kj.field_P) {
             this.n((byte) 7);
             kj.field_P = false;
@@ -603,7 +603,7 @@ public final class Main extends c {
           stackIn_24_0 = !param0;
           boolean decompiledFrameRemainder0 = true;
           if (th.a(stackIn_24_0)) {
-            this.k((byte) -100);
+            this.updateLoginFlow((byte) -100);
             decompiledFrameRemainder0 = !(!ri.b((byte) 38));
             if (decompiledFrameRemainder0) {
               discarded$0 = this.b(false, (byte) -59);
@@ -757,10 +757,10 @@ public final class Main extends c {
               fe.a((byte) -102, 0);
               break;
             }
-            this.f((byte) 99);
+            this.dispatchCommonPacket((byte) 99);
           } while (var3 == 0);
           if (SpriteGeometry.b((byte) 34)) {
-            var2_int = this.c(false);
+            var2_int = this.attemptReconnect(false);
             if (var2_int == 0 ||
               var2_int == 1) {
               pg.a(true, 3);
@@ -1008,8 +1008,8 @@ public final class Main extends c {
 
     final void initializeClient(int param0) {
         try {
-          this.a(false, param0 ^ 4405030, false, true, false);
-          this.a(6, 0, 7, 9, 7, (byte) 115, false, 8);
+          this.configureOptionalPacketHandlers(false, param0 ^ 4405030, false, true, false);
+          this.initializeFramework(6, 0, 7, 9, 7, (byte) 115, false, 8);
           oa.a((java.awt.Component) ((Object) tb.field_c), 22050, (byte) 103, jk.field_a, true);
           wg.field_a = param0;
           ca.field_b = 4086842;
@@ -2071,7 +2071,7 @@ public final class Main extends c {
           pk.clearStaticReferences(8450);
           ve.clearStaticReferences(param0 + 8192);
           sh.clearStaticReferences(4352);
-          c.g((byte) 108);
+          NetworkGameClient.g((byte) 108);
           ClientException.clearStaticReferences((byte) -118);
           GameApplet.a((byte) -67);
           rf.clearStaticReferences(param0 ^ -19749);
@@ -2897,16 +2897,16 @@ public final class Main extends c {
                       } else {
                         stackIn_118_1 = 13;
                       }
-                      hk.$cfr$intArgs$a$7ad285df57e9(stackIn_117_0, stackIn_118_1, 300);
+                      hk.playIndexedSoundEffectWithIntGuard(stackIn_117_0, stackIn_118_1, 300);
                     } else {
-                      hk.$cfr$intArgs$a$7ad285df57e9(125, var3, 300);
+                      hk.playIndexedSoundEffectWithIntGuard(125, var3, 300);
                     }
-                    hk.$cfr$intArgs$a$7ad285df57e9(125, 0, 700);
+                    hk.playIndexedSoundEffectWithIntGuard(125, 0, 700);
                   } else {
-                    hk.$cfr$intArgs$a$7ad285df57e9(127, 3, -Bzip2State.field_I[3] + 1000);
+                    hk.playIndexedSoundEffectWithIntGuard(127, 3, -Bzip2State.field_I[3] + 1000);
                     if (this.field_Q == 1) {
                       var3 = 10 + sj.a(10999, 3, uh.field_l);
-                      hk.$cfr$intArgs$a$7ad285df57e9(124, var3, 1000);
+                      hk.playIndexedSoundEffectWithIntGuard(124, var3, 1000);
                     }
                   }
                 }

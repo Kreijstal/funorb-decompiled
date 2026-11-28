@@ -330,7 +330,7 @@ class rc extends DualLinkNode {
               }
               stackIn_65_0 = 52;
             }
-            na.$cfr$intArgs$a$83744e1822f8(stackIn_65_0, var7, var6);
+            na.insertAdjacentNodeWithIntGuard(stackIn_65_0, var7, var6);
             if (var8 == 0) {
               return;
             }

@@ -70,7 +70,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
           LabeledWidgetContainer.field_H = 0;
           wk.field_h = false;
           tb.field_N = 0;
-          ec.$cfr$intArgs$a$7ffe4b125357(-123, hk.field_q);
+          ec.setAlternateMovementKeysWithIntGuard(-123, hk.field_q);
           ib.a((byte) -72);
           rl.field_c = param1;
           stackIn_5_0 = (bm.field_c == 0) && (9 == rl.field_c);

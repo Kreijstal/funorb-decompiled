@@ -130,7 +130,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             }
             if (StandardContentDialog.field_fb.position > 0) {
               try {
-                dma.field_b.a(0, StandardContentDialog.field_fb.payload, false, StandardContentDialog.field_fb.position);
+                dma.field_b.enqueueWrite(0, StandardContentDialog.field_fb.payload, false, StandardContentDialog.field_fb.position);
                 vla.field_v = f.correctedCurrentTimeMillis((byte) 73);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

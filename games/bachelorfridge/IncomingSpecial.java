@@ -501,7 +501,7 @@ final class IncomingSpecial extends SpecialOrder {
         }
     }
 
-    final static void a(Object[] param0, byte param1, int[] param2) {
+    final static void sortObjectsByIntKey(Object[] param0, byte param1, int[] param2) {
         try {
           if (param1 <= 85) {
             field_q = (String) null;
@@ -526,7 +526,7 @@ final class IncomingSpecial extends SpecialOrder {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$e46325ef0b7e(Object[] param0, int param1, int[] param2) {
+    final static void sortObjectsByIntKeyWithIntGuard(Object[] param0, int param1, int[] param2) {
         try {
           if (param1 <= 85) {
             field_q = (String) null;

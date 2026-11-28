@@ -214,7 +214,7 @@ final class rb {
               }
               if (LoginPanel.field_D.position > 0) {
                 try {
-                  nk.field_b.a((byte) 9, LoginPanel.field_D.payload, LoginPanel.field_D.position, 0);
+                  nk.field_b.enqueueWrite((byte) 9, LoginPanel.field_D.payload, LoginPanel.field_D.position, 0);
                   FrameTimer.field_b = lk.correctedCurrentTimeMillis(0);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

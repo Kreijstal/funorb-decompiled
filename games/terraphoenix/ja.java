@@ -310,7 +310,7 @@ final class ja extends IntrusiveNode {
           for (var5Lifetime1 = 0; rb.field_d.length > var5Lifetime1; var5Lifetime1++) {
             stackIn_89_0 = 87;
             stackIn_90_1 = !(0 > f.field_a[var5Lifetime1]);
-            var6Lifetime1 = bb.$cfr$intArgs$a$62abead39cee(stackIn_89_0, stackIn_90_1, rb.field_d[var5Lifetime1]);
+            var6Lifetime1 = bb.measureSelectedFontTextWidthWithIntGuard(stackIn_89_0, stackIn_90_1, rb.field_d[var5Lifetime1]);
             if (var4Lifetime1 < var6Lifetime1) {
               var4Lifetime1 = var6Lifetime1;
             }
@@ -320,7 +320,7 @@ final class ja extends IntrusiveNode {
             var5_ref_String__ = var11;
             for (var6Lifetime2 = 0; var11.length > var6Lifetime2; var6Lifetime2++) {
               var12 = var11[var6Lifetime2];
-              var8Lifetime1 = bb.$cfr$intArgs$a$62abead39cee(87, false, var12);
+              var8Lifetime1 = bb.measureSelectedFontTextWidthWithIntGuard(87, false, var12);
               if (var8Lifetime1 > var4Lifetime1) {
                 var4Lifetime1 = var8Lifetime1;
               }
@@ -328,7 +328,7 @@ final class ja extends IntrusiveNode {
             var5_ref_String__Lifetime1 = kj.field_c;
             for (var6Lifetime2Lifetime1 = 0; var6Lifetime2Lifetime1 < var5_ref_String__Lifetime1.length; var6Lifetime2Lifetime1++) {
               var13 = var5_ref_String__Lifetime1[var6Lifetime2Lifetime1];
-              var8Lifetime1Lifetime1 = bb.$cfr$intArgs$a$62abead39cee(87, false, var13);
+              var8Lifetime1Lifetime1 = bb.measureSelectedFontTextWidthWithIntGuard(87, false, var13);
               if (var4Lifetime1 < var8Lifetime1Lifetime1) {
                 var4Lifetime1 = var8Lifetime1Lifetime1;
               }
@@ -353,7 +353,7 @@ final class ja extends IntrusiveNode {
           while (rb.field_d.length > var5Lifetime3) {
             var7Lifetime1 = f.field_a[var5Lifetime3];
             if (var7Lifetime1 >= 0) {
-              var8Lifetime2 = bb.$cfr$intArgs$a$62abead39cee(87, true, rb.field_d[var5Lifetime3]);
+              var8Lifetime2 = bb.measureSelectedFontTextWidthWithIntGuard(87, true, rb.field_d[var5Lifetime3]);
               var9Lifetime1 = -(var8Lifetime2 >> 1) + nd.field_r;
               var6Lifetime3 = var6Lifetime3 + FullscreenStatusDialog.field_ab;
               ll.field_d[var5Lifetime3] = new int[4];

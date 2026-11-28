@@ -209,14 +209,14 @@ public final class DekoBlokoClient extends FunOrbClient {
             SceneWidgetPart008.performAction1128(54);
           }
           stackBooleanLocal2 = (null != MixedSupport020.fullscreenCanvasState0001);
-          this.performAction0112(stackBooleanLocal2, -11);
+          this.serviceFramework(stackBooleanLocal2, -11);
           if (ResourceSupport003.booleanState0127) {
             this.initializeAssetArchives(24903);
             ResourceSupport003.booleanState0127 = false;
           }
           CipherPacketBuffer.integerState0799 = CipherPacketBuffer.integerState0799 + 1;
           if (MixedSupport119.computeBoolean1560((byte) -104)) {
-            this.performAction0119(10);
+            this.updateLoginFlow(10);
             if (MixedSupport119.computeBoolean1560((byte) -93)) {
               return;
             }
@@ -780,7 +780,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                     }
                     break;
                   }
-                  this.performAction0117((byte) 126);
+                  this.dispatchCommonPacket((byte) 126);
                   continue scanLoop2;
                 }
               } else {
@@ -808,7 +808,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                 MixedSupport010.integerState0067 = 0;
               }
               if (RichTextLayout.computeBoolean0398((byte) -60)) {
-                integerLocal27 = this.computeInteger0118((byte) 125);
+                integerLocal27 = this.reconnectAndResendRequests((byte) 125);
                 if (integerLocal27 == 0 ||
                   integerLocal27 == 1) {
                   if (1 != integerLocal27) {
@@ -1862,7 +1862,7 @@ public final class DekoBlokoClient extends FunOrbClient {
 
     final void initializeGame(boolean booleanArgument1) {
         try {
-          this.performAction0105(5, 94, 31, 0, 1, 12, 2, booleanArgument1);
+          this.initializeFramework(5, 94, 31, 0, 1, 12, 2, booleanArgument1);
           PcmPlayer.configureAudio(22050, true, 10);
           SceneWidgetNode.pcmPlayerState0002 = PcmPlayer.createOutput(GzipDecompressor.platformServiceState0003, (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001), 0, 22050);
           MixedSupport019.pcmPlayerState0001 = PcmPlayer.createOutput(GzipDecompressor.platformServiceState0003, (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001), 1, 1024);
@@ -1870,7 +1870,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           MixedSupport019.pcmPlayerState0001.setRootStream(SecondaryNodeDequeIterator.pcmStreamMixerState0001);
           GameAssets.pcmStreamMixerState0004 = new PcmStreamMixer();
           SceneWidgetNode.pcmPlayerState0002.setRootStream(GameAssets.pcmStreamMixerState0004);
-          this.performAction0111(false, true, true, false, true, true, false);
+          this.configureOptionalPacketHandlers(false, true, true, false, true, true, false);
           ByteStorage.integerArrayState0158[66] = 2;
           ByteStorage.integerArrayState0158[74] = 1;
           ByteStorage.integerArrayState0158[64] = -2;
@@ -3185,7 +3185,7 @@ public final class DekoBlokoClient extends FunOrbClient {
 
     public final void init() {
         try {
-          this.performAction0106(-2990, 32, "dekobloko");
+          this.startWithDefaultSize(-2990, 32, "dekobloko");
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "client.init()");
         }

@@ -47,7 +47,7 @@ final class ll {
           while (true) {
             if (t.field_C < 0) {
               RichTextLayout.field_p.position = 0;
-              if (!ag.a(125, 1)) {
+              if (!NetworkGameClient.a(125, 1)) {
                 return false;
               }
               t.field_C = RichTextLayout.field_p.readCipheredByte(255);

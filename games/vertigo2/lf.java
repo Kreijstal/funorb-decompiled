@@ -45,7 +45,7 @@ final class lf extends TextureOperator {
             }
             if (uh.field_Wb.position > 0) {
               try {
-                lo.field_k.a(0, uh.field_Wb.position, -93, uh.field_Wb.payload);
+                lo.field_k.enqueueWrite(0, uh.field_Wb.position, -93, uh.field_Wb.payload);
                 bm.field_H = gk.correctedCurrentTimeMillis(48);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

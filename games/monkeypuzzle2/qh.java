@@ -232,7 +232,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               }
               if (var9Lifetime1 == 99) {
                 hj.a(gb.a((byte) 57), true);
-                kc.field_b = new Boolean(bi.a((byte) 122, MonkeyPuzzle2.field_D));
+                kc.field_b = new Boolean(NetworkGameClient.a((byte) 122, MonkeyPuzzle2.field_D));
                 MonkeyPuzzle2.field_D.position = 0;
               } else {
                 dk.field_h = ma.field_d;

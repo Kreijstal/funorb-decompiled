@@ -1384,7 +1384,7 @@ final class da extends ArchiveProvider {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7_ref = null;
         try {
-          DirectByteStorage.$cfr$intArgs$a$c398e174f2fe(param0.field_Yb, param0.field_Lb, -122, param5, -1, param0, (int[]) null, -1, param0.field_Rb);
+          DirectByteStorage.createPlayerActionContextWithIntGuard(param0.field_Yb, param0.field_Lb, -122, param5, -1, param0, (int[]) null, -1, param0.field_Rb);
           pi.field_d.a(0, true);
           pi.field_d.a(17, (int[]) null, 0);
           pi.field_d.d(-32);

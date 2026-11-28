@@ -45,9 +45,9 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
         }
     }
 
-    final static int a(rb param0, int param1, boolean param2) {
+    final static int a(NetworkGameClient param0, int param1, boolean param2) {
         RuntimeException var3 = null;
-        rb var4 = null;
+        NetworkGameClient var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -55,10 +55,10 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            var4 = (rb) null;
-            AlphaWidgetContainer.a((rb) null, 119, true);
+            var4 = (NetworkGameClient) null;
+            AlphaWidgetContainer.a((NetworkGameClient) null, 119, true);
           }
-          stackIn_3_0 = param0.c(param1 - 25186, param2);
+          stackIn_3_0 = param0.pollAccountUiActions(param1 - 25186, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

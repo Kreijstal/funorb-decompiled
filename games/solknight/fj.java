@@ -32,7 +32,7 @@ final class fj extends IntrusiveNode {
         int var15 = 0;
         var15 = SolKnight.field_L ? 1 : 0;
         try {
-          ab.field_s[param5] = param1;
+          NetworkGameClient.field_s[param5] = param1;
           var8 = 116 / ((-78 - param3) / 48);
           var7_int = 0;
           var9 = BufferedSocket.field_b;

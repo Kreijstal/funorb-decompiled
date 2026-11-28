@@ -61,7 +61,7 @@ final class qf {
         RgbSprite var32Lifetime1Lifetime4;
         RgbSprite var32Lifetime1Lifetime5;
         try {
-          DirectByteStorage.$cfr$intArgs$a$c398e174f2fe(0L, (String) null, 85, (nb) null, param0, param1, (int[]) null, -1, (String) null);
+          DirectByteStorage.createPlayerActionContextWithIntGuard(0L, (String) null, 85, (nb) null, param0, param1, (int[]) null, -1, (String) null);
           if (param0 == 0) {
             var12 = pi.field_d;
             var14 = el.field_z[0];

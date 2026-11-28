@@ -248,7 +248,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             stackIn_40_0 = var6;
             stackIn_40_1 = 26;
             stackIn_41_2 = !(var4 < 0);
-            var7Lifetime1 = fb.$cfr$intArgs$a$1694234bddb3(stackIn_40_0, stackIn_40_1, stackIn_41_2);
+            var7Lifetime1 = fb.measureSelectedFontTextWidthWithIntGuard(stackIn_40_0, stackIn_40_1, stackIn_41_2);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + ee.field_b;
             if (var4 >= 0) {
               if (var4 == SoundCache.field_c.field_k) {

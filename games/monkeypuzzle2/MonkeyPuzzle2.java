@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class MonkeyPuzzle2 extends bi {
+public final class MonkeyPuzzle2 extends NetworkGameClient {
     static ib field_C;
     static hb field_D;
     static PacketBuffer field_A;
@@ -10,9 +10,9 @@ public final class MonkeyPuzzle2 extends bi {
 
     final void initializeClient(int param0) {
         try {
-          this.a(24, 10, 0, 9, -25172, false, 11, 8);
+          this.initializeFramework(24, 10, 0, 9, -25172, false, 11, 8);
           v.a(22050, true, 512, rc.field_k, (java.awt.Component) ((Object) ie.field_e));
-          this.a(true, 4472, true, false, false);
+          this.configureOptionalPacketHandlers(true, 4472, true, false, false);
           he.e(0);
           int var2_int = 56 / ((param0 - 32) / 33);
           nh.a((byte) 62);
@@ -26,7 +26,7 @@ public final class MonkeyPuzzle2 extends bi {
 
     public final void init() {
         try {
-          this.a(12, 126, "monkeypuzzle2");
+          this.startWithDefaultSize(12, 126, "monkeypuzzle2");
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "MonkeyPuzzle2.init()");
         }
@@ -63,7 +63,7 @@ public final class MonkeyPuzzle2 extends bi {
           rl.clearStaticReferences(-104);
           gj.a(1);
           bd.a((byte) -54);
-          bi.clearStaticReferences((byte) -35);
+          NetworkGameClient.clearStaticReferences((byte) -35);
           ClientException.clearStaticReferences((byte) -123);
           qa.a((byte) 115);
           tk.clearStaticReferences(119);
@@ -434,13 +434,13 @@ public final class MonkeyPuzzle2 extends bi {
           }
           stackIn_9_1 = 99;
           stackIn_10_2 = (null != AwtRasterBuffer.field_f);
-          this.a((byte) stackIn_9_1, stackIn_10_2);
+          this.serviceFramework((byte) stackIn_9_1, stackIn_10_2);
           if (BoundedRandomAccessFile.field_d) {
             this.h((byte) -32);
             BoundedRandomAccessFile.field_d = false;
           }
           if (TextFieldValidator.d(-26)) {
-            this.i(250);
+            this.updateLoginFlow(250);
             if (TextFieldValidator.d(-76)) {
               if (ValidationStatusWidget.c(false)) {
                 discarded$0 = this.b((byte) 36, false);
@@ -457,7 +457,7 @@ public final class MonkeyPuzzle2 extends bi {
               if (ek.a((byte) 25) &&
                 !ResourceArchive.isMessageDialogActive(false)) {
                 stackIn_33_0 = (null != AwtRasterBuffer.field_f);
-                var2_int = PcmOutputWorker.a(stackIn_33_0, -32323, (bi) (this));
+                var2_int = PcmOutputWorker.a(stackIn_33_0, -32323, (NetworkGameClient) (this));
                 if (var2_int == 2364824) {
                   DirectByteStorage.e(-18753);
                 } else {
@@ -552,7 +552,7 @@ public final class MonkeyPuzzle2 extends bi {
                         }
                         stackIn_60_0 = 44;
                         stackIn_61_1 = !(af.field_c <= 0);
-                        RichTextLayout.$cfr$intArgs$a$7ffe4b125357(stackIn_60_0, stackIn_61_1);
+                        RichTextLayout.configureMenuActionIdsWithIntGuard(stackIn_60_0, stackIn_61_1);
                         ProxyAuthenticationRequiredException.field_d[1] = new kk(1);
                         qh.field_b = dh.field_c;
                         uh.a((byte) -101, qh.field_b);
@@ -609,11 +609,11 @@ public final class MonkeyPuzzle2 extends bi {
             field_E = (String) null;
           }
           while (ValidationStatusIcon.a(ok.field_c, (byte) 125)) {
-            this.k(-28710);
+            this.dispatchCommonPacket(-28710);
           }
           SocketConnector.a((byte) -71, 0);
           if (ld.b(true)) {
-            var2_intLifetime2 = this.f(param0 ^ 15246);
+            var2_intLifetime2 = this.reconnectAndResendRequests(param0 ^ 15246);
             if (2 == var2_intLifetime2) {
               ProgressMessageDialog.a(8, 126, 8, BoundedRandomAccessFile.field_e.field_j, (Sprite[]) null, (Sprite[]) null, 2, 320, BoundedRandomAccessFile.field_e.field_j + BoundedRandomAccessFile.field_e.field_D, 240, BoundedRandomAccessFile.field_e);
             }
@@ -782,7 +782,7 @@ public final class MonkeyPuzzle2 extends bi {
           db.b((byte) 80);
           stackIn_69_0 = 119;
           stackIn_70_1 = !(af.field_c <= 0);
-          RichTextLayout.$cfr$intArgs$a$7ffe4b125357(stackIn_69_0, stackIn_70_1);
+          RichTextLayout.configureMenuActionIdsWithIntGuard(stackIn_69_0, stackIn_70_1);
           if (param0 != 36) {
             field_D = (hb) null;
           }

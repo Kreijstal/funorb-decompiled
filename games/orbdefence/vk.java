@@ -89,7 +89,7 @@ final class vk extends DefaultTextWidgetRenderer {
         }
     }
 
-    final static void a(IntrusiveNode param0, byte param1, IntrusiveNode param2) {
+    final static void insertAdjacentNode(IntrusiveNode param0, byte param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -148,7 +148,7 @@ final class vk extends DefaultTextWidgetRenderer {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$0b89e0d19fbb(IntrusiveNode param0, int param1, IntrusiveNode param2) {
+    final static void insertAdjacentNodeWithIntGuard(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

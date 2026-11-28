@@ -76,7 +76,7 @@ final class hj {
           stackIn_7_9 = uo.field_h;
           stackIn_7_10 = 14;
           stackIn_9_11 = (LevelRenderer.field_b) || (PacketBuffer.field_q);
-          fn.$cfr$intArgs$a$946cf173619b(stackIn_3_0, stackIn_3_1, stackIn_3_2 != 0, stackIn_3_3, stackIn_3_4, stackIn_4_5, stackIn_7_6, stackIn_7_7, stackIn_7_8, stackIn_7_9, stackIn_7_10, stackIn_9_11);
+          fn.updateLobbyInterfaceWithIntGuard(stackIn_3_0, stackIn_3_1, stackIn_3_2 != 0, stackIn_3_3, stackIn_3_4, stackIn_4_5, stackIn_7_6, stackIn_7_7, stackIn_7_8, stackIn_7_9, stackIn_7_10, stackIn_9_11);
         } else {
           if (kh.a(-3, gd.field_j.field_Qb)) {
             var2 = 1;
@@ -92,7 +92,7 @@ final class hj {
             stackIn_48_9 = uo.field_h;
             stackIn_48_10 = 14;
             stackIn_50_11 = (LevelRenderer.field_b) || (PacketBuffer.field_q);
-            fn.$cfr$intArgs$a$946cf173619b(stackIn_44_0, stackIn_44_1, stackIn_44_2 != 0, stackIn_44_3, stackIn_44_4, stackIn_45_5, stackIn_48_6, stackIn_48_7, stackIn_48_8, stackIn_48_9, stackIn_48_10, stackIn_50_11);
+            fn.updateLobbyInterfaceWithIntGuard(stackIn_44_0, stackIn_44_1, stackIn_44_2 != 0, stackIn_44_3, stackIn_44_4, stackIn_45_5, stackIn_48_6, stackIn_48_7, stackIn_48_8, stackIn_48_9, stackIn_48_10, stackIn_50_11);
             if (AgeValidator.field_p) {
               uh.field_Wb.writeCipheredByte(57, 123);
               AgeValidator.field_p = false;
@@ -120,7 +120,7 @@ final class hj {
           stackIn_28_9 = uo.field_h;
           stackIn_28_10 = 14;
           stackIn_30_11 = (LevelRenderer.field_b) || (PacketBuffer.field_q);
-          fn.$cfr$intArgs$a$946cf173619b(stackIn_24_0, stackIn_24_1, stackIn_24_2 != 0, stackIn_24_3, stackIn_24_4, stackIn_25_5, stackIn_28_6, stackIn_28_7, stackIn_28_8, stackIn_28_9, stackIn_28_10, stackIn_30_11);
+          fn.updateLobbyInterfaceWithIntGuard(stackIn_24_0, stackIn_24_1, stackIn_24_2 != 0, stackIn_24_3, stackIn_24_4, stackIn_25_5, stackIn_28_6, stackIn_28_7, stackIn_28_8, stackIn_28_9, stackIn_28_10, stackIn_30_11);
         }
         if (AgeValidator.field_p) {
           uh.field_Wb.writeCipheredByte(57, 123);

@@ -160,7 +160,7 @@ final class fb {
         field_e = null;
     }
 
-    final static int a(String param0, byte param1, boolean param2) {
+    final static int measureSelectedFontTextWidth(String param0, byte param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -363,7 +363,7 @@ final class fb {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$1694234bddb3(String param0, int param1, boolean param2) {
+    final static int measureSelectedFontTextWidthWithIntGuard(String param0, int param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;

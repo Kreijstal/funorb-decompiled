@@ -124,7 +124,7 @@ final class sl extends sf {
           }
           var2++;
         }
-        md.$cfr$intArgs$a$6121ff5511c4(-127);
+        md.clearIndexedSpriteDecodeBuffersWithIntGuard(-127);
         return var1;
     }
 

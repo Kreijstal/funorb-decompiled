@@ -50,9 +50,9 @@ final class a extends kb {
               vl.b(-91) <= 30000L) {
               return false;
             }
-            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-120);
+            ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-120);
           } catch (IOException iOException) {
-            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-86);
+            ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-86);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {

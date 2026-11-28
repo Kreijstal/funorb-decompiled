@@ -1478,7 +1478,7 @@ final class bf extends IntrusiveNode {
             r.field_c = eb.field_a;
           }
           if (eb.field_a == r.field_c &&
-            ag.a(param3 ^ 122, 1)) {
+            NetworkGameClient.a(param3 ^ 122, 1)) {
             var9Lifetime1 = RichTextLayout.field_p.readUnsignedByte(param3 ^ 7907);
             RichTextLayout.field_p.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -1499,7 +1499,7 @@ final class bf extends IntrusiveNode {
                 il.field_g = -1;
                 vh.field_t = var9Lifetime1;
               } else {
-                ag.a(124, gd.a(true));
+                NetworkGameClient.a(124, gd.a(true));
                 oj.field_g = new Boolean(vf.a(RichTextLayout.field_p, param3 - 6));
                 RichTextLayout.field_p.position = 0;
               }
@@ -1507,10 +1507,10 @@ final class bf extends IntrusiveNode {
           }
           if (dh.field_a == r.field_c) {
             var9Lifetime2 = 2;
-            if (ag.a(125, var9Lifetime2)) {
+            if (NetworkGameClient.a(125, var9Lifetime2)) {
               var10Lifetime1 = RichTextLayout.field_p.readUnsignedShort(param3 ^ -1174051986);
               RichTextLayout.field_p.position = 0;
-              if (ag.a(126, var10Lifetime1)) {
+              if (NetworkGameClient.a(126, var10Lifetime1)) {
                 var11 = ProgressMessageDialog.field_nb.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   ProgressMessageDialog.field_nb[var12] = RichTextLayout.field_p.readPrefixedString(-12287);

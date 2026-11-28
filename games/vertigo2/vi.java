@@ -54,7 +54,7 @@ final class vi extends IntrusiveNode {
         }
     }
 
-    final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
+    final static String getAlternativeButtonPromptPrefix(byte param0, boolean param1, boolean param2, boolean param3) {
         if (param0 <= 103) {
           field_z = (long[]) null;
         }
@@ -126,7 +126,7 @@ final class vi extends IntrusiveNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static String $cfr$intArgs$a$c7de0d339b2a(int param0, boolean param1, boolean param2, boolean param3) {
+    final static String getAlternativeButtonPromptPrefixWithIntGuard(int param0, boolean param1, boolean param2, boolean param3) {
         if (param0 <= 103) {
           field_z = (long[]) null;
         }

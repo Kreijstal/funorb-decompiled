@@ -110,7 +110,7 @@ final class BufferedSocket implements Runnable {
             break;
           }
           if (var3 == null) {
-            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-47);
+            ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-47);
             return;
           }
           var4 = var15.readUnsignedByte(true);

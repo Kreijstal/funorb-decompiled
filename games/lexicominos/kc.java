@@ -35,7 +35,7 @@ final class kc {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-37);
+                ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-37);
               }
               SpriteGeometry.field_q.position = 0;
             }

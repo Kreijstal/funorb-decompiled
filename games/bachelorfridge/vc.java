@@ -19,7 +19,7 @@ final class vc {
 
     final static void a(byte param0) {
         if (dma.field_b != null) {
-          dma.field_b.a((byte) 45);
+          dma.field_b.close((byte) 45);
           dma.field_b = null;
           if (param0 > -64) {
             field_b = (String) null;

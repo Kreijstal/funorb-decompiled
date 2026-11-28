@@ -148,7 +148,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
             }
             if (SocketFactory.cipherPacketBufferState0002.position > 0) {
               try {
-                GameSession.bufferedSocketState0002.performAction1374(0, SocketFactory.cipherPacketBufferState0002.position, 1, SocketFactory.cipherPacketBufferState0002.payload);
+                GameSession.bufferedSocketState0002.enqueueWrite(0, SocketFactory.cipherPacketBufferState0002.position, 1, SocketFactory.cipherPacketBufferState0002.payload);
                 ArchiveRequestManager.longState0011 = MixedSupport062.correctedCurrentTimeMillis(integerArgument1 ^ 4796);
               } catch (java.io.IOException caughtParameterLocal3) {
                 caughtExceptionLocal2 = caughtParameterLocal3;

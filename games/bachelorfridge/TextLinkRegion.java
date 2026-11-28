@@ -276,7 +276,7 @@ final class TextLinkRegion extends IntrusiveNode {
             stackIn_56_1 = et.field_l;
             stackIn_56_2 = 91;
             stackIn_57_3 = (ClearPendingPetAttackEffect.field_i.field_g == 0);
-            rg.$cfr$intArgs$a$c6021a39f7cf(stackIn_56_0, stackIn_56_1, stackIn_56_2, stackIn_57_3);
+            rg.drawBenefitsButtonFrameWithIntGuard(stackIn_56_0, stackIn_56_1, stackIn_56_2, stackIn_57_3);
           }
           if (null != HomingMissileAnimation.field_E &&
             null != ug.field_o) {
@@ -289,7 +289,7 @@ final class TextLinkRegion extends IntrusiveNode {
             stackIn_66_1 = AgeValidator.field_h;
             stackIn_66_2 = -112;
             stackIn_67_3 = (ClearPendingPetAttackEffect.field_i.field_g == 1);
-            rg.$cfr$intArgs$a$c6021a39f7cf(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3);
+            rg.drawBenefitsButtonFrameWithIntGuard(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3);
           }
           if (PizzaArenaTheme.field_h != null) {
             var1_int = -(PizzaArenaTheme.field_h.field_o / 2) + 357;

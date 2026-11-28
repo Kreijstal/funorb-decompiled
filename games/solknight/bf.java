@@ -60,7 +60,7 @@ final class bf {
             if (param0 < 35) {
               bf.c(-65, -12);
             }
-            var2_int = MouseWheelInput.field_d.b(-30119);
+            var2_int = MouseWheelInput.field_d.availableBytes(-30119);
             if (var2_int <= 0) {
               if (0 > var2_int) {
                 je.a(false);
@@ -75,7 +75,7 @@ final class bf {
             if (param1 - AlphaWidgetContainer.field_N.position < var2_int) {
               var2_int = param1 - AlphaWidgetContainer.field_N.position;
             }
-            MouseWheelInput.field_d.a((byte) 59, AlphaWidgetContainer.field_N.position, var2_int, AlphaWidgetContainer.field_N.payload);
+            MouseWheelInput.field_d.readFully((byte) 59, AlphaWidgetContainer.field_N.position, var2_int, AlphaWidgetContainer.field_N.payload);
             DiskArchiveRequest.field_y = je.correctedCurrentTimeMillis(1);
             AlphaWidgetContainer.field_N.position = AlphaWidgetContainer.field_N.position + var2_int;
             if (AlphaWidgetContainer.field_N.position < param1) {

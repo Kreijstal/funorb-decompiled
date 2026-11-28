@@ -2543,7 +2543,7 @@ final class MenuScreen {
                 stackIn_38_2 = 100;
                 stackIn_39_3 = (ie.field_b.field_L != 0);
                 stackIn_42_4 = (fa.field_b != 0);
-                stackIn_43_0 = ((PalettedBitmapFont) (Object) stackIn_35_0).drawParagraph(ProxyAuthenticationRequiredException.$cfr$intArgs$a$feb7e63b59d8(stackIn_36_1, stackIn_38_2, stackIn_39_3, stackIn_42_4), 135, 169 - FullscreenStatusDialog.field_N.field_x, 370, 1000, 0, -1, 1, 0, FullscreenStatusDialog.field_N.field_x);
+                stackIn_43_0 = ((PalettedBitmapFont) (Object) stackIn_35_0).drawParagraph(ProxyAuthenticationRequiredException.getSaveResultsLoginPromptWithIntGuard(stackIn_36_1, stackIn_38_2, stackIn_39_3, stackIn_42_4), 135, 169 - FullscreenStatusDialog.field_N.field_x, 370, 1000, 0, -1, 1, 0, FullscreenStatusDialog.field_N.field_x);
                 break;
               }
               stackIn_43_0Lifetime1 = -1;

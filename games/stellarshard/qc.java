@@ -200,8 +200,8 @@ final class qc {
         var9 = stellarshard.field_B;
         try {
           PcmResampler.field_g = true;
-          rb.field_s = param0;
-          if (rb.field_s == 0) {
+          NetworkGameClient.field_s = param0;
+          if (NetworkGameClient.field_s == 0) {
             var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ValidationStatusIcon.field_G);
             var4 = 3 + var3_int;
             RegistrationAgreementPane.field_J = new int[var4];
@@ -220,7 +220,7 @@ final class qc {
             stellarshard.field_L[-1 + var4] = td.field_a;
             RegistrationAgreementPane.field_J[var4 - 1] = 1;
             pk.field_j[1] = 5;
-          } else if (rb.field_s == 1) {
+          } else if (NetworkGameClient.field_s == 1) {
             var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ValidationStatusIcon.field_G);
             var4 = 2 + var3_int;
             stellarshard.field_L = new String[var4];
@@ -236,8 +236,8 @@ final class qc {
             stellarshard.field_L[var4 - 1] = td.field_a;
             RegistrationAgreementPane.field_J[var4 - 1] = 0;
             pk.field_j[0] = 5;
-          } else if (rb.field_s != 2) {
-            if (rb.field_s == 3) {
+          } else if (NetworkGameClient.field_s != 2) {
+            if (NetworkGameClient.field_s == 3) {
               if (DebouncedFieldValidator.field_d.privilegedTasksEnabled) {
                 var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ModalDialogHost.field_E);
               } else {
@@ -257,7 +257,7 @@ final class qc {
               stellarshard.field_L[-1 + var4] = td.field_a;
               RegistrationAgreementPane.field_J[var4 - 1] = 0;
               pk.field_j[0] = 5;
-            } else if (rb.field_s == 4) {
+            } else if (NetworkGameClient.field_s == 4) {
               var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, wh.field_d);
               var4 = var3_int + 2;
               RegistrationAgreementPane.field_J = new int[var4];
@@ -274,7 +274,7 @@ final class qc {
               RegistrationAgreementPane.field_J[-1 + var4] = 0;
               pk.field_j[0] = 5;
             } else {
-              if (rb.field_s != 5) {
+              if (NetworkGameClient.field_s != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, df.field_k);
@@ -388,17 +388,17 @@ final class qc {
             stackIn_87_0 = -39;
             stackIn_87_1 = stellarshard.field_L[var4Lifetime1];
             stackIn_88_2 = !(RegistrationAgreementPane.field_J[var4Lifetime1] < 0);
-            var5Lifetime1 = GameEntity.$cfr$intArgs$a$590e95718a07(stackIn_87_0, stackIn_87_1, stackIn_88_2);
+            var5Lifetime1 = GameEntity.measureSelectedFontTextWidthWithIntGuard(stackIn_87_0, stackIn_87_1, stackIn_88_2);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (2 == rb.field_s) {
+          if (2 == NetworkGameClient.field_s) {
             var10 = RichTextLayout.field_g;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = GameEntity.$cfr$intArgs$a$590e95718a07(-33, var11, false);
+              var7Lifetime1 = GameEntity.measureSelectedFontTextWidthWithIntGuard(-33, var11, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -406,7 +406,7 @@ final class qc {
             var4_ref_String__Lifetime1 = fb.field_e;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = GameEntity.$cfr$intArgs$a$590e95718a07(-40, var12, false);
+              var7Lifetime1Lifetime1 = GameEntity.measureSelectedFontTextWidthWithIntGuard(-40, var12, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -431,7 +431,7 @@ final class qc {
           while (var4Lifetime3 < stellarshard.field_L.length) {
             var6Lifetime1 = RegistrationAgreementPane.field_J[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = GameEntity.$cfr$intArgs$a$590e95718a07(-21, stellarshard.field_L[var4Lifetime3], true);
+              var7Lifetime2 = GameEntity.measureSelectedFontTextWidthWithIntGuard(-21, stellarshard.field_L[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + nh.field_f;
               var8Lifetime1 = DualLinkDequeIterator.field_b - (var7Lifetime2 >> 1);
               vl.field_o[var4Lifetime3] = new int[4];
@@ -445,7 +445,7 @@ final class qc {
             }
             var4Lifetime3++;
           }
-          if (rb.field_s != 2) {
+          if (NetworkGameClient.field_s != 2) {
             ua.field_i.a(KeyHandler.a(KeyHandler.field_a, ni.field_e, -112), 0, param1, false);
           } else {
             ua.field_i.a(-1, -1, param1, false);

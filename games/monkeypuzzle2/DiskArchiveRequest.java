@@ -43,7 +43,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           DiskArchiveRequest.f(78);
         }
         PcmResampler.field_c = var8.readUnsignedByte((byte) 114);
-        bi.field_z = var8.readLong(66);
+        NetworkGameClient.field_z = var8.readLong(66);
         if (2 == lf.field_c) {
           sd.field_b = var8.readUnsignedShort(param1 + 17277);
           c.field_b = var8.readUnsignedMedium((byte) 115);

@@ -119,7 +119,7 @@ final class NodeHashTable implements Iterable {
 
     final static void performAction1498(int integerArgument1) {
         if (null != GameSession.bufferedSocketState0002) {
-          GameSession.bufferedSocketState0002.performAction1372(0);
+          GameSession.bufferedSocketState0002.close(0);
           GameSession.bufferedSocketState0002 = null;
         }
         if (integerArgument1 > 57) {

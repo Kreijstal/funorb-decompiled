@@ -31,7 +31,7 @@ abstract class FrameTimer {
             return false;
           }
           if (param1 > -65) {
-            FrameTimer.a((ResourceArchive) null, 71);
+            FrameTimer.loadSharedInterfaceText((ResourceArchive) null, 71);
           }
           if (la.a(0, param0)) {
             return true;
@@ -102,8 +102,8 @@ abstract class FrameTimer {
 
     abstract long getDelayMillis(byte param0);
 
-    final static void a(ResourceArchive param0, int param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(ResourceArchive param0, int param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2592_0;
             StringBuilder stackIn_2592_1;
             String stackIn_2593_2;
@@ -115,7 +115,7 @@ abstract class FrameTimer {
             ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
+            ClientTextLoader(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2592_0 = null;
@@ -127,7 +127,7 @@ abstract class FrameTimer {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 sc.field_c = param0;
                 var2 = cd.a("loginm3", -121);
                 if (var2 != null) {
@@ -1039,7 +1039,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("rule_0_3", -125);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   SecondaryNodeDequeIterator.field_e = ad.a(-29410, var2);
                 }
@@ -2000,7 +2000,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("highscores", -75);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   ad.a(-29410, var2);
                 }
@@ -2986,7 +2986,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mustlogin3,6", -87);
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadLoginPromptsAndSubscriptionText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   wh.field_a[6] = ad.a(-29410, var2);
                 }
@@ -3119,13 +3119,13 @@ abstract class FrameTimer {
             void run() {
                 var3 = Chess.field_G;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadLoginPromptsAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3145,7 +3145,7 @@ abstract class FrameTimer {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 

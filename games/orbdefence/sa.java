@@ -161,12 +161,12 @@ final class sa {
           field_d = null;
           return;
         }
-        sa.$cfr$intArgs$a$c7de0d339b2a(66, false, false, true);
+        sa.getSaveResultsLoginPromptWithIntGuard(66, false, false, true);
         field_g = null;
         field_d = null;
     }
 
-    final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
+    final static String getSaveResultsLoginPrompt(byte param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
         int var5 = -40 / ((param0 - 32) / 37);
         if (param3) {
@@ -371,7 +371,7 @@ final class sa {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static String $cfr$intArgs$a$c7de0d339b2a(int param0, boolean param1, boolean param2, boolean param3) {
+    final static String getSaveResultsLoginPromptWithIntGuard(int param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
         int var5 = -40 / ((param0 - 32) / 37);
         if (param3) {

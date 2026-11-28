@@ -1381,7 +1381,7 @@ final class jb {
         if (var3 == 12 &&
           this.field_p.d((byte) 55)) {
           kc.field_o = true;
-          KeyboardInput.field_a = EmailFormatValidator.a(320, false, param1, i.field_o);
+          KeyboardInput.field_a = EmailFormatValidator.a(320, false, param1, NetworkGameClient.field_o);
           this.e((byte) -128);
           return true;
         }

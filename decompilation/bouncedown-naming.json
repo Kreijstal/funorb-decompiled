@@ -388,6 +388,14 @@
       "renamedSymbol": "C:SoundFilter"
     },
     {
+      "symbol": "C:cg$1$CfrPartitionedBody",
+      "originalName": "$CfrPartitionedBody",
+      "to": "ClientTextLoader",
+      "evidence": "Local loader carries the resource archive and temporary decode state across 4 sections with 744 bound shared client interface text lookups.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:cg$1ClientTextLoader"
+    },
+    {
       "symbol": "C:ch",
       "originalName": "ch",
       "to": "MusicPatchEnvelope",
@@ -2956,6 +2964,46 @@
       "renamedSymbol": "M:cf.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:cg$1$CfrPartitionedBody.runChunk0()V",
+      "originalName": "runChunk0",
+      "to": "loadLoginLobbyAndChatText",
+      "evidence": "Source-purpose review: Loads 248 text entries in this section, including loginm3, gameopt_needrating, mu_chat_lobby.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:cg$1ClientTextLoader.loadLoginLobbyAndChatText()V"
+    },
+    {
+      "symbol": "M:cg$1$CfrPartitionedBody.runChunk1()V",
+      "originalName": "runChunk1",
+      "to": "loadAccountFormsAndLoadingText",
+      "evidence": "Source-purpose review: Loads 238 text entries in this section, including create_displayname, monthnames, loading_music.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:cg$1ClientTextLoader.loadAccountFormsAndLoadingText()V"
+    },
+    {
+      "symbol": "M:cg$1$CfrPartitionedBody.runChunk2()V",
+      "originalName": "runChunk2",
+      "to": "loadMatchDisplayAndMembershipText",
+      "evidence": "Source-purpose review: Loads 241 text entries in this section, including mp_offerrematch, fs_button_members, me_extra_benefits.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:cg$1ClientTextLoader.loadMatchDisplayAndMembershipText()V"
+    },
+    {
+      "symbol": "M:cg$1$CfrPartitionedBody.runChunk3()V",
+      "originalName": "runChunk3",
+      "to": "loadLoginPromptsAndSubscriptionText",
+      "evidence": "Source-purpose review: Loads 17 text entries in this section, including mustlogin_alternate, subscription_cost_monthly, sentence_separator.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:cg$1ClientTextLoader.loadLoginPromptsAndSubscriptionText()V"
+    },
+    {
+      "symbol": "M:cg.a(BLgk;)V",
+      "originalName": "a",
+      "to": "loadSharedInterfaceText",
+      "evidence": "Source-purpose review: Runs the local loader for shared client interface text, reading and decoding resource keys from the supplied archive.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:cg.loadSharedInterfaceText(BLResourceArchive;)V"
+    },
+    {
       "symbol": "M:ch.a(Z)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -3828,6 +3876,30 @@
       "renamedSymbol": "M:AppletShell.updateClient(B)V"
     },
     {
+      "symbol": "M:fj.a(BLjava/lang/String;)V",
+      "originalName": "a",
+      "to": "showErrorPage",
+      "evidence": "Source-purpose review: Reports the applet error once, notifies the browser of logout, and navigates to its error page.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AppletShell.showErrorPage(BLjava/lang/String;)V"
+    },
+    {
+      "symbol": "M:fj.a(I)Z",
+      "originalName": "a",
+      "to": "allowAppletStartup",
+      "evidence": "Source-purpose review: Provides the applet’s startup predicate before browser parameters are read.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AppletShell.allowAppletStartup(I)Z"
+    },
+    {
+      "symbol": "M:fj.a(ILjava/lang/String;IIIII)V",
+      "originalName": "a",
+      "to": "startApplet",
+      "evidence": "Source-purpose review: Sets up the applet host and task dispatcher, then starts its game loop thread.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AppletShell.startApplet(ILjava/lang/String;IIIII)V"
+    },
+    {
       "symbol": "M:fj.a(Lgk;II)Lrj;",
       "originalName": "a",
       "to": "loadMusicPatch",
@@ -4482,6 +4554,22 @@
       "evidence": "Source-purpose review: Resets declared static state through 7 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
       "confidence": "reviewed",
       "renamedSymbol": "M:hh.resetStaticState(Z)V"
+    },
+    {
+      "symbol": "M:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V",
+      "originalName": "$cfr$intArgs$a$d6db22f779ae",
+      "to": "bucketVisibleFacesByDepthWithIntGuard",
+      "evidence": "Source-purpose review: Tests projected triangle winding and depth, stores visible face indices in depth buckets, and prepares optional face-priority offsets. Preserves the separate JVM integer-width guard and all bound integer call sites.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V"
+    },
+    {
+      "symbol": "M:hj.a(ZBLjk;II)V",
+      "originalName": "a",
+      "to": "bucketVisibleFacesByDepth",
+      "evidence": "Source-purpose review: Tests projected triangle winding and depth, stores visible face indices in depth buckets, and prepares optional face-priority offsets.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:hj.bucketVisibleFacesByDepth(ZBLjk;II)V"
     },
     {
       "symbol": "M:hk.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
@@ -5236,12 +5324,124 @@
       "renamedSymbol": "M:MidiNoteMask.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:kk.a(IBLjava/lang/String;)V",
+      "originalName": "a",
+      "to": "startWithDefaultSize",
+      "evidence": "Source-purpose review: Starts applet configuration with the default 640 by 480 canvas size.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClient.startWithDefaultSize(IBLjava/lang/String;)V"
+    },
+    {
+      "symbol": "M:kk.a(IIBLjava/lang/String;I)V",
+      "originalName": "a",
+      "to": "readAppletParameters",
+      "evidence": "Source-purpose review: Reads the applet host, server ports, game checksum, instance and membership parameters before startup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClient.readAppletParameters(IIBLjava/lang/String;I)V"
+    },
+    {
+      "symbol": "M:kk.a(IIIIIIZI)V",
+      "originalName": "a",
+      "to": "initializeFramework",
+      "evidence": "Source-purpose review: Sets up the client display, network and resource archive services, and the applet’s input handlers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClient.initializeFramework(IIIIIIZI)V"
+    },
+    {
+      "symbol": "M:kk.a(IZ)I",
+      "originalName": "a",
+      "to": "pollAccountUiActions",
+      "evidence": "Source-purpose review: Runs one account and login UI polling step through the common action dispatcher.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClient.pollAccountUiActions(IZ)I"
+    },
+    {
+      "symbol": "M:kk.a(ZI)V",
+      "originalName": "a",
+      "to": "serviceFramework",
+      "evidence": "Source-purpose review: Services the client’s resource loading and reconnect state, updates input, and handles canvas resets.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClient.serviceFramework(ZI)V"
+    },
+    {
+      "symbol": "M:kk.a(ZZ)V",
+      "originalName": "a",
+      "to": "enableDefaultPacketHandlers",
+      "evidence": "Source-purpose review: Configures the common packet routes available to the client and its optional default features.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClient.enableDefaultPacketHandlers(ZZ)V"
+    },
+    {
+      "symbol": "M:kk.a(ZZZ)I",
+      "originalName": "a",
+      "to": "processAccountUiActions",
+      "evidence": "Source-purpose review: Dispatches account and login actions and polls the country list download when requested.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClient.processAccountUiActions(ZZZ)I"
+    },
+    {
+      "symbol": "M:kk.f(B)V",
+      "originalName": "f",
+      "to": "initializePacketLengths",
+      "evidence": "Source-purpose review: Registers the fixed and variable lengths of common incoming packets.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClient.initializePacketLengths(B)V"
+    },
+    {
+      "symbol": "M:kk.f(I)V",
+      "originalName": "f",
+      "to": "enablePacketHandler",
+      "evidence": "Source-purpose review: Enables dispatch for the supplied server packet type.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClient.enablePacketHandler(I)V"
+    },
+    {
       "symbol": "M:kk.g(B)V",
       "originalName": "g",
       "to": "clearStaticReferences",
       "evidence": "Source-purpose review: Clears 3 owned static reference fields by null assignment. Full source-bound restricted-effect parse permits only these null stores, primitive guard/local expressions, conditional returns, and direct self calls (0 sites). No external calls or foreign field/array effects. Preserve modifiers,full primitive domains,casts,sentinel control flow,self recursion/overflow,division exceptions and original write/evaluation order. Effect parser passed7positive/14hostile fixtures;representative bodies/callers separately reviewed;all original caller bindings retained. Cleanup synonym selected to avoid inherited or same-signature name collisions;all unselected meaningful names preserved.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameClient.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:kk.h(B)V",
+      "originalName": "h",
+      "to": "readSessionCookieUpdate",
+      "evidence": "Source-purpose review: Reads the server-provided session value and updates the applet’s session cookie.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClient.readSessionCookieUpdate(B)V"
+    },
+    {
+      "symbol": "M:kk.h(I)I",
+      "originalName": "h",
+      "to": "attemptReconnect",
+      "evidence": "Source-purpose review: Polls reconnection and updates the pending reconnect state after a server reply.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClient.attemptReconnect(I)I"
+    },
+    {
+      "symbol": "M:kk.i(I)V",
+      "originalName": "i",
+      "to": "enablePacketTwo",
+      "evidence": "Source-purpose review: Enables dispatch for common server packet 2.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClient.enablePacketTwo(I)V"
+    },
+    {
+      "symbol": "M:kk.j(B)V",
+      "originalName": "j",
+      "to": "enablePacketFive",
+      "evidence": "Source-purpose review: Enables dispatch for common server packet 5.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClient.enablePacketFive(B)V"
+    },
+    {
+      "symbol": "M:kk.j(I)V",
+      "originalName": "j",
+      "to": "dispatchCommonPacket",
+      "evidence": "Source-purpose review: Routes enabled common server packets to their handlers and reports unknown packet types.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameClient.dispatchCommonPacket(I)V"
     },
     {
       "symbol": "M:kl.a(I)V",
@@ -5466,6 +5666,22 @@
       "evidence": "Source-purpose review: Visits the deque’s children and refreshes their layouts after the container’s bounds change.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DequeWidgetContainer.refreshChildLayouts(I)V"
+    },
+    {
+      "symbol": "M:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;",
+      "originalName": "$cfr$intArgs$a$c7de0d339b2a",
+      "to": "getAlternativeButtonPromptPrefixWithIntGuard",
+      "evidence": "Source-purpose review: Selects the alternative-button prefix for the current combination of result flags. Preserves the separate JVM integer-width guard and all bound integer call sites.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ld.getAlternativeButtonPromptPrefixWithIntGuard(IZZZ)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:ld.a(BZZZ)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "getAlternativeButtonPromptPrefix",
+      "evidence": "Source-purpose review: Selects the alternative-button prefix for the current combination of result flags.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ld.getAlternativeButtonPromptPrefix(BZZZ)Ljava/lang/String;"
     },
     {
       "symbol": "M:ld.a(Z)V",
@@ -10855,9 +11071,9 @@
     },
     {
       "symbol": "C:cg$1$CfrPartitionedBody",
-      "renamedSymbol": "C:cg$1$CfrPartitionedBody",
+      "renamedSymbol": "C:cg$1ClientTextLoader",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "ClientTextLoader",
       "declaration": {
         "file": "cg.java",
         "start": 662,
@@ -15475,7 +15691,7 @@
     },
     {
       "symbol": "F:cg$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:cg$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:cg$1ClientTextLoader.decompiledCaughtException:Ljava/lang/RuntimeException;",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -15486,7 +15702,7 @@
     },
     {
       "symbol": "F:cg$1$CfrPartitionedBody.finished:Z",
-      "renamedSymbol": "F:cg$1$CfrPartitionedBody.finished:Z",
+      "renamedSymbol": "F:cg$1ClientTextLoader.finished:Z",
       "originalName": "finished",
       "renamedName": "finished",
       "declaration": {
@@ -15497,7 +15713,7 @@
     },
     {
       "symbol": "F:cg$1$CfrPartitionedBody.param0:B",
-      "renamedSymbol": "F:cg$1$CfrPartitionedBody.param0:B",
+      "renamedSymbol": "F:cg$1ClientTextLoader.param0:B",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -15508,7 +15724,7 @@
     },
     {
       "symbol": "F:cg$1$CfrPartitionedBody.param1:Lgk;",
-      "renamedSymbol": "F:cg$1$CfrPartitionedBody.param1:LResourceArchive;",
+      "renamedSymbol": "F:cg$1ClientTextLoader.param1:LResourceArchive;",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -15519,7 +15735,7 @@
     },
     {
       "symbol": "F:cg$1$CfrPartitionedBody.stackIn_2609_0:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:cg$1$CfrPartitionedBody.stackIn_2609_0:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:cg$1ClientTextLoader.stackIn_2609_0:Ljava/lang/RuntimeException;",
       "originalName": "stackIn_2609_0",
       "renamedName": "stackIn_2609_0",
       "declaration": {
@@ -15530,7 +15746,7 @@
     },
     {
       "symbol": "F:cg$1$CfrPartitionedBody.stackIn_2609_1:Ljava/lang/StringBuilder;",
-      "renamedSymbol": "F:cg$1$CfrPartitionedBody.stackIn_2609_1:Ljava/lang/StringBuilder;",
+      "renamedSymbol": "F:cg$1ClientTextLoader.stackIn_2609_1:Ljava/lang/StringBuilder;",
       "originalName": "stackIn_2609_1",
       "renamedName": "stackIn_2609_1",
       "declaration": {
@@ -15541,7 +15757,7 @@
     },
     {
       "symbol": "F:cg$1$CfrPartitionedBody.stackIn_2610_2:Ljava/lang/String;",
-      "renamedSymbol": "F:cg$1$CfrPartitionedBody.stackIn_2610_2:Ljava/lang/String;",
+      "renamedSymbol": "F:cg$1ClientTextLoader.stackIn_2610_2:Ljava/lang/String;",
       "originalName": "stackIn_2610_2",
       "renamedName": "stackIn_2610_2",
       "declaration": {
@@ -15552,7 +15768,7 @@
     },
     {
       "symbol": "F:cg$1$CfrPartitionedBody.var2:[B",
-      "renamedSymbol": "F:cg$1$CfrPartitionedBody.var2:[B",
+      "renamedSymbol": "F:cg$1ClientTextLoader.var2:[B",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -15563,7 +15779,7 @@
     },
     {
       "symbol": "F:cg$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:cg$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:cg$1ClientTextLoader.var2_ref:Ljava/lang/RuntimeException;",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -15574,7 +15790,7 @@
     },
     {
       "symbol": "F:cg$1$CfrPartitionedBody.var3:I",
-      "renamedSymbol": "F:cg$1$CfrPartitionedBody.var3:I",
+      "renamedSymbol": "F:cg$1ClientTextLoader.var3:I",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -15585,7 +15801,7 @@
     },
     {
       "symbol": "F:cg$1$CfrPartitionedBody.var4:I",
-      "renamedSymbol": "F:cg$1$CfrPartitionedBody.var4:I",
+      "renamedSymbol": "F:cg$1ClientTextLoader.var4:I",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -50125,7 +50341,7 @@
     },
     {
       "symbol": "L:cg$1$CfrPartitionedBody.run()V#0",
-      "renamedSymbol": "L:cg$1$CfrPartitionedBody.run()V#0",
+      "renamedSymbol": "L:cg$1ClientTextLoader.run()V#0",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -50136,7 +50352,7 @@
     },
     {
       "symbol": "L:cg.a(BLgk;)V#0",
-      "renamedSymbol": "L:cg.a(BLResourceArchive;)V#0",
+      "renamedSymbol": "L:cg.loadSharedInterfaceText(BLResourceArchive;)V#0",
       "originalName": "decompiledBody",
       "renamedName": "decompiledBody",
       "declaration": {
@@ -61620,7 +61836,7 @@
     },
     {
       "symbol": "L:fj.a(BLjava/lang/String;)V#0",
-      "renamedSymbol": "L:AppletShell.a(BLjava/lang/String;)V#0",
+      "renamedSymbol": "L:AppletShell.showErrorPage(BLjava/lang/String;)V#0",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -61631,7 +61847,7 @@
     },
     {
       "symbol": "L:fj.a(BLjava/lang/String;)V#1",
-      "renamedSymbol": "L:AppletShell.a(BLjava/lang/String;)V#1",
+      "renamedSymbol": "L:AppletShell.showErrorPage(BLjava/lang/String;)V#1",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -61642,7 +61858,7 @@
     },
     {
       "symbol": "L:fj.a(BLjava/lang/String;)V#10",
-      "renamedSymbol": "L:AppletShell.a(BLjava/lang/String;)V#10",
+      "renamedSymbol": "L:AppletShell.showErrorPage(BLjava/lang/String;)V#10",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -61653,7 +61869,7 @@
     },
     {
       "symbol": "L:fj.a(BLjava/lang/String;)V#11",
-      "renamedSymbol": "L:AppletShell.a(BLjava/lang/String;)V#11",
+      "renamedSymbol": "L:AppletShell.showErrorPage(BLjava/lang/String;)V#11",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -61664,7 +61880,7 @@
     },
     {
       "symbol": "L:fj.a(BLjava/lang/String;)V#12",
-      "renamedSymbol": "L:AppletShell.a(BLjava/lang/String;)V#12",
+      "renamedSymbol": "L:AppletShell.showErrorPage(BLjava/lang/String;)V#12",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -61675,7 +61891,7 @@
     },
     {
       "symbol": "L:fj.a(BLjava/lang/String;)V#2",
-      "renamedSymbol": "L:AppletShell.a(BLjava/lang/String;)V#2",
+      "renamedSymbol": "L:AppletShell.showErrorPage(BLjava/lang/String;)V#2",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -61686,7 +61902,7 @@
     },
     {
       "symbol": "L:fj.a(BLjava/lang/String;)V#3",
-      "renamedSymbol": "L:AppletShell.a(BLjava/lang/String;)V#3",
+      "renamedSymbol": "L:AppletShell.showErrorPage(BLjava/lang/String;)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -61697,7 +61913,7 @@
     },
     {
       "symbol": "L:fj.a(BLjava/lang/String;)V#4",
-      "renamedSymbol": "L:AppletShell.a(BLjava/lang/String;)V#4",
+      "renamedSymbol": "L:AppletShell.showErrorPage(BLjava/lang/String;)V#4",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -61708,7 +61924,7 @@
     },
     {
       "symbol": "L:fj.a(BLjava/lang/String;)V#5",
-      "renamedSymbol": "L:AppletShell.a(BLjava/lang/String;)V#5",
+      "renamedSymbol": "L:AppletShell.showErrorPage(BLjava/lang/String;)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -61719,7 +61935,7 @@
     },
     {
       "symbol": "L:fj.a(BLjava/lang/String;)V#6",
-      "renamedSymbol": "L:AppletShell.a(BLjava/lang/String;)V#6",
+      "renamedSymbol": "L:AppletShell.showErrorPage(BLjava/lang/String;)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -61730,7 +61946,7 @@
     },
     {
       "symbol": "L:fj.a(BLjava/lang/String;)V#7",
-      "renamedSymbol": "L:AppletShell.a(BLjava/lang/String;)V#7",
+      "renamedSymbol": "L:AppletShell.showErrorPage(BLjava/lang/String;)V#7",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -61741,7 +61957,7 @@
     },
     {
       "symbol": "L:fj.a(BLjava/lang/String;)V#8",
-      "renamedSymbol": "L:AppletShell.a(BLjava/lang/String;)V#8",
+      "renamedSymbol": "L:AppletShell.showErrorPage(BLjava/lang/String;)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -61752,7 +61968,7 @@
     },
     {
       "symbol": "L:fj.a(BLjava/lang/String;)V#9",
-      "renamedSymbol": "L:AppletShell.a(BLjava/lang/String;)V#9",
+      "renamedSymbol": "L:AppletShell.showErrorPage(BLjava/lang/String;)V#9",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -61829,7 +62045,7 @@
     },
     {
       "symbol": "L:fj.a(ILjava/lang/String;IIIII)V#0",
-      "renamedSymbol": "L:AppletShell.a(ILjava/lang/String;IIIII)V#0",
+      "renamedSymbol": "L:AppletShell.startApplet(ILjava/lang/String;IIIII)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -61840,7 +62056,7 @@
     },
     {
       "symbol": "L:fj.a(ILjava/lang/String;IIIII)V#1",
-      "renamedSymbol": "L:AppletShell.a(ILjava/lang/String;IIIII)V#1",
+      "renamedSymbol": "L:AppletShell.startApplet(ILjava/lang/String;IIIII)V#1",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -61851,7 +62067,7 @@
     },
     {
       "symbol": "L:fj.a(ILjava/lang/String;IIIII)V#10",
-      "renamedSymbol": "L:AppletShell.a(ILjava/lang/String;IIIII)V#10",
+      "renamedSymbol": "L:AppletShell.startApplet(ILjava/lang/String;IIIII)V#10",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -61862,7 +62078,7 @@
     },
     {
       "symbol": "L:fj.a(ILjava/lang/String;IIIII)V#11",
-      "renamedSymbol": "L:AppletShell.a(ILjava/lang/String;IIIII)V#11",
+      "renamedSymbol": "L:AppletShell.startApplet(ILjava/lang/String;IIIII)V#11",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -61873,7 +62089,7 @@
     },
     {
       "symbol": "L:fj.a(ILjava/lang/String;IIIII)V#12",
-      "renamedSymbol": "L:AppletShell.a(ILjava/lang/String;IIIII)V#12",
+      "renamedSymbol": "L:AppletShell.startApplet(ILjava/lang/String;IIIII)V#12",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -61884,7 +62100,7 @@
     },
     {
       "symbol": "L:fj.a(ILjava/lang/String;IIIII)V#2",
-      "renamedSymbol": "L:AppletShell.a(ILjava/lang/String;IIIII)V#2",
+      "renamedSymbol": "L:AppletShell.startApplet(ILjava/lang/String;IIIII)V#2",
       "originalName": "stackIn_26_1",
       "renamedName": "stackIn_26_1",
       "declaration": {
@@ -61895,7 +62111,7 @@
     },
     {
       "symbol": "L:fj.a(ILjava/lang/String;IIIII)V#3",
-      "renamedSymbol": "L:AppletShell.a(ILjava/lang/String;IIIII)V#3",
+      "renamedSymbol": "L:AppletShell.startApplet(ILjava/lang/String;IIIII)V#3",
       "originalName": "stackIn_27_2",
       "renamedName": "stackIn_27_2",
       "declaration": {
@@ -61906,7 +62122,7 @@
     },
     {
       "symbol": "L:fj.a(ILjava/lang/String;IIIII)V#4",
-      "renamedSymbol": "L:AppletShell.a(ILjava/lang/String;IIIII)V#4",
+      "renamedSymbol": "L:AppletShell.startApplet(ILjava/lang/String;IIIII)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -61917,7 +62133,7 @@
     },
     {
       "symbol": "L:fj.a(ILjava/lang/String;IIIII)V#5",
-      "renamedSymbol": "L:AppletShell.a(ILjava/lang/String;IIIII)V#5",
+      "renamedSymbol": "L:AppletShell.startApplet(ILjava/lang/String;IIIII)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -61928,7 +62144,7 @@
     },
     {
       "symbol": "L:fj.a(ILjava/lang/String;IIIII)V#6",
-      "renamedSymbol": "L:AppletShell.a(ILjava/lang/String;IIIII)V#6",
+      "renamedSymbol": "L:AppletShell.startApplet(ILjava/lang/String;IIIII)V#6",
       "originalName": "var8_ref",
       "renamedName": "var8_ref",
       "declaration": {
@@ -61939,7 +62155,7 @@
     },
     {
       "symbol": "L:fj.a(ILjava/lang/String;IIIII)V#7",
-      "renamedSymbol": "L:AppletShell.a(ILjava/lang/String;IIIII)V#7",
+      "renamedSymbol": "L:AppletShell.startApplet(ILjava/lang/String;IIIII)V#7",
       "originalName": "var8_ref2",
       "renamedName": "var8_ref2",
       "declaration": {
@@ -61950,7 +62166,7 @@
     },
     {
       "symbol": "L:fj.a(ILjava/lang/String;IIIII)V#8",
-      "renamedSymbol": "L:AppletShell.a(ILjava/lang/String;IIIII)V#8",
+      "renamedSymbol": "L:AppletShell.startApplet(ILjava/lang/String;IIIII)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -61961,7 +62177,7 @@
     },
     {
       "symbol": "L:fj.a(ILjava/lang/String;IIIII)V#9",
-      "renamedSymbol": "L:AppletShell.a(ILjava/lang/String;IIIII)V#9",
+      "renamedSymbol": "L:AppletShell.startApplet(ILjava/lang/String;IIIII)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -71311,7 +71527,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#0",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#0",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -71322,7 +71538,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#1",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#1",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#1",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -71333,7 +71549,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#10",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#10",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#10",
       "originalName": "stackIn_72_2",
       "renamedName": "stackIn_72_2",
       "declaration": {
@@ -71344,7 +71560,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#11",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#11",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -71355,7 +71571,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#12",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#12",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#12",
       "originalName": "stackOut_13_0",
       "renamedName": "stackOut_13_0",
       "declaration": {
@@ -71366,7 +71582,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#13",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#13",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#13",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -71377,7 +71593,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#14",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#14",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#14",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -71388,7 +71604,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#15",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#15",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#15",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -71399,7 +71615,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#16",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#16",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#16",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -71410,7 +71626,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#17",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#17",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#17",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -71421,7 +71637,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#18",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#18",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#18",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -71432,7 +71648,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#19",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#19",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#19",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -71443,7 +71659,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#2",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#2",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#2",
       "originalName": "stackIn_33_0",
       "renamedName": "stackIn_33_0",
       "declaration": {
@@ -71454,7 +71670,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#20",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#20",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#20",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -71465,7 +71681,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#21",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#21",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#21",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -71476,7 +71692,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#22",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#22",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#22",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -71487,7 +71703,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#23",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#23",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#23",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -71498,7 +71714,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#24",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#24",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#24",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -71509,7 +71725,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#25",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#25",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#25",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -71520,7 +71736,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#26",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#26",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#26",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -71531,7 +71747,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#27",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#27",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#27",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -71542,7 +71758,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#28",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#28",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#28",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -71553,7 +71769,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#29",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#29",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#29",
       "originalName": "stackIn_45_0Lifetime1",
       "renamedName": "stackIn_45_0Lifetime1",
       "declaration": {
@@ -71564,7 +71780,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#3",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#3",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#3",
       "originalName": "stackIn_33_1",
       "renamedName": "stackIn_33_1",
       "declaration": {
@@ -71575,7 +71791,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#30",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#30",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#30",
       "originalName": "stackIn_45_1Lifetime1",
       "renamedName": "stackIn_45_1Lifetime1",
       "declaration": {
@@ -71586,7 +71802,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#31",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#31",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#31",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -71597,7 +71813,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#32",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#32",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#32",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -71608,7 +71824,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#33",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#33",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#33",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -71619,7 +71835,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#34",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#34",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#34",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -71630,7 +71846,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#35",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#35",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#35",
       "originalName": "var13Lifetime1",
       "renamedName": "var13Lifetime1",
       "declaration": {
@@ -71641,7 +71857,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#36",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#36",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#36",
       "originalName": "decompiledNaturalLoopExit0",
       "renamedName": "decompiledNaturalLoopExit0",
       "declaration": {
@@ -71652,7 +71868,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#37",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#37",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#37",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -71663,7 +71879,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#4",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#4",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#4",
       "originalName": "stackIn_34_2",
       "renamedName": "stackIn_34_2",
       "declaration": {
@@ -71674,7 +71890,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#5",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#5",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#5",
       "originalName": "stackIn_45_0",
       "renamedName": "stackIn_45_0",
       "declaration": {
@@ -71685,7 +71901,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#6",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#6",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#6",
       "originalName": "stackIn_45_1",
       "renamedName": "stackIn_45_1",
       "declaration": {
@@ -71696,7 +71912,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#7",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#7",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#7",
       "originalName": "stackIn_55_0",
       "renamedName": "stackIn_55_0",
       "declaration": {
@@ -71707,7 +71923,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#8",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#8",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#8",
       "originalName": "stackIn_71_0",
       "renamedName": "stackIn_71_0",
       "declaration": {
@@ -71718,7 +71934,7 @@
     },
     {
       "symbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#9",
-      "renamedSymbol": "L:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#9",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#9",
       "originalName": "stackIn_71_1",
       "renamedName": "stackIn_71_1",
       "declaration": {
@@ -71773,7 +71989,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#0",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#0",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -71784,7 +72000,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#1",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#1",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#1",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -71795,7 +72011,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#10",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#10",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#10",
       "originalName": "stackIn_72_2",
       "renamedName": "stackIn_72_2",
       "declaration": {
@@ -71806,7 +72022,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#11",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#11",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -71817,7 +72033,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#12",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#12",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#12",
       "originalName": "stackOut_13_0",
       "renamedName": "stackOut_13_0",
       "declaration": {
@@ -71828,7 +72044,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#13",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#13",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#13",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -71839,7 +72055,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#14",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#14",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#14",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -71850,7 +72066,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#15",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#15",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#15",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -71861,7 +72077,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#16",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#16",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#16",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -71872,7 +72088,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#17",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#17",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#17",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -71883,7 +72099,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#18",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#18",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#18",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -71894,7 +72110,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#19",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#19",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#19",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -71905,7 +72121,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#2",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#2",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#2",
       "originalName": "stackIn_33_0",
       "renamedName": "stackIn_33_0",
       "declaration": {
@@ -71916,7 +72132,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#20",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#20",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#20",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -71927,7 +72143,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#21",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#21",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#21",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -71938,7 +72154,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#22",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#22",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#22",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -71949,7 +72165,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#23",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#23",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#23",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -71960,7 +72176,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#24",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#24",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#24",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -71971,7 +72187,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#25",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#25",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#25",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -71982,7 +72198,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#26",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#26",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#26",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -71993,7 +72209,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#27",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#27",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#27",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -72004,7 +72220,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#28",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#28",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#28",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -72015,7 +72231,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#29",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#29",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#29",
       "originalName": "stackIn_45_0Lifetime1",
       "renamedName": "stackIn_45_0Lifetime1",
       "declaration": {
@@ -72026,7 +72242,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#3",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#3",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#3",
       "originalName": "stackIn_33_1",
       "renamedName": "stackIn_33_1",
       "declaration": {
@@ -72037,7 +72253,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#30",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#30",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#30",
       "originalName": "stackIn_45_1Lifetime1",
       "renamedName": "stackIn_45_1Lifetime1",
       "declaration": {
@@ -72048,7 +72264,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#31",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#31",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#31",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -72059,7 +72275,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#32",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#32",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#32",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -72070,7 +72286,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#33",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#33",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#33",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -72081,7 +72297,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#34",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#34",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#34",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -72092,7 +72308,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#35",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#35",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#35",
       "originalName": "var13Lifetime1",
       "renamedName": "var13Lifetime1",
       "declaration": {
@@ -72103,7 +72319,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#36",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#36",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#36",
       "originalName": "decompiledNaturalLoopExit0",
       "renamedName": "decompiledNaturalLoopExit0",
       "declaration": {
@@ -72114,7 +72330,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#37",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#37",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#37",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -72125,7 +72341,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#4",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#4",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#4",
       "originalName": "stackIn_34_2",
       "renamedName": "stackIn_34_2",
       "declaration": {
@@ -72136,7 +72352,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#5",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#5",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#5",
       "originalName": "stackIn_45_0",
       "renamedName": "stackIn_45_0",
       "declaration": {
@@ -72147,7 +72363,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#6",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#6",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#6",
       "originalName": "stackIn_45_1",
       "renamedName": "stackIn_45_1",
       "declaration": {
@@ -72158,7 +72374,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#7",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#7",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#7",
       "originalName": "stackIn_55_0",
       "renamedName": "stackIn_55_0",
       "declaration": {
@@ -72169,7 +72385,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#8",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#8",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#8",
       "originalName": "stackIn_71_0",
       "renamedName": "stackIn_71_0",
       "declaration": {
@@ -72180,7 +72396,7 @@
     },
     {
       "symbol": "L:hj.a(ZBLjk;II)V#9",
-      "renamedSymbol": "L:hj.a(ZBLjk;II)V#9",
+      "renamedSymbol": "L:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#9",
       "originalName": "stackIn_71_1",
       "renamedName": "stackIn_71_1",
       "declaration": {
@@ -83928,7 +84144,7 @@
     },
     {
       "symbol": "L:kk.a(IBLjava/lang/String;)V#0",
-      "renamedSymbol": "L:GameClient.a(IBLjava/lang/String;)V#0",
+      "renamedSymbol": "L:GameClient.startWithDefaultSize(IBLjava/lang/String;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -83939,7 +84155,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#0",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#0",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -83950,7 +84166,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#1",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#1",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#1",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -83961,7 +84177,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#10",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#10",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -83972,7 +84188,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#11",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#11",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -83983,7 +84199,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#12",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#12",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#12",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -83994,7 +84210,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#13",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#13",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -84005,7 +84221,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#14",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#14",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#14",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -84016,7 +84232,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#2",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#2",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#2",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -84027,7 +84243,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#3",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#3",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#3",
       "originalName": "stackIn_27_1",
       "renamedName": "stackIn_27_1",
       "declaration": {
@@ -84038,7 +84254,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#4",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#4",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#4",
       "originalName": "stackIn_28_2",
       "renamedName": "stackIn_28_2",
       "declaration": {
@@ -84049,7 +84265,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#5",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#5",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -84060,7 +84276,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#6",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#6",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -84071,7 +84287,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#7",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#7",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#7",
       "originalName": "var6_ref",
       "renamedName": "var6_ref",
       "declaration": {
@@ -84082,7 +84298,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#8",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#8",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#8",
       "originalName": "var6_ref2",
       "renamedName": "var6_ref2",
       "declaration": {
@@ -84093,7 +84309,7 @@
     },
     {
       "symbol": "L:kk.a(IIBLjava/lang/String;I)V#9",
-      "renamedSymbol": "L:GameClient.a(IIBLjava/lang/String;I)V#9",
+      "renamedSymbol": "L:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -84104,7 +84320,7 @@
     },
     {
       "symbol": "L:kk.a(IIIIIIZI)V#0",
-      "renamedSymbol": "L:GameClient.a(IIIIIIZI)V#0",
+      "renamedSymbol": "L:GameClient.initializeFramework(IIIIIIZI)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -84115,7 +84331,7 @@
     },
     {
       "symbol": "L:kk.a(ZI)V#0",
-      "renamedSymbol": "L:GameClient.a(ZI)V#0",
+      "renamedSymbol": "L:GameClient.serviceFramework(ZI)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -84126,7 +84342,7 @@
     },
     {
       "symbol": "L:kk.a(ZI)V#1",
-      "renamedSymbol": "L:GameClient.a(ZI)V#1",
+      "renamedSymbol": "L:GameClient.serviceFramework(ZI)V#1",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -84137,7 +84353,7 @@
     },
     {
       "symbol": "L:kk.a(ZI)V#10",
-      "renamedSymbol": "L:GameClient.a(ZI)V#10",
+      "renamedSymbol": "L:GameClient.serviceFramework(ZI)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -84148,7 +84364,7 @@
     },
     {
       "symbol": "L:kk.a(ZI)V#11",
-      "renamedSymbol": "L:GameClient.a(ZI)V#11",
+      "renamedSymbol": "L:GameClient.serviceFramework(ZI)V#11",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -84159,7 +84375,7 @@
     },
     {
       "symbol": "L:kk.a(ZI)V#12",
-      "renamedSymbol": "L:GameClient.a(ZI)V#12",
+      "renamedSymbol": "L:GameClient.serviceFramework(ZI)V#12",
       "originalName": "var3Lifetime2",
       "renamedName": "var3Lifetime2",
       "declaration": {
@@ -84170,7 +84386,7 @@
     },
     {
       "symbol": "L:kk.a(ZI)V#13",
-      "renamedSymbol": "L:GameClient.a(ZI)V#13",
+      "renamedSymbol": "L:GameClient.serviceFramework(ZI)V#13",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -84181,7 +84397,7 @@
     },
     {
       "symbol": "L:kk.a(ZI)V#2",
-      "renamedSymbol": "L:GameClient.a(ZI)V#2",
+      "renamedSymbol": "L:GameClient.serviceFramework(ZI)V#2",
       "originalName": "stackIn_98_0",
       "renamedName": "stackIn_98_0",
       "declaration": {
@@ -84192,7 +84408,7 @@
     },
     {
       "symbol": "L:kk.a(ZI)V#3",
-      "renamedSymbol": "L:GameClient.a(ZI)V#3",
+      "renamedSymbol": "L:GameClient.serviceFramework(ZI)V#3",
       "originalName": "stackIn_98_1",
       "renamedName": "stackIn_98_1",
       "declaration": {
@@ -84203,7 +84419,7 @@
     },
     {
       "symbol": "L:kk.a(ZI)V#4",
-      "renamedSymbol": "L:GameClient.a(ZI)V#4",
+      "renamedSymbol": "L:GameClient.serviceFramework(ZI)V#4",
       "originalName": "stackIn_99_2",
       "renamedName": "stackIn_99_2",
       "declaration": {
@@ -84214,7 +84430,7 @@
     },
     {
       "symbol": "L:kk.a(ZI)V#5",
-      "renamedSymbol": "L:GameClient.a(ZI)V#5",
+      "renamedSymbol": "L:GameClient.serviceFramework(ZI)V#5",
       "originalName": "stackIn_102_3",
       "renamedName": "stackIn_102_3",
       "declaration": {
@@ -84225,7 +84441,7 @@
     },
     {
       "symbol": "L:kk.a(ZI)V#6",
-      "renamedSymbol": "L:GameClient.a(ZI)V#6",
+      "renamedSymbol": "L:GameClient.serviceFramework(ZI)V#6",
       "originalName": "stackIn_132_0",
       "renamedName": "stackIn_132_0",
       "declaration": {
@@ -84236,7 +84452,7 @@
     },
     {
       "symbol": "L:kk.a(ZI)V#7",
-      "renamedSymbol": "L:GameClient.a(ZI)V#7",
+      "renamedSymbol": "L:GameClient.serviceFramework(ZI)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -84247,7 +84463,7 @@
     },
     {
       "symbol": "L:kk.a(ZI)V#8",
-      "renamedSymbol": "L:GameClient.a(ZI)V#8",
+      "renamedSymbol": "L:GameClient.serviceFramework(ZI)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -84258,7 +84474,7 @@
     },
     {
       "symbol": "L:kk.a(ZI)V#9",
-      "renamedSymbol": "L:GameClient.a(ZI)V#9",
+      "renamedSymbol": "L:GameClient.serviceFramework(ZI)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -84269,7 +84485,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#0",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#0",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#0",
       "originalName": "stackIn_29_0",
       "renamedName": "stackIn_29_0",
       "declaration": {
@@ -84280,7 +84496,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#1",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#1",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#1",
       "originalName": "stackIn_30_1",
       "renamedName": "stackIn_30_1",
       "declaration": {
@@ -84291,7 +84507,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#10",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#10",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -84302,7 +84518,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#11",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#11",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -84313,7 +84529,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#12",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#12",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#12",
       "originalName": "var5_intLifetime1",
       "renamedName": "var5_intLifetime1",
       "declaration": {
@@ -84324,7 +84540,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#13",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#13",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#13",
       "originalName": "var5_intLifetime2",
       "renamedName": "var5_intLifetime2",
       "declaration": {
@@ -84335,7 +84551,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#14",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#14",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -84346,7 +84562,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#15",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#15",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#15",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -84357,7 +84573,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#16",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#16",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#16",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -84368,7 +84584,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#2",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#2",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -84379,7 +84595,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#3",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#3",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -84390,7 +84606,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#4",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#4",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#4",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -84401,7 +84617,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#5",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#5",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -84412,7 +84628,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#6",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#6",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -84423,7 +84639,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#7",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#7",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -84434,7 +84650,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#8",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#8",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -84445,7 +84661,7 @@
     },
     {
       "symbol": "L:kk.a(ZZZ)I#9",
-      "renamedSymbol": "L:GameClient.a(ZZZ)I#9",
+      "renamedSymbol": "L:GameClient.processAccountUiActions(ZZZ)I#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -84500,7 +84716,7 @@
     },
     {
       "symbol": "L:kk.h(B)V#0",
-      "renamedSymbol": "L:GameClient.h(B)V#0",
+      "renamedSymbol": "L:GameClient.readSessionCookieUpdate(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -84511,7 +84727,7 @@
     },
     {
       "symbol": "L:kk.h(I)I#0",
-      "renamedSymbol": "L:GameClient.h(I)I#0",
+      "renamedSymbol": "L:GameClient.attemptReconnect(I)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -84566,7 +84782,7 @@
     },
     {
       "symbol": "L:kk.j(I)V#0",
-      "renamedSymbol": "L:GameClient.j(I)V#0",
+      "renamedSymbol": "L:GameClient.dispatchCommonPacket(I)V#0",
       "originalName": "stackIn_35_0",
       "renamedName": "stackIn_35_0",
       "declaration": {
@@ -84577,7 +84793,7 @@
     },
     {
       "symbol": "L:kk.j(I)V#1",
-      "renamedSymbol": "L:GameClient.j(I)V#1",
+      "renamedSymbol": "L:GameClient.dispatchCommonPacket(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -84588,7 +84804,7 @@
     },
     {
       "symbol": "L:kk.j(I)V#2",
-      "renamedSymbol": "L:GameClient.j(I)V#2",
+      "renamedSymbol": "L:GameClient.dispatchCommonPacket(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -84599,7 +84815,7 @@
     },
     {
       "symbol": "L:kk.j(I)V#3",
-      "renamedSymbol": "L:GameClient.j(I)V#3",
+      "renamedSymbol": "L:GameClient.dispatchCommonPacket(I)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -87294,7 +87510,7 @@
     },
     {
       "symbol": "L:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;#0",
-      "renamedSymbol": "L:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;#0",
+      "renamedSymbol": "L:ld.getAlternativeButtonPromptPrefixWithIntGuard(IZZZ)Ljava/lang/String;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -87305,7 +87521,7 @@
     },
     {
       "symbol": "L:ld.a(BZZZ)Ljava/lang/String;#0",
-      "renamedSymbol": "L:ld.a(BZZZ)Ljava/lang/String;#0",
+      "renamedSymbol": "L:ld.getAlternativeButtonPromptPrefix(BZZZ)Ljava/lang/String;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -146441,9 +146657,9 @@
     },
     {
       "symbol": "M:cg$1$CfrPartitionedBody.<init>(BLgk;)V",
-      "renamedSymbol": "M:cg$1$CfrPartitionedBody.<init>(BLResourceArchive;)V",
+      "renamedSymbol": "M:cg$1ClientTextLoader.<init>(BLResourceArchive;)V",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "ClientTextLoader",
       "declaration": {
         "file": "cg.java",
         "start": 1060,
@@ -146452,7 +146668,7 @@
     },
     {
       "symbol": "M:cg$1$CfrPartitionedBody.run()V",
-      "renamedSymbol": "M:cg$1$CfrPartitionedBody.run()V",
+      "renamedSymbol": "M:cg$1ClientTextLoader.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -146463,9 +146679,9 @@
     },
     {
       "symbol": "M:cg$1$CfrPartitionedBody.runChunk0()V",
-      "renamedSymbol": "M:cg$1$CfrPartitionedBody.runChunk0()V",
+      "renamedSymbol": "M:cg$1ClientTextLoader.loadLoginLobbyAndChatText()V",
       "originalName": "runChunk0",
-      "renamedName": "runChunk0",
+      "renamedName": "loadLoginLobbyAndChatText",
       "declaration": {
         "file": "cg.java",
         "start": 1562,
@@ -146474,9 +146690,9 @@
     },
     {
       "symbol": "M:cg$1$CfrPartitionedBody.runChunk1()V",
-      "renamedSymbol": "M:cg$1$CfrPartitionedBody.runChunk1()V",
+      "renamedSymbol": "M:cg$1ClientTextLoader.loadAccountFormsAndLoadingText()V",
       "originalName": "runChunk1",
-      "renamedName": "runChunk1",
+      "renamedName": "loadAccountFormsAndLoadingText",
       "declaration": {
         "file": "cg.java",
         "start": 39470,
@@ -146485,9 +146701,9 @@
     },
     {
       "symbol": "M:cg$1$CfrPartitionedBody.runChunk2()V",
-      "renamedSymbol": "M:cg$1$CfrPartitionedBody.runChunk2()V",
+      "renamedSymbol": "M:cg$1ClientTextLoader.loadMatchDisplayAndMembershipText()V",
       "originalName": "runChunk2",
-      "renamedName": "runChunk2",
+      "renamedName": "loadMatchDisplayAndMembershipText",
       "declaration": {
         "file": "cg.java",
         "start": 76842,
@@ -146496,9 +146712,9 @@
     },
     {
       "symbol": "M:cg$1$CfrPartitionedBody.runChunk3()V",
-      "renamedSymbol": "M:cg$1$CfrPartitionedBody.runChunk3()V",
+      "renamedSymbol": "M:cg$1ClientTextLoader.loadLoginPromptsAndSubscriptionText()V",
       "originalName": "runChunk3",
-      "renamedName": "runChunk3",
+      "renamedName": "loadLoginPromptsAndSubscriptionText",
       "declaration": {
         "file": "cg.java",
         "start": 114453,
@@ -146507,9 +146723,9 @@
     },
     {
       "symbol": "M:cg.a(BLgk;)V",
-      "renamedSymbol": "M:cg.a(BLResourceArchive;)V",
+      "renamedSymbol": "M:cg.loadSharedInterfaceText(BLResourceArchive;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadSharedInterfaceText",
       "declaration": {
         "file": "cg.java",
         "start": 620,
@@ -149136,9 +149352,9 @@
     },
     {
       "symbol": "M:fj.a(BLjava/lang/String;)V",
-      "renamedSymbol": "M:AppletShell.a(BLjava/lang/String;)V",
+      "renamedSymbol": "M:AppletShell.showErrorPage(BLjava/lang/String;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "showErrorPage",
       "declaration": {
         "file": "fj.java",
         "start": 4126,
@@ -149147,9 +149363,9 @@
     },
     {
       "symbol": "M:fj.a(I)Z",
-      "renamedSymbol": "M:AppletShell.a(I)Z",
+      "renamedSymbol": "M:AppletShell.allowAppletStartup(I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "allowAppletStartup",
       "declaration": {
         "file": "fj.java",
         "start": 19383,
@@ -149169,9 +149385,9 @@
     },
     {
       "symbol": "M:fj.a(ILjava/lang/String;IIIII)V",
-      "renamedSymbol": "M:AppletShell.a(ILjava/lang/String;IIIII)V",
+      "renamedSymbol": "M:AppletShell.startApplet(ILjava/lang/String;IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "startApplet",
       "declaration": {
         "file": "fj.java",
         "start": 19442,
@@ -151094,9 +151310,9 @@
     },
     {
       "symbol": "M:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V",
-      "renamedSymbol": "M:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V",
+      "renamedSymbol": "M:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V",
       "originalName": "$cfr$intArgs$a$d6db22f779ae",
-      "renamedName": "$cfr$intArgs$a$d6db22f779ae",
+      "renamedName": "bucketVisibleFacesByDepthWithIntGuard",
       "declaration": {
         "file": "hj.java",
         "start": 6771,
@@ -151116,9 +151332,9 @@
     },
     {
       "symbol": "M:hj.a(ZBLjk;II)V",
-      "renamedSymbol": "M:hj.a(ZBLjk;II)V",
+      "renamedSymbol": "M:hj.bucketVisibleFacesByDepth(ZBLjk;II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "bucketVisibleFacesByDepth",
       "declaration": {
         "file": "hj.java",
         "start": 126,
@@ -153657,9 +153873,9 @@
     },
     {
       "symbol": "M:kk.a(IBLjava/lang/String;)V",
-      "renamedSymbol": "M:GameClient.a(IBLjava/lang/String;)V",
+      "renamedSymbol": "M:GameClient.startWithDefaultSize(IBLjava/lang/String;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "startWithDefaultSize",
       "declaration": {
         "file": "kk.java",
         "start": 22226,
@@ -153668,9 +153884,9 @@
     },
     {
       "symbol": "M:kk.a(IIBLjava/lang/String;I)V",
-      "renamedSymbol": "M:GameClient.a(IIBLjava/lang/String;I)V",
+      "renamedSymbol": "M:GameClient.readAppletParameters(IIBLjava/lang/String;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readAppletParameters",
       "declaration": {
         "file": "kk.java",
         "start": 19065,
@@ -153679,9 +153895,9 @@
     },
     {
       "symbol": "M:kk.a(IIIIIIZI)V",
-      "renamedSymbol": "M:GameClient.a(IIIIIIZI)V",
+      "renamedSymbol": "M:GameClient.initializeFramework(IIIIIIZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeFramework",
       "declaration": {
         "file": "kk.java",
         "start": 12553,
@@ -153690,9 +153906,9 @@
     },
     {
       "symbol": "M:kk.a(IZ)I",
-      "renamedSymbol": "M:GameClient.a(IZ)I",
+      "renamedSymbol": "M:GameClient.pollAccountUiActions(IZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollAccountUiActions",
       "declaration": {
         "file": "kk.java",
         "start": 18899,
@@ -153712,9 +153928,9 @@
     },
     {
       "symbol": "M:kk.a(ZI)V",
-      "renamedSymbol": "M:GameClient.a(ZI)V",
+      "renamedSymbol": "M:GameClient.serviceFramework(ZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "serviceFramework",
       "declaration": {
         "file": "kk.java",
         "start": 4075,
@@ -153723,9 +153939,9 @@
     },
     {
       "symbol": "M:kk.a(ZZ)V",
-      "renamedSymbol": "M:GameClient.a(ZZ)V",
+      "renamedSymbol": "M:GameClient.enableDefaultPacketHandlers(ZZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enableDefaultPacketHandlers",
       "declaration": {
         "file": "kk.java",
         "start": 3235,
@@ -153745,9 +153961,9 @@
     },
     {
       "symbol": "M:kk.a(ZZZ)I",
-      "renamedSymbol": "M:GameClient.a(ZZZ)I",
+      "renamedSymbol": "M:GameClient.processAccountUiActions(ZZZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "processAccountUiActions",
       "declaration": {
         "file": "kk.java",
         "start": 14109,
@@ -153756,9 +153972,9 @@
     },
     {
       "symbol": "M:kk.f(B)V",
-      "renamedSymbol": "M:GameClient.f(B)V",
+      "renamedSymbol": "M:GameClient.initializePacketLengths(B)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "initializePacketLengths",
       "declaration": {
         "file": "kk.java",
         "start": 13542,
@@ -153767,9 +153983,9 @@
     },
     {
       "symbol": "M:kk.f(I)V",
-      "renamedSymbol": "M:GameClient.f(I)V",
+      "renamedSymbol": "M:GameClient.enablePacketHandler(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "enablePacketHandler",
       "declaration": {
         "file": "kk.java",
         "start": 12042,
@@ -153800,9 +154016,9 @@
     },
     {
       "symbol": "M:kk.h(B)V",
-      "renamedSymbol": "M:GameClient.h(B)V",
+      "renamedSymbol": "M:GameClient.readSessionCookieUpdate(B)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "readSessionCookieUpdate",
       "declaration": {
         "file": "kk.java",
         "start": 22802,
@@ -153811,9 +154027,9 @@
     },
     {
       "symbol": "M:kk.h(I)I",
-      "renamedSymbol": "M:GameClient.h(I)I",
+      "renamedSymbol": "M:GameClient.attemptReconnect(I)I",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "attemptReconnect",
       "declaration": {
         "file": "kk.java",
         "start": 11178,
@@ -153833,9 +154049,9 @@
     },
     {
       "symbol": "M:kk.i(I)V",
-      "renamedSymbol": "M:GameClient.i(I)V",
+      "renamedSymbol": "M:GameClient.enablePacketTwo(I)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "enablePacketTwo",
       "declaration": {
         "file": "kk.java",
         "start": 3939,
@@ -153844,9 +154060,9 @@
     },
     {
       "symbol": "M:kk.j(B)V",
-      "renamedSymbol": "M:GameClient.j(B)V",
+      "renamedSymbol": "M:GameClient.enablePacketFive(B)V",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "enablePacketFive",
       "declaration": {
         "file": "kk.java",
         "start": 526,
@@ -153855,9 +154071,9 @@
     },
     {
       "symbol": "M:kk.j(I)V",
-      "renamedSymbol": "M:GameClient.j(I)V",
+      "renamedSymbol": "M:GameClient.dispatchCommonPacket(I)V",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "dispatchCommonPacket",
       "declaration": {
         "file": "kk.java",
         "start": 664,
@@ -154350,9 +154566,9 @@
     },
     {
       "symbol": "M:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;",
-      "renamedSymbol": "M:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;",
+      "renamedSymbol": "M:ld.getAlternativeButtonPromptPrefixWithIntGuard(IZZZ)Ljava/lang/String;",
       "originalName": "$cfr$intArgs$a$c7de0d339b2a",
-      "renamedName": "$cfr$intArgs$a$c7de0d339b2a",
+      "renamedName": "getAlternativeButtonPromptPrefixWithIntGuard",
       "declaration": {
         "file": "ld.java",
         "start": 3169,
@@ -154372,9 +154588,9 @@
     },
     {
       "symbol": "M:ld.a(BZZZ)Ljava/lang/String;",
-      "renamedSymbol": "M:ld.a(BZZZ)Ljava/lang/String;",
+      "renamedSymbol": "M:ld.getAlternativeButtonPromptPrefix(BZZZ)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getAlternativeButtonPromptPrefix",
       "declaration": {
         "file": "ld.java",
         "start": 2553,
@@ -171906,7 +172122,7 @@
     },
     {
       "symbol": "P:cg$1$CfrPartitionedBody.<init>(BLgk;)V#0",
-      "renamedSymbol": "P:cg$1$CfrPartitionedBody.<init>(BLResourceArchive;)V#0",
+      "renamedSymbol": "P:cg$1ClientTextLoader.<init>(BLResourceArchive;)V#0",
       "originalName": "initialParam0",
       "renamedName": "initialParam0",
       "declaration": {
@@ -171917,7 +172133,7 @@
     },
     {
       "symbol": "P:cg$1$CfrPartitionedBody.<init>(BLgk;)V#1",
-      "renamedSymbol": "P:cg$1$CfrPartitionedBody.<init>(BLResourceArchive;)V#1",
+      "renamedSymbol": "P:cg$1ClientTextLoader.<init>(BLResourceArchive;)V#1",
       "originalName": "initialParam1",
       "renamedName": "initialParam1",
       "declaration": {
@@ -171928,7 +172144,7 @@
     },
     {
       "symbol": "P:cg.a(BLgk;)V#0",
-      "renamedSymbol": "P:cg.a(BLResourceArchive;)V#0",
+      "renamedSymbol": "P:cg.loadSharedInterfaceText(BLResourceArchive;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -171939,7 +172155,7 @@
     },
     {
       "symbol": "P:cg.a(BLgk;)V#1",
-      "renamedSymbol": "P:cg.a(BLResourceArchive;)V#1",
+      "renamedSymbol": "P:cg.loadSharedInterfaceText(BLResourceArchive;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -177395,7 +177611,7 @@
     },
     {
       "symbol": "P:fj.a(BLjava/lang/String;)V#0",
-      "renamedSymbol": "P:AppletShell.a(BLjava/lang/String;)V#0",
+      "renamedSymbol": "P:AppletShell.showErrorPage(BLjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -177406,7 +177622,7 @@
     },
     {
       "symbol": "P:fj.a(BLjava/lang/String;)V#1",
-      "renamedSymbol": "P:AppletShell.a(BLjava/lang/String;)V#1",
+      "renamedSymbol": "P:AppletShell.showErrorPage(BLjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -177417,7 +177633,7 @@
     },
     {
       "symbol": "P:fj.a(I)Z#0",
-      "renamedSymbol": "P:AppletShell.a(I)Z#0",
+      "renamedSymbol": "P:AppletShell.allowAppletStartup(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -177483,7 +177699,7 @@
     },
     {
       "symbol": "P:fj.a(ILjava/lang/String;IIIII)V#0",
-      "renamedSymbol": "P:AppletShell.a(ILjava/lang/String;IIIII)V#0",
+      "renamedSymbol": "P:AppletShell.startApplet(ILjava/lang/String;IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -177494,7 +177710,7 @@
     },
     {
       "symbol": "P:fj.a(ILjava/lang/String;IIIII)V#1",
-      "renamedSymbol": "P:AppletShell.a(ILjava/lang/String;IIIII)V#1",
+      "renamedSymbol": "P:AppletShell.startApplet(ILjava/lang/String;IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -177505,7 +177721,7 @@
     },
     {
       "symbol": "P:fj.a(ILjava/lang/String;IIIII)V#2",
-      "renamedSymbol": "P:AppletShell.a(ILjava/lang/String;IIIII)V#2",
+      "renamedSymbol": "P:AppletShell.startApplet(ILjava/lang/String;IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -177516,7 +177732,7 @@
     },
     {
       "symbol": "P:fj.a(ILjava/lang/String;IIIII)V#3",
-      "renamedSymbol": "P:AppletShell.a(ILjava/lang/String;IIIII)V#3",
+      "renamedSymbol": "P:AppletShell.startApplet(ILjava/lang/String;IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -177527,7 +177743,7 @@
     },
     {
       "symbol": "P:fj.a(ILjava/lang/String;IIIII)V#4",
-      "renamedSymbol": "P:AppletShell.a(ILjava/lang/String;IIIII)V#4",
+      "renamedSymbol": "P:AppletShell.startApplet(ILjava/lang/String;IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -177538,7 +177754,7 @@
     },
     {
       "symbol": "P:fj.a(ILjava/lang/String;IIIII)V#5",
-      "renamedSymbol": "P:AppletShell.a(ILjava/lang/String;IIIII)V#5",
+      "renamedSymbol": "P:AppletShell.startApplet(ILjava/lang/String;IIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -177549,7 +177765,7 @@
     },
     {
       "symbol": "P:fj.a(ILjava/lang/String;IIIII)V#6",
-      "renamedSymbol": "P:AppletShell.a(ILjava/lang/String;IIIII)V#6",
+      "renamedSymbol": "P:AppletShell.startApplet(ILjava/lang/String;IIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -181157,7 +181373,7 @@
     },
     {
       "symbol": "P:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#0",
-      "renamedSymbol": "P:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#0",
+      "renamedSymbol": "P:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -181168,7 +181384,7 @@
     },
     {
       "symbol": "P:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#1",
-      "renamedSymbol": "P:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#1",
+      "renamedSymbol": "P:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -181179,7 +181395,7 @@
     },
     {
       "symbol": "P:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#2",
-      "renamedSymbol": "P:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#2",
+      "renamedSymbol": "P:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -181190,7 +181406,7 @@
     },
     {
       "symbol": "P:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#3",
-      "renamedSymbol": "P:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#3",
+      "renamedSymbol": "P:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -181201,7 +181417,7 @@
     },
     {
       "symbol": "P:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#4",
-      "renamedSymbol": "P:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V#4",
+      "renamedSymbol": "P:hj.bucketVisibleFacesByDepthWithIntGuard(ZILjk;II)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -181223,7 +181439,7 @@
     },
     {
       "symbol": "P:hj.a(ZBLjk;II)V#0",
-      "renamedSymbol": "P:hj.a(ZBLjk;II)V#0",
+      "renamedSymbol": "P:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -181234,7 +181450,7 @@
     },
     {
       "symbol": "P:hj.a(ZBLjk;II)V#1",
-      "renamedSymbol": "P:hj.a(ZBLjk;II)V#1",
+      "renamedSymbol": "P:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -181245,7 +181461,7 @@
     },
     {
       "symbol": "P:hj.a(ZBLjk;II)V#2",
-      "renamedSymbol": "P:hj.a(ZBLjk;II)V#2",
+      "renamedSymbol": "P:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -181256,7 +181472,7 @@
     },
     {
       "symbol": "P:hj.a(ZBLjk;II)V#3",
-      "renamedSymbol": "P:hj.a(ZBLjk;II)V#3",
+      "renamedSymbol": "P:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -181267,7 +181483,7 @@
     },
     {
       "symbol": "P:hj.a(ZBLjk;II)V#4",
-      "renamedSymbol": "P:hj.a(ZBLjk;II)V#4",
+      "renamedSymbol": "P:hj.bucketVisibleFacesByDepth(ZBLjk;II)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -187196,7 +187412,7 @@
     },
     {
       "symbol": "P:kk.a(IBLjava/lang/String;)V#0",
-      "renamedSymbol": "P:GameClient.a(IBLjava/lang/String;)V#0",
+      "renamedSymbol": "P:GameClient.startWithDefaultSize(IBLjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187207,7 +187423,7 @@
     },
     {
       "symbol": "P:kk.a(IBLjava/lang/String;)V#1",
-      "renamedSymbol": "P:GameClient.a(IBLjava/lang/String;)V#1",
+      "renamedSymbol": "P:GameClient.startWithDefaultSize(IBLjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187218,7 +187434,7 @@
     },
     {
       "symbol": "P:kk.a(IBLjava/lang/String;)V#2",
-      "renamedSymbol": "P:GameClient.a(IBLjava/lang/String;)V#2",
+      "renamedSymbol": "P:GameClient.startWithDefaultSize(IBLjava/lang/String;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187229,7 +187445,7 @@
     },
     {
       "symbol": "P:kk.a(IIBLjava/lang/String;I)V#0",
-      "renamedSymbol": "P:GameClient.a(IIBLjava/lang/String;I)V#0",
+      "renamedSymbol": "P:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187240,7 +187456,7 @@
     },
     {
       "symbol": "P:kk.a(IIBLjava/lang/String;I)V#1",
-      "renamedSymbol": "P:GameClient.a(IIBLjava/lang/String;I)V#1",
+      "renamedSymbol": "P:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187251,7 +187467,7 @@
     },
     {
       "symbol": "P:kk.a(IIBLjava/lang/String;I)V#2",
-      "renamedSymbol": "P:GameClient.a(IIBLjava/lang/String;I)V#2",
+      "renamedSymbol": "P:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187262,7 +187478,7 @@
     },
     {
       "symbol": "P:kk.a(IIBLjava/lang/String;I)V#3",
-      "renamedSymbol": "P:GameClient.a(IIBLjava/lang/String;I)V#3",
+      "renamedSymbol": "P:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -187273,7 +187489,7 @@
     },
     {
       "symbol": "P:kk.a(IIBLjava/lang/String;I)V#4",
-      "renamedSymbol": "P:GameClient.a(IIBLjava/lang/String;I)V#4",
+      "renamedSymbol": "P:GameClient.readAppletParameters(IIBLjava/lang/String;I)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -187284,7 +187500,7 @@
     },
     {
       "symbol": "P:kk.a(IIIIIIZI)V#0",
-      "renamedSymbol": "P:GameClient.a(IIIIIIZI)V#0",
+      "renamedSymbol": "P:GameClient.initializeFramework(IIIIIIZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187295,7 +187511,7 @@
     },
     {
       "symbol": "P:kk.a(IIIIIIZI)V#1",
-      "renamedSymbol": "P:GameClient.a(IIIIIIZI)V#1",
+      "renamedSymbol": "P:GameClient.initializeFramework(IIIIIIZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187306,7 +187522,7 @@
     },
     {
       "symbol": "P:kk.a(IIIIIIZI)V#2",
-      "renamedSymbol": "P:GameClient.a(IIIIIIZI)V#2",
+      "renamedSymbol": "P:GameClient.initializeFramework(IIIIIIZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187317,7 +187533,7 @@
     },
     {
       "symbol": "P:kk.a(IIIIIIZI)V#3",
-      "renamedSymbol": "P:GameClient.a(IIIIIIZI)V#3",
+      "renamedSymbol": "P:GameClient.initializeFramework(IIIIIIZI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -187328,7 +187544,7 @@
     },
     {
       "symbol": "P:kk.a(IIIIIIZI)V#4",
-      "renamedSymbol": "P:GameClient.a(IIIIIIZI)V#4",
+      "renamedSymbol": "P:GameClient.initializeFramework(IIIIIIZI)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -187339,7 +187555,7 @@
     },
     {
       "symbol": "P:kk.a(IIIIIIZI)V#5",
-      "renamedSymbol": "P:GameClient.a(IIIIIIZI)V#5",
+      "renamedSymbol": "P:GameClient.initializeFramework(IIIIIIZI)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -187350,7 +187566,7 @@
     },
     {
       "symbol": "P:kk.a(IIIIIIZI)V#6",
-      "renamedSymbol": "P:GameClient.a(IIIIIIZI)V#6",
+      "renamedSymbol": "P:GameClient.initializeFramework(IIIIIIZI)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -187361,7 +187577,7 @@
     },
     {
       "symbol": "P:kk.a(IIIIIIZI)V#7",
-      "renamedSymbol": "P:GameClient.a(IIIIIIZI)V#7",
+      "renamedSymbol": "P:GameClient.initializeFramework(IIIIIIZI)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -187372,7 +187588,7 @@
     },
     {
       "symbol": "P:kk.a(IZ)I#0",
-      "renamedSymbol": "P:GameClient.a(IZ)I#0",
+      "renamedSymbol": "P:GameClient.pollAccountUiActions(IZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187383,7 +187599,7 @@
     },
     {
       "symbol": "P:kk.a(IZ)I#1",
-      "renamedSymbol": "P:GameClient.a(IZ)I#1",
+      "renamedSymbol": "P:GameClient.pollAccountUiActions(IZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187405,7 +187621,7 @@
     },
     {
       "symbol": "P:kk.a(ZI)V#0",
-      "renamedSymbol": "P:GameClient.a(ZI)V#0",
+      "renamedSymbol": "P:GameClient.serviceFramework(ZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187416,7 +187632,7 @@
     },
     {
       "symbol": "P:kk.a(ZI)V#1",
-      "renamedSymbol": "P:GameClient.a(ZI)V#1",
+      "renamedSymbol": "P:GameClient.serviceFramework(ZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187427,7 +187643,7 @@
     },
     {
       "symbol": "P:kk.a(ZZ)V#0",
-      "renamedSymbol": "P:GameClient.a(ZZ)V#0",
+      "renamedSymbol": "P:GameClient.enableDefaultPacketHandlers(ZZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187438,7 +187654,7 @@
     },
     {
       "symbol": "P:kk.a(ZZ)V#1",
-      "renamedSymbol": "P:GameClient.a(ZZ)V#1",
+      "renamedSymbol": "P:GameClient.enableDefaultPacketHandlers(ZZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187504,7 +187720,7 @@
     },
     {
       "symbol": "P:kk.a(ZZZ)I#0",
-      "renamedSymbol": "P:GameClient.a(ZZZ)I#0",
+      "renamedSymbol": "P:GameClient.processAccountUiActions(ZZZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187515,7 +187731,7 @@
     },
     {
       "symbol": "P:kk.a(ZZZ)I#1",
-      "renamedSymbol": "P:GameClient.a(ZZZ)I#1",
+      "renamedSymbol": "P:GameClient.processAccountUiActions(ZZZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187526,7 +187742,7 @@
     },
     {
       "symbol": "P:kk.a(ZZZ)I#2",
-      "renamedSymbol": "P:GameClient.a(ZZZ)I#2",
+      "renamedSymbol": "P:GameClient.processAccountUiActions(ZZZ)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187537,7 +187753,7 @@
     },
     {
       "symbol": "P:kk.f(B)V#0",
-      "renamedSymbol": "P:GameClient.f(B)V#0",
+      "renamedSymbol": "P:GameClient.initializePacketLengths(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187548,7 +187764,7 @@
     },
     {
       "symbol": "P:kk.f(I)V#0",
-      "renamedSymbol": "P:GameClient.f(I)V#0",
+      "renamedSymbol": "P:GameClient.enablePacketHandler(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187581,7 +187797,7 @@
     },
     {
       "symbol": "P:kk.h(B)V#0",
-      "renamedSymbol": "P:GameClient.h(B)V#0",
+      "renamedSymbol": "P:GameClient.readSessionCookieUpdate(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187592,7 +187808,7 @@
     },
     {
       "symbol": "P:kk.h(I)I#0",
-      "renamedSymbol": "P:GameClient.h(I)I#0",
+      "renamedSymbol": "P:GameClient.attemptReconnect(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187614,7 +187830,7 @@
     },
     {
       "symbol": "P:kk.i(I)V#0",
-      "renamedSymbol": "P:GameClient.i(I)V#0",
+      "renamedSymbol": "P:GameClient.enablePacketTwo(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187625,7 +187841,7 @@
     },
     {
       "symbol": "P:kk.j(B)V#0",
-      "renamedSymbol": "P:GameClient.j(B)V#0",
+      "renamedSymbol": "P:GameClient.enablePacketFive(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187636,7 +187852,7 @@
     },
     {
       "symbol": "P:kk.j(I)V#0",
-      "renamedSymbol": "P:GameClient.j(I)V#0",
+      "renamedSymbol": "P:GameClient.dispatchCommonPacket(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -188890,7 +189106,7 @@
     },
     {
       "symbol": "P:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;#0",
-      "renamedSymbol": "P:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;#0",
+      "renamedSymbol": "P:ld.getAlternativeButtonPromptPrefixWithIntGuard(IZZZ)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -188901,7 +189117,7 @@
     },
     {
       "symbol": "P:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;#1",
-      "renamedSymbol": "P:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;#1",
+      "renamedSymbol": "P:ld.getAlternativeButtonPromptPrefixWithIntGuard(IZZZ)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -188912,7 +189128,7 @@
     },
     {
       "symbol": "P:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;#2",
-      "renamedSymbol": "P:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;#2",
+      "renamedSymbol": "P:ld.getAlternativeButtonPromptPrefixWithIntGuard(IZZZ)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -188923,7 +189139,7 @@
     },
     {
       "symbol": "P:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;#3",
-      "renamedSymbol": "P:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;#3",
+      "renamedSymbol": "P:ld.getAlternativeButtonPromptPrefixWithIntGuard(IZZZ)Ljava/lang/String;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -188934,7 +189150,7 @@
     },
     {
       "symbol": "P:ld.a(BZZZ)Ljava/lang/String;#0",
-      "renamedSymbol": "P:ld.a(BZZZ)Ljava/lang/String;#0",
+      "renamedSymbol": "P:ld.getAlternativeButtonPromptPrefix(BZZZ)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -188945,7 +189161,7 @@
     },
     {
       "symbol": "P:ld.a(BZZZ)Ljava/lang/String;#1",
-      "renamedSymbol": "P:ld.a(BZZZ)Ljava/lang/String;#1",
+      "renamedSymbol": "P:ld.getAlternativeButtonPromptPrefix(BZZZ)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -188956,7 +189172,7 @@
     },
     {
       "symbol": "P:ld.a(BZZZ)Ljava/lang/String;#2",
-      "renamedSymbol": "P:ld.a(BZZZ)Ljava/lang/String;#2",
+      "renamedSymbol": "P:ld.getAlternativeButtonPromptPrefix(BZZZ)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -188967,7 +189183,7 @@
     },
     {
       "symbol": "P:ld.a(BZZZ)Ljava/lang/String;#3",
-      "renamedSymbol": "P:ld.a(BZZZ)Ljava/lang/String;#3",
+      "renamedSymbol": "P:ld.getAlternativeButtonPromptPrefix(BZZZ)Ljava/lang/String;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -217670,7 +217886,7 @@
       "original": "Bounce.java",
       "renamed": "Bounce.java",
       "inputSha256": "78b98fbd6e8da86bcfe3fd55e0345ca4608cafab1c08ef61f8c859b7341c4eee",
-      "outputSha256": "4d5c493065108ad86cd580482242e42781919e9a616226a35c01ac0b5ff3988e",
+      "outputSha256": "68c58d6b22ac1003640eff681c309e7e106012ec3b83ea1bce3699dc7060c126",
       "edits": [
         {
           "start": 72,
@@ -220854,6 +221070,13 @@
           "renamed": "serviceOutput"
         },
         {
+          "start": 28716,
+          "end": 28717,
+          "symbol": "M:kk.a(ZI)V",
+          "original": "a",
+          "renamed": "serviceFramework"
+        },
+        {
           "start": 28751,
           "end": 28753,
           "symbol": "C:ri",
@@ -221211,6 +221434,20 @@
           "renamed": "ByteArrayPoolSupport"
         },
         {
+          "start": 32887,
+          "end": 32888,
+          "symbol": "M:kk.j(I)V",
+          "original": "j",
+          "renamed": "dispatchCommonPacket"
+        },
+        {
+          "start": 33020,
+          "end": 33021,
+          "symbol": "M:kk.h(I)I",
+          "original": "h",
+          "renamed": "attemptReconnect"
+        },
+        {
           "start": 33277,
           "end": 33279,
           "symbol": "C:tg",
@@ -221339,6 +221576,13 @@
           "symbol": "M:ii.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 37880,
+          "end": 37881,
+          "symbol": "M:kk.a(IBLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "startWithDefaultSize"
         },
         {
           "start": 37983,
@@ -222825,6 +223069,13 @@
           "renamed": "initializeClient"
         },
         {
+          "start": 49754,
+          "end": 49755,
+          "symbol": "M:kk.a(IIIIIIZI)V",
+          "original": "a",
+          "renamed": "initializeFramework"
+        },
+        {
           "start": 49797,
           "end": 49798,
           "symbol": "C:e",
@@ -223929,6 +224180,13 @@
           "symbol": "M:tj.a(Ljava/lang/String;IIII)V",
           "original": "a",
           "renamed": "drawCentred"
+        },
+        {
+          "start": 67215,
+          "end": 67242,
+          "symbol": "M:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;",
+          "original": "$cfr$intArgs$a$c7de0d339b2a",
+          "renamed": "getAlternativeButtonPromptPrefixWithIntGuard"
         },
         {
           "start": 67423,
@@ -233795,7 +234053,7 @@
       "original": "cg.java",
       "renamed": "cg.java",
       "inputSha256": "5b6f7fa6a60387c6aac60685c1ad98be9127b2280b6b5c452ed8db4cc4a6b728",
-      "outputSha256": "3705337fb72341ff5adedaa3f67a97b5abd6250d3b303d2a7000a54d01fd2575",
+      "outputSha256": "bc42c595f6659d7b34d7596ef7f9780f95c23352f7de057cfd1614e58e29138a",
       "edits": [
         {
           "start": 522,
@@ -233812,11 +234070,25 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 620,
+          "end": 621,
+          "symbol": "M:cg.a(BLgk;)V",
+          "original": "a",
+          "renamed": "loadSharedInterfaceText"
+        },
+        {
           "start": 635,
           "end": 637,
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 662,
+          "end": 681,
+          "symbol": "C:cg$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientTextLoader"
         },
         {
           "start": 1007,
@@ -233826,11 +234098,25 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 1060,
+          "end": 1079,
+          "symbol": "M:cg$1$CfrPartitionedBody.<init>(BLgk;)V",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientTextLoader"
+        },
+        {
           "start": 1100,
           "end": 1102,
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 1562,
+          "end": 1571,
+          "symbol": "M:cg$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginLobbyAndChatText"
         },
         {
           "start": 1626,
@@ -235630,6 +235916,13 @@
           "symbol": "C:hg",
           "original": "hg",
           "renamed": "AgeValidator"
+        },
+        {
+          "start": 39470,
+          "end": 39479,
+          "symbol": "M:cg$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadAccountFormsAndLoadingText"
         },
         {
           "start": 39637,
@@ -237534,6 +237827,13 @@
           "symbol": "C:hg",
           "original": "hg",
           "renamed": "AgeValidator"
+        },
+        {
+          "start": 76842,
+          "end": 76851,
+          "symbol": "M:cg$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMatchDisplayAndMembershipText"
         },
         {
           "start": 76999,
@@ -239510,6 +239810,13 @@
           "renamed": "AgeValidator"
         },
         {
+          "start": 114453,
+          "end": 114462,
+          "symbol": "M:cg$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadLoginPromptsAndSubscriptionText"
+        },
+        {
           "start": 114626,
           "end": 114628,
           "symbol": "C:hg",
@@ -239678,6 +239985,34 @@
           "renamed": "ValidationStatusIcon"
         },
         {
+          "start": 117751,
+          "end": 117760,
+          "symbol": "M:cg$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginLobbyAndChatText"
+        },
+        {
+          "start": 117822,
+          "end": 117831,
+          "symbol": "M:cg$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadAccountFormsAndLoadingText"
+        },
+        {
+          "start": 117893,
+          "end": 117902,
+          "symbol": "M:cg$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMatchDisplayAndMembershipText"
+        },
+        {
+          "start": 117964,
+          "end": 117973,
+          "symbol": "M:cg$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadLoginPromptsAndSubscriptionText"
+        },
+        {
           "start": 118596,
           "end": 118598,
           "symbol": "C:ii",
@@ -239704,6 +240039,20 @@
           "symbol": "C:fj",
           "original": "fj",
           "renamed": "AppletShell"
+        },
+        {
+          "start": 118931,
+          "end": 118950,
+          "symbol": "C:cg$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientTextLoader"
+        },
+        {
+          "start": 118972,
+          "end": 118991,
+          "symbol": "C:cg$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientTextLoader"
         }
       ]
     },
@@ -249326,7 +249675,7 @@
       "original": "fj.java",
       "renamed": "AppletShell.java",
       "inputSha256": "be277cacf97a6899ef495bdabd68bc33bc6a81e54543087a0bf4a2d4d3bb6077",
-      "outputSha256": "710ba307383d3fabefbe6334010a906b84ee82fdeff078ae56cf5c202ac4b354",
+      "outputSha256": "771a9c18748b5968b1e8169a74acc4f6e38330a4e9bd05b858ecd317b40eba65",
       "edits": [
         {
           "start": 60,
@@ -249509,6 +249858,13 @@
           "symbol": "C:i",
           "original": "i",
           "renamed": "SoundCache"
+        },
+        {
+          "start": 4126,
+          "end": 4127,
+          "symbol": "M:fj.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 4750,
@@ -250050,6 +250406,20 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 19383,
+          "end": 19384,
+          "symbol": "M:fj.a(I)Z",
+          "original": "a",
+          "renamed": "allowAppletStartup"
+        },
+        {
+          "start": 19442,
+          "end": 19443,
+          "symbol": "M:fj.a(ILjava/lang/String;IIIII)V",
+          "original": "a",
+          "renamed": "startApplet"
+        },
+        {
           "start": 19557,
           "end": 19559,
           "symbol": "C:si",
@@ -250083,6 +250453,13 @@
           "symbol": "C:kl",
           "original": "kl",
           "renamed": "MusicPatchNode"
+        },
+        {
+          "start": 20109,
+          "end": 20110,
+          "symbol": "M:fj.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 20326,
@@ -250197,6 +250574,13 @@
           "renamed": "ValidatedTextField"
         },
         {
+          "start": 21427,
+          "end": 21428,
+          "symbol": "M:fj.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
+        },
+        {
           "start": 22001,
           "end": 22003,
           "symbol": "C:ii",
@@ -250232,11 +250616,25 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 24065,
+          "end": 24066,
+          "symbol": "M:fj.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
+        },
+        {
           "start": 24396,
           "end": 24398,
           "symbol": "C:kf",
           "original": "kf",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 25045,
+          "end": 25046,
+          "symbol": "M:fj.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 25365,
@@ -250363,6 +250761,13 @@
           "symbol": "C:ti",
           "original": "ti",
           "renamed": "ValidatedTextField"
+        },
+        {
+          "start": 28807,
+          "end": 28808,
+          "symbol": "M:fj.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 28862,
@@ -257204,8 +257609,15 @@
       "original": "hj.java",
       "renamed": "hj.java",
       "inputSha256": "13631e6e86c2d54a14585d8e843cc559d516b0a3cf44d86baaa9a7c23240a916",
-      "outputSha256": "273f4a65b814539f012f9a87ce2ee0ab386520dc54675506a33568dde8b1a6eb",
+      "outputSha256": "0374afdc180d5650601ad815d174701be3c420aa2817382960269cc1a6d51d73",
       "edits": [
+        {
+          "start": 126,
+          "end": 127,
+          "symbol": "M:hj.a(ZBLjk;II)V",
+          "original": "a",
+          "renamed": "bucketVisibleFacesByDepth"
+        },
         {
           "start": 1315,
           "end": 1316,
@@ -257242,6 +257654,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 6205,
+          "end": 6232,
+          "symbol": "M:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V",
+          "original": "$cfr$intArgs$a$d6db22f779ae",
+          "renamed": "bucketVisibleFacesByDepthWithIntGuard"
+        },
+        {
           "start": 6315,
           "end": 6317,
           "symbol": "C:ui",
@@ -257261,6 +257680,13 @@
           "symbol": "M:ii.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 6771,
+          "end": 6798,
+          "symbol": "M:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V",
+          "original": "$cfr$intArgs$a$d6db22f779ae",
+          "renamed": "bucketVisibleFacesByDepthWithIntGuard"
         },
         {
           "start": 7985,
@@ -266839,7 +267265,7 @@
       "original": "kk.java",
       "renamed": "GameClient.java",
       "inputSha256": "d976c1c602624e3c431f7f92687a6569b6b4d778bd8db0547798da265fd5c5d3",
-      "outputSha256": "9eab2947b4a05a16d27f5760ec122c1fd4c44668a07942868c0b00da87d20f1f",
+      "outputSha256": "7c2b5c015d73e62dcd26826e82a8c5a56d91c4078a400fafce382e8892f848f3",
       "edits": [
         {
           "start": 53,
@@ -266863,11 +267289,25 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 526,
+          "end": 527,
+          "symbol": "M:kk.j(B)V",
+          "original": "j",
+          "renamed": "enablePacketFive"
+        },
+        {
           "start": 620,
           "end": 622,
           "symbol": "C:ib",
           "original": "ib",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 664,
+          "end": 665,
+          "symbol": "M:kk.j(I)V",
+          "original": "j",
+          "renamed": "dispatchCommonPacket"
         },
         {
           "start": 864,
@@ -266940,6 +267380,13 @@
           "renamed": "DebouncedFieldValidator"
         },
         {
+          "start": 2655,
+          "end": 2656,
+          "symbol": "M:kk.h(B)V",
+          "original": "h",
+          "renamed": "readSessionCookieUpdate"
+        },
+        {
           "start": 2904,
           "end": 2906,
           "symbol": "C:cl",
@@ -266973,6 +267420,13 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "ValidationStatusIcon"
+        },
+        {
+          "start": 3235,
+          "end": 3236,
+          "symbol": "M:kk.a(ZZ)V",
+          "original": "a",
+          "renamed": "enableDefaultPacketHandlers"
         },
         {
           "start": 3279,
@@ -267045,6 +267499,13 @@
           "renamed": "DiskCacheWorker"
         },
         {
+          "start": 3939,
+          "end": 3940,
+          "symbol": "M:kk.i(I)V",
+          "original": "i",
+          "renamed": "enablePacketTwo"
+        },
+        {
           "start": 3963,
           "end": 3965,
           "symbol": "C:ib",
@@ -267057,6 +267518,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 4075,
+          "end": 4076,
+          "symbol": "M:kk.a(ZI)V",
+          "original": "a",
+          "renamed": "serviceFramework"
         },
         {
           "start": 4841,
@@ -267176,6 +267644,41 @@
           "symbol": "M:fa.a(I)J",
           "original": "a",
           "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 6058,
+          "end": 6059,
+          "symbol": "M:fj.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
+        },
+        {
+          "start": 6204,
+          "end": 6205,
+          "symbol": "M:fj.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
+        },
+        {
+          "start": 6329,
+          "end": 6330,
+          "symbol": "M:fj.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
+        },
+        {
+          "start": 6409,
+          "end": 6410,
+          "symbol": "M:fj.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
+        },
+        {
+          "start": 6520,
+          "end": 6521,
+          "symbol": "M:fj.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 6614,
@@ -267344,6 +267847,13 @@
           "symbol": "M:gk.b(Ljava/lang/String;Z)Z",
           "original": "b",
           "renamed": "tryLoadGroupByName"
+        },
+        {
+          "start": 8369,
+          "end": 8370,
+          "symbol": "M:cg.a(BLgk;)V",
+          "original": "a",
+          "renamed": "loadSharedInterfaceText"
         },
         {
           "start": 8383,
@@ -267542,6 +268052,13 @@
           "renamed": "AgeValidator"
         },
         {
+          "start": 10823,
+          "end": 10824,
+          "symbol": "M:kk.a(ZZZ)I",
+          "original": "a",
+          "renamed": "processAccountUiActions"
+        },
+        {
           "start": 10889,
           "end": 10891,
           "symbol": "C:ef",
@@ -267584,11 +268101,25 @@
           "renamed": "ImageProducerRasterBuffer"
         },
         {
+          "start": 11178,
+          "end": 11179,
+          "symbol": "M:kk.h(I)I",
+          "original": "h",
+          "renamed": "attemptReconnect"
+        },
+        {
           "start": 11594,
           "end": 11596,
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "ContentTransitionDialog"
+        },
+        {
+          "start": 11763,
+          "end": 11764,
+          "symbol": "M:fj.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 11825,
@@ -267619,11 +268150,53 @@
           "renamed": "correctedCurrentTimeMillis"
         },
         {
+          "start": 12042,
+          "end": 12043,
+          "symbol": "M:kk.f(I)V",
+          "original": "f",
+          "renamed": "enablePacketHandler"
+        },
+        {
           "start": 12066,
           "end": 12068,
           "symbol": "C:ib",
           "original": "ib",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 12208,
+          "end": 12209,
+          "symbol": "M:kk.a(ZZ)V",
+          "original": "a",
+          "renamed": "enableDefaultPacketHandlers"
+        },
+        {
+          "start": 12318,
+          "end": 12319,
+          "symbol": "M:kk.i(I)V",
+          "original": "i",
+          "renamed": "enablePacketTwo"
+        },
+        {
+          "start": 12371,
+          "end": 12372,
+          "symbol": "M:kk.f(I)V",
+          "original": "f",
+          "renamed": "enablePacketHandler"
+        },
+        {
+          "start": 12437,
+          "end": 12438,
+          "symbol": "M:kk.j(B)V",
+          "original": "j",
+          "renamed": "enablePacketFive"
+        },
+        {
+          "start": 12553,
+          "end": 12554,
+          "symbol": "M:kk.a(IIIIIIZI)V",
+          "original": "a",
+          "renamed": "initializeFramework"
         },
         {
           "start": 12822,
@@ -267715,6 +268288,41 @@
           "symbol": "C:jd",
           "original": "jd",
           "renamed": "DefaultTextWidgetRenderer"
+        },
+        {
+          "start": 13419,
+          "end": 13420,
+          "symbol": "M:kk.h(I)I",
+          "original": "h",
+          "renamed": "attemptReconnect"
+        },
+        {
+          "start": 13478,
+          "end": 13479,
+          "symbol": "M:kk.f(B)V",
+          "original": "f",
+          "renamed": "initializePacketLengths"
+        },
+        {
+          "start": 13542,
+          "end": 13543,
+          "symbol": "M:kk.f(B)V",
+          "original": "f",
+          "renamed": "initializePacketLengths"
+        },
+        {
+          "start": 13743,
+          "end": 13744,
+          "symbol": "M:kk.f(B)V",
+          "original": "f",
+          "renamed": "initializePacketLengths"
+        },
+        {
+          "start": 14109,
+          "end": 14110,
+          "symbol": "M:kk.a(ZZZ)I",
+          "original": "a",
+          "renamed": "processAccountUiActions"
         },
         {
           "start": 14549,
@@ -268018,11 +268626,60 @@
           "renamed": "ContentTransitionDialog"
         },
         {
+          "start": 18899,
+          "end": 18900,
+          "symbol": "M:kk.a(IZ)I",
+          "original": "a",
+          "renamed": "pollAccountUiActions"
+        },
+        {
+          "start": 19011,
+          "end": 19012,
+          "symbol": "M:kk.a(ZZZ)I",
+          "original": "a",
+          "renamed": "processAccountUiActions"
+        },
+        {
+          "start": 19065,
+          "end": 19066,
+          "symbol": "M:kk.a(IIBLjava/lang/String;I)V",
+          "original": "a",
+          "renamed": "readAppletParameters"
+        },
+        {
+          "start": 19647,
+          "end": 19648,
+          "symbol": "M:fj.a(I)Z",
+          "original": "a",
+          "renamed": "allowAppletStartup"
+        },
+        {
+          "start": 20525,
+          "end": 20526,
+          "symbol": "M:kk.a(ZZZ)I",
+          "original": "a",
+          "renamed": "processAccountUiActions"
+        },
+        {
+          "start": 21042,
+          "end": 21043,
+          "symbol": "M:fj.a(ILjava/lang/String;IIIII)V",
+          "original": "a",
+          "renamed": "startApplet"
+        },
+        {
           "start": 21355,
           "end": 21357,
           "symbol": "C:ti",
           "original": "ti",
           "renamed": "ValidatedTextField"
+        },
+        {
+          "start": 21438,
+          "end": 21439,
+          "symbol": "M:fj.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 22039,
@@ -268037,6 +268694,20 @@
           "symbol": "M:ii.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 22226,
+          "end": 22227,
+          "symbol": "M:kk.a(IBLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "startWithDefaultSize"
+        },
+        {
+          "start": 22356,
+          "end": 22357,
+          "symbol": "M:kk.a(IIBLjava/lang/String;I)V",
+          "original": "a",
+          "renamed": "readAppletParameters"
         },
         {
           "start": 22466,
@@ -268060,6 +268731,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 22802,
+          "end": 22803,
+          "symbol": "M:kk.h(B)V",
+          "original": "h",
+          "renamed": "readSessionCookieUpdate"
+        },
+        {
           "start": 22841,
           "end": 22843,
           "symbol": "C:jj",
@@ -268074,6 +268752,20 @@
           "renamed": "DiskCacheWorker"
         },
         {
+          "start": 22942,
+          "end": 22943,
+          "symbol": "M:kk.a(IZ)I",
+          "original": "a",
+          "renamed": "pollAccountUiActions"
+        },
+        {
+          "start": 23159,
+          "end": 23160,
+          "symbol": "M:kk.a(ZZZ)I",
+          "original": "a",
+          "renamed": "processAccountUiActions"
+        },
+        {
           "start": 23297,
           "end": 23299,
           "symbol": "C:tk",
@@ -268086,6 +268778,20 @@
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "ContentTransitionDialog"
+        },
+        {
+          "start": 23514,
+          "end": 23515,
+          "symbol": "M:kk.a(ZZZ)I",
+          "original": "a",
+          "renamed": "processAccountUiActions"
+        },
+        {
+          "start": 23632,
+          "end": 23633,
+          "symbol": "M:kk.h(I)I",
+          "original": "h",
+          "renamed": "attemptReconnect"
         },
         {
           "start": 23670,
@@ -270226,7 +270932,7 @@
       "original": "ld.java",
       "renamed": "ld.java",
       "inputSha256": "a927141e5a25254476c70e2456b4e6d9f9589f3f759e84cb24daabc71f1ecf5c",
-      "outputSha256": "dba245cd71b93b0a937d6df6d43d815bc9cacb01a6a84a9ff4ff6d77dda1c71b",
+      "outputSha256": "58441e3916f7bdbccc8f861f611a46f9bda90daefefaa9ff8e7ef251364f16cb",
       "edits": [
         {
           "start": 61,
@@ -270402,6 +271108,20 @@
           "symbol": "M:ld.a(Z)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 2553,
+          "end": 2554,
+          "symbol": "M:ld.a(BZZZ)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "getAlternativeButtonPromptPrefix"
+        },
+        {
+          "start": 3169,
+          "end": 3196,
+          "symbol": "M:ld.$cfr$intArgs$a$c7de0d339b2a(IZZZ)Ljava/lang/String;",
+          "original": "$cfr$intArgs$a$c7de0d339b2a",
+          "renamed": "getAlternativeButtonPromptPrefixWithIntGuard"
         }
       ]
     },
@@ -282878,7 +283598,7 @@
       "original": "oj.java",
       "renamed": "oj.java",
       "inputSha256": "10c597412ad42a7953e669916e981c7e2696f37b11215ce196c9f5e3adb6e810",
-      "outputSha256": "a190d97aa29bb0200c0f5122936a808246e70df680fc68f01648dde63f0c86e2",
+      "outputSha256": "20936fcefef7ef269251dcab8aff8b74a7973d4e8af5d85671b991671f559473",
       "edits": [
         {
           "start": 158,
@@ -283061,6 +283781,13 @@
           "symbol": "C:kk",
           "original": "kk",
           "renamed": "GameClient"
+        },
+        {
+          "start": 5649,
+          "end": 5650,
+          "symbol": "M:kk.a(IZ)I",
+          "original": "a",
+          "renamed": "pollAccountUiActions"
         },
         {
           "start": 6117,
@@ -309041,7 +309768,7 @@
       "original": "ui.java",
       "renamed": "TextHotspotBounds.java",
       "inputSha256": "c122f4771daaa613b0c858a6d634f61d822063ad964470feb8d65800842ab9b4",
-      "outputSha256": "d2efb31c950c7777b2db1e7ba04a183440dea2a9bfdc52c521fe6410cec9821c",
+      "outputSha256": "2f9fe028042d59b5e529d5a6a450f19a8f4989c5e6665db8c187c8cfba9adb8f",
       "edits": [
         {
           "start": 50,
@@ -309184,6 +309911,13 @@
           "symbol": "C:uc",
           "original": "uc",
           "renamed": "DialogMessagePane"
+        },
+        {
+          "start": 9590,
+          "end": 9617,
+          "symbol": "M:hj.$cfr$intArgs$a$d6db22f779ae(ZILjk;II)V",
+          "original": "$cfr$intArgs$a$d6db22f779ae",
+          "renamed": "bucketVisibleFacesByDepthWithIntGuard"
         },
         {
           "start": 10695,
@@ -319124,10 +319858,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bouncedown"
     },
-    "rulesSha256": "ef52d5aa6f5c8085eb83520b524fc1d6e7d7ab8bcd0294c0e1847889dd3a1f48",
+    "rulesSha256": "ae34a3f0b6068cf5974a2ead4471718db6f9bb6166a64f949d9aa25188c57d5e",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c6fd77ce09bb6ecadc8d53036ad88fae8b835c4f3993f27cf6ecd238fa706eff",
-    "outputTreeSha256": "83f77376ee69c9c812f57225dbfe50552478852a95c24a0e4fd2bfb6560364bd",
+    "outputTreeSha256": "282beb0c7fbdfc3a1e6e0c6bf7b4b01c86d3d81634bedc607a65c302bd310c3f",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

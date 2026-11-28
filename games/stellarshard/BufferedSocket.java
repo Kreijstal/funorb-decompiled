@@ -89,7 +89,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(int param0, byte param1, byte[] param2, int param3) throws IOException {
+    final void readFully(int param0, byte param1, byte[] param2, int param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -128,7 +128,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void c(int param0) throws IOException {
+    final void checkWriteError(int param0) throws IOException {
         if (this.field_i) {
           return;
         }
@@ -236,7 +236,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int b(int param0) throws IOException {
+    final int availableBytes(int param0) throws IOException {
         if (this.field_i) {
           return 0;
         }
@@ -246,9 +246,9 @@ final class BufferedSocket implements Runnable {
         return this.field_d.available();
     }
 
-    final int a(int param0) throws IOException {
+    final int readByteOrEof(int param0) throws IOException {
         if (param0 != 0) {
-          this.a(true);
+          this.close(true);
         }
         if (this.field_i) {
           return 0;
@@ -353,7 +353,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final void enqueueWrite(byte[] param0, int param1, int param2, int param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -410,7 +410,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final void a(boolean param0) {
+    final void close(boolean param0) {
         try {
           int var4 = 0;
           var4 = stellarshard.field_B;
@@ -441,7 +441,7 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.a(true);
+        this.close(true);
     }
 
     private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {

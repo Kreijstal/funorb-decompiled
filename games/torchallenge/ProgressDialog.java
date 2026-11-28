@@ -118,12 +118,12 @@ final class ProgressDialog extends ResizableModalDialog {
           if (null == qf.field_a) {
             return false;
           }
-          int var2_int = qf.field_a.a(0);
+          int var2_int = qf.field_a.availableBytes(0);
           if (var2_int > 0) {
             if (!(-id.field_b.position + param1 >= var2_int)) {
               var2_int = param1 - id.field_b.position;
             }
-            qf.field_a.a(-1, id.field_b.position, var2_int, id.field_b.payload);
+            qf.field_a.readFully(-1, id.field_b.position, var2_int, id.field_b.payload);
             ac.field_e = ol.correctedCurrentTimeMillis(256);
             id.field_b.position = id.field_b.position + var2_int;
             if (!(param1 <= id.field_b.position)) {

@@ -17,7 +17,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
 
     public final void init() {
         try {
-          this.a(12, "drphlogistonsavestheearth", (byte) 12);
+          this.startWithDefaultSize(12, "drphlogistonsavestheearth", (byte) 12);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.init()");
         }
@@ -233,7 +233,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             this.a((he[]) null, 93, (he[]) null);
           }
           stackIn_21_1 = (df.field_l != null);
-          this.a(stackIn_21_1, 55);
+          this.serviceFramework(stackIn_21_1, 55);
           if (nd.field_Q) {
             this.p(-119);
             nd.field_Q = false;
@@ -241,7 +241,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           EmailFormatValidator.field_x = EmailFormatValidator.field_x + 1;
           lf.field_b = lf.field_b + 1;
           if (kh.a(false)) {
-            this.m(-128);
+            this.updateLoginFlow(-128);
             if (kh.a(false)) {
               if (bj.a(13)) {
                 discarded$0 = this.b(false, -111);
@@ -302,7 +302,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                 if (decompiledFrameRemainder0) {
                   stackIn_82_1 = 5017;
                   stackIn_83_2 = (null != df.field_l);
-                  var2_int = this.b(stackIn_82_1, stackIn_83_2);
+                  var2_int = this.pollAccountUiActions(stackIn_82_1, stackIn_83_2);
                   if (var2_int == 1 ||
                     var2_int == 2) {
                     if (null != df.field_l) {
@@ -349,7 +349,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           }
           if (decompiledFrameCompleted1) {
             while (th.a(false, vi.field_a)) {
-              this.c(true);
+              this.dispatchCommonPacket(true);
               if (var5 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -360,7 +360,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             }
           }
           if (sb.b(-11)) {
-            var2_int = this.b(false);
+            var2_int = this.attemptReconnect(false);
             if (var2_int == 0 ||
               var2_int == 1) {
               StandardContentDialog.a(false, 2);
@@ -999,7 +999,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                 } else {
                   stackIn_87_1 = DequeWidgetContainer.field_C;
                 }
-                LabeledWidgetContainer.$cfr$intArgs$a$7ffe4b125357(stackIn_86_0, stackIn_87_1);
+                LabeledWidgetContainer.drawModalOverlayWithIntGuard(stackIn_86_0, stackIn_87_1);
               }
             }
           } else {
@@ -1009,7 +1009,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             } else {
               stackIn_87_1 = DequeWidgetContainer.field_C;
             }
-            LabeledWidgetContainer.$cfr$intArgs$a$7ffe4b125357(stackIn_86_0, stackIn_87_1);
+            LabeledWidgetContainer.drawModalOverlayWithIntGuard(stackIn_86_0, stackIn_87_1);
           }
           if (nj.field_j >= 2) {
             a.field_g.drawString(qj.field_c + " lps", 15, 15, 16777215, 65793);
@@ -1697,7 +1697,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (param0 != 32) {
             field_J = (RgbSprite) null;
           }
-          this.a(8, 4, false, 7320, 0, 11, 10, 9);
+          this.initializeFramework(8, 4, false, 7320, 0, 11, 10, 9);
           var2 = new MidiPcmStream();
           var2.setChannelProgram(9, 128, param0 ^ 85);
           var2.a(SecondaryNodeDequeIterator.field_b, (byte) -13);
@@ -1705,7 +1705,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           a.field_i = 16711680;
           DequeWidgetContainer.field_E = 11184895;
           b.field_h = 16777215;
-          this.a(true, false, true, true, -6);
+          this.configureOptionalPacketHandlers(true, false, true, true, -6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

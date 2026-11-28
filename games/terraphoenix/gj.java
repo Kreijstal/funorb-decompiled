@@ -141,7 +141,7 @@ final class gj {
                 lg.field_c = 16 * (p.field_a[var4_int].field_d.field_H + p.field_a[var4_int].field_d.field_F);
                 eg.field_p = p.field_a[var4_int].field_d.field_E;
               }
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(69, 33);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(69, 33);
               return true;
             }
           }

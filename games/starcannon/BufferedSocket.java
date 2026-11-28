@@ -23,7 +23,7 @@ final class BufferedSocket implements Runnable {
     static int field_c;
     private byte[] field_e;
 
-    final void b(byte param0) {
+    final void close(byte param0) {
         try {
           if (this.field_i) {
             return;
@@ -129,7 +129,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final void a(byte param0) throws IOException {
+    final void checkWriteError(byte param0) throws IOException {
         if (this.field_i) {
           return;
         }
@@ -140,7 +140,7 @@ final class BufferedSocket implements Runnable {
         int var2 = 69 % ((param0 - 67) / 58);
     }
 
-    final int a(int param0) throws IOException {
+    final int readByteOrEof(int param0) throws IOException {
         if (param0 != 488852616) {
           this.field_e = (byte[]) null;
         }
@@ -302,7 +302,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void readFully(int param0, int param1, int param2, byte[] param3) throws IOException {
         int var5_int = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -358,7 +358,7 @@ final class BufferedSocket implements Runnable {
         qa.field_a.a(param0, false);
     }
 
-    final void a(int param0, byte[] param1, byte param2, int param3) throws IOException {
+    final void enqueueWrite(int param0, byte[] param1, byte param2, int param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -410,10 +410,10 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.b((byte) -113);
+        this.close((byte) -113);
     }
 
-    final int c(int param0) throws IOException {
+    final int availableBytes(int param0) throws IOException {
         if (this.field_i) {
           return 0;
         }

@@ -51,7 +51,7 @@ final class MovingBlock extends IntrusiveNode {
             }
             if (0 < LevelView.field_C.position) {
               try {
-                r.field_i.a(param0 - 124, LevelView.field_C.payload, LevelView.field_C.position, 0);
+                r.field_i.enqueueWrite(param0 - 124, LevelView.field_C.payload, LevelView.field_C.position, 0);
                 GrowableIntArray.field_f = qg.correctedCurrentTimeMillis(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

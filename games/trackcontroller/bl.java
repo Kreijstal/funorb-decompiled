@@ -226,18 +226,18 @@ final class bl {
               ModalDialog.a(kf.field_a, var2, 17, LabeledWidgetContainer.field_T, GameStringTable.field_j);
               var2.writeByte(15, (byte) -100);
               var2.writeInt(false, gi.field_r);
-              ob.field_u.a(-128, var2.payload, 13, 0);
+              ob.field_u.enqueueWrite(-128, var2.payload, 13, 0);
               rf.field_c = rf.field_c + 1;
               ma.field_b = qg.correctedCurrentTimeMillis(false) + 30000L;
             }
             if (rf.field_c == 3) {
-              if (0 >= ob.field_u.b(0)) {
+              if (0 >= ob.field_u.availableBytes(0)) {
                 if (ma.field_b < qg.correctedCurrentTimeMillis(false)) {
                   stackIn_35_0 = ej.a(116, -2);
                   return stackIn_35_0;
                 }
               } else {
-                var1_int = ob.field_u.a(-85);
+                var1_int = ob.field_u.readByteOrEof(-85);
                 if (0 != var1_int) {
                   stackIn_30_0 = ej.a(39, var1_int);
                   return stackIn_30_0;

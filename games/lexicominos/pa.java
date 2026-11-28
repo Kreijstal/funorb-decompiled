@@ -118,7 +118,7 @@ final class pa {
               return;
             }
             uj.a("F1: " + StandardContentDialog.h(-124), (Throwable) null, param0 ^ 14);
-            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-45);
+            ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-45);
             if (param0 != 15) {
               pa.b(35);
             }

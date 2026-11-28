@@ -245,7 +245,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
               stackIn_63_1 = var7;
               stackIn_63_2 = -117;
             }
-            AlphaWidgetContainer.$cfr$intArgs$a$c5042ffd0615(stackIn_63_0, stackIn_63_1, stackIn_63_2);
+            AlphaWidgetContainer.insertAdjacentNodeWithIntGuard(stackIn_63_0, stackIn_63_1, stackIn_63_2);
             if (var8 == 0) {
               return;
             }

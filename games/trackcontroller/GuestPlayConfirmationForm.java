@@ -164,8 +164,8 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Bu
         }
     }
 
-    final static void a(byte param0, Archive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(byte param0, Archive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2635_0;
             StringBuilder stackIn_2635_1;
             String stackIn_2636_2;
@@ -178,7 +178,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Bu
             byte param0;
             Archive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, Archive initialParam1) {
+            ClientTextLoader(byte initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2635_0 = null;
@@ -191,7 +191,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Bu
                 this.var4 = 0;
                 this.var5 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 fk.field_e = param1;
                 var2 = TextLineMetrics.a(0, "loginm3");
                 if (var2 != null) {
@@ -1259,7 +1259,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Bu
                 }
                 var2 = TextLineMetrics.a(0, "attemptingtoreconnect");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   ta.a(32200, var2);
                 }
@@ -2288,7 +2288,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Bu
                   ta.a(32200, var2);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 var2 = TextLineMetrics.a(0, "graphics_mode");
                 if (null != var2) {
                   ta.a(32200, var2);
@@ -3179,11 +3179,11 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Bu
             void run() {
                 var4 = TrackController.field_F ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3204,7 +3204,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Bu
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 

@@ -229,10 +229,10 @@ abstract class ResizableModalDialog extends ModalDialog {
 
     final static am g(byte param0) {
         if (param0 == 118) {
-          return new am(rb.j(5), vj.b(18596));
+          return new am(NetworkGameClient.j(5), vj.b(18596));
         }
         field_K = 94;
-        return new am(rb.j(5), vj.b(18596));
+        return new am(NetworkGameClient.j(5), vj.b(18596));
     }
 
     static {

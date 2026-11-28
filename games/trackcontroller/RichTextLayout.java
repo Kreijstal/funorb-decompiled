@@ -79,7 +79,7 @@ final class RichTextLayout extends TextLayout {
           var9 = var8;
           var9.field_b[0] = param4 - param3.stringWidth(param1);
           var9.field_b[param1.length()] = param4;
-          NodeHashTable.$cfr$intArgs$a$1fdf1ca47e3f(-119, 0, param3, param1, var9);
+          NodeHashTable.computeJustifiedCharacterOffsetsWithIntGuard(-119, 0, param3, param1, var9);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "cj.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -202,7 +202,7 @@ final class RichTextLayout extends TextLayout {
               } else {
                 stackIn_43_1 = this.computeJustificationStep(param0.stringWidth(var13), var13, 5, param5);
               }
-              NodeHashTable.$cfr$intArgs$a$1fdf1ca47e3f(stackIn_42_0, stackIn_43_1, param0, var13, var14);
+              NodeHashTable.computeJustifiedCharacterOffsetsWithIntGuard(stackIn_42_0, stackIn_43_1, param0, var13, var14);
             }
             var11 = var11 + param4;
             this.field_b[var12Lifetime1] = var14;
@@ -303,7 +303,7 @@ final class RichTextLayout extends TextLayout {
           var8 = var7;
           var7.field_b[0] = param3;
           var8.field_b[param4.length()] = param2.stringWidth(param4) + param3;
-          NodeHashTable.$cfr$intArgs$a$1fdf1ca47e3f(-121, 0, param2, param4, var8);
+          NodeHashTable.computeJustifiedCharacterOffsetsWithIntGuard(-121, 0, param2, param4, var8);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "cj.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -331,7 +331,7 @@ final class RichTextLayout extends TextLayout {
           var7 = param1.stringWidth(param2);
           var8.field_b[0] = param4 - (var7 >> 1);
           var8.field_b[param2.length()] = (var7 >> 1) + param4;
-          NodeHashTable.$cfr$intArgs$a$1fdf1ca47e3f(-125, 0, param1, param2, var8);
+          NodeHashTable.computeJustifiedCharacterOffsetsWithIntGuard(-125, 0, param1, param2, var8);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "cj.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

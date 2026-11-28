@@ -19,7 +19,7 @@ final class BufferedSocket implements Runnable {
     static int[] field_i;
     private byte[] field_d;
 
-    final void e(int param0) throws IOException {
+    final void checkWriteError(int param0) throws IOException {
         if (param0 != 22685) {
           PlatformTaskDispatcher var3 = (PlatformTaskDispatcher) null;
           BufferedSocket.a((PlatformTaskDispatcher) null, -81);
@@ -33,7 +33,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(boolean param0) {
+    final void close(boolean param0) {
         try {
           int var4 = 0;
           var4 = Torquing.field_u;
@@ -158,7 +158,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(int param0, byte[] param1, byte param2, int param3) throws IOException {
+    final void enqueueWrite(int param0, byte[] param1, byte param2, int param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -256,12 +256,12 @@ final class BufferedSocket implements Runnable {
             if (param1 != 0) {
               BufferedSocket.c(-9);
             }
-            var2_int = vk.field_E.a(-85);
+            var2_int = vk.field_E.availableBytes(-85);
             if (var2_int > 0) {
               if (var2_int > param0 - kj.field_d.position) {
                 var2_int = param0 - kj.field_d.position;
               }
-              vk.field_E.a(var2_int, kj.field_d.position, kj.field_d.payload, (byte) -74);
+              vk.field_E.readFully(var2_int, kj.field_d.position, kj.field_d.payload, (byte) -74);
               RichTextWidget.field_C = km.correctedCurrentTimeMillis(~param1);
               kj.field_d.position = kj.field_d.position + var2_int;
               if (param0 > kj.field_d.position) {
@@ -291,7 +291,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int d(int param0) throws IOException {
+    final int readByteOrEof(int param0) throws IOException {
         if (this.field_c) {
           return 0;
         }
@@ -301,7 +301,7 @@ final class BufferedSocket implements Runnable {
         return this.field_f.read();
     }
 
-    final void a(int param0, int param1, byte[] param2, byte param3) throws IOException {
+    final void readFully(int param0, int param1, byte[] param2, byte param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -402,7 +402,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int a(int param0) throws IOException {
+    final int availableBytes(int param0) throws IOException {
         if (param0 >= -68) {
           field_j = (int[]) null;
         }
@@ -413,7 +413,7 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.a(true);
+        this.close(true);
     }
 
     BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {

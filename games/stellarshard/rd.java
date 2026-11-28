@@ -89,7 +89,7 @@ final class rd {
           if (param2.length() == 0) {
             return true;
           }
-          if (rb.a(param1, -56, param2)) {
+          if (NetworkGameClient.a(param1, -56, param2)) {
             return false;
           }
           if (ji.a(param1, 95, param2)) {

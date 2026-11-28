@@ -75,19 +75,19 @@ final class Bzip2State {
           return true;
         }
         if (il.field_g == -1) {
-          if (!ag.a(126, 1)) {
+          if (!NetworkGameClient.a(126, 1)) {
             return false;
           }
           il.field_g = RichTextLayout.field_p.readUnsignedByte(7909);
           RichTextLayout.field_p.position = 0;
         }
         if (-2 != il.field_g) {
-          return ag.a(125, il.field_g);
+          return NetworkGameClient.a(125, il.field_g);
         }
-        if (ag.a(125, 2)) {
+        if (NetworkGameClient.a(125, 2)) {
           il.field_g = RichTextLayout.field_p.readUnsignedShort(-1174051992);
           RichTextLayout.field_p.position = 0;
-          return ag.a(125, il.field_g);
+          return NetworkGameClient.a(125, il.field_g);
         }
         return false;
     }

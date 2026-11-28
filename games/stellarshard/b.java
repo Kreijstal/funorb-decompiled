@@ -22,7 +22,7 @@ final class b extends DefaultTextWidgetRenderer {
         try {
           var4_int = -9 / ((param0 + 59) / 44);
           if (ProxyAuthenticationRequiredException.a(param3, (byte) -5, param2, param1)) {
-            stackIn_4_0 = rb.g(1851);
+            stackIn_4_0 = NetworkGameClient.g(1851);
             return stackIn_4_0;
           }
           stackIn_2_0 = null;

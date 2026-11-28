@@ -30,7 +30,7 @@ final class th {
         if (IntrusiveNode.field_b <= 0) {
           return false;
         }
-        if (!c.b(true)) {
+        if (!NetworkGameClient.b(true)) {
           return true;
         }
         return false;

@@ -46,7 +46,7 @@ final class a {
           }
           if (TextFieldValidator.field_f.field_o) {
             oj.field_B = oj.field_B & ~TextFieldValidator.field_f.field_s;
-            i.field_o = i.field_o | TextFieldValidator.field_f.field_s;
+            NetworkGameClient.field_o = NetworkGameClient.field_o | TextFieldValidator.field_f.field_s;
             TextFieldValidator.field_f = null;
             tl.field_g = true;
           }

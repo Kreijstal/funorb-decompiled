@@ -7,7 +7,7 @@ final class s {
     static int field_c;
     static ModalDialogHost field_d;
 
-    final static void a(BitmapFont param0, byte param1, int param2, TextLineMetrics param3, String param4) {
+    final static void computeJustifiedCharacterOffsets(BitmapFont param0, byte param1, int param2, TextLineMetrics param3, String param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -88,7 +88,7 @@ final class s {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$05bb3be3c57b(BitmapFont param0, int param1, int param2, TextLineMetrics param3, String param4) {
+    final static void computeJustifiedCharacterOffsetsWithIntGuard(BitmapFont param0, int param1, int param2, TextLineMetrics param3, String param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;

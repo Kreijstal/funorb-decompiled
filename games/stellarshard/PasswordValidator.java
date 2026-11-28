@@ -234,7 +234,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_20_0 = k.field_e;
             return stackIn_20_0;
           }
-          if (rb.a(var6, -85, var4)) {
+          if (NetworkGameClient.a(var6, -85, var4)) {
             stackIn_23_0 = DialogMessagePane.field_D;
             return stackIn_23_0;
           }

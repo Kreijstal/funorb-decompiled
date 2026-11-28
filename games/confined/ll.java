@@ -108,11 +108,11 @@ final class ll {
     }
 
     final static boolean a(int param0, int param1) {
-        if ((param1 << param0 & i.field_o) != 0) {
+        if ((param1 << param0 & NetworkGameClient.field_o) != 0) {
           return false;
         }
         pn.field_a.drawCentred(hl.field_b, 320, 100, 9805732, -1);
-        tf.a((byte) 59, param0, 105, i.field_o);
+        tf.a((byte) 59, param0, 105, NetworkGameClient.field_o);
         return true;
     }
 

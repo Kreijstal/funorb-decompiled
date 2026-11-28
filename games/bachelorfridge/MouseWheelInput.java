@@ -49,13 +49,13 @@ abstract class MouseWheelInput {
               HazmatAnimation.a(var2, uea.field_i, (byte) -103, ma.field_E, ClearTileFlagEffect.field_j);
               var2.writeByte(15, 0);
               var2.writeInt(bd.field_m, -1615464796);
-              RaiseEvent.field_s.a(0, var2.payload, false, 13);
+              RaiseEvent.field_s.enqueueWrite(0, var2.payload, false, 13);
               ds.field_m = ds.field_m + 1;
               RefreshingSpecial.field_q = f.correctedCurrentTimeMillis((byte) 73) + 30000L;
             }
             if (ds.field_m == 3) {
-              if (0 < RaiseEvent.field_s.b(125)) {
-                var1_int = RaiseEvent.field_s.b((byte) -47);
+              if (0 < RaiseEvent.field_s.availableBytes(125)) {
+                var1_int = RaiseEvent.field_s.readByteOrEof((byte) -47);
                 if (var1_int != 0) {
                   stackIn_26_0 = BattleUpdate.a(var1_int, 1);
                   return stackIn_26_0;

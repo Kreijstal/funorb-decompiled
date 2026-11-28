@@ -61,7 +61,7 @@ final class ba extends DualLinkNode {
         var9 = SolKnight.field_L ? 1 : 0;
         try {
           if (1 == param0) {
-            this.field_p = b.$cfr$intArgs$a$25ae83805f84(param1.readString(72), 60, true);
+            this.field_p = b.splitByDelimiterWithIntDelimiter(param1.readString(72), 60, true);
           } else {
             if (param0 == 2) {
               var4_int = param1.readUnsignedByte(255);

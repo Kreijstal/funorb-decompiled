@@ -21,8 +21,8 @@ abstract class kb {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(int param0, ResourceArchive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2609_0;
             StringBuilder stackIn_2609_1;
             String stackIn_2610_2;
@@ -35,7 +35,7 @@ abstract class kb {
             int param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2609_0 = null;
@@ -48,11 +48,11 @@ abstract class kb {
                 this.var3 = 0;
                 this.var4 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 hc.field_eb = param1;
                 var2 = StandardContentDialog.a(33, "loginm3");
                 if (var2 != null) {
-                  nk.field_t = ni.a((byte) -55, var2);
+                  NetworkGameClient.field_t = ni.a((byte) -55, var2);
                 }
                 var2 = StandardContentDialog.a(33, "loginm2");
                 if (var2 != null) {
@@ -1049,7 +1049,7 @@ abstract class kb {
                 }
                 var2 = StandardContentDialog.a(33, "reloadgame");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   StripedProgressWidget.field_B = ni.a((byte) -55, var2);
                 }
@@ -1535,7 +1535,7 @@ abstract class kb {
                 }
                 var2 = StandardContentDialog.a(33, "create_displayname_hint");
                 if (var2 != null) {
-                  nk.field_C = ni.a((byte) -55, var2);
+                  NetworkGameClient.field_C = ni.a((byte) -55, var2);
                 }
                 var2 = StandardContentDialog.a(33, "create_password_tooltip");
                 if (null != var2) {
@@ -2010,7 +2010,7 @@ abstract class kb {
                   ni.a((byte) -55, var2);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 var2 = StandardContentDialog.a(33, "skiptutorial");
                 if (var2 != null) {
                   ni.a((byte) -55, var2);
@@ -2977,7 +2977,7 @@ abstract class kb {
                 }
                 var2 = StandardContentDialog.a(33, "subscription_cost_monthly,0");
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadSubscriptionText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   nj.field_b[0] = ni.a((byte) -55, var2);
                 }
@@ -3038,13 +3038,13 @@ abstract class kb {
             void run() {
                 var4 = Lexicominos.field_L ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3064,7 +3064,7 @@ abstract class kb {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 
@@ -3161,7 +3161,7 @@ abstract class kb {
             param0 = param0 >>> 2;
           }
           if (param1 != 16) {
-            kb.a(17, (ResourceArchive) null);
+            kb.loadSharedInterfaceText(17, (ResourceArchive) null);
           }
           if (param0 >= 1) {
             var2_int++;

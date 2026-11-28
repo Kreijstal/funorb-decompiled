@@ -1863,7 +1863,7 @@ public final class Torquing extends NetworkGameClient {
                       var2_int = 1;
                     } else {
                       stackIn_57_1 = (TranslucentSpriteLayer.field_i != null);
-                      var3 = this.b(stackIn_57_1, -92);
+                      var3 = this.pollAccountUiActions(stackIn_57_1, -92);
                       if (var3 == 1 ||
                         var3 == 2) {
                         if (TranslucentSpriteLayer.field_i != null) {
@@ -1907,7 +1907,7 @@ public final class Torquing extends NetworkGameClient {
               }
             }
           } else {
-            this.n(param0 + 126);
+            this.updateLoginFlow(param0 + 126);
             if (sf.a(-1)) {
               if (ResourceArchive.isClientStartupReady(true) &&
                 !ee.field_s) {
@@ -1998,11 +1998,11 @@ public final class Torquing extends NetworkGameClient {
             }
           }
           while (kg.a(ArchiveRequest.field_s, (byte) 21)) {
-            this.e((byte) -117);
+            this.dispatchCommonPacket((byte) -117);
           }
           DropTargetWidgetContainer.a((byte) -115, 0);
           if (mk.a((byte) 38)) {
-            var3Lifetime2 = this.g(118);
+            var3Lifetime2 = this.reconnectAndResendRequests(118);
             if (var3Lifetime2 == 2 && (SpriteBase.field_h != -1 ||
               fn.field_c != -1)) {
               InteractiveWidget.h(-122);

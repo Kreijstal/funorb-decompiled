@@ -156,7 +156,7 @@ abstract class TextLayout {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-30);
+                  ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-30);
                   fb.field_p = false;
                   stackIn_30_0 = var6_intLifetime1;
                   return stackIn_30_0;
@@ -241,7 +241,7 @@ abstract class TextLayout {
             }
             if (AgeValidator.field_m == CrossfadingMidiPcmStream.field_l &&
               NetworkArchiveRequest.d(param1 + 27)) {
-              ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-96);
+              ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-96);
               if (7 == pg.field_d &&
                 !fb.field_p) {
                 fb.field_p = true;
@@ -261,7 +261,7 @@ abstract class TextLayout {
                 if (vl.b(-92) <= 30000L) {
                   MusicPatch.field_p = sa.field_h;
                 } else {
-                  MusicPatch.field_p = nk.field_t;
+                  MusicPatch.field_p = NetworkGameClient.field_t;
                 }
                 fb.field_p = false;
                 stackIn_93_0 = 3;

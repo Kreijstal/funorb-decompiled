@@ -224,18 +224,18 @@ final class pg {
               SingleChildWidgetContainer.a(Bzip2State.field_x, (byte) 22, sa.field_o, q.field_a, var2);
               var2.writeByte(param0 + 35, 15);
               var2.writeInt(IntrusiveDeque.field_a, false);
-              qf.field_a.a(-28748, 0, 13, var2.payload);
+              qf.field_a.enqueueWrite(-28748, 0, 13, var2.payload);
               SocketConnector.field_f = SocketConnector.field_f + 1;
               cj.field_c = 30000L + je.correctedCurrentTimeMillis(1);
             }
             if (SocketConnector.field_f == 3) {
-              if (qf.field_a.b(-30119) <= 0) {
+              if (qf.field_a.availableBytes(-30119) <= 0) {
                 if (cj.field_c < je.correctedCurrentTimeMillis(param0 ^ 82)) {
                   stackIn_29_0 = NameSuggestionsPanel.a(-2, (byte) -86);
                   return stackIn_29_0;
                 }
               } else {
-                var1_int = qf.field_a.a(-116);
+                var1_int = qf.field_a.readByteOrEof(-116);
                 if (0 != var1_int) {
                   stackIn_25_0 = NameSuggestionsPanel.a(var1_int, (byte) -86);
                   return stackIn_25_0;

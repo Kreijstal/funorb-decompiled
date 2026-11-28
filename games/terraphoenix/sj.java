@@ -25,7 +25,7 @@ final class sj {
         field_d = null;
     }
 
-    final static void a(boolean param0, byte param1, boolean param2, String param3) {
+    final static void showLoginDialog(boolean param0, byte param1, boolean param2, String param3) {
         try {
           PacketBuffer.g((byte) -124);
           AlphaWidgetContainer.field_I.closeAllDialogs(false);
@@ -77,7 +77,7 @@ final class sj {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$b1efba5c64a3(boolean param0, int param1, boolean param2, String param3) {
+    final static void showLoginDialogWithIntGuard(boolean param0, int param1, boolean param2, String param3) {
         try {
           PacketBuffer.g((byte) -124);
           AlphaWidgetContainer.field_I.closeAllDialogs(false);

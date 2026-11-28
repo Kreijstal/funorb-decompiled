@@ -17,7 +17,7 @@ abstract class SessionGameApplet extends GameApplet {
     private int field_p;
     private boolean field_x;
 
-    final void g(int param0) {
+    final void dispatchCommonPacket(int param0) {
         boolean stackIn_28_0 = false;
         int var2;
         sg var3;
@@ -77,7 +77,7 @@ abstract class SessionGameApplet extends GameApplet {
                           ua.a(tg.field_a, lk.field_b, -22635, WordLanguage.field_l);
                         }
                       } else {
-                        this.e((byte) -125);
+                        this.readSessionCookieUpdate((byte) -125);
                       }
                     }
                   } else {
@@ -96,7 +96,7 @@ abstract class SessionGameApplet extends GameApplet {
         return;
     }
 
-    private final int j(byte param0) {
+    private final int attemptReconnect(byte param0) {
         int var2;
         if (this.field_j) {
           return -1;
@@ -114,7 +114,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (var2 != 0 &&
           1 != var2) {
           if (!AccountRequestState.field_b) {
-            this.a((byte) -95, "reconnect");
+            this.showErrorPage((byte) -95, "reconnect");
           }
           je.a(-11);
           gb.a(var2, -89, Transmogrify.field_B);
@@ -132,7 +132,7 @@ abstract class SessionGameApplet extends GameApplet {
         return var2;
     }
 
-    final void b(boolean param0) {
+    final void updateLoginFlow(boolean param0) {
         int discarded$6 = 0;
         int discarded$7 = 0;
         int var3;
@@ -140,7 +140,7 @@ abstract class SessionGameApplet extends GameApplet {
         boolean stackIn_6_2 = false;
         var3 = Transmogrify.field_A ? 1 : 0;
         if (param0) {
-          this.b(false);
+          this.updateLoginFlow(false);
         }
         if (!pa.b(-47)) {
           if (ResizableModalDialog.field_L >= 10) {
@@ -148,7 +148,7 @@ abstract class SessionGameApplet extends GameApplet {
               ga.a((byte) 94);
             } else {
               if (AlphaWidgetContainer.field_y == 0) {
-                discarded$6 = this.a(2625, false, false);
+                discarded$6 = this.processAccountUiActions(2625, false, false);
               } else {
                 BufferedSocket.a(true, f.field_a);
               }
@@ -157,11 +157,11 @@ abstract class SessionGameApplet extends GameApplet {
         } else {
           stackIn_5_1 = 2625;
           stackIn_6_2 = (ub.field_c != null);
-          discarded$7 = this.a(stackIn_5_1, stackIn_6_2, false);
+          discarded$7 = this.processAccountUiActions(stackIn_5_1, stackIn_6_2, false);
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
+    final void initializeFramework(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         var10.dispose();
@@ -178,26 +178,26 @@ abstract class SessionGameApplet extends GameApplet {
         uh.field_q = param3;
         q.field_d = param0;
         BoundedRandomAccessFile.field_d = param7;
-        this.c(true);
+        this.initializePacketLengths(true);
         StandardContentDialog.q(param1 ^ param1);
     }
 
-    final void a(String param0, boolean param1, int param2) {
+    final void startWithDefaultSize(String param0, boolean param1, int param2) {
         try {
           if (param1) {
             this.field_x = true;
           }
-          this.a(480, param2, 640, param0, -19492);
+          this.readAppletParameters(480, param2, 640, param0, -19492);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ig.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    private final void b(int param0, boolean param1) {
+    private final void enableDefaultPacketHandlers(int param0, boolean param1) {
         c.field_e[17] = true;
         if (param0 <= 27) {
           String var4 = (String) null;
-          this.a((String) null, true, -8);
+          this.startWithDefaultSize((String) null, true, -8);
         }
         c.field_e[8] = param1;
         c.field_e[16] = true;
@@ -284,20 +284,20 @@ abstract class SessionGameApplet extends GameApplet {
         }
     }
 
-    private final void g(byte param0) {
+    private final void enablePacketTwo(byte param0) {
         if (param0 != 59) {
           return;
         }
         c.field_e[2] = true;
     }
 
-    final int f(byte param0) {
+    final int reconnectAndResendRequests(byte param0) {
         int discarded$1 = 0;
         int var2;
         if (param0 != 102) {
-          discarded$1 = this.j((byte) -124);
+          discarded$1 = this.attemptReconnect((byte) -124);
         }
-        var2 = this.j((byte) 54);
+        var2 = this.attemptReconnect((byte) 54);
         if (var2 == 0 ||
           var2 == 1) {
           if (c.field_e[1]) {
@@ -325,7 +325,7 @@ abstract class SessionGameApplet extends GameApplet {
         return var2;
     }
 
-    private final void a(int param0, int param1, int param2, String param3, int param4) {
+    private final void readAppletParameters(int param0, int param1, int param2, String param3, int param4) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -339,7 +339,7 @@ abstract class SessionGameApplet extends GameApplet {
         String var9 = null;
         try {
           try {
-            if (!this.c((byte) 125)) {
+            if (!this.allowAppletStartup((byte) 125)) {
               return;
             }
             this.field_q = this.getCodeBase().getHost();
@@ -370,12 +370,12 @@ abstract class SessionGameApplet extends GameApplet {
               this.field_n = Integer.parseInt(var9);
             }
             ProxySocketConnector.field_h = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a((byte) 79, param0, param3, this.field_w, param1, 32, param2);
+            this.startApplet((byte) 79, param0, param3, this.field_w, param1, 32, param2);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             d.a((Throwable) ((Object) var6_ref), param4 + 19370, (String) null);
-            this.a((byte) -123, "crash");
+            this.showErrorPage((byte) -123, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -392,14 +392,14 @@ abstract class SessionGameApplet extends GameApplet {
         }
     }
 
-    private final void i(int param0) {
+    private final void enablePacketFive(int param0) {
         if (param0 != -15038) {
-          this.b(-59, false);
+          this.enableDefaultPacketHandlers(-59, false);
         }
         c.field_e[5] = true;
     }
 
-    final void a(int param0, boolean param1) {
+    final void serviceFramework(int param0, boolean param1) {
         int stackIn_24_0 = 0;
         int stackIn_103_0 = 0;
         boolean stackIn_104_1 = false;
@@ -490,20 +490,20 @@ abstract class SessionGameApplet extends GameApplet {
           } else {
             if (3 != tb.field_a) {
               if (tb.field_a == 4) {
-                this.a((byte) -122, "js5io");
+                this.showErrorPage((byte) -122, "js5io");
               } else {
                 if (2 != tb.field_a) {
                   if (5 == tb.field_a) {
-                    this.a((byte) -117, "outofdate");
+                    this.showErrorPage((byte) -117, "outofdate");
                   } else {
-                    this.a((byte) -102, "js5connect");
+                    this.showErrorPage((byte) -102, "js5connect");
                   }
                 } else {
-                  this.a((byte) -100, "js5connect_full");
+                  this.showErrorPage((byte) -100, "js5connect_full");
                 }
               }
             } else {
-              this.a((byte) -127, "js5crc");
+              this.showErrorPage((byte) -127, "js5crc");
             }
           }
         }
@@ -542,7 +542,7 @@ abstract class SessionGameApplet extends GameApplet {
             hg.field_a.ensureIndexLoaded((byte) -117)) {
             if (hg.field_a.hasGroupName((byte) -120, "")) {
               if (hg.field_a.tryLoadGroupByName((byte) 117, "")) {
-                ContextualRuntimeException.a(7, hg.field_a);
+                ContextualRuntimeException.loadSharedInterfaceText(7, hg.field_a);
                 hg.field_a = null;
                 el.b(-6491);
               }
@@ -635,21 +635,21 @@ abstract class SessionGameApplet extends GameApplet {
         int var1 = -128 % ((param0 - 21) / 35);
     }
 
-    final int a(boolean param0, int param1) {
+    final int pollAccountUiActions(boolean param0, int param1) {
         if (param1 < 73) {
-          this.a(false, -89);
+          this.pollAccountUiActions(false, -89);
         }
-        return this.a(2625, param0, true);
+        return this.processAccountUiActions(2625, param0, true);
     }
 
-    private final void h(int param0) {
+    private final void enablePacketOne(int param0) {
         c.field_e[1] = true;
         if (param0 != -21646) {
-          this.a(true, -82);
+          this.pollAccountUiActions(true, -82);
         }
     }
 
-    private final int a(int param0, boolean param1, boolean param2) {
+    private final int processAccountUiActions(int param0, boolean param1, boolean param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;
@@ -720,7 +720,7 @@ abstract class SessionGameApplet extends GameApplet {
             }
           }
           if (param0 != 2625) {
-            this.b(-119, false);
+            this.enableDefaultPacketHandlers(-119, false);
           }
           if (var4 == 5) {
             DraggableWidgetContainer.a((byte) -98, ha.b(74));
@@ -789,18 +789,18 @@ abstract class SessionGameApplet extends GameApplet {
         }
     }
 
-    private final void d(byte param0) {
+    private final void enablePacketFour(byte param0) {
         c.field_e[4] = true;
         if (param0 != -36) {
           this.field_t = false;
         }
     }
 
-    private final void e(byte param0) {
+    private final void readSessionCookieUpdate(byte param0) {
         String var2 = Transmogrify.k(72);
         gb.a(ha.b(109), (byte) -119, var2);
         if (param0 > -105) {
-          this.g((byte) -48);
+          this.enablePacketTwo((byte) -48);
         }
     }
 
@@ -819,26 +819,26 @@ abstract class SessionGameApplet extends GameApplet {
         ea.a((byte) 68, ha.b(127), var3 != 0, eg.a(106, var5));
     }
 
-    final void a(boolean param0, boolean param1, boolean param2, boolean param3, byte param4) {
-        this.b(84, false);
+    final void configureOptionalPacketHandlers(boolean param0, boolean param1, boolean param2, boolean param3, byte param4) {
+        this.enableDefaultPacketHandlers(84, false);
         if (param3) {
-          this.h(-21646);
+          this.enablePacketOne(-21646);
         }
         if (param0) {
-          this.g((byte) 59);
+          this.enablePacketTwo((byte) 59);
         }
         if (param4 != 9) {
           return;
         }
         if (param1) {
-          this.d((byte) -36);
+          this.enablePacketFour((byte) -36);
         }
         if (param2) {
-          this.i(-15038);
+          this.enablePacketFive(-15038);
         }
     }
 
-    private final void c(boolean param0) {
+    private final void initializePacketLengths(boolean param0) {
         ek.field_c[9] = -1;
         ek.field_c[17] = -1;
         ek.field_c[5] = -1;

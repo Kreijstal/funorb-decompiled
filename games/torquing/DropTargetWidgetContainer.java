@@ -23,7 +23,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
             }
             if (wa.field_d.position > 0) {
               try {
-                vk.field_E.a(0, wa.field_d.payload, (byte) 47, wa.field_d.position);
+                vk.field_E.enqueueWrite(0, wa.field_d.payload, (byte) 47, wa.field_d.position);
                 ak.field_k = km.correctedCurrentTimeMillis(-1);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

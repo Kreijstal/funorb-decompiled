@@ -477,12 +477,12 @@ final class hj {
               if (!param1) {
                 field_D = (BufferedRandomAccessFile) null;
               }
-              var2_int = IsaacRandom.field_g.c(-110);
+              var2_int = IsaacRandom.field_g.availableBytes(-110);
               if (var2_int > 0) {
                 if (var2_int > param0 - MonkeyPuzzle2.field_D.position) {
                   var2_int = param0 - MonkeyPuzzle2.field_D.position;
                 }
-                IsaacRandom.field_g.a(var2_int, param1, MonkeyPuzzle2.field_D.payload, MonkeyPuzzle2.field_D.position);
+                IsaacRandom.field_g.readFully(var2_int, param1, MonkeyPuzzle2.field_D.payload, MonkeyPuzzle2.field_D.position);
                 d.field_k = pf.correctedCurrentTimeMillis(0);
                 MonkeyPuzzle2.field_D.position = MonkeyPuzzle2.field_D.position + var2_int;
                 if (param0 > MonkeyPuzzle2.field_D.position) {

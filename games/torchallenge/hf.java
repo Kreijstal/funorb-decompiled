@@ -18,7 +18,7 @@ final class hf implements WidgetRenderer {
         return stackIn_6_0;
     }
 
-    final static void a(byte param0, boolean param1, int param2, String param3, String param4, boolean param5) {
+    final static void updateTooltipTransition(byte param0, boolean param1, int param2, String param3, String param4, boolean param5) {
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -221,7 +221,7 @@ final class hf implements WidgetRenderer {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$759f676cf37b(int param0, boolean param1, int param2, String param3, String param4, boolean param5) {
+    final static void updateTooltipTransitionWithIntGuard(int param0, boolean param1, int param2, String param3, String param4, boolean param5) {
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;

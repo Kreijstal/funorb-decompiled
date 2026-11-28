@@ -205,10 +205,10 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.d(16777215);
+        this.close(16777215);
     }
 
-    final int b(int param0) throws IOException {
+    final int availableBytes(int param0) throws IOException {
         if (param0 != 0) {
           CharSequence var3 = (CharSequence) null;
           BufferedSocket.encodeCp1252Bytes((byte) 44, (CharSequence) null);
@@ -223,7 +223,7 @@ final class BufferedSocket implements Runnable {
         return this.field_g.available();
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final void readFully(byte[] param0, int param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -263,7 +263,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void d(int param0) {
+    final void close(int param0) {
         try {
           Throwable decompiledCaughtException = null;
           Object var2 = null;
@@ -424,7 +424,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void enqueueWrite(int param0, byte[] param1, int param2, int param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -572,7 +572,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(boolean param0) throws IOException {
+    final void checkWriteError(boolean param0) throws IOException {
         if (this.field_j) {
           return;
         }
@@ -595,7 +595,7 @@ final class BufferedSocket implements Runnable {
         field_c = (int[][]) null;
     }
 
-    final int a(int param0) throws IOException {
+    final int readByteOrEof(int param0) throws IOException {
         if (param0 > -23) {
           return 58;
         }

@@ -16,7 +16,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     abstract void renderClientFrame(int param0);
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, String param6) {
+    final void startApplet(int param0, int param1, int param2, int param3, int param4, int param5, String param6) {
         try {
           PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_23_0 = null;
@@ -36,7 +36,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
-                this.a(0, "alreadyloaded");
+                this.showErrorPage(0, "alreadyloaded");
                 return;
               }
               oq.field_I = param3;
@@ -68,7 +68,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
               HuffmanCodec.a(var8_ref, (String) null, 0);
-              this.a(0, "crash");
+              this.showErrorPage(0, "crash");
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -175,13 +175,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final boolean c(int param0) {
+    final boolean allowAppletStartup(int param0) {
         return true;
     }
 
     public abstract void init();
 
-    final void a(int param0, String param1) {
+    final void showErrorPage(int param0, String param1) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -195,7 +195,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               return;
             }
             if (param0 != 0) {
-              this.a(110, -90, 45, 6, 64, 46, (String) null);
+              this.startApplet(110, -90, 45, 6, 64, 46, (String) null);
             }
             this.field_f = true;
             System.out.println("error_game_" + param1);
@@ -937,7 +937,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     var2.equals("1.5") ||
                     var2.startsWith("1.5.") ||
                     var2.equals("1.6.0")) {
-                    this.a(0, "wrongjava");
+                    this.showErrorPage(0, "wrongjava");
                     decompiledFrameRemainder3 = (var5 != 0);
                   }
                   if ((decompiledFrameRemainder3) &&
@@ -959,7 +959,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       var4 = var2.substring(6, var3);
                       if (JaggrabClient.a((CharSequence) ((Object) var4), -69) &&
                         !(10 <= SecondaryNodeDequeIterator.a(86, (CharSequence) ((Object) var4)))) {
-                        this.a(0, "wrongjava");
+                        this.showErrorPage(0, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
                     }
@@ -1049,7 +1049,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
               HuffmanCodec.a((Throwable) (var1), (String) null, 0);
-              this.a(0, "crash");
+              this.showErrorPage(0, "crash");
             }
             this.shutdownApplet((byte) -53, true);
             return;

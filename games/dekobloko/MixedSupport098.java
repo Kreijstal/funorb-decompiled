@@ -103,12 +103,12 @@ final class MixedSupport098 {
             return false;
           }
           try {
-            integerLocal1 = GameSession.bufferedSocketState0002.computeInteger1377(0);
+            integerLocal1 = GameSession.bufferedSocketState0002.availableBytes(0);
             if (integerLocal1 > 0) {
               if (-LabeledWidgetContainer.cipherPacketBufferState0001.position + integerArgument2 < integerLocal1) {
                 integerLocal1 = -LabeledWidgetContainer.cipherPacketBufferState0001.position + integerArgument2;
               }
-              GameSession.bufferedSocketState0002.performAction1373(integerLocal1, LabeledWidgetContainer.cipherPacketBufferState0001.position, (byte) 17, LabeledWidgetContainer.cipherPacketBufferState0001.payload);
+              GameSession.bufferedSocketState0002.readFully(integerLocal1, LabeledWidgetContainer.cipherPacketBufferState0001.position, (byte) 17, LabeledWidgetContainer.cipherPacketBufferState0001.payload);
               MixedSupport095.longState0040 = MixedSupport062.correctedCurrentTimeMillis(4);
               LabeledWidgetContainer.cipherPacketBufferState0001.position = LabeledWidgetContainer.cipherPacketBufferState0001.position + integerLocal1;
               if (integerArgument2 > LabeledWidgetContainer.cipherPacketBufferState0001.position) {

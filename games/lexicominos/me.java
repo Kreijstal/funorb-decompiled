@@ -116,7 +116,7 @@ final class me extends DualLinkNode {
             }
             var15 = (vi) (ci.field_f.beginForward(true));
             if (var15 == null) {
-              ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-49);
+              ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-49);
               return;
             }
             var15.field_i = var16[0];
@@ -128,7 +128,7 @@ final class me extends DualLinkNode {
               if (var2 == 2) {
                 var13 = (vi) (ci.field_f.beginForward(true));
                 if (var13 == null) {
-                  ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-68);
+                  ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-68);
                   return;
                 }
                 var13.field_k = MusicPatch.b(26770);
@@ -137,12 +137,12 @@ final class me extends DualLinkNode {
                 var13.unlink((byte) -116);
               } else {
                 uj.a("A1: " + StandardContentDialog.h(-94), (Throwable) null, 1);
-                ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-32);
+                ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-32);
               }
             } else {
               var12 = (vb) (jl.field_a.beginForward(true));
               if (var12 == null) {
-                ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-125);
+                ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-125);
                 return;
               }
               var12.unlink((byte) -125);

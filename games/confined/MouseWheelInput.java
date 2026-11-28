@@ -252,7 +252,7 @@ abstract class MouseWheelInput {
             stackIn_68_1 = var7_int;
             break;
           }
-          rc.$cfr$intArgs$a$c68ae6d2455d(stackIn_68_0, stackIn_68_1, param4, var8, param6);
+          rc.bucketVisibleFacesByDepthWithIntGuard(stackIn_68_0, stackIn_68_1, param4, var8, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -173,7 +173,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               FullscreenFocusCanvas.a((Sprite[]) null, -12, 123, (Sprite[]) null, 4, 6, -76, 11, true, -78, -110, (BitmapFont) null, 9, 62, (BitmapFont) null);
             }
             if (wc.field_d == r.field_c &&
-              ag.a(127, 1)) {
+              NetworkGameClient.a(127, 1)) {
               var6_int = RichTextLayout.field_p.readUnsignedByte(7909);
               RichTextLayout.field_p.position = 0;
               if (var6_int == 0) {
@@ -185,7 +185,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               }
             }
             if (r.field_c == od.field_f &&
-              ag.a(127, 8)) {
+              NetworkGameClient.a(127, 8)) {
               mi.field_o = RichTextLayout.field_p.readLong((byte) 5);
               RichTextLayout.field_p.position = 0;
               RichTextLayout.a(param3, jh.field_h, 0, param2, param1);
@@ -193,7 +193,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             }
             boolean decompiledFrameRemainder0 = true;
             if (DebouncedFieldValidator.field_a == r.field_c &&
-              ag.a(123, 1)) {
+              NetworkGameClient.a(123, 1)) {
               var6_intLifetime1 = RichTextLayout.field_p.readUnsignedByte(7909);
               lj.field_c = null;
               vh.field_t = var6_intLifetime1;

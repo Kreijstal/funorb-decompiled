@@ -456,17 +456,17 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             for (var5 = 0; var4 > var5; var5++) {
               gh.field_a[var5] = -1;
             }
-            bi.field_B = new int[2];
+            NetworkGameClient.field_B = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
               BoundedRandomAccessFile.field_k[var5] = vi.field_b[var5];
             }
             BoundedRandomAccessFile.field_k[-3 + var4] = "";
             BoundedRandomAccessFile.field_k[var4 - 2] = qd.field_d;
             gh.field_a[-2 + var4] = 0;
-            bi.field_B[0] = 4;
+            NetworkGameClient.field_B[0] = 4;
             BoundedRandomAccessFile.field_k[-1 + var4] = db.field_e;
             gh.field_a[-1 + var4] = 1;
-            bi.field_B[1] = 5;
+            NetworkGameClient.field_B[1] = 5;
           } else if (SoundCache.field_b == 1) {
             var3_int = TextLayout.a(fe.field_a, rk.field_h, ContentTransitionDialog.field_P, true, vi.field_b);
             var4 = var3_int + 2;
@@ -475,14 +475,14 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             for (var5 = 0; var4 > var5; var5++) {
               gh.field_a[var5] = -1;
             }
-            bi.field_B = new int[1];
+            NetworkGameClient.field_B = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
               BoundedRandomAccessFile.field_k[var5] = vi.field_b[var5];
             }
             BoundedRandomAccessFile.field_k[-2 + var4] = "";
             BoundedRandomAccessFile.field_k[-1 + var4] = db.field_e;
             gh.field_a[var4 - 1] = 0;
-            bi.field_B[0] = 5;
+            NetworkGameClient.field_B[0] = 5;
           } else if (SoundCache.field_b != 2) {
             if (SoundCache.field_b == 3) {
               if (rc.field_k.privilegedTasksEnabled) {
@@ -496,14 +496,14 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
               for (var5 = 0; var5 < var4; var5++) {
                 gh.field_a[var5] = -1;
               }
-              bi.field_B = new int[1];
+              NetworkGameClient.field_B = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 BoundedRandomAccessFile.field_k[var5] = vi.field_b[var5];
               }
               BoundedRandomAccessFile.field_k[var4 - 2] = "";
               BoundedRandomAccessFile.field_k[var4 - 1] = db.field_e;
               gh.field_a[-1 + var4] = 0;
-              bi.field_B[0] = 5;
+              NetworkGameClient.field_B[0] = 5;
             } else if (SoundCache.field_b == 4) {
               var3_int = TextLayout.a(fe.field_a, rk.field_h, pd.field_e, true, vi.field_b);
               var4 = var3_int + 2;
@@ -512,14 +512,14 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
               for (var5 = 0; var4 > var5; var5++) {
                 gh.field_a[var5] = -1;
               }
-              bi.field_B = new int[1];
+              NetworkGameClient.field_B = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 BoundedRandomAccessFile.field_k[var5] = vi.field_b[var5];
               }
               BoundedRandomAccessFile.field_k[-2 + var4] = "";
               BoundedRandomAccessFile.field_k[-1 + var4] = db.field_e;
               gh.field_a[-1 + var4] = 0;
-              bi.field_B[0] = 5;
+              NetworkGameClient.field_B[0] = 5;
             } else {
               if (SoundCache.field_b != 5) {
                 throw new IllegalArgumentException();
@@ -531,17 +531,17 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
               for (var5 = 0; var4 > var5; var5++) {
                 gh.field_a[var5] = -1;
               }
-              bi.field_B = new int[2];
+              NetworkGameClient.field_B = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
                 BoundedRandomAccessFile.field_k[var5] = vi.field_b[var5];
               }
               BoundedRandomAccessFile.field_k[var4 - 3] = "";
               BoundedRandomAccessFile.field_k[var4 - 2] = j.field_b;
               gh.field_a[var4 - 2] = 0;
-              bi.field_B[0] = 3;
+              NetworkGameClient.field_B[0] = 3;
               BoundedRandomAccessFile.field_k[var4 - 1] = db.field_e;
               gh.field_a[-1 + var4] = 1;
-              bi.field_B[1] = 5;
+              NetworkGameClient.field_B[1] = 5;
             }
           } else {
             var3_int = TextLayout.a(fe.field_a, rk.field_h, gg.a(new String[]{"<br><%0><br>"}, pd.field_h, true), true, vi.field_b);
@@ -594,15 +594,15 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             for (var8 = 0; var8 < var7; var8++) {
               gh.field_a[var8] = -1;
             }
-            bi.field_B = new int[2];
+            NetworkGameClient.field_B = new int[2];
             BoundedRandomAccessFile.field_k[0] = qb.field_d;
             gh.field_a[1] = 0;
             BoundedRandomAccessFile.field_k[1] = jf.field_p;
             gh.field_a[3] = 1;
             BoundedRandomAccessFile.field_k[4] = DialogMessagePane.field_F;
-            bi.field_B[1] = 2;
+            NetworkGameClient.field_B[1] = 2;
             BoundedRandomAccessFile.field_k[2] = WidgetContainer.field_y;
-            bi.field_B[0] = 5;
+            NetworkGameClient.field_B[0] = 5;
             BoundedRandomAccessFile.field_k[3] = NanoFrameTimer.field_c;
             BoundedRandomAccessFile.field_k[5] = "";
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
@@ -631,13 +631,13 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             }
             ArchiveRequest.field_n = pf.correctedCurrentTimeMillis(0);
           }
-          sj.field_f.field_i = bi.field_B.length;
+          sj.field_f.field_i = NetworkGameClient.field_B.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < BoundedRandomAccessFile.field_k.length; var4Lifetime1++) {
             stackIn_91_0 = -108;
             stackIn_91_1 = BoundedRandomAccessFile.field_k[var4Lifetime1];
             stackIn_92_2 = !(gh.field_a[var4Lifetime1] < 0);
-            var5Lifetime1 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(stackIn_91_0, stackIn_91_1, stackIn_92_2);
+            var5Lifetime1 = AccountNameAvailabilityValidator.measureSelectedFontTextWidthWithIntGuard(stackIn_91_0, stackIn_91_1, stackIn_92_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -647,7 +647,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(-109, var11, false);
+              var7Lifetime1 = AccountNameAvailabilityValidator.measureSelectedFontTextWidthWithIntGuard(-109, var11, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -655,7 +655,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             var4_ref_String__Lifetime1 = SoundCache.field_e;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(-126, var12, false);
+              var7Lifetime1Lifetime1 = AccountNameAvailabilityValidator.measureSelectedFontTextWidthWithIntGuard(-126, var12, false);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -685,7 +685,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + gi.field_a;
             } else {
-              var7Lifetime2 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(-115, BoundedRandomAccessFile.field_k[var4Lifetime3], true);
+              var7Lifetime2 = AccountNameAvailabilityValidator.measureSelectedFontTextWidthWithIntGuard(-115, BoundedRandomAccessFile.field_k[var4Lifetime3], true);
               var8Lifetime1 = jc.field_b - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + SoundCache.field_a;
               RegistrationAgreementPane.field_A[var4Lifetime3] = new int[4];

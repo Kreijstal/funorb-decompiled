@@ -2522,7 +2522,7 @@ final class ja {
                     stackIn_36_2 = false;
                     stackIn_37_3 = (0 != il.field_f.field_i);
                     stackIn_40_4 = (TextLayout.field_f != 0);
-                    ((BinaryBitmapFont) (Object) stackIn_36_0).drawCentred(sa.$cfr$intArgs$a$c7de0d339b2a(stackIn_36_1, stackIn_36_2, stackIn_37_3, stackIn_40_4), 320, var3Lifetime1 + var2Lifetime1, 16777215, -1);
+                    ((BinaryBitmapFont) (Object) stackIn_36_0).drawCentred(sa.getSaveResultsLoginPromptWithIntGuard(stackIn_36_1, stackIn_36_2, stackIn_37_3, stackIn_40_4), 320, var3Lifetime1 + var2Lifetime1, 16777215, -1);
                     stackIn_42_0 = RegistrationAgreementPane.field_I;
                     stackIn_42_1 = false;
                     stackIn_43_2 = (TextLayout.field_f != 0);

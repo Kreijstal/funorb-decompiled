@@ -32,8 +32,8 @@ class ah extends mo {
         }
     }
 
-    final static void a(int param0, Archive param1) {
-        class $CfrPartitionedBody {
+    final static void loadGameInterfaceText(int param0, Archive param1) {
+        class GameTextLoader {
             RuntimeException stackIn_1292_0;
             StringBuilder stackIn_1292_1;
             String stackIn_1293_2;
@@ -45,7 +45,7 @@ class ah extends mo {
             int param0;
             Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, Archive initialParam1) {
+            GameTextLoader(int initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1292_0 = null;
@@ -57,7 +57,7 @@ class ah extends mo {
                 this.var3 = 0;
                 this.var4 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadAchievementsGameOptionsAndTutorialTips() throws java.lang.RuntimeException {
                 po.field_e = param1;
                 var2 = en.a((byte) -21, "text_game_name");
                 if (var2 != null) {
@@ -946,7 +946,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -98, "pass2,22");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadLevelNamesGameModesAndControlLabels() throws java.lang.RuntimeException {
                 if (null != var2) {
                   Vertigo2.field_G[22] = in.a(0, var2);
                 }
@@ -1531,9 +1531,9 @@ class ah extends mo {
             void run() {
                 var4 = Vertigo2.field_L ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadAchievementsGameOptionsAndTutorialTips();
                   if (finished) return;
-                  runChunk1();
+                  loadLevelNamesGameModesAndControlLabels();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -1552,7 +1552,7 @@ class ah extends mo {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        GameTextLoader decompiledBody = new GameTextLoader(param0, param1);
         decompiledBody.run();
     }
 

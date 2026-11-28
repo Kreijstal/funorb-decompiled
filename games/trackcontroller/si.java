@@ -7,7 +7,7 @@ final class si {
     static Archive field_b;
     static Archive field_c;
 
-    final static void a(byte param0, int param1) {
+    final static void playIndexedSoundEffect(byte param0, int param1) {
         if (param0 == -68) {
           SocketArchiveRequestConnection.a(TextLineMetrics.field_d[param1], NameSuggestionsPanel.field_G[param1], (byte) -110);
           return;
@@ -30,7 +30,7 @@ final class si {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$e9dea5688aa5(int param0, int param1) {
+    final static void playIndexedSoundEffectWithIntGuard(int param0, int param1) {
         if (param0 == -68) {
           SocketArchiveRequestConnection.a(TextLineMetrics.field_d[param1], NameSuggestionsPanel.field_G[param1], (byte) -110);
           return;

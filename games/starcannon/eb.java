@@ -262,7 +262,7 @@ final class eb {
             }
             stackIn_53_0 = 112;
             stackIn_54_1 = (0 == ea.field_a.field_k);
-            m.$cfr$intArgs$a$43a9e830b5b3(stackIn_53_0, stackIn_54_1, TextLineMetrics.field_f, ProgressDialog.field_Z);
+            m.drawBenefitsButtonFrameWithIntGuard(stackIn_53_0, stackIn_54_1, TextLineMetrics.field_f, ProgressDialog.field_Z);
           }
           if (pc.field_a != null &&
             null != KeyboardInput.field_c) {
@@ -273,7 +273,7 @@ final class eb {
             }
             stackIn_61_0 = 112;
             stackIn_62_1 = (ea.field_a.field_k == 1);
-            m.$cfr$intArgs$a$43a9e830b5b3(stackIn_61_0, stackIn_62_1, TextFieldValidator.field_e, mf.field_d);
+            m.drawBenefitsButtonFrameWithIntGuard(stackIn_61_0, stackIn_62_1, TextFieldValidator.field_e, mf.field_d);
           }
           if (ge.field_b != null) {
             var2Lifetime4 = -(ge.field_b.field_q / 2) + 357;
@@ -301,10 +301,10 @@ final class eb {
               }
             }
             RichTextWidget.e(-67);
-            ValidationStatusWidget.field_I[ag.field_o].draw(269, 340);
+            ValidationStatusWidget.field_I[NetworkGameClient.field_o].draw(269, 340);
           } else {
             RichTextWidget.e(-67);
-            ValidationStatusWidget.field_I[ag.field_o].draw(269, 340);
+            ValidationStatusWidget.field_I[NetworkGameClient.field_o].draw(269, 340);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

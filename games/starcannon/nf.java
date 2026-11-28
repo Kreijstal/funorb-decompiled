@@ -44,7 +44,7 @@ final class nf {
             }
             if (d.field_b.position > 0) {
               try {
-                m.field_b.a(0, d.field_b.payload, (byte) 87, d.field_b.position);
+                m.field_b.enqueueWrite(0, d.field_b.payload, (byte) 87, d.field_b.position);
                 ca.field_Y = dd.correctedCurrentTimeMillis(84);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

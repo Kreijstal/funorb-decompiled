@@ -169,7 +169,7 @@ final class PcmOutputWorker implements Runnable {
         }
     }
 
-    final static int a(boolean param0, int param1, bi param2) {
+    final static int a(boolean param0, int param1, NetworkGameClient param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -180,7 +180,7 @@ final class PcmOutputWorker implements Runnable {
           if (param1 != -32323) {
             field_a = (String) null;
           }
-          stackIn_3_0 = param2.a(param0, 4);
+          stackIn_3_0 = param2.pollAccountUiActions(param0, 4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

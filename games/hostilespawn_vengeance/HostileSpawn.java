@@ -1561,7 +1561,7 @@ public final class HostileSpawn extends NetworkGameClient {
             wh.field_f = false;
           }
           stackIn_18_1 = (null != ImageProducerRasterBuffer.field_q);
-          this.a(stackIn_18_1, param0 + 9803);
+          this.serviceFramework(stackIn_18_1, param0 + 9803);
           if (ri.field_m) {
             cf.d(-112);
             ri.field_m = false;
@@ -1662,7 +1662,7 @@ public final class HostileSpawn extends NetworkGameClient {
             }
             if (decompiledFrameCompleted1) {
               while (wd.a(23278, ng.field_l)) {
-                this.h((byte) 126);
+                this.dispatchCommonPacket((byte) 126);
                 if (var4 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -1675,7 +1675,7 @@ public final class HostileSpawn extends NetworkGameClient {
             if (!EditableTextField.c(false)) {
               return;
             }
-            var2_intLifetime1 = this.d((byte) -75);
+            var2_intLifetime1 = this.attemptReconnect((byte) -75);
             if (var2_intLifetime1 == 0 ||
               var2_intLifetime1 == 1) {
               FullscreenStatusDialog.b(2, -107);
@@ -1691,7 +1691,7 @@ public final class HostileSpawn extends NetworkGameClient {
               return;
             }
           }
-          this.h(-12752);
+          this.updateLoginFlow(-12752);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2207,7 +2207,7 @@ public final class HostileSpawn extends NetworkGameClient {
           }
           if (pf.a(param0 - 202)) {
             stackIn_27_1 = (ImageProducerRasterBuffer.field_q != null);
-            var2_intLifetime1 = this.b(stackIn_27_1, param0 - 77);
+            var2_intLifetime1 = this.pollAccountUiActions(stackIn_27_1, param0 - 77);
             if (var2_intLifetime1 != 1) {
               if (var2_intLifetime1 != 2) {
                 return;
@@ -2294,7 +2294,7 @@ public final class HostileSpawn extends NetworkGameClient {
         CrossfadingMidiPcmStream var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(9, false, 11, 23, 0, false, 13, 10);
+          this.initializeFramework(9, false, 11, 23, 0, false, 13, 10);
           eh.field_c = new PcmStreamMixer();
           var2 = new MidiPcmStream();
           var2.setChannelProgram(param0 + 4325, 128, 9);

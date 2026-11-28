@@ -278,7 +278,7 @@ class RichTextWidget extends InteractiveWidget {
         bf.c(109);
         BufferedSocket.a(-118);
         bl.a(true);
-        if (ob.l(-1)) {
+        if (NetworkGameClient.l(-1)) {
           sn.field_c.d((byte) -75, 1);
           bk.a((byte) 83, 0);
         }

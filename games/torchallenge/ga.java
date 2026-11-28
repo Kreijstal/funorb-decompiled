@@ -361,7 +361,7 @@ final class ga extends DefaultTextWidgetRenderer {
         field_u = null;
     }
 
-    final static int a(byte param0, int param1) {
+    final static int lookupFixedPointSine(byte param0, int param1) {
         if (param0 < 3) {
           field_x = (int[][][]) null;
         }
@@ -385,7 +385,7 @@ final class ga extends DefaultTextWidgetRenderer {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$f0c91481eb80(int param0, int param1) {
+    final static int lookupFixedPointSineWithIntGuard(int param0, int param1) {
         if (param0 < 3) {
           field_x = (int[][][]) null;
         }

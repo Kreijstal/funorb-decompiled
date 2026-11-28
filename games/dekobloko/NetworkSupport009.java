@@ -382,13 +382,13 @@ final class NetworkSupport009 {
               MixedSupport049.performAction0587(GameDomainSupport003.integerState0278, MixedSupport039.integerState0233, 17, packetBufferLocal9, DisplayNameSelectionPanel.integerState0122);
               packetBufferLocal9.writeByte(true, 15);
               packetBufferLocal9.writeInt(ReturnedShapeUpdate.integerState0880, false);
-              EditableTextField.bufferedSocketState0003.performAction1374(0, 13, integerArgument1 + 1, packetBufferLocal9.payload);
+              EditableTextField.bufferedSocketState0003.enqueueWrite(0, 13, integerArgument1 + 1, packetBufferLocal9.payload);
               MixedSupport053.integerState0273 = MixedSupport053.integerState0273 + 1;
               NetworkSupport007.longState0030 = 30000L + MixedSupport062.correctedCurrentTimeMillis(integerArgument1 ^ 4);
             }
             if (MixedSupport053.integerState0273 == 3) {
-              if (EditableTextField.bufferedSocketState0003.computeInteger1377(0) > 0) {
-                integerLocal7 = EditableTextField.bufferedSocketState0003.computeInteger1378((byte) 8);
+              if (EditableTextField.bufferedSocketState0003.availableBytes(0) > 0) {
+                integerLocal7 = EditableTextField.bufferedSocketState0003.readByteOrEof((byte) 8);
                 if (integerLocal7 != 0) {
                   stackIntegerLocal3 = InputAdapter001.computeInteger0068(0, integerLocal7);
                   return stackIntegerLocal3;

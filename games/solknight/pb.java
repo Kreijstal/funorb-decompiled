@@ -32,7 +32,7 @@ final class pb implements WidgetRenderer {
           DelegatingCanvas.field_d = new uh[var3];
           bg.field_v = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            DelegatingCanvas.field_d[var4] = ab.a(var8, -14945);
+            DelegatingCanvas.field_d[var4] = NetworkGameClient.a(var8, -14945);
           }
           var5_int = -69 % ((param1 + 46) / 41);
           var10.endBitAccess(0);

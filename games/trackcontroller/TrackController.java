@@ -11,7 +11,7 @@ public final class TrackController extends GameShell {
     public static boolean field_F;
 
     public final void init() {
-        this.a((byte) -123, "trackcontroller", 12);
+        this.startWithDefaultSize((byte) -123, "trackcontroller", 12);
     }
 
     private final void s(int param0) {
@@ -51,7 +51,7 @@ public final class TrackController extends GameShell {
               if ((decompiledFrameRemainder1) &&
                 (decompiledFrameRemainder0)) {
                 if (MatchingFieldValidator.keyDown[13]) {
-                  si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                  si.playIndexedSoundEffectWithIntGuard(-68, 5);
                   stackIn_50_0 = (SocketConnector.field_d <= 0) ? 13 : 12;
                   sc.field_g = stackIn_50_0;
                 }
@@ -200,7 +200,7 @@ public final class TrackController extends GameShell {
           } else {
             stackIn_7_1 = true;
           }
-          ji.$cfr$intArgs$a$f0d318109cc1(stackIn_6_0, stackIn_7_1, (java.awt.Canvas) (var7));
+          ji.drawClientCanvasWithIntGuard(stackIn_6_0, stackIn_7_1, (java.awt.Canvas) (var7));
           return;
         }
         if (param0 != 160) {
@@ -557,13 +557,13 @@ public final class TrackController extends GameShell {
         }
         stackIn_5_1 = 103;
         stackIn_6_2 = (null != AccountCreationResultPanel.field_rb);
-        this.a((byte) stackIn_5_1, stackIn_6_2);
+        this.serviceFramework((byte) stackIn_5_1, stackIn_6_2);
         if (ag.field_e) {
           this.r(-23);
           ag.field_e = false;
         }
         if (IterableNodeHashTable.a(43)) {
-          this.l(-122);
+          this.updateLoginFlow(-122);
           if (IterableNodeHashTable.a(114)) {
             if (!DefaultTextWidgetRenderer.a(1)) {
               return;
@@ -584,7 +584,7 @@ public final class TrackController extends GameShell {
                   this.s(0);
                 } else {
                   stackIn_47_1 = (null != AccountCreationResultPanel.field_rb);
-                  var2 = this.b(stackIn_47_1, 119);
+                  var2 = this.pollAccountUiActions(stackIn_47_1, 119);
                   if (var2 == 1) {
                     if (AccountCreationResultPanel.field_rb != null) {
                       oj.a(-108);
@@ -671,11 +671,11 @@ public final class TrackController extends GameShell {
           fe.a(true, Model.field_P[0], 256);
         }
         while (RegistrationAgreementPane.a(kg.field_b, param0)) {
-          this.e((byte) 85);
+          this.dispatchCommonPacket((byte) 85);
         }
         MovingBlock.a(-1, 0);
         if (IntrusiveNode.c(72)) {
-          var2Lifetime1 = this.d((byte) 103);
+          var2Lifetime1 = this.reconnectAndResendRequests((byte) 103);
           if (2 == var2Lifetime1) {
             SecondaryNodeDequeIterator.a(-28717);
           }
@@ -705,7 +705,7 @@ public final class TrackController extends GameShell {
     }
 
     final void initialise(byte param0) {
-        this.a(false, 0, 10, 12, 7, (byte) 3, 11, 9);
+        this.initializeFramework(false, 0, 10, 12, 7, (byte) 3, 11, 9);
         MidiPlayer var2 = new MidiPlayer();
         var2.a(false, 128, 9);
         mf.a(15, true, 22050, rg.field_c, (java.awt.Component) ((Object) ki.field_f), var2);

@@ -233,7 +233,7 @@ class gk extends IntrusiveNode {
         this.field_x = false;
     }
 
-    final static void a(boolean param0, String param1, byte param2, boolean param3) {
+    final static void showLoginDialog(boolean param0, String param1, byte param2, boolean param3) {
         im.a((byte) -110);
         TunnelCamera.field_Z.closeAllDialogs((byte) 105);
         om.field_p = new LoginPanel(kj.field_c, (String) null, IntrusiveNode.field_f, param0, param3);
@@ -378,7 +378,7 @@ class gk extends IntrusiveNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c13c9cd76cbe(boolean param0, String param1, int param2, boolean param3) {
+    final static void showLoginDialogWithIntGuard(boolean param0, String param1, int param2, boolean param3) {
         im.a((byte) -110);
         TunnelCamera.field_Z.closeAllDialogs((byte) 105);
         om.field_p = new LoginPanel(kj.field_c, (String) null, IntrusiveNode.field_f, param0, param3);

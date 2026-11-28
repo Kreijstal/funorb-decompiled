@@ -38,7 +38,7 @@ final class ga {
         }
     }
 
-    final static void a(byte param0, boolean param1, java.awt.Canvas param2) {
+    final static void drawClientCanvas(byte param0, boolean param1, java.awt.Canvas param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -100,7 +100,7 @@ final class ga {
         field_a = null;
         if (param0 != 0) {
           java.awt.Canvas var2 = (java.awt.Canvas) null;
-          ga.$cfr$intArgs$a$f0d318109cc1(-81, true, (java.awt.Canvas) null);
+          ga.drawClientCanvasWithIntGuard(-81, true, (java.awt.Canvas) null);
         }
     }
 
@@ -110,7 +110,7 @@ final class ga {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$f0d318109cc1(int param0, boolean param1, java.awt.Canvas param2) {
+    final static void drawClientCanvasWithIntGuard(int param0, boolean param1, java.awt.Canvas param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

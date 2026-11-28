@@ -19,8 +19,8 @@ final class cg {
         }
     }
 
-    final static void a(byte param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(byte param0, ResourceArchive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2609_0;
             StringBuilder stackIn_2609_1;
             String stackIn_2610_2;
@@ -32,7 +32,7 @@ final class cg {
             byte param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(byte initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2609_0 = null;
@@ -44,7 +44,7 @@ final class cg {
                 this.var3 = 0;
                 this.var4 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 ValidationStatusIcon.field_D = param1;
                 var2 = AgeValidator.a((byte) 117, "loginm3");
                 if (var2 != null) {
@@ -1036,7 +1036,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 100, "pleasereenterpass");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   c.a(param0 + 99, var2);
                 }
@@ -1990,7 +1990,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 98, "newgame");
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   c.a(0, var2);
                 }
@@ -2959,7 +2959,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 98, "mustlogin_alternate,4");
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadLoginPromptsAndSubscriptionText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   qi.field_s[4] = c.a(0, var2);
                 }
@@ -3036,13 +3036,13 @@ final class cg {
             void run() {
                 var3 = Bounce.field_N;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadLoginPromptsAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3063,7 +3063,7 @@ final class cg {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 

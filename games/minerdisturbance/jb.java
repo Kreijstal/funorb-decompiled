@@ -8,7 +8,7 @@ final class jb extends IntrusiveNode {
     static int[] field_o;
     static int field_p;
 
-    final static boolean a(boolean param0, byte param1, boolean param2, int param3, boolean param4) {
+    final static boolean drawAchievementGrid(boolean param0, byte param1, boolean param2, int param3, boolean param4) {
         int var25 = 0;
         int[] stackIn_4_0 = null;
         int stackIn_12_0 = 0;
@@ -295,7 +295,7 @@ final class jb extends IntrusiveNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static boolean $cfr$intArgs$a$3cff09437531(boolean param0, int param1, boolean param2, int param3, boolean param4) {
+    final static boolean drawAchievementGridWithIntGuard(boolean param0, int param1, boolean param2, int param3, boolean param4) {
         int var25 = 0;
         int[] stackIn_4_0 = null;
         int stackIn_12_0 = 0;

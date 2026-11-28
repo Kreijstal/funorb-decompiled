@@ -39,7 +39,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
 
     final void c(byte param0) {
         if (this.field_q != null) {
-          this.field_q.d(param0 ^ 16777114);
+          this.field_q.close(param0 ^ 16777114);
         }
         if (param0 != 101) {
           SocketArchiveRequestConnection.a(-15, (byte) 51);
@@ -279,7 +279,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
 
     final void b(byte param0) {
         try {
-          this.field_q.d(16777215);
+          this.field_q.close(16777215);
         } catch (Exception exception) {
         }
         this.field_q = null;
@@ -319,12 +319,12 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
             }
             ((PacketBuffer) (Object) stackIn_4_0).writeByte(stackIn_5_1, (byte) -127);
             this.field_g.writeLong40(2488, 0L);
-            this.field_q.a(-103, this.field_g.payload, this.field_g.payload.length, param1);
+            this.field_q.enqueueWrite(-103, this.field_g.payload, this.field_g.payload.length, param1);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_q.d(16777215);
+              this.field_q.close(16777215);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;
@@ -399,7 +399,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
             this.field_g.writeByte(6, (byte) -59);
             this.field_g.writeMedium((byte) -38, 3);
             this.field_g.writeShort(0, (byte) -118);
-            this.field_q.a(-102, this.field_g.payload, this.field_g.payload.length, 0);
+            this.field_q.enqueueWrite(-102, this.field_g.payload, this.field_g.payload.length, 0);
             if (param0 >= -5) {
               avatarSprites = (Sprite[][]) null;
             }
@@ -407,7 +407,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_q.d(16777215);
+              this.field_q.close(16777215);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -440,7 +440,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
           try {
             if (null != this.field_q) {
               try {
-                this.field_q.d(16777215);
+                this.field_q.close(16777215);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -477,12 +477,12 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                 this.field_g.writeByte(4, (byte) -112);
                 this.field_g.writeByte((int) this.field_i, (byte) -99);
                 this.field_g.writeInt(false, 0);
-                this.field_q.a(-126, this.field_g.payload, this.field_g.payload.length, 0);
+                this.field_q.enqueueWrite(-126, this.field_g.payload, this.field_g.payload.length, 0);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_q.d(16777215);
+                  this.field_q.close(16777215);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
@@ -551,7 +551,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
             this.field_d = this.field_d + var4;
             if (30000 < this.field_d) {
               try {
-                this.field_q.d(param0 + 16748049);
+                this.field_q.close(param0 + 16748049);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -572,13 +572,13 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
             return true;
           }
           try {
-            this.field_q.a(true);
+            this.field_q.checkWriteError(true);
             var2 = (NetworkArchiveRequest) (this.field_f.b(48));
             while (var2 != null) {
               this.field_g.position = 0;
               this.field_g.writeByte(1, (byte) -96);
               this.field_g.writeLong40(2488, var2.field_m);
-              this.field_q.a(-124, this.field_g.payload, this.field_g.payload.length, 0);
+              this.field_q.enqueueWrite(-124, this.field_g.payload, this.field_g.payload.length, 0);
               this.field_c.a(var2, true);
               var2 = (NetworkArchiveRequest) (this.field_f.a((byte) 108));
             }
@@ -587,12 +587,12 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               this.field_g.position = 0;
               this.field_g.writeByte(0, (byte) -74);
               this.field_g.writeLong40(2488, var2Lifetime1.field_m);
-              this.field_q.a(-106, this.field_g.payload, this.field_g.payload.length, 0);
+              this.field_q.enqueueWrite(-106, this.field_g.payload, this.field_g.payload.length, 0);
               this.field_k.a(var2Lifetime1, true);
               var2Lifetime1 = (NetworkArchiveRequest) (this.field_h.a((byte) 113));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
-              var3_int = this.field_q.b(0);
+              var3_int = this.field_q.availableBytes(0);
               if (var3_int < 0) {
                 throw new IOException();
               }
@@ -611,7 +611,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.field_q.a(this.field_a.payload, 0, var5, this.field_a.position);
+                  this.field_q.readFully(this.field_a.payload, 0, var5, this.field_a.position);
                   if (this.field_i != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
                       this.field_a.payload[this.field_a.position + var6] = (byte)ma.bitwiseXor((int) this.field_a.payload[this.field_a.position + var6], (int) this.field_i);
@@ -685,7 +685,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.field_q.a(this.field_l.field_x.payload, 0, var6, this.field_l.field_x.position);
+                  this.field_q.readFully(this.field_l.field_x.payload, 0, var6, this.field_l.field_x.position);
                   if (this.field_i != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
                       this.field_l.field_x.payload[this.field_l.field_x.position + var7] = (byte)ma.bitwiseXor((int) this.field_l.field_x.payload[this.field_l.field_x.position + var7], (int) this.field_i);
@@ -712,7 +712,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_q.d(16777215);
+              this.field_q.close(16777215);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;

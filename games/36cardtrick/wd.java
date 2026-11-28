@@ -243,7 +243,7 @@ final class wd {
             sg.field_b = true;
             return;
           }
-          if (!c.b(true)) {
+          if (!NetworkGameClient.b(true)) {
             DebouncedFieldValidator.c(-128);
             cd.field_e = 11;
             sg.field_b = true;
@@ -258,7 +258,7 @@ final class wd {
           sg.field_b = true;
           return;
         }
-        if (!c.b(true)) {
+        if (!NetworkGameClient.b(true)) {
           DebouncedFieldValidator.c(-128);
           cd.field_e = 11;
           sg.field_b = true;

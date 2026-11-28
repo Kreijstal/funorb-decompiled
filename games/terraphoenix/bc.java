@@ -29,7 +29,7 @@ final class bc {
             }
             if (TextFieldValidator.field_l.position > 0) {
               try {
-                ig.field_e.a(TextFieldValidator.field_l.position, 0, (byte) -97, TextFieldValidator.field_l.payload);
+                ig.field_e.enqueueWrite(TextFieldValidator.field_l.position, 0, (byte) -97, TextFieldValidator.field_l.payload);
                 bl.field_h = ll.correctedCurrentTimeMillis(param1 ^ 1000);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

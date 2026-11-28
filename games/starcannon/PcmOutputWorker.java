@@ -80,18 +80,18 @@ final class PcmOutputWorker implements Runnable {
               oe.a(wj.field_b, 32, var2, ResizableModalDialog.field_M, ld.field_fb);
               var2.writeByte(15, -122);
               var2.writeInt((byte) -113, ac.field_e);
-              AccountCreationResultPanel.field_sb.a(0, var2.payload, (byte) 87, 13);
+              AccountCreationResultPanel.field_sb.enqueueWrite(0, var2.payload, (byte) 87, 13);
               KeyboardInput.field_a = KeyboardInput.field_a + 1;
               wf.field_f = dd.correctedCurrentTimeMillis(69) + 30000L;
             }
             if (KeyboardInput.field_a == 3) {
-              if (0 >= AccountCreationResultPanel.field_sb.c(122)) {
+              if (0 >= AccountCreationResultPanel.field_sb.availableBytes(122)) {
                 if (wf.field_f < dd.correctedCurrentTimeMillis(63)) {
                   stackIn_33_0 = ej.a(2, -2);
                   return stackIn_33_0;
                 }
               } else {
-                var1_int = AccountCreationResultPanel.field_sb.a(488852616);
+                var1_int = AccountCreationResultPanel.field_sb.readByteOrEof(488852616);
                 if (var1_int != 0) {
                   stackIn_28_0 = ej.a(2, var1_int);
                   return stackIn_28_0;

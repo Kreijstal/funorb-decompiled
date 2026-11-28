@@ -169,9 +169,9 @@ final class df implements WidgetRenderer {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               MouseWheelInput.a(var16, 12726);
               if (var6_intLifetime1 != 0) {
-                DualLinkDeque.a((byte) 79, rb.field_w, b.field_t, NanoFrameTimer.field_h, FrameTimer.field_b, var6_intLifetime1);
+                DualLinkDeque.a((byte) 79, NetworkGameClient.field_w, b.field_t, NanoFrameTimer.field_h, FrameTimer.field_b, var6_intLifetime1);
               } else {
-                DualLinkDeque.a((byte) 78, rb.field_w, b.field_t, NanoFrameTimer.field_h, FrameTimer.field_b, var6_intLifetime1);
+                DualLinkDeque.a((byte) 78, NetworkGameClient.field_w, b.field_t, NanoFrameTimer.field_h, FrameTimer.field_b, var6_intLifetime1);
               }
             }
             BoundedRandomAccessFile.a(var5, (byte) 47);

@@ -61,7 +61,7 @@ class cf extends DualLinkNode {
           }
           return;
         }
-        ib.a(uh.field_m, (byte) 35);
+        ib.loadGameInterfaceText(uh.field_m, (byte) 35);
         uh.field_m = null;
         ql.f(8036);
         var1Lifetime1 = -33 % ((param0 + 22) / 61);

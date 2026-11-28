@@ -47,7 +47,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
           if (AgeValidator.a(false, param1)) {
             return true;
           }
-          var6 = bi.field_s;
+          var6 = NetworkGameClient.field_s;
           var2 = var6;
           for (var3 = param0; var3 < var6.length; var3++) {
             var4 = var6[var3];

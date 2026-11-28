@@ -66,18 +66,18 @@ final class lf {
               LoginPanel.a(fl.field_d, var2, fa.field_q, false, rb.field_eb);
               var2.writeByte(15, -49152);
               var2.writeInt(param0 - 803539347, mk.field_f);
-              ProxyAuthenticationRequiredException.field_a.a(var2.payload, 0, (byte) 93, 13);
+              ProxyAuthenticationRequiredException.field_a.enqueueWrite(var2.payload, 0, (byte) 93, 13);
               ii.field_T = ii.field_T + 1;
               wi.field_f = 30000L + pf.correctedCurrentTimeMillis(0);
             }
             if (ii.field_T == param0) {
-              if (ProxyAuthenticationRequiredException.field_a.c(72) <= 0) {
+              if (ProxyAuthenticationRequiredException.field_a.availableBytes(72) <= 0) {
                 if (wi.field_f < pf.correctedCurrentTimeMillis(param0 ^ 3)) {
                   stackIn_31_0 = dh.a(true, -2);
                   return stackIn_31_0;
                 }
               } else {
-                var1_int = ProxyAuthenticationRequiredException.field_a.a(-16840);
+                var1_int = ProxyAuthenticationRequiredException.field_a.readByteOrEof(-16840);
                 if (0 != var1_int) {
                   stackIn_26_0 = dh.a(true, var1_int);
                   return stackIn_26_0;

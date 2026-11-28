@@ -65,7 +65,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         }
     }
 
-    final static int a(nk param0, boolean param1, int param2) {
+    final static int a(NetworkGameClient param0, boolean param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -76,7 +76,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
           if (param2 >= -41) {
             field_i = (MusicTrack[]) null;
           }
-          stackIn_3_0 = param0.b(param1, -118);
+          stackIn_3_0 = param0.pollAccountUiActions(param1, -118);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

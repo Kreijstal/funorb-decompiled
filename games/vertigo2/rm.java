@@ -207,7 +207,7 @@ final class rm extends TextureOperator {
     final static void b(byte param0) {
         int var1 = -81 % ((47 - param0) / 34);
         if (lo.field_k != null) {
-          lo.field_k.b(0);
+          lo.field_k.close(0);
           lo.field_k = null;
         }
     }

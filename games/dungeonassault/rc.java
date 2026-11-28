@@ -122,7 +122,7 @@ final class rc {
             var6 = StripedProgressWidget.field_K[var3];
             stackIn_10_0 = 107;
             stackIn_11_1 = !(var4 < 0);
-            var7 = rb.$cfr$intArgs$a$62abead39cee(stackIn_10_0, stackIn_11_1, var6);
+            var7 = rb.measureSelectedFontTextWidthWithIntGuard(stackIn_10_0, stackIn_11_1, var6);
             var8 = -(var7 >> 1) + tm.field_e;
             if (var4 >= 0) {
               var2 = var2 + SoundCache.field_j;

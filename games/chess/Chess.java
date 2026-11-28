@@ -253,7 +253,7 @@ public final class Chess extends NetworkGameClient {
           om.a(119);
         }
         stackIn_19_1 = (null != StripedProgressWidget.field_R);
-        this.b(stackIn_19_1, (byte) 31);
+        this.serviceFramework(stackIn_19_1, (byte) 31);
         if (ic.field_b) {
           this.initializeAssetArchives(111);
           ic.field_b = false;
@@ -267,7 +267,7 @@ public final class Chess extends NetworkGameClient {
         TriangleRasterizer.useRasterClip();
         TriangleRasterizer.setProjectionCenter(370, ec.c((byte) -63) + 240);
         if (PasswordValidator.h(30065)) {
-          this.m(-122);
+          this.updateLoginFlow(-122);
           if (PasswordValidator.h(30065)) {
             if (AccountCreationResultPanel.p(-77)) {
               discarded$2 = this.advanceChessAssetLoading(19763, false);
@@ -296,7 +296,7 @@ public final class Chess extends NetworkGameClient {
               } else {
                 stackIn_54_1 = 68;
                 stackIn_55_2 = (null != StripedProgressWidget.field_R);
-                var2 = this.b((byte) stackIn_54_1, stackIn_55_2);
+                var2 = this.pollAccountUiActions((byte) stackIn_54_1, stackIn_55_2);
                 if (var2 == 1 ||
                   var2 == 2) {
                   if (StripedProgressWidget.field_R != null) {
@@ -355,7 +355,7 @@ public final class Chess extends NetworkGameClient {
               DisplayNameSelectionPanel.field_O = 0;
             }
             if (nc.j(124)) {
-              var2Lifetime1 = this.l(0);
+              var2Lifetime1 = this.attemptReconnect(0);
               if (var2Lifetime1 == 0 ||
                 var2Lifetime1 == 1) {
                 sc.a(-116, 2);
@@ -551,7 +551,7 @@ public final class Chess extends NetworkGameClient {
                 continue;
               }
             }
-            this.b(true);
+            this.dispatchCommonPacket(true);
             continue;
           }
           de.a(-31645);
@@ -1280,7 +1280,7 @@ public final class Chess extends NetworkGameClient {
     }
 
     final void initializeGame(int param0) {
-        this.a(14, 12, 0, 11, 14, false, -4, 10);
+        this.initializeFramework(14, 12, 0, 11, 14, false, -4, 10);
         aa.field_f = ug.field_b;
         TriangleRasterizer.field_m = false;
         MidiPcmStream var4 = new MidiPcmStream();
@@ -1297,7 +1297,7 @@ public final class Chess extends NetworkGameClient {
         if (param0 != 2) {
           field_E = -100;
         }
-        this.a(true, param0 + 10229, false, true, false, false, true);
+        this.configureOptionalPacketHandlers(true, param0 + 10229, false, true, false, false, true);
         sk.field_r[62] = 1;
         sk.field_r[64] = 1;
         sk.field_r[61] = 5;
@@ -1488,7 +1488,7 @@ public final class Chess extends NetworkGameClient {
     }
 
     public final void init() {
-        this.a(16742, 15, "Chess");
+        this.startWithDefaultSize(16742, 15, "Chess");
     }
 
     private final void loadMatchArtwork(int param0) {

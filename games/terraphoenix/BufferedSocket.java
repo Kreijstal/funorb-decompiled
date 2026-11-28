@@ -18,7 +18,7 @@ final class BufferedSocket implements Runnable {
     static int field_k;
     private int field_j;
 
-    final void a(int param0, int param1, byte param2, byte[] param3) throws IOException {
+    final void enqueueWrite(int param0, int param1, byte param2, byte[] param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -295,7 +295,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(byte[] param0, int param1, int param2, byte param3) throws IOException {
+    final void readFully(byte[] param0, int param1, int param2, byte param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -335,7 +335,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int b(int param0) throws IOException {
+    final int readByteOrEof(int param0) throws IOException {
         if (param0 != 0) {
           this.field_m = (byte[]) null;
           if (this.field_g) {

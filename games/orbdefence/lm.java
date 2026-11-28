@@ -40,8 +40,8 @@ final class lm {
         }
     }
 
-    final static void a(byte param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(byte param0, ResourceArchive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2616_0;
             StringBuilder stackIn_2616_1;
             String stackIn_2617_2;
@@ -53,7 +53,7 @@ final class lm {
             byte param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(byte initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2616_0 = null;
@@ -65,7 +65,7 @@ final class lm {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 ak.field_y = param1;
                 var2 = CrossfadingMidiPcmStream.a(15136, "loginm3");
                 if (var2 != null) {
@@ -1045,7 +1045,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 ^ 15188, "pleaselogin_member");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
@@ -1978,7 +1978,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "returntopausemenu");
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
                 }
@@ -2931,7 +2931,7 @@ final class lm {
                   InteractiveWidget.field_E[7] = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadLoginPromptsAndSubscriptionText() throws java.lang.RuntimeException {
                 var2 = CrossfadingMidiPcmStream.a(15136, "discard");
                 if (var2 != null) {
                   bm.field_c = ProxyAuthenticationRequiredException.a(var2, -12465);
@@ -3057,13 +3057,13 @@ final class lm {
             void run() {
                 var3 = OrbDefence.field_D ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadLoginPromptsAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3083,7 +3083,7 @@ final class lm {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 
@@ -3127,7 +3127,7 @@ final class lm {
             stackIn_15_0 = -125;
             break;
           }
-          md.$cfr$intArgs$a$6121ff5511c4(stackIn_15_0);
+          md.clearIndexedSpriteDecodeBuffersWithIntGuard(stackIn_15_0);
           stackIn_16_0 = var1;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

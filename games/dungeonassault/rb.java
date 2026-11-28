@@ -80,7 +80,7 @@ final class rb extends InteractiveWidget {
         field_K = null;
     }
 
-    final static int a(byte param0, boolean param1, String param2) {
+    final static int measureSelectedFontTextWidth(byte param0, boolean param1, String param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_4_0 = 0;
@@ -92,7 +92,7 @@ final class rb extends InteractiveWidget {
         try {
           if (param0 <= 91) {
             var4 = (String) null;
-            rb.$cfr$intArgs$a$62abead39cee(-6, true, (String) null);
+            rb.measureSelectedFontTextWidthWithIntGuard(-6, true, (String) null);
           }
           if (param1) {
             stackIn_6_0 = mp.field_a.stringWidth(param2);
@@ -147,7 +147,7 @@ final class rb extends InteractiveWidget {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$62abead39cee(int param0, boolean param1, String param2) {
+    final static int measureSelectedFontTextWidthWithIntGuard(int param0, boolean param1, String param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_4_0 = 0;
@@ -159,7 +159,7 @@ final class rb extends InteractiveWidget {
         try {
           if (param0 <= 91) {
             var4 = (String) null;
-            rb.$cfr$intArgs$a$62abead39cee(-6, true, (String) null);
+            rb.measureSelectedFontTextWidthWithIntGuard(-6, true, (String) null);
           }
           if (param1) {
             stackIn_6_0 = mp.field_a.stringWidth(param2);

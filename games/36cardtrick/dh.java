@@ -21,7 +21,7 @@ final class dh extends IntrusiveNode {
         }
     }
 
-    final static String a(boolean param0, byte param1, boolean param2, boolean param3) {
+    final static String getSaveResultsLoginPrompt(boolean param0, byte param1, boolean param2, boolean param3) {
         int var4;
         var4 = 0;
         if (param0) {
@@ -55,7 +55,7 @@ final class dh extends IntrusiveNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static String $cfr$intArgs$a$feb7e63b59d8(boolean param0, int param1, boolean param2, boolean param3) {
+    final static String getSaveResultsLoginPromptWithIntGuard(boolean param0, int param1, boolean param2, boolean param3) {
         int var4;
         var4 = 0;
         if (param0) {

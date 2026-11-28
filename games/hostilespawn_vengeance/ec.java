@@ -84,7 +84,7 @@ final class ec {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void setAlternateMovementKeys(byte param0, boolean param1) {
         hk.field_q = param1 ? true : false;
         if (param0 != -123) {
           return;
@@ -142,7 +142,7 @@ final class ec {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
+    final static void setAlternateMovementKeysWithIntGuard(int param0, boolean param1) {
         hk.field_q = param1 ? true : false;
         if (param0 != -123) {
           return;

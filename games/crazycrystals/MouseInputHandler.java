@@ -550,7 +550,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           for (var4Lifetime1 = 0; var4Lifetime1 < je.field_i.length; var4Lifetime1++) {
             stackIn_90_0 = 90;
             stackIn_91_1 = !(ub.field_b[var4Lifetime1] < 0);
-            var5Lifetime1 = vm.$cfr$intArgs$a$62abead39cee(stackIn_90_0, stackIn_91_1, je.field_i[var4Lifetime1]);
+            var5Lifetime1 = vm.measureSelectedFontTextWidthWithIntGuard(stackIn_90_0, stackIn_91_1, je.field_i[var4Lifetime1]);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -560,7 +560,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = vm.$cfr$intArgs$a$62abead39cee(98, false, var11);
+              var7Lifetime1 = vm.measureSelectedFontTextWidthWithIntGuard(98, false, var11);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -568,7 +568,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             var4_ref_String__Lifetime1 = lo.field_c;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = vm.$cfr$intArgs$a$62abead39cee(-113, false, var12);
+              var7Lifetime1Lifetime1 = vm.measureSelectedFontTextWidthWithIntGuard(-113, false, var12);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -596,7 +596,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           while (je.field_i.length > var4Lifetime3) {
             var6Lifetime1 = ub.field_b[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = vm.$cfr$intArgs$a$62abead39cee(-112, true, je.field_i[var4Lifetime3]);
+              var7Lifetime2 = vm.measureSelectedFontTextWidthWithIntGuard(-112, true, je.field_i[var4Lifetime3]);
               var5Lifetime3 = var5Lifetime3 + field_a;
               var8Lifetime1 = -(var7Lifetime2 >> 1) + oa.field_b;
               cd.field_z[var4Lifetime3] = new int[4];

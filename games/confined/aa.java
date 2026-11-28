@@ -13,7 +13,7 @@ final class aa {
         }
         ka.field_N = cc.a(1, -14245);
         GameCanvas.field_a = cc.a(2, -14245);
-        i.field_u = cc.a(3, -14245);
+        NetworkGameClient.field_u = cc.a(3, -14245);
         PasswordValidator.field_j = cc.a(4, -14245);
         ih.field_d = cc.a(5, -14245);
         EditableTextField.field_U = cc.a(12, -14245);
@@ -25,7 +25,7 @@ final class aa {
         dg.field_n.a(param0, fi.field_b, ByteArrayPoolSupport.field_a, pb.field_e, "basic");
         dg.field_n.a((byte) -6, ka.field_N, un.field_b, NameSuggestionsPanel.field_P);
         dg.field_n.a((byte) -6, GameCanvas.field_a, d.field_f, DualLinkNode.field_n);
-        dg.field_n.a((byte) -6, i.field_u, d.field_f, DualLinkNode.field_n);
+        dg.field_n.a((byte) -6, NetworkGameClient.field_u, d.field_f, DualLinkNode.field_n);
         dg.field_n.a((byte) -6, PasswordValidator.field_j, d.field_f, DualLinkNode.field_n);
         dg.field_n.a((byte) -6, ih.field_d, fi.field_b, ByteArrayPoolSupport.field_a);
         dg.field_n.a((byte) -6, EditableTextField.field_U, pb.field_a, ByteStorage.field_d);

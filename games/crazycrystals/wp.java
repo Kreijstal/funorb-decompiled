@@ -175,7 +175,7 @@ final class wp {
             }
             stackIn_38_0 = 102;
             stackIn_39_1 = !(var4 < 0);
-            var7Lifetime1 = vm.$cfr$intArgs$a$62abead39cee(stackIn_38_0, stackIn_39_1, var6);
+            var7Lifetime1 = vm.measureSelectedFontTextWidthWithIntGuard(stackIn_38_0, stackIn_39_1, var6);
             var8Lifetime1 = oa.field_b - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (DefaultTextWidgetRenderer.field_l.field_c == var4) {

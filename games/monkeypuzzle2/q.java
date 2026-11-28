@@ -118,7 +118,7 @@ final class q {
           while (BoundedRandomAccessFile.field_k.length > var3_int) {
             var5 = gh.field_a[var3_int];
             if (var5 >= 0) {
-              var6 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(74, BoundedRandomAccessFile.field_k[var3_int], true);
+              var6 = AccountNameAvailabilityValidator.measureSelectedFontTextWidthWithIntGuard(74, BoundedRandomAccessFile.field_k[var3_int], true);
               var7 = jc.field_b - (var6 >> 1);
               var4 = var4 + SoundCache.field_a;
               if (lf.a(param1 - 19828, param2, param0, hb.field_n + (vf.field_b << 1), (BoundedRandomAccessFile.field_h << 1) + var6, -BoundedRandomAccessFile.field_h + var7, var4)) {

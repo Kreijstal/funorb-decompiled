@@ -46,12 +46,12 @@ final class vd {
             }
           } else {
             if (var2 != 0 &&
-              2 != rb.field_s) {
+              2 != NetworkGameClient.field_s) {
               ContentTransitionDialog.l(-12128);
             }
           }
           if (var3 == 0 &&
-            rb.field_s == 2) {
+            NetworkGameClient.field_s == 2) {
             var4 = ih.correctedCurrentTimeMillis((byte) -98) - jj.field_p;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {

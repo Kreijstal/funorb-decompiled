@@ -14,7 +14,7 @@ abstract class FunOrbClient extends GameApplet {
     String stringState0042;
     private boolean booleanState0009;
 
-    private final void performAction0113(byte byteArgument1) {
+    private final void enablePacketFive(byte byteArgument1) {
         try {
           PasswordValidator.booleanArrayState0010[5] = true;
           if (byteArgument1 <= 62) {
@@ -25,18 +25,18 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    private final void performAction0121(int integerArgument1) {
+    private final void enablePacketSix(int integerArgument1) {
         try {
           PasswordValidator.booleanArrayState0010[6] = true;
           if (integerArgument1 != -1) {
-            this.performAction0122(-42);
+            this.readSessionCookieUpdate(-42);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "bd.EA(" + integerArgument1 + ')');
         }
     }
 
-    private final int computeInteger0110(boolean booleanArgument1, int integerArgument2, boolean booleanArgument3) {
+    private final int processAccountUiActions(boolean booleanArgument1, int integerArgument2, boolean booleanArgument3) {
         try {
           int stackIntegerLocal1 = 0;
           int stackIntegerLocal2 = 0;
@@ -188,7 +188,7 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    private final void performAction0122(int integerArgument1) {
+    private final void readSessionCookieUpdate(int integerArgument1) {
         String stringLocal1 = null;
         RuntimeException caughtExceptionLocal2 = null;
         RuntimeException runtimeExceptionLocal3 = null;
@@ -196,7 +196,7 @@ abstract class FunOrbClient extends GameApplet {
           stringLocal1 = MusicTrack.computeString1662(integerArgument1 ^ -12040);
           MixedSupport089.performAction1139(DraggableWidgetContainer.computeApplet1485(25144), -1, stringLocal1);
           if (integerArgument1 != 0) {
-            this.performAction0117((byte) 100);
+            this.dispatchCommonPacket((byte) 100);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal4) {
@@ -206,7 +206,7 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    final void performAction0119(int integerArgument1) {
+    final void updateLoginFlow(int integerArgument1) {
         int discarded$0 = 0;
         int discarded$1 = 0;
         int integerLocal3 = 0;
@@ -220,7 +220,7 @@ abstract class FunOrbClient extends GameApplet {
           }
           if (ResizableModalDialog.computeBoolean1556((byte) 124)) {
             stackBooleanLocal4 = (null != MixedSupport020.fullscreenCanvasState0001);
-            discarded$0 = this.computeInteger0110(stackBooleanLocal4, -41, false);
+            discarded$0 = this.processAccountUiActions(stackBooleanLocal4, -41, false);
           } else {
             if (ContentTransitionDialog.integerState0091 >= 10) {
               if (!UiComponentPart009.computeBoolean0376(480)) {
@@ -228,7 +228,7 @@ abstract class FunOrbClient extends GameApplet {
                 return;
               }
               if (MixedSupport052.integerState0269 == 0) {
-                discarded$1 = this.computeInteger0110(false, -104, false);
+                discarded$1 = this.processAccountUiActions(false, -104, false);
                 return;
               }
               FullscreenCanvas.performAction1381(HuffmanCodec.integerState0353, (byte) -101);
@@ -243,7 +243,7 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    private final void performAction0116(byte byteArgument1) {
+    private final void enablePacketsElevenToThirteen(byte byteArgument1) {
         try {
           PasswordValidator.booleanArrayState0010[13] = true;
           PasswordValidator.booleanArrayState0010[12] = true;
@@ -256,7 +256,7 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    final void performAction0112(boolean booleanArgument1, int integerArgument2) {
+    final void serviceFramework(boolean booleanArgument1, int integerArgument2) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -326,19 +326,19 @@ abstract class FunOrbClient extends GameApplet {
             SceneWidgetPart010.integerState0722 != 0) {
             if (ContentTransitionDialog.integerState0091 < 10) {
               if (SceneWidgetPart010.integerState0722 == 3) {
-                this.performAction0679(true, "js5crc");
+                this.showErrorPage(true, "js5crc");
               } else {
                 if (4 == SceneWidgetPart010.integerState0722) {
-                  this.performAction0679(true, "js5io");
+                  this.showErrorPage(true, "js5io");
                 } else {
                   if (SceneWidgetPart010.integerState0722 != 2) {
                     if (SceneWidgetPart010.integerState0722 == 5) {
-                      this.performAction0679(true, "outofdate");
+                      this.showErrorPage(true, "outofdate");
                     } else {
-                      this.performAction0679(true, "js5connect");
+                      this.showErrorPage(true, "js5connect");
                     }
                   } else {
-                    this.performAction0679(true, "js5connect_full");
+                    this.showErrorPage(true, "js5connect_full");
                   }
                 }
               }
@@ -401,7 +401,7 @@ abstract class FunOrbClient extends GameApplet {
               NodeDeque.resourceArchiveState0025.ensureIndexLoaded((byte) 121)) {
               if (NodeDeque.resourceArchiveState0025.hasGroupName("", integerArgument2 ^ -11)) {
                 if (NodeDeque.resourceArchiveState0025.tryLoadGroupByName("", (byte) -94)) {
-                  TranslatedUiText.performAction1063(NodeDeque.resourceArchiveState0025, (byte) 117);
+                  TranslatedUiText.loadSharedInterfaceText(NodeDeque.resourceArchiveState0025, (byte) 117);
                   NodeDeque.resourceArchiveState0025 = null;
                   NodeDeque.performAction1737(true);
                 }
@@ -509,7 +509,7 @@ abstract class FunOrbClient extends GameApplet {
           if (byteArgument2 != 102) {
             this.booleanState0007 = false;
           }
-          stackIntegerLocal2 = this.computeInteger0110(booleanArgument1, byteArgument2 ^ -124, true);
+          stackIntegerLocal2 = this.processAccountUiActions(booleanArgument1, byteArgument2 ^ -124, true);
           return stackIntegerLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal4) {
           caughtExceptionLocal3 = caughtParameterLocal4;
@@ -518,7 +518,7 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    final void performAction0117(byte byteArgument1) {
+    final void dispatchCommonPacket(byte byteArgument1) {
         int stackIntegerLocal1 = 0;
         boolean stackBooleanLocal2 = false;
         RuntimeException caughtExceptionLocal3 = null;
@@ -529,7 +529,7 @@ abstract class FunOrbClient extends GameApplet {
         integerLocal7 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           if (byteArgument1 < 115) {
-            this.performAction0119(-60);
+            this.updateLoginFlow(-60);
           }
           integerLocal4 = HashNode.integerState0070;
           if (integerLocal4 < 64 &&
@@ -579,7 +579,7 @@ abstract class FunOrbClient extends GameApplet {
                             }
                           }
                         } else {
-                          this.performAction0122(0);
+                          this.readSessionCookieUpdate(0);
                         }
                       } else {
                         MixedSupport131.performAction1670((byte) 112);
@@ -607,7 +607,7 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    private final void performAction0120(byte byteArgument1) {
+    private final void enablePacketFour(byte byteArgument1) {
         try {
           PasswordValidator.booleanArrayState0010[4] = true;
           if (byteArgument1 != -25) {
@@ -618,7 +618,7 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    final void performAction0106(int integerArgument1, int integerArgument2, String stringArgument3) {
+    final void startWithDefaultSize(int integerArgument1, int integerArgument2, String stringArgument3) {
         RuntimeException runtimeException = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -628,7 +628,7 @@ abstract class FunOrbClient extends GameApplet {
           if (integerArgument1 != -2990) {
             this.stringState0042 = (String) null;
           }
-          this.performAction0108(integerArgument2, false, 480, 640, stringArgument3);
+          this.readAppletParameters(integerArgument2, false, 480, 640, stringArgument3);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
           caughtExceptionLocal5 = caughtParameterLocal6;
@@ -644,7 +644,7 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    private final void performAction0107(int integerArgument1, boolean booleanArgument2) {
+    private final void enableDefaultPacketHandlers(int integerArgument1, boolean booleanArgument2) {
         try {
           if (integerArgument1 < 70) {
             this.stringState0042 = (String) null;
@@ -661,7 +661,7 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    private final int computeInteger0123(int integerArgument1) {
+    private final int attemptReconnect(int integerArgument1) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -692,7 +692,7 @@ abstract class FunOrbClient extends GameApplet {
           if (0 != integerLocal8 &&
             integerLocal8 != 1) {
             if (!GzipDecompressor.booleanState0102) {
-              this.performAction0679(true, "reconnect");
+              this.showErrorPage(true, "reconnect");
             }
             MixedSupport048.performAction0583(false);
             NetworkSupport003.performAction0345(EditableTextField.stringState0483, integerArgument1 ^ integerArgument1, integerLocal8);
@@ -725,7 +725,7 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    final void performAction0105(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, boolean booleanArgument8) {
+    final void initializeFramework(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, boolean booleanArgument8) {
         java.awt.Frame frameLocal1 = new java.awt.Frame("Jagex");
         frameLocal1.pack();
         frameLocal1.dispose();
@@ -746,14 +746,14 @@ abstract class FunOrbClient extends GameApplet {
           MixedSupport139.integerState0856 = integerArgument4;
           RenderingSupport002.integerState0112 = integerArgument5;
           ReturnedShape.integerState0697 = integerArgument6;
-          this.performAction0114(true);
+          this.initializePacketLengths(true);
           NetworkSupport008.performAction1170((byte) 13);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "bd.TA(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + integerArgument7 + ',' + booleanArgument8 + ')');
         }
     }
 
-    private final void performAction0126(int integerArgument1) {
+    private final void enablePacketOne(int integerArgument1) {
         try {
           PasswordValidator.booleanArrayState0010[1] = true;
           if (integerArgument1 != -1) {
@@ -764,31 +764,31 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    final void performAction0111(boolean booleanArgument1, boolean booleanArgument2, boolean booleanArgument3, boolean booleanArgument4, boolean booleanArgument5, boolean booleanArgument6, boolean booleanArgument7) {
+    final void configureOptionalPacketHandlers(boolean booleanArgument1, boolean booleanArgument2, boolean booleanArgument3, boolean booleanArgument4, boolean booleanArgument5, boolean booleanArgument6, boolean booleanArgument7) {
         RuntimeException caughtExceptionLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         try {
-          this.performAction0107(77, true);
+          this.enableDefaultPacketHandlers(77, true);
           if (booleanArgument1) {
-            this.performAction0126(-1);
+            this.enablePacketOne(-1);
           }
           if (booleanArgument3) {
-            this.performAction0124(7);
+            this.enablePacketTwo(7);
           }
           if (booleanArgument4) {
             return;
           }
           if (booleanArgument6) {
-            this.performAction0120((byte) -25);
+            this.enablePacketFour((byte) -25);
           }
           if (booleanArgument7) {
-            this.performAction0113((byte) 87);
+            this.enablePacketFive((byte) 87);
           }
           if (booleanArgument5) {
-            this.performAction0121(-1);
+            this.enablePacketSix(-1);
           }
           if (booleanArgument2) {
-            this.performAction0116((byte) 13);
+            this.enablePacketsElevenToThirteen((byte) 13);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal3) {
@@ -798,7 +798,7 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    private final void performAction0108(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, String stringArgument5) {
+    private final void readAppletParameters(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, String stringArgument5) {
         boolean stackBooleanLocal1 = false;
         Object stackObjectLocal2;
         String stackStringLocal3;
@@ -820,7 +820,7 @@ abstract class FunOrbClient extends GameApplet {
         String stringLocal19 = null;
         try {
           try {
-            if (!this.computeBoolean0674((byte) -29)) {
+            if (!this.allowAppletStartup((byte) -29)) {
               return;
             }
             this.stringState0042 = this.getCodeBase().getHost();
@@ -862,14 +862,14 @@ abstract class FunOrbClient extends GameApplet {
               stackObjectLocal6 = this;
               stackBooleanLocal7 = true;
             }
-            this.performAction0675(stackStringLocal3, stackIntegerLocal4, stackIntegerLocal5, stackBooleanLocal7, integerArgument3, integerArgument4, this.integerState0055);
+            this.startApplet(stackStringLocal3, stackIntegerLocal4, stackIntegerLocal5, stackBooleanLocal7, integerArgument3, integerArgument4, this.integerState0055);
           } catch (java.lang.Exception caughtParameterLocal20) {
             caughtExceptionLocal12 = caughtParameterLocal20;
             exceptionLocal14 = (Exception) (Object) caughtExceptionLocal12;
             stringLocal19 = (String) null;
             NetworkArchiveRequestManager.performAction1289((Throwable) ((Object) exceptionLocal14), 16408, (String) null);
             stackBooleanLocal8 = !(booleanArgument2);
-            this.performAction0679(stackBooleanLocal8, "crash");
+            this.showErrorPage(stackBooleanLocal8, "crash");
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal21) {
@@ -926,7 +926,7 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    private final void performAction0124(int integerArgument1) {
+    private final void enablePacketTwo(int integerArgument1) {
         if (integerArgument1 != 7) {
           return;
         }
@@ -937,13 +937,13 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    final int computeInteger0118(byte byteArgument1) {
+    final int reconnectAndResendRequests(byte byteArgument1) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int stackIntegerLocal3 = 0;
         RuntimeException caughtExceptionLocal4 = null;
         try {
-          integerLocal1 = this.computeInteger0123(-1);
+          integerLocal1 = this.attemptReconnect(-1);
           if (byteArgument1 <= 122) {
             this.integerState0058 = -122;
           }
@@ -980,7 +980,7 @@ abstract class FunOrbClient extends GameApplet {
         }
     }
 
-    private final void performAction0114(boolean booleanArgument1) {
+    private final void initializePacketLengths(boolean booleanArgument1) {
         ByteStorage.integerArrayState0158[18] = 1;
         ByteStorage.integerArrayState0158[4] = -1;
         ByteStorage.integerArrayState0158[13] = -1;

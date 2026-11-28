@@ -4,7 +4,7 @@
 import java.util.*;
 import java.io.PrintStream;
 
-public final class Lexicominos extends nk {
+public final class Lexicominos extends NetworkGameClient {
     static RgbSprite field_I;
     static String field_H;
     private boolean field_K;
@@ -924,7 +924,7 @@ public final class Lexicominos extends nk {
           bi.a(-1);
           of.clearStaticReferences(param0 ^ -80);
           ka.clearStaticReferences((byte) -81);
-          nk.clearStaticReferences((byte) 89);
+          NetworkGameClient.clearStaticReferences((byte) 89);
           de.clearStaticReferences(param0 ^ 73);
           GameAppletShell.e(439);
           wg.resetStaticState(param0 + 37);
@@ -1178,7 +1178,7 @@ public final class Lexicominos extends nk {
 
     final void initializeClient(boolean param0) {
         try {
-          this.a(12, 13, false, 10, 5000, 0, 11, 2);
+          this.initializeFramework(12, 13, false, 10, 5000, 0, 11, 2);
           AudioOutput.configureAudio(22050, true, 10);
           ce.field_b = AudioOutput.createOutput(jh.field_a, (java.awt.Component) ((Object) ug.field_y), 0, 4096);
           DefaultTextWidgetRenderer.field_h = AudioOutput.createOutput(jh.field_a, (java.awt.Component) ((Object) ug.field_y), 1, 2048);
@@ -1241,11 +1241,11 @@ public final class Lexicominos extends nk {
               kc.a(0, -1);
               break;
             }
-            this.m(-6721);
+            this.dispatchCommonPacket(-6721);
           } while (var4 == 0);
           var2_int = param0 ? 1 : 0;
           if (d.a((byte) -56)) {
-            var3 = this.n(6);
+            var3 = this.reconnectAndResendRequests(6);
             if (var3 == 2) {
               var2_int = 1;
             }
@@ -1314,7 +1314,7 @@ public final class Lexicominos extends nk {
 
     public final void init() {
         try {
-          this.a(14, "lexicominos", (byte) -107);
+          this.startWithDefaultSize(14, "lexicominos", (byte) -107);
         } catch (RuntimeException runtimeException) {
           throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "Lexicominos.init()");
         }
@@ -1348,7 +1348,7 @@ public final class Lexicominos extends nk {
             } else {
               stackIn_12_1 = vi.field_j;
             }
-            ga.$cfr$intArgs$a$f0d318109cc1(stackIn_11_0, stackIn_12_1, (java.awt.Canvas) (var2));
+            ga.drawClientCanvasWithIntGuard(stackIn_11_0, stackIn_12_1, (java.awt.Canvas) (var2));
             return;
           }
           if (!oj.field_g) {
@@ -1537,13 +1537,13 @@ public final class Lexicominos extends nk {
             ce.b(4);
           }
           stackIn_12_1 = (null != ff.field_b);
-          this.c(stackIn_12_1, -1);
+          this.serviceFramework(stackIn_12_1, -1);
           if (ne.field_e) {
             this.h((byte) 121);
             ne.field_e = false;
           }
           if (lh.b(-24921)) {
-            this.e((byte) 49);
+            this.updateLoginFlow((byte) 49);
             if (lh.b(-24921)) {
               if (ha.a(89) &&
                 !oj.field_g) {
@@ -1612,7 +1612,7 @@ public final class Lexicominos extends nk {
               if (decompiledFrameRemainder0) {
                 if (ae.i(0)) {
                   stackIn_94_1 = (ff.field_b != null);
-                  var3 = ImageProducerRasterBuffer.a((nk) (this), stackIn_94_1, -96);
+                  var3 = ImageProducerRasterBuffer.a((NetworkGameClient) (this), stackIn_94_1, -96);
                   boolean decompiledSharedTail0 = (var3 != 2364824);
                   if (!decompiledSharedTail0) {
                     SecondaryNodeDeque.clearStaticReferences(482);

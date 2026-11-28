@@ -51,7 +51,7 @@ final class kl extends IntrusiveNode {
           if (!param0) {
             field_r = (PacketBuffer) null;
           }
-          if (rb.field_s == 2) {
+          if (NetworkGameClient.field_s == 2) {
             var3_long = -jj.field_p + ih.correctedCurrentTimeMillis((byte) -98);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (0 > var2) {
@@ -70,7 +70,7 @@ final class kl extends IntrusiveNode {
               }
             }
             var6 = stellarshard.field_L[var3];
-            if (2 == rb.field_s &&
+            if (2 == NetworkGameClient.field_s &&
               var2 == 1) {
               if (RichTextLayout.field_g.length < bb.field_k.length) {
                 stackIn_19_0 = bb.field_k.length;
@@ -109,7 +109,7 @@ final class kl extends IntrusiveNode {
             stackIn_40_0 = -112;
             stackIn_40_1 = var6;
             stackIn_41_2 = !(var4 < 0);
-            var7Lifetime1 = GameEntity.$cfr$intArgs$a$590e95718a07(stackIn_40_0, stackIn_40_1, stackIn_41_2);
+            var7Lifetime1 = GameEntity.measureSelectedFontTextWidthWithIntGuard(stackIn_40_0, stackIn_40_1, stackIn_41_2);
             var8Lifetime1 = DualLinkDequeIterator.field_b - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (var4 == ua.field_i.field_f) {

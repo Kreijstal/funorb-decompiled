@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class c extends GameApplet {
+abstract class NetworkGameClient extends GameApplet {
     private boolean field_v;
     private int field_m;
     private int field_q;
@@ -17,7 +17,7 @@ abstract class c extends GameApplet {
     static de field_k;
     static BitmapFont field_u;
 
-    final void k(byte param0) {
+    final void updateLoginFlow(byte param0) {
         int discarded$2 = 0;
         int discarded$3 = 0;
         int var2_int = 0;
@@ -31,32 +31,32 @@ abstract class c extends GameApplet {
             if (!(DequeWidgetContainer.field_A < 10)) {
               if (lc.a((byte) -94)) {
                 if (cd.field_e == 0) {
-                  discarded$2 = this.a(false, false, 10);
+                  discarded$2 = this.processAccountUiActions(false, false, 10);
                   if (var3 != 0) {
                     AccountNameAvailabilityValidator.a(2, eg.field_f);
                     AccountRequestState.a((byte) 20);
                     stackIn_26_1 = (null != DiskCacheWorker.field_a);
-                    discarded$3 = this.a(stackIn_26_1, false, 10);
+                    discarded$3 = this.processAccountUiActions(stackIn_26_1, false, 10);
                   }
                 } else {
                   AccountNameAvailabilityValidator.a(2, eg.field_f);
                   if (var3 != 0) {
                     AccountRequestState.a((byte) 20);
                     stackIn_26_1 = (null != DiskCacheWorker.field_a);
-                    discarded$3 = this.a(stackIn_26_1, false, 10);
+                    discarded$3 = this.processAccountUiActions(stackIn_26_1, false, 10);
                   }
                 }
               } else {
                 AccountRequestState.a((byte) 20);
                 if (var3 != 0) {
                   stackIn_26_1 = (null != DiskCacheWorker.field_a);
-                  discarded$3 = this.a(stackIn_26_1, false, 10);
+                  discarded$3 = this.processAccountUiActions(stackIn_26_1, false, 10);
                 }
               }
             }
           } else {
             stackIn_26_1 = (null != DiskCacheWorker.field_a);
-            discarded$3 = this.a(stackIn_26_1, false, 10);
+            discarded$3 = this.processAccountUiActions(stackIn_26_1, false, 10);
           }
           var2_int = -98 % ((param0 + 32) / 51);
           return;
@@ -67,7 +67,7 @@ abstract class c extends GameApplet {
         }
     }
 
-    private final void h(int param0) {
+    private final void enablePacketTwo(int param0) {
         try {
           nl.field_e[2] = true;
           int var2_int = -80 / ((param0 - 41) / 62);
@@ -76,8 +76,8 @@ abstract class c extends GameApplet {
         }
     }
 
-    private final static void a(int param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    private final static void loadSharedInterfaceText(int param0, ResourceArchive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2608_0;
             StringBuilder stackIn_2608_1;
             String stackIn_2609_2;
@@ -88,7 +88,7 @@ abstract class c extends GameApplet {
             int param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2608_0 = null;
@@ -99,7 +99,7 @@ abstract class c extends GameApplet {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 FrameTimer.field_d = param1;
                 var2 = SectorCacheStore.a("loginm3", (byte) -127);
                 if (null != var2) {
@@ -1015,7 +1015,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("rule_0_4", (byte) -127);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 100);
                 }
@@ -1897,7 +1897,7 @@ abstract class c extends GameApplet {
                   rj.field_w = GzipInflater.a(var2, (byte) 93);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 var2 = SectorCacheStore.a("loading_languages", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 97);
@@ -2808,7 +2808,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("me_extra_benefits", (byte) -127);
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadRankingsLoginAndSubscriptionText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 122);
                 }
@@ -3089,13 +3089,13 @@ abstract class c extends GameApplet {
             }
             void run() {
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadRankingsLoginAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3111,29 +3111,29 @@ abstract class c extends GameApplet {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 
-    final void a(boolean param0, int param1, boolean param2, boolean param3, boolean param4) {
+    final void configureOptionalPacketHandlers(boolean param0, int param1, boolean param2, boolean param3, boolean param4) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          this.a(param1 - 11472, false);
+          this.enableDefaultPacketHandlers(param1 - 11472, false);
           if (param2) {
-            this.i(108);
+            this.enablePacketOne(108);
           }
           if (param3) {
-            this.h(param1 ^ 116);
+            this.enablePacketTwo(param1 ^ 116);
           }
           if (param1 != 2) {
             this.field_t = (String) null;
           }
           if (param4) {
-            this.e((byte) -58);
+            this.enablePacketFour((byte) -58);
           }
           if (param0) {
-            this.d((byte) 43);
+            this.enablePacketFive((byte) 43);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3143,7 +3143,7 @@ abstract class c extends GameApplet {
         }
     }
 
-    private final void d(byte param0) {
+    private final void enablePacketFive(byte param0) {
         try {
           nl.field_e[5] = true;
           if (param0 != 43) {
@@ -3154,7 +3154,7 @@ abstract class c extends GameApplet {
         }
     }
 
-    final void f(byte param0) {
+    final void dispatchCommonPacket(byte param0) {
         int stackIn_82_0 = 0;
         boolean stackIn_83_1 = false;
         RuntimeException decompiledCaughtException = null;
@@ -3183,7 +3183,7 @@ abstract class c extends GameApplet {
                     if (var2_int != 5) {
                       if (var2_int != 6) {
                         if (var2_int == 7) {
-                          this.j((byte) -122);
+                          this.readSessionCookieUpdate((byte) -122);
                           if (var4 == 0) {
                             return;
                           }
@@ -3269,7 +3269,7 @@ abstract class c extends GameApplet {
         }
     }
 
-    private final void i(int param0) {
+    private final void enablePacketOne(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -3300,7 +3300,7 @@ abstract class c extends GameApplet {
         }
     }
 
-    final int c(boolean param0) {
+    final int attemptReconnect(boolean param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
@@ -3331,7 +3331,7 @@ abstract class c extends GameApplet {
           if (0 != var2_int &&
             var2_int != 1) {
             if (!ve.field_e) {
-              this.a((byte) -60, "reconnect");
+              this.showErrorPage((byte) -60, "reconnect");
             }
             wd.a(31668);
             if (param0) {
@@ -3363,7 +3363,7 @@ abstract class c extends GameApplet {
         RuntimeException var3 = null;
         try {
           var3_int = 33 % ((-19 - param1) / 43);
-          stackIn_1_0 = this.a(param0, true, 10);
+          stackIn_1_0 = this.processAccountUiActions(param0, true, 10);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3372,7 +3372,7 @@ abstract class c extends GameApplet {
         }
     }
 
-    final void a(byte param0, boolean param1) {
+    final void serviceFramework(byte param0, boolean param1) {
         int stackIn_38_0 = 0;
         String stackIn_200_0 = null;
         int stackIn_200_1 = 0;
@@ -3442,28 +3442,28 @@ abstract class c extends GameApplet {
             BitPacketBuffer.field_n != 0) {
             if (10 > DequeWidgetContainer.field_A) {
               if (BitPacketBuffer.field_n == 3) {
-                this.a((byte) -115, "js5crc");
+                this.showErrorPage((byte) -115, "js5crc");
                 decompiledFrameRemainder1 = (var5 != 0);
               }
               if (decompiledFrameRemainder1) {
                 if (BitPacketBuffer.field_n != 4) {
                   if (BitPacketBuffer.field_n != 2) {
                     if (5 == BitPacketBuffer.field_n) {
-                      this.a((byte) -121, "outofdate");
+                      this.showErrorPage((byte) -121, "outofdate");
                       decompiledFrameRemainder1 = (var5 != 0);
                     }
                     if (decompiledFrameRemainder1) {
-                      this.a((byte) -95, "js5connect");
+                      this.showErrorPage((byte) -95, "js5connect");
                       decompiledFrameRemainder1 = (var5 != 0);
                     }
                   }
                   if (decompiledFrameRemainder1) {
-                    this.a((byte) -64, "js5connect_full");
+                    this.showErrorPage((byte) -64, "js5connect_full");
                     decompiledFrameRemainder1 = (var5 != 0);
                   }
                 }
                 if (decompiledFrameRemainder1) {
-                  this.a((byte) -36, "js5io");
+                  this.showErrorPage((byte) -36, "js5io");
                   decompiledFrameRemainder1 = (var5 != 0);
                 }
               }
@@ -3540,7 +3540,7 @@ abstract class c extends GameApplet {
               lb.field_a.ensureIndexLoaded(4)) {
               if (lb.field_a.hasGroupName(0, "")) {
                 if (lb.field_a.tryLoadGroupByName(4, "")) {
-                  c.a(-106, lb.field_a);
+                  NetworkGameClient.loadSharedInterfaceText(-106, lb.field_a);
                   lb.field_a = null;
                   AccountNameAvailabilityValidator.b((byte) -40);
                   if (var5 != 0) {
@@ -3636,7 +3636,7 @@ abstract class c extends GameApplet {
         }
     }
 
-    private final void g(int param0) {
+    private final void initializePacketLengths(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -3667,7 +3667,7 @@ abstract class c extends GameApplet {
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void enableDefaultPacketHandlers(int param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
@@ -3706,7 +3706,7 @@ abstract class c extends GameApplet {
         }
     }
 
-    private final void a(int param0, String param1, int param2, int param3, int param4) {
+    private final void readAppletParameters(int param0, String param1, int param2, int param3, int param4) {
         boolean stackIn_10_1 = false;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -3720,7 +3720,7 @@ abstract class c extends GameApplet {
         String var9 = null;
         try {
           try {
-            if (!this.c((byte) -123)) {
+            if (!this.allowAppletStartup((byte) -123)) {
               return;
             }
             this.field_t = this.getCodeBase().getHost();
@@ -3748,12 +3748,12 @@ abstract class c extends GameApplet {
               this.field_p = Integer.parseInt(var9);
             }
             sl.field_a = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a((byte) 106, param1, param4, this.field_l, param3, param2, 32);
+            this.startApplet((byte) 106, param1, param4, this.field_l, param3, param2, 32);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             DebouncedFieldValidator.a((Throwable) ((Object) var6_ref), (byte) -72, (String) null);
-            this.a((byte) -77, "crash");
+            this.showErrorPage((byte) -77, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -3785,7 +3785,7 @@ abstract class c extends GameApplet {
           var4 = al.field_a - 1;
           var5 = new byte[var4];
           if (param0 != -47) {
-            this.c(false);
+            this.attemptReconnect(false);
           }
           EmailFormatValidator.field_j.readCipheredBytes(0, var5, 28040, var4);
           IntrusiveDeque.a(PasswordValidator.g(-117), -25573, GzipInflater.a(var5, (byte) 89), var3 != 0);
@@ -3804,7 +3804,7 @@ abstract class c extends GameApplet {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(-6, param1, 640, param0, param2);
+          this.readAppletParameters(-6, param1, 640, param0, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3820,7 +3820,7 @@ abstract class c extends GameApplet {
         }
     }
 
-    private final void j(byte param0) {
+    private final void readSessionCookieUpdate(byte param0) {
         String var2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
@@ -3845,7 +3845,7 @@ abstract class c extends GameApplet {
           field_u = null;
           field_k = null;
           if (param0 <= 60) {
-            c.g((byte) 43);
+            NetworkGameClient.g((byte) 43);
           }
           field_w = null;
           return;
@@ -3856,7 +3856,7 @@ abstract class c extends GameApplet {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, byte param5, boolean param6, int param7) {
+    final void initializeFramework(int param0, int param1, int param2, int param3, int param4, byte param5, boolean param6, int param7) {
         RuntimeException runtimeException = null;
         java.awt.Frame var9 = null;
         RuntimeException decompiledCaughtException = null;
@@ -3880,7 +3880,7 @@ abstract class c extends GameApplet {
           ia.field_e = param3;
           jj.field_b = param4;
           eb.field_f = param1;
-          this.g(90);
+          this.initializePacketLengths(90);
           uh.clearStaticReferences((byte) -79);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3890,10 +3890,10 @@ abstract class c extends GameApplet {
         }
     }
 
-    protected c() {
+    protected NetworkGameClient() {
     }
 
-    private final void e(byte param0) {
+    private final void enablePacketFour(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -3909,7 +3909,7 @@ abstract class c extends GameApplet {
         }
     }
 
-    private final int a(boolean param0, boolean param1, int param2) {
+    private final int processAccountUiActions(boolean param0, boolean param1, int param2) {
         try {
           int stackIn_105_0 = 0;
           int stackIn_108_0 = 0;
@@ -3942,7 +3942,7 @@ abstract class c extends GameApplet {
               }
             }
             if (var4_int == 2) {
-              var5_int = qa.a(c.h((byte) -58), ij.a((byte) 120), ja.a(-7705), de.a(565192680), td.a(-2), true, this.field_p);
+              var5_int = qa.a(NetworkGameClient.h((byte) -58), ij.a((byte) 120), ja.a(-7705), de.a(565192680), td.a(-2), true, this.field_p);
               if (var5_int != -1) {
                 sj.a(44, e.field_a, ll.field_f, var5_int);
                 e.field_a = null;

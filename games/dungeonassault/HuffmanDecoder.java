@@ -341,7 +341,7 @@ final class HuffmanDecoder {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, boolean param3, di[] param4) {
+    final static void mergeLeaderboardPage(int param0, int param1, byte param2, boolean param3, di[] param4) {
         int var7 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -425,7 +425,7 @@ final class HuffmanDecoder {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$ed16b0445cf3(int param0, int param1, int param2, boolean param3, di[] param4) {
+    final static void mergeLeaderboardPageWithIntGuard(int param0, int param1, int param2, boolean param3, di[] param4) {
         int var7 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;

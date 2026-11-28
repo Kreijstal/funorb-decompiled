@@ -118,7 +118,7 @@ final class md extends rg {
         }
     }
 
-    final static void a(byte param0) {
+    final static void clearIndexedSpriteDecodeBuffers(byte param0) {
         fl.field_a = (byte[][]) null;
         jd.field_g = null;
         m.field_a = null;
@@ -218,7 +218,7 @@ final class md extends rg {
 
     final static void c(int param0) {
         if (param0 != 32) {
-          md.$cfr$intArgs$a$6121ff5511c4(-11);
+          md.clearIndexedSpriteDecodeBuffersWithIntGuard(-11);
         }
     }
 
@@ -391,7 +391,7 @@ final class md extends rg {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$6121ff5511c4(int param0) {
+    final static void clearIndexedSpriteDecodeBuffersWithIntGuard(int param0) {
         fl.field_a = (byte[][]) null;
         jd.field_g = null;
         m.field_a = null;

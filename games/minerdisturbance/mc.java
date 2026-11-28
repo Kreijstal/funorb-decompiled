@@ -1145,7 +1145,7 @@ final class mc {
                   }
                 } else {
                   RichTextWidget.field_K[3].drawOpaque(487, 326);
-                  var13_ref = ob.field_v;
+                  var13_ref = NetworkGameClient.field_v;
                 }
               }
             } else {

@@ -550,7 +550,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         PasswordValidator.field_i[34] = nj.field_b;
         PasswordValidator.field_i[28] = pf.field_g;
         PasswordValidator.field_i[33] = i.field_b;
-        PasswordValidator.field_i[32] = ob.field_n;
+        PasswordValidator.field_i[32] = NetworkGameClient.field_n;
         PasswordValidator.field_i[30] = vh.field_b;
         PasswordValidator.field_i[31] = PacketBuffer.field_s;
     }

@@ -99,7 +99,7 @@ final class rc implements WidgetRenderer {
         }
     }
 
-    final static void a(byte param0, int param1, boolean param2, int param3, rm param4) {
+    final static void bucketVisibleFacesByDepth(byte param0, int param1, boolean param2, int param3, rm param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_14_0 = false;
         int stackIn_35_0 = 0;
@@ -283,7 +283,7 @@ final class rc implements WidgetRenderer {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c68ae6d2455d(int param0, int param1, boolean param2, int param3, rm param4) {
+    final static void bucketVisibleFacesByDepthWithIntGuard(int param0, int param1, boolean param2, int param3, rm param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_14_0 = false;
         int stackIn_35_0 = 0;

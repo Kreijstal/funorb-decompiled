@@ -287,7 +287,7 @@ final class gg {
             stackIn_71_1 = -128;
             break;
           }
-          MusicPatchPcmStream.$cfr$intArgs$a$ff69b800fca9(stackIn_71_0, stackIn_71_1, param4, param3, var7_int);
+          MusicPatchPcmStream.bucketVisibleFacesByDepthWithIntGuard(stackIn_71_0, stackIn_71_1, param4, param3, var7_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -46,7 +46,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int[] param11) {
+    final static void blurAndCompositeRasterRows(byte param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int[] param11) {
         int var18 = 0;
         int incrementValue$0 = 0;
         int incrementValue$5 = 0;
@@ -325,7 +325,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
             stackIn_25_0 = 57;
             stackIn_25_1 = -8;
             var7 = (int[]) null;
-            StandardContentDialog.$cfr$intArgs$a$c64d0b17f51c(stackIn_25_0, stackIn_25_1, -11, 81, 3, 33, (int[]) null, -76, -25, 43, -2, (int[]) null);
+            StandardContentDialog.blurAndCompositeRasterRowsWithIntGuard(stackIn_25_0, stackIn_25_1, -11, 81, 3, 33, (int[]) null, -76, -25, 43, -2, (int[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -353,7 +353,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c64d0b17f51c(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int[] param11) {
+    final static void blurAndCompositeRasterRowsWithIntGuard(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int[] param11) {
         int var18 = 0;
         int incrementValue$0 = 0;
         int incrementValue$5 = 0;

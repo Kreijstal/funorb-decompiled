@@ -60,7 +60,7 @@ final class ce {
           } else {
             stackIn_3_7 = 0;
           }
-          DirectByteStorage.$cfr$intArgs$a$c398e174f2fe(stackIn_2_0, stackIn_2_1, stackIn_2_2, (nb) (stackIn_2_3), stackIn_2_4, stackIn_2_5, (int[]) (stackIn_2_6), stackIn_3_7, param0.field_i);
+          DirectByteStorage.createPlayerActionContextWithIntGuard(stackIn_2_0, stackIn_2_1, stackIn_2_2, (nb) (stackIn_2_3), stackIn_2_4, stackIn_2_5, (int[]) (stackIn_2_6), stackIn_3_7, param0.field_i);
           if (0 == param0.field_k &&
             !StandardContentDialog.j((byte) 78) &&
             null == pd.field_Rb &&

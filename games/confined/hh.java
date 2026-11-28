@@ -63,7 +63,7 @@ final class hh {
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
             if (DequeCursor.isAllowedPlayerNameCharacter((byte) -37, (char) var7)) {
-              var8 = i.a((char) var7, (byte) -98);
+              var8 = NetworkGameClient.a((char) var7, (byte) -98);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }

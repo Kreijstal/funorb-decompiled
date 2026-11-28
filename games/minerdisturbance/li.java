@@ -41,8 +41,8 @@ final class li implements uj {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(int param0, ResourceArchive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2629_0;
             StringBuilder stackIn_2629_1;
             String stackIn_2630_2;
@@ -54,7 +54,7 @@ final class li implements uj {
             int param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2629_0 = null;
@@ -66,7 +66,7 @@ final class li implements uj {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 hb.field_e = param1;
                 var2 = PasswordValidator.a(-127, "loginm3");
                 if (var2 != null) {
@@ -1082,7 +1082,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(-111, "returntohomepage");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   FullscreenStatusDialog.a(var2, -119);
                 }
@@ -2062,7 +2062,7 @@ final class li implements uj {
                   gm.field_b = FullscreenStatusDialog.a(var2, -126);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 var2 = PasswordValidator.a(-104, "off");
                 if (var2 != null) {
                   ie.field_a = FullscreenStatusDialog.a(var2, -120);
@@ -3025,7 +3025,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(-126, "subscription_cost_monthly,7");
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadSubscriptionText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   ub.field_a[7] = FullscreenStatusDialog.a(var2, param0 - 9232);
                 }
@@ -3058,13 +3058,13 @@ final class li implements uj {
             void run() {
                 var3 = MinerDisturbance.field_ab;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3084,7 +3084,7 @@ final class li implements uj {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 

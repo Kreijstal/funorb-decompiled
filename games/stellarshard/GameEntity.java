@@ -723,7 +723,7 @@ final class GameEntity {
         mc.field_a = param3;
         if (param1 != -29770) {
           String var6 = (String) null;
-          GameEntity.$cfr$intArgs$a$590e95718a07(-45, (String) null, false);
+          GameEntity.measureSelectedFontTextWidthWithIntGuard(-45, (String) null, false);
         }
         l.field_e = param2;
         IsaacRandom.field_a = param4;
@@ -2100,7 +2100,7 @@ final class GameEntity {
         }
     }
 
-    final static int a(byte param0, String param1, boolean param2) {
+    final static int measureSelectedFontTextWidth(byte param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -2147,16 +2147,16 @@ final class GameEntity {
             return false;
           }
           try {
-            var2_int = ob.field_b.b(-111);
+            var2_int = ob.field_b.availableBytes(-111);
             if (param0 != 64) {
               var3 = (String) null;
-              GameEntity.$cfr$intArgs$a$590e95718a07(101, (String) null, false);
+              GameEntity.measureSelectedFontTextWidthWithIntGuard(101, (String) null, false);
             }
             if (var2_int > 0) {
               if (-EditableTextField.field_N.position + param1 < var2_int) {
                 var2_int = -EditableTextField.field_N.position + param1;
               }
-              ob.field_b.a(EditableTextField.field_N.position, (byte) -64, EditableTextField.field_N.payload, var2_int);
+              ob.field_b.readFully(EditableTextField.field_N.position, (byte) -64, EditableTextField.field_N.payload, var2_int);
               PacketBuffer.field_o = ih.correctedCurrentTimeMillis((byte) -98);
               EditableTextField.field_N.position = EditableTextField.field_N.position + var2_int;
               if (EditableTextField.field_N.position < param1) {
@@ -2366,7 +2366,7 @@ final class GameEntity {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$590e95718a07(int param0, String param1, boolean param2) {
+    final static int measureSelectedFontTextWidthWithIntGuard(int param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;

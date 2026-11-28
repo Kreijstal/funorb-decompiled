@@ -263,7 +263,7 @@ final class fm {
             stackIn_55_0 = 8;
             stackIn_55_1 = ua.field_c;
             stackIn_56_2 = (ArchiveRequest.field_k.field_h == 0);
-            RasterBuffer.$cfr$intArgs$a$a1440e9a5aa4(stackIn_55_0, stackIn_55_1, stackIn_56_2, gb.field_d);
+            RasterBuffer.drawBenefitsButtonFrameWithIntGuard(stackIn_55_0, stackIn_55_1, stackIn_56_2, gb.field_d);
           }
           if (null != rl.field_a &&
             bl.field_n != null) {
@@ -275,7 +275,7 @@ final class fm {
             stackIn_64_0 = 8;
             stackIn_64_1 = MatchingFieldValidator.field_q;
             stackIn_65_2 = (ArchiveRequest.field_k.field_h == 1);
-            RasterBuffer.$cfr$intArgs$a$a1440e9a5aa4(stackIn_64_0, stackIn_64_1, stackIn_65_2, ce.field_a);
+            RasterBuffer.drawBenefitsButtonFrameWithIntGuard(stackIn_64_0, stackIn_64_1, stackIn_65_2, ce.field_a);
           }
           if (null != field_b) {
             var1_int = 357 - field_b.field_t / 2;

@@ -67,7 +67,7 @@ final class Archive {
           this.field_g.field_o[param0] > param2) {
           return true;
         }
-        if (!ab.field_t) {
+        if (!NetworkGameClient.field_t) {
           return false;
         }
         throw new IllegalArgumentException(param0 + " " + param2);
@@ -308,7 +308,7 @@ final class Archive {
           this.field_g.field_o[param1] != 0) {
           return true;
         }
-        if (!ab.field_t) {
+        if (!NetworkGameClient.field_t) {
           return false;
         }
         throw new IllegalArgumentException(Integer.toString(param1));

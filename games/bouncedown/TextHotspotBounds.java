@@ -207,7 +207,7 @@ final class TextHotspotBounds extends IntrusiveNode {
             }
             break;
           }
-          hj.$cfr$intArgs$a$d6db22f779ae(stackIn_62_0 != 0, stackIn_62_1, param6, var8, var7_int);
+          hj.bucketVisibleFacesByDepthWithIntGuard(stackIn_62_0 != 0, stackIn_62_1, param6, var8, var7_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

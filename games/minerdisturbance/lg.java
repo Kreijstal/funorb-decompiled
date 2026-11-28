@@ -17,8 +17,8 @@ final class lg {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1) {
-        class $CfrPartitionedBody {
+    final static void loadGameInterfaceText(ResourceArchive param0, int param1) {
+        class GameTextLoader {
             RuntimeException stackIn_1680_0;
             StringBuilder stackIn_1680_1;
             String stackIn_1681_2;
@@ -29,7 +29,7 @@ final class lg {
             ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
+            GameTextLoader(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1680_0 = null;
@@ -40,7 +40,7 @@ final class lg {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadCaptionsAchievementsInstructionsAndRankNames() throws java.lang.RuntimeException {
                 fa.field_d = param0;
                 var2 = ByteArrayPoolSupport.b(-1, "caption1");
                 if (var2 != null) {
@@ -491,7 +491,7 @@ final class lg {
                   ol.field_b[0][4] = FullscreenStatusDialog.a(var2, 109);
                 }
                 if (param1 >= -35) {
-                  lg.a((ResourceArchive) null, -75);
+                  lg.loadGameInterfaceText((ResourceArchive) null, -75);
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "INSTRUCTION,1,0");
                 if (var2 != null) {
@@ -954,7 +954,7 @@ final class lg {
                   sl.field_u[5][1] = FullscreenStatusDialog.a(var2, -124);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadDeathMessagesTutorialAndVolcanoText() throws java.lang.RuntimeException {
                 var2 = ByteArrayPoolSupport.b(-1, "deathstrings,5,2");
                 if (var2 != null) {
                   sl.field_u[5][2] = FullscreenStatusDialog.a(var2, 54);
@@ -1405,7 +1405,7 @@ final class lg {
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "tutorialPinniped,1,0");
                 if (null != var2) {
-                  ob.field_n[1][0] = FullscreenStatusDialog.a(var2, 39);
+                  NetworkGameClient.field_n[1][0] = FullscreenStatusDialog.a(var2, 39);
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "tutorialBoulders,0,0");
                 if (null != var2) {
@@ -1737,7 +1737,7 @@ final class lg {
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "shopGasMask");
                 if (var2 != null) {
-                  ob.field_v = FullscreenStatusDialog.a(var2, -118);
+                  NetworkGameClient.field_v = FullscreenStatusDialog.a(var2, -118);
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "shopHardHat");
                 if (var2 != null) {
@@ -1889,7 +1889,7 @@ final class lg {
                 }
                 var2 = ByteArrayPoolSupport.b(-1, "stillLoadingVolcano");
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadSuperVolcanoAndMiningControlLabels() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   GameCanvas.field_c = FullscreenStatusDialog.a(var2, 11);
                 }
@@ -1946,11 +1946,11 @@ final class lg {
             void run() {
                 var3 = MinerDisturbance.field_ab;
                 try {
-                  runChunk0();
+                  loadCaptionsAchievementsInstructionsAndRankNames();
                   if (finished) return;
-                  runChunk1();
+                  loadDeathMessagesTutorialAndVolcanoText();
                   if (finished) return;
-                  runChunk2();
+                  loadSuperVolcanoAndMiningControlLabels();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -1970,7 +1970,7 @@ final class lg {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        GameTextLoader decompiledBody = new GameTextLoader(param0, param1);
         decompiledBody.run();
     }
 

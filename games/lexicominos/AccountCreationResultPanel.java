@@ -298,7 +298,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
           if (var2 == 0) {
             var4 = (mc) (vh.field_a.beginForward(true));
             if (var4 == null) {
-              ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-72);
+              ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-72);
               return;
             }
             var5 = -var10.position + a.field_c;
@@ -329,11 +329,11 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
               var5_ref_wa.unlink((byte) -127);
               return;
             }
-            ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-95);
+            ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-95);
             return;
           }
           uj.a("LR1: " + StandardContentDialog.h(-93), (Throwable) null, 1);
-          ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-42);
+          ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-42);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

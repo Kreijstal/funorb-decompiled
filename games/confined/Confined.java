@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class Confined extends i {
+public final class Confined extends NetworkGameClient {
     static rm[] field_K;
     static int field_I;
     static int field_D;
@@ -24,7 +24,7 @@ public final class Confined extends i {
           ResourceArchive.clearStaticReferences((byte) -63);
           dn.clearStaticReferences(-89);
           ua.a(7526);
-          i.b((byte) 82);
+          NetworkGameClient.b((byte) 82);
           ClientException.a(3);
           GameAppletShell.b(32575);
           pk.clearStaticReferences(param0 - 13733);
@@ -317,7 +317,7 @@ public final class Confined extends i {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.a((byte) 19, 20, 13, 11, false, 10, 0, 14);
+          this.initializeFramework((byte) 19, 20, 13, 11, false, 10, 0, 14);
           AudioOutput.configureAudio(22050, true, 10);
           FullscreenStatusDialog.field_ob = AudioOutput.createOutput(ki.field_d, (java.awt.Component) ((Object) fb.field_b), 0, 1024);
           DirectByteStorage.field_h = AudioOutput.createOutput(ki.field_d, (java.awt.Component) ((Object) fb.field_b), 1, 22050);
@@ -360,14 +360,14 @@ public final class Confined extends i {
           DirectByteStorage.field_h.serviceOutput();
           stackIn_11_1 = 110;
           stackIn_12_2 = (dn.field_d != null);
-          this.b(stackIn_11_1, stackIn_12_2);
+          this.serviceFramework(stackIn_11_1, stackIn_12_2);
           if (DiskCacheWorker.field_d) {
             aa.a(false);
             DiskCacheWorker.field_d = false;
           }
           boolean decompiledFrameRemainder0 = true;
           if (DequeWidgetContainer.g(15214)) {
-            this.c((byte) -109);
+            this.updateLoginFlow((byte) -109);
             decompiledFrameRemainder0 = (var3 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -396,7 +396,7 @@ public final class Confined extends i {
             }
             while (true) {
               if (pe.a(StripedProgressWidget.field_M, -69)) {
-                this.i(112);
+                this.dispatchCommonPacket(112);
                 if (var3 == 0) {
                   continue;
                 }
@@ -406,7 +406,7 @@ public final class Confined extends i {
               if (!rj.b(param0 + 28405)) {
                 break;
               }
-              var2_int = this.l(-215);
+              var2_int = this.attemptReconnect(-215);
               if (var2_int != 0 &&
                 var2_int != 1) {
                 break;
@@ -986,7 +986,7 @@ public final class Confined extends i {
                 while (tf.field_b[var2_int] > var5) {
                   var6Lifetime1 = GameCanvas.field_a.getFileIdByName(0, si.field_e[var2_int] + "attack" + (var5 + 1), param0 ^ 19);
                   tf.field_n[var2_int][var5] = var6Lifetime1;
-                  tf.field_c[var2_int][var5] = va.bitwiseAnd((int) i.field_u.getFile((byte) -2, 0, var6Lifetime1)[0], 255);
+                  tf.field_c[var2_int][var5] = va.bitwiseAnd((int) NetworkGameClient.field_u.getFile((byte) -2, 0, var6Lifetime1)[0], 255);
                   li.field_m.a(var4Lifetime2, 61, var6Lifetime1, 192);
                   var5++;
                 }
@@ -994,7 +994,7 @@ public final class Confined extends i {
                 while (MovingTunnelEntity.field_I[var2_int] > var5Lifetime1) {
                   var6Lifetime1Lifetime1 = GameCanvas.field_a.getFileIdByName(0, si.field_e[var2_int] + "ready" + (var5Lifetime1 + 1), -114);
                   MovingTunnelEntity.field_H[var2_int][var5Lifetime1] = var6Lifetime1Lifetime1;
-                  MovingTunnelEntity.field_O[var2_int][var5Lifetime1] = va.bitwiseAnd((int) i.field_u.getFile((byte) -2, 0, var6Lifetime1Lifetime1)[0], 255);
+                  MovingTunnelEntity.field_O[var2_int][var5Lifetime1] = va.bitwiseAnd((int) NetworkGameClient.field_u.getFile((byte) -2, 0, var6Lifetime1Lifetime1)[0], 255);
                   li.field_m.a(var4Lifetime2, 61, var6Lifetime1Lifetime1, 192);
                   var5Lifetime1++;
                 }
@@ -1004,7 +1004,7 @@ public final class Confined extends i {
               }
               PasswordValidator.field_j = null;
               GameCanvas.field_a = null;
-              i.field_u = null;
+              NetworkGameClient.field_u = null;
               stackIn_64_0 = -4258;
               break;
             }
@@ -1394,7 +1394,7 @@ public final class Confined extends i {
             if (decompiledFrameRemainder2) {
               if (fi.field_a != 2) {
                 if (fi.field_a == 3) {
-                  KeyboardInput.field_a = EmailFormatValidator.a(320, false, false, i.field_o);
+                  KeyboardInput.field_a = EmailFormatValidator.a(320, false, false, NetworkGameClient.field_o);
                   decompiledFrameRemainder2 = (var3 != 0);
                 }
                 if (decompiledFrameRemainder2) {
@@ -1436,7 +1436,7 @@ public final class Confined extends i {
           }
           if (ka.h((byte) -70)) {
             stackIn_80_1 = (null != dn.field_d);
-            var2_intLifetime1 = this.a(stackIn_80_1, 30116);
+            var2_intLifetime1 = this.pollAccountUiActions(stackIn_80_1, 30116);
             if (var2_intLifetime1 == 1) {
               qh.c(4);
             }

@@ -13,7 +13,7 @@ final class TranslatedUiText {
         try {
           sceneWidgetState0086 = null;
           if (byteArgument1 != -33) {
-            TranslatedUiText.performAction1063((ResourceArchive) null, (byte) 123);
+            TranslatedUiText.loadSharedInterfaceText((ResourceArchive) null, (byte) 123);
           }
           stringState0353 = null;
           stringState0352 = null;
@@ -25,8 +25,8 @@ final class TranslatedUiText {
         }
     }
 
-    final static void performAction1063(ResourceArchive resourceArchiveArgument1, byte byteArgument2) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(ResourceArchive resourceArchiveArgument1, byte byteArgument2) {
+        class ClientTextLoader {
             RuntimeException runtimeExceptionState0001;
             StringBuilder stringBuilderState0004;
             String stringState0354;
@@ -38,7 +38,7 @@ final class TranslatedUiText {
             ResourceArchive resourceArchiveState0012;
             byte byteState0002;
             boolean booleanState0117;
-            $CfrPartitionedBody(ResourceArchive initialParam0, byte initialParam1) {
+            ClientTextLoader(ResourceArchive initialParam0, byte initialParam1) {
                 this.resourceArchiveState0012 = initialParam0;
                 this.byteState0002 = initialParam1;
                 this.runtimeExceptionState0001 = null;
@@ -50,7 +50,7 @@ final class TranslatedUiText {
                 this.runtimeExceptionState0003 = null;
                 this.integerState0515 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 Sprite.resourceArchiveState0010 = resourceArchiveState0012;
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("loginm3", -15192);
                 if (null != byteArrayState0015) {
@@ -985,7 +985,7 @@ final class TranslatedUiText {
                   MixedSupport128.stringState0555 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("rule_1_2", -15192);
                 if (byteArrayState0015 != null) {
                   RenderingSupport004.stringState0202 = MixedSupport105.computeString1370(byteArrayState0015, 2);
@@ -1975,7 +1975,7 @@ final class TranslatedUiText {
                   MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("optionsmenu_notpaused", -15192);
                 if (null != byteArrayState0015) {
                   CacheWorkQueue.stringState0265 = MixedSupport105.computeString1370(byteArrayState0015, 2);
@@ -2972,7 +2972,7 @@ final class TranslatedUiText {
                   HashNode.stringArrayState0002[5] = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadLoginPromptsAndSubscriptionText() throws java.lang.RuntimeException {
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mustlogin_alternate,6", -15192);
                 if (byteArrayState0015 != null) {
                   HashNode.stringArrayState0002[6] = MixedSupport105.computeString1370(byteArrayState0015, 2);
@@ -3042,13 +3042,13 @@ final class TranslatedUiText {
             void run() {
                 integerState0515 = DekoBlokoClient.obfuscationControl ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (booleanState0117) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (booleanState0117) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (booleanState0117) return;
-                  runChunk3();
+                  loadLoginPromptsAndSubscriptionText();
                   if (booleanState0117) return;
                 } catch (java.lang.RuntimeException caughtParameterLocal1) {
                   runtimeExceptionState0002 = caughtParameterLocal1;
@@ -3068,7 +3068,7 @@ final class TranslatedUiText {
                 }
             }
         }
-        $CfrPartitionedBody bodyLocal1 = new $CfrPartitionedBody(resourceArchiveArgument1, byteArgument2);
+        ClientTextLoader bodyLocal1 = new ClientTextLoader(resourceArchiveArgument1, byteArgument2);
         bodyLocal1.run();
     }
 

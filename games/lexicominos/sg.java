@@ -2015,7 +2015,7 @@ final class sg {
           if (this.field_c.field_d != -1) {
             this.a(95, true, this.field_c.field_d);
           }
-          if (nk.field_z != 0) {
+          if (NetworkGameClient.field_z != 0) {
             this.field_j = ProxyAuthenticationRequiredException.field_a;
             this.field_o = ef.field_a;
           }

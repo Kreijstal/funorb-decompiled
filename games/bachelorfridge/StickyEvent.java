@@ -122,8 +122,8 @@ final class StickyEvent extends SpecialEvent {
         }
     }
 
-    final static void a(boolean param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(boolean param0, ResourceArchive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2618_0;
             StringBuilder stackIn_2618_1;
             String stackIn_2619_2;
@@ -135,7 +135,7 @@ final class StickyEvent extends SpecialEvent {
             boolean param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(boolean initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(boolean initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2618_0 = null;
@@ -147,7 +147,7 @@ final class StickyEvent extends SpecialEvent {
                 this.var3 = 0;
                 this.var4 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 ft.field_h = param1;
                 var2 = qba.a(17602, "loginm3");
                 if (var2 != null) {
@@ -1038,7 +1038,7 @@ final class StickyEvent extends SpecialEvent {
                   InsanoSauceSpecial.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 var2 = qba.a(17602, "ra_explanation");
                 if (null != var2) {
                   vj.field_q = ChangeCreatureStatOrHealthEffect.a(var2, param0);
@@ -1981,7 +1981,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "unpacking_animations");
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
@@ -2567,7 +2567,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "click_to_quickchat");
                 if (param0) {
-                  StickyEvent.a(true, (ResourceArchive) null);
+                  StickyEvent.loadSharedInterfaceText(true, (ResourceArchive) null);
                 }
                 if (var2 != null) {
                   qca.field_m = ChangeCreatureStatOrHealthEffect.a(var2, param0);
@@ -2954,7 +2954,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "mustlogin1");
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadLoginPromptsAndSubscriptionText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
@@ -3139,13 +3139,13 @@ final class StickyEvent extends SpecialEvent {
             void run() {
                 var3 = BachelorFridge.field_y;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadLoginPromptsAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3166,7 +3166,7 @@ final class StickyEvent extends SpecialEvent {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 

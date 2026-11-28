@@ -58,7 +58,7 @@ abstract class RasterBuffer {
             decompiledFrameRemainder0 = !(param1.equals(StandardContentDialog.field_ib));
           }
           if (decompiledFrameRemainder0) {
-            if (!ab.field_u) {
+            if (!NetworkGameClient.field_u) {
               if (GzipDecompressor.field_e <= kk.field_d) {
                 stackIn_17_0 = (GzipDecompressor.field_e + wi.field_l > kk.field_d) ? 1 : 0;
               } else {
@@ -71,7 +71,7 @@ abstract class RasterBuffer {
             if (param1 == null) {
               kk.field_d = 0;
             } else {
-              if (ab.field_u) {
+              if (NetworkGameClient.field_u) {
                 kk.field_d = GzipDecompressor.field_e;
               } else {
                 if (var2_int == 0) {
@@ -84,14 +84,14 @@ abstract class RasterBuffer {
             bf.field_a = ch.field_b;
             if (param1 == null) {
               if (var2_int != 0) {
-                ab.field_u = true;
+                NetworkGameClient.field_u = true;
               }
             } else {
-              ab.field_u = false;
+              NetworkGameClient.field_u = false;
             }
             kd.field_c = ql.field_v;
           }
-          if (!ab.field_u &&
+          if (!NetworkGameClient.field_u &&
             GzipDecompressor.field_e > kk.field_d &&
             ne.field_d) {
             kd.field_c = ql.field_v;
@@ -103,10 +103,10 @@ abstract class RasterBuffer {
             RasterBuffer.a(95, (String) null);
           }
           StandardContentDialog.field_ib = param1;
-          if (ab.field_u &&
+          if (NetworkGameClient.field_u &&
             kk.field_d == InteractiveWidget.field_A) {
             kk.field_d = 0;
-            ab.field_u = false;
+            NetworkGameClient.field_u = false;
           }
           ch.field_b = -1;
           ql.field_v = -1;

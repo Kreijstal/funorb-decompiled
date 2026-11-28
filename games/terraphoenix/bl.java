@@ -11,8 +11,8 @@ final class bl {
     static long field_h;
     static String field_d;
 
-    final static void a(byte param0, Archive param1) {
-        class $CfrPartitionedBody {
+    final static void loadGameInterfaceText(byte param0, Archive param1) {
+        class GameTextLoader {
             RuntimeException stackIn_2491_0;
             StringBuilder stackIn_2491_1;
             String stackIn_2492_2;
@@ -24,7 +24,7 @@ final class bl {
             byte param0;
             Archive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, Archive initialParam1) {
+            GameTextLoader(byte initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2491_0 = null;
@@ -36,7 +36,7 @@ final class bl {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadAchievementsArmorAndWeaponNames() throws java.lang.RuntimeException {
                 DirectByteStorage.field_i = param1;
                 var2 = il.a((byte) 85, "achievement_names,0");
                 if (var2 != null) {
@@ -916,7 +916,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 97, "weapondescriptions,12");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadWeaponResearchInstructionsAndMissionDebrief() throws java.lang.RuntimeException {
                 if (null != var2) {
                   i.field_b[12] = ll.a(0, var2);
                 }
@@ -1790,7 +1790,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 71, "debriefstrings,23");
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMissionBriefingsDifficultyAndTutorial() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   pe.field_c[23] = ll.a(0, var2);
                 }
@@ -2676,7 +2676,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 84, "tutorialtext,49");
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadTutorialInstructionsAndControlLabels() throws java.lang.RuntimeException {
                 if (null != var2) {
                   TutorialText.field_d[49] = ll.a(0, var2);
                 }
@@ -2885,13 +2885,13 @@ final class bl {
             void run() {
                 var3 = Terraphoenix.field_V;
                 try {
-                  runChunk0();
+                  loadAchievementsArmorAndWeaponNames();
                   if (finished) return;
-                  runChunk1();
+                  loadWeaponResearchInstructionsAndMissionDebrief();
                   if (finished) return;
-                  runChunk2();
+                  loadMissionBriefingsDifficultyAndTutorial();
                   if (finished) return;
-                  runChunk3();
+                  loadTutorialInstructionsAndControlLabels();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -2911,7 +2911,7 @@ final class bl {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        GameTextLoader decompiledBody = new GameTextLoader(param0, param1);
         decompiledBody.run();
     }
 

@@ -143,19 +143,19 @@ abstract class NetworkGameClient extends GameApplet {
           0 != DraggableWidgetContainer.field_J) {
           if (b.field_x < 10) {
             if (DraggableWidgetContainer.field_J == 3) {
-              this.a(10, "js5crc");
+              this.showErrorPage(10, "js5crc");
             } else {
               if (DraggableWidgetContainer.field_J == 4) {
-                this.a(param0 - 13, "js5io");
+                this.showErrorPage(param0 - 13, "js5io");
               } else {
                 if (2 != DraggableWidgetContainer.field_J) {
                   if (DraggableWidgetContainer.field_J != 5) {
-                    this.a(10, "js5connect");
+                    this.showErrorPage(10, "js5connect");
                   } else {
-                    this.a(10, "outofdate");
+                    this.showErrorPage(10, "outofdate");
                   }
                 } else {
-                  this.a(10, "js5connect_full");
+                  this.showErrorPage(10, "js5connect_full");
                 }
               }
             }
@@ -220,7 +220,7 @@ abstract class NetworkGameClient extends GameApplet {
               je.field_f = null;
             } else {
               if (je.field_f.tryLoadGroupByName(true, "")) {
-                SocketJs5Transport.a(7, je.field_f);
+                SocketJs5Transport.loadSharedInterfaceText(7, je.field_f);
                 je.field_f = null;
                 cf.a(param0 ^ 6648);
               }
@@ -326,7 +326,7 @@ abstract class NetworkGameClient extends GameApplet {
         ArchiveRequest.field_s[18] = 1;
     }
 
-    private final void c(byte param0) {
+    private final void readSessionCookieUpdate(byte param0) {
         String var2 = ol.a(124);
         ol.a(var2, true, ip.a(param0 - 81));
         if (param0 != 90) {
@@ -334,7 +334,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
     }
 
-    private final void l(int param0) {
+    private final void enablePacketOne(int param0) {
         FullscreenNoticeType.field_d[1] = true;
         if (param0 != 0) {
           String var3 = (String) null;
@@ -342,7 +342,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
     }
 
-    final void e(byte param0) {
+    final void dispatchCommonPacket(byte param0) {
         int stackIn_29_0 = 0;
         boolean stackIn_30_1 = false;
         int var2;
@@ -401,7 +401,7 @@ abstract class NetworkGameClient extends GameApplet {
                           }
                         }
                       } else {
-                        this.c((byte) 90);
+                        this.readSessionCookieUpdate((byte) 90);
                       }
                     } else {
                       en.e((byte) 50);
@@ -421,14 +421,14 @@ abstract class NetworkGameClient extends GameApplet {
         ih.b(true);
     }
 
-    private final void i(int param0) {
+    private final void enablePacketTwo(int param0) {
         FullscreenNoticeType.field_d[2] = true;
         if (param0 != 24500) {
-          this.b(false, 7);
+          this.pollAccountUiActions(false, 7);
         }
     }
 
-    private final void a(boolean param0, byte param1) {
+    private final void enableDefaultPacketHandlers(boolean param0, byte param1) {
         FullscreenNoticeType.field_d[7] = true;
         FullscreenNoticeType.field_d[16] = true;
         if (param1 > -90) {
@@ -441,7 +441,7 @@ abstract class NetworkGameClient extends GameApplet {
         FullscreenNoticeType.field_d[3] = true;
     }
 
-    final int g(int param0) {
+    final int reconnectAndResendRequests(int param0) {
         int var2;
         int var3;
         var2 = -125 / ((param0 - 70) / 47);
@@ -482,7 +482,7 @@ abstract class NetworkGameClient extends GameApplet {
         a.a(var3 != 0, SecondaryNodeDeque.a(var5, false), ip.a(9), 3);
     }
 
-    private final void d(byte param0) {
+    private final void enablePacketFive(byte param0) {
         if (param0 != 84) {
           this.field_l = -57;
         }
@@ -498,11 +498,11 @@ abstract class NetworkGameClient extends GameApplet {
         }
     }
 
-    final int b(boolean param0, int param1) {
+    final int pollAccountUiActions(boolean param0, int param1) {
         if (param1 > -85) {
-          this.f(93);
+          this.enablePacketHandler(93);
         }
-        return this.a(param0, true, true);
+        return this.processAccountUiActions(param0, true, true);
     }
 
     private final int pollLoginConnection(int param0) {
@@ -531,7 +531,7 @@ abstract class NetworkGameClient extends GameApplet {
           return var2;
         }
         if (!hg.field_c) {
-          this.a(10, "reconnect");
+          this.showErrorPage(10, "reconnect");
         }
         InteractiveWidget.h(-128);
         dc.a(var2, pl.field_u, 2);
@@ -540,11 +540,11 @@ abstract class NetworkGameClient extends GameApplet {
         return var2;
     }
 
-    private final void f(int param0) {
+    private final void enablePacketHandler(int param0) {
         FullscreenNoticeType.field_d[param0] = true;
     }
 
-    final void n(int param0) {
+    final void updateLoginFlow(int param0) {
         int discarded$4 = 0;
         int discarded$5 = 0;
         int var3;
@@ -552,14 +552,14 @@ abstract class NetworkGameClient extends GameApplet {
         var3 = Torquing.field_u;
         if (ResourceArchive.isClientStartupReady(true)) {
           stackIn_11_1 = (TranslucentSpriteLayer.field_i != null);
-          discarded$4 = this.a(stackIn_11_1, false, true);
+          discarded$4 = this.processAccountUiActions(stackIn_11_1, false, true);
         } else {
           if (b.field_x >= 10) {
             if (pl.b(-115)) {
               if (op.field_i != 0) {
                 RandomAccessCacheFile.a(-16513, da.field_g);
               } else {
-                discarded$5 = this.a(false, false, true);
+                discarded$5 = this.processAccountUiActions(false, false, true);
               }
             } else {
               pg.a((byte) -3);
@@ -572,18 +572,18 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, boolean param4) {
-        this.a(param4, (byte) -116);
+        this.enableDefaultPacketHandlers(param4, (byte) -116);
         if (param3) {
-          this.l(0);
+          this.enablePacketOne(0);
         }
         if (param2) {
-          this.i(24500);
+          this.enablePacketTwo(24500);
         }
         if (param0) {
-          this.f(4);
+          this.enablePacketHandler(4);
         }
         if (param1) {
-          this.d((byte) 84);
+          this.enablePacketFive((byte) 84);
         }
     }
 
@@ -605,7 +605,7 @@ abstract class NetworkGameClient extends GameApplet {
             this.field_q = -47;
           }
           try {
-            if (!this.b(false)) {
+            if (!this.allowAppletStartup(false)) {
               return;
             }
             this.field_i = this.getCodeBase().getHost();
@@ -633,13 +633,13 @@ abstract class NetworkGameClient extends GameApplet {
               this.field_q = Integer.parseInt(var9);
             }
             ii.field_n = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(this.field_r, 121, param4, param2, param3, 32, param1);
+            this.startApplet(this.field_r, 121, param4, param2, param3, 32, param1);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             nn.a((String) null, (Throwable) ((Object) var6_ref), -9958);
-            this.a(10, "crash");
+            this.showErrorPage(10, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -656,7 +656,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
     }
 
-    private final int a(boolean param0, boolean param1, boolean param2) {
+    private final int processAccountUiActions(boolean param0, boolean param1, boolean param2) {
         try {
           boolean stackIn_6_0 = false;
           Throwable decompiledCaughtException = null;

@@ -10,7 +10,7 @@ final class hk {
         field_a = null;
         field_c = null;
         if (param0 < 107) {
-          hk.$cfr$intArgs$a$7ad285df57e9(65, -66, -69);
+          hk.playIndexedSoundEffectWithIntGuard(65, -66, -69);
         }
     }
 
@@ -72,7 +72,7 @@ final class hk {
         }
     }
 
-    final static void a(byte param0, int param1, int param2) {
+    final static void playIndexedSoundEffect(byte param0, int param1, int param2) {
         ValidationStatusIcon.a(param2, BufferedSocket.field_c[param1], ca.field_c[param1], 804);
         if (param0 <= 121) {
           BitPacketBuffer var4 = (BitPacketBuffer) null;
@@ -85,7 +85,7 @@ final class hk {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$7ad285df57e9(int param0, int param1, int param2) {
+    final static void playIndexedSoundEffectWithIntGuard(int param0, int param1, int param2) {
         ValidationStatusIcon.a(param2, BufferedSocket.field_c[param1], ca.field_c[param1], 804);
         if (param0 <= 121) {
           BitPacketBuffer var4 = (BitPacketBuffer) null;

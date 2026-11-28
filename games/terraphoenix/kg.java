@@ -28,7 +28,7 @@ final class kg extends h {
             }
             ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_6_1, param0 - 99);
             this.field_e.writeLong40((long)param0, -2108648176);
-            this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
+            this.field_p.enqueueWrite(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -100,7 +100,7 @@ final class kg extends h {
                 this.field_e.writeByte(4, -90);
                 this.field_e.writeByte((int) this.field_n, 68);
                 this.field_e.writeInt(0, 8959);
-                this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
+                this.field_p.enqueueWrite(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -165,7 +165,7 @@ final class kg extends h {
             this.field_e.writeByte(6, -108);
             this.field_e.writeMedium(3, (byte) -89);
             this.field_e.writeShort(-1564407352, 0);
-            this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
+            this.field_p.enqueueWrite(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -259,7 +259,7 @@ final class kg extends h {
               this.field_e.position = 0;
               this.field_e.writeByte(1, -115);
               this.field_e.writeLong40(var2.secondaryKey, -2108648176);
-              this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
+              this.field_p.enqueueWrite(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
               this.field_m.a(11152, var2);
               var2 = (NetworkArchiveRequest) (this.field_b.a(6273));
             }
@@ -268,7 +268,7 @@ final class kg extends h {
               this.field_e.position = 0;
               this.field_e.writeByte(0, -124);
               this.field_e.writeLong40(var2Lifetime1.secondaryKey, -2108648176);
-              this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
+              this.field_p.enqueueWrite(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
               this.field_g.a(11152, var2Lifetime1);
               var2Lifetime1 = (NetworkArchiveRequest) (this.field_a.a(6273));
             }
@@ -296,7 +296,7 @@ final class kg extends h {
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.field_p.a(this.field_k.field_H.payload, var6, this.field_k.field_H.position, (byte) 117);
+                  this.field_p.readFully(this.field_k.field_H.payload, var6, this.field_k.field_H.position, (byte) 117);
                   if (this.field_n != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
                       this.field_k.field_H.payload[var7 + this.field_k.field_H.position] = (byte)sl.bitwiseXor((int) this.field_k.field_H.payload[var7 + this.field_k.field_H.position], (int) this.field_n);
@@ -318,7 +318,7 @@ final class kg extends h {
                   if (var5 > var3_int) {
                     var5 = var3_int;
                   }
-                  this.field_p.a(this.field_o.payload, var5, this.field_o.position, (byte) 101);
+                  this.field_p.readFully(this.field_o.payload, var5, this.field_o.position, (byte) 101);
                   if (this.field_n != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
                       this.field_o.payload[this.field_o.position + var6] = (byte)sl.bitwiseXor((int) this.field_o.payload[this.field_o.position + var6], (int) this.field_n);

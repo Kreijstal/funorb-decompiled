@@ -65,7 +65,7 @@ final class dm {
               var7 = (a) (param0.nextBackward(4));
               continue;
             }
-            so.$cfr$intArgs$a$d4f67f19bfc6(60, var7, var6);
+            so.insertAdjacentNodeWithIntGuard(60, var7, var6);
             break;
           }
           if (var7 != null) {

@@ -159,11 +159,11 @@ public final class Terraphoenix extends GameShell {
                   lf.field_c == 13) {
                   ProxyAuthenticationRequiredException.field_g = 20;
                   TextLayout.field_b = false;
-                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(79, 34);
+                  MusicPatch.playIndexedSoundEffectWithIntGuard(79, 34);
                 }
                 if (lf.field_c == 97 ||
                   lf.field_c == 99) {
-                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(53, 24);
+                  MusicPatch.playIndexedSoundEffectWithIntGuard(53, 24);
                   ProxyAuthenticationRequiredException.field_g = 20;
                   ea.field_o = ea.field_o + 1;
                   if (ea.field_o >= gh.g(-118)) {
@@ -174,7 +174,7 @@ public final class Terraphoenix extends GameShell {
                   lf.field_c != 98) {
                   continue;
                 }
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(68, 25);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(68, 25);
                 ProxyAuthenticationRequiredException.field_g = 20;
                 ea.field_o = ea.field_o - 1;
                 if (0 <= ea.field_o) {
@@ -198,7 +198,7 @@ public final class Terraphoenix extends GameShell {
               MouseWheelInput.field_b <= var4 + var6_int &&
               1 == DiskArchiveRequest.field_I &&
               ProxyAuthenticationRequiredException.field_g < 10) {
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(48, 24);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(48, 24);
               ProxyAuthenticationRequiredException.field_g = 20;
               ea.field_o = ea.field_o + 1;
               if (ea.field_o >= gh.g(-123)) {
@@ -216,7 +216,7 @@ public final class Terraphoenix extends GameShell {
                 (var6_intLifetime1 + var4Lifetime3) >= MouseWheelInput.field_b &&
                 1 == DiskArchiveRequest.field_I &&
                 ProxyAuthenticationRequiredException.field_g < 10) {
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(94, 25);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(94, 25);
                 ProxyAuthenticationRequiredException.field_g = 20;
                 ea.field_o = ea.field_o - 1;
                 if (ea.field_o < 0) {
@@ -232,7 +232,7 @@ public final class Terraphoenix extends GameShell {
                 (var3Lifetime4 + var5_intLifetime1Lifetime1) >= ef.field_j &&
                 MouseWheelInput.field_b <= var6_intLifetime1Lifetime1 + var4Lifetime3 &&
                 DiskArchiveRequest.field_I == 1) {
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(26, 34);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(26, 34);
                 ProxyAuthenticationRequiredException.field_g = 20;
                 TextLayout.field_b = false;
               }
@@ -240,7 +240,7 @@ public final class Terraphoenix extends GameShell {
             if (oh.field_f == 2) {
               TextLayout.field_b = false;
               ProxyAuthenticationRequiredException.field_g = 20;
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(53, 34);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(53, 34);
             }
             return;
           }
@@ -351,7 +351,7 @@ public final class Terraphoenix extends GameShell {
                   if (10 == var3Lifetime1 &&
                     var8 == 0) {
                     if (bh.field_e[13]) {
-                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(25, 34);
+                      MusicPatch.playIndexedSoundEffectWithIntGuard(25, 34);
                       ja.field_i = 0;
                       ProxyAuthenticationRequiredException.field_g = 20;
                       if (!se.field_h) {
@@ -366,7 +366,7 @@ public final class Terraphoenix extends GameShell {
                         ef.field_j <= var3Lifetime1 / 2 + 320 &&
                         MouseWheelInput.field_b >= 280 &&
                         (280 + FrameTimer.field_f.field_s) >= MouseWheelInput.field_b) {
-                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(86, 33);
+                        MusicPatch.playIndexedSoundEffectWithIntGuard(86, 33);
                         WidgetContainer.a(10, -25786, 10);
                       }
                     }
@@ -377,7 +377,7 @@ public final class Terraphoenix extends GameShell {
                         (476 - qh.field_b.field_t) <= MouseWheelInput.field_b &&
                         MouseWheelInput.field_b <= 476 &&
                         1 == oh.field_f) {
-                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(102, 34);
+                        MusicPatch.playIndexedSoundEffectWithIntGuard(102, 34);
                         ProxyAuthenticationRequiredException.field_g = 20;
                         ja.field_i = 0;
                         GameShell.field_y = null;
@@ -387,7 +387,7 @@ public final class Terraphoenix extends GameShell {
                       return;
                     }
                     if (bh.field_e[84]) {
-                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(87, 34);
+                      MusicPatch.playIndexedSoundEffectWithIntGuard(87, 34);
                       ProxyAuthenticationRequiredException.field_g = 20;
                       ja.field_i = 0;
                       if (!se.field_h) {
@@ -397,7 +397,7 @@ public final class Terraphoenix extends GameShell {
                     }
                     if (bh.field_e[96] &&
                       DiskArchiveRequest.field_J > 0) {
-                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(22, 33);
+                      MusicPatch.playIndexedSoundEffectWithIntGuard(22, 33);
                       DiskArchiveRequest.field_J = DiskArchiveRequest.field_J - 1;
                       ProxyAuthenticationRequiredException.field_g = 10;
                     }
@@ -407,7 +407,7 @@ public final class Terraphoenix extends GameShell {
                     if (DiskArchiveRequest.field_J >= 2) {
                       return;
                     }
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(114, 33);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(114, 33);
                     ProxyAuthenticationRequiredException.field_g = 10;
                     DiskArchiveRequest.field_J = DiskArchiveRequest.field_J + 1;
                     return;
@@ -433,7 +433,7 @@ public final class Terraphoenix extends GameShell {
                           (var3Lifetime1 / 2 + 320) >= ef.field_j &&
                           MouseWheelInput.field_b >= 240 &&
                           MouseWheelInput.field_b <= 240 + FrameTimer.field_f.field_s) {
-                          MusicPatch.$cfr$intArgs$a$e9dea5688aa5(98, 33);
+                          MusicPatch.playIndexedSoundEffectWithIntGuard(98, 33);
                           WidgetContainer.a(11, -25786, 11);
                         }
                       }
@@ -442,7 +442,7 @@ public final class Terraphoenix extends GameShell {
                         ef.field_j <= (var3Lifetime1 + qh.field_b.field_r / 2) &&
                         MouseWheelInput.field_b >= (-qh.field_b.field_t + 476) &&
                         MouseWheelInput.field_b <= 476) {
-                        MusicPatch.$cfr$intArgs$a$e9dea5688aa5(87, 34);
+                        MusicPatch.playIndexedSoundEffectWithIntGuard(87, 34);
                         ProxyAuthenticationRequiredException.field_g = 20;
                         ja.field_i = 0;
                         GameShell.field_y = null;
@@ -463,7 +463,7 @@ public final class Terraphoenix extends GameShell {
                         return;
                       }
                     }
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(54, 34);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(54, 34);
                     ja.field_i = 0;
                     ProxyAuthenticationRequiredException.field_g = 20;
                     if (!se.field_h) {
@@ -496,7 +496,7 @@ public final class Terraphoenix extends GameShell {
               stackIn_273_3 = (ge.field_e != 0);
               stackIn_276_4 = 98;
               stackIn_277_5 = (TutorialText.field_a != 0);
-              var3Lifetime1 = stackIn_272_0 + ((BinaryBitmapFont) (Object) stackIn_272_1).lineCount(((StringBuilder) (Object) stackIn_272_2).append(oe.$cfr$intArgs$a$feb7e63b59d8(stackIn_273_3, stackIn_276_4, stackIn_277_5, false)).toString(), 310) * 14;
+              var3Lifetime1 = stackIn_272_0 + ((BinaryBitmapFont) (Object) stackIn_272_1).lineCount(((StringBuilder) (Object) stackIn_272_2).append(oe.getSaveResultsLoginPromptWithIntGuard(stackIn_273_3, stackIn_276_4, stackIn_277_5, false)).toString(), 310) * 14;
               var3Lifetime1 += 24;
               if (this.a(false, 224, (byte) -44, var3Lifetime1, FullscreenFocusCanvas.field_c) &&
                 1 == DiskArchiveRequest.field_I) {
@@ -705,7 +705,7 @@ public final class Terraphoenix extends GameShell {
               if (DiskArchiveRequest.field_I != 1) {
                 return;
               }
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(92, 33);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(92, 33);
               ProxyAuthenticationRequiredException.field_g = 20;
               ja.field_i = 5;
               DraggableWidgetContainer.a(false, this.field_X.field_i);
@@ -757,7 +757,7 @@ public final class Terraphoenix extends GameShell {
             if (DiskArchiveRequest.field_I != 1) {
               return;
             }
-            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(63, 33);
+            MusicPatch.playIndexedSoundEffectWithIntGuard(63, 33);
             ja.field_i = 5;
             ProxyAuthenticationRequiredException.field_g = 20;
             DraggableWidgetContainer.a(false, this.field_X.field_i);
@@ -998,7 +998,7 @@ public final class Terraphoenix extends GameShell {
                 }
               }
               if (this.field_bb.charAt(this.field_cb - 1) != 32) {
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(123, 22);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(123, 22);
               }
             }
           }
@@ -1012,13 +1012,13 @@ public final class Terraphoenix extends GameShell {
                 this.field_mb = this.field_mb - (this.field_bb.length() - this.field_cb) * 5;
                 this.field_cb = this.field_bb.length();
                 this.field_ib = 256;
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(55, 33);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(55, 33);
                 decompiledSharedTail1 = (var8 != 0);
               }
               if ((decompiledSharedTail1) &&
                 (500 > this.field_mb)) {
                 this.field_mb = 500;
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(19, 33);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(19, 33);
               }
             }
             if (ef.field_j >= 532 &&
@@ -1027,24 +1027,24 @@ public final class Terraphoenix extends GameShell {
               (548 - PcmResampler.field_g.field_t) > MouseWheelInput.field_b) {
               this.field_mb = 500;
               gd.field_c = 10;
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(64, 33);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(64, 33);
             }
           }
           if (500 <= this.field_mb) {
             boolean decompiledSharedTail0 = (ConfirmedEmailAvailabilityValidator.field_q == 4);
             if (!decompiledSharedTail0) {
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(55, 24);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(55, 24);
               decompiledSharedTail0 = (var8 != 0);
             }
             if (decompiledSharedTail0) {
               if (0 == gd.field_c) {
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(40, 81);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(40, 81);
               }
               if (gd.field_c == 1) {
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(23, 49);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(23, 49);
               }
               if (1 <= gd.field_c) {
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(26, 24);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(26, 24);
               }
             }
             this.field_cb = 0;
@@ -1207,7 +1207,7 @@ public final class Terraphoenix extends GameShell {
         RuntimeException var2 = null;
         try {
           if (bi.field_b != null) {
-            bl.a((byte) 96, bi.field_b);
+            bl.loadGameInterfaceText((byte) 96, bi.field_b);
             bi.field_b = null;
             ea.a((byte) 47);
           }
@@ -1312,7 +1312,7 @@ public final class Terraphoenix extends GameShell {
             if (lf.field_c == 84) {
               var2_int = this.field_xb;
               var3 = 0;
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(77, 33);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(77, 33);
             }
             if (97 == lf.field_c) {
               var3 = 1;
@@ -1323,7 +1323,7 @@ public final class Terraphoenix extends GameShell {
               var3 = -1;
             }
             if (98 == lf.field_c) {
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(68, 25);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(68, 25);
               var4 = -1;
             }
             if (99 != lf.field_c) {
@@ -1332,7 +1332,7 @@ public final class Terraphoenix extends GameShell {
             var4 = 1;
             stackIn_51_0 = 80;
             if (var6 == 0) {
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(stackIn_51_0, 24);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(stackIn_51_0, 24);
               continue;
             }
             break;
@@ -1387,11 +1387,11 @@ public final class Terraphoenix extends GameShell {
               }
               if (1 == var3) {
                 ConfirmedEmailAvailabilityValidator.field_q = (1 + (ConfirmedEmailAvailabilityValidator.field_q + this.field_kb)) % this.field_kb;
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(51, 24);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(51, 24);
               }
               if (var3 == -1) {
                 ConfirmedEmailAvailabilityValidator.field_q = (-1 + this.field_kb + ConfirmedEmailAvailabilityValidator.field_q) % this.field_kb;
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(24, 25);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(24, 25);
               }
             }
             var5++;
@@ -1404,12 +1404,12 @@ public final class Terraphoenix extends GameShell {
             if (var3 == 1 &&
               Archive.field_a < this.field_K - 1) {
               Archive.field_a = Archive.field_a + 1;
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(113, 24);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(113, 24);
             }
             if (var3 == -1 &&
               0 < Archive.field_a) {
               Archive.field_a = Archive.field_a - 1;
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(33, 25);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(33, 25);
             }
           }
           var5++;
@@ -1439,7 +1439,7 @@ public final class Terraphoenix extends GameShell {
               SectorCacheStore.field_e = 128;
             }
             if (ai.field_g <= 0) {
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(31, 70);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(31, 70);
               ai.field_g = 25;
             }
           }
@@ -2124,7 +2124,7 @@ public final class Terraphoenix extends GameShell {
         int var4 = 0;
         var4 = field_V;
         try {
-          this.a(8, 5000, 9, 0, 10, false, 26, 11);
+          this.initializeFramework(8, 5000, 9, 0, 10, false, 26, 11);
           RichTextWidget.g(0);
           ByteStorage.b(false);
           wi.h(-4168);
@@ -2170,7 +2170,7 @@ public final class Terraphoenix extends GameShell {
           uk.field_b = new MidiPcmStream();
           uk.field_b.setChannelProgram(9, 128, -51);
           WidgetContainer.field_E.addChildStream(uk.field_b);
-          this.a(true, false, 13, true, true);
+          this.configureOptionalPacketHandlers(true, false, 13, true, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2522,7 +2522,7 @@ public final class Terraphoenix extends GameShell {
               var9 = var9 + var10;
             }
             if (~this.field_xb != ~var5) {
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(24, 22);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(24, 22);
             }
             SoftwareRasterizer.resetClip();
             k.field_f.setAsRasterTarget(0);
@@ -3103,22 +3103,22 @@ public final class Terraphoenix extends GameShell {
           }
           boolean decompiledSharedTail0 = (null == this.field_nb[param0].field_b);
           if (!decompiledSharedTail0) {
-            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(88, od.field_c[this.field_nb[param0].field_b.field_g].field_n);
+            MusicPatch.playIndexedSoundEffectWithIntGuard(88, od.field_c[this.field_nb[param0].field_b.field_g].field_n);
             decompiledSharedTail0 = (var4 != 0);
           }
           if ((decompiledSharedTail0) &&
             (this.field_nb[param0].field_A != null)) {
-            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(16, od.field_c[this.field_nb[param0].field_A.field_g].field_n);
+            MusicPatch.playIndexedSoundEffectWithIntGuard(16, od.field_c[this.field_nb[param0].field_A.field_g].field_n);
           }
           if (this.field_nb[param0].field_m != null) {
             if (this.field_nb[param0].field_m.field_f == 1) {
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(68, 36);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(68, 36);
             }
             if (2 == this.field_nb[param0].field_m.field_f) {
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(110, 35);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(110, 35);
             }
             if (3 == this.field_nb[param0].field_m.field_f) {
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(28, 39);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(28, 39);
             }
           }
           return;
@@ -3183,7 +3183,7 @@ public final class Terraphoenix extends GameShell {
             if (DiskArchiveRequest.field_I == 1) {
               this.field_N.field_b = true;
               ja.field_i = 1;
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(70, 27);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(70, 27);
               if (null != this.field_X) {
                 ja.field_i = 2;
               }
@@ -3225,7 +3225,7 @@ public final class Terraphoenix extends GameShell {
             if (var9 != 0) {
               while (true) {
                 if (stackIn_478_0 != null) {
-                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(62, 24);
+                  MusicPatch.playIndexedSoundEffectWithIntGuard(62, 24);
                   while (true) {
                     if (lf.field_c == 96) {
                       while (true) {
@@ -3239,12 +3239,12 @@ public final class Terraphoenix extends GameShell {
                         }
                         break;
                       }
-                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(65, 25);
+                      MusicPatch.playIndexedSoundEffectWithIntGuard(65, 25);
                     }
                     if (lf.field_c == 13) {
                       ja.field_i = 1;
                       this.field_N.field_b = true;
-                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(105, 27);
+                      MusicPatch.playIndexedSoundEffectWithIntGuard(105, 27);
                       return;
                     }
                     if (!DefaultTextWidgetRenderer.d(1)) {
@@ -3314,7 +3314,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_Eb[0] = SecondaryNodeDequeIterator.field_b + this.field_nb[var7_int].b(1);
                 }
                 if (1 == DiskArchiveRequest.field_I) {
-                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(80, 33);
+                  MusicPatch.playIndexedSoundEffectWithIntGuard(80, 33);
                   if (null != this.field_nb[var7_int]) {
                     this.field_qb = var7_int;
                   } else {
@@ -3357,7 +3357,7 @@ public final class Terraphoenix extends GameShell {
                 var2_intLifetime3 != 11) {
                 if (null == this.field_nb[this.field_qb].field_b) {
                   this.field_nb[this.field_qb].field_b = new oh(var2_intLifetime3);
-                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(31, od.field_c[var2_intLifetime3].field_n);
+                  MusicPatch.playIndexedSoundEffectWithIntGuard(31, od.field_c[var2_intLifetime3].field_n);
                   var7.field_a[var2_intLifetime3] = var7.field_a[var2_intLifetime3] - 1;
                   decompiledFrameRemainder1 = (var9 != 0);
                 }
@@ -3366,7 +3366,7 @@ public final class Terraphoenix extends GameShell {
                   dupTemp$2 = this.field_nb[this.field_qb].field_b.field_g;
                   var7.field_a[dupTemp$2] = var7.field_a[dupTemp$2] + 1;
                   this.field_nb[this.field_qb].field_b = new oh(var2_intLifetime3);
-                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(99, od.field_c[var2_intLifetime3].field_n);
+                  MusicPatch.playIndexedSoundEffectWithIntGuard(99, od.field_c[var2_intLifetime3].field_n);
                   var7.field_a[var2_intLifetime3] = var7.field_a[var2_intLifetime3] - 1;
                   decompiledFrameRemainder1 = (var9 != 0);
                 }
@@ -3378,7 +3378,7 @@ public final class Terraphoenix extends GameShell {
                   var2_intLifetime3 == 12) {
                   if (null == this.field_nb[this.field_qb].field_A) {
                     this.field_nb[this.field_qb].field_A = new oh(var2_intLifetime3);
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(61, od.field_c[var2_intLifetime3].field_n);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(61, od.field_c[var2_intLifetime3].field_n);
                     var7.field_a[var2_intLifetime3] = var7.field_a[var2_intLifetime3] - 1;
                     decompiledFrameRemainder1 = (var9 != 0);
                   }
@@ -3387,7 +3387,7 @@ public final class Terraphoenix extends GameShell {
                     dupTemp$3 = this.field_nb[this.field_qb].field_A.field_g;
                     var7.field_a[dupTemp$3] = var7.field_a[dupTemp$3] + 1;
                     this.field_nb[this.field_qb].field_A = new oh(var2_intLifetime3);
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(25, od.field_c[var2_intLifetime3].field_n);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(25, od.field_c[var2_intLifetime3].field_n);
                     var7.field_a[var2_intLifetime3] = var7.field_a[var2_intLifetime3] - 1;
                     decompiledFrameRemainder1 = (var9 != 0);
                   }
@@ -3397,7 +3397,7 @@ public final class Terraphoenix extends GameShell {
                   var2_intLifetime3 == 11))) {
                   if (this.field_nb[this.field_qb].field_i == null) {
                     this.field_nb[this.field_qb].field_i = new oh(var2_intLifetime3);
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(49, od.field_c[var2_intLifetime3].field_n);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(49, od.field_c[var2_intLifetime3].field_n);
                     this.field_nb[this.field_qb].field_i.field_d = 1;
                     var7.field_a[var2_intLifetime3] = var7.field_a[var2_intLifetime3] - 1;
                     decompiledFrameRemainder1 = (var9 != 0);
@@ -3407,14 +3407,14 @@ public final class Terraphoenix extends GameShell {
                       dupTemp$4 = this.field_nb[this.field_qb].field_i.field_g;
                       var7.field_a[dupTemp$4] = var7.field_a[dupTemp$4] + this.field_nb[this.field_qb].field_i.field_d;
                       this.field_nb[this.field_qb].field_i = new oh(var2_intLifetime3);
-                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(34, od.field_c[var2_intLifetime3].field_n);
+                      MusicPatch.playIndexedSoundEffectWithIntGuard(34, od.field_c[var2_intLifetime3].field_n);
                       this.field_nb[this.field_qb].field_i.field_d = 1;
                       var7.field_a[var2_intLifetime3] = var7.field_a[var2_intLifetime3] - 1;
                       decompiledFrameRemainder1 = (var9 != 0);
                     }
                     if ((decompiledFrameRemainder1) &&
                       (decompiledFrameRemainder1 = !(this.field_nb[this.field_qb].field_i.field_d >= 8))) {
-                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(114, od.field_c[var2_intLifetime3].field_n);
+                      MusicPatch.playIndexedSoundEffectWithIntGuard(114, od.field_c[var2_intLifetime3].field_n);
                       dupTemp$5 = this.field_nb[this.field_qb].field_i;
                       dupTemp$5.field_d = dupTemp$5.field_d + 1;
                       var7.field_a[var2_intLifetime3] = var7.field_a[var2_intLifetime3] - 1;
@@ -3467,7 +3467,7 @@ public final class Terraphoenix extends GameShell {
                   var8Lifetime1 = 4;
                 }
                 this.field_I.field_a[var2_intLifetime3] = this.field_I.field_a[var2_intLifetime3] + var8Lifetime1;
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(106, 24);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(106, 24);
               }
             }
           }
@@ -3496,7 +3496,7 @@ public final class Terraphoenix extends GameShell {
                   var8Lifetime2 = 2;
                 }
                 this.field_I.field_d[var2_intLifetime4] = this.field_I.field_d[var2_intLifetime4] + var8Lifetime2;
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(60, 24);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(60, 24);
                 decompiledFrameRemainder0 = (var9 != 0);
               }
             }
@@ -3514,13 +3514,13 @@ public final class Terraphoenix extends GameShell {
               }
               this.field_nb[this.field_qb].field_m.field_f = var2_intLifetime4;
               if (var2_intLifetime4 == 1) {
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(78, 36);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(78, 36);
               }
               if (2 == var2_intLifetime4) {
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(119, 35);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(119, 35);
               }
               if (var2_intLifetime4 == 3) {
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(72, 39);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(72, 39);
               }
               var7Lifetime1.field_d[var2_intLifetime4] = var7Lifetime1.field_d[var2_intLifetime4] - 1;
             }
@@ -3538,7 +3538,7 @@ public final class Terraphoenix extends GameShell {
               dupTemp$7 = this.field_nb[this.field_qb].field_b.field_g;
               this.field_I.field_a[dupTemp$7] = this.field_I.field_a[dupTemp$7] + 1;
               this.field_nb[this.field_qb].field_b = null;
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(120, 34);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(120, 34);
             }
           }
           if (ef.field_j >= 556 &&
@@ -3559,7 +3559,7 @@ public final class Terraphoenix extends GameShell {
                 dupTemp$9 = this.field_nb[this.field_qb].field_A.field_g;
                 this.field_I.field_a[dupTemp$9] = this.field_I.field_a[dupTemp$9] - 1;
               }
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(37, 34);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(37, 34);
             }
           }
           if (ef.field_j >= 453 &&
@@ -3578,7 +3578,7 @@ public final class Terraphoenix extends GameShell {
               if (0 < this.field_I.field_d[0]) {
                 this.field_I.field_d[0] = this.field_I.field_d[0] - 1;
               }
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(81, 34);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(81, 34);
             }
           }
           if (ef.field_j >= 578 &&
@@ -3594,7 +3594,7 @@ public final class Terraphoenix extends GameShell {
               dupTemp$11 = this.field_nb[this.field_qb].field_i.field_g;
               this.field_I.field_a[dupTemp$11] = this.field_I.field_a[dupTemp$11] + this.field_nb[this.field_qb].field_i.field_d;
               this.field_nb[this.field_qb].field_i = null;
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(22, 34);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(22, 34);
             }
           }
           if (578 <= ef.field_j &&
@@ -3605,7 +3605,7 @@ public final class Terraphoenix extends GameShell {
             this.field_Eb = new String[1];
             this.field_Eb[0] = lf.field_b;
             if (0 != DiskArchiveRequest.field_I) {
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(65, 25);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(65, 25);
               dupTemp$12 = this.field_nb[this.field_qb].field_i.field_g;
               this.field_I.field_a[dupTemp$12] = this.field_I.field_a[dupTemp$12] + 1;
               dupTemp$13 = this.field_nb[this.field_qb].field_i;
@@ -3626,7 +3626,7 @@ public final class Terraphoenix extends GameShell {
             this.field_Eb = new String[1];
             this.field_Eb[0] = PcmResampler.field_a;
             if (DiskArchiveRequest.field_I != 0) {
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(23, 24);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(23, 24);
               dupTemp$15 = this.field_nb[this.field_qb].field_i.field_g;
               this.field_I.field_a[dupTemp$15] = this.field_I.field_a[dupTemp$15] - 1;
               dupTemp$16 = this.field_nb[this.field_qb].field_i;
@@ -3651,7 +3651,7 @@ public final class Terraphoenix extends GameShell {
                 }
                 break;
               }
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(62, 24);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(62, 24);
             }
             if (lf.field_c == 96) {
               while (true) {
@@ -3665,14 +3665,14 @@ public final class Terraphoenix extends GameShell {
                 }
                 break;
               }
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(65, 25);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(65, 25);
             }
             if (lf.field_c != 13) {
               continue;
             }
             ja.field_i = 1;
             this.field_N.field_b = true;
-            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(105, 27);
+            MusicPatch.playIndexedSoundEffectWithIntGuard(105, 27);
             if (var9 != 0) {
               return;
             }
@@ -3906,7 +3906,7 @@ public final class Terraphoenix extends GameShell {
             var11++;
             var9 = var9 + var10;
             if (~var5 != ~this.field_xb) {
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(86, 22);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(86, 22);
             }
             k.field_f.setAsRasterTarget(0);
           }
@@ -4646,7 +4646,7 @@ public final class Terraphoenix extends GameShell {
           }
           if (var3 != 0) {
             ProxyAuthenticationRequiredException.field_g = 20;
-            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(89, 33);
+            MusicPatch.playIndexedSoundEffectWithIntGuard(89, 33);
             ge.field_e = ge.field_e + this.field_X.field_H;
             if (0 != (1 & ef.field_j)) {
               ArchiveIndex.field_e = ArchiveIndex.field_e - this.field_X.field_H;
@@ -4991,7 +4991,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_Eb[0] = ArchiveRequest.field_t;
                   decompiledFrameRemainder0 = (DiskArchiveRequest.field_I == 1);
                   if (decompiledFrameRemainder0) {
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(46, 34);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(46, 34);
                     var4 = 11;
                     while (var4 >= 0) {
                       if (var5 != 0) {
@@ -5267,7 +5267,7 @@ public final class Terraphoenix extends GameShell {
             ProxyAuthenticationRequiredException.field_g = 20;
             TextFieldValidator.field_k = null;
             ja.field_i = 12;
-            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(59, 33);
+            MusicPatch.playIndexedSoundEffectWithIntGuard(59, 33);
             if (var7 == 0) {
               continue;
             }
@@ -5885,7 +5885,7 @@ public final class Terraphoenix extends GameShell {
                   var2_intLifetime1Lifetime1++;
                 }
                 k.field_f.setAsRasterTarget(0);
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(37, 33);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(37, 33);
                 return;
               }
               this.field_X.a((byte) -106, lf.field_c);
@@ -5902,7 +5902,7 @@ public final class Terraphoenix extends GameShell {
                   SoftwareRasterizer.clearRaster();
                   k.field_f.setAsRasterTarget(0);
                   rk.field_c = 32;
-                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(22, 33);
+                  MusicPatch.playIndexedSoundEffectWithIntGuard(22, 33);
                 }
               }
               if (BufferedSocket.a(70, (byte) 110, 7, 85, false, 28)) {
@@ -5920,12 +5920,12 @@ public final class Terraphoenix extends GameShell {
                   stackIn_142_1 = !(this.field_X.field_w);
                   stackIn_141_0.field_w = stackIn_142_1;
                   if (!this.field_X.field_w) {
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(16, 34);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(16, 34);
                     if (var6 != 0) {
-                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(115, 33);
+                      MusicPatch.playIndexedSoundEffectWithIntGuard(115, 33);
                     }
                   } else {
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(115, 33);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(115, 33);
                   }
                 }
               }
@@ -5952,7 +5952,7 @@ public final class Terraphoenix extends GameShell {
                     }
                     break;
                   }
-                  MusicPatch.$cfr$intArgs$a$e9dea5688aa5(82, 33);
+                  MusicPatch.playIndexedSoundEffectWithIntGuard(82, 33);
                 }
               }
             }
@@ -6204,7 +6204,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_db = false;
                   this.field_Db = true;
                   if (!this.field_Db) {
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(69, 31);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(69, 31);
                   }
                   this.field_P = 2;
                 }
@@ -6262,7 +6262,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_db = false;
                   this.field_Db = true;
                   if (!this.field_Db) {
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(116, 31);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(116, 31);
                   }
                   this.field_P = 3;
                 }
@@ -6320,7 +6320,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_Db = true;
                   this.field_db = false;
                   if (!this.field_Db) {
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(75, 31);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(75, 31);
                   }
                   this.field_P = 4;
                 }
@@ -6354,7 +6354,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_Db = true;
                   this.field_db = false;
                   if (!this.field_Db) {
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(25, 31);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(25, 31);
                   }
                   this.field_P = 5;
                 }
@@ -6379,7 +6379,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_Db = true;
                   this.field_db = false;
                   if (!this.field_Db) {
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(76, 31);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(76, 31);
                   }
                   this.field_P = 6;
                 }
@@ -6419,7 +6419,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_Db = true;
                   this.field_db = false;
                   if (!this.field_Db) {
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(124, 31);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(124, 31);
                   }
                   this.field_P = 7;
                 }
@@ -6460,7 +6460,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_db = false;
                   this.field_Db = true;
                   if (!this.field_Db) {
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(125, 31);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(125, 31);
                   }
                   this.field_P = 9;
                 }
@@ -6486,7 +6486,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_db = false;
                   this.field_Db = true;
                   if (!this.field_Db) {
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(61, 31);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(61, 31);
                   }
                   this.field_P = 8;
                 }
@@ -6511,7 +6511,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_db = false;
                   this.field_Db = true;
                   if (!this.field_Db) {
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(77, 31);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(77, 31);
                   }
                   this.field_P = 9;
                 }
@@ -6567,7 +6567,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_db = true;
                   this.field_Db = true;
                   if (!this.field_Db) {
-                    MusicPatch.$cfr$intArgs$a$e9dea5688aa5(75, 31);
+                    MusicPatch.playIndexedSoundEffectWithIntGuard(75, 31);
                   }
                   this.field_P = 11;
                 }
@@ -6667,7 +6667,7 @@ public final class Terraphoenix extends GameShell {
                     this.field_db = false;
                     this.field_P = 1;
                     if (!this.field_Db) {
-                      MusicPatch.$cfr$intArgs$a$e9dea5688aa5(20, 31);
+                      MusicPatch.playIndexedSoundEffectWithIntGuard(20, 31);
                     }
                   }
                   SoftwareRasterizer.drawCircleOutline(var6, var7, (int)(15.0 + Math.sin(mm.field_f) * -5.0), 65280);
@@ -6886,7 +6886,7 @@ public final class Terraphoenix extends GameShell {
 
     public final void init() {
         try {
-          this.a(-68, "terraphoenix", 32);
+          this.startWithDefaultSize(-68, "terraphoenix", 32);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.init()");
         }
@@ -7758,7 +7758,7 @@ public final class Terraphoenix extends GameShell {
               SectorCacheStore.field_e = 128;
             }
             if (0 >= ai.field_g) {
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(34, 70);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(34, 70);
               ai.field_g = 25;
             }
           }
@@ -8134,7 +8134,7 @@ public final class Terraphoenix extends GameShell {
               stackIn_185_4 = (ge.field_e != 0);
               stackIn_188_5 = 119;
               stackIn_189_6 = (0 != TutorialText.field_a);
-              var8 = stackIn_184_0 + stackIn_184_1 * ((BinaryBitmapFont) (Object) stackIn_184_2).drawParagraph(((StringBuilder) (Object) stackIn_184_3).append(oe.$cfr$intArgs$a$feb7e63b59d8(stackIn_185_4, stackIn_188_5, stackIn_189_6, false)).toString(), 330 - var3_intLifetime1 / 2, var8, var3_intLifetime1 - 10, 128, 16777215, 0, 1, 0, 14);
+              var8 = stackIn_184_0 + stackIn_184_1 * ((BinaryBitmapFont) (Object) stackIn_184_2).drawParagraph(((StringBuilder) (Object) stackIn_184_3).append(oe.getSaveResultsLoginPromptWithIntGuard(stackIn_185_4, stackIn_188_5, stackIn_189_6, false)).toString(), 330 - var3_intLifetime1 / 2, var8, var3_intLifetime1 - 10, 128, 16777215, 0, 1, 0, 14);
               var8 += 24;
               if (!this.a(false, 224, (byte) -44, var8, FullscreenFocusCanvas.field_c)) {
               }
@@ -8837,7 +8837,7 @@ public final class Terraphoenix extends GameShell {
           ModalDialogHost.field_I.serviceOutput();
           stackIn_4_1 = -107;
           stackIn_5_2 = (null != a.field_b);
-          this.a(stackIn_4_1, stackIn_5_2);
+          this.serviceFramework(stackIn_4_1, stackIn_5_2);
           if (rh.field_d) {
             this.B(-37);
             rh.field_d = false;
@@ -8975,7 +8975,7 @@ public final class Terraphoenix extends GameShell {
             }
             while (true) {
               if (rj.a(-1491050718, LevelMap.field_j)) {
-                this.h(43);
+                this.dispatchCommonPacket(43);
                 if (var3 == 0) {
                   continue;
                 }
@@ -8985,19 +8985,19 @@ public final class Terraphoenix extends GameShell {
               break;
             }
             if (FullscreenNoticeType.a((byte) 76)) {
-              var2_int = this.h((byte) -13);
+              var2_int = this.reconnectAndResendRequests((byte) -13);
               if (2 == var2_int) {
                 o.a(50, 320, 240, AccountRequestState.field_f, 10, 12);
               }
               if (var3 != 0) {
-                this.k(-20858);
+                this.updateLoginFlow(-20858);
                 if (wf.a(31996)) {
                   this.b(false, (byte) -107);
                 }
               }
             }
           } else {
-            this.k(-20858);
+            this.updateLoginFlow(-20858);
             if (wf.a(31996)) {
               this.b(false, (byte) -107);
             }
@@ -9503,7 +9503,7 @@ public final class Terraphoenix extends GameShell {
             this.field_Eb[0] = AccountNameAvailabilityValidator.field_n;
             if (DiskArchiveRequest.field_I == 1) {
               ja.field_i = 1;
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(33, 27);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(33, 27);
               this.field_zb.field_a = true;
             }
           }
@@ -9536,7 +9536,7 @@ public final class Terraphoenix extends GameShell {
             }
             if (DiskArchiveRequest.field_I == 1) {
               this.field_D = this.field_gb;
-              MusicPatch.$cfr$intArgs$a$e9dea5688aa5(84, 33);
+              MusicPatch.playIndexedSoundEffectWithIntGuard(84, 33);
             }
           }
           var2_intLifetime1 = 31 % ((param0 - 68) / 38);
@@ -9555,7 +9555,7 @@ public final class Terraphoenix extends GameShell {
                 od.field_c[var3Lifetime1].field_t = true;
                 this.s((byte) 106);
                 this.field_jb = this.field_jb - 1;
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(39, 32);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(39, 32);
               }
             }
             if (this.field_D < 0) {
@@ -9564,7 +9564,7 @@ public final class Terraphoenix extends GameShell {
                 sj.field_a[var3Lifetime2].field_l = true;
                 this.s((byte) -68);
                 this.field_jb = this.field_jb - 1;
-                MusicPatch.$cfr$intArgs$a$e9dea5688aa5(94, 32);
+                MusicPatch.playIndexedSoundEffectWithIntGuard(94, 32);
               }
             }
           }
@@ -9577,7 +9577,7 @@ public final class Terraphoenix extends GameShell {
             }
             ja.field_i = 1;
             this.field_zb.field_a = true;
-            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(80, 27);
+            MusicPatch.playIndexedSoundEffectWithIntGuard(80, 27);
             if (var4 == 0) {
               continue;
             }
@@ -9666,7 +9666,7 @@ public final class Terraphoenix extends GameShell {
             if (decompiledFrameCompleted0) {
               k.field_f.setAsRasterTarget(0);
             }
-            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(66, 33);
+            MusicPatch.playIndexedSoundEffectWithIntGuard(66, 33);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

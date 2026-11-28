@@ -23,7 +23,7 @@ final class pd {
             if (8 == param1) {
               param1 = 2;
               if (!ModalDialogHost.field_x) {
-                param0 = ag.field_k;
+                param0 = NetworkGameClient.field_k;
               } else {
                 param0 = pk.field_b;
               }

@@ -61,7 +61,7 @@ public final class Transmogrify extends SessionGameApplet {
           }
           stackIn_7_1 = 10017;
           stackIn_8_2 = (ub.field_c != null);
-          this.a(stackIn_7_1, stackIn_8_2);
+          this.serviceFramework(stackIn_7_1, stackIn_8_2);
           if (IntrusiveNode.field_a) {
             this.j(-7632);
             IntrusiveNode.field_a = false;
@@ -70,7 +70,7 @@ public final class Transmogrify extends SessionGameApplet {
             return;
           }
           if (rd.b(63)) {
-            this.b(false);
+            this.updateLoginFlow(false);
             if (rd.b(72)) {
               if (pa.b(-120)) {
                 discarded$0 = this.a((byte) -96, false);
@@ -174,13 +174,13 @@ public final class Transmogrify extends SessionGameApplet {
             }
           }
           while (BufferedSocket.a(ek.field_c, (byte) 114)) {
-            this.g(-89);
+            this.dispatchCommonPacket(-89);
           }
           rb.a(0, -377);
           stackIn_95_0 = (!ValidatedTextField.e(false)) ? 0 : 1;
           var2_int = stackIn_95_0;
           if (var2_int != 0) {
-            var3 = this.f((byte) 102);
+            var3 = this.reconnectAndResendRequests((byte) 102);
             if (var3 == 2) {
               ProxyAuthenticationRequiredException.a(240, 10, eh.field_c, 3, IntrusiveNode.field_d.field_y, 320, IntrusiveNode.field_d, IntrusiveNode.field_d.field_y * 3 / 2, 3, SecondaryNodeDeque.field_h, false);
             }
@@ -429,7 +429,7 @@ public final class Transmogrify extends SessionGameApplet {
                       stackIn_52_7 = stackIn_48_7;
                       stackIn_52_8 = true;
                     }
-                    stackIn_52_0[stackIn_52_1] = stackIn_52_2 + stackIn_52_3 * ((BinaryBitmapFont) (Object) stackIn_52_4).lineCount(AchievementNotice.$cfr$intArgs$a$c7de0d339b2a(stackIn_52_5, stackIn_52_6 != 0, stackIn_52_7 != 0, stackIn_52_8), 341);
+                    stackIn_52_0[stackIn_52_1] = stackIn_52_2 + stackIn_52_3 * ((BinaryBitmapFont) (Object) stackIn_52_4).lineCount(AchievementNotice.getAlternativeButtonPromptPrefixWithIntGuard(stackIn_52_5, stackIn_52_6 != 0, stackIn_52_7 != 0, stackIn_52_8), 341);
                   }
                 }
               } else {
@@ -1041,7 +1041,7 @@ public final class Transmogrify extends SessionGameApplet {
     }
 
     final void initializeGame(int param0) {
-        this.a(8, param0 ^ -10, 13, 9, 11, 0, false, 10);
+        this.initializeFramework(8, param0 ^ -10, 13, 9, 11, 0, false, 10);
         MidiPcmStream var2 = new MidiPcmStream();
         if (param0 != -9) {
           return;
@@ -1053,7 +1053,7 @@ public final class Transmogrify extends SessionGameApplet {
           u.field_b = 4473924;
           field_D = 128;
           SecondaryNodeDeque.field_b = 255;
-          this.a(true, false, false, false, (byte) 9);
+          this.configureOptionalPacketHandlers(true, false, false, false, (byte) 9);
           TextLayout.field_c = new IndexedSprite[3];
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "Transmogrify.F(" + param0 + ')');
@@ -1098,7 +1098,7 @@ public final class Transmogrify extends SessionGameApplet {
 
     public final void init() {
         try {
-          this.a("transmogrify", false, 12);
+          this.startWithDefaultSize("transmogrify", false, 12);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "Transmogrify.init()");
         }

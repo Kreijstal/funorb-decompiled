@@ -56,10 +56,10 @@ final class StripedProgressWidget extends UiWidget {
           if (!wc.field_Wb.tryLoadGroupByName("commonui", 0)) {
             return 40;
           }
-          if (!i.field_r.ensureIndexLoaded(param0 ^ 109)) {
+          if (!NetworkGameClient.field_r.ensureIndexLoaded(param0 ^ 109)) {
             return 50;
           }
-          if (!i.field_r.tryLoadGroupByName("commonui", 0)) {
+          if (!NetworkGameClient.field_r.tryLoadGroupByName("commonui", 0)) {
             return 60;
           }
           if (!tf.field_k.ensureIndexLoaded(0)) {
@@ -86,10 +86,10 @@ final class StripedProgressWidget extends UiWidget {
           if (!wc.field_Wb.tryLoadGroupByName("commonui", 0)) {
             return 57;
           }
-          if (!i.field_r.ensureIndexLoaded(0)) {
+          if (!NetworkGameClient.field_r.ensureIndexLoaded(0)) {
             return 71;
           }
-          if (!i.field_r.tryLoadGroupByName("commonui", 0)) {
+          if (!NetworkGameClient.field_r.tryLoadGroupByName("commonui", 0)) {
             return 80;
           }
           if (!tf.field_k.ensureIndexLoaded(0)) {

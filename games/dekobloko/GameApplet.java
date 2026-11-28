@@ -154,7 +154,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final void performAction0675(String stringArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
+    final void startApplet(String stringArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
         try {
           PlatformService cachedPlatformServiceLocal1 = null;
           AsyncTask asyncTaskLocal2 = null;
@@ -174,7 +174,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
-                this.performAction0679(true, "alreadyloaded");
+                this.showErrorPage(true, "alreadyloaded");
                 return;
               }
               BirthDateTextFields.integerState0592 = 0;
@@ -203,7 +203,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               caughtExceptionLocal7 = caughtParameterLocal10;
               throwableLocal8 = caughtExceptionLocal7;
               NetworkArchiveRequestManager.performAction1289(throwableLocal8, 16408, (String) null);
-              this.performAction0679(true, "crash");
+              this.showErrorPage(true, "crash");
             }
             return;
           } catch (java.lang.RuntimeException caughtParameterLocal11) {
@@ -225,7 +225,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final boolean computeBoolean0674(byte byteArgument1) {
+    final boolean allowAppletStartup(byte byteArgument1) {
         return true;
     }
 
@@ -470,7 +470,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     public final void windowIconified(java.awt.event.WindowEvent windowEventArgument1) {
     }
 
-    final void performAction0679(boolean booleanArgument1, String stringArgument2) {
+    final void showErrorPage(boolean booleanArgument1, String stringArgument2) {
         try {
           RuntimeException stackRuntimeExceptionLocal1 = null;
           StringBuilder stackStringBuilderLocal2 = null;
@@ -607,7 +607,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     stringLocal8.equals("1.5") ||
                     stringLocal8.startsWith("1.5.") ||
                     stringLocal8.equals("1.6.0")) {
-                    this.performAction0679(true, "wrongjava");
+                    this.showErrorPage(true, "wrongjava");
                     frameRemainderLocal15 = (integerLocal14 != 0);
                   }
                   if ((frameRemainderLocal15) &&
@@ -629,7 +629,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       stringLocal13 = stringLocal8.substring(6, integerLocal11);
                       if (DualNode.computeBoolean0128((byte) 98, (CharSequence) ((Object) stringLocal13)) &&
                         !(MixedSupport014.computeInteger0191((byte) 51, (CharSequence) ((Object) stringLocal13)) >= 10)) {
-                        this.performAction0679(true, "wrongjava");
+                        this.showErrorPage(true, "wrongjava");
                         frameRemainderLocal15 = (integerLocal14 != 0);
                       }
                     }
@@ -719,7 +719,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               caughtExceptionLocal5 = caughtParameterLocal21;
               objectLocal6 = caughtExceptionLocal5;
               NetworkArchiveRequestManager.performAction1289((Throwable) (objectLocal6), 16408, (String) null);
-              this.performAction0679(true, "crash");
+              this.showErrorPage(true, "crash");
             }
             this.shutdownApplet(true, -128);
             return;

@@ -38,12 +38,12 @@ abstract class gi {
           if (!param1) {
             field_d = (PcmSample) null;
           }
-          int var2_int = sg.field_h.e(-114);
+          int var2_int = sg.field_h.availableBytes(-114);
           if (var2_int > 0) {
             if (!(var2_int <= param0 - AccountRequestState.field_a.position)) {
               var2_int = param0 - AccountRequestState.field_a.position;
             }
-            sg.field_h.a(var2_int, AccountRequestState.field_a.payload, AccountRequestState.field_a.position, false);
+            sg.field_h.readFully(var2_int, AccountRequestState.field_a.payload, AccountRequestState.field_a.position, false);
             ug.field_d = lj.correctedCurrentTimeMillis((byte) -128);
             AccountRequestState.field_a.position = AccountRequestState.field_a.position + var2_int;
             if (AccountRequestState.field_a.position < param0) {

@@ -135,7 +135,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
         }
     }
 
-    final static void a(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
+    final static void insertAdjacentNode(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
         try {
           if (param2 != -117) {
             field_K = -82;
@@ -198,7 +198,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c5042ffd0615(IntrusiveNode param0, IntrusiveNode param1, int param2) {
+    final static void insertAdjacentNodeWithIntGuard(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         try {
           if (param2 != -117) {
             field_K = -82;

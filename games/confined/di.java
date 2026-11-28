@@ -203,10 +203,10 @@ final class di {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if ((1 << param2 & i.field_o) != 0) {
+        if ((1 << param2 & NetworkGameClient.field_o) != 0) {
           return;
         }
-        i.field_o = i.field_o | 1 << param2;
+        NetworkGameClient.field_o = NetworkGameClient.field_o | 1 << param2;
         if (param0 != -30867) {
           field_a = (PcmSample) null;
         }

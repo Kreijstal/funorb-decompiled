@@ -45,7 +45,7 @@ final class RageAnimation extends EventAnimation {
         }
     }
 
-    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void insertAdjacentNode(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
           if (param2.previous != null) {
             param2.unlink(false);
@@ -96,7 +96,7 @@ final class RageAnimation extends EventAnimation {
         field_y = null;
         if (param0 != 1) {
           IntrusiveNode var2 = (IntrusiveNode) null;
-          RageAnimation.$cfr$intArgs$a$94cfdbf41ae0(91, (IntrusiveNode) null, (IntrusiveNode) null);
+          RageAnimation.insertAdjacentNodeWithIntGuard(91, (IntrusiveNode) null, (IntrusiveNode) null);
         }
     }
 
@@ -114,7 +114,7 @@ final class RageAnimation extends EventAnimation {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$94cfdbf41ae0(int param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void insertAdjacentNodeWithIntGuard(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
           if (param2.previous != null) {
             param2.unlink(false);

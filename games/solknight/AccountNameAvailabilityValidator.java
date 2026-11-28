@@ -84,7 +84,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         StandardContentDialog.field_ib = null;
         bf.field_a = param0;
         kk.field_d = 0;
-        ab.field_u = false;
+        NetworkGameClient.field_u = false;
     }
 
     final qf getValidationStatus(String param0, byte param1) {

@@ -23,8 +23,8 @@ final class oj {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(int param0, ResourceArchive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2620_0;
             StringBuilder stackIn_2620_1;
             String stackIn_2621_2;
@@ -36,7 +36,7 @@ final class oj {
             int param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2620_0 = null;
@@ -48,7 +48,7 @@ final class oj {
                 this.var3 = 0;
                 this.var4 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 ji.field_r = param1;
                 var2 = MusicPatchNode.a("loginm3", false);
                 if (var2 != null) {
@@ -1047,7 +1047,7 @@ final class oj {
                 }
                 var2 = MusicPatchNode.a("playfreeversion", false);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   le.field_d = re.a(18990, var2);
                 }
@@ -2000,7 +2000,7 @@ final class oj {
                   wf.field_f = re.a(18990, var2);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 var2 = MusicPatchNode.a("resumegame", false);
                 if (var2 != null) {
                   eb.field_i = re.a(18990, var2);
@@ -2959,7 +2959,7 @@ final class oj {
                 }
                 var2 = MusicPatchNode.a("mustlogin_alternate,3", false);
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadLoginPromptsAndSubscriptionText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   ba.field_c[3] = re.a(18990, var2);
                 }
@@ -3040,13 +3040,13 @@ final class oj {
             void run() {
                 var3 = TorChallenge.field_F ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadLoginPromptsAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3067,7 +3067,7 @@ final class oj {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 

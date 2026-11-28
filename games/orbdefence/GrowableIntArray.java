@@ -279,7 +279,7 @@ final class GrowableIntArray {
           var3[var4_int] = vc.field_g[EditableTextField.bitwiseAnd(255, (int) var2[var4_int])];
         }
         RgbSprite var4 = new RgbSprite(ModalDialog.field_B, MusicPatchNode.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], var3);
-        md.$cfr$intArgs$a$6121ff5511c4(-125);
+        md.clearIndexedSpriteDecodeBuffersWithIntGuard(-125);
         return var4;
     }
 

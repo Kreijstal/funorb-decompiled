@@ -108,7 +108,7 @@ final class SocketJs5Transport extends Js5Transport {
               this.field_l = this.field_l + var4;
               if (30000 < this.field_l) {
                 try {
-                  this.field_q.a(true);
+                  this.field_q.close(true);
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -124,7 +124,7 @@ final class SocketJs5Transport extends Js5Transport {
               return false;
             }
             try {
-              this.field_q.e(22685);
+              this.field_q.checkWriteError(22685);
               if (param0 != 20) {
                 field_r = -12;
               }
@@ -134,7 +134,7 @@ final class SocketJs5Transport extends Js5Transport {
                   this.field_d.position = 0;
                   this.field_d.writeByte(90, 1);
                   this.field_d.writeLong40(var2.field_l, -19642);
-                  this.field_q.a(0, this.field_d.payload, (byte) 77, this.field_d.payload.length);
+                  this.field_q.enqueueWrite(0, this.field_d.payload, (byte) 77, this.field_d.payload.length);
                   this.field_h.a((byte) 122, var2);
                   var2 = (NetworkArchiveRequest) (this.field_a.c(param0 + 24522));
                   if (var16 != 0) {
@@ -151,7 +151,7 @@ final class SocketJs5Transport extends Js5Transport {
                 this.field_d.position = 0;
                 this.field_d.writeByte(90, 0);
                 this.field_d.writeLong40(var2.field_l, param0 ^ -19630);
-                this.field_q.a(0, this.field_d.payload, (byte) -101, this.field_d.payload.length);
+                this.field_q.enqueueWrite(0, this.field_d.payload, (byte) -101, this.field_d.payload.length);
                 this.field_b.a((byte) 119, var2);
                 var2 = (NetworkArchiveRequest) (this.field_m.c(24542));
                 if (var16 == 0) {
@@ -162,7 +162,7 @@ final class SocketJs5Transport extends Js5Transport {
               var2_int = 0;
               scanLoop2: while (true) {
                 if (100 > var2_int) {
-                  var3_int = this.field_q.a(-103);
+                  var3_int = this.field_q.availableBytes(-103);
                   stackIn_146_0 = var3_int;
                   if (var16 != 0) {
                     break scanLoop2;
@@ -195,7 +195,7 @@ final class SocketJs5Transport extends Js5Transport {
                         var6 = var3_int;
                       }
                       boolean decompiledFrameCompleted4 = true;
-                      this.field_q.a(var6, this.field_j.field_z.position, this.field_j.field_z.payload, (byte) -74);
+                      this.field_q.readFully(var6, this.field_j.field_z.position, this.field_j.field_z.payload, (byte) -74);
                       if (this.field_f != 0) {
                         var7 = 0;
                         while (var6 > var7) {
@@ -234,7 +234,7 @@ final class SocketJs5Transport extends Js5Transport {
                         var5Lifetime1 = var3_int;
                       }
                       boolean decompiledFrameCompleted3 = true;
-                      this.field_q.a(var5Lifetime1, this.field_c.position, this.field_c.payload, (byte) -74);
+                      this.field_q.readFully(var5Lifetime1, this.field_c.position, this.field_c.payload, (byte) -74);
                       if (this.field_f != 0) {
                         var6Lifetime1 = 0;
                         while (var6Lifetime1 < var5Lifetime1) {
@@ -359,7 +359,7 @@ final class SocketJs5Transport extends Js5Transport {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (IOException) (Object) decompiledCaughtException;
               try {
-                this.field_q.a(true);
+                this.field_q.close(true);
               } catch (java.lang.Exception decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var3 = (Exception) (Object) decompiledCaughtException;
@@ -391,7 +391,7 @@ final class SocketJs5Transport extends Js5Transport {
         RuntimeException var2_ref = null;
         try {
           try {
-            this.field_q.a(true);
+            this.field_q.close(true);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (Exception) (Object) decompiledCaughtException;
@@ -428,7 +428,7 @@ final class SocketJs5Transport extends Js5Transport {
           try {
             if (null != this.field_q) {
               try {
-                this.field_q.a(true);
+                this.field_q.close(true);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -475,12 +475,12 @@ final class SocketJs5Transport extends Js5Transport {
                 this.field_d.writeByte(90, 4);
                 this.field_d.writeByte(90, (int) this.field_f);
                 this.field_d.writeInt((byte) 60, 0);
-                this.field_q.a(0, this.field_d.payload, (byte) 54, this.field_d.payload.length);
+                this.field_q.enqueueWrite(0, this.field_d.payload, (byte) 54, this.field_d.payload.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var5 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_q.a(true);
+                  this.field_q.close(true);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var6 = (Exception) (Object) decompiledCaughtException;
@@ -512,8 +512,8 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(int param0, ResourceArchive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2611_0;
             StringBuilder stackIn_2611_1;
             String stackIn_2612_2;
@@ -525,7 +525,7 @@ final class SocketJs5Transport extends Js5Transport {
             int param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2611_0 = null;
@@ -537,7 +537,7 @@ final class SocketJs5Transport extends Js5Transport {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 GuestPlayConfirmationForm.field_F = param1;
                 var2 = se.a((byte) -33, "loginm3");
                 if (var2 != null) {
@@ -1509,7 +1509,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "pleaselogintoplay");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   SecondaryNodeDeque.a(var2, false);
                 }
@@ -2430,7 +2430,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "watchintroduction");
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   SecondaryNodeDeque.a(var2, false);
                 }
@@ -3371,7 +3371,7 @@ final class SocketJs5Transport extends Js5Transport {
                   n.field_s[6] = SecondaryNodeDeque.a(var2, false);
                 }
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadLoginPromptsAndSubscriptionText() throws java.lang.RuntimeException {
                 var2 = se.a((byte) -33, "mustlogin2,7");
                 if (null != var2) {
                   n.field_s[7] = SecondaryNodeDeque.a(var2, false);
@@ -3529,13 +3529,13 @@ final class SocketJs5Transport extends Js5Transport {
             void run() {
                 var3 = Torquing.field_u;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadLoginPromptsAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3555,7 +3555,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 
@@ -3565,7 +3565,7 @@ final class SocketJs5Transport extends Js5Transport {
         RuntimeException var2 = null;
         try {
           if (null != this.field_q) {
-            this.field_q.a(true);
+            this.field_q.close(true);
           }
           var2_int = -75 % ((-32 - param0) / 37);
           return;
@@ -3608,12 +3608,12 @@ final class SocketJs5Transport extends Js5Transport {
               this.field_d.writeByte(90, 6);
               this.field_d.writeMedium((byte) -121, 3);
               this.field_d.writeShort(0, 114);
-              this.field_q.a(0, this.field_d.payload, (byte) -110, this.field_d.payload.length);
+              this.field_q.enqueueWrite(0, this.field_d.payload, (byte) -110, this.field_d.payload.length);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
               try {
-                this.field_q.a(true);
+                this.field_q.close(true);
               } catch (java.lang.Exception decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var3 = (Exception) (Object) decompiledCaughtException;
@@ -3665,12 +3665,12 @@ final class SocketJs5Transport extends Js5Transport {
               if (param1 < 126) {
                 return;
               }
-              this.field_q.a(0, this.field_d.payload, (byte) 99, this.field_d.payload.length);
+              this.field_q.enqueueWrite(0, this.field_d.payload, (byte) 99, this.field_d.payload.length);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (IOException) (Object) decompiledCaughtException;
               try {
-                this.field_q.a(true);
+                this.field_q.close(true);
               } catch (java.lang.Exception decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4 = (Exception) (Object) decompiledCaughtException;

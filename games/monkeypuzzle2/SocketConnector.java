@@ -97,7 +97,7 @@ abstract class SocketConnector {
             }
             if (0 < SectorCacheStore.field_c.position) {
               try {
-                IsaacRandom.field_g.a(SectorCacheStore.field_c.payload, 0, (byte) 122, SectorCacheStore.field_c.position);
+                IsaacRandom.field_g.enqueueWrite(SectorCacheStore.field_c.payload, 0, (byte) 122, SectorCacheStore.field_c.position);
                 qg.field_d = pf.correctedCurrentTimeMillis(param0 + 71);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

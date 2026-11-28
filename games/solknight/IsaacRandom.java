@@ -97,7 +97,7 @@ final class IsaacRandom {
         if (param1 <= 71) {
           return (Archive) null;
         }
-        return ab.a(2097152, param0, 1, false, true, false);
+        return NetworkGameClient.a(2097152, param0, 1, false, true, false);
     }
 
     public static void clearStaticReferences(int param0) {

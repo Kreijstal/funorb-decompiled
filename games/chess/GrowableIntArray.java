@@ -268,7 +268,7 @@ final class GrowableIntArray {
         String var14 = null;
         dh var15 = null;
         try {
-          DirectByteStorage.$cfr$intArgs$a$c398e174f2fe(0L, (String) null, -103, ci.field_zb, -1, param1, (int[]) null, param1.g((byte) -82), (String) null);
+          DirectByteStorage.createPlayerActionContextWithIntGuard(0L, (String) null, -103, ci.field_zb, -1, param1, (int[]) null, param1.g((byte) -82), (String) null);
           if (param1.field_Vb && (param1.field_Mb == 2 ||
             !(2 > sk.field_t))) {
             var9 = pi.field_d;

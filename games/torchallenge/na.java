@@ -18,7 +18,7 @@ class na extends t {
         field_d = null;
     }
 
-    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void insertAdjacentNode(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -94,7 +94,7 @@ class na extends t {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$83744e1822f8(int param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void insertAdjacentNodeWithIntGuard(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

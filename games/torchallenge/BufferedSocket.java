@@ -37,7 +37,7 @@ final class BufferedSocket implements Runnable {
         field_m = null;
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void readFully(int param0, int param1, int param2, byte[] param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -85,7 +85,7 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.a((byte) -90);
+        this.close((byte) -90);
     }
 
     final static void b(byte param0) {
@@ -98,7 +98,7 @@ final class BufferedSocket implements Runnable {
         int var2 = 126 / ((param0 + 23) / 54);
     }
 
-    final void a(int param0, int param1, byte param2, byte[] param3) throws IOException {
+    final void enqueueWrite(int param0, int param1, byte param2, byte[] param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -250,7 +250,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int c(int param0) throws IOException {
+    final int readByteOrEof(int param0) throws IOException {
         if (param0 != 0) {
           BufferedSocket.b((byte) 122);
           if (!this.field_k) {
@@ -264,7 +264,7 @@ final class BufferedSocket implements Runnable {
         return 0;
     }
 
-    final void b(int param0) throws IOException {
+    final void checkWriteError(int param0) throws IOException {
         if (this.field_k) {
           return;
         }
@@ -275,7 +275,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(byte param0) {
+    final void close(byte param0) {
         try {
           Throwable decompiledCaughtException = null;
           int var2 = 0;
@@ -334,7 +334,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int a(int param0) throws IOException {
+    final int availableBytes(int param0) throws IOException {
         if (this.field_k) {
           return 0;
         }

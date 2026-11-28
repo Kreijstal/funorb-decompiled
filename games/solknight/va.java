@@ -31,7 +31,7 @@ abstract class va {
     final static String a(boolean param0) {
         if (!param0) {
           field_g = (Sprite) null;
-          if (ab.field_u) {
+          if (NetworkGameClient.field_u) {
             return null;
           }
           if (kk.field_d < GzipDecompressor.field_e) {
@@ -42,7 +42,7 @@ abstract class va {
           }
           return null;
         }
-        if (ab.field_u) {
+        if (NetworkGameClient.field_u) {
           return null;
         }
         if (kk.field_d < GzipDecompressor.field_e) {

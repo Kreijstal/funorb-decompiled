@@ -24,7 +24,7 @@ class hb extends nb {
           if (param1 < 124) {
             field_o = (String) null;
           }
-          stackIn_3_0 = param0.a(param2, (byte) -50);
+          stackIn_3_0 = param0.pollAccountUiActions(param2, (byte) -50);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

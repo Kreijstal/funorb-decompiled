@@ -73,13 +73,13 @@ final class ga {
               EditableTextField.a(ng.field_y, -25563, var2, AccountCreationResultPanel.field_wb, ai.field_c);
               var2.writeByte(15, -121);
               var2.writeInt(ArchiveRequest.field_v, 8959);
-              gi.field_l.a(13, 0, (byte) -97, var2.payload);
+              gi.field_l.enqueueWrite(13, 0, (byte) -97, var2.payload);
               StripedProgressWidget.field_N = StripedProgressWidget.field_N + 1;
               GzipDecompressor.field_b = 30000L + ll.correctedCurrentTimeMillis(1000);
             }
             if (StripedProgressWidget.field_N == 3) {
               if (gi.field_l.available(0) > 0) {
-                var1_int = gi.field_l.b(0);
+                var1_int = gi.field_l.readByteOrEof(0);
                 if (var1_int != 0) {
                   stackIn_30_0 = o.a(var1_int, (byte) -112);
                   return stackIn_30_0;

@@ -24,7 +24,7 @@ final class BufferedSocket implements Runnable {
     static String[] stringArrayState0036;
     private int integerState0669;
 
-    final void performAction1374(int integerArgument1, int integerArgument2, int integerArgument3, byte[] byteArrayArgument4) throws IOException {
+    final void enqueueWrite(int integerArgument1, int integerArgument2, int integerArgument3, byte[] byteArrayArgument4) throws IOException {
         int integerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -77,7 +77,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int computeInteger1378(byte byteArgument1) throws IOException {
+    final int readByteOrEof(byte byteArgument1) throws IOException {
         if (this.booleanState0154) {
           return 0;
         }
@@ -124,7 +124,7 @@ final class BufferedSocket implements Runnable {
         return stringLocal2;
     }
 
-    final void performAction1372(int integerArgument1) {
+    final void close(int integerArgument1) {
         try {
           int integerLocal1 = 0;
           integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
@@ -253,7 +253,7 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.performAction1372(0);
+        this.close(0);
     }
 
     final static Object computeObject1375(byte[] byteArrayArgument1, int integerArgument2, boolean booleanArgument3) {
@@ -299,7 +299,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int computeInteger1377(int integerArgument1) throws IOException {
+    final int availableBytes(int integerArgument1) throws IOException {
         if (this.booleanState0154) {
           return 0;
         }
@@ -317,7 +317,7 @@ final class BufferedSocket implements Runnable {
         stringArrayState0035 = null;
     }
 
-    final void performAction1373(int integerArgument1, int integerArgument2, byte byteArgument3, byte[] byteArrayArgument4) throws IOException {
+    final void readFully(int integerArgument1, int integerArgument2, byte byteArgument3, byte[] byteArrayArgument4) throws IOException {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -339,7 +339,7 @@ final class BufferedSocket implements Runnable {
             integerArgument1 = integerArgument1 - integerLocal1;
           }
           if (byteArgument3 != 17) {
-            this.performAction1372(31);
+            this.close(31);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
@@ -356,7 +356,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void performAction1376(byte byteArgument1) throws IOException {
+    final void checkWriteError(byte byteArgument1) throws IOException {
         if (this.booleanState0154) {
           return;
         }

@@ -1438,7 +1438,7 @@ final class LevelScreen extends ib {
             stackIn_131_2 = !(tf.field_a.isEmpty(0));
             stackIn_134_3 = -72;
             stackIn_135_4 = (ProxyAuthenticationRequiredException.field_a != 0);
-            ((BinaryBitmapFont) (Object) stackIn_126_0).drawCentred(pe.$cfr$intArgs$a$3214d41809e1(stackIn_127_1, stackIn_131_2, stackIn_134_3, stackIn_135_4), 320, 30 + (3 * var4 + var3), 10742263, -1);
+            ((BinaryBitmapFont) (Object) stackIn_126_0).drawCentred(pe.getAlternativeButtonPromptPrefixWithIntGuard(stackIn_127_1, stackIn_131_2, stackIn_134_3, stackIn_135_4), 320, 30 + (3 * var4 + var3), 10742263, -1);
             stackIn_138_1 = 320;
             stackIn_138_2 = param0 ^ -87;
             stackIn_139_3 = (ld.field_F == 1);

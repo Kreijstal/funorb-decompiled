@@ -67,7 +67,7 @@ final class bo extends ok {
         int var1 = 0;
         int var1Lifetime1;
         if (PacketBuffer.field_k != null) {
-          PacketBuffer.a(PacketBuffer.field_k, false);
+          PacketBuffer.loadGameInterfaceText(PacketBuffer.field_k, false);
           PacketBuffer.field_k = null;
           nf.d(0);
           SecondaryNodeDequeIterator.field_i = MidiNoteMask.a(3, (byte) 34);

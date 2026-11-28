@@ -121,7 +121,7 @@ final class hl {
         }
         this.field_h = i.field_h;
         this.field_i = lf.field_c;
-        this.field_j = bi.field_z;
+        this.field_j = NetworkGameClient.field_z;
         this.field_b = eg.field_j;
         this.field_c = AwtRasterBuffer.field_h;
     }

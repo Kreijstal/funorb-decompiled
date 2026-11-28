@@ -260,17 +260,17 @@ final class mg {
             var5 = var27.readUnsignedByte(-120);
             if (var5 != 0) {
               var6_int = var4_ref_uh.field_k;
-              c.field_w[0].field_d = false;
-              c.field_w[0].field_f = null;
+              NetworkGameClient.field_w[0].field_d = false;
+              NetworkGameClient.field_w[0].field_f = null;
               var7 = var4_ref_uh.field_h;
-              c.field_w[0].field_e = ri.field_c;
+              NetworkGameClient.field_w[0].field_e = ri.field_c;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                c.field_w[var8_int].field_e = var27.readString(false);
-                c.field_w[var8_int].field_d = false;
+                NetworkGameClient.field_w[var8_int].field_e = var27.readString(false);
+                NetworkGameClient.field_w[var8_int].field_d = false;
                 if (var27.readUnsignedByte(56) == 1) {
-                  c.field_w[var8_int].field_f = var27.readString(false);
+                  NetworkGameClient.field_w[var8_int].field_f = var27.readString(false);
                 } else {
-                  c.field_w[var8_int].field_f = null;
+                  NetworkGameClient.field_w[var8_int].field_f = null;
                 }
               }
               dupTemp$0 = new String[3][var6_int];
@@ -293,12 +293,12 @@ final class mg {
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var27.readUnsignedByte(121);
-                  var21 = c.field_w[var20].field_e;
+                  var21 = NetworkGameClient.field_w[var20].field_e;
                   var22 = var27.readLong(true);
                   var24 = var27.position;
                   if (var6_int > var19) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = c.field_w[var20].field_f;
+                    var9[0][var12] = NetworkGameClient.field_w[var20].field_f;
                     var10[0][var12] = var22;
                     var12++;
                     for (var25 = 0; var7 > var25; var25++) {
@@ -321,10 +321,10 @@ final class mg {
                     }
                   }
                   if (var6_int > var14 &&
-                    !c.field_w[var20].field_d) {
-                    c.field_w[var20].field_d = true;
+                    !NetworkGameClient.field_w[var20].field_d) {
+                    NetworkGameClient.field_w[var20].field_d = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = c.field_w[var20].field_f;
+                    var9[2][var14] = NetworkGameClient.field_w[var20].field_f;
                     var10[2][var14] = var22;
                     var14++;
                     var27.position = var24;

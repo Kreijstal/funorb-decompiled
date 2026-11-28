@@ -87,7 +87,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListenerByDeadline(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.field_l.sentinel) {
-            vk.$cfr$intArgs$a$0b89e0d19fbb(param1, -65, param0);
+            vk.insertAdjacentNodeWithIntGuard(param1, -65, param0);
             this.field_k = ((PcmMixerListener) (this.field_l.sentinel.field_e)).field_f;
             return;
           }
@@ -97,7 +97,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        vk.$cfr$intArgs$a$0b89e0d19fbb(param1, -65, param0);
+        vk.insertAdjacentNodeWithIntGuard(param1, -65, param0);
         this.field_k = ((PcmMixerListener) (this.field_l.sentinel.field_e)).field_f;
         return;
     }

@@ -11,10 +11,10 @@ final class u {
         boolean stackIn_28_0 = false;
         boolean stackIn_50_0 = false;
         boolean stackIn_64_0 = false;
-        ag var3;
+        NetworkGameClient var3;
         if (param0 != 9476) {
-          var3 = (ag) null;
-          u.a((ag) null, false, (byte) -98);
+          var3 = (NetworkGameClient) null;
+          u.a((NetworkGameClient) null, false, (byte) -98);
           if (param1 < 48) {
             if (param1 >= 65 &&
               param1 <= 90) {
@@ -88,7 +88,7 @@ final class u {
         var2.writeByte(2, -120);
     }
 
-    final static int a(ag param0, boolean param1, byte param2) {
+    final static int a(NetworkGameClient param0, boolean param1, byte param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -99,7 +99,7 @@ final class u {
           if (param2 < 58) {
             u.a(120, '#');
           }
-          stackIn_3_0 = param0.b(17, param1);
+          stackIn_3_0 = param0.pollAccountUiActions(17, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

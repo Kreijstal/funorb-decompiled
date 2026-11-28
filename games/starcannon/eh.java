@@ -114,8 +114,8 @@ abstract class eh {
 
     abstract void a(int param0);
 
-    final static void a(byte param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(byte param0, ResourceArchive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2625_0;
             StringBuilder stackIn_2625_1;
             String stackIn_2626_2;
@@ -127,7 +127,7 @@ abstract class eh {
             byte param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(byte initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2625_0 = null;
@@ -139,7 +139,7 @@ abstract class eh {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 tf.field_a = param1;
                 var2 = rd.a("loginm3", param0 - 167);
                 if (var2 != null) {
@@ -1126,7 +1126,7 @@ abstract class eh {
                 }
                 var2 = rd.a("invaliduserorpass", 79);
                 if (var2 != null) {
-                  ag.field_k = DualLinkNode.a(122, var2);
+                  NetworkGameClient.field_k = DualLinkNode.a(122, var2);
                 }
                 var2 = rd.a("pleasetryagain", 68);
                 if (null != var2) {
@@ -1162,7 +1162,7 @@ abstract class eh {
                 }
                 var2 = rd.a("justplay", 72);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   LoginPanel.field_E = DualLinkNode.a(param0 ^ 64, var2);
                 }
@@ -2140,7 +2140,7 @@ abstract class eh {
                 }
                 var2 = rd.a("previous", -43);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   DualLinkNode.a(param0 + 55, var2);
                 }
@@ -3102,7 +3102,7 @@ abstract class eh {
                 }
                 var2 = rd.a("subscription_cost_monthly,8", param0 - 157);
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadSubscriptionText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   ResizableModalDialog.field_N[8] = DualLinkNode.a(dg.bitwiseXor((int) param0, 64), var2);
                 }
@@ -3131,13 +3131,13 @@ abstract class eh {
             void run() {
                 var3 = StarCannon.field_A;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3157,7 +3157,7 @@ abstract class eh {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 

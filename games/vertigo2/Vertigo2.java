@@ -95,14 +95,14 @@ public final class Vertigo2 extends GameShell {
             DelegatingCanvas.a(96);
           }
           stackIn_8_1 = (dc.field_L != null);
-          this.c(stackIn_8_1, -6);
+          this.serviceFramework(stackIn_8_1, -6);
           if (hh.field_c) {
             this.l((byte) 123);
             hh.field_c = false;
           }
           ProxyAuthenticationRequiredException.field_f = ProxyAuthenticationRequiredException.field_f + 1;
           if (cp.a(-109)) {
-            this.m(-105);
+            this.updateLoginFlow(-105);
             if (cp.a(-1)) {
               if (tk.c((byte) -94)) {
                 discarded$0 = this.a(16777215, false);
@@ -137,7 +137,7 @@ public final class Vertigo2 extends GameShell {
                   }
                 } else {
                   stackIn_37_1 = (dc.field_L != null);
-                  var3 = this.b(stackIn_37_1, 125);
+                  var3 = this.pollAccountUiActions(stackIn_37_1, 125);
                   if (var3 == 1 ||
                     var3 == 2) {
                     if (null != dc.field_L) {
@@ -195,7 +195,7 @@ public final class Vertigo2 extends GameShell {
                 wg.field_g = 0;
               }
               if (DefaultTextWidgetRenderer.b((byte) -81)) {
-                var3Lifetime1 = this.h((byte) -127);
+                var3Lifetime1 = this.reconnectAndResendRequests((byte) -127);
                 if (var3Lifetime1 == 0 ||
                   var3Lifetime1 == 1) {
                   en.a(true);
@@ -391,7 +391,7 @@ public final class Vertigo2 extends GameShell {
                   continue;
                 }
               }
-              this.g(-109);
+              this.dispatchCommonPacket(-109);
               continue;
             }
             g.b(7);
@@ -607,7 +607,7 @@ public final class Vertigo2 extends GameShell {
     final void initializeClient(int param0) {
         MidiPcmStream var3 = null;
         try {
-          this.a(4, 0, 19, 1, false, -16, 2, 64);
+          this.initializeFramework(4, 0, 19, 1, false, -16, 2, 64);
           var3 = new MidiPcmStream();
           var3.setChannelProgram(9, true, 128);
           nr.a(true, var3, 22050, gi.field_s, 1024, (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
@@ -617,7 +617,7 @@ public final class Vertigo2 extends GameShell {
           vg.field_d = 128;
           ImageProducerRasterBuffer.field_m = 16777215;
           vm.field_b = param0;
-          this.a(true, false, true, true, false, false, true);
+          this.configureOptionalPacketHandlers(true, false, true, true, false, false, true);
           ok.field_d[9] = -1;
           ok.field_d[65] = 1;
           ok.field_d[64] = 1;
@@ -787,7 +787,7 @@ public final class Vertigo2 extends GameShell {
 
     public final void init() {
         try {
-          this.a(20, 0, "vertigo2");
+          this.startWithDefaultSize(20, 0, "vertigo2");
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "Vertigo2.init()");
         }
@@ -1390,7 +1390,7 @@ public final class Vertigo2 extends GameShell {
     private final void l(byte param0) {
         try {
           if (IntrusiveDequeCursor.field_c != null) {
-            ah.a(98, IntrusiveDequeCursor.field_c);
+            ah.loadGameInterfaceText(98, IntrusiveDequeCursor.field_c);
             IntrusiveDequeCursor.field_c = null;
             di.b((byte) -44);
           }

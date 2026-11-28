@@ -161,7 +161,7 @@ final class rb {
     final static void a(boolean param0) {
         cg var1 = (cg) (DualLinkNode.field_n.beginForward(true));
         if (var1 == null) {
-          ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-120);
+          ProxyAuthenticationRequiredException.closeBufferedSocketWithIntGuard(-120);
           return;
         }
         BitPacketBuffer var2 = ig.field_a;

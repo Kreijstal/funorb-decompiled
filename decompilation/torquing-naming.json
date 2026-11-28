@@ -700,6 +700,14 @@
       "renamedSymbol": "C:SocketJs5Transport"
     },
     {
+      "symbol": "C:fh$1$CfrPartitionedBody",
+      "originalName": "$CfrPartitionedBody",
+      "to": "ClientTextLoader",
+      "evidence": "Local loader carries the resource archive and temporary decode state across 4 sections with 744 bound shared client interface text lookups.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SocketJs5Transport$1ClientTextLoader"
+    },
+    {
       "symbol": "C:fi",
       "originalName": "fi",
       "to": "SoundCache",
@@ -4068,12 +4076,52 @@
       "renamedSymbol": "M:BufferedImageRasterBuffer.initialize(Ljava/awt/Component;BII)V"
     },
     {
+      "symbol": "M:fh$1$CfrPartitionedBody.runChunk0()V",
+      "originalName": "runChunk0",
+      "to": "loadLoginLobbyAndChatText",
+      "evidence": "Source-purpose review: Loads 243 text entries in this section, including loginm3, gameopt_needrating, mu_chat_lobby.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SocketJs5Transport$1ClientTextLoader.loadLoginLobbyAndChatText()V"
+    },
+    {
+      "symbol": "M:fh$1$CfrPartitionedBody.runChunk1()V",
+      "originalName": "runChunk1",
+      "to": "loadAccountFormsAndLoadingText",
+      "evidence": "Source-purpose review: Loads 229 text entries in this section, including create_displayname, monthnames, loading_music.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SocketJs5Transport$1ClientTextLoader.loadAccountFormsAndLoadingText()V"
+    },
+    {
+      "symbol": "M:fh$1$CfrPartitionedBody.runChunk2()V",
+      "originalName": "runChunk2",
+      "to": "loadMatchDisplayAndMembershipText",
+      "evidence": "Source-purpose review: Loads 234 text entries in this section, including mp_offerrematch, fs_button_members, me_extra_benefits.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SocketJs5Transport$1ClientTextLoader.loadMatchDisplayAndMembershipText()V"
+    },
+    {
+      "symbol": "M:fh$1$CfrPartitionedBody.runChunk3()V",
+      "originalName": "runChunk3",
+      "to": "loadLoginPromptsAndSubscriptionText",
+      "evidence": "Source-purpose review: Loads 38 text entries in this section, including mustlogin_alternate, subscription_cost_monthly, sentence_separator.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SocketJs5Transport$1ClientTextLoader.loadLoginPromptsAndSubscriptionText()V"
+    },
+    {
       "symbol": "M:fh.$cfr$lcmp(JJ)I",
       "originalName": "$cfr$lcmp",
       "to": "compareLongs",
       "evidence": "Complete private static declaration/body source reviewed and exactly checked against archived pinned source. Signed64-bit comparison returning-1/0/1 without subtracting operands; preserve full long range and argument order. Pure comparison with no allocation/state/side effects; preserve all operators, result constants, operand types and caller behavior. No replacement of the comparison implementation.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SocketJs5Transport.compareLongs(JJ)I"
+    },
+    {
+      "symbol": "M:fh.a(ILla;)V",
+      "originalName": "a",
+      "to": "loadSharedInterfaceText",
+      "evidence": "Source-purpose review: Runs the local loader for shared client interface text, reading and decoding resource keys from the supplied archive.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SocketJs5Transport.loadSharedInterfaceText(ILResourceArchive;)V"
     },
     {
       "symbol": "M:fi.a(B[B)Lvn;",
@@ -5148,6 +5196,22 @@
       "renamedSymbol": "M:GameApplet.releaseGameResources(I)V"
     },
     {
+      "symbol": "M:hk.a(IILjava/lang/String;IIII)V",
+      "originalName": "a",
+      "to": "startApplet",
+      "evidence": "Source-purpose review: Sets up the applet host and task dispatcher, then starts its game loop thread.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.startApplet(IILjava/lang/String;IIII)V"
+    },
+    {
+      "symbol": "M:hk.a(ILjava/lang/String;)V",
+      "originalName": "a",
+      "to": "showErrorPage",
+      "evidence": "Source-purpose review: Reports the applet error once, notifies the browser of logout, and navigates to its error page.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.showErrorPage(ILjava/lang/String;)V"
+    },
+    {
       "symbol": "M:hk.a(IZI[B)Ljava/lang/String;",
       "originalName": "a",
       "to": "decodeCp1252String",
@@ -5178,6 +5242,14 @@
       "evidence": "Source-purpose review: Declares the early shutdown callback invoked before removing the main canvas.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameApplet.prepareGameShutdown(I)V"
+    },
+    {
+      "symbol": "M:hk.b(Z)Z",
+      "originalName": "b",
+      "to": "allowAppletStartup",
+      "evidence": "Source-purpose review: Provides the applet’s startup predicate before browser parameters are read.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.allowAppletStartup(Z)Z"
     },
     {
       "symbol": "M:hk.c(I)V",
@@ -6620,12 +6692,28 @@
       "renamedSymbol": "M:RasterBuffer.initialize(Ljava/awt/Component;BII)V"
     },
     {
+      "symbol": "M:ko.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;",
+      "originalName": "$cfr$intArgs$a$feb7e63b59d8",
+      "to": "getSaveResultsLoginPromptWithIntGuard",
+      "evidence": "Source-purpose review: Selects the sign-in prompt for preserving the current score, progress, or achievements. Preserves the separate JVM integer-width guard and all bound integer call sites.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ProxyAuthenticationRequiredException.getSaveResultsLoginPromptWithIntGuard(ZIZZ)Ljava/lang/String;"
+    },
+    {
       "symbol": "M:ko.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
       "evidence": "Source-reviewed pure cleanup: only owned static reference null assignments, primitive parameter guards, return and braces after inert default locals. Each reference ownership and no-shadow binding proved against the current source/dictionary; guard order, partial cleanup and arithmetic-free predicates preserved. No scalar clearing or helper calls introduced.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ProxyAuthenticationRequiredException.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:ko.a(ZBZZ)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "getSaveResultsLoginPrompt",
+      "evidence": "Source-purpose review: Selects the sign-in prompt for preserving the current score, progress, or achievements.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ProxyAuthenticationRequiredException.getSaveResultsLoginPrompt(ZBZZ)Ljava/lang/String;"
     },
     {
       "symbol": "M:kp.a(B)I",
@@ -7972,12 +8060,60 @@
       "renamedSymbol": "M:nn.computeCrc32(I[BII)I"
     },
     {
+      "symbol": "M:no.a(I)I",
+      "originalName": "a",
+      "to": "availableBytes",
+      "evidence": "Source-purpose review: Returns the number of input bytes available to read without blocking.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.availableBytes(I)I"
+    },
+    {
+      "symbol": "M:no.a(II[BB)V",
+      "originalName": "a",
+      "to": "readFully",
+      "evidence": "Source-purpose review: Reads repeatedly into the requested destination range and throws EOFException when the stream ends early.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.readFully(II[BB)V"
+    },
+    {
+      "symbol": "M:no.a(I[BBI)V",
+      "originalName": "a",
+      "to": "enqueueWrite",
+      "evidence": "Source-purpose review: Copies outgoing bytes to the circular write buffer, starts the background writer when needed, and signals it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.enqueueWrite(I[BBI)V"
+    },
+    {
+      "symbol": "M:no.a(Z)V",
+      "originalName": "a",
+      "to": "close",
+      "evidence": "Source-purpose review: Signals the socket writer to stop and waits for its thread before clearing the writer task.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.close(Z)V"
+    },
+    {
       "symbol": "M:no.b(I)V",
       "originalName": "b",
       "to": "clearStaticReferences",
       "evidence": "Source-reviewed pure cleanup: only owned static reference null assignments, primitive parameter guards, return and braces after inert default locals. Each reference ownership and no-shadow binding proved against the current source/dictionary; guard order, partial cleanup and arithmetic-free predicates preserved. No scalar clearing or helper calls introduced.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BufferedSocket.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:no.d(I)I",
+      "originalName": "d",
+      "to": "readByteOrEof",
+      "evidence": "Source-purpose review: Reads one byte from the socket input stream and returns its end-of-stream result.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.readByteOrEof(I)I"
+    },
+    {
+      "symbol": "M:no.e(I)V",
+      "originalName": "e",
+      "to": "checkWriteError",
+      "evidence": "Source-purpose review: Checks and clears the saved background-write error, reporting it once as an IOException.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.checkWriteError(I)V"
     },
     {
       "symbol": "M:np.a(JZ)I",
@@ -10268,6 +10404,70 @@
       "renamedSymbol": "M:NetworkGameClient.startAppletClient(ILjava/lang/String;I)V"
     },
     {
+      "symbol": "M:tg.a(ZB)V",
+      "originalName": "a",
+      "to": "enableDefaultPacketHandlers",
+      "evidence": "Source-purpose review: Configures the common packet routes available to the client and its optional default features.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkGameClient.enableDefaultPacketHandlers(ZB)V"
+    },
+    {
+      "symbol": "M:tg.a(ZZZ)I",
+      "originalName": "a",
+      "to": "processAccountUiActions",
+      "evidence": "Source-purpose review: Dispatches account and login actions and polls the country list download when requested.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkGameClient.processAccountUiActions(ZZZ)I"
+    },
+    {
+      "symbol": "M:tg.b(ZI)I",
+      "originalName": "b",
+      "to": "pollAccountUiActions",
+      "evidence": "Source-purpose review: Runs one account and login UI polling step through the common action dispatcher.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkGameClient.pollAccountUiActions(ZI)I"
+    },
+    {
+      "symbol": "M:tg.c(B)V",
+      "originalName": "c",
+      "to": "readSessionCookieUpdate",
+      "evidence": "Source-purpose review: Reads the server-provided session value and updates the applet’s session cookie.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkGameClient.readSessionCookieUpdate(B)V"
+    },
+    {
+      "symbol": "M:tg.d(B)V",
+      "originalName": "d",
+      "to": "enablePacketFive",
+      "evidence": "Source-purpose review: Enables dispatch for common server packet 5.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkGameClient.enablePacketFive(B)V"
+    },
+    {
+      "symbol": "M:tg.e(B)V",
+      "originalName": "e",
+      "to": "dispatchCommonPacket",
+      "evidence": "Source-purpose review: Routes enabled common server packets to their handlers and reports unknown packet types.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkGameClient.dispatchCommonPacket(B)V"
+    },
+    {
+      "symbol": "M:tg.f(I)V",
+      "originalName": "f",
+      "to": "enablePacketHandler",
+      "evidence": "Source-purpose review: Enables dispatch for the supplied server packet type.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkGameClient.enablePacketHandler(I)V"
+    },
+    {
+      "symbol": "M:tg.g(I)I",
+      "originalName": "g",
+      "to": "reconnectAndResendRequests",
+      "evidence": "Source-purpose review: Retries the connection and resubmits outstanding requests for enabled response types.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkGameClient.reconnectAndResendRequests(I)I"
+    },
+    {
       "symbol": "M:tg.h(I)V",
       "originalName": "h",
       "to": "initializePacketLengths",
@@ -10276,12 +10476,36 @@
       "renamedSymbol": "M:NetworkGameClient.initializePacketLengths(I)V"
     },
     {
+      "symbol": "M:tg.i(I)V",
+      "originalName": "i",
+      "to": "enablePacketTwo",
+      "evidence": "Source-purpose review: Enables dispatch for common server packet 2.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkGameClient.enablePacketTwo(I)V"
+    },
+    {
       "symbol": "M:tg.j(I)I",
       "originalName": "j",
       "to": "pollLoginConnection",
       "evidence": "Source-purpose review: Polls the login connection when ready and schedules reconnection after an error.",
       "confidence": "reviewed",
       "renamedSymbol": "M:NetworkGameClient.pollLoginConnection(I)I"
+    },
+    {
+      "symbol": "M:tg.l(I)V",
+      "originalName": "l",
+      "to": "enablePacketOne",
+      "evidence": "Source-purpose review: Enables dispatch for common server packet 1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkGameClient.enablePacketOne(I)V"
+    },
+    {
+      "symbol": "M:tg.n(I)V",
+      "originalName": "n",
+      "to": "updateLoginFlow",
+      "evidence": "Source-purpose review: Advances the login UI and connection states while the client cannot enter the game.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkGameClient.updateLoginFlow(I)V"
     },
     {
       "symbol": "M:th.a(B)V",
@@ -13519,9 +13743,9 @@
     },
     {
       "symbol": "C:fh$1$CfrPartitionedBody",
-      "renamedSymbol": "C:SocketJs5Transport$1$CfrPartitionedBody",
+      "renamedSymbol": "C:SocketJs5Transport$1ClientTextLoader",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "ClientTextLoader",
       "declaration": {
         "file": "fh.java",
         "start": 21968,
@@ -22726,7 +22950,7 @@
     },
     {
       "symbol": "F:fh$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:SocketJs5Transport$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:SocketJs5Transport$1ClientTextLoader.decompiledCaughtException:Ljava/lang/RuntimeException;",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -22737,7 +22961,7 @@
     },
     {
       "symbol": "F:fh$1$CfrPartitionedBody.finished:Z",
-      "renamedSymbol": "F:SocketJs5Transport$1$CfrPartitionedBody.finished:Z",
+      "renamedSymbol": "F:SocketJs5Transport$1ClientTextLoader.finished:Z",
       "originalName": "finished",
       "renamedName": "finished",
       "declaration": {
@@ -22748,7 +22972,7 @@
     },
     {
       "symbol": "F:fh$1$CfrPartitionedBody.param0:I",
-      "renamedSymbol": "F:SocketJs5Transport$1$CfrPartitionedBody.param0:I",
+      "renamedSymbol": "F:SocketJs5Transport$1ClientTextLoader.param0:I",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -22759,7 +22983,7 @@
     },
     {
       "symbol": "F:fh$1$CfrPartitionedBody.param1:Lla;",
-      "renamedSymbol": "F:SocketJs5Transport$1$CfrPartitionedBody.param1:LResourceArchive;",
+      "renamedSymbol": "F:SocketJs5Transport$1ClientTextLoader.param1:LResourceArchive;",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -22770,7 +22994,7 @@
     },
     {
       "symbol": "F:fh$1$CfrPartitionedBody.stackIn_2611_0:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:SocketJs5Transport$1$CfrPartitionedBody.stackIn_2611_0:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:SocketJs5Transport$1ClientTextLoader.stackIn_2611_0:Ljava/lang/RuntimeException;",
       "originalName": "stackIn_2611_0",
       "renamedName": "stackIn_2611_0",
       "declaration": {
@@ -22781,7 +23005,7 @@
     },
     {
       "symbol": "F:fh$1$CfrPartitionedBody.stackIn_2611_1:Ljava/lang/StringBuilder;",
-      "renamedSymbol": "F:SocketJs5Transport$1$CfrPartitionedBody.stackIn_2611_1:Ljava/lang/StringBuilder;",
+      "renamedSymbol": "F:SocketJs5Transport$1ClientTextLoader.stackIn_2611_1:Ljava/lang/StringBuilder;",
       "originalName": "stackIn_2611_1",
       "renamedName": "stackIn_2611_1",
       "declaration": {
@@ -22792,7 +23016,7 @@
     },
     {
       "symbol": "F:fh$1$CfrPartitionedBody.stackIn_2612_2:Ljava/lang/String;",
-      "renamedSymbol": "F:SocketJs5Transport$1$CfrPartitionedBody.stackIn_2612_2:Ljava/lang/String;",
+      "renamedSymbol": "F:SocketJs5Transport$1ClientTextLoader.stackIn_2612_2:Ljava/lang/String;",
       "originalName": "stackIn_2612_2",
       "renamedName": "stackIn_2612_2",
       "declaration": {
@@ -22803,7 +23027,7 @@
     },
     {
       "symbol": "F:fh$1$CfrPartitionedBody.stackIn_2620_0:Z",
-      "renamedSymbol": "F:SocketJs5Transport$1$CfrPartitionedBody.stackIn_2620_0:Z",
+      "renamedSymbol": "F:SocketJs5Transport$1ClientTextLoader.stackIn_2620_0:Z",
       "originalName": "stackIn_2620_0",
       "renamedName": "stackIn_2620_0",
       "declaration": {
@@ -22814,7 +23038,7 @@
     },
     {
       "symbol": "F:fh$1$CfrPartitionedBody.var2:[B",
-      "renamedSymbol": "F:SocketJs5Transport$1$CfrPartitionedBody.var2:[B",
+      "renamedSymbol": "F:SocketJs5Transport$1ClientTextLoader.var2:[B",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -22825,7 +23049,7 @@
     },
     {
       "symbol": "F:fh$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:SocketJs5Transport$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:SocketJs5Transport$1ClientTextLoader.var2_ref:Ljava/lang/RuntimeException;",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -22836,7 +23060,7 @@
     },
     {
       "symbol": "F:fh$1$CfrPartitionedBody.var3:I",
-      "renamedSymbol": "F:SocketJs5Transport$1$CfrPartitionedBody.var3:I",
+      "renamedSymbol": "F:SocketJs5Transport$1ClientTextLoader.var3:I",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -76714,7 +76938,7 @@
     },
     {
       "symbol": "L:fh$1$CfrPartitionedBody.run()V#0",
-      "renamedSymbol": "L:SocketJs5Transport$1$CfrPartitionedBody.run()V#0",
+      "renamedSymbol": "L:SocketJs5Transport$1ClientTextLoader.run()V#0",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -76934,7 +77158,7 @@
     },
     {
       "symbol": "L:fh.a(ILla;)V#0",
-      "renamedSymbol": "L:SocketJs5Transport.a(ILResourceArchive;)V#0",
+      "renamedSymbol": "L:SocketJs5Transport.loadSharedInterfaceText(ILResourceArchive;)V#0",
       "originalName": "decompiledBody",
       "renamedName": "decompiledBody",
       "declaration": {
@@ -95425,7 +95649,7 @@
     },
     {
       "symbol": "L:hk.a(IILjava/lang/String;IIII)V#0",
-      "renamedSymbol": "L:GameApplet.a(IILjava/lang/String;IIII)V#0",
+      "renamedSymbol": "L:GameApplet.startApplet(IILjava/lang/String;IIII)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -95436,7 +95660,7 @@
     },
     {
       "symbol": "L:hk.a(IILjava/lang/String;IIII)V#1",
-      "renamedSymbol": "L:GameApplet.a(IILjava/lang/String;IIII)V#1",
+      "renamedSymbol": "L:GameApplet.startApplet(IILjava/lang/String;IIII)V#1",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -95447,7 +95671,7 @@
     },
     {
       "symbol": "L:hk.a(IILjava/lang/String;IIII)V#10",
-      "renamedSymbol": "L:GameApplet.a(IILjava/lang/String;IIII)V#10",
+      "renamedSymbol": "L:GameApplet.startApplet(IILjava/lang/String;IIII)V#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -95458,7 +95682,7 @@
     },
     {
       "symbol": "L:hk.a(IILjava/lang/String;IIII)V#11",
-      "renamedSymbol": "L:GameApplet.a(IILjava/lang/String;IIII)V#11",
+      "renamedSymbol": "L:GameApplet.startApplet(IILjava/lang/String;IIII)V#11",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -95469,7 +95693,7 @@
     },
     {
       "symbol": "L:hk.a(IILjava/lang/String;IIII)V#12",
-      "renamedSymbol": "L:GameApplet.a(IILjava/lang/String;IIII)V#12",
+      "renamedSymbol": "L:GameApplet.startApplet(IILjava/lang/String;IIII)V#12",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -95480,7 +95704,7 @@
     },
     {
       "symbol": "L:hk.a(IILjava/lang/String;IIII)V#13",
-      "renamedSymbol": "L:GameApplet.a(IILjava/lang/String;IIII)V#13",
+      "renamedSymbol": "L:GameApplet.startApplet(IILjava/lang/String;IIII)V#13",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -95491,7 +95715,7 @@
     },
     {
       "symbol": "L:hk.a(IILjava/lang/String;IIII)V#2",
-      "renamedSymbol": "L:GameApplet.a(IILjava/lang/String;IIII)V#2",
+      "renamedSymbol": "L:GameApplet.startApplet(IILjava/lang/String;IIII)V#2",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -95502,7 +95726,7 @@
     },
     {
       "symbol": "L:hk.a(IILjava/lang/String;IIII)V#3",
-      "renamedSymbol": "L:GameApplet.a(IILjava/lang/String;IIII)V#3",
+      "renamedSymbol": "L:GameApplet.startApplet(IILjava/lang/String;IIII)V#3",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -95513,7 +95737,7 @@
     },
     {
       "symbol": "L:hk.a(IILjava/lang/String;IIII)V#4",
-      "renamedSymbol": "L:GameApplet.a(IILjava/lang/String;IIII)V#4",
+      "renamedSymbol": "L:GameApplet.startApplet(IILjava/lang/String;IIII)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -95524,7 +95748,7 @@
     },
     {
       "symbol": "L:hk.a(IILjava/lang/String;IIII)V#5",
-      "renamedSymbol": "L:GameApplet.a(IILjava/lang/String;IIII)V#5",
+      "renamedSymbol": "L:GameApplet.startApplet(IILjava/lang/String;IIII)V#5",
       "originalName": "var8_int",
       "renamedName": "var8_int",
       "declaration": {
@@ -95535,7 +95759,7 @@
     },
     {
       "symbol": "L:hk.a(IILjava/lang/String;IIII)V#6",
-      "renamedSymbol": "L:GameApplet.a(IILjava/lang/String;IIII)V#6",
+      "renamedSymbol": "L:GameApplet.startApplet(IILjava/lang/String;IIII)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -95546,7 +95770,7 @@
     },
     {
       "symbol": "L:hk.a(IILjava/lang/String;IIII)V#7",
-      "renamedSymbol": "L:GameApplet.a(IILjava/lang/String;IIII)V#7",
+      "renamedSymbol": "L:GameApplet.startApplet(IILjava/lang/String;IIII)V#7",
       "originalName": "var8_ref",
       "renamedName": "var8_ref",
       "declaration": {
@@ -95557,7 +95781,7 @@
     },
     {
       "symbol": "L:hk.a(IILjava/lang/String;IIII)V#8",
-      "renamedSymbol": "L:GameApplet.a(IILjava/lang/String;IIII)V#8",
+      "renamedSymbol": "L:GameApplet.startApplet(IILjava/lang/String;IIII)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -95568,7 +95792,7 @@
     },
     {
       "symbol": "L:hk.a(IILjava/lang/String;IIII)V#9",
-      "renamedSymbol": "L:GameApplet.a(IILjava/lang/String;IIII)V#9",
+      "renamedSymbol": "L:GameApplet.startApplet(IILjava/lang/String;IIII)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -95579,7 +95803,7 @@
     },
     {
       "symbol": "L:hk.a(ILjava/lang/String;)V#0",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#0",
+      "renamedSymbol": "L:GameApplet.showErrorPage(ILjava/lang/String;)V#0",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -95590,7 +95814,7 @@
     },
     {
       "symbol": "L:hk.a(ILjava/lang/String;)V#1",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#1",
+      "renamedSymbol": "L:GameApplet.showErrorPage(ILjava/lang/String;)V#1",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -95601,7 +95825,7 @@
     },
     {
       "symbol": "L:hk.a(ILjava/lang/String;)V#10",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#10",
+      "renamedSymbol": "L:GameApplet.showErrorPage(ILjava/lang/String;)V#10",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -95612,7 +95836,7 @@
     },
     {
       "symbol": "L:hk.a(ILjava/lang/String;)V#11",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#11",
+      "renamedSymbol": "L:GameApplet.showErrorPage(ILjava/lang/String;)V#11",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -95623,7 +95847,7 @@
     },
     {
       "symbol": "L:hk.a(ILjava/lang/String;)V#2",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#2",
+      "renamedSymbol": "L:GameApplet.showErrorPage(ILjava/lang/String;)V#2",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -95634,7 +95858,7 @@
     },
     {
       "symbol": "L:hk.a(ILjava/lang/String;)V#3",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#3",
+      "renamedSymbol": "L:GameApplet.showErrorPage(ILjava/lang/String;)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -95645,7 +95869,7 @@
     },
     {
       "symbol": "L:hk.a(ILjava/lang/String;)V#4",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#4",
+      "renamedSymbol": "L:GameApplet.showErrorPage(ILjava/lang/String;)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -95656,7 +95880,7 @@
     },
     {
       "symbol": "L:hk.a(ILjava/lang/String;)V#5",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#5",
+      "renamedSymbol": "L:GameApplet.showErrorPage(ILjava/lang/String;)V#5",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -95667,7 +95891,7 @@
     },
     {
       "symbol": "L:hk.a(ILjava/lang/String;)V#6",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#6",
+      "renamedSymbol": "L:GameApplet.showErrorPage(ILjava/lang/String;)V#6",
       "originalName": "var3_ref2",
       "renamedName": "var3_ref2",
       "declaration": {
@@ -95678,7 +95902,7 @@
     },
     {
       "symbol": "L:hk.a(ILjava/lang/String;)V#7",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#7",
+      "renamedSymbol": "L:GameApplet.showErrorPage(ILjava/lang/String;)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -95689,7 +95913,7 @@
     },
     {
       "symbol": "L:hk.a(ILjava/lang/String;)V#8",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#8",
+      "renamedSymbol": "L:GameApplet.showErrorPage(ILjava/lang/String;)V#8",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -95700,7 +95924,7 @@
     },
     {
       "symbol": "L:hk.a(ILjava/lang/String;)V#9",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#9",
+      "renamedSymbol": "L:GameApplet.showErrorPage(ILjava/lang/String;)V#9",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -120527,7 +120751,7 @@
     },
     {
       "symbol": "L:ko.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;#0",
-      "renamedSymbol": "L:ProxyAuthenticationRequiredException.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;#0",
+      "renamedSymbol": "L:ProxyAuthenticationRequiredException.getSaveResultsLoginPromptWithIntGuard(ZIZZ)Ljava/lang/String;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -120538,7 +120762,7 @@
     },
     {
       "symbol": "L:ko.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;#1",
-      "renamedSymbol": "L:ProxyAuthenticationRequiredException.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;#1",
+      "renamedSymbol": "L:ProxyAuthenticationRequiredException.getSaveResultsLoginPromptWithIntGuard(ZIZZ)Ljava/lang/String;#1",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -120560,7 +120784,7 @@
     },
     {
       "symbol": "L:ko.a(ZBZZ)Ljava/lang/String;#0",
-      "renamedSymbol": "L:ProxyAuthenticationRequiredException.a(ZBZZ)Ljava/lang/String;#0",
+      "renamedSymbol": "L:ProxyAuthenticationRequiredException.getSaveResultsLoginPrompt(ZBZZ)Ljava/lang/String;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -120571,7 +120795,7 @@
     },
     {
       "symbol": "L:ko.a(ZBZZ)Ljava/lang/String;#1",
-      "renamedSymbol": "L:ProxyAuthenticationRequiredException.a(ZBZZ)Ljava/lang/String;#1",
+      "renamedSymbol": "L:ProxyAuthenticationRequiredException.getSaveResultsLoginPrompt(ZBZZ)Ljava/lang/String;#1",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -144683,7 +144907,7 @@
     },
     {
       "symbol": "L:no.a(II[BB)V#0",
-      "renamedSymbol": "L:BufferedSocket.a(II[BB)V#0",
+      "renamedSymbol": "L:BufferedSocket.readFully(II[BB)V#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -144694,7 +144918,7 @@
     },
     {
       "symbol": "L:no.a(II[BB)V#1",
-      "renamedSymbol": "L:BufferedSocket.a(II[BB)V#1",
+      "renamedSymbol": "L:BufferedSocket.readFully(II[BB)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -144705,7 +144929,7 @@
     },
     {
       "symbol": "L:no.a(II[BB)V#2",
-      "renamedSymbol": "L:BufferedSocket.a(II[BB)V#2",
+      "renamedSymbol": "L:BufferedSocket.readFully(II[BB)V#2",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -144716,7 +144940,7 @@
     },
     {
       "symbol": "L:no.a(II[BB)V#3",
-      "renamedSymbol": "L:BufferedSocket.a(II[BB)V#3",
+      "renamedSymbol": "L:BufferedSocket.readFully(II[BB)V#3",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -144727,7 +144951,7 @@
     },
     {
       "symbol": "L:no.a(II[BB)V#4",
-      "renamedSymbol": "L:BufferedSocket.a(II[BB)V#4",
+      "renamedSymbol": "L:BufferedSocket.readFully(II[BB)V#4",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -144738,7 +144962,7 @@
     },
     {
       "symbol": "L:no.a(II[BB)V#5",
-      "renamedSymbol": "L:BufferedSocket.a(II[BB)V#5",
+      "renamedSymbol": "L:BufferedSocket.readFully(II[BB)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -144749,7 +144973,7 @@
     },
     {
       "symbol": "L:no.a(II[BB)V#6",
-      "renamedSymbol": "L:BufferedSocket.a(II[BB)V#6",
+      "renamedSymbol": "L:BufferedSocket.readFully(II[BB)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -144760,7 +144984,7 @@
     },
     {
       "symbol": "L:no.a(II[BB)V#7",
-      "renamedSymbol": "L:BufferedSocket.a(II[BB)V#7",
+      "renamedSymbol": "L:BufferedSocket.readFully(II[BB)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -144771,7 +144995,7 @@
     },
     {
       "symbol": "L:no.a(I[BBI)V#0",
-      "renamedSymbol": "L:BufferedSocket.a(I[BBI)V#0",
+      "renamedSymbol": "L:BufferedSocket.enqueueWrite(I[BBI)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -144782,7 +145006,7 @@
     },
     {
       "symbol": "L:no.a(I[BBI)V#1",
-      "renamedSymbol": "L:BufferedSocket.a(I[BBI)V#1",
+      "renamedSymbol": "L:BufferedSocket.enqueueWrite(I[BBI)V#1",
       "originalName": "stackIn_28_0",
       "renamedName": "stackIn_28_0",
       "declaration": {
@@ -144793,7 +145017,7 @@
     },
     {
       "symbol": "L:no.a(I[BBI)V#2",
-      "renamedSymbol": "L:BufferedSocket.a(I[BBI)V#2",
+      "renamedSymbol": "L:BufferedSocket.enqueueWrite(I[BBI)V#2",
       "originalName": "stackIn_28_1",
       "renamedName": "stackIn_28_1",
       "declaration": {
@@ -144804,7 +145028,7 @@
     },
     {
       "symbol": "L:no.a(I[BBI)V#3",
-      "renamedSymbol": "L:BufferedSocket.a(I[BBI)V#3",
+      "renamedSymbol": "L:BufferedSocket.enqueueWrite(I[BBI)V#3",
       "originalName": "stackIn_29_2",
       "renamedName": "stackIn_29_2",
       "declaration": {
@@ -144815,7 +145039,7 @@
     },
     {
       "symbol": "L:no.a(I[BBI)V#4",
-      "renamedSymbol": "L:BufferedSocket.a(I[BBI)V#4",
+      "renamedSymbol": "L:BufferedSocket.enqueueWrite(I[BBI)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -144826,7 +145050,7 @@
     },
     {
       "symbol": "L:no.a(I[BBI)V#5",
-      "renamedSymbol": "L:BufferedSocket.a(I[BBI)V#5",
+      "renamedSymbol": "L:BufferedSocket.enqueueWrite(I[BBI)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -144837,7 +145061,7 @@
     },
     {
       "symbol": "L:no.a(I[BBI)V#6",
-      "renamedSymbol": "L:BufferedSocket.a(I[BBI)V#6",
+      "renamedSymbol": "L:BufferedSocket.enqueueWrite(I[BBI)V#6",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -144848,7 +145072,7 @@
     },
     {
       "symbol": "L:no.a(I[BBI)V#7",
-      "renamedSymbol": "L:BufferedSocket.a(I[BBI)V#7",
+      "renamedSymbol": "L:BufferedSocket.enqueueWrite(I[BBI)V#7",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -144859,7 +145083,7 @@
     },
     {
       "symbol": "L:no.a(I[BBI)V#8",
-      "renamedSymbol": "L:BufferedSocket.a(I[BBI)V#8",
+      "renamedSymbol": "L:BufferedSocket.enqueueWrite(I[BBI)V#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -144870,7 +145094,7 @@
     },
     {
       "symbol": "L:no.a(I[BBI)V#9",
-      "renamedSymbol": "L:BufferedSocket.a(I[BBI)V#9",
+      "renamedSymbol": "L:BufferedSocket.enqueueWrite(I[BBI)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -145068,7 +145292,7 @@
     },
     {
       "symbol": "L:no.a(Z)V#0",
-      "renamedSymbol": "L:BufferedSocket.a(Z)V#0",
+      "renamedSymbol": "L:BufferedSocket.close(Z)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -145079,7 +145303,7 @@
     },
     {
       "symbol": "L:no.a(Z)V#1",
-      "renamedSymbol": "L:BufferedSocket.a(Z)V#1",
+      "renamedSymbol": "L:BufferedSocket.close(Z)V#1",
       "originalName": "interruptedException",
       "renamedName": "interruptedException",
       "declaration": {
@@ -145090,7 +145314,7 @@
     },
     {
       "symbol": "L:no.a(Z)V#2",
-      "renamedSymbol": "L:BufferedSocket.a(Z)V#2",
+      "renamedSymbol": "L:BufferedSocket.close(Z)V#2",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -145101,7 +145325,7 @@
     },
     {
       "symbol": "L:no.a(Z)V#3",
-      "renamedSymbol": "L:BufferedSocket.a(Z)V#3",
+      "renamedSymbol": "L:BufferedSocket.close(Z)V#3",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -145145,7 +145369,7 @@
     },
     {
       "symbol": "L:no.e(I)V#0",
-      "renamedSymbol": "L:BufferedSocket.e(I)V#0",
+      "renamedSymbol": "L:BufferedSocket.checkWriteError(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -190432,7 +190656,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#0",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#0",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -190443,7 +190667,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#1",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#1",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -190454,7 +190678,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#10",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#10",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#10",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -190465,7 +190689,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#11",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#11",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#11",
       "originalName": "var5_intLifetime1",
       "renamedName": "var5_intLifetime1",
       "declaration": {
@@ -190476,7 +190700,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#12",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#12",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#12",
       "originalName": "var5_intLifetime2",
       "renamedName": "var5_intLifetime2",
       "declaration": {
@@ -190487,7 +190711,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#13",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#13",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -190498,7 +190722,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#14",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#14",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#14",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -190509,7 +190733,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#15",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#15",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#15",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -190520,7 +190744,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#2",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#2",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -190531,7 +190755,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#3",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#3",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#3",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -190542,7 +190766,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#4",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#4",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -190553,7 +190777,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#5",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#5",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -190564,7 +190788,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#6",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#6",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -190575,7 +190799,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#7",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#7",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -190586,7 +190810,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#8",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#8",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -190597,7 +190821,7 @@
     },
     {
       "symbol": "L:tg.a(ZZZ)I#9",
-      "renamedSymbol": "L:NetworkGameClient.a(ZZZ)I#9",
+      "renamedSymbol": "L:NetworkGameClient.processAccountUiActions(ZZZ)I#9",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -190608,7 +190832,7 @@
     },
     {
       "symbol": "L:tg.c(B)V#0",
-      "renamedSymbol": "L:NetworkGameClient.c(B)V#0",
+      "renamedSymbol": "L:NetworkGameClient.readSessionCookieUpdate(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -190619,7 +190843,7 @@
     },
     {
       "symbol": "L:tg.e(B)V#0",
-      "renamedSymbol": "L:NetworkGameClient.e(B)V#0",
+      "renamedSymbol": "L:NetworkGameClient.dispatchCommonPacket(B)V#0",
       "originalName": "stackIn_29_0",
       "renamedName": "stackIn_29_0",
       "declaration": {
@@ -190630,7 +190854,7 @@
     },
     {
       "symbol": "L:tg.e(B)V#1",
-      "renamedSymbol": "L:NetworkGameClient.e(B)V#1",
+      "renamedSymbol": "L:NetworkGameClient.dispatchCommonPacket(B)V#1",
       "originalName": "stackIn_30_1",
       "renamedName": "stackIn_30_1",
       "declaration": {
@@ -190641,7 +190865,7 @@
     },
     {
       "symbol": "L:tg.e(B)V#2",
-      "renamedSymbol": "L:NetworkGameClient.e(B)V#2",
+      "renamedSymbol": "L:NetworkGameClient.dispatchCommonPacket(B)V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -190652,7 +190876,7 @@
     },
     {
       "symbol": "L:tg.e(B)V#3",
-      "renamedSymbol": "L:NetworkGameClient.e(B)V#3",
+      "renamedSymbol": "L:NetworkGameClient.dispatchCommonPacket(B)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -190663,7 +190887,7 @@
     },
     {
       "symbol": "L:tg.e(B)V#4",
-      "renamedSymbol": "L:NetworkGameClient.e(B)V#4",
+      "renamedSymbol": "L:NetworkGameClient.dispatchCommonPacket(B)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -190674,7 +190898,7 @@
     },
     {
       "symbol": "L:tg.e(B)V#5",
-      "renamedSymbol": "L:NetworkGameClient.e(B)V#5",
+      "renamedSymbol": "L:NetworkGameClient.dispatchCommonPacket(B)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -190685,7 +190909,7 @@
     },
     {
       "symbol": "L:tg.g(I)I#0",
-      "renamedSymbol": "L:NetworkGameClient.g(I)I#0",
+      "renamedSymbol": "L:NetworkGameClient.reconnectAndResendRequests(I)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -190696,7 +190920,7 @@
     },
     {
       "symbol": "L:tg.g(I)I#1",
-      "renamedSymbol": "L:NetworkGameClient.g(I)I#1",
+      "renamedSymbol": "L:NetworkGameClient.reconnectAndResendRequests(I)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -190762,7 +190986,7 @@
     },
     {
       "symbol": "L:tg.l(I)V#0",
-      "renamedSymbol": "L:NetworkGameClient.l(I)V#0",
+      "renamedSymbol": "L:NetworkGameClient.enablePacketOne(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -190839,7 +191063,7 @@
     },
     {
       "symbol": "L:tg.n(I)V#0",
-      "renamedSymbol": "L:NetworkGameClient.n(I)V#0",
+      "renamedSymbol": "L:NetworkGameClient.updateLoginFlow(I)V#0",
       "originalName": "discarded$4",
       "renamedName": "discarded$4",
       "declaration": {
@@ -190850,7 +191074,7 @@
     },
     {
       "symbol": "L:tg.n(I)V#1",
-      "renamedSymbol": "L:NetworkGameClient.n(I)V#1",
+      "renamedSymbol": "L:NetworkGameClient.updateLoginFlow(I)V#1",
       "originalName": "discarded$5",
       "renamedName": "discarded$5",
       "declaration": {
@@ -190861,7 +191085,7 @@
     },
     {
       "symbol": "L:tg.n(I)V#2",
-      "renamedSymbol": "L:NetworkGameClient.n(I)V#2",
+      "renamedSymbol": "L:NetworkGameClient.updateLoginFlow(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -190872,7 +191096,7 @@
     },
     {
       "symbol": "L:tg.n(I)V#3",
-      "renamedSymbol": "L:NetworkGameClient.n(I)V#3",
+      "renamedSymbol": "L:NetworkGameClient.updateLoginFlow(I)V#3",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -224279,9 +224503,9 @@
     },
     {
       "symbol": "M:fh$1$CfrPartitionedBody.<init>(ILla;)V",
-      "renamedSymbol": "M:SocketJs5Transport$1$CfrPartitionedBody.<init>(ILResourceArchive;)V",
+      "renamedSymbol": "M:SocketJs5Transport$1ClientTextLoader.<init>(ILResourceArchive;)V",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "ClientTextLoader",
       "declaration": {
         "file": "fh.java",
         "start": 22379,
@@ -224290,7 +224514,7 @@
     },
     {
       "symbol": "M:fh$1$CfrPartitionedBody.run()V",
-      "renamedSymbol": "M:SocketJs5Transport$1$CfrPartitionedBody.run()V",
+      "renamedSymbol": "M:SocketJs5Transport$1ClientTextLoader.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -224301,9 +224525,9 @@
     },
     {
       "symbol": "M:fh$1$CfrPartitionedBody.runChunk0()V",
-      "renamedSymbol": "M:SocketJs5Transport$1$CfrPartitionedBody.runChunk0()V",
+      "renamedSymbol": "M:SocketJs5Transport$1ClientTextLoader.loadLoginLobbyAndChatText()V",
       "originalName": "runChunk0",
-      "renamedName": "runChunk0",
+      "renamedName": "loadLoginLobbyAndChatText",
       "declaration": {
         "file": "fh.java",
         "start": 22894,
@@ -224312,9 +224536,9 @@
     },
     {
       "symbol": "M:fh$1$CfrPartitionedBody.runChunk1()V",
-      "renamedSymbol": "M:SocketJs5Transport$1$CfrPartitionedBody.runChunk1()V",
+      "renamedSymbol": "M:SocketJs5Transport$1ClientTextLoader.loadAccountFormsAndLoadingText()V",
       "originalName": "runChunk1",
-      "renamedName": "runChunk1",
+      "renamedName": "loadAccountFormsAndLoadingText",
       "declaration": {
         "file": "fh.java",
         "start": 60537,
@@ -224323,9 +224547,9 @@
     },
     {
       "symbol": "M:fh$1$CfrPartitionedBody.runChunk2()V",
-      "renamedSymbol": "M:SocketJs5Transport$1$CfrPartitionedBody.runChunk2()V",
+      "renamedSymbol": "M:SocketJs5Transport$1ClientTextLoader.loadMatchDisplayAndMembershipText()V",
       "originalName": "runChunk2",
-      "renamedName": "runChunk2",
+      "renamedName": "loadMatchDisplayAndMembershipText",
       "declaration": {
         "file": "fh.java",
         "start": 97444,
@@ -224334,9 +224558,9 @@
     },
     {
       "symbol": "M:fh$1$CfrPartitionedBody.runChunk3()V",
-      "renamedSymbol": "M:SocketJs5Transport$1$CfrPartitionedBody.runChunk3()V",
+      "renamedSymbol": "M:SocketJs5Transport$1ClientTextLoader.loadLoginPromptsAndSubscriptionText()V",
       "originalName": "runChunk3",
-      "renamedName": "runChunk3",
+      "renamedName": "loadLoginPromptsAndSubscriptionText",
       "declaration": {
         "file": "fh.java",
         "start": 134663,
@@ -224389,9 +224613,9 @@
     },
     {
       "symbol": "M:fh.a(ILla;)V",
-      "renamedSymbol": "M:SocketJs5Transport.a(ILResourceArchive;)V",
+      "renamedSymbol": "M:SocketJs5Transport.loadSharedInterfaceText(ILResourceArchive;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadSharedInterfaceText",
       "declaration": {
         "file": "fh.java",
         "start": 21927,
@@ -227326,9 +227550,9 @@
     },
     {
       "symbol": "M:hk.a(IILjava/lang/String;IIII)V",
-      "renamedSymbol": "M:GameApplet.a(IILjava/lang/String;IIII)V",
+      "renamedSymbol": "M:GameApplet.startApplet(IILjava/lang/String;IIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "startApplet",
       "declaration": {
         "file": "hk.java",
         "start": 39427,
@@ -227337,9 +227561,9 @@
     },
     {
       "symbol": "M:hk.a(ILjava/lang/String;)V",
-      "renamedSymbol": "M:GameApplet.a(ILjava/lang/String;)V",
+      "renamedSymbol": "M:GameApplet.showErrorPage(ILjava/lang/String;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "showErrorPage",
       "declaration": {
         "file": "hk.java",
         "start": 20340,
@@ -227425,9 +227649,9 @@
     },
     {
       "symbol": "M:hk.b(Z)Z",
-      "renamedSymbol": "M:GameApplet.b(Z)Z",
+      "renamedSymbol": "M:GameApplet.allowAppletStartup(Z)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "allowAppletStartup",
       "declaration": {
         "file": "hk.java",
         "start": 46241,
@@ -231693,9 +231917,9 @@
     },
     {
       "symbol": "M:ko.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;",
-      "renamedSymbol": "M:ProxyAuthenticationRequiredException.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;",
+      "renamedSymbol": "M:ProxyAuthenticationRequiredException.getSaveResultsLoginPromptWithIntGuard(ZIZZ)Ljava/lang/String;",
       "originalName": "$cfr$intArgs$a$feb7e63b59d8",
-      "renamedName": "$cfr$intArgs$a$feb7e63b59d8",
+      "renamedName": "getSaveResultsLoginPromptWithIntGuard",
       "declaration": {
         "file": "ko.java",
         "start": 2377,
@@ -231737,9 +231961,9 @@
     },
     {
       "symbol": "M:ko.a(ZBZZ)Ljava/lang/String;",
-      "renamedSymbol": "M:ProxyAuthenticationRequiredException.a(ZBZZ)Ljava/lang/String;",
+      "renamedSymbol": "M:ProxyAuthenticationRequiredException.getSaveResultsLoginPrompt(ZBZZ)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSaveResultsLoginPrompt",
       "declaration": {
         "file": "ko.java",
         "start": 256,
@@ -235884,9 +236108,9 @@
     },
     {
       "symbol": "M:no.a(I)I",
-      "renamedSymbol": "M:BufferedSocket.a(I)I",
+      "renamedSymbol": "M:BufferedSocket.availableBytes(I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "availableBytes",
       "declaration": {
         "file": "no.java",
         "start": 14420,
@@ -235906,9 +236130,9 @@
     },
     {
       "symbol": "M:no.a(II[BB)V",
-      "renamedSymbol": "M:BufferedSocket.a(II[BB)V",
+      "renamedSymbol": "M:BufferedSocket.readFully(II[BB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readFully",
       "declaration": {
         "file": "no.java",
         "start": 10764,
@@ -235917,9 +236141,9 @@
     },
     {
       "symbol": "M:no.a(I[BBI)V",
-      "renamedSymbol": "M:BufferedSocket.a(I[BBI)V",
+      "renamedSymbol": "M:BufferedSocket.enqueueWrite(I[BBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enqueueWrite",
       "declaration": {
         "file": "no.java",
         "start": 5642,
@@ -235939,9 +236163,9 @@
     },
     {
       "symbol": "M:no.a(Z)V",
-      "renamedSymbol": "M:BufferedSocket.a(Z)V",
+      "renamedSymbol": "M:BufferedSocket.close(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "close",
       "declaration": {
         "file": "no.java",
         "start": 820,
@@ -235983,9 +236207,9 @@
     },
     {
       "symbol": "M:no.d(I)I",
-      "renamedSymbol": "M:BufferedSocket.d(I)I",
+      "renamedSymbol": "M:BufferedSocket.readByteOrEof(I)I",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "readByteOrEof",
       "declaration": {
         "file": "no.java",
         "start": 10542,
@@ -235994,9 +236218,9 @@
     },
     {
       "symbol": "M:no.e(I)V",
-      "renamedSymbol": "M:BufferedSocket.e(I)V",
+      "renamedSymbol": "M:BufferedSocket.checkWriteError(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "checkWriteError",
       "declaration": {
         "file": "no.java",
         "start": 498,
@@ -243078,9 +243302,9 @@
     },
     {
       "symbol": "M:tg.a(ZB)V",
-      "renamedSymbol": "M:NetworkGameClient.a(ZB)V",
+      "renamedSymbol": "M:NetworkGameClient.enableDefaultPacketHandlers(ZB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enableDefaultPacketHandlers",
       "declaration": {
         "file": "tg.java",
         "start": 13295,
@@ -243089,9 +243313,9 @@
     },
     {
       "symbol": "M:tg.a(ZZZ)I",
-      "renamedSymbol": "M:NetworkGameClient.a(ZZZ)I",
+      "renamedSymbol": "M:NetworkGameClient.processAccountUiActions(ZZZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "processAccountUiActions",
       "declaration": {
         "file": "tg.java",
         "start": 20470,
@@ -243111,9 +243335,9 @@
     },
     {
       "symbol": "M:tg.b(ZI)I",
-      "renamedSymbol": "M:NetworkGameClient.b(ZI)I",
+      "renamedSymbol": "M:NetworkGameClient.pollAccountUiActions(ZI)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "pollAccountUiActions",
       "declaration": {
         "file": "tg.java",
         "start": 15203,
@@ -243122,9 +243346,9 @@
     },
     {
       "symbol": "M:tg.c(B)V",
-      "renamedSymbol": "M:NetworkGameClient.c(B)V",
+      "renamedSymbol": "M:NetworkGameClient.readSessionCookieUpdate(B)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "readSessionCookieUpdate",
       "declaration": {
         "file": "tg.java",
         "start": 10180,
@@ -243133,9 +243357,9 @@
     },
     {
       "symbol": "M:tg.d(B)V",
-      "renamedSymbol": "M:NetworkGameClient.d(B)V",
+      "renamedSymbol": "M:NetworkGameClient.enablePacketFive(B)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "enablePacketFive",
       "declaration": {
         "file": "tg.java",
         "start": 14671,
@@ -243144,9 +243368,9 @@
     },
     {
       "symbol": "M:tg.e(B)V",
-      "renamedSymbol": "M:NetworkGameClient.e(B)V",
+      "renamedSymbol": "M:NetworkGameClient.dispatchCommonPacket(B)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "dispatchCommonPacket",
       "declaration": {
         "file": "tg.java",
         "start": 10551,
@@ -243155,9 +243379,9 @@
     },
     {
       "symbol": "M:tg.f(I)V",
-      "renamedSymbol": "M:NetworkGameClient.f(I)V",
+      "renamedSymbol": "M:NetworkGameClient.enablePacketHandler(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "enablePacketHandler",
       "declaration": {
         "file": "tg.java",
         "start": 16205,
@@ -243166,9 +243390,9 @@
     },
     {
       "symbol": "M:tg.g(I)I",
-      "renamedSymbol": "M:NetworkGameClient.g(I)I",
+      "renamedSymbol": "M:NetworkGameClient.reconnectAndResendRequests(I)I",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "reconnectAndResendRequests",
       "declaration": {
         "file": "tg.java",
         "start": 13620,
@@ -243188,9 +243412,9 @@
     },
     {
       "symbol": "M:tg.i(I)V",
-      "renamedSymbol": "M:NetworkGameClient.i(I)V",
+      "renamedSymbol": "M:NetworkGameClient.enablePacketTwo(I)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "enablePacketTwo",
       "declaration": {
         "file": "tg.java",
         "start": 13150,
@@ -243221,9 +243445,9 @@
     },
     {
       "symbol": "M:tg.l(I)V",
-      "renamedSymbol": "M:NetworkGameClient.l(I)V",
+      "renamedSymbol": "M:NetworkGameClient.enablePacketOne(I)V",
       "originalName": "l",
-      "renamedName": "l",
+      "renamedName": "enablePacketOne",
       "declaration": {
         "file": "tg.java",
         "start": 10365,
@@ -243243,9 +243467,9 @@
     },
     {
       "symbol": "M:tg.n(I)V",
-      "renamedSymbol": "M:NetworkGameClient.n(I)V",
+      "renamedSymbol": "M:NetworkGameClient.updateLoginFlow(I)V",
       "originalName": "n",
-      "renamedName": "n",
+      "renamedName": "updateLoginFlow",
       "declaration": {
         "file": "tg.java",
         "start": 16278,
@@ -263450,7 +263674,7 @@
     },
     {
       "symbol": "P:fh$1$CfrPartitionedBody.<init>(ILla;)V#0",
-      "renamedSymbol": "P:SocketJs5Transport$1$CfrPartitionedBody.<init>(ILResourceArchive;)V#0",
+      "renamedSymbol": "P:SocketJs5Transport$1ClientTextLoader.<init>(ILResourceArchive;)V#0",
       "originalName": "initialParam0",
       "renamedName": "initialParam0",
       "declaration": {
@@ -263461,7 +263685,7 @@
     },
     {
       "symbol": "P:fh$1$CfrPartitionedBody.<init>(ILla;)V#1",
-      "renamedSymbol": "P:SocketJs5Transport$1$CfrPartitionedBody.<init>(ILResourceArchive;)V#1",
+      "renamedSymbol": "P:SocketJs5Transport$1ClientTextLoader.<init>(ILResourceArchive;)V#1",
       "originalName": "initialParam1",
       "renamedName": "initialParam1",
       "declaration": {
@@ -263648,7 +263872,7 @@
     },
     {
       "symbol": "P:fh.a(ILla;)V#0",
-      "renamedSymbol": "P:SocketJs5Transport.a(ILResourceArchive;)V#0",
+      "renamedSymbol": "P:SocketJs5Transport.loadSharedInterfaceText(ILResourceArchive;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263659,7 +263883,7 @@
     },
     {
       "symbol": "P:fh.a(ILla;)V#1",
-      "renamedSymbol": "P:SocketJs5Transport.a(ILResourceArchive;)V#1",
+      "renamedSymbol": "P:SocketJs5Transport.loadSharedInterfaceText(ILResourceArchive;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -269984,7 +270208,7 @@
     },
     {
       "symbol": "P:hk.a(IILjava/lang/String;IIII)V#0",
-      "renamedSymbol": "P:GameApplet.a(IILjava/lang/String;IIII)V#0",
+      "renamedSymbol": "P:GameApplet.startApplet(IILjava/lang/String;IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -269995,7 +270219,7 @@
     },
     {
       "symbol": "P:hk.a(IILjava/lang/String;IIII)V#1",
-      "renamedSymbol": "P:GameApplet.a(IILjava/lang/String;IIII)V#1",
+      "renamedSymbol": "P:GameApplet.startApplet(IILjava/lang/String;IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -270006,7 +270230,7 @@
     },
     {
       "symbol": "P:hk.a(IILjava/lang/String;IIII)V#2",
-      "renamedSymbol": "P:GameApplet.a(IILjava/lang/String;IIII)V#2",
+      "renamedSymbol": "P:GameApplet.startApplet(IILjava/lang/String;IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -270017,7 +270241,7 @@
     },
     {
       "symbol": "P:hk.a(IILjava/lang/String;IIII)V#3",
-      "renamedSymbol": "P:GameApplet.a(IILjava/lang/String;IIII)V#3",
+      "renamedSymbol": "P:GameApplet.startApplet(IILjava/lang/String;IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -270028,7 +270252,7 @@
     },
     {
       "symbol": "P:hk.a(IILjava/lang/String;IIII)V#4",
-      "renamedSymbol": "P:GameApplet.a(IILjava/lang/String;IIII)V#4",
+      "renamedSymbol": "P:GameApplet.startApplet(IILjava/lang/String;IIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -270039,7 +270263,7 @@
     },
     {
       "symbol": "P:hk.a(IILjava/lang/String;IIII)V#5",
-      "renamedSymbol": "P:GameApplet.a(IILjava/lang/String;IIII)V#5",
+      "renamedSymbol": "P:GameApplet.startApplet(IILjava/lang/String;IIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -270050,7 +270274,7 @@
     },
     {
       "symbol": "P:hk.a(IILjava/lang/String;IIII)V#6",
-      "renamedSymbol": "P:GameApplet.a(IILjava/lang/String;IIII)V#6",
+      "renamedSymbol": "P:GameApplet.startApplet(IILjava/lang/String;IIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -270061,7 +270285,7 @@
     },
     {
       "symbol": "P:hk.a(ILjava/lang/String;)V#0",
-      "renamedSymbol": "P:GameApplet.a(ILjava/lang/String;)V#0",
+      "renamedSymbol": "P:GameApplet.showErrorPage(ILjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -270072,7 +270296,7 @@
     },
     {
       "symbol": "P:hk.a(ILjava/lang/String;)V#1",
-      "renamedSymbol": "P:GameApplet.a(ILjava/lang/String;)V#1",
+      "renamedSymbol": "P:GameApplet.showErrorPage(ILjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -270226,7 +270450,7 @@
     },
     {
       "symbol": "P:hk.b(Z)Z#0",
-      "renamedSymbol": "P:GameApplet.b(Z)Z#0",
+      "renamedSymbol": "P:GameApplet.allowAppletStartup(Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -279796,7 +280020,7 @@
     },
     {
       "symbol": "P:ko.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;#0",
-      "renamedSymbol": "P:ProxyAuthenticationRequiredException.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;#0",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.getSaveResultsLoginPromptWithIntGuard(ZIZZ)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -279807,7 +280031,7 @@
     },
     {
       "symbol": "P:ko.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;#1",
-      "renamedSymbol": "P:ProxyAuthenticationRequiredException.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;#1",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.getSaveResultsLoginPromptWithIntGuard(ZIZZ)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -279818,7 +280042,7 @@
     },
     {
       "symbol": "P:ko.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;#2",
-      "renamedSymbol": "P:ProxyAuthenticationRequiredException.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;#2",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.getSaveResultsLoginPromptWithIntGuard(ZIZZ)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -279829,7 +280053,7 @@
     },
     {
       "symbol": "P:ko.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;#3",
-      "renamedSymbol": "P:ProxyAuthenticationRequiredException.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;#3",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.getSaveResultsLoginPromptWithIntGuard(ZIZZ)Ljava/lang/String;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -279939,7 +280163,7 @@
     },
     {
       "symbol": "P:ko.a(ZBZZ)Ljava/lang/String;#0",
-      "renamedSymbol": "P:ProxyAuthenticationRequiredException.a(ZBZZ)Ljava/lang/String;#0",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.getSaveResultsLoginPrompt(ZBZZ)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -279950,7 +280174,7 @@
     },
     {
       "symbol": "P:ko.a(ZBZZ)Ljava/lang/String;#1",
-      "renamedSymbol": "P:ProxyAuthenticationRequiredException.a(ZBZZ)Ljava/lang/String;#1",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.getSaveResultsLoginPrompt(ZBZZ)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -279961,7 +280185,7 @@
     },
     {
       "symbol": "P:ko.a(ZBZZ)Ljava/lang/String;#2",
-      "renamedSymbol": "P:ProxyAuthenticationRequiredException.a(ZBZZ)Ljava/lang/String;#2",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.getSaveResultsLoginPrompt(ZBZZ)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -279972,7 +280196,7 @@
     },
     {
       "symbol": "P:ko.a(ZBZZ)Ljava/lang/String;#3",
-      "renamedSymbol": "P:ProxyAuthenticationRequiredException.a(ZBZZ)Ljava/lang/String;#3",
+      "renamedSymbol": "P:ProxyAuthenticationRequiredException.getSaveResultsLoginPrompt(ZBZZ)Ljava/lang/String;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -291214,7 +291438,7 @@
     },
     {
       "symbol": "P:no.a(I)I#0",
-      "renamedSymbol": "P:BufferedSocket.a(I)I#0",
+      "renamedSymbol": "P:BufferedSocket.availableBytes(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291247,7 +291471,7 @@
     },
     {
       "symbol": "P:no.a(II[BB)V#0",
-      "renamedSymbol": "P:BufferedSocket.a(II[BB)V#0",
+      "renamedSymbol": "P:BufferedSocket.readFully(II[BB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291258,7 +291482,7 @@
     },
     {
       "symbol": "P:no.a(II[BB)V#1",
-      "renamedSymbol": "P:BufferedSocket.a(II[BB)V#1",
+      "renamedSymbol": "P:BufferedSocket.readFully(II[BB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -291269,7 +291493,7 @@
     },
     {
       "symbol": "P:no.a(II[BB)V#2",
-      "renamedSymbol": "P:BufferedSocket.a(II[BB)V#2",
+      "renamedSymbol": "P:BufferedSocket.readFully(II[BB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -291280,7 +291504,7 @@
     },
     {
       "symbol": "P:no.a(II[BB)V#3",
-      "renamedSymbol": "P:BufferedSocket.a(II[BB)V#3",
+      "renamedSymbol": "P:BufferedSocket.readFully(II[BB)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -291291,7 +291515,7 @@
     },
     {
       "symbol": "P:no.a(I[BBI)V#0",
-      "renamedSymbol": "P:BufferedSocket.a(I[BBI)V#0",
+      "renamedSymbol": "P:BufferedSocket.enqueueWrite(I[BBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291302,7 +291526,7 @@
     },
     {
       "symbol": "P:no.a(I[BBI)V#1",
-      "renamedSymbol": "P:BufferedSocket.a(I[BBI)V#1",
+      "renamedSymbol": "P:BufferedSocket.enqueueWrite(I[BBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -291313,7 +291537,7 @@
     },
     {
       "symbol": "P:no.a(I[BBI)V#2",
-      "renamedSymbol": "P:BufferedSocket.a(I[BBI)V#2",
+      "renamedSymbol": "P:BufferedSocket.enqueueWrite(I[BBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -291324,7 +291548,7 @@
     },
     {
       "symbol": "P:no.a(I[BBI)V#3",
-      "renamedSymbol": "P:BufferedSocket.a(I[BBI)V#3",
+      "renamedSymbol": "P:BufferedSocket.enqueueWrite(I[BBI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -291357,7 +291581,7 @@
     },
     {
       "symbol": "P:no.a(Z)V#0",
-      "renamedSymbol": "P:BufferedSocket.a(Z)V#0",
+      "renamedSymbol": "P:BufferedSocket.close(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291401,7 +291625,7 @@
     },
     {
       "symbol": "P:no.d(I)I#0",
-      "renamedSymbol": "P:BufferedSocket.d(I)I#0",
+      "renamedSymbol": "P:BufferedSocket.readByteOrEof(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291412,7 +291636,7 @@
     },
     {
       "symbol": "P:no.e(I)V#0",
-      "renamedSymbol": "P:BufferedSocket.e(I)V#0",
+      "renamedSymbol": "P:BufferedSocket.checkWriteError(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309760,7 +309984,7 @@
     },
     {
       "symbol": "P:tg.a(ZB)V#0",
-      "renamedSymbol": "P:NetworkGameClient.a(ZB)V#0",
+      "renamedSymbol": "P:NetworkGameClient.enableDefaultPacketHandlers(ZB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309771,7 +309995,7 @@
     },
     {
       "symbol": "P:tg.a(ZB)V#1",
-      "renamedSymbol": "P:NetworkGameClient.a(ZB)V#1",
+      "renamedSymbol": "P:NetworkGameClient.enableDefaultPacketHandlers(ZB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -309782,7 +310006,7 @@
     },
     {
       "symbol": "P:tg.a(ZZZ)I#0",
-      "renamedSymbol": "P:NetworkGameClient.a(ZZZ)I#0",
+      "renamedSymbol": "P:NetworkGameClient.processAccountUiActions(ZZZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309793,7 +310017,7 @@
     },
     {
       "symbol": "P:tg.a(ZZZ)I#1",
-      "renamedSymbol": "P:NetworkGameClient.a(ZZZ)I#1",
+      "renamedSymbol": "P:NetworkGameClient.processAccountUiActions(ZZZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -309804,7 +310028,7 @@
     },
     {
       "symbol": "P:tg.a(ZZZ)I#2",
-      "renamedSymbol": "P:NetworkGameClient.a(ZZZ)I#2",
+      "renamedSymbol": "P:NetworkGameClient.processAccountUiActions(ZZZ)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -309870,7 +310094,7 @@
     },
     {
       "symbol": "P:tg.b(ZI)I#0",
-      "renamedSymbol": "P:NetworkGameClient.b(ZI)I#0",
+      "renamedSymbol": "P:NetworkGameClient.pollAccountUiActions(ZI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309881,7 +310105,7 @@
     },
     {
       "symbol": "P:tg.b(ZI)I#1",
-      "renamedSymbol": "P:NetworkGameClient.b(ZI)I#1",
+      "renamedSymbol": "P:NetworkGameClient.pollAccountUiActions(ZI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -309892,7 +310116,7 @@
     },
     {
       "symbol": "P:tg.c(B)V#0",
-      "renamedSymbol": "P:NetworkGameClient.c(B)V#0",
+      "renamedSymbol": "P:NetworkGameClient.readSessionCookieUpdate(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309903,7 +310127,7 @@
     },
     {
       "symbol": "P:tg.d(B)V#0",
-      "renamedSymbol": "P:NetworkGameClient.d(B)V#0",
+      "renamedSymbol": "P:NetworkGameClient.enablePacketFive(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309914,7 +310138,7 @@
     },
     {
       "symbol": "P:tg.e(B)V#0",
-      "renamedSymbol": "P:NetworkGameClient.e(B)V#0",
+      "renamedSymbol": "P:NetworkGameClient.dispatchCommonPacket(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309925,7 +310149,7 @@
     },
     {
       "symbol": "P:tg.f(I)V#0",
-      "renamedSymbol": "P:NetworkGameClient.f(I)V#0",
+      "renamedSymbol": "P:NetworkGameClient.enablePacketHandler(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309936,7 +310160,7 @@
     },
     {
       "symbol": "P:tg.g(I)I#0",
-      "renamedSymbol": "P:NetworkGameClient.g(I)I#0",
+      "renamedSymbol": "P:NetworkGameClient.reconnectAndResendRequests(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309958,7 +310182,7 @@
     },
     {
       "symbol": "P:tg.i(I)V#0",
-      "renamedSymbol": "P:NetworkGameClient.i(I)V#0",
+      "renamedSymbol": "P:NetworkGameClient.enablePacketTwo(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -309991,7 +310215,7 @@
     },
     {
       "symbol": "P:tg.l(I)V#0",
-      "renamedSymbol": "P:NetworkGameClient.l(I)V#0",
+      "renamedSymbol": "P:NetworkGameClient.enablePacketOne(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -310013,7 +310237,7 @@
     },
     {
       "symbol": "P:tg.n(I)V#0",
-      "renamedSymbol": "P:NetworkGameClient.n(I)V#0",
+      "renamedSymbol": "P:NetworkGameClient.updateLoginFlow(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -322568,7 +322792,7 @@
       "original": "Torquing.java",
       "renamed": "Torquing.java",
       "inputSha256": "742b6d0e1c2e9f63f2a936a53bef0afab5a0766ce8f580bc98ea4a0992d727f5",
-      "outputSha256": "2703314f7be7c1687668d159980c094c803e978b07b6d9deb1ccab3032d08160",
+      "outputSha256": "272fc8eeeda6c82ac8ccf717f969fa146ac65bbfd729ea0dd0a1af13833ca50d",
       "edits": [
         {
           "start": 74,
@@ -331580,6 +331804,13 @@
           "renamed": "TranslucentSpriteLayer"
         },
         {
+          "start": 85151,
+          "end": 85152,
+          "symbol": "M:tg.b(ZI)I",
+          "original": "b",
+          "renamed": "pollAccountUiActions"
+        },
+        {
           "start": 85277,
           "end": 85279,
           "symbol": "C:dg",
@@ -331634,6 +331865,13 @@
           "symbol": "C:ao",
           "original": "ao",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 86749,
+          "end": 86750,
+          "symbol": "M:tg.n(I)V",
+          "original": "n",
+          "renamed": "updateLoginFlow"
         },
         {
           "start": 86812,
@@ -331839,11 +332077,25 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 90000,
+          "end": 90001,
+          "symbol": "M:tg.e(B)V",
+          "original": "e",
+          "renamed": "dispatchCommonPacket"
+        },
+        {
           "start": 90038,
           "end": 90040,
           "symbol": "C:jd",
           "original": "jd",
           "renamed": "DropTargetWidgetContainer"
+        },
+        {
+          "start": 90126,
+          "end": 90127,
+          "symbol": "M:tg.g(I)I",
+          "original": "g",
+          "renamed": "reconnectAndResendRequests"
         },
         {
           "start": 90173,
@@ -354714,7 +354966,7 @@
       "original": "fh.java",
       "renamed": "SocketJs5Transport.java",
       "inputSha256": "752bd57c070592db8c24c714f62eeccb9ca7e7c92728cf9acfea10717232a908",
-      "outputSha256": "3dc456b0a22c362442accb7b57e25c3236ece206c96bacfb3b7338a70edc2cb5",
+      "outputSha256": "a2da3fa225578c5fa0abdaafcb9d2a553ab847b0bd557f56e570ce0f4f810025",
       "edits": [
         {
           "start": 69,
@@ -354794,6 +355046,20 @@
           "renamed": "correctedCurrentTimeMillis"
         },
         {
+          "start": 3843,
+          "end": 3844,
+          "symbol": "M:no.a(Z)V",
+          "original": "a",
+          "renamed": "close"
+        },
+        {
+          "start": 4435,
+          "end": 4436,
+          "symbol": "M:no.e(I)V",
+          "original": "e",
+          "renamed": "checkWriteError"
+        },
+        {
           "start": 4548,
           "end": 4550,
           "symbol": "C:ac",
@@ -354828,6 +355094,13 @@
           "symbol": "M:fj.b(JI)V",
           "original": "b",
           "renamed": "writeLong40"
+        },
+        {
+          "start": 4824,
+          "end": 4825,
+          "symbol": "M:no.a(I[BBI)V",
+          "original": "a",
+          "renamed": "enqueueWrite"
         },
         {
           "start": 4842,
@@ -354887,6 +355160,13 @@
           "renamed": "writeLong40"
         },
         {
+          "start": 5505,
+          "end": 5506,
+          "symbol": "M:no.a(I[BBI)V",
+          "original": "a",
+          "renamed": "enqueueWrite"
+        },
+        {
           "start": 5523,
           "end": 5530,
           "symbol": "F:fj.field_j:[B",
@@ -354916,6 +355196,13 @@
           "kind": "label"
         },
         {
+          "start": 5939,
+          "end": 5940,
+          "symbol": "M:no.a(I)I",
+          "original": "a",
+          "renamed": "availableBytes"
+        },
+        {
           "start": 6054,
           "end": 6057,
           "symbol": "B:fh.b(I)Z#1",
@@ -354943,6 +355230,13 @@
           "symbol": "F:fj.field_n:I",
           "original": "field_n",
           "renamed": "position"
+        },
+        {
+          "start": 7310,
+          "end": 7311,
+          "symbol": "M:no.a(II[BB)V",
+          "original": "a",
+          "renamed": "readFully"
         },
         {
           "start": 7339,
@@ -355034,6 +355328,13 @@
           "symbol": "F:fj.field_n:I",
           "original": "field_n",
           "renamed": "position"
+        },
+        {
+          "start": 9325,
+          "end": 9326,
+          "symbol": "M:no.a(II[BB)V",
+          "original": "a",
+          "renamed": "readFully"
         },
         {
           "start": 9355,
@@ -355232,6 +355533,13 @@
           "renamed": "position"
         },
         {
+          "start": 15712,
+          "end": 15713,
+          "symbol": "M:no.a(Z)V",
+          "original": "a",
+          "renamed": "close"
+        },
+        {
           "start": 16486,
           "end": 16488,
           "symbol": "C:rb",
@@ -355244,6 +355552,13 @@
           "symbol": "M:rb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 17034,
+          "end": 17035,
+          "symbol": "M:no.a(Z)V",
+          "original": "a",
+          "renamed": "close"
         },
         {
           "start": 17747,
@@ -355265,6 +355580,13 @@
           "symbol": "C:ac",
           "original": "ac",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 18457,
+          "end": 18458,
+          "symbol": "M:no.a(Z)V",
+          "original": "a",
+          "renamed": "close"
         },
         {
           "start": 18775,
@@ -355339,6 +355661,13 @@
           "renamed": "writeInt"
         },
         {
+          "start": 20138,
+          "end": 20139,
+          "symbol": "M:no.a(I[BBI)V",
+          "original": "a",
+          "renamed": "enqueueWrite"
+        },
+        {
           "start": 20156,
           "end": 20163,
           "symbol": "F:fj.field_j:[B",
@@ -355351,6 +355680,13 @@
           "symbol": "F:fj.field_j:[B",
           "original": "field_j",
           "renamed": "payload"
+        },
+        {
+          "start": 20477,
+          "end": 20478,
+          "symbol": "M:no.a(Z)V",
+          "original": "a",
+          "renamed": "close"
         },
         {
           "start": 20937,
@@ -355374,11 +355710,25 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 21927,
+          "end": 21928,
+          "symbol": "M:fh.a(ILla;)V",
+          "original": "a",
+          "renamed": "loadSharedInterfaceText"
+        },
+        {
           "start": 21941,
           "end": 21943,
           "symbol": "C:la",
           "original": "la",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 21968,
+          "end": 21987,
+          "symbol": "C:fh$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientTextLoader"
         },
         {
           "start": 22326,
@@ -355388,11 +355738,25 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 22379,
+          "end": 22398,
+          "symbol": "M:fh$1$CfrPartitionedBody.<init>(ILla;)V",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientTextLoader"
+        },
+        {
           "start": 22418,
           "end": 22420,
           "symbol": "C:la",
           "original": "la",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 22894,
+          "end": 22903,
+          "symbol": "M:fh$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginLobbyAndChatText"
         },
         {
           "start": 22958,
@@ -357115,6 +357479,13 @@
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 60537,
+          "end": 60546,
+          "symbol": "M:fh$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadAccountFormsAndLoadingText"
         },
         {
           "start": 60639,
@@ -358921,6 +359292,13 @@
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 97444,
+          "end": 97453,
+          "symbol": "M:fh$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMatchDisplayAndMembershipText"
         },
         {
           "start": 97546,
@@ -360841,6 +361219,13 @@
           "renamed": "SecondaryNodeDeque"
         },
         {
+          "start": 134663,
+          "end": 134672,
+          "symbol": "M:fh$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadLoginPromptsAndSubscriptionText"
+        },
+        {
           "start": 134837,
           "end": 134839,
           "symbol": "C:lj",
@@ -361219,6 +361604,34 @@
           "renamed": "GuestPlayConfirmationForm"
         },
         {
+          "start": 141349,
+          "end": 141358,
+          "symbol": "M:fh$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginLobbyAndChatText"
+        },
+        {
+          "start": 141420,
+          "end": 141429,
+          "symbol": "M:fh$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadAccountFormsAndLoadingText"
+        },
+        {
+          "start": 141491,
+          "end": 141500,
+          "symbol": "M:fh$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMatchDisplayAndMembershipText"
+        },
+        {
+          "start": 141562,
+          "end": 141571,
+          "symbol": "M:fh$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadLoginPromptsAndSubscriptionText"
+        },
+        {
           "start": 142194,
           "end": 142196,
           "symbol": "C:rb",
@@ -361245,6 +361658,27 @@
           "symbol": "C:hk",
           "original": "hk",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 142526,
+          "end": 142545,
+          "symbol": "C:fh$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientTextLoader"
+        },
+        {
+          "start": 142567,
+          "end": 142586,
+          "symbol": "C:fh$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientTextLoader"
+        },
+        {
+          "start": 142873,
+          "end": 142874,
+          "symbol": "M:no.a(Z)V",
+          "original": "a",
+          "renamed": "close"
         },
         {
           "start": 143162,
@@ -361303,6 +361737,13 @@
           "renamed": "writeShort"
         },
         {
+          "start": 144319,
+          "end": 144320,
+          "symbol": "M:no.a(I[BBI)V",
+          "original": "a",
+          "renamed": "enqueueWrite"
+        },
+        {
           "start": 144337,
           "end": 144344,
           "symbol": "F:fj.field_j:[B",
@@ -361315,6 +361756,13 @@
           "symbol": "F:fj.field_j:[B",
           "original": "field_j",
           "renamed": "payload"
+        },
+        {
+          "start": 144650,
+          "end": 144651,
+          "symbol": "M:no.a(Z)V",
+          "original": "a",
+          "renamed": "close"
         },
         {
           "start": 145352,
@@ -361366,6 +361814,13 @@
           "renamed": "writeLong40"
         },
         {
+          "start": 146589,
+          "end": 146590,
+          "symbol": "M:no.a(I[BBI)V",
+          "original": "a",
+          "renamed": "enqueueWrite"
+        },
+        {
           "start": 146607,
           "end": 146614,
           "symbol": "F:fj.field_j:[B",
@@ -361378,6 +361833,13 @@
           "symbol": "F:fj.field_j:[B",
           "original": "field_j",
           "renamed": "payload"
+        },
+        {
+          "start": 146918,
+          "end": 146919,
+          "symbol": "M:no.a(Z)V",
+          "original": "a",
+          "renamed": "close"
         },
         {
           "start": 147548,
@@ -374295,7 +374757,7 @@
       "original": "hk.java",
       "renamed": "GameApplet.java",
       "inputSha256": "5041d2a0919a08ae6f193c5156f17dfc1390de9f69052ecb83a1796b9d8800e2",
-      "outputSha256": "f47aa09d74e62ca715883526848f7594b608ccbfe63d7c5fbd169eb3dbc416bc",
+      "outputSha256": "5ffd30c60ece71ad08892e0dbdaa769fb0cdc3670340d4e681e885101ab6f781",
       "edits": [
         {
           "start": 79,
@@ -374886,6 +375348,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 20340,
+          "end": 20341,
+          "symbol": "M:hk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
+        },
+        {
           "start": 20890,
           "end": 20892,
           "symbol": "C:hp",
@@ -374933,6 +375402,20 @@
           "symbol": "C:vh",
           "original": "vh",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 24054,
+          "end": 24055,
+          "symbol": "M:hk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
+        },
+        {
+          "start": 25044,
+          "end": 25045,
+          "symbol": "M:hk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 25357,
@@ -375059,6 +375542,13 @@
           "symbol": "M:hk.e(I)V",
           "original": "e",
           "renamed": "processClientTick"
+        },
+        {
+          "start": 28784,
+          "end": 28785,
+          "symbol": "M:hk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 28831,
@@ -375206,6 +375696,13 @@
           "symbol": "M:hk.b(B)V",
           "original": "b",
           "renamed": "renderFrame"
+        },
+        {
+          "start": 31465,
+          "end": 31466,
+          "symbol": "M:hk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 31729,
@@ -375376,6 +375873,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 39427,
+          "end": 39428,
+          "symbol": "M:hk.a(IILjava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "startApplet"
+        },
+        {
           "start": 39542,
           "end": 39544,
           "symbol": "C:vh",
@@ -375388,6 +375892,13 @@
           "symbol": "C:rc",
           "original": "rc",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 40251,
+          "end": 40252,
+          "symbol": "M:hk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 40364,
@@ -375465,6 +375976,13 @@
           "symbol": "M:ub.a(IJ)V",
           "original": "a",
           "renamed": "sleepMillis"
+        },
+        {
+          "start": 41385,
+          "end": 41386,
+          "symbol": "M:hk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 41974,
@@ -375584,6 +376102,13 @@
           "symbol": "M:hk.a(B)V",
           "original": "a",
           "renamed": "updateGameTick"
+        },
+        {
+          "start": 46241,
+          "end": 46242,
+          "symbol": "M:hk.b(Z)Z",
+          "original": "b",
+          "renamed": "allowAppletStartup"
         },
         {
           "start": 46307,
@@ -375732,7 +376257,7 @@
       "original": "hm.java",
       "renamed": "hm.java",
       "inputSha256": "dbb1e69eaa823a01dd6e627aff5943fc71eadf777320de6bbf0660c34d077d9a",
-      "outputSha256": "f586cb6f7a725b8213941d4f16ed6553adc150ebf849845b47b53d4ded96f11f",
+      "outputSha256": "888fe259164457b7768494fbd36935631f01629c8d7ea03f2b49e1a13922b919",
       "edits": [
         {
           "start": 1189,
@@ -375882,6 +376407,13 @@
           "renamed": "TextFieldValidator"
         },
         {
+          "start": 11840,
+          "end": 11841,
+          "symbol": "M:no.a(I[BBI)V",
+          "original": "a",
+          "renamed": "enqueueWrite"
+        },
+        {
           "start": 11850,
           "end": 11857,
           "symbol": "F:fj.field_j:[B",
@@ -375894,6 +376426,20 @@
           "symbol": "M:km.b(I)J",
           "original": "b",
           "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 12046,
+          "end": 12047,
+          "symbol": "M:no.a(I)I",
+          "original": "a",
+          "renamed": "availableBytes"
+        },
+        {
+          "start": 12095,
+          "end": 12096,
+          "symbol": "M:no.d(I)I",
+          "original": "d",
+          "renamed": "readByteOrEof"
         },
         {
           "start": 12347,
@@ -379922,7 +380468,7 @@
       "original": "ih.java",
       "renamed": "ih.java",
       "inputSha256": "157689c178efd34db450a0302960f95874f840bd683000212d9be1aefe802db1",
-      "outputSha256": "1d0ac575a7eff2e61c7961c20eb2a9a34d76d813fa274a5ddd06d818bb88d942",
+      "outputSha256": "15aced237b9137d52fec990bab333977ef0863a177055b61f24f98124b41f8ee",
       "edits": [
         {
           "start": 129,
@@ -379986,6 +380532,13 @@
           "symbol": "M:rb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 2687,
+          "end": 2688,
+          "symbol": "M:no.a(Z)V",
+          "original": "a",
+          "renamed": "close"
         }
       ]
     },
@@ -382914,7 +383467,7 @@
       "original": "jd.java",
       "renamed": "DropTargetWidgetContainer.java",
       "inputSha256": "52da8aea5e2d2c0d66c8325d212c442ea9ebcd2549aad946699a8a0c41e86d14",
-      "outputSha256": "1b9a4ccb9bc6d3488c13fccdd545eeb51ad156ccbe8bc523eff7d00457c0fad3",
+      "outputSha256": "e0e6f095ba5aca8076f4308500dca2eb82868220d33858d135a113d57f051044",
       "edits": [
         {
           "start": 69,
@@ -382971,6 +383524,13 @@
           "symbol": "F:fj.field_n:I",
           "original": "field_n",
           "renamed": "position"
+        },
+        {
+          "start": 726,
+          "end": 727,
+          "symbol": "M:no.a(I[BBI)V",
+          "original": "a",
+          "renamed": "enqueueWrite"
         },
         {
           "start": 742,
@@ -393234,7 +393794,7 @@
       "original": "ko.java",
       "renamed": "ProxyAuthenticationRequiredException.java",
       "inputSha256": "cdb4a34c446c0043a7f0472ae55a8411703bbff4e5e92090e9586e38948ef890",
-      "outputSha256": "12b70960db58a2414b70f1421c2996c0c35a5883fba7ebacacc8212af2df65df",
+      "outputSha256": "8f4c5d608c70bf3901877c6a0f316eb88567d50f5cb3623a6b7f64da344b221d",
       "edits": [
         {
           "start": 69,
@@ -393249,6 +393809,13 @@
           "symbol": "M:ko.<init>(Ljava/lang/String;)V",
           "original": "ko",
           "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 256,
+          "end": 257,
+          "symbol": "M:ko.a(ZBZZ)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "getSaveResultsLoginPrompt"
         },
         {
           "start": 1030,
@@ -393305,6 +393872,13 @@
           "symbol": "M:dk.a([IIII)V",
           "original": "a",
           "renamed": "fillInts"
+        },
+        {
+          "start": 2377,
+          "end": 2404,
+          "symbol": "M:ko.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;",
+          "original": "$cfr$intArgs$a$feb7e63b59d8",
+          "renamed": "getSaveResultsLoginPromptWithIntGuard"
         }
       ]
     },
@@ -401115,7 +401689,7 @@
       "original": "mh.java",
       "renamed": "MenuScreen.java",
       "inputSha256": "edef7f8c7b294558f5d2fb331a5972c511ad2d0d15d1f99b7600b24626ef4305",
-      "outputSha256": "f6e76cb44992c8324f6faff4bb94f3d03e911782f3b93bd74b0fff77cb08b10f",
+      "outputSha256": "548bef4e424a477a7caec81e16c5172da8fdc12665484ff92b1658a9c5163fb3",
       "edits": [
         {
           "start": 50,
@@ -404982,6 +405556,13 @@
           "symbol": "C:ko",
           "original": "ko",
           "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 93552,
+          "end": 93579,
+          "symbol": "M:ko.$cfr$intArgs$a$feb7e63b59d8(ZIZZ)Ljava/lang/String;",
+          "original": "$cfr$intArgs$a$feb7e63b59d8",
+          "renamed": "getSaveResultsLoginPromptWithIntGuard"
         },
         {
           "start": 93648,
@@ -413080,7 +413661,7 @@
       "original": "no.java",
       "renamed": "BufferedSocket.java",
       "inputSha256": "2f7fa2eb685fd9349b14088d5e9bbb8f2578fb74ff9e2e81442ebb90115dfc10",
-      "outputSha256": "df2fd7f8d8239eb5c7acdeeba1cc838fe31d25e908213e2ae0a6d2781265bd61",
+      "outputSha256": "92c4838634a6d29729d3de67d5530dce78c0bf8fdd17df4d68b2a143283aef05",
       "edits": [
         {
           "start": 69,
@@ -413102,6 +413683,13 @@
           "symbol": "C:vh",
           "original": "vh",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 498,
+          "end": 499,
+          "symbol": "M:no.e(I)V",
+          "original": "e",
+          "renamed": "checkWriteError"
         },
         {
           "start": 574,
@@ -413130,6 +413718,13 @@
           "symbol": "C:vh",
           "original": "vh",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 820,
+          "end": 821,
+          "symbol": "M:no.a(Z)V",
+          "original": "a",
+          "renamed": "close"
         },
         {
           "start": 1169,
@@ -413165,6 +413760,13 @@
           "symbol": "F:rc.field_d:Ljava/lang/Object;",
           "original": "field_d",
           "renamed": "result"
+        },
+        {
+          "start": 5642,
+          "end": 5643,
+          "symbol": "M:no.a(I[BBI)V",
+          "original": "a",
+          "renamed": "enqueueWrite"
         },
         {
           "start": 6841,
@@ -413412,6 +414014,13 @@
           "renamed": "BufferedSocket"
         },
         {
+          "start": 9245,
+          "end": 9246,
+          "symbol": "M:no.a(I)I",
+          "original": "a",
+          "renamed": "availableBytes"
+        },
+        {
           "start": 9334,
           "end": 9341,
           "symbol": "F:fj.field_n:I",
@@ -413424,6 +414033,13 @@
           "symbol": "F:fj.field_n:I",
           "original": "field_n",
           "renamed": "position"
+        },
+        {
+          "start": 9442,
+          "end": 9443,
+          "symbol": "M:no.a(II[BB)V",
+          "original": "a",
+          "renamed": "readFully"
         },
         {
           "start": 9465,
@@ -413480,6 +414096,20 @@
           "symbol": "F:fj.field_n:I",
           "original": "field_n",
           "renamed": "position"
+        },
+        {
+          "start": 10542,
+          "end": 10543,
+          "symbol": "M:no.d(I)I",
+          "original": "d",
+          "renamed": "readByteOrEof"
+        },
+        {
+          "start": 10764,
+          "end": 10765,
+          "symbol": "M:no.a(II[BB)V",
+          "original": "a",
+          "renamed": "readFully"
         },
         {
           "start": 12083,
@@ -413578,6 +414208,20 @@
           "symbol": "M:rb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 14420,
+          "end": 14421,
+          "symbol": "M:no.a(I)I",
+          "original": "a",
+          "renamed": "availableBytes"
+        },
+        {
+          "start": 14685,
+          "end": 14686,
+          "symbol": "M:no.a(Z)V",
+          "original": "a",
+          "renamed": "close"
         },
         {
           "start": 14705,
@@ -441780,7 +442424,7 @@
       "original": "tg.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "3129f33fbd1e5071240de0c5e9a03ae69775ef67d34a1628df47e001e17a4bef",
-      "outputSha256": "bd5dc6e70658606551900899920cd7efdc64e4aedd94befffc77187600da0554",
+      "outputSha256": "335b641ada99f402046a95f3ac83c7656971c8fe4a7ff69739e59d50134b5c1b",
       "edits": [
         {
           "start": 53,
@@ -442147,11 +442791,25 @@
           "renamed": "DraggableWidgetContainer"
         },
         {
+          "start": 4653,
+          "end": 4654,
+          "symbol": "M:hk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
+        },
+        {
           "start": 4709,
           "end": 4711,
           "symbol": "C:aj",
           "original": "aj",
           "renamed": "DraggableWidgetContainer"
+        },
+        {
+          "start": 4749,
+          "end": 4750,
+          "symbol": "M:hk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 4822,
@@ -442166,6 +442824,27 @@
           "symbol": "C:aj",
           "original": "aj",
           "renamed": "DraggableWidgetContainer"
+        },
+        {
+          "start": 4902,
+          "end": 4903,
+          "symbol": "M:hk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
+        },
+        {
+          "start": 4975,
+          "end": 4976,
+          "symbol": "M:hk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
+        },
+        {
+          "start": 5063,
+          "end": 5064,
+          "symbol": "M:hk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 5206,
@@ -442306,6 +442985,13 @@
           "symbol": "C:fh",
           "original": "fh",
           "renamed": "SocketJs5Transport"
+        },
+        {
+          "start": 7079,
+          "end": 7080,
+          "symbol": "M:fh.a(ILla;)V",
+          "original": "a",
+          "renamed": "loadSharedInterfaceText"
         },
         {
           "start": 7549,
@@ -442525,6 +443211,20 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 10180,
+          "end": 10181,
+          "symbol": "M:tg.c(B)V",
+          "original": "c",
+          "renamed": "readSessionCookieUpdate"
+        },
+        {
+          "start": 10365,
+          "end": 10366,
+          "symbol": "M:tg.l(I)V",
+          "original": "l",
+          "renamed": "enablePacketOne"
+        },
+        {
           "start": 10389,
           "end": 10391,
           "symbol": "C:hh",
@@ -442537,6 +443237,13 @@
           "symbol": "M:tg.a(ILjava/lang/String;I)V",
           "original": "a",
           "renamed": "startAppletClient"
+        },
+        {
+          "start": 10551,
+          "end": 10552,
+          "symbol": "M:tg.e(B)V",
+          "original": "e",
+          "renamed": "dispatchCommonPacket"
         },
         {
           "start": 10844,
@@ -442581,6 +443288,13 @@
           "renamed": "ClientException"
         },
         {
+          "start": 12701,
+          "end": 12702,
+          "symbol": "M:tg.c(B)V",
+          "original": "c",
+          "renamed": "readSessionCookieUpdate"
+        },
+        {
           "start": 12876,
           "end": 12878,
           "symbol": "C:ij",
@@ -442602,11 +443316,32 @@
           "renamed": "ArchiveSource"
         },
         {
+          "start": 13150,
+          "end": 13151,
+          "symbol": "M:tg.i(I)V",
+          "original": "i",
+          "renamed": "enablePacketTwo"
+        },
+        {
           "start": 13174,
           "end": 13176,
           "symbol": "C:hh",
           "original": "hh",
           "renamed": "FullscreenNoticeType"
+        },
+        {
+          "start": 13242,
+          "end": 13243,
+          "symbol": "M:tg.b(ZI)I",
+          "original": "b",
+          "renamed": "pollAccountUiActions"
+        },
+        {
+          "start": 13295,
+          "end": 13296,
+          "symbol": "M:tg.a(ZB)V",
+          "original": "a",
+          "renamed": "enableDefaultPacketHandlers"
         },
         {
           "start": 13336,
@@ -442656,6 +443391,13 @@
           "symbol": "C:hh",
           "original": "hh",
           "renamed": "FullscreenNoticeType"
+        },
+        {
+          "start": 13620,
+          "end": 13621,
+          "symbol": "M:tg.g(I)I",
+          "original": "g",
+          "renamed": "reconnectAndResendRequests"
         },
         {
           "start": 13736,
@@ -442749,6 +443491,13 @@
           "renamed": "SecondaryNodeDeque"
         },
         {
+          "start": 14671,
+          "end": 14672,
+          "symbol": "M:tg.d(B)V",
+          "original": "d",
+          "renamed": "enablePacketFive"
+        },
+        {
           "start": 14764,
           "end": 14766,
           "symbol": "C:hh",
@@ -442784,6 +443533,27 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 15203,
+          "end": 15204,
+          "symbol": "M:tg.b(ZI)I",
+          "original": "b",
+          "renamed": "pollAccountUiActions"
+        },
+        {
+          "start": 15278,
+          "end": 15279,
+          "symbol": "M:tg.f(I)V",
+          "original": "f",
+          "renamed": "enablePacketHandler"
+        },
+        {
+          "start": 15315,
+          "end": 15316,
+          "symbol": "M:tg.a(ZZZ)I",
+          "original": "a",
+          "renamed": "processAccountUiActions"
+        },
+        {
           "start": 15367,
           "end": 15368,
           "symbol": "M:tg.j(I)I",
@@ -442812,6 +443582,13 @@
           "renamed": "DraggableWidgetContainer"
         },
         {
+          "start": 16002,
+          "end": 16003,
+          "symbol": "M:hk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
+        },
+        {
           "start": 16040,
           "end": 16042,
           "symbol": "C:lg",
@@ -442833,11 +443610,25 @@
           "renamed": "correctedCurrentTimeMillis"
         },
         {
+          "start": 16205,
+          "end": 16206,
+          "symbol": "M:tg.f(I)V",
+          "original": "f",
+          "renamed": "enablePacketHandler"
+        },
+        {
           "start": 16229,
           "end": 16231,
           "symbol": "C:hh",
           "original": "hh",
           "renamed": "FullscreenNoticeType"
+        },
+        {
+          "start": 16278,
+          "end": 16279,
+          "symbol": "M:tg.n(I)V",
+          "original": "n",
+          "renamed": "updateLoginFlow"
         },
         {
           "start": 16453,
@@ -442861,6 +443652,13 @@
           "renamed": "TranslucentSpriteLayer"
         },
         {
+          "start": 16543,
+          "end": 16544,
+          "symbol": "M:tg.a(ZZZ)I",
+          "original": "a",
+          "renamed": "processAccountUiActions"
+        },
+        {
           "start": 16706,
           "end": 16708,
           "symbol": "C:ue",
@@ -442868,11 +443666,74 @@
           "renamed": "RandomAccessCacheFile"
         },
         {
+          "start": 16790,
+          "end": 16791,
+          "symbol": "M:tg.a(ZZZ)I",
+          "original": "a",
+          "renamed": "processAccountUiActions"
+        },
+        {
+          "start": 17104,
+          "end": 17105,
+          "symbol": "M:tg.a(ZB)V",
+          "original": "a",
+          "renamed": "enableDefaultPacketHandlers"
+        },
+        {
+          "start": 17165,
+          "end": 17166,
+          "symbol": "M:tg.l(I)V",
+          "original": "l",
+          "renamed": "enablePacketOne"
+        },
+        {
+          "start": 17218,
+          "end": 17219,
+          "symbol": "M:tg.i(I)V",
+          "original": "i",
+          "renamed": "enablePacketTwo"
+        },
+        {
+          "start": 17275,
+          "end": 17276,
+          "symbol": "M:tg.f(I)V",
+          "original": "f",
+          "renamed": "enablePacketHandler"
+        },
+        {
+          "start": 17328,
+          "end": 17329,
+          "symbol": "M:tg.d(B)V",
+          "original": "d",
+          "renamed": "enablePacketFive"
+        },
+        {
           "start": 17382,
           "end": 17383,
           "symbol": "M:tg.a(BIIILjava/lang/String;)V",
           "original": "a",
           "renamed": "readAppletConfigurationAndStart"
+        },
+        {
+          "start": 18008,
+          "end": 18009,
+          "symbol": "M:hk.b(Z)Z",
+          "original": "b",
+          "renamed": "allowAppletStartup"
+        },
+        {
+          "start": 19293,
+          "end": 19294,
+          "symbol": "M:hk.a(IILjava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "startApplet"
+        },
+        {
+          "start": 19684,
+          "end": 19685,
+          "symbol": "M:hk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "showErrorPage"
         },
         {
           "start": 20303,
@@ -442887,6 +443748,13 @@
           "symbol": "M:rb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 20470,
+          "end": 20471,
+          "symbol": "M:tg.a(ZZZ)I",
+          "original": "a",
+          "renamed": "processAccountUiActions"
         },
         {
           "start": 20871,
@@ -463994,10 +464862,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/torquing"
     },
-    "rulesSha256": "fab831e108070752c2c0417f23a557fa82a1490fbd557c3d24babed479f1f9c3",
+    "rulesSha256": "3a79edd01909998961e4e980f60173c22bdc445aedf908e2018e3ca49f7e871a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "d5b607927334e94f96a23b7311ef60890204fe2a23d66a0571322079a17eec67",
-    "outputTreeSha256": "03e76c19b7d4b3683d27f0847686acc9d64e4581726ea0d990f8c652aa310418",
+    "outputTreeSha256": "e967703ffb42eb9cef32b168e53fe7a541181a4cf8b417969abd58b15bf3f924",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

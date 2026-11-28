@@ -19,7 +19,7 @@ abstract class GameClientShell extends GameAppletShell {
     private boolean field_t;
     private int field_A;
 
-    final void a(boolean param0, int param1) {
+    final void serviceFramework(boolean param0, int param1) {
         int stackIn_25_0 = 0;
         String stackIn_101_0 = null;
         boolean stackIn_102_1 = false;
@@ -86,19 +86,19 @@ abstract class GameClientShell extends GameAppletShell {
           mh.field_d != 0) {
           if (10 > hj.field_f) {
             if (3 == mh.field_d) {
-              this.a(-51, "js5crc");
+              this.showErrorPage(-51, "js5crc");
             } else {
               if (mh.field_d == 4) {
-                this.a(-51, "js5io");
+                this.showErrorPage(-51, "js5io");
               } else {
                 if (mh.field_d != 2) {
                   if (mh.field_d == 5) {
-                    this.a(-51, "outofdate");
+                    this.showErrorPage(-51, "outofdate");
                   } else {
-                    this.a(-51, "js5connect");
+                    this.showErrorPage(-51, "js5connect");
                   }
                 } else {
-                  this.a(-51, "js5connect_full");
+                  this.showErrorPage(-51, "js5connect_full");
                 }
               }
             }
@@ -161,7 +161,7 @@ abstract class GameClientShell extends GameAppletShell {
             DiskArchiveRequest.field_I.ensureIndexLoaded(0)) {
             if (DiskArchiveRequest.field_I.hasGroupName((byte) 12, "")) {
               if (DiskArchiveRequest.field_I.tryLoadGroupByName(255, "")) {
-                NameSuggestionsPanel.a(7, DiskArchiveRequest.field_I);
+                NameSuggestionsPanel.loadSharedInterfaceText(7, DiskArchiveRequest.field_I);
                 DiskArchiveRequest.field_I = null;
                 IterableNodeHashTable.a((byte) 86);
               }
@@ -247,7 +247,7 @@ abstract class GameClientShell extends GameAppletShell {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6, int param7) {
+    final void initializeFramework(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6, int param7) {
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         var10.dispose();
@@ -267,11 +267,11 @@ abstract class GameClientShell extends GameAppletShell {
         NameSuggestionsPanel.field_O = param5;
         hb.field_q = param4;
         field_q = param0;
-        this.l(param3 ^ -7321);
+        this.initializePacketLengths(param3 ^ -7321);
         bf.b(param3 ^ 7192);
     }
 
-    private final void i(int param0) {
+    private final void readSessionCookieUpdate(int param0) {
         if (param0 >= -106) {
           field_o = (BitmapFont) null;
         }
@@ -279,14 +279,14 @@ abstract class GameClientShell extends GameAppletShell {
         hg.a(nb.a(-102), -1, var2);
     }
 
-    private final void n(int param0) {
+    private final void enablePacketFour(int param0) {
         if (param0 != -5721) {
-          this.c(false);
+          this.dispatchCommonPacket(false);
         }
         AgeValidator.field_p[4] = true;
     }
 
-    final int b(boolean param0) {
+    final int attemptReconnect(boolean param0) {
         int var2;
         if (this.field_c) {
           return -1;
@@ -304,7 +304,7 @@ abstract class GameClientShell extends GameAppletShell {
         if (var2 != 0 &&
           var2 != 1) {
           if (!oh.field_a) {
-            this.a(-51, "reconnect");
+            this.showErrorPage(-51, "reconnect");
           }
           MusicPatchPcmStream.e(11);
           AlphaWidgetContainer.a(MusicPatchNode.field_p, var2, 105);
@@ -322,7 +322,7 @@ abstract class GameClientShell extends GameAppletShell {
         return var2;
     }
 
-    private final void e(byte param0) {
+    private final void enablePacketOne(byte param0) {
         if (param0 >= -71) {
           return;
         }
@@ -373,7 +373,7 @@ abstract class GameClientShell extends GameAppletShell {
         }
     }
 
-    private final void l(int param0) {
+    private final void initializePacketLengths(int param0) {
         vi.field_a[17] = -1;
         vi.field_a[13] = -1;
         vi.field_a[12] = param0;
@@ -392,14 +392,14 @@ abstract class GameClientShell extends GameAppletShell {
         vi.field_a[9] = -1;
     }
 
-    final void c(boolean param0) {
+    final void dispatchCommonPacket(boolean param0) {
         boolean stackIn_29_0 = false;
         int var2;
         fg var3;
         int var4;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (!param0) {
-          this.b(true);
+          this.attemptReconnect(true);
         }
         var2 = t.field_b;
         if (var2 < 64 &&
@@ -446,7 +446,7 @@ abstract class GameClientShell extends GameAppletShell {
                           StripedProgressWidget.a((byte) 109, LabeledWidgetContainer.field_N, sb.field_d, gf.field_C);
                         }
                       } else {
-                        this.i(-115);
+                        this.readSessionCookieUpdate(-115);
                       }
                     } else {
                       fm.a((byte) 124);
@@ -470,7 +470,7 @@ abstract class GameClientShell extends GameAppletShell {
         eg.a((byte) 126);
     }
 
-    private final void a(String param0, int param1, int param2, int param3, int param4) {
+    private final void readAppletParameters(String param0, int param1, int param2, int param3, int param4) {
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -484,7 +484,7 @@ abstract class GameClientShell extends GameAppletShell {
         String var9 = null;
         try {
           try {
-            if (!this.e(-125)) {
+            if (!this.allowAppletStartup(-125)) {
               return;
             }
             this.field_z = this.getCodeBase().getHost();
@@ -515,12 +515,12 @@ abstract class GameClientShell extends GameAppletShell {
               this.field_u = Integer.parseInt(var9);
             }
             TextLayout.field_b = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(-4, param1, this.field_m, 32, param2, param0, param4);
+            this.startApplet(-4, param1, this.field_m, 32, param2, param0, param4);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             gb.a((Throwable) ((Object) var6_ref), (String) null, param3 + 5385);
-            this.a(param3 ^ 5324, "crash");
+            this.showErrorPage(param3 ^ 5324, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -537,15 +537,15 @@ abstract class GameClientShell extends GameAppletShell {
         }
     }
 
-    final int b(int param0, boolean param1) {
+    final int pollAccountUiActions(int param0, boolean param1) {
         int discarded$0 = 0;
         if (param0 != 5017) {
-          discarded$0 = this.a(false, true, 12);
+          discarded$0 = this.processAccountUiActions(false, true, 12);
         }
-        return this.a(param1, true, 10);
+        return this.processAccountUiActions(param1, true, 10);
     }
 
-    private final void a(byte param0, boolean param1) {
+    private final void enableDefaultPacketHandlers(byte param0, boolean param1) {
         int var3 = 111 / ((22 - param0) / 38);
         AgeValidator.field_p[7] = true;
         AgeValidator.field_p[3] = true;
@@ -556,7 +556,7 @@ abstract class GameClientShell extends GameAppletShell {
         AgeValidator.field_p[8] = param1;
     }
 
-    final void m(int param0) {
+    final void updateLoginFlow(int param0) {
         int discarded$0 = 0;
         int discarded$1 = 0;
         boolean stackIn_5_1 = false;
@@ -573,19 +573,19 @@ abstract class GameClientShell extends GameAppletShell {
               if (af.field_b != 0) {
                 ui.a(ProgressMessageDialog.field_sb, 1);
               } else {
-                discarded$0 = this.a(false, false, 10);
+                discarded$0 = this.processAccountUiActions(false, false, 10);
               }
             }
           }
         } else {
           stackIn_5_1 = (null != df.field_l);
-          discarded$1 = this.a(stackIn_5_1, false, 10);
+          discarded$1 = this.processAccountUiActions(stackIn_5_1, false, 10);
         }
     }
 
-    final void a(int param0, String param1, byte param2) {
+    final void startWithDefaultSize(int param0, String param1, byte param2) {
         try {
-          this.a(param1, param0, 480, param2 - 5387, 640);
+          this.readAppletParameters(param1, param0, 480, param2 - 5387, 640);
           if (param2 != 12) {
             this.field_r = true;
           }
@@ -594,12 +594,12 @@ abstract class GameClientShell extends GameAppletShell {
         }
     }
 
-    private final void g(byte param0) {
+    private final void enablePacketFive(byte param0) {
         AgeValidator.field_p[5] = true;
         int var2 = -91 / ((param0 - 58) / 49);
     }
 
-    private final void f(byte param0) {
+    private final void enablePacketTwo(byte param0) {
         if (param0 != 72) {
           return;
         }
@@ -619,26 +619,26 @@ abstract class GameClientShell extends GameAppletShell {
         LoginPanel.a(mj.a((byte) 127, var5), var3 != 0, nb.a(89), (byte) 9);
     }
 
-    final void a(boolean param0, boolean param1, boolean param2, boolean param3, int param4) {
-        this.a((byte) 82, false);
+    final void configureOptionalPacketHandlers(boolean param0, boolean param1, boolean param2, boolean param3, int param4) {
+        this.enableDefaultPacketHandlers((byte) 82, false);
         if (param2) {
-          this.e((byte) -99);
+          this.enablePacketOne((byte) -99);
         }
         if (param3) {
-          this.f((byte) 72);
+          this.enablePacketTwo((byte) 72);
         }
         if (param4 != -6) {
           field_B = (String) null;
         }
         if (param0) {
-          this.n(-5721);
+          this.enablePacketFour(-5721);
         }
         if (param1) {
-          this.g((byte) -59);
+          this.enablePacketFive((byte) -59);
         }
     }
 
-    private final int a(boolean param0, boolean param1, int param2) {
+    private final int processAccountUiActions(boolean param0, boolean param1, int param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;

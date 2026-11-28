@@ -184,13 +184,13 @@ final class f extends TextureOperator {
               jo.a(var2, od.field_Kb, FullscreenFocusCanvas.field_a, 124, MouseWheelInput.field_h);
               var2.writeByte(15, param0 - 85);
               var2.writeInt(MatchingFieldValidator.field_q, 0);
-              fn.field_y.a(0, 13, 127, var2.payload);
+              fn.field_y.enqueueWrite(0, 13, 127, var2.payload);
               MusicPatch.field_t = MusicPatch.field_t + 1;
               pq.field_e = 30000L + gk.correctedCurrentTimeMillis(param0 + 60);
             }
             if (MusicPatch.field_t == 3) {
-              if (fn.field_y.a(15166) > 0) {
-                var1_int = fn.field_y.a((byte) -113);
+              if (fn.field_y.availableBytes(15166) > 0) {
+                var1_int = fn.field_y.readByteOrEof((byte) -113);
                 if (0 != var1_int) {
                   stackIn_30_0 = pl.a((byte) 11, var1_int);
                   return stackIn_30_0;

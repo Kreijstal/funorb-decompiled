@@ -23,7 +23,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           if (param2 != 10) {
             field_fb = (String) null;
           }
-          stackIn_3_0 = param0.a(36, param1);
+          stackIn_3_0 = param0.pollAccountUiActions(36, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

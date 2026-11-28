@@ -17,7 +17,7 @@ final class m {
           field_f = null;
           return;
         }
-        m.$cfr$intArgs$a$43a9e830b5b3(-98, true, -18, -57);
+        m.drawBenefitsButtonFrameWithIntGuard(-98, true, -18, -57);
         field_b = null;
         field_f = null;
     }
@@ -58,7 +58,7 @@ final class m {
         return qb.field_h > 250 ? true : false;
     }
 
-    final static void a(byte param0, boolean param1, int param2, int param3) {
+    final static void drawBenefitsButtonFrame(byte param0, boolean param1, int param2, int param3) {
         int var4;
         if (param0 != 112) {
           return;
@@ -88,7 +88,7 @@ final class m {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$43a9e830b5b3(int param0, boolean param1, int param2, int param3) {
+    final static void drawBenefitsButtonFrameWithIntGuard(int param0, boolean param1, int param2, int param3) {
         int var4;
         if (param0 != 112) {
           return;

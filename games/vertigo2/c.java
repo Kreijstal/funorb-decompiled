@@ -63,12 +63,12 @@ class c extends v {
             return false;
           }
           try {
-            var2_int = lo.field_k.a(15166);
+            var2_int = lo.field_k.availableBytes(15166);
             if (var2_int > 0) {
               if (param0 - SoundCache.field_f.position < var2_int) {
                 var2_int = -SoundCache.field_f.position + param0;
               }
-              lo.field_k.a(SoundCache.field_f.payload, false, var2_int, SoundCache.field_f.position);
+              lo.field_k.readFully(SoundCache.field_f.payload, false, var2_int, SoundCache.field_f.position);
               gn.field_b = gk.correctedCurrentTimeMillis(89);
               SoundCache.field_f.position = SoundCache.field_f.position + var2_int;
               if (param0 > SoundCache.field_f.position) {

@@ -365,7 +365,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
             field_y = (AwtRasterBuffer) null;
           }
           if (param0 == this.field_C) {
-            ag.k(-1108);
+            NetworkGameClient.k(-1108);
             return;
           }
           if (this.field_E != param0) {

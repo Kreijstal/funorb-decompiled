@@ -320,13 +320,13 @@ final class hm extends am {
               IntrusiveNode.a(MatchingFieldValidator.field_r, 123, qg.field_A, var2, eg.field_x);
               var2.writeByte(90, 15);
               var2.writeInt((byte) 60, TextFieldValidator.field_g);
-              up.field_a.a(0, var2.payload, (byte) 64, 13);
+              up.field_a.enqueueWrite(0, var2.payload, (byte) 64, 13);
               pd.field_c = pd.field_c + 1;
               ro.field_v = 30000L + km.correctedCurrentTimeMillis(-1);
             }
             if (pd.field_c == 3) {
-              if (0 < up.field_a.a(-126)) {
-                var1_int = up.field_a.d(0);
+              if (0 < up.field_a.availableBytes(-126)) {
+                var1_int = up.field_a.readByteOrEof(0);
                 if (0 != var1_int) {
                   stackIn_29_0 = pg.a(var1_int, (byte) -56);
                   return stackIn_29_0;

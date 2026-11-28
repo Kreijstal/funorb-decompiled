@@ -98,7 +98,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         var2.writeByte(param1, -1);
     }
 
-    final static void b(byte param0) {
+    final static void closeBufferedSocket(byte param0) {
         if (DelegatingCanvas.field_b != null) {
           DelegatingCanvas.field_b.close(58);
           DelegatingCanvas.field_b = null;
@@ -124,7 +124,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$b$e683eeaaf5b5(int param0) {
+    final static void closeBufferedSocketWithIntGuard(int param0) {
         if (DelegatingCanvas.field_b != null) {
           DelegatingCanvas.field_b.close(58);
           DelegatingCanvas.field_b = null;

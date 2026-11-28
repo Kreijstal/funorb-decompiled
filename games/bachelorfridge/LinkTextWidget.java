@@ -78,8 +78,8 @@ class LinkTextWidget extends InteractiveWidget {
         }
     }
 
-    final static void a(byte param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadGameInterfaceText(byte param0, ResourceArchive param1) {
+        class GameTextLoader {
             RuntimeException stackIn_2085_0;
             StringBuilder stackIn_2085_1;
             String stackIn_2086_2;
@@ -90,7 +90,7 @@ class LinkTextWidget extends InteractiveWidget {
             byte param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, ResourceArchive initialParam1) {
+            GameTextLoader(byte initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2085_0 = null;
@@ -101,7 +101,7 @@ class LinkTextWidget extends InteractiveWidget {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadAchievementsInstructionsAndTurnLabels() throws java.lang.RuntimeException {
                 IsaacRandom.field_g = param1;
                 var2 = BuffVendorAnimation.a("text_game_name", (byte) 105);
                 if (var2 != null) {
@@ -933,7 +933,7 @@ class LinkTextWidget extends InteractiveWidget {
                 }
                 var2 = BuffVendorAnimation.a("flag_captured", (byte) 88);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadBattlePhasesMovesAndStatusEffects() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   gka.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
@@ -1546,7 +1546,7 @@ class LinkTextWidget extends InteractiveWidget {
                   c.field_k[9] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 if (param0 < 15) {
-                  LinkTextWidget.a((byte) 51, (ResourceArchive) null);
+                  LinkTextWidget.loadGameInterfaceText((byte) 51, (ResourceArchive) null);
                 }
                 var2 = BuffVendorAnimation.a("STATUS_EFFECTS_DESC,10", (byte) 82);
                 if (null != var2) {
@@ -1801,7 +1801,7 @@ class LinkTextWidget extends InteractiveWidget {
                   vj.field_r[17] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadTileDescriptionsTutorialAndRewards() throws java.lang.RuntimeException {
                 var2 = BuffVendorAnimation.a("TILE_NAMES,18", (byte) 110);
                 if (var2 != null) {
                   vj.field_r[18] = ChangeCreatureStatOrHealthEffect.a(var2, false);
@@ -2487,11 +2487,11 @@ class LinkTextWidget extends InteractiveWidget {
             void run() {
                 var3 = BachelorFridge.field_y;
                 try {
-                  runChunk0();
+                  loadAchievementsInstructionsAndTurnLabels();
                   if (finished) return;
-                  runChunk1();
+                  loadBattlePhasesMovesAndStatusEffects();
                   if (finished) return;
-                  runChunk2();
+                  loadTileDescriptionsTutorialAndRewards();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -2511,7 +2511,7 @@ class LinkTextWidget extends InteractiveWidget {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        GameTextLoader decompiledBody = new GameTextLoader(param0, param1);
         decompiledBody.run();
     }
 
@@ -2840,7 +2840,7 @@ class LinkTextWidget extends InteractiveWidget {
           field_A = (int[][]) null;
           field_H = null;
           if (!param0) {
-            LinkTextWidget.a((byte) 76, (ResourceArchive) null);
+            LinkTextWidget.loadGameInterfaceText((byte) 76, (ResourceArchive) null);
           }
           field_F = null;
           field_D = null;

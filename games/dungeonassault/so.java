@@ -5,7 +5,7 @@ final class so {
     static aj field_b;
     static String field_a;
 
-    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void insertAdjacentNode(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
         IntrusiveNode var4 = null;
         RuntimeException stackIn_7_0 = null;
@@ -26,7 +26,7 @@ final class so {
             return;
           }
           var4 = (IntrusiveNode) null;
-          so.$cfr$intArgs$a$d4f67f19bfc6(-107, (IntrusiveNode) null, (IntrusiveNode) null);
+          so.insertAdjacentNodeWithIntGuard(-107, (IntrusiveNode) null, (IntrusiveNode) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,7 +64,7 @@ final class so {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$d4f67f19bfc6(int param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void insertAdjacentNodeWithIntGuard(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
         IntrusiveNode var4 = null;
         RuntimeException stackIn_7_0 = null;
@@ -85,7 +85,7 @@ final class so {
             return;
           }
           var4 = (IntrusiveNode) null;
-          so.$cfr$intArgs$a$d4f67f19bfc6(-107, (IntrusiveNode) null, (IntrusiveNode) null);
+          so.insertAdjacentNodeWithIntGuard(-107, (IntrusiveNode) null, (IntrusiveNode) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

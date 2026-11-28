@@ -299,30 +299,30 @@ final class gi {
         if (this.field_s == 0 &&
           param1) {
           if (!(30.0 * Math.random() < (double)(-15 + this.field_o))) {
-            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(81, 40);
+            MusicPatch.playIndexedSoundEffectWithIntGuard(81, 40);
           } else {
-            MusicPatch.$cfr$intArgs$a$e9dea5688aa5(116, (int)(Math.random() * 2.0) + 41);
+            MusicPatch.playIndexedSoundEffectWithIntGuard(116, (int)(Math.random() * 2.0) + 41);
           }
         }
         if (3 == this.field_s &&
           param1) {
-          MusicPatch.$cfr$intArgs$a$e9dea5688aa5(98, 91);
+          MusicPatch.playIndexedSoundEffectWithIntGuard(98, 91);
         }
         if (this.field_s == 1) {
           var3 = 4;
-          MusicPatch.$cfr$intArgs$a$e9dea5688aa5(86, 81);
+          MusicPatch.playIndexedSoundEffectWithIntGuard(86, 81);
         }
         if (6 == this.field_s) {
           var3 = 4;
-          MusicPatch.$cfr$intArgs$a$e9dea5688aa5(56, 78);
+          MusicPatch.playIndexedSoundEffectWithIntGuard(56, 78);
         }
         if (this.field_s == 5) {
           var3 = 10;
-          MusicPatch.$cfr$intArgs$a$e9dea5688aa5(91, 49);
+          MusicPatch.playIndexedSoundEffectWithIntGuard(91, 49);
         }
         if (this.field_s == 7) {
           var3 = 6;
-          MusicPatch.$cfr$intArgs$a$e9dea5688aa5(58, 65);
+          MusicPatch.playIndexedSoundEffectWithIntGuard(58, 65);
         }
         if (var3 > 0) {
           var5 = 32 * this.field_c - this.field_m * 32;

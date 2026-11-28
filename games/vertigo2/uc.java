@@ -17,7 +17,7 @@ final class uc {
         field_b = null;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void updateClientPanelStack(byte param0, boolean param1) {
         ie.b(20983, param1);
         if (param0 >= 97) {
           return;
@@ -71,7 +71,7 @@ final class uc {
           bl.field_r = new int[260];
           BlastDebrisModel.field_j = 11;
           if (param0 != 73) {
-            uc.$cfr$intArgs$a$7ffe4b125357(69, true);
+            uc.updateClientPanelStackWithIntGuard(69, true);
           }
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
@@ -97,7 +97,7 @@ final class uc {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
+    final static void updateClientPanelStackWithIntGuard(int param0, boolean param1) {
         ie.b(20983, param1);
         if (param0 >= 97) {
           return;

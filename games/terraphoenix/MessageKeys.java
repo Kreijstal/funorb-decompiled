@@ -178,8 +178,8 @@ final class MessageKeys {
         }
     }
 
-    final static void a(int param0, Archive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(int param0, Archive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2604_0;
             StringBuilder stackIn_2604_1;
             String stackIn_2605_2;
@@ -190,7 +190,7 @@ final class MessageKeys {
             int param0;
             Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, Archive initialParam1) {
+            ClientTextLoader(int initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2604_0 = null;
@@ -201,7 +201,7 @@ final class MessageKeys {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 fh.field_d = param1;
                 var2 = bc.a("loginm3", false);
                 if (var2 != null) {
@@ -1249,7 +1249,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("pleasewait", false);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   ll.a(0, var2);
                 }
@@ -2249,7 +2249,7 @@ final class MessageKeys {
                   ll.a(0, var2);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 var2 = bc.a("resign", false);
                 if (null != var2) {
                   ll.a(0, var2);
@@ -3191,11 +3191,11 @@ final class MessageKeys {
             void run() {
                 var3 = Terraphoenix.field_V;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3215,7 +3215,7 @@ final class MessageKeys {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 
@@ -3227,7 +3227,7 @@ final class MessageKeys {
         try {
           var4_int = 0;
           if (param3 != 2) {
-            MessageKeys.a(82, (Archive) null);
+            MessageKeys.loadSharedInterfaceText(82, (Archive) null);
           }
           if (param2) {
             var4_int += 4;

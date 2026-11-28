@@ -927,7 +927,7 @@ final class vg {
                   stackIn_16_1 = false;
                   stackIn_17_2 = (SecondaryNodeDeque.field_g == 0) ? false : true;
                   stackIn_20_3 = (hc.field_u == 0) ? false : true;
-                  var9 = AchievementNotice.$cfr$intArgs$a$c7de0d339b2a(stackIn_16_0, stackIn_16_1, stackIn_17_2, stackIn_20_3);
+                  var9 = AchievementNotice.getAlternativeButtonPromptPrefixWithIntGuard(stackIn_16_0, stackIn_16_1, stackIn_17_2, stackIn_20_3);
                   var5Lifetime2 = var4 * IntrusiveNode.field_d.lineCount(var9, 341);
                   IntrusiveNode.field_d.drawParagraph(var9, 150, var3, 341, var5Lifetime2, 0, -1, 1, 0, var4);
                   var3 = var3 + var5Lifetime2;

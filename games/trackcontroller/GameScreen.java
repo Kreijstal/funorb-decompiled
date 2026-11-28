@@ -641,7 +641,7 @@ final class GameScreen {
         var2 = 86 / ((22 - param0) / 62);
         if (kg.field_d == 13 &&
           -2147483648 != mf.field_e[this.field_c]) {
-          si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+          si.playIndexedSoundEffectWithIntGuard(-68, 5);
           sc.field_g = mf.field_e[this.field_c];
         }
         boolean decompiledFrameRemainder0 = true;
@@ -769,7 +769,7 @@ final class GameScreen {
                       }
                       if (84 == kg.field_d &&
                         1 + ArchiveIndex.field_i >= GrowableIntArray.field_b.levelIndex) {
-                        si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                        si.playIndexedSoundEffectWithIntGuard(-68, 5);
                         SpriteState.field_w = null;
                         ProgressDialog.field_bb = null;
                         ValidationStatusIcon.field_L = new ActiveLevel();
@@ -1244,7 +1244,7 @@ final class GameScreen {
                   stackIn_120_2 = -98;
                   stackIn_121_3 = (oe.field_e != 0);
                   stackIn_124_4 = (ValidationStatusIcon.field_L.score != 0);
-                  ((BitmapFont) (Object) stackIn_117_0).drawCentred(ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(stackIn_118_1, stackIn_120_2, stackIn_121_3, stackIn_124_4), 320, DisplayNameSelectionPanel.font.field_G + 310, 5, -1);
+                  ((BitmapFont) (Object) stackIn_117_0).drawCentred(ProxySocketConnector.getDiscardResultsPromptSuffixWithIntGuard(stackIn_118_1, stackIn_120_2, stackIn_121_3, stackIn_124_4), 320, DisplayNameSelectionPanel.font.field_G + 310, 5, -1);
                   break scanLoop1;
                 }
                 UiWidget.field_z[1].drawTransparent(-UiWidget.field_z[1].field_t + 640 >> 1, 1);
@@ -1311,7 +1311,7 @@ final class GameScreen {
         var6 = var5;
         if (var6 == 0) {
           if (this.field_e.b(false)) {
-            si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+            si.playIndexedSoundEffectWithIntGuard(-68, 5);
             if (2 <= LevelGrid.field_j &&
               MatchingFieldValidator.keyDown[48]) {
               ArchiveIndex.field_i = 31;
@@ -1328,7 +1328,7 @@ final class GameScreen {
         } else {
           if (var6 == 1) {
             if (this.field_e.b(false)) {
-              si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+              si.playIndexedSoundEffectWithIntGuard(-68, 5);
               ProgressDialog.field_bb = null;
               SpriteState.field_w = null;
               ValidationStatusIcon.field_L = new ActiveLevel();
@@ -1338,7 +1338,7 @@ final class GameScreen {
           } else {
             if (13 == var6) {
               if (!(!this.field_e.b(false))) {
-                si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                si.playIndexedSoundEffectWithIntGuard(-68, 5);
                 if (AccountCreationResultPanel.field_rb != null) {
                   oj.a(-127);
                 } else {
@@ -1351,14 +1351,14 @@ final class GameScreen {
             else {
               if (var6 == 4) {
                 if (this.field_e.b(false)) {
-                  si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                  si.playIndexedSoundEffectWithIntGuard(-68, 5);
                   sc.field_g = -1;
                 }
               } else {
                 if (21 != var6) {
                   if (22 == var6) {
                     if (!(!this.field_e.b(false))) {
-                      si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                      si.playIndexedSoundEffectWithIntGuard(-68, 5);
                       sc.field_g = 11;
                     }
                     decompiledFrameRemainder0 = false;
@@ -1366,7 +1366,7 @@ final class GameScreen {
                   else {
                     if (var6 == 26) {
                       if (!(!this.field_e.b(false))) {
-                        si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                        si.playIndexedSoundEffectWithIntGuard(-68, 5);
                         stackIn_79_0 = !(TextHotspotBounds.field_i);
                         TextHotspotBounds.field_i = stackIn_79_0;
                       }
@@ -1375,19 +1375,19 @@ final class GameScreen {
                     else {
                       if (var6 == 14) {
                         if (this.field_e.b(false)) {
-                          si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                          si.playIndexedSoundEffectWithIntGuard(-68, 5);
                           sc.field_g = 12;
                         }
                       } else {
                         if (var6 == 15) {
                           if (this.field_e.b(false)) {
-                            si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                            si.playIndexedSoundEffectWithIntGuard(-68, 5);
                             sc.field_g = 13;
                           }
                         } else {
                           if (var6 == 23) {
                             if (!(!this.field_e.b(false))) {
-                              si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                              si.playIndexedSoundEffectWithIntGuard(-68, 5);
                               TextFieldValidator.field_i = 0;
                             }
                             decompiledFrameRemainder0 = false;
@@ -1395,7 +1395,7 @@ final class GameScreen {
                           else {
                             if (var6 == 24) {
                               if (!(!this.field_e.b(false))) {
-                                si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                 TextFieldValidator.field_i = 1;
                               }
                               decompiledFrameRemainder0 = false;
@@ -1407,7 +1407,7 @@ final class GameScreen {
                                     if (var6 != 8) {
                                       if (9 == var6) {
                                         if (!(!this.field_e.b(false))) {
-                                          si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                          si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                           rd.field_b = 0;
                                           sc.field_g = 7;
                                         }
@@ -1417,7 +1417,7 @@ final class GameScreen {
                                         if (10 != var6) {
                                           if (var6 == 11) {
                                             if (!(!this.field_e.b(false))) {
-                                              si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                              si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                               sc.field_g = 1;
                                             }
                                             decompiledFrameRemainder0 = false;
@@ -1426,7 +1426,7 @@ final class GameScreen {
                                             if (var6 != 20) {
                                               if (var6 == 28) {
                                                 if (!(!this.field_e.b(false))) {
-                                                  si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                                  si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                                   if (AccountCreationResultPanel.field_rb != null) {
                                                     oj.a(param3 ^ -499);
                                                   }
@@ -1440,7 +1440,7 @@ final class GameScreen {
                                                     if (var6 != 18) {
                                                       if (19 == var6) {
                                                         if (this.field_e.b(false)) {
-                                                          si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                                          si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                                           if (this.field_c == 8) {
                                                             ad.a(this.field_c, 9, (byte) -120);
                                                           } else {
@@ -1461,7 +1461,7 @@ final class GameScreen {
                                                       } else {
                                                         if (var6 == 16) {
                                                           if (!(!this.field_e.b(false))) {
-                                                            si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                                            si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                                             AccountNameAvailabilityValidator.a(CachedArchiveSource.b((byte) 77), (byte) -9);
                                                           }
                                                           decompiledFrameRemainder0 = false;
@@ -1469,7 +1469,7 @@ final class GameScreen {
                                                         else {
                                                           if (var6 == 5) {
                                                             if (!(!this.field_e.b(false))) {
-                                                              si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                                              si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                                               ValidationStatusIcon.field_L.c(3, 117);
                                                             }
                                                             decompiledFrameRemainder0 = false;
@@ -1477,7 +1477,7 @@ final class GameScreen {
                                                           else {
                                                             if (var6 == 27) {
                                                               if (this.field_e.b(false)) {
-                                                                si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                                                si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                                                 if (ProgressMessageDialog.s(49)) {
                                                                   if ((ValidationStatusIcon.field_L.score | oe.field_e) == 0) {
                                                                     sc.field_g = 0;
@@ -1574,26 +1574,26 @@ final class GameScreen {
                                                       }
                                                     } else {
                                                       if (this.field_e.b(false)) {
-                                                        si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                                        si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                                         sc.field_g = 9;
                                                       }
                                                     }
                                                   } else {
                                                     if (this.field_e.b(false)) {
-                                                      si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                                      si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                                       sc.field_g = 8;
                                                     }
                                                   }
                                                 } else {
                                                   if (this.field_e.b(false)) {
-                                                    si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                                    si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                                     rd.field_b = (rd.field_b + 1) % 2;
                                                   }
                                                 }
                                               }
                                             } else {
                                               if (this.field_e.b(false)) {
-                                                si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                                si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                                 ka.field_d.clear(param3 ^ 391);
                                                 th.field_l = 0;
                                                 ArchiveIndex.field_i = 0;
@@ -1605,35 +1605,35 @@ final class GameScreen {
                                           }
                                         } else {
                                           if (this.field_e.b(false)) {
-                                            si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                            si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                             sc.field_g = 0;
                                           }
                                         }
                                       }
                                     } else {
                                       if (this.field_e.b(false)) {
-                                        si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                        si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                         rd.field_b = 0;
                                         sc.field_g = 6;
                                       }
                                     }
                                   } else {
                                     if (this.field_e.b(false)) {
-                                      si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                      si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                       rd.field_b = 0;
                                       sc.field_g = 5;
                                     }
                                   }
                                 } else {
                                   if (this.field_e.b(false)) {
-                                    si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                    si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                     sc.field_g = 4;
                                     rd.field_b = 0;
                                   }
                                 }
                               } else {
                                 if (this.field_e.b(false)) {
-                                  si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                                  si.playIndexedSoundEffectWithIntGuard(-68, 5);
                                   TextFieldValidator.field_i = 2;
                                 }
                               }
@@ -1645,7 +1645,7 @@ final class GameScreen {
                   }
                 } else {
                   if (this.field_e.b(false)) {
-                    si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
+                    si.playIndexedSoundEffectWithIntGuard(-68, 5);
                     sc.field_g = 10;
                   }
                 }

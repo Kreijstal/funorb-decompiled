@@ -21,7 +21,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
             return;
           }
           if (param0 == this.field_A) {
-            ag.k(-1108);
+            NetworkGameClient.k(-1108);
             return;
           }
           if (param0 == this.field_y) {

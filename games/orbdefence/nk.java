@@ -2719,7 +2719,7 @@ final class nk {
                                       var14Lifetime2 = (kb) (wf.field_c.field_o.nextForward(853));
                                       continue;
                                     }
-                                    vk.$cfr$intArgs$a$0b89e0d19fbb(var25_ref, -65, (IntrusiveNode) (var14Lifetime2));
+                                    vk.insertAdjacentNodeWithIntGuard(var25_ref, -65, (IntrusiveNode) (var14Lifetime2));
                                     var14Lifetime2 = null;
                                     var13 = null;
                                     break;
@@ -2804,7 +2804,7 @@ final class nk {
                                 var15Lifetime1 = (kb) (wf.field_c.field_o.nextForward(853));
                                 continue;
                               }
-                              vk.$cfr$intArgs$a$0b89e0d19fbb(var29_ref, -65, var15Lifetime1);
+                              vk.insertAdjacentNodeWithIntGuard(var29_ref, -65, var15Lifetime1);
                               var14Lifetime1 = null;
                               var15_ref = null;
                               break;

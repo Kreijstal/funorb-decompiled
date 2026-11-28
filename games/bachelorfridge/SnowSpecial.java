@@ -259,7 +259,7 @@ final class SnowSpecial extends SpecialOrder {
             stackIn_60_0 = -74;
             break;
           }
-          RageAnimation.$cfr$intArgs$a$94cfdbf41ae0(stackIn_60_0, var7_ref, var6Lifetime1);
+          RageAnimation.insertAdjacentNodeWithIntGuard(stackIn_60_0, var7_ref, var6Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

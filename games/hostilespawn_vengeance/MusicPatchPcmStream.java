@@ -204,8 +204,8 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadSharedInterfaceText(int param0, ResourceArchive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2619_0;
             StringBuilder stackIn_2619_1;
             String stackIn_2620_2;
@@ -217,7 +217,7 @@ final class MusicPatchPcmStream extends PcmStream {
             int param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2619_0 = null;
@@ -229,7 +229,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndChatText() throws java.lang.RuntimeException {
                 i.field_b = param1;
                 var2 = vj.a("loginm3", 24);
                 if (var2 != null) {
@@ -1311,7 +1311,7 @@ final class MusicPatchPcmStream extends PcmStream {
                   Bzip2State.field_o = PcmResampler.a(124, var2);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountFormsAndLoadingText() throws java.lang.RuntimeException {
                 var2 = vj.a("passwordverificationrequired", 24);
                 if (null != var2) {
                   PcmResampler.a(122, var2);
@@ -2354,7 +2354,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("currentobjective", 24);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMatchDisplayAndMembershipText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   PcmResampler.a(125, var2);
                 }
@@ -3219,11 +3219,11 @@ final class MusicPatchPcmStream extends PcmStream {
             void run() {
                 var3 = HostileSpawn.field_I ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndChatText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountFormsAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMatchDisplayAndMembershipText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3243,7 +3243,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 

@@ -22,7 +22,7 @@ final class ji {
         field_d = null;
     }
 
-    final static void a(byte param0, boolean param1, java.awt.Canvas param2) {
+    final static void drawClientCanvas(byte param0, boolean param1, java.awt.Canvas param2) {
         int var4 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -77,7 +77,7 @@ final class ji {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$f0d318109cc1(int param0, boolean param1, java.awt.Canvas param2) {
+    final static void drawClientCanvasWithIntGuard(int param0, boolean param1, java.awt.Canvas param2) {
         int var4 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;

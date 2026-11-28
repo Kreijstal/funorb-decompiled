@@ -84,7 +84,7 @@ final class ob {
           return;
         }
         if (qf.field_a != null) {
-          qf.field_a.a((byte) 94);
+          qf.field_a.close((byte) 94);
           qf.field_a = null;
         }
     }

@@ -91,7 +91,7 @@ final class wl {
             stackIn_34_5 = pi.field_c;
             stackIn_34_6 = 127;
             stackIn_36_7 = (DebouncedFieldValidator.field_b) || (ij.field_z);
-            SingleChildWidgetContainer.$cfr$intArgs$a$ceabca3815d0(stackIn_34_0, stackIn_34_1, stackIn_34_2, stackIn_34_3, stackIn_34_4, stackIn_34_5, stackIn_34_6, stackIn_36_7);
+            SingleChildWidgetContainer.drawTooltipTransitionWithIntGuard(stackIn_34_0, stackIn_34_1, stackIn_34_2, stackIn_34_3, stackIn_34_4, stackIn_34_5, stackIn_34_6, stackIn_36_7);
           }
           if (ol.field_a &&
             BufferedSocket.field_p != null) {
@@ -449,7 +449,7 @@ final class wl {
         BufferedSocket.field_p.b(true, false);
         stackIn_180_0 = -73;
         stackIn_182_1 = (DebouncedFieldValidator.field_b) || (ij.field_z);
-        hf.$cfr$intArgs$a$759f676cf37b(stackIn_180_0, stackIn_182_1, InteractiveWidget.field_I, pi.field_c, rj.field_d, true);
+        hf.updateTooltipTransitionWithIntGuard(stackIn_180_0, stackIn_182_1, InteractiveWidget.field_I, pi.field_c, rj.field_d, true);
         this.a((byte) -71);
         rc.c((byte) -82);
         if (gh.field_x &&

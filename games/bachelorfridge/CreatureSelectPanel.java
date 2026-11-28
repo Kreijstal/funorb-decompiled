@@ -304,7 +304,7 @@ final class CreatureSelectPanel {
                         }
                         var10 = var2;
                         var11 = var9;
-                        IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(stackIn_63_0, stackIn_63_1, var11);
+                        IncomingSpecial.sortObjectsByIntKeyWithIntGuard(stackIn_63_0, stackIn_63_1, var11);
                         this.field_f.a(this.field_e, var10, false);
                         System.gc();
                         this.field_d = true;
@@ -388,7 +388,7 @@ final class CreatureSelectPanel {
                   }
                   var10Lifetime4 = var2Lifetime4;
                   var11Lifetime4 = var9Lifetime4;
-                  IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(stackIn_96_0, stackIn_96_1, var11Lifetime4);
+                  IncomingSpecial.sortObjectsByIntKeyWithIntGuard(stackIn_96_0, stackIn_96_1, var11Lifetime4);
                   this.field_f.a(this.field_e, var10Lifetime4, false);
                   System.gc();
                   this.field_d = true;
@@ -446,7 +446,7 @@ final class CreatureSelectPanel {
               stackIn_208_1Lifetime1 = 109;
               var10Lifetime1 = var2Lifetime1;
               var11Lifetime1 = var9Lifetime1;
-              IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(stackIn_208_0Lifetime1, stackIn_208_1Lifetime1, var11Lifetime1);
+              IncomingSpecial.sortObjectsByIntKeyWithIntGuard(stackIn_208_0Lifetime1, stackIn_208_1Lifetime1, var11Lifetime1);
               this.field_f.a(this.field_e, var10Lifetime1, false);
               System.gc();
               this.field_d = true;
@@ -486,7 +486,7 @@ final class CreatureSelectPanel {
                 }
                 var10Lifetime1Lifetime1 = var2Lifetime1Lifetime1;
                 var11Lifetime1Lifetime1 = var9Lifetime1Lifetime1;
-                IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(stackIn_157_0, stackIn_157_1, var11Lifetime1Lifetime1);
+                IncomingSpecial.sortObjectsByIntKeyWithIntGuard(stackIn_157_0, stackIn_157_1, var11Lifetime1Lifetime1);
                 this.field_f.a(this.field_e, var10Lifetime1Lifetime1, false);
                 System.gc();
                 this.field_d = true;
@@ -556,7 +556,7 @@ final class CreatureSelectPanel {
             }
             var10Lifetime2Lifetime2 = var2Lifetime2;
             var11Lifetime2Lifetime2 = var9Lifetime2;
-            IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(stackIn_183_0, stackIn_183_1, var11Lifetime2Lifetime2);
+            IncomingSpecial.sortObjectsByIntKeyWithIntGuard(stackIn_183_0, stackIn_183_1, var11Lifetime2Lifetime2);
             this.field_f.a(this.field_e, var10Lifetime2Lifetime2, false);
             System.gc();
             this.field_d = true;
@@ -636,7 +636,7 @@ final class CreatureSelectPanel {
           }
           var10Lifetime3Lifetime2 = var2Lifetime3;
           var11Lifetime3Lifetime2 = var9Lifetime3;
-          IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(stackIn_130_0, stackIn_130_1, var11Lifetime3Lifetime2);
+          IncomingSpecial.sortObjectsByIntKeyWithIntGuard(stackIn_130_0, stackIn_130_1, var11Lifetime3Lifetime2);
           this.field_f.a(this.field_e, var10Lifetime3Lifetime2, false);
           System.gc();
           this.field_d = true;

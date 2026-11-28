@@ -81,7 +81,7 @@ final class SpiltMilkSpecial extends SpecialOrder {
             return;
           }
           stackIn_10_0 = 106;
-          RageAnimation.$cfr$intArgs$a$94cfdbf41ae0(stackIn_10_0, var2, param0);
+          RageAnimation.insertAdjacentNodeWithIntGuard(stackIn_10_0, var2, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

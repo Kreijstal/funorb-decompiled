@@ -24,7 +24,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
         kaa.field_m = param1;
         ut.field_o = param2;
         SplitAnimation.field_v = 0;
-        if (!GameClock.a(kaa.field_m, 120)) {
+        if (!GameClock.isNonnegativeScreenId(kaa.field_m, 120)) {
           boolean decompiledFrameRemainder0 = true;
           if (OhNoEvent.field_s == 0) {
             if (kaa.field_m != -3) {

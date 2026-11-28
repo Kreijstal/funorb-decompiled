@@ -3034,7 +3034,7 @@ final class BattleState {
               var4[var5] = 2147483646;
             }
           }
-          IncomingSpecial.$cfr$intArgs$a$e46325ef0b7e(param1, 96, var14);
+          IncomingSpecial.sortObjectsByIntKeyWithIntGuard(param1, 96, var14);
           var17 = this.field_L.b(param2, -36);
           var6 = this.rosters[param2].field_b;
           for (var7 = 0; var17.length > var7; var7++) {

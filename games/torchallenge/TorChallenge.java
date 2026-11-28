@@ -10,7 +10,7 @@ public final class TorChallenge extends GameClientBase {
 
     public final void init() {
         try {
-          this.a((byte) 58, 12, "torchallenge");
+          this.startWithDefaultSize((byte) 58, 12, "torchallenge");
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "TorChallenge.init()");
         }
@@ -733,7 +733,7 @@ public final class TorChallenge extends GameClientBase {
         RuntimeException decompiledCaughtException = null;
         var4 = field_F ? 1 : 0;
         try {
-          this.a(false, 11, 2, 3, false, 0, 1, 39);
+          this.initializeFramework(false, 11, 2, 3, false, 0, 1, 39);
           var2 = new MidiPcmStream();
           var2.setChannelProgram(128, -122, 9);
           MidiPcmStream.a(22050, 16239, ArchiveRequest.field_u, true, (java.awt.Component) ((Object) LabeledWidgetContainer.field_P), var2);
@@ -957,13 +957,13 @@ public final class TorChallenge extends GameClientBase {
           var2_int = 54 / ((param0 + 39) / 43);
           stackIn_11_1 = -115;
           stackIn_12_2 = (null != gi.field_d);
-          this.b(stackIn_11_1, stackIn_12_2);
+          this.serviceFramework(stackIn_11_1, stackIn_12_2);
           if (tc.field_k) {
             this.s(119);
             tc.field_k = false;
           }
           if (hc.c((byte) 63)) {
-            this.i(109);
+            this.updateLoginFlow(109);
             if (hc.c((byte) -108)) {
               if (GuestPlayConfirmationForm.f((byte) -128)) {
                 discarded$0 = this.a(false, (byte) 82);
@@ -989,7 +989,7 @@ public final class TorChallenge extends GameClientBase {
                 }
                 if (decompiledFrameRemainder0) {
                   stackIn_51_1 = (null != gi.field_d);
-                  var3 = this.a(stackIn_51_1, 127);
+                  var3 = this.pollAccountUiActions(stackIn_51_1, 127);
                   if (var3 == 1 ||
                     var3 == 2) {
                     if (gi.field_d != null) {
@@ -1094,7 +1094,7 @@ public final class TorChallenge extends GameClientBase {
           }
           if (decompiledFrameCompleted1) {
             while (p.a(16, qc.field_h)) {
-              this.j(5000);
+              this.dispatchCommonPacket(5000);
               if (var4 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -1105,7 +1105,7 @@ public final class TorChallenge extends GameClientBase {
             }
           }
           if (nb.a(-26375)) {
-            var3 = this.e((byte) 110);
+            var3 = this.reconnectAndResendRequests((byte) 110);
             if (var3 == 2) {
               ConfirmedEmailAvailabilityValidator.f(10);
             }

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class ab extends GameApplet {
+abstract class NetworkGameClient extends GameApplet {
     static String field_q;
     private int field_C;
     static int[] field_A;
@@ -22,18 +22,18 @@ abstract class ab extends GameApplet {
     static boolean field_u;
     private int field_z;
 
-    private final void h(int param0) {
+    private final void enablePacketHandler(int param0) {
         AccountRequestState.field_c[param0] = true;
     }
 
-    private final void i(int param0) {
+    private final void enablePacketOne(int param0) {
         AccountRequestState.field_c[1] = true;
         if (param0 != -13072) {
           this.field_x = (String) null;
         }
     }
 
-    final void c(boolean param0) {
+    final void updateLoginFlow(boolean param0) {
         int discarded$6 = 0;
         int discarded$7 = 0;
         int var3;
@@ -45,7 +45,7 @@ abstract class ab extends GameApplet {
               Asteroid.c(-27347);
             } else {
               if (0 == fj.field_i) {
-                discarded$6 = this.a(false, false, 121);
+                discarded$6 = this.processAccountUiActions(false, false, 121);
               } else {
                 ta.a((byte) 119, AgeValidator.field_n);
               }
@@ -53,14 +53,14 @@ abstract class ab extends GameApplet {
           }
         } else {
           stackIn_4_1 = (dj.field_k != null);
-          discarded$7 = this.a(stackIn_4_1, false, 106);
+          discarded$7 = this.processAccountUiActions(stackIn_4_1, false, 106);
         }
         if (!param0) {
-          this.c(false, false);
+          this.enableDefaultPacketHandlers(false, false);
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, String param4) {
+    private final void readAppletParameters(int param0, int param1, int param2, int param3, String param4) {
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -75,7 +75,7 @@ abstract class ab extends GameApplet {
         String var11 = null;
         try {
           try {
-            if (!this.c(76)) {
+            if (!this.allowAppletStartup(76)) {
               return;
             }
             this.field_x = this.getCodeBase().getHost();
@@ -103,16 +103,16 @@ abstract class ab extends GameApplet {
               this.field_r = Integer.parseInt(var9);
             }
             ml.field_g = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a((byte) 80, param4, param1, 32, param0, param2, this.field_C);
+            this.startApplet((byte) 80, param4, param1, 32, param0, param2, this.field_C);
             if (param3 != -14) {
-              this.k(107);
+              this.readSessionCookieUpdate(107);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             hi.a((Throwable) ((Object) var6), (String) null, 1);
-            this.a("crash", param3 ^ 13);
+            this.showErrorPage("crash", param3 ^ 13);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -175,11 +175,11 @@ abstract class ab extends GameApplet {
         }
     }
 
-    final int g(int param0) {
+    final int reconnectAndResendRequests(int param0) {
         if (param0 != 0) {
           return -59;
         }
-        int var2 = this.j(-1);
+        int var2 = this.attemptReconnect(-1);
         if (var2 == 0 ||
           var2 == 1) {
           if (AccountRequestState.field_c[1]) {
@@ -207,7 +207,7 @@ abstract class ab extends GameApplet {
         return var2;
     }
 
-    final void d(boolean param0) {
+    final void dispatchCommonPacket(boolean param0) {
         int stackIn_32_0 = 0;
         boolean stackIn_33_1 = false;
         int var2;
@@ -262,7 +262,7 @@ abstract class ab extends GameApplet {
                 al.a((byte) -70, var3);
                 break;
               case 7:
-                this.k(31156);
+                this.readSessionCookieUpdate(31156);
                 break;
               case 5:
                 dd.a(true);
@@ -342,7 +342,7 @@ abstract class ab extends GameApplet {
         }
     }
 
-    private final int a(boolean param0, boolean param1, int param2) {
+    private final int processAccountUiActions(boolean param0, boolean param1, int param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;
@@ -492,7 +492,7 @@ abstract class ab extends GameApplet {
         field_s = (int[][]) null;
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
+    final void initializeFramework(int param0, boolean param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         var10.dispose();
@@ -512,22 +512,22 @@ abstract class ab extends GameApplet {
         vd.field_c = param0;
         aj.field_u = param6;
         bl.field_k = param3;
-        this.g((byte) 119);
+        this.initializePacketLengths((byte) 119);
         id.a(-114);
     }
 
-    private final void f(byte param0) {
+    private final void enablePacketFour(byte param0) {
         AccountRequestState.field_c[4] = true;
         if (param0 < 6) {
-          this.g(122);
+          this.reconnectAndResendRequests(122);
         }
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void startWithDefaultSize(String param0, int param1, int param2) {
         try {
-          this.a(param1, 640, 480, -14, param0);
+          this.readAppletParameters(param1, 640, 480, -14, param0);
           if (param2 != 8) {
-            this.i(-48);
+            this.enablePacketOne(-48);
           }
         } catch (RuntimeException runtimeException) {
           throw MusicPatch.wrapClientException((Throwable) ((Object) runtimeException), "ab.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -535,25 +535,25 @@ abstract class ab extends GameApplet {
     }
 
     final void a(byte param0, boolean param1, boolean param2, boolean param3, boolean param4) {
-        this.c(false, false);
+        this.enableDefaultPacketHandlers(false, false);
         if (param4) {
-          this.i(-13072);
+          this.enablePacketOne(-13072);
         }
         if (param0 != -38) {
           this.field_n = true;
         }
         if (param1) {
-          this.b(false);
+          this.enablePacketTwo(false);
         }
         if (param3) {
-          this.f((byte) 124);
+          this.enablePacketFour((byte) 124);
         }
         if (param2) {
-          this.h(param0 ^ -33);
+          this.enablePacketHandler(param0 ^ -33);
         }
     }
 
-    private final void c(boolean param0, boolean param1) {
+    private final void enableDefaultPacketHandlers(boolean param0, boolean param1) {
         AccountRequestState.field_c[8] = param1;
         AccountRequestState.field_c[7] = true;
         if (param0) {
@@ -566,7 +566,7 @@ abstract class ab extends GameApplet {
         AccountRequestState.field_c[0] = true;
     }
 
-    private final void g(byte param0) {
+    private final void initializePacketLengths(byte param0) {
         AccountRequestState.field_b[18] = 1;
         AccountRequestState.field_b[3] = -1;
         AccountRequestState.field_b[16] = -1;
@@ -588,29 +588,29 @@ abstract class ab extends GameApplet {
         AccountRequestState.field_b[12] = -1;
     }
 
-    private final void k(int param0) {
+    private final void readSessionCookieUpdate(int param0) {
         if (param0 != 31156) {
-          this.i(80);
+          this.enablePacketOne(80);
         }
         String var2 = bk.a(0);
         MusicPatchEnvelope.a(ia.g(-22), var2, -3603);
     }
 
-    final int b(boolean param0, boolean param1) {
+    final int pollAccountUiActions(boolean param0, boolean param1) {
         if (param0) {
           return 74;
         }
-        return this.a(param1, true, 120);
+        return this.processAccountUiActions(param1, true, 120);
     }
 
-    private final void b(boolean param0) {
+    private final void enablePacketTwo(boolean param0) {
         if (param0) {
           return;
         }
         AccountRequestState.field_c[2] = true;
     }
 
-    final void a(int param0, boolean param1) {
+    final void serviceFramework(int param0, boolean param1) {
         int stackIn_23_0 = 0;
         boolean stackIn_101_0 = false;
         int stackIn_103_1 = 0;
@@ -674,18 +674,18 @@ abstract class ab extends GameApplet {
           bf.field_e != 0) {
           if (RichTextWidget.field_R < 10) {
             if (bf.field_e == 3) {
-              this.a("js5crc", -1);
+              this.showErrorPage("js5crc", -1);
             } else {
               if (bf.field_e == 4) {
-                this.a("js5io", param0 ^ 2);
+                this.showErrorPage("js5io", param0 ^ 2);
               } else {
                 if (bf.field_e == 2) {
-                  this.a("js5connect_full", -1);
+                  this.showErrorPage("js5connect_full", -1);
                 } else {
                   if (bf.field_e != 5) {
-                    this.a("js5connect", -1);
+                    this.showErrorPage("js5connect", -1);
                   } else {
-                    this.a("outofdate", -1);
+                    this.showErrorPage("outofdate", -1);
                   }
                 }
               }
@@ -751,7 +751,7 @@ abstract class ab extends GameApplet {
               DefaultTextWidgetRenderer.field_c = null;
             } else {
               if (DefaultTextWidgetRenderer.field_c.tryLoadGroupByName(2, "")) {
-                DialogMessagePane.a(26708, DefaultTextWidgetRenderer.field_c);
+                DialogMessagePane.loadSharedInterfaceText(26708, DefaultTextWidgetRenderer.field_c);
                 DefaultTextWidgetRenderer.field_c = null;
                 mh.a(8192);
               }
@@ -924,7 +924,7 @@ abstract class ab extends GameApplet {
         }
     }
 
-    private final int j(int param0) {
+    private final int attemptReconnect(int param0) {
         int var2;
         if (this.field_c) {
           return -1;
@@ -942,7 +942,7 @@ abstract class ab extends GameApplet {
         if (~var2 != param0 &&
           var2 != 1) {
           if (!rh.field_f) {
-            this.a("reconnect", -1);
+            this.showErrorPage("reconnect", -1);
           }
           sf.b(false);
           dd.a((byte) 8, DiskArchiveRequest.field_v, var2);
@@ -957,7 +957,7 @@ abstract class ab extends GameApplet {
         return var2;
     }
 
-    protected ab() {
+    protected NetworkGameClient() {
     }
 
     private final void l(int param0) {

@@ -16,7 +16,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public static boolean field_a;
     public static boolean field_d;
 
-    final void a(byte param0, String param1) {
+    final void showErrorPage(byte param0, String param1) {
         try {
           RuntimeException stackIn_14_0 = null;
           StringBuilder stackIn_14_1 = null;
@@ -198,7 +198,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     abstract void updateClient(byte param0);
 
-    final boolean a(byte param0) {
+    final boolean allowAppletStartup(byte param0) {
         return true;
     }
 
@@ -280,7 +280,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     var2.equals("1.5") ||
                     var2.startsWith("1.5.") ||
                     var2.equals("1.6.0")) {
-                    this.a((byte) 70, "wrongjava");
+                    this.showErrorPage((byte) 70, "wrongjava");
                     decompiledFrameRemainder3 = (var5 != 0);
                   }
                   if ((decompiledFrameRemainder3) &&
@@ -302,7 +302,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                       var4 = var2.substring(6, var3);
                       if (StripedProgressWidget.a(-19804, (CharSequence) ((Object) var4)) &&
                         !(md.a((CharSequence) ((Object) var4), true) >= 10)) {
-                        this.a((byte) -128, "wrongjava");
+                        this.showErrorPage((byte) -128, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
                     }
@@ -392,7 +392,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
               MidiPcmStream.a((Throwable) (var1), 1, (String) null);
-              this.a((byte) -125, "crash");
+              this.showErrorPage((byte) -125, "crash");
             }
             this.shutdownApplet(true, true);
             return;
@@ -792,7 +792,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6) {
+    final void startApplet(int param0, int param1, int param2, int param3, String param4, int param5, int param6) {
         try {
           PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_24_0 = null;
@@ -812,7 +812,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
-                this.a((byte) -31, "alreadyloaded");
+                this.showErrorPage((byte) -31, "alreadyloaded");
                 return;
               }
               tb.field_h = param2;
@@ -844,7 +844,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
               MidiPcmStream.a(var8_ref, 1, (String) null);
-              this.a((byte) -121, "crash");
+              this.showErrorPage((byte) -121, "crash");
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

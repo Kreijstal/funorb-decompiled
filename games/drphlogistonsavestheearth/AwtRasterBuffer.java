@@ -21,7 +21,7 @@ abstract class AwtRasterBuffer {
         return sg.field_a;
     }
 
-    final static boolean a(hg param0, byte param1, hg param2) {
+    final static boolean shouldAdvancePastRosterEntry(hg param0, byte param1, hg param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -129,7 +129,7 @@ abstract class AwtRasterBuffer {
           return;
         }
         hg var2 = (hg) null;
-        AwtRasterBuffer.$cfr$intArgs$a$0163a84c1fcf((hg) null, -50, (hg) null);
+        AwtRasterBuffer.shouldAdvancePastRosterEntryWithIntGuard((hg) null, -50, (hg) null);
         field_b = null;
         field_c = null;
         field_a = null;
@@ -154,7 +154,7 @@ abstract class AwtRasterBuffer {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static boolean $cfr$intArgs$a$0163a84c1fcf(hg param0, int param1, hg param2) {
+    final static boolean shouldAdvancePastRosterEntryWithIntGuard(hg param0, int param1, hg param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_18_0 = null;

@@ -169,14 +169,14 @@ final class je {
     final static void a(boolean param0) {
         if (!param0) {
           if (MouseWheelInput.field_d != null) {
-            MouseWheelInput.field_d.d(2);
+            MouseWheelInput.field_d.close(2);
             MouseWheelInput.field_d = null;
           }
           return;
         }
         je.a(false);
         if (MouseWheelInput.field_d != null) {
-          MouseWheelInput.field_d.d(2);
+          MouseWheelInput.field_d.close(2);
           MouseWheelInput.field_d = null;
         }
     }

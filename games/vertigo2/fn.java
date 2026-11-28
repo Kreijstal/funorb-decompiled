@@ -38,7 +38,7 @@ final class fn extends TextureOperator {
         }
     }
 
-    final static void a(byte param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9, int param10, boolean param11) {
+    final static void updateLobbyInterface(byte param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9, int param10, boolean param11) {
         ok.a(param6, param10, param1, param5, param11, param7, 16777215, 12423, param2, param3, param9, param8, param4, 16777215);
         if (param0 <= 84) {
           String var13 = (String) null;
@@ -141,7 +141,7 @@ final class fn extends TextureOperator {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$946cf173619b(int param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9, int param10, boolean param11) {
+    final static void updateLobbyInterfaceWithIntGuard(int param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9, int param10, boolean param11) {
         ok.a(param6, param10, param1, param5, param11, param7, 16777215, 12423, param2, param3, param9, param8, param4, 16777215);
         if (param0 <= 84) {
           String var13 = (String) null;

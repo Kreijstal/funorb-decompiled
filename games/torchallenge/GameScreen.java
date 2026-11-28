@@ -2786,7 +2786,7 @@ final class GameScreen {
                       stackIn_97_1 = 96;
                       stackIn_98_2 = (eh.field_l != 0);
                       stackIn_102_3 = (tf.field_o != 0);
-                      var3_intLifetime3 = ((BitmapFont) (Object) stackIn_97_0).stringWidth(qf.$cfr$intArgs$a$c7de0d339b2a(stackIn_97_1, stackIn_98_2, stackIn_102_3, false));
+                      var3_intLifetime3 = ((BitmapFont) (Object) stackIn_97_0).stringWidth(qf.getAlternativeButtonPromptPrefixWithIntGuard(stackIn_97_1, stackIn_98_2, stackIn_102_3, false));
                       if (var3_intLifetime3 > var2_intLifetime2) {
                         var2_intLifetime2 = var3_intLifetime3;
                       }
@@ -2821,7 +2821,7 @@ final class GameScreen {
                       stackIn_129_1 = -15;
                       stackIn_130_2 = (eh.field_l != 0);
                       stackIn_134_3 = (tf.field_o != 0);
-                      ((BitmapFont) (Object) stackIn_129_0).drawCentred(qf.$cfr$intArgs$a$c7de0d339b2a(stackIn_129_1, stackIn_130_2, stackIn_134_3, false), 320, -18 + 2 * var9 + (var8 + 63), var10, -1);
+                      ((BitmapFont) (Object) stackIn_129_0).drawCentred(qf.getAlternativeButtonPromptPrefixWithIntGuard(stackIn_129_1, stackIn_130_2, stackIn_134_3, false), 320, -18 + 2 * var9 + (var8 + 63), var10, -1);
                       stackIn_137_0 = tf.field_x;
                       stackIn_137_1 = false;
                       stackIn_138_2 = (tf.field_o != 0);
@@ -5781,9 +5781,9 @@ final class GameScreen {
                               var6Lifetime1Lifetime2 = var4 / 2 + var2_intLifetime1;
                               var7Lifetime1Lifetime2 = var3 + ph.field_m[1].fullHeight;
                               if (cd.field_c != 30) {
-                                hf.$cfr$intArgs$a$759f676cf37b(-73, true, cd.field_c, AgeValidator.field_q, MatchingFieldValidator.field_v, false);
+                                hf.updateTooltipTransitionWithIntGuard(-73, true, cd.field_c, AgeValidator.field_q, MatchingFieldValidator.field_v, false);
                               }
-                              SingleChildWidgetContainer.$cfr$intArgs$a$ceabca3815d0(ec.field_a[5].fullHeight / 2 + var7Lifetime1Lifetime2, cd.field_c, var6Lifetime1Lifetime2, var4, MatchingFieldValidator.field_v, MatchingFieldValidator.field_v, 127, true);
+                              SingleChildWidgetContainer.drawTooltipTransitionWithIntGuard(ec.field_a[5].fullHeight / 2 + var7Lifetime1Lifetime2, cd.field_c, var6Lifetime1Lifetime2, var4, MatchingFieldValidator.field_v, MatchingFieldValidator.field_v, 127, true);
                             }
                             if (119 > var11Lifetime2Lifetime4 ||
                               var21 != 0) {

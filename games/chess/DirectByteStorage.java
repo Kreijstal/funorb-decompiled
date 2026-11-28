@@ -334,7 +334,7 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    final static void a(long param0, String param1, byte param2, nb param3, int param4, ci param5, int[] param6, int param7, String param8) {
+    final static void createPlayerActionContext(long param0, String param1, byte param2, nb param3, int param4, ci param5, int[] param6, int param7, String param8) {
         RuntimeException runtimeException = null;
         int var10_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -398,7 +398,7 @@ final class DirectByteStorage extends ByteStorage {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c398e174f2fe(long param0, String param1, int param2, nb param3, int param4, ci param5, int[] param6, int param7, String param8) {
+    final static void createPlayerActionContextWithIntGuard(long param0, String param1, int param2, nb param3, int param4, ci param5, int[] param6, int param7, String param8) {
         RuntimeException runtimeException = null;
         int var10_int = 0;
         RuntimeException stackIn_5_0 = null;

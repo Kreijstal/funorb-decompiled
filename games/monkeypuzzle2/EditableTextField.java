@@ -326,7 +326,7 @@ class EditableTextField extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          if (!bi.a(param1, 20558, param0)) {
+          if (!NetworkGameClient.a(param1, 20558, param0)) {
             return false;
           }
           for (var3_int = 0; param1.length() > var3_int; var3_int++) {

@@ -7,7 +7,7 @@ final class DirectByteStorage extends ByteStorage {
 
     final static void a(int param0, boolean param1) {
         IntrusiveDeque.field_a = ByteStorage.field_a;
-        ag.field_o = 0;
+        NetworkGameClient.field_o = 0;
         PcmOutputWorker.field_f = 0;
         Bzip2State.field_a = param0;
         ea.field_a = new n(2);

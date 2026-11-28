@@ -416,11 +416,11 @@ class EditableTextField extends InteractiveWidget {
         if (!wc.field_Wb.tryLoadGroupByName("commonui", 0)) {
           return ByteArrayPoolSupport.field_a + " - " + wc.field_Wb.getGroupLoadPercentByName(-8087, "commonui") + "%";
         }
-        if (!i.field_r.ensureIndexLoaded(0)) {
+        if (!NetworkGameClient.field_r.ensureIndexLoaded(0)) {
           return pb.field_a;
         }
-        if (!i.field_r.tryLoadGroupByName("commonui", 0)) {
-          return ByteStorage.field_d + " - " + i.field_r.getGroupLoadPercentByName(param0 - 8087, "commonui") + "%";
+        if (!NetworkGameClient.field_r.tryLoadGroupByName("commonui", 0)) {
+          return ByteStorage.field_d + " - " + NetworkGameClient.field_r.getGroupLoadPercentByName(param0 - 8087, "commonui") + "%";
         }
         if (!tf.field_k.ensureIndexLoaded(param0)) {
           return nl.field_d;

@@ -133,7 +133,7 @@ final class MusicPatchNode extends IntrusiveNode {
             }
             stackIn_39_0 = 87;
             stackIn_40_1 = !(var4 < 0);
-            var7Lifetime1 = bb.$cfr$intArgs$a$62abead39cee(stackIn_39_0, stackIn_40_1, var6);
+            var7Lifetime1 = bb.measureSelectedFontTextWidthWithIntGuard(stackIn_39_0, stackIn_40_1, var6);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + nd.field_r;
             if (var4 >= 0) {
               if (var4 == ai.field_i.field_h) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class MinerDisturbance extends ob {
+public final class MinerDisturbance extends NetworkGameClient {
     private int[] field_L;
     private boolean field_eb;
     private int field_R;
@@ -393,16 +393,16 @@ public final class MinerDisturbance extends ob {
               fg.field_c = td.a("miner_stash_oily", fl.field_f, "supervolcano", (byte) 122);
               ProgressMessageDialog.field_tb = td.a("jetpack", fl.field_f, "supervolcano", (byte) 112);
               pc.field_f = td.a("jetpack_onfire", fl.field_f, "supervolcano", (byte) 110);
-              ob.field_w = td.a("miner_pickup_freezium", fl.field_f, "supervolcano", (byte) 117);
+              NetworkGameClient.field_w = td.a("miner_pickup_freezium", fl.field_f, "supervolcano", (byte) 117);
               tf.field_c = td.a("miner_pickup_freezium_oily", fl.field_f, "supervolcano", (byte) 122);
-              TextHotspotBounds.field_x = new Sprite[ob.field_w.length];
+              TextHotspotBounds.field_x = new Sprite[NetworkGameClient.field_w.length];
               var2_int = 0;
               while (true) {
                 stackIn_47_0 = var2_int;
                 stackIn_47_1 = TextHotspotBounds.field_x.length;
                 if (stackIn_47_0 < stackIn_47_1) {
-                  TextHotspotBounds.field_x[var2_int] = ob.field_w[var2_int].copy();
-                  ml.a((byte) 93, 16777215, TextHotspotBounds.field_x[var2_int], ob.field_w[var2_int]);
+                  TextHotspotBounds.field_x[var2_int] = NetworkGameClient.field_w[var2_int].copy();
+                  ml.a((byte) 93, 16777215, TextHotspotBounds.field_x[var2_int], NetworkGameClient.field_w[var2_int]);
                   var3 = TextHotspotBounds.field_x[var2_int].field_D;
                   stackIn_62_0 = -1 + var3.length;
                   if (var5 == 0) {
@@ -1131,7 +1131,7 @@ public final class MinerDisturbance extends ob {
             return;
           }
           if (fh.field_c != null) {
-            lg.a(fh.field_c, -36);
+            lg.loadGameInterfaceText(fh.field_c, -36);
             fh.field_c = null;
             ResizableModalDialog.p(param0 + 4440);
           }
@@ -1142,7 +1142,7 @@ public final class MinerDisturbance extends ob {
           ge.field_e = TextHotspotBounds.a(1, 5);
           ne.field_L = TextHotspotBounds.a(param0 ^ 23, 6);
           id.field_c = TextHotspotBounds.a(param0 - 21, 11);
-          im.a(ob.field_q, (byte) 82, s.field_P);
+          im.a(NetworkGameClient.field_q, (byte) 82, s.field_P);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4068,8 +4068,8 @@ public final class MinerDisturbance extends ob {
             if (decompiledFrameRemainder0) {
               ef.field_b[3].addOutline(1);
               ResourceArchive.field_e.setAsRasterTarget((byte) -45);
-              ha.field_c = jn.a("unachieved", -29553, "basic", ob.field_q);
-              TextFieldValidator.field_e = jn.a("orbcoin", -29553, "basic", ob.field_q);
+              ha.field_c = jn.a("unachieved", -29553, "basic", NetworkGameClient.field_q);
+              TextFieldValidator.field_e = jn.a("orbcoin", -29553, "basic", NetworkGameClient.field_q);
               a.field_a = td.a("miner2", fl.field_f, "", (byte) 118);
               ag.field_a = td.a("miner_stash", fl.field_f, "", (byte) 121);
               pk.field_h = new Sprite[a.field_a.length];
@@ -4709,7 +4709,7 @@ public final class MinerDisturbance extends ob {
           nd.clearStaticReferences(111);
           kd.c(94);
           en.a(10);
-          ob.clearStaticReferences(124);
+          NetworkGameClient.clearStaticReferences(124);
           tj.clearStaticReferences(false);
           ge.resetStaticState(111);
           el.clearStaticReferences(2);
@@ -5722,7 +5722,7 @@ public final class MinerDisturbance extends ob {
 
     public final void init() {
         try {
-          this.a("minerdisturbance", 13, -6622);
+          this.startWithDefaultSize("minerdisturbance", 13, -6622);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "MinerDisturbance.init()");
         }
@@ -5733,7 +5733,7 @@ public final class MinerDisturbance extends ob {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          this.a(false, 5, (byte) -121, 9, 7, 8, 10, 12);
+          this.initializeFramework(false, 5, (byte) -121, 9, 7, 8, 10, 12);
           pl.field_h = 15;
           cm.field_r = 0;
           if (param0 <= 37) {
@@ -6183,8 +6183,8 @@ public final class MinerDisturbance extends ob {
                       }
                       if (ne.field_L.ensureIndexLoaded((byte) 108) &&
                         ne.field_L.tryLoadAllGroups(-1)) {
-                        if (ob.field_q.ensureIndexLoaded((byte) 86) &&
-                          ob.field_q.tryLoadGroupByName(false, "basic")) {
+                        if (NetworkGameClient.field_q.ensureIndexLoaded((byte) 86) &&
+                          NetworkGameClient.field_q.tryLoadGroupByName(false, "basic")) {
                           if (id.field_c.ensureIndexLoaded((byte) 107) &&
                             id.field_c.tryLoadAllGroups(-1)) {
                             pa.a(true, le.field_b, 50.0f);
@@ -6206,7 +6206,7 @@ public final class MinerDisturbance extends ob {
                             pa.a(true, qg.field_e, 75.0f);
                             this.renderClientFrame(false);
                             this.x(-33);
-                            ob.field_q = null;
+                            NetworkGameClient.field_q = null;
                             ne.field_L = null;
                             if (param1 > -77) {
                               this.g((byte) -103);
@@ -6250,7 +6250,7 @@ public final class MinerDisturbance extends ob {
                           pa.a(true, ValidationStatusIcon.a(NameSuggestionsPanel.field_P, td.field_a, false, id.field_c), 40.0f);
                           return;
                         }
-                        pa.a(true, u.a(ub.field_c, ob.field_q, ul.field_d, -7157, "basic"), 35.0f);
+                        pa.a(true, u.a(ub.field_c, NetworkGameClient.field_q, ul.field_d, -7157, "basic"), 35.0f);
                         return;
                       }
                       pa.a(true, u.a(mb.field_a, ne.field_L, GameCanvas.field_a, -7157, ""), 30.0f);
@@ -6430,7 +6430,7 @@ public final class MinerDisturbance extends ob {
           NodeHashTableIterator.b(-6129);
           var2_int = 111 % ((param0 - 7) / 42);
           stackIn_5_1 = (kf.field_d != null);
-          this.a(stackIn_5_1, 18808);
+          this.serviceFramework(stackIn_5_1, 18808);
           if (MouseWheelInput.field_a) {
             this.j((byte) 22);
             MouseWheelInput.field_a = false;
@@ -6567,7 +6567,7 @@ public final class MinerDisturbance extends ob {
                 }
                 if (decompiledFrameRemainder1) {
                   stackIn_142_0 = (kf.field_d != null);
-                  var3 = MusicPatchPcmStream.a(stackIn_142_0, -61, (ob) (this));
+                  var3 = MusicPatchPcmStream.a(stackIn_142_0, -61, (NetworkGameClient) (this));
                   boolean decompiledSharedTail0 = (var3 != 2364824);
                   if (!decompiledSharedTail0) {
                     le.clearStaticReferences(8952);
@@ -6588,7 +6588,7 @@ public final class MinerDisturbance extends ob {
             }
             while (true) {
               if (im.a(ge.field_g, 0)) {
-                this.n(22);
+                this.dispatchCommonPacket(22);
                 if (var4 == 0) {
                   continue;
                 }
@@ -6600,7 +6600,7 @@ public final class MinerDisturbance extends ob {
             if (!AwtRasterBuffer.a(105)) {
               return;
             }
-            var3 = this.c((byte) -119);
+            var3 = this.reconnectAndResendRequests((byte) -119);
             if (var3 == 2) {
               eb.a((byte) -106);
             }
@@ -6608,7 +6608,7 @@ public final class MinerDisturbance extends ob {
               return;
             }
           }
-          this.k(10);
+          this.updateLoginFlow(10);
           if (bi.a(-11) &&
             !nn.field_n) {
             this.a(false, (byte) -101);

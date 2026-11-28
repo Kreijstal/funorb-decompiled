@@ -181,13 +181,13 @@ final class fi {
         this.field_e = 0;
         this.field_g = 0;
         this.field_a = 0;
-        if (0 != nk.field_z) {
+        if (0 != NetworkGameClient.field_z) {
           this.field_c = tc.field_a;
-          this.field_f = nk.field_z;
+          this.field_f = NetworkGameClient.field_z;
           this.field_d = param0;
           this.field_i = true;
-          this.field_g = nk.field_z;
-          this.field_e = nk.field_z;
+          this.field_g = NetworkGameClient.field_z;
+          this.field_e = NetworkGameClient.field_z;
         }
         if (this.field_f != 0 &&
           ul.field_o != 0) {
@@ -197,7 +197,7 @@ final class fi {
           }
           this.field_c = this.field_c - 1;
         }
-        if (nk.field_z == 0 &&
+        if (NetworkGameClient.field_z == 0 &&
           ul.field_o == 0) {
           this.field_f = 0;
         }

@@ -22,7 +22,7 @@ final class bf {
           ResourceArchive.field_e = ij.field_h;
           ob.field_c = ResizableModalDialog.field_K;
           ResizableModalDialog.field_K = false;
-          nk.field_z = lj.field_a;
+          NetworkGameClient.field_z = lj.field_a;
           ef.field_a = GameAppletShell.field_j;
           ProxyAuthenticationRequiredException.field_a = GzipDecompressor.field_b;
           lj.field_a = 0;

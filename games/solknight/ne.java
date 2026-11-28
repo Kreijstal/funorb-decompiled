@@ -244,7 +244,7 @@ final class ne {
             return stackIn_7_0;
           }
           var3 = 63 % ((param1 - 4) / 50);
-          var4 = b.$cfr$intArgs$a$25ae83805f84(param0, 46, true);
+          var4 = b.splitByDelimiterWithIntDelimiter(param0, 46, true);
           if (var4.length < 2) {
             stackIn_10_0 = h.field_a;
             return stackIn_10_0;

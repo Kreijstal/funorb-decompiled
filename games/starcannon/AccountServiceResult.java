@@ -246,7 +246,7 @@ final class AccountServiceResult {
             stackIn_88_0 = DualLinkNode.field_h[var4Lifetime1];
             stackIn_88_1 = 26;
             stackIn_89_2 = !(eg.field_a[var4Lifetime1] < 0);
-            var5Lifetime1 = fb.$cfr$intArgs$a$1694234bddb3(stackIn_88_0, stackIn_88_1, stackIn_89_2);
+            var5Lifetime1 = fb.measureSelectedFontTextWidthWithIntGuard(stackIn_88_0, stackIn_88_1, stackIn_89_2);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -255,7 +255,7 @@ final class AccountServiceResult {
             var9 = RichTextLayout.field_n;
             for (var5Lifetime2 = 0; var9.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var9[var5Lifetime2];
-              var7Lifetime1 = fb.$cfr$intArgs$a$1694234bddb3(var11, 26, false);
+              var7Lifetime1 = fb.measureSelectedFontTextWidthWithIntGuard(var11, 26, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -263,7 +263,7 @@ final class AccountServiceResult {
             var10 = fb.field_c;
             for (var5Lifetime2Lifetime1 = 0; var10.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var10[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = fb.$cfr$intArgs$a$1694234bddb3(var12, 26, false);
+              var7Lifetime1Lifetime1 = fb.measureSelectedFontTextWidthWithIntGuard(var12, 26, false);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -288,7 +288,7 @@ final class AccountServiceResult {
           while (DualLinkNode.field_h.length > var4Lifetime3) {
             var6Lifetime1 = eg.field_a[var4Lifetime3];
             if (0 <= var6Lifetime1) {
-              var7Lifetime2 = fb.$cfr$intArgs$a$1694234bddb3(DualLinkNode.field_h[var4Lifetime3], 26, true);
+              var7Lifetime2 = fb.measureSelectedFontTextWidthWithIntGuard(DualLinkNode.field_h[var4Lifetime3], 26, true);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + ee.field_b;
               var5Lifetime3 = var5Lifetime3 + ByteArrayPoolSupport.field_h;
               oh.field_e[var4Lifetime3] = new int[4];

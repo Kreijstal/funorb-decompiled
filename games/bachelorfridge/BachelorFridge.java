@@ -5,7 +5,7 @@ public final class BachelorFridge extends NetworkGameClient {
     private boolean field_x;
     public static int field_y;
 
-    private final void a(boolean param0, byte param1) {
+    private final void updateGameAndMenuState(boolean param0, byte param1) {
         int fieldTemp$0 = 0;
         boolean stackIn_112_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -23,7 +23,7 @@ public final class BachelorFridge extends NetworkGameClient {
             boolean decompiledFrameRemainder1 = true;
             if (!kha.field_f) {
               FullscreenNoticeType.a(75);
-              kha.field_f = this.i((byte) -120);
+              kha.field_f = this.loadGameAssets((byte) -120);
               if ((kha.field_f) &&
                 (decompiledFrameRemainder1 = (mg.field_m == null))) {
                 if (!AttackUpAllAnimation.e(-29919)) {
@@ -50,7 +50,7 @@ public final class BachelorFridge extends NetworkGameClient {
                 if (-1 != OhNoEvent.field_s) {
                   if (OhNoEvent.field_s != -3) {
                     if ((OhNoEvent.field_s != -2) &&
-                      (decompiledFrameRemainder0 = !(!GameClock.a(OhNoEvent.field_s, 124)))) {
+                      (decompiledFrameRemainder0 = !(!GameClock.isNonnegativeScreenId(OhNoEvent.field_s, 124)))) {
                       LevitateSpecial.field_p[OhNoEvent.field_s].e(8456);
                       decompiledFrameRemainder0 = (var8 != 0);
                     }
@@ -89,13 +89,13 @@ public final class BachelorFridge extends NetworkGameClient {
                     var4 = 1;
                     var3_int = 1;
                     if ((var8 != 0) &&
-                      (this.k((byte) -55))) {
+                      (this.advanceScreenTransition((byte) -55))) {
                       StatusEffectInfo.a(true);
                     }
                   }
                 }
               } else {
-                if (this.k((byte) -55)) {
+                if (this.advanceScreenTransition((byte) -55)) {
                   StatusEffectInfo.a(true);
                 }
               }
@@ -199,7 +199,7 @@ public final class BachelorFridge extends NetworkGameClient {
                   if (SuperSpeedEvent.field_r) {
                     lg.a(true, -4, false);
                   }
-                  if (GameClock.a(kaa.field_m, 127)) {
+                  if (GameClock.isNonnegativeScreenId(kaa.field_m, 127)) {
                     StatusEffectInfo.a(true);
                   }
                 }
@@ -247,7 +247,7 @@ public final class BachelorFridge extends NetworkGameClient {
         }
     }
 
-    private final boolean k(byte param0) {
+    private final boolean advanceScreenTransition(byte param0) {
         int fieldTemp$1 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -279,7 +279,7 @@ public final class BachelorFridge extends NetworkGameClient {
         }
     }
 
-    private final void a(float param0, boolean param1) {
+    private final void setLoadingProgress(float param0, boolean param1) {
         try {
           ShieldSpecial.field_r = param0;
           if (!param1) {
@@ -326,7 +326,7 @@ public final class BachelorFridge extends NetworkGameClient {
           }
           if (decompiledFrameRemainder0) {
             if (kaa.field_m != OhNoEvent.field_s) {
-              this.h((byte) 103);
+              this.drawScreenTransition((byte) 103);
               if (var6 != 0) {
                 cf.a(true, OhNoEvent.field_s, vla.field_w, (byte) 46);
               }
@@ -382,7 +382,7 @@ public final class BachelorFridge extends NetworkGameClient {
             } else {
               stackIn_70_1 = SetMoveSlotCooldownEffect.field_i;
             }
-            SetFriendlyEffect.$cfr$intArgs$a$7ffe4b125357(stackIn_69_0, stackIn_70_1);
+            SetFriendlyEffect.drawModalOverlayWithIntGuard(stackIn_69_0, stackIn_70_1);
           }
           if (ha.field_l != ha.field_k) {
             var3_int = StampedeAnimation.field_A * 256 / 16;
@@ -410,12 +410,12 @@ public final class BachelorFridge extends NetworkGameClient {
         }
     }
 
-    private final void r(int param0) {
+    private final void openGameArchives(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (null != nha.field_c) {
-            LinkTextWidget.a((byte) 54, nha.field_c);
+            LinkTextWidget.loadGameInterfaceText((byte) 54, nha.field_c);
             nha.field_c = null;
             mia.b(32);
           }
@@ -450,7 +450,7 @@ public final class BachelorFridge extends NetworkGameClient {
         RuntimeException var2 = null;
         try {
           if (param0 != 76) {
-            discarded$1 = this.i((byte) 56);
+            discarded$1 = this.loadGameAssets((byte) 56);
           }
           eia.a((byte) -15);
           if (kga.field_c != null) {
@@ -465,7 +465,7 @@ public final class BachelorFridge extends NetworkGameClient {
         }
     }
 
-    private final void a(ResourceArchive param0, byte param1, float param2, float param3) {
+    private final void setArchiveLoadingProgress(ResourceArchive param0, byte param1, float param2, float param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -496,13 +496,13 @@ public final class BachelorFridge extends NetworkGameClient {
 
     public final void init() {
         try {
-          this.a(-8771, "bachelorfridge", 21);
+          this.startWithDefaultSize(-8771, "bachelorfridge", 21);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "BachelorFridge.init()");
         }
     }
 
-    private final void a(float param0, ResourceArchive param1, float param2, int param3, String param4) {
+    private final void setArchiveGroupLoadingProgress(float param0, ResourceArchive param1, float param2, int param3, String param4) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -536,7 +536,7 @@ public final class BachelorFridge extends NetworkGameClient {
         }
     }
 
-    private final boolean j(byte param0) {
+    private final boolean loadBootstrapAssets(byte param0) {
         BinaryBitmapFont dupTemp$0 = null;
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
@@ -614,7 +614,7 @@ public final class BachelorFridge extends NetworkGameClient {
         oja.a(-32341);
         dj.clearStaticReferences((byte) -75);
         cba.releaseStatics((byte) -44);
-        GameAppletShell.e(-12132);
+        GameAppletShell.clearAppletStrings(-12132);
         dl.clearStaticReferences((byte) -39);
         ArenaTheme.releaseStatics((byte) -60);
         SoftwareRasterizer.releaseRasterStorage();
@@ -1291,7 +1291,7 @@ public final class BachelorFridge extends NetworkGameClient {
         }
     }
 
-    private final void h(byte param0) {
+    private final void drawScreenTransition(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -1325,7 +1325,7 @@ public final class BachelorFridge extends NetworkGameClient {
         }
     }
 
-    private final boolean i(byte param0) {
+    private final boolean loadGameAssets(byte param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         byte[] var2 = null;
@@ -1406,85 +1406,85 @@ public final class BachelorFridge extends NetworkGameClient {
                                                     RemoveDefeatedCreatureEffect.field_k.tryLoadAllGroups((byte) 101)) {
                                                     waa.a(0, 19);
                                                     SlowAllSpecial.b(108);
-                                                    this.a(78.5999984741211f, true);
+                                                    this.setLoadingProgress(78.5999984741211f, true);
                                                     this.draw((byte) 50);
                                                     waa.a(0, 20);
                                                     pu.a(JaggrabDownloader.field_m, RemoveDefeatedCreatureEffect.field_l, -21201, HomingMissileAnimation.field_w, FullHealAnimation.field_B);
                                                     oe.a(230, (byte) 108);
                                                     ke.b(34);
                                                     HomingMissileAnimation.field_w = null;
-                                                    this.a(81.0999984741211f, true);
+                                                    this.setLoadingProgress(81.0999984741211f, true);
                                                     waa.a(0, 21);
                                                     return false;
                                                   }
-                                                  this.a(RemoveDefeatedCreatureEffect.field_k, (byte) -6, 78.5f, 78.5999984741211f);
+                                                  this.setArchiveLoadingProgress(RemoveDefeatedCreatureEffect.field_k, (byte) -6, 78.5f, 78.5999984741211f);
                                                   return false;
                                                 }
-                                                this.a(wb.field_l, (byte) 110, 78.0999984741211f, 78.5f);
+                                                this.setArchiveLoadingProgress(wb.field_l, (byte) 110, 78.0999984741211f, 78.5f);
                                                 return false;
                                               }
-                                              this.a(wba.field_f, (byte) -62, 78.0f, 78.0999984741211f);
+                                              this.setArchiveLoadingProgress(wba.field_f, (byte) -62, 78.0f, 78.0999984741211f);
                                               return false;
                                             }
-                                            this.a(iga.field_d, (byte) 110, 60.79999923706055f, 78.0f);
+                                            this.setArchiveLoadingProgress(iga.field_d, (byte) 110, 60.79999923706055f, 78.0f);
                                             return false;
                                           }
-                                          this.a(fga.field_h, (byte) -7, 60.70000076293945f, 60.79999923706055f);
+                                          this.setArchiveLoadingProgress(fga.field_h, (byte) -7, 60.70000076293945f, 60.79999923706055f);
                                           return false;
                                         }
-                                        this.a(pr.field_j, (byte) -108, 60.5f, 60.70000076293945f);
+                                        this.setArchiveLoadingProgress(pr.field_j, (byte) -108, 60.5f, 60.70000076293945f);
                                         return false;
                                       }
-                                      this.a(fw.field_j, (byte) -121, 60.400001525878906f, 60.5f);
+                                      this.setArchiveLoadingProgress(fw.field_j, (byte) -121, 60.400001525878906f, 60.5f);
                                       return false;
                                     }
-                                    this.a(WidgetContainer.field_y, (byte) 109, 60.29999923706055f, 60.400001525878906f);
+                                    this.setArchiveLoadingProgress(WidgetContainer.field_y, (byte) 109, 60.29999923706055f, 60.400001525878906f);
                                     return false;
                                   }
-                                  this.a(ContentTransitionDialog.field_U, (byte) 120, 60.0f, 60.29999923706055f);
+                                  this.setArchiveLoadingProgress(ContentTransitionDialog.field_U, (byte) 120, 60.0f, 60.29999923706055f);
                                   return false;
                                 }
-                                this.a(ria.field_i, (byte) 127, 60.0f, 60.0f);
+                                this.setArchiveLoadingProgress(ria.field_i, (byte) 127, 60.0f, 60.0f);
                                 return false;
                               }
-                              this.a(59.79999923706055f, BoardTile.field_b, 60.0f, -113, "basic");
+                              this.setArchiveGroupLoadingProgress(59.79999923706055f, BoardTile.field_b, 60.0f, -113, "basic");
                               return false;
                             }
-                            this.a(55.5f, vb.field_j, 59.79999923706055f, -119, "bacteria_components");
+                            this.setArchiveGroupLoadingProgress(55.5f, vb.field_j, 59.79999923706055f, -119, "bacteria_components");
                             return false;
                           }
-                          this.a(25.399999618530273f, vb.field_j, 55.5f, -121, "basic");
+                          this.setArchiveGroupLoadingProgress(25.399999618530273f, vb.field_j, 55.5f, -121, "basic");
                           return false;
                         }
-                        this.a(JaggrabDownloader.field_m, (byte) 115, 23.299999237060547f, 25.399999618530273f);
+                        this.setArchiveLoadingProgress(JaggrabDownloader.field_m, (byte) 115, 23.299999237060547f, 25.399999618530273f);
                         return false;
                       }
-                      this.a(RemoveDefeatedCreatureEffect.field_l, (byte) -100, 23.299999237060547f, 23.299999237060547f);
+                      this.setArchiveLoadingProgress(RemoveDefeatedCreatureEffect.field_l, (byte) -100, 23.299999237060547f, 23.299999237060547f);
                       return false;
                     }
-                    this.a(FullHealAnimation.field_B, (byte) -91, 0.8999999761581421f, 23.299999237060547f);
+                    this.setArchiveLoadingProgress(FullHealAnimation.field_B, (byte) -91, 0.8999999761581421f, 23.299999237060547f);
                     return false;
                   }
-                  this.a(HomingMissileAnimation.field_w, (byte) -102, 0.6000000238418579f, 0.8999999761581421f);
+                  this.setArchiveLoadingProgress(HomingMissileAnimation.field_w, (byte) -102, 0.6000000238418579f, 0.8999999761581421f);
                   return false;
                 }
-                this.a(0.5f, ClamsSpecial.field_p, 0.6000000238418579f, -119, "lobby");
+                this.setArchiveGroupLoadingProgress(0.5f, ClamsSpecial.field_p, 0.6000000238418579f, -119, "lobby");
                 return false;
               }
-              this.a(0.20000000298023224f, ScavengerSpecial.field_p, 0.5f, -115, "lobby");
+              this.setArchiveGroupLoadingProgress(0.20000000298023224f, ScavengerSpecial.field_p, 0.5f, -115, "lobby");
               return false;
             }
-            this.a(0.0f, ScavengerSpecial.field_p, 0.20000000298023224f, -116, "basic");
+            this.setArchiveGroupLoadingProgress(0.0f, ScavengerSpecial.field_p, 0.20000000298023224f, -116, "basic");
             return false;
           }
-          this.a(84.5999984741211f, true);
+          this.setLoadingProgress(84.5999984741211f, true);
           waa.a(0, 22);
           if (null != wba.field_f) {
             ce.a(wba.field_f, 15);
             wba.field_f = null;
             return false;
           }
-          this.a(84.9000015258789f, true);
+          this.setLoadingProgress(84.9000015258789f, true);
           waa.a(0, 23);
           if (wb.field_l != null) {
             qla.d(-64);
@@ -1492,7 +1492,7 @@ public final class BachelorFridge extends NetworkGameClient {
             CranberryAnimation.e(0);
             wb.field_l = null;
           }
-          this.a(85.30000305175781f, true);
+          this.setLoadingProgress(85.30000305175781f, true);
           waa.a(0, 24);
           if (null != FullHealAnimation.field_B) {
             this.draw((byte) 100);
@@ -1500,7 +1500,7 @@ public final class BachelorFridge extends NetworkGameClient {
             mia.b(32);
             return false;
           }
-          this.a(85.9000015258789f, true);
+          this.setLoadingProgress(85.9000015258789f, true);
           waa.a(0, 25);
           if (null != JaggrabDownloader.field_m) {
             this.draw((byte) 125);
@@ -1510,31 +1510,31 @@ public final class BachelorFridge extends NetworkGameClient {
             mia.b(32);
             return false;
           }
-          this.a(94.0999984741211f, true);
+          this.setLoadingProgress(94.0999984741211f, true);
           waa.a(0, 26);
           if (iga.field_d != null) {
             BufferedSocket.a(true, iga.field_d);
             iga.field_d = null;
             return false;
           }
-          this.a(94.30000305175781f, true);
+          this.setLoadingProgress(94.30000305175781f, true);
           waa.a(0, 27);
           if (null == BoardTile.field_b) {
-            this.a(99.0f, true);
+            this.setLoadingProgress(99.0f, true);
             waa.a(0, 30);
             if (null != ria.field_i) {
               bka.a(ria.field_i, true);
               ria.field_i = null;
               return false;
             }
-            this.a(99.30000305175781f, true);
+            this.setLoadingProgress(99.30000305175781f, true);
             waa.a(0, 31);
             if (pr.field_j != null) {
               iia.a(-167571320, pr.field_j);
               pr.field_j = null;
               return false;
             }
-            this.a(99.5999984741211f, true);
+            this.setLoadingProgress(99.5999984741211f, true);
             waa.a(0, 32);
             if (fga.field_h != null) {
               ika.a((byte) 18, new HuffmanCodec(fga.field_h.getFileByName((byte) 123, "huffman", "")));
@@ -1542,7 +1542,7 @@ public final class BachelorFridge extends NetworkGameClient {
               mia.b(32);
               return false;
             }
-            this.a(99.69999694824219f, true);
+            this.setLoadingProgress(99.69999694824219f, true);
             waa.a(0, 33);
             DamagePopupAnimation.d((byte) -19);
             uw.g(-128);
@@ -1677,9 +1677,9 @@ public final class BachelorFridge extends NetworkGameClient {
           }
           stackIn_11_1 = -30;
           stackIn_12_2 = (null != kga.field_c);
-          this.b(stackIn_11_1, stackIn_12_2);
+          this.serviceFramework(stackIn_11_1, stackIn_12_2);
           if (ed.field_a) {
-            this.r(11);
+            this.openGameArchives(11);
             ed.field_a = false;
           }
           ResourceArchive.field_b = ResourceArchive.field_b + 1;
@@ -1689,7 +1689,7 @@ public final class BachelorFridge extends NetworkGameClient {
               DiveBomberEvent.field_r.requestCursorVisibility((java.awt.Component) ((Object) TBomberAnimation.field_y), true, 124);
               SnowAnimation.field_z = true;
             }
-            this.l(10);
+            this.updateLoginFlow(10);
             if (sn.c(106)) {
               return;
             }
@@ -1725,18 +1725,18 @@ public final class BachelorFridge extends NetworkGameClient {
                       oq.a(true, false);
                       break;
                   }
-                  this.a(true, (byte) 91);
+                  this.updateGameAndMenuState(true, (byte) 91);
                   decompiledFrameRemainder0 = (var8 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  this.a(false, (byte) 93);
+                  this.updateGameAndMenuState(false, (byte) 93);
                   decompiledFrameRemainder0 = (var8 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
                 if (paa.a(15000)) {
                   stackIn_74_1 = (kga.field_c != null);
-                  var3 = this.a(stackIn_74_1, -48);
+                  var3 = this.pollAccountUiActions(stackIn_74_1, -48);
                   if (1 == var3 ||
                     var3 == 2) {
                     if (null != kga.field_c) {
@@ -1746,7 +1746,7 @@ public final class BachelorFridge extends NetworkGameClient {
                       ArmPetAttackEffect.a((java.applet.Applet) (this), 59);
                     }
                   }
-                  this.a(true, (byte) 115);
+                  this.updateGameAndMenuState(true, (byte) 115);
                   decompiledFrameRemainder0 = (var8 != 0);
                 }
                 if (decompiledFrameRemainder0) {
@@ -1757,24 +1757,24 @@ public final class BachelorFridge extends NetworkGameClient {
                         SuperSpeedEvent.field_r = true;
                         au.a(0, gba.field_Ib, false);
                       }
-                      this.a(true, (byte) 126);
+                      this.updateGameAndMenuState(true, (byte) 126);
                       decompiledFrameRemainder0 = (var8 != 0);
                     }
                     if (decompiledFrameRemainder0) {
-                      this.a(false, (byte) 98);
+                      this.updateGameAndMenuState(false, (byte) 98);
                       if (var8 != 0) {
-                        this.a(false, (byte) 125);
+                        this.updateGameAndMenuState(false, (byte) 125);
                         aca.a((byte) -118, vc.field_a);
-                        if (this.j((byte) 7)) {
+                        if (this.loadBootstrapAssets((byte) 7)) {
                           ZombiesSpecial.field_r = true;
                         }
                       }
                     }
                   } else {
-                    this.a(false, (byte) 125);
+                    this.updateGameAndMenuState(false, (byte) 125);
                     if (var8 != 0) {
                       aca.a((byte) -118, vc.field_a);
-                      if (this.j((byte) 7)) {
+                      if (this.loadBootstrapAssets((byte) 7)) {
                         ZombiesSpecial.field_r = true;
                       }
                     }
@@ -1784,7 +1784,7 @@ public final class BachelorFridge extends NetworkGameClient {
             }
           } else {
             aca.a((byte) -118, vc.field_a);
-            if (this.j((byte) 7)) {
+            if (this.loadBootstrapAssets((byte) 7)) {
               ZombiesSpecial.field_r = true;
             }
           }
@@ -1819,7 +1819,7 @@ public final class BachelorFridge extends NetworkGameClient {
                     }
                     if (ri.field_a == 14) {
                       StatusEffectInfo.a(true);
-                      dfa.a(150, ul.roundUpPowerOfTwo(-58, 4), ul.roundUpPowerOfTwo(-51, 2000), 0, jha.field_j, InsanoSauceAnimation.field_y.length, mia.d((byte) -104), StickySpecial.c(true), 1024, NetworkGameClient.n(96));
+                      dfa.a(150, ul.roundUpPowerOfTwo(-58, 4), ul.roundUpPowerOfTwo(-51, 2000), 0, jha.field_j, InsanoSauceAnimation.field_y.length, mia.d((byte) -104), StickySpecial.c(true), 1024, NetworkGameClient.getLobbyGameListContent(96));
                       MusicPatch.a(TextLayout.a(31185), -83, jha.c(-31068));
                       UiWidget.field_g = true;
                       hm.field_b = true;
@@ -1943,7 +1943,7 @@ public final class BachelorFridge extends NetworkGameClient {
                     if (lfa.d(-124)) {
                       continue;
                     }
-                    this.a(true);
+                    this.dispatchCommonPacket(true);
                     continue;
                   }
                 } else {
@@ -1959,7 +1959,7 @@ public final class BachelorFridge extends NetworkGameClient {
             DualLinkNodeHashTable.field_b = 0;
           }
           if (FlirtAnimation.d(11154)) {
-            var3 = this.g(-127);
+            var3 = this.reconnectAndResendRequests(-127);
             if (0 == var3 ||
               var3 == 1) {
               if (1 == var3) {
@@ -2033,14 +2033,14 @@ public final class BachelorFridge extends NetworkGameClient {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.a(70, 4, 0, 1, false, false, 2, 20);
+          this.initializeFramework(70, 4, 0, 1, false, false, 2, 20);
           nja.field_a = 16711935;
           jc.field_t = 2603264;
           fa.field_f = 16777215;
           ScavengerSpecial.field_v = 2603264;
           NanoGameClock.field_c = 16711935;
           wk.field_f = 16777215;
-          this.a(false, (byte) 62, true, true, false, false, false);
+          this.configureOptionalPacketHandlers(false, (byte) 62, true, true, false, false, false);
           GameKeyHandler.field_b[64] = 1;
           GameKeyHandler.field_b[63] = 1;
           GameKeyHandler.field_b[57] = -2;

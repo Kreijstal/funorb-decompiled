@@ -762,8 +762,8 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final static void a(ResourceArchive param0, boolean param1) {
-        class $CfrPartitionedBody {
+    final static void loadGameInterfaceText(ResourceArchive param0, boolean param1) {
+        class GameTextLoader {
             RuntimeException stackIn_2776_0;
             StringBuilder stackIn_2776_1;
             String stackIn_2777_2;
@@ -775,7 +775,7 @@ class PacketBuffer extends IntrusiveNode {
             ResourceArchive param0;
             boolean param1;
             boolean finished;
-            $CfrPartitionedBody(ResourceArchive initialParam0, boolean initialParam1) {
+            GameTextLoader(ResourceArchive initialParam0, boolean initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2776_0 = null;
@@ -787,7 +787,7 @@ class PacketBuffer extends IntrusiveNode {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadAchievementsInstructionsAndAdventurerNames() throws java.lang.RuntimeException {
                 d.field_d = param0;
                 var2 = gm.a("text_game_name", false);
                 if (var2 != null) {
@@ -1647,7 +1647,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("thief", false);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAdventurerAndAbilityDescriptions() throws java.lang.RuntimeException {
                 if (null != var2) {
                   o.field_l = dj.a(var2, false);
                 }
@@ -2556,7 +2556,7 @@ class PacketBuffer extends IntrusiveNode {
                   LoginPanel.field_N[0] = dj.a(var2, false);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadAbilitiesTitlesAndEncounterActions() throws java.lang.RuntimeException {
                 var2 = gm.a("ability_fireimmunity_brief,1", false);
                 if (null != var2) {
                   LoginPanel.field_N[1] = dj.a(var2, false);
@@ -3431,7 +3431,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_disarm_trap_tooltip", false);
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadEncounterActionsAndRenownText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   DungeonTileState.field_d = dj.a(var2, false);
                 }
@@ -3956,13 +3956,13 @@ class PacketBuffer extends IntrusiveNode {
             void run() {
                 var3 = DungeonAssault.field_K;
                 try {
-                  runChunk0();
+                  loadAchievementsInstructionsAndAdventurerNames();
                   if (finished) return;
-                  runChunk1();
+                  loadAdventurerAndAbilityDescriptions();
                   if (finished) return;
-                  runChunk2();
+                  loadAbilitiesTitlesAndEncounterActions();
                   if (finished) return;
-                  runChunk3();
+                  loadEncounterActionsAndRenownText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3982,7 +3982,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        GameTextLoader decompiledBody = new GameTextLoader(param0, param1);
         decompiledBody.run();
     }
 

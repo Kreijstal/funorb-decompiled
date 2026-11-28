@@ -258,29 +258,29 @@ final class GzipDecompressor {
             if (IntrusiveDeque.field_a < ByteStorage.field_c) {
               IntrusiveDeque.field_a = IntrusiveDeque.field_a + 1;
               if (ByteStorage.field_a < IntrusiveDeque.field_a && (null == og.field_d ||
-                null == og.field_d[ag.field_o])) {
+                null == og.field_d[NetworkGameClient.field_o])) {
                 IntrusiveDeque.field_a = IntrusiveDeque.field_a - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (ByteStorage.field_c <= IntrusiveDeque.field_a &&
-                  null == og.field_d[(ag.field_o + 1) % var2_int]) {
+                  null == og.field_d[(NetworkGameClient.field_o + 1) % var2_int]) {
                   IntrusiveDeque.field_a = IntrusiveDeque.field_a - 1;
                 }
               }
             }
             if (IntrusiveDeque.field_a >= ByteStorage.field_c) {
-              od.field_i = ag.field_o;
+              od.field_i = NetworkGameClient.field_o;
               IntrusiveDeque.field_a = IntrusiveDeque.field_a - ByteStorage.field_c;
               if (PasswordValidator.field_j) {
-                ag.field_o = ag.field_o + 1;
-                if (var2_int <= ag.field_o) {
-                  ag.field_o = ag.field_o - var2_int;
+                NetworkGameClient.field_o = NetworkGameClient.field_o + 1;
+                if (var2_int <= NetworkGameClient.field_o) {
+                  NetworkGameClient.field_o = NetworkGameClient.field_o - var2_int;
                 }
               } else {
-                ag.field_o = ag.field_o - 1;
-                if (0 > ag.field_o) {
-                  ag.field_o = ag.field_o + var2_int;
+                NetworkGameClient.field_o = NetworkGameClient.field_o - 1;
+                if (0 > NetworkGameClient.field_o) {
+                  NetworkGameClient.field_o = NetworkGameClient.field_o + var2_int;
                 }
               }
             }

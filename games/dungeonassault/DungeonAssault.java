@@ -288,14 +288,14 @@ public final class DungeonAssault extends NetworkGameClient {
             DefaultTextWidgetRenderer.a((byte) -128);
           }
           stackIn_44_1 = (RegistrationAgreementPane.field_R != null);
-          this.a(stackIn_44_1, (byte) -74);
+          this.serviceFramework(stackIn_44_1, (byte) -74);
           if (ld.field_i) {
             bo.h(78);
             ld.field_i = false;
           }
           mo.field_a = mo.field_a + 1;
           if (ao.a((byte) -123)) {
-            this.g((byte) 2);
+            this.updateLoginFlow((byte) 2);
             if (ao.a((byte) 121)) {
               return;
             }
@@ -323,7 +323,7 @@ public final class DungeonAssault extends NetworkGameClient {
                 } else {
                   stackIn_101_1 = 82;
                   stackIn_102_2 = (null != RegistrationAgreementPane.field_R);
-                  var2_int = this.b((byte) stackIn_101_1, stackIn_102_2);
+                  var2_int = this.pollAccountUiActions((byte) stackIn_101_1, stackIn_102_2);
                   if (1 == var2_int ||
                     2 == var2_int) {
                     if (null != RegistrationAgreementPane.field_R) {
@@ -483,7 +483,7 @@ public final class DungeonAssault extends NetworkGameClient {
                     ik.field_e.handleRaidPacket(0)) {
                     continue scanLoop1;
                   }
-                  this.d(true);
+                  this.dispatchCommonPacket(true);
                   continue scanLoop1;
                 }
                 if (nf.field_A) {
@@ -508,7 +508,7 @@ public final class DungeonAssault extends NetworkGameClient {
               stackIn_208_1 = var3Lifetime3;
               stackIn_208_2 = 22;
               stackIn_209_3 = (hc.field_c == 57);
-              HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(stackIn_208_0, stackIn_208_1, stackIn_208_2, stackIn_209_3, var5_ref_di__);
+              HuffmanDecoder.mergeLeaderboardPageWithIntGuard(stackIn_208_0, stackIn_208_1, stackIn_208_2, stackIn_209_3, var5_ref_di__);
               continue scanLoop1;
             }
             break;
@@ -517,7 +517,7 @@ public final class DungeonAssault extends NetworkGameClient {
           stackIn_254_1Lifetime1 = 0;
           op.a(stackIn_254_0Lifetime1, stackIn_254_1Lifetime1);
           if (dm.c(81)) {
-            var2_intLifetime2 = this.f((byte) 101);
+            var2_intLifetime2 = this.reconnectAndResendRequests((byte) 101);
             if (var2_intLifetime2 == 0 ||
               var2_intLifetime2 == 1) {
               if (!ed.c(true)) {
@@ -562,7 +562,7 @@ public final class DungeonAssault extends NetworkGameClient {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.a(false, 32, 8, 2, 17, 0, 5000, 1);
+          this.initializeFramework(false, 32, 8, 2, 17, 0, 5000, 1);
           var3 = new CrossfadingMidiPcmStream();
           var3.field_A.setChannelProgram((byte) 7, 128, 9);
           var3.field_B.setChannelProgram((byte) -120, 128, 9);
@@ -576,7 +576,7 @@ public final class DungeonAssault extends NetworkGameClient {
           sm.field_c = 16776960;
           j.f((byte) -4);
           kd.b(0);
-          this.b(true, (byte) -67);
+          this.enableDefaultPacketHandlers(true, (byte) -67);
           uo.field_c[70] = 0;
           uo.field_c[55] = 704;
           uo.field_c[57] = -2;
@@ -608,7 +608,7 @@ public final class DungeonAssault extends NetworkGameClient {
 
     public final void init() {
         try {
-          this.a(32, "dungeonassault", 0);
+          this.startWithDefaultSize(32, "dungeonassault", 0);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "DungeonAssault.init()");
         }
